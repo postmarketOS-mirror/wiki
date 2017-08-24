@@ -10,13 +10,13 @@
 * [[Installation guide]] ''for devices, which are already working''
 
 == Development ==
-* [[Porting to a new device]] *and general installation guide*
-* [[Troubleshooting]] *the page to read when something isn't working*
-* [[Deviceinfo reference]] *our work-in-progress device-specific file format*
-* [[Creating a package]] *and how to recycle package recipes from other distributions*
-* [[Migration to aports subfolders]] *how to migrate old checkouts to the new folder structure*
-* [[Mainline kernel|The mainline kernel]] *early work on getting device kernels into mainline Linux*
-* [[Development guide]] *currently has a git hook for working on packages*
+* [[Porting to a new device]] ''and general installation guide''
+* [[Troubleshooting]] ''the page to read when something isn't working''
+* [[Deviceinfo reference]] ''our work-in-progress device-specific file format''
+* [[Creating a package]] ''and how to recycle package recipes from other distributions''
+* [[Migration to aports subfolders]] ''how to migrate old checkouts to the new folder structure''
+* [[Mainline kernel|The mainline kernel]] ''early work on getting device kernels into mainline Linux''
+* [[Development guide]] ''currently has a git hook for working on packages''
 
 == Communication channels ==
 * [[Matrix and IRC]] *live chat makes development easier*
