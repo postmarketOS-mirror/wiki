@@ -1,3 +1,37 @@
+
+{{Infobox
+|name         = Infobox/doc
+|bodystyle    = 
+|title        = Test Infobox
+|titlestyle   = 
+
+|image        = [[File:example.png|200px|alt=Example alt text]]
+|imagestyle   = 
+|caption      = Caption for example.png
+|captionstyle = 
+|headerstyle  = background:#ccf;
+|labelstyle   = background:#ddf;
+|datastyle    = 
+
+|header1 = Header defined alone
+|label1  = 
+|data1   = 
+|header2 = 
+|label2  = Label defined alone does not display (needs data, or is suppressed)
+|data2   = 
+|header3 =
+|label3  = 
+|data3   = Data defined alone
+|header4 = All three defined (header, label, data, all with same number)
+|label4  = does not display (same number as a header)
+|data4   = does not display (same number as a header)
+|header5 =
+|label5  = Label and data defined (label)
+|data5   = Label and data defined (data)
+
+|belowstyle = background:#ddf;
+|below = Below text
+}}
 == Contributors ==
 * [[user:MartijnBraam]]
 * craftyguy
