@@ -19,89 +19,129 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 ! Wifi
 ! Xwayland
 |-
-| [[samsung-maguro (Google Galaxy Nexus GSM)|Google Galaxy Nexus (GSM)]]
-| samsung-maguro
-| 
-| 
-| Yes
-| 
-| Yes
-| Yes
-| Yes
-| Yes
-| Yes
+  | [[samsung-maguro (Google Galaxy Nexus GSM)|Google Galaxy Nexus (GSM)]]
+  | samsung-maguro
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | Yes
+  | Yes
 |-
-| [[lg-mako (Google Nexus 4)|Google Nexus 4]]
-| lg-mako
-| 
-| 
-| Yes
-| 
-| Yes
-| Yes
-| Yes
-|
-|
+  | [[lg-mako (Google Nexus 4)|Google Nexus 4]]
+  | lg-mako
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | 
+  | 
 |-
-| [[Google Nexus 5 (GSM)
-| lg-hammerhead (Google Nexus 5)]]
-| lg-hammerhead
+  | [[lg-hammerhead (Google Nexus 5)|Google Nexus 5 (GSM)]]
+  | lg-hammerhead
+  | 
+  | 
+  | Yes
+  | 
+  | Somewhat
+  | Yes
+  | Yes
+  | 
+  | 
 |-
-| [[Google Nexus 7 (2012)
-| asus-grouper (Google Nexus 7 2012)]]
-| asus-grouper
+  | [[asus-grouper (Google Nexus 7 2012)|Google Nexus 7 (2012)]]
+  | asus-grouper
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | Somewhat
+  | 
 |-
-| [[HTC Desire
-| HTC-Bravo-(HTC-Desire)]]
-| htc-bravo
+  | [[HTC-Bravo-(HTC-Desire)|HTC Desire]]
+  | htc-bravo
+  | 
+  | 
+  | 
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | 
+  | 
 |-
-| [[HTC Desire HD
-| HTC-Ace-(HTC-Desire-HD)]]
-| htc-ace
+  | [[HTC-Ace-(HTC-Desire-HD)|HTC Desire HD]]
+  | htc-ace
+  | 
+  | 
+  | 
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | Yes
+  | Yes
 |-
-| [[LG G3 Global]]
-| lg-d855
-| fSTU
+  | [[lg-d855 (LG G3 Global)|LG G3 Global]]
+  | lg-d855
+  | 
+  | 
+  | Somewhat
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | 
+  | 
 |-
-| [[Moto G 2014
-| motorola-titan (Moto G 2014)]]
-| motorola-titan
+  | [[Moto G 2014
+  | motorola-titan (Moto G 2014)]]
+  | motorola-titan
 |-
-| [[Mozilla Flame
-| mozilla-flame]]
-| mozilla-flame
+  | [[Mozilla Flame
+  | mozilla-flame]]
+  | mozilla-flame
 |-
-| [[Nokia N900
-| nokia-rx51 (Nokia N900)]]
-| nokia-rx51
+  | [[Nokia N900
+  | nokia-rx51 (Nokia N900)]]
+  | nokia-rx51
 |-
-| [[QEMU (arm)
-| qemu-vexpress (Qemu with vexpress soc)]]
-| qemu-vexpress
+  | [[QEMU (arm)
+  | qemu-vexpress (Qemu with vexpress soc)]]
+  | qemu-vexpress
 |-
-| [[QEMU (x86_64)
-| qemu-amd64 (QEMU for x86_64)]]
-| qemu-amd64
+  | [[QEMU (x86_64)
+  | qemu-amd64 (QEMU for x86_64)]]
+  | qemu-amd64
 |-
-| [[Samsung Galaxy Note 2
-| Samsung-N7100-(Galaxy-Note-II-GSM)]]
-| samsung-n7100
+  | [[Samsung Galaxy Note 2
+  | Samsung-N7100-(Galaxy-Note-II-GSM)]]
+  | samsung-n7100
 |-
-| [[Samsung Galaxy S Advance
-| Samsung-i9070-(Samsung-Galaxy-S-Advance)]]
-| samsung-i9070
+  | [[Samsung Galaxy S Advance
+  | Samsung-i9070-(Samsung-Galaxy-S-Advance)]]
+  | samsung-i9070
 |-
-| [[Samsung Galaxy SII
-| samsung-i9100 (Samsung Galaxy SII)]]
-| samsung-i9100
+  | [[Samsung Galaxy SII
+  | samsung-i9100 (Samsung Galaxy SII)]]
+  | samsung-i9100
 |-
-| [[Xperia Z1 Compact
-| sony-amami-(Xperia-Z1-Compact)]]
-| sony-amami
+  | [[Xperia Z1 Compact
+  | sony-amami-(Xperia-Z1-Compact)]]
+  | sony-amami
 |-
-| [[Xperia Z2 Tablet
-| Xperia Z2 Tablet]]
-| sony-castor-windy
+  | [[Xperia Z2 Tablet
+  | Xperia Z2 Tablet]]
+  | sony-castor-windy
 |}
 
 === Work in progress ===
