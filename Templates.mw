@@ -1,3 +1,6 @@
-Added templates to this installation:
+Adding infoboxes to the page:
 
-{{key press|:|w|q}}
+<pre><nowiki>{{note|This page is a work in progress, and is not complete enough at this point to be useful.}}
+</nowiki></pre>
+
+{{note|This page is a work in progress, and is not complete enough at this point to be useful.}}
