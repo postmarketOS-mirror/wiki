@@ -22,8 +22,9 @@ The following applications should be installed:
 
 At this point in the project, it is recommended to build postmarketOS from the latest available source code. It can be obtained by running the following:
 
-`$ git clone https://github.com/postmarketOS/pmbootstrap.git`
-
+<syntaxhighlight lang="bash">
+$ git clone https://github.com/postmarketOS/pmbootstrap.git
+</syntaxhighlight>
 
 == Building postmarketOS ==
 
