@@ -33,7 +33,15 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
 | [[lg-mako (Google Nexus 4)|Google Nexus 4]]
 | lg-mako
-| STU
+| 
+| 
+| Yes
+| 
+| Yes
+| Yes
+| Yes
+|
+|
 |-
 | [[Google Nexus 5 (GSM)
 | lg-hammerhead (Google Nexus 5)]]
