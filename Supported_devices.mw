@@ -1,6 +1,6 @@
 Please add devices you're porting here, and write your porting progress in the wiki page. Devices are sorted alphabetically.
 
-=== Officially supported ===
+== Officially supported ==
 
 Devices will be officially supported in <code>pmbootstrap</code> when the encrypted root partition can be unlocked and graphical output works.
 
@@ -224,7 +224,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | Yes
 |}
 
-=== Work in progress ===
+== Work in progress ==
 
 {| class="wikitable sortable"
 !width="68%"| Device
@@ -303,39 +303,3 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |
 
 |}
-
-=== Status Legend ===
-
-{|
-! Letter
-! Meaning
-|-
-| 3
-| 3D Acceleration
-|-
-| A
-| Audio
-|-
-| F
-| [[Flash to device
-|-
-| M
-| [[Mainline kernel
-|-
-| S
-| Screen
-|-
-| T
-| [[Touch
-|-
-| U
-| USB Networking
-|-
-| W
-| [[Wifi]]
-|-
-| X
-| XWayland
-|}
-
-''A lowercase letter indicates partial
