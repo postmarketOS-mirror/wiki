@@ -1,8 +1,8 @@
-### Contributors
-* MartijnBraam
+== Contributors ==
+* [[user:MartijnBraam]]
 * craftyguy
 
-### What works
+== What works ==
 * Booting the system
 * Kernel log to the display
 * Framebuffer graphics
@@ -17,12 +17,12 @@
 * Battery capacity reporting (see Additional Info below)
 * Keyboard in virtual terminal
 
-### What does not work
+== What does not work ==
 * Both cameras
 * Cell modem (untested)
 * 3D Acceleration (requires binary blob)
 
-### Installation
+== Installation ==
 
 We currently only support installing and running pmos from the microsd card on the n900.
 Getting it to work with emmc and 0xffff is harder to implement and has no real benefit since
@@ -47,16 +47,16 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX
 1. enter `run sdboot` into the shell
 
 
-### Links
+== Links ==
 * [Device package](https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-rx51)
 * [Kernel source](https://kernel.org)
 
-### Additional info
+== Additional info ==
 
 * Martijn's N900 has uboot installed a long time ago, I'm using sdcard boot from the bootmenu shell using `run sdboot`
 * The [Neo900](https://neo900.org/) (still in development) will upgrade the hardware inside of the N900, and has some nice features such as hardware sandboxing the modem.
 
-#### Wifi
+=== Wifi ===
 
 The `linux-firmware` package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([#158](https://github.com/postmarketOS/pmbootstrap/pull/158))
 
@@ -80,7 +80,7 @@ If your network uses DHCP, start the DHCP client:
 
     $ sudo udhcpc -i wlan0
 
-#### Keyboard Backlight
+=== Keyboard Backlight ===
 
 There are 6 keyboard backlight LEDs that can be adjusted, they are found under `/sys/class/leds/lp5523:kb{1-6}`. To adjust brightness, write a value, $VAL between 0 and 255, to the `brightness` parameter as the root user:
 
@@ -90,7 +90,7 @@ for i in $(seq 1 6);
 done
 ```
 
-#### Display
+=== Display ===
 
 With DRM enabled ([#197](https://github.com/postmarketOS/pmbootstrap/pull/197)), the display can be managed at this location: `/sys/devices/platform/omapdrm.0/graphics/fb0/`
 
@@ -100,7 +100,7 @@ For example, the display can be turned off by:
 # echo 1 > /sys/devices/platform/omapdrm.0/graphics/fb0/blank
 ```
 
-#### Keyboard layout in console
+=== Keyboard layout in console ===
 
 In order to set the keyboard layout for the virtual console (e.g. to take advantage of number keys on the N900 keyboard), obtain your desired language keymap file for the RX-51, [such as this one.](https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map). (TODO: Need to pull 'official' vconsole keymaps from Maemo5 if they exist..).
 
@@ -118,7 +118,7 @@ Compress it and copy it to `/usr/share/bkeymaps/us/` on the N900.
 
 Log into the N900, and run `sudo setup-keymap`, then select `us` and finally `rx51_us`.
 
-#### Battery Capacity Reporting
+=== Battery Capacity Reporting ===
 
 The current battery capacity can be found under `/sys/class/power_supply/bq27200-0/capacity`, and is represented as a percentage. For example, a value of `11` equates to `11%`. If `capacity` does not exist or contains erroneous information, then your battery needs to be calibrated first. To calibrate the battery:
 
@@ -132,7 +132,7 @@ The current battery capacity can be found under `/sys/class/power_supply/bq27200
 
 [Datasheet for the bq27200 charging chip](http://www.ti.com/lit/ds/symlink/bq27200.pdf)
 
-#### Setting the hardware clock
+== Setting the hardware clock ==
 
 Since 49fd9e0e4efcf030ca47344858bdc74370a78603 the hardware clock works. If your hardware clock doesn't have the time set you can set it with:
 
@@ -144,7 +144,7 @@ $ date -s "2017-08-14 16:34:50"
 $ hwclock -w
 ```
 
-#### Configuring U-boot
+=== Configuring U-boot ===
 
 In order to configure pmos to boot by default on the N900, using U-boot, you will need to boot into Maemo and create a `/etc/bootmenu.d/10-pmos.item` file as the root user with these contents:
 
@@ -177,8 +177,8 @@ Generating u-boot bootmenu script...
 ```
 
 **Note**: This will set pmos as the default boot option. Maemo will still be accessible when booting the N900 with the keyboard slide out and selecting the relevant boot option in the u-boot boot menu.
-
-### Helpful Links for Porting
+ 
+== Helpful Links for Porting ==
 
 - [Device schematic](https://neo900.org/stuff/block-diagrams/n900/n900.html)
 
