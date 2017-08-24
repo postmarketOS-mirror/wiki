@@ -1,39 +1,5 @@
-
-{{Infobox
-|name         = Infobox/doc
-|bodystyle    = 
-|title        = Test Infobox
-|titlestyle   = 
-
-|image        = [[File:example.png|200px|alt=Example alt text]]
-|imagestyle   = 
-|caption      = Caption for example.png
-|captionstyle = 
-|headerstyle  = background:#ccf;
-|labelstyle   = background:#ddf;
-|datastyle    = 
-
-|header1 = Header defined alone
-|label1  = 
-|data1   = 
-|header2 = 
-|label2  = Label defined alone does not display (needs data, or is suppressed)
-|data2   = 
-|header3 =
-|label3  = 
-|data3   = Data defined alone
-|header4 = All three defined (header, label, data, all with same number)
-|label4  = does not display (same number as a header)
-|data4   = does not display (same number as a header)
-|header5 =
-|label5  = Label and data defined (label)
-|data5   = Label and data defined (data)
-
-|belowstyle = background:#ddf;
-|below = Below text
-}}
 == Contributors ==
-* [[user:MartijnBraam]]
+* [[user:MartijnBraam|MartijnBraam]]
 * craftyguy
 
 == What works ==
@@ -62,23 +28,23 @@ We currently only support installing and running pmos from the microsd card on t
 Getting it to work with emmc and 0xffff is harder to implement and has no real benefit since
 the built in emmc is quite slow and fragile.
 
-1. Init pmbootstrap
+# Init pmbootstrap
 
 ```bash
 $ ./pmbootstrap.py init
 ```
 
-2. Start the build process and install the completed image to a sdcard
+# Start the build process and install the completed image to a sdcard
 
 ```bash
 # Replace /dev/sdX with the device for your sdcard
 $ ./pmbootstrap.py install --sdcard /dev/sdX
 ```
 
-3. [Install u-boot from pali](http://maemo.org/downloads/product/Maemo5/u-boot-flasher/) on the n900 if you haven't installed it already. See Additional Info below for instructions on configuring pmos to boot by default.
-1. Place the sdcard into the n900 and boot it with the keyboard slide open
-1. Choose the u-boot shell
-1. enter `run sdboot` into the shell
+# [Install u-boot from pali](http://maemo.org/downloads/product/Maemo5/u-boot-flasher/) on the n900 if you haven't installed it already. See Additional Info below for instructions on configuring pmos to boot by default.
+# Place the sdcard into the n900 and boot it with the keyboard slide open
+# Choose the u-boot shell
+# enter `run sdboot` into the shell
 
 
 == Links ==
