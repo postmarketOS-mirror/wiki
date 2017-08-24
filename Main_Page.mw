@@ -19,9 +19,9 @@
 * [[Development guide]] ''currently has a git hook for working on packages''
 
 == Communication channels ==
-* [[Matrix and IRC]] *live chat makes development easier*
-* [Issues](https://github.com/postmarketOS/pmbootstrap/issues) *besides bugs, lots feature ideas and questions, [mobile UI](https://github.com/postmarketOS/pmbootstrap/issues/62) for example*
-* [Reddit](https://reddit.com/r/postmarketOS) *photos of devices running pmOS, blog posts, questions, official announcements*
+* [[Matrix and IRC]] ''live chat makes development easier''
+* [https://github.com/postmarketOS/pmbootstrap/issues Issuetracker] ''besides bugs, lots feature ideas and questions''
+* [https://reddit.com/r/postmarketOS Reddit] ''photos of devices running pmOS, blog posts, questions, official announcements''
 
 == Contributing to the wiki ==
 * [Mastering markdown](https://guides.github.com/features/mastering-markdown/) *guide on how to properly format text in the wiki*
