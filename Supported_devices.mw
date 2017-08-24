@@ -227,9 +227,19 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 == Work in progress ==
 
 {| class="wikitable sortable"
-!width="68%"| Device
-!width="21%"| Codename
-!width="10%"| Status
+! rowspan="2" | Device
+! rowspan="2" | Codename
+! colspan="9" | Status
+|-
+! 3D
+! Audio
+! Flashing
+! Mainline
+! Screen
+! Touch
+! Usbnet
+! Wifi
+! Xwayland
 |-
   | [[apple-ipt1g (Apple iPod Touch 1G)|Apple iPod Touch 1G]]
   | apple-ipt1g
