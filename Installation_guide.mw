@@ -1,0 +1,54 @@
+## Important Note 
+This page is a work in progress, and is not complete enough at this point to be useful.
+
+### Introduction
+
+If you own a device which has been ported to postmarketOS, then this page will help you to obtain, build, and install postmarketOS to this device.
+
+Any commands that are expected to be entered into a terminal are prefixed with `$`. You should not enter the `$` character, it is merely to designate that the following commands are intented to be input/executed within a termina. For example, the following command to list contents of the current working directory, `ls`, will be mentioned on this page as:
+
+`$ ls`
+
+### Requirements
+
+The following applications should be installed:
+
+- python 3
+
+- git
+
+
+### Obtaining postmarketOS
+
+At this point in the project, it is recommended to build postmarketOS from the latest available source code. It can be obtained by running the following:
+
+`$ git clone https://github.com/postmarketOS/pmbootstrap.git`
+
+
+### Building postmarketOS
+
+First, initialize the work directory. Replace `$WORKDIR` with the desired location for placing the output from the build process. It is recommended to have at least 10GB of available space in this location. 
+
+When initializing pmbootstrap, you'll need to select the device you are building for, the location for the work directory, the number of parallel jobs to run when compiling, and whether or not file timestamps should be accounted for when determining if a rebuild is necessary. User input is **bolded** below, replace with your desired options.
+
+<pre>
+$ cd pmbootstrap
+$ ./pmbootstrap.py init
+[23:09:38] Target device (either an existing one, or a new one for porting).
+[23:09:38] Available (18): asus-grouper, htc-ace, htc-bravo, lg-d855, lg-hammerhead, lg-mako, motorola-titan, mozilla-flame, nokia-rx51, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-i9070, samsung-i9100, samsung-maguro, samsung-n7100, sony-amami, sony-castor-windy
+[23:09:38] Device [samsung-i8262]: <b>nokia-rx51</b>
+[23:09:49] Available user interfaces (1): weston, none
+[23:09:49] User interface [weston]: <b>weston</b>
+[23:09:51] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+[23:09:51] Work path [/home/user/.local/var/pmbootstrap]: <b>~/work</b>
+[23:10:13] How many jobs should run parallel on this machine, when compiling?
+[23:10:13] Jobs [4]: <b>8</b>
+[23:10:14] Rebuild packages, when the last modified timestamp changed, even if the version did not change? This makes pmbootstrap behave more like 'make'.
+[23:10:14] Timestamp based rebuilds (y/n) [y]: <b>y</b>
+[23:10:19] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+[23:10:19] Extra packages [none]: <b>vim</b>
+[23:10:24] WARNING: The applications in the chroots do not get updated automatically.
+[23:10:24] Run 'pmbootstrap zap' to delete all chroots once a day before working with pmbootstrap!
+[23:10:24] It only takes a few seconds, and all packages are cached.
+[23:10:24] Done!
+</pre>
