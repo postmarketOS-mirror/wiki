@@ -1,0 +1,20 @@
+Enable the wlan0 interface and set it up for networking
+
+
+    $ sudo ip link set wlan0 up
+    $ sudo iw wlan0 set type managed
+
+Configure wpa_supplicant (only necessary on WPA/WPA2 encrypted networks):
+
+    $ sudo su -
+    # wpa_passphrase $YOUR_SSID > /etc/wpa_supplicant/wlan0.conf
+    <enter passphrase here and press Enter>
+    # exit
+
+Connect to network using wpa_supplicant:
+
+    $ sudo wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wlan0.conf 
+
+If your network uses DHCP, start the DHCP client:
+
+    $ sudo udhcpc -i wlan0
