@@ -59,26 +59,7 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX
 === Wifi ===
 
 The `linux-firmware` package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([#158](https://github.com/postmarketOS/pmbootstrap/pull/158))
-
-Once the device has been successfully initialized, enable it:
-
-    $ sudo ip link set wlan0 up
-    $ sudo iw wlan0 set type managed
-
-Configure wpa_supplicant (only necessary on encrypted networks):
-
-    $ sudo su -
-    # wpa_passphrase $YOUR_SSID > /etc/wpa_supplicant/wlan0.conf
-    <enter passphrase here and press Enter>
-    # exit
-
-Connect to network using wpa_supplicant:
-
-    $ sudo wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wlan0.conf 
-
-If your network uses DHCP, start the DHCP client:
-
-    $ sudo udhcpc -i wlan0
+If the firmware loads correctly you can follow the steps in [[Setup WiFi with iproute2]] to connect to an accesspoint.
 
 === Keyboard Backlight ===
 
