@@ -4,7 +4,7 @@ Please add devices you're porting here, and write your porting progress in the w
 
 Devices will be officially supported in <code>pmbootstrap</code> when the encrypted root partition can be unlocked and graphical output works.
 
-{|
+{| class="wikitable sortable"
 !width="68%"| Device
 !width="21%"| Codename
 !width="10%"| Status
@@ -80,7 +80,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 
 === Work in progress ===
 
-{|
+{| class="wikitable sortable"
 !width="68%"| Device
 !width="21%"| Codename
 !width="10%"| Status
