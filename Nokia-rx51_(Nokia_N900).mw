@@ -58,7 +58,8 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX
 
 === Wifi ===
 
-The `linux-firmware` package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([#158](https://github.com/postmarketOS/pmbootstrap/pull/158))
+The `linux-firmware` package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/158 #158])
+
 If the firmware loads correctly you can follow the steps in [[Setup WiFi with iproute2]] to connect to an accesspoint.
 
 === Keyboard Backlight ===
