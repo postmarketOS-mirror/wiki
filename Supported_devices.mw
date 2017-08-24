@@ -48,7 +48,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | 
   | 
   | Yes
-  | 
+  | Partially
   | Somewhat
   | Yes
   | Yes
@@ -103,45 +103,125 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | 
   | 
 |-
-  | [[Moto G 2014
-  | motorola-titan (Moto G 2014)]]
+  | [[motorola-titan (Moto G 2014)|Moto G 2014]]
   | motorola-titan
+  | 
+  | 
+  | Somewhat
+  | 
+  | Somewhat
+  | Yes
+  | Yes
+  | Somewhat
+  | 
 |-
-  | [[Mozilla Flame
-  | mozilla-flame]]
+  | [[mozilla-flame|Mozilla Flame]]
   | mozilla-flame
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Somewhat
+  | Yes
+  | Somewhat
+  | 
 |-
-  | [[Nokia N900
-  | nokia-rx51 (Nokia N900)]]
+  | [[nokia-rx51 (Nokia N900)|Nokia N900]]
   | nokia-rx51
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | Yes
+  | Yes
+  | Yes
 |-
-  | [[QEMU (arm)
-  | qemu-vexpress (Qemu with vexpress soc)]]
+  | [[qemu-vexpress (Qemu with vexpress soc)|QEMU (arm)]]
   | qemu-vexpress
+  | 
+  | 
+  | 
+  | Yes
+  | Yes
+  | 
+  | 
+  | 
+  | 
 |-
-  | [[QEMU (x86_64)
-  | qemu-amd64 (QEMU for x86_64)]]
+  | [[qemu-amd64 (QEMU for x86_64)|QEMU (x86_64)]]
   | qemu-amd64
+  | 
+  | 
+  | 
+  | Yes
+  | Yes
+  | 
+  | 
+  | 
+  | 
 |-
-  | [[Samsung Galaxy Note 2
-  | Samsung-N7100-(Galaxy-Note-II-GSM)]]
+  | [[Samsung-N7100-(Galaxy-Note-II-GSM)|Samsung Galaxy Note 2]]
   | samsung-n7100
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | 
+  | 
 |-
-  | [[Samsung Galaxy S Advance
-  | Samsung-i9070-(Samsung-Galaxy-S-Advance)]]
+  | [[Samsung-i9070-(Samsung-Galaxy-S-Advance)|Samsung Galaxy S Advance]]
   | samsung-i9070
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | Yes
+  | Yes
 |-
-  | [[Samsung Galaxy SII
-  | samsung-i9100 (Samsung Galaxy SII)]]
+  | [[samsung-i9100 (Samsung Galaxy SII)|Samsung Galaxy SII]]
   | samsung-i9100
+  | 
+  | 
+  | 
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | 
+  | Yes
 |-
-  | [[Xperia Z1 Compact
-  | sony-amami-(Xperia-Z1-Compact)]]
+  | [[sony-amami-(Xperia-Z1-Compact)|Xperia Z1 Compact]]
   | sony-amami
+  | 
+  | 
+  | Yes
+  | 
+  | Yes
+  | Yes
+  | Yes
+  | 
+  | 
 |-
-  | [[Xperia Z2 Tablet
-  | Xperia Z2 Tablet]]
+  | [[Xperia Z2 Tablet|Xperia Z2 Tablet]]
   | sony-castor-windy
+  | Yes
+  | 
+  | Yes
+  | Partially
+  | Yes
+  | Yes
+  | Yes
+  | Yes
+  | Yes
 |}
 
 === Work in progress ===
