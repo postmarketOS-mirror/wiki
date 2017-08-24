@@ -5,17 +5,17 @@ Please add devices you're porting here, and write your porting progress in the w
 Devices will be officially supported in <code>pmbootstrap</code> when the encrypted root partition can be unlocked and graphical output works.
 
 {| class="wikitable sortable"
-!width="68%"| Device
-!width="21%"| Codename
-!width="10%"| Status
+! Device
+! Codename
+! Status
 |-
-| [[Google Galaxy Nexus (GSM)
-| samsung-maguro (Google Galaxy Nexus GSM)]]
+| [[samsung-maguro (Google Galaxy Nexus GSM)|Google Galaxy Nexus (GSM)]]
 | samsung-maguro
+| FSTUWX
 |-
-| [[Google Nexus 4
-| lg-mako (Google Nexus 4)]]
+| [[lg-mako (Google Nexus 4)|Google Nexus 4]]
 | lg-mako
+| STU
 |-
 | [[Google Nexus 5 (GSM)
 | lg-hammerhead (Google Nexus 5)]]
