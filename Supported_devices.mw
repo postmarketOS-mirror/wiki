@@ -1,0 +1,195 @@
+Please add devices you're porting here, and write your porting progress in the wiki page. Devices are sorted alphabetically.
+
+=== Officially supported ===
+
+Devices will be officially supported in <code>pmbootstrap</code> when the encrypted root partition can be unlocked and graphical output works.
+
+{|
+!width="68%"| Device
+!width="21%"| Codename
+!width="10%"| Status
+|-
+| [[Google Galaxy Nexus (GSM)
+| samsung-maguro (Google Galaxy Nexus GSM)]]
+| samsung-maguro
+|-
+| [[Google Nexus 4
+| lg-mako (Google Nexus 4)]]
+| lg-mako
+|-
+| [[Google Nexus 5 (GSM)
+| lg-hammerhead (Google Nexus 5)]]
+| lg-hammerhead
+|-
+| [[Google Nexus 7 (2012)
+| asus-grouper (Google Nexus 7 2012)]]
+| asus-grouper
+|-
+| [[HTC Desire
+| HTC-Bravo-(HTC-Desire)]]
+| htc-bravo
+|-
+| [[HTC Desire HD
+| HTC-Ace-(HTC-Desire-HD)]]
+| htc-ace
+|-
+| [[LG G3 Global]]
+| lg-d855
+| fSTU
+|-
+| [[Moto G 2014
+| motorola-titan (Moto G 2014)]]
+| motorola-titan
+|-
+| [[Mozilla Flame
+| mozilla-flame]]
+| mozilla-flame
+|-
+| [[Nokia N900
+| nokia-rx51 (Nokia N900)]]
+| nokia-rx51
+|-
+| [[QEMU (arm)
+| qemu-vexpress (Qemu with vexpress soc)]]
+| qemu-vexpress
+|-
+| [[QEMU (x86_64)
+| qemu-amd64 (QEMU for x86_64)]]
+| qemu-amd64
+|-
+| [[Samsung Galaxy Note 2
+| Samsung-N7100-(Galaxy-Note-II-GSM)]]
+| samsung-n7100
+|-
+| [[Samsung Galaxy S Advance
+| Samsung-i9070-(Samsung-Galaxy-S-Advance)]]
+| samsung-i9070
+|-
+| [[Samsung Galaxy SII
+| samsung-i9100 (Samsung Galaxy SII)]]
+| samsung-i9100
+|-
+| [[Xperia Z1 Compact
+| sony-amami-(Xperia-Z1-Compact)]]
+| sony-amami
+|-
+| [[Xperia Z2 Tablet
+| Xperia Z2 Tablet]]
+| sony-castor-windy
+|}
+
+=== Work in progress ===
+
+{|
+!width="68%"| Device
+!width="21%"| Codename
+!width="10%"| Status
+|-
+| [[Apple iPod Touch 1G]]
+| apple-ipt1g
+|
+
+|-
+| [[ASUS Transformer TF101
+| asus-tf101 (ASUS Transformer TF101)]]
+| asus-tf101
+|-
+| [[BlackBerry Bold Touch 9900
+| BlackBerry-Bold-Touch-9900-(Dakota)]]
+| blackberry-dakota
+|-
+| [[Coolpad Sky 3 E502 (Modena 2)]]
+|
+
+|
+
+|-
+| [[Fairphone 2
+| fairphone-2]]
+| fairphone-fp2
+|-
+| [[HP Touchpad
+| hp-tenderloin (HP Touchpad)]]
+| hp-tenderloin
+|-
+| [[HTC Desire Z
+| htc-vision (HTC Desire Z)]]
+| htc-vision
+|-
+| [[HTC Droid DNA
+| htc-monarudo-(HTC-Droid-DNA)]]
+| htc-monarudo
+|-
+| [[Huawei Ascend Y530]]
+| huawei-y530
+| fU
+|-
+| [[Jolla phone
+| jolla-sbj (Jolla phone)]]
+| jolla-sbj
+|-
+| [[Landrover A9
+| landrover-a9]]
+| landrover-a9
+|-
+| [[Samsung Galaxy S5 mini
+| samsung-g800f (Samsung Galaxy S5 mini)]]
+| samsung-g800f
+|-
+| [[Samsung Galaxy S Duos S7562
+| samsung-S7562]]
+| samsung-s7562
+|-
+| [[Xperia Arc
+| semc anzu (Xperia Arc)]]
+| semc-anzu
+|-
+| [[Xperia Z2
+| Xperia Z2]]
+| sony-sirius
+|-
+| [[Xperia E Dual
+| Xperia E Dual]]
+| sony-nanhu
+|-
+| [[Xperia Z3C]]
+| sony-aries
+|
+
+|}
+
+=== Status Legend ===
+
+{|
+! Letter
+! Meaning
+|-
+| 3
+| 3D Acceleration
+|-
+| A
+| Audio
+|-
+| F
+| [[Flash to device
+|-
+| M
+| [[Mainline kernel
+|-
+| S
+| Screen
+|-
+| T
+| [[Touch
+|-
+| U
+| USB Networking
+|-
+| W
+| [[Wifi]]
+|-
+| X
+| XWayland
+|}
+
+''A lowercase letter indicates partial
