@@ -231,75 +231,207 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 !width="21%"| Codename
 !width="10%"| Status
 |-
-| [[Apple iPod Touch 1G]]
-| apple-ipt1g
-|
-
+  | [[apple-ipt1g (Apple iPod Touch 1G)|Apple iPod Touch 1G]]
+  | apple-ipt1g
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[ASUS Transformer TF101
-| asus-tf101 (ASUS Transformer TF101)]]
-| asus-tf101
+  | [[asus-tf101 (ASUS Transformer TF101)|ASUS Transformer TF101]]
+  | asus-tf101
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[BlackBerry Bold Touch 9900
-| BlackBerry-Bold-Touch-9900-(Dakota)]]
-| blackberry-dakota
+  | [[blackberry-dakota (BlackBerry Bold Touch 9900)|BlackBerry Bold Touch 9900]]
+  | blackberry-dakota
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Coolpad Sky 3 E502 (Modena 2)]]
-|
-
-|
-
+  | [[Coolpad Sky 3 E502 (Modena 2)]]
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Fairphone 2
-| fairphone-2]]
-| fairphone-fp2
+  | [[fairphone-2|Fairphone 2]]
+  | fairphone-fp2
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[HP Touchpad
-| hp-tenderloin (HP Touchpad)]]
-| hp-tenderloin
+  | [[hp-tenderloin (HP Touchpad)|HP Touchpad]]
+  | hp-tenderloin
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[HTC Desire Z
-| htc-vision (HTC Desire Z)]]
-| htc-vision
+  | [[htc-vision (HTC Desire Z)|HTC Desire Z]]
+  | htc-vision
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[HTC Droid DNA
-| htc-monarudo-(HTC-Droid-DNA)]]
-| htc-monarudo
+  | [[htc-monarudo (HTC Droid DNA)|HTC Droid DNA]]
+  | htc-monarudo
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Huawei Ascend Y530]]
-| huawei-y530
-| fU
+  | [[huawei-y530 (Huawei Ascend Y530)|Huawei Ascend Y530]]
+  | huawei-y530
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Jolla phone
-| jolla-sbj (Jolla phone)]]
-| jolla-sbj
+  | [[jolla-sbj (Jolla phone)|Jolla phone]]
+  | jolla-sbj
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Landrover A9
-| landrover-a9]]
-| landrover-a9
+  | [[landrover-a9|Landrover A9]]
+  | landrover-a9
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Samsung Galaxy S5 mini
-| samsung-g800f (Samsung Galaxy S5 mini)]]
-| samsung-g800f
+  | [[samsung-g800f (Samsung Galaxy S5 mini)|Samsung Galaxy S5 mini]]
+  | samsung-g800f
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Samsung Galaxy S Duos S7562
-| samsung-S7562]]
-| samsung-s7562
+  | [[samsung-S7562|Samsung Galaxy S Duos S7562]]
+  | samsung-s7562
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Xperia Arc
-| semc anzu (Xperia Arc)]]
-| semc-anzu
+  | [[semc anzu (Xperia Arc)|Xperia Arc]]
+  | semc-anzu
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Xperia Z2
-| Xperia Z2]]
-| sony-sirius
+  | [[sony-sirius (Xperia Z2)|Xperia Z2]]
+  | sony-sirius
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Xperia E Dual
-| Xperia E Dual]]
-| sony-nanhu
+  | [[sony-nanhu (Xperia E Dual)|Xperia E Dual]]
+  | sony-nanhu
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |-
-| [[Xperia Z3C]]
-| sony-aries
-|
-
+  | [[sony-aries (Xperia Z3C)|Xperia Z3C]]
+  | sony-aries
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
 |}
