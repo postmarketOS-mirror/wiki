@@ -1,7 +1,7 @@
 ## Important Note 
 This page is a work in progress, and is not complete enough at this point to be useful.
 
-### Introduction
+== Introduction ==
 
 If you own a device which has been ported to postmarketOS, then this page will help you to obtain, build, and install postmarketOS to this device.
 
@@ -9,7 +9,7 @@ Any commands that are expected to be entered into a terminal are prefixed with `
 
 `$ ls`
 
-### Requirements
+== Requirements ==
 
 The following applications should be installed:
 
@@ -18,14 +18,14 @@ The following applications should be installed:
 - git
 
 
-### Obtaining postmarketOS
+== Obtaining postmarketOS ==
 
 At this point in the project, it is recommended to build postmarketOS from the latest available source code. It can be obtained by running the following:
 
 `$ git clone https://github.com/postmarketOS/pmbootstrap.git`
 
 
-### Building postmarketOS
+== Building postmarketOS ==
 
 First, initialize the work directory. Replace `$WORKDIR` with the desired location for placing the output from the build process. It is recommended to have at least 10GB of available space in this location. 
 
