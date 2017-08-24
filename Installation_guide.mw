@@ -15,10 +15,8 @@ $ ls
 
 The following applications should be installed:
 
-- python 3
-
-- git
-
+* python 3.4+
+* git
 
 == Obtaining postmarketOS ==
 
