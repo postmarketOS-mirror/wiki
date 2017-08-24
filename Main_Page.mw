@@ -3,26 +3,26 @@
 
 == General information ==
 
-# [https://ollieparanoid.github.io/post/postmarketOS/ Introduction post] ''the utopic vision and goals''
-# [Security warning](https://ollieparanoid.github.io/post/security-warning/) ''about running unfixable outdated firmware software''
-# [[Supported devices]] ''quite a few Android devices, and the N900''
-# [[Milestones]] ''where individuals want to take the project''
-# [[Installation guide]] ''for devices, which are already working''
+* [https://ollieparanoid.github.io/post/postmarketOS/ Introduction post] ''the utopic vision and goals''
+* [https://ollieparanoid.github.io/post/security-warning/ Security warning] ''about running unfixable outdated firmware software''
+* [[Supported devices]] ''quite a few Android devices, and the N900''
+* [[Milestones]] ''where individuals want to take the project''
+* [[Installation guide]] ''for devices, which are already working''
 
 == Development ==
-# [[Porting to a new device]] *and general installation guide*
-# [[Troubleshooting]] *the page to read when something isn't working*
-# [[Deviceinfo reference]] *our work-in-progress device-specific file format*
-# [[Creating a package]] *and how to recycle package recipes from other distributions*
-# [[Migration to aports subfolders]] *how to migrate old checkouts to the new folder structure*
-# [[Mainline kernel|The mainline kernel]] *early work on getting device kernels into mainline Linux*
-# [[Development guide]] *currently has a git hook for working on packages*
+* [[Porting to a new device]] *and general installation guide*
+* [[Troubleshooting]] *the page to read when something isn't working*
+* [[Deviceinfo reference]] *our work-in-progress device-specific file format*
+* [[Creating a package]] *and how to recycle package recipes from other distributions*
+* [[Migration to aports subfolders]] *how to migrate old checkouts to the new folder structure*
+* [[Mainline kernel|The mainline kernel]] *early work on getting device kernels into mainline Linux*
+* [[Development guide]] *currently has a git hook for working on packages*
 
 == Communication channels ==
-# [[Matrix and IRC]] *live chat makes development easier*
-# [Issues](https://github.com/postmarketOS/pmbootstrap/issues) *besides bugs, lots feature ideas and questions, [mobile UI](https://github.com/postmarketOS/pmbootstrap/issues/62) for example*
-# [Reddit](https://reddit.com/r/postmarketOS) *photos of devices running pmOS, blog posts, questions, official announcements*
+* [[Matrix and IRC]] *live chat makes development easier*
+* [Issues](https://github.com/postmarketOS/pmbootstrap/issues) *besides bugs, lots feature ideas and questions, [mobile UI](https://github.com/postmarketOS/pmbootstrap/issues/62) for example*
+* [Reddit](https://reddit.com/r/postmarketOS) *photos of devices running pmOS, blog posts, questions, official announcements*
 
 == Contributing to the wiki ==
-# [Mastering markdown](https://guides.github.com/features/mastering-markdown/) *guide on how to properly format text in the wiki*
-# [Edit the sidebar](https://github.com/postmarketOS/pmbootstrap/wiki/_Sidebar/_edit) *we put all pages there, except for the device specific pages*
+* [Mastering markdown](https://guides.github.com/features/mastering-markdown/) *guide on how to properly format text in the wiki*
+* [Edit the sidebar](https://github.com/postmarketOS/pmbootstrap/wiki/_Sidebar/_edit) *we put all pages there, except for the device specific pages*
