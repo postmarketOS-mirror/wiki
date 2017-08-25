@@ -1,0 +1,25 @@
+Here is a practical approach on how to port packages from other Linux distributions to pmOS (because that is usually the fastest way). Feel free to extend this information, and to add other distributions.
+
+=== General information ===
+
+* Please read [https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package#APKBUILD_variables.2Ffunctions this section] from our upstream friends wiki (''which we should also extend and improve'')
+* Please always package the latest version of a software (unless it is impossible because of software that depends on it, but try to avoid that!)
+* Please do not copy maintainers/contributors from the other packages to your new ports (so they won't get annoyed by questions for pmOS/Alpine packages!). Instead please credit them in the commit messages (maybe with a link to the original build recipe)
+* Alpine Linux uses <code>musl</code> as libc, not <code>glibc</code>. Never add <code>glibc</code> as dependency.
+* Alpine uses busybox' <code>sh</code> for building packages. Do not use bash specific features.
+* Manpages and other documentation goes into an extra -doc package in Alpine, and abuild will complain if the main package contains them. The solution is to add this: <code>subpackages=&quot;$pkgname-doc&quot;</code> ([https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#doc.28.29 more info])
+* You can look up the exact meaning of every variable and function in the [https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD Reference]
+* Set up the git hook from the [[development guide]] article to automatically verify checksums in your APKBUILDs and therefore making your life easier
+
+=== Porting packages from Arch Linux ===
+
+==== Find the package ====
+
+[https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches appears).
+
+==== Differences between APKBUILDs and PKGBUILDs ====
+
+* <code>APKBUILD</code>s do not have the arrays from bash, use flat strings instead
+* There's no <code>optdepends</code>
+* <code>-doc</code> subpackages (see above)
+* <code>APKBUILD</code> has different options (!makeflags won't work, but it has !strip and !check)
