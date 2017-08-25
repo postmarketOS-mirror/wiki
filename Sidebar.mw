@@ -1,0 +1,54 @@
+'''[[postmarketOS|Home]]'''
+
+* [[Battery replacement]]
+* [[Boot process]]
+* [[Build internals]]
+* [[Device wishlist]]
+* [[Deviceinfo reference]]
+** [[bootimg_qcdt|deviceinfo_bootimg_qcdt]]
+** [[flash_methods|deviceinfo_flash_methods]]
+* [[Devices]]
+* [[External resources]]
+* [[Firmware]]
+* [[Glossary]]
+* [[Matrix and IRC]]
+* [[Milestones]]
+* [[Package naming convention]]
+* [[Partition layout]]
+* [[QMI (Qualcomm MSM Interface)]]
+* [[Related Projects]]
+* [[Tips and tricks]]
+* [[Troubleshooting]]
+** [[Grsec|Troubleshooting:grsec]]
+** [[Kernel|Troubleshooting:kernel]]
+* [[Upstreaming]]
+* [[User Interfaces]]
+
+'''Interfaces'''
+
+* [[Hildon]]
+* [[Plasma Mobile]]
+* [[Packaging|Packaging Plasma Mobile]]
+
+'''Howto'''
+
+* [[Create a package|Creating a package]]
+* [[Development guide]]
+* [[Find device specific information|How to find device specific information]]
+* [[Initramfs development]]
+* [[Inspecting the initramfs]]
+* [[Installation guide]]
+* [[Mainline Kernel|The Mainline Kernel]]
+* [[Provide packages with a local webserver|Installing-packages-on-a-running-phone]]
+* [[Porting to a new device]]
+* [[Qemu|Common Qemu Notes]]
+* [[Screen calibration]]
+* [[Serial debugging]]
+* [[Tuning sysfs]]
+* [[Using prebuilt kernels]]
+* [[Wifi]]
+
+'''[https://alpinelinux.org/ Alpine Linux]'''
+
+* [https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD reference]
+* [http://pkgs.alpinelinux.org/ Package search]
