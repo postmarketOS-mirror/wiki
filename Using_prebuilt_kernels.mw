@@ -1,0 +1,47 @@
+Some vendors do not release the kernel source code, which is very bad for freedom and goes against the Linux kernel license (see [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting#my-device-runs-the-linux-kernel-eg-android-but-the-vendor-does-not-provide-the-source My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source] in the Troubleshooting page.
+
+But you can still extract the kernel image from a device that is running Android and use it to run postmarketOS. Of course this is ''totally discouraged'' because we want to make sure that we know the code our devices are running but you might find it useful in order to start hacking on postmarketOS without having the kernel source code.
+
+== Extracting boot.img from an Android device ==
+
+You can extract the kernel that is running your Android device, it doesn't matter if it's the stock ROM, LineageOS or any custom ROM. For this approach you need the <code>adb</code> tool and root permissions.
+
+NOTE: in this example the boot partition is named msm_sdcc.1 but it might have a different name in your device
+
+<source lang="bash"># Connect to your Android device
+adb shell
+
+# Find the partition name
+ls -l /dev/block/platform/
+ls -l /dev/block/platform/msm_sdcc.1/by-name
+
+# From there we know that the boot partition is /dev/block/mmcblk0p14
+# Now we just dump the partition to a file (we need to root permissions)
+su
+cat /dev/block/mmcblk0p14 > /sdcard/boot.img
+chmod 0666 /sdcard/boot.img
+
+# Exit from adb and copy boot.img to your computer
+adb pull /sdcard/boot.img .</source>
+== Running postmarketOS with a pre-built kernel ==
+
+You can use <code>unpackbootimg</code> (usage is described in [[here|How to find device specific information]]) to extract the kernel from your recently extracted boot.img or from a LineageOS release and run it together with postmarketOS initramfs.
+
+If you extracted the kernel from you Stock ROM, it might not have encryption support enabled and in this case you would not be able to boot from an encrypted partition which is how postmarketOS works by default. To disable encryption in postmarketOS use <code>pmbootstrap install --no-fde</code>. You might need other modules as well for pmOS to work properly.
+
+<source lang="bash"># fastboot boot <kernel> [ <ramdisk> ]
+fastboot boot \
+uncompressed_boot/boot.img-zImage \
+~/.local/var/pmboostrap/chroot_rootfs-XXX-XXXX/boot/initramfs-lg-hammerhead</source>
+== Maybe we can chainload the pmOS kernel? ==
+
+Linux kernels can load other kernels via the [https://en.wikipedia.org/wiki/Kexec kexec] syscall. The deal is, that signed bootloaders only allow signed kernels. But what if we repackaged the signed kernel with our own initramfs, that loads our own kernel via kexecboot from the boot subpartition? Not sure if this will work because of SELinux etc, but if it did, it would be a nice way to get around the bootloader's signed kernel enforcement! '''If you have an usecase for this, please open a ticket to discuss this further.'''
+
+More research showed, that the <code>kexec</code> syscall is usually disabled in such kernels. However, it could be possible to do <code>kexec</code> without it being enabled in the kernel (such as it has been done in the PS4 hack, where a kexec gets done on the PS4's BSD kernel, which does obviously not support this feature, to load a Linux kernel). This is ''a lot'' of work, but it would be an impressive hack!
+
+kexec is also used by [https://forum.xda-developers.com/showthread.php?t=2011403 MultiROM] in order to allow users to choose which ROM to boot up. For MultiROM support in pmbootstrap, see [https://github.com/postmarketOS/pmbootstrap/issues/421 issue #421].
+
+== Useful links ==
+
+* [https://github.com/lygstate/lygstate.github.com/blob/master/_posts/2014-03-10-Extract-boot.img-from-an-android-device.md 2014-03-10-Extract-boot.img-from-an-android-device.md]
+* [http://android-dls.com/wiki/index.php?title=HOWTO:_Unpack%2C_Edit%2C_and_Re-Pack_Boot_Images HOWTO: Unpack, Edit, and Re-Pack Boot Images]
