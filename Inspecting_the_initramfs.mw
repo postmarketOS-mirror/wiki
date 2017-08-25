@@ -1,0 +1,15 @@
+This page explains how to connect to your device when it has booted to the [[initramfs|Initramfs-development]] by installing the so-called [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/main/postmarketos-mkinitfs-hook-usb-shell/20-usb-shell.sh usb-shell hook]. This is useful if you want to know more about the [[boot process]], simply inspect the initramfs or you want to debug why something doesn't work.
+
+'''NOTE: This is considered a security hole. Only use it for debugging, and uninstall the usb-shell hook afterwards'''
+
+By default, initramfs launchs a telnet daemon listening on <code>:23</code> waiting for your partition password.
+
+It is possible to enable a second telnet daemon on <code>:24</code> that gives you a shell this way:
+
+<pre class="shell">./pmbootstrap.py initfs hook_add usb-shell
+./pmbootstrap.py install</pre>
+After reflashing the kernel or booting with the new initramfs image, you should be able to connect to the new telnet instance.
+
+=== Tips and tricks ===
+
+* [http://www.microhowto.info/howto/copy_a_file_from_one_machine_to_another_using_netcat.html copy files to/from the initramfs with <code>nc</code> while it is running]
