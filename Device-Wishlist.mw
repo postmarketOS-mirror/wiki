@@ -1,0 +1,25 @@
+We have been asked, which devices we would like to see pmOS running on - by people who might specifically buy them (with broken screens etc, to get them cheaper) to help the project. Please list devices here, that you would like to see pmOS running on. Do not list devices, that we already have a port for, or specify a reason why you do.
+
+== Candidate Devices ==
+
+* Fairphone 1 &amp; 2
+* [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
+* Openmoko (they come with open source baseband firmware!)
+* Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
+* Intex Aqua Fish and Other Sailfish running devices
+* Oneplus One
+* Ubuntu phones
+* BQ Aquaris E4.5
+* BQ Aquaris E5
+* BQ Aquaris M10
+* Meizu MX4
+* Meizu PRO 5
+
+== Mainline Linux Candidate Devices ==
+
+* [https://plus.google.com/102276447148493441479/posts/amRvpE8piSw Sony Xperia Z3]
+* [http://elektranox.org/droid4/ Motorola Droid 4]
+
+== Low Priority Devices ==
+
+* Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine)
