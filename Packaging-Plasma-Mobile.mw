@@ -1,0 +1,1024 @@
+This page keeps track of what needs to be packaged to get Plasma Mobile working ([https://github.com/postmarketOS/pmbootstrap/issues/161 #161]). The minimal set of programs is already packaged (thanks to PureTryOut!). See [[Plasma Mobile]] for further documentation on getting it running.
+
+The dependencies listed are dependencies of packages not packaged by Alpine. This list is subject to change. The list is based on [https://github.com/blue-systems/pm-arch/tree/master/packages this Arch repository].
+
+=== Packages already in the Alpine repositories ===
+
+{|
+!width="28%"| Required packages
+!width="24%"| Dependency of
+!width="31%"| Packaged by Alpine
+!width="15%"| Status
+|-
+| qt5-qttools-dev
+| baloo, kfilemetadata, ki18n, karchive, kpty, kdelibs4support, threadweaver, plasma-framework, kwayland, plasma-workspace, kpeople, kcoreaddons, kunitconversion, kitemmodels, kemoticons, kparts, kdesignerplugin, kactivities, kdeclarative, kjsembed, knotifyconfig, ktexteditor, kholidays, kwin, krunner, kxmlrpcclient, networkmanager-qt, kdesignerplugin, kservice, kwidgetsaddons, kitemviews, kplotting, kconfig, kwindowsystem, kpackage, kdesu, kcmutils, kcrash, kdbusaddons, kcodecs, kauth, kguiaddons, knewstuff, ki18n, kdoctools, kjsembed, kservice, kcontacts, kpackage
+| yes
+|
+
+|-
+| lmdb-dev
+| baloo
+| yes
+|
+
+|-
+| docbook-xsl
+| kdoctools, appstream-qt, libaccounts-glib
+| yes
+|
+
+|-
+| taglib-dev
+| kfilemetadata
+| yes
+|
+
+|-
+| qt5-qtdeclarative
+| kpeople, kactivities, qt5-qtwebchannel, qt5-qtlocation
+| yes
+|
+
+|-
+| qt5-qtdeclarative-dev
+| ki18n, plasma-maliit-framework, plasma-maliit-plugin
+| yes
+|
+
+|-
+| py3-qt5
+| ki18n, kcoreaddons, kitemmodels, kwidgetsaddons, kitemviews, kconfig, kdbusaddons, kcodecs, kauth, kguiaddons, kconfigwidgets
+| yes
+|
+
+|-
+| qt5-qtbase
+| karchive, threadweaver, kwayland, kcoreaddons, kitemmodels, kjs, kholidays, appstream-qt, networkmanager-qt, kwidgetsaddons, kitemviews, kplotting, kconfig, kcodecs, kdecoration, qt5-qtpolkit, qt5-qtpackagekit
+| yes
+|
+
+|-
+| qt5-qtsvg
+| kjsembed
+| yes
+|
+
+|-
+| qt5-qtgraphicaleffects
+| plasma-phone-components
+| yes
+|
+
+|-
+| networkmanager
+| networkmanager-qt, packagekit
+| yes
+|
+
+|-
+| networkmanager-dev
+| kdelibs4support
+| yes
+|
+
+|-
+| mesa-dev
+| threadweaver, kservice, kplotting, kcrash, kguiaddons, kconfigwidgets
+| yes
+|
+
+|-
+| giflib
+| khtml
+| yes
+|
+
+|-
+| gperf-dev
+| khtml, kcodecs
+| yes
+|
+
+|-
+| qt5-qtquickcontrols
+| plasma-framework
+| yes
+|
+
+|-
+| libgit2
+| ktexteditor
+| yes
+|
+
+|-
+| libxml2
+| libqalculate, appstream-qt, libaccounts-glib
+| yes
+|
+
+|-
+| wayland
+| kwayland
+| yes
+|
+
+|-
+| gpsd-dev
+| plasma-workspace
+| yes
+|
+
+|-
+| libepoxy
+| kdeclarative
+| yes
+|
+
+|-
+| gconf-dev
+| qt5-qtlocation
+| yes
+|
+
+|-
+| util-macros
+| xmessage
+| yes
+|
+
+|-
+| glib
+| libqalculate, appstream-qt
+| yes
+|
+
+|-
+| perl-xml-parser
+| libqalculate
+| yes
+|
+
+|-
+| intltool
+| libqalculate, packagekit
+| yes
+|
+
+|-
+| libxaw
+| xmessage
+| yes
+|
+
+|-
+| font-noto
+| plasma-integration
+| yes
+|
+
+|-
+| gobject-introspection
+| appstream-qt, packagekit
+| yes
+|
+
+|-
+| itstool
+| appstream-qt
+| yes
+|
+
+|-
+| vala
+| appstream-qt, packagekit
+| yes
+|
+
+|-
+| gtk-doc
+| libaccounts-glib, packagekit
+| yes
+|
+
+|-
+| libical
+| kcalcore
+| yes
+|
+
+|-
+| dbus-glib
+| libaccounts-glib, packagekit
+| yes
+|
+
+|-
+| sqlite
+| libaccounts-glib, packagekit
+| yes
+|
+
+|-
+| py-gobject
+| libaccounts-glib
+| yes
+|
+
+|-
+| libxfixes
+| kwindowsystem
+| yes
+|
+
+|-
+| automoc4
+| breeze, kdelibs. qt5-qtpolkit
+| yes
+|
+
+|-
+| polkit
+| packagekit
+| yes
+|
+
+|-
+| polkit-dev
+| qt5-qtpolkit
+| yes
+|
+
+|-
+| shared-mime-info
+| packagekit
+| yes
+|
+
+|-
+| snowball
+| appstream-qt
+| yes
+|
+
+|-
+| dbus-glib
+| telepathy-glib
+| yes
+|
+
+|-
+| gtk-doc
+| telepathy-farstream
+| yes
+|
+
+|-
+| glib-doc
+| telepathy-farstream
+| yes
+|
+
+|-
+| vala
+| telepathy-glib
+| yes
+|
+
+|-
+| gobject-introspection
+| telepathy-farstream, telepathy-glib
+| yes
+|
+
+|}
+
+=== Packages yet to be packaged ===
+
+{|
+!width="28%"| Required packages
+!width="24%"| Dependency of
+!width="31%"| Packaged by Alpine
+!width="15%"| Status
+|-
+| extra-cmake-modules
+| all KDE packages
+| no, only an outdated version (5.31.x rather than 5.36.x)
+| compiles
+|-
+| karchive
+| kdoctools, kfilemetadata, kemoticons, kpackage
+| no
+| compiles
+|-
+| qt5-qtscript-dev
+| ki18n
+| yes for all architectures, except armhf due to a build failure. It however compiles fine now
+| upstreamed
+|-
+| kdecoration
+| breeze
+| no
+| compiles
+|-
+| autoconf-archive
+| packagekit
+| no
+| compiles
+|-
+| libyaml
+| appstream-qt
+| no
+| compiles
+|-
+| kwindowsystem
+| kactivities, kcrash
+| no
+| compiles
+|-
+| kwidgetsaddons
+| kpeople, kconfigwidgets
+| no
+| compiles
+|-
+| kitemviews
+| kpeople
+| no
+| compiles
+|-
+| kcoreaddons
+| kpty, kactivities, kcontacts, kpackage, kcrash, kauth
+| no
+| compiles
+|-
+| kunitconversion
+| kdelibs4support
+| no
+| compiles
+|-
+| kitemmodels
+| kdelibs4support
+| no
+| compiles
+|-
+| libutempter
+| kpty
+| no
+| doesn't compile, glibc is required
+|-
+| kwayland
+| plasma-maliit-framework, plasma-framework, plasma-integration, kscreenlocker
+| no
+| compiles
+|-
+| poppler-qt5
+| kfilemetadata
+| no, only a qt4 version
+| compiles
+|-
+| kdoctools
+| plasma-mobile, kdelibs4support, plasma-framework, plasma-workspace, kded, kdesignerplugin, kjs, kjsembed, kde-cli-tools, milou, kwin, krunner, kdesignerplugin, kservice, kcalcore, kinit, kpackage, kscreenlocker
+| no
+| compiles
+|-
+| kfilemetadata
+| baloo
+| no
+| compiles
+|-
+| kidletime
+| baloo, kscreenlocker
+| no
+| compiles
+|-
+| polkit-qt5
+| kauth
+| no
+| compiles
+|-
+| kcrash
+| kservice
+| no
+| compiles
+|-
+| kdbusaddons
+| kservice, kio
+| no
+| compiles
+|-
+| kcodecs
+| kcontacts, kconfigwidgets
+| no
+| compiles
+|-
+| kconfig
+| kactivities, kservice, kcontacts, kio, kconfigwidgets
+| no
+| compiles
+|-
+| kpackage
+| kdeclarative, frameworkintegration
+| no
+| compiles
+|-
+| networkmanager-qt
+| plasma-workspace
+| no
+| compiles
+|-
+| kservice
+| kpeople, kemoticons, kdesu, kinit, kio
+| no
+| compiles
+|-
+| solid
+| kio
+| no
+| compiles
+|-
+| media-player-info
+| kio
+| no
+| compiles
+|-
+| kauth
+| kconfigwidgets
+| no
+| compiles
+|-
+| kguiaddons
+| kconfigwidgets
+| no
+| compiles
+|-
+| kconfigwidgets
+| libksysguard, kbookmarks
+| no
+| compiles
+|-
+| kiconthemes
+| kbookmarks
+| no
+| compiles
+|-
+| kcompletion
+| ktextwidgets
+| no
+| compiles
+|-
+| sonnet
+| ktextwidgets
+| no
+| compiles
+|-
+| ktextwidgets
+| kxmlgui
+| no
+| compiles
+|-
+| kglobalaccel
+| kxmlgui
+| no
+| compiles
+|-
+| kxmlgui
+| kbookmarks
+| no
+| compiles
+|-
+| kbookmarks
+| kio
+| no
+| compiles
+|-
+| kjobwidgets
+| kio
+| no
+| compiles
+|-
+| kio
+| baloo, kparts, kdesignerplugin, kdeclarative, knotifyconfig, kactivitymanagerd, plasma-integration, kxmlrpcclient, kdesignerplugin, kinit, knewstuff
+| no
+| compiles
+|-
+| kactivitymanagerd
+| plasma-workspace
+| no
+| compiles
+|-
+| knotifyconfig
+| plasma-workspace
+| no
+| compiles
+|-
+| kjs
+| khtml, kjsembed
+| no
+| compiles
+|-
+| kactivities
+| plasma-framework
+| no
+| compiles
+|-
+| kdeclarative
+| plasma-framework, kcmutils, kscreenlocker
+| no
+| compiles
+|-
+| knotifications
+| plasma-framework
+| no
+| compiles
+|-
+| plasma-framework
+| plasma-samegame, plasma-settings, kwin
+| no
+| compiles
+|-
+| cln
+| libqalculate
+| no
+| compiles
+|-
+| kemoticons
+| kdelibs4support
+| no
+| compiles
+|-
+| kinit
+| kded
+| no
+| compiles
+|-
+| kded
+| kdelibs4support
+| no
+| compiles
+|-
+| kparts
+| kdelibs4support, khtml, ktexteditor
+| no
+| compiles
+|-
+| kpeople
+| plasma-phone-components
+| no
+| compiles
+|-
+| kjsembed
+| plasma-workspace
+| no
+| compiles
+|-
+| kdesignerplugin
+| plasma-workspace, kdelibs4support, kcalcore
+| no
+| compiles
+|-
+| kdelibs4support
+| plasma-settings, plasma-workspace, kcalcore
+| no
+| compiles
+|-
+| frameworkintegration
+| breeze
+| no
+| compiles
+|-
+| kpty
+| kdesu
+| no
+| compiles
+|-
+| kdesu
+| kde-cli-tools
+| no
+| compiles
+|-
+| kcmutils
+| kde-cli-tools, kwin, kscreenlocker, breeze
+| no
+| compiles
+|-
+| ktexteditor
+| plasma-workspace
+| no
+| compiles
+|-
+| threadweaver
+| krunner
+| no
+| compiles
+|-
+| krunner
+| breeze, plasma-workspace, milou
+| no
+| compiles
+|-
+| kscreenlocker
+| kwin
+| no
+| compiles
+|-
+| breeze
+| kwin, plasma-integration
+| no
+| compiles
+|-
+| kwin
+| plasma-workspace
+| no
+| compiles
+|-
+| milou
+| plasma-workspace
+| no
+| compiles
+|-
+| baloo
+| plasma-mobile, plasma-workspace
+| no
+| compiles
+|-
+| plasma-workspace
+| plasma-phone-components, plasma-mobile
+| no
+| compiles
+|-
+| plasma-mobile
+|
+
+| no
+| compiles
+|-
+| farstream
+| telepathy-farstream
+| yes, but upstream APKBUILD has wrong dependency and fails
+| upstreamed
+|-
+| telepathy-glib
+| telepathy-farstream
+| no
+| compiles
+|-
+| telepathy-farstream
+| telepathy-qt5
+| no
+| compiles
+|-
+| telepathy-qt5
+| plasma-phone-components
+| no
+| compiles
+|-
+| plasma-phone-components
+|
+
+| no
+| compiles
+|}
+
+=== Optional (extra apps and functionality, but not required to get the base working) ===
+
+{|
+! Required packages
+! (Optional) Dependency of
+! Packaged by Alpine
+! Status
+|-
+| qt5-qtdeclarative-dev
+| libqofono-qt5
+| yes
+|
+
+|-
+| libqofono-qt5
+|
+
+| no
+| ?
+|-
+| bluez
+| gypsy
+| yes
+|
+
+|-
+| bluez-libs
+| gypsy
+| yes
+|
+
+|-
+| libgudev
+| gypsy
+| yes
+|
+
+|-
+| dbus-glib
+| gypsy
+| yes
+|
+
+|-
+| libxslt
+| gypsy
+| yes
+|
+
+|-
+| libxslt
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| libxdamage
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| minizip
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| ffmpeg
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| jsoncpp-dev
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| ninja
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| libvpx
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| libevent
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| libsrtp
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| snappy
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| nss
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| protobuf
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| libxcomposite
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| libxrandr
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| pciutils
+| qt5-qtwebengine
+| yes
+|
+
+|-
+| gperf-dev
+| khtml, qt5-qtwebengine, kcodecs
+| yes
+|
+
+|-
+| gypsy
+| qt5-qtlocation
+| no
+| compiles
+|-
+| qt5-qtwebchannel
+| qt5-qtwebengine
+| no
+| ?
+|-
+| qt5-qtlocation
+| qt5-qtwebengine
+| no
+| ?
+|-
+| kdoctools
+| kconfigwidgets
+| no
+| compiles
+|-
+| qt5-qtwebengine
+| plasma-angelfish
+| no
+| ?
+|-
+| knewstuff
+| frameworkintegration
+| no
+| compiles
+|-
+| kcontacts
+| libkgapi
+| no
+| ?
+|-
+| kcalcore
+| libkgapi
+| no
+| ?
+|-
+| libkgapi
+| plasma-settings
+| no
+| ?
+|-
+| kplotting
+| kdesignerplugin
+| no
+| compiles
+|-
+| plasma-integration
+| plasma-workspace
+| no
+| ?
+|-
+| plasma-maliit-framework
+| plasma-maliit-plugin
+| no
+| ?
+|-
+| plasma-maliit-plugin
+|
+
+| no
+| ?
+|-
+| plasma-settings
+|
+
+| no
+| ?
+|-
+| libqalculate
+| plasma-workspace
+| no
+| ?
+|-
+| kde-cli-tools
+| plasma-workspace
+| no
+| ?
+|-
+| plasma-samegame
+|
+
+| no
+| ?
+|}
+
+=== Plasma Mobile Browser ===
+
+{|
+! Required packages
+! Dependency of
+! Packaged by Alpine
+! Status
+|-
+| plasma-angelfish
+|
+
+| no
+| ?
+|}
+
+=== Plasma Calendar ===
+
+{|
+! Required packages
+! Dependency of
+! Packaged by Alpine
+! Status
+|-
+| kholidays
+| plasma-workspace
+| no
+| ?
+|}
+
+=== Plasma Camera ===
+
+{|
+! Required packages
+! Dependency of
+! Packaged by Alpine
+! Status
+|-
+| plasma-framework
+| plasma-camera
+| no
+| compiles
+|-
+| plasma-camera
+|
+
+| no
+| ?
+|}
+
+=== Okular Universal Document Viewer ===
+
+{|
+! Required packages
+! Dependency of
+! Packaged by Alpine
+! Status
+|-
+| kdelibs4support
+| okular-frameworks
+| no
+| compiles
+|-
+| khtml
+| okular-frameworks
+| no
+| ?
+|-
+| chmlib
+| okular-frameworks
+| no
+| ?
+|-
+| threadweaver
+| okular-frameworks
+| no
+| compiles
+|-
+| kactivities-frameworks
+| okular-frameworks
+| no
+| ?
+|-
+| kpty
+| okular-frameworks
+| no
+| ?
+|-
+| okular-frameworks
+|
+
+| no
+| ?
+|}
+
+=== Koko Image Gallery ===
+
+{|
+! Required packages
+! Dependency of
+! Packaged by Alpine
+! Status
+|-
+| koko
+|
+
+| no
+| ?
+|}
