@@ -1,0 +1,40 @@
+=== Contributors ===
+
+* alexlep
+
+=== Random information ===
+
+<ul>
+<li><p>Obscure phone:</p>
+<blockquote><p>This is just another clone from millions of devices from Chinese manufacturers.</p></blockquote></li>
+<li>MT6582 CPU</li>
+<li><p>Product code F090_GPS_KK</p></li></ul>
+
+=== Status ===
+
+<ul>
+<li>a boot.img file with kernel, initramfs and dtb file from pmOS does ''not'' work.</li>
+<li>alexlep has a boot.img file from the vendor somewhere (extracted from the device?), that works when flashed via <code>fastboot boot</code>. It can not be extracted like a normal boot.img file, as reported on IRC. Probably the extraction tool can't handle the files.</li>
+<li><p>according to alexlep, there is a 512b header in front of the kernel and initramfs:</p>
+<blockquote><p>ramdisk and kernel has 512 bytes added in the beginning of the files</p>
+<p>custom header with file description</p></blockquote></li>
+<li><p>...and simply prepending that header in front of a custom initramfs/kernel does not work, as he reports.</p></li></ul>
+
+extracted boot.img, first bytes of pmOS initramfs (not working):
+
+<pre>sp@sppc:~/else/pmbs_work/chroot_native/pmos/extracted$ xxd -l 50 ramdisk
+00000000: 1f8b 0800 0000 0000 0203 949a 0d70 1ce5  .............p..
+00000010: 79c7 5fb0 09b2 621b 411d ac16 0317 c7a1  y._...b.A.......
+00000020: 0ed8 d6d9 96b1 2026 11b5 70d4 5814 4344 ...... &amp;..p.X.CD
+00000030: ea49                                     .I</pre>
+extracted boot.img, first bytes of the vendor's initramfs (working):
+
+<pre>sp@sppc:~/else/pmbs_work/chroot_native/olololo/extracted$ xxd -l 50 ramdisk
+00000000: 8816 8858 f5a7 0c00 524f 4f54 4653 0000  ...X....ROOTFS..
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 ffff ffff ffff ffff  ................
+00000030: ffff</pre>
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/issues/73 #73] lists lots of issues with the device, and additional information, such as fastboot's partitions output
+* [http://ruggedphoneco.com/smartphones/8-alps-a9-smartphone.html This might be the same phone?]
