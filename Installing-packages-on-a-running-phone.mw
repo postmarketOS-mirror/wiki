@@ -1,0 +1,17 @@
+<ol>
+<li>Go to the pmbootstrap packages dir (by default it's <code>~/.local/var/pmbootstrap/packages</code>)</li>
+<li>Start a webserver <code>python3 -m http.server</code></li>
+<li><p>Change repository on the phone to point to your dev machine in <code>/etc/apk/repositories</code>:<br />
+```</p>
+= You can remove this line =
+
+<p>/home/user/packages/user</p></li></ol>
+
+= Add your dev machine, change the ip-address for your network =
+
+http://192.168.2.42:8000
+
+https://nl.alpinelinux.org/alpine/edge/main<br />
+https://nl.alpinelinux.org/alpine/edge/community<br />
+https://nl.alpinelinux.org/alpine/edge/testing<br />
+``<code>1. Upgrade the package you built with</code>apk upgrade [package name]`
