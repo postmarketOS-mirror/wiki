@@ -1,0 +1,111 @@
+postmarketOS aims to be like a typical Linux distribution - with lots of possibilities to choose from. And with a default selection of components, that are most useful to casual users.<br />
+This means, that there is no concrete plan, that everyone must follow for it to succeed. Instead, '''everyone is encouraged to work on what they enjoy most!'''
+
+In consequence, pmOS does not use a regular milestone plan with versions (at least right now). Here is a list with what individuals are working on. '''Feel free to add yourself here and what you are interested in''' (optionally with priorities and estimated finish date), but you don't have to! If you do, please keep your section of this list updated, and remove finished tasks.
+
+'''These are all estimations''' and the community is expected to understand when something does not work out as planned here. This is a free time project after all, so be grateful, that the individuals step up and share their plans at all.
+
+
+-----
+
+=== [https://github.com/ollieparanoid/ ollieparanoid] ===
+
+''Right now, my primary focus is recruiting more developers by keeping the development enjoyable. Apart from fixing bugs and reviewing/testing/merging PRs, I focus on the following list. Feel free to discuss the importance of these items with me in [https://github.com/postmarketOS/pmbootstrap/wiki/Matrix-and-IRC Matrix/IRC] or on [https://reddit.com/r/postmarketOS /r/postmarketOS] (for longer discussions).''
+
+# Review/test/integrate PRs
+# Help get the new postmarketOS homepage up [https://github.com/postmarketOS/pmbootstrap/issues/321 #321]
+# 100 days of pmOS post
+# Fix low severity pmbootstrap bug [https://github.com/postmarketOS/pmbootstrap/issues/151 #151] (so we're down to 0 pmbootstrap bugs again)
+# pmbootstrap strict build mode [https://github.com/postmarketOS/pmbootstrap/issues/256 #256]
+# Binary package repository [https://github.com/postmarketOS/pmbootstrap/issues/64 #64]
+# Extend initramfs hooks: allow adding files, multiple hook points (e.g. before and after initramfs-extra was loaded) [https://github.com/postmarketOS/pmbootstrap/issues/165 #165]
+# Run the [https://github.com/postmarketOS/pmbootstrap/tree/master/test full testsuite] with Travis CI for each commit/PR
+# Show code coverage in the <code>README.md</code> (with a link to details: which files are not covered by testcases etc.)
+# Use [https://www.shellcheck.net/ <code>shellcheck</code>] for more shell scripts in the repo (maybe for all <code>APKBUILD</code>s?), [https://github.com/postmarketOS/pmbootstrap/issues/110 automatically format shell scripts]
+# [[deviceinfo|deviceinfo reference]] related:
+
+* Write a [https://en.wikipedia.org/wiki/Lint_(software) linter] for deviceinfo files as part of <code>pmbootstrap</code>
+* Add that linting to the static code analysis script for CI
+
+# Various device improvements. I'd like to ''try out'' (with no expectations, that this will work anytime soon!) mainline for <code>lg-mako</code> ([https://github.com/postmarketOS/pmbootstrap/issues/91 #91], [https://github.com/postmarketOS/pmbootstrap/issues/12 #12])
+
+=== MartijnBraam ===
+
+# Try to post as much different devices as portable to find edgecases in the build process
+
+=== AndrewMcSwain ===
+
+# Evangelization
+
+* project-specific (devs)
+* Means: current: word of mouth in Sao Paulo ; future: meetups, talks, panels, presentations
+* philosophy and anthropology of tool-making (gateway for layperson to the hacking community)
+* Means: writings and discussions with intellectuals, the urban youth, the homeless, and the elite of Sao Paulo society
+
+# On-boarding and new dev integration
+# Documentation<br />
+-(''more details to come'')-
+
+=== ata2001 ===
+
+* [x] 1. Implement a feature in pmbootstrap, what will allow users to create recovery flashable zips for android devices. ([https://github.com/postmarketOS/pmbootstrap/issues/109 #109])
+
+# Make postmarketOS work on the following devices:
+#* [x] Sony Xperia Z1 Compact (amami)
+#* [ ] Motorola Moto G 3rd gen. (osprey)
+#* [ ] Motorola Defy+ (jordanplus)
+
+=== Pablo Castellano ===
+
+# Add support for new devices (actually focused on [https://github.com/postmarketOS/pmbootstrap/wiki/motorola-titan-%28Moto-G-2014%29 Moto G 2014]). If you want, you can send me your device by mail and I will try to add pmOS support to it. After that I will return the device back to you.
+# Make pmOS debugging easier for new developers
+# Improve documentation &amp; usability of <code>pmboostrap</code>/<code>pmOS</code>
+
+=== [https://github.com/craftyguy craftyguy] ===
+
+# Develop [https://github.com/postmarketOS/osk-sdl osk-sdl], an sdl/directfb on-screen keyboard for use during initramfs execution
+# Make the greatest device ever, the Nokia N900, the best device to use with postmarketOS.
+
+* telephony
+* audio
+* UI (plasma?)
+
+# Assist with documentation &amp; on IRC/matrix where I can.
+
+=== [https://github.com/drebrez drebrez] ===
+
+* [x] Optimizing the pmOS system image size by creating the partitions as small as possible and resize them during the first boot ([https://github.com/postmarketOS/pmbootstrap/pull/127 #127])
+* [x] Add possibility to export an Odin flashable file for samsung devices (<code>pmbootstrap flasher export --odin</code>)
+* [ ] Add support for [https://en.wikipedia.org/wiki/Memory_Technology_Device MTD] devices (generate yaffs2 image, adapt initramfs script)
+* [ ] Add support for new devices (actually focused on [https://github.com/postmarketOS/pmbootstrap/wiki/Huawei-Ascend-Y530 Huawei Ascend Y530], next device might be the Samsung Galaxy S5)
+* [ ] Porting PostmarketOS to a [https://github.com/postmarketOS/pmbootstrap/wiki/BlackBerry-Bold-Touch-9900-%28Dakota%29 BlackBerry]
+* [ ] Use LVM over system and userdata partitions ([https://github.com/postmarketOS/pmbootstrap/issues/60 #60])
+
+=== PureTryOut ===
+
+In general, get postmarketOS to a ready for daily usage state, in my case getting packages and UI packaged for the end user to install. Right now focus is on:
+
+# Packaging Phone UI: Plasma Mobile
+# Packaging Phone UI: UBports/Yunit
+
+=== bshah ===
+
+# Getting postmarketOS working on my device locally
+# Helping to make Plasma Mobile working on postmarketOS
+
+=== [https://github.com/mcbitter McBitter] ===
+
+# Get bootloader for Coolpad Modena 2 opensourced and unlocked. Requires lots of reverse engineering work.
+# Eventually start porting device to pmOS.
+# Write open source replacement for SP flashtool (very low priority).
+
+=== [https://github.com/yuvadm yuvadm] ===
+
+# Expand support for the [https://github.com/postmarketOS/pmbootstrap/wiki/Mozilla-Flame Mozilla Flame]
+# Work on pmOS documentation and website
+# Help develop the pmOS architecture
+
+=== [https://github.com/opendata26 opendata] ===
+
+# Get audio and BT working to overtake the n900 in supported features
+# Get mainline working for castor
