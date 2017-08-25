@@ -1,0 +1,44 @@
+=== Contributors ===
+
+* drebrez
+
+=== What works ===
+
+* Compiling the kernel
+* Booting (see below)
+* Framebuffer works (see photos below)
+* Network through USB
+* SSH
+* Touchscreen
+* Weston with demo menu
+
+=== What does not work ===
+
+* Flashing (requires smaller boot.img [https://github.com/postmarketOS/pmbootstrap/issues/126 #126])
+* Wifi (requires firmware)
+* Unknown, but probably everything else
+
+=== Device partitions ===
+
+<pre>dev:  size      erasesize  name
+mtd0: 000a0000  00020000   &quot;misc&quot;
+mtd1: 00480000  00020000   &quot;recovery&quot;
+mtd2: 00300000  00020000   &quot;boot&quot;
+mtd3: 0fa00000  00020000   &quot;system&quot;
+mtd4: 02800000  00020000   &quot;cache&quot;
+mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
+=== Booting ===
+
+* Build everything <code>pmbootstrap install</code>
+* Boot using <code>pmbootstrap flasher boot</code>
+
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-htc-bravo Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/linux-htc-bravo Kernel package]
+* [https://github.com/spezi77/android_kernel_htc_qsd8k_3.0/tree/n-7.1 spezi77's Kernel]
+
+=== Photos ===
+
+* [http://imgur.com/a/8ODj5 Initramfs asking for the password via telnet]
+* [http://imgur.com/a/1OgGZ PostmarketOS demo menu (XWayland)]
