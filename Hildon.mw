@@ -1,0 +1,17 @@
+This is the desktop from Maemo, which is a Debian-based distribution, that originally ran on the N900.<br />
+We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be easy to make, look at <code>postmarketos-ui-weston</code> for reference if you're interested, dear reader).
+
+=== Installation instructions ===
+
+To make hildon-desktop find its theme (install hildom-theme-alpha first):
+
+<pre class="shell">ln -s /usr/share/themes/alpha /usr/share/themes/default</pre>
+For default wallpapers:
+
+<pre>cp /usr/share/themes/alpha/backgrounds/wallpaper1.png ~/.backgrounds/background-1.png
+cp /usr/share/themes/alpha/backgrounds/wallpaper2.png ~/.backgrounds/background-2.png
+cp /usr/share/themes/alpha/backgrounds/wallpaper3.png ~/.backgrounds/background-3.png
+cp /usr/share/themes/alpha/backgrounds/wallpaper4.png ~/.backgrounds/background-4.png</pre>
+=== See also: ===
+
+* https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in Qemu)
