@@ -1,0 +1,60 @@
+After porting postmarketOS to your device, you might find that still some features don't work. You may need to adjust some values inside the /sys directory.
+
+sysfs is a pseudo file system provided by the Linux kernel that exports information about various kernel subsystems, hardware devices, and associated device drivers from the kernel's device model to user space through virtual files. In addition to providing information about various devices and kernel subsystems, exported virtual files are also used for their configuring.
+
+One approach is comparing the contents of these files when TWRP or LineageOS is running and the same for pmOS.
+
+The following script dumps the content of /sys/devices. Copy it as <code>dumpsys.sh</code>
+
+<pre class="shell">#!/bin/sh
+# dumpsys.sh
+DIR=&quot;/sys/devices&quot;
+
+walk() {
+    for file in $(ls $1); do
+        path=&quot;$1/$file&quot;
+        if test -L &quot;$path&quot;; then
+            continue
+        fi
+        if test -f &quot;$path&quot;; then
+            echo &quot;$path&quot;
+            cat &quot;$path&quot;
+        fi
+        if test -d &quot;$path&quot;; then
+            walk &quot;$path&quot;
+        fi
+    done
+}
+
+others() {
+    cat /proc/cpuinfo
+    cat /proc/cmdline
+}
+
+walk &quot;$DIR&quot;
+others</pre>
+Upload it to your device when running TWRP (use <code>adb push</code>) and when running postmarketOS (use <code>scp</code>). Run it and then compare the output.
+
+For TWRP/LineageOS:
+
+<pre class="shell">adb push dumpsys.sh /
+adb shell &quot;sh /dumpsys.sh &gt; /devices-twrp.dump&quot;
+adb pull /devices-twrp.dump .</pre>
+For pmOS:
+
+<pre class="shell">scp dumpsys.sh user@172.16.42.1:~
+# sh dumpsys.sh &gt; devices-pmos.dump
+scp user@172.16.42.1:~/devices-pmos.dump .</pre>
+Then get the differences ([https://gist.github.com/yuvadm/654f2c5e578d0e26cec3ea28b5c24b30 example]):
+
+<pre class="shell">diff -u devices-pmos.dump devices-twrp.dump &gt; devices.diff</pre>
+You could also run it in even in the stock ROM but it is important that you run the same kernel version in postmarketOS then.
+
+== Examples ==
+
+=== i9070 port ===
+
+This way, user <code>drebrez</code> figured out two values needed for the framebuffer configuration for the i9070 port.
+
+<pre class="shell">echo 16 &gt; /sys/devices/platform/mcde_fb/graphics/fb0/bits_per_pixel
+echo 960,1600 &gt; /sys/devices/platform/mcde_fb/graphics/fb0/virtual_size</pre>
