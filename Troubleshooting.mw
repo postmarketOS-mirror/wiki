@@ -1,0 +1,188 @@
+=== General information ===
+
+* Always look at the log file for a detailed error message: <code>~/.local/var/pmbootstrap/log.txt</code>
+* Make sure, that you have the latest version. Your bug may already be fixed
+* Please report the bugs you have found in the [https://github.com/postmarketOS/pmbootstrap/issues issues], so we can fix them :)
+* Syslog is enabled, and will log to shared memory once the OS has booted. It can be read with the <code>logread</code> tool in BusyBox. The syslog is currently not preserved across reboots.
+
+=== <code>musl-*</code>/<code>busybox-static-*</code> fails to build with a 404 error ===
+
+Run <code>pmbootstrap aportgen musl-armhf musl-aarch64</code>. The reason why this fails from time to time is, that we use Alpine's binary <code>musl</code> lib c package for <code>armhf</code>/<code>aarch64</code> in the native chroot, to get the cross-compiler working. So the download URL inside the <code>aports/cross/musl-*/APKBUILD</code> file must be in sync with the upstream version. This pmbootstrap command safely gets the new version, uses <code>apk</code> to verify the signature of the package, generates the hash, and updates the <code>APKBUILD</code> file. To make sure, that <code>pmbootstrap aportgen</code> receives the latest <code>musl</code> version, delete your HTTP cache right before executing this command: <code>pmbootstrap zap -hc</code>. Don't bother making a pull-request for this, as the fix is really trivial (see [https://github.com/postmarketOS/pmbootstrap/commit/0f3b2ea4277679056079000eac581d1b9d05afc8 this commit]). Just report it as issue, if it happens.
+
+=== pmbootstrap is broken! But it worked yesterday! ===
+
+Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the IRC/matrix channel to find out, which commit was the last one that worked.
+
+=== Figuring out booting problems ===
+
+Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>. If you managed to get the system to boot far enough to have telnet access, add [[the port 24 telnet listener|Inspecting-the-initramfs]] and you can mount the root device to view said log.
+
+=== SSH / udev / touch screen do not work ===
+
+* Make sure, that <code>DEVTMPFS</code> is enabled in your kernel config. Do not enable <code>DEVTMPFS_MOUNT</code>.
+
+=== I can't access the framebuffer device ===
+
+* <code>cat /dev/random &gt; /dev/fb0</code> returns: <code>cat: write error: No such device</code>
+* This could be caused by a proprietary 3d driver enabled in the kernel config. [https://github.com/postmarketOS/pmbootstrap/pull/66/ Try to disable it (the actual config options may be different).]
+
+=== BusyBox does something different than the standard tool for the job, and this breaks building my package! ===
+
+'''Example:''' unzip in BusyBox doesn't extract symlinks like the normal unzip implementation ([https://github.com/postmarketOS/pmbootstrap/issues/82 #82]).
+
+'''Solution:''' Simply add <code>unzip</code> to the makedepends in the APKBUILD, and the &quot;real&quot; unzip will be used (or in that case, try to get the sources in another archive format, such as <code>.tar.bz2</code>, <code>.tar.xz</code>, <code>.tar.gz</code>).
+
+=== Errors with ecryptfs ===
+
+When your &quot;work&quot; folder is inside an ecryptfs mounted folder, [https://github.com/postmarketOS/pmbootstrap/issues/53 <code>/dev/random</code> may not work inside the chroot] and you may have other issues. Try to move your ''work'' folder to another location, you can use <code>/tmp</code> to test if this resolves the issue. You can change the location in <code>pmbootstrap init</code>. See also: [https://github.com/postmarketOS/pmbootstrap/issues/61 #61]. (This doesn't seem to be an issue with newer versions of ecryptfs anymore.)
+
+=== ERROR: unsatisfiable constraints ===
+
+postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
+
+=== Serial Console Debug Cable (early boot debugging) ===
+
+For some devices it's possible to get early boot output using a debug cable that provides access to the UART. Unfortunately manufacturers don't use to publish the details and it is endusers who in some cases have figured it out:
+
+* Here's one such cable for [https://www.optiv.com/blog/building-a-nexus-4-uart-debug-cable Nexus 4] and another for [https://www.abclinuxu.cz/blog/Lorris/2013/12/serial-console-on-google-nexus-5 Nexus 5].
+* [http://www.pabr.org/consolejack/consolejack.en.html This article] goes a step further with Google Nexus devices.
+* Sony has published information about how to access the UART port on their [https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/ Xperia series]
+* The [https://redmine.replicant.us/projects/replicant/wiki/SamsungSerial Replicant wiki] has useful information on this as well.
+
+On fastboot devices, you may have to enable UART debugging with <code>fastboot oem uart-on</code>.
+
+By default, all output from the initramfs get redirected to <code>/pmOS_init.log</code>. If you want the output through the debug cable you need to add <code>PMOS_NO_OUTPUT_REDIRECT</code> to your [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting:kernel#how-can-i-boot-the-kernel-with-some-specific-arguments kernel command line].
+
+See [https://github.com/postmarketOS/pmbootstrap/wiki/Serial-debugging Serial debugging].
+
+=== Proprietary Blobs ===
+
+Many devices require proprietary blobs for enabling certain peripherals (wifi/bluetooth/cellular/GPS). [https://github.com/TheMuppets These repositories] appear to contain blobs for a large percentage of devices out there.
+
+=== Force reboot ===
+
+On some phones, you can hold down the power button for ten seconds to force a reboot. If that does not work: On other phones, you have to hold the power button down for a full minute (or hold it together with volume down). On some phones, it might take even longer (3 minutes or so).
+
+=== Phone shows the telnet message, a black screen, or doesn't leave the bootloader or Samsung/Google/... splash screen ===
+
+==== The graphics may not be working. Try connecting via telnet as usual: ====
+
+* Connect a USB cable
+* You should get an IP (if not, try to unplug and re-plug the cable)
+* If your PC is not configured to get IPs automatically via DHCP, run a dhcp client like <code>dhcpcd</code> on the usb network device (check with <code>ip a</code>)
+* Try to connect to your device with <code>telnet 172.16.42.1</code> (yes, the IP [https://github.com/postmarketOS/pmbootstrap/pull/72 has changed]!)
+* If you can't get it to work, consider using a serial cable (see [[#serial-console-debug-cable-early-boot-debugging|above]])
+
+==== If that doesn't work: ====
+
+<ul>
+<li>Fastboot based devices: check whether your flasher offset variables are right in your deviceconfig</li>
+<li><p>If nothing else works, you ''could'' try to get the pre-built kernel from LineageOS working (combined with postmarketOS' initramfs). Theoretically, these would be the steps (please correct/extend):</p>
+<pre>pmbootstrap build mkbootimg
+pmbootstrap build unpackbootimg
+pmbootstrap chroot
+apk add mkbootimg unpackbootimg
+# 1. download a full LineageOS image
+# 2. extract it
+# 3. extract the kernel with unpackbootimg
+# 4. there's the kernel image!
+# 5. either try to overwrite the image generated by postmarketOS in /boot and use 'pmbootstrap flasher....'
+# Or: create a bootimg with &quot;mkbootimg&quot; inside &quot;pmbootstrap chroot&quot; and try to flash the image on your host GNU/Linux system with fastboot/heimdall</pre></li>
+<li><p>Diffoscope may also be useful to list differences between your self-compiled kernel, and the binary version from LineageOS (or whichever binary kernel is working).</p></li></ul>
+
+See [https://github.com/postmarketOS/pmbootstrap/wiki/Using-prebuilt-kernels Using prebuilt kernels].
+
+=== My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source ===
+
+# Ask kindly via e-mail.
+# If they don't provide the source, team up with [http://gpl-violations.org/faq/violation-faq/ gpl-violations.org]. You have the legal right to get the source, because the Linux kernel is under the GPLv2!
+# Another option is [[using prebuilt kernels]]
+
+=== I have ported postmarketOS to my device and the screen doesn't get updated ===
+
+There is a [https://github.com/postmarketOS/pmbootstrap/pull/66#issuecomment-306343779 known bug] where if you execute <code>cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/mode</code> exactly one frame is drawn, and the screen isn't updated otherwise.
+
+=== &quot;if running weston from ssh, use --tty to specify a tty&quot; ===
+
+Specify a tty in weston's commandline. The correct syntax is: <code>weston --tty=1</code>.
+
+=== Weston and fbsplash -s <image> do not work ===
+
+If Weston returns an error because it could not access <code>/dev/tty1</code>, even when you specify it on the command line as above, you may need to enable Virtual Terminals in the kernel config.<br />
+You can enable <code>CONFIG_VT</code> using <code>pmbootstrap menuconfig</code> and checking under Device Drivers -&gt; Character devices -&gt; Virtual terminal
+
+=== My screen is red! ===
+
+There are some buggy framebuffer drivers (e.g. in LG Nexus 5) that report incorrect data. You can override it with:
+
+<pre>weston --pixman-type=2</pre>
+More information on [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54]
+
+=== Errors with grsec-based kernel on the host system ===
+
+See: [[Troubleshooting:grsec]]
+
+=== WARNING: No provider for dependency... ===
+
+'''Normal behavior.''' it means, that your &quot;user&quot; repository (the repository with all custom compiled packaged from pmOS, such as your device package and kernel) does not have the dependencies from the official Alpine Linux repositories (such as <code>cryptsetup</code>, <code>iw</code>, <code>htop</code>, ...) when indexing it. But these dependencies ''are'' in the official repositories, so they will be found when you try to install something. Usually the package indexing is done on all repositories at once in Alpine (then you wouldn't get the error), but pmOS does it only on the &quot;user&quot; repository.
+
+=== ERROR: busybox-1.27.0-r1.post-install: script exited with error 127 ===
+
+'''Normal behavior.''' We use a x86_64 version of <code>apk</code> to set up the chroots. When setting up the armhf chroot, the armhf post-installation code can't be executed, and that's where the errors come from. But we run &quot;apk fix&quot; right afterwards - with the armhf architecture, because we have an armhf version of apk installed inside the chroot now - and this runs the installation scripts again.
+
+=== sh: can't create /proc/sys/fs/binfmt_misc/register: nonexistent directory ===
+
+This issue is known to happen in Alpine Virthardened. These commands should fix it:
+
+<pre class="shell">sudo modprobe binfmt_misc
+sudo mount -t binfmt_misc none /proc/sys/fs/binfmt_misc</pre>
+If it still does not work, it is probably not supported by your host Linux distribution's kernel (<code>CONFIG_BINFMT_MISC</code>). Try to use another kernel.
+
+=== ERROR: /home/user/packages/user/x86_64/qemu-user-static-repack-2.8-r6.apk: UNTRUSTED signature ===
+
+The reason is somewhat unknown but looks like the following workaround solves it
+
+<pre>./pmbootstrap zap -p -hc
+./pmbootstrap shutdown</pre>
+See issue [https://github.com/postmarketOS/pmbootstrap/issues/270 #270] for more information and don't hesitate to reopen if this didn't work for you.
+
+=== Fastboot does not detect my device! ===
+
+Maybe you need to install udev rules on your host Linux distribution. Arch has the [https://www.archlinux.org/packages/community/any/android-udev/ android-udev] package for example, which uses the rules from [https://github.com/M0Rf30/android-udev-rules here].
+
+=== Invalid sparse file format at header magi ===
+
+In some devices (e.g.: bullhead, titan), when flashing the system (<code>pmbootstrap flasher flash_system</code>), it works but fastboot complains of <code>Invalid sparse file format at header magi</code>.
+
+<pre>$ ./pmbootstrap.py flasher flash_system
+[23:02:58] (native) install android-tools
+[23:02:58] (native) flash system image
+target reported max download size of 536870912 bytes
+Invalid sparse file format at header magi
+sending sparse 'system' 1/1 (274101 KB)...
+OKAY [  9.452s]
+writing 'system' 1/1...
+OKAY [ 12.584s]
+finished. total time: 22.036s
+[23:03:20] Done</pre>
+It happens when your device expects a sparse system image. The workaround is as follows:
+
+* Set <code>deviceinfo_flash_sparse=true</code> in deviceinfo
+* Add <code>libsparse</code> to <code>depends=</code>.
+
+For more information, see issue [https://github.com/postmarketOS/pmbootstrap/issues/299 #299]
+
+=== Installed version newer than the version in the repositories ===
+
+''You have a program installed in one of your chroots with a higher version, than what is available in the binary package repositories (either from upstream or the packages you have built yourself).''
+
+'''Example how this can happen:'''
+
+* Git branch switch to one which increased the version of <code>postmarketos-mkinitfs</code>
+* Build <code>postmarketos-mkinitfs</code>
+* Install it in a chroot (e.g. by running <code>pmbootstrap install</code>)
+* Branch switched to <code>master</code>
+* All packages got zapped, but not the chroots
+* Build <code>postmarketos-mkinitfs</code> again (this time it has a lower version count!)
+
+'''Solution:''' Simply zap your chroot! When it gets set up again, it will use the current package version.
