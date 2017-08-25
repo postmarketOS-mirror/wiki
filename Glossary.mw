@@ -1,0 +1,67 @@
+If you found a technical term related to this project, that you had to research to understand, please add it here (alphabetically sorted).
+
+See also:
+
+* [https://wiki.alpinelinux.org/wiki/Alpine_Linux:Glossary Alpine Linux:Glossary]
+
+
+-----
+
+=== [https://alpinelinux.org/ Alpine Linux] ===
+
+The minimal Linux distribution, that postmarketOS is based on. Actually, pmOS only adds a few packages on top of it, and provides the installer and development environment - that is the plan, to keep following upstream as close as possible. Alpine developers do not see their distribution as &quot;GNU/Linux&quot;. That being said, it works a lot like a typical Desktop Linux distribution. You have your package manager, the typical shell commands, you can install typical Linux software, and so on.
+
+=== android-msm ===
+
+The Google provided 3.4 kernel as base for all Qualcomm devices.
+
+=== apk ===
+
+One of the following:
+
+* Android app format
+* Alpine Linux package (also ends in <code>.apk</code>, but totally incompatible!), which are actually gzipped tar files
+* Alpine Linux package manager (apk)
+
+=== boot.img ===
+
+Android specific format, that usually consists of the Linux kernel (in modern versions with a <code>dtb</code> appended) and the <code>initramfs</code>. This file gets flashed to the boot or recovery partition of the Android device.
+
+'''Variations:'''
+
+* Some old Samsungs: <code>boot.img</code> is just a kernel with a baked in <code>initramfs</code> ([[more|deviceinfo_flash_methods#isorec-or-bootimg]])
+* qcdt: <code>boot.img</code> has a <code>dtb</code> appended (instead of appending it to the kernel, [[more|deviceinfo_bootimg_qcdt]])
+
+=== dtb ===
+
+The binary device tree, this is a file containing a description of the hardware in the device since phones don't have discoverable busses like x86 platforms. These are created from dts files in the kernel repository and produce a file called <code>zImage-dtb</code> for some Android kernels (older Android kernels do not generate a <code>dtb</code> file at all and have hardcoded the information directly in the kernel source). In mainline kernels, <code>dtb</code> files for all supported boards are created at once.
+
+=== dri ===
+
+[https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure Direct Rendering Infrastructure], the modern Linux kernel API for drawing to the screen.
+
+=== FDE ===
+
+Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with luks, preventing the phone data to be retrieved without password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
+
+=== fbdev / framebuffer ===
+
+[https://en.wikipedia.org/wiki/Linux_framebuffer Linux framebuffer] a (more or less?) deprecated API from the Linux kernel, that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
+
+=== drm/kvm ===
+
+This is a slightly more complicated API than fbdev (and it replaces all fbdev functionality), it still provides a framebuffer but also has options to integrate hardware acceleration for 2D and 3D. All opensource fbdev drivers should be portable to a drm driver.
+
+=== lk (little kernel) ===
+
+''[https://github.com/littlekernel/lk <code>lk</code>] is the kernel where fastboot runs on - at least all new-ish qualcomm devices is using <code>lk</code> and new-ish mediatek devices too''
+
+=== OpenRC ===
+
+[https://en.wikipedia.org/wiki/OpenRC OpenRC] is a dependency-based init for Unix-like systems. It is the default init system of Alpine Linux.
+
+=== Weston ===
+
+[https://github.com/wayland-project/weston Weston] is the reference implementation of a Wayland compositor. It has various backends that lets it run on Linux kernel modesetting and evdev input as well as under X11.
+
+We have chosen Weston as demo because we didn't want to use X11, as this is slowly dying. Also there's libweston, which might come in handy later (you can write your own desktop environment and inherit the hardware compatibility from weston). Weston is nice as demo useful at this moment of the development, but not usable as phone interface, so we'll need different desktop environments packaged sooner or later. See [https://github.com/postmarketOS/pmbootstrap/issues/62 issue #62]
