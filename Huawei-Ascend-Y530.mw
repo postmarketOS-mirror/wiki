@@ -1,0 +1,78 @@
+=== Contributors ===
+
+* drebrez
+
+=== What works ===
+
+* [x] Kernel compilation
+* [x] Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* [ ] Flash System (<code>pmbootstrap flasher flash_system</code>)
+* [x] Initramfs boot
+* [x] USB Network
+* [ ] Framebuffer graphics (Splash screens)
+* [x] SSH Connectivity
+* [ ] Weston on framebuffer
+* [ ] Touchscreen
+* [ ] Xwayland
+* [ ] Wifi
+* [ ] Audio playback
+
+=== Device info ===
+
+* [http://www.gsmarena.com/huawei_ascend_y530-6103.php Full phone specifications]
+
+=== Additional info ===
+
+==== Entering &quot;Fastboot mode&quot; ====
+
+Hold the '''Volume Down''' button, and then press the '''Power''' button
+
+==== Entering &quot;Recovery mode&quot; ====
+
+Hold the '''Volume Up''' button, and then press the '''Power''' button
+
+==== Partition layout ====
+
+<pre class="shell">~ # fdisk -l /dev/block/mmcblk0
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/block/mmcblk0: 7634944 sectors, 3728M
+Logical sector size: 512
+Disk identifier (GUID): 98101b32-bbe2-4bf2-a06e-2bb33d000c20
+Partition table holds up to 28 entries
+First usable sector is 34, last usable sector is 7634910
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1              34            1057        512K   0700  sbl1
+   2            1058            1121       32768   0700  sdi
+   3            8192            8255       32768   0700  DDR
+   4           16384           17383        500K   0700  rpm
+   5           17384           18383        500K   0700  tz
+   6           18384           29567       5592K   0700  aboot
+   7           29568           31615       1024K   0700  pad
+   8           31616          162687       64.0M   0700  oeminfo
+   9          162688          170879       4096K   0700  modemst1
+  10          170880          179071       4096K   0700  modemst2
+  11          180224          376831       96.0M   0700  modem
+  12          376832          385023       4096K   0700  fsg
+  13          385024          385025        1024   0700  fsc
+  14          385026          385041        8192   0700  ssd
+  15          385042          450577       32.0M   0700  log
+  16          458752          589823       64.0M   0700  bkbootup
+  17          589824          606207       8192K   0700  persist
+  18          606208          630783       12.0M   0700  boot
+  19          630784          663551       16.0M   0700  recovery
+  20          663552         1187839        256M   0700  cust
+  21         1187840         1581055        192M   0700  cache
+  22         1581056         1589247       4096K   0700  misc
+  23         1589248         3686399       1024M   0700  system
+  24         3686400         5783551       1024M   0700  userdata
+  25         5783552         7634910        903M   0700  grow</pre>
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-huawei-y530 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-huawei-y530 Kernel package]
+* [https://github.com/EfranDev/android_kernel_huawei_Soulfire Soulfire Kernel]
+* [https://github.com/PieroV/android_vendor_huawei_y530/tree/cm-11.0 PieroV's vendor files]
+
+=== Photos ===
