@@ -1,0 +1,20 @@
+It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches.
+
+=== Successful ===
+
+* <code>2017-08-14</code> libSDL: [https://bugzilla.libsdl.org/show_bug.cgi?id=3751 DirectFB linux_input disabled by default]
+* <code>2017-08-03</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/2057 add consolekit2]
+* <code>2017-07-21</code> abuild: [https://github.com/alpinelinux/abuild/pull/21 <code>-D</code> parameter for alternative description]
+* <code>2017-07-07</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/1092 busybox-extras with telnetd enabled]
+* <code>2017-05-23</code> weston: [https://patchwork.freedesktop.org/patch/150943/ instead of less than 1 Hz use default refresh rate]
+
+=== Work in progress ===
+
+* weston: [https://bugs.freedesktop.org/show_bug.cgi?id=101472 add parameter --pixman-type], see also: [https://github.com/postmarketOS/pmbootstrap/issues/141 #141]
+* weston: [https://patchwork.freedesktop.org/patch/167681/ add support for ABGR]
+* alpine: [https://bugs.alpinelinux.org/issues/7556 Weston can only be run by root user] (PR [https://github.com/postmarketOS/pmbootstrap/issues/199 #199])
+* kde: [https://bugs.kde.org/show_bug.cgi?id=383486 kwin_wayland fails to start with &quot;Running on a compositor with no screens is not supported&quot;]
+
+=== Not started, but should be done in the future ===
+
+* abuild: Add a compression flag to override the default of highest compression (right now we install a [https://github.com/postmarketOS/pmbootstrap/blob/34e2f8093c6cf6571815a82865309b02d31b5d0c/pmb/build/init.py#L61 wrapper] that converts <code>-9</code> to <code>-1</code> to improve performance)
