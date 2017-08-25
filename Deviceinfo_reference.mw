@@ -1,0 +1,168 @@
+Most of the variables in <code>deviceinfo</code> have self-explanatory names and are used both when you are building postmarketOS and during runtime (it is available at <code>/etc/deviceinfo</code>).
+
+All variables start with <code>deviceinfo_</code> in the file - this is omitted here to save space.
+
+== device ==
+
+{|
+!width="50%"| Variable
+!width="19%"| Description
+!width="26%"| Possibles values
+|-
+| <code>format_version</code>
+| Used to distinguish between different versions of this file.
+| <code>0</code>
+|-
+| <code>name</code>
+| Device model (e.g. <code>Google Nexus 5</code>)
+|
+
+|-
+| <code>manufacturer</code>
+| Device manufacturer (e.g. <code>LG</code>)
+|
+
+|-
+| <code>date</code>
+| Release date of the device
+|
+
+|-
+| <code>keyboard</code>
+| The device has a hardware keyboard.
+| <code>true</code>, <code>false</code>
+|-
+| <code>nonfree</code>
+| Components of the device, that only run with closed source firmware. We have to do more research on this topic and specify a list of possible values, for now all devices have <code>????</code> here.
+| <code>????</code>
+|-
+| <code>dtb</code>
+| Name of the [https://github.com/postmarketOS/pmbootstrap/wiki/Glossary#dtb device tree blob] file. This will be necessary for the [https://github.com/postmarketOS/pmbootstrap/issues/91 mainline kernel]. This can be left blank during initial porting.
+|
+
+|-
+| <code>modules_initfs</code>
+| Kernel modules to include in the initramfs image. Note: modules to be loaded ''after'' the initramfs can be specified like in a <code>modules-load.conf</code> ([https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-samsung-i9070 example]).
+|
+
+|-
+| <code>external_disk</code>
+| Does the device have an sdcard or other external storage medium?
+| <code>true</code>, <code>false</code>
+|-
+| <code>external_disk_install</code>
+| Allow installing to sdcard
+| <code>true</code>, <code>false</code>
+|-
+| <code>flash_methods</code>
+| Method used to flash the device ([[more info
+| deviceinfo_flash_methods]])
+|-
+| <code>arch</code>
+| Device architecture, must be supported by Alpine Linux
+| <code>armhf</code>, <code>aarch64</code>
+|}
+
+=== flash ===
+
+These are used for flashing and booting the device, and most of them are fastboot specific. '''[https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets Here is a guide on how to get these values for a specific Android device (by extracting the <code>boot.img</code>)]'''
+
+{|
+!width="38%"| Variable
+!width="36%"| Description
+!width="25%"| Possible values
+|-
+| <code>flash_offset_kernel</code>
+| Kernel offset used for flashing
+|
+
+|-
+| <code>flash_offset_ramdisk</code>
+| Ramdisk offset used for flashing
+|
+
+|-
+| <code>flash_offset_second</code>
+| Used for flashing
+|
+
+|-
+| <code>flash_offset_tags</code>
+| Used for flashing
+|
+
+|-
+| <code>flash_offset_base</code>
+| Used for flashing
+| Default: <code>0x10000000</code>
+|-
+| <code>flash_pagesize</code>
+| Page size
+| Usually <code>2048</code>
+|-
+| <code>flash_sparse</code>
+| Set this to true if your device expects a [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting#invalid-sparse-file-format-at-header-magi sparse system image] flashed
+|
+
+|-
+| <code>kernel_cmdline</code>
+| Kernel command line
+|
+
+|-
+| <code>generate_bootimg</code>
+| Set this to true for fastboot device, so the <code>mkinitfs</code> command will generate a <code>boot.img</code> file after creating the <code>initfs</code>. Add <code>mkbootimg</code> as dependency to your device's APKBUILD!
+| <code>true, false</code>
+|-
+| <code>bootimg_qcdt</code>
+| Append <code>dtb</code> file to <code>boot.img</code> ([[more info
+| deviceinfo_bootimg_qcdt]])
+|-
+| <code>generate_legacy_uboot_initfs</code>
+| For the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 N900], we use a legacy version of the [https://en.wikipedia.org/wiki/Das_U-Boot uboot] bootloader right now. When setting this variable to true, the initramfs will generate an uboot legacy compatible initramfs file. Modern versions of uboot can load regular initramfs files.
+| <code>true, false</code>
+|}
+
+== weston ==
+
+{|
+!width="48%"| Variable
+!width="19%"| Description
+!width="26%"| Possibles values
+|-
+| <code>weston_pixman_type</code>
+| (optional) Use it as a workaround for [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54].
+| mostly <code>&quot;2&quot;</code> for ARGB, [https://github.com/postmarketOS/pmbootstrap/issues/141#issuecomment-314211363 all values]
+|-
+| <code>weston_core_modules</code>
+| Module(s) to load on device when using Weston
+| See the [http://manpages.ubuntu.com/manpages/wily/man5/weston.ini.5.html#contenttoc3 weston.ini manpage] for a list of valid modules
+|-
+| <code>weston_core_backend</code>
+| Weston backend to use
+| See the [http://manpages.ubuntu.com/manpages/wily/man5/weston.ini.5.html#contenttoc3 weston.ini manpage] for a list of valid backends. Note that not all of these may be compiled into Weston for Alpine Linux. If not set, this defaults to 'fbdev-backend.so'
+|-
+| <code>weston_keymap_rules</code>
+| Keyboard keymap rule to use.
+| Valid rules are listed in <code>/usr/share/X11/xkb/rules/</code>.
+|-
+| <code>weston_keymap_model</code>
+| Keyboard keymap model to use.
+| Valid models are listed in <code>/usr/share/X11/xkb/rules/symbols</code>, typically buried in a particular symbol file. For example, the model for the Nokia N900 is found in the file <code>/usr/share/X11/xkb/symbols/nokia_vndr/rx-51</code>, with a line that specifies <code>-model nokiarx51</code>. To set the keymap model for the N900, you would set <code>weston_keymap_model=nokiarx51</code> in the appropriate <code>deviceinfo</code> file
+|}
+
+== splash ==
+
+{|
+! Variable
+! Description
+! Possibles values
+|-
+| <code>screen_width</code>
+| The width of the display
+| 800, 720, 1440... anything really
+|-
+| <code>screen_height</code>
+| The height of the display
+| 1280, 2560... other
+|}
