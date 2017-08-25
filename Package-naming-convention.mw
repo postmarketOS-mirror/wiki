@@ -1,0 +1,14 @@
+=== General convention ===
+
+* All package names should be lowercase.
+* Wherever possible, device code name is preferred over the model number.
+* Please use dashes (<code>-</code>) only, no underscores (<code>_</code>).
+* If something is unclear or you would like to extend the naming convention, please open a ticket in the tracker.
+
+=== device-* packages ===
+
+<code>device-{vendor}-{device code name/model number}</code>
+
+=== linux-* kernels ===
+
+<code>linux-{vendor}-{device code name/model number}</code>
