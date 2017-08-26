@@ -1,6 +1,6 @@
 Please join our chat, so we can help you with using postmarketOS in real time. The chat is bridged between Matrix and IRC. We also provide an offtopic channel, which can be used to discuss your favorite pizza API and other non-related topics with the postmarketOS community.
 
-==== Matrix ====
+== Matrix ==
 In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser to enter the channel.
 
 * [https://matrix.to/#/#postmarketos:disroot.org #postmarketos:disroot.org]
@@ -8,13 +8,13 @@ In case you have no experience in using IRC, this is the easier method. You can 
 
 After you register at any matrix site and join the channel, the offline history will be saved automatically (for IRC you will need a bouncer to get this functionality). It is highly recommended that you can receiver offline messages, so your questions can be answered even when you are offline!
 
-==== IRC ====
+== IRC ==
 
 The following two channels are hosted on freenode (mind the <code>##</code> for offtopic!):
   #postmarketos
   ##postmarketos-offtopic
 
-==== Other channels ====
+== Other channels ==
 
 * [https://reddit.com/r/postmarketOS Reddit] (we share photos/videos/blog posts of our development work there)
 * [https://github.com/postmarketOS/pmbootstrap/issues GitHub issues] (for discussing bugs and features)
