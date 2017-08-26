@@ -1,12 +1,1 @@
-=== Contributors ===
-
-* kskarthik
-
-Special thanks to '''opendata26, craftguy, ata2001''' for helping with this port.
-
-=== What works ===
-
-* Compiling the kernel
-* Device detected in <code>ifconfig</code> but connection to telnet, ssh refused
-
-=== Source ===
+#REDIRECT [[Sony Xperia Z3C (sony-aries)]]
