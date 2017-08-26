@@ -6,7 +6,7 @@ To install it on your device run <code>./pmbootstrap.py install --add plasma-mob
 
 For instructions on running Plasma Mobile you can use the KDE website: https://community.kde.org/Plasma/Mobile/RunningApps
 
-''Packaging efforts have been documented [[here|Packaging Plasma Mobile]].''
+''Packaging efforts have been documented [[Packaging-Plasma-Mobile|here]].''
 
 == Debugging ==
 
