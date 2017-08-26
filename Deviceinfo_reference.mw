@@ -115,8 +115,8 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>true, false</code>
 |-
 | <code>bootimg_qcdt</code>
-| Append <code>dtb</code> file to <code>boot.img</code> ([[more info
-| deviceinfo_bootimg_qcdt]])
+| Append <code>dtb</code> file to <code>boot.img</code> ([[deviceinfo_bootimg_qcdt|more info]])
+|
 |-
 | <code>generate_legacy_uboot_initfs</code>
 | For the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 N900], we use a legacy version of the [https://en.wikipedia.org/wiki/Das_U-Boot uboot] bootloader right now. When setting this variable to true, the initramfs will generate an uboot legacy compatible initramfs file. Modern versions of uboot can load regular initramfs files.
