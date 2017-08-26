@@ -25,7 +25,7 @@ chmod 0666 /sdcard/boot.img
 adb pull /sdcard/boot.img .</source>
 == Running postmarketOS with a pre-built kernel ==
 
-You can use <code>unpackbootimg</code> (usage is described in [[here|How to find device specific information]]) to extract the kernel from your recently extracted boot.img or from a LineageOS release and run it together with postmarketOS initramfs.
+You can use <code>unpackbootimg</code> (usage is described in [[How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets|here]]) to extract the kernel from your recently extracted boot.img or from a LineageOS release and run it together with postmarketOS initramfs.
 
 If you extracted the kernel from you Stock ROM, it might not have encryption support enabled and in this case you would not be able to boot from an encrypted partition which is how postmarketOS works by default. To disable encryption in postmarketOS use <code>pmbootstrap install --no-fde</code>. You might need other modules as well for pmOS to work properly.
 
@@ -33,6 +33,7 @@ If you extracted the kernel from you Stock ROM, it might not have encryption sup
 fastboot boot \
 uncompressed_boot/boot.img-zImage \
 ~/.local/var/pmboostrap/chroot_rootfs-XXX-XXXX/boot/initramfs-lg-hammerhead</source>
+
 == Maybe we can chainload the pmOS kernel? ==
 
 Linux kernels can load other kernels via the [https://en.wikipedia.org/wiki/Kexec kexec] syscall. The deal is, that signed bootloaders only allow signed kernels. But what if we repackaged the signed kernel with our own initramfs, that loads our own kernel via kexecboot from the boot subpartition? Not sure if this will work because of SELinux etc, but if it did, it would be a nice way to get around the bootloader's signed kernel enforcement! '''If you have an usecase for this, please open a ticket to discuss this further.'''
