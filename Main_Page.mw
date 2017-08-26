@@ -1,4 +1,4 @@
-[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. '''pmbootstrap''' allows installation and development of pmOS. As of now, its repository contains all of the projects code, pmbootstrap itself and all package build recipes ([https://github.com/postmarketOS/pmbootstrap/tree/master/aports aports]). Therefore this wiki contains all information about pmOS, not only about pmbootstrap. Here are the most important links:
+[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://github.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
 
 
 == General information ==
