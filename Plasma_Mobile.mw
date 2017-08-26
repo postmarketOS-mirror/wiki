@@ -105,3 +105,6 @@ On devices without OpenGL support (like Qemu right now), it's required to tell k
 <pre>[QtQuickRendererSettings]
 SceneGraphBackend=software</pre>
 Then execute <code>ck-launch-session kwin_wayland --framebuffer --xwayland</code>. As this way you can not view the logs, it's advisable to add <code>2&gt; kwin_log.txt</code> to the end of the command, so it ends up looking like <code>ck-launch-session kwin_wayland --framebuffer --xwayland 2&gt; kwin_log.txt</code>. This will make it log to kwin_log.txt instead of stdout.
+
+
+[[Category:Interface]]
