@@ -29,8 +29,8 @@ Android specific format, that usually consists of the Linux kernel (in modern ve
 
 '''Variations:'''
 
-* Some old Samsungs: <code>boot.img</code> is just a kernel with a baked in <code>initramfs</code> ([[more|deviceinfo_flash_methods#isorec-or-bootimg]])
-* qcdt: <code>boot.img</code> has a <code>dtb</code> appended (instead of appending it to the kernel, [[more|deviceinfo_bootimg_qcdt]])
+* Some old Samsungs: <code>boot.img</code> is just a kernel with a baked in <code>initramfs</code> ([[deviceinfo_flash_methods#isorec-or-bootimg|more]])
+* qcdt: <code>boot.img</code> has a <code>dtb</code> appended (instead of appending it to the kernel, [[deviceinfo_bootimg_qcdt|more]])
 
 === dtb ===
 
