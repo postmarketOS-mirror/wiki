@@ -1,0 +1,106 @@
+=== Contributors ===
+
+* drebrez
+
+=== What works ===
+
+* Compiling the kernel
+* Flashing with heimdall (see below)
+* Booting initramfs
+* Network through USB
+* SSH
+* Weston with touchscreen
+* Wifi (Details below and in [https://github.com/postmarketOS/pmbootstrap/pull/138 #138])
+
+=== What does not work ===
+
+* Unknown, but probably everything else
+
+=== Boot process ===
+
+Unlike most other Android devices, the i9070 can not boot a <code>boot.img</code> (which consists of <code>kernel</code> + <code>initramfs</code>). Instead, the <code>boot.img</code> file is just a regular kernel.
+
+However, it is possible to directly integrate a <code>initramfs</code> into the kernel at kernel compile time (this is totally different from the boot.img approach, if this is unclear to you, please ask in the channel), and this is what the Android ROMs do on the i9070. While it is not a big deal in the Android compilation process, it is a problem for postmarketOS, because we want to be able to build the <code>initramfs</code> independently from the kernel.
+
+The following workaround is currently implemented:
+
+* We flash the ''real'' initramfs to the kernel2 partition (this partition usually contains a backup of the stock kernel)
+* The initramfs [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-samsung-i9070/init init script built into the kernel] checks if the kernel2 partition contains a compressed initramfs, and if it does, it extracts it and passes execution to the real initramfs init script.
+* This idea is based on something called [https://forum.xda-developers.com/galaxy-s2/orig-development/isorec-isolated-recovery-galaxy-s2-t3291176 &quot;isorec&quot;].
+
+=== Device partitions ===
+
+The following partitions are used for the postmarketOS:
+
+* Kernel =&gt; /dev/mmcblk0p15 (16MB)
+* Kernel2 =&gt; /dev/mmcblk0p17 (16MB)
+
+Possible partitions for the postmarketOS system image:
+
+* SYSTEM =&gt; /dev/mmcblk0p3 (600MB)
+* DATAFS =&gt; /dev/mmcblk0p5 (2GB)
+
+=== Flashing with heimdall ===
+
+In order to flash the kernel and the initramfs using <code>heimdall</code> you simply have to call <code>pmbootstrap flasher flash_kernel</code>
+
+This will write in the partitions specified in the [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/device-samsung-i9070/deviceinfo#L18-L19 deviceinfo] file.
+
+At the moment is not possible to write the system image file (samsung-i9070.img) using heimdall. A temporary solution is to use the TWRP shell to perform a command like this:<br />
+<code>dd if=samsung-i9070.img of=/dev/mmcblk0p5</code>
+
+=== How drebrez made wifi work ===
+
+* build the kernel module (dhd.ko for the i9070)
+* get the vendor files for the [https://github.com/Epirex/android_vendor_samsung_u8500 Samsung U8500 devices]
+* load the module using insmod with the firmware_path and nvram_path parameters
+
+<code>insmod dhd.ko firmware_path=/etc/wifi/bcmdhd_sta.bin nvram_path=/etc/wifi/nvram_net.txt</code>
+
+* set a mac address
+
+<code>ifconfig wlan0 hw ether 01:02:03:04:05:06</code>
+
+* bring the interface up
+
+<code>ifconfig wlan0 up</code>
+
+* scan to find out what WiFi networks are detected
+
+<code>iw dev wlan0 scan</code>
+
+* connect to WPA/WPA2 WiFi network
+
+<code>wpa_passphrase wifi_ssid wifi_key &gt;&gt; /etc/wpa_supplicant.conf</code>
+
+* start wpa_supplicant to connect to the network
+
+<code>wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf</code>
+
+* verify that you are indeed connected to the SSID
+
+<code>iw wlan0 link</code>
+
+* start udhcpc to get an ip address
+
+<code>udhcpc -b -i wlan0</code>
+
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9070 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-i9070 Kernel package]
+* [https://github.com/Epirex/Samsung_STE_Kernel/tree/marshmallow Epirex's Kernel]
+* [https://github.com/Epirex/android_vendor_samsung_u8500 Epirex's vendor files]
+
+=== Photos ===
+
+* Initramfs asking for the password via telnet<br />
+[[File:https://i.imgur.com/MuVLljM.jpg]]
+* postmarketOS demo menu (XWayland)<br />
+[[File:http://i.imgur.com/maobRbj.jpg]]
+* Weston-terminal running in fullscreen mode<br />
+[[File:http://i.imgur.com/Nop8uu4.jpg]]
+
+=== Videos ===
+
+* [http://i.imgur.com/9c66GAs.mp4 Weston with various programs running]
