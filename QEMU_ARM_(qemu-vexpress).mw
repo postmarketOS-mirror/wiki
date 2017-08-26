@@ -1,3 +1,4 @@
+[[Category:Devices]]
 <blockquote>''This page is specific to running the <code>arm</code> version of Qemu. Make sure to also read the '''[[common Qemu notes]]'''!''
 </blockquote>
 This device is used to emulate an ARM Versatile Express for Cortex-A9.
