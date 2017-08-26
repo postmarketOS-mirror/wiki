@@ -15,7 +15,7 @@ Sorry! Revert to the last commit, that was known to work (git checkout $commit) 
 
 === Figuring out booting problems ===
 
-Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>. If you managed to get the system to boot far enough to have telnet access, add [[the port 24 telnet listener|Inspecting-the-initramfs]] and you can mount the root device to view said log.
+Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>. If you managed to get the system to boot far enough to have telnet access, add [[Inspecting-the-initramfs|the port 24 telnet listener|]] and you can mount the root device to view said log.
 
 === SSH / udev / touch screen do not work ===
 
