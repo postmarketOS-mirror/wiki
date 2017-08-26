@@ -186,3 +186,16 @@ For more information, see issue [https://github.com/postmarketOS/pmbootstrap/iss
 * Build <code>postmarketos-mkinitfs</code> again (this time it has a lower version count!)
 
 '''Solution:''' Simply zap your chroot! When it gets set up again, it will use the current package version.
+
+=== Newer version in binary package repositories than in aports folder ===
+
+''You have built a package earlier, and the branch you are currently working in has a lower version in the aports folder.''
+
+'''Example how this can happen:'''
+* Git branch switch to a feature branch which increased the version of <code>postmarketos-mkinitfs</code>
+* Build <code>postmarketos-mkinitfs</code>
+* Switch to <code>master</code> branch
+* Run just about any <code>pmbootstrap</code> command, it will print this warning:
+  Package 'postmarketos-mkinitfs' in your aports folder has version X, but the binary package repositories already have version Y
+
+'''Solution:''' Delete that specific package from your aports folder: <code>sudo rm ~/.local/var/pmbootstrap/packages/*/postmarketos-mkinitfs*.apk</code> and run <code>pmbootstrap index</code> to re-index all packages. See also [https://github.com/postmarketOS/pmbootstrap/issues/466 #466] to integrate this into <code>pmbootstrap zap</code>.
