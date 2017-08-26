@@ -1,0 +1,23 @@
+[[Category:Unsupported Devices]]
+=== Contributors ===
+
+* MartijnBraam
+
+=== What works ===
+
+* Compiling the kernel from the jolla sources which should provide everything to run wayland since that's what sailfish uses
+
+=== What does not work ===
+
+* Flashing, still need to find the correct offsets
+
+=== Flashing mode ===
+
+The jolla does use fastboot from the mer project instead of android. To enter fastboot shut down the device, then plug in the USB lead while holding down volume down.
+
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/device-jolla-sbj/aports/device-jolla-sbj Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/device-jolla-sbj/aports/linux-jolla-sbj Kernel package]
+* [http://releases.sailfishos.org/sources/2.0.5.6/ Jolla sources]
+* [https://wiki.merproject.org/wiki/Compiling_Jolla_kernel Mer project page]
