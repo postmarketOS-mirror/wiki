@@ -1,4 +1,4 @@
-This page explains how to connect to your device when it has booted to the [[initramfs|Initramfs-development]] by installing the so-called [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/main/postmarketos-mkinitfs-hook-usb-shell/20-usb-shell.sh usb-shell hook]. This is useful if you want to know more about the [[boot process]], simply inspect the initramfs or you want to debug why something doesn't work.
+This page explains how to connect to your device when it has booted to the [[Initramfs-development|initramfs]] by installing the so-called [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/main/postmarketos-mkinitfs-hook-usb-shell/20-usb-shell.sh usb-shell hook]. This is useful if you want to know more about the [[boot process]], simply inspect the initramfs or you want to debug why something doesn't work.
 
 '''NOTE: This is considered a security hole. Only use it for debugging, and uninstall the usb-shell hook afterwards'''
 
