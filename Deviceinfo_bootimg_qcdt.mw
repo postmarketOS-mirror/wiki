@@ -1,11 +1,11 @@
-The <code>mozilla-flame</code> and other devices have the [[dtb|Glossary#dtb]] appended to the [[boot.img|Glossary#boot.img]].<br />
+The <code>mozilla-flame</code> and other devices have the [[Glossary#dtb|dtb]] appended to the [[Glossary#boot.img|boot.img]].<br />
 To find out if your device boots <code>qcdt</code> <code>boot.img</code> files, run <code>extract-dtb</code> (packaged for pmOS) on a known-working <code>boot.img</code> (e.g. from TWRP or LineageOS).
 
 '''Check PR [https://github.com/postmarketOS/pmbootstrap/pull/356/files #356] for example usage''' of how it is implemented right now, and [https://github.com/postmarketOS/pmbootstrap/issues/323 #323] for the related discussion. In case you are implementing this for another device, please edit this article and put it more in a step-by-step format.
 
 Some approaches that can help debug appended DTB issues:
 
-* Hook up the [[serial UART|Serial debugging]] and see what kind of debug output the bootloader provides
+* Hook up the [[serial UART]] and see what kind of debug output the bootloader provides
 * Repack the boot image with a working <code>dt.img</code> from another distribution (stock, Lineage, recovery, etc.)
 
 === Repack Procedure ===
