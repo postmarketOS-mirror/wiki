@@ -1,0 +1,43 @@
+[[Category:Unsupported Devices]]
+== Basic info ==
+
+Device: Samsung Galaxy S5 mini (SM-G800F; European version)
+
+Cortex A7 (32 bit ARM), quad core 1.4GHz; 1.5GB RAM, 16GB storage.
+
+* [http://www.gsmarena.com/samsung_galaxy_s5_mini-6252.php more specs]
+* [https://github.com/cm-3470/android_device_samsung_kminilte Unofficial LineageOS repo]
+* [https://github.com/cm-3470/android_kernel_samsung_kminilte Unofficial LineageOS kernel repo]
+
+=== How to enter flash mode ===
+
+Press and hold &quot;volume down + home + power&quot; simultaneously. Then click volume up to confirm.
+
+=== Problems ===
+
+* Currently, Heimdall seems to be unable to flash the device's <code>SYSTEM</code> partition, so we can't do the entire install using just <code>pmbootstrap flasher</code>.
+* <code>udevadm trigger</code> causes a complete system freeze and eventual reboot. If you comment out that line in <code>start_weston.sh</code> and replace it by <code>udevadm trigger --attr-match=name=sec_touchscreen</code>, the touch screen should work.
+
+=== Preparing for install ===
+
+First, [https://eu.dl.twrp.me/kminilte/ download the TWRP recovery ROM]. You'll need both the <code>.img.tar</code> and the <code>.img</code> file. First, extract the tar file to obtain <code>recovery.img</code>. Then, put your phone in flash mode and flash using Heimdall:
+
+<pre>$ heimdall flash --RECOVERY recovery.img --BOOT twrp-3.1.1-1-kminilte.img</pre>
+Now you should be able to connect to the device using <code>adb</code>.
+
+=== Installing system ===
+
+Follow [https://github.com/ata2001/android-recovery-zip the android-recovery-zip steps], substituting <code>samsung-g800f</code> for <code>your-device</code> in all the commands. If you get an error <code>lddtree not found</code>, simply run <code>apk add lddtree</code> in the chroot environment and try again.
+
+If you get the following errors:
+
+<pre>device-mapper: reload ioctl on   failed: No such file or directory
+Failed to setup dm-crypt key mapping for device /dev/block/mmcblk0p18.
+Check that kernel supports aes-xts-plain64 cipher (check syslog for more info).</pre>
+You can try to reinstall with a different cipher, by editing <code>install_options</code> and changing the <code>CIPHER</code> line to <code>CIPHER=&quot;aes-cbc-plain64&quot;</code>, re-zipping and using <code>adb sideload</code> again.
+
+=== Installing kernel ===
+
+This can be done via <code>./pmbootstrap.py flasher flash_kernel</code>
+
+It should boot, and show the Samsung splash screen. After that you should be able to [https://github.com/postmarketOS/pmbootstrap/wiki/Boot-process connect via telnet]
