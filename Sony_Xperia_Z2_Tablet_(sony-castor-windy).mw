@@ -1,0 +1,83 @@
+[[Category:Supported Devices]]
+=== Contributors ===
+
+* bjorn andersson (ported device to 4.3)
+* robclark (freedreno support)
+* opendata26
+
+=== What works ===
+
+* Booting the system
+* Kernel log to the display
+* Framebuffer graphics
+* Unlocking the root partition
+* Display Backlight control
+* Wayland on framebuffer
+* Module loading
+* Wifi (see Additional Info below)
+* Notification led
+* Freedreno (see Additional Info below)
+
+=== What does not work ===
+
+* Audio
+* Both cameras
+
+=== Installation ===
+
+# Init pmbootstrap
+
+<source lang="bash">$ ./pmbootstrap.py init</source>
+# Start the build process and install flash to the device
+
+<source lang="bash"># Replace /dev/sdX with the device for your sdcard
+$ ./pmbootstrap.py install
+$ ./pmbootstrap.py flasher flash_system
+$ ./pmbootstrap.py flasher flash_kernel</source>
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-sony-castor-windy Device package]
+* [https://github.com/andersson/kernel Kernel source]
+
+==== Wifi ====
+
+The <code>linux-firmware</code> (included by default) package is required to provide the brcmfmac firmware necessary for initializing the wifi device.
+
+Once the device has been successfully initialized, enable it:
+
+<pre>$ sudo ip link set wlan0 up</pre>
+Configure wpa_supplicant (only necessary on encrypted networks):
+
+<pre>$ sudo su -
+# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wlan0.conf
+&lt;enter passphrase here and press Enter&gt;
+# exit</pre>
+Connect to network using wpa_supplicant:
+
+<pre>$ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
+If your network uses DHCP, start the DHCP client:
+
+<pre>$ sudo udhcpc -i wlan0</pre>
+==== Freedreno ====
+
+Freedreno is only supported with X atm as weston segfaults<br />
+Here are some games being played https://imgur.com/a/ji6jl#jhR61Ww
+
+<source lang="bash"># Install mesa and X allong with the touchscreen driver
+$ sudo apk add mesa mesa-dri-freedreno xorg-server xf86-input-libinput
+
+# Start X
+$ sudo X &</source>
+==== Setting the date ====
+
+Since the rtc driver is read only you need to use ntp to set the date
+
+<source lang="bash"># Install openntpd
+$ sudo apk add openntpd
+
+# Write the current system time to the hardware clock
+$ sudo ntp -s</source>
+=== Helpful Links for Porting ===
+
+* [https://github.com/andersson/kernel Kernel]
+* [http://elixir.free-electrons.com/linux/v4.8.16/source/Documentation/devicetree/bindings/display/msm/mdp5.txt New MDP5 Bindings]
