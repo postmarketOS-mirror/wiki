@@ -377,7 +377,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Jolla-sbj-(Jolla-phone)|Jolla phone]]
   | jolla-sbj
-  |
+  | Kernel compiles, can't get fastboot to work
 |-
   | [[Landrover-a9|Landrover A9]]
   | landrover-a9
