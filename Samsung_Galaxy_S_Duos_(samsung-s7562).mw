@@ -1,0 +1,24 @@
+[[Category:Unsupported Devices]]
+This device is not supported by LineageOS but the kernel is apparently in GitHub.
+
+=== Contributors ===
+
+* cmdr2 on IRC
+
+=== What works ===
+
+* Compilation of kernel, system and initramfs
+* pmOS starts up if a pre-compiled kernel (from the original boot.img) is used, along with the newly built initramfs and system image. Telnet, decrypt filesystem, and ssh (partially) works
+
+=== What does not work ===
+
+* pmOS does not boot with the newly built kernel. it only works if a pre-built factory kernel is used
+* ssh fails with a 'cannot create channel 0' error, which can be bypassed with <code>ssh user@&lt;ip&gt; '/bin/sh'</code>. With this, no prompt is shown (i.e. no &quot;$&quot; or &quot;%&quot;), but commands can be typed and executed and the results are displayed
+* No graphics are displayed on the screen, weston fails with <code>Failed to open frame buffer device ‘/dev/fb0’: No such file or directory</code>
+
+=== Links ===
+
+* https://github.com/KlinkOnE/android_kernel_ba2x_2.0-1
+* https://forum.xda-developers.com/s7562/development/cm11-samsung-galaxy-s-duos-kitkat-4-4-4-t3024762
+
+=== Photos ===
