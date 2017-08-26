@@ -4,7 +4,7 @@ Some phones have a serial port accessible from the outside, this makes debugging
 
 The nexus phones multiplexed the serial debug lines with the headphone audio lines. To switch it into serial mode you have to supply -3V to the mic port. The uart lines themselves are 1.8V. If you use a 3.3V usb-to-uart adapter the signal from the phone will probably work, for the TX side you have to add a resistor divider to lover the voltage for the phone. Here's the schematic for a nexus debug cable:
 
-[[File:http://i.imgur.com/cAjWu2a.png]]
+[[File:Nexus-debug-cable.png]]
 
 This cable has been tested with:
 
