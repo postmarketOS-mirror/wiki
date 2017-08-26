@@ -1,10 +1,10 @@
 [[Category:Supported Devices]]
-=== Contributors ===
+= Contributors =
 
 * lawl
 * Pneumaticat
 
-=== What works ===
+= What works =
 
 * [x] Kernel compilation
 * [x] Flash kernel (<code>pmbootstrap flasher flash_kernel</code>)
@@ -24,19 +24,19 @@
 * [ ] Rear camera
 * [ ] ...
 
-=== Links ===
+= Links =
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-maguro Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-tuna Kernel package]
 * [https://github.com/lawl/pmbootstrap lawl's development branch] (now merged into master)
 
-=== Additional info ===
+= Additional info =
 
-==== Entering &quot;Fastboot mode&quot; ====
+== Entering &quot;Fastboot mode&quot; ==
 
 Hold the '''Volume Up''' and '''Volume Down''' buttons, and then press the '''Power''' button
 
-==== Partition layout ====
+== Partition layout ==
 
 <pre> # fdisk /dev/block/mmcblk0
 Found valid GPT with protective MBR; using GPT
@@ -65,7 +65,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
   13          122752          122879       65536   0700  metadata</pre>
 (From this, you can see that if your postmarketOS install image is larger than 654 MB, you'll have to install it to the <code>userdata</code> partition instead. Or you could repartition.)
 
-=== Photos ===
+= Photos =
 
 * Galaxy Nexus feat. Weston and a working touch-screen<br />
 [[File:Lawl Galaxy Nexus Weston.jpg|500 px]]
