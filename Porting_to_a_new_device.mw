@@ -2,7 +2,7 @@ If you have ''any'' questions, feel free to ask in the [https://github.com/postm
 
 Please write your porting progress to the [https://github.com/postmarketOS/pmbootstrap/wiki/Devices devices] page, even if you didn't get very far. This helps to determine what can be improved to make porting easier.
 
-'''Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, writing SMS, using Wi-Fi, using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.'''
+{{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, writing SMS, using Wi-Fi, using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
 
 === Initialization ===
 
