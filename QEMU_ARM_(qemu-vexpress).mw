@@ -1,0 +1,32 @@
+<blockquote>''This page is specific to running the <code>arm</code> version of Qemu. Make sure to also read the '''[[common Qemu notes]]'''!''
+</blockquote>
+This device is used to emulate an ARM Versatile Express for Cortex-A9.
+
+Vexpress (Versatile Express) is the reference architecture from the ARM Foundation. It simulates the armv7 architecture and a lot of other hardware (like graphics hardware).
+
+QEMU supports many other ARM architectures (see <code>qemu-system-arm -machine help</code>).
+
+=== Contributors ===
+
+* MartijnBraam
+* mmaret
+
+=== What works ===
+
+* Compilation of kernel, system and initramfs
+* It boots but only if you specify a seperate <code>-dtb</code> flag, it doesn't use the embedded dtb
+* Storage
+* Network
+
+=== What does not work ===
+
+* Keyboard and mouse
+
+=== Links ===
+
+* https://wiki.linaro.org/PeterMaydell/QemuVersatileExpress
+
+=== Screenshot ===
+
+[[File:http://i.imgur.com/Hwq0ryI.png|Qemu unlock screen]]<br />
+[[File:http://i.imgur.com/AWRDDQ1.png|Weston]]
