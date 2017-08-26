@@ -1,0 +1,41 @@
+=== Contributors ===
+
+* ollieparanoid
+* PabloCastellano and robb4 on IRC: Workaround for red screen bug [https://github.com/postmarketOS/pmbootstrap/issues/54 #54]
+
+=== Entering &quot;Fastboot mode&quot; ===
+
+Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
+
+=== What works ===
+
+* Touchscreen
+* Weston (has the red screen bug, but we have a workaround for that now 👍 )
+
+=== What does not work ===
+
+* XWayland
+* The rest (Wifi, bluetooth, making calls, ...)
+* fbsplash only displays splash images very shortly, then goes to black screen
+
+=== Wifi ===
+
+Looks like, we need to package the [https://github.com/LineageOS/android_device_lge_mako/blob/12ac6e9aeb32d5ac9fc832f2214ede2c7690d0a6/proprietary-blobs.txt#L152-L157 wcnss.* files] for wifi. A version from 2015 can be found [https://github.com/TheMuppets/proprietary_vendor_lge/tree/cm-14.1/mako/proprietary/vendor/firmware here]. It's a Qualcomm chip.
+
+=== Alternative kernels ===
+
+These are not packaged yet in postmarketOS, feel free to package them.
+
+* [https://github.com/postmarketOS/pmbootstrap/issues/12 &quot;Almost mainline&quot; from John Stultz] &lt;- maybe this also resolves the wrong-color-bug
+* [https://github.com/postmarketOS/pmbootstrap/pull/38 Freedreno]
+
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-lg-mako Device package]
+* [https://www.optiv.com/blog/building-a-nexus-4-uart-debug-cable Tutorial: UART debug cable]
+* [https://developers.google.com/android/drivers#mako Official proprietary drivers]
+
+=== Photos ===
+
+* [https://ollieparanoid.github.io/img/2017-05-26/mako/editor.jpg Weston running with framebuffer issues]
+* [https://cloud.githubusercontent.com/assets/6033024/26761940/2e3273e0-4928-11e7-8800-0b4ddb14e239.jpg robb4 patched Weston to display the right colors]
