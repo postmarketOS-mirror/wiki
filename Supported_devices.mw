@@ -25,7 +25,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 ! Mobile data
 ! Voice
 |-
-  | [[samsung-maguro (Google Galaxy Nexus GSM)|Google Galaxy Nexus (GSM)]]
+  | [[Samsung-Maguro-(Google-Galaxy-Nexus-GSM)|Google Galaxy Nexus (GSM)]]
   | samsung-maguro
   | 
   | 
@@ -43,7 +43,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[lg-mako (Google Nexus 4)|Google Nexus 4]]
+  | [[Lg-mako-(Google-Nexus-4)|Google Nexus 4]]
   | lg-mako
   | 
   | 
@@ -61,7 +61,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[lg-hammerhead (Google Nexus 5)|Google Nexus 5 (GSM)]]
+  | [[Lg-hammerhead-(Google-Nexus-5)|Google Nexus 5 (GSM)]]
   | lg-hammerhead
   | 
   | 
@@ -79,7 +79,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[asus-grouper (Google Nexus 7 2012)|Google Nexus 7 (2012)]]
+  | [[Asus-grouper-(Google-Nexus-7-2012)|Google Nexus 7 (2012)]]
   | asus-grouper
   | 
   | 
@@ -133,7 +133,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[lg-d855 (LG G3 Global)|LG G3 Global]]
+  | [[LG-G3-Global|LG G3 Global]]
   | lg-d855
   | 
   | 
@@ -151,7 +151,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[motorola-titan (Moto G 2014)|Moto G 2014]]
+  | [[Motorola-titan-(Moto-G-2014)|Moto G 2014]]
   | motorola-titan
   | 
   | 
@@ -169,7 +169,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[mozilla-flame|Mozilla Flame]]
+  | [[Mozilla-Flame|Mozilla Flame]]
   | mozilla-flame
   | 
   | 
@@ -205,7 +205,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[qemu-vexpress (Qemu with vexpress soc)|QEMU (arm)]]
+  | [[Qemu-vexpress-(Qemu-with-vexpress-soc)|QEMU (arm)]]
   | qemu-vexpress
   | 
   | 
@@ -223,7 +223,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[qemu-amd64 (QEMU for x86_64)|QEMU (x86_64)]]
+  | [[Qemu-amd64-(QEMU-for-x86 64)|QEMU (x86_64)]]
   | qemu-amd64
   | 
   | 
@@ -277,7 +277,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[samsung-i9100 (Samsung Galaxy SII)|Samsung Galaxy SII]]
+  | [[Samsung-i9100-(Samsung-Galaxy-SII)|Samsung Galaxy SII]]
   | samsung-i9100
   | 
   | 
@@ -295,7 +295,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[sony-amami-(Xperia-Z1-Compact)|Xperia Z1 Compact]]
+  | [[Sony-amami-(Xperia-Z1-Compact)|Xperia Z1 Compact]]
   | sony-amami
   | 
   | 
@@ -313,7 +313,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Xperia Z2 Tablet|Xperia Z2 Tablet]]
+  | [[Xperia-Z2-Tablet|Xperia Z2 Tablet]]
   | sony-castor-windy
   | Yes
   | 
