@@ -1,0 +1,93 @@
+=== Contributors ===
+
+* MartijnBraam
+* dzervas
+* lawl
+
+=== What works ===
+
+* Compiling the LineageOS kernel
+* SSH
+* Booting
+* Flash light
+* Battery
+* Weston + Touchscreen (with [https://github.com/postmarketOS/pmbootstrap/pull/66 ugly hacks] and the [https://github.com/postmarketOS/pmbootstrap/issues/54 red screen bug])
+
+<source lang="bash">fastboot boot /mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead /mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead</source>
+=== What does not work ===
+
+* Proprietary video driver ([https://github.com/postmarketOS/pmbootstrap/issues/29 #29])
+* Flashing the compiled LineageOS kernel via pmbootstrap ([https://github.com/postmarketOS/pmbootstrap/issues/35 #35])
+* WiFi (firmware needed)
+* Front led
+
+<pre>[00:33:38] (native) flash kernel 'lg-hammerhead'
+creating boot image...
+creating boot image - 3600384 bytes
+sending 'SHLVL=1' (3516 KB)...
+OKAY [  0.331s]
+writing 'SHLVL=1'...
+FAILED (remote: partition table doesn't exist)
+finished. total time: 0.511s
+[00:33:38] ERROR: Command failed: (native) % fastboot --base 0 --kernel-offset 0x00008000 --ramdisk-offset 0x02900000 --tags-offset 0x02700000 --page-size 2048 flash:raw /mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead /mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead</pre>
+Workaround (on host, not inside chroot):
+
+<pre>mkbootimg --base 0 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x2900000 --second_offset 0x00f00000 --tags_offset 0x02700000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1' --kernel ~/.local/var/pmbootstrap/chroot_native/mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead --ramdisk ~/.local/var/pmbootstrap/chroot_native/mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead -o pmos.img
+fastboot boot pmos.img</pre>
+There is also a bug and the screen is not updated. Workaround: login using ssh and run the following command:
+
+<pre>ssh user@172.16.42.1
+sudo su
+while [ ! ]; do cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/mode; done</pre>
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/linux-lg-hammerhead Kernel package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-lg-hammerhead Device package]
+* [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
+
+== Photos ==
+
+* [https://user-images.githubusercontent.com/6033024/26851053-3f5512fe-4af9-11e7-93da-cf9dd94b6b75.jpg Weston running (with the red screen bug)]
+* [https://www.reddit.com/r/postmarketOS/comments/6fovjp/postmarketos_running_on_the_the_nexus_5/ /r/postmarketOS post]
+
+== Component support table ==
+
+{|
+! Component
+! Module
+! LineageOS Kernel
+! Mainline kernel
+|-
+| Storage
+| sdhci
+| Working
+| Working
+|-
+| WiFi
+| bcmdhd
+| Missing firmware
+| No
+|-
+| USB Networking
+|
+
+| Yes
+| No
+|-
+| 2D Video
+| mdss_fb
+| Screen not refreshing automatically
+| No
+|-
+| 3D Video
+|
+
+| Not in kernel
+| No
+|-
+| Debug serial
+|
+
+| Yes, /dev/ttyHSL0
+| Yes, /dev/ttyMSM0
+|}
