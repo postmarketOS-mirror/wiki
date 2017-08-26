@@ -4,10 +4,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 
 == device ==
 
-{|
-!width="50%"| Variable
-!width="19%"| Description
-!width="26%"| Possibles values
+{| class="wikitable sortable"
+!Variable
+!Description
+!Possibles values
 |-
 | <code>format_version</code>
 | Used to distinguish between different versions of this file.
@@ -67,10 +67,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 
 These are used for flashing and booting the device, and most of them are fastboot specific. '''[https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets Here is a guide on how to get these values for a specific Android device (by extracting the <code>boot.img</code>)]'''
 
-{|
-!width="38%"| Variable
-!width="36%"| Description
-!width="25%"| Possible values
+{|  class="wikitable sortable"
+! Variable
+! Description
+! Possible values
 |-
 | <code>flash_offset_kernel</code>
 | Kernel offset used for flashing
@@ -125,10 +125,10 @@ These are used for flashing and booting the device, and most of them are fastboo
 
 == weston ==
 
-{|
-!width="48%"| Variable
-!width="19%"| Description
-!width="26%"| Possibles values
+{| class="wikitable sortable"
+! Variable
+! Description
+! Possibles values
 |-
 | <code>weston_pixman_type</code>
 | (optional) Use it as a workaround for [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54].
@@ -153,7 +153,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 
 == splash ==
 
-{|
+{| class="wikitable sortable"
 ! Variable
 ! Description
 ! Possibles values
