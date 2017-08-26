@@ -25,17 +25,17 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 ! Mobile data
 ! Voice
 |-
-  | [[Samsung-Maguro-(Google-Galaxy-Nexus-GSM)|Google Galaxy Nexus (GSM)]]
-  | samsung-maguro
+  | style="white-space: nowrap;" | [[Samsung-Maguro-(Google-Galaxy-Nexus-GSM)|Google Galaxy Nexus (GSM)]]
+  | style="white-space: nowrap;" | samsung-maguro
   | 
   | 
-  | Yes
+  | Y
   | 
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  | Yes
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
   |
   |
   |
@@ -43,33 +43,15 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Lg-mako-(Google-Nexus-4)|Google Nexus 4]]
-  | lg-mako
+  | style="white-space: nowrap;" | [[Lg-mako-(Google-Nexus-4)|Google Nexus 4]]
+  | style="white-space: nowrap;" | lg-mako
   | 
   | 
-  | Yes
+  | Y
   | 
-  | Yes
-  | Yes
-  | Yes
-  | 
-  | 
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[Lg-hammerhead-(Google-Nexus-5)|Google Nexus 5 (GSM)]]
-  | lg-hammerhead
-  | 
-  | 
-  | Yes
-  | Partially
-  | Somewhat
-  | Yes
-  | Yes
+  | Y
+  | Y
+  | Y
   | 
   | 
   |
@@ -79,33 +61,15 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Asus-grouper-(Google-Nexus-7-2012)|Google Nexus 7 (2012)]]
-  | asus-grouper
+  | style="white-space: nowrap;" | [[Lg-hammerhead-(Google-Nexus-5)|Google Nexus 5 (GSM)]]
+  | style="white-space: nowrap;" | lg-hammerhead
   | 
   | 
-  | Yes
-  | 
-  | Yes
-  | Yes
-  | Yes
-  | Somewhat
-  | 
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[HTC-Bravo-(HTC-Desire)|HTC Desire]]
-  | htc-bravo
-  | 
-  | 
-  | 
-  | 
-  | Yes
-  | Yes
-  | Yes
+  | Y
+  | P
+  | P
+  | Y
+  | Y
   | 
   | 
   |
@@ -115,34 +79,16 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[HTC-Ace-(HTC-Desire-HD)|HTC Desire HD]]
-  | htc-ace
+  | style="white-space: nowrap;" | [[Asus-grouper-(Google-Nexus-7-2012)|Google Nexus 7 (2012)]]
+  | style="white-space: nowrap;" | asus-grouper
   | 
   | 
+  | Y
   | 
-  | 
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[LG-G3-Global|LG G3 Global]]
-  | lg-d855
-  | 
-  | 
-  | Somewhat
-  | 
-  | Yes
-  | Yes
-  | Yes
-  | 
+  | Y
+  | Y
+  | Y
+  | P
   | 
   |
   |
@@ -151,105 +97,15 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Motorola-titan-(Moto-G-2014)|Moto G 2014]]
-  | motorola-titan
-  | 
-  | 
-  | Somewhat
-  | 
-  | Somewhat
-  | Yes
-  | Yes
-  | Somewhat
-  | 
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[Mozilla-Flame|Mozilla Flame]]
-  | mozilla-flame
-  | 
-  | 
-  | Yes
-  | 
-  | Yes
-  | Somewhat
-  | Yes
-  | Somewhat
-  | 
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[nokia-rx51 (Nokia N900)|Nokia N900]]
-  | nokia-rx51
-  | 
-  | Yes
-  | 
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  |
-  |
-  | Yes
-  |
-  |
-  |
-|-
-  | [[Qemu-vexpress-(Qemu-with-vexpress-soc)|QEMU (arm)]]
-  | qemu-vexpress
+  | style="white-space: nowrap;" | [[HTC-Bravo-(HTC-Desire)|HTC Desire]]
+  | style="white-space: nowrap;" | htc-bravo
   | 
   | 
   | 
-  | Yes
-  | Yes
   | 
-  | 
-  | 
-  | Yes
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[Qemu-amd64-(QEMU-for-x86 64)|QEMU (x86_64)]]
-  | qemu-amd64
-  | 
-  | 
-  | 
-  | Yes
-  | Yes
-  | 
-  | 
-  | 
-  | Yes
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  | [[Samsung-N7100-(Galaxy-Note-II-GSM)|Samsung Galaxy Note 2]]
-  | samsung-n7100
-  | 
-  | 
-  | Yes
-  | 
-  | Yes
-  | Yes
-  | Yes
+  | Y
+  | Y
+  | Y
   | 
   | 
   |
@@ -259,17 +115,17 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Samsung-i9070-(Samsung-Galaxy-S-Advance)|Samsung Galaxy S Advance]]
-  | samsung-i9070
+  | style="white-space: nowrap;" | [[HTC-Ace-(HTC-Desire-HD)|HTC Desire HD]]
+  | style="white-space: nowrap;" | htc-ace
   | 
   | 
-  | Yes
   | 
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  | Yes
+  | 
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
   |
   |
   |
@@ -277,17 +133,17 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Samsung-i9100-(Samsung-Galaxy-SII)|Samsung Galaxy SII]]
-  | samsung-i9100
+  | style="white-space: nowrap;" | [[LG-G3-Global|LG G3 Global]]
+  | style="white-space: nowrap;" | lg-d855
   | 
   | 
+  | P
+  | 
+  | Y
+  | Y
+  | Y
   | 
   | 
-  | Yes
-  | Yes
-  | Yes
-  | 
-  | Yes
   |
   |
   |
@@ -295,17 +151,17 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Sony-amami-(Xperia-Z1-Compact)|Xperia Z1 Compact]]
-  | sony-amami
+  | style="white-space: nowrap;" | [[Motorola-titan-(Moto-G-2014)|Moto G 2014]]
+  | style="white-space: nowrap;" | motorola-titan
   | 
   | 
-  | Yes
+  | P
   | 
-  | Yes
-  | Yes
-  | Yes
+  | P
+  | Y
+  | Y
+  | P
   | 
-  | Yes
   |
   |
   |
@@ -313,17 +169,161 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | [[Xperia-Z2-Tablet|Xperia Z2 Tablet]]
-  | sony-castor-windy
-  | Yes
+  | style="white-space: nowrap;" | [[Mozilla-Flame|Mozilla Flame]]
+  | style="white-space: nowrap;" | mozilla-flame
   | 
-  | Yes
-  | Partially
-  | Yes
-  | Yes
-  | Yes
-  | Yes
-  | Yes
+  | 
+  | Y
+  | 
+  | Y
+  | P
+  | Y
+  | P
+  | 
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[nokia-rx51 (Nokia N900)|Nokia N900]]
+  | style="white-space: nowrap;" | nokia-rx51
+  | 
+  | Y
+  | 
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
+  |
+  |
+  | Y
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Qemu-vexpress-(Qemu-with-vexpress-soc)|QEMU (arm)]]
+  | style="white-space: nowrap;" | qemu-vexpress
+  | 
+  | 
+  | 
+  | Y
+  | Y
+  | 
+  | 
+  | 
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Qemu-amd64-(QEMU-for-x86 64)|QEMU (x86_64)]]
+  | style="white-space: nowrap;" | qemu-amd64
+  | 
+  | 
+  | 
+  | Y
+  | Y
+  | 
+  | 
+  | 
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Samsung-N7100-(Galaxy-Note-II-GSM)|Samsung Galaxy Note 2]]
+  | style="white-space: nowrap;" | samsung-n7100
+  | 
+  | 
+  | Y
+  | 
+  | Y
+  | Y
+  | Y
+  | 
+  | 
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Samsung-i9070-(Samsung-Galaxy-S-Advance)|Samsung Galaxy S Advance]]
+  | style="white-space: nowrap;" | samsung-i9070
+  | 
+  | 
+  | Y
+  | 
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Samsung-i9100-(Samsung-Galaxy-SII)|Samsung Galaxy SII]]
+  | style="white-space: nowrap;" | samsung-i9100
+  | 
+  | 
+  | 
+  | 
+  | Y
+  | Y
+  | Y
+  | 
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Sony-amami-(Xperia-Z1-Compact)|Xperia Z1 Compact]]
+  | style="white-space: nowrap;" | sony-amami
+  | 
+  | 
+  | Y
+  | 
+  | Y
+  | Y
+  | Y
+  | 
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Xperia-Z2-Tablet|Xperia Z2 Tablet]]
+  | style="white-space: nowrap;" | sony-castor-windy
+  | Y
+  | 
+  | Y
+  | P
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
   |
   |
   |
@@ -341,69 +341,85 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Apple-iPod-Touch-1G|Apple iPod Touch 1G]]
   | apple-ipt1g
-  | 
+  |
 |-
   | [[Asus-tf101-(ASUS-Transformer-TF101)|ASUS Transformer TF101]]
   | asus-tf101
-  | 
+  | Kernel does not compile
 |-
   | [[BlackBerry-Bold-Touch-9900-(Dakota)|BlackBerry Bold Touch 9900]]
   | blackberry-dakota
-  | 
+  |
 |-
   | [[Coolpad-Sky-3-E502-(Modena-2)]]
   | 
-  | 
+  |
 |-
   | [[Fairphone-2|Fairphone 2]]
   | fairphone-fp2
-  | 
+  |
 |-
   | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]
   | hp-tenderloin
-  | 
+  | Need novacom packaged for Alpine
 |-
   | [[Htc-vision-(HTC-Desire-Z)|HTC Desire Z]]
   | htc-vision
-  | 
+  | Kernel compiles, not tested
 |-
   | [[Htc-monarudo-(HTC-Droid-DNA)|HTC Droid DNA]]
   | htc-monarudo
-  | 
+  |
 |-
   | [[Huawei-Ascend-Y530|Huawei Ascend Y530]]
   | huawei-y530
-  | 
+  |
 |-
   | [[Jolla-sbj-(Jolla-phone)|Jolla phone]]
   | jolla-sbj
-  | 
+  |
 |-
   | [[Landrover-a9|Landrover A9]]
   | landrover-a9
-  | 
+  |
 |-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
-  | 
+  |
 |-
   | [[Samsung-S7562|Samsung Galaxy S Duos S7562]]
   | samsung-s7562
-  | 
+  |
 |-
   | [[Semc-anzu-(Xperia-Arc)|Xperia Arc]]
   | semc-anzu
-  | 
+  |
 |-
   | [[Xperia-Z2|Xperia Z2]]
   | sony-sirius
-  | 
+  |
 |-
   | [[Xperia-E-Dual|Xperia E Dual]]
   | sony-nanhu
-  | 
+  |
 |-
   | [[Xperia-Z3C|Xperia Z3C]]
   | sony-aries
-  | 
+  |
+|}
+
+== Legend ==
+
+{| class="wikitable sortable"
+! Code
+! Meaning
+|-
+  | Y
+  | Yes, fully implemented
+|-
+  | P
+  | Partially implemented
+|-
+  | -
+  | Not applicable
 |}
