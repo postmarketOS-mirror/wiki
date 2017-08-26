@@ -1,9 +1,9 @@
 [[Category:Supported Devices]]
-== Contributors ==
+=== Contributors ===
 * [[user:MartijnBraam|MartijnBraam]]
 * craftyguy
 
-== What works ==
+=== What works ===
 * Booting the system
 * Kernel log to the display
 * Framebuffer graphics
@@ -18,136 +18,125 @@
 * Battery capacity reporting (see Additional Info below)
 * Keyboard in virtual terminal
 
-== What does not work ==
+=== What does not work ===
 * Both cameras
 * Cell modem (untested)
 * 3D Acceleration (requires binary blob)
 
-== Installation ==
+=== Installation ===
 
-We currently only support installing and running pmos from the microsd card on the n900.
-Getting it to work with emmc and 0xffff is harder to implement and has no real benefit since
+We currently only support installing and running pmos from the microsd card on the n900.<br />
+Getting it to work with emmc and 0xffff is harder to implement and has no real benefit since<br />
 the built in emmc is quite slow and fragile.
 
 # Init pmbootstrap
 
-```bash
-$ ./pmbootstrap.py init
-```
-
+<source lang="shell">$ ./pmbootstrap.py init</source>
 # Start the build process and install the completed image to a sdcard
 
-```bash
-# Replace /dev/sdX with the device for your sdcard
-$ ./pmbootstrap.py install --sdcard /dev/sdX
-```
-
-# [Install u-boot from pali](http://maemo.org/downloads/product/Maemo5/u-boot-flasher/) on the n900 if you haven't installed it already. See Additional Info below for instructions on configuring pmos to boot by default.
+<source lang="shell"># Replace /dev/sdX with the device for your sdcard
+$ ./pmbootstrap.py install --sdcard /dev/sdX</source>
+# [http://maemo.org/downloads/product/Maemo5/u-boot-flasher/ Install u-boot from pali] on the n900 if you haven't installed it already. See Additional Info below for instructions on configuring pmos to boot by default.
 # Place the sdcard into the n900 and boot it with the keyboard slide open
 # Choose the u-boot shell
-# enter `run sdboot` into the shell
+# enter <code>run sdboot</code> into the shell
 
+=== Links ===
 
-== Links ==
-* [Device package](https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-rx51)
-* [Kernel source](https://kernel.org)
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-rx51 Device package]
+* [https://kernel.org Kernel source]
 
-== Additional info ==
+=== Additional info ===
 
-* Martijn's N900 has uboot installed a long time ago, I'm using sdcard boot from the bootmenu shell using `run sdboot`
-* The [Neo900](https://neo900.org/) (still in development) will upgrade the hardware inside of the N900, and has some nice features such as hardware sandboxing the modem.
+* Martijn's N900 has uboot installed a long time ago, I'm using sdcard boot from the bootmenu shell using <code>run sdboot</code>
+* The [https://neo900.org/ Neo900] (still in development) will upgrade the hardware inside of the N900, and has some nice features such as hardware sandboxing the modem.
 
-=== Wifi ===
+==== Wifi ====
 
-The `linux-firmware` package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/158 #158])
+The <code>linux-firmware</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/158 #158])
 
-If the firmware loads correctly you can follow the steps in [[Setup WiFi with iproute2]] to connect to an accesspoint.
+Once the device has been successfully initialized, enable it:
 
-=== Keyboard Backlight ===
+<pre>$ sudo ip link set wlan0 up
+$ sudo iw wlan0 set type managed</pre>
+Configure wpa_supplicant (only necessary on encrypted networks):
 
-There are 6 keyboard backlight LEDs that can be adjusted, they are found under `/sys/class/leds/lp5523:kb{1-6}`. To adjust brightness, write a value, $VAL between 0 and 255, to the `brightness` parameter as the root user:
+<pre>$ sudo su -
+# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wlan0.conf
+&lt;enter passphrase here and press Enter&gt;
+# exit</pre>
+Connect to network using wpa_supplicant:
 
-```
-for i in $(seq 1 6);
-    do echo $VAL > /sys/class/leds/lp5523\:kb$i/brightness
-done
-```
+<pre>$ sudo wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
+If your network uses DHCP, start the DHCP client:
 
-=== Display ===
+<pre>$ sudo udhcpc -i wlan0</pre>
+==== Keyboard Backlight ====
 
-With DRM enabled ([#197](https://github.com/postmarketOS/pmbootstrap/pull/197)), the display can be managed at this location: `/sys/devices/platform/omapdrm.0/graphics/fb0/`
+There are 6 keyboard backlight LEDs that can be adjusted, they are found under <code>/sys/class/leds/lp5523:kb{1-6}</code>. To adjust brightness, write a value, $VAL between 0 and 255, to the <code>brightness</code> parameter as the root user:
 
-For example, the display can be turned off by: 
+<pre>for i in $(seq 1 6);
+    do echo $VAL &gt; /sys/class/leds/lp5523\:kb$i/brightness
+done</pre>
+==== Display ====
 
-```
-# echo 1 > /sys/devices/platform/omapdrm.0/graphics/fb0/blank
-```
+With DRM enabled ([https://github.com/postmarketOS/pmbootstrap/pull/197 #197]), the display can be managed at this location: <code>/sys/devices/platform/omapdrm.0/graphics/fb0/</code>
 
-=== Keyboard layout in console ===
+For example, the display can be turned off by:
 
-In order to set the keyboard layout for the virtual console (e.g. to take advantage of number keys on the N900 keyboard), obtain your desired language keymap file for the RX-51, [such as this one.](https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map). (TODO: Need to pull 'official' vconsole keymaps from Maemo5 if they exist..).
+<pre># echo 1 &gt; /sys/devices/platform/omapdrm.0/graphics/fb0/blank</pre>
+==== Keyboard layout in console ====
 
-On the N900, install `kbd-bkeymaps`, either by using `pmbootstrap install --add kbd-bkeysmaps` on the host system or by running `apk add kbd-bkeysmaps` on the device itself.
+In order to set the keyboard layout for the virtual console (e.g. to take advantage of number keys on the N900 keyboard), obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one.]. (TODO: Need to pull 'official' vconsole keymaps from Maemo5 if they exist..).
 
-The keymap must be in binary format, bmap. This can be accomplished using the `loadkeys` tool:
+On the N900, install <code>kbd-bkeymaps</code>, either by using <code>pmbootstrap install --add kbd-bkeysmaps</code> on the host system or by running <code>apk add kbd-bkeysmaps</code> on the device itself.
 
-```bash    
-$ apk add kbd kbd-bkeymaps
+The keymap must be in binary format, bmap. This can be accomplished using the <code>loadkeys</code> tool:
+
+<source lang="shell">$ apk add kbd kbd-bkeymaps
 $ loadkeys -b rx51_us.map > rx51_us.bmap
-$ gzip rx51_us.bmap
-```
+$ gzip rx51_us.bmap</source>
+Compress it and copy it to <code>/usr/share/bkeymaps/us/</code> on the N900.
 
-Compress it and copy it to `/usr/share/bkeymaps/us/` on the N900.
+Log into the N900, and run <code>sudo setup-keymap</code>, then select <code>us</code> and finally <code>rx51_us</code>.
 
-Log into the N900, and run `sudo setup-keymap`, then select `us` and finally `rx51_us`.
+==== Battery Capacity Reporting ====
 
-=== Battery Capacity Reporting ===
-
-The current battery capacity can be found under `/sys/class/power_supply/bq27200-0/capacity`, and is represented as a percentage. For example, a value of `11` equates to `11%`. If `capacity` does not exist or contains erroneous information, then your battery needs to be calibrated first. To calibrate the battery:
+The current battery capacity can be found under <code>/sys/class/power_supply/bq27200-0/capacity</code>, and is represented as a percentage. For example, a value of <code>11</code> equates to <code>11%</code>. If <code>capacity</code> does not exist or contains erroneous information, then your battery needs to be calibrated first. To calibrate the battery:
 
 1) Charge it up fully, using a wall power adapter.
 
 2) Once it is charged up, power on the device
 
-3) Unplug the device and allow the battery to run all the way down until it powers off. This may take quite a while to happen (>24hrs, but can be made shorter by running a CPU intensive workload)
+3) Unplug the device and allow the battery to run all the way down until it powers off. This may take quite a while to happen (&gt;24hrs, but can be made shorter by running a CPU intensive workload)
 
 4) When device powers off, plug it back into wall adapter and allow to charge up fully again. The battery and charging chip should now be calibrated.
 
-[Datasheet for the bq27200 charging chip](http://www.ti.com/lit/ds/symlink/bq27200.pdf)
+[http://www.ti.com/lit/ds/symlink/bq27200.pdf Datasheet for the bq27200 charging chip]
 
-== Setting the hardware clock ==
+==== Setting the hardware clock ====
 
 Since 49fd9e0e4efcf030ca47344858bdc74370a78603 the hardware clock works. If your hardware clock doesn't have the time set you can set it with:
 
-```bash
-# Get the system date in the right ballpark so ntpd works
+<source lang="shell"># Get the system date in the right ballpark so ntpd works
 $ date -s "2017-08-14 16:34:50"
 
 # Write the current system time to the hardware clock
-$ hwclock -w
-```
+$ hwclock -w</source>
+==== Configuring U-boot ====
 
-=== Configuring U-boot ===
+In order to configure pmos to boot by default on the N900, using U-boot, you will need to boot into Maemo and create a <code>/etc/bootmenu.d/10-pmos.item</code> file as the root user with these contents:
 
-In order to configure pmos to boot by default on the N900, using U-boot, you will need to boot into Maemo and create a `/etc/bootmenu.d/10-pmos.item` file as the root user with these contents:
-
-```
-ITEM_NAME="Postmarket OS"
-ITEM_SCRIPT="boot.scr"
-ITEM_DEVICE="${EXT_CARD}p1"
-ITEM_FSTYPE="ext2"
-``` 
-
+<pre>ITEM_NAME=&quot;Postmarket OS&quot;
+ITEM_SCRIPT=&quot;boot.scr&quot;
+ITEM_DEVICE=&quot;${EXT_CARD}p1&quot;
+ITEM_FSTYPE=&quot;ext2&quot;</pre>
 It can be set to the default boot option by creating a symlink:
 
-``` 
-root@Nokia-N900:~# ln -s /etc/bootmenu.d/10-pmos.item /etc/default/bootmenu.item
-```
+<pre>root@Nokia-N900:~# ln -s /etc/bootmenu.d/10-pmos.item /etc/default/bootmenu.item</pre>
+Finally, run <code>u-boot-update-bootmenu</code>:
 
-Finally, run `u-boot-update-bootmenu`:
-
-```
-root@Nokia-N900:~# u-boot-update-bootmenu 
+<pre>root@Nokia-N900:~# u-boot-update-bootmenu 
 Default bootmenu entry is '/etc/bootmenu.d/10-pmos.item'
 Adding bootmenu entry for: 'Maemo 5 with attached kernel (Internal Nand)'
 
@@ -156,19 +145,13 @@ Adding bootmenu entry for: 'Postmarket OS'
 Configuring this bootmenu entry as default
 
 Generating u-boot bootmenu script...
+</pre>
+'''Note''': This will set pmos as the default boot option. Maemo will still be accessible when booting the N900 with the keyboard slide out and selecting the relevant boot option in the u-boot boot menu.
 
-```
+=== Helpful Links for Porting ===
 
-**Note**: This will set pmos as the default boot option. Maemo will still be accessible when booting the N900 with the keyboard slide out and selecting the relevant boot option in the u-boot boot menu.
- 
-== Helpful Links for Porting ==
-
-- [Device schematic](https://neo900.org/stuff/block-diagrams/n900/n900.html)
-
-- [Very detailed schematic](http://plan9.stanleylieber.com/hardware/n900/n900.schematics.pdf)
-
-- [Arch Linux ARM - N900 hardware components list](https://github.com/archlinuxarm-n900/alarm-n900/wiki/Hardware-support)
-
-- [N900 sensor access in Maemo](http://mlab.taik.fi/paja/?p=1263)
-
-- [Hardware component specs / list](http://natisbad.org/N900/n900-commented-hardware-specs.html)
+* [https://neo900.org/stuff/block-diagrams/n900/n900.html Device schematic]
+* [http://plan9.stanleylieber.com/hardware/n900/n900.schematics.pdf Very detailed schematic]
+* [https://github.com/archlinuxarm-n900/alarm-n900/wiki/Hardware-support Arch Linux ARM - N900 hardware components list]
+* [http://mlab.taik.fi/paja/?p=1263 N900 sensor access in Maemo]
+* [http://natisbad.org/N900/n900-commented-hardware-specs.html Hardware component specs / list]
