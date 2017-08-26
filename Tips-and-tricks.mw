@@ -1,3 +1,1 @@
-* The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
-* Browse the Linux source with links to all references [http://elixir.free-electrons.com here]
-* Qualcomm and maybe some other Androids can simply reboot from postmarketOS (or any Linux distro) into your bootloader or recovery with <code>reboot -f bootloader</code> and <code>reboot -f recovery</code>
+#REDIRECT [[Tips and tricks]]
