@@ -40,4 +40,6 @@ Novacom sources can be found [https://github.com/openwebos here]. The specific r
 * [https://github.com/openwebos/cmake-modules-webos cmake-modules-webos]
 * [https://github.com/openwebos/nyx-lib nyx-lib]
 
+We can probably use the novacom pkgbuild from the AUR in alpine: https://aur.archlinux.org/packages/palm-novacom-git/
+
 We might also need [https://github.com/openwebos/novacomd novacomd], not sure yet.
