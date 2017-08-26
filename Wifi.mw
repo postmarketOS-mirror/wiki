@@ -7,9 +7,9 @@ A great place to start looking for information about many available WiFi chips i
 
 === Android ===
 
-We haven't quite figured it out yet, but for starters you need to [[find the WiFi firmware|How-to-find-device-specific-information#firmware-files]], make sure it gets installed and adjust the path in your kernel config (see [https://github.com/postmarketOS/pmbootstrap/pull/122 #122]). Some firmwares need additional config files with calibration data, these can usually be found in the LineageOS or Google repositories.
+We haven't quite figured it out yet, but for starters you need to [[How_to_find_device_specific_information#Firmware_files|find the WiFi firmware]], make sure it gets installed and adjust the path in your kernel config (see [https://github.com/postmarketOS/pmbootstrap/pull/122 #122]). Some firmwares need additional config files with calibration data, these can usually be found in the LineageOS or Google repositories.
 
-'''Wifi ''is working'' for the [[i9070|Samsung-i9070-(Samsung-Galaxy-S-Advance)]], all steps are listed on the device's wiki page!''' (see [https://github.com/postmarketOS/pmbootstrap/pull/138 PR #138]) (Feel free to put them here in a more generic way)
+'''Wifi ''is working'' for the [[Samsung-i9070-(Samsung-Galaxy-S-Advance)|i9070]], all steps are listed on the device's wiki page!''' (see [https://github.com/postmarketOS/pmbootstrap/pull/138 PR #138]) (Feel free to put them here in a more generic way)
 
 === Debugging ===
 
