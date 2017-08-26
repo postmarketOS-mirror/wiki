@@ -1,0 +1,21 @@
+[[Category:Unsupported Devices]]
+=== Contributors ===
+
+* wfranken
+
+=== What works ===
+
+* Compiling the kernel
+* Flashing pmos + kernel
+
+'''Current status''': There is currently no way to telnet into the device: 'lsusb' shows nothing after rebooting.
+
+'''What i've tried''':
+
+* The security hole on [[Inspecting the initramfs]]
+* Flashing manually with fastboot command
+* Everything on [[Boot process]] (doesn't work obviously as even lsusb does not recognize my device)
+
+=== Links ===
+
+* [https://github.com/sonyxperiadev/kernel-copyleft Kernel Source]
