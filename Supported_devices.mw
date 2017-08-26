@@ -379,7 +379,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | jolla-sbj
   | Kernel compiles, can't get fastboot to work
 |-
-  | [[Landrover-a9|Landrover A9]]
+  | [[Landrover-a9|Land Rover A9]]
   | landrover-a9
   |
 |-
@@ -387,27 +387,27 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | samsung-g800f
   |
 |-
-  | [[Samsung-S7562|Samsung Galaxy S Duos S7562]]
+  | [[Samsung-S7562|Samsung Galaxy S Duos]]
   | samsung-s7562
   |
 |-
-  | [[Semc-anzu-(Xperia-Arc)|Xperia Arc]]
+  | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
   | semc-anzu
   |
 |-
-  | [[Xperia-Z2|Xperia Z2]]
+  | [[Xperia-Z2|Sony Xperia Z2]]
   | sony-sirius
   |
 |-
-  | [[Xperia-E-Dual|Xperia E Dual]]
+  | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
   |
 |-
-  | [[Xperia-Z3C|Xperia Z3C]]
+  | [[Xperia-Z3C|Sony Xperia Z3C]]
   | sony-aries
   |
 |-
-  | [[Xperia-Z|Xperia Z]]
+  | [[Xperia-Z|Sony Xperia Z]]
   | sony-yuga
   |
 |}
