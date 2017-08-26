@@ -1,18 +1,20 @@
-If you want to talk to other people working on/with postmarketOS you can do so either:
+Please join our chat, so we can help you with using postmarketOS in real time. The chat is bridged between Matrix and IRC. We also provide an offtopic channel, which can be used to discuss your favorite pizza API and other non-related topics with the postmarketOS community.
 
-Join Matrix group
+==== Matrix ====
+In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser to enter the channel.
 
-[[https://matrix.to/#/#postmarketos:disroot.org|'''#postmarketos:disroot.org''']]
+* [https://matrix.to/#/#postmarketos:disroot.org #postmarketos:disroot.org]
+* [https://matrix.to/#/#postmarketos-offtopic:disroot.org #postmarketos-offtopic:disroot.org]
 
-Or IRC:
+After you register at any matrix site and join the channel, the offline history will be saved automatically (for IRC you will need a bouncer to get this functionality). It is highly recommended that you can receiver offline messages, so your questions can be answered even when you are offline!
 
-'''#postmarketos on freenode'''
+==== IRC ====
 
-Matrix &amp; IRC are bridged.
+The following two channels are hosted on freenode (mind the <code>##</code> for offtopic!):
+  #postmarketos
+  ##postmarketos-offtopic
 
-''If you don't know which one to use, use the Matrix group, because it doesn't require a bouncer to receive all messages all the time.''
+==== Other channels ====
 
-There is also an off-topic room available at [[https://matrix.to/#/#postmarketos-offtopic:disroot.org|'''#postmarketos-offtopic:disroot.org''']] for Matrix users and '''##postmarketos-offtopic''' at Freenode for IRC users.
-
-<blockquote>Please use the [https://reddit.com/r/postmarketos reddit page] for general discussions, as the matrix &amp; IRC are primarily focused on porting / development help &amp; discussions.
-</blockquote>
+* [https://reddit.com/r/postmarketOS Reddit] (we share photos/videos/blog posts of our development work there)
+* [https://github.com/postmarketOS/pmbootstrap/issues GitHub issues] (for discussing bugs and features)
