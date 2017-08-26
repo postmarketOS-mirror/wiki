@@ -15,7 +15,7 @@ Please write your porting progress to the [https://github.com/postmarketOS/pmboo
 Create an appropriate <code>device-$vendor-$name</code> package in the <code>aports/device</code> folder:
 
 <pre class="shell">cp -r aports/device/device-samsung-i9100 aports/device/device-vendor-name</pre>
-The important files are <code>APKBUILD</code> (''build recipe, [[apk is an Alpine Linux term|Glossary#apk]]'') and [[deviceinfo|deviceinfo reference]]. Please adjust them as necessary. Note that if your device uses '''fastboot''', you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/2670c3a031e7204cb638a6947ea4e867e66d033b/aports/device-lg-mako/deviceinfo#L18-L24 example]):
+The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary. Note that if your device uses '''fastboot''', you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/2670c3a031e7204cb638a6947ea4e867e66d033b/aports/device-lg-mako/deviceinfo#L18-L24 example]):
 
 <pre class="shell"># Fastboot related
 deviceinfo_generate_bootimg=&quot;true&quot;
