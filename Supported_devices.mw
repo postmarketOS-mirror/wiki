@@ -343,7 +343,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | apple-ipt1g
   |
 |-
-  | [[Asus-tf101-(ASUS-Transformer-TF101)|ASUS Transformer TF101]]
+  | [[Asus-tf101-(ASUS-Transformer-TF101)|ASUS Eee Pad Transformer]]
   | asus-tf101
   | Kernel does not compile
 |-
@@ -351,8 +351,8 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | blackberry-dakota
   |
 |-
-  | [[Coolpad-Sky-3-E502-(Modena-2)]]
-  | 
+  | [[Coolpad-Sky-3-E502-(Modena-2)|Coolpad Modena 2]]
+  | coolpad-modena2
   |
 |-
   | [[Fairphone-2|Fairphone 2]]
