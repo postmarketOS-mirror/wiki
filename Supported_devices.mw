@@ -375,7 +375,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | huawei-y530
   |
 |-
-  | [[Jolla-sbj-(Jolla-phone)|Jolla phone]]
+  | [[Jolla-sbj-(Jolla-phone)|Jolla Phone]]
   | jolla-sbj
   | Kernel compiles, can't get fastboot to work
 |-
