@@ -1,6 +1,6 @@
 == Framebuffer ==
 
-On most Android devices, a somewhat working framebuffer is required to get Weston and other Wayland compositors running. The alternative to framebuffer would be [[DRI|Glossary#dri]].
+On most Android devices, a somewhat working framebuffer is required to get Weston and other Wayland compositors running. The alternative to framebuffer would be [[Glossary#dri|DRI]].
 
 If your framebuffer does not work out of the box, try the following:
 
