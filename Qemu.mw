@@ -13,5 +13,5 @@ By default, the size in the image is almost as small as possible. This is, becau
 truncate -s +200M /path/to/qemu.img # replace 200M accordingly</pre>
 === See also ===
 
-* [[Qemu for x86_64|qemu-amd64-(QEMU-for-x86_64)]]
-* [[Qemu for arm|qemu-vexpress-(Qemu-with-vexpress-soc)]]
+* [[qemu-amd64-(QEMU-for-x86_64)|Qemu for x86_64]]
+* [[qemu-vexpress-(Qemu-with-vexpress-soc)|Qemu for arm]]
