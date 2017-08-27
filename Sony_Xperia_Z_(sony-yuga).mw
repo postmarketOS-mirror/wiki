@@ -7,14 +7,11 @@
 
 * Compiling the kernel
 * Flashing pmos + kernel
+* Telnet into it using the usb-shell procedure as described on [[Initramfs development]]
 
-'''Current status''': There is currently no way to telnet into the device: 'lsusb' shows nothing after rebooting.
+=== Current status === 
 
-'''What i've tried''':
-
-* The security hole on [[Inspecting the initramfs]]
-* Flashing manually with fastboot command
-* Everything on [[Boot process]] (doesn't work obviously as even lsusb does not recognize my device)
+Telnet into initramfs (from [[Initramfs development]]) only works when replacing the ramdisk in the LineageOS boot.img with pmos one using abootimg.
 
 === Other information ===
 * when red leds are flashing, offsets are wrong
@@ -22,4 +19,4 @@
 
 === Links ===
 
-* [https://github.com/sonyxperiadev/kernel-copyleft Kernel Source]
+* [https://github.com/LineageOS/android_kernel_sony_msm8974 Kernel Source]
