@@ -99,7 +99,7 @@ If the flashing method does not work, it is also possible to export all generate
 <pre class="shell">./pmbootstrap flasher export</pre>
 === After flashing ===
 
-If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through telnet over USB. See the [[Inspecting the initramfs]] page for more details.
+If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through telnet over USB. See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details.
 
 Also check [[Tuning sysfs]].
 
