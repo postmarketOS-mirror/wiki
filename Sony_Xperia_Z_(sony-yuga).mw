@@ -16,6 +16,10 @@
 * Flashing manually with fastboot command
 * Everything on [[Boot process]] (doesn't work obviously as even lsusb does not recognize my device)
 
+=== Other information ===
+* when red leds are flashing, offsets are wrong
+* LineageOS boot.img is far larger because the recovery is inside it
+
 === Links ===
 
 * [https://github.com/sonyxperiadev/kernel-copyleft Kernel Source]
