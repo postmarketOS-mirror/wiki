@@ -8,6 +8,8 @@ In case you have no experience in using IRC, this is the easier method. You can 
 
 After you register at any matrix site and join the channel, the offline history will be saved automatically (for IRC you will need a bouncer to get this functionality). It is highly recommended that you can receiver offline messages, so your questions can be answered even when you are offline!
 
+'''Note''': Our rooms are public & everyone can access the history even if you are not a registered matrix/riot user
+
 == IRC ==
 
 The following two channels are hosted on freenode (mind the <code>##</code> for offtopic!):
