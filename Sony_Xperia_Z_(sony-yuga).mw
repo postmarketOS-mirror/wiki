@@ -12,11 +12,11 @@
 
 * Compiling the kernel
 * Flashing pmos + kernel
-* Telnet into it using the usb-shell procedure as described on [[Initramfs development]]
+* Telnet into it, fill in passphrase for decrypting system and get into SSH
 
 === Current status === 
 
-Telnet into initramfs (from [[Initramfs development]]) only works when replacing the ramdisk in the LineageOS boot.img with pmos one using abootimg.
+This currently only works when replacing the ramdisk in the LineageOS boot.img with pmos one using abootimg (so we use the prebuilt kernel of lineageOS).
 
 === Other information ===
 * when red leds are flashing, offsets are wrong
