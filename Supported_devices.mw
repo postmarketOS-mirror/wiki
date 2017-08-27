@@ -1,4 +1,4 @@
-Please add devices you're porting here, and write your porting progress in the wiki page. Devices are sorted alphabetically.
+Please add devices you're porting here, and write your porting progress in the wiki page.
 
 == Officially supported ==
 
@@ -332,6 +332,22 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
 |}
 
+=== Status Legend ===
+
+{| class="wikitable"
+! Code
+! Meaning
+|-
+  | Y
+  | Yes, fully implemented
+|-
+  | P
+  | Partially implemented
+|-
+  | -
+  | Not applicable
+|}
+
 == Work in progress ==
 
 {| class="wikitable sortable"
@@ -410,20 +426,4 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Xperia-Z|Sony Xperia Z]]
   | sony-yuga
   |
-|}
-
-== Legend ==
-
-{| class="wikitable sortable"
-! Code
-! Meaning
-|-
-  | Y
-  | Yes, fully implemented
-|-
-  | P
-  | Partially implemented
-|-
-  | -
-  | Not applicable
 |}
