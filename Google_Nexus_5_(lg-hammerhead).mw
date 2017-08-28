@@ -64,7 +64,7 @@ while [ ! ]; do cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/m
 
 == Component support table ==
 
-{|
+{| class="wikitable"
 ! Component
 ! Module
 ! LineageOS Kernel
