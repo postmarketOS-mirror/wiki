@@ -2,4 +2,4 @@ This is an application developed by postmarketOS to unlock the LUKS volume in th
 
 It is written in C++11 and uses libcryptsetup directly to unlock the partitions.
 
-[[File:osk-sdl.jpg|width=200]]
+[[File:osk-sdl.jpg|width=200px]]
