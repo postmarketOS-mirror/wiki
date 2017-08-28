@@ -84,9 +84,6 @@ Before you can run any flash command, you must put your device in the flashing m
 If you want to install to the system partition, run the following (not for the SD card installation!):
 
 <pre class="shell">./pmbootstrap.py flasher flash_system</pre>
-If the system partition for your device is less than 850MB, you should find the size and change the value of <code>install_size_system</code> in the file <code>pmb/config/__init__.py</code>
-
-{{outdated|install_size_system no longer exists}}
 
 If you have a device, that works with fastboot, you can boot the kernel now without flashing it:
 
