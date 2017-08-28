@@ -40,6 +40,11 @@ The binary device tree, this is a file containing a description of the hardware 
 
 [https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure Direct Rendering Infrastructure], the modern Linux kernel API for drawing to the screen.
 
+
+=== drm/kvm ===
+
+This is a slightly more complicated API than fbdev (and it replaces all fbdev functionality), it still provides a framebuffer but also has options to integrate hardware acceleration for 2D and 3D. All opensource fbdev drivers should be portable to a drm driver.
+
 === FDE ===
 
 Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with luks, preventing the phone data to be retrieved without password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
@@ -48,9 +53,9 @@ Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encr
 
 [https://en.wikipedia.org/wiki/Linux_framebuffer Linux framebuffer] a (more or less?) deprecated API from the Linux kernel, that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
 
-=== drm/kvm ===
+=== IDA ===
 
-This is a slightly more complicated API than fbdev (and it replaces all fbdev functionality), it still provides a framebuffer but also has options to integrate hardware acceleration for 2D and 3D. All opensource fbdev drivers should be portable to a drm driver.
+The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disassembler] is state of the art in the reverse engineering scene. It can be used to reverse engineer all kinds of blobs where the source code is not available, such as closed-source [[firmware]].
 
 === lk (little kernel) ===
 
