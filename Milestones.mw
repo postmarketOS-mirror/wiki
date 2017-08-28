@@ -32,6 +32,7 @@ In consequence, pmOS does not use a regular milestone plan with versions (at lea
 === MartijnBraam ===
 
 # Try to post as much different devices as portable to find edgecases in the build process
+# Maintaining some of the pmos infra (wiki, binary package mirrors, website)
 
 === AndrewMcSwain ===
 
