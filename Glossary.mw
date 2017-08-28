@@ -55,7 +55,7 @@ Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encr
 
 === IDA ===
 
-The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disassembler] is state of the art in the reverse engineering scene. It can be used to reverse engineer all kinds of blobs where the source code is not available, such as closed-source [[firmware]].
+The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disassembler] is state of the art in the reverse engineering scene. It can be used to reverse engineer all kinds of blobs where the source code is not available, such as closed-source [[firmware]]. Disassembling is hard, and there's a high learning curve involved. It also features a decompiler, which produces (non-working) C code for better understanding.
 
 === lk (little kernel) ===
 
