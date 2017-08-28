@@ -18,7 +18,7 @@
 This currently only works when replacing the ramdisk in the LineageOS/TWRP boot.img with pmos one using abootimg (so we use the prebuilt kernel of lineageOS).
 
 Replacing the initramfs in a boot image can be done like so:
-<code>abootimg -u boot.img -r initramfs</code>
+<code>$ abootimg -u boot.img -r initramfs</code>
 
 
 === Other information ===
