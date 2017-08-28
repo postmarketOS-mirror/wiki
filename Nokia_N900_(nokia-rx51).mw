@@ -1,6 +1,29 @@
 [[Category:Supported Devices]]
 [[Category:Devices]]
 
+{{Infobox
+| name=Infobox
+| bodystyle=
+| title = "Nokia N900"
+| titlestyle = 
+
+|header1 = Header defined alone
+|label1  = 
+|data1   = 
+|header2 = 
+|label2  = Label defined alone does not display (needs data, or is suppressed)
+|data2   = 
+|header3 =
+|label3  = 
+|data3   = Data defined alone
+|header4 = All three defined (header, label, data, all with same number)
+|label4  = does not display (same number as a header)
+|data4   = does not display (same number as a header)
+|header5 =
+|label5  = Label and data defined (label)
+|data5   = Label and data defined (data)
+}}
+
 === Contributors ===
 * [[user:MartijnBraam|MartijnBraam]]
 * craftyguy
