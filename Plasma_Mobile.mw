@@ -84,6 +84,16 @@ kwin_qpa_plugin.critical=true
 kwin_qpa_plugin.debug=true</pre>
 == Running ==
 
+If the device supports OpenGL, the Plasma Shell will automatically launch upon boot. If it doesn't, you'll have to SSH in and add the following to <code>~/.config/kdeglobals</code>:
+<pre>[QtQuickRendererSettings]
+SceneGraphBackend=software</pre>
+
+Then, reboot again to have it launch automatically upon boot.
+
+
+
+If you've chosen to install Plasma Mobile manually instead of in <code>./pmbootstrap.py init</code> you'll have to follow the following instructions.
+
 Setup the required environment variables for kwin:
 
 <pre>export QT_QPA_PLATFORM=wayland
@@ -100,11 +110,8 @@ export $(dbus-launch)</pre>
 Right now kwin fails due to lacking permissions on <code>/dev/fb0</code>, so as a workaround you can chown it to your user.
 
 <pre># chown user:user /dev/fb0</pre>
-On devices without OpenGL support (like Qemu right now), it's required to tell kwin to run in software rendering mode. Add the following to <code>~/.config/kdeglobals</code>:
 
-<pre>[QtQuickRendererSettings]
-SceneGraphBackend=software</pre>
-Then execute <code>ck-launch-session kwin_wayland --framebuffer --xwayland</code>. As this way you can not view the logs, it's advisable to add <code>2&gt; kwin_log.txt</code> to the end of the command, so it ends up looking like <code>ck-launch-session kwin_wayland --framebuffer --xwayland 2&gt; kwin_log.txt</code>. This will make it log to kwin_log.txt instead of stdout.
+Then execute <code>ck-launch-session kwin_wayland --framebuffer --xwayland</code>. As this way you can not view the logs, it's advisable to add <code>2&gt; /tmp/kwin_log.txt</code> to the end of the command, so it ends up looking like <code>ck-launch-session kwin_wayland --framebuffer --xwayland 2&gt; /tmp/kwin_log.txt</code>. This will make it log to <code>/tmp/kwin_log.txt</code> instead of stdout.
 
 
 [[Category:Interface]]
