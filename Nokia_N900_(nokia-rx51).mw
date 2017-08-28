@@ -7,21 +7,26 @@
 | title = "Nokia N900"
 | titlestyle = 
 
-|header1 = Header defined alone
-|label1  = 
-|data1   = 
-|header2 = 
-|label2  = Label defined alone does not display (needs data, or is suppressed)
-|data2   = 
+|image        = [[File:Nokia-rx51.jpg|200px|alt=Nokia N900 running postmarketOS]]
+|imagestyle   = 
+|caption      = Nokia N900 running postmarketOS
+|captionstyle = 
+
+|header1 =
+|label1  = Manufacturer
+|data1   = Nokia
+|header2 =
+|label2  = Name
+|data2   = N900
 |header3 =
-|label3  = 
-|data3   = Data defined alone
-|header4 = All three defined (header, label, data, all with same number)
-|label4  = does not display (same number as a header)
-|data4   = does not display (same number as a header)
-|header5 =
-|label5  = Label and data defined (label)
-|data5   = Label and data defined (data)
+|label3  = Codename
+|data3   = rx51
+|header3 =
+|label3  = Released
+|data3   = 2009
+|header3 =
+|label3  = Original software
+|data3   = Maemo on Linux 2.6
 }}
 
 === Contributors ===
