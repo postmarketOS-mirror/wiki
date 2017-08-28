@@ -1,4 +1,19 @@
 [[Category:Unsupported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = HP
+| name = Touchpad
+| codename = tenderloin
+| image = 
+| imagecaption = HP Touchpad
+| releaseyear = 2011
+| originalsoftware = WebOS on Linux
+| cpu = Qualcomm APQ8060 Snapdragon S3
+| gpu = Adreno 220
+| storage = 16/32GB
+| display = 768x1024
+| memory = 1GB
+}}
 === NOTE ===
 
 None of this work has been (merged/pushed/get correct terminology) upstream. Contact CmdrWgls on IRC if you're interested in working on it before he gets around to actually doing so.
