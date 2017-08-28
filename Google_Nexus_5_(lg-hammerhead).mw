@@ -1,4 +1,15 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| name = Nexus 5
+| manufacturer = LG
+| codename = hammerhead
+| image = File:Lg-hammerhead.jpg
+| imagecaption = Nexus 5 running the weston demo
+| releaseyear = 2013
+| originalsoftware = Android 5 on Linux 3.4
+}}
+
 === Contributors ===
 
 * MartijnBraam
