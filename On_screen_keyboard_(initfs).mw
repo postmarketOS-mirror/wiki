@@ -1,1 +1,5 @@
-Keyboard stuffs
+This is an application developed by postmarketOS to unlock the LUKS volume in the beginning of the boot process. It implements an password box and on-screen keyboard directly on the linux framebuffer (and also any of the other backends supported by SDL2).
+
+It is written in C++11 and uses libcryptsetup directly to unlock the partitions.
+
+[[File:osk-sdl.png]]
