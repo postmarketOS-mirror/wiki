@@ -86,12 +86,15 @@ If you want to install to the system partition, run the following (not for the S
 <pre class="shell">./pmbootstrap.py flasher flash_system</pre>
 If the system partition for your device is less than 850MB, you should find the size and change the value of <code>install_size_system</code> in the file <code>pmb/config/__init__.py</code>
 
+{{outdated|install_size_system no longer exists}}
+
 If you have a device, that works with fastboot, you can boot the kernel now without flashing it:
 
 <pre class="shell">./pmbootstrap.py flasher boot</pre>
 Otherwise, you will need to flash the kernel to the device boot partition:
 
 <pre class="shell">./pmbootstrap.py flasher flash_kernel</pre>
+
 === Alternative to flashing: export ===
 
 If the flashing method does not work, it is also possible to export all generated image files to a specific directory (with symlinks), so you can flash it manually with your host Linux system (or even on Windows with proprietary flashers such as Odin, if this is the only way it works for you):
