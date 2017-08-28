@@ -52,7 +52,7 @@ You could also run it in even in the stock ROM but it is important that you run 
 
 '''Note:''' On some devices (like Xperia Z) this script will hang on <code>vsync_event</code> files. To continue the script to the next file we just kill the process that processes the <code>vsync_event</code> file:
 
-<pre class="shell">ps aux | grep vsync # To find process id of the cat command
+<pre class="shell">ps w | grep vsync_event # To find process id of the cat command that was processing vsync_event
 kill -SIGTERM <pid> # Kill the process</pre>
 
 == Examples ==
