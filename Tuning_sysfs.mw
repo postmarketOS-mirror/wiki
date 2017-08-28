@@ -50,6 +50,11 @@ Then get the differences ([https://gist.github.com/yuvadm/654f2c5e578d0e26cec3ea
 <pre class="shell">diff -u devices-pmos.dump devices-twrp.dump &gt; devices.diff</pre>
 You could also run it in even in the stock ROM but it is important that you run the same kernel version in postmarketOS then.
 
+'''Note:''' On some devices (like Xperia Z) this script will hang on <code>vsync_event</code> files. To continue the script to the next file we just kill the process that processes the <code>vsync_event</code> file:
+
+<pre class="shell">ps aux | grep vsync # To find process id of the cat command
+kill -SIGTERM <pid> # Kill the process</pre>
+
 == Examples ==
 
 === i9070 port ===
