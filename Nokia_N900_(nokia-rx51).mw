@@ -38,6 +38,7 @@
 * Both cameras
 * Cell modem (untested)
 * 3D Acceleration (requires binary blob)
+* [https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git/commit/?id=7bb318680e868cd049922f6761170b42ff89687d Bluetooth]
 
 === Installation ===
 
