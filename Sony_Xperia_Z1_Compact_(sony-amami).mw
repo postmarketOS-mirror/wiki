@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia Z1 Compact (Z1C)
+| codename = amami
+| image = File:Sony_Amami_Weston.gif
+| imagecaption = Sony Xperia Z1C running Weston
+| releaseyear = 2014
+| originalsoftware = Android 4.3 on Linux 3.4
+| cpu = 2.2 GHz Qualcomm MSM8974 Quad Core
+| gpu = Adreno 330 at 450Mhz
+| storage = 16GB
+| display = 720x1280 IPS
+| memory = 2GB
+}}
 = Contributors =
 
 * ata2001 (porting and testing)
