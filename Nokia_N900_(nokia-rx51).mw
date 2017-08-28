@@ -1,34 +1,11 @@
 [[Category:Supported Devices]]
 [[Category:Devices]]
 
-{{Infobox
-| name=Infobox
-| bodystyle=
-| title = "Nokia N900"
-| titlestyle = 
-
-|image        = [[File:Nokia-rx51.jpg|200px|alt=Nokia N900 running postmarketOS]]
-|imagestyle   = 
-|caption      = Nokia N900 running postmarketOS
-|captionstyle = 
-
-|header1 =
-|label1  = Manufacturer
-|data1   = Nokia
-|header2 =
-|label2  = Name
-|data2   = N900
-|header3 =
-|label3  = Codename
-|data3   = rx51
-|header3 =
-|label3  = Released
-|data3   = 2009
-|header4 =
-|label4  = Original software
-|data4   = Maemo on Linux 2.6
+{{Infobox device
+| manufacturer = Nokia
+| name = N900
+| codename = rx51
 }}
-
 === Contributors ===
 * [[user:MartijnBraam|MartijnBraam]]
 * craftyguy
