@@ -1,8 +1,8 @@
 == Overview ==
 
-The basic minimum shell has been ported to postmarketOS, and can now be tested. So far no one has gotten it working yet, so don't expect anything but errors.
+The basic minimum shell has been ported to postmarketOS, and can now be tested.
 
-To install it on your device run <code>./pmbootstrap.py install --add plasma-mobile,plasma-phone-components,dbus-x11</code>. You can also tell pmbootstrap to ''always'' add Plasma Mobile by adding <code>plasma-mobile</code>, <code>plasma-phone-components</code> and <code>dbus-x11</code> to the list of &quot;Extra packages&quot; when running <code>./pmbootstrap.py init</code>.
+To install it on your device run <code>./pmbootstrap.py init</code> and choose <code>plasma-mobile</code> in the interface section. Alternatively manually install it with <code>./pmbootstrap.py install --add plasma-mobile,plasma-phone-components,dbus-nox11</code>.
 
 For instructions on running Plasma Mobile you can use the KDE website: https://community.kde.org/Plasma/Mobile/RunningApps
 
