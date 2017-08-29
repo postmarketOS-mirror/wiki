@@ -43,7 +43,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Lg-mako-(Google-Nexus-4)|Google Nexus 4]]
+  | style="white-space: nowrap;" | [[Google Nexus 4 (lg-mako)|Google Nexus 4]]
   | style="white-space: nowrap;" | lg-mako
   | 
   | 
@@ -61,7 +61,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Lg-hammerhead-(Google-Nexus-5)|Google Nexus 5 (GSM)]]
+  | style="white-space: nowrap;" | [[Google Nexus 5 (lg-hammerhead)|Google Nexus 5 (GSM)]]
   | style="white-space: nowrap;" | lg-hammerhead
   | 
   | 
@@ -79,7 +79,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Asus-grouper-(Google-Nexus-7-2012)|Google Nexus 7 (2012)]]
+  | style="white-space: nowrap;" | [[Google Nexus 7 2012 (asus-grouper)|Google Nexus 7 (2012)]]
   | style="white-space: nowrap;" | asus-grouper
   | 
   | 
@@ -97,7 +97,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[HTC-Bravo-(HTC-Desire)|HTC Desire]]
+  | style="white-space: nowrap;" | [[HTC Desire (htc-bravo)|HTC Desire]]
   | style="white-space: nowrap;" | htc-bravo
   | 
   | 
@@ -115,7 +115,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[HTC-Ace-(HTC-Desire-HD)|HTC Desire HD]]
+  | style="white-space: nowrap;" | [[HTC Desire HD (htc-ace)|HTC Desire HD]]
   | style="white-space: nowrap;" | htc-ace
   | 
   | 
@@ -133,7 +133,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[LG-G3-Global|LG G3 Global]]
+  | style="white-space: nowrap;" | [[LG G3 Europe (lg-d855)|LG G3 Global]]
   | style="white-space: nowrap;" | lg-d855
   | 
   | 
@@ -151,7 +151,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Motorola-titan-(Moto-G-2014)|Moto G 2014]]
+  | style="white-space: nowrap;" | [[Moto G 2014 (motorola-titan)]]
   | style="white-space: nowrap;" | motorola-titan
   | 
   | 
@@ -169,7 +169,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Mozilla-Flame|Mozilla Flame]]
+  | style="white-space: nowrap;" | [[Mozilla Flame (mozilla-flame)]]
   | style="white-space: nowrap;" | mozilla-flame
   | 
   | 
@@ -205,7 +205,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Qemu-vexpress-(Qemu-with-vexpress-soc)|QEMU (arm)]]
+  | style="white-space: nowrap;" | [[QEMU ARM (qemu-vexpress)]]
   | style="white-space: nowrap;" | qemu-vexpress
   | 
   | 
@@ -223,7 +223,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Qemu-amd64-(QEMU-for-x86 64)|QEMU (x86_64)]]
+  | style="white-space: nowrap;" | [[QEMU amd64 (qemu-amd64)]]
   | style="white-space: nowrap;" | qemu-amd64
   | 
   | 
@@ -241,7 +241,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Samsung-N7100-(Galaxy-Note-II-GSM)|Samsung Galaxy Note 2]]
+  | style="white-space: nowrap;" | [[Galaxy Note II (samsung-n7100)]]
   | style="white-space: nowrap;" | samsung-n7100
   | 
   | 
@@ -259,7 +259,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Samsung-i9070-(Samsung-Galaxy-S-Advance)|Samsung Galaxy S Advance]]
+  | style="white-space: nowrap;" | [[Samsung Galaxy S Advance (samsung-i9070)]]
   | style="white-space: nowrap;" | samsung-i9070
   | 
   | 
@@ -277,7 +277,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Samsung-i9100-(Samsung-Galaxy-SII)|Samsung Galaxy SII]]
+  | style="white-space: nowrap;" | [[Samsung Galaxy SII (samsung-i9100)]]
   | style="white-space: nowrap;" | samsung-i9100
   | 
   | 
@@ -295,7 +295,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Sony-amami-(Xperia-Z1-Compact)|Sony Xperia Z1 Compact]]
+  | style="white-space: nowrap;" | [[Sony Xperia Z1 Compact (sony-amami)|Sony Xperia Z1 Compact]]
   | style="white-space: nowrap;" | sony-amami
   | 
   | 
@@ -313,7 +313,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Xperia-Z2-Tablet|Sony Xperia Z2 Tablet]]
+  | style="white-space: nowrap;" | [[Sony Xperia Z2 Tablet (sony-castor-windy)]]
   | style="white-space: nowrap;" | sony-castor-windy
   | Y
   | 
