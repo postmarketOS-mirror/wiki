@@ -7,6 +7,8 @@
 
 Flashing a custom kernel is not possible yet, but McBitter is working on replacing the bootloader with a custom fork of [https://github.com/littlekernel/lk LK] (a proprietary fork of LK is already present on the device, but it does not allow flashing a custom kernel). When that works, porting pmOS can begin.
 
+Most of the time is spent on documenting Mediatek boot process in depth. This device will be used as an example.
+
 ==== List of LCM's (the LCD control module) in original firmware ====
 
 * hx8394f_dsi_ld_cpt_vdo
@@ -23,6 +25,7 @@ Flashing a custom kernel is not possible yet, but McBitter is working on replaci
 * [https://forum.xda-developers.com/u/repair/coolpad-sky-3-e502-modena-2-unbrick-t3610163 Unbrick tutorial]
 * [https://androidmtk.com/smart-phone-flash-tool Proprietary flashing software SP Flash Tool]
 * [https://gitgud.io/mcbitter/coolpad_sky_3_E502 Original firmware with Android 6.0]
+* [[Mediatek|Detailed description of boot process]]
 
 === Links to useful reverse engineering hints ===
 
