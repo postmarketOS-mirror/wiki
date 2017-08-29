@@ -198,4 +198,6 @@ For more information, see issue [https://github.com/postmarketOS/pmbootstrap/iss
 * Run just about any <code>pmbootstrap</code> command, it will print this warning:
   Package 'postmarketos-mkinitfs' in your aports folder has version X, but the binary package repositories already have version Y
 
-'''Solution:''' Delete that specific package from your aports folder: <code>sudo rm ~/.local/var/pmbootstrap/packages/*/postmarketos-mkinitfs*.apk</code> and run <code>pmbootstrap index</code> to re-index all packages. See also [https://github.com/postmarketOS/pmbootstrap/issues/466 #466] to integrate this into <code>pmbootstrap zap</code>.
+'''Solution:''' Run <code>pmbootstrap zap -m</code> to delete the mismatched binary packages.
+
+'''Note:''' If that does not help it, you can manually delete that specific packages from your aports folder: <code>sudo rm ~/.local/var/pmbootstrap/packages/*/postmarketos-mkinitfs*.apk</code> and run <code>pmbootstrap index</code> to re-index all packages. See also: [https://github.com/postmarketOS/pmbootstrap/issues/466 #466], [https://github.com/postmarketOS/pmbootstrap/pull/474 #474]
