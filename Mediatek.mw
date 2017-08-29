@@ -1,15 +1,15 @@
 {{note|This page is a stub, please improve it.}}
 
-=== Booting procedure ===
-==== Power applied to the SoC ====
+= Booting procedure =
+== Power applied to the SoC ==
 When chip is powered on the dram controller pushes the address of brom (boot rom, mask rom that is hardwired) to PC (program counter) and execution of rom begins.
 
-==== Brom execution ====
+== Brom execution ==
 # UART1 gets initialized to some predetermined baudrate. Baud usually depends in chip input clock source. Observation has been made that UART1 is disabled on many phones, but can be found if eFuses are not blown.
 # Initialize storage with low clock. Reason why it's using low clock is because muxes are not programmed at this stage.
 # Wait for "Start" string on UART1 for unknown amount of time, the internet keeps buzzing about 150ms. After start is recieved, listen to commands from host until jump is observed (refer to brom spec in further reading section). If start is not sent then Preloader image will be loaded from the storage to the SRAM (static ram) and brom loads it according to the flags set in header.
 
-=== Futher reading ===
+= Futher reading =
 * http://www.lieberbiber.de/2015/07/02/mediatek-details-soc-startup/
 * http://www.lieberbiber.de/2015/07/04/mediatek-details-partitions-and-preloader/
 * https://forum.xda-developers.com/u/repair/coolpad-sky-3-e502-modena-2-unbrick-t3610163 (KCOL0 unbrick)
