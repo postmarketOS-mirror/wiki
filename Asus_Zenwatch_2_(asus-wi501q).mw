@@ -27,6 +27,8 @@ Turn on your watch and swipe from the top left corner (so that be where 11 would
 
 === What doesn't work ===
 
+I've tried booting the zenwatch with the kernel for the [[LG G Watch R (lg-lenok)|LG G Watch R]] but that doesn't work. The boot image is just a bit too big (17.2MiB on a 16MiB partition) and the zenwatch wants an appended DTB.
+
 == Device info ==
 === Partition info ===
 Boot and recovery are 16MiB
