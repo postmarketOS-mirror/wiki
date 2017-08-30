@@ -1,0 +1,11 @@
+{{note|This is a technical page designed to see how to implement support for Samsung modems in postmarketOS.}}
+
+Samsung modems use three abstraction layers:
+
+# Kernel interface (specific to each modem)
+# Samsung IPC modem protocol (specific to Samsung devices)
+# Radio Interface Layer (universal)
+
+The IPC protocol, <code>libsamsung-ipc</code>, has been [https://redmine.replicant.us/projects/replicant/wiki/Libsamsung-ipc reimplemented as free software by Replicant].
+
+There [https://lists.ofono.org/pipermail/ofono/2012-September/013777.html have been patches to add libsamsung-ipc support] to ofono, a potential RIL for postmarketOS, but it doesn't seem like they were merged.
