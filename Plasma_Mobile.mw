@@ -119,7 +119,7 @@ Right now kwin fails due to lacking permissions on <code>/dev/fb0</code>, so as 
 
 <pre># chown user:user /dev/fb0</pre>
 
-Then execute <code>ck-launch-session kwin_wayland --framebuffer --xwayland</code>. As this way you can not view the logs, it's advisable to add <code>2&gt; /tmp/kwin_log.txt</code> to the end of the command, so it ends up looking like <code>ck-launch-session kwin_wayland --framebuffer --xwayland 2&gt; /tmp/kwin_log.txt</code>. This will make it log to <code>/tmp/kwin_log.txt</code> instead of stdout.
+Then execute <code>ck-launch-session kwin_wayland --framebuffer --xwayland -- /usr/bin/plasmashell -p org.kde.satellite.phone</code>. As this way you can not view the logs, it's advisable to add <code>2&gt; /tmp/kwin_log.txt</code> to the end of the command, so it ends up looking like <code>ck-launch-session kwin_wayland --framebuffer --xwayland -- /usr/bin/plasmashell -p org.kde.satellite.phone 2&gt; /tmp/kwin_log.txt</code>. This will make it log to <code>/tmp/kwin_log.txt</code> instead of stdout.
 
 
 [[Category:Interface]]
