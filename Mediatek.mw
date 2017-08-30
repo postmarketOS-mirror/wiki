@@ -1,4 +1,4 @@
-{{note|This page is a stub, please improve it.}}
+{{note|This page is WiP.}}
 
 = Booting procedure =
 == Power applied to the SoC ==
@@ -8,6 +8,70 @@ When chip is powered on the dram controller pushes the address of brom (boot rom
 # UART1 gets initialized to some predetermined baudrate. Baud usually depends in chip input clock source. Observation has been made that UART1 is disabled on many phones, but can be found if eFuses are not blown.
 # Initialize storage with low clock. Reason why it's using low clock is because muxes are not programmed at this stage.
 # Wait for "Start" string on UART1 for unknown amount of time, the internet keeps buzzing about 150ms. After start is recieved, listen to commands from host until jump is observed (refer to brom spec in further reading section). If start is not sent then Preloader image will be loaded from the storage to the SRAM (static ram) and brom loads it according to the flags set in header.
+# If KCOL0 pin is shorted to the ground, preloader loading is avoided and download protocol is rolled up on USB port.
+
+== Image format ==
+{{note|Incomplete and has missing information. Feel free to coordinate corrections with me.}}
+
+To my knowledge this format is only used by brom and preloader(?) All fields are in little endian. Going to add working example data in near future.
+
+=== File info image format ===
+{| class="wikitable"
+! Size
+! Content
+! Extra notes
+|-
+  | 4 
+  | <code>4d 4d 4d 01</code>
+|-
+  | 4
+  | Length of complete header
+|-
+  | 12
+  | <code>"FILE_INFO\0\0\0"</code>
+  | Pay attention to padding bytes
+|-
+  | 4
+  | <code>0x01</code>
+|-
+  | 2
+  | Image type
+  | 0: NONE 1: ARM-Bootloader 2: ARM-External-Bootloader 10: Root-Certificate 256: Primary-MAUI 264: VIVA 769: SECURE_RO_ME
+|-
+  | 1
+  | Storage type
+  | 0: NONE 1: NOR Flash 2: NAND Sequential Flash 3: NAND_TTBL 4: NAND_FDM50 5: EMMC-Boot-Region 6: EMMC-Data-Region 7: Serial Flash 255: Device-End
+|-
+  | 1
+  | Signature type
+  | 0: No Signature 1: PHASH 2: SINGLE 3: SINGLE and PHASH 4: MULTI 5: TYPE_NUM 255: TYPE_END
+|-
+  | 4
+  | Load address
+|-
+  | 4
+  | Total file size
+|-
+  | 4
+  | <code>00 04 00 00</code>
+  | Maximum file size
+|-
+  | 4
+  | Content offset in file
+  | You can have multiple headers before actual content (preloader assembly image)
+|-
+  | 4
+  | Signature length
+  | If no signature was set, size is 0
+|-
+  | 4
+  | Jump offset
+  | Seems to be the same as content offset, maybe because preloader needs to execute
+|-
+  | 4
+  | Ending
+  | 1: POST_BUILD_DONE 2: XIP (Execute In Place)
+|}
 
 = Futher reading =
 * http://www.lieberbiber.de/2015/07/02/mediatek-details-soc-startup/
