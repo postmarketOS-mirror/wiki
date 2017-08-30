@@ -1,3 +1,11 @@
+{{Infobox interface
+| name = Hildon
+| image = File:Hildon.png
+| imagecaption = Hildon running in qemu
+| graphics = Xorg?
+| toolkit = GTK?
+}}
+
 This is the desktop from Maemo, which is a Debian-based distribution, that originally ran on the N900.<br />
 We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be easy to make, look at <code>postmarketos-ui-weston</code> for reference if you're interested, dear reader).
 
@@ -15,7 +23,3 @@ cp /usr/share/themes/alpha/backgrounds/wallpaper4.png ~/.backgrounds/background-
 === See also: ===
 
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in Qemu)
-
-[[File:Hildon.png]]
-
-[[Category:Interface]]
