@@ -1,3 +1,11 @@
+{{Infobox interface
+| name = Plasma Mobile
+| image = File:Plasma-mobile.png
+| imagecaption = Plasma Mobile running in qemu
+| graphics = Wayland or Xorg
+| toolkit = QT5
+}}
+
 == Overview ==
 
 The basic minimum shell has been ported to postmarketOS, and can now be tested.
