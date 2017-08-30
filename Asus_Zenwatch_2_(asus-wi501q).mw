@@ -1,0 +1,33 @@
+{{Infobox device
+| manufacturer = Asus
+| name = Zenwatch 2
+| codename = wi501q
+| image = 
+| imagecaption = 
+| releaseyear = 2015
+| originalsoftware = Android Wear 1.0
+| cpu = Qualcomm Snapdragon 400
+| gpu = Adreno 305
+| storage = 4GB
+| display = 320x320 OLED
+| memory = 512MB
+}}
+
+=== Contributors ===
+
+* MartijnBraam
+
+=== Entering Fastboot mode ===
+
+Turn on your watch and swipe from the top left corner (so that be where 11 would be on the watch) as soon as you see the Asus logo.
+
+=== What works ===
+
+* Nothing yet
+
+=== What doesn't work ===
+
+
+=== Links ===
+
+* [https://github.com/PharaohsCurse/Momentum-Kernel Kernel source]
