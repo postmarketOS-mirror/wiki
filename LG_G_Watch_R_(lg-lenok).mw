@@ -1,3 +1,17 @@
+{{Infobox device
+| manufacturer = LG
+| name = G Watch R
+| codename = lenok
+| image = File:Lg-g-watch-r.jpg
+| imagecaption = LG G Watch R running the weston demo
+| releaseyear = 2015
+| originalsoftware = Android Wear 1.0 and 2.0
+| cpu = Qualcomm Snapdragon 400
+| gpu = Adreno 305
+| storage = 4GB
+| display = 320x320 OLED
+| memory = 512MB
+}}
 [[Category:Supported Devices]]
 === Contributors ===
 
