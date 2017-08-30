@@ -27,6 +27,17 @@ Turn on your watch and swipe from the top left corner (so that be where 11 would
 
 === What doesn't work ===
 
+== Device info ==
+=== Partition info ===
+Boot and recovery are 16MiB
+<pre>
+(bootloader) partition: system,    	 ,size:	 0x20000000 	,type:	 ext4
+(bootloader) partition: userdata,    	 ,size:	 0xa47fbe00 	,type:	 ext4
+(bootloader) partition: cache,    	 ,size:	 0x19000000 	,type:	 ext4
+(bootloader) partition: boot,    	 ,size:	 0x1000000 	,type:	 raw
+(bootloader) partition: recovery,    	 ,size:	 0x1000000 	,type:	 raw
+</pre>
+
 
 === Links ===
 
