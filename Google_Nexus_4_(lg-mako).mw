@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = Google (LG)
+| name = Nexus 4
+| codename = mako
+| image = File:LG Nexus 4 Weston.png
+| imagecaption = LG Nexus 4 running Weston
+| releaseyear = 2012
+| originalsoftware = Android on Linux 3.4
+| cpu = Qualcomm APQ8064 Snapdragon S4 Pro
+| gpu = Adreno 320
+| storage = 8/16GB
+| display = 768x1280 IPS
+| memory = 2GB
+}}
 === Contributors ===
 
 * ollieparanoid
