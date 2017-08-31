@@ -1,6 +1,16 @@
 This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo]] file.
 
-== How to find the touchscreen device name? (initramfs only) ==
+== How to find the touchscreen device name? ==
+
+=== Initramfs #1 (fastest) ===
+* [[Inspecting_the_initramfs|Connect to your initramfs via telnet]]
+* Run <code>ls /dev/input</code>
+* For each device in there, do the following:
+** Run cat /dev/input/$device
+** Tap on the screen and see if you get any output
+** The device where you get output is the touch screen
+
+=== Initramfs #2 ===
 * [[Inspecting_the_initramfs|Connect to your initramfs via telnet]]
 * Run <code>ls /dev/input</code>
 * Try out one after another:
@@ -12,7 +22,7 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
   pmbootstrap flasher boot_kernel
 
 
-== How to find the touchscreen device name? (flashing system) ==
+=== Flashing system + libinput-list-devices ===
 Alternatively, run <code>pmbootstrap install --no-fde</code> and flash the system partition again. The initramfs will boot through without asking you for a password (because you disabled encryption). Then you can use the program <code>libinput-list-devices</code> to get the list of devices - with probably more useful names.
 
 When you have the right device name, put it into your <code>deviceinfo</code> (as outlined above), then re-flash the encrypted system image. It should work now.
