@@ -1,9 +1,20 @@
 [[Category:Supported Devices]]
-== Basic info ==
-
-Device: Samsung Galaxy Note II (N7100 GSM)
-
-ARM Cortex A9 Samsung Exynos 4 Quad 4412 (32bit), quad core 1.6GHz; 2GB RAM, 16GB storage.
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name = Note II
+| codename = n7100
+| image = File:Samsung Galaxy Note II.png
+| imagecaption = Samsung Galaxy Note II
+| releaseyear = 2012
+| originalsoftware = Android 4.1.1 on Linux 3.0.31
+| cpu = Exynos 4412 Quad
+| gpu = Mali-400MP4
+| storage = 16/32/64GB
+| display = 720x1280 AMOLED
+| memory = 2GB
+}}
+=== Basic info ===
 
 * [http://www.gsmarena.com/samsung_galaxy_note_ii_n7100-4854.php more specs]
 * [https://github.com/bigbiff/android_kernel_samsung_smdk4412 Unofficial TWRP kernel repo]
