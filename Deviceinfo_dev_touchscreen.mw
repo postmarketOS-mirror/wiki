@@ -1,0 +1,13 @@
+This page is about `deviceinfo_dev_touchscreen` from the [[deviceinfo]] file.
+
+== How to find the touchscreen device name? ==
+* [[Inspecting_the_initramfs|Connect to your initramfs via telnet]]
+* Run <code>ls /dev/input</code>
+* Note down all devices. If you see one with "touch" in the name, that is a good candidate.
+* Try out one after another:
+** Change <code>deviceinfo_dev_touchscreen</code> in your <code>deviceinfo</code>
+** Rebuild the deviceinfo package, initramfs and flash:
+  pmbootstrap checksum device-nokia-rx51
+  pmbootstrap build --force device-nokia-rx51
+  pmbootstrap initfs # rebuild initramfs
+  pmbootstrap flasher boot_kernel
