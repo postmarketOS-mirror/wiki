@@ -6,9 +6,10 @@ By default, initramfs launchs a telnet daemon listening on <code>:23</code> wait
 
 It is possible to enable a second telnet daemon on <code>:24</code> that gives you a shell this way:
 
-<pre class="shell">./pmbootstrap.py initfs hook_add usb-shell
-./pmbootstrap.py install</pre>
-After reflashing the kernel or booting with the new initramfs image, you should be able to connect to the new telnet instance.
+<source lang="shell">./pmbootstrap.py initfs hook_add usb-shell
+./pmbootstrap.py initfs
+./pmbootstrap.py flasher boot # or however you flash/boot the kernel</source>
+After reflashing the kernel or booting with the new initramfs image, you should be able to [[Boot_process|connect to the new telnet instance]].
 
 === Tips and tricks ===
 
