@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = Google (ASUS)
+| name = Nexus 7 (2012)
+| codename = grouper
+| image = File:Nexus 7 2012 weston.jpg
+| imagecaption = Galaxy Nexus 7
+| releaseyear = 2012
+| originalsoftware = Android 4.1.2 on Linux 3.0
+| cpu = Nvidia Tegra 3
+| gpu = ULP GeForce
+| storage = 8/16/32GB
+| display = 800x1280 IPS
+| memory = 1GB
+}}
 == Contributors ==
 
 <ul>
