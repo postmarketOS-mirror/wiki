@@ -15,46 +15,45 @@
 | display = 800x1280 IPS
 | memory = 1GB
 }}
-== Contributors ==
+=== Contributors ===
 
-<ul>
-<li><p>antonok</p>
-== What works ==
-</li>
-<li>Boot process</li>
-<li>Telnet/SSH over USB</li>
-<li>Screen</li>
-<li>USB keyboard, mouse</li>
-<li>Touchscreen</li>
-<li><p>Wifi (somewhat hacky so far, will improve soon!)</p>
-== What does not work ==
-</li>
-<li>weston-keyboard</li>
-<li>Can't boot without reflashing boot (!)</li>
-<li><p>Untested parts</p>
-== How to enter flash mode ==
-</li>
-<li>Connect a USB cable</li>
-<li>Power the device off</li>
-<li>Hold power + volume down</li>
-<li><p><code>fastboot</code> should work when the green android appears on the screen</p>
-== Notes ==
-</li>
-<li>I am using the LineageOS kernel found [https://github.com/LineageOS/android_kernel_asus_grouper here]</li>
-<li>The kernel cannot be compiled on versions of gcc newer than 4.9 without the appropriate patch</li>
-<li>I could not get UART debugging through the headphone jack to work - as far as I can tell, and according to a few other sources I found, the 2012 version of the Nexus 7 does not have this feature.</li>
-<li>CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.</li>
-<li>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</li>
-<li>xwayland does not work.</li>
-<li>weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.</li>
-<li>The touchscreen input device is named <code>elan-touchscreen</code>.</li>
-<li>The wifi chip is the Broadcom 4330.</li>
-<li>This device was once officially supported on Ubuntu, so it has a firmware package in the [https://packages.ubuntu.com/trusty/linux-firmware-nexus7 Ubuntu repositories]</li>
-<li>[https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux.</li>
-<li>I was able to get networking over USB with an RTL8150 ethernet USB adapter by enabling the RTL8150 kernel config and following the [https://wiki.alpinelinux.org/wiki/Configure_Networking network setup guide on the Alpine Linux wiki].</li>
-<li><p>I was able to get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, I ran <code>/etc/init.d/networking restart</code>, which gave an error about being unable to get a MAC address. I restarted the device to find that wifi Just Worked™, and was able to successfully scan for wireless networks and establish a connection to my secured wireless AP.</p>
-== Image ==
+* antonok
 
-<p>[[File:http://i.imgur.com/P2QlXCR.jpg]]</p></li></ul>
+=== What works ===
+
+* Boot process
+* Telnet/SSH over USB
+* Screen
+* USB keyboard, mouse
+* Touchscreen
+* Wifi (somewhat hacky so far, will improve soon!)
+
+=== What does not work ===
+
+* weston-keyboard
+* Can't boot without reflashing boot (!)
+
+=== How to enter flash mode ===
+
+* Connect a USB cable
+* Power the device off
+* Hold power + volume down
+* <code>fastboot</code> should work when the green android appears on the screen
+
+=== Notes ===
+
+* I am using the LineageOS kernel found [https://github.com/LineageOS/android_kernel_asus_grouper here]
+* The kernel cannot be compiled on versions of gcc newer than 4.9 without the appropriate patch
+* I could not get UART debugging through the headphone jack to work - as far as I can tell, and according to a few other sources I found, the 2012 version of the Nexus 7 does not have this feature.
+* CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.
+* /sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.
+* xwayland does not work.
+* weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.
+* The touchscreen input device is named <code>elan-touchscreen</code>.
+* The wifi chip is the Broadcom 4330.
+* This device was once officially supported on Ubuntu, so it has a firmware package in the [https://packages.ubuntu.com/trusty/linux-firmware-nexus7 Ubuntu repositories]
+* [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux.
+* I was able to get networking over USB with an RTL8150 ethernet USB adapter by enabling the RTL8150 kernel config and following the [https://wiki.alpinelinux.org/wiki/Configure_Networking network setup guide on the Alpine Linux wiki].
+* I was able to get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, I ran <code>/etc/init.d/networking restart</code>, which gave an error about being unable to get a MAC address. I restarted the device to find that wifi Just Worked™, and was able to successfully scan for wireless networks and establish a connection to my secured wireless AP.
 
 ''Fun fact: <code>grouper</code> was the first tablet to run pmOS!''
