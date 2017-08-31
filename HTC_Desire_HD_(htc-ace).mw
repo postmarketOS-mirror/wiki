@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = HTC
+| name = Desire HD
+| codename = ace
+| image = File:HTC Desire HD.jpg
+| imagecaption = HTC Desire HD
+| releaseyear = 2011
+| originalsoftware = Android 2.2 on Linux 2.6.32
+| cpu = Qualcomm MSM8255 Snapdragon S2
+| gpu = Adreno 205
+| storage = 1.5GB
+| display = 480x800
+| memory = 768MB
+}}
 === Contributors ===
 
 * Victor9
