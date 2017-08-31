@@ -25,6 +25,7 @@ enp0s20f0u1 Link encap:Ethernet  HWaddr b2:c4:1e:03:64:b9
 It the interface doesn't automatically get an IP address on your system (for example on systems without NetworkManager) you need to start a dhcp client to get one.
 
 <source lang="bash"># Replace the interface name with the one on your machine
+# Some Linux distributions have "dhcpcd" installed instead of "dhclient"
 $ dhclient -v enp0s20f0u1</source>
 If this fails, you may need to first assign an ethernet address to it:
 
