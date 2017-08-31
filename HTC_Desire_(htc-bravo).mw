@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = HTC
+| name = Desire
+| codename = bravo
+| image = File:HTC Desire weston demo.jpg
+| imagecaption = HTC Desire running the Weston demo
+| releaseyear = 2010
+| originalsoftware = Android 2.1 on Linux 2.6.29
+| cpu = Qualcomm QSD8250 Snapdragon S1
+| gpu = Adreno 200
+| storage = 512MB
+| display = 480x800 AMOLED or SLCD
+| memory = 576MB
+}}
 === Contributors ===
 
 * drebrez
@@ -28,6 +44,7 @@ mtd2: 00300000  00020000   &quot;boot&quot;
 mtd3: 0fa00000  00020000   &quot;system&quot;
 mtd4: 02800000  00020000   &quot;cache&quot;
 mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
+
 === Booting ===
 
 * Build everything <code>pmbootstrap install</code>
