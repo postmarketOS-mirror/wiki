@@ -1,4 +1,19 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S Advance
+| codename = i9070
+| image = File:Samsung Galaxy S Advance weston demo.jpg
+| imagecaption = Samsung Galaxy S Advance running Weston demos
+| releaseyear = 2012
+| originalsoftware = Android 2.3.6 on Linux 2.6.35
+| cpu = NovaThor U8500
+| gpu = Mali-400
+| storage = 8/16GB
+| display = 480x800 AMOLED
+| memory = 768MB
+}}
 === Contributors ===
 
 * drebrez
@@ -95,12 +110,9 @@ At the moment is not possible to write the system image file (samsung-i9070.img)
 
 === Photos ===
 
-* Initramfs asking for the password via telnet<br />
-[[File:https://i.imgur.com/MuVLljM.jpg]]
-* postmarketOS demo menu (XWayland)<br />
-[[File:http://i.imgur.com/maobRbj.jpg]]
-* Weston-terminal running in fullscreen mode<br />
-[[File:http://i.imgur.com/Nop8uu4.jpg]]
+* [https://i.imgur.com/MuVLljM.jpg Initramfs asking for the password via telnet]
+* [https://i.imgur.com/maobRbj.jpg postmarketOS demo menu (XWayland)]
+* [https://i.imgur.com/Nop8uu4.jpg Weston-terminal running in fullscreen mode]
 
 === Videos ===
 
