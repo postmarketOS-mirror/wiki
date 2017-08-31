@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = LG
+| name = G3 (Europe)
+| codename = lg-d885
+| image = File:LG G3 weston demo.jpg
+| imagecaption = LG G3 running Weston demos
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 on Linux 3.10
+| cpu = Qualcomm MSM8974AC Snapdragon 801
+| gpu = Adreno 330
+| storage = 16GB
+| display = 1440x2560 IPS
+| memory = 3GB
+}}
 === Contributors ===
 
 * Nutcake
