@@ -1,4 +1,20 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+
+{{Infobox device
+| manufacturer = Google (Samsung)
+| name = Galaxy Nexus I9250
+| codename = maguro
+| image = 
+| imagecaption = Google Galaxy Nexus
+| releaseyear = 2011
+| originalsoftware = Android 4.0 on Linux 3.0
+| cpu = TI OMAP 4460
+| gpu = PowerVR SGX540
+| storage = 16GB
+| display = 720x1280 AMOLED
+| memory = 1GB
+}}
 = Contributors =
 
 * lawl
