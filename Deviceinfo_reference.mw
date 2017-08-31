@@ -61,6 +61,15 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>arch</code>
 | Device architecture, must be supported by Alpine Linux
 | <code>armhf</code>, <code>aarch64</code>
+
+|-
+| <code>dev_touchscreen</code>
+| Path to the touchscreen device (needed for initramfs on-screen-keyboard, [[deviceinfo_dev_touchscreen|more info]])
+| e.g. <code>/dev/input/event3</code>
+|-
+| <code>dev_keyboard</code>
+| Path to the keyboard device, if your device has any (needed for initramfs password unlocking)
+| e.g. <code>/dev/input/event1</code> 
 |}
 
 === flash ===
