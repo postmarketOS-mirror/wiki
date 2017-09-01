@@ -37,6 +37,7 @@ fastboot flash userdata /tmp/postmarketOS-export/device-name.img
 === What works ===
 
 * Weston
+* XWayland
 * Touch screen
 * Vibration motor? (if I hold the side button down for 5 seconds it vibrates...)
 
