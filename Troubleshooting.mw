@@ -95,7 +95,7 @@ apk add mkbootimg unpackbootimg
 # Or: create a bootimg with &quot;mkbootimg&quot; inside &quot;pmbootstrap chroot&quot; and try to flash the image on your host GNU/Linux system with fastboot/heimdall</pre></li>
 <li><p>Diffoscope may also be useful to list differences between your self-compiled kernel, and the binary version from LineageOS (or whichever binary kernel is working).</p></li></ul>
 
-See [https://github.com/postmarketOS/pmbootstrap/wiki/Using-prebuilt-kernels Using prebuilt kernels].
+See [https://wiki.postmarketos.org/wiki/Using-prebuilt-kernels Using prebuilt kernels].
 
 === My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source ===
 
