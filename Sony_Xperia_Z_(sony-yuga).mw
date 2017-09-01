@@ -11,20 +11,22 @@
 
 * Compiling the kernel
 * Flashing pmos + kernel
-* Telnet into it, fill in passphrase for decrypting system and get into SSH
+* Telnet into it, fill in passphrase for decrypting system and get into SSH (only with prebuilt kernel)
 
 === Current status === 
+It is possible now to flash pmos + kernel and boot into it. However, for the moment we cannot telnet into the system. Dmesg of the host system says: the host system cannot enumerate the USB.
 
-This currently only works when replacing the ramdisk in the LineageOS/TWRP boot.img with pmos one using abootimg (so we use the prebuilt kernel of lineageOS).
-
-Replacing the initramfs in a boot image can be done like so:
+But when using the TWRP boot image and replacing its ramdisk with the pmos one we can telnet into the system (in other words our custom built kernel does not work).
+Replacing the initramfs in the TWRP boot image can be done like so:
 <code>$ abootimg -u boot.img -r initramfs</code>
 
 
 === Other information ===
-* when red leds are flashing, offsets are wrong
+
+* When red leds are flashing, offsets are wrong
 * LineageOS boot.img is far larger because the recovery is inside it
 
 === Links ===
 
 * [https://github.com/LineageOS/android_kernel_sony_msm8974 Kernel Source]
+* [https://github.com/Wouter92/pmbootstrap-sony-yuga Current device and kernel files]
