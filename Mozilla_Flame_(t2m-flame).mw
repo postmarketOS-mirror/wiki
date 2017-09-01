@@ -1,0 +1,169 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Mozilla (Alcatel)
+| name = Flame
+| codename = flame
+| image = File:Mozilla-flame.png
+| imagecaption = Mozilla Flame
+| releaseyear = 2014
+| originalsoftware = Firefox OS on Linux 3.0(?)
+| cpu = Qualcomm MSM8610 Snapdragon
+| gpu = Adreno 302
+| storage = 8GB
+| display = 480x854 AMOLED
+| memory = 1GB
+}}
+
+=== Contributors ===
+
+* kskarthik
+* MartijnBraam
+* ata2001
+* ollieparanoid
+* dzervas
+* lawl
+* yuvadm
+
+=== What works ===
+
+* Compiling the kernel
+* Building a base image
+* Fastboot flash
+* SD card install
+* Modules and firmware installation (sort of)
+
+==== Current Build / Boot Process ====
+
+Build and install to SD card:
+
+<pre>$ ./pmbootstrap.py install --sdcard /dev/mmcblkX</pre>
+Boot the phone into fastboot mode (power + volume down) and flash the boot partition:
+
+<pre>$ ./pmbootstrap.py flasher flash_kernel</pre>
+Insert SD card and boot.
+
+=== Known Issues ===
+
+==== Modules / Firmware Support ====
+
+Most modules and firmware while built and installed do not load correctly. Ongoing work is in progress to support:
+
+* Touchscreen
+* Wifi
+* Audio
+* etc.
+
+==== Unknown chunk type ====
+
+<code>mozilla-flame.img</code> cannot be flashed to either the <code>system</code>/<code>userdata</code> partitions due to bootloader limitations (probably because the system image is larger than the max download size and it forces the download into sparse mode, which is handled badly.)
+
+<pre>$ fastboot flash userdata flame/mozilla-flame.img 
+target reported max download size of 301989888 bytes
+erasing 'userdata'...
+OKAY [  1.254s]
+sending sparse 'userdata' 1/2 (288781 KB)...
+OKAY [ 10.018s]
+writing 'userdata' 1/2...
+FAILED (remote: Unknown chunk type)
+finished. total time: 11.275s</pre>
+Workaround is to install to SD card, or to init your build with <code>none</code> UI instead of <code>weston</code>, which will produce a system image under the limitation.
+
+=== Links ===
+
+* [https://github.com/mozilla-b2g/codeaurora_kernel_msm/tree/t2m-flame-3.4-kk Kernel Source]
+* Bleeding edge [https://github.com/postmarketOS/pmbootstrap/tree/device/mozilla-flame <code>device/mozilla-flame</code>] branch
+* [https://gist.github.com/yuvadm/238db856f1a81a572b0cd2a02a51ae8a UART/serial debug logs]
+* [https://github.com/postmarketOS/pmbootstrap/wiki/Serial-debugging#mozilla-flame Serial debugging]
+* [https://yuv.al/flame/ Mozilla Flame B2G build artifacts mirror]
+
+=== Internal Data ===
+
+Taken off a clean <code>v18D_nightly_v5.zip</code> B2G base image
+
+==== Partitions ====
+
+<source lang="bash">shell@flame:/ $ df
+Filesystem               Size     Used     Free   Blksize
+/dev                   451.7M   132.0K   451.6M   4096
+/sys/fs/cgroup         451.7M     0.0K   451.7M   4096
+/sys/fs/cgroup/memory: Permission denied
+/mnt/asec              451.7M     0.0K   451.7M   4096
+/mnt/obb               451.7M     0.0K   451.7M   4096
+/system                412.5M   283.5M   129.0M   4096
+/data                    2.0G    40.4M     2.0G   4096
+/cache                  70.8M     4.1M    66.8M   4096
+/persist                 4.9M     4.0M   852.0K   4096
+/firmware               64.0M    31.7M    32.2M   16384
+/storage/sdcard          3.8G     8.0K     3.8G   4096
+/mnt/media_rw/sdcard: Permission denied
+
+shell@flame:/ $ cat /proc/partitions                                       
+major minor  #blocks  name
+
+ 253        0     196608 zram0
+ 179        0    7634944 mmcblk0
+ 179        1      65536 mmcblk0p1
+ 179        2        512 mmcblk0p2
+ 179        3        128 mmcblk0p3
+ 179        4         32 mmcblk0p4
+ 179        5        512 mmcblk0p5
+ 179        6        500 mmcblk0p6
+ 179        7      15360 mmcblk0p7
+ 179        8        500 mmcblk0p8
+ 179        9       1024 mmcblk0p9
+ 179       10       1536 mmcblk0p10
+ 179       11       1536 mmcblk0p11
+ 179       12     429580 mmcblk0p12
+ 179       13      32768 mmcblk0p13
+ 179       14      73728 mmcblk0p14
+ 179       15      15360 mmcblk0p15
+ 179       16       1024 mmcblk0p16
+ 179       17       1536 mmcblk0p17
+ 179       18          1 mmcblk0p18
+ 179       19          8 mmcblk0p19
+ 179       20      10240 mmcblk0p20
+ 179       21       1024 mmcblk0p21
+ 179       22       1024 mmcblk0p22
+ 179       23        256 mmcblk0p23
+ 179       24         10 mmcblk0p24
+ 179       25        512 mmcblk0p25
+ 179       26        500 mmcblk0p26
+ 179       27        500 mmcblk0p27
+ 179       28     204800 mmcblk0p28
+ 179       29    2162688 mmcblk0p29
+ 179       30    4095983 mmcblk0p30
+ 179       32        512 mmcblk0rpmb
+
+shell@flame:/ $ ls -la /dev/block/platform/msm_sdcc.1/by-name/                 
+lrwxrwxrwx root     root              1969-12-31 19:10 DDR -> /dev/block/mmcblk0p4
+lrwxrwxrwx root     root              1969-12-31 19:10 aboot -> /dev/block/mmcblk0p5
+lrwxrwxrwx root     root              1969-12-31 19:10 abootbk -> /dev/block/mmcblk0p25
+lrwxrwxrwx root     root              1969-12-31 19:10 boot -> /dev/block/mmcblk0p7
+lrwxrwxrwx root     root              1969-12-31 19:10 cache -> /dev/block/mmcblk0p14
+lrwxrwxrwx root     root              1969-12-31 19:10 custpack -> /dev/block/mmcblk0p28
+lrwxrwxrwx root     root              1969-12-31 19:10 fota -> /dev/block/mmcblk0p24
+lrwxrwxrwx root     root              1969-12-31 19:10 fsc -> /dev/block/mmcblk0p18
+lrwxrwxrwx root     root              1969-12-31 19:10 fsg -> /dev/block/mmcblk0p17
+lrwxrwxrwx root     root              1969-12-31 19:10 misc -> /dev/block/mmcblk0p16
+lrwxrwxrwx root     root              1969-12-31 19:10 modem -> /dev/block/mmcblk0p1
+lrwxrwxrwx root     root              1969-12-31 19:10 modemst1 -> /dev/block/mmcblk0p10
+lrwxrwxrwx root     root              1969-12-31 19:10 modemst2 -> /dev/block/mmcblk0p11
+lrwxrwxrwx root     root              1969-12-31 19:10 pad -> /dev/block/mmcblk0p9
+lrwxrwxrwx root     root              1969-12-31 19:10 persist -> /dev/block/mmcblk0p13
+lrwxrwxrwx root     root              1969-12-31 19:10 recovery -> /dev/block/mmcblk0p15
+lrwxrwxrwx root     root              1969-12-31 19:10 rpm -> /dev/block/mmcblk0p6
+lrwxrwxrwx root     root              1969-12-31 19:10 rpmbk -> /dev/block/mmcblk0p26
+lrwxrwxrwx root     root              1969-12-31 19:10 sbl1 -> /dev/block/mmcblk0p2
+lrwxrwxrwx root     root              1969-12-31 19:10 sdi -> /dev/block/mmcblk0p3
+lrwxrwxrwx root     root              1969-12-31 19:10 secro -> /dev/block/mmcblk0p23
+lrwxrwxrwx root     root              1969-12-31 19:10 splash -> /dev/block/mmcblk0p20
+lrwxrwxrwx root     root              1969-12-31 19:10 ssd -> /dev/block/mmcblk0p19
+lrwxrwxrwx root     root              1969-12-31 19:10 system -> /dev/block/mmcblk0p12
+lrwxrwxrwx root     root              1969-12-31 19:10 traceability -> /dev/block/mmcblk0p21
+lrwxrwxrwx root     root              1969-12-31 19:10 tuningpara -> /dev/block/mmcblk0p22
+lrwxrwxrwx root     root              1969-12-31 19:10 tz -> /dev/block/mmcblk0p8
+lrwxrwxrwx root     root              1969-12-31 19:10 tzbk -> /dev/block/mmcblk0p27
+lrwxrwxrwx root     root              1969-12-31 19:10 usbmsc -> /dev/block/mmcblk0p30
+lrwxrwxrwx root     root              1969-12-31 19:10 userdata -> /dev/block/mmcblk0p29
+</source>
