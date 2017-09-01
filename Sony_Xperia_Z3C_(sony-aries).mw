@@ -8,6 +8,12 @@ Special thanks to '''opendata26, craftguy, ata2001''' for helping with this port
 === What works ===
 
 * Compiling the kernel
-* Device detected in <code>ifconfig</code> but connection to telnet, ssh refused
+* SSH into device
+
+=== What doesn't ===
+
+* GUI 
+* WiFi
+* Everything else
 
 === Source ===
