@@ -28,6 +28,15 @@ Turn on your watch and swipe from the top left corner (so thatd be where 11 woul
 
 Its important to remember to flash the system image to `userdata` as the system partition on the G Watch R is not big enough for pmOS. It will boot straight into pmOS once the kernel is flashed and the system is on userdata.
 
+This is done by using:
+
+```
+pmbootstrap flasher export
+
+fastboot flash userdata /tmp/postmarketOS-export/device-name.img
+
+```
+
 === What works ===
 
 * Weston
