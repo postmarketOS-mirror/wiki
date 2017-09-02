@@ -20,7 +20,7 @@ These kernel options must be set for pmOS to work.
 
 '''About'''
 
-''This creates a tmpfs filesystem, and mounts it at bootup and mounts it at /dev. The kernel driver core creates device nodes for all registered devices in that filesystem. All device nodes are owned by root and have the default mode of 0600. Userspace can add and delete the nodes as needed.''
+''This adds support for the devtmpfs filesystem which should be mounted to /dev at startup. The kernel driver core creates device nodes for all registered devices in that filesystem. All device nodes are owned by root and have the default mode of 0600. Userspace can add and delete the nodes as needed.''
 
 [https://cateee.net/lkddb/web-lkddb/DEVTMPFS.html Read more...]
 
