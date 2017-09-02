@@ -1,4 +1,19 @@
 [[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S II
+| codename = i9100
+| image = File:Samsung-i9100-weston.jpg
+| imagecaption = First photo ever released of postmarketOS (from the original [https://ollieparanoid.github.io/post/postmarketOS/ introduction post]).
+| releaseyear = 2011
+| originalsoftware = Android 2.3.4
+| cpu = Dual-core 1.2 GHz Cortex-A9
+| gpu = Mali-400MP4
+| storage = 16/32 GB
+| display = 480x800 AMOLED
+| memory = 1 GB RAM
+}}
 === Contributors ===
 
 * ollieparanoid
