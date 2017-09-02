@@ -39,6 +39,26 @@ This should always be set, otherwise you get this when you try SSH:
 <pre>PTY allocation request failed on channel 0
 -ash: a: unknown operand</pre>
 
+=== CONFIG_DEVTMPFS_MOUNT ===
+
+'''About'''
+
+''This will instruct the kernel to automatically mount the devtmpfs filesystem at /dev, directly after the kernel has mounted the root filesystem. The behavior can be overridden with the commandline parameter: devtmpfs.mount=0|1.''
+
+[https://cateee.net/lkddb/web-lkddb/DEVTMPFS_MOUNT.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  Generic Driver Options -->
+    Automount devtmpfs at /dev, after the kernel mounted the rootfs
+</pre>
+
+'''pmOS specific'''
+
+This option should '''not''' be set.
+
 === CONFIG_VT ===
 
 '''About'''
