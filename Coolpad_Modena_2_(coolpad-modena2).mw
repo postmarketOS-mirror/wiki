@@ -9,6 +9,8 @@ Flashing a custom kernel is not possible yet, but McBitter is working on replaci
 
 Most of the time is spent on documenting Mediatek boot process in depth. This device will be used as an example.
 
+See also: [[Mediatek]]
+
 ==== List of LCM's (the LCD control module) in original firmware ====
 
 * hx8394f_dsi_ld_cpt_vdo
