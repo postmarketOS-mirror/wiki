@@ -1,0 +1,164 @@
+{{note|This page is WIP.}}
+
+= Changing the kernel configuration =
+
+You can change the kernel configuration with pmbootstrap, for the sony-yuga device for example we run:
+
+<pre class="shell">./pmbootstrap.py menuconfig linux-sony-yuga</pre>
+
+This gives you a menu where you can select and deselect all kernel configuration options:
+
+[[File:KernelConfig.png|800px]]
+
+= Useful kernel configuration options =
+
+=== CONFIG_DEVTMPFS ===
+
+'''About'''
+
+''This creates a tmpfs filesystem, and mounts it at bootup and mounts it at /dev. The kernel driver core creates device nodes for all registered devices in that filesystem. All device nodes are owned by root and have the default mode of 0600. Userspace can add and delete the nodes as needed.''
+
+[https://cateee.net/lkddb/web-lkddb/DEVTMPFS.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  Generic Driver Options -->
+    Maintain a devtmpfs filesystem to mount at /dev
+</pre>
+
+'''pmOS specific'''
+
+This should always be set, otherwise you get this when you try SSH:
+
+<pre>PTY allocation request failed on channel 0
+-ash: a: unknown operand</pre>
+
+=== CONFIG_VT ===
+
+'''About'''
+
+''If you say Y here, you will get support for terminal devices with display and keyboard devices. These are called "virtual" because you can run several virtual terminals (also called virtual consoles) on one physical terminal. This is rather useful, for example one virtual terminal can collect system messages and warnings, another one can be used for a text-mode user session, and a third could run an X session, all in parallel. Switching between virtual terminals is done with certain key combinations, usually Alt-<function key>.''
+
+[https://cateee.net/lkddb/web-lkddb/VT.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  Character Devices -->
+    Virtual Terminal
+</pre>
+
+'''pmOS specific'''
+
+This should always be set, otherwise you cannot get virtual terminal over USB.
+
+== CONFIG_DM_CRYPT ==
+
+'''About'''
+
+''This device-mapper target allows you to create a device that transparently encrypts the data on it.''
+
+[https://cateee.net/lkddb/web-lkddb/DM_CRYPT.html Read more...]
+
+'''Location in menu'''
+
+Does not exist in menu
+
+'''pmOS specific'''
+
+This should always be set, required for full disk encyption.
+
+== CONFIG_KERNEL_GZIP, CONFIG_KERNEL_XZ, CONFIG_KERNEL_LZO and CONFIG_KERNEL_LZMA ==
+
+'''About'''
+
+;GZIP
+:  ''The old and tried gzip compression. It provides a good balance between compression ratio and decompression speed.''
+:  [https://cateee.net/lkddb/web-lkddb/KERNEL_GZIP.html Read more...]
+;XZ
+:  ''XZ uses the LZMA2 algorithm and instruction set specific BCJ filters which can improve compression ratio of executable code. The size of the kernel is about 30% smaller with XZ in comparison to gzip. The speed is about the same as with LZMA: The decompression speed of XZ is better than that of bzip2 but worse than gzip and LZO. Compression is slow.''
+:  [https://cateee.net/lkddb/web-lkddb/KERNEL_XZ.html Read more...]
+;LZO
+:  ''Its compression ratio is the poorest among the choices. The kernel size is about 10% bigger than gzip; however its speed (both compression and decompression) is the fastest.''
+:  [https://cateee.net/lkddb/web-lkddb/KERNEL_LZO.html Read more...]
+;LZMA
+:  ''This compression algorithm's ratio is best. Decompression speed is between gzip and bzip2. Compression is slowest. The kernel size is about 33% smaller with LZMA in comparison to gzip.''
+:  [https://cateee.net/lkddb/web-lkddb/KERNEL_LZMA.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+General Setup -->
+  Kernel compression mode -->
+    Gzip
+    LZMA
+    XZ
+    LZO
+</pre>
+
+'''pmOS specific'''
+
+You should set one of these to Y.
+* Gzip: Works without specifying anything else.
+* LZMA: If kernel compilation fails with this compression type, read [[Troubleshooting:kernel]].
+* XZ: Make sure to add <code>xz</code> to <code>makedepends</code> in the APKBUILD of your kernel package.
+* LZO: If you get <code>lzop: high compression not compiled in</code> during compilation of the kernel you probably need [https://github.com/postmarketOS/pmbootstrap/blob/b4c9f93f0d7be1272f6a67de2128558ce58e1077/aports/linux-samsung-i9070/02_reduce_lzo_compression.patch this patch].
+
+== CONFIG_USB_ETH ==
+
+'''About'''
+
+''This driver implements Ethernet style communication, in one of several ways:
+
+* ''The "Communication Device Class" (CDC) Ethernet Control Model. That protocol is often avoided with pure Ethernet adapters, in favor of simpler vendor-specific hardware, but is widely supported by firmware for smart network devices.''
+* ''On hardware can't implement that protocol, a simple CDC subset is used, placing fewer demands on USB.''
+* ''CDC Ethernet Emulation Model (EEM) is a newer standard that has a simpler interface that can be used by more USB hardware.''
+
+''RNDIS support is an additional option, more demanding than than subset.''
+
+[https://cateee.net/lkddb/web-lkddb/USB_ETH.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  USB Support -->
+    USB Gadget Support -->
+      USB Gadget Drivers -->
+        Ethernet Gadget
+</pre>
+
+'''pmOS specific'''
+
+Most devices do not need this to be set. If telnet/SSH does not work you can try and set this option to Y.
+
+== CONFIG_USB_ETH_RNDIS ==
+
+'''About'''
+
+''Microsoft Windows XP bundles the "Remote NDIS" (RNDIS) protocol, and Microsoft provides redistributable binary RNDIS drivers for older versions of Windows.''
+
+''If you say "y" here, the Ethernet gadget driver will try to provide a second device configuration, supporting RNDIS to talk to such Microsoft USB hosts.''
+
+[https://cateee.net/lkddb/web-lkddb/USB_ETH_RNDIS.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  USB Support -->
+    USB Gadget Support -->
+      USB Gadget Drivers -->
+        RNDIS Support
+</pre>
+
+'''pmOS specific'''
+
+Required if you set <code>CONFIG_USB_ETH</code> to 'Y'.
+
+= References =
+
+# [https://cateee.net/lkddb/web-lkddb/ Linux Kernel Driver Database]
