@@ -255,6 +255,10 @@ No
 
 ''Build a concatenated zImage/dtb by default''
 
+''Enabling this option will cause a concatenated zImage and list of DTBs to be built by default (instead of a standalone zImage.)''
+
+''The image will built in arch/arm/boot/zImage-dtb''
+
 '''Location in menu'''
 
 <pre class="shell>
