@@ -74,6 +74,7 @@ To my knowledge this format is only used by brom and preloader(?) All fields are
 |}
 
 = Futher reading =
+* [[Coolpad Modena 2 (coolpad-modena2)]]
 * http://www.lieberbiber.de/2015/07/02/mediatek-details-soc-startup/
 * http://www.lieberbiber.de/2015/07/04/mediatek-details-partitions-and-preloader/
 * https://forum.xda-developers.com/u/repair/coolpad-sky-3-e502-modena-2-unbrick-t3610163 (KCOL0 unbrick)
