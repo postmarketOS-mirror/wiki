@@ -52,7 +52,7 @@
 
 * Launching Weston is delayed by 135 seconds to let udev settle down
 
-=== Other information ===
+== Other information ==
 
 * When red leds are flashing, offsets are wrong
 * LineageOS boot.img is far larger because the recovery is inside it
