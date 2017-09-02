@@ -62,6 +62,8 @@ Once you've successfully compiled the kernel you can install the OS to an SD car
 <pre class="shell">./pmbootstrap.py install --sdcard=/dev/sdb</pre>
 You will need a 1GB SD card in order for this to work, also keep in mind that this will format the sd card.
 
+Please also note, that you cannot flash directly to the system due to an error in Heimdall.
+
 Next you want to put your phone in download mode by holding <code>power + vol down + home</code> all together until you enter download mode, press volume up again to continue past the warning.
 
 Now you can flash the boot image:
