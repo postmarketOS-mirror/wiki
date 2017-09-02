@@ -445,3 +445,11 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | sony-yuga
   |
 |}
+
+
+==Other supported hardware==
+There are a variety of devices which pmOS users will likely plug into their phones. If the device is free software compliant (drivers and firmware), we should ensure it works with the OS. These devices are listed below.
+
+===External wifi adapters===
+
+[[AR9271]]
