@@ -55,7 +55,7 @@ Device Drivers -->
 
 This should always be set, otherwise you cannot get virtual terminal over USB.
 
-== CONFIG_DM_CRYPT ==
+=== CONFIG_DM_CRYPT ===
 
 '''About'''
 
@@ -71,7 +71,7 @@ Does not exist in menu
 
 This should always be set, required for full disk encyption.
 
-== CONFIG_KERNEL_GZIP, CONFIG_KERNEL_XZ, CONFIG_KERNEL_LZO and CONFIG_KERNEL_LZMA ==
+=== CONFIG_KERNEL_GZIP, CONFIG_KERNEL_XZ, CONFIG_KERNEL_LZO and CONFIG_KERNEL_LZMA ===
 
 '''About'''
 
@@ -107,7 +107,7 @@ You should set one of these to Y.
 * XZ: Make sure to add <code>xz</code> to <code>makedepends</code> in the APKBUILD of your kernel package.
 * LZO: If you get <code>lzop: high compression not compiled in</code> during compilation of the kernel you probably need [https://github.com/postmarketOS/pmbootstrap/blob/b4c9f93f0d7be1272f6a67de2128558ce58e1077/aports/linux-samsung-i9070/02_reduce_lzo_compression.patch this patch].
 
-== CONFIG_USB_ETH ==
+=== CONFIG_USB_ETH ===
 
 '''About'''
 
@@ -135,7 +135,7 @@ Device Drivers -->
 
 Most devices do not need this to be set. If telnet/SSH does not work you can try and set this option to Y.
 
-== CONFIG_USB_ETH_RNDIS ==
+=== CONFIG_USB_ETH_RNDIS ===
 
 '''About'''
 
