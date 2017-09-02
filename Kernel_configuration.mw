@@ -225,7 +225,7 @@ General Setup -->
 
 '''pmOS specific'''
 
-Nothing.
+No
 
 === CONFIG_ARM_APPENDED_DTB ===
 
