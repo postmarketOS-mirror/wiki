@@ -12,6 +12,10 @@ This gives you a menu where you can select and deselect all kernel configuration
 
 = Useful kernel configuration options =
 
+== Required ==
+
+These kernel options must be set for pmOS to work.
+
 === CONFIG_DEVTMPFS ===
 
 '''About'''
@@ -106,6 +110,10 @@ You should set one of these to Y.
 * LZMA: If kernel compilation fails with this compression type, read [[Troubleshooting:kernel]].
 * XZ: Make sure to add <code>xz</code> to <code>makedepends</code> in the APKBUILD of your kernel package.
 * LZO: If you get <code>lzop: high compression not compiled in</code> during compilation of the kernel you probably need [https://github.com/postmarketOS/pmbootstrap/blob/b4c9f93f0d7be1272f6a67de2128558ce58e1077/aports/linux-samsung-i9070/02_reduce_lzo_compression.patch this patch].
+
+== Optional ==
+
+These kernel options are optional and for some devices required for fixing some issues.
 
 === CONFIG_USB_ETH ===
 
