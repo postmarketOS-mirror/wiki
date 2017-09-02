@@ -187,6 +187,67 @@ Device Drivers -->
 
 Required if you set <code>CONFIG_USB_ETH</code> to 'Y'.
 
+=== CONFIG_MSM_KGSL ===
+
+'''About'''
+
+''3D graphics driver. Required to use hardware accelerated OpenGL ES 2.0 and 1.1.''
+
+[https://android.googlesource.com/kernel/msm/+/android-msm-mako-3.4-jb-mr1-kgsl/drivers/gpu/msm/Kconfig Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  Graphics Support -->
+    MSM 3D graphics Driver
+</pre>
+
+'''pmOS specific'''
+
+If framebuffer does not work set this to 'N'
+
+=== CONFIG_CMDLINE ===
+
+'''About'''
+
+''Enter arguments here that should be compiled into the kernel image and used at boot time. If the boot loader provides a command line at boot time, it is appended to this string to form the full kernel command line, when the system boots.''
+
+[https://cateee.net/lkddb/web-lkddb/CMDLINE.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+General Setup -->
+  Boot options -->
+    Default kernel command string
+</pre>
+
+'''pmOS specific'''
+
+Nothing.
+
+=== CONFIG_ARM_APPENDED_DTB ===
+
+'''About'''
+
+''With this option, the boot code will look for a device tree binary (DTB) appended to zImage (e.g. cat zImage <filename>.dtb > zImage_w_dtb).''
+
+[https://cateee.net/lkddb/web-lkddb/ARM_APPENDED_DTB.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell>
+General Setup -->
+  Boot options -->
+    Flattened Device Tree support
+    Use appended device tree blob to zImage
+</pre>
+
+'''pmOS specific'''
+
+Set this if your device need an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image.
+
 = References =
 
 # [https://cateee.net/lkddb/web-lkddb/ Linux Kernel Driver Database]
