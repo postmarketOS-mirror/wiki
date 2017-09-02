@@ -243,7 +243,7 @@ General Setup -->
 
 '''pmOS specific'''
 
-Set this if your device needs an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image.
+Set this if your device needs an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image. Not to be confused with <code>CONFIG_ARM_APPENDED_DTB</code>!
 
 = References =
 
