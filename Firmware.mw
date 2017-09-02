@@ -1,5 +1,16 @@
 There are closed source components (like firmware and bootloaders) in every phone, and [https://ollieparanoid.github.io/post/security-warning/ they are dangerous]. It seems next to impossible to replace them with open source components, and it won't be feasible any time soon for postmarketOS. Yet, this is an interesting topic, so this page provides links for deeper insight into the topic.
 
+== What can we do? ==
+* Document whether firmware is partially based on open source code and try to reverse engineer the proprietary bits, like @McBitter does for his [[Mediatek]] device!
+* Document which firmware components exist in your devices
+* Document which of these have known security issues
+* Learn more about the circumstances, in which the security bugs can be exploited. Example: Possibly an exploit in the wifi module can only be exploited, after we loaded the wifi firmware.
+* Use alternative components, that are plugged in via USB, and therefore do not have access to the device's memory
+* Connect to people who know more about this topic to get more help
+* Consider bricking insecure components through firmware security holes on purpose, just to make sure that they aren't a risk anymore.
+
+== Components ==
+
 === Bootloaders ===
 
 ==== hboot (HTC) ====
