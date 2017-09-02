@@ -227,26 +227,23 @@ General Setup -->
 
 No
 
-=== CONFIG_ARM_APPENDED_DTB ===
+=== CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE ===
 
 '''About'''
 
-''With this option, the boot code will look for a device tree binary (DTB) appended to zImage (e.g. cat zImage <filename>.dtb > zImage_w_dtb).''
-
-[https://cateee.net/lkddb/web-lkddb/ARM_APPENDED_DTB.html Read more...]
+''Build a concatenated zImage/dtb by default''
 
 '''Location in menu'''
 
 <pre class="shell>
 General Setup -->
   Boot options -->
-    Flattened Device Tree support
-    Use appended device tree blob to zImage
+    appended device tree blob to zImage
 </pre>
 
 '''pmOS specific'''
 
-Set this if your device need an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image.
+Set this if your device needs an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image.
 
 = References =
 
