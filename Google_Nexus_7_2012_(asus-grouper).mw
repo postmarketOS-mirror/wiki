@@ -55,5 +55,6 @@
 * [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux.
 * I was able to get networking over USB with an RTL8150 ethernet USB adapter by enabling the RTL8150 kernel config and following the [https://wiki.alpinelinux.org/wiki/Configure_Networking network setup guide on the Alpine Linux wiki].
 * I was able to get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, I ran <code>/etc/init.d/networking restart</code>, which gave an error about being unable to get a MAC address. I restarted the device to find that wifi Just Worked™, and was able to successfully scan for wireless networks and establish a connection to my secured wireless AP.
+* A newer kernel, that should work, can be found here (thanks to Jasper in IRC): https://github.com/Unlegacy-Android
 
 ''Fun fact: <code>grouper</code> was the first tablet to run pmOS!''
