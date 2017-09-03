@@ -31,11 +31,13 @@ First, initialize the work directory. Replace `$WORKDIR` with the desired locati
 
 When initializing pmbootstrap, you'll need to select the device you are building for, the location for the work directory, the number of parallel jobs to run when compiling, and whether or not file timestamps should be accounted for when determining if a rebuild is necessary. User input is **bolded** below, replace with your desired options.
 
+You can find a list of supported devices and their codenames at [[Supported devices]]. See [[User-Interfaces]] for a list of supported UIs.
+
  $ cd pmbootstrap
  $ ./pmbootstrap.py init
  [23:09:38] Target device (either an existing one, or a new one for porting).
  [23:09:38] Available (18): asus-grouper, htc-ace, htc-bravo, lg-d855, lg-hammerhead, lg-mako, motorola-titan, mozilla-flame, nokia-rx51, qemu- aarch64, qemu-amd64, qemu-vexpress, samsung-i9070, samsung-i9100, samsung-maguro, samsung-n7100, sony-amami, sony-castor-windy
- [23:09:38] Device [samsung-i8262]: <b>nokia-rx51</b>
+ [23:09:38] Device [samsung-i8262]]: <b>nokia-rx51</b>
  [23:09:49] Available user interfaces (1): weston, none
  [23:09:49] User interface [weston]: <b>weston</b>
  [23:09:51] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
