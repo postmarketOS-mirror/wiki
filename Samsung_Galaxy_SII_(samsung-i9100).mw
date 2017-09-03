@@ -64,3 +64,33 @@ While this works for the i9100, this approach needs to be improved to also work 
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/demos.jpg postmarketOS demo menu (XWayland)]
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/firefox.jpg Firefox (XWayland)]
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/smoke.jpg Weston-smoke demo]
+
+=== Wifi ===
+
+''Please edit this to match the style of wiki.''
+
+I got wifi working on gt-i9100 with following procedure:
+
+- Created path /system/etc/wifi
+
+mkdir -p /system/etc/wifi
+
+- Downloaded firmware files from https://github.com/TheMuppets/proprietary_vendor_samsung/tree/cm-14.1/i9100/proprietary/system/etc/wifi and saved to /system/etc/wifi
+
+- Rebooted phone
+
+reboot
+
+- Created conf for wpa_supplicant
+
+$ wpa_passphrase "SSID" "password" > wifi
+
+- connect to wifi AP
+
+$ sudo wpa_supplicant -i wlan0 -c wifi
+
+- get ip address from dhcp server
+
+$ sudo udhcpc -i wlan0
+
+I have no idea how to package this for pmOS and if it is even possible because of the binary blobs.
