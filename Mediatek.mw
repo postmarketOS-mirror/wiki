@@ -5,15 +5,15 @@
 When chip is powered on the dram controller pushes the address of brom (boot rom, mask rom that is hardwired) to PC (program counter) and execution of rom begins.
 
 == Brom execution ==
-# UART1 gets initialized to some predetermined baudrate. Baud usually depends in chip input clock source. Observation has been made that UART1 is disabled on many phones, but can be found if eFuses are not blown.
+# UART1 gets initialized to some predetermined baudrate. Baud usually depends in chip input clock source. Observation has been made that UART1 is disabled on many phones, but can be enabled if proper firmware is used and eFuses are not blown.
 # Initialize storage with low clock. Reason why it's using low clock is because muxes are not programmed at this stage.
 # Wait for "Start" string on UART1 for unknown amount of time, the internet keeps buzzing about 150ms. After start is recieved, listen to commands from host until jump is observed (refer to brom spec in further reading section). If start is not sent then Preloader image will be loaded from the storage to the SRAM (static ram) and brom loads it according to the flags set in header.
 # If KCOL0 pin is shorted to the ground, preloader loading is avoided and download protocol is rolled up on USB port.
 
 == Image format ==
-{{note|Incomplete and has missing information. Feel free to coordinate corrections with me.}}
+{{note|Incomplete and has missing information. Feel free to coordinate corrections on Matrix chat.}}
 
-To my knowledge this format is only used by brom and preloader(?) All fields are in little endian. Going to add working example data in near future.
+This format is used in brom and preloader(has to be verified). All fields are in little endian.
 
 === File info image format ===
 {| class="wikitable"
@@ -32,7 +32,7 @@ To my knowledge this format is only used by brom and preloader(?) All fields are
   | Pay attention to padding bytes
 |-
   | 4
-  | <code>0x01</code>
+  | <code>01 00 00 00</code>
 |-
   | 2
   | Image type
@@ -53,7 +53,7 @@ To my knowledge this format is only used by brom and preloader(?) All fields are
   | Total file size
 |-
   | 4
-  | <code>00 04 00 00</code>
+  | <code>00 00 04 00</code>
   | Maximum file size
 |-
   | 4
@@ -70,8 +70,26 @@ To my knowledge this format is only used by brom and preloader(?) All fields are
 |-
   | 4
   | Ending
-  | 1: POST_BUILD_DONE 2: XIP (Execute In Place)
+  | 1: POST_BUILD_DONE 2: XIP (Execute In Place) use bitwise OR to combine multiple flags
 |}
+
+
+=== Example data from MT6735P chipset ===
+
+ ROM:00031128 magicValue      DCD 0x14D4D4D
+ ROM:0003112C HeaderSize      DCD 0x38                ; completeHeaderSize
+ ROM:00031130 aFile_info      DCB "FILE_INFO",0,0,0
+ ROM:0003113C alwaysOne       DCD 1
+ ROM:00031140 FileType        DCW 1                   ; ARM-Bootloader
+ ROM:00031142 FlashType       DCB 5                   ; EMMC-Boot-Region
+ ROM:00031143 SignatureType   DCB 3                   ; Single and PHASH
+ ROM:00031144 LoadAddress     DCD 0x200D00            ; SRAM address
+ ROM:00031148 FileLength      DCD 0x1CE4C
+ ROM:0003114C MaximumSize     DCD 0x40000
+ ROM:00031150 ContentOffset   DCD 0x300
+ ROM:00031154 SigLen          DCD 0x124
+ ROM:00031158 JumpOffset      DCD 0x300
+ ROM:0003115C Ending          DCD 1                   ; POST_BUILD_DONE
 
 = Futher reading =
 * [[Coolpad Modena 2 (coolpad-modena2)]]
