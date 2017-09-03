@@ -1,6 +1,6 @@
 If you have ''any'' questions, feel free to ask in the [[Matrix and IRC|matrix/irc channel]] or [https://github.com/postmarketOS/pmbootstrap/issues bug tracker]! This is a wiki, so please adjust everything that isn't detailed enough or would have helped you with porting.
 
-Please write your porting progress to the [https://github.com/postmarketOS/pmbootstrap/wiki/Devices devices] page, even if you didn't get very far. This helps to determine what can be improved to make porting easier.
+Please write your porting progress to the [[Devices]] page, even if you didn't get very far. This helps to determine what can be improved to make porting easier.
 
 {{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, writing SMS, using Wi-Fi, using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
 
