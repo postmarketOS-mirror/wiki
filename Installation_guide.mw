@@ -31,24 +31,22 @@ First, initialize the work directory. Replace `$WORKDIR` with the desired locati
 
 When initializing pmbootstrap, you'll need to select the device you are building for, the location for the work directory, the number of parallel jobs to run when compiling, and whether or not file timestamps should be accounted for when determining if a rebuild is necessary. User input is **bolded** below, replace with your desired options.
 
-<pre>
-$ cd pmbootstrap
-$ ./pmbootstrap.py init
-[23:09:38] Target device (either an existing one, or a new one for porting).
-[23:09:38] Available (18): asus-grouper, htc-ace, htc-bravo, lg-d855, lg-hammerhead, lg-mako, motorola-titan, mozilla-flame, nokia-rx51, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-i9070, samsung-i9100, samsung-maguro, samsung-n7100, sony-amami, sony-castor-windy
-[23:09:38] Device [samsung-i8262]: <b>nokia-rx51</b>
-[23:09:49] Available user interfaces (1): weston, none
-[23:09:49] User interface [weston]: <b>weston</b>
-[23:09:51] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
-[23:09:51] Work path [/home/user/.local/var/pmbootstrap]: <b>~/work</b>
-[23:10:13] How many jobs should run parallel on this machine, when compiling?
-[23:10:13] Jobs [4]: <b>8</b>
-[23:10:14] Rebuild packages, when the last modified timestamp changed, even if the version did not change? This makes pmbootstrap behave more like 'make'.
-[23:10:14] Timestamp based rebuilds (y/n) [y]: <b>y</b>
-[23:10:19] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
-[23:10:19] Extra packages [none]: <b>vim</b>
-[23:10:24] WARNING: The applications in the chroots do not get updated automatically.
-[23:10:24] Run 'pmbootstrap zap' to delete all chroots once a day before working with pmbootstrap!
-[23:10:24] It only takes a few seconds, and all packages are cached.
-[23:10:24] Done!
-</pre>
+ $ cd pmbootstrap
+ $ ./pmbootstrap.py init
+ [23:09:38] Target device (either an existing one, or a new one for porting).
+ [23:09:38] Available (18): asus-grouper, htc-ace, htc-bravo, lg-d855, lg-hammerhead, lg-mako, motorola-titan, mozilla-flame, nokia-rx51, qemu- aarch64, qemu-amd64, qemu-vexpress, samsung-i9070, samsung-i9100, samsung-maguro, samsung-n7100, sony-amami, sony-castor-windy
+ [23:09:38] Device [samsung-i8262]: <b>nokia-rx51</b>
+ [23:09:49] Available user interfaces (1): weston, none
+ [23:09:49] User interface [weston]: <b>weston</b>
+ [23:09:51] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+ [23:09:51] Work path [/home/user/.local/var/pmbootstrap]: <b>~/work</b>
+ [23:10:13] How many jobs should run parallel on this machine, when compiling?
+ [23:10:13] Jobs [4]: <b>8</b>
+ [23:10:14] Rebuild packages, when the last modified timestamp changed, even if the version did not change? This makes pmbootstrap behave more  like 'make'.
+ [23:10:14] Timestamp based rebuilds (y/n) [y]: <b>y</b>
+ [23:10:19] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+ [23:10:19] Extra packages [none]: <b>vim</b>
+ [23:10:24] WARNING: The applications in the chroots do not get updated automatically.
+ [23:10:24] Run 'pmbootstrap zap' to delete all chroots once a day before working with pmbootstrap!
+ [23:10:24] It only takes a few seconds, and all packages are cached.
+ [23:10:24] Done!
