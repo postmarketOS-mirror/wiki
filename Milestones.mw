@@ -110,3 +110,12 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 
 # Get audio and BT working to overtake the n900 in supported features
 # Get mainline working for castor
+
+=== [https://github.com/wouter92 wfranken] ===
+
+* [x] Basic support for yuga
+* [ ] Getting mainline working for yuga.
+* [ ] Getting more features working on yuga.
+* Adding more device support
+* Work on wiki
+* In general: make pmos usable as a daily driver
