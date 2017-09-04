@@ -1,0 +1,44 @@
+[[Category:Unsupported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Google (Huawei)
+| name = Google Nexus 6P
+| codename = angler
+| image =
+| imagecaption =
+| releaseyear = 2015
+| originalsoftware = Android 6.0.0 on Linux 3.10 (upgradeable to Android 8.0.0 on Linux 3.10)
+| cpu = Qualcomm MSM8994 Snapdragon 810
+| gpu = Adreno 430
+| storage = 32/64/128 GB
+| display = 1440x2560 AMOLED
+| memory = 3 GB RAM
+}}
+
+=== Contributors ===
+
+* zhuowei
+
+=== What works ===
+
+* Building kernel
+* Booting kernel via fastboot
+* Telnet to initramfs
+
+=== What does not work ===
+
+* Splash image
+* Booting past initramfs (untested currently)
+* Everything else (no graphics, Wi-Fi, touchscreen, you tell me)
+
+=== How to enter flash mode ===
+
+The Nexus 6P, like all Google Nexus devices, uses Fastboot as the flashing protocol.
+
+To enter Fastboot mode, hold Volume Down while powering on the device. Let go of Volume Down when a picture of a green Android mascot shows up on the screen.
+
+=== Links ===
+
+[https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512]
+
+[https://github.com/LineageOS/android_kernel_huawei_angler/tree/04d1557af1259b211609fa41adbe852b5f9cf2da The LineageOS 14.1 kernel used]
