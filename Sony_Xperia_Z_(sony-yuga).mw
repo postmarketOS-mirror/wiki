@@ -43,7 +43,13 @@ To install a custom recovery on the Xperia Z:
 * ssh
 * adjusting the led, torch and the lcd backlight
 * display
+** Weston
+** Xwayland
 * touchscreen
+
+=== What does not work ===
+
+* Splash screens
 
 === What has not been tested ===
 
