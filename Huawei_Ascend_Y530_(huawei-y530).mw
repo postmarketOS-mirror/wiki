@@ -1,22 +1,22 @@
 [[Category:Unsupported Devices]]
 === Contributors ===
 
-* drebrez
+* ''[[user:drebrez|drebrez]]''
 
 === What works ===
 
-* [x] Kernel compilation
-* [x] Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* [ ] Flash System (<code>pmbootstrap flasher flash_system</code>)
-* [x] Initramfs boot
-* [x] USB Network
-* [ ] Framebuffer graphics (Splash screens)
-* [x] SSH Connectivity
-* [ ] Weston on framebuffer
-* [ ] Touchscreen
-* [ ] Xwayland
-* [ ] Wifi
-* [ ] Audio playback
+* ☑ Kernel compilation
+* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Initramfs boot
+* ☑ USB Network
+* ☐ Framebuffer graphics (Splash screens)
+* ☑ SSH Connectivity
+* ☐ Weston on framebuffer
+* ☐ Touchscreen
+* ☐ Xwayland
+* ☐ Wifi
+* ☐ Audio playback
 
 === Device info ===
 
