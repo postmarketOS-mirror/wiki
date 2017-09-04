@@ -1,0 +1,25 @@
+osk-sdl is an on-screen keyboard built primarily for running in initfs and aiding users with unlocking the rootfs LUKS device from a touch screen device.
+
+It currently lives in the <code>add_osk_initramfs</code> branch of <code>pmbootstrap</code>.
+
+To install it:
+
+<pre>
+$ git clone https://github.com/postmarketOS/pmbootstrap.git
+$ git checkout feature/add_osk_initramfs
+$ ./pmbootstrap init
+<select device options>
+<Note: It's helpful to select 'none' here for UI so that osk-sdl can be run from within pmos without conflicting with weston>
+$ ./pmbootstrap install --no-fde
+</pre>
+
+Using <code>--no-fde</code> will allow pmOS to boot straight into rootfs without requiring unlocking of the partition. This seems counter-intuitive for testing a keyboard made for initramfs, but this will allow you to manually run osk-sdl with various environment options set and/or osk.conf options for debug and testing.
+
+To run osk-sdl from pmOS (not in initramfs):
+
+<pre>
+$ sudo su
+# export SDL_VIDEO_GL_DRIVER="libGL.so.1"
+# DFBARGS="system=fbdev,no-cursor"
+# osk-sdl -d a -n a -c /etc/osk.conf
+</pre>
