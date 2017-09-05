@@ -66,7 +66,7 @@ To generate a recovery zip file and flash it, execute the following:
 * swipe to allow modifications (if you get asked for that)
 * click on &quot;Advanced&quot; / &quot;ADB Sideload&quot;
 * swipe to start sideload
-* run <code>pmbootstrap flasher --method=adb flash sideload</code>
+* run <code>pmbootstrap flasher --method adb sideload</code>
 * If you would like to flash the kernel partition too, add <code>--recovery-flash-bootimg</code> to the install command! Please note, that this method currently only works, when the device accepts a <code>boot.img</code> file, consisting of initramfs and kernel - our workaround with &quot;isorec&quot; (see above) can not yet be flashed this way yet. If you need that, please open a ticket.*
 
 == Maemo ==
