@@ -1,12 +1,11 @@
 [[Category:Supported Devices]]
 [[Category:Devices]]
-
 {{Infobox device
 | manufacturer = Sony
 | name = Xperia Z1 Compact (Z1C)
 | codename = amami
-| image = File:Sony_Amami_Weston.gif
-| imagecaption = Sony Xperia Z1C running Weston
+| image = File:Sony Xperia Z1C.png
+| imagecaption = Sony Xperia Z1C
 | releaseyear = 2014
 | originalsoftware = Android 4.3 on Linux 3.4
 | cpu = 2.2 GHz Qualcomm MSM8974 Quad Core
@@ -15,7 +14,7 @@
 | display = 720x1280 IPS
 | memory = 2GB
 }}
-= Contributors =
+== Contributors ==
 
 * ata2001 (porting and testing)
 * ollieparanoid (help on IRC)
@@ -25,13 +24,13 @@
 * bshah (help on IRC)
 * mmaret (help on IRC)
 
-= Special keycombo's =
+== Special keycombo's ==
 
 * Boot to recovery: hold volume down and power button till the phone shakes
 * Boot to bootloader: unplug device, hold volume up and plug usb into device
 * Reset if stuck: hold volume up and power button till the phone shakes
 
-= What works =
+== What works ==
 
 * charging
 * network through USB
@@ -41,11 +40,11 @@
 * display
 * touchscreen
 
-= What does not work =
+== What does not work ==
 
 * Wifi
 
-= What have not been tested =
+== What have not been tested ==
 
 * Bluetooth
 * 3G
@@ -54,10 +53,10 @@
 * SD card
 * Hardware buttons
 
-= Issues =
+== Issues ==
 
 * Launching Weston is delayed by 135 seconds to let udev settle down
 
-= Links =
+== Links ==
 
 * [https://web.archive.org/web/20161225005457/https://wiki.cyanogenmod.org/w/Amami_Info CM wiki archive]
