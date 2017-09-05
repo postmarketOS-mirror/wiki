@@ -1,9 +1,24 @@
 [[Category:Unsupported Devices]]
-=== Contributor ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Coolpad
+| name = Modena 2
+| codename = modena2
+| image = File:
+| imagecaption = Coolpad Modena 2
+| releaseyear = 2016
+| originalsoftware = Android 6.0 on Linux 3.18.10
+| cpu = Mediatek MT6735P
+| gpu = Mali-T720MP2
+| storage = 16GB
+| display = 720x1280 IPS
+| memory = 2GB
+}}
+== Contributor ==
 
 * [https://github.com/McBitter McBitter]
 
-=== Status ===
+== Status ==
 
 Flashing a custom kernel is not possible yet, but McBitter is working on replacing the bootloader with a custom fork of [https://github.com/littlekernel/lk LK] (a proprietary fork of LK is already present on the device, but it does not allow flashing a custom kernel). When that works, porting pmOS can begin.
 
@@ -11,25 +26,25 @@ Most of the time is spent on documenting Mediatek boot process in depth. This de
 
 See also: [[Mediatek]]
 
-==== List of LCM's (the LCD control module) in original firmware ====
+=== List of LCM's (the LCD control module) in original firmware ===
 
 * hx8394f_dsi_ld_cpt_vdo
 * ili9881c_dsi_ys_cmi_vdo
 * otm1287a_dsi_by_auo
 * ili9881c_dsi_ld_auo_vdo
 
-==== Digitizer that is present on the model I have ====
+=== Digitizer that is present on the model I have ===
 
 * TBD
 
-=== Links ===
+== Links ==
 
 * [https://forum.xda-developers.com/u/repair/coolpad-sky-3-e502-modena-2-unbrick-t3610163 Unbrick tutorial]
 * [https://androidmtk.com/smart-phone-flash-tool Proprietary flashing software SP Flash Tool]
 * [https://gitgud.io/mcbitter/coolpad_sky_3_E502 Original firmware with Android 6.0]
 * [[Mediatek|Detailed description of boot process]]
 
-=== Links to useful reverse engineering hints ===
+== Links to useful reverse engineering hints ==
 
 * http://www.stevenhoneyman.co.uk/2015/02/reconstructing-mtk-lcm-drivers.html
 * https://forum.xda-developers.com/showpost.php?p=70395172&postcount=5882
