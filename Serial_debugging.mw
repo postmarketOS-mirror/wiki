@@ -16,6 +16,8 @@ It should work fine with:
 
 The Nexus 7 2012 (grouper) does not work with this setup and likely does not have any serial UART capabilities at all.
 
+Google open sourced their own [https://android.googlesource.com/device/google/debugcable/+/master debug cable design] in the AOSP repository.
+
 == Nexus USB debug cable ==
 
 The nexus S and galaxy nexus have the serial port multiplexed with the USB connector instead of the headphone connector. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
