@@ -1,28 +1,43 @@
 [[Category:Unsupported Devices]]
-=== NOTE ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = HTC
+| name = Desire Z
+| codename = vision
+| image = File:HTC Desire Z.jpg
+| imagecaption = HTC Desire Z
+| releaseyear = 2010
+| originalsoftware = Android 2.2 on Linux 2.6.32
+| cpu = Qualcomm MSM7230
+| gpu = Adreno 205
+| storage = 1.5GB
+| display = 480x800
+| memory = 512MB
+}}
+== NOTE ==
 
 None of this work has been (merged/pushed/get correct terminology) upstream. Contact CmdrWgls on IRC if you're interested in working on it before he gets around to actually doing so.
 
-=== Contributors ===
+== Contributors ==
 
 * CmdrWgls
 * (everyone on IRC)
 
-=== What works ===
+== What works ==
 
 * Nothing
 
-=== What doesn't work ===
+== What doesn't work ==
 
 * Everything
 
-=== Progress ===
+== Progress ==
 
 What's been done:
 
 * device-htc-vision builds
 * linux-htc-vision builds (using [https://github.com/milaq/android_kernel_htc_vision milaq's kernel])
 
-=== Next steps ===
+== Next steps ==
 
 * Test kernel on device.
