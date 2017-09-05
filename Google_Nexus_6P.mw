@@ -4,8 +4,8 @@
 | manufacturer = Google (Huawei)
 | name = Google Nexus 6P
 | codename = angler
-| image =
-| imagecaption =
+| image = File:Huawei Nexus 6P.png
+| imagecaption = Huawei Nexus 6P
 | releaseyear = 2015
 | originalsoftware = Android 6.0.0 on Linux 3.10 (upgradeable to Android 8.0.0 on Linux 3.10)
 | cpu = Qualcomm MSM8994 Snapdragon 810
@@ -14,30 +14,29 @@
 | display = 1440x2560 AMOLED
 | memory = 3 GB RAM
 }}
-
-=== Contributors ===
+== Contributors ==
 
 * zhuowei
 
-=== What works ===
+== What works ==
 
 * Building kernel
 * Booting kernel via fastboot
 * Telnet to initramfs
 
-=== What does not work ===
+== What does not work ==
 
 * Splash image
 * Booting past initramfs (untested currently)
 * Everything else (no graphics, Wi-Fi, touchscreen, you tell me)
 
-=== How to enter flash mode ===
+== How to enter flash mode ==
 
 The Nexus 6P, like all Google Nexus devices, uses Fastboot as the flashing protocol.
 
 To enter Fastboot mode, hold Volume Down while powering on the device. Let go of Volume Down when a picture of a green Android mascot shows up on the screen.
 
-=== Links ===
+== Links ==
 
 [https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512]
 
