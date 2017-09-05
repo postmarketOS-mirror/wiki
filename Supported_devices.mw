@@ -464,7 +464,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
 |}
 
-
 ==Other supported hardware==
 There are a variety of devices which pmOS users will likely plug into their phones. If the device is free software compliant (drivers and firmware), we should ensure it works with the OS. This is particularly relevant if the hardware offers an alternative to a non-free piece of hardware which is part of a supported device, such as external wifi adapters and gps units. These devices are listed below.
 
