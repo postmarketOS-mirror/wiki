@@ -1,9 +1,24 @@
 [[Category:Unsupported Devices]]
-=== Contributors ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Huawei
+| name = Ascend Y530
+| codename = y530
+| image = File:
+| imagecaption = 
+| releaseyear = 2014
+| originalsoftware = Android 4.3 on Linux 3.4.39
+| cpu = Qualcomm MSM8210 Snapdragon 200
+| gpu = Adreno 302
+| storage = 4GB
+| display = 480x854
+| memory = 512MB
+}}
+== Contributors ==
 
 * ''[[user:drebrez|drebrez]]''
 
-=== What works ===
+== What works ==
 
 * ☑ Kernel compilation
 * ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
@@ -18,21 +33,21 @@
 * ☐ Wifi
 * ☐ Audio playback
 
-=== Device info ===
+== Device info ==
 
 * [http://www.gsmarena.com/huawei_ascend_y530-6103.php Full phone specifications]
 
-=== Additional info ===
+== Additional info ==
 
-==== Entering &quot;Fastboot mode&quot; ====
+=== Entering "Fastboot mode" ===
 
 Hold the '''Volume Down''' button, and then press the '''Power''' button
 
-==== Entering &quot;Recovery mode&quot; ====
+=== Entering "Recovery mode" ===
 
 Hold the '''Volume Up''' button, and then press the '''Power''' button
 
-==== Partition layout ====
+=== Partition layout ===
 
 <pre class="shell">~ # fdisk -l /dev/block/mmcblk0
 Found valid GPT with protective MBR; using GPT
@@ -69,11 +84,12 @@ Number  Start (sector)    End (sector)  Size       Code  Name
   23         1589248         3686399       1024M   0700  system
   24         3686400         5783551       1024M   0700  userdata
   25         5783552         7634910        903M   0700  grow</pre>
-=== Links ===
+
+== Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-huawei-y530 Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-huawei-y530 Kernel package]
 * [https://github.com/EfranDev/android_kernel_huawei_Soulfire Soulfire Kernel]
 * [https://github.com/PieroV/android_vendor_huawei_y530/tree/cm-11.0 PieroV's vendor files]
 
-=== Photos ===
+== Photos ==
