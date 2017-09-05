@@ -1,11 +1,26 @@
 [[Category:Supported Devices]]
-=== Contributors ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia Z2 Tablet
+| codename = sony-castor-windy
+| image = File:Sony Xperia Z2 Tablet.png
+| imagecaption = Sony Xperia Z2 Tablet
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 on Linux 3.10
+| cpu = Qualcomm MSM8974AB Snapdragon 801
+| gpu = Adreno 330
+| storage = 16GB
+| display = 1920x1200
+| memory = 3GB
+}}
+== Contributors ==
 
 * bjorn andersson (ported device to 4.3)
 * robclark (freedreno support)
 * opendata26
 
-=== What works ===
+== What works ==
 
 * Booting the system
 * Kernel log to the display
@@ -18,12 +33,12 @@
 * Notification led
 * Freedreno (see Additional Info below)
 
-=== What does not work ===
+== What does not work ==
 
 * Audio
 * Both cameras
 
-=== Installation ===
+== Installation ==
 
 # Init pmbootstrap
 
@@ -34,12 +49,13 @@
 $ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_system
 $ ./pmbootstrap.py flasher flash_kernel</source>
-=== Links ===
+
+== Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-sony-castor-windy Device package]
 * [https://github.com/andersson/kernel Kernel source]
 
-==== Wifi ====
+== Wifi ==
 
 The <code>linux-firmware</code> (included by default) package is required to provide the brcmfmac firmware necessary for initializing the wifi device.
 
@@ -58,7 +74,8 @@ Connect to network using wpa_supplicant:
 If your network uses DHCP, start the DHCP client:
 
 <pre>$ sudo udhcpc -i wlan0</pre>
-==== Freedreno ====
+
+== Freedreno ==
 
 Freedreno is only supported with X atm as weston segfaults<br />
 Here are some games being played https://imgur.com/a/ji6jl#jhR61Ww
@@ -68,7 +85,8 @@ $ sudo apk add mesa mesa-dri-freedreno xorg-server xf86-input-libinput
 
 # Start X
 $ sudo X &</source>
-==== Setting the date ====
+
+== Setting the date ==
 
 Since the rtc driver is read only you need to use ntp to set the date
 
@@ -77,7 +95,8 @@ $ sudo apk add openntpd
 
 # Write the current system time to the hardware clock
 $ sudo ntp -s</source>
-=== Helpful Links for Porting ===
+
+== Helpful Links for Porting ==
 
 * [https://github.com/andersson/kernel Kernel]
 * [http://elixir.free-electrons.com/linux/v4.8.16/source/Documentation/devicetree/bindings/display/msm/mdp5.txt New MDP5 Bindings]
