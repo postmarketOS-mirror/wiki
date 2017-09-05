@@ -93,4 +93,8 @@ $ sudo wpa_supplicant -i wlan0 -c wifi
 
 $ sudo udhcpc -i wlan0
 
-I have no idea how to package this for pmOS and if it is even possible because of the binary blobs.
+PR (https://github.com/postmarketOS/pmbootstrap/pull/514) to include necessary firmware. Not yet properly tested. 
+
+=== Modem ===
+
+https://forum.xda-developers.com/galaxy-s2/help/how-to-talk-to-modem-commands-t1471241
