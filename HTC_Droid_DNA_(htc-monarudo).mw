@@ -1,27 +1,42 @@
 [[Category:Unsupported Devices]]
-=== Contributors ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = HTC
+| name = Droid DNA / Butterfly
+| codename = monarudo
+| image = File:HTC Droid DNA.jpg
+| imagecaption = HTC Droid DNA
+| releaseyear = 2012
+| originalsoftware = Android 4.1 on Linux 3.0.31
+| cpu = Qualcomm APQ8064 Snapdragon S4 Pro
+| gpu = Adreno 320
+| storage = 16GB
+| display = 1080x1920
+| memory = 2GB
+}}
+== Contributors ==
 
 * Ross Schulman
 
-=== Current Status ===
+== Current Status ==
 
 * Kernel builds
 * Trying to boot the kernel with <code>fastboot boot ...</code> freezes the phone, as does using <code>pmbootstrap.py flasher boot</code>
 * Trying to flash the kernel with <code>pmboostrap.py flasher flash_system</code> or <code>flash_kernel</code> results in a <code>remote:not allowed</code> error, although this may be related to a corrupted partition table on my particular device.
 
-=== What works ===
+== What works ==
 
 * Nothing yet
 
-=== Links ===
+== Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/device-htc-dlx Working branch]
 * [https://github.com/rschulman/pmbootstrap/tree/dlx Working branch]
 * [https://github.com/rschulman/pmbootstrap-htc-dlx-debug Working CM boot.img and non-working pmOS kernel binaries]
 
-=== Partition layout ===
+== Partition layout ==
 
-{|
+{| class="wikitable"
 ! device
 ! size
 ! filesystem
@@ -63,13 +78,13 @@
 | android userdata
 |}
 
-=== What have I tried so far ===
+== What have I tried so far ==
 
 * Pulling flash offsets from two different dlx ROMS. Both match each other and what we're using.
 * <code>adb push</code>ing the .img file and attempting to use <code>dd</code> to write into the system partition. Only succeeded in mangling the partition.
 * Reflashing CM-12 just to be sure that the phone isn't totally bricked, but CM installs just fine and boots properly.
 
-=== Some theories ===
+== Some theories ==
 
 * Ross Schulman's particular HTC Droid DNA is individually broken and/or not unlocked properly (but see the ability to flash and boot multiple different CyanogenMod versions)
 * Somehow the offsets are incorrect (haunting feeling this is it, but numbers were taken from previously mentioned CyanogenMod boot.img)
