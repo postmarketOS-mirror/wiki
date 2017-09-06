@@ -25,7 +25,7 @@ This format is used in brom and preloader(has to be verified). All fields are in
   | <code>4d 4d 4d 01</code>
 |-
   | 4
-  | Length of complete header
+  | Length of complete header (including this size field and the magic field above)
 |-
   | 12
   | <code>"FILE_INFO\0\0\0"</code>
@@ -72,7 +72,6 @@ This format is used in brom and preloader(has to be verified). All fields are in
   | Ending
   | 1: POST_BUILD_DONE 2: XIP (Execute In Place) use bitwise OR to combine multiple flags
 |}
-
 
 === Example data from MT6735P chipset ===
 
