@@ -430,7 +430,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Google Nexus 6P]]
   | huawei-angler
-  | kernel compiles, telnet works, nothing else
+  | Kernel compiles, telnet works, nothing else
 |-
   | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]
   | hp-tenderloin
@@ -456,6 +456,14 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | landrover-a9
   |
 |-
+  | [[Moto X 2014|Moto X 2014]]
+  | motorola-x-2014
+  |
+|-
+  | [[OnePlus One|OnePlus One]]
+  | oneplus-bacon
+  | Telnet and SSH work
+|-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
   |
@@ -474,10 +482,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
-  |
-|-
-  | [[Moto X 2014|Moto X 2014]]
-  | motorola-x-2014
   |
 |-
  
