@@ -1,0 +1,47 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| name = One
+| manufacturer = OnePlus
+| codename = bacon
+| image = File:bacon-oxygenos.png|200px
+| imagecaption = OnePlus One with factory OS
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 on Linux 3.10
+| cpu = Qualcomm Krait 400
+| gpu = Adreno 330
+| display = 1080x1920 IPS
+| storage = 16GB/64GB
+| memory = 3GB
+}}
+
+= Contributors =
+
+* flacks
+
+= What works =
+
+* Kernel compilation
+* Flashing system
+* Booting kernel via fastboot
+* initramfs boot
+* Flashing kernel
+* USB network
+* SSH connectivity
+
+= What doesn't work =
+
+* Wi-Fi (blob needed)
+* Framebuffer graphics (splash screens)
+* ...
+
+= Links =
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-bacon Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-bacon Kernel package]
+
+= Additional info =
+
+== Entering &quot;Fastboot mode&quot; ==
+
+Hold the '''Volume Up''' and '''Power''' buttons. Let go of buttons after device vibrates and displays the Cyanogenmod logo followed by "Fastboot Mode".
