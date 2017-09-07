@@ -22,8 +22,11 @@ If you never worked on kernel before, you may want to help with some simple driv
 
 === Preparation ===
 
+* Select a device where support is doable. Get a suitable one if necessary.
 * Get a working [[Serial-debugging|serial cable]]
 * Find out hardware details about your device, such as CPU, GPU, display, ...
+* Find out which drivers are missing from mainline.
+* Configure bootloader
 
 === Boot with serial output and shell ===
 
