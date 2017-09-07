@@ -1,3 +1,5 @@
+== Why is postmarketOS based on Alpine Linux? ==
+
 == Will Android apps be supported? ==
 Currently, our best bet seems to be getting [[Anbox]] running on postmarketOS. It's highly recommended to use native Linux applications though, as there are some downsides to Android apps:
 * Freedom issues (most are proprietary, or only work together with a proprietary network, some even track you), see [https://f-droid.org/ F-Droid] for FLOSS programs, that respect your freedom.
