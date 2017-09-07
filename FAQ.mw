@@ -1,5 +1,12 @@
 == Why is postmarketOS based on Alpine Linux? ==
 
+The biggest upside is, that Alpine is small. The base installation is about '''5 MB'''! Only because of that, our development/installation tool <code>pmbootstrap</code> is able to abstract everything in chroots and therefore keep the development environment the same, no matter which Linux distribution your host runs on.
+
+And if you messed up (or we have a bug), you can simply run <code>pmbootstrap zap</code> and the chroot will be set up again in seconds. Imagine how long it would take to do the same with Debian (which is a fine distributions for plenty of other use cases).
+
+Another angle on the tininess of Alpine - many older devices don't have much space to spare, so hilariously tiny system images can be quite useful or even required.
+
+
 == Will Android apps be supported? ==
 Currently, our best bet seems to be getting [[Anbox]] running on postmarketOS. It's highly recommended to use native Linux applications though, as there are some downsides to Android apps:
 * Freedom issues (most are proprietary, or only work together with a proprietary network, some even track you), see [https://f-droid.org/ F-Droid] for FLOSS programs, that respect your freedom.
