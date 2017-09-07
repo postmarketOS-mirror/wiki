@@ -17,3 +17,6 @@ Special thanks to '''opendata26, craftguy, ata2001''' for helping with this port
 * Everything else
 
 === Source ===
+
+* Device [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-sony-aries Source]
+* Kernel [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-sony-aries Source]
