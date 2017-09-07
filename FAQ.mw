@@ -1,0 +1,6 @@
+== Will Android apps be supported? ==
+Currently, our best bet seems to be getting [[Anbox]] running on postmarketOS. It's highly recommended to use native Linux applications though, as there are some downsides to Android apps:
+* Freedom issues (most are proprietary, or only work together with a proprietary network, some even track you), see [https://f-droid.org/ F-Droid] for FLOSS programs, that respect your freedom.
+* Heavy resource usage: With all resources, we will most likely need to run a Android environment next to your regular Linux. So it will use up more RAM and CPU compared to native Linux applications.
+
+So at least try to find a native-Linux alternative for your favorite application or ask yourself if you really need it. For app developers, consider using [https://dot.kde.org/2017/01/02/kde-releases-beta-kirigami-ui-20 Kirigami UI] or similar to develop apps for both mainstream mobile OSes (Android/iOS) as well as natively for Linux distributions.
