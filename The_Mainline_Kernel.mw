@@ -18,6 +18,8 @@ A good example of a device using a mainline kernel is the <code>device-nokia-rx5
 
 ''This is a massive amount of work, and you will need C knowledge, as well as knowledge about [https://kernelnewbies.org/KernelHacking how to contribute to the kernel]. It is probably a very frustrating path, so make sure that you are either up to that or consider contributing in pmOS in another, from a developers point of view, more enjoyable way. Documentation from our side is also pretty thin on this, so if you actually work on this, please expand it. Thanks!''
 
+If you never worked on kernel before, you may want to help with some simple driver on already-working device. Nokia N900 should be easy, Nokia N9, N950 and Motorola Droid 4 are a bit harder. You might also try to revive support for something older, Nokia N770, N800 or N810 may not be too hard. Next in difficulty is unsupported phone based on supported SoC. TI OMAPs have pretty good support, so Samsung i9100g might be good target... Preparing mainline support for new SoC may be too much work for individual developer.
+
 === Preparation ===
 
 * Get a working [[Serial-debugging|serial cable]]
