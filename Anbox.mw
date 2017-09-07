@@ -1,4 +1,5 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
+{{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]].}}
 
 '''[https://anbox.io Anbox]''' runs Android apps on Linux by running a (trimmed down?) version of Android next to Linux in a container.
 
