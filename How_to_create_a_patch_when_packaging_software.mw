@@ -18,7 +18,7 @@ As everywhere else in the wiki, '''please expand this guide wherever information
 ## Go into the source folder: <code>cd ~/build/src/</code>
 ## Patches get applied in the builddir, so usually there is another folder inside <code>src</code>, that you need to enter. You can check with <code>ls</code> which folders/files are inside the <code>src</code> folder. Enter that subfolder if necessary.
 ## We'll be using git to create a patch file, so we will initialize a new repository and add everything:
-### <code>git init .</code>
+### <code>git init .</code> (it will say: ''"Initialized empty Git repository in /home/user/build/src/.git/"'')
 ### <code>git add -A</code>
 ### <code>git commit -m "initial"</code>
 ## Now it's time to edit the file you want to edit.
