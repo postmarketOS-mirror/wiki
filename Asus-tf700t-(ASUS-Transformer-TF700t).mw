@@ -6,6 +6,11 @@
 
 === Compiling a kernel ===
 
+==== LineageOS ====
+* For some reason, they only have an empty repository.
+* But CyanogenMOD has a kernel: https://github.com/CyanogenMod/android_kernel_asus_tf700t
+* (CyanogenMOD was basically renamed to LinageOS)
+
 ==== "grimlock" ====
 
 * Source: https://github.com/Hardslog/grimlock_kernel_asus_tegra3_unified/tree/mm6.0
