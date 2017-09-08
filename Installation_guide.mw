@@ -4,7 +4,7 @@
 
 If you own a device which has been ported to postmarketOS, then this page will help you to obtain, build, and install postmarketOS to this device.
 
-Any commands that are expected to be entered into a terminal are prefixed with `$`. You should not enter the `$` character, it is merely to designate that the following commands are intented to be input/executed within a termina. For example, the following command to list contents of the current working directory, `ls`, will be mentioned on this page as:
+Any commands that are expected to be entered into a terminal are prefixed with `$`. You should not enter the `$` character, it is merely to designate that the following commands are intended to be input/executed within a terminal. For example, the following command to list contents of the current working directory, `ls`, will be mentioned on this page as:
 
 <syntaxhighlight lang="bash">
 $ ls
