@@ -1,0 +1,7 @@
+=== Introduction ===
+
+The most common use-case is, that you want to package an Android kernel. But it does not compile with our GCC6, so you need to patch the kernel. Unlike in the Android world, we do not fork the kernel repository and apply our patches there. Instead we ship our custom patches with the package build recipe in the aport folder.
+
+This guide assumes, that you already know what to patch - if you don't know what to patch and only have the error, try to search the web for that error message. More often than not, there is a patch already available, that will fix it. If you don't have any luck, ask in the [[Matrix and IRC|chat]].
+
+As everywhere else in the wiki, please expand this guide wherever information is missing that would have helped you!
