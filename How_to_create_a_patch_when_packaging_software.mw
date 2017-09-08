@@ -13,7 +13,7 @@ As everywhere else in the wiki, '''please expand this guide wherever information
 # Wait until it fails or runs through (it works in both cases)
 # The sources of the kernel are now extracted in <code>/home/user/build/src</code> in the chroot where it was building.
 # Use <code>pmbootstrap chroot</code> to enter the chroot and to create the patch. It will enter the native chroot by default, if you need another chroot, then look at <code>pmbootstrap chroot --help</code>. Then do the following inside the chroot shell:
-## Install <code>git</code> with: <code>apk add git</code>
+## Install <code>git</code> and a editor such as <code>nano</code> with: <code>apk add git nano</code>
 ## Switch from root to user: <code>su - user</code>
 ## Go into the source folder: <code>cd ~/build/src/</code>
 ## Patches get applied in the builddir, so usually there is another folder inside <code>src</code>, that you need to enter. You can check with <code>ls</code> which folders/files are inside the <code>src</code> folder. Enter that subfolder if necessary.
@@ -22,7 +22,10 @@ As everywhere else in the wiki, '''please expand this guide wherever information
 ### <code>git add -A</code>
 ### <code>git commit -m "initial"</code>
 ## Now it's time to edit the file you want to edit.
-## Run <code>git diff</code> to get a patch file generated to the screen. You can save it to a file by redirecting it: <code>git diff > /tmp/mypatch.patch</code>.
+### <code>export TERM=xterm</code>
+### <code>nano Makefile</code> (or whichever file you want to edit)
+### NOTE: nano is glitchy when used like that. If it is unusable for you, run <code>chmod 777 Makefile</code> and then edit the file from outside the chroot with your favorite editor (a graphical one works, too!). The path is similar to: <code>~/.local/var/pmbootstrap/chroot_native/home/user/build/src/(optional builddir)/Makefile</code>.
+## (in the chroot again) run <code>git diff</code> to get a patch file generated to the screen. You can save it to a file by redirecting it: <code>git diff > /tmp/mypatch.patch</code>.
 ## Quit the chroot by pressing <code>^D</code> (CTRL+D) twice (typing <code>exit</code> also works).
 # Copy the patch file you have created to your aport folder (adjust the work path, that you have given <code>pmbootstrap init</code> and the chroot suffix <code>native</code> if necessary):
 ## <code>cp ~/.local/var/pmbootstrap/chroot_native/tmp/mypatch.patch ~/code/pmbootstrap/aports/device/linux-my-cool-kernel/mypatch.patch</code>
