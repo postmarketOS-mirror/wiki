@@ -1,0 +1,15 @@
+[[Category:Devices]]
+
+=== Contributors ===
+* Jasper (aka. jja2000_)
+* ''[[user:ollieparanoid|ollieparanoid]]'' (help in IRC, documentation)
+
+=== Compiling a kernel ===
+
+==== "grimlock" ====
+
+* Source: https://github.com/Hardslog/grimlock_kernel_asus_tegra3_unified/tree/mm6.0
+
+==== "katkernel" ====
+
+* Source: https://github.com/timduru/tf300t-katkernel/tree/dev-tf700t/
