@@ -26,14 +26,14 @@
 * Version: 3.1.10
 * Status: Untested
 
-==== "grimlock" ====
+==== Grimlock ====
 
 * Grimlock is a fork of an older Stable CyanogenMOD kernel source maintained by Hardslog, this was after Katkernel the most maintained kernel source of this list.
 * Source: https://github.com/Hardslog/grimlock_kernel_asus_tegra3_unified/tree/mm6.0
 * Version: 3.1.10
 * Status: Doesn't compile
 
-==== "katkernel" ====
+==== KatKernel ====
 
 * Katkernel is based off the kernel with the same name for the TF300t. An overlap in components makes these kernels mostly compatible hence the rom it belongs to (KatKiss) has been ported to the TF700t aswell. The reason why the kernel is included in this list is because it's currently the most active kernel for the TF700t.
 * Source: https://github.com/timduru/tf300t-katkernel/tree/dev-tf700t/
