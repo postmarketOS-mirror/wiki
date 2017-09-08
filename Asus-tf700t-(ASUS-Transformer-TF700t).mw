@@ -1,5 +1,18 @@
 [[Category:Devices]]
 
+{{Infobox device
+| manufacturer = ASUS
+| name = Transformer Infinity
+| codename = tf700t
+| releaseyear = 2012
+| originalsoftware = Android 4.0.3 on Linux 2.6
+| cpu = Nvidia Tegra 3 T33
+| gpu = ULP GeForce
+| storage = 32/64GB
+| display = 1200x1920 IPS
+| memory = 1GB
+}}
+
 === Contributors ===
 * ''[[user:jja2000|jja2000]]'' (Testing, documentation)
 * ''[[user:ollieparanoid|ollieparanoid]]'' (help in IRC, documentation)
