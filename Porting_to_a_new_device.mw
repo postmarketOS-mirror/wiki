@@ -52,6 +52,8 @@ Once you have configured the kernel, build it (the arch specification is necessa
 <pre class="shell">./pmbootstrap.py build linux-$vendor-$name --arch=armhf</pre>
 ''NOTE'': The <code>linux-lg-mako</code> package has a patch called <code>gpu-msm-fix-gcc5-compile.patch</code>, to fix compiler errors with GCC6. If your kernel doesn't need that specific patch (if it does not apply correctly, as in [https://github.com/postmarketOS/pmbootstrap/issues/14#issuecomment-305083767 this] report), just remove the file, and remove it from the <code>source=</code> line in the <code>APKBUILD</code>.
 
+Important: You will need to '''patch your kernel to get it working with GCC6''' - read [[how to create a patch when packaging software]] for instructions.
+
 If your manufacturer has not released the source code of your kernel and you don't want to give up on porting your device, you can try the [[Using-prebuilt-kernels|prebuilt kernels]] approach.
 
 ==== Appended device trees ====
