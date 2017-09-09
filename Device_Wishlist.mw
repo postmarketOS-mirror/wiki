@@ -23,4 +23,4 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 
 == Low Priority Devices ==
 
-* Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine)
+* Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine, see also: [https://github.com/postmarketOS/pmbootstrap/issues/238 #238])
