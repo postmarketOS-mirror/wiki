@@ -130,6 +130,19 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>generate_legacy_uboot_initfs</code>
 | For the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 N900], we use a legacy version of the [https://en.wikipedia.org/wiki/Das_U-Boot uboot] bootloader right now. When setting this variable to true, the initramfs will generate an uboot legacy compatible initramfs file. Modern versions of uboot can load regular initramfs files.
 | <code>true, false</code>
+
+|-
+| <code>heimdall_partition_kernel</code>
+| Only relevant for [[Deviceinfo_flash_methods|heimdall]] flash methods, the partition where the kernel or boot.img will be stored.
+| default: <code>"KERNEL"</code>
+|-
+| <code>heimdall_partition_initfs</code>
+| Only relevant for the [[Deviceinfo_flash_methods#heimdall-isorec|heimdall-isorec]] flash method, the partition where the initramfs will be stored.
+| default: <code>"RECOVERY"</code>
+|-
+| <code>heimdall_partition_system</code>
+| Only relevant for [[Deviceinfo_flash_methods|heimdall]] flash methods, the partition where the system image will be stored (see also: [[partition-layout]]).
+| default: <code>"SYSTEM"</code>
 |}
 
 == weston ==
