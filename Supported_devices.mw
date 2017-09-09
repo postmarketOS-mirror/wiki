@@ -133,6 +133,24 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
+  | style="white-space: nowrap;" | [[Huawei-Ascend-Y530|Huawei Ascend Y530]]
+  | style="white-space: nowrap;" | huawei-y530
+  | 
+  | 
+  | P
+  |
+  | Y
+  | P
+  | Y
+  |
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+|-
   | style="white-space: nowrap;" | [[LG G3 Europe (lg-d855)|LG G3 Europe]]
   | style="white-space: nowrap;" | lg-d855
   | 
@@ -363,6 +381,9 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
   |
+  |
+  |
+  |
 |-
   |style="white-space: nowrap;" | [[Sony Xperia Z3C (sony-aries)|Sony Xperia Z3 Compact]]
   |style="white-space: nowrap;" | sony-aries
@@ -377,8 +398,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | 
   | 
   | 
-  |
-  |
   |
   |
   |
@@ -446,10 +465,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Htc-monarudo-(HTC-Droid-DNA)|HTC Droid DNA]]
   | htc-monarudo
-  |
-|-
-  | [[Huawei-Ascend-Y530|Huawei Ascend Y530]]
-  | huawei-y530
   |
 |-
   | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]
