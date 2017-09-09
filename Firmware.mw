@@ -25,7 +25,8 @@ There are closed source components (like firmware and bootloaders) in every phon
 
 === Wi-Fi modems ===
 
-* [https://www.blackhat.com/us-17/briefings.html#broadpwn-remotely-compromising-android-and-ios-via-a-bug-in-broadcoms-wi-fi-chipsets Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets] (Upcoming talk)
+* [https://www.blackhat.com/us-17/briefings.html#broadpwn-remotely-compromising-android-and-ios-via-a-bug-in-broadcoms-wi-fi-chipsets Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets]
+* [https://github.com/seemoo-lab/nexmon nexmon]: "Firmware Patching Framework for Broadcom/Cypress WiFi Chips that enables Monitor Mode, Frame Injection and much more"
 
 == Security risks ==
 
