@@ -24,7 +24,7 @@
 * Due to the fact that the port of CyanogenMOD never went past version 11 because of a lack of maintainers, the device didn't get taken up by the continuation of CyanogenMOD (LineageOS) after it died off. This is the reason why we're using the old abandoned repository.
 * Source: https://github.com/CyanogenMod/android_kernel_asus_tf700t
 * Version: 3.1.10
-* Status: Untested
+* Status: [https://gist.github.com/jja2000/18ab1ad83ffacdc5b8b9f0526106f94a Doesn't compile]
 
 ==== Grimlock ====
 
