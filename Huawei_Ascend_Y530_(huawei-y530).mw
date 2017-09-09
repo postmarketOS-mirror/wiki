@@ -25,11 +25,11 @@
 * ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
 * ☑ Initramfs boot
 * ☑ USB Network
-* ☐ Framebuffer graphics (Splash screens)
+* ☑ Framebuffer graphics (Splash screens)
 * ☑ SSH Connectivity
-* ☐ Weston on framebuffer
+* ☑ Weston on framebuffer
 * ☐ Touchscreen
-* ☐ Xwayland
+* ☑ Xwayland
 * ☐ Wifi
 * ☐ Audio playback
 
