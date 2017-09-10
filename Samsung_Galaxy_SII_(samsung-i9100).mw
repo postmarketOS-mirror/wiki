@@ -66,6 +66,83 @@ For the d710, on step 5 use ''/dev/mmcblk0p11'' as the install partition.
 
 On step 8, use <source lang="shell">pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
 
+== Step by step guide for Flashing to device memory ==
+
+''Please do not hesitate to remove or edit if this does not belong here or match intended wiki content. This does not bring anything new just summary.''
+
+- Build image (on your computer)
+
+-- Install pmboostrap
+
+  $ git clone https://github.com/postmarketOS/pmbootstrap.git
+
+-- Change working directory to the pmboostrap
+
+  $ cd pmbootstrap/
+
+-- Configure
+
+  $ ./pmbootstrap.py init
+  [18:27:09] Device [samsung-i9100]: samsung-i9100
+  [18:27:45] User interface [weston]: weston
+  [18:28:05] Work path [/home/<USER>/.local/var/pmbootstrap]:
+  [18:28:29] Jobs [5]:
+  [18:28:46] Timestamp based rebuilds (y/n) [y]:
+  [18:29:05] Extra packages [none]:
+
+-- Build device package
+
+  $ ./pmbootstrap.py build device-samsung-i9100
+
+-- Build device kernel
+
+  $ ./pmbootstrap.py build linux-samsung-i9100
+
+-- Prepapre the installation
+
+  $ ./pmbootstrap.py install
+
+- Flash to phone memory - This will replace (break) your current phone system!
+The description is using the alternative flash method because there it did not work for me with heimdall - https://github.com/Benjamin-Dobell/Heimdall/issues/418
+
+-- Set phone to ODIN mode
+
+  1. Turn off phone
+  2. Connect USB cable
+  3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
+  4. Push VOLUME_UP to continue to ODIN mode screen
+
+-- Set image for NETCAT flash method
+
+  $ ./pmbootstrap.py initfs hook_add usb-shell
+
+-- Flash Kernel and Recovery (phone will reboot to screen with postmarketOS logo)
+
+  $ ./pmbootstrap.py flasher flash_kernel
+
+-- Connect to phone with telnet
+
+  $ telnet 172.16.42.1 24
+
+-- Start netcat to listen for image (on the phone)
+''/dev/mmcblk0p9 should be FACTORYFS partition you check by running fdisk -l /dev/mmcblk0''
+
+  / # nc -v -l -p 60000 > /dev/mmcblk0p9
+
+-- Switch to pmboostrap chroot (on the computer in other terminal)
+
+  $ ./pmbootstrap.py chroot --suffix native
+
+-- Install pv (in the chroot)
+
+  / # apk add pv
+
+-- Send image from computer to netcat (on the computer)
+
+  / # pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000
+
+-- Restart phone with POWER button when transfer finishes
+
 === Boot process ===
 
 We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flash_methods]] for more information.
