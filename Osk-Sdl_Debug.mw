@@ -20,7 +20,7 @@ To run osk-sdl from pmOS (not in initramfs):
 <pre>
 $ sudo su
 # export SDL_VIDEO_GL_DRIVER="libGL.so.1"
-# export DFBARGS="system=fbdev,no-cursor"
+# export DFBARGS="system=fbdev,no-cursor,linux-input-grab"
 # export TSLIB_TSDEVICE=/dev/input/eventX
 # osk-sdl -d a -n a -c /etc/osk.conf -v
 </pre>
