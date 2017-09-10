@@ -17,25 +17,53 @@
 === Contributors ===
 
 * ollieparanoid
+* veggie
 
 === What works ===
 
 * Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
+* Installation to device memory (partial)
 * Touchscreen
-* Weston
+* Weston (only on SD card)
 * XWayland
 
 === What does not work ===
 
 * The rest (Wifi, bluetooth, making calls, ...)
-* Installation to the device memory (<code>pmbootstrap flasher flash_system</code>, see [https://github.com/postmarketOS/pmbootstrap/issues/422 #422])
+* Auto resizing partitions during installation to device memory (probably)
 
 === How to enter flash mode ===
 
-* Connect an USB cable
+'''For i9100'''
+* Connect a USB cable
 * Make sure, the device is powered off
 * Hold power + volume down
 * As soon, as the samsung logo appears on the screen, only press volume down
+
+'''For d710'''
+* Connect a USB cable
+* Make sure, the device is powered off
+* Hold power + volume down
+* When prompted, release all buttons and press volume up
+
+=== Installation ===
+
+Flashing to device memory uses [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)].
+
+Init pmbootstrap. Make sure to choose ''none'' for the user interface instead of ''weston'' because ''weston'' makes the image just a little bit too large for the unresized partition.
+
+<source lang="shell">$ ./pmbootstrap.py init</source>
+
+Start the build process
+
+<source lang="shell">$ ./pmbootstrap.py install</source>
+
+Flash postmarketOS to the device:
+
+https://github.com/postmarketOS/pmbootstrap/issues/456
+
+On step 8, use <source lang="shell">pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
+
 
 === Boot process ===
 
@@ -44,6 +72,7 @@ We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flas
 === Links ===
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9100 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat installation method]
 
 === Photos ===
 
