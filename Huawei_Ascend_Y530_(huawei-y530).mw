@@ -28,7 +28,7 @@
 * ☑ Framebuffer graphics (Splash screens)
 * ☑ SSH Connectivity
 * ☑ Weston on framebuffer
-* ☐ Touchscreen
+* ☑ Touchscreen
 * ☑ Xwayland
 * ☐ Wifi
 * ☐ Audio playback
@@ -46,6 +46,16 @@ Hold the '''Volume Down''' button, and then press the '''Power''' button
 === Entering "Recovery mode" ===
 
 Hold the '''Volume Up''' button, and then press the '''Power''' button
+
+=== Flash system ===
+
+Right now flashing the system with fastboot fails with the '''FAILED (remote: Unknown chunk type)''' error.
+
+As a workaround it's possible to write the system partition using '''netcat'''.
+
+The procedure is explained here => https://github.com/postmarketOS/pmbootstrap/issues/456
+
+The partition to use in step 5 is <pre class="shell" style="display: inline;padding: 0.4em;">/dev/mmcblk0p23</pre>
 
 === Partition layout ===
 
