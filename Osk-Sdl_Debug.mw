@@ -1,3 +1,5 @@
+== Debugging osk-sdl in pmos ==
+
 osk-sdl is an on-screen keyboard built primarily for running in initfs and aiding users with unlocking the rootfs LUKS device from a touch screen device.
 
 It currently lives in the <code>add_osk_initramfs</code> branch of <code>pmbootstrap</code>.
@@ -26,3 +28,37 @@ $ sudo su
 </pre>
 
 Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/event3
+
+== Troubleshooting ==
+
+=== ERROR: Library not found: libGL.so ===
+
+Make sure you've exported SDL_VIDEO_GL_DRIVER:
+
+<pre>
+$ sudo su
+# export SDL_VIDEO_GL_DRIVER="libGL.so.1"
+</pre>
+
+=== DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ===
+
+To fix this error message you need to create /etc/fb.modes and add a framebuffer mode to this. An example for a display with 1080x1920 resolution and 32-bit color depth:
+
+<pre>
+mode "1080x1920-0"
+    # D: 0.001 MHz, H: 0.001 kHz, V: 0.000 Hz
+    geometry 1080 1920 1080 1920 16
+    timings 898000000 75 129 4 8 5 4
+    rgba 8/16,8/8,8/0,8/24
+endmode
+</pre>
+
+To calculate the mode for your device you can run <code>fbset</code>, however beware that the mode it returns isn't always supported. Some things to be aware of:
+* Make sure the last number of the geometry line (the color depth) is not 32, because this is not supported by directfb. If you need 32 there, set this value to 16 and set <code>pixelformat</code> in DFBARGS to a supported pixel format (see [https://linux.die.net/man/5/directfbrc man page of directfbrc] for all available pixelformat options.
+* Normally the geometry line should have twice your resolution (both for physical and virtual resolution). Fbset sometimes returns wrong values with which osk-sdl cannot cope (generates segmentation fault when touching the keyboard).
+
+== References ==
+
+* [https://linux.die.net/man/5/fb.modes fb.modes man page]
+* [https://linux.die.net/man/8/fbset fbset man page]
+* [https://linux.die.net/man/5/directfbrc directfbrc man page]
