@@ -62,7 +62,7 @@ Flash postmarketOS to the device:
 
 https://github.com/postmarketOS/pmbootstrap/issues/456
 
-For the d710, on step 5 user ''/dev/mmcblk0p11'' as the install partition.
+For the d710, on step 5 use ''/dev/mmcblk0p11'' as the install partition.
 
 On step 8, use <source lang="shell">pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
 
