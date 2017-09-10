@@ -437,7 +437,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Asus-tf700t-(ASUS-Transformer-TF700t)|ASUS Transformer Infinity]]
   | asus-tf700t
-  | Kernel does not compile
+  | Kernel compiles, not tested
 |-
   | [[BlackBerry-Bold-Touch-9900-(Dakota)|BlackBerry Bold Touch 9900]]
   | blackberry-dakota
