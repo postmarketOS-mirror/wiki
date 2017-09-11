@@ -20,3 +20,18 @@ What I do:
 * Trying to recruit new developers with blogging ([https://github.com/postmarketOS/postmarketos.org not alone anymore]!) and answering questions everywhere
 * Directly helping out in the chat when I find time to do so
 * Check out my [[Milestones#ollieparanoid|milestones]]
+
+
+=== Clayton Craft (craftyguy) ===
+If you're crazy enough to want to throw money at me, I ask that you instead throw your money at one (or all) of the following organizations, or to any other organization committed to making the world a better place:
+
+* [https://my.fsf.org/donate Free Software Foundation (FSF)]
+* [https://supporters.eff.org/donate Electronic Frontier Foundation (EFF)]
+* [http://www.msf.org/en/donate Doctors Without Borders / Médecins Sans Frontières (MSF)]
+
+
+What I do:
+
+* A maintainer for the N900 on pmOS
+* [https://github.com/postmarketOS/pmbootstrap/pulls/craftyguy Numerous PRs for pmOS], focusing primarily on usability.
+* [https://github.com/postmarketOS/osk-sdl OSK-SDL], a touchscreen keyboard for running in initramfs, used for unlocking LUKS rootfs on boot for touch-only devices
