@@ -453,7 +453,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Google Nexus 6P]]
   | huawei-angler
-  | Kernel compiles, telnet works, nothing else
+  | Kernel compiles, telnet works, graphics not working
 |-
   | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]
   | hp-tenderloin
