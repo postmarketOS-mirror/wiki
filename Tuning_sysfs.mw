@@ -1,3 +1,5 @@
+{{note|Permission denied errors while running the script are expected and can be ignored}}
+
 After porting postmarketOS to your device, you might find that still some features don't work. You may need to adjust some values inside the /sys directory.
 
 sysfs is a pseudo file system provided by the Linux kernel that exports information about various kernel subsystems, hardware devices, and associated device drivers from the kernel's device model to user space through virtual files. In addition to providing information about various devices and kernel subsystems, exported virtual files are also used for their configuring.
