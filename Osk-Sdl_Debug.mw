@@ -6,26 +6,27 @@ It currently lives in the <code>add_osk_initramfs</code> branch of <code>pmboots
 
 To install it:
 
-<pre>
+<syntaxhighlight lang="shell-session">
 $ git clone https://github.com/postmarketOS/pmbootstrap.git
 $ git checkout feature/add_osk_initramfs
 $ ./pmbootstrap init
 <select device options>
 <Note: It's helpful to select 'none' here for UI so that osk-sdl can be run from within pmos without conflicting with weston>
 $ ./pmbootstrap install --no-fde
-</pre>
+</syntaxhighlight>
+
 
 Using <code>--no-fde</code> will allow pmOS to boot straight into rootfs without requiring unlocking of the partition. This seems counter-intuitive for testing a keyboard made for initramfs, but this will allow you to manually run osk-sdl with various environment options set and/or osk.conf options for debug and testing.
 
 To run osk-sdl from pmOS (not in initramfs):
 
-<pre>
+<syntaxhighlight lang="shell-session">
 $ sudo su
 # export SDL_VIDEO_GL_DRIVER="libGL.so.1"
 # export DFBARGS="system=fbdev,no-cursor,linux-input-grab"
 # export TSLIB_TSDEVICE=/dev/input/eventX
 # osk-sdl -d a -n a -c /etc/osk.conf -v
-</pre>
+</syntaxhighlight>
 
 Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/event3
 
@@ -33,7 +34,7 @@ Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/ev
 
 This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag. Don't forget to generate a new checksum (<code>pmbootstrap checksum osk-sdl</code>) before trying to build it.
 
-<syntaxhighlight lang="bash" line='line'>
+<syntaxhighlight lang="bash">
 # Change out the hash here with the hash of the git commit you want to build
 _hash=617c1cf407160329535d6dbc6a315fd0dc72de70
 pkgname=osk-sdl
@@ -70,23 +71,23 @@ package() {
 
 Make sure you've exported SDL_VIDEO_GL_DRIVER:
 
-<pre>
+<syntaxhighlight lang="shell-session">
 $ sudo su
 # export SDL_VIDEO_GL_DRIVER="libGL.so.1"
-</pre>
+</syntaxhighlight>
 
 === DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ===
 
 To fix this error message you need to create /etc/fb.modes and add a framebuffer mode to this. An example for a display with 1080x1920 resolution and 32-bit color depth:
 
-<pre>
+<syntaxhighlight lang="Xorg">
 mode "1080x1920-0"
     # D: 0.001 MHz, H: 0.001 kHz, V: 0.000 Hz
     geometry 1080 1920 1080 1920 16
     timings 898000000 75 129 4 8 5 4
     rgba 8/16,8/8,8/0,8/24
 endmode
-</pre>
+</syntaxhighlight>
 
 To calculate the mode for your device you can run <code>fbset</code>, however beware that the mode it returns isn't always supported. Some things to be aware of:
 * Make sure the last number of the geometry line (the color depth) is not 32 or 24, because this is not supported by directfb. If you need 32 or 24 there, set this value to 16 and set <code>pixelformat</code> in DFBARGS to a supported pixel format with color depth 32 or 24 (see [https://linux.die.net/man/5/directfbrc man page of directfbrc] for all available pixelformat options).
