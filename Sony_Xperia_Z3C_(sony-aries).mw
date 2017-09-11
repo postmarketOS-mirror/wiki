@@ -25,6 +25,8 @@ for their help & all IRC/Matrix folks
 === Build Instructions === 
 
 <code>
+git clone https://github.com/postmarketos/pmbootstrap 
+
 ./pmbootstrap.py checksum device-sony-aries
 
 ./pmbootstrap.py build device-sony-aries
@@ -35,7 +37,6 @@ for their help & all IRC/Matrix folks
 
 ./pmbootstrap.py install
 </code>
-
 
 === Source ===
 
