@@ -22,6 +22,21 @@ for their help & all IRC/Matrix folks
 
 * Everything else
 
+=== Build Instructions === 
+
+<code>
+./pmbootstrap.py checksum device-sony-aries
+
+./pmbootstrap.py build device-sony-aries
+
+./pmbootstrap.py checksum linux-sony-aries
+
+./pmbootstrap.py build linux-sony-aries --arch=armhf
+
+./pmbootstrap.py install
+</code>
+
+
 === Source ===
 
 * Device [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-sony-aries Source]
