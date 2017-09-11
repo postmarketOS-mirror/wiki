@@ -14,7 +14,6 @@ There are closed source components (like firmware and bootloaders) in every phon
 === Bootloaders ===
 * [https://github.com/ucsb-seclab/BootStomp BootStomp] "a bootloader vulnerability finder" (also check the references at the bottom of README.md!)
 
-
 ==== hboot (HTC) ====
 
 * [http://archive.hack.lu/2013/hacklu2013_hbootdbg.pdf hbootdbg] ''pdf presentation slides''
