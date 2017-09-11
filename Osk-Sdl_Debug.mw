@@ -29,6 +29,41 @@ $ sudo su
 
 Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/event3
 
+== Building OSK-SDL from a branch ==
+
+This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag:
+
+<syntaxhighlight lang="bash" line='line'>
+# Change out the hash here with the hash of the git commit you want to build
+_hash=617c1cf407160329535d6dbc6a315fd0dc72de70
+pkgname=osk-sdl
+pkgver=0.48
+pkgrel=0
+pkgdesc="Onscreen keyboard for unlocking LUKS devices"
+url="https://github.com/postmarketOS/osk-sdl"
+arch="all"
+license="GPL3"
+depends="sdl2 sdl2_ttf cryptsetup-libs mesa-gl directfb"
+makedepends="linux-headers sdl2-dev sdl2_ttf-dev cryptsetup-dev"
+subpackages=""
+
+source="${pkgname}-${_hash}.tar.gz::https://github.com/postmarketOS/osk-sdl/archive/${_hash}.tar.gz"
+
+options="!strip !check"
+
+build() {
+    cd $srcdir/${pkgname}-${_hash}
+    make
+}
+
+package() {
+    install -D -m755 "${srcdir}/${pkgname}-${_hash}"/osk-sdl \
+        "$pkgdir"/usr/bin/osk-sdl
+    install -D -m755 "${srcdir}/${pkgname}-${_hash}"/osk.conf \
+        "$pkgdir"/etc/osk.conf
+}
+</syntaxhighlight>
+
 == Troubleshooting ==
 
 === ERROR: Library not found: libGL.so ===
