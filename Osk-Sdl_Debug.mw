@@ -31,7 +31,7 @@ Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/ev
 
 == Building OSK-SDL from a branch ==
 
-This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag:
+This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag. Don't forget to generate a new checksum (<code>pmbootstrap checksum osk-sdl</code>) before trying to build it.
 
 <syntaxhighlight lang="bash" line='line'>
 # Change out the hash here with the hash of the git commit you want to build
