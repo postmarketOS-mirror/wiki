@@ -2,7 +2,7 @@
 [[Category:Devices]]
 {{Infobox device
 | manufacturer = Google (Huawei)
-| name = Google Nexus 6P
+| name = Nexus 6P
 | codename = angler
 | image = File:Huawei Nexus 6P.png
 | imagecaption = Huawei Nexus 6P
@@ -22,13 +22,28 @@
 
 * Building kernel
 * Booting kernel via fastboot
-* Telnet to initramfs
+* Telnet to initramfs, ssh to running system
+* Mounting rootfs via NFS over USB (needs the [https://github.com/postmarketOS/pmbootstrap/pull/547 nfs-root PR])
+* Touchscreen
+* Wi-Fi: Follow [[Wifi#Connecting_to_APs]] to enable; currently using outdated firmware from upstream linux-firmware package
 
 == What does not work ==
 
 * Splash image
-* Booting past initramfs (untested currently)
-* Everything else (no graphics, Wi-Fi, touchscreen, you tell me)
+* Graphics: Screen will only work if you [https://github.com/postmarketOS/pmbootstrap/pull/66 run in the background]
+<pre>while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
+* Mounting rootfs on internal storage (untested)
+* Everything else (no Bluetooth, audio, modem, accelerometer, you tell me)
+
+== Kernel configs applied ==
+
+Configs changed from stock Lineage kernel:
+* [[Kernel_configuration#CONFIG_DEVTMPFS | CONFIG_DEVTMPFS]]=y
+* [[Kernel_configuration#CONFIG_VT | CONFIG_VT]]=y
+* CONFIG_FRAMEBUFFER_CONSOLE=y
+* Various NFS client configs: CONFIG_NFS_V4_1=y
+* [[Kernel_configuration#CONFIG_MSM_KGSL | CONFIG_MSM_KGSL]]=n
+* CONFIG_BCMDHD_FW_PATH, CONFIG_BCMDHD_NVRAM_PATH
 
 == How to enter flash mode ==
 
@@ -38,6 +53,10 @@ To enter Fastboot mode, hold Volume Down while powering on the device. Let go of
 
 == Links ==
 
-[https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512]
+[https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-huawei-angler Device Package]
+
+[https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512: initial PR]
+
+[https://github.com/postmarketOS/pmbootstrap/pull/555 pmbootstrap Pull Request #555: Wi-Fi and graphics]
 
 [https://github.com/LineageOS/android_kernel_huawei_angler/tree/04d1557af1259b211609fa41adbe852b5f9cf2da The LineageOS 14.1 kernel used]
