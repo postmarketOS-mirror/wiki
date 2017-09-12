@@ -141,7 +141,13 @@ The description is using the alternative flash method because there it did not w
 
   / # pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000
 
--- Restart phone with POWER button when transfer finishes
+-- Close both nc with CTRL+C when transfer finishes
+
+-- Telnet to phone to enter password
+
+  $ telnet 172.16.42.1
+
+-- Follow further instructions from telnet
 
 === Boot process ===
 
