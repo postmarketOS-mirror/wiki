@@ -5,8 +5,19 @@
 * Not all contributors accept donations
 * Before we let money destroy the community, we will cancel donations altogether
 
-== Developers ==
+== Developer-specific donations ==
 ''Feel free to add yourself to the list if you have contributed something and intend to do so in the future. If you don't like how donations are handled, please [https://github.com/postmarketOS/postmarketos.org/issues/28 get involved in the discussion]. Please order the names alphabetically. Do not add bitcoin addresses here directly, as these can be swapped out easily without being noticed - it's better to link to a page that only you can edit instead (e.g. GitHub account, blog, ...).''
+
+=== Clayton Craft (craftyguy) ===
+If you're crazy enough to want to throw money at me, I ask that you instead throw your money at one (or all) of the following organizations, or to any other organization committed to making the world a better place:
+* [https://my.fsf.org/donate Free Software Foundation (FSF)]
+* [https://supporters.eff.org/donate Electronic Frontier Foundation (EFF)]
+* [http://www.msf.org/en/donate Doctors Without Borders / Médecins Sans Frontières (MSF)]
+
+What I do:
+* A maintainer for the N900 on pmOS, including helping to keep N900 support relevant in upstream components (e.g. [https://git.kernel.org/pub/scm/network/ofono/ofono.git/commit/?id=cbac15cdd9858e797f223bf9d16116f82e184d88 ofono])
+* [https://github.com/postmarketOS/pmbootstrap/pulls/craftyguy Numerous PRs for pmOS], focusing primarily on usability.
+* [https://github.com/postmarketOS/osk-sdl OSK-SDL], a touchscreen keyboard for running in initramfs, used for unlocking LUKS rootfs on boot for touch-only devices
 
 === Oliver Smith (ollieparanoid) ===
 Donate via:
@@ -20,15 +31,3 @@ What I do:
 * Trying to recruit new developers with blogging ([https://github.com/postmarketOS/postmarketos.org not alone anymore]!) and answering questions everywhere
 * Directly helping out in the chat when I find time to do so
 * Check out my [[Milestones#ollieparanoid|milestones]]
-
-
-=== Clayton Craft (craftyguy) ===
-If you're crazy enough to want to throw money at me, I ask that you instead throw your money at one (or all) of the following organizations, or to any other organization committed to making the world a better place:
-* [https://my.fsf.org/donate Free Software Foundation (FSF)]
-* [https://supporters.eff.org/donate Electronic Frontier Foundation (EFF)]
-* [http://www.msf.org/en/donate Doctors Without Borders / Médecins Sans Frontières (MSF)]
-
-What I do:
-* A maintainer for the N900 on pmOS, including helping to keep N900 support relevant in upstream components (e.g. [https://git.kernel.org/pub/scm/network/ofono/ofono.git/commit/?id=cbac15cdd9858e797f223bf9d16116f82e184d88 ofono])
-* [https://github.com/postmarketOS/pmbootstrap/pulls/craftyguy Numerous PRs for pmOS], focusing primarily on usability.
-* [https://github.com/postmarketOS/osk-sdl OSK-SDL], a touchscreen keyboard for running in initramfs, used for unlocking LUKS rootfs on boot for touch-only devices
