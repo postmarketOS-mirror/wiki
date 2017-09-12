@@ -66,7 +66,7 @@ For the d710, on step 5 use ''/dev/mmcblk0p11'' as the install partition.
 
 On step 8, use <source lang="shell">pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
 
-== Step by step guide for Flashing to device memory ==
+==== Step by step guide for Flashing to device memory ====
 
 ''Please do not hesitate to remove or edit if this does not belong here or match intended wiki content. This does not bring anything new just summary.''
 
@@ -193,7 +193,7 @@ PR (https://github.com/postmarketOS/pmbootstrap/pull/514) to include necessary f
 
 === Modem ===
 
-== Links ==
+==== Links ====
 
 https://forum.xda-developers.com/galaxy-s2/help/how-to-talk-to-modem-commands-t1471241
 
@@ -203,7 +203,7 @@ https://forum.xda-developers.com/showpost.php?p=22218364&postcount=14
 
 http://ksyslabs.org/sgnx/
 
-== Progress so far ==
+==== Progress so far ====
 
 - build libsamsung-ipc (see https://github.com/postmarketOS/pmbootstrap/pull/522)
 
