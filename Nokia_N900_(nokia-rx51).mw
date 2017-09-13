@@ -223,7 +223,7 @@ Configuring /n900_0/context1
 
 </pre>
 
-==== GPS and incoming SMS ====
+==== GPS ====
 
 First, get network and date to work. Next, clone tui repository. it contains includes many goodies, including script for hardware testing, gps support, and graphical ofono control software.
 
