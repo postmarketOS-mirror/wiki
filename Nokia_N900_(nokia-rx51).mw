@@ -167,8 +167,7 @@ Generating u-boot bootmenu script...
 ==== GPRS / SMS ====
 
 
-In order to use the ofono test scripts, you must install py-dbus, that is currently available only for python2. You'll also need patched ofonod and configuration tweaks, see 
-https://github.com/postmarketOS/pmbootstrap/pull/567
+In order to use the ofono test scripts, you must install py-dbus, that is currently available only for python2.
 
 {{note|The N900 needs internet access to perform these steps. See the section above on setting up Wifi.}}
 {{note|Your date/time need to be correct in order for HTTPS to work. You can use ntpd to do this.}}
@@ -222,6 +221,25 @@ Configuring /n900_0/context1
 # echo 10.177.0.34 > /etc/resolv.conf                              
 
 
+</pre>
+
+==== GPS and incoming SMS ====
+
+First, get network and date to work. Next, clone tui repository. it contains includes many goodies, including script for hardware testing, gps support, and graphical ofono control software.
+
+<pre>
+mkdir /my
+cd /my
+git clone https://gitlab.com/tui/tui.git
+</pre>
+
+Next, install packages necessary for compiling software and prepare gps2. enable-modem, online-modem and you should be able to run gps2. AGPS is not available, so expect long startup.
+
+<pre>
+apk add gcc vala musl-dev make linux-headers gpsd
+cd /my/tui/ofone
+make gps2
+./gps2
 </pre>
 
 === Helpful Links for Porting ===
