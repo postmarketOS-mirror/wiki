@@ -33,10 +33,11 @@
 * Keyboard in virtual terminal
 
 === What does not work ===
-* Both cameras
-* Cell modem (untested)
+* Front cameras
+* Back camera is close to supported in 4.14-rc1.
+* Voice calls
 * 3D Acceleration (requires binary blob)
-* [https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git/commit/?id=7bb318680e868cd049922f6761170b42ff89687d Bluetooth]
+* There's bluetooth support at bluetooth-next, but that works on N950, not on N900. [https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git/commit/?id=7bb318680e868cd049922f6761170b42ff89687d Bluetooth] . There was driver in staging some time ago, that one should work.
 
 === Installation ===
 
