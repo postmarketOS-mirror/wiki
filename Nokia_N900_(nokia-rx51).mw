@@ -167,7 +167,9 @@ Generating u-boot bootmenu script...
 ==== GPRS / SMS ====
 
 
-In order to use the ofono test scripts, you must install py-dbus, that is currently available only for python2. 
+In order to use the ofono test scripts, you must install py-dbus, that is currently available only for python2. You'll also need patched ofonod and configuration tweaks, see 
+https://github.com/postmarketOS/pmbootstrap/pull/567
+
 {{note|The N900 needs internet access to perform these steps. See the section above on setting up Wifi.}}
 {{note|Your date/time need to be correct in order for HTTPS to work. You can use ntpd to do this.}}
 <pre>
@@ -221,6 +223,7 @@ Configuring /n900_0/context1
 
 
 </pre>
+
 === Helpful Links for Porting ===
 
 * [https://neo900.org/stuff/block-diagrams/n900/n900.html Device schematic]
