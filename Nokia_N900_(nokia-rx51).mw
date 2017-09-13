@@ -20,16 +20,14 @@
 * ''[https://github.com/craftyguy craftyguy]''
 
 === What works ===
-* Booting the system
-* Kernel log to the display
-* Framebuffer graphics
-* Unlocking the root partition using the keyboard
+* Framebuffer & DRM graphics
+* GPRS / SMS (see section below)
+* Unlocking the root partition using the physical keyboard
 * Display Backlight control
 * Wayland on framebuffer
-* Module loading
 * Wifi (see Additional Info below)
 * Notification led
-* Audio playback
+* Audio playback (ALSA)
 * Keyboard backlight (see Additional Info below)
 * Battery capacity reporting (see Additional Info below)
 * Keyboard in virtual terminal
