@@ -1,0 +1,87 @@
+{{Infobox device
+| manufacturer = LG
+| name = G Watch
+| codename = dory
+| image = File:
+| imagecaption = 
+| releaseyear = 2014
+| originalsoftware = Android Wear 1.5
+| cpu = Qualcomm Snapdragon 400
+| gpu = Adreno 305
+| storage = 4GB
+| display = 280x280 LCD
+| memory = 512MB
+}}
+[[Category:Supported Devices]]
+=== Contributors ===
+
+* ''[[user:drebrez|drebrez]]''
+
+== What works ==
+
+* ☑ Kernel compilation
+* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Initramfs boot
+* ☑ USB Network
+* ☐ Framebuffer graphics (Splash screens)
+* ☐ SSH Connectivity
+* ☐ Weston on framebuffer
+* ☐ Touchscreen
+* ☐ Xwayland
+* ☐ Wifi
+* ☐ Audio playback
+
+== Device info ==
+
+* [http://www.gsmarena.com/lg_g_watch_w100-7718.php Full phone specifications]
+
+== Additional info ==
+
+=== Entering "Fastboot mode" ===
+
+Turn on your watch and swipe from the top left corner (so that'd be where 11 would be on the watch) as soon as you see the LG logo.
+
+=== Partition layout ===
+<pre class="shell">/ # fdisk -l
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/mmcblk0: 7634944 sectors, 3728M
+Logical sector size: 512
+Disk identifier (GUID): 98101b32-bbe2-4bf2-a06e-2bb33d000c20
+Partition table holds up to 24 entries
+First usable sector is 34, last usable sector is 7634910
+
+Number  Start (sector)    End (sector)  Size Name
+     1            1024            3071 1024K sbl1
+     2            3072            4095  512K rpm
+     3            4096            5119  512K tz
+     4            5120            6143  512K sdi
+     5            6144            7167  512K aboot
+     6            7168            9215 1024K sbl1b
+     7            9216           10239  512K rpmb
+     8           10240           11263  512K tzb
+     9           11264           12287  512K abootb
+    10           12288           16383 2048K imgdata
+    11           16384           17407  512K metadata
+    12           17408           50175 16.0M misc
+    13           50176           82943 16.0M persist
+    14           82944          127999 22.0M laf
+    15          128000          173055 22.0M boot
+    16          173056          218111 22.0M recovery
+    17          218112          219135  512K ssd
+    18          219136          220159  512K DDR
+    19          220160          744447  256M system
+    20          744448         1268735  256M cache
+    21         1268736         7633919 3108M userdata
+    22         7633920         7634910  495K grow</pre>
+
+== Links ==
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-dory Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-lg-dory Kernel package]
+* [https://android.googlesource.com/kernel/msm/+/refs/tags/android-wear-6.0.1_r0.1 Android Wear 6.0.1 Release 0.1 Kernel]
+
+== Photos ==
+
+coming soon
