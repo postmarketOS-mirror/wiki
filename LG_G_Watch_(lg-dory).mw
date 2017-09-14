@@ -21,11 +21,11 @@
 
 * ☑ Kernel compilation
 * ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Flash System (<code>pmbootstrap flasher flash_system</code>)
 * ☑ Initramfs boot
 * ☑ USB Network
 * ☐ Framebuffer graphics (Splash screens)
-* ☐ SSH Connectivity
+* ☑ SSH Connectivity
 * ☐ Weston on framebuffer
 * ☐ Touchscreen
 * ☐ Xwayland
