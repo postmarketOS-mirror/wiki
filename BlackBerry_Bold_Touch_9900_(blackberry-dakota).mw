@@ -37,6 +37,10 @@
 * <code>CFP INFO</code> =&gt; [https://pastebin.com/aQNrCdhD output]
 * <code>CFP FLASHINFO</code> =&gt; [https://pastebin.com/mKEsFiTA output]
 
+== Random research ==
+* There are OSes you can download, which includes a RAM loader for loading the OS; a later version of the RAM loader protocol (for BlackBerry 10, not classic, but seems similar) is https://github.com/xsacha/Sachesi/blob/master/src/boot.cpp
+* there's at least one bootrom-level exploit for Snapdragon S4 (https://www.wpinternals.net/), so maybe older Snapdragons are also vulnerable 
+
 == Useful Links ==
 
 * [http://www.gsmarena.com/blackberry_bold_touch_9900-3116.php Full phone specifications]
