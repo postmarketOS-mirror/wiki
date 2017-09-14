@@ -42,6 +42,12 @@
 
 Turn on your watch and swipe from the top left corner (so that'd be where 11 would be on the watch) as soon as you see the LG logo.
 
+=== Flash system image ===
+
+It's important to remember to flash the system image to `userdata` as the system partition is not big enough for PostmarketOS.
+
+<code>pmbootstrap flasher flash_system --partition userdata</code>
+
 === Partition layout ===
 <pre class="shell">/ # fdisk -l
 Found valid GPT with protective MBR; using GPT
