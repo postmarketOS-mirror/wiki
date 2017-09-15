@@ -1,5 +1,20 @@
-[[Category:Unsupported Devices]]
-=== Contributors ===
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia Z3 Compact
+| codename = aries
+| image = File:Sony Xperia Z3C.jpg
+| imagecaption = Sony Xperia Z3C
+| releaseyear = 2014
+| originalsoftware = Android 4.4.4 on Linux 3.10
+| cpu = Qualcomm MSM8974AC Snapdragon 801
+| gpu = Adreno 330
+| storage = 16GB
+| display = 720x1280 IPS
+| memory = 2GB
+}}
+== Contributors ==
 
 * kskarthik 
 
@@ -11,18 +26,18 @@
 
 for their help & all IRC/Matrix folks
 
-=== What works ===
+== What works ==
 
 * Compiling the kernel
 * SSH into device
 * GUI
 * Touch
 
-=== What doesn't ===
+== What doesn't ==
 
 * Everything else
 
-=== Build Instructions === 
+== Build Instructions == 
 
 <code>
 git clone https://github.com/postmarketos/pmbootstrap 
@@ -40,7 +55,7 @@ cd pmbootstrap
 ./pmbootstrap.py install
 </code>
 
-=== Source ===
+== Source ==
 
 * Device [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-sony-aries Source]
 * Kernel [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-sony-aries Source]
