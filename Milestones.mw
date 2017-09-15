@@ -75,12 +75,14 @@ In consequence, pmOS does not use a regular milestone plan with versions (at lea
 
 === [https://github.com/drebrez drebrez] ===
 
-* [x] Optimizing the pmOS system image size by creating the partitions as small as possible and resize them during the first boot ([https://github.com/postmarketOS/pmbootstrap/pull/127 #127])
-* [x] Add possibility to export an Odin flashable file for samsung devices (<code>pmbootstrap flasher export --odin</code>)
-* [ ] Add support for [https://en.wikipedia.org/wiki/Memory_Technology_Device MTD] devices (generate yaffs2 image, adapt initramfs script)
-* [ ] Add support for new devices (actually focused on [https://github.com/postmarketOS/pmbootstrap/wiki/Huawei-Ascend-Y530 Huawei Ascend Y530], next device might be the Samsung Galaxy S5)
-* [ ] Porting PostmarketOS to a [https://github.com/postmarketOS/pmbootstrap/wiki/BlackBerry-Bold-Touch-9900-%28Dakota%29 BlackBerry]
-* [ ] Use LVM over system and userdata partitions ([https://github.com/postmarketOS/pmbootstrap/issues/60 #60])
+* ☑ Optimizing the pmOS system image size by creating the partitions as small as possible and resize them during the first boot ([https://github.com/postmarketOS/pmbootstrap/pull/127 #127])
+* ☑ Add possibility to export an Odin flashable file for samsung devices (<code>pmbootstrap flasher export --odin</code>)
+* ☐ Add support for [https://en.wikipedia.org/wiki/Memory_Technology_Device MTD] devices (generate yaffs2 image, adapt initramfs script)
+* ☐ Porting PostmarketOS to a [https://github.com/postmarketOS/pmbootstrap/wiki/BlackBerry-Bold-Touch-9900-%28Dakota%29 BlackBerry]
+* ☐ Use LVM over system and userdata partitions ([https://github.com/postmarketOS/pmbootstrap/issues/60 #60])
+* ☐ Add versioning in initramfs scripts (check initramfs and initramfs-extra versions)
+* ☐ Integrate alternative flashing method using netcat ([https://github.com/postmarketOS/pmbootstrap/issues/456 #456])
+* ☐ Add support for new devices
 
 === PureTryOut ===
 
