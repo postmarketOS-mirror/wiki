@@ -1,19 +1,32 @@
 [[Category:Unsupported Devices]]
-=== Contributors ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia E Dual
+| codename = nanhu
+| releaseyear = 2013
+| originalsoftware = Android 4.0.4 on Linux 3.0.1
+| cpu = Qualcomm MSM7227A Snapdragon S1
+| gpu = Adreno 200
+| storage = 4GB
+| display = 320x480 IPS
+| memory = 512MB
+}}
+== Contributors ==
 
 * Nicknack
 
-=== What works ===
+== What works ==
 
 * Compiling the kernel
 
-=== What does not work ===
+== What does not work ==
 
 * Flashing, there are problems with Sony's boot image format
 
 The built kernel boots with a black screen and no further sign of acitivity. Fastboot flashes without errors but flash offsets are probably wrong. Only known working kernels have a different ELF file format.
 
-=== Boot image format ===
+== Boot image format ==
 
 There is one tool avaiable for unpacking Sony's ELF boot format into the normal ANDROID format:<br />
 [https://github.com/Tasssadar/libbootimg libbootimg]
@@ -28,13 +41,13 @@ Here are some links describing the problem with Sony's boot format:
 * https://github.com/Tasssadar/libbootimg/pull/2/commits/8986984b5d618be0b753e55d6b9d9d1744bc4094
 * https://books.google.de/books?id=2qo6AwAAQBAJ&pg=PA313&lpg=PA313&dq=sony+boot.img+format&source=bl&ots=0mtMMle9eZ&sig=adCVtfarXK9cticvd5qqYA6g39Y&hl=de&sa=X&ved=0ahUKEwjgp5mfx5XVAhUHWRQKHWSeDZcQ6AEIQzAB#v=onepage&q&f=false
 
-=== Next possible steps ===
+== Next possible steps ==
 
 * Try booting pmOS with a prebuilt kernel.
 * Try repacking built kernel into ELF format
 * UART debugging?
 
-=== Links ===
+== Links ==
 
 * [https://github.com/Nicknack/pmOs_device_sony_nanhu Device package]
 * [https://github.com/Klozz/android_kernel_sony_msm7x27a-nanhu Kernel Source]
