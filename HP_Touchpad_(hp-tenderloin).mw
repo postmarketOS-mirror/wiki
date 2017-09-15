@@ -14,36 +14,37 @@
 | display = 768x1024
 | memory = 1GB
 }}
-=== NOTE ===
+== NOTE ==
 
 None of this work has been (merged/pushed/get correct terminology) upstream. Contact CmdrWgls on IRC if you're interested in working on it before he gets around to actually doing so.
 
-=== Contributors ===
+== Contributors ==
 
 * CmdrWgls
 * (everyone on IRC)
 
-=== What works ===
+== What works ==
 
 * Nothing
 
-=== What doesn't work ===
+== What doesn't work ==
 
 * Everything
 
-=== Progress ===
-
-What's been done:
+== Progress ==
 
 * boot.img extracted from [http://evervolv.com/devices/tenderloin Evervolv nightly] Android ROM
 * determined that boot.img is vmlinuz and not an Android boot image
+* successfully compiled novacom (and its dependencies)
 
-=== Next steps ===
+== Next steps ==
 
 * package novacom for Alpine
 * build device-hp-tenderloin
+* find a kernel and compile it
+* package kernel and boot image following [https://wiki.merproject.org/wiki/Adaptation/Touchpad these instructions]
 
-=== Flashing/booting ===
+== Flashing/booting ==
 
 It looks like the actual boot process on the touchpad is just uBoot. We only need to package novacom for alpine to push images to the boot partition of the device.
 
