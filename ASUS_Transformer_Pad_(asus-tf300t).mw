@@ -1,0 +1,38 @@
+[[Category:Unsupported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = ASUS
+| name = Transformer Pad
+| codename = tf300t
+| image = File:ASUS Transformer Pad.jpg
+| imagecaption = ASUS Transformer Pad
+| releaseyear = 2012
+| originalsoftware = Android 4.0 on Linux 3.1
+| cpu = Nvidia Tegra 3 T30
+| gpu = ULP GeForce
+| storage = 16/32GB, microSD, SD
+| display = 1280x800 IPS
+| memory = 1GB
+}}
+
+None of this work has been merged upstream. Check out the work-in-progress [https://github.com/jonty-comp/pmbootstrap/tree/device-asus-tf300t here] or contact jonty-comp on IRC.
+
+== Contributors ==
+
+* jonty-comp
+* Jasper (working on [[ASUS Transformer Pad Infinity]])
+
+== What works ==
+
+* Compiling CM13 kernel ([https://github.com/LineageOS/android_kernel_asus_tf300t GitHub])
+* Flashing via Android recovery zip (Boot image included)
+* System boots
+* Most sensors/cameras/devices seem to be detected (e.g. accelerometer values can be read from <code>/sys</code> etc)
+
+== What does not work ===
+
+* Flashing via fastboot (device appears to write successfully but then locks up and does not apply the uploaded image)
+* Framebuffer (stuck on ASUS bootloader graphic)
+
+The framebuffer issue is an interesting one as it works without issue on CM13-based Android ROMs with the same kernel and defconfig.  Possible toolchain issue or patch needed for GCC6.
+Devices with a working framebuffer output modesetting information in <code>dmesg</code> after loading the tegradc driver, but the PMOS compiled kernel does not.  Common fixes including setting values in <code>/sys</code> have no effect yet.
