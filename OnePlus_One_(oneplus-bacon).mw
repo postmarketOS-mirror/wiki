@@ -4,10 +4,10 @@
 | name = One
 | manufacturer = OnePlus
 | codename = bacon
-| image = File:bacon-oxygenos.png|200px
-| imagecaption = OnePlus One with factory OS
+| image = File:Bacon-weston.jpg|200px
+| imagecaption = OnePlus One running Weston
 | releaseyear = 2014
-| originalsoftware = Android 4.4.2 on Linux 3.10
+| originalsoftware = Android 4.4.2 on Linux 3.4
 | cpu = Qualcomm Krait 400
 | gpu = Adreno 330
 | display = 1080x1920 IPS
@@ -15,11 +15,11 @@
 | memory = 3GB
 }}
 
-= Contributors =
+== Contributors ==
 
 * flacks
 
-= What works =
+== What works ==
 
 * Kernel compilation
 * Flashing system
@@ -28,19 +28,24 @@
 * Flashing kernel
 * USB network
 * SSH connectivity
+* Weston
+* Touchscreen
 
-= What doesn't work =
+== What doesn't work ==
 
 * Wi-Fi (blob needed)
-* Framebuffer graphics (splash screens)
 * ...
 
-= Links =
+== Display refresh ==
+There is a bug whereby the screen is not automatically refreshed. To work around this, run the following command as root on the device:
+<pre># while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
+
+== Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-bacon Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-bacon Kernel package]
 
-= Additional info =
+== Additional info ==
 
 == Entering &quot;Fastboot mode&quot; ==
 
