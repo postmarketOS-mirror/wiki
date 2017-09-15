@@ -1,28 +1,43 @@
 [[Category:Unsupported Devices]]
-=== Contributors ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Sony Ericsson
+| name = Xperia Arc
+| codename = anzu
+| image = File:Sony Ericsson Xperia Arc.png
+| imagecaption = Sony Ericsson Xperia Arc
+| releaseyear = 2011
+| originalsoftware = Android 2.3 on Linux 2.6.35
+| cpu = Qualcomm MSM8255 Snapdragon S2
+| gpu = Adreno 205
+| storage = 320MB
+| display = 480x854
+| memory = 512MB
+}}
+== Contributors ==
 
 * rendeko
 
-=== Entering &quot;Fastboot mode&quot; ===
+== Entering Fastboot mode ==
 
 Power off the device. Hold <code>Back</code> as you plug the USB cable into the device.
 
-=== What works ===
+== What works ==
 
 * Compiling kernel
 * Installing to system partition of image file
 
-=== What does not work ===
+== What does not work ==
 
 * ???
 
 Testing device had permanent locked bootloader, so flashing could not be tested. However, everything built successfully. Further testing on a device with an unlocked bootloader will be needed to know what works and how to continue
 
-=== Additional info ===
+== Additional info ==
 
 * Page size may need to be adjusted in the future, as it is non-standard and presents a non-fatal error.
 
-=== Links ===
+== Links ==
 
 * [https://github.com/msm7x30/android_kernel_qcom_msm7x30 Kernel]
 * [http://www.flashtool.net/ Xperia Flashtool] that should probably work once it is unlocked. With [https://github.com/Androxyde/Flashtool source code!]
