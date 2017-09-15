@@ -47,7 +47,7 @@ These are not packaged yet in postmarketOS, feel free to package them.
 
 == Links ==
 
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-lg-mako Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-mako Device package]
 * [https://www.optiv.com/blog/building-a-nexus-4-uart-debug-cable Tutorial: UART debug cable]
 * [https://developers.google.com/android/drivers#mako Official proprietary drivers]
 
