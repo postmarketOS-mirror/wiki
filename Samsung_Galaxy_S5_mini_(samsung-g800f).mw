@@ -1,4 +1,19 @@
 [[Category:Unsupported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S5 mini
+| codename = g800f
+| image = File:Samsung Galaxy S5 mini.png
+| imagecaption = Samsung Galaxy S5 mini
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 on Linux 3.10
+| cpu = Exynos 3470 Quad
+| gpu = Mali-400MP4
+| storage = 16GB
+| display = 720x1280 AMOLED
+| memory = 1.5GB
+}}
 == Basic info ==
 
 Device: Samsung Galaxy S5 mini (SM-G800F; European version)
