@@ -1,10 +1,25 @@
 [[Category:Unsupported Devices]]
-=== Contributors ===
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia Z2
+| codename = sirius
+| image = File:Sony Xperia Z2.png
+| imagecaption = Sony Xperia Z2
+| releaseyear = 2014
+| originalsoftware = Android 4.4.4 on Linux 3.10
+| cpu = Qualcomm MSM8974AB Snapdragon 801
+| gpu = Adreno 330
+| storage = 16GB
+| display = 1080x1980 IPS
+| memory = 3GB
+}}
+== Contributors ==
 
 * rcstar6696
 * opendata26
 
-=== What works ===
+== What works ==
 
 * Compiling the kernel
 * Fastboot flash
@@ -19,6 +34,6 @@ the same happens with <code>cat /sys/devices/virtual/graphics/fb0/mode &gt; /sys
 * Using 3.10 instead of 3.4 (Gives same isue as anami -&gt; [https://github.com/postmarketOS/pmbootstrap/pull/348/files try out this fix!])
 * Setting fb settings same as twrp (does nothing)
 
-=== Links ===
+== Links ==
 
 * [https://github.com/rcstar6696/android_kernel_sony_msm8974 Kernel Source]
