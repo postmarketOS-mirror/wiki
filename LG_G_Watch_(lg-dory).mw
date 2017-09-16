@@ -27,10 +27,10 @@
 * ☑ Framebuffer graphics (Splash screens)
 * ☑ SSH Connectivity
 * ☑ Weston on framebuffer
-* ☐ Touchscreen
-* ☐ Xwayland
-* ☐ Wifi
+* ☑ Touchscreen
+* ☑ Xwayland
 * ☐ Audio playback
+* ☐ Bluetooth
 
 == Device info ==
 
@@ -90,4 +90,4 @@ Number  Start (sector)    End (sector)  Size Name
 
 == Photos ==
 
-coming soon
+* [https://i.imgur.com/yz6Ra5A.jpg postmarketOS demo menu (XWayland)]
