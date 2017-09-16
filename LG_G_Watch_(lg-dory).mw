@@ -2,7 +2,7 @@
 | manufacturer = LG
 | name = G Watch
 | codename = dory
-| image = File:
+| image = File:LG_G_Watch_(dory).jpg
 | imagecaption = 
 | releaseyear = 2014
 | originalsoftware = Android Wear 1.5
@@ -24,9 +24,9 @@
 * ☑ Flash System (<code>pmbootstrap flasher flash_system</code>)
 * ☑ Initramfs boot
 * ☑ USB Network
-* ☐ Framebuffer graphics (Splash screens)
+* ☑ Framebuffer graphics (Splash screens)
 * ☑ SSH Connectivity
-* ☐ Weston on framebuffer
+* ☑ Weston on framebuffer
 * ☐ Touchscreen
 * ☐ Xwayland
 * ☐ Wifi
