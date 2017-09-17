@@ -168,111 +168,11 @@ We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flas
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/smoke.jpg Weston-smoke demo]
 * [https://wiki.postmarketos.org/wiki/File:Samsung-d710.jpg Weston-smoke demo running on a d710]
 
-=== Modem ===
+=== ofono ===
 
-==== Links ====
+Best way seems to get Samsung IPC modem support from the patchset https://lists.ofono.org/pipermail/ofono/2012-September/013766.html (but it was not accepted) and does not build https://github.com/tssk/pmbootstrap/commit/527825967792ab47a0fd21f2f33c462ef0ad6f68 . I would appreciate help from someone that understands C.
 
-https://forum.xda-developers.com/galaxy-s2/help/how-to-talk-to-modem-commands-t1471241
-
-https://github.com/astarasikov/samsung-xmm6260-fw-loader
-
-https://forum.xda-developers.com/showpost.php?p=22218364&postcount=14
-
-http://ksyslabs.org/sgnx/
-
-==== Progress so far ====
-
-- build libsamsung-ipc (see https://github.com/postmarketOS/pmbootstrap/pull/522)
-
-  $ ./pmbootstrap.py build libsamsung-ipc --arch=armhf
-
-- install on phone (you need wifi working to download dependencies (libcrypto))
-
-  localhost:~# apk add libsamsung-ipc-6.0-0002-r0.apk
-
-- symlink for partition with modem firmware
-
-  localhost:/dev/block# ln -s ../mmcblk0p8
-
-- mount EFS
-
-  localhost:/# mkdir /efs
-  localhost:/# mount /dev/mmcblk0p1 /efs
-
-- run ipc-test
-
-  localhost:~# ipc-test 
-  [ipc] Starting galaxys2 modem boot
-  [ipc] Opened modem image device
-  [ipc] Mapped modem image data to memory
-  [ipc] Opened modem boot device
-  [ipc] Opened modem link device
-  [ipc] Turned the modem off
-  [ipc] Turned the modem on
-  [ipc] Waited for link connected
-  [ipc] Wrote ATAT in ASCII
-  [ipc] Read chip id (0x16)
-  [ipc] Wrote PSI header
-  [ipc] Wrote PSI, CRC is 0x20
-  [ipc] Wrote PSI CRC (0x20)
-  [ipc] Read PSI CRC ACK
-  [ipc] Read PSI ACK
-  [ipc] Sent XMM626 HSIC PSI
-  [ipc] Wrote EBL size
-  [ipc] Wrote EBL, CRC is 0xbc
-  [ipc] Wrote EBL CRC (0xbc)
-  [ipc] Sent XMM626 HSIC EBL
-  [ipc] Read port config
-  [ipc] Sent XMM626 HSIC port config
-  [ipc] Sent XMM626 HSIC SEC start
-  [ipc] Sent XMM626 HSIC firmware
-  [ipc] Checked nv_data path
-  [ipc] Checked nv_data md5 path
-  [ipc] Calculated nv_data md5: 053556cad766c6976840c5ec34f05151
-  [ipc] Read nv_data md5: 053556cad766c6976840c5ec34f05151
-  [ipc] Checked nv_data backup path
-  [ipc] Loaded nv_data
-  [ipc] Sent XMM626 HSIC nv_data
-  [ipc] Sent XMM626 HSIC SEC end
-  [ipc] Sent XMM626 HSIC HW reset
-  [ipc] Waiting for host wake failed
-  [ipc] Waited for host wake
-  [ipc] Waited for link connected
-  [ipc] 
-  [ipc] xmm626_sec_modem_fmt_recv: Received FMT message
-  [ipc] xmm626_sec_modem_fmt_recv: Message: aseq=0xff, command=IPC_PWR_PHONE_PWR_UP, type=IPC_TYPE_NOTI, size=0
-  [ipc] 
-  [ipc] xmm626_sec_modem_fmt_recv: Received FMT message
-  [ipc] xmm626_sec_modem_fmt_recv: Message: aseq=0x00, command=IPC_MISC_ME_IMSI, type=IPC_TYPE_NOTI, size=16
-  [ipc] 
-  [ipc] xmm626_sec_modem_fmt_recv: Received FMT message
-  [ipc] xmm626_sec_modem_fmt_recv: Message: aseq=0x00, command=IPC_SEC_SIM_ICC_TYPE, type=IPC_TYPE_NOTI, size=1
-  [ipc] 
-  [ipc] xmm626_sec_modem_fmt_recv: Received FMT message
-  [ipc] xmm626_sec_modem_fmt_recv: Message: aseq=0x00, command=IPC_SEC_PIN_STATUS, type=IPC_TYPE_NOTI, size=2
-  [ipc] 
-  [ipc] xmm626_sec_modem_fmt_recv: Received FMT message
-  [ipc] xmm626_sec_modem_fmt_recv: Message: aseq=0xff, command=IPC_NET_REGIST, type=IPC_TYPE_NOTI, size=11
-
-- run ipc-modem
-
-  localhost:~# ipc-modem start --pin=XXXX
-  [I] Got SIM PIN!
-  [0] Starting modem on FMT client
-  [1] Starting modem_read_loop on FMT client
-  [2] Phone is powered up (LPM)!
-  [I] SIM card found
-  [I] We need the PIN1 to unlock the card!
-  [I] Sending PIN1 unlock request
-  [3] SIM init complete
-  [4] Modem is ready, requesting normal power mode
-  [I] SIM card found
-  [3] SIM init complete
-  [5] Modem is fully ready
-  [I] SIM Phone Book init complete
-  [6] Registered with network! Got PLMN (Mobile Network Code): '@65@5'
-  [6] Registered with network! Got PLMN (Mobile Network Code): '21902'
-  [6] Registered with network! Got PLMN (Mobile Network Code): '21902'
+Second idea was to build Andoird RIL + Samsung RIL and get ofono working with ofono-ril support - https://redmine.replicant.us/projects/replicant/wiki/Samsung-RIL .
 
 === GPS ===
 
