@@ -55,7 +55,7 @@
 
 == Issues ==
 
-* Launching Weston is delayed by 135 seconds to let udev settle down
+* No splash in initramfs.
 
 == Links ==
 
