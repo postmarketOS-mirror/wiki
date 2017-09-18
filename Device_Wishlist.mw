@@ -4,7 +4,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 
 * Fairphone 1 &amp; 2
 * [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
-* Openmoko (they come with open source baseband firmware!)
+* OpenMoko
 * Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
 * Intex Aqua Fish and Other Sailfish running devices
 * Oneplus One
