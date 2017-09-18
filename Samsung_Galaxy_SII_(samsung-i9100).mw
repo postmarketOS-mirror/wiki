@@ -91,15 +91,7 @@ On step 8, use <source lang="shell">pv /home/user/rootfs/samsung-i9100.img | nc 
   [18:28:46] Timestamp based rebuilds (y/n) [y]:
   [18:29:05] Extra packages [none]:
 
--- Build device package
-
-  $ ./pmbootstrap.py build device-samsung-i9100
-
--- Build device kernel
-
-  $ ./pmbootstrap.py build linux-samsung-i9100
-
--- Prepapre the installation
+-- Prepare the installation
 
   $ ./pmbootstrap.py install
 
