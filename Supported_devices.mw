@@ -159,6 +159,25 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
+  | style="white-space: nowrap;" | [[LG_G_Watch_(lg-dory)|LG G Watch]]
+  | style="white-space: nowrap;" | lg-dory
+  |
+  |
+  | Y
+  |
+  | Y
+  | Y
+  | Y
+  | -
+  | Y
+  |
+  | -
+  |
+  | -
+  | -
+  | -
+  |
+|-
   | style="white-space: nowrap;" | [[LG G Watch R (lg-lenok)|LG G Watch R]]
   | style="white-space: nowrap;" | lg-lenok
   |
@@ -171,11 +190,11 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   | Y
   |
+  | -
   |
-  |
-  |
-  |
-  |
+  | -
+  | -
+  | -
   |
 |-
   | style="white-space: nowrap;" | [[LG G3 Europe (lg-d855)|LG G3 Europe]]
@@ -514,10 +533,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Landrover-a9|Land Rover A9]]
   | landrover-a9
-  |
-|-
-  | [[LG_G_Watch_(lg-dory)|LG G Watch]]
-  | lg-dory
   |
 |-
   | [[Moto X 2014|Moto X 2014]]
