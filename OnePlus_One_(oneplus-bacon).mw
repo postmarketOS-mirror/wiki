@@ -47,6 +47,6 @@ There is a bug whereby the screen is not automatically refreshed. To work around
 
 == Additional info ==
 
-== Entering &quot;Fastboot mode&quot; ==
+=== Entering fastboot mode ===
 
-Hold the '''Volume Up''' and '''Power''' buttons. Let go of buttons after device vibrates and displays the Cyanogenmod logo followed by "Fastboot Mode".
+From a power off state, hold the '''volume up''' and '''power''' buttons until the device vibrates. The display should then light up and say "Fastboot Mode".
