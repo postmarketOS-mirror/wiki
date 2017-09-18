@@ -117,9 +117,11 @@ The description is using the alternative flash method because there it did not w
 
   $ ./pmbootstrap.py initfs hook_add usb-shell
 
--- Flash Kernel and Recovery (phone will reboot to screen with postmarketOS logo)
+-- Flash Kernel and Recovery (phone will reboot to screen "boot partition not found")
 
   $ ./pmbootstrap.py flasher flash_kernel
+
+-- Set up USB network connection to phone (for network-manager right click network icon and choose Edit Connections... -> edit -> IPv4 Settings -> Add   IP: 172.16.42.2   Netmask: 16  Gateway: <empty> -> Save)
 
 -- Connect to phone with telnet
 
