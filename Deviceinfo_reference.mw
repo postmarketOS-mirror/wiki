@@ -72,7 +72,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | e.g. <code>/dev/input/event1</code> 
 |-
 | <code>msm_refresher</code>
-| Enable msm-fb-refresher for devices that only implement double buffering.
+| Enable msm-fb-refresher for devices that only implement double buffering (graphics).
 | <code>true</code>,<code>false</code>(default)
 |}
 
