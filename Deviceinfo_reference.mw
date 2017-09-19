@@ -70,6 +70,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>dev_keyboard</code>
 | Path to the keyboard device, if your device has any (needed for initramfs password unlocking)
 | e.g. <code>/dev/input/event1</code> 
+|-
+| <code>msm_refresher</code>
+| Enable msm-fb-refresher for devices that only implement double buffering.
+| <code>true</code>,<code>false</code>(default)
 |}
 
 === flash ===
