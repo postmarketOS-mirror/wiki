@@ -24,10 +24,6 @@ Donate via:
 * [https://liberapay.com/ollieparanoid Liberapay] ([https://ollieparanoid.github.io/page/donate/ why?])
 
 What I do:
-* Worked on <code>pmboostrap</code> and postmarketOS about 1 year before [https://ollieparanoid.github.io/post/postmarketOS/ releasing] it
-* Keeping development enjoyable for everyone by fixing <code>pmbootstrap</code> bugs (usually within few days, we're always pretty close to 0), giving a lot of thought to the [https://github.com/postmarketOS/pmbootstrap/issues/ issues]
-* Testing/reviewing/merging contributions from others
-* Implementing new <code>pmbootstrap</code> features, especially ones that others require to be unblocked from their development, and ones that lower the entry barrier to the project (though that happens less often now, as I spend more time on testing/reviewing/merging PRs from other people, which means faster development!)
-* Trying to recruit new developers with blogging ([https://github.com/postmarketOS/postmarketos.org not alone anymore]!) and answering questions everywhere
-* Directly helping out in the chat when I find time to do so
-* Check out my [[Milestones#ollieparanoid|milestones]]
+* Worked on <code>pmboostrap</code> and postmarketOS about one year before [https://ollieparanoid.github.io/post/postmarketOS/ releasing] it
+* Building a helpful community of developers, which make decisions together
+* Making development enjoyable for everyone and making postmarketOS a daily driver (see my [[Milestones#ollieparanoid|milestones]] for details)
