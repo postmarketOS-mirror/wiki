@@ -19,22 +19,9 @@
 
 === Compiling a kernel ===
 
-==== LineageOS ====
-
-* Due to the fact that the port of CyanogenMOD never went past version 11 because of a lack of maintainers, the device didn't get taken up by the continuation of CyanogenMOD (LineageOS) after it died off. This is the reason why we're using the old abandoned repository.
-* Source: https://github.com/CyanogenMod/android_kernel_asus_tf700t
-* Version: 3.1.10
-* Status: [https://gist.github.com/jja2000/18ab1ad83ffacdc5b8b9f0526106f94a Doesn't compile]
-
-==== Grimlock ====
-
-* Grimlock is a fork of an older Stable CyanogenMOD kernel source maintained by Hardslog, this was after Katkernel the most maintained kernel source of this list.
-* Source: https://github.com/Hardslog/grimlock_kernel_asus_tegra3_unified/tree/mm6.0
-* Version: 3.1.10
-* Status: [https://gist.github.com/anonymous/e8543d2f4a2268dacefda0fa5e7ad00f Doesn't compile]
 ==== KatKernel ====
 
 * Katkernel is based off the kernel with the same name for the TF300t. An overlap in components makes these kernels mostly compatible hence the rom it belongs to (KatKiss) has been ported to the TF700t aswell. The reason why the kernel is included in this list is because it's currently the most active kernel for the TF700t.
 * Source: https://github.com/timduru/tf300t-katkernel/tree/dev-tf700t/
 * Version: 3.1.10
-* Status: [https://gist.github.com/anonymous/366060771662c174f2ac7de2f64f47d7 Doesn't compile]
+* Status: Compiles, is too big to fit on /boot
