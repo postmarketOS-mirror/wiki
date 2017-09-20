@@ -9,25 +9,25 @@ In consequence, pmOS does not use a regular milestone plan with versions (at lea
 -----
 
 === [https://github.com/ollieparanoid/ ollieparanoid] ===
+Basically all points listed below are done together with other community members. In fact, when I do postmarketOS work today, it is most of the time ''not'' running/porting pmOS on a device, but doing something else from below.
 
-''Right now, my primary focus is recruiting more developers by keeping the development enjoyable. Apart from fixing bugs and reviewing/testing/merging PRs, I focus on the following list. Feel free to discuss the importance of these items with me in [https://github.com/postmarketOS/pmbootstrap/wiki/Matrix-and-IRC Matrix/IRC] or on [https://reddit.com/r/postmarketOS /r/postmarketOS] (for longer discussions).''
 
-# Review/test/integrate PRs
-# Help get the new postmarketOS homepage up [https://github.com/postmarketOS/pmbootstrap/issues/321 #321]
-# 100 days of pmOS post
-# Fix low severity pmbootstrap bug [https://github.com/postmarketOS/pmbootstrap/issues/151 #151] (so we're down to 0 pmbootstrap bugs again)
-# pmbootstrap strict build mode [https://github.com/postmarketOS/pmbootstrap/issues/256 #256]
-# Binary package repository [https://github.com/postmarketOS/pmbootstrap/issues/64 #64]
-# Extend initramfs hooks: allow adding files, multiple hook points (e.g. before and after initramfs-extra was loaded) [https://github.com/postmarketOS/pmbootstrap/issues/165 #165]
-# Run the [https://github.com/postmarketOS/pmbootstrap/tree/master/test full testsuite] with Travis CI for each commit/PR
-# Show code coverage in the <code>README.md</code> (with a link to details: which files are not covered by testcases etc.)
-# Use [https://www.shellcheck.net/ <code>shellcheck</code>] for more shell scripts in the repo (maybe for all <code>APKBUILD</code>s?), [https://github.com/postmarketOS/pmbootstrap/issues/110 automatically format shell scripts]
-# [[deviceinfo|deviceinfo reference]] related:
+'''Make development enjoyable for everybody:'''
+* fix all pmbootstrap bugs
+* test / review / integrate pull-requests
+* help whenever someone is stuck with development
+* work on features, that make development easier (e.g. [https://github.com/postmarketOS/pmbootstrap/issues/256 strict mode])
+* assist with implementation ideas in GitHub issues
+* improve documentation in the wiki
+* improve continuous integration (e.g. [https://github.com/postmarketOS/pmbootstrap/issues/110 #110], [https://github.com/postmarketOS/pmbootstrap/issues/64 #64])
+* write about what we do in [http://postmarketos.org/blog/ blog posts]
+* help with infrastructure (homepage, wiki, ...)
+* work together with upstream
 
-* Write a [https://en.wikipedia.org/wiki/Lint_(software) linter] for deviceinfo files as part of <code>pmbootstrap</code>
-* Add that linting to the static code analysis script for CI
 
-# Various device improvements. I'd like to ''try out'' (with no expectations, that this will work anytime soon!) mainline for <code>lg-mako</code> ([https://github.com/postmarketOS/pmbootstrap/issues/91 #91], [https://github.com/postmarketOS/pmbootstrap/issues/12 #12])
+'''Get postmarketOS ready for daily usage:'''
+* research on how we could implement "daily driver" stuff (e.g. [https://github.com/postmarketOS/pmbootstrap/issues/161 plasma-mobile], [https://github.com/postmarketOS/pmbootstrap/issues/598 cellular modem], [https://github.com/postmarketOS/pmbootstrap/issues/592 firmware patching])
+* binary package repository (not usable yet, see [https://github.com/postmarketOS/pmbootstrap/issues/64 #64])
 
 === MartijnBraam ===
 
