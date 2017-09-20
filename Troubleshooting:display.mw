@@ -42,3 +42,10 @@ If the output on the screen is not aligned correctly ([https://user-images.githu
 You can try patching the source code by setting a different video mode (RGB/ARGB/RGBA/YCRYCB/...).
 
 See example patch: [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-huawei-y530/06_fix_mdss_fb_rgb_mode.patch 06_fix_mdss_fb_rgb_mode.patch]
+
+==== My screen is red! ====
+
+There are some buggy framebuffer drivers (e.g. in LG Nexus 5) that report incorrect data. You can override it with:
+
+<pre>weston --pixman-type=2</pre>
+More information on [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54]
