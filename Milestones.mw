@@ -11,7 +11,6 @@ In consequence, pmOS does not use a regular milestone plan with versions (at lea
 === [https://github.com/ollieparanoid/ ollieparanoid] ===
 Basically all points listed below are done together with other community members. In fact, when I do postmarketOS work today, it is most of the time ''not'' running/porting pmOS on a device, but doing something else from below.
 
-
 '''Make development enjoyable for everybody:'''
 * fix all pmbootstrap bugs
 * test / review / integrate pull-requests
@@ -23,7 +22,6 @@ Basically all points listed below are done together with other community members
 * write about what we do in [http://postmarketos.org/blog/ blog posts]
 * help with infrastructure (homepage, wiki, ...)
 * work together with upstream
-
 
 '''Get postmarketOS ready for daily usage:'''
 * research on how we could implement "daily driver" stuff (e.g. [https://github.com/postmarketOS/pmbootstrap/issues/161 plasma-mobile], [https://github.com/postmarketOS/pmbootstrap/issues/598 cellular modem], [https://github.com/postmarketOS/pmbootstrap/issues/592 firmware patching])
