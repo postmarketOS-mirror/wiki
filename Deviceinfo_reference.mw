@@ -74,6 +74,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>msm_refresher</code>
 | Enable msm-fb-refresher for devices that only implement double buffering (graphics).
 | <code>true</code>,<code>false</code>(default)
+|-
+| <code>swap_size_recommended</code>
+| Set recommended swap file size for device
+| Integer, in MB.
 |}
 
 === flash ===
