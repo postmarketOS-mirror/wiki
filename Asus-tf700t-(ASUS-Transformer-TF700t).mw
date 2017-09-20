@@ -29,5 +29,5 @@
 * Status: Compiles, is too big to fit on /boot
 
 === Useful Links ===
-[https://wiki.gentoo.org/wiki/Asus_Transformer_Infinity_(TF700T)/Install How to install Gentoo on the TF700t]
-[https://forum.xda-developers.com/showthread.php?t=2387133 Using Kexec to boot Kernels and .img files]
+* [https://wiki.gentoo.org/wiki/Asus_Transformer_Infinity_(TF700T)/Install How to install Gentoo on the TF700t]
+* [https://forum.xda-developers.com/showthread.php?t=2387133 Using Kexec to boot Kernels and .img files]
