@@ -29,6 +29,7 @@
 * ☑ Weston on framebuffer
 * ☑ Touchscreen
 * ☑ Xwayland
+* ☑ Accelerometer
 * ☐ Audio playback
 * ☐ Bluetooth
 
@@ -47,6 +48,12 @@ Turn on your watch and swipe from the top left corner (so that'd be where 11 wou
 It's important to remember to flash the system image to `userdata` as the system partition is not big enough for PostmarketOS.
 
 <code>pmbootstrap flasher flash_system --partition userdata</code>
+
+=== Accelerometer ===
+
+Enable the accelerometer with <code>echo 1 > /sys/bus/i2c/drivers/lis3dsh_acc/4-001e/enable_device</code>
+
+Read accelerometer measurements with <code>evtest /dev/input/event1</code>
 
 === Partition layout ===
 <pre class="shell">/ # fdisk -l
