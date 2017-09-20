@@ -19,15 +19,13 @@ todo: add file contents here
 $ echo 0 0 > /sys/class/graphics/fb0/pan
 </syntaxhighlight>
 
-= Qualcomm framebuffer (mdss) =
+= Qualcomm framebuffer (mdss, mdp3) =
 
 ==== MSM framebuffer doesn't work ====
 
 We found out that removing the 3D driver support makes the MSM framebuffer. See [https://github.com/postmarketOS/pmbootstrap/pull/66 #66].
 
 <pre>CONFIG_MSM_KGSL=n</pre>
-
-= Qualcomm framebuffer (mdp3) =
 
 ==== Screen output flicker and inactivity ====
 
@@ -36,3 +34,11 @@ If you notice a very brief flicker upon boot, but immediately disappears and scr
 You can try patching the source code by removing the function assigned to the <code>mdp3_interface->off_fnc</code> in the <code>mdp3_ctrl.c</code> file.
 
 See example patch: [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-huawei-y530/05_fix_mdp3_ctrl_off.patch 05_fix_mdp3_ctrl_off.patch]
+
+==== Screen output messed up ====
+
+If the output on the screen is not aligned correctly ([https://user-images.githubusercontent.com/315080/30261765-c28df28e-96d6-11e7-971a-fd031704a810.jpg see picture]) it's probably because you have a wrong value in <code>/sys/class/graphics/fb0/bits_per_pixel</code>.
+
+You can try patching the source code by setting a different video mode (RGB/ARGB/RGBA/YCRYCB/...).
+
+See example patch: [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-huawei-y530/06_fix_mdss_fb_rgb_mode.patch 06_fix_mdss_fb_rgb_mode.patch]
