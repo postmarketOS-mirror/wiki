@@ -76,7 +76,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>true</code>,<code>false</code>(default)
 |-
 | <code>swap_size_recommended</code>
-| Set recommended swap file size for device
+| Set recommended swap file size for device. If unset, no swap file will be created for the device.
 | Integer, in MB.
 |}
 
