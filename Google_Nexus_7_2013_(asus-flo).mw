@@ -1,0 +1,19 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Google (Asus)
+| name = Google Nexus 7 (2013)
+| codename = flo
+| releaseyear = 2013
+| originalsoftware = Android 4.3 on Linux 3.4
+| storage = 16/32GB
+| memory = 2GB
+}}
+= Contributors =
+
+* montvid
+
+= Links =
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-asus-flo Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-asus-flo Kernel package]
