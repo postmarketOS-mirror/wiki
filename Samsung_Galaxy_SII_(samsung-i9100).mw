@@ -174,11 +174,11 @@ We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flas
 
 - Connect to wifi AP
 
-  $ sudo wpa_supplicant -i wlan0 -c wifi
+  $ sudo wpa_supplicant -i wlan0 -c wifi &
 
 - Get ip address from dhcp server (in another terminal)
 
-  $ sudo udhcpc -i wlan0 
+  $ sudo udhcpc -i wlan0
 
 === ofono ===
 
