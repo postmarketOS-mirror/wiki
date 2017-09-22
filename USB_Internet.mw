@@ -7,9 +7,9 @@ X are your pc usb ip address last numbers you will find in your pc's network man
 
 sudo route add default gw 172.16.42.x 
 
-Delete and write instead your router ip address (nameserver 192.168.1.1) or dns server address (nameserver 8.8.8.8) 
+sudo nano /etc/resolv.conf
 
-sudo nano /etc/resolv.conf 
+Delete and write instead your router ip address (nameserver 192.168.1.1) or dns server address (nameserver 8.8.8.8) 
 
 On your pc:
 
