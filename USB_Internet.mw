@@ -5,18 +5,19 @@ On your phone:
 
 X are your pc usb ip address last numbers you will find in your pc's network manager.
 
-sudo route add default gw 172.16.42.x 
-
-sudo nano /etc/resolv.conf
+<syntaxhighlight lang="shell-session">
+$ sudo route add default gw 172.16.42.x 
+$ sudo nano /etc/resolv.conf
+</syntaxhighlight>
 
 Delete and write instead your router ip address (nameserver 192.168.1.1) or dns server address (nameserver 8.8.8.8) 
 
 On your pc:
 
-echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null
-
-sudo iptables -P FORWARD ACCEPT
-
-sudo iptables -A POSTROUTING -t nat -j MASQUERADE -s 172.16.42.0/24
+<syntaxhighlight lang="shell-session">
+$ echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null
+$ sudo iptables -P FORWARD ACCEPT
+$ sudo iptables -A POSTROUTING -t nat -j MASQUERADE -s 172.16.42.0/24
+</syntaxhighlight>
 
 You are done! Now try to ping someone!
