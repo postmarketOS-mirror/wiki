@@ -1,4 +1,4 @@
-You can enable internet through the USB cable when WiFi doesn't work yet on your device. For this to work you set your host machine as gateway for your phone and let your host machine do network address translation for the phone.
+You can enable internet through the USB cable when [[WiFi]] doesn't work yet on your device. For this to work you set your host machine as gateway for your phone and let your host machine do network address translation for the phone.
 
 ==== On your phone: ====
 
