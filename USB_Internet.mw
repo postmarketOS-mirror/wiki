@@ -1,18 +1,15 @@
-USB Internet
-Enable Internet on your device by using a usb cable (when wifi does not work).
+You can enable internet through the USB cable when WiFi doesn't work yet on your device. For this to work you set your host machine as gateway for your phone and let your host machine do network address translation for the phone.
 
-On your phone:
+==== On your phone: ====
 
-X are your pc usb ip address last numbers you will find in your pc's network manager.
 
 <syntaxhighlight lang="shell-session">
-$ sudo route add default gw 172.16.42.x 
-$ sudo nano /etc/resolv.conf
+$ sudo route add default gw 172.16.42.2
+$ echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+Substitute 8.8.8.8 for your own internal DNS server if you want.
 </syntaxhighlight>
 
-Delete and write instead your router ip address (nameserver 192.168.1.1) or dns server address (nameserver 8.8.8.8) 
-
-On your pc:
+==== On the host machine: ====
 
 <syntaxhighlight lang="shell-session">
 $ echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null
@@ -20,4 +17,7 @@ $ sudo iptables -P FORWARD ACCEPT
 $ sudo iptables -A POSTROUTING -t nat -j MASQUERADE -s 172.16.42.0/24
 </syntaxhighlight>
 
-You are done! Now try to ping someone!
+This will enable IPv4 forwarding on your host machine which basically lets it function as a router. The postrouting command will make the kernel on the host translate the packets between the phone network
+and your normal network on the host machine.
+
+You can now verify the internet connection on your phone my pinging something
