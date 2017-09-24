@@ -37,6 +37,8 @@ exec hildon-desktop
 
 You will also have to install <code>dbus-x11</code> in order to get <code>dbus-launch</code>. Depending on the device you have, you may also have to install <code>mesa-dri-swrast</code>.
 
+hildon-desktop can then be started by running <code>startx</code>.
+
 === See also: ===
 
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in Qemu)
