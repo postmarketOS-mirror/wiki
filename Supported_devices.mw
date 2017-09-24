@@ -26,6 +26,25 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 ! SMS
 ! Voice
 |-
+  | style="white-space: nowrap;" | [[Fairphone 2 (fairphone-fp2)|Fairphone 2]]
+  | style="white-space: nowrap;" | fairphone-fp2
+  |
+  |
+  | Y
+  |
+  | Y
+  | Y
+  | Y
+  |
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+  |
+|-
   | style="white-space: nowrap;" | [[Google Galaxy Nexus GSM (samsung-maguro)|Google Galaxy Nexus (GSM)]]
   | style="white-space: nowrap;" | samsung-maguro
   |
@@ -505,10 +524,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Coolpad-Sky-3-E502-(Modena-2)|Coolpad Modena 2]]
   | coolpad-modena2
-  |
-|-
-  | [[Fairphone-2|Fairphone 2]]
-  | fairphone-fp2
   |
 |-
   | [[Google Nexus 6P]]
