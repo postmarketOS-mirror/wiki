@@ -12,7 +12,9 @@ We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be eas
 === Installation instructions ===
 
 Add following packages as extra in pmbootstrap init: 
-mesa,mesa-dri-swrast,hildon-desktop,hildon-theme-alpha
+<pre>mesa,mesa-dri-swrast,hildon-desktop,hildon-theme-alpha</pre>
+
+Notice that due to swrast being used (probably) this is way too slow to be usable on N900. Even typing in xfce4-terminal results in one second lag.
 
 
 To make hildon-desktop find its theme (install hildom-theme-alpha first):
