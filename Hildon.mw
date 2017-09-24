@@ -20,6 +20,23 @@ For default wallpapers:
 cp /usr/share/themes/alpha/backgrounds/wallpaper2.png ~/.backgrounds/background-2.png
 cp /usr/share/themes/alpha/backgrounds/wallpaper3.png ~/.backgrounds/background-3.png
 cp /usr/share/themes/alpha/backgrounds/wallpaper4.png ~/.backgrounds/background-4.png</pre>
+
+
+=== Running ===
+
+Run <code>sudo setup-xorg-base</code>.
+
+To run hildon-desktop, create a <code>~/.xinitrc</code> with the following contents:
+
+<pre>
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval `dbus-launch --sh-syntax --exit-with-session`
+fi
+exec hildon-desktop
+</pre>
+
+You will also have to install <code>dbus-x11</code> in order to get <code>dbus-launch</code>. Depending on the device you have, you may also have to install <code>mesa-dri-swrast</code>.
+
 === See also: ===
 
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in Qemu)
