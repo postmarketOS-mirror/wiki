@@ -3,7 +3,7 @@
 === General information ===
 
 To get wireless LAN working, most WiFi chips need a proprietary firmware blob. While it would be more secure to replace that with open source software in the long term, it isn't feasible right now, so we try to get it working with that closed source firmware.<br />
-A great place to start looking for information about many available WiFi chips is [https://wireless.wiki.kernel.org/en/users/drivers this kernel.org page]. It often provides driver sources and the required firmware blobs as well.
+A great place to start looking for information about many available WiFi chips is [https://wireless.wiki.kernel.org/en/users/drivers this kernel.org page]. It often provides driver sources and the required firmware blobs as well. For a start if you want Internet working try the [[USB Internet]] guide.
 
 === Android ===
 
