@@ -11,6 +11,10 @@ We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be eas
 
 === Installation instructions ===
 
+Add following packages as extra in pmbootstrap init: 
+mesa,mesa-dri-swrast,hildon-desktop,hildon-theme-alpha
+
+
 To make hildon-desktop find its theme (install hildom-theme-alpha first):
 
 <pre class="shell">ln -s /usr/share/themes/alpha /usr/share/themes/default</pre>
@@ -21,6 +25,17 @@ cp /usr/share/themes/alpha/backgrounds/wallpaper2.png ~/.backgrounds/background-
 cp /usr/share/themes/alpha/backgrounds/wallpaper3.png ~/.backgrounds/background-3.png
 cp /usr/share/themes/alpha/backgrounds/wallpaper4.png ~/.backgrounds/background-4.png</pre>
 
+You can then verify correct operation by ssh-ing in, as root:
+
+<pre>
+mv /etc/profile.d/start_weston.sh /etc
+killall	weston
+
+Xorg &
+DISPLAY=:0
+export DISPLAY
+hildon-desktop
+</pre>
 
 === Running ===
 
