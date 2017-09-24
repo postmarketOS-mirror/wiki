@@ -216,6 +216,8 @@ Broadcom BCM4330 (SWB-B42) Bluetooth 4.0 Dual Band WLAN FM [https://gsmserver.co
 
 Driver? - https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
 
+Firmware? - https://packages.debian.org/sid/kernel/firmware-brcm80211
+
 === Memory ===
 
 1 GB RAM [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
