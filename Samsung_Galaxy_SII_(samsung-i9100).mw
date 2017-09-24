@@ -195,3 +195,39 @@ https://redmine.replicant.us/projects/replicant/wiki/GSD4t
 https://github.com/mnalis/gsd4t_parser
 
 https://redmine.replicant.us/boards/21/topics/897
+
+== Hardware specifications for i9100 ==
+
+=== SoC ===
+
+Samsung Exynos 4 Dual 45 nm (GT-I9100, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+
+=== CPU ===
+
+1.2 GHz dual-core ARM Cortex-A9 (GT-I9100, GT-I9105, GT-I9100G, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+
+=== GPU ===
+
+ARM Mali-400 MP4 (GT-I9100, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+
+=== WiFi / Bluetooth / FM radio ===
+
+Broadcom BCM4330 (SWB-B42) Bluetooth 4.0 Dual Band WLAN FM [https://gsmserver.com/item/ic-and-processors/wi-fi-ic-bcm4330-swb-b42-for-samsung-i9100-galaxy-s2-cell-phone-for-bluetooth-for-fm-radio-4709-002054/ source] [https://www.techinsights.com/reports-and-subscriptions/open-market-reports/Report-Profile/?ReportKey=7587 source]
+
+Driver? - https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
+
+=== Memory ===
+
+1 GB RAM [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+
+=== Storage ===
+
+16 GB or 32 GB flash memory [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+
+=== Removable storage ===
+
+microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+
+=== TODO ===
+
+gps, sensors, camera...
