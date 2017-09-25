@@ -14,6 +14,10 @@ Font ... 16?
 settings|panels, panel1, hide panel inteligently, 53 pixels.
 settings|panels, panel2, hide panel inteligently.
 
+With configuration above, you get this. Only obvious problem is waste of space at top of the screen.
 
-[[File:17090008.jpg|200px]]
-[[File:17090009.jpg|200px]]
+[[File:17090009.jpg|600px]]
+
+Simple status window without decorations can be put there. Plan is to display battery / signal status there:
+
+[[File:17090008.jpg|600px]]
