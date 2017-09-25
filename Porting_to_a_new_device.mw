@@ -100,10 +100,6 @@ If the flashing method does not work, it is also possible to export all generate
 <pre class="shell">./pmbootstrap flasher export</pre>
 === After flashing ===
 
-If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through telnet over USB. See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details.
+If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through telnet over USB. See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details. Also check [[Tuning sysfs]].
 
-Also check [[Tuning sysfs]].
-
-Don't forget to create a specific wiki page for your device, and add it to the [[devices]] page. If you noticed anything that was unclear or discovered something useful, please help to improve the wiki!
-
-Feel free to ask / help on [[Matrix-and-IRC|IRC or Matrix group]]
+Don't forget to [[Help:Device_Page|create a specific wiki page for your device]], and add it to the [[devices]] page. If you noticed anything that was unclear or discovered something useful, please help to improve the wiki! Feel free to ask / help on [[Matrix-and-IRC|IRC or Matrix group]].
