@@ -245,6 +245,10 @@ make gps2
 
 gps2 will not talk to gpsd, so it is only useful to verify that hardware is working.
 
+==== GUI ====
+
+[[Xfce4]] should work well.
+
 === Helpful Links for Porting ===
 
 * [https://neo900.org/stuff/block-diagrams/n900/n900.html Device schematic]
