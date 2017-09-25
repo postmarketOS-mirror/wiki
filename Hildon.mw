@@ -19,7 +19,7 @@ Notice that due to swrast being used (probably) this is way too slow to be usabl
 
 To make hildon-desktop find its theme (install hildom-theme-alpha first):
 
-<pre class="shell">ln -s /usr/share/themes/alpha /usr/share/themes/default</pre>
+<pre class="shell">sudo ln -s /usr/share/themes/alpha /usr/share/themes/default</pre>
 For default wallpapers:
 
 <pre>cp /usr/share/themes/alpha/backgrounds/wallpaper1.png ~/.backgrounds/background-1.png
