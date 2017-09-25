@@ -1,4 +1,19 @@
 Xfce4 is pretty usable on Nokia N900.
 
-[[File:17090008.jpg]]
-[[File:17090009.jpg]]
+
+pmbootstrap.py init
+User interface: none
+Extra packages: emacs,ofono,git,xfce4,py-gtk-dev,py-dbus,xorg-server,xf86-video-vesa,xf86-input-evdev,xf86-input-mouse,xf86-input-keyboard,udev,xinput
+
+Log in as user, then startxfce4
+
+applications| settings| windowmanager
+Default-xhdpi
+Font ... 16?
+
+settings|panels, panel1, hide panel inteligently, 53 pixels.
+settings|panels, panel2, hide panel inteligently.
+
+
+[[File:17090008.jpg|200px]]
+[[File:17090009.jpg|200px]]
