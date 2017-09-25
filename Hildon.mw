@@ -32,7 +32,7 @@ You can then verify correct operation by ssh-ing in, as root:
 
 <pre>
 sudo mv /etc/profile.d/start_weston.sh /etc
-killall	weston
+sudo killall weston
 
 Xorg &
 DISPLAY=:0
