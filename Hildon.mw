@@ -58,7 +58,7 @@ You will also have to install <code>dbus-x11</code> in order to get <code>dbus-l
 hildon-desktop can then be started by running <code>startx</code>.
 
 === Performance problems ===
-Hildon renders everything on the GPU, which is terribly slow when we have to resort to software rendering. At least on the N900 it is not usable at all. The GTK+3 version won't improve this, as it also uses Clutter for rendering. We could try to use [https://github.com/lunixbochs/tinygles tinygles] instead of mesa, which does software rendering only and is optimized for performance. It is a bit dated though, so no idea if it will actually be faster.
+Hildon renders everything on the GPU, which is terribly slow when we have to resort to software rendering. At least on the N900 it is not usable at all. The GTK+3 version won't improve this, as it also uses Clutter for rendering. We could try to use [https://github.com/lunixbochs/tinygles tinygles] instead of mesa, which does software rendering only and is optimized for performance. It is a bit dated though, so no idea if it will actually be faster. [https://github.com/lunixbochs/tinygles/issues/9 Asked for opinion from upstream.]
 
 === See also ===
 
