@@ -34,6 +34,7 @@ You can then verify correct operation by ssh-ing in, as root:
 sudo mv /etc/profile.d/start_weston.sh /etc
 sudo killall weston
 sudo rc-update add dbus default
+sudo setup-xorg-base
 Xorg &
 DISPLAY=:0
 export DISPLAY
@@ -41,8 +42,6 @@ hildon-desktop
 </pre>
 
 === Running ===
-
-Run <code>sudo setup-xorg-base</code>.
 
 To run hildon-desktop, create a <code>~/.xinitrc</code> with the following contents:
 
