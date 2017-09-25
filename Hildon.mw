@@ -49,6 +49,7 @@ To run hildon-desktop, create a <code>~/.xinitrc</code> with the following conte
 if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
     eval `dbus-launch --sh-syntax --exit-with-session`
 fi
+export LC_MESSAGES=en_GB.UTF-8
 exec hildon-desktop
 </pre>
 
