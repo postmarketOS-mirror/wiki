@@ -1,16 +1,12 @@
-=== Building and starting a qemu image ===
+=== Building and starting a QEMU image ===
 
 <pre class="shell">pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
 pmbootstrap install
-pmbootstrap qemu</pre>
+pmbootstrap qemu --image-size=2G</pre>
 ''Note: The <code>amd64</code> version is recommended if you don't know which one to choose. See the device specific pages (links below) for the differences.''
 
-=== Increase partition size ===
+The <code>--image-size=2G</code> parameter will increase the image size to 2GB, so you don't run out of space (by default the image size is as small as possible). Check out <code>pmbootstrap qemu --help</code> for more options, such as performance tweaks.
 
-By default, the size in the image is almost as small as possible. This is, because the initramfs will resize it to the full available space of the partition on first boot on a real device. This does not work in qemu, because we never put it on a real partition. So use the following command to increase the image file (the initramfs will adjust the partitions in the image automatically).
-
-<pre class="shell">pmbootstrap flasher export # exports a symlink to the qemu system image/prints the path
-truncate -s +200M /path/to/qemu.img # replace 200M accordingly</pre>
 === See also ===
 
 * [[qemu-amd64-(QEMU-for-x86_64)|Qemu for x86_64]]
