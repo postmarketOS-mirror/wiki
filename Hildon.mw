@@ -60,6 +60,16 @@ hildon-desktop can then be started by running <code>startx</code>.
 === WIP: Possible fix for performance problems ===
 Hildon renders everything on the GPU, which is terribly slow when we have to resort to software rendering. At least on the N900 it looks like a slideshow. The GTK+3 version won't improve this, as it also uses Clutter for rendering. However, we should be able to improve the situation by replacing the OpenGL stuff, that mesa currently handles, with a faster software implementation from [https://github.com/lunixbochs/tinygles TinyGLES] and related libraries.
 
+<pre>
+Current stack:
+(hardware) - mesa - cogl - clutter - hildon
+
+New stack:
+(hardware) - tinygles - glshim - cogl - clutter - hildon
+</pre>
+
+It makes sense to run cogl demos with tinygles before trying anything hildon or clutter related, as Clutter depends on cogl.
+
 More information:
 * [https://github.com/lunixbochs/glshim glshim]
 * [https://github.com/lunixbochs/tinygles/issues/9 Asking upstream if this is possible]
