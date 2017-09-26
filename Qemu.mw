@@ -5,7 +5,7 @@ pmbootstrap install
 pmbootstrap qemu --image-size=2G</pre>
 ''Note: The <code>amd64</code> version is recommended if you don't know which one to choose. See the device specific pages (links below) for the differences.''
 
-The <code>--image-size=2G</code> parameter will increase the image size to 2GB, so you don't run out of space (by default the image size is as small as possible). Check out <code>pmbootstrap qemu --help</code> for more options, such as performance tweaks.
+The <code>--image-size=2G</code> parameter will increase the image size to 2GB, so you don't instantly run out of space (by default the image size is as small as possible). Check out <code>pmbootstrap qemu --help</code> for more options, such as performance tweaks.
 
 === See also ===
 
