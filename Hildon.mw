@@ -74,7 +74,7 @@ More information:
 * [https://github.com/lunixbochs/glshim glshim]
 * [https://github.com/lunixbochs/tinygles/issues/9 Asking upstream if this is possible]
 * [https://github.com/lunixbochs/tinygles/issues/10 Unable to run hildon-desktop: Failed to create texture 2d due to size/format constraints]
-* [https://pyra-handheld.com/boards/threads/glshim.69736/ Pandora thread about glshim]
+* [https://pyra-handheld.com/boards/threads/glshim.69736/ Pandora thread about glshim] (contains debug environment variables etc!)
 
 === See also ===
 
