@@ -1,19 +1,84 @@
 [[Category:Supported Devices]]
 [[Category:Devices]]
 {{Infobox device
-| manufacturer = Google (Asus)
-| name = Google Nexus 7 (2013)
+| manufacturer = Asus-Goggle
+| name = Nexus 7 2013 WIFI
 | codename = flo
-| releaseyear = 2013
-| originalsoftware = Android 4.3 on Linux 3.4
+| image = File:Sony_yuga_weston.jpg
+| image caption = Flo running Hildon
+| release year = 2013 July 26
+| original software = Android 6 on Linux 3.4
+| cpu = Qualcomm APQ8064 Snapdragon S4 Pro Quad-Core Krait 300, 1.5GHz
+| gpu = Adreno 320, 400MHz
+| wifi = 802.11 a/b/g/n @ 2.4 GHz & 5 GHz
 | storage = 16/32GB
-| memory = 2GB
+| display = 7.02” 1920x1200 (323 ppi) FHD IPS
+| memory = 2GB DDR3L SDRAM 
 }}
-= Contributors =
+=== Contributors ===
 
-* montvid
+* montvid porting
+* John Stultz Linaro Flo kernel maintainer.
+* Linaro, Qualcomm, Red Hat/Freedreno kernel, drivers upstreaming
 
-= Links =
+=== Keycombo's ===
 
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-asus-flo Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-asus-flo Kernel package]
+* Boot to bootloader: Power + Volume Down
+* Boot to recovery: Power + Volume Up
+* Shutdown: Power
+
+=== What works ===
+
+* 3D Freedreno hardware acceleration
+* Flashing with pmbootstrap
+* Linaro Kernel 4.11
+* Screen
+* Touchscreen input
+* USB Internet
+* WIFI Internet
+* X11, Xwayland-Weston, Hildon
+* TWRP Recovery
+
+=== What does not work yet ===
+
+* Audio
+* Bluetooth
+* Sensors
+* Camera
+
+=== Issues ===
+
+* WIFI firmware sometimes does not load. As a workaround one can delete/edit udev 50.firmware rules and start wifi with wcnss-start, write an Open-RC service.
+
+=== Other information ===
+
+* Flash system to userdata partition to have 10GB free space. If you don't have 10GB install TWRP recovery and format system/all partitons and start again:
+./pmbootstrap.py flasher flash_system --partition userdata
+
+./pmbootstrap.py flasher flash_kernel
+
+* My X11 xinitrc script - install xrandr and xinput:
+
+nano .xinitrc
+
+export DISPLAY=:0
+
+if
+    which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+
+    eval `dbus-launch --sh-syntax --exit-with-session`
+fi
+
+export LC_MESSAGES=en_US.UTF-8
+
+xrandr -o left
+
+xinput set-prop 'Elan Touchscreen' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
+
+exec hildon-desktop
+
+=== Links ===
+
+* [https://twrp.me/asus/asusnexus72013wifi.html TWRP recovery]
+* [https://git.linaro.org/landing-teams/working/qualcomm/wcnss-config.git/tree Wcnss-start]
+* [https://git.linaro.org/people/john.stultz/flo.git/log/?h=flo-v4.11 John Stultz Linaro Flo kernel]
