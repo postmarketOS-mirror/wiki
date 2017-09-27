@@ -53,7 +53,7 @@
 
 === Other information ===
 
-* Flash system to userdata partition to have 10GB free space. If you don't have 10GB install TWRP recovery and format system/all partitons and start again:
+* Flash the system to a userdata partition to have 10GB free space. If you don't have 10GB install TWRP recovery and format system/all partitions and start again:
 ./pmbootstrap.py flasher flash_system --partition userdata
 
 ./pmbootstrap.py flasher flash_kernel
