@@ -143,10 +143,12 @@ $ hwclock -w</source>
 
 In order to configure pmos to boot by default on the N900, using U-boot, you will need to boot into Maemo and create a <code>/etc/bootmenu.d/10-pmos.item</code> file as the root user with these contents:
 
-<pre>ITEM_NAME=&quot;Postmarket OS&quot;
+{{hc|/etc/bootmenu.d/10-pmos.item|
+ITEM_NAME=&quot;Postmarket OS&quot;
 ITEM_SCRIPT=&quot;boot.scr&quot;
 ITEM_DEVICE=&quot;${EXT_CARD}p1&quot;
-ITEM_FSTYPE=&quot;ext2&quot;</pre>
+ITEM_FSTYPE=&quot;ext2&quot;
+}}
 It can be set to the default boot option by creating a symlink:
 
 <pre>root@Nokia-N900:~# ln -s /etc/bootmenu.d/10-pmos.item /etc/default/bootmenu.item</pre>
@@ -163,7 +165,6 @@ Configuring this bootmenu entry as default
 Generating u-boot bootmenu script...
 </pre>
 '''Note''': This will set pmos as the default boot option. Maemo will still be accessible when booting the N900 with the keyboard slide out and selecting the relevant boot option in the u-boot boot menu.
-
 
 ==== SMS ====
 
