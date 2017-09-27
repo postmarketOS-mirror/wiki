@@ -22,7 +22,7 @@ Google open sourced their own [https://android.googlesource.com/device/google/de
 
 The nexus S and galaxy nexus have the serial port multiplexed with the USB connector instead of the headphone connector. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
 
-[[File:File:Nexus-usb-debug.png]]
+[[File:Nexus-usb-debug.png]]
 
 It should work with:
 
