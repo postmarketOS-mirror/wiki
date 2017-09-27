@@ -38,7 +38,7 @@ The Flame has open UART pads that are accessible underneath the outer and inner 
 
 Pull-ups/downs are unneccesary, hook straight up to any FTDI/USB-to-serial.
 
-[[File:https://gist.githubusercontent.com/yuvadm/238db856f1a81a572b0cd2a02a51ae8a/raw/69b1a7f6d7217ef618cf43c728fe10920f496cdf/01-pcb.jpg]]
+[[File:Mozilla-flame-pcb.jpg]]
 
 == Nokia N900 ==
 
