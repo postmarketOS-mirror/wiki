@@ -42,7 +42,7 @@ hildon-desktop
 
 === Running ===
 
-To run hildon-desktop in a horizontal view, create a <code>~/.xinitrc</code> with the following contents:
+hildon-desktop can be run in a horizontal view only so create a <code>~/.xinitrc</code> with the following contents:
 
 <pre>
 if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
