@@ -55,29 +55,23 @@
 === Other information ===
 
 * Flash the system to a userdata partition to have 10GB free space. If you don't see 10GB install TWRP recovery and format system/all partitions and start again:
-./pmbootstrap.py flasher flash_system --partition userdata
-
-./pmbootstrap.py flasher flash_kernel
+<pre>./pmbootstrap.py flasher flash_system --partition userdata
+./pmbootstrap.py flasher flash_kernel</pre>
 
 * My X11 xinitrc script - install xrandr and xinput:
 
+<pre>
 nano .xinitrc
-
 export DISPLAY=:0
-
 if
     which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-
     eval `dbus-launch --sh-syntax --exit-with-session`
 fi
-
 export LC_MESSAGES=en_US.UTF-8
-
 xrandr -o left
-
 xinput set-prop 'Elan Touchscreen' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
-
 exec hildon-desktop
+</pre>
 
 === Links ===
 
