@@ -144,7 +144,7 @@ $ hwclock -w</source>
 In order to configure pmos to boot by default on the N900, using U-boot, you will need to boot into Maemo and create a <code>/etc/bootmenu.d/10-pmos.item</code> file as the root user with these contents:
 
 {{hc|/etc/bootmenu.d/10-pmos.item|<syntaxhighlight lang="ini">
-ITEM_NAME="Postmarket OS"
+ITEM_NAME="postmarketOS"
 ITEM_SCRIPT="boot.scr"
 ITEM_DEVICE="${EXT_CARD}p1"
 ITEM_FSTYPE="ext2"
@@ -159,7 +159,7 @@ Default bootmenu entry is '/etc/bootmenu.d/10-pmos.item'
 Adding bootmenu entry for: 'Maemo 5 with attached kernel (Internal Nand)'
 
 Configuration file: /etc/bootmenu.d/10-pmos.item
-Adding bootmenu entry for: 'Postmarket OS'
+Adding bootmenu entry for: 'postmarketOS'
 Configuring this bootmenu entry as default
 
 Generating u-boot bootmenu script...
