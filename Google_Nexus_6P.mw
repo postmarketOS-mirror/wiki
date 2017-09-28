@@ -1,4 +1,4 @@
-[[Category:Unsupported Devices]]
+[[Category:Supported Devices]]
 [[Category:Devices]]
 {{Infobox device
 | manufacturer = Google (Huawei)
@@ -24,15 +24,13 @@
 * Booting kernel via fastboot
 * Telnet to initramfs, ssh to running system
 * Mounting rootfs via NFS over USB (needs the [https://github.com/postmarketOS/pmbootstrap/pull/547 nfs-root PR])
+* Graphics (using msm_fb_refresher)
 * Touchscreen
-* Wi-Fi: Follow [[Wifi#Connecting_to_APs]] to enable; currently using outdated firmware from upstream linux-firmware package
+* Wi-Fi: Follow [[Wifi#Connecting_to_APs]] to enable; currently using firmware extracted from AOSP.
 
 == What does not work ==
 
-* Splash image
-* Graphics: Screen will only work if you [https://github.com/postmarketOS/pmbootstrap/pull/66 run in the background]
-<pre>while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
-* Mounting rootfs on internal storage (untested)
+* Flashing and mounting rootfs on internal storage (untested)
 * Everything else (no Bluetooth, audio, modem, accelerometer, you tell me)
 
 == Kernel configs applied ==
@@ -42,7 +40,6 @@ Configs changed from stock Lineage kernel:
 * [[Kernel_configuration#CONFIG_VT | CONFIG_VT]]=y
 * CONFIG_FRAMEBUFFER_CONSOLE=y
 * Various NFS client configs: CONFIG_NFS_V4_1=y
-* [[Kernel_configuration#CONFIG_MSM_KGSL | CONFIG_MSM_KGSL]]=n
 * CONFIG_BCMDHD_FW_PATH, CONFIG_BCMDHD_NVRAM_PATH
 
 == How to enter flash mode ==
@@ -50,6 +47,24 @@ Configs changed from stock Lineage kernel:
 The Nexus 6P, like all Google Nexus devices, uses Fastboot as the flashing protocol.
 
 To enter Fastboot mode, hold Volume Down while powering on the device. Let go of Volume Down when a picture of a green Android mascot shows up on the screen.
+
+== Research ==
+
+=== Mainline ===
+
+There is a [https://www.youtube.com/watch?v=77tuFtM4gjA project] to port the mainline kernel to Nexus 6P: as a result there's now some support for Nexus 6P in mainline. However, currently there's only support for serial output and input, no screen or USB. Thus, this port doesn't use a mainline kernel. (The mainlining team's members can be found at ##linux-msm on Freenode.)
+
+=== Modem ===
+
+Android boots the modem by mounting the modem partition to /firmware, then opening /dev/subsys_modem. Doing the same on postmarketOS (after linking all the firmware in /firmware/images to /lib/firmware/postmarketos) causes any `dmesg` call to freeze (?!), and the device would kernel panic with a [https://gist.github.com/zhuowei/c7a92393e25136c8977a46361bf826d7 "modem crashed" error] in a few seconds.
+
+=== Audio ===
+
+The audio requires the blobs from Android's /vendor/adsp.* to be present in /lib/firmware/postmarketos. Then, opening /dev/subsys_adsp will boot the sound card. Currently ALSA recognizes the sound card but fails with an error when playing audio: the Android audio configuration files would need to be converted to Linux format by [https://github.com/ford-prefect/xml2ucm xml2ucm]. See https://arunraghavan.net/2016/01/audio-devices-and-configuration/ for an explanation of the difference between Android and Linux audio, and see https://github.com/kholk/sony-alsa-ucm/tree/master/kitakami for a different SD810 device's ALSA config.
+
+=== Bluetooth ===
+
+It seems Bluetooth is connected via H4 UART at /dev/ttyHS0. [https://wiki.tizen.org/Porting_Guide/Connectivity#Configuration Tizen] uses the hciattach_bcm43xx tool from BlueZ to load firmware to the Bluetooth dongle, but I can't find this utility in Alpine's bluez or bluez-deprecated package. btattach -B /dev/ttyHS0 doesn't seem to work.
 
 == Links ==
 
