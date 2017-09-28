@@ -14,20 +14,15 @@ Most Android devices are compatible with the open source fastboot protocol. That
 
 === Odin mode ===
 
-This uses a proprietary flashing protocol from Samsung. There has been great effort put into Heimdall, an open source program that tries to be compatible to the odin protocol. But it does not work perfectly yet, and some devices are not<br />
-supported at all.
+This uses a proprietary flashing protocol from Samsung. There has been great effort put into Heimdall, an open source program that tries to be compatible to the odin protocol. But it does not work perfectly yet, and some devices are not supported at all.
 
-So first check if your device also supports fastboot - some Samsung devices (such as the Galaxy Nexus) actually have both protocols (you would need to press another key combination to enter fastboot mode - search the Internet for the<br />
-supported flash modes of your device). If you can use fastboot, please do so.
+So first check if your device also supports fastboot - some Samsung devices (such as the Galaxy Nexus) actually have both protocols (you would need to press another key combination to enter fastboot mode - search the Internet for the supported flash modes of your device). If you can use fastboot, please do so.
 
 For postmarketOS we're going to use Heimdall, but we use it in two different configurations - <code>heimdall-isorec</code> and <code>heimdall-bootimg</code>. You will need to find out the correct one for your device.
 
 ==== Isorec or bootimg? ====
 
-A <code>boot.img</code> file contains a Linux kernel and an initramfs, along with some other configuration, such as the kernel command line. Some Samsung devices support these <code>boot.img</code> files, while others only support flashing a kernel with<br />
-a baked-in initramfs. To find out what your device has, download a known working image for your device<br />
-(e.g. from the vendor, or a LineageOS ROM, ...). Usually they come in zip files. Extract the zip file, and you will find a <code>boot.img</code> inside. Run the command <code>file</code> on that to find out, whether it is a real <code>boot.img</code> file, or just a<br />
-<code>vmlinuz</code> file:
+A <code>boot.img</code> file contains a Linux kernel and an initramfs, along with some other configuration, such as the kernel command line. Some Samsung devices support these <code>boot.img</code> files, while others only support flashing a kernel with a baked-in initramfs. To find out what your device has, download a known working image for your device (e.g. from the vendor, or a LineageOS ROM, ...). Usually they come in zip files. Extract the zip file, and you will find a <code>boot.img</code> inside. Run the command <code>file</code> on that to find out, whether it is a real <code>boot.img</code> file, or just a <code>vmlinuz</code> file:
 
 <pre class="shell">file boot.img # real boot.img file -&gt; use heimdall-bootimg
 Android bootimg, kernel, ramdisk, page size: 2048</pre>
@@ -40,8 +35,7 @@ To generate a working boot.img, in the <code>deviceinfo</code> you also need to 
 
 ===== <code>heimdall-isorec</code> =====
 
-Usually the initramfs would get packed into the vmlinuz file, when it has no support for the <code>boot.img</code> format. But this is a problem for postmarketOS, because we want to generate the initramfs explicitly ''after'' compiling the<br />
-kernel, like it is done in typical Linux distributions.
+Usually the initramfs would get packed into the vmlinuz file, when it has no support for the <code>boot.img</code> format. But this is a problem for postmarketOS, because we want to generate the initramfs explicitly ''after'' compiling the kernel, like it is done in typical Linux distributions.
 
 So what we do instead, is putting the real initramfs on the recovery partition (or any other free partition, such as &quot;kernel2&quot;, but the name comes from &quot;isolated recovery&quot; and was coined by [https://forum.xda-developers.com/galaxy-s2/orig-development/isorec-isolated-recovery-galaxy-s2-t3291176 Lanchon]). The initramfs baked into the kernel only extracts the real initramfs, and executes its init script.
 
