@@ -12,7 +12,7 @@ We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be eas
 === Installation instructions ===
 
 Add following packages as extra in pmbootstrap init: 
-<pre>mesa,mesa-dri-swrast,hildon-desktop,hildon-theme-alpha</pre>
+<pre>mesa,mesa-dri-swrast,hildon-desktop,hildon-theme-alpha,dbus-x11,xrandr,xinput,xorg-server,xf86-input-libinput,libinput</pre>
 
 Notice that due to swrast being used (probably) this is way too slow to be usable on N900. Even typing in xfce4-terminal results in one second lag.
 
@@ -34,7 +34,7 @@ You can then verify correct operation by ssh-ing in, as root:
 sudo mv /etc/profile.d/start_weston.sh /etc
 sudo killall weston
 sudo rc-update add dbus default
-sudo setup-xorg-base
+sudo rc-service dbus start
 Xorg &
 export DISPLAY=:0
 hildon-desktop
@@ -51,8 +51,6 @@ fi
 export LC_MESSAGES=en_GB.UTF-8
 exec hildon-desktop
 </pre>
-
-You will also have to install <code>dbus-x11</code> in order to get <code>dbus-launch</code>. Depending on the device you have, you may also have to install <code>mesa-dri-swrast</code>.
 
 hildon-desktop can then be started by running <code>startx</code>.
 
