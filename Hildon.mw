@@ -36,8 +36,7 @@ sudo killall weston
 sudo rc-update add dbus default
 sudo setup-xorg-base
 Xorg &
-DISPLAY=:0
-export DISPLAY
+export DISPLAY=:0
 hildon-desktop
 </pre>
 
