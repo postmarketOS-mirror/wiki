@@ -42,17 +42,18 @@ hildon-desktop
 
 === Running ===
 
-To run hildon-desktop, create a <code>~/.xinitrc</code> with the following contents:
+To run hildon-desktop in a horizontal view, create a <code>~/.xinitrc</code> with the following contents:
 
 <pre>
 if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
     eval `dbus-launch --sh-syntax --exit-with-session`
 fi
-export LC_MESSAGES=en_GB.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+xrandr -o left
+xinput set-prop 'Your touchscreen name' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
 exec hildon-desktop
 </pre>
-
-hildon-desktop can then be started by running <code>startx</code>.
+'Your touchscreen name' should be your touchscreen name. You can find out your touchscreen name by running <code>sudo libinput list-devices</code>. hildon-desktop can then be started by running <code>startx</code>.
 
 === WIP: Possible fix for performance problems ===
 Hildon renders everything on the GPU, which is terribly slow when we have to resort to software rendering. At least on the N900 it looks like a slideshow. The GTK+3 version won't improve this, as it also uses Clutter for rendering. However, we should be able to improve the situation by replacing the OpenGL stuff, that mesa currently handles, with a faster software implementation from [https://github.com/lunixbochs/tinygles TinyGLES] and related libraries.
