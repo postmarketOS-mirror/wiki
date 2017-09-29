@@ -29,4 +29,4 @@ The big reason for "squash and merge" is, that the reviewer usually tests and re
 
 If you feel like multiple commits should be merged without being squashed, please make multiple PRs for them. Especially when you note somewhere, that you have another PR coming, that depends on the other one, we will do our best to prioritize getting that PR in, so you are not blocked.
 
-Just to avoid confusion, ''we'' squash the commit for you, you don't need to do that in your PR.
+Just to avoid confusion, ''we'' squash the commit for you, it's totally okay to have multiple commits in one PR (it even makes the history easier to read, when commits come after a code review for example).
