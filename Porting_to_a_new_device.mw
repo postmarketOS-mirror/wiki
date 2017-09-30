@@ -69,7 +69,10 @@ In the mainline kernel instead, you enable [https://github.com/postmarketOS/pmbo
 
 <pre class="shell">cd &quot;$srcdir/build/arch/arm/boot&quot;
 cat zImage dts/omap3-n900.dtb &gt; zImage-dtb</pre>
-''If you are unsure, whether your device has an appended dtb file, use [https://github.com/PabloCastellano/extract-dtb extract-dtb] on an existing kernel image (e.g. from LineageOS). <code>extract-dtb</code> is packaged for postmarketOS, you can build it with <code>pmbootstrap build extract-dtb</code>.''
+
+Is it possible that your device need the dtb file appended to the boot.img instead of the kernel itself. In that case you have to pack all the generated dtb files into a single master dtb.img file (see example [https://github.com/postmarketOS/pmbootstrap/blob/cfbf06ee71eed6f9bc1ec40087c3a6c69ab629c6/aports/device/linux-huawei-y530/APKBUILD#L115-L116 here] and [https://github.com/postmarketOS/pmbootstrap/blob/cfbf06ee71eed6f9bc1ec40087c3a6c69ab629c6/aports/device/linux-huawei-y530/APKBUILD#L124-L126 here]) and add the variable <code>deviceinfo_bootimg_qcdt="true"</code> in the <code>deviceinfo</code>.
+
+''If you are unsure, whether your device has an appended dtb file, use [https://github.com/PabloCastellano/extract-dtb extract-dtb] on an existing kernel image or boot.img file (e.g. from LineageOS or TWRP). <code>extract-dtb</code> is packaged for postmarketOS, you can build it with <code>pmbootstrap build extract-dtb</code>.''
 
 === Installation ===
 
