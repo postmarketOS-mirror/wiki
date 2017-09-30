@@ -209,8 +209,7 @@ Stop ofono in order to set APN:
 Edit APN, where <IMSI> should be replaced in the following commands with the IMSI from your SIM card. Replace <APN> with the relevant APN for your cellular carrier (e.g. fast.t-mobile.com).
 This file should be created when ofono starts, so you should only need to add the APN.
 
-<code>/var/lib/ofono/<IMSI>/gprs</code>
-<pre>
+{{hc|/var/lib/ofono/<IMSI>/gprs|<nowiki>
 [Settings]                                                                                                                                                                                                                                                                                                                                                              
 Powered=true                                                                                                                                                                                                                                                                                                                                                            
 RoamingAllowed=false                                                                                                                                                                                                                                                                                                                                                    
@@ -223,7 +222,7 @@ Password=
 AuthenticationMethod=chap                                                                                                                                                                                                                                                                                                                                               
 Type=internet                                                                                                                                                                                                                                                                                                                                                           
 Protocol=ip  
-</pre>
+</nowiki>}}
 
 Start ofono and power on modem.
 
@@ -241,6 +240,7 @@ cellular_340369959729712_context1
 </pre>
 
 Connect to the cellular service:
+
 <pre>                                
 $ sudo connmanctl connect cellular_340369959729712_context1                                     
 Connected cellular_340369959729712_context1
