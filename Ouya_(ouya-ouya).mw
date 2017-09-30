@@ -1,0 +1,35 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Ouya, Inc.
+| name =  Ouya
+| codename = ouya_1_1
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = Android
+| cpu = 1.7 GHz Quad-Core ARM Cortex-A9
+| gpu = Nvidia GeForce ULP @ 520 MHz (12.48 GFLOPS)
+| storage = 8GB/16GB internal flash memory
+| display = 1x HDMI
+| memory = 1 GB DDR3 SDRAM
+}}
+
+== Contributors ==
+* rendeko
+
+== Maintainer(s) ==
+* rendeko
+
+== What works ==
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+W.I.P.
+
+== Photos ==
+
+== Links ==
