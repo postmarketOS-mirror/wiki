@@ -27,6 +27,11 @@ There are two cross-compile types supported. [https://github.com/postmarketOS/pm
 * <code>&quot;native&quot;</code>: the build system of the package understands cross-compiling, like all kernel packages. We can use the native chroot with the cross-compiler inside that chroot for maximum speed.
 * <code>&quot;distcc&quot;</code>: the build system of the package does ''not'' understand cross-compiling, so we run the whole compiling process inside a chroot with the target architecture (with qemu user mode emulation, this is slow). We avoid using qemu emulation for the compiler though, because we use the cross-compiler inside the native chroot through distcc (which was originally meant to share compiling efforts across the network, but it works for this case. [https://archlinuxarm.org/wiki/Distcc_Cross-Compiling Arch Linux ARM also does this] and has a detailed description of how to set this up manually.)
 
+=== Performance related issues ===
+* [https://github.com/postmarketOS/pmbootstrap/issues/659 Use "native" for (almost) all packages?]
+* [https://github.com/postmarketOS/pmbootstrap/issues/384 Distcc: use pump mode for possible performance improvement]
+* [https://github.com/postmarketOS/pmbootstrap/issues/480 Distcc: has integrated timeout, slowing down our builds ._.]
+
 === Caches ===
 
 <code>pmbootstrap</code> uses various caches. They can all be found inside the <code>work</code> folder, and start with <code>cache_</code>. All cache folders get mounted to the appropriate chroots, depending on $ARCH. They are shared among the chroots, when it makes sense (e.g. <code>cache_distfiles</code>).
