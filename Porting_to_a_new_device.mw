@@ -14,10 +14,11 @@ If you have ''any'' questions, feel free to ask in the [[Matrix and IRC|matrix/i
 Create an appropriate <code>device-$vendor-$name</code> package in the <code>aports/device</code> folder:
 
 <pre class="shell">cp -r aports/device/device-samsung-i9100 aports/device/device-vendor-name</pre>
-The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary. Note that if your device uses '''fastboot''', you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/2670c3a031e7204cb638a6947ea4e867e66d033b/aports/device-lg-mako/deviceinfo#L18-L24 example]):
+The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary.<br/>Note that if your device uses '''fastboot''' or [https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods#Isorec_or_bootimg.3F '''heimdall-bootimg'''], you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/eddf81a730b68076e59b66f2a6163e6587b7fc84/aports/device/device-sony-yuga/deviceinfo#L22-L28 example]):
 
 <pre class="shell"># Fastboot related
 deviceinfo_generate_bootimg=&quot;true&quot;
+deviceinfo_flash_offset_base=&quot;&quot;
 deviceinfo_flash_offset_kernel=&quot;&quot;
 deviceinfo_flash_offset_ramdisk=&quot;&quot;
 deviceinfo_flash_offset_second=&quot;&quot;
@@ -36,7 +37,7 @@ Now, you can build your device package with:
 While the goal is to use a mainline kernel for all devices in the long run, this certainly can not be done in one step when porting to a new device. Create a new package for the kernel by copying the kernel package of the most similar device with an existing port. For example:
 
 <pre class="shell">cp -r aports/device/linux-lg-mako aports/device/linux-vendor-name</pre>
-Now edit the <code>APKBUILD</code>. Replace the kernel source with a kernel suitable for your device. For Android devices we usually use the [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#LineageOS_kernel_source_repository kernels from LineageOS]. Copy the right [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Kernel_defconfig_.28default_config.29] from your kernel's source folder into your new <code>linux-...</code> folder and adjust its file name. Please adjust the comments in the <code>APKBUILD</code> file about which defconfig you have used, and which modifications you have made. Please also adjust the <code>pkgver</code>/<code>pkgrel</code> to match the [https://stackoverflow.com/a/12151781 kernel version].
+Now edit the <code>APKBUILD</code>. Replace the kernel source with a kernel suitable for your device. For Android devices we usually use the [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#LineageOS_kernel_source_repository kernels from LineageOS]. Copy the right [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Kernel_defconfig_.28default_config.29 default config] from your kernel's source folder into your new <code>linux-...</code> folder and adjust its file name. Please adjust the comments in the <code>APKBUILD</code> file about which defconfig you have used, and which modifications you have made. Please also adjust the <code>pkgver</code>/<code>pkgrel</code> to match the [https://stackoverflow.com/a/12151781 kernel version].
 
 Next, generate the checksum for the kernel package files using:
 
@@ -44,7 +45,7 @@ Next, generate the checksum for the kernel package files using:
 Now, before building the kernel itself, it is required to run the kernel's [https://en.wikipedia.org/wiki/Menuconfig menuconfig] with:
 
 <pre class="shell">./pmbootstrap.py menuconfig linux-$vendor-$name</pre>
-The first time, you run the menuconfig command, you will get prompted about new config options, that the default config does not address (in Android's build process, these options get ignored, but in pmOS they must be specified). Please accept the defaults it presents. After that, you will be shown a menu, in which the <code>DEVTMPFS</code> kconfig flag should be enabled, to get udev working, which is needed for touchscreen support in Weston. It should be located under <code>Device Drivers ---&gt; Generic Driver Options</code>. NOTE: Do NOT set <code>DEVTMPFS</code> to automount.
+The first time, you run the menuconfig command, you will get prompted about new config options, that the default config does not address (in Android's build process, these options get ignored, but in pmOS they must be specified). Please accept the defaults it presents.<br/>After that, you will be shown a menu, in which the [https://wiki.postmarketos.org/wiki/Kernel_configuration#Required required kernel options] must be set for pmOS to work.
 
 Once you have configured the kernel, build it (the arch specification is necessary here, because we're really compiling code - the device package just contains text/scripts and no native code, therefore it is architecture independent):
 
