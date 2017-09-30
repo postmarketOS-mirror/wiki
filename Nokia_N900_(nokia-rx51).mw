@@ -195,8 +195,9 @@ GPRS can be managed by [https://pkgs.alpinelinux.org/package/edge/testing/armhf/
 
 It's '''VERY''' important that you add the following to <code>/etc/connman/main.conf</code> '''BEFORE''' starting connman, else it will take over all network connection handling and disconnect you if you are connected over SSH:
 
-<code>/etc/connman/main.conf</code>
-<pre>NetworkInterfaceBlacklist = usb,wlan</pre> 
+{{hc|/etc/connman/main.conf|<nowiki>
+NetworkInterfaceBlacklist = usb,wlan
+</nowiki>}}
 
 Configure connman to start at boot:
 
