@@ -55,6 +55,21 @@ exec hildon-desktop
 </pre>
 'Your touchscreen name' should be your touchscreen name. You can find out your touchscreen name by running <code>sudo libinput list-devices</code>. hildon-desktop can then be started by running <code>startx</code>. To run programs you need to <code>export DISPLAY=:0</code>. To set it by default edit <code>sudo nano /etc/profile</code>.
 
+=== Rotate screen when using ''fbdev'' driver ===
+
+In order to rotate the screen when using the framebuffer, you need to create this file:
+
+'''/etc/X11/xorg.conf.d/1-fbdev.conf'''
+<pre>
+Section "Device"
+  Identifier "LCD"
+  Driver "fbdev"
+  Option "Rotate" "CW"
+EndSection
+</pre>
+
+reference: https://www.x.org/archive//X11R6.8.0/doc/fbdev.4.html
+
 === WIP: Possible fix for performance problems ===
 Hildon renders everything on the GPU, which is terribly slow when we have to resort to software rendering. At least on the N900 it looks like a slideshow. The GTK+3 version won't improve this, as it also uses Clutter for rendering. However, we should be able to improve the situation by replacing the OpenGL stuff, that mesa currently handles, with a faster software implementation from [https://github.com/lunixbochs/tinygles TinyGLES] and related libraries.
 
