@@ -1,7 +1,7 @@
 === Building and starting a QEMU image ===
 
 <pre class="shell">pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
-pmbootstrap install
+pmbootstrap install --no-fde
 pmbootstrap qemu --image-size=2G</pre>
 ''Note: The <code>amd64</code> version is recommended if you don't know which one to choose. See the device specific pages (links below) for the differences.''
 
