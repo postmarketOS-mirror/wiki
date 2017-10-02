@@ -589,7 +589,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
 |-
   | [[NEC Terrain]]
-  | rel
+  | nec-ne-201a1a
   |
 |-
   | [[Qemu Nokia N900|Qemu N900]]
