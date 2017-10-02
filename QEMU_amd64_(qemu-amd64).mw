@@ -20,6 +20,7 @@ QEMU will emulate the default x86_64 architecture (see <code>qemu-system-x86_64 
 === What does not work ===
 
 * Weston
+* X11 over vesa: see issue #672
 
 === Screenshot ===
 
