@@ -588,6 +588,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | motorola-x-2014
   |
 |-
+  | [[Qemu Nokia N900|Qemu N900]]
+  | qemu-n900
+  |
+|-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
   |
