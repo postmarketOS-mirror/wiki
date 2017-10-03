@@ -32,7 +32,7 @@
 === What works ===
 
 * 3D Freedreno hardware acceleration
-* Flashing with pmbootstrap
+* Flashing with pmbootstrap/fastboot
 * Linaro Kernel 4.11
 * Screen
 * Touchscreen input
@@ -60,7 +60,7 @@
 ./pmbootstrap.py flasher flash_kernel</pre>
 
 * To run Hildon see [[Hildon]]
-
+* To run Internet via USB see [[USB Internet]]
 === Links ===
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-asus-flo Device package]
