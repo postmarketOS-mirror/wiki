@@ -52,18 +52,58 @@ $ ./pmbootstrap.py install --sdcard=/dev/mmcblk
 
 == Flashing ==
 
--- Set phone to ODIN mode
+- Set phone to ODIN mode
 
   1. Turn off phone
   2. Connect USB cable
   3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
   4. Push VOLUME_UP to continue to ODIN mode screen
 
--- Build and flash the kernel
+- Build and flash the kernel
 
   $ ./pmbootstrap.py flasher flash_kernel
 
+== Boot ==
+
+Once postmarketOS is installed on the sdcard and the kernel is flashed, you need telnet to unlock the root partition
+  
+  $ telnet 172.16.42.1
+  Trying 172.16.42.1...
+  Connected to 172.16.42.1.
+  Escape character is '^]'.
+
+  Enter passphrase for /dev/mapper/mmcblk1p2:
+
+Then you can SSH into the device.
+
+  $ ssh user@172.16.42.1
+
 == Wifi == 
+
+To get the wifi working, you'll need to modify the wpa_supplicant confg
+  
+  # If this is not done, wpa_supplicant launches itself with -ip2p0
+  $ echo 'wpa_supplicant_args="-iwlan0 -Dwext"' | sudo tee /etc/conf.d/wpa_supplicant
+  $ sudo wpa_passphrase $YOUR_SSID > /etc/wpa_supplicant/wpa_supplicant.conf
+  $ /etc/init.d/wpa_supplicant restart
+ 
+Write the following file to <source>/etc/network/interfaces</source>
+
+  auto lo 
+  iface lo inet loopback   
+  auto wlan0 
+  iface wlan0 inet dhcp
+
+Restart the network to verify it's working
+
+  $ /etc/init.d/networking restart
+
+Set it to start on boot
+
+  $ sudo rc-update add wpa_supplicant boot
+  $ sudo rc-update add networking default
+
+Reboot and you should be connected on boot.
 
 == Photos ==
 
