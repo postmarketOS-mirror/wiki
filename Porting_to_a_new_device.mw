@@ -47,6 +47,10 @@ Now, before building the kernel itself, it is required to run the kernel's [http
 <pre class="shell">./pmbootstrap.py menuconfig linux-$vendor-$name</pre>
 The first time, you run the menuconfig command, you will get prompted about new config options, that the default config does not address (in Android's build process, these options get ignored, but in pmOS they must be specified). Please accept the defaults it presents.<br/>After that, you will be shown a menu, in which the [https://wiki.postmarketos.org/wiki/Kernel_configuration#Required required kernel options] must be set for pmOS to work.
 
+The easiest way is getting out of the menu with "Exit", and confirming when asked whether the changes should be saved. Then run the following to see what needs to be changed in your config:
+<pre class="shell">./pmbootstrap.py kconfig_check</pre>
+Adjust your kernel config until <code>kconfig_check</code> doesn't complain anymore.
+
 Once you have configured the kernel, build it (the arch specification is necessary here, because we're really compiling code - the device package just contains text/scripts and no native code, therefore it is architecture independent):
 
 <pre class="shell">./pmbootstrap.py build linux-$vendor-$name --arch=armhf</pre>
