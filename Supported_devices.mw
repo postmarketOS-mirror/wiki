@@ -567,6 +567,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | apple-ipt1g
   |
 |-
+  | [[Archos_80_G9_(archos-a80)|Archos 80 G9]]
+  | archos-a80
+  | Still figuring out the flashing stuff
+|-
   | [[Asus-tf101-(ASUS-Transformer-TF101)|ASUS Eee Pad Transformer]]
   | asus-tf101
   | Kernel does not compile
