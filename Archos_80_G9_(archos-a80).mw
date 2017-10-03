@@ -1,0 +1,36 @@
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Archos
+| name =  80 G9 Turbo
+| codename = a80
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = Archos 80 G9 Turbo
+| releaseyear = 2012
+| originalsoftware = Android 4.0 ICS
+| cpu = TI OMAP 4460
+| storage = 16GB
+| display = 1024x768 TN
+| memory = 1GB
+}}
+
+== Contributors ==
+* MartijnBraam
+
+== What works ==
+Nothing yet
+
+== What does not work ==
+
+== How to enter flash mode ==
+You can enter flash mode with power+volup or power+voldown after installing the SDE bootmenu
+
+== Installation ==
+
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+== Links ==
+SDE Bootmenu installation on XDA [https://forum.xda-developers.com/showthread.php?t=1653566]
