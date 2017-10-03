@@ -38,7 +38,7 @@
 * Touchscreen input
 * USB Internet
 * WIFI Internet
-* X11, Xwayland-Weston, Hildon
+* X11 Hildon, Mate, Xwayland-Weston
 * TWRP Recovery
 
 === What does not work yet ===
