@@ -39,6 +39,7 @@ After installing SDE bootmenu you can install the kernel and initramfs. This is 
 
 # Power on the tablet while holding volume down
 # Select "Developer Edition Menu"
+# The first time you flash a kernel you'll have to remove the android kernel since the bootloader will default to that kernel over your custom developer kernel.
 # Select "Flash Kernel and Initramfs"
 # Mount the mass storage device that just appeared
 
