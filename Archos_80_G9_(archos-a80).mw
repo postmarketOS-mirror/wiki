@@ -34,6 +34,13 @@ The first step is installing SDE bootmenu so you'll be able to actually flash no
 # The device now shows up as an empty mass storage device, mount the device and download the [http://update.archos.com/9/gen9/gen9_sde/firmware_archos_it4.aos SDE bootmenu image] to it.
 # Unmount the mass storage device and press the power button again on the device to install
 
+=== Flashing the kernel and initramfs ===
+After installing SDE bootmenu you can install the kernel and initramfs. This is also done through a mass storage device.
+
+# Power on the tablet while holding volume down
+# Select "Developer Edition Menu"
+# Select "Flash Kernel and Initramfs"
+# Mount the mass storage device that just appeared
 
 == Photos ==
 
