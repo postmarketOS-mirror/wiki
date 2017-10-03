@@ -1,0 +1,62 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy SIII LTE
+| codename = i9305
+| image = File:samsung-i9305.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2012
+| originalsoftware = Android 4.1.1
+| cpu = Quad-core 1.4 GHz Cortex-A9
+| gpu = Mali-400MP4
+| storage = 16GB (internal), up to 64GB (sdcard)
+| display = 720x1280 Super AMOLED
+| memory = 2GB
+}}
+
+== Contributors ==
+* tyxieblub
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+* Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
+* Touchscreen
+* Weston (only on SD card)
+* XWayland
+* Wifi
+
+== What does not work ==
+
+* The rest
+
+== How to enter flash mode ==
+
+* Hold power + Home + volume down
+* When prompted, release all buttons and press volume up
+
+== Installation ==
+
+
+<source lang="shell">$ ./pmbootstrap.py init</source>
+
+Start the build process
+
+<source lang="shell">
+# Replace /dev/mmcblk with your actual sdcard device
+$ ./pmbootstrap.py install --sdcard=/dev/mmcblk
+</source>
+
+Build and flash the kernel
+
+<source lang="shell">$ ./pmbootstrap.py flasher flash_kernel</source>
+
+== Wifi == 
+
+== Photos ==
+
+== Links ==
