@@ -41,19 +41,27 @@
 
 == Installation ==
 
-
 <source lang="shell">$ ./pmbootstrap.py init</source>
 
-Start the build process
+Install to sdcard
 
 <source lang="shell">
 # Replace /dev/mmcblk with your actual sdcard device
 $ ./pmbootstrap.py install --sdcard=/dev/mmcblk
 </source>
 
-Build and flash the kernel
+== Flashing ==
 
-<source lang="shell">$ ./pmbootstrap.py flasher flash_kernel</source>
+-- Set phone to ODIN mode
+
+  1. Turn off phone
+  2. Connect USB cable
+  3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
+  4. Push VOLUME_UP to continue to ODIN mode screen
+
+-- Build and flash the kernel
+
+  $ ./pmbootstrap.py flasher flash_kernel
 
 == Wifi == 
 
