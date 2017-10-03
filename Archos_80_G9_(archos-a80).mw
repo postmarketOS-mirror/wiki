@@ -26,11 +26,16 @@ You can enter flash mode with power+volup or power+voldown after installing the 
 
 == Installation ==
 
+=== Installing SDE bootmenu ===
+The first step is installing SDE bootmenu so you'll be able to actually flash non-archos software to the device. This will void your warrenty!
 
-<!-- add more sections here as necessary, e.g. Wifi, ... -->
+# Power on the tablet while holding the volume down button, release the power button as soon as the archos logo shows up but hold the volume button.
+# Choose "Update Firmware" with the volume buttons and press the power button to accept
+# The device now shows up as an empty mass storage device, mount the device and download the [http://update.archos.com/9/gen9/gen9_sde/firmware_archos_it4.aos SDE bootmenu image] to it.
+# Unmount the mass storage device and press the power button again on the device to install
 
 
 == Photos ==
 
 == Links ==
-SDE Bootmenu installation on XDA [https://forum.xda-developers.com/showthread.php?t=1653566]
+[https://forum.xda-developers.com/showthread.php?t=1653566 SDE Bootmenu installation on XDA]
