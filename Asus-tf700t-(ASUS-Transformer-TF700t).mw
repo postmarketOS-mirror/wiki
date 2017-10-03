@@ -31,3 +31,4 @@
 === Useful Links ===
 * [https://wiki.gentoo.org/wiki/Asus_Transformer_Infinity_(TF700T)/Install How to install Gentoo on the TF700t]
 * [https://forum.xda-developers.com/showthread.php?t=2387133 Using Kexec to boot Kernels and .img files]
+* [https://www.spinics.net/lists/linux-tegra/msg30366.html Patches to get TF300t into mainline]
