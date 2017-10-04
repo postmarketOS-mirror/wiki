@@ -87,6 +87,11 @@ Connect to network using wpa_supplicant:
 If your network uses DHCP, start the DHCP client:
 
 <pre>$ sudo udhcpc -i wlan0</pre>
+
+==== Sound =====
+
+udevadm trigger is needed before /dev/ entries appear. Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. Now /usr/share/sounds/alsa contains test sounds.
+
 ==== Keyboard Backlight ====
 
 There are 6 keyboard backlight LEDs that can be adjusted, they are found under <code>/sys/class/leds/lp5523:kb{1-6}</code>. To adjust brightness, write a value, $VAL between 0 and 255, to the <code>brightness</code> parameter as the root user:
