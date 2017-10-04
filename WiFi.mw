@@ -26,6 +26,9 @@ PostmarketOS currently configures the wpa_supplicant service to start on boot. T
 
 <pre>$ sudo wpa_passphrase YOUR_SSID &gt; /etc/wpa_supplicant/wpa_supplicant.conf
 &lt;enter your passphrase and press RETURN&gt;</pre>
+
+Note: If you are connecting to a hidden wireless network, make sure to add line "scan_ssid=1" after the ssid line in your generated conf file
+
 Next you'll need to set up the <code>networking</code> service by adding interfaces to <code>/etc/network/interfaces</code>. In some cases, the loopback device may need to precede the wlan interface:
 
 <pre>auto lo 
