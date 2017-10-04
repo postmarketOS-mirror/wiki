@@ -88,9 +88,9 @@ If your network uses DHCP, start the DHCP client:
 
 <pre>$ sudo udhcpc -i wlan0</pre>
 
-==== Sound =====
+==== Sound ====
 
-udevadm trigger is needed before /dev/ entries appear. Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. Now /usr/share/sounds/alsa contains test sounds.
+udevadm trigger is needed before /dev/ entries appear. Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. Now /usr/share/sounds/alsa contains test sounds. Use "sudo aplay" to play them.
 
 ==== Keyboard Backlight ====
 
