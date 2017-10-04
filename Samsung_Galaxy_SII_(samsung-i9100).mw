@@ -172,6 +172,8 @@ We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flas
 
   $ wpa_passphrase "SSID" "password" > wifi
 
+Note : If you are connecting to a hidden wireless network, make sure to add line "scan_ssid=1" after the ssid line in your generated conf file
+
 - Connect to wifi AP
 
   $ sudo wpa_supplicant -i wlan0 -c wifi &
