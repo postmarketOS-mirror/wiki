@@ -103,6 +103,8 @@ For example, the display can be turned off by:
 <pre># echo 1 &gt; /sys/devices/platform/omapdrm.0/graphics/fb0/blank</pre>
 ==== Keyboard layout in console ====
 
+(FIXME: is this still needed?)
+
 In order to set the keyboard layout for the virtual console (e.g. to take advantage of number keys on the N900 keyboard), obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one.]. (TODO: Need to pull 'official' vconsole keymaps from Maemo5 if they exist..).
 
 On the N900, install <code>kbd-bkeymaps</code>, either by using <code>pmbootstrap install --add kbd-bkeysmaps</code> on the host system or by running <code>apk add kbd-bkeysmaps</code> on the device itself.
