@@ -1,6 +1,6 @@
 While [https://github.com/postmarketOS/pmbootstrap/wiki/Porting-to-a-new-device porting pmOS to a new device] you probably will find common pitfalls that others have already solved. Here is a set of them:
 
-Patching a kernel is as simple as putting a <code>.patch</code> file in your <code>aports/device/linux-vendor-flavor</code> folder and adding the patch name to the <code>source</code> variable in your <code>APKBUILD</code> file.
+Patching a kernel is as simple as putting a <code>.patch</code> file in your <code>aports/device/linux-vendor-flavor</code> folder and adding the patch name to the <code>source</code> variable in your <code>APKBUILD</code> file. See also: [[How to create a patch when packaging software]].
 
 ==== Common configurations ====
 
@@ -113,3 +113,6 @@ You can check the <code>$OUT</code> environment variable and cd into it. In the 
 * <code>~/android/lineage/out/target/product/titan/ramdisk.img</code> (compressed initramfs)
 
 The defconfig used is available at <code>~/android/lineage/kernel/motorola/msm8226/arch/arm/configs/titan_defconfig</code>
+
+==== Error: selected processor does not support ARM mode `smc #0' ====
+Try this patch: https://github.com/imoseyon/leanKernel-galaxy-nexus/pull/6
