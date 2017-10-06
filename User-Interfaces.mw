@@ -56,3 +56,5 @@ You have to configure <code>pmbootstrap</code> before generating the system imag
 [11:23:08] Available user interfaces (1): weston, none
 [11:23:08] User interface [weston]: </pre>
 <pre>$ ./pmbootstrap config ui weston</pre>
+
+[[Category:Interface]]
