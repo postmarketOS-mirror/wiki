@@ -1,5 +1,10 @@
 Xfce4 is pretty usable on Nokia N900.
 
+=== Installation ===
+* <code>pmbootstrap init</code>
+* Select <code>xfce4</code> as user interface
+
+=== How the config was made ===
 
 pmbootstrap.py init
 User interface: none
