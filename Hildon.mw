@@ -11,7 +11,7 @@ We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be eas
 
 === Installation instructions ===
 
-In <code>pmbootstrap init</code>, select <code>hildon</code> as user interface, then do the installation as usually.
+In <code>pmbootstrap init</code>, select <code>hildon</code> as user interface, then do the installation as usually. When running postmarketOS, it should boot automatically into Hildon now!
 
 === Running ===
 {{note|These instructions are outdated, as we have <code>postmarketos-ui-hildon</code> now. Please adjust as necessary, then remove this note.}}
