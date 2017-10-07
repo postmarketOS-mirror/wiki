@@ -1,10 +1,17 @@
 We have been asked, which devices we would like to see pmOS running on - by people who might specifically buy them (with broken screens etc, to get them cheaper) to help the project. Please list devices here, that you would like to see pmOS running on. Do not list devices, that we already have a port for, or specify a reason why you do.
 
+== Mainline Linux Candidate Devices ==
+
+* [http://elektranox.org/droid4/ Motorola Droid 4]
+* Nokia N9, N950
+* [http://www.noodlepi.com/ Noodle Pi] (Open Hardware, "a full Linux PC in your pocket! With hi-res display, camera, battery, WiFi, Bluetooth, HDMI and USB.")
+* [https://plus.google.com/102276447148493441479/posts/amRvpE8piSw Sony Xperia Z3]
+* [https://developer.sonymobile.com/2016/02/17/work-on-the-mainline-kernel-for-open-xperia-devices/ Sony Xperia Z]
+
 == Candidate Devices ==
 
 * Fairphone 1 &amp; 2
 * [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
-* OpenMoko
 * Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
 * Intex Aqua Fish and Other Sailfish running devices
 * Oneplus One
@@ -17,14 +24,8 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Moto G LTE (1st Gen, 2013)
 * Possibly Nokia Lumia 520 and 525
 
-== Mainline Linux Candidate Devices ==
-
-* [http://elektranox.org/droid4/ Motorola Droid 4]
-* Nokia N9, N950
-* [http://www.noodlepi.com/ Noodle Pi] (Open Hardware, "a full Linux PC in your pocket! With hi-res display, camera, battery, WiFi, Bluetooth, HDMI and USB.")
-* [https://plus.google.com/102276447148493441479/posts/amRvpE8piSw Sony Xperia Z3]
-* [https://developer.sonymobile.com/2016/02/17/work-on-the-mainline-kernel-for-open-xperia-devices/ Sony Xperia Z]
-
 == Low Priority Devices ==
 
 * Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine, see also: [https://github.com/postmarketOS/pmbootstrap/issues/238 #238])
+* Older Nokias (N810, N800, N770) -- should have mainline support, but less than 128MB of memory
+* OpenMoko -- less than 128MB of memory
