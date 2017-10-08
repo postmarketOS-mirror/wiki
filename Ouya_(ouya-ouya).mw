@@ -37,13 +37,13 @@
 # Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
 
 == Notes ==
-* Flashing a kernel directly to the Ouya should be avoided at all costs, as [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] A tool called [https://forum.xda-developers.com/showthread.php?t=2499673 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] allows us to run the postmarketOS kernel in a kexec method, meaning we never have to flash our kernel. Even if we perfected the kernel, we should still use this tool to encourage other projects surrounding the Ouya to implement this failsafe, and allow booting of different kernels for development and dual booting.
+* Flashing a kernel directly to the Ouya should be avoided at all costs, as [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] A tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] allows us to run the postmarketOS kernel in a kexec method, meaning we never have to flash our kernel. Even if we perfected the kernel, we should still use this tool to encourage other projects surrounding the Ouya to implement this failsafe, and allow booting of different kernels for development and dual booting.
 * Using Ouya Boot Menu, it may be possible to retain the original Ouya android ROM (or any Android ROM you choose to flash) while still being able to flash postmarketOS. This would require renaming the kernel image to <code>kernelA1.img</code> while having device-ouya-ouya built to launch from an external USB drive. 
 
 == Installation ==
 '''Work in progress. Do not attempt for now.'''
 
-# Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2499673 Ouya BootMenu] using fastboot.
+# Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] using fastboot.
 # Flash the system image to the Ouya using <code>./pmbootstrap.py flasher flash_system</code>
 
 == Photos ==
