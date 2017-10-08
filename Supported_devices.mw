@@ -613,9 +613,17 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | asus-tf101
   | Kernel does not compile
 |-
+  | [[ASUS_Transformer_Pad_(asus-tf300t)|ASUS Transformer Pad]]
+  | asus-tf300t
+  | Framebuffer doesn't work
+|-
   | [[Asus-tf700t-(ASUS-Transformer-TF700t)|ASUS Transformer Infinity]]
   | asus-tf700t
   | Kernel compiles, not tested
+|-
+  | [[Asus_Zenwatch_2_(asus-wi501q)|ASUS Zenwatch 2]]
+  | asus-wi501q
+  | Boot partition too small
 |-
   | [[BlackBerry-Bold-Touch-9900-(Dakota)|BlackBerry Bold Touch 9900]]
   | blackberry-dakota
