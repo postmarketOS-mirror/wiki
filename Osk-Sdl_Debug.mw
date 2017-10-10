@@ -28,8 +28,14 @@ $ sudo su
 # osk-sdl -d a -n a -c /etc/osk.conf -v
 </syntaxhighlight>
 
-Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/event3
-
+Note: TSLIB_TSDEVICE should point to your touchscreen device, e.g. /dev/input/event3.
+If you have problems with your touchscreen you need to calibrate it:
+<syntaxhighlight lang="shell-session">
+$ sudo apk add tslib
+$ sudo touch /etc/pointercal
+$ export DISPLAY=:0
+$ sudo TSLIB_FBDEVICE=/dev/fbX TSLIB_TSDEVICE=/dev/input/eventX TSLIB_CALIBFILE=/etc/pointercal ts_calibrate
+</syntaxhighlight>
 == Building OSK-SDL from a branch ==
 
 This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag. Don't forget to generate a new checksum (<code>pmbootstrap checksum osk-sdl</code>) before trying to build it.
