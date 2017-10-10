@@ -20,4 +20,4 @@ $ sudo iptables -A POSTROUTING -t nat -j MASQUERADE -s 172.16.42.0/24
 This will enable IPv4 forwarding on your host machine which basically lets it function as a router. The postrouting command will make the kernel on the host translate the packets between the phone network
 and your normal network on the host machine.
 
-You can now verify the internet connection on your phone my pinging something
+You can now verify the internet connection on your phone my pinging something. If this does not work it means you need to compile the kernel with USB_ETH setting enabled in menuconfig.
