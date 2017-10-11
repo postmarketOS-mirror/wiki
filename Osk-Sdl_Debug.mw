@@ -1,3 +1,6 @@
+{{outdated|This page is outdated, and should no longer be maintained! New location: https://wiki.postmarketos.org/wiki/Osk-sdl}}
+
+
 == Debugging osk-sdl in pmOS ==
 
 osk-sdl is an on-screen keyboard built primarily for running in initfs and aiding users with unlocking the rootfs LUKS device from a touch screen device.
