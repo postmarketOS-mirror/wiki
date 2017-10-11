@@ -1,18 +1,16 @@
-== Debugging osk-sdl in pmos ==
+== Debugging osk-sdl in pmOS ==
 
 osk-sdl is an on-screen keyboard built primarily for running in initfs and aiding users with unlocking the rootfs LUKS device from a touch screen device.
 
-It currently lives in the <code>add_osk_initramfs</code> branch of <code>pmbootstrap</code>.
+The package is in pmOS's aports directory. To prepare pmOS for running osk-sdl for debug/porting: 
 
-To install it:
 
 <syntaxhighlight lang="shell-session">
 $ git clone https://github.com/postmarketOS/pmbootstrap.git
-$ git checkout feature/add_osk_initramfs
 $ ./pmbootstrap init
 <select device options>
-<Note: It's helpful to select 'none' here for UI so that osk-sdl can be run from within pmos without conflicting with weston>
-$ ./pmbootstrap install --no-fde
+<select 'none' for UI so that osk-sdl can be run from within pmos without conflicting with weston>
+$ ./pmbootstrap install --no-fde --add osk-sdl
 </syntaxhighlight>
 
 
@@ -22,7 +20,6 @@ To run osk-sdl from pmOS (not in initramfs):
 
 <syntaxhighlight lang="shell-session">
 $ sudo su
-# export SDL_VIDEO_GL_DRIVER="libGL.so.1"
 # export DFBARGS="system=fbdev,no-cursor,linux-input-grab"
 # export TSLIB_TSDEVICE=/dev/input/eventX
 # osk-sdl -d a -n a -c /etc/osk.conf -v
@@ -36,6 +33,7 @@ $ sudo touch /etc/pointercal
 $ export DISPLAY=:0
 $ sudo TSLIB_FBDEVICE=/dev/fbX TSLIB_TSDEVICE=/dev/input/eventX TSLIB_CALIBFILE=/etc/pointercal ts_calibrate
 </syntaxhighlight>
+
 == Building OSK-SDL from a branch ==
 
 This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag. Don't forget to generate a new checksum (<code>pmbootstrap checksum osk-sdl</code>) before trying to build it.
