@@ -10,7 +10,7 @@ Issues with osk-sdl should be reported on [https://github.com/postmarketOS/osk-s
 
 The osk-sdl-dev room on Matrix can also be used to ask questions: #osk-sdl-dev:disroot.org
 
-== Porting osk-sdl to New Devices ==
+== Porting to New Devices ==
 
 It's necessary to configure and/or create a few files when porting osk-sdl to a new device. Some of the files mentioned below are not necessary on all devices. Any files created out of necessity in the below steps should be included in your device package. See the <code>nokia-rx51</code> device package for an example of how some of these files have been included/installed.
 
@@ -86,7 +86,6 @@ If you had to create this file for osk-sdl to properly handle the touchscreen in
 * [https://linux.die.net/man/5/fb.modes fb.modes man page]
 * [https://linux.die.net/man/8/fbset fbset man page]
 * [https://linux.die.net/man/5/directfbrc directfbrc man page]
-
 
 == Troubleshooting ==
 
