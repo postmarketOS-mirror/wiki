@@ -7,8 +7,8 @@ Xfce4 is pretty usable on Nokia N900.
 === How the config was made ===
 
 pmbootstrap.py init
-User interface: none
-Extra packages: emacs,ofono,git,xfce4,py-gtk-dev,py-dbus,xorg-server,xf86-video-vesa,xf86-input-evdev,xf86-input-mouse,xf86-input-keyboard,udev,xinput
+User interface: xfce4
+Extra packages: xf86-video-vesa mesa-egl libinput xf86-input-libinput
 
 Log in as user, then startxfce4
 
