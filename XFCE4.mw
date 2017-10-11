@@ -2,15 +2,8 @@ Xfce4 is pretty usable on Nokia N900.
 
 === Installation ===
 * <code>pmbootstrap init</code>
-* Select <code>xfce4</code> as user interface
-
-=== How the config was made ===
-
-pmbootstrap.py init
-User interface: xfce4
-Extra packages: xf86-video-vesa mesa-egl libinput xf86-input-libinput
-
-Log in as user, then startxfce4
+* <code>User interface: xfce4</code>
+* <code>Extra packages: xf86-video-vesa mesa-egl libinput xf86-input-libinput</code>
 
 applications| settings| windowmanager
 Default-xhdpi
