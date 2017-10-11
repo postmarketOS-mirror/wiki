@@ -1,0 +1,142 @@
+This is an application developed by the postmarketOS community to unlock the LUKS volume in the beginning of the boot process. It implements an password box and on-screen keyboard directly on the linux framebuffer (and also any of the other backends supported by SDL2).
+
+It is written in C++14 and uses libcryptsetup directly to unlock the partitions. The osk-sdl package is part of pmOS's aports.
+
+See also: [[Osk-Sdl Debug]]
+
+== Reporting Issues ==
+
+Issues with osk-sdl should be reported on [https://github.com/postmarketOS/osk-sdl/issues the project github issues page].
+
+The osk-sdl-dev room on Matrix can also be used to ask questions: #osk-sdl-dev:disroot.org
+
+== Porting osk-sdl to New Devices ==
+
+It's necessary to configure and/or create a few files when porting osk-sdl to a new device. Some of the files mentioned below are not necessary on all devices. Any files created out of necessity in the below steps should be included in your device package. See the <code>nokia-rx51</code> device package for an example of how some of these files have been included/installed.
+
+It's highly recommended that you run osk-sdl from '''within''' pmOS, which means installing pmOS with the <code>--no-fde</code> parameter. Running osk-sdl from within pmOS during the porting process will allow you to run any additional tools required for generating some of the configuration files below, as well as collect additional diagnostic info if you run into any issues.
+
+=== Running osk-sdl within pmOS ===
+
+The osk-sdl package is in pmOS's aports directory. To prepare pmOS for running osk-sdl for porting: 
+
+<syntaxhighlight lang="shell-session">
+$ git clone https://github.com/postmarketOS/pmbootstrap.git
+$ ./pmbootstrap init
+<select device options>
+<select 'none' for UI so that osk-sdl can be run from within pmos without conflicting with weston>
+$ ./pmbootstrap install --no-fde --add osk-sdl
+</syntaxhighlight>
+
+Using <code>--no-fde</code> will allow pmOS to boot straight into rootfs without requiring unlocking of the partition. This seems counter-intuitive for porting a keyboard made for initramfs, but this will allow you to manually run osk-sdl with various environment options set and/or osk.conf options for debug.
+
+To run osk-sdl from pmOS (not in initramfs):
+
+<syntaxhighlight lang="shell-session">
+$ sudo su
+# export DFBARGS="system=fbdev,no-cursor,linux-input-grab"
+# export TSLIB_TSDEVICE=/dev/input/eventX
+# osk-sdl -d a -n a -c /etc/osk.conf -v
+</syntaxhighlight>
+
+Do '''not''' use the <code>-t</code> option when porting osk-sdl on a device, this mode of running osk-sdl will not be helpful for this purpose!
+
+=== Set touchscreen device ===
+A rudimentary method for finding this device is to <code>cat /dev/input/eventX</code> each event file in that directory and touch the screen. If you cat the touchscreen device, cat will output a bunch of gibberish on the screen when you touch it.
+
+Once you have identified the touchscreen event file under <code>/dev/input</code>, set (or add if it doesn't exist) the <code>deviceinfo_dev_touchscreen</code> variable in your deviceinfo file to the <code>/dev/input/eventX</code> event device file representing your touchscreen.
+For example:
+
+<syntaxhighlight lang="shell-session">
+deviceinfo_dev_touchscreen="/dev/input/event3"
+</syntaxhighlight>
+
+
+=== Create fb.modes === 
+
+Some devices require creating a file to inform DirectFB of the correct mode that the display supports.
+
+To calculate the mode for your device you can run <code>fbset</code>, however beware that the mode it returns isn't always supported. Some things to be aware of:
+* Make sure the last number of the geometry line (the color depth) is not 32 or 24, because this is not supported by directfb. If you need 32 or 24 there, set this value to 16 and set <code>pixelformat</code> in DFBARGS to a supported pixel format with color depth 32 or 24 (see [https://linux.die.net/man/5/directfbrc man page of directfbrc] for all available pixelformat options).
+* Normally the geometry line should have twice your resolution (both for physical and virtual resolution). Fbset sometimes returns wrong values with which osk-sdl cannot cope (generates segmentation fault when touching the keyboard).
+
+An example for a display with 1080x1920 resolution and 32-bit color depth:
+
+<syntaxhighlight lang="Xorg">
+mode "1080x1920-0"
+    # D: 0.001 MHz, H: 0.001 kHz, V: 0.000 Hz
+    geometry 1080 1920 1080 1920 16
+    timings 898000000 75 129 4 8 5 4
+    rgba 8/16,8/8,8/0,8/24
+endmode
+</syntaxhighlight>
+
+If you had to create this file for osk-sdl to display on your device, make sure to include the <code>/etc/fb.modes</code> file in your device package.
+
+=== Create touchscreen calibration file ===
+
+Some devices require touchscreen calibration for osk-sdl to properly handle taps on the screen. To create the calibration file necessary for osk-sdl, run the <code>ts_calibrate</code> utility and tap the small X's on screen as accurately as you can. This will generate a file <code>/etc/pointercal</code>.
+
+After running the calibration, re-run osk-sdl to confirm that touch input is being appropriately handled.
+
+If you had to create this file for osk-sdl to properly handle the touchscreen input on your device, make sure to include the <code>/etc/pointercal</code> file in your device package.
+
+=== Porting References ===
+
+* [https://linux.die.net/man/5/fb.modes fb.modes man page]
+* [https://linux.die.net/man/8/fbset fbset man page]
+* [https://linux.die.net/man/5/directfbrc directfbrc man page]
+
+
+== Troubleshooting ==
+
+=== ERROR: Library not found: libGL.so ===
+
+This should be resolved in SDL2 2.0.6, however if this issue occurs then most likely the mesa-gl dependency for osk-sdl did not install properly. Please report this issue, see [[#Reporting Issues]].
+
+Make sure you've exported SDL_VIDEO_GL_DRIVER:
+
+<syntaxhighlight lang="shell-session">
+$ sudo su
+# export SDL_VIDEO_GL_DRIVER="libGL.so.1"
+</syntaxhighlight>
+
+=== DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ===
+
+You will need to create a <code>fb.modes</code> file for your device. See the above section [[#Create fb.modes]]
+
+
+== Building osk-sdl from repo ==
+
+This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag. Don't forget to generate a new checksum (<code>pmbootstrap checksum osk-sdl</code>) before trying to build it.
+
+<syntaxhighlight lang="bash">
+# Change out the hash here with the hash of the git commit you want to build
+_hash=617c1cf407160329535d6dbc6a315fd0dc72de70
+pkgname=osk-sdl
+pkgver=0.48
+pkgrel=0
+pkgdesc="Onscreen keyboard for unlocking LUKS devices"
+url="https://github.com/postmarketOS/osk-sdl"
+arch="all"
+license="GPL3"
+depends="sdl2 sdl2_ttf cryptsetup-libs mesa-gl directfb"
+makedepends="linux-headers sdl2-dev sdl2_ttf-dev cryptsetup-dev"
+subpackages=""
+
+source="${pkgname}-${_hash}.tar.gz::https://github.com/postmarketOS/osk-sdl/archive/${_hash}.tar.gz"
+
+options="!strip !check"
+
+build() {
+    cd $srcdir/${pkgname}-${_hash}
+    make
+}
+
+package() {
+    install -D -m755 "${srcdir}/${pkgname}-${_hash}"/osk-sdl \
+        "$pkgdir"/usr/bin/osk-sdl
+    install -D -m755 "${srcdir}/${pkgname}-${_hash}"/osk.conf \
+        "$pkgdir"/etc/osk.conf
+}
+</syntaxhighlight>
