@@ -5,6 +5,21 @@ Xfce4 is pretty usable on Nokia N900, Nexus 7 2013.
 * <code>User interface: xfce4</code>
 * <code>Extra packages: xf86-video-vesa mesa-egl</code>
 
+=== Calibrate the touchscreen ===
+If you rotate the screen change/add a value in this file:
+<pre>
+sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
+</pre>
+<pre>
+ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
+# default			ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
+# Left - 90 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
+# 180 degree clockwise		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
+# Right - 270 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
+# reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
+</pre>
+
+
 applications| settings| windowmanager
 Default-xhdpi
 Font ... 16?
