@@ -14,24 +14,12 @@ We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be eas
 In <code>pmbootstrap init</code>, select <code>hildon</code> as user interface, then do the installation as usually. When running postmarketOS, it should boot automatically into Hildon now!
 
 === Running ===
-{{note|These instructions are outdated, as we have <code>postmarketos-ui-hildon</code> now. Please adjust as necessary, then remove this note.}}
 
-hildon-desktop can be run in a horizontal view only so create a <code>~/.xinitrc</code> with the following contents:
+hildon-desktop can be run in a horizontal view only. To run programs from the terminal you need to <code>export DISPLAY=:0</code>. To set it by default edit <code>sudo nano /etc/profile</code>.
 
-<pre>
-if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-    eval `dbus-launch --sh-syntax --exit-with-session`
-fi
-export LC_MESSAGES=en_US.UTF-8
-xrandr -o left
-xinput set-prop 'Your touchscreen name' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
-exec hildon-desktop
-</pre>
-'Your touchscreen name' should be your touchscreen name. You can find out your touchscreen name by running <code>sudo libinput list-devices</code>. hildon-desktop can then be started by running <code>startx</code>. To run programs you need to <code>export DISPLAY=:0</code>. To set it by default edit <code>sudo nano /etc/profile</code>.
+=== Rotate screen using ''fbdev'' driver ===
 
-=== Rotate screen when using ''fbdev'' driver ===
-
-In order to rotate the screen when using the framebuffer, you need to create this file:
+In order to rotate the screen using the framebuffer, you need to create this file:
 
 '''/etc/X11/xorg.conf.d/1-fbdev.conf'''
 <pre>
@@ -43,6 +31,33 @@ EndSection
 </pre>
 
 reference: https://www.x.org/archive//X11R6.8.0/doc/fbdev.4.html
+
+=== Rotate screen using ''xrandr'' ===
+
+In order to rotate the screen using xrandr, you need to edit a file and put xrandr -o right or xrandr -o left:
+
+<pre>
+sudo nano /etc/postmarketos-ui/xinitrc_hildon.sh
+</pre>
+<pre>
+xrandr -o right
+exec hildon-desktop
+</pre>
+
+=== Calibrate the touchscreen ===
+
+After rotating the screen change/add a value in this file:
+<pre>
+sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
+</pre>
+<pre>
+ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
+# default			ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
+# Left - 90 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
+# 180 degree clockwise		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
+# Right - 270 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
+# reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
+</pre>
 
 === WIP: Possible fix for performance problems ===
 Hildon renders everything on the GPU, which is terribly slow when we have to resort to software rendering. At least on the N900 it looks like a slideshow. The GTK+3 version won't improve this, as it also uses Clutter for rendering. However, we should be able to improve the situation by replacing the OpenGL stuff, that mesa currently handles, with a faster software implementation from [https://github.com/lunixbochs/tinygles TinyGLES] and related libraries.
