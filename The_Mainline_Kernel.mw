@@ -39,3 +39,4 @@ You probably need to copy over the device tree source, from which the <code>dtb<
 * [https://github.com/postmarketOS/pmbootstrap/issues/91 #91: &quot;The Mainline Kernel&quot;]
 * [http://n900.elektranox.org/index.html Debian on N900]
 * [https://developer.sonymobile.com/open-devices/how-to-build-and-flash-a-linux-kernel/how-to-build-mainline-linux-for-xperia-devices/ Build Mainline for Xperia devices]
+* [https://forum.xda-developers.com/android/software-hacking/reference-how-to-upstream-android-kernel-t3626913 How to get an Android kernel up to date with Linux upstream]
