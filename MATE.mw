@@ -1,0 +1,51 @@
+== Install MATE Desktop ==
+
+<pre>
+setup-xorg-base
+apk add dbus-x11
+</pre>
+Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in our Edge repository:
+
+<pre>
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus lxdm udev hicolor-icon-theme sudo
+mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
+apk add $mate_pkgs
+</pre>
+
+In the next step we add some services to start up with the operating system:
+<pre>
+rc-update add lxdm
+rc-update add dbus
+rc-update add udev
+</pre>
+We will start D-Bus before other services in order to fix D-Bus configuration file (replace the hard coded 'system_bus_socket' path):
+Starting D-Bus:
+rc-service dbus start
+
+Fixing the  D-Bus configuration file:
+<pre>
+dbus_sock_path=$(find / -name system_bus_socket)
+dbus_sock_path=$(echo $dbus_sock_path | sed 's/\//\\&/g')
+sed -i 's/\/var\/run\/dbus\/system_bus_socket/'$dbus_sock_path'/' /etc/dbus-1/system.conf
+</pre>
+<pre>
+apk del mate-screensaver
+ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
+apk add mate-screensaver}}
+</pre>
+Adding avaliables True Type Fonts:
+<pre>
+ttfs=$(apk search -q ttf- | grep -v '\-doc')
+apk add $ttfs
+</pre>
+Configure lxdm with autologin:
+<pre>
+nano /etc/lxdm/lxdm.conf
+autologin=yourusername
+session=/usr/bin/mate-session
+skip_password=1
+</pre>
+And finally, let us start the lxdm service and log in to our MATE Desktop
+<pre>
+rc-service lxdm start
+</pre>
