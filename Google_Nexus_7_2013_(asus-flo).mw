@@ -19,7 +19,7 @@
 
 * montvid porting
 * #postmarketos irc crew
-* John Stultz Linaro Flo kernel maintainer
+* John Stultz Flo kernel patches maintainer
 * Rob Clark Freedreno video driver maintainer
 * Linaro, Qualcomm, Red Hat drivers, kernel upstreaming
 
@@ -33,12 +33,12 @@
 
 * 3D Freedreno hardware acceleration
 * Flashing with pmbootstrap/fastboot
-* Linaro Kernel 4.11
+* Upstream stable Kernel 4.11.12 + patches
 * Screen
 * Touchscreen input
 * USB Internet
 * WIFI Internet
-* X11 Hildon, Mate, Xwayland-Weston
+* X11 Hildon, Mate, Xfce, Xwayland-Weston
 * TWRP Recovery
 
 === What does not work yet ===
@@ -68,6 +68,6 @@
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-asus-flo Kernel package]
 * [https://twrp.me/asus/asusnexus72013wifi.html TWRP recovery]
 * [https://git.linaro.org/landing-teams/working/qualcomm/wcnss-config.git/tree WIFI start with Wcnss-start]
-* [https://git.linaro.org/people/john.stultz/flo.git/log/?h=flo-v4.11 John Stultz's Linaro Flo kernel]
+* [https://git.linaro.org/people/john.stultz/flo.git/log/?h=flo-v4.11 John Stultz's Flo kernel/patches]
 * [http://freedreno.github.io Rob Clark's Freedreno video driver]
 * [https://dflund.se/~triad/krad/nexus7-flo Making the UART Cable for Flo]
