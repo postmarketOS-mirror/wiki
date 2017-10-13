@@ -4,7 +4,7 @@
 setup-xorg-base
 apk add dbus-x11
 </pre>
-Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in our Edge repository:
+Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
 
 <pre>
 apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus lxdm udev hicolor-icon-theme sudo
@@ -20,8 +20,9 @@ rc-update add udev
 </pre>
 We will start D-Bus before other services in order to fix D-Bus configuration file (replace the hard coded 'system_bus_socket' path):
 Starting D-Bus:
+<pre>
 rc-service dbus start
-
+</pre>
 Fixing the  D-Bus configuration file:
 <pre>
 dbus_sock_path=$(find / -name system_bus_socket)
