@@ -44,6 +44,7 @@
 === What does not work yet ===
 
 * Audio
+* Hardware Video decoding
 * Bluetooth
 * Sensors
 * Camera
