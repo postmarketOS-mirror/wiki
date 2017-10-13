@@ -49,3 +49,4 @@ And finally, let us start the lxdm service and log in to our MATE Desktop
 <pre>
 rc-service lxdm start
 </pre>
+[[Category:Interface]]
