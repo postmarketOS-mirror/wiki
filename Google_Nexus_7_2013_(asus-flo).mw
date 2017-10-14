@@ -52,15 +52,15 @@
 
 === Issues ===
 
-* WIFI firmware sometimes does not load. As a workaround one can delete/edit udev 50.firmware rules and start wifi with wcnss-start, write an Open-RC service.
-* No on screen keyboard implemented in OS yet.
+* WIFI firmware sometimes does not load. As a workaround one can delete/edit udev 50.firmware rules and start wifi with wcnss-start, write an Open-RC service
+* No on screen keyboard implemented in OS yet
 
 === Other information ===
 
 * Flash the system to a userdata partition to have 10GB free space. If you don't see 10GB install TWRP recovery and format system/all partitions and start again:
 <pre>./pmbootstrap.py flasher flash_system --partition userdata
 ./pmbootstrap.py flasher flash_kernel</pre>
-* I would recommend installing and using [[MATE]] as it is very complete.
+* I would recommend installing and using [[MATE]] as it is very complete
 * To run Internet via USB see [[USB Internet]]
 === Links ===
 
