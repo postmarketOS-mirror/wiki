@@ -55,7 +55,7 @@ rc-service lxdm start
 
 === Calibrating the touchscreen ===
 
-If you rotate the screen change/add a value in this file:
+If you want to rotate the screen change/add a value in this file:
 <pre>
 sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
 </pre>
