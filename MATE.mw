@@ -52,4 +52,19 @@ And finally, let us start the lxdm service and log in to our MATE Desktop. If it
 <pre>
 rc-service lxdm start
 </pre>
+
+=== Calibrating the touchscreen ===
+
+If you rotate the screen change/add a value in this file:
+<pre>
+sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
+</pre>
+<pre>
+ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
+# default			ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
+# Left - 90 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
+# 180 degree clockwise		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
+# Right - 270 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
+# reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
+</pre>
 [[Category:Interface]]
