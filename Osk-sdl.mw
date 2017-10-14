@@ -98,10 +98,16 @@ $ sudo su
 # export SDL_VIDEO_GL_DRIVER="libGL.so.1"
 </syntaxhighlight>
 
+If you have been testing earlier versions of <code>osk-sdl</code>, you may still have a custom SDL2 package with version <code>9999</code> in your packages directory. That is not required anymore, all necessary changes to SDL2 have been upstreamed, we can use the version from Alpine now. Delete it with the following steps:
+
+<syntaxhighlight lang="shell-session">
+$ sudo rm -v ~/.local/var/pmbootstrap/packages/*/sdl2*
+$ pmbootstrap index
+</syntaxhighlight>
+
 === DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ===
 
 You will need to create a <code>fb.modes</code> file for your device. See the above section [[#Create fb.modes]]
-
 
 == Building osk-sdl from repo ==
 
