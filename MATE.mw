@@ -2,6 +2,7 @@
 {{note|This is a draft, installation will be as easy as selecting "mate" in pmbootstrap init, once a postmarketos-ui-mate package is created with the information from below. Contributions welcome - it is not that hard, simply look at the other postmarketos-ui- packages and make a PR.}}
 
 <pre>
+sudo su
 setup-xorg-base
 </pre>
 Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
