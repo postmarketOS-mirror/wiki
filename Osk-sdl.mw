@@ -86,6 +86,15 @@ If you had to create this file for osk-sdl to properly handle the touchscreen in
 * [https://linux.die.net/man/5/directfbrc directfbrc man page]
 
 == Troubleshooting ==
+=== Unlocking via telnet ===
+If osk-sdl does not work for some reason, but you really need to access your data, you can [Inspecting_the_initramfs|connect to the Initramfs via telnet], then run the following to unlock it:
+
+<syntaxhighlight lang="shell-session">
+# source /init_functions.sh
+# cryptsetup luksOpen "$(find_root_partition)" root
+Enter passphrase for /dev/mapper/mmcblk0p2:
+# killall osk-sdl
+</syntaxhighlight>
 
 === ERROR: Library not found: libGL.so ===
 
