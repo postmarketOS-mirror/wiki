@@ -117,4 +117,4 @@ Don't forget to [[Help:Device_Page|create a specific wiki page for your device]]
 
 === Adding osk-sdl support ===
 
-If the display & the touchscreen interface are working, then it's time to add support for osk-sdl, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices]]
+If the display & the touchscreen interface are working, then it's time to add support for osk-sdl, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting Osk-SDL to New Devices]]
