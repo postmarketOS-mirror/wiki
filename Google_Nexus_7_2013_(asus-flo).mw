@@ -40,6 +40,7 @@
 * WIFI Internet
 * X11 Hildon, Mate, Xfce, Xwayland-Weston
 * TWRP Recovery
+* PREEMPT_RT
 
 === What does not work yet ===
 
@@ -59,8 +60,7 @@
 * Flash the system to a userdata partition to have 10GB free space. If you don't see 10GB install TWRP recovery and format system/all partitions and start again:
 <pre>./pmbootstrap.py flasher flash_system --partition userdata
 ./pmbootstrap.py flasher flash_kernel</pre>
-
-* To run Hildon see [[Hildon]]
+* I would recommend installing and using [[MATE]] as it is very complete.
 * To run Internet via USB see [[USB Internet]]
 === Links ===
 
