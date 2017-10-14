@@ -33,7 +33,7 @@ sed -i 's/\/var\/run\/dbus\/system_bus_socket/'$dbus_sock_path'/' /etc/dbus-1/sy
 <pre>
 apk del mate-screensaver
 ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
-apk add mate-screensaver}}
+apk add mate-screensaver
 </pre>
 Adding avaliables True Type Fonts:
 <pre>
