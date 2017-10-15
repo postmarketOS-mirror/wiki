@@ -7,23 +7,18 @@ apk add xorg-server xf86-input-libinput libinput
 </pre>
 Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
 <pre>
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus lxdm udev hicolor-icon-theme sudo
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus lxdm hicolor-icon-theme
 mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add $mate_pkgs
+apk add dbus-x11
 ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
 </pre>
 In the next step we add some services to start up with the operating system:
 <pre>
 rc-update add lxdm
 rc-update add dbus
-rc-update add udev
-apk add dbus-x11
 </pre>
-Starting D-Bus:
-<pre>
-rc-service dbus start
-</pre>
-Adding avaliables True Type Fonts:
+Adding avaliable True Type Fonts:
 <pre>
 ttfs=$(apk search -q ttf- | grep -v '\-doc')
 apk add $ttfs
@@ -35,11 +30,11 @@ autologin=yourusername
 session=/usr/bin/mate-session
 skip_password=1
 </pre>
-And finally, let us start the lxdm service and log in to our MATE Desktop. If it does not boot - reboot the device and you should be auto logged into MATE.
+And finally, reboot the device and you should be auto logged into MATE.
 <pre>
-rc-service lxdm start
+sync
+reboot
 </pre>
-
 === Calibrating the touchscreen ===
 
 If you want to rotate the screen change/add a value in this file and reboot udev or the device:
