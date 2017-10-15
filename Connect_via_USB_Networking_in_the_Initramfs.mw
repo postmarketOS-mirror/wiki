@@ -54,5 +54,5 @@ localhost:~$</pre>
 Use <code>sudo</code> to run commands as <code>root</code>, it is configured.
 
 === See also ===
-
+* [[Osk-sdl#Troubleshooting]]
 * http://www.elinux.org/Android_Booting (low level overview of Android boot process)
