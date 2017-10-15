@@ -1,18 +1,17 @@
 == Install MATE Desktop ==
 {{note|This is a draft, installation will be as easy as selecting "mate" in pmbootstrap init, once a postmarketos-ui-mate package is created with the information from below. Contributions welcome - it is not that hard, simply look at the other postmarketos-ui- packages and make a PR.}}
-
+Install your X11 video drivers and do:
 <pre>
 sudo su
-setup-xorg-base
+apk add xorg-server xf86-input-libinput libinput
 </pre>
 Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
-
 <pre>
 apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus lxdm udev hicolor-icon-theme sudo
 mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add $mate_pkgs
+ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
 </pre>
-
 In the next step we add some services to start up with the operating system:
 <pre>
 rc-update add lxdm
@@ -20,21 +19,9 @@ rc-update add dbus
 rc-update add udev
 apk add dbus-x11
 </pre>
-We will start D-Bus before other services in order to fix D-Bus configuration file (replace the hard coded 'system_bus_socket' path):
 Starting D-Bus:
 <pre>
 rc-service dbus start
-</pre>
-Fixing the  D-Bus configuration file:
-<pre>
-dbus_sock_path=$(find / -name system_bus_socket)
-dbus_sock_path=$(echo $dbus_sock_path | sed 's/\//\\&/g')
-sed -i 's/\/var\/run\/dbus\/system_bus_socket/'$dbus_sock_path'/' /etc/dbus-1/system.conf
-</pre>
-<pre>
-apk del mate-screensaver
-ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
-apk add mate-screensaver
 </pre>
 Adding avaliables True Type Fonts:
 <pre>
