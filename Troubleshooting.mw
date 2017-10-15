@@ -148,12 +148,15 @@ This issue is known to happen in Alpine Virthardened. These commands should fix 
 sudo mount -t binfmt_misc none /proc/sys/fs/binfmt_misc</pre>
 If it still does not work, it is probably not supported by your host Linux distribution's kernel (<code>CONFIG_BINFMT_MISC</code>). Try to use another kernel.
 
-=== ERROR: /home/user/packages/user/x86_64/qemu-user-static-repack-2.8-r6.apk: UNTRUSTED signature ===
+=== ERROR: /mnt/pmbootstrap-packages/x86_64/qemu-user-static-repack-2.8-r6.apk: UNTRUSTED signature ===
 
-The reason is somewhat unknown but looks like the following workaround solves it
+You don't have your own package signing key imported, which gets generated when you compile a package for the first time. pmbootstrap should automatically import it, but when you hit <code>^C</code> during that, it may go wrong.
 
-<pre>./pmbootstrap zap -p -hc
-./pmbootstrap shutdown</pre>
+Your generated key is in <code>~/.local/var/pmbootstrap/config_abuild</code>, all imported keys are in <code>~/.local/var/pmbootstrap/config_apk_keys</code>.
+
+A quick fix is deleting all packages:
+<pre>./pmbootstrap zap -p</pre>
+
 See issue [https://github.com/postmarketOS/pmbootstrap/issues/270 #270] for more information and don't hesitate to reopen if this didn't work for you.
 
 === Fastboot does not detect my device! ===
