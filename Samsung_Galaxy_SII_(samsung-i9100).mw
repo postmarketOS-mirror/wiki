@@ -65,7 +65,7 @@ https://github.com/postmarketOS/pmbootstrap/issues/456
 
 For the d710, on step 5 use ''/dev/mmcblk0p11'' as the install partition.
 
-On step 8, use <source lang="shell">pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
+On step 8, use <source lang="shell">pv /home/pmos/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
 
 ==== Step by step guide for Flashing to device memory ====
 
@@ -138,7 +138,7 @@ The description is using the alternative flash method because there it did not w
 
 -- Send image from computer to netcat (on the computer)
 
-  / # pv /home/user/rootfs/samsung-i9100.img | nc 172.16.42.1 60000
+  / # pv /home/pmos/rootfs/samsung-i9100.img | nc 172.16.42.1 60000
 
 -- Close both nc with CTRL+C when transfer finishes and reboot the phone with power button
 
