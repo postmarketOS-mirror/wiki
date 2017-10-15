@@ -1,5 +1,3 @@
-Have you already flashed your device with pmOS? Now it's time to run it.
-
 Power on your device and connect it to your USB port. pmOS uses the USB interface as a network interface and runs a DHCP server on it and <code>dmesg</code> will show something like
 
 <pre>[ 6284.442088] usb 1-1: new high-speed USB device number 36 using xhci_hcd
@@ -32,20 +30,14 @@ If this fails, you may need to first assign an ethernet address to it:
 <pre># ip l set enp0s20f0u1 address 12:12:12:12:12:12</pre>
 Then you can try the above dhclient command.
 
-At this point, your device will show a logo and will be waiting for you to connect using telnet and enter the password to decrypt the filesystem (Make sure the last segment of the IP address is a &quot;1&quot; and not what is shown in the output of <code>ifconfig</code>!).
+When your device is still in the initramfs (that's where it shows the keyboard to unlock the device when full disk encryption is enabled), you can connect via telnet now (make sure the last segment of the IP address is a &quot;1&quot; and not what is shown in the output of <code>ifconfig</code>!).
 
-<pre>telnet 172.16.42.1
+<pre>telnet 172.16.42.1 24
 Trying 172.16.42.1...
 Connected to 172.16.42.1.
-Escape character is '^]'.
+Escape character is '^]'.</pre>
 
-Enter passphrase for /dev/mapper/mmcblk0p25p2: 
-Connection closed by foreign host.</pre>
-After entering the password, you'll get disconnected and the graphic interface will show up in your device.
-
-Congratulations, you are now running postmarketOS!
-
-From now on you can also login to your device using <code>ssh</code> and the password you set during the install phase
+If you are already past the initramfs, you should be able to connect via <code>ssh</code> and the password you set during the install phase:
 
 <pre>$ ssh user@172.16.42.1
 user@172.16.42.1's password: 
