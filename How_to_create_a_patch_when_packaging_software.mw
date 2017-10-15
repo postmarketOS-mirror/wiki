@@ -1,30 +1,27 @@
 === Introduction ===
-
 The most common use-case is, that you want to package an Android kernel. But it does not compile with our GCC6, so you need to patch the kernel. Unlike in the Android world, we do not fork the kernel repository and apply our patches there. Instead we ship our custom patches with the package build recipe in the aport folder.
 
 This guide assumes, that you already know what to patch - if you don't know what to patch and only have the error, try to search the web for that error message. More often than not, there is a patch already available, that will fix it. If you don't have any luck, ask in the [[Matrix and IRC|chat]].
 
 As everywhere else in the wiki, '''please expand this guide wherever information is missing that would have helped you!'''
 
-
 === Workflow ===
-
 # Try to compile your program with <code>pmbootstrap build my-package</code>. Note in which chroot it will actually build, it is the start of the building message. When it starts with <code>(native)</code> for example, the chroot is the "native" chroot (which is the default).
 # Wait until it fails or runs through (it works in both cases)
-# The sources of the kernel are now extracted in <code>/home/user/build/src</code> in the chroot where it was building.
+# The sources of the kernel are now extracted in <code>/home/pmos/build/src</code> in the chroot where it was building.
 # Use <code>pmbootstrap chroot</code> to enter the chroot and to create the patch. It will enter the native chroot by default, if you need another chroot, then look at <code>pmbootstrap chroot --help</code>. Then do the following inside the chroot shell:
 ## Install <code>git</code> and an editor such as <code>nano</code> with: <code>apk add git nano</code>
 ## Switch from root to user: <code>su - user</code>
 ## Go into the source folder: <code>cd ~/build/src/</code>
 ## Patches get applied in the builddir, so usually there is another folder inside <code>src</code>, that you need to enter. You can check with <code>ls</code> which folders/files are inside the <code>src</code> folder. Enter that subfolder if necessary.
 ## We'll be using git to create a patch file, so we will initialize a new repository and add everything:
-### <code>git init .</code> (it will say: ''"Initialized empty Git repository in /home/user/build/src/.git/"'')
+### <code>git init .</code> (it will say: ''"Initialized empty Git repository in /home/pmos/build/src/.git/"'')
 ### <code>git add -A</code>
 ### <code>git commit -m "initial"</code>
 ## Now it's time to edit the file you want to edit.
 ### <code>export TERM=xterm</code>
 ### <code>nano Makefile</code> (or whichever file you want to edit)
-### NOTE: nano is glitchy when used like that. If it is unusable for you, run <code>chmod 777 Makefile</code> and then edit the file from outside the chroot with your favorite editor (a graphical one works, too!). The path is similar to: <code>~/.local/var/pmbootstrap/chroot_native/home/user/build/src/(optional builddir)/Makefile</code>.
+### NOTE: nano is glitchy when used like that. If it is unusable for you, run <code>chmod 777 Makefile</code> and then edit the file from outside the chroot with your favorite editor (a graphical one works, too!). The path is similar to: <code>~/.local/var/pmbootstrap/chroot_native/home/pmos/build/src/(optional builddir)/Makefile</code>.
 ## (You need to still be in the chroot!) run <code>git diff</code> to get a patch file generated to the screen. You can save it to a file by redirecting it: <code>git diff > /tmp/mypatch.patch</code>.
 ## Quit the chroot by pressing <code>^D</code> (CTRL+D) twice (typing <code>exit</code> also works).
 # Copy the patch file you have created to your aport folder (adjust the work path, that you have given <code>pmbootstrap init</code> and the chroot suffix <code>native</code> if necessary):
