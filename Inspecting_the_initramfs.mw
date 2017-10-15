@@ -1,5 +1,6 @@
-{{note|This is considered a security hole. Only use it for debugging, and uninstall the usb-shell hook afterwards}}
-{{note|The port is for historic reasons, we used to have another telnet daemon on <code>:23</code>}}
+{{note|This is considered a '''security hole'''. Only use it for debugging, and uninstall the usb-shell hook afterwards.
+
+The port is for historic reasons, we used to have another telnet daemon on <code>:23</code>.}}
 
 This page explains how to connect to your device when it has booted to the [[Initramfs-development|initramfs]] by installing the so-called [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/main/postmarketos-mkinitfs-hook-usb-shell/20-usb-shell.sh usb-shell hook]. This is useful if you want to know more about the [[boot process]], simply inspect the initramfs or you want to debug why something doesn't work.
 
@@ -10,7 +11,7 @@ It is possible to enable a telnet daemon on <code>:24</code> that gives you a sh
 ./pmbootstrap.py flasher boot # or however you flash/boot the kernel
 telnet 172.16.42.1 24</source>
 
-If the telnet command does not work out of the box, read the detailed description on [[Boot_process|how to connect to your device via USB networking]].
+If the telnet command does not work out of the box, read [[connect via USB Networking in the Initramfs]].
 
 === Tips and tricks ===
 
