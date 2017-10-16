@@ -645,6 +645,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | htc-monarudo
   |
 |-
+  | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
+  | huawei-kiwi
+  | Kernel compiles, dts not found
+|-
   | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]
   | jolla-sbj
   | Kernel compiles, can't get fastboot to work
