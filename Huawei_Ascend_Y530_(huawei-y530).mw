@@ -30,7 +30,7 @@
 * ☑ Weston on framebuffer
 * ☑ Touchscreen
 * ☑ Xwayland
-* ☐ Wifi
+* ☑ Wifi
 * ☐ Audio playback
 
 == Device info ==
@@ -56,6 +56,17 @@ As a workaround it's possible to write the system partition using '''netcat'''.
 The procedure is explained here => https://github.com/postmarketOS/pmbootstrap/issues/456
 
 The partition to use in step 5 is <pre class="shell" style="display: inline;padding: 0.4em;">/dev/mmcblk0p23</pre>
+
+=== Wifi ===
+
+In order to start the wifi you have to load the kernel module and bring the interface up with the following commands:
+
+<pre class="shell">
+sudo modprobe wlan
+sudo ifconfig wlan0 up
+</pre>
+
+[[Setup_WiFi_with_iproute2|Setup WiFi with iproute2]]
 
 === Partition layout ===
 
