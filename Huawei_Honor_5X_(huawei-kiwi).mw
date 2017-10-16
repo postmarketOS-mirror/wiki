@@ -1,0 +1,53 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Huawei
+| name =  Honor 5X
+| codename = kiwi
+| image = File:kiwi.jpg
+| imagecaption = Upload an image as soon as you got something to show – I personally am very excited to see it.
+| releaseyear = 2015
+| originalsoftware = EMUI 3.1 on Android 5.1.1
+| cpu = Qualcomm Snapdragon 616
+| gpu = Adreno 405 GPU
+| storage = 16GB
+| display = 1080x1920 IPS
+| memory = 2GB
+}}
+
+== Contributors ==
+* fyfyone
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+None
+
+== What works ==
+
+* The kernel compiles
+
+== What does not work ==
+
+* The recovery zip that can be generated fails because boot.img is not found. It may also happen to be the case that device tree images are not appended correctly. ([https://github.com/postmarketOS/pmbootstrap/issues/750 relevant issue #750])
+
+* ??? (device doesn't boot so no additional problems could be found)
+
+== How to enter flash mode ==
+
+Hold volume down plus power at the same time. If your device is unlocked already, it will show "device unlocked" at the bottom. To unlock the bootloader (which also deletes all data on your device!), please refer to [https://wiki.lineageos.org/devices/kiwi/install#unlocking-the-bootloader this section on the LineageOS installation guide].
+
+== Installation ==
+
+You can not install postmarketOS on this device yet because something is not quite right – see above.
+
+== Photos ==
+
+Nothing to show.
+
+== Links ==
+
+[https://github.com/LineageOS/android_kernel_huawei_kiwi Kernel used]
+
+[https://github.com/dragonGR/android_kernel_xiaomi_msm8956/commit/44f841be2a223d672eaf9fa3029fd9249aeca583 Patch #1 Prima GCC6 source] (thanks to ollieparanoid for digging that up – [https://github.com/postmarketOS/pmbootstrap/issues/719 relevant issue #719])
