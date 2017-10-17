@@ -42,3 +42,11 @@ Note that on some systems (e.g. the RX51) you may have to configure wpa_supplica
 
 <pre>wpa_supplicant_args=&quot;-Dwext&quot;</pre>
 You will have to reboot, or manually restart the aforementioned services, before your device will connect to the access point.
+
+=== Start WIFI manually ===
+If you experience problems or just want to test wifi you can start wpa supplicant (using -Dwext or nl80211 driver) and the dhcp service:
+
+<pre>
+sudo wpa_supplicant -u -Dnl80211 -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+sudo udhcpc -i wlan0
+</pre>
