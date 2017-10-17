@@ -47,6 +47,6 @@ You can not install postmarketOS on this device yet because something is not qui
 Nothing to show.
 
 == Links ==
-* [https://github.com/postmarketOS/pmbootstrap/tree/device-huawei-kiwi device-huawei-kiwi branch with fyfyne's work]
+* [https://github.com/postmarketOS/pmbootstrap/tree/device-huawei-kiwi device-huawei-kiwi branch with fyfyone's work]
 * [https://github.com/LineageOS/android_kernel_huawei_kiwi Kernel used]
 * [https://github.com/dragonGR/android_kernel_xiaomi_msm8956/commit/44f841be2a223d672eaf9fa3029fd9249aeca583 Patch #1 Prima GCC6 source] (thanks to ollieparanoid for digging that up – [https://github.com/postmarketOS/pmbootstrap/issues/719 relevant issue #719])
