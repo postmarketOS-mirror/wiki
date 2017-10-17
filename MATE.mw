@@ -10,7 +10,6 @@ Now let us install a bunch of needed packages what includes all MATE Desktop pac
 apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus lxdm hicolor-icon-theme
 mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add $mate_pkgs
-apk add dbus-x11
 ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
 </pre>
 In the next step we add some services to start up with the operating system:
@@ -22,6 +21,7 @@ Adding avaliable True Type Fonts:
 <pre>
 ttfs=$(apk search -q ttf- | grep -v '\-doc')
 apk add $ttfs
+apk add dbus-x11
 </pre>
 Configure lxdm with autologin:
 <pre>
