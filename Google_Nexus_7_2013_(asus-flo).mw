@@ -40,7 +40,7 @@
 * WIFI Internet
 * X11 Hildon, Mate, Xfce, Xwayland-Weston
 * TWRP Recovery
-* PREEMPT_RT
+* PREEMPT_RT (not on by default)
 
 === What does not work yet ===
 
@@ -52,8 +52,7 @@
 
 === Issues ===
 
-* WIFI firmware sometimes does not load. As a workaround one can delete/edit udev 50.firmware rules and start wifi with wcnss-start, write an Open-RC service
-* No on screen keyboard implemented in OS yet
+* WIFI firmware sometimes does not load on boot. You need to start [[WiFi#Start_WIFI_manually]] as the firmware loads late in the boot process.
 
 === Other information ===
 
