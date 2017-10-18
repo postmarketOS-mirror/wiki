@@ -3,11 +3,12 @@
 Install your X11 video drivers and do:
 <pre>
 sudo su
+apk update
 apk add xorg-server xf86-input-libinput libinput
 </pre>
 Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
 <pre>
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus-x11 lxdm hicolor-icon-theme
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus dbus-x11 lxdm hicolor-icon-theme
 mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add $mate_pkgs
 ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
@@ -21,7 +22,6 @@ Adding avaliable True Type Fonts:
 <pre>
 ttfs=$(apk search -q ttf- | grep -v '\-doc')
 apk add $ttfs
-apk add dbus-x11
 </pre>
 Configure lxdm with autologin:
 <pre>
@@ -30,7 +30,7 @@ autologin=yourusername
 session=/usr/bin/mate-session
 skip_password=1
 </pre>
-And finally, reboot the device and you should be auto logged into MATE.
+And finally, reboot the device and you should be auto logged into MATE. If you see just a black screen try rebooting again - Mate should load.
 <pre>
 sync
 reboot
