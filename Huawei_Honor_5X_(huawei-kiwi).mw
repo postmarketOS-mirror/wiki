@@ -28,11 +28,14 @@ None
 
 * The kernel compiles
 
+* Flashing finishes without error
+
 == What does not work ==
 
-* The recovery zip that can be generated fails because boot.img is not found. It may also happen to be the case that device tree images are not appended correctly. ([https://github.com/postmarketOS/pmbootstrap/issues/750 relevant issue #750])
+* After trying to boot, the device is stuck at the Honor branding/fastboot screen
+** When using fastboot mode, fastboot isn't able to connect to the device after it booted, so something must be happening. It may be that graphics are not working.
 
-* ??? (device doesn't boot so no additional problems could be found)
+* ???
 
 == How to enter flash mode ==
 
@@ -40,7 +43,9 @@ Hold volume down plus power at the same time. If your device is unlocked already
 
 == Installation ==
 
-You can not install postmarketOS on this device yet because something is not quite right – see above.
+# Please follow the [[Installation guide]], but use <syntaxhighlight lang="bash">$ git clone https://github.com/postmarketOS/pmbootstrap.git device-huawei-kiwi</syntaxhighlight> in order to clone this device's branch.
+# Generate installation files with <syntaxhighlight lang="bash">$ ./pmbootstrap.py install</syntaxhighlight>If you prefer to install with TWRP, append <syntaxhighlight lang="bash"> --android-recovery-zip</syntaxhighlight>
+# Follow the steps displayed at the end of output the previous command to finally flash postmarketOS.
 
 == Photos ==
 
