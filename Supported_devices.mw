@@ -647,7 +647,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
   | huawei-kiwi
-  | Kernel compiles, unknown problem
+  | Kernel compiles, graphic output does not work
 |-
   | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]
   | jolla-sbj
