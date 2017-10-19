@@ -45,12 +45,9 @@ We currently only support installing and running pmos from the microsd card on t
 Getting it to work with emmc and 0xffff is harder to implement and has no real benefit since<br />
 the built in emmc is quite slow and fragile.
 
-# Init pmbootstrap
-
-<source lang="shell">$ ./pmbootstrap.py init</source>
-# Start the build process and install the completed image to a sdcard
-
-<source lang="shell"># Replace /dev/sdX with the device for your sdcard
+# Init pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source>
+# Start the build process and install the completed image to a sdcard<source lang="shell">
+# Replace /dev/sdX with the device for your sdcard
 $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
 # [http://maemo.org/downloads/product/Maemo5/u-boot-flasher/ Install u-boot from pali] on the n900 if you haven't installed it already. See Additional Info below for instructions on configuring pmos to boot by default.
 # Place the sdcard into the n900 and boot it with the keyboard slide open
