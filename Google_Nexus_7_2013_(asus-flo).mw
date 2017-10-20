@@ -52,7 +52,7 @@
 
 === Issues ===
 
-* WIFI firmware sometimes does not load on boot. You need to start [[WiFi#Start_WIFI_manually]] as the firmware loads late in the boot process.
+* WIFI firmware sometimes does not load on boot. WIFI connection is very slow. You need to start [[WiFi#Start_WIFI_manually]] as the firmware loads late in the boot process.
 
 === Other information ===
 
