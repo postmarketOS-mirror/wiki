@@ -2,10 +2,10 @@
 
 Related issues:
 
-* [https://github.com/postmarketOS/pmbootstrap/issues/373 #373: wlan-prima (wireless module) and wcnss-service]
-* [https://github.com/postmarketOS/pmbootstrap/issues/410 #410: flame: Wifi firmware and driver errors]
-* [https://github.com/postmarketOS/pmbootstrap/issues/358 #358: Building and packaging external modules]
-* [https://github.com/postmarketOS/pmbootstrap/issues/598 #598: Let's get the cellular modem working!]
+* {{github|373}} wlan-prima (wireless module) and wcnss-service
+* {{github|410}} flame: Wifi firmware and driver errors
+* {{github|358}} Building and packaging external modules
+* {{github|598}} Let's get the cellular modem working!
 
 == QMI ==
 
