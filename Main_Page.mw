@@ -24,3 +24,8 @@
 * [[Matrix and IRC]] ''live chat makes development easier''
 * [https://github.com/postmarketOS/pmbootstrap/issues Issuetracker] ''besides bugs, lots feature ideas and questions''
 * [https://reddit.com/r/postmarketOS Reddit] ''photos of devices running pmOS, blog posts, questions, official announcements''
+
+'''Wiki editing'''
+* [[Templates]] ''list of postmarketOS Wiki specific templates''
+* [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Formatting MediaWiki formatting] ''MediaWiki specific markup reference''
+* [https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting] ''display <code>shell-session</code> listings or source code''
