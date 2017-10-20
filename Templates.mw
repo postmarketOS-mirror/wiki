@@ -1,7 +1,8 @@
 MediaWiki allows us to define custom templates, which can then be included in other wiki pages. When creating a new one, please add an usage example below, and use the "[[Template:Template]]" at the top of the new template.
 
 == Available templates ==
-=== Note ===
+=== [[Template:Note|Note]] ===
+
 <pre><nowiki>{{note|This page is a work in progress, and is not complete enough at this point to be useful.}}
 </nowiki></pre>
 
