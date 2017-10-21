@@ -14,7 +14,7 @@ If you have ''any'' questions, feel free to ask in the [[Matrix and IRC|matrix/i
 Create an appropriate <code>device-$vendor-$name</code> package in the <code>aports/device</code> folder:
 
 <pre class="shell">cp -r aports/device/device-samsung-i9100 aports/device/device-vendor-name</pre>
-The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary.<br/>Note that if your device uses '''fastboot''' or [https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods#Isorec_or_bootimg.3F '''heimdall-bootimg'''], you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/eddf81a730b68076e59b66f2a6163e6587b7fc84/aports/device/device-sony-yuga/deviceinfo#L22-L28 example]):
+The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary. (More info [here](https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets))<br/>Note that if your device uses '''fastboot''' or [https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods#Isorec_or_bootimg.3F '''heimdall-bootimg'''], you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/eddf81a730b68076e59b66f2a6163e6587b7fc84/aports/device/device-sony-yuga/deviceinfo#L22-L28 example]):
 
 <pre class="shell"># Fastboot related
 deviceinfo_generate_bootimg=&quot;true&quot;
@@ -32,6 +32,7 @@ Once the device package is configured, you will need to update checksums in the 
 Now, you can build your device package with:
 
 <pre class="shell">./pmbootstrap.py build device-$vendor-$name</pre>
+
 === Kernel package ===
 
 While the goal is to use a mainline kernel for all devices in the long run, this certainly can not be done in one step when porting to a new device. Create a new package for the kernel by copying the kernel package of the most similar device with an existing port. For example:
