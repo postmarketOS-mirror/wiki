@@ -14,7 +14,7 @@ If you have ''any'' questions, feel free to ask in the [[Matrix and IRC|matrix/i
 Create an appropriate <code>device-$vendor-$name</code> package in the <code>aports/device</code> folder:
 
 <pre class="shell">cp -r aports/device/device-samsung-i9100 aports/device/device-vendor-name</pre>
-The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary. (More info [here](https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets))<br/>Note that if your device uses '''fastboot''' or [https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods#Isorec_or_bootimg.3F '''heimdall-bootimg'''], you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/eddf81a730b68076e59b66f2a6163e6587b7fc84/aports/device/device-sony-yuga/deviceinfo#L22-L28 example]):
+The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary. (More info [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets])<br/>Note that if your device uses '''fastboot''' or [https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods#Isorec_or_bootimg.3F '''heimdall-bootimg'''], you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/eddf81a730b68076e59b66f2a6163e6587b7fc84/aports/device/device-sony-yuga/deviceinfo#L22-L28 example]):
 
 <pre class="shell"># Fastboot related
 deviceinfo_generate_bootimg=&quot;true&quot;
@@ -24,7 +24,7 @@ deviceinfo_flash_offset_ramdisk=&quot;&quot;
 deviceinfo_flash_offset_second=&quot;&quot;
 deviceinfo_flash_offset_tags=&quot;&quot;
 deviceinfo_flash_pagesize=&quot;&quot;</pre>
-A post-install script can be created to append device-specific partitions to <code>/etc/fstab</code>. See [https://github.com/postmarketOS/pmbootstrap/blob/ed8fba54c31c3ccd1f1f59c7194fffecc63ca7c4/aports/device/device-nokia-rx51/device-nokia-rx51.post-install#L12 the post-install script] for <code>device-nokia-rx51</code> for an example.
+A post-install script can be chttps://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsetsreated to append device-specific partitions to <code>/etc/fstab</code>. See [https://github.com/postmarketOS/pmbootstrap/blob/ed8fba54c31c3ccd1f1f59c7194fffecc63ca7c4/aports/device/device-nokia-rx51/device-nokia-rx51.post-install#L12 the post-install script] for <code>device-nokia-rx51</code> for an example.
 
 Once the device package is configured, you will need to update checksums in the APKBUILD to match the new configuration files. You can do that by running:
 
