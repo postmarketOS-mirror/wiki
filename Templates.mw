@@ -7,6 +7,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:Infobox|infobox]] ''on the top right of every device / user interface article''
 * [[Template:Note|note]]
 * [[Template:Outdated|outdated]]
+* [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
 
 == See also ==
 * [[Special:UncategorizedTemplates]]
