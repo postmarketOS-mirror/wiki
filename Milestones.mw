@@ -59,11 +59,9 @@ Basically all points listed below are done together with other community members
 
 # Develop [https://github.com/postmarketOS/osk-sdl osk-sdl], an sdl/directfb on-screen keyboard for use during initramfs execution
 # Make the greatest device ever, the Nokia N900, the best device to use with postmarketOS.
-
-* telephony
-* audio
-* UI (plasma?)
-
+#* telephony
+#* audio
+#* UI (plasma?)
 # Assist with documentation &amp; on IRC/matrix where I can.
 
 === [https://github.com/drebrez drebrez] ===
