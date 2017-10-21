@@ -1,6 +1,7 @@
 MediaWiki allows us to define custom templates, which can then be included in other wiki pages. When creating a new one, please add it below, and use the "[[Template:Template]]" at the top of the new template. Check existing templates for reference.
 
 == Available templates ==
+* [[Template:alpine|alpine]] ''link to a page on the [https://wiki.alpinelinux.org/ Alpine Wiki]''
 * [[Template:github|github]] ''issue or pull-request link''
 * [[Template:Hc|hc]] ''block code with header (can be used for listing the contents of a file, with the file location on top)''
 * [[Template:Infobox|infobox]] ''on the top right of every device / user interface article''
