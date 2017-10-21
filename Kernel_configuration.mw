@@ -192,8 +192,6 @@ Enabling this option is needed for usb networking on some of the android kernels
 
 [https://cateee.net/lkddb/web-lkddb/USB_ETH.html Read more...]
 
-If the kernel does not compile anymore after enabling this option, try enabling [[#CONFIG_USB_G_ANDROID|CONFIG_USB_G_ANDROID]].
-
 '''Location in menu'''
 
 <pre class="shell>
