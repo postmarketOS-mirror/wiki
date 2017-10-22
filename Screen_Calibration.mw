@@ -4,7 +4,6 @@ On most Android devices, a somewhat working framebuffer is required to get Westo
 
 If your framebuffer does not work out of the box, try the following:
 
-* Run this to set the framebuffer resolution: <code>cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/mode</code>
 * Boot TWRP/Android and read out the correct framebuffer configurations from the /sys... paths and try to set them in pmOS
 * If you made it work, create an initfs hook, that instantly sets the framebuffer right. [https://github.com/postmarketOS/pmbootstrap/blob/ad17254e86b7dab4f87e139eaeb298222f37a031/aports/device/device-lg-mako/initfs-hook.sh Example]
 
