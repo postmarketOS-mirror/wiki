@@ -8,7 +8,7 @@ apk add xorg-server xf86-input-libinput libinput
 </pre>
 Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
 <pre>
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus dbus-x11 lxdm hicolor-icon-theme
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus-x11 lxdm hicolor-icon-theme
 mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add $mate_pkgs
 ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
@@ -16,7 +16,6 @@ ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
 In the next step we add some services to start up with the operating system:
 <pre>
 rc-update add lxdm
-rc-update add dbus
 </pre>
 Adding avaliable True Type Fonts:
 <pre>
