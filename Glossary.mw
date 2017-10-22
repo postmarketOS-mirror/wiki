@@ -46,7 +46,7 @@ This is a slightly more complicated API than fbdev (and it replaces all fbdev fu
 
 === FDE ===
 
-Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with luks, preventing the phone data to be retrieved without password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
+Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with [https://en.wikipedia.org/wiki/LUKS luks], preventing the phone data from being retrieved without the password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
 
 === fbdev/framebuffer ===
 
