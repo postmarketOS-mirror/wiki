@@ -1,3 +1,11 @@
+{{Infobox interface
+| name = Weston
+| image = 
+| imagecaption = 
+| graphics =
+| toolkit =
+}}
+
 Weston is the reference implementation of a Wayland compositor.
 
 info here about using Weston
