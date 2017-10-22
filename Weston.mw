@@ -8,4 +8,8 @@
 
 Weston is the reference implementation of a Wayland compositor.
 
-info here about using Weston
+=== Installation ===
+* <code>pmbootstrap init</code>
+* <code>User interface: weston</code>
+
+more info here about using Weston
