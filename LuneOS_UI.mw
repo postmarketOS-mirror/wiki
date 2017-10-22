@@ -2,6 +2,7 @@
 | name = LuneOS UI
 | graphics = Wayland
 | toolkit = QT5
+| image = File:LuneOS Browser.png|Illustration image of LuneOS UI. Not running on pmOS
 }}
 
 User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and open sourced mobile operating system updated with Wayland and QT5.)  UI port under development.[https://github.com/postmarketOS/pmbootstrap/issues/629]
