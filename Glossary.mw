@@ -9,7 +9,7 @@ See also:
 
 === [https://alpinelinux.org/ Alpine Linux] ===
 
-The minimal Linux distribution, that postmarketOS is based on. Actually, pmOS only adds a few packages on top of it, and provides the installer and development environment - that is the plan, to keep following upstream as close as possible. Alpine developers do not see their distribution as &quot;GNU/Linux&quot;. That being said, it works a lot like a typical Desktop Linux distribution. You have your package manager, the typical shell commands, you can install typical Linux software, and so on.
+The minimal Linux distribution which postmarketOS is based upon. Actually, pmOS only adds a few packages on top of it, and provides the installer and development environment - that is the plan, to keep following upstream as closely as possible. Alpine developers do not see their distribution as &quot;GNU/Linux&quot;. That being said, it works a lot like a typical Desktop Linux distribution. You have your package manager, the typical shell commands, you can install typical Linux software, and so on.
 
 === android-msm ===
 
