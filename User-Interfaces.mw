@@ -14,6 +14,7 @@ Photos:
 
 * [http://i.imgur.com/5XtSNzp.jpg Running Youtube in Weston]
 
+See '''[[Weston]]'''.
 === Plasma Mobile ===
 
 Project page: https://plasma-mobile.org/
@@ -22,7 +23,7 @@ Based on KDE.
 
 Work in Progress.
 
-For more information, see [[Plasma Mobile]] and issues [https://github.com/postmarketOS/pmbootstrap/issues/161 #161], [https://github.com/postmarketOS/pmbootstrap/issues/378 #378].
+For more information, see '''[[Plasma Mobile]]''' and issues [https://github.com/postmarketOS/pmbootstrap/issues/161 #161], [https://github.com/postmarketOS/pmbootstrap/issues/378 #378].
 
 === Hildon ===
 
@@ -30,8 +31,9 @@ Hildon is an application framework originally developed for mobile devices (PDAs
 
 Hildon is based on GTK2 and there is a work in progress port to GTK3.
 
-For more information, see [[Hildon]] and PR [https://github.com/postmarketOS/pmbootstrap/pull/461 #461].
-
+For more information, see '''[[Hildon]]''' and PR [https://github.com/postmarketOS/pmbootstrap/pull/461 #461].
+===MATE===
+Desktop environment forked from the now-unmaintained code base of GNOME 2. See '''[[MATE]]'''.
 === Others ===
 
 See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more information on other UIs that could be ported to postmarketOS. Some of these are:
@@ -43,7 +45,7 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more i
 ** [https://github.com/qwazix/glacier-controls-spec glacier] ([https://www.reddit.com/r/linux/comments/6djq1z/postmarketos_aiming_for_a_10_year_lifecycle_for/di4iekw/ relevant comment])
 * sway
 ** [http://i.imgur.com/rwCM4AY.jpg Photo]
-* [https://github.com/postmarketOS/pmbootstrap/issues/629 LuneOS] (continuation of webOS, HP's discontinued and open sourced mobile operating system with Wayland and QT5)
+* '''[[LuneOS]]''' ([https://github.com/postmarketOS/pmbootstrap/issues/629 link]) (continuation of webOS, HP's discontinued and open sourced mobile operating system with Wayland and QT5)
 
 == How to choose a different UI ==
 
