@@ -49,7 +49,7 @@ This is a slightly more complicated API than fbdev (and it replaces all fbdev fu
 
 Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with luks, preventing the phone data to be retrieved without password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
 
-=== fbdev / framebuffer ===
+=== fbdev/framebuffer ===
 
 [https://en.wikipedia.org/wiki/Linux_framebuffer Linux framebuffer] a (more or less?) deprecated API from the Linux kernel, that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
 
