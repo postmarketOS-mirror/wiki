@@ -230,3 +230,7 @@ If the output on the screen is not aligned correctly ([https://user-images.githu
 You can try patching the source code by setting a different video mode (RGB/ARGB/RGBA/YCRYCB/...).
 
 See example patch: [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-huawei-y530/06_fix_mdss_fb_rgb_mode.patch 06_fix_mdss_fb_rgb_mode.patch]
+
+=== Packaging for aarch64: ./config.guess: unable to guess system type ===
+
+This happens in packages built with autoconf (./configure; make; make install), when it ships an outdated config.guess file in the source code. Adjust your APKBUILD's <code>prepare()</code> function like done in {{github|698}}.
