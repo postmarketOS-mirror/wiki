@@ -1,3 +1,5 @@
+MATE is a desktop environment forked from the now-unmaintained code base of GNOME 2.  It is installable on postmarketOS.<br>
+''screenshot needed''
 == Install MATE Desktop ==
 {{note|This is a draft, installation will be as easy as selecting "mate" in pmbootstrap init, once a postmarketos-ui-mate package is created with the information from below. Contributions welcome - it is not that hard, simply look at the other postmarketos-ui- packages and make a PR.}}
 Install your X11 video drivers and do:
