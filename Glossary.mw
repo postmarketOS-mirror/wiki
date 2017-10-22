@@ -59,7 +59,7 @@ The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disa
 
 === lk (little kernel) ===
 
-''[https://github.com/littlekernel/lk <code>lk</code>] is the kernel where fastboot runs on - at least all new-ish qualcomm devices is using <code>lk</code> and new-ish mediatek devices too''
+''[https://github.com/littlekernel/lk <code>lk</code>] is the kernel which fastboot runs on - at least all new-ish qualcomm devices are using <code>lk</code> and new-ish mediatek devices too''
 
 === OpenRC ===
 
