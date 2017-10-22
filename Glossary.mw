@@ -51,7 +51,7 @@ Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encr
 
 === fbdev/framebuffer ===
 
-[https://en.wikipedia.org/wiki/Linux_framebuffer Linux framebuffer] a (more or less?) deprecated API from the Linux kernel, that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
+[https://en.wikipedia.org/wiki/Linux_framebuffer Linux framebuffer] a (more or less?) deprecated API from the Linux kernel that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
 
 === IDA ===
 
