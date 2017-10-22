@@ -43,7 +43,7 @@ fastboot flash userdata /tmp/postmarketOS-export/device-name.img
 * Vibration motor? (if I hold the side button down for 5 seconds it vibrates...)
 
 === What doesn't work ===
-
+* we still use the ugly "while true..." hack instead of msm-fb-refresher {{github|584}} (this is easy to fix: just remove the hack, use msm-fb-refresher instead and check if it is still working!)
 * fbsplash (further research needed, LG logo is stuck on screen until weston is launched)
 * The usual (wifi, bluetooth, everything else)
 
