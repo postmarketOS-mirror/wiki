@@ -13,7 +13,7 @@ The minimal Linux distribution which postmarketOS is based upon. Actually, pmOS 
 
 === android-msm ===
 
-The Google provided 3.4 kernel as base for all Qualcomm devices.
+The Google provided Linux version 3.4 kernel as base for all Qualcomm devices.
 
 === apk ===
 
