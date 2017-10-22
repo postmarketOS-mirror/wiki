@@ -37,7 +37,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>????</code>
 |-
 | <code>dtb</code>
-| Name of the [https://github.com/postmarketOS/pmbootstrap/wiki/Glossary#dtb device tree blob] file. This will be necessary for the [https://github.com/postmarketOS/pmbootstrap/issues/91 mainline kernel]. This can be left blank during initial porting.
+| Name of the [[Glossary#dtb|device tree blob]] file. This will be necessary for the [[Mainline kernel]]; see also [https://github.com/postmarketOS/pmbootstrap/issues/91 #91]. This can be left blank during initial porting.
 |
 
 |-
