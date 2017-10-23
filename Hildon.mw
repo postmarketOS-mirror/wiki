@@ -60,10 +60,8 @@ ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
 </pre>
 
 === Performance issues ===
-Software rendering is slow. Possible fix in the [[Software OpenGL]] article with TinyGLES and similar software.
-
+Software rendering is slow. A possible fix is in the [[Software OpenGL]] article with TinyGLES and similar software.
 
 === See also ===
-
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in Qemu)
 * https://github.com/fremantle-gtk3 (GTK+3 port, which we could package in the future)
