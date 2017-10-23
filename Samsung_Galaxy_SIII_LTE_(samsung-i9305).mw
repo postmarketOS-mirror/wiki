@@ -24,11 +24,14 @@
 
 == What works ==
 
+* '''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII without LTE).'''
+
 * Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
 * Touchscreen
 * Weston (only on SD card)
 * XWayland
 * Wifi
+* osk-sdl
 
 == What does not work ==
 
