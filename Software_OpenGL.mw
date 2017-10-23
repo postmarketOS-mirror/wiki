@@ -1,0 +1,27 @@
+Some interfaces, like [[Hildon]] or simple games require 3D acceleration, even though they are only rendering fancy 2D graphics. With postmarketOS, we have a lot of devices, where 3d acceleration does not work, or does not work with open source drivers. As a workaround, it is possible to do that kind of rendering in software with mesa-swrast. But that is too slow to be usable in most cases. This article lists some alternatives, that will hopefully be more performant.
+
+== TinyGLES ==
+[https://github.com/lunixbochs/tinygles TinyGLES] was originally written and optimized for the Pandora, which uses the same chipset as the N900. Upstream told us, that it is worth trying at least.
+
+We've tried a bit to get Hildon working, but we did not get very far with it yet.
+
+<pre>
+Current stack:
+(hardware) - mesa (swrast) - cogl - clutter - hildon
+
+New stack:
+(hardware) - tinygles - glshim - cogl - clutter - hildon
+</pre>
+
+It makes sense to run cogl demos with tinygles before trying anything hildon or clutter related, as Clutter depends on cogl.
+
+More information:
+* [https://github.com/lunixbochs/glshim glshim]
+* [https://github.com/lunixbochs/tinygles/issues/9 Asking upstream if this is possible]
+* [https://github.com/lunixbochs/tinygles/issues/10 Unable to run hildon-desktop: Failed to create texture 2d due to size/format constraints]
+* [https://pyra-handheld.com/boards/threads/glshim.69736/ Pandora thread about glshim] (contains debug environment variables etc!)
+
+== Others ==
+Not much research has gone into these, please expand.
+* [http://openswr.org/ OpenSWR]
+* [https://github.com/google/swiftshader swiftshader]
