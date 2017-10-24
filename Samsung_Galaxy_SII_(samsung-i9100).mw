@@ -193,6 +193,24 @@ https://github.com/mnalis/gsd4t_parser
 
 https://redmine.replicant.us/boards/21/topics/897
 
+=== Setting the hardware clock ===
+
+If you have already setup chrony and if your hardware clock doesn't have the time set you can set it with,
+<source>
+# hwclock -w  # Write the current system time to the hardware clock</source>
+
+=== Setting the display brightness ===
+
+To adjust display brightness write a value between 0-255 to file given below,
+<source>
+# echo 0 > /sys/class/backlight/panel/brightness #set the display to its lowest brightness
+
+# echo 255 > /sys/class/backlight/panel/brightness #set the display to maximum brightness
+
+</source>
+
+=== Read
+
 == Hardware specifications for i9100 ==
 
 === SoC ===
