@@ -160,7 +160,7 @@ We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flas
 * [https://wiki.postmarketos.org/wiki/File:Samsung-d710.jpg Weston-smoke demo running on a d710]
 * [https://wiki.postmarketos.org/images/3/36/I9100-xfce.jpeg xfce-ui running on i9100]
 
-=== wifi ===
+=== Wifi ===
 
 - Create conf for wpa_supplicant
 
