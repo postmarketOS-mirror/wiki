@@ -213,7 +213,7 @@ localhost:~# echo 255 > /sys/class/backlight/panel/brightness #set the display t
 
 Accelerometer sensor data can read from following file
 <source lang="shell">
-localhost:~# cat /sys/class/accelerometer/accelerometer/acc_file 
+localhost:~$ cat /sys/class/accelerometer/accelerometer/acc_file 
 </source>
 
 == Hardware specifications for i9100 ==
