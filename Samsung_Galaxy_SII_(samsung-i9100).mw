@@ -196,7 +196,7 @@ https://redmine.replicant.us/boards/21/topics/897
 === Setting the hardware clock ===
 
 If you have already setup chrony and if your hardware clock doesn't have the time set you can set it with,
-<source>
+<source lang="shell">
 # hwclock -w  # Write the current system time to the hardware clock</source>
 
 === Setting the display brightness ===
