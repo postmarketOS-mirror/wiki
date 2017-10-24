@@ -27,6 +27,9 @@
 * Weston (only on SD card)
 * XWayland
 * Wifi
+* Display brightness control
+* Accerelometer sensor
+* rtc
 * Xfce
 
 === What does not work ===
