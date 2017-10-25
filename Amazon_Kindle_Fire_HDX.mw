@@ -1,0 +1,45 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Amazon
+| name =  Kindle Fire HDX
+| codename = CHANGE_ME
+| image = File:thor.jpg
+| imagecaption = 7" (thor) edition
+| releaseyear = 2013
+| originalsoftware = Fire OS 3
+| cpu = Qualcomm Snapdragon 800
+| gpu = Qualcomm Adreno 330
+| storage = 16, 32, or 64 GB
+| display = 1920x1200 (thor), 2560x1600 (apollo)
+| memory = 2 GB
+}}
+
+== Contributors ==
+* steamport (MoreRobustThanYou)
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+WIP!
+
+== What does not work ==
+
+WIP!
+
+== How to enter flash mode ==
+
+Hold down POWER and VOL DOWN
+
+== Installation ==
+
+WIP!
+
+== Photos ==
+
+WIP!
+
+== Links ==
