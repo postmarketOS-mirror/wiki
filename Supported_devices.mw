@@ -692,7 +692,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Google Glass|Google Glass]]
   | google-glass
   |
- 
+|-
+  | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX]]
+  | thor(7") / apollo(8.9")
+  | apollo port not started yet
 |}
 
 ==Other supported hardware==
