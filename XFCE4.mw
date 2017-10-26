@@ -20,6 +20,18 @@ ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
 # reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
 </pre>
 
+=== Controlling display power management ===
+To control display from a terminal first set DISPLAY environment variable like:
+<source lang="shell">
+export DISPLAY=:0.0
+</source>
+
+<B>xset</B> command can be used to turn diplay on and off or set a display timeout value
+<source lang="shell">
+xset dpms force off    # To turn off display
+xset dpms force on     # To turn the display back on
+xset q                 # Prints current display status info
+</source>
 
 applications| settings| windowmanager
 Default-xhdpi
