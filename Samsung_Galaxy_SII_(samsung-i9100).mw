@@ -181,6 +181,8 @@ Note : If you are connecting to a hidden wireless network, make sure to add line
 
   $ sudo udhcpc -i wlan0
 
+To set wifi connection to start automatically on boot, please refer here [[wifi]]
+
 === ofono ===
 
 Best way seems to get Samsung IPC modem support from the patchset https://lists.ofono.org/pipermail/ofono/2012-September/013766.html (but it was not accepted) and does not build https://github.com/tssk/pmbootstrap/commits/device-samsung-i9100_modem . I would appreciate help from someone that understands C.
