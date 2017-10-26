@@ -8,13 +8,16 @@
 
 == Overview ==
 
-The basic minimum shell has been ported to postmarketOS, and can now be tested.
+The basic shell has been ported to postmarketOS, and can now be tested.
 
 Currently, Plasma Mobile is not available from the "master" branch, to use it you will need to check out the "postmarketos-ui-plasma-mobile" branch from the git repository. Once it is considered stable it will be merged with the "master" branch (see [https://github.com/postmarketOS/pmbootstrap/issues/378 #378] for more info and progress).
 
-To install it on your device run <code>./pmbootstrap.py init</code> and choose <code>plasma-mobile</code> in the interface section. Alternatively manually install it with <code>./pmbootstrap.py install --add plasma-mobile,plasma-phone-components,dbus-nox11</code>.
+To install it on your device run <code>./pmbootstrap.py init</code> and choose <code>plasma-mobile</code> in the interface section.
 
-For instructions on running Plasma Mobile you can use the KDE website: https://community.kde.org/Plasma/Mobile/RunningApps
+Because compiling the entirety of KDE and Plasma may take a long time, a Git repository has been setup where pre-built packages can be downloaded for both x86_64 and armhf.
+Clone <code>https://github.com/puretryout/pmos-plasma-mobile</code> and copy the <code>armhf</code> and <code>x86_64</code> folders to <code>~/.local/var/pmbootstrap/packages/</code>, and copy the <code>config_apk_keys</code> folder to <code>~/.local/var/pmbootstrap/</code>. Afterwards run <code>./pmbootstrap.py index</code> from the root of your pmbootstrap installation.
+
+For the official KDE instructions on running Plasma Mobile you can use their website: https://community.kde.org/Plasma/Mobile/RunningApps
 
 ''Packaging efforts have been documented [[Packaging-Plasma-Mobile|here]].''
 
