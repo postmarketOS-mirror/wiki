@@ -25,16 +25,21 @@
 
 * Kernel compiles
 
-== What does not work ==
+== Problems ==
 
 WIP!
 
 == How to enter flash mode ==
 
-Hold down POWER and VOL DOWN
+'''Fastboot''': Hold down POWER and VOL DOWN
+'''Recovery''': Hold down POWER and VOL UP until the silver "Kindle Fire" shows up. Then let go of POWER.
 
+== Preparing for install ==
+Unlock your bootloader and install TWRP. ''SAFESTRAP WILL NOT WORK!!''
+This will automatically do it: https://forum.xda-developers.com/kindle-fire-hdx/general/multi-platform-1-click-bootloader-t3241014
+
+However, there is a manual tutorial here: https://forum.xda-developers.com/kindle-fire-hdx/general/thor-unlocking-bootloader-firmware-t3463982
 == Installation ==
-
 WIP!
 
 == Photos ==
