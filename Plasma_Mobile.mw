@@ -29,7 +29,7 @@ After installation, the shell will automatically launch upon boot. If it doesn't
 
 == Debugging ==
 
-Create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
+By default Plasma and kwin don't really log anything. To tell them to, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
 
 <pre>[Rules]
 org.kde.kwindowsystem.info=true
@@ -101,6 +101,8 @@ kwin_qpa_plugin.info=true
 kwin_qpa_plugin.warning=true
 kwin_qpa_plugin.critical=true
 kwin_qpa_plugin.debug=true</pre>
+
+You can read the log output with <code>logread -f</code>. Anything related to Plasma and KDE will have a <code>username:plasma-mobile</code> prefix.
 
 
 [[Category:Interface]]
