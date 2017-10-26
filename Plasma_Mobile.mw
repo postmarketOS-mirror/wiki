@@ -23,34 +23,9 @@ For the official KDE instructions on running Plasma Mobile you can use their web
 
 == Running ==
 
-If the device supports OpenGL, the Plasma Shell will automatically launch upon boot. If it doesn't, you'll have to SSH in and add the following to <code>~/.config/kdeglobals</code>:
-<pre>[QtQuickRendererSettings]
-SceneGraphBackend=software</pre>
+For now Plasma requires a device with (basic) OpenGL support.
 
-Then, reboot again to have it launch automatically upon boot.
-
-
-
-If you've chosen to install Plasma Mobile manually instead of in <code>./pmbootstrap.py init</code> you'll have to follow the following instructions.
-
-Setup the required environment variables for kwin:
-
-<pre>export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=KDE
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export XDG_CURRENT_DESKTOP=KDE
-export KSCREEN_BACKEND=QScreen
-
-export KDE_FULL_SESSION=1
-export KDE_SESSION_VERSION=5
-export KWIN_COMPOSE=Q
-
-export $(dbus-launch)</pre>
-Right now kwin fails due to lacking permissions on <code>/dev/fb0</code>, so as a workaround you can chown it to your user.
-
-<pre># chown user:user /dev/fb0</pre>
-
-Then execute <code>ck-launch-session kwin_wayland --framebuffer --xwayland -- /usr/bin/plasmashell -p org.kde.satellite.phone</code>. As this way you can not view the logs, it's advisable to add <code>2&gt; /tmp/kwin_log.txt</code> to the end of the command, so it ends up looking like <code>ck-launch-session kwin_wayland --framebuffer --xwayland -- /usr/bin/plasmashell -p org.kde.satellite.phone 2&gt; /tmp/kwin_log.txt</code>. This will make it log to <code>/tmp/kwin_log.txt</code> instead of stdout.
+After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_plasma.sh</code> and <code>/bin/startkwin.sh</code>.
 
 == Debugging ==
 
