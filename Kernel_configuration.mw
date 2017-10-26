@@ -140,7 +140,7 @@ Setting this config will enable the paranoid network security feature''
 
 '''Location in menu'''
 
-<pre class="shell>
+<pre class="shell">
 Networking Support -->
   Networking Options -->
     Only allow certain groups to create sockets
@@ -149,6 +149,25 @@ Networking Support -->
 '''Android specific'''
 
 This option should '''not''' be set in pmOS or any other OS not using Android security model.
+
+
+=== CONFIG_PFT===
+
+'''About'''
+
+''This caused builds to fail with a modern GCC at least once, and while it originally was meant as security feature by Qualcomm, "it is unsupported by Qualcomm, and opens up to a wide range of potential attack surfaces that has not been audited by anyone." [http://www.merproject.org/logs/%23sailfishos-porters/%23sailfishos-porters.2016-08-26.log.html#t2016-08-26T17:43:06].''
+
+'''Location in menu'''
+
+<pre class="shell">
+Device Drivers -->
+  Qualcomm MSM specific device drivers --
+    Per-File-Tagger driver
+</pre>
+
+'''pmOS specific'''
+
+Please disable it, so we have one less source for failing builds and enabling it has no benefit anyway.
 
 == Optional ==
 
