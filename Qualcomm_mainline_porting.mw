@@ -1,0 +1,14 @@
+==WIP==
+== Prerequisites ==
+* A working device-tree based downstream kernel
+* You know the location of the uart port on your device ([https://www.youtube.com/watch?v=_aedd8SUBgY this video] shows how to find it)
+* A device that has one of the following snapdragon processors
+** S3
+** S4 Pro
+** 800
+** 801
+** 805
+** 410
+** 808
+** 810
+** 820
