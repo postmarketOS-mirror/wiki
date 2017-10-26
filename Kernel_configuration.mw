@@ -1,12 +1,10 @@
-{{note|This page is WIP.}}
-
 = Changing the kernel configuration =
 
-You can change the kernel configuration with pmbootstrap, for the sony-yuga device for example we run:
+You can change the kernel configuration with pmbootstrap, for the linux-sony-yuga package for example we run:
 
-<pre class="shell">./pmbootstrap.py menuconfig linux-sony-yuga</pre>
+<pre class="shell">./pmbootstrap.py menuconfig sony-yuga</pre>
 
-This gives you a menu where you can select and deselect all kernel configuration options:
+This gives you a menu where you can select and deselect all kernel configuration options. Press the <code>/</code> key to get a search dialog.
 
 [[File:KernelConfig.png|800px]]
 
@@ -14,7 +12,7 @@ This gives you a menu where you can select and deselect all kernel configuration
 
 == Required ==
 
-These kernel options must be set for pmOS to work.
+Enable or disable the following options to get postmarketOS working. Use <code>./pmbootstrap.py kconfig_check</code> to check which options need to be modified.
 
 === CONFIG_DEVTMPFS ===
 
