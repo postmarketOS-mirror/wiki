@@ -161,13 +161,27 @@ This option should '''not''' be set in pmOS or any other OS not using Android se
 
 <pre class="shell">
 Device Drivers -->
-  Qualcomm MSM specific device drivers --
+  Qualcomm MSM specific device drivers -->
     Per-File-Tagger driver
 </pre>
 
 '''pmOS specific'''
 
 Please disable it, so we have one less source for failing builds and enabling it has no benefit anyway.
+
+
+=== CONFIG_SYSVIPC ===
+
+'''Location in menu'''
+
+<pre class="shell">
+General Setup -->
+  System V IPC
+</pre>
+
+'''pmOS specific'''
+
+Please enable it for postmarketOS, so busybox' syslogd can log to a ringbuffer in the kernel (fixes {{github|808}}).
 
 == Optional ==
 
