@@ -27,7 +27,7 @@
 
 == Problems ==
 
-WIP!
+* mkbootimg isn't run during install, which makes a non-working recovery zip
 
 == How to enter flash mode ==
 
