@@ -55,11 +55,14 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more i
 You have to configure <code>pmbootstrap</code> before generating the system image either by <code>pmbootstrap init</code> or <code>pmbootstrap config</code>:
 
 <pre>$ ./pmbootstrap init
-[11:23:07] Target device (either an existing one, or a new one for porting).
-[11:23:07] Available (17): asus-grouper, htc-ace, htc-bravo, lg-d855, lg-hammerhead, lg-mako, motorola-titan, mozilla-flame, nokia-rx51, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-i9070, samsung-i9100, samsung-maguro, samsung-n7100, sony-amami
-[11:23:07] Device [motorola-titan]: 
-[11:23:08] Available user interfaces (1): weston, none
-[11:23:08] User interface [weston]: </pre>
+[19:09:14] Target device (either an existing one, or a new one for porting).
+[19:09:14] Available (31): asus-flo, asus-grouper, fairphone-fp2, htc-ace, htc-bravo, huawei-angler, huawei-y530, lg-d285, lg-d855, lg-dory, lg-hammerhead, lg-lenok, lg-mako, motorola-osprey, motorola-titan, nokia-rx51, oneplus-bacon, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-i9003, samsung-i9070, samsung-i9100, samsung-i9305, samsung-maguro, samsung-n7100, sony-amami, sony-aries, sony-castor-windy, sony-yuga, t2m-flame
+[19:09:14] Device [motorola-titan]: 
+[19:09:16] Available user interfaces (3): 
+[19:09:16] * weston: (Wayland) Reference compositor (demo, not a phone interface)
+[19:09:16] * hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
+[19:09:16] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
+[19:09:16] * none: No graphical environment</pre>
 <pre>$ ./pmbootstrap config ui weston</pre>
 
 [[Category:Interface]]
