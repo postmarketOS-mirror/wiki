@@ -665,6 +665,14 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | nec-ne-201a1a
   |
 |-
+  | [[Nokia N9]]
+  |
+  | Filip is working on that one
+|-
+  | [[Nokia N950]]
+  |
+  | kernel is booting
+|-
   | [[Qemu Nokia N900|Qemu N900]]
   | qemu-rx51
   |
