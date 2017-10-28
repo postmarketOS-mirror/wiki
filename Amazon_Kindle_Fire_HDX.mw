@@ -24,6 +24,9 @@
 == What works ==
 
 * Kernel compiles
+* Can be flashed with custom script in TWRP Terminal
+* Boots (without graphics except for flickering)
+* SSH/RNDIS
 
 == Problems ==
 
