@@ -1,12 +1,5 @@
 = Generic debugging steps =
 
-==== Setting the resolution for the framebuffer ====
-The resolution for the framebuffer might not be set to the correct resolution for the display panel in the device. In some cases this command will also manually refresh the panel (like for the hammerhead)
-
-<syntaxhighlight lang="shell-session">
-$ cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode
-</syntaxhighlight>
-
 ==== Changing the panning ====
 Some devices might have a framebuffer virtual size thats twice as big as the panel resolution, this is a common double buffering method. The application renders to one side of the display while the panning is set to
 the other side. You can try changing the panning with the `panning` file in the sysfs directory.
@@ -54,7 +47,14 @@ You can set <code>deviceinfo_weston_pixman_type</code> (see [[deviceinfo referen
 
 ==== Screen doesn't refresh ====
 
-Enable <code>deviceinfo_msm_refresher</code> (see [[deviceinfo reference]]) and add <code>msm-fb-refresher</code> to the <code>depends=</code> of your device-package.
+Check if your screen refreshes when you do the following:
+<syntaxhighlight lang="shell-session">
+$ cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode
+</syntaxhighlight>
+
+If it does, enable <code>deviceinfo_msm_refresher</code> (see [[deviceinfo reference]]) and add <code>msm-fb-refresher</code> to the <code>depends=</code> of your device-package. It will basically do the same automatically.
+
+(If the above command does ''not'' refresh your screen, you could try the <code>msm-fb-refresher</code> anyway.)
 
 ==== Screen is blank outside of Weston ====
 
