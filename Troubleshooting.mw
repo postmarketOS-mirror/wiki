@@ -1,9 +1,16 @@
-=== General information ===
+= General information =
 
 * Always look at the log file for a detailed error message: <code>~/.local/var/pmbootstrap/log.txt</code>
 * Make sure, that you have the latest version. Your bug may already be fixed
 * Please report the bugs you have found in the [https://github.com/postmarketOS/pmbootstrap/issues issues], so we can fix them :)
 * Syslog is enabled, and will log to shared memory once the OS has booted. It can be read with the <code>logread</code> tool in BusyBox. The syslog is currently not preserved across reboots.
+
+= Specific troubleshooting pages =
+* [[Troubleshooting:display]]
+* [[Troubleshooting:grsec]] (TL;DR: doesn't work)
+* [[Troubleshooting:kernel]]
+
+= Uncategorized errors =
 
 === <code>musl-*</code>/<code>busybox-static-*</code> fails to build with a 404 error ===
 
