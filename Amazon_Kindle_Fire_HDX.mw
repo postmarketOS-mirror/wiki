@@ -27,7 +27,7 @@
 
 == Problems ==
 
-* mkbootimg isn't run during install, which makes a non-working recovery zip
+* Recovery zip returns TWRP Error 255 when attempting to flash
 
 == How to enter flash mode ==
 
