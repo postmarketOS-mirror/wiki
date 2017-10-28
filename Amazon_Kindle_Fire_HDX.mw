@@ -31,6 +31,7 @@
 == Problems ==
 
 * Recovery zip returns TWRP Error 255 when attempting to flash
+* On boot, graphics flicker
 
 == How to enter flash mode ==
 
