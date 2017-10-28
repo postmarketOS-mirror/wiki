@@ -22,7 +22,7 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == What works ==
-* Boot with LineageOS kernel
+* Boot with LineageOS kernel (with postmarketOS configuration)
 * Weston
 * Touchscreen
 
@@ -30,7 +30,7 @@
 * Everything else
 
 == How to enter flash mode ==
-Hold power button and up while device is turned off
+Hold power button and volume up while device is turned off
 
 == Installation ==
 
@@ -41,3 +41,8 @@ Hold power button and up while device is turned off
 == Photos ==
 
 == Links ==
+
+==Current Work==
+
+* osk-sdl porting (black screen is current issue)
+* Booting with a postmarketOS-built kernel
