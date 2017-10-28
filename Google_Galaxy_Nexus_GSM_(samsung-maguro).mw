@@ -21,28 +21,28 @@
 
 = What works =
 
-* [x] Kernel compilation
-* [x] Flash kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* [x] Flash system (<code>pmbootstrap flasher flash_system</code>) (System partition may be too small to flash postmarketOS on, in which case you should change the partition to <code>userdata</code> in <code>pmb/config/__init__.py</code>.)
-* [x] Initramfs boot
-* [x] USB network
-* [x] Framebuffer graphics (Splash screens)
-* [x] SSH connectivity (via USB and Wifi)
-* [x] Weston on framebuffer
-* [x] Touchscreen
-* [x] Xwayland
-* [x] Wifi
-* [ ] Audio playback (untested)
-* [ ] Bluetooth
-* [ ] GPS
-* [ ] Front camera
-* [ ] Rear camera
-* [ ] ...
+* ☑ Kernel compilation
+* ☑ Flash kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* ☑ Flash system (<code>pmbootstrap flasher flash_system</code>) (System is only 654M and may be too small to flash postmarketOS on, in that case add <code>--partition userdata</code>)
+* ☑ Initramfs boot
+* ☑ USB network
+* ☑ Framebuffer graphics (Splash screens)
+* ☑ SSH connectivity (via USB and Wifi)
+* ☑ Weston on framebuffer
+* ☑ Touchscreen
+* ☑ Xwayland
+* ☑ Wifi
+* ☐ Audio playback (untested)
+* ☐ Bluetooth
+* ☐ GPS
+* ☐ Front camera
+* ☐ Rear camera
+* ☐ ...
 
 = Links =
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-maguro Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-tuna Kernel package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-maguro Kernel package]
 * [https://github.com/lawl/pmbootstrap lawl's development branch] (now merged into master)
 
 = Additional info =
