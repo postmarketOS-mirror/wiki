@@ -25,13 +25,13 @@
 
 * Kernel compiles
 * Can be flashed with custom script in TWRP Terminal
-* Boots (without graphics except for flickering)
+* Boots successfully
+* Weston
 * SSH/RNDIS
 
 == Problems ==
 
 * Recovery zip returns TWRP Error 255 when attempting to flash
-* On boot, graphics flicker
 
 == How to enter flash mode ==
 
