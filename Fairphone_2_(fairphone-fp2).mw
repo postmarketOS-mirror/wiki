@@ -14,34 +14,44 @@
 | display = 1080x1920 IPS
 | memory = 2GB
 }}
+
 == Contributors ==
-* z3ntu
+
+* Luca Weiss (z3ntu)
+
+== Maintainer(s) ==
+
+* Luca Weiss (z3ntu)
 
 == What works ==
 
-* Flashing
+* Flashing (needs bootloader path)
 * Booting
-* Screen (after msm framebuffer hack)
+* Screen (needs the msm framebuffer hack)
 * Touchscreen
 * USB networking
 * USB OTG
+* WiFi
 
 == What does not work ==
 
-* The rest
+* The rest (probably)
 
 == How to enter flash mode ==
 
-As mentioned in [[#Installation]], fastboot does not work for flashing the system image (it does for the boot image), the TWRP Android recovery must be used. A current version can be downloaded from [https://twrp.me/devices/fairphone2.html twrp.me].
+Hold vol-down while booting the device. The splash screen doesn't indicate, that the phone is in fastboot mode, but you can test it by running "fastboot devices" on a PC that's connected via USB to the phone.
 
 == Installation ==
 
-As the Fairphone bootloader/lk has a bug that affects the flashing of large images via fastboot, the Android recovery zip option must be used and the resulting zip must be flashed from TWRP.
+As mentioned in [[#Installation]], the bootloader doesn't current support flashing images generated with the "img2simg" tool. It needs the patch [https://github.com/z3ntu/android_kernel_lk_fairphone_FP2/commit/0255581a47b96b8b0b3d7c5f0336d5f6bef8f2ad "app: aboot: Add support for CHUNK_FILL type for sparse image"] to work. This patch should be included in a future release from Fairphone. Contact @z3ntu to get instructions on how to patch the bootloader.
 
-After that, it's as easy as rebooting and unlocking the phone via the telnet interface.
+Installation procedure is the same as with most other devices and isn't special for this phone.
 
 == Photos ==
+
 * [https://wiki.postmarketos.org/images/7/7e/Fairphone_2.jpg Weston running]
+
 == Links ==
+
 * [https://github.com/LineageOS/android_kernel_fairphone_msm8974/ LineageOS kernel source]
 * [https://github.com/FairphoneMirrors/android_kernel_lk_fairphone_fp2 Bootloader/lk source]
