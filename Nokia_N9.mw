@@ -1,0 +1,3 @@
+This device is pretty similar to nokia N950, with exception of kernel. Bootloader has same problems.
+
+Filippz did some initial porting, at https://github.com/filippz/pmbootstrap/commit/d92f2de6585bbfa98bad3bd60e017af905783157
