@@ -25,7 +25,7 @@
 
 == What works ==
 
-* Flashing (needs bootloader path)
+* Flashing (needs bootloader patch)
 * Booting
 * Screen (needs the msm framebuffer hack)
 * Touchscreen
