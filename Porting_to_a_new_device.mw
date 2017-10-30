@@ -317,7 +317,7 @@ $ pmbootstrap flasher --method=adb sideload
 When all else fails, you might have success with installing via [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] or booting via [https://github.com/postmarketOS/pmbootstrap/pull/547 NFS].
 
 === USB Network ===
-{{note|As soon as usb networking works, it's time to upstream your work into the official pmbootstrap repository. Please [https://help.github.com/articles/about-pull-requests/ make a pull request] (PR) or send us a link to your code in the chat if you don't want to use GitHub.}}
+{{note|As soon as usb networking works, it's time to upstream your work into the official pmbootstrap repository. Please [https://help.github.com/articles/about-pull-requests/ make a pull request] (PR) or send us a link to your git repository in the chat if you don't want to use GitHub.}}
 If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through SSH over USB (or if that fails, via telnet). See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details.
 
 === Display ===
