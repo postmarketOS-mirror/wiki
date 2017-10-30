@@ -32,6 +32,7 @@
 == Problems ==
 
 * Recovery zip returns TWRP Error 255 when attempting to flash
+* Wifi doesn't work
 
 == How to enter flash mode ==
 
