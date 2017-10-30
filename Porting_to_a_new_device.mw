@@ -178,7 +178,7 @@ $ pmbootstrap checksum linux-wiki-example
 $ pmbootstrap build linux-wiki-example
 </syntaxhighlight>
 
-In the unlikely case, that everything runs through smoothly, continue reading [[here]].
+In the unlikely case, that everything runs through smoothly, continue reading [[#Documentation|here]].
 
 ==== Find the error message ====
 In the log window, scroll up until you find the first message containing <code>error:</code> or <code>Error</code> (examples below). Read on for some tips on how to make this easier, if you can't find it right away.
