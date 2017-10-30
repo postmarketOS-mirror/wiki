@@ -228,7 +228,7 @@ When there is a result, copy the patch file you found to your new kernel package
 
 <syntaxhighlight lang="shell-session">
 $ cp aports/device/linux-lg-mako/01_msm-fix-perf_trace_counters.patch aports/device/linux-wiki-example/
-$ nano aports/device/linux-wiki-example/APKBUILD
+$ nano aports/device/linux-wiki-example/APKBUILD # add it to source
 $ pmbootstrap checksum linux-wiki-example
 $ pmbootstrap build linux-wiki-example
 </syntaxhighlight>
