@@ -705,10 +705,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | google-glass
   |
 |-
-  | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX]]
-  | thor(7") / apollo(8.9")
-  | apollo port not started yet
-|-
   | [[Aquaris-U|bq Aquaris U]]
   | chaozu
   | kernel compiles, more is not yet tested
