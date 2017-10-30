@@ -1,123 +1,333 @@
-=== Introduction ===
-{{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, writing SMS, using Wi-Fi, using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
+=== Preparation ===
+{{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, writing SMS, using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
 
-If you have ''any'' questions, feel free to ask in the [[Matrix and IRC|matrix/irc channel]] or [https://github.com/postmarketOS/pmbootstrap/issues bug tracker]! This is a wiki, so '''please adjust everything that isn't detailed enough or would have helped you with porting.''' Please write your porting '''progress to the [[Devices]] page''', even if you didn't get very far. This helps to determine what can be improved to make porting easier. We even have a [[Help:Device Page|tutorial for that]].
+* Join [[Matrix and IRC|Matrix/IRC]] to get help when you're stuck
+* Search the [[supported devices]] page for your device to avoid duplicate work
+* We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with Virtual Box] first.
 
 === Initialization ===
+Run the following commands in a Linux terminal to get started.
 
-* Clone the repository: <code>git clone https://github.com/postmarketOS/pmbootstrap</code>
-* Run <code>./pmbootstrap.py init</code> and configure for a new device
-* Open a second terminal and run <code>./pmbootstrap.py log</code> to get detailed output from the following pmbootstrap commands
+<syntaxhighlight lang="shell-session">
+$ git clone https://github.com/postmarketOS/pmbootstrap
+$ cd pmbootstrap
+$ ./pmbootstrap.py init
+</syntaxhighlight>
 
-=== Device-specific package ===
+Type in the code name of your device to start a new port, and fill out everything else you get asked for. Check out [[how to find device specific information]] if necessary.
 
-Create an appropriate <code>device-$vendor-$name</code> package in the <code>aports/device</code> folder:
+<pre>
+Target device (either an existing one, or a new one for porting).
+Available (31): asus-flo, asus-grouper, fairphone-fp2, ...
+Device [samsung-i9100]: wiki-example
+You are about to do a new device port for 'wiki-example'.
+Continue? (y/n) [y]:
+Device architecture (armhf/aarch64) [armhf]:
+Who produced the device (e.g. LG)?
+Manufacturer: Samsung
+What is the official name (e.g. Google Nexus 5)?
+Name: Wiki Example
+Does the device have a hardware keyboard? (y/n) [n]:
+Does the device have a sdcard or other external storage medium? (y/n) [n]:
+Which flash method does the device support?
+</pre>
 
-<pre class="shell">cp -r aports/device/device-samsung-i9100 aports/device/device-vendor-name</pre>
-The important files are <code>APKBUILD</code> (''build recipe, [[Glossary#apk|apk is an Alpine Linux term]]'') and [[deviceinfo]]. Please adjust them as necessary. For more info, see [[How to find device specific information]], particularly the section "Fastboot (boot.img) flash offsets".
+==== Flash method ====
+It depends on the flashing protocol, that comes with the device. For most Android devices, this is <code>fastboot</code>, some Samsung models need <code>heimdall</code> (which is compatible to "Odin") and some Nokia based phones work with <code>0xffff</code>. If you don't know which one it is, try to enter the bootloader on your device and check whether it says "Fastboot mode" or "Odin mode". Most of the time, that can be done by pressing the <code>Volume Down</code> key when it is just booting. In case you can't figure that one out, try to search the internet - there might even be videos on YouTube on how to do that if you're lucky.
 
-Note that if your device uses '''fastboot''' or [https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods#Isorec_or_bootimg.3F '''heimdall-bootimg'''], you will need to add <code>mkbootimg</code> to the <code>depends=</code> list in the <code>APKBUILD</code>, and the following variables at the end of <code>deviceinfo</code> ([https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets guide], [https://github.com/postmarketOS/pmbootstrap/blob/eddf81a730b68076e59b66f2a6163e6587b7fc84/aports/device/device-sony-yuga/deviceinfo#L22-L28 example]):
+<pre>
+Flash method (fastboot/heimdall/0xffff) [fastboot]:
+Username [user]:
+Available user interfaces (3):
+</pre>
 
-<pre class="shell"># Fastboot related
-deviceinfo_generate_bootimg=&quot;true&quot;
-deviceinfo_flash_offset_base=&quot;&quot;
-deviceinfo_flash_offset_kernel=&quot;&quot;
-deviceinfo_flash_offset_ramdisk=&quot;&quot;
-deviceinfo_flash_offset_second=&quot;&quot;
-deviceinfo_flash_offset_tags=&quot;&quot;
-deviceinfo_flash_pagesize=&quot;&quot;</pre>
-A post-install script can be created to append device-specific partitions to <code>/etc/fstab</code>. See [https://github.com/postmarketOS/pmbootstrap/blob/ed8fba54c31c3ccd1f1f59c7194fffecc63ca7c4/aports/device/device-nokia-rx51/device-nokia-rx51.post-install#L12 the post-install script] for <code>device-nokia-rx51</code> for an example.
+==== Interfaces ====
+We recommend, that you start with <code>weston</code> first, because that has been around the longest in postmarketOS and, while it is not really suitable for a phone, it works as a stable demo interface for making the graphics output work in the first place. After that one works, feel free to try out another interface (but expect, that it will not necessarily work out of the box).
 
-Once the device package is configured, you will need to update checksums in the APKBUILD to match the new configuration files. You can do that by running:
+<pre>
+* none: No graphical environment
+* hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
+* weston: (Wayland) Reference compositor (demo, not a phone interface)
+* xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
+User interface [weston]:
+Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+Work path [/home/user/.local/var/pmbootstrap]:
+How many jobs should run parallel on this machine, when compiling?
+Jobs [3]:
+Rebuild packages, when the last modified timestamp changed, even if the version did not change? This makes pmbootstrap behave more like 'make'.
+Timestamp based rebuilds (y/n) [n]:
+Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+Extra packages [none]:
+Your host timezone: Europe/London
+Use this timezone instead of GMT? (y/n) [y]:
+WARNING: The applications in the chroots do not get updated automatically.
+Run 'pmbootstrap zap' to delete all chroots once a day before working with pmbootstrap!
+It only takes a few seconds, and all packages are cached.
+Done!
+</pre>
 
-<pre class="shell">./pmbootstrap.py checksum device-$vendor-$name</pre>
-Now, you can build your device package with:
+==== Shortcut ====
+<code>./pmbootstrap.py</code> is the key program for postmarketOS development, so you might want to set up <code>pmbootstrap</code> as shortcut, that works from any folder:
 
-<pre class="shell">./pmbootstrap.py build device-$vendor-$name</pre>
+<syntaxhighlight lang="shell-session">
+$ sudo ln -s $PWD/pmbootstrap.py /usr/local/bin/pmbootstrap
+</syntaxhighlight>
+
+The rest of the documentation assumes, that you have this shortcut set up. If you skipped this step, simply use <code>./pmbootstrap.py</code> whenever <code>pmbootstrap</code> is mentioned.
+
+==== Logging ====
+Open a second terminal and run the following command to see detailed logging (such as compiler output). Whenever reporting, that something does not work, please attach the detailed log output from this window.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap log
+</syntaxhighlight>
+
+=== Device specific package ===
+Open <code>aports/device/device-wiki-example/deviceinfo</code> in your favorite editor (replace <code>wiki-example</code>) and adjust:
+
+* <code>deviceinfo_screen_width</code> and <code>height</code>
+* <code>deviceinfo_flash_offset_</code> lines with [[How-to-find-device-specific-information#Fastboot_.28boot.img.29_flash_offsets|this guide]] (only if there are any!)
+
+Then regenerate the checksums and build your device package. Example commands:
+
+<syntaxhighlight lang="shell-session">
+$ nano aports/device/device-wiki-example/deviceinfo
+$ pmbootstrap checksum device-wiki-example
+$ pmbootstrap build device-wiki-example
+</syntaxhighlight>
 
 === Kernel package ===
+While the goal is to use a mainline kernel for all devices in the long run, this certainly can not be done in one step when porting to a new device. What we do in the meantime is shipping a Linux kernel fork, that is known to work with this device (e.g. from Android).
 
-While the goal is to use a mainline kernel for all devices in the long run, this certainly can not be done in one step when porting to a new device. Create a new package for the kernel by copying the kernel package of the most similar device with an existing port. For example:
+==== Source code ====
+{{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
+First of all, [[How-to-find-device-specific-information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork, then and adjust the <code># Source</code> section in the <code>aports/device/linux-wiki-example/APKBUILD</code> file. For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch.
 
-<pre class="shell">cp -r aports/device/linux-lg-mako aports/device/linux-vendor-name</pre>
-Now edit the <code>APKBUILD</code>. Replace the kernel source with a kernel suitable for your device. For Android devices we usually use the [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#LineageOS_kernel_source_repository kernels from LineageOS]. Copy the right [https://wiki.postmarketos.org/wiki/How_to_find_device_specific_information#Kernel_defconfig_.28default_config.29 default config] from your kernel's source folder into your new <code>linux-...</code> folder and adjust its file name. Please adjust the comments in the <code>APKBUILD</code> file about which defconfig you have used, and which modifications you have made. Please also adjust the <code>pkgver</code>/<code>pkgrel</code> to match the [https://stackoverflow.com/a/12151781 kernel version].
+<syntaxhighlight lang="bash">
+# Source
+_repository="(CHANGEME!)"
+_commit="ffffffffffffffffffffffffffffffffffffffff"
+_config="config-${_flavor}.${arch}"
+source="
+    $pkgname-$_commit.tar.gz::https://github.com/LineageOS/${_repository}/archive/${_commit}.tar.gz
+    $_config
+    compiler-gcc6.h
+    01_msm-fix-perf_trace_counters.patch
+    02_gpu-msm-fix-gcc5-compile.patch
+"
+builddir="$srcdir/${_repository}-${_commit}"
+</syntaxhighlight>
 
-Next, generate the checksum for the kernel package files using:
+==== Kernel version ====
+In the repository with the kernel source code, you will find a <code>Makefile</code>. Open this file and adjust the <code>pkgver</code> in the kernel <code>APKBUILD</code> to the information from the <code>VERSION</code>, <code>PATCHLEVEL</code> and <code>SUBLEVEL</code> variables (e.g. [https://github.com/LineageOS/lge-kernel-mako/blob/c76e1bc83219088b2ff1b2b5709a88ebda5e54e4/Makefile#L1-L3 3.4.0]).
 
-<pre class="shell">./pmbootstrap.py checksum linux-$vendor-$name</pre>
-Now, before building the kernel itself, it is required to run the kernel's [https://en.wikipedia.org/wiki/Menuconfig menuconfig] with:
+==== Defconfig ====
+Next you will need to [[How-to-find-device-specific-information#Kernel_defconfig_.28default_config.29|find the kernel configuration]], that is used to compile that kernel source for your device. Download it and save it as <code>aports/device/linux-wiki-example/config-wiki-example.armhf</code> (replace <code>wiki-example</code> and <code>armhf</code>).
 
-<pre class="shell">./pmbootstrap.py menuconfig linux-$vendor-$name</pre>
-The first time, you run the menuconfig command, you will get prompted about new config options, that the default config does not address (in Android's build process, these options get ignored, but in pmOS they must be specified). Please accept the defaults it presents.<br/>After that, you will be shown a menu, in which the [https://wiki.postmarketos.org/wiki/Kernel_configuration#Required required kernel options] must be set for pmOS to work.
+<syntaxhighlight lang="shell-session">
+$ wget https://github.com/LineageOS/lge-kernel-mako/raw/cm-14.1/arch/arm/configs/lineageos_mako_defconfig
+$ mv lineageos_mako_defconfig aports/device/linux-wiki-example/config-wiki-example.armhf
+</syntaxhighlight>
 
-The easiest way is getting out of the menu with "Exit", and confirming when asked whether the changes should be saved. Then run the following to see what needs to be changed in your config:
-<pre class="shell">./pmbootstrap.py kconfig_check</pre>
-Adjust your kernel config until <code>kconfig_check</code> doesn't complain anymore.
+==== Download sources and update checksums ====
+Use the checksum action again. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window.
 
-Once you have configured the kernel, build it (the arch specification is necessary here, because we're really compiling code - the device package just contains text/scripts and no native code, therefore it is architecture independent):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap checksum linux-wiki-example
+</syntaxhighlight>
 
-<pre class="shell">./pmbootstrap.py build linux-$vendor-$name --arch=armhf</pre>
-''NOTE'': The <code>linux-lg-mako</code> package has a patch called <code>gpu-msm-fix-gcc5-compile.patch</code>, to fix compiler errors with GCC6. If your kernel doesn't need that specific patch (if it does not apply correctly, as in [https://github.com/postmarketOS/pmbootstrap/issues/14#issuecomment-305083767 this] report), just remove the file, and remove it from the <code>source=</code> line in the <code>APKBUILD</code>.
+==== Kernel configuration ====
+Check what you need to adjust in the kernel config before it can be used with postmarketOS. Keep [[Kernel_configuration|changing the options]], until everything passes.
 
-Important: You will need to '''patch your kernel to get it working with GCC6''' - read [[how to create a patch when packaging software]] for instructions.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap kconfig_check
+$ pmbootstrap menuconfig wiki-example
+$ pmbootstrap kconfig_check
+</syntaxhighlight>
 
-If your manufacturer has not released the source code of your kernel and you don't want to give up on porting your device, you can try the [[Using-prebuilt-kernels|prebuilt kernels]] approach.
+==== Kernel compilation ====
+Next up is the kernel compilation, which will fail a few times before you get it working. Run it once to see where it fails. Please note, that before actually compiling the kernel, pmbootstrap will build/install the required dependencies, such as <code>binutils</code> and <code>gcc</code> versions for cross-compilation (the plan is to provide them in binary form at some point in the future).
 
-==== Appended device trees ====
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap build linux-wiki-example
+</syntaxhighlight>
 
-Some devices need an appended device tree to boot. In LineageOS kernels this will mean that beside the generated <code>zImage</code> there is also a <code>zImage-dtb</code> file. To use this you have to enable in your kernel appending the <code>dtb</code> as in [https://github.com/postmarketOS/pmbootstrap/blob/51af907534a1518c22f78c006ae880d495ec3985/aports/linux-lg-hammerhead/config-lg-hammerhead.armhf#L674 lg-hammerhead] and change the package step in the build script to use the <code>dtb</code> file:
+We most likely use a more modern version of GCC compared to what your device kernel was intended to be compiled with (which is good, we don't want outdated software). However, this means that you will probably need to patch your kernel before it compiles successfully. Don't be scared, we'll talk you through it.
 
-<pre class="shell"># Change zImage to zImage-dtb on this command:    
-install -Dm644 &quot;$srcdir/build/arch/arm/boot/zImage-dtb&quot; \
-               &quot;$pkgdir/boot/vmlinuz-$_flavor&quot;</pre>
-In Android kernels, you usually enable <code>BUILD_ARM_APPENDED_DTB_IMAGE</code> and get an image with <code>dtb</code> appended and the filename will be <code>zImage-dtb</code>.
+==== Remove failed patches ====
+You will find some example patches already in the generated kernel package. When a patch does not apply correctly, you will get something like the following in the log window (scroll up, the error is above the <code>^^^</code> line).
 
-In the mainline kernel instead, you enable [https://github.com/postmarketOS/pmbootstrap/blob/51af907534a1518c22f78c006ae880d495ec3985/aports/linux-nokia-rx51/config-nokia-rx51.armhf#L555 <code>ARM_APPENDED_DTB</code>] (without trialing **_IMAGE**) and will get a bunch of <code>.dtb</code> files for the boards that are selected in the kernel config. In this case you need to manually append the correct <code>.dtb</code> file to the compiled kernel image <code>zImage</code>. An example of this is in the kernel package for the [https://github.com/postmarketOS/pmbootstrap/blob/51af907534a1518c22f78c006ae880d495ec3985/aports/linux-nokia-rx51/APKBUILD#L94-L96 nokia n900]:
+<pre>
+>>> linux-wiki-example: Unpacking /var/cache/distfiles/linux-wiki-example-ffff.tar.gz...
+>>> linux-wiki-example: 01_msm-fix-perf_trace_counters.patch
+patching file arch/arm/mach-msm/perf_trace_counters.h
+Hunk #1 succeeded at 158 (offset 37 lines).
+>>> linux-wiki-example: 02_this_patch_fails.patch
+patching file arch/arm/mach-msm/perf_trace_counters.h
+Hunk #1 FAILED at 121.
+1 out of 1 hunk FAILED -- saving rejects to file arch/arm/mach-msm/perf_trace_counters.h.rej
+>>> ERROR: linux-wiki-example: all failed
+</pre>
 
-<pre class="shell">cd &quot;$srcdir/build/arch/arm/boot&quot;
-cat zImage dts/omap3-n900.dtb &gt; zImage-dtb</pre>
+When this happens, remove the failing patch from the <code>source=</code> variable in the <code>APKBUILD</code>, and delete the patch file from the same folder. Finally, correct the checksums and build again.
 
-Is it possible that your device need the dtb file appended to the boot.img instead of the kernel itself. In that case you have to pack all the generated dtb files into a single master dtb.img file (see example [https://github.com/postmarketOS/pmbootstrap/blob/cfbf06ee71eed6f9bc1ec40087c3a6c69ab629c6/aports/device/linux-huawei-y530/APKBUILD#L115-L116 here] and [https://github.com/postmarketOS/pmbootstrap/blob/cfbf06ee71eed6f9bc1ec40087c3a6c69ab629c6/aports/device/linux-huawei-y530/APKBUILD#L124-L126 here]) and add the variable <code>deviceinfo_bootimg_qcdt="true"</code> in the <code>deviceinfo</code>.
+<syntaxhighlight lang="shell-session">
+$ nano aports/device/linux-wiki-example/APKBUILD # remove from source
+$ rm aports/device/linux-wiki-example/02_this_patch_fails.patch
+$ pmbootstrap checksum linux-wiki-example
+$ pmbootstrap build linux-wiki-example
+</syntaxhighlight>
 
-''If you are unsure, whether your device has an appended dtb file, use [https://github.com/PabloCastellano/extract-dtb extract-dtb] on an existing kernel image or boot.img file (e.g. from LineageOS or TWRP). <code>extract-dtb</code> is packaged for postmarketOS, you can build it with <code>pmbootstrap build extract-dtb</code>.''
+In the unlikely case, that everything runs through smoothly, continue reading [[here]].
+
+==== Find the error message ====
+In the log window, scroll up until you find the first message containing <code>error:</code> or <code>Error</code> (examples below). Read on for some tips on how to make this easier, if you can't find it right away.
+
+<pre>
+In file included from arch/arm/mach-msm/perf_trace_counters.h:127:0,
+                 from arch/arm/mach-msm/perf_trace_counters.c:14:
+include/trace/define_trace.h:79:43: fatal error: ./perf_trace_counters.h: No such file or directory
+</pre>
+
+<pre>
+drivers/built-in.o: In function `.LANCHOR1':
+msm_iommu_sec.c:(.data+0x9298): undefined reference to `kgsl_iommu_sync_lock'
+msm_iommu_sec.c:(.data+0x929c): undefined reference to `kgsl_iommu_sync_unlock'
+Makefile:877: recipe for target '.tmp_vmlinux1' failed
+make: *** [.tmp_vmlinux1] Error 1
+</pre>
+
+To get an error log, where the actual error message is not mixed with jobs running in parallel, please run the compilation again with only one job enabled. In general, this makes it slower. But don't worry, we use <code>ccache</code>. Therefore everything you have already compiled once will be faster when compiled again.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap -j1 build linux-wiki-example
+</syntaxhighlight>
+
+If you still can't find it, try it with a text editor. The log is stored in <code>~/.local/var/pmbootstrap/log.txt</code> (or in whichever work folder you have specified in the initialization step). It is even possible to clear the log file right before compilation, when you press <code>CTRL</code> + <code>C</code> in the log window and use <code>log -c</code>:
+
+<syntaxhighlight lang="shell-session">
+(old log output here)
+^C
+$ pmbootstrap log -c
+</syntaxhighlight>
+
+==== Get a patch ====
+===== From postmarketOS aports =====
+It is highly likely, that we already ran into the same issue with another kernel. Take (parts of) the offending file name and search for it inside <code>aports/device</code>.
+
+<syntaxhighlight lang="shell-session">
+$ grep -r 'perf_trace_counters\.c' aports/device/
+aports/device/linux-lg-mako/01_msm-fix-perf_trace_counters.patch:In-tree compilation for arch/arm/mach-msm/perf_trace_counters.c was
+aports/device/linux-lg-mako/01_msm-fix-perf_trace_counters.patch:                     from arch/arm/mach-msm/perf_trace_counters.c:14
+$ grep -r 'msm_iommu_sec' aports/device/
+aports/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch:msm_iommu_sec.c:(.data+0x9298): undefined reference to `kgsl_iommu_sync_lock'
+aports/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch:msm_iommu_sec.c:(.data+0x929c): undefined reference to `kgsl_iommu_sync_unlock'
+</syntaxhighlight>
+
+When there is a result, copy the patch file you found to your new kernel package, add it to the <code>source</code> variable in the <code>APKBUILD</code> and try building again.
+
+<syntaxhighlight lang="shell-session">
+$ cp aports/device/linux-lg-mako/01_msm-fix-perf_trace_counters.patch aports/device/linux-wiki-example/
+$ nano aports/device/linux-wiki-example/APKBUILD
+$ pmbootstrap checksum linux-wiki-example
+$ pmbootstrap build linux-wiki-example
+</syntaxhighlight>
+
+===== From elsewhere =====
+Fire up your favorite search engine, and look at all results for the error message and variations of it. The <code>""</code> feature of most search engines is useful, so it searches for an exact string and not single words. Example queries for the error messages above:
+* <code>include/trace/define_trace.h: fatal error: ./perf_trace_counters.h: "No such file or directory"</code>
+* <code>linux "./perf_trace_counters.h: No such file or directory"</code>
+* <code>android "undefined reference to `kgsl_iommu_sync_unlock'"</code>
+
+In most cases, this will yield a patch that you can apply to your kernel. Save what you have found as a patch file right next to the <code>APKBUILD</code> of your new kernel package. Mailing list posts are usually in the format of a patch file and can be used directly, while commits or Pull Requests on GitHub can be downloaded as patch when you append <code>.patch</code> to the URL (e.g. [https://github.com/ShinySide/HispAsian_Lollipop_G6/commit/b7756b6fc4bb728722b14d2dfdbaf1dc843812e9 commit], [https://github.com/ShinySide/HispAsian_Lollipop_G6/commit/b7756b6fc4bb728722b14d2dfdbaf1dc843812e9.patch patch]).
+
+If what you found on the web can't be used as patch file directly (e.g. sometimes the files are in other folders), but you understood how you would need to patch the source (from the search results or simply because you already knew), please follow [[How_to_create_a_patch_when_packaging_software|this guide]].
+
+Patch files can contain arbitrary text before the first line with <code>---</code> in the file. Please use this space to link to the source where you found a patch (in case it is from the Internet) and to paste the error message, that your patch fixes (so it is easier to find for other people).
+
+After creating the patch file and adding the source URL and error message, put the file name into <code>source</code> in your <code>APKBUILD</code> and give it another shot.
+
+<syntaxhighlight lang="shell-session">
+$ nano aports/device/linux-wiki-example/03_description-here.patch
+$ nano aports/device/linux-wiki-example/APKBUILD
+$ pmbootstrap checksum linux-wiki-example
+$ pmbootstrap build linux-wiki-example
+</syntaxhighlight>
+
+We can't promise anything, but you shouldn't need to do this more than 2 times or so, before the kernel build finally goes through.
+
+=== We are happy to help you! ===
+If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://github.com/postmarketOS/pmbootstrap/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
+
+=== Documentation ===
+This is a wiki, so '''please adjust everything that isn't detailed enough or would have helped you with porting.'''
+
+More importantly, if you are at this point, it is a good idea to start writing your porting '''progress to the [[Devices]] page''', even if you didn't get very far and the kernel does not compile (it will help others to continue from your work). Simply register in the wiki (you don't even need an e-mail address) and [[Help:Device Page|follow this tutorial]].
 
 === Installation ===
-
 If you want to install to the system partition of an image file, run the following:
 
-<pre class="shell">./pmbootstrap.py install --no-fde</pre>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --no-fde
+</syntaxhighlight>
+
 If you want to install to a SD card, insert it and run the following. Replace mmcblk0 with the actual device name (<code>lsblk</code> is handy to find out the correct device name).
 
-<pre class="shell">./pmbootstrap.py install --no-fde --sdcard=/dev/mmcblk0</pre>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0
+</syntaxhighlight>
 
 The <code>--no-fde</code> disables '''f'''ull '''d'''isk '''e'''ncryption. You can enable it once you have graphical output and touchscreen or physical keyboard working, so you can actually type in the password. Additional porting steps to get that working are described [[Osk-sdl#Porting_to_New_Devices|here]].
 
 === Flashing ===
-
 Before you can run any flash command, you must put your device in the flashing mode. It is usually done holding Volume Down &amp; Power simultaneously when the device is switched off but it may vary depending on the device. For more information see the specific page for your device in the [https://wiki.lineageos.org/devices LineageOS Wiki].
 
 If you want to install to the system partition, run the following (not for the SD card installation!):
 
-<pre class="shell">./pmbootstrap.py flasher flash_system</pre>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher flash_system
+</syntaxhighlight>
 
 If you have a device, that works with fastboot, you can boot the kernel now without flashing it:
 
-<pre class="shell">./pmbootstrap.py flasher boot</pre>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher boot
+</syntaxhighlight>
+
 Otherwise, you will need to flash the kernel to the device boot partition:
 
-<pre class="shell">./pmbootstrap.py flasher flash_kernel</pre>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher flash_kernel
+</syntaxhighlight>
 
-=== Alternative to flashing: export ===
-
+=== Alternatives to regular flashing ===
 If the flashing method does not work, it is also possible to export all generated image files to a specific directory (with symlinks), so you can flash it manually with your host Linux system (or even on Windows with proprietary flashers such as Odin, if this is the only way it works for you):
 
-<pre class="shell">./pmbootstrap flasher export</pre>
-=== After flashing ===
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher export
+$ pmbootstrap flasher export --odin
+</syntaxhighlight>
 
-If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through telnet over USB. See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details. Also check [[Tuning sysfs]].
+For Android based devices, where a recovery system such as TWRP is installed, you can generate an Android recovery zip compatible file, and sideload it.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --android-recovery-zip
+$ pmbootstrap flasher --method=adb sideload
+</syntaxhighlight>
 
-Don't forget to [[Help:Device_Page|create a specific wiki page for your device]], and add it to the [[devices]] page. If you noticed anything that was unclear or discovered something useful, please help to improve the wiki! Feel free to ask / help on [[Matrix-and-IRC|IRC or Matrix group]].
+When all else fails, you might have success with installing via [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] or booting via [https://github.com/postmarketOS/pmbootstrap/pull/547 NFS].
 
-=== Adding osk-sdl support ===
+=== USB Network ===
+{{note|As soon as usb networking works, it's time to upstream your work into the official pmbootstrap repository. Please [https://help.github.com/articles/about-pull-requests/ make a pull request] (PR) or send us a link to your code in the chat if you don't want to use GitHub.}}
+If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through SSH over USB (or if that fails, via telnet). See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details.
 
-If the display & the touchscreen interface are working, then it's time to add support for osk-sdl, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting Osk-SDL to New Devices]]
+=== Display ===
+To make the display work in the first place, read [[Troubleshooting:display]] and [[Tuning sysfs]]. Touch screen in <code>weston</code> is described [[Screen Calibration#Weston|here]].
+
+=== osk-sdl support ===
+If the display and the touchscreen interface are working, then it's time to add support for <code>osk-sdl</code>, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting osk-sdl to New Devices]]
+
+=== Advanced topics ===
+* [[WiFi]] (works on many devices now, but the guide needs some work, please expand it and look into the <code>aports</code> folder how it works for other devices and ask in the chat)
+* Cellular modems still need lots of work, see the software stack we have proposed and started to implement in {{github|598}}.
+* [[User-Interfaces]]
+* [[Mainline kernel]]
