@@ -26,6 +26,25 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 ! SMS
 ! Voice
 |-
+  |style="white-space: nowrap;" | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX 7" (thor)]]
+  |style="white-space: nowrap;" | amazon-thor
+  | 
+  | 
+  | P
+  | 
+  | Y
+  | Y
+  | Y
+  |
+  |
+  |
+  |
+  |
+  |
+  |
+  |
+  |
+|-
   | style="white-space: nowrap;" | [[Fairphone 2 (fairphone-fp2)|Fairphone 2]]
   | style="white-space: nowrap;" | fairphone-fp2
   |
@@ -567,25 +586,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | Y
   | Y
   |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-|-
-  |style="white-space: nowrap;" | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX 7" (thor)]]
-  |style="white-space: nowrap;" | amazon-thor
-  | 
-  | 
-  | P
-  | 
-  | Y
-  | Y
-  | Y
   |
   |
   |
