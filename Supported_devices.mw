@@ -311,7 +311,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[Mozilla Flame (t2m-flame)|Mozilla Flame]]
+  | style="white-space: nowrap;" | [[Mozilla Flame (t2m-flame)|Mozilla Flame]]🔼
   | style="white-space: nowrap;" | t2m-flame
   |
   |
@@ -330,7 +330,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |
   |
 |-
-  | style="white-space: nowrap;" | [[nokia-rx51 (Nokia N900)|Nokia N900]]
+  | style="white-space: nowrap;" | [[nokia-rx51 (Nokia N900)|Nokia N900]]🔼
   | style="white-space: nowrap;" | nokia-rx51
   |
   | Y
@@ -611,6 +611,9 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | -
   | Not applicable
+|-
+  | 🔼
+  | non-Android based device
 |}
 
 == Work in progress ==
@@ -620,7 +623,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 ! Codename
 ! Status
 |-
-  | [[Apple-iPod-Touch-1G|Apple iPod Touch 1G]]
+  | [[Apple-iPod-Touch-1G|Apple iPod Touch 1G]]🔼
   | apple-ipt1g
   |
 |-
@@ -644,7 +647,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | asus-wi501q
   | Boot partition too small
 |-
-  | [[BlackBerry-Bold-Touch-9900-(Dakota)|BlackBerry Bold Touch 9900]]
+  | [[BlackBerry-Bold-Touch-9900-(Dakota)|BlackBerry Bold Touch 9900]]🔼
   | blackberry-dakota
   |
 |-
@@ -652,7 +655,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | coolpad-modena2
   |
 |-
-  | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]
+  | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]🔼
   | hp-tenderloin
   | Need novacom packaged for Alpine
 |-
@@ -684,11 +687,11 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | nec-ne-201a1a
   |
 |-
-  | [[Nokia N9]]
+  | [[Nokia N9]]🔼
   |
   | Filip is working on that one
 |-
-  | [[Nokia N950]]
+  | [[Nokia N950]]🔼
   |
   | kernel is booting
 |-
