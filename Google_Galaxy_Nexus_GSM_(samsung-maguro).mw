@@ -52,6 +52,32 @@
 
 Hold the '''Volume Up''' and '''Volume Down''' buttons, and then press the '''Power''' button
 
+== Connect to WiFi ==
+
+* bring the interface up
+
+<code>sudo ifconfig wlan0 up</code>
+
+* scan to find out what WiFi networks are detected
+
+<code>sudo iw dev wlan0 scan</code>
+
+* connect to WPA/WPA2 WiFi network
+
+<code>wpa_passphrase <wifi_ssid> <wifi_key> | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf</code>
+
+* start wpa_supplicant to connect to the network
+
+<code>sudo wpa_supplicant -B -D nl80211 -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0 </code>
+
+* verify that you are indeed connected to the SSID
+
+<code>iw wlan0 link</code>
+
+* start udhcpc to get an ip address
+
+<code>sudo udhcpc -b -i wlan0</code>
+
 == Partition layout ==
 
 <pre> # fdisk /dev/block/mmcblk0
