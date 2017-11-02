@@ -10,7 +10,7 @@
 
 The basic shell has been ported to postmarketOS, and can now be tested.
 
-Currently, Plasma Mobile is not available from the "master" branch, to use it you will need to check out the "postmarketos-ui-plasma-mobile" branch from the git repository. Once it is considered stable it will be merged with the "master" branch (see [https://github.com/postmarketOS/pmbootstrap/issues/378 #378] for more info and progress).
+Currently, Plasma Mobile is not available from the <code>master</code> branch, to use it you will need to check out the <code>postmarketos-ui-plasma-mobile</code> branch from the git repository. Once it is considered stable it will be merged with the <code>master</code> branch (see [https://github.com/postmarketOS/pmbootstrap/issues/378 #378] for more info and progress).
 
 To install it on your device run <code>./pmbootstrap.py init</code> and choose <code>plasma-mobile</code> in the interface section.
 
