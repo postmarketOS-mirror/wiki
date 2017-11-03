@@ -24,7 +24,7 @@
 == What works ==
 
 * Kernel compiles
-* Can be flashed with fastboot (requires 0x1949 as deviceinfo_flash_fastboot_vendor_id), or TWRP terminal
+* Can be flashed with fastboot (requires <code>0x1949</code> as deviceinfo_flash_fastboot_vendor_id), or TWRP terminal
 * Boots successfully
 * Weston
 * SSH/RNDIS
