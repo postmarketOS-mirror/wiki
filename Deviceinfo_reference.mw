@@ -120,6 +120,10 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>flash_sparse</code>
 | Set this to true if your device expects a [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting#invalid-sparse-file-format-at-header-magi sparse system image] flashed
 |
+|-
+| <code>flash_fastboot_vendor_id</code>
+| Set this to your vendor id if fastboot requires the <code>-i</code> argument to work on your device
+|
 
 |-
 | <code>kernel_cmdline</code>
