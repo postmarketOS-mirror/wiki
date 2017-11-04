@@ -701,7 +701,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | [[OnePlus X]]
   | oneplus-onyx
-  |
+  | Kernel boots, postmarketOS kernel causes panic on framebuffer usage.
 |-
   | [[Qemu Nokia N900|Qemu N900]]
   | qemu-rx51
@@ -714,6 +714,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Samsung-S7562|Samsung Galaxy S Duos]]
   | samsung-s7562
   |
+|- 
+  | [[Samsung-i747m|Samsung Galaxy SIII (i747m)]]
+  | samsung-i747m
+  | 
 |-
   | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
   | semc-anzu
