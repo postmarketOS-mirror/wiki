@@ -31,7 +31,7 @@
 === What does not work ===
 
 * weston-keyboard
-* Can't boot without reflashing boot (!)
+* Can't boot without reflashing boot (!) [https://github.com/postmarketOS/pmbootstrap/issues/834#issuecomment-341231881]
 
 === How to enter flash mode ===
 
