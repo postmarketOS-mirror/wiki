@@ -2,6 +2,9 @@ This list is a collection of presentations, talks and other resources that are s
 
 = Topics =
 
+=== Alpine ===
+* [https://archive.fosdem.org/2017/schedule/event/building_a_distro_with_musl_libc/ Building a distro with musl libc (why and how Alpine Linux did it)] (FOSDEM, 2017)
+
 === Apps / Programs ===
 
 * [https://github.com/kaniini/apk-gtk apk-gtk]: GTK2 and 3 frontend for Alpine's package manager
