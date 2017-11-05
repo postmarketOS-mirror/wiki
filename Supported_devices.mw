@@ -523,6 +523,25 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | style="white-space: nowrap;" | [[Samsung Galaxy SIII LTE (samsung-i9305)|Samsung Galaxy SIII (LTE)]]
   | style="white-space: nowrap;" | samsung-i9305, samsung-i9300
   |
+  | P
+  | Y
+  |
+  | Y
+  | Y
+  | Y
+  | Y
+  | Y
+  | 
+  |
+  |
+  |
+  |
+  |
+  |
+|-
+  | style="white-space: nowrap;" | [[Samsung-i747m|Samsung Galaxy SIII (i747m)]]
+  | style="white-space: nowrap;" | samsung-i747m, samsung-i747
+  |
   |
   |
   |
@@ -733,10 +752,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Samsung-S7562|Samsung Galaxy S Duos]]
   | samsung-s7562
   |
-|- 
-  | [[Samsung-i747m|Samsung Galaxy SIII (i747m)]]
-  | samsung-i747m
-  | 
 |-
   | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
   | semc-anzu
