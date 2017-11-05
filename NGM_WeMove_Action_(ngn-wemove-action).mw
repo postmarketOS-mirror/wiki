@@ -1,0 +1,81 @@
+[[Category:Unsupported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = NGM
+| name = WeMove Action
+| image = File:NGM wemove action.png
+| imagecaption = NGM WeMove Action
+| releaseyear = 2012
+| originalsoftware = Android 2.3.6, Gingerbread
+| cpu = MediaTek MT6575, 1GHz Cortex-A9 ARM v7
+| gpu = PowerVR SGX531 Ultra
+| storage = 512MB
+| display = 240×320 QVGA
+| memory = 256MB
+}}
+== Contributors ==
+
+* ''[[user:drebrez|drebrez]]''
+
+== What works ==
+
+* ☐ Kernel compilation
+* ☐ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☐ Initramfs boot
+* ☐ USB Network
+* ☐ Framebuffer graphics (Splash screens)
+* ☐ SSH Connectivity
+* ☐ Weston on framebuffer
+* ☐ Touchscreen
+* ☐ Xwayland
+* ☐ Accelerometer
+* ☐ Audio playback
+* ☐ Bluetooth
+
+== Device info ==
+
+* [http://www.ngm.eu/prd/altri-smartphones-it/wemove-action/ Full phone specifications]
+
+== Additional info ==
+
+=== Entering "Bootloader mode?" ===
+
+Hold the '''Volume Down''' button, and then press the '''Power''' button
+
+=== Entering "Recovery mode" ===
+
+Hold the '''Volume Up''' button, and then press the '''Power''' button
+
+=== Partition layout ===
+
+<pre>
+dev:   size      erasesize  name
+mtd0:  00080000  00040000   "preloader"
+mtd1:  00180000  00040000   "dsp_bl"
+mtd2:  00300000  00040000   "nvram"
+mtd3:  00040000  00040000   "seccnfg"
+mtd4:  00080000  00040000   "uboot"
+mtd5:  00a00000  00040000   "boot"
+mtd6:  00600000  00040000   "recovery"
+mtd7:  00140000  00040000   "secstatic"
+mtd8:  00080000  00040000   "misc"
+mtd9:  00300000  00040000   "logo"
+mtd10: 000c0000  00040000   "expdb"
+mtd11: 00400000  00040000   "gionee"
+mtd12: 0eb00000  00040000   "system"
+mtd13: 03c00000  00040000   "cache"
+mtd14: 0a540000  00040000   "userdata"
+</pre>
+
+=== Leds ===
+
+<pre>
+/sys/devices/platform/leds-mt65xx/leds/green
+/sys/devices/platform/leds-mt65xx/leds/red
+/sys/devices/platform/leds-mt65xx/leds/blue
+</pre>
+
+== Useful links ==
+
+[http://bm-smartphone-reviews.blogspot.ch/2012/05/mt6575-flashing-tutorial.html MT657x flashing tutorial]
