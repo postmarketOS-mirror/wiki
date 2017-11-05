@@ -1,0 +1,38 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = LG
+| name = L65 Dual SIM D285
+| codename = lg-d285
+| image = File:Lg-l65-d285.jpg
+| imagecaption = LG L65 Dual SIM D285
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 (KitKat)
+| cpu = Qualcomm MSM8210 Snapdragon 200
+| gpu = Adreno 302
+| storage = 4 GB
+| display = 480x800
+| memory = 1 GB
+}}
+
+== Contributors ==
+* zhenyolka
+
+=== What works ===
+
+* Kernel compilation
+* Initramfs boot
+* USB Network
+* SSH Connectivity
+* Weston on framebuffer
+* Touchscreen
+* Xwayland
+
+=== What does not work ===
+
+* Unknown, but probably everything else
+
+=== Links ===
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-d285 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-lg-d285 Kernel package]
