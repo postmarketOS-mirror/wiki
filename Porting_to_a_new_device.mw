@@ -96,6 +96,8 @@ $ pmbootstrap checksum device-wiki-example
 $ pmbootstrap build device-wiki-example
 </syntaxhighlight>
 
+See [[deviceinfo reference]] for a listing of all available variables and their meanings.
+
 === Kernel package ===
 While the goal is to use a mainline kernel for all devices in the long run, this certainly can not be done in one step when porting to a new device. What we do in the meantime is shipping a Linux kernel fork, that is known to work with this device (e.g. from Android).
 
