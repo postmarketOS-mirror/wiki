@@ -4,7 +4,7 @@ Please [[Help:Device Page|add devices you're porting here]], and write your port
 
 Devices will be officially supported in <code>pmbootstrap</code> when the encrypted root partition can be unlocked and graphical output works.
 
-{| class="wikitable sortable"
+{| class="wikitable sortable feature-colors"
   ! rowspan="2" | Device
   ! rowspan="2" | Codename
   ! colspan="16" | Status
