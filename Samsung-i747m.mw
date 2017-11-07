@@ -24,9 +24,14 @@
 * Touchscreen
 * Weston
 * WiFi
+* Bluetooth (ish)
 
 == What does not work ==
 
+
+== Notes ==
+
+magmastonealex is currently working on getting Bluetooth to work. I've managed to get the hci0 interface to come up, and scan with hcitool, still trying to get the non-legacy bluez utils to work.
 
 == How to enter flash mode ==
 
