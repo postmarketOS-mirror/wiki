@@ -15,5 +15,37 @@
 | memory = 1/2 GB
 }}
 == Contributors ==
-
 * ata2001
+
+== Maintainer(s) ==
+* ata2001
+
+== What works ==
+* Flashing
+* Screen
+* Touch
+* Networking trough USB
+* Xwayland
+
+== What does not work ==
+* Initfs splash and osk-sdl
+* Wifi
+* GPU acceleration
+* Audio
+* Bluetooth
+* GPS
+* Camera
+* Mobile data
+* Phone calls
+
+== How to enter flash mode ==
+Power off the device, hold down the power and the volume up key for 1-2 seconds.
+
+== Installation ==
+Follow the [https://github.com/postmarketOS/pmbootstrap#usage installation guide]. Make sure to add the <code>--no-fde</code> option to the install command, because initfs unlocking does not work yet.
+
+== Photos ==
+[[File:Osprey-pmos.jpg]]
+
+== Links ==
+[https://wiki.lineageos.org/devices/osprey/ LineageOS wiki]
