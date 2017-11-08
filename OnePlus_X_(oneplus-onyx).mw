@@ -1,0 +1,62 @@
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = OnePlus
+| name =  X
+| codename = onyx
+| image = File:onyx-Weston.jpg
+| imagecaption = Oneplus X running Weston demos
+| releaseyear = 2015
+| originalsoftware = OxygenOS
+| cpu = Qualcomm Krait 400
+| gpu = Adreno 330
+| storage = 16GB
+| display = 1080x1920 OLED
+| memory = 3GB
+}}
+
+== Contributors ==
+* magmastonealex
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+* magmastonealex
+
+== Notes ==
+
+This device seems to suffer from issues with the postmarketOS toolchain. See [https://github.com/postmarketOS/pmbootstrap/issues/848 here] for more information.
+
+Current fork with the code used to get this far is available [https://github.com/magmastonealex/pmbootstrap here].
+
+== What works ==
+'''with LineageOS-built kernel'''
+
+* Boot with LineageOS kernel (with postmarketOS configuration)
+* Weston
+* Touchscreen
+
+'''With pmOS built kernel'''
+* Boot
+* Touchscreen (but NOT display)
+
+== What does not work ==
+* Everything else
+
+== How to enter flash mode ==
+Hold power button and volume up while device is turned off
+
+== Installation ==
+
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+== Links ==
+
+==Current Work==
+
+* osk-sdl porting (black screen is current issue)
+* Debugging why postmarketOS kernel causes panics when framebuffer is accessed.
