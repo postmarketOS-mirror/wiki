@@ -127,6 +127,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | style="white-space: nowrap;" | samsung-i9305, samsung-i9300
   |   ||   ||   ||   ||   ||   ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
+  | style="white-space: nowrap;" | [[Samsung Galaxy SL (samsung-i9003)|Samsung Galaxy SL]]
+  | style="white-space: nowrap;" | samsung-i9003
+  |   ||   ||   ||   ||   || P ||   ||   ||   || Y ||   || Y || Y ||   ||   || Y
+|-
   | style="white-space: nowrap;" | [[Sony Xperia Z (sony-yuga)|Sony Xperia Z]]
   | style="white-space: nowrap;" | sony-yuga
   |   ||   ||   ||   ||   || Y ||   ||   ||   || Y ||   || Y || Y ||   ||   || Y
