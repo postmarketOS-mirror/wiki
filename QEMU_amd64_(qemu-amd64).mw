@@ -16,12 +16,13 @@ QEMU will emulate the default x86_64 architecture (see <code>qemu-system-x86_64 
 * Storage
 * Network
 * Keyboard and mouse
+* Weston
 
 === What does not work ===
 
-* Weston
 * X11 over vesa: see issue #672
 
 === Screenshot ===
 
-[[File:https://user-images.githubusercontent.com/1565836/28927507-087fb78a-786b-11e7-8dea-96e8afe2acd9.png|screenshot_2017-08-03_16-43-26]]
+* QEMU running weston
+[[File:QEMU amd64 weston.png|500 px]]
