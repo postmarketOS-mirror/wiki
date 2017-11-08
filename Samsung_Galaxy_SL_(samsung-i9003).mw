@@ -1,0 +1,48 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy SL
+| codename = i9003
+| image = File:Samsung-i9003-galaxy-s-sl-1.jpg
+| imagecaption = Samsung Galaxy SL
+| releaseyear = 2011
+| originalsoftware = Android 2.2 (Froyo), 2.3 (Gingerbread)
+| cpu = 1.0 GHz Cortex-A8
+| gpu = PowerVR SGX530
+| storage = 4GB
+| display = 480x800
+| memory = 478MB
+}}
+== Contributors ==
+
+* dakk
+
+== What works ==
+
+* ☑ Kernel compilation
+* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Initramfs boot
+* ☑ USB Network
+* ☑ Framebuffer graphics (Splash screens)
+* ☑ SSH Connectivity
+* ☑ Weston on framebuffer
+* ☑ Touchscreen
+* ☑ Xwayland
+* ☐ Wifi
+* ☐ Audio playback
+
+== Device info ==
+
+* [https://www.gsmarena.com/samsung_i9003_galaxy_sl-3761.php Full phone specifications]
+
+== Links ==
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9003 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-i9003 Kernel package]
+
+== Photos ==
+
+* postmarketOS running
+[[File:Samsung-i9003-pmos.jpg|500px]]
