@@ -142,7 +142,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 
 === Status Legend ===
 
-{| class="wikitable"
+{| class="wikitable feature-colors"
 ! Code
 ! Meaning
 |-
@@ -155,7 +155,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | -
   | Not applicable
 |-
-  | 🔼
+  | style="text-align: center" | 🔼
   | non-Android based device
 |}
 
