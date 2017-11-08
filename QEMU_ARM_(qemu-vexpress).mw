@@ -29,5 +29,7 @@ QEMU supports many other ARM architectures (see <code>qemu-system-arm -machine h
 
 === Screenshot ===
 
-[[File:http://i.imgur.com/Hwq0ryI.png|Qemu unlock screen]]<br />
-[[File:http://i.imgur.com/AWRDDQ1.png|Weston]]
+* QEMU unlock screen
+[[File:Qemu unlock screen.png|500 px]]<br />
+* QEMU running weston
+[[File:Qemu weston.png|500 px]]
