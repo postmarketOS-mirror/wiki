@@ -91,6 +91,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | style="white-space: nowrap;" | oneplus-bacon
   |   ||   ||   ||   ||   || Y ||   ||   ||   || P ||   || Y || Y ||   ||   || 
 |-
+  | style="white:space: nowrap;" | [[OnePlus X (oneplus-onyx)|OnePlus X]]
+  | style="white-space: nowrap;" | oneplus-onyx
+  |   ||   ||   ||   ||   || Y ||   ||   ||   || P ||   || Y || Y ||   ||   || 
+|-
   | style="white:space: nowrap;" | [[Ouya (ouya-ouya)|Ouya]]
   | style="white-space: nowrap;" | ouya-ouya
   |   ||   ||   ||   || - || Y ||   ||   || - || Y || - || - || Y || - ||   || Y
@@ -249,10 +253,6 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Nokia N950]]🔼
   |
   | kernel is booting
-|-
-  | [[OnePlus X]]
-  | oneplus-onyx
-  | Kernel boots, postmarketOS kernel causes panic on framebuffer usage.
 |-
   | [[Qemu Nokia N900|Qemu N900]]
   | qemu-rx51
