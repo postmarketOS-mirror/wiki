@@ -230,7 +230,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | lg-bullhead
   | Kernel compiles and flashes succesfully, but device is stuck in a boot loop
 |-
-  | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]
+  | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]🔼
   | jolla-sbj
   | Kernel compiles, can't get fastboot to work
 |-
