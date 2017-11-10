@@ -17,23 +17,28 @@
 }}
 === Contributors ===
 
-* drebrez
+* ''[[user:drebrez|drebrez]]''
 
 === What works ===
 
-* Compiling the kernel
-* Booting (see below)
-* Framebuffer works (see photos below)
-* Network through USB
-* SSH
-* Touchscreen
-* Weston with demo menu
+* ☑ Kernel compilation
+* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Initramfs boot
+* ☑ USB Network
+* ☑ Framebuffer graphics (Splash screens)
+* ☑ SSH Connectivity
+* ☑ Weston on framebuffer
+* ☑ Touchscreen
+* ☑ Xwayland
+* ☐ Wifi
+* ☐ Audio playback
 
-=== What does not work ===
+== Additional info ==
 
-* Flashing (requires smaller boot.img [https://github.com/postmarketOS/pmbootstrap/issues/126 #126])
-* Wifi (requires firmware)
-* Unknown, but probably everything else
+=== Entering "HBOOT mode" ===
+
+Hold the '''Volume Down''' button, and then press the '''Power''' button
 
 === Device partitions ===
 
@@ -47,14 +52,17 @@ mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
 
 === Booting ===
 
-* Build everything <code>pmbootstrap install</code>
-* Boot using <code>pmbootstrap flasher boot</code>
+* Install everything using an SD-Card <code>pmbootstrap install --sdcard=/dev/sdb?</code>
+* Insert the SD-Card on the device
+* Boot the device in HBOOT mode and select fastboot
+* Flash kernel using <code>pmbootstrap flasher flash_kernel</code>
+* Reboot
 
-=== Links ===
+== Links ==
 
 * [https://github.com/spezi77/android_kernel_htc_qsd8k_3.0/tree/n-7.1 spezi77's Kernel]
 
-=== Photos ===
+== Photos ==
 
 * [http://imgur.com/a/8ODj5 Initramfs asking for the password via telnet]
 * [http://imgur.com/a/1OgGZ PostmarketOS demo menu (XWayland)]
