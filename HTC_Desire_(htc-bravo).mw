@@ -57,6 +57,8 @@ mtd3: 0fa00000  00020000   &quot;system&quot;
 mtd4: 02800000  00020000   &quot;cache&quot;
 mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
 
+These MTD partitions only work with the YAFFS file system.
+
 == Links ==
 
 * [https://github.com/spezi77/android_kernel_htc_qsd8k_3.0/tree/n-7.1 spezi77's Kernel]
