@@ -59,7 +59,7 @@ mtd3: 0fa00000  00020000   &quot;system&quot;
 mtd4: 02800000  00020000   &quot;cache&quot;
 mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
 
-These MTD partitions only work with the YAFFS file system.
+These MTD partitions only work with YAFFS, which we don't handle properly yet. See also: [[Partition-layout#Future_ideas]]
 
 == Links ==
 
