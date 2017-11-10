@@ -9,7 +9,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   ! rowspan="2" | Codename
   ! colspan="18" | Status
 |-
-  ! 3D !! Accelero meters !! Audio !! Battery !! Blue tooth !! Camera !! FDE !! Flash ing !! GPS !! Main line !! Mobile data !! Screen !! SMS !! Touch !! Usb net !! Voice !! Wifi !! Xwayland
+  ! 3D !! Accelerometers !! Audio !! Battery !! Bluetooth !! Camera !! FDE !! Flashing !! GPS !! Mainline !! Mobile data !! Screen !! SMS !! Touch !! Usb net !! Voice !! Wifi !! XWayland
 |-
   |style="white-space: nowrap;" | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX 7"]]
   |style="white-space: nowrap;" | amazon-thor
