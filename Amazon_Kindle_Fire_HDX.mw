@@ -31,7 +31,8 @@
 
 == Problems ==
 
-* Recovery zip returns TWRP Error 255 when attempting to flash
+* TWRP for this device does NOT contain busybox
+* fastboot cannot flash larger images (approx 400-500+ MB), it will error with <code>FAILED Unknown chunk type</code>
 * Wifi doesn't work
 
 == How to enter flash mode ==
