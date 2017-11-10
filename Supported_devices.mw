@@ -7,7 +7,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 {| class="wikitable sortable feature-colors"
   ! rowspan="2" | Device
   ! rowspan="2" | Codename
-  ! colspan="17" | Status
+  ! colspan="18" | Status
 |-
   ! 3D !! Accelero meters !! Audio !! Battery !! Blue tooth !! Camera !! FDE !! Flash ing !! GPS !! Main line !! Mobile data !! Screen !! SMS !! Touch !! Usb net !! Voice !! Wifi !! Xwayland
 |-
@@ -85,7 +85,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | style="white-space: nowrap;" | [[nokia-rx51 (Nokia N900)|Nokia N900]]🔼
   | style="white-space: nowrap;" | nokia-rx51
-  |   || Y || Y ||   ||   ||   ||   || Y || P || Y || P || Y || P || Y || Y ||   || Y || Y
+  |   || Y || Y || P ||   ||   ||   || Y || P || Y || P || Y || P || Y || Y ||   || Y || Y
 |-
   | style="white:space: nowrap;" | [[OnePlus One (oneplus-bacon)|OnePlus One]]
   | style="white-space: nowrap;" | oneplus-bacon
