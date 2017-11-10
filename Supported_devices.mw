@@ -120,15 +120,15 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   |   ||   ||   ||   ||   || Y || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy SII (samsung-i9100)|Samsung Galaxy SII]]
-  | style="white-space: nowrap;" | samsung-i9100, samsung-d710
+  | style="white-space: nowrap;" | samsung-i9100, -d710
   |   || Y ||   ||   ||   || P ||   ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
   | style="white-space: nowrap;" | [[Samsung-i747m|Samsung Galaxy SIII (i747m)]]
-  | style="white-space: nowrap;" | samsung-i747m, samsung-i747
+  | style="white-space: nowrap;" | samsung-i747m, -i747
   |   ||   || P ||   ||   || P || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy SIII LTE (samsung-i9305)|Samsung Galaxy SIII (LTE)]]
-  | style="white-space: nowrap;" | samsung-i9305, samsung-i9300
+  | style="white-space: nowrap;" | samsung-i9305, -i9300
   |   ||   ||   ||   ||   || Y ||   ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy SL (samsung-i9003)|Samsung Galaxy SL]]
