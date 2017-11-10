@@ -15,11 +15,11 @@
 | display = 480x800 AMOLED or SLCD
 | memory = 576MB
 }}
-=== Contributors ===
+== Contributors ==
 
 * ''[[user:drebrez|drebrez]]''
 
-=== What works ===
+== What works ==
 
 * ☑ Kernel compilation
 * ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
@@ -34,12 +34,19 @@
 * ☐ Wifi
 * ☐ Audio playback
 
-== Additional info ==
-
-=== Entering "HBOOT mode" ===
+== Entering "HBOOT mode" ==
 
 Hold the '''Volume Down''' button, and then press the '''Power''' button
 
+== Installation ==
+{{note|Flashing the partitions does not work yet (except for the kernel), so you will need an SD card.}}
+* Install everything using an SD card <code>pmbootstrap install --sdcard=/dev/sdb?</code>
+* Insert the SD-Card on the device
+* Boot the device in HBOOT mode and select fastboot
+* Flash kernel using <code>pmbootstrap flasher flash_kernel</code>
+* Reboot
+
+== Additional information ==
 === Device partitions ===
 
 <pre>dev:  size      erasesize  name
@@ -50,13 +57,6 @@ mtd3: 0fa00000  00020000   &quot;system&quot;
 mtd4: 02800000  00020000   &quot;cache&quot;
 mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
 
-=== Booting ===
-
-* Install everything using an SD-Card <code>pmbootstrap install --sdcard=/dev/sdb?</code>
-* Insert the SD-Card on the device
-* Boot the device in HBOOT mode and select fastboot
-* Flash kernel using <code>pmbootstrap flasher flash_kernel</code>
-* Reboot
 
 == Links ==
 
