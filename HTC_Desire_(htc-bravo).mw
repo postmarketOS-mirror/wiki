@@ -52,8 +52,6 @@ mtd5: 093a0000  00020000   &quot;userdata&quot;</pre>
 
 === Links ===
 
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-htc-bravo Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/linux-htc-bravo Kernel package]
 * [https://github.com/spezi77/android_kernel_htc_qsd8k_3.0/tree/n-7.1 spezi77's Kernel]
 
 === Photos ===
