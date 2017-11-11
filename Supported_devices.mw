@@ -97,7 +97,7 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
 |-
   | style="white:space: nowrap;" | [[Ouya (ouya-ouya)|Ouya]]
   | style="white-space: nowrap;" | ouya-ouya
-  |   ||   ||   ||   ||   || - || Y || Y ||   ||   || - || Y || - || - || Y || - ||   || Y
+  |   ||   ||   ||   ||   || - ||   || Y ||   ||   || - || Y || - || - || Y || - ||   || Y
 |-
   | style="white-space: nowrap;" | [[QEMU aarch64 (qemu-aarch64 )|QEMU aarch64]]
   | style="white-space: nowrap;" | qemu-aarch64
