@@ -32,7 +32,7 @@
 == Problems ==
 
 * TWRP for this device does NOT contain busybox
-* fastboot cannot flash larger images (approx 400-500+ MB), it will error with <code>FAILED Unknown chunk type</code>
+* fastboot cannot flash larger images (512 MB or above), it will error with <code>FAILED Unknown chunk type</code>. The latest pmbootstrap should warn you about this.
 * Wifi doesn't work
 
 == How to enter flash mode ==
