@@ -1,0 +1,38 @@
+These are applications which already exist for Linux and could be reused in postmarketOS with little to no adjustment.
+
+{| class="wikitable"
+!Application
+!Website
+!License
+!Type
+|-
+|smtube (YouTube)
+|http://www.smtube.org/
+|GPL
+|X11 application (Native Qt5) with some touch optimisation
+|-
+|ghetto-skype
+|https://github.com/stanfieldr/ghetto-skype
+|GPL3
+|X11 application (Electron web wrapper).  Touch optimisation and notifications support.
+|-
+|whatsapp-desktop
+|https://github.com/Enrico204/Whatsapp-Desktop
+|GPL3
+|X11 application (Electron web wrapper).
+|-
+|ramme (Instagram)
+|https://github.com/terkelg/ramme
+|MIT
+|X11 application (Electron web wrapper). Touch friendly
+|-
+|telegram-desktop
+|https://github.com/telegramdesktop/tdesktop
+|GPL3
+|X11 application (Native)
+|-
+|nheko (Matrix)
+|https://github.com/mujx/nheko
+|GPL3
+|X11 and Wayland application (Native).  Touch friendly version under development.
+|}
