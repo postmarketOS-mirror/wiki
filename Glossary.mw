@@ -49,7 +49,7 @@ This is a slightly more complicated API than fbdev (and it replaces all fbdev fu
 Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with [https://en.wikipedia.org/wiki/LUKS luks], preventing the phone data from being retrieved without the password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
 
 === fdt ===
-Flat device tree, seems to be some non-standard alternative to [[Glossary#dtb|dtb]], that some devices use (Mediatek for example). There's also a [https://android.googlesource.com/kernel/msm/+/cc0c55a/scripts/dtc/libfdt/fdt.c libfdt].
+This seems to be just another name for [[Glossary#dtb|dtb]]? We found that in Mediatek devices. There's also a [https://android.googlesource.com/kernel/msm/+/cc0c55a/scripts/dtc/libfdt/fdt.c libfdt].
 
 === fbdev/framebuffer ===
 
