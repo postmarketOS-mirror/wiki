@@ -24,12 +24,13 @@
 
 == What works ==
 * Ethernet
+* Full disk encryption
 * USB Keyboard/Mouse
 * XWayland/Weston
 
 == What does not work ==
 * Bluetooth (requires binaries, WIP)
-* Booting without pmbootstrap (WIP)
+* Booting without pmbootstrap (WIP. waiting for osk-sdl to be mainlined)
 * Wifi (requires binaries, WIP)
 
 == How to enter flash mode ==
