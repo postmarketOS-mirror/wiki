@@ -126,6 +126,10 @@ These are used for flashing and booting the device, and most of them are fastboo
 |
 
 |-
+| <code>flash_fastboot_max_size</code>
+| Set this if the fastboot required by your device has an upper limit to the size of system images it will flash.
+| Size, in MB
+|-
 | <code>kernel_cmdline</code>
 | Kernel command line
 |
