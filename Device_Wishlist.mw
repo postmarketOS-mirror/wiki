@@ -31,3 +31,5 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine, see also: [https://github.com/postmarketOS/pmbootstrap/issues/238 #238])
 * Older Nokias (N810, N800, N770) -- should have mainline support, but less than 128MB of memory
 * OpenMoko -- less than 128MB of memory
+
+[[Category:Hardware]]
