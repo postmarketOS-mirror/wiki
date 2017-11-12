@@ -41,7 +41,7 @@ Hold the '''Volume Down''' button, and then press the '''Power''' button
 
 == Installation ==
 {{note|Flashing the partitions does not work yet (except for the kernel), so you will need an SD card.}}
-* Install everything using an SD card <code>pmbootstrap install --sdcard=/dev/sdb?</code>
+* Install everything using an SD card <code>pmbootstrap install --sdcard=/dev/sd?</code>
 * Insert the SD-Card on the device
 * Boot the device in HBOOT mode and select fastboot
 * Flash kernel using <code>pmbootstrap flasher flash_kernel</code>
