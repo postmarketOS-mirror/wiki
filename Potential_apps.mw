@@ -35,4 +35,9 @@ These are applications which already exist for Linux and could be reused in post
 |https://github.com/mujx/nheko
 |GPL3
 |X11 and Wayland application (Native).  Touch friendly version under development.
+|-
+|KDE Marble (maps)
+|https://cgit.kde.org/marble.git
+|LGPL
+|https://marble.kde.org/
 |}
