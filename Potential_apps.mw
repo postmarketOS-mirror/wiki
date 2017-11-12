@@ -56,3 +56,9 @@ These are applications which already exist for Linux and could be reused in post
 |X11 application (Native)
 |-
 |}
+
+==See also==
+===Other Mobile Linux platforms===
+* [https://uappexplorer.com/ Ubuntu Touch app explorer] - some of these applications may be reusable on pmOS
+* [http://www.tizenstore.com/main/getMain.as Tizen Store] - unknown compatibility with pmOS
+* [https://anbox.io/ Anbox] - under construction Android compatibility layer
