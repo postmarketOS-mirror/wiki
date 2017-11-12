@@ -26,7 +26,7 @@ These are applications which already exist for Linux and could be reused in post
 !Type
 |-
 |smtube (YouTube)
-|http://www.smtube.org/
+|http://www.smtube.org/<br>https://app.assembla.com/spaces/smplayer/subversion/source/HEAD
 |GPL
 |X11 application (Native Qt5) with some touch optimisation
 |-
