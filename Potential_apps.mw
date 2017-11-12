@@ -15,6 +15,11 @@ These are applications which already exist for Linux and could be reused in post
 |https://cgit.kde.org/marble.git<br>https://marble.kde.org/
 |LGPL
 |Touch optimised mobile application. X11 and Wayland support.
+|-
+|LLs Video Player
+|https://github.com/llelectronics/videoPlayer/tree/plasma
+|GPL2
+|Touch-based Wayland application.  Ported to Plasma Mobile.
 |}
 
 === Apps that only work with proprietary services ===
