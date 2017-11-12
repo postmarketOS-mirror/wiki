@@ -39,10 +39,10 @@
 * adjusting the led, torch and the lcd backlight
 * display
 * touchscreen
+* wifi
 
 == What does not work ==
 
-* Wifi
 
 == What have not been tested ==
 
