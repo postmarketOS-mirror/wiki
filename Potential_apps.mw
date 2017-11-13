@@ -60,5 +60,6 @@ These are applications which already exist for Linux and could be reused in post
 ==See also==
 ===Other Mobile Linux platforms===
 * [https://uappexplorer.com/ Ubuntu Touch app explorer] - some of these applications may be reusable on pmOS
+* [https://openrepos.net/ Meego/Sailfish/Nemo applications] - will require some reworking for pmOS
 * [http://www.tizenstore.com/main/getMain.as Tizen Store] - unknown compatibility with pmOS
 * [https://anbox.io/ Anbox] - under construction Android compatibility layer
