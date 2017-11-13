@@ -55,6 +55,10 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |X11 application (Native)
 |-
+|caprine (FB Messenger)
+|https://github.com/sindresorhus/caprine
+|MIT
+|X11 application (Electron web wrapper). Touch friendly
 |}
 
 ==See also==
