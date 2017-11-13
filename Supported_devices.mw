@@ -289,6 +289,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Wiko_Lenny_3_(wiko-lenny3)|Wiko Lenny 3]]
   | wiko-lenny3
   | 
+|-
+  | [[LG_Joy_(lg-h220)|LG Joy]]
+  | lg-h220
+  | 
 |}
 
 ==Other supported hardware==
