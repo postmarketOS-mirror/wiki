@@ -2,3 +2,10 @@ This device is pretty similar to nokia N950, with minor differences in kernel. B
 
 
 Filippz did some initial porting, at https://github.com/filippz/pmbootstrap/commit/d92f2de6585bbfa98bad3bd60e017af905783157
+
+
+Kernel can be started without flashing, using:
+
+```
+sudo /data/l/maemo/0xffff/src/0xFFFF -m kernel:vmlinuz-nokia-n9-dtb -m initfs:initramfs-nokia-n9 -l -b
+```
