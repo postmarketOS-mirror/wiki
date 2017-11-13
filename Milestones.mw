@@ -119,3 +119,8 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * would like to use N900 as daily phone
 * some interest in Nokia N9, N950, LG Optimus Chic E720
 * mild interest in OpenMoko gt01, Nokia N770, N800, N810
+
+=== [https://github.com/MoreRobustThanYou steamport] ===
+* [x] Basic Kindle Fire HDX (2013) support
+* [ ] Get X11/xorg working on the HDX
+* [ ] Get wifi working on the HDX...
