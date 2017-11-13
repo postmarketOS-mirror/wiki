@@ -1,7 +1,7 @@
 This device is pretty similar to nokia N950, with minor differences in kernel. Bootloader has same problems.  https://elinux.org/N950
 
 
-Filippz did some initial porting, at https://github.com/filippz/pmbootstrap/commit/d92f2de6585bbfa98bad3bd60e017af905783157
+Filippz did some initial porting, at https://github.com/filippz/pmbootstrap/
 
 
 Kernel can be started without flashing, using:
