@@ -1,0 +1,31 @@
+[[Category:Unsupported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = LG
+| name =  Joy
+| codename = h220
+| image = File:Lg-joy-full-1.jpg
+| imagecaption = LG Joy
+| releaseyear = 2015
+| originalsoftware = Android 4.4 (KitKat)
+| cpu = Dual-core 1.2 GHz Cortex-A7
+| gpu = Adreno 302
+| storage = 4GB
+| display = 480x800
+| memory = 512MB
+}}
+
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
+
+== Maintainer(s) ==
+* ''[[user:drebrez|drebrez]]''
+
+== What works ==
+* Nothing yet
+
+== What does not work ==
+* Everything else
+
+== Links ==
+* [https://www.gsmarena.com/lg_joy-7054.php Full phone specifications]
