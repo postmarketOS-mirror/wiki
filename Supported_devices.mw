@@ -285,6 +285,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | [[Aquaris-U|bq Aquaris U]]
   | chaozu
   | kernel compiles, more is not yet tested
+|-
+  | [[Wiko_Lenny3_(wiko-lenny3)|Wiko Lenny 3]]
+  | wiko-lenny3
+  | 
 |}
 
 ==Other supported hardware==
