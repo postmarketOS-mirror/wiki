@@ -122,5 +122,7 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 
 === [https://github.com/MoreRobustThanYou steamport] ===
 ✔ Basic Kindle Fire HDX (2013) support
+
 ✖ Get X11/xorg working on the HDX
+
 ✖ Get wifi working on the HDX...
