@@ -8,11 +8,12 @@
 | imagecaption = Mozilla Flame
 | releaseyear = 2014
 | originalsoftware = Firefox OS on Linux 3.0(?)
-| cpu = Qualcomm MSM8610 Snapdragon
+| chipset = Qualcomm MSM8610 Snapdragon 200
+| cpu = Dual-core 1.2 GHz Cortex-A7
 | gpu = Adreno 302
-| storage = 8GB
+| storage = 8 GB
 | display = 480x854 AMOLED
-| memory = 1GB
+| memory = 1 GB
 }}
 
 === Contributors ===
