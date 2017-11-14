@@ -8,11 +8,12 @@
 | imagecaption = LG G Watch R running the weston demo
 | releaseyear = 2015
 | originalsoftware = Android Wear 1.0 and 2.0
-| cpu = Qualcomm Snapdragon 400
+| chipset = Qualcomm Snapdragon 400
+| cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Adreno 305
-| storage = 4GB
-| display = 320x320 OLED
-| memory = 512MB
+| storage = 4 GB
+| display = 320x320 P-OLED
+| memory = 512 MB
 }}
 === Contributors ===
 
