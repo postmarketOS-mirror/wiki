@@ -12,9 +12,9 @@
 | chipset = TI OMAP 3430
 | cpu = 600 MHz Cortex-A8
 | gpu = PowerVR SGX530
-| storage = 32GB
-| display = 800x480 IPS
-| memory = 256MB
+| storage = 32 GB
+| display = 800x480 TFT resistive
+| memory = 256 MB
 }}
 === Contributors ===
 * ''[[user:MartijnBraam|MartijnBraam]]''
