@@ -8,12 +8,12 @@
 | imagecaption = Flo running Hildon
 | release year = 2013 July 26
 | original software = Android 6 on Linux 3.4
-| cpu = Qualcomm APQ8064-1AA Snapdragon S4 Pro (Snapdragon 600) Quad-Core Krait 300, 1.5GHz
-| gpu = Adreno 320, 400MHz
-| wifi = 802.11 a/b/g/n @ 2.4 GHz & 5 GHz
-| storage = 16/32GB eMMC 4.5/5.0
-| display = 7.02” 1920x1200 (323 ppi) FHD IPS
-| memory = 2GB DDR3L SDRAM 
+| chipset = Qualcomm APQ8064-1AA Snapdragon S4 Pro (Snapdragon 600)
+| cpu = Quad-core 1.5 GHz Krait 300
+| gpu = Adreno 320
+| storage = 16/32 GB
+| display = 1200x1920 FHD IPS
+| memory = 2 GB
 }}
 === Contributors ===
 
