@@ -8,11 +8,12 @@
 | imagecaption = PostmarketOS running
 | releaseyear = 2014
 | originalsoftware = Android 4.3 on Linux 3.4.39
-| cpu = Qualcomm MSM8210 Snapdragon 200
+| chipset = Qualcomm MSM8210 Snapdragon 200
+| cpu = Dual-core 1.2 GHz Cortex-A7
 | gpu = Adreno 302
-| storage = 4GB
-| display = 480x854
-| memory = 512MB
+| storage = 4 GB
+| display = 480x854 TFT
+| memory = 512 MB
 }}
 == Contributors ==
 
