@@ -8,11 +8,12 @@
 | imagecaption = HTC Desire running the Weston demo
 | releaseyear = 2010
 | originalsoftware = Android 2.1 on Linux 2.6.29
-| cpu = Qualcomm QSD8250 Snapdragon S1
+| chipset = Qualcomm QSD8250 Snapdragon S1
+| cpu = 1.0 GHz Scorpion
 | gpu = Adreno 200
-| storage = 512MB
-| display = 480x800 AMOLED or SLCD
-| memory = 576MB
+| storage = 512 MB
+| display = 480x800 AMOLED
+| memory = 576 MB
 }}
 == Contributors ==
 
