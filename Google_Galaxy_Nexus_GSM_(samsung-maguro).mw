@@ -8,11 +8,12 @@
 | imagecaption = Samsung Galaxy Nexus
 | releaseyear = 2011
 | originalsoftware = Android 4.0 on Linux 3.0
-| cpu = TI OMAP 4460
+| chipset = TI OMAP 4460
+| cpu = Dual-core 1.2 GHz Cortex-A9
 | gpu = PowerVR SGX540
-| storage = 16GB
+| storage = 16 GB
 | display = 720x1280 AMOLED
-| memory = 1GB
+| memory = 1 GB
 }}
 = Contributors =
 
