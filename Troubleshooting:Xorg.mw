@@ -1,0 +1,14 @@
+If your X11 server is not working, check the {{alpine|syslog}} with <code>logread</code> and the <code>/var/log/Xorg.0.log</code> files via SSH for helpful messages.
+
+== Strange refresh rate ==
+Android devices seem to usually have a refresh rate of 60 Hz. If you have a very high or low refresh rate, that does not make any sense, try the patch from {{github|348}}. If that also fails, try to add a [https://www.x.org/wiki/FAQVideoModes/#index3h2 X11 modeline] with the correct refresh rate.
+
+== Output isn't displayed right for other reasons ==
+Try the patches from [[Troubleshooting:display]].
+
+== Other ideas ==
+If Weston is working, but X11 is not, you could try [https://bbs.archlinux.org/viewtopic.php?id=185297 Xweston] to simply run your X11 desktop completely inside Weston.
+
+== See also ==
+* {{github|902}} Xorg issues (<code>amazon-thor</code>)
+* {{github|779}} Xorg doesn't start properly (<code>lg-hammerhead</code>)
