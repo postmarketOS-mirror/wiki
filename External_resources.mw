@@ -35,6 +35,9 @@ This list is a collection of presentations, talks and other resources that are s
 === Reverse engineering ===
 * [https://simhacks.github.io/defcon-21/ simhacks] (Defcon 21)
 
+=== Mobile operating systems ===
+* [https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Architecture Firefox OS: Boot2Gecko Architecture] (discontinued)
+
 = Books =
 
 * [http://www.newandroidbook.com/AIvI-M-RL1.pdf Android Internals: A Confectioner's Cookbook (PDF)]
