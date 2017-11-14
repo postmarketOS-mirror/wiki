@@ -2,17 +2,18 @@
 [[Category:Devices]]
 {{Infobox device
 | manufacturer = Ouya, Inc.
-| name =  Ouya
+| name = Ouya
 | codename = ouya_1_1
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:Ouya-9.jpg
+| imagecaption = Ouya
 | releaseyear = 2013
 | originalsoftware = Android
-| cpu = 1.7 GHz Quad-Core ARM Cortex-A9
-| gpu = Nvidia GeForce ULP @ 520 MHz (12.48 GFLOPS)
-| storage = 8GB/16GB internal flash memory
+| chipset = Nvidia Tegra 3
+| cpu = Quad-core 1.7 GHz Cortex-A9
+| gpu = Nvidia GeForce ULP<br/>520 MHz (12.48 GFLOPS)
+| storage = 8/16 GB
 | display = 1x HDMI
-| memory = 1 GB DDR3 SDRAM
+| memory = 1 GB
 }}
 
 == Contributors ==
