@@ -7,11 +7,12 @@
 | imagecaption = NGM WeMove Action
 | releaseyear = 2012
 | originalsoftware = Android 2.3.6, Gingerbread
-| cpu = MediaTek MT6575, 1GHz Cortex-A9 ARM v7
+| chipset = MediaTek MT6575
+| cpu = 1 GHz Cortex-A9 ARM v7
 | gpu = PowerVR SGX531 Ultra
-| storage = 512MB
+| storage = 512 MB
 | display = 240×320 QVGA
-| memory = 256MB
+| memory = 256 MB
 }}
 == Contributors ==
 
