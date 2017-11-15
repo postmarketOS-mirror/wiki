@@ -7,7 +7,7 @@ Android devices seem to usually have a refresh rate of 60 Hz. If you have a very
 Try the patches from [[Troubleshooting:display]].
 
 == Is TWRP working? ==
-Try to compare it's framebuffer output code with xf86-video-fbdev. If you go down this road, please expand this idea with more information.
+Try to compare its framebuffer output code with xf86-video-fbdev. If you go down this road, please expand this idea with more information.
 
 == Use Xweston instead ==
 If Weston is working, but X11 is not, you could try [https://bbs.archlinux.org/viewtopic.php?id=185297 Xweston] to simply run your X11 desktop completely inside Weston. Currently, that is only an idea with implementation work beginning in {{github|909}}.
