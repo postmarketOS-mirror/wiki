@@ -1,0 +1,46 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy SIII (US version, i747m)
+| codename = i747m
+| image = File:samsung-i474m.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2012
+| originalsoftware = CHANGE_ME
+| cpu = CHANGE_ME
+| gpu = CHANGE_ME
+| storage = CHANGE_ME
+| display = CHANGE_ME
+| memory = CHANGE_ME
+}}
+
+== Contributors ==
+
+* magmastonealex
+
+== Maintainer(s) ==
+
+== What works ==
+
+* Touchscreen
+* Weston
+* WiFi
+* Bluetooth (ish)
+
+== What does not work ==
+
+
+== Notes ==
+
+magmastonealex is currently working on getting Bluetooth to work. I've managed to get the hci0 interface to come up, and scan with hcitool, still trying to get the non-legacy bluez utils to work.
+
+== How to enter flash mode ==
+
+Hold power key, volume down, and home button simultaneously.
+
+== Installation ==
+
+== Photos ==
+
+== Links ==
