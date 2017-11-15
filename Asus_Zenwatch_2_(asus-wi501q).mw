@@ -6,11 +6,12 @@
 | imagecaption = Fastboot mode
 | releaseyear = 2015
 | originalsoftware = Android Wear 1.0
-| cpu = Qualcomm Snapdragon 400
+| chipset = Qualcomm MSM8926 Snapdragon 400
+| cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Adreno 305
-| storage = 4GB
-| display = 320x320 OLED
-| memory = 512MB
+| storage = 4 GB
+| display = 320x320 AMOLED
+| memory = 512 MB
 }}
 
 === Contributors ===
