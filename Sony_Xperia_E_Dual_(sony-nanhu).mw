@@ -4,13 +4,16 @@
 | manufacturer = Sony
 | name = Xperia E Dual
 | codename = nanhu
+| image = File:Sony-nanhu.jpg
+| imagecaption = Sony Xperia E Dual
 | releaseyear = 2013
 | originalsoftware = Android 4.0.4 on Linux 3.0.1
-| cpu = Qualcomm MSM7227A Snapdragon S1
+| chipset = Qualcomm MSM7227A Snapdragon S1
+| cpu = 1.0 GHz Cortex-A5
 | gpu = Adreno 200
-| storage = 4GB
+| storage = 4 GB
 | display = 320x480 IPS
-| memory = 512MB
+| memory = 512 MB
 }}
 == Contributors ==
 
