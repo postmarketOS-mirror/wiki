@@ -58,7 +58,7 @@ Fastboot also works, however please note that images that are 510+ MB cannot be 
 
 == Partitions ==
 
-<code>
+<source lang="bash">
 total 0
 drwxr-xr-x 2 root root 500 2017-11-16 16:03 .
 drwxr-xr-x 4 root root 620 2017-11-16 16:03 ..
@@ -85,7 +85,8 @@ lrwxrwxrwx 1 root root  21 2017-11-16 16:03 ssd -> /dev/block/mmcblk0p15
 lrwxrwxrwx 1 root root  21 2017-11-16 16:03 system -> /dev/block/mmcblk0p22
 lrwxrwxrwx 1 root root  20 2017-11-16 16:03 tz -> /dev/block/mmcblk0p9
 lrwxrwxrwx 1 root root  21 2017-11-16 16:03 userdata -> /dev/block/mmcblk0p23
-</code>
+</source>
+
 == Photos ==
 
 WIP!
