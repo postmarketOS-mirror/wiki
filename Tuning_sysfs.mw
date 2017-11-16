@@ -57,6 +57,28 @@ You could also run it in even in the stock ROM but it is important that you run 
 <pre class="shell">ps w | grep vsync_event # To find process id of the cat command that was processing vsync_event
 kill -SIGTERM <pid> # Kill the process</pre>
 
+'''Note:''' On some devices (like Xperia Z1) this script can reboot the device when executed in TWRP. To fix this, you need to find out which file is causing the reboot and skip it. You can find the file by running the script without output redirection (it should be the last line printed before the reboot - see example below).
+<pre class="shell">$ adb shell "sh /dumpsys.sh"
+/sys/devices/0.qcom,msm-cpufreq/modalias
+platform:0.qcom,msm-cpufreq
+...
+/sys/devices/mdss_dsi_panel/interval_array         -----> THE FILE THAT CAUSES A REBOOT
+------> THE DEVICE REBOOTS</pre> 
+Now that you found the file, you can exclude it by updating the script. Change this part:
+<pre class="shell">if test -f &quot;$path&quot;; then
+     echo &quot;$path&quot;
+     cat &quot;$path&quot;
+fi</pre>
+To this:
+<pre class="shell">if test -f "$path"; then
+    if [ "$path" = "/sys/devices/mdss_dsi_panel/interval_array" ]
+    then
+        continue
+    fi
+    echo "$path"
+    cat "$path"
+fi</pre>
+
 == Examples ==
 
 === i9070 port ===
