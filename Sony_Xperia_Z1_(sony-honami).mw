@@ -1,0 +1,48 @@
+[[Category:Supported Devices]]
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia Z1
+| codename = honami
+| image = File:honami.jpg
+| imagecaption = Sony Xperia Z1
+| releaseyear = 2013
+| originalsoftware = Android 4.2
+| cpu = Qualcomm MSM8974 Snapdragon 800
+| gpu = Adreno 330
+| storage = 16 GB
+| display = 1080x1920
+| memory = 2 GB
+}}
+
+== Contributors ==
+* limiter121
+* ata2001 (work on Z1C)
+
+== Maintainer(s) ==
+* limiter121
+
+== What works ==
+* Display
+* Touchscreen
+* Network through USB
+* Telnet in initramfs
+* SSH
+
+== What does not work ==
+
+== How to enter flash mode ==
+Press VOL UP while plugging the USB cable
+
+== Installation ==
+
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+== Links ==
+* [https://github.com/sonyxperiadev/kernel Kernel source code]
+* [https://github.com/sonyxperiadev/device-sony-honami Android configuration]
+* [https://developer.sonymobile.com/open-devices/ Sony Open Devices (official tutorials, tools, code, etc.)]
