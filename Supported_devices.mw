@@ -270,6 +270,10 @@ Devices will be officially supported in <code>pmbootstrap</code> when the encryp
   | semc-anzu
   |
 |-
+  | [[Xperia-Z1|Sony Xperia Z1]]
+  | sony-honami
+  | Kernel compiles; boots into initramfs (via fastboot); more to come
+|-
   | [[Xperia-Z2|Sony Xperia Z2]]
   | sony-sirius
   |
