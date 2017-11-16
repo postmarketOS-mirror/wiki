@@ -51,17 +51,10 @@ However, there is a manual tutorial here: https://forum.xda-developers.com/kindl
 
 == Installation ==
 (TWRP)
-Copy <code>amazon-thor.img</code> and <code>boot.img</code> to the sdcard, along with a file called <code>flash.sh</code> that contains
+A recovery image can be flashed via TWRP normally
 
-<code>
-dd if=amazon-thor.img of=/dev/block/platform/msm_sdcc.1/by-name/system bs=1M;   
-dd if=boot.img of=/dev/block/platform/msm_sdcc.1/by-name/boot bs=1M</code>
-
-Open up TWRP on your device, and do the following, IN ORDER:
-* Wipe all your partitions (including System, Data, and Internal Storage!)
-* Reboot > Recovery
-* Mount > ensure System is unchecked
-* Go to the terminal, and do <code>cd /sdcard</code>, and then <code>sh flash.sh</code>
+(Fastboot)
+Fastboot also works, however please note that images that are 510+ MB cannot be flashed via Fastboot. Use netcat or recovery.
 
 == Photos ==
 
