@@ -1,9 +1,9 @@
 {{Infobox interface
 | name = Plasma Mobile
 | image = File:Plasma-mobile.png
-| imagecaption = Plasma Mobile running in qemu
+| imagecaption = Plasma Mobile running in QEMU
 | graphics = KWin on Wayland or Xorg
-| toolkit = QT5
+| toolkit = Qt 5
 }}
 
 == Overview ==
@@ -29,7 +29,7 @@ After installation, the shell will automatically launch upon boot. If it doesn't
 
 == Debugging ==
 
-By default Plasma and kwin don't log anything significant or useful for this project. To tell them to, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
+By default Plasma and KWin don't log anything significant or useful for this project. To tell them to, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
 
 <pre>[Rules]
 org.kde.kwindowsystem.info=true
