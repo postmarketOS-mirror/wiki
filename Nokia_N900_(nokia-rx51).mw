@@ -296,4 +296,4 @@ gps2 will not talk to gpsd, so it is only useful to verify that hardware is work
 * [https://github.com/archlinuxarm-n900/alarm-n900/wiki/Hardware-support Arch Linux ARM - N900 hardware components list]
 * [http://mlab.taik.fi/paja/?p=1263 N900 sensor access in Maemo]
 * [http://natisbad.org/N900/n900-commented-hardware-specs.html Hardware component specs / list]
-* [http://elinux.org/N900]
+* [http://elinux.org/N900 Kernel status]
