@@ -56,6 +56,36 @@ A recovery image can be flashed via TWRP normally
 '''(Fastboot)'''
 Fastboot also works, however please note that images that are 510+ MB cannot be flashed via Fastboot. Use netcat or recovery.
 
+== Partitions ==
+
+<code>
+total 0
+drwxr-xr-x 2 root root 500 2017-11-16 16:03 .
+drwxr-xr-x 4 root root 620 2017-11-16 16:03 ..
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 DDR -> /dev/block/mmcblk0p4
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 aboot -> /dev/block/mmcblk0p6
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 boot -> /dev/block/mmcblk0p8
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 cache -> /dev/block/mmcblk0p21
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 dbi -> /dev/block/mmcblk0p3
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 dfs -> /dev/block/mmcblk0p17
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 dkernel -> /dev/block/mmcblk0p16
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 fsc -> /dev/block/mmcblk0p14
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 fsg -> /dev/block/mmcblk0p13
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 misc -> /dev/block/mmcblk0p5
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 modem -> /dev/block/mmcblk0p1
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 modemst1 -> /dev/block/mmcblk0p11
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 modemst2 -> /dev/block/mmcblk0p12
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 pad -> /dev/block/mmcblk0p10
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 persist -> /dev/block/mmcblk0p19
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 persistbackup -> /dev/block/mmcblk0p20
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 recovery -> /dev/block/mmcblk0p18
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 rpm -> /dev/block/mmcblk0p7
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 sbl1 -> /dev/block/mmcblk0p2
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 ssd -> /dev/block/mmcblk0p15
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 system -> /dev/block/mmcblk0p22
+lrwxrwxrwx 1 root root  20 2017-11-16 16:03 tz -> /dev/block/mmcblk0p9
+lrwxrwxrwx 1 root root  21 2017-11-16 16:03 userdata -> /dev/block/mmcblk0p23
+</code>
 == Photos ==
 
 WIP!
