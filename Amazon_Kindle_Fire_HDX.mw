@@ -50,10 +50,10 @@ This will automatically do it: https://forum.xda-developers.com/kindle-fire-hdx/
 However, there is a manual tutorial here: https://forum.xda-developers.com/kindle-fire-hdx/general/thor-unlocking-bootloader-firmware-t3463982
 
 == Installation ==
-(TWRP)
+'''(TWRP)'''
 A recovery image can be flashed via TWRP normally
 
-(Fastboot)
+'''(Fastboot)'''
 Fastboot also works, however please note that images that are 510+ MB cannot be flashed via Fastboot. Use netcat or recovery.
 
 == Photos ==
