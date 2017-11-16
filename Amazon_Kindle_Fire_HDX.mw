@@ -59,7 +59,8 @@ Fastboot also works, however please note that images that are 510+ MB cannot be 
 == Partitions ==
 
 <source lang="bash">
-# ls -la /dev/block/platform/msm_sdcc.1/by-name/ 
+ls -la /dev/block/platform/msm_sdcc.1/by-name/ 
+
 total 0
 drwxr-xr-x 2 root root 500 2017-11-16 16:03 .
 drwxr-xr-x 4 root root 620 2017-11-16 16:03 ..
