@@ -40,13 +40,9 @@ Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code>
 Looks like, we need to package the [https://github.com/LineageOS/android_device_lge_mako/blob/12ac6e9aeb32d5ac9fc832f2214ede2c7690d0a6/proprietary-blobs.txt#L152-L157 wcnss.* files] for wifi. A version from 2015 can be found [https://github.com/TheMuppets/proprietary_vendor_lge/tree/cm-14.1/mako/proprietary/vendor/firmware here]. It's a Qualcomm chip.
 
 == Alternative kernels ==
+It *should* be possible to run [[The Mainline Kernel]] on the lg-mako, maybe we need to write a display driver, but there's a [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting tutorial for it]. I (ollieparanoid) didn't do enough research on this yet - if you're interested in doing this, please talk to opendata26 from postmarketOS and robclark from the freedreno project. With their help it should be quite feasible.
 
-It *should* be possible to run [[the mainline kernel]] on the lg-mako, maybe we need to write a display driver, but there's a [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting tutorial for it]. I (ollieparanoid) didn't do enough research on this yet - if you're interested in doing this, please talk to opendata26 from postmarketOS and robclark from the freedreno project. With their help it should be quite feasible.
-
-
-
-These are not packaged yet in postmarketOS, feel free to package them.
-
+Non-mainline:
 * Freedreno backport to 3.4.0 (couldn't make it work out of the box and I suggest trying to get mainline working instead of spending time on this one)
 * {{github|38}} Freedreno backport to 3.0.8
 
