@@ -35,7 +35,7 @@ To flash the kernel, you can choose <code>pmbootstrap flasher flash kernel</code
 
 Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
 
-== After flashing the postmarketOS kernel: charging and power off ==
+== Charging and power off (after flashing the postmarketOS kernel) ==
 {{note|You don't have to flash the kernel! <code>pmbootstrap flasher boot</code> is also working!}}
 You can flash the postmarketOS kernel, but instead of charging the battery, it will boot straight into postmarketOS (or the on screen keyboard to type in the password). Right now, the best way to charge it from that situation is to boot the recovery TWRP.
 
