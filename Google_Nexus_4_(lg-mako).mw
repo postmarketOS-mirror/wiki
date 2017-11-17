@@ -49,8 +49,9 @@ You can properly turn the device off by unplugging the usb cable, then booting i
 == What does not work ==
 
 * XWayland
-* The rest (Wifi, bluetooth, making calls, ...)
 * fbsplash only displays splash images very shortly, then goes to black screen
+* osk-sdl has graphical bugs (but it works for unlocking!) ({{github|59|osk-sdl}})
+* The rest (Wifi, bluetooth, making calls, ...)
 
 == Wifi ==
 
