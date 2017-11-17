@@ -41,10 +41,14 @@ Looks like, we need to package the [https://github.com/LineageOS/android_device_
 
 == Alternative kernels ==
 
+It *should* be possible to run [[the mainline kernel]] on the lg-mako, maybe we need to write a display driver, but there's a [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting tutorial for it]. I (ollieparanoid) didn't do enough research on this yet - if you're interested in doing this, please talk to opendata26 from postmarketOS and robclark from the freedreno project. With their help it should be quite feasible.
+
+
+
 These are not packaged yet in postmarketOS, feel free to package them.
 
-* [https://github.com/postmarketOS/pmbootstrap/issues/12 &quot;Almost mainline&quot; from John Stultz] &lt;- maybe this also resolves the wrong-color-bug
-* [https://github.com/postmarketOS/pmbootstrap/pull/38 Freedreno]
+* Freedreno backport to 3.4.0 (couldn't make it work out of the box and I suggest trying to get mainline working instead of spending time on this one)
+* {{github|38}} Freedreno backport to 3.0.8
 
 == Links ==
 
