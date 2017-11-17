@@ -18,11 +18,28 @@
 == Contributors ==
 
 * ollieparanoid
-* PabloCastellano and robb4 on IRC: Workaround for red screen bug [https://github.com/postmarketOS/pmbootstrap/issues/54 #54]
+* PabloCastellano and robb4 on IRC: Workaround for red screen bug ({{github|54}})
+
+== Installation ==
+<pre>
+pmbootstrap init
+pmbootstrap install
+(enter fastboot, see below)
+pmbootstrap flasher flash_system
+pmbootstrap flasher boot
+</pre>
+
+To flash the kernel, you can choose <code>pmbootstrap flasher flash kernel</code> (but charging and power off doesn't work as expected anymore, see below).
 
 == Entering &quot;Fastboot mode&quot; ==
 
 Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
+
+== After flashing the postmarketOS kernel: charging and power off ==
+{{note|You don't have to flash the kernel! <code>pmbootstrap flasher boot</code> is also working!}}
+You can flash the postmarketOS kernel, but instead of charging the battery, it will boot straight into postmarketOS (or the on screen keyboard to type in the password). Right now, the best way to charge it from that situation is to boot the recovery TWRP.
+
+You can properly turn the device off by unplugging the usb cable, then booting into fastboot, then choosing power off.
 
 == What works ==
 
