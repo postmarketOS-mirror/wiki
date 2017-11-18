@@ -1,30 +1,26 @@
-''This is heavily work in progress - if you're working on this, make sure to join the [https://github.com/postmarketOS/pmbootstrap/wiki/Matrix-and-IRC IRC/matrix] channel and to extend this wiki page with everything you find out.''
-
-=== General information ===
-
+== General information ==
 To get wireless LAN working, most WiFi chips need a proprietary firmware blob. While it would be more secure to replace that with open source software in the long term, it isn't feasible right now, so we try to get it working with that closed source firmware.<br />
 A great place to start looking for information about many available WiFi chips is [https://wireless.wiki.kernel.org/en/users/drivers this kernel.org page]. It often provides driver sources and the required firmware blobs as well. For a start if you want Internet working try the [[USB Internet]] guide.
 
-=== Android ===
+== Android-specific ==
+{{note|Instead of mounting Android's firmware partition, we package the files ourselves (see the [[FAQ#Why_don.27t_we_use_firmware_files_from_Android.27s_firmware_partition.3F|FAQ]]).}}
 
-We haven't quite figured it out yet, but for starters you need to [[How_to_find_device_specific_information#Firmware_files|find the WiFi firmware]], make sure it gets installed and adjust the path in your kernel config (see [https://github.com/postmarketOS/pmbootstrap/pull/122 #122]). Some firmwares need additional config files with calibration data, these can usually be found in the LineageOS or Google repositories.
+Requirements:
+* [[How_to_find_device_specific_information#Firmware_files|WiFi firmware files]]
+* Some firmwares need additional config files with calibration data, these can usually be found in the LineageOS or Google repositories.
+* Make sure all files get installed properly (look at the packaging of other [[devices]] with working wifi in our <code>aports/device</code> folder)
 
-'''Wifi ''is working'' for the [[Samsung-i9070-(Samsung-Galaxy-S-Advance)|i9070]], all steps are listed on the device's wiki page!''' (see [https://github.com/postmarketOS/pmbootstrap/pull/138 PR #138]) (Feel free to put them here in a more generic way)
+=== Path to firmware ===
+Usually your Android kernel expects the firmware files to be in a folder like <code>/system/vendor/firmware</code> and you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://github.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch]. Sometimes there is no need to patch, but simply change a kernel option that defines this path.
 
-=== Debugging ===
-
+== Debugging ==
 First find the wifi device name with <code>ip link</code>. This is <code>wlan0</code> on most phones.<br />
 Try to start the wlan interface with <code>ip link set wlan0 up</code>. This will most likely end with an error. Now to get the detailed error from the driver/firmware start <code>dmesg</code> and search for the relevant log lines. Here you will find errors about possible missing firmware and the filename that it wants.
 
 If dmesg has nothing helpful, check <code>/var/log/firmwareload.log</code>.
 
-=== Path to firmware ===
-
-Usually your Android kernel expects the firmware files to be in a folder like <code>/system/vendor/firmware</code> and you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://github.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch]. Sometimes there is no need to patch, but simply change a kernel option that defines this path.
-
-=== Connecting to APs ===
-
-PostmarketOS currently configures the wpa_supplicant service to start on boot. This service will fail to start unless <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> has been defined. This can be configured using the <code>wpa_passphrase</code> utility:
+== Connecting to APs ==
+postmarketOS currently configures the wpa_supplicant service to start on boot. This service will fail to start unless <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> has been defined. This can be configured using the <code>wpa_passphrase</code> utility:
 
 <pre>$ sudo wpa_passphrase YOUR_SSID &gt; /etc/wpa_supplicant/wpa_supplicant.conf
 &lt;enter your passphrase and press RETURN&gt;</pre>
@@ -45,10 +41,13 @@ Note that on some systems (e.g. the RX51) you may have to configure wpa_supplica
 <pre>wpa_supplicant_args=&quot;-Dwext&quot;</pre>
 You will have to reboot, or manually restart the aforementioned services, before your device will connect to the access point.
 
-=== Start WIFI manually ===
+== Start WIFI manually ==
 If you experience problems or just want to test wifi you can start wpa supplicant (using -Dwext or nl80211 driver) and the dhcp service:
 
 <pre>
 sudo wpa_supplicant -u -Dnl80211 -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
 sudo udhcpc -i wlan0
 </pre>
+
+== See also ==
+* [[Samsung_Galaxy_S_Advance_(samsung-i9070)#How_drebrez_made_wifi_work|samsung-i9070: How drebrez made wifi work]]
