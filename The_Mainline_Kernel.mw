@@ -9,8 +9,18 @@ That package is <code>linux-postmarketos-stable</code>. For devices, which are i
 
 To make the kernel work with multiple devices, it no longer appends the <code>dtb</code> file to the kernel image. Instead, it puts all <code>dtb</code> files for the current architecture in <code>/usr/share/dtb</code>. The <code>postmarketos-mkinitfs</code> package appends the <code>dtb</code> file defined in the [[deviceinfo]] to the linux image in the boot partition.
 
-== Enable the mainline kernel for a new device ==
+== Device tree source (ARM architecture) ==
+To make your device boot, you will need a device tree source (<code>dts</code>) file (which will get compiled to a <code>dtb</code> mentioned above). Check the <code>arch/arm/boot/dts</code> folder in the kernel source code for relevant files ([http://elixir.free-electrons.com/linux/latest/source/arch/arm/boot/dts browse online]) with your device's codename.
 
+Examples:
+* <code>qcom-msm8974-lge-nexus5-hammerhead.dts</code>
+* <code>qcom-msm8974-sony-xperia-honami.dts</code>
+* <code>qcom-apq8064-sony-xperia-yuga.dts</code>
+* <code>qcom-apq8064-asus-nexus7-flo.dts</code>
+
+When you don't have a result, try to find a <code>dts</code> file with the same chipset as your device (e.g. <code>msm8974</code>). Try to create a new one for your device based on that by [[How_to_create_a_patch_when_packaging_software|creating a patch]] for <code>linux-postmarketos-stable</code>. If there is not even a <code>dts</code> file for the same chipset, you need to create one from scratch (''no idea how to do that, good luck and please extend the wiki'').
+
+== Enable the mainline kernel for a new device ==
 ''Before proceeding, make sure that you know that your device is supported by the mainline kernel. Otherwise use the source code of a vendor's fork of the kernel, which is known to work as described in the [[porting guide]].''
 
 # run <code>pmbootstrap.py menuconfig linux-postmarketos</code> and adjust the kernel config to add the drivers for the device if they are not enabled yet. Set as much drivers to build as external module as possible so the main vmlinuz filesize doesn't increase too much.
