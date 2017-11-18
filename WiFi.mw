@@ -16,6 +16,8 @@ We haven't quite figured it out yet, but for starters you need to [[How_to_find_
 First find the wifi device name with <code>ip link</code>. This is <code>wlan0</code> on most phones.<br />
 Try to start the wlan interface with <code>ip link set wlan0 up</code>. This will most likely end with an error. Now to get the detailed error from the driver/firmware start <code>dmesg</code> and search for the relevant log lines. Here you will find errors about possible missing firmware and the filename that it wants.
 
+If dmesg has nothing helpful, check <code>/var/log/firmwareload.log</code>.
+
 === Path to firmware ===
 
 Usually your Android kernel expects the firmware files to be in a folder like <code>/system/vendor/firmware</code> and you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://github.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch]. Sometimes there is no need to patch, but simply change a kernel option that defines this path.
