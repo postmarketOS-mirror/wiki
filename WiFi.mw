@@ -23,7 +23,7 @@ When that worked, you're done with this section. Otherwise look in the following
 
 If there is nothing helpful in these files, continue reading. The original OS may run a userspace application, that enables the wifi driver by doing essentially <code>echo 1 > /dev/wcnss_wlan</code> and <code>echo sta > /sys/module/wlan/parameters/fwpath</code> or execute similar commands. This was the case for <code>wcnss-wlan</code> (see <code>aports/main/wcnss-wlan</code> for how we packaged it).
 
-Try to compare your sysfs with the one of a known working ROM (see [[Tuning sysfs]]) after you have connected to a wireless network. Look for differences in <code>/sys/module/wlan/</code>.
+Try to [[Tuning sysfs|compare your sysfs]] and <code>dmesg</code> output with the one of a known working ROM after you have connected to a wireless network. Look for differences in <code>/sys/module/wlan/</code>.
 
 == Connecting to APs ==
 postmarketOS currently configures the wpa_supplicant service to start on boot. This service will fail to start unless <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> has been defined. This can be configured using the <code>wpa_passphrase</code> utility:
