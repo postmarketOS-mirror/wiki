@@ -6,7 +6,7 @@
 * [https://ollieparanoid.github.io/post/postmarketOS/ Introduction post] ''the utopic vision and goals''
 * [https://ollieparanoid.github.io/post/security-warning/ Security warning] ''about running unfixable outdated firmware software''
 * [[FAQ]] ''the recurring questions thing every project has''
-* [[Supported devices]] ''quite a few Android devices, plus the Flame and N900''
+* [[Devices]] ''quite a few Android devices, plus the Flame and N900''
 * [[:Category:Interface|Supported interfaces]] ''the phone interfaces we are working on''
 * [[Milestones]] ''where individuals want to take the project''
 ** [[Potential apps]] for pmOS
@@ -14,7 +14,7 @@
 * [[Donate]] ''some individuals accept donations, the project as a whole does not''
 
 '''Development'''
-* [[Porting to a new device]] ''and general installation guide''
+* '''[[Porting to a new device]]''' ''and general installation guide''
 * [[Troubleshooting]] ''the page to read when something isn't working''
 * [[Deviceinfo reference]] ''our work-in-progress device-specific file format''
 * [[Creating a package]] ''and how to recycle package recipes from other distributions''
