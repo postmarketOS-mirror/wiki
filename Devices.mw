@@ -1,6 +1,6 @@
 Please [[Help:Device Page|add devices you're porting here]], and write your porting progress in the wiki page.
 
-== Device feature matrix ==
+== Feature matrix ==
 These devices are included in the postmarketOS source tree, and it is at least possible to boot them. To confirm that, either the screen or networking/serial output must be working. If your device fulfills these requirements and is not yet on the list, please make a [https://help.github.com/articles/about-pull-requests/ pull-request] and edit the list after it has been accepted.
 
 {| class="wikitable sortable feature-colors"
