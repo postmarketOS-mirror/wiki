@@ -1,8 +1,13 @@
-One of the major goals of the postmarketOS project is getting as many devices as possible working on the mainline upstream Linux kernel. The majority of the current devices run some form of Android kernel tree like AOSP, LineageOS or CyanogenMOD.
+== Introduction ==
+We want to get as many devices working with one shared kernel package (based on [https://kernel.org upstream]). Making a device boot with the upstream kernel is commonly referred to as <i>mainlining</i>.
 
-The current progress of the mainlining effort is in the <code>linux-postmarketos</code> package, which can be used by multiple devices. The only pmOS-supported device that is usable with Linux 4.12 is the [[Nokia-rx51 (Nokia N900)|N900]]. The [[Qemu|qemu-vexpress-(Qemu-with-vexpress-soc)]] packages also use the <code>linux-postmarketos</code> package.
+=== Why bother? ===
+Carrying around forks of the kernel is not sustainable as it becomes impossible to provide security patches after a short time. The only way to truly fix this for a device is mainlining it.
 
-To make the kernel work with multiple devices, it no longer appends the dtb file to the kernel image. It generate a <code>vmlinuz-postmarketos</code> file in the boot partition and puts all dtb files for the current architecture in <code>/usr/share/dtb</code>. The <code>postmarketos-mkinitfs</code> package appends the dtb file defined in the [[deviceinfo]] to the linux image in the boot partition.
+=== Kernel packaging ===
+That package is <code>linux-postmarketos-stable</code>. For devices, which are in the kernel's <code>mainline</code> release, but not yet in <code>stable</code> (see [https://www.kernel.org/category/releases.html kernel releases]), we also have <code>linux-postmarketos-mainline</code>. It is even allowed to carry temporary patches around on top of these kernels, as long as work is being done to get them upstreamed properly. The kernel packages based on the official one are in <code>aports/main/postmarketos-linux*</code>, while the device-specific forks are in <code>aports/device/linux-*</code>.
+
+To make the kernel work with multiple devices, it no longer appends the <code>dtb</code> file to the kernel image. Instead, it puts all <code>dtb</code> files for the current architecture in <code>/usr/share/dtb</code>. The <code>postmarketos-mkinitfs</code> package appends the <code>dtb</code> file defined in the [[deviceinfo]] to the linux image in the boot partition.
 
 == Enable the mainline kernel for a new device ==
 
