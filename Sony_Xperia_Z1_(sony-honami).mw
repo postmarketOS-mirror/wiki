@@ -26,11 +26,12 @@
 * Network through USB
 * Telnet in initramfs
 * SSH
+* Wifi
 
 == What does not work ==
 
 == How to enter flash mode ==
-Press VOL UP while plugging the USB cable
+Press VOL UP while plugging the USB cable (fastboot mode)
 
 == Installation ==
 
