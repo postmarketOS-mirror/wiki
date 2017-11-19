@@ -40,6 +40,8 @@ Press VOL UP while plugging the USB cable (fastboot mode)
 
 
 == Photos ==
+[[File:honami.jpg|100px]]
+[[File:honami-2.jpg|100px]]
 
 == Other Information ==
 * It should be possible to run [[The Mainline Kernel]] on the device. At least there is a <code>dts</code> file already in the 4.14 kernel: <code>arch/arm/boot/dts/qcom-msm8974-sony-xperia-honami.dts</code>
