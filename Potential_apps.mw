@@ -5,11 +5,13 @@ These are applications which already exist for Linux and could be reused in post
 !Website
 !License
 !Type
+!Package link (if available)
 |-
 |nheko (Matrix)
 |https://github.com/mujx/nheko
 |GPL3
-|X11 and Wayland application (Native).  Touch friendly version under development. {{github|900}}
+|X11 and Wayland application (Native).  Touch friendly version under development.
+|{{github|900}}
 |-
 |KDE Marble (maps)
 |https://cgit.kde.org/marble.git<br>https://marble.kde.org/
@@ -40,6 +42,7 @@ These are applications which already exist for Linux and could be reused in post
 |https://docs.xfce.org/xfce/thunar/start
 |GPL2
 |Default file manager on XFCE (GTK2 based).  Reasonably touch friendly when menu bar and status bar are disabled.
+|[https://pkgs.alpinelinux.org/packages?name=thunar&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |Tuxemon
 |https://www.tuxemon.org/
