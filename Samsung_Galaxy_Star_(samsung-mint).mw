@@ -23,6 +23,7 @@
 
 == What works ==
 * Kernel compilation (with GZIP)
+* Installation process (except generating boot.img)
 
 == What does not work ==
 * Anything except stuff written in "What works" list
