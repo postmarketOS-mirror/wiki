@@ -75,6 +75,11 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |Photo gallery application. Reasonably touch friendly
 |-
+|Transmission
+|https://transmissionbt.com/
+|GPL2/GPL3
+|BitTorrent client. Main interface is touch friendly but settings is not. 
+|-
 |Tuxemon
 |https://www.tuxemon.org/
 |GPL2
