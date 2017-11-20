@@ -1,5 +1,16 @@
 If your X11 server is not working, check the {{alpine|syslog}} with <code>logread</code> and the <code>/var/log/Xorg.0.log</code> files via SSH for helpful messages.
 
+== X11 segfault ==
+Example output from running XFCE4:
+<pre>
+(xfwm4:2538): xfwm4-WARNING **: Cannot find visual format on screen 0
+(EE) Segmentation fault at address 0x4
+(EE) 
+Fatal server error:
+(EE) Caught signal 11 (Segmentation fault). Server aborting
+</pre>
+This might get fixed with [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-huawei-y530/06_fix_mdss_fb_rgb_mode.patch 06_fix_mdss_fb_rgb_mode.patch] (see {{github|779}}).
+
 == Strange refresh rate ==
 Android devices seem to usually have a refresh rate of 60 Hz. If you have a very high or low refresh rate, that does not make any sense, try the patch from {{github|348}}. If that also fails, try to add a [https://www.x.org/wiki/FAQVideoModes/#index3h2 X11 modeline] with the correct refresh rate.
 
