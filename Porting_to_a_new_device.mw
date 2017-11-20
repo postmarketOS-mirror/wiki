@@ -312,7 +312,7 @@ $ pmbootstrap flasher export --odin
 
 For Android based devices, where a recovery system such as TWRP is installed, you can generate an Android recovery zip compatible file, and sideload it.
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap install --android-recovery-zip
+$ pmbootstrap install --no-fde --android-recovery-zip
 $ pmbootstrap flasher sideload
 </syntaxhighlight>
 
