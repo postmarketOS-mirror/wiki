@@ -24,11 +24,18 @@
 == What works ==
 * Kernel compilation
 * Flash Kernel (SP Flash Tool required)
+* Flash System (SP Flash Tool required)
 * Initramfs boot
 * USB Network
 * Framebuffer graphics (Splash screens)
+* SSH Connectivity
+* Weston on framebuffer
+* Xwayland
 
 == What does not work ==
+* Touchscreen
+* Wifi
+* Audio playback
 * Everything else
 
 == How to enter flash mode ==
