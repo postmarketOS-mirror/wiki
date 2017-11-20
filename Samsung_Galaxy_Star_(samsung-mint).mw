@@ -40,7 +40,7 @@
 3. If anything is right, then phone will display [[Media:Mint_bootloader.jpg|this screen]]  
 
 == Installation ==
-Currently no installation because firmware isn't tested.
+There are no ready releases, so you need to build your own pmOS image (it's not that long)
 
 == Photos ==
 No photos
