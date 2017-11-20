@@ -85,6 +85,22 @@ These are applications which already exist for Linux and could be reused in post
 |https://www.tuxemon.org/
 |GPL2
 |Monster fighting RPG. Capture and battle monsters against others! ([http://osgameclones.com/ more games])
+|-
+|Liri Browser
+|https://liri.io/apps/browser/
+|GPL3
+|QtWebEngine based browser built with complete touch support, Material Design, and support for coloured site windows
+|-
+|Liri Text
+|https://liri.io/apps/text/
+|GPL3
+|Simple text and code editor using Material Design and with touch support
+|-
+|Liri Calculator
+|https://liri.io/apps/calculator/
+|GPL3
+|Simple calculator using Material Design and with touch support
+|-
 |}
 
 === Apps that only work with proprietary services ===
