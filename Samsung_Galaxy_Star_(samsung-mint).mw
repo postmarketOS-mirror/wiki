@@ -26,7 +26,8 @@
 * Installation process (except generating boot.img)
 
 == What does not work ==
-* Anything except build process
+* Booting (stuck at bootloader's logo)
+* Anything
 
 == What is not properly tested\or doesn't confirmed to work ==
 * Booting (stuck at bootloader logo, boots in TWRP successfully)
