@@ -22,7 +22,7 @@
 * Michael Orishich (mishaor)
 
 == What works ==
-Nothing
+* Kernel compilation (with GZIP)
 
 == What does not work ==
 Anything
