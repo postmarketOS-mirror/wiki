@@ -48,3 +48,5 @@ No photos of device booting postmarketOS
 https://github.com/mint2g/kernel_mint2g/commit/6e0493ff61365f9cdd02bab84a5c7bccc67428e3 - kernel commit it's compiling from
 
 https://github.com/mishaor/pmbootstrap - repository with device
+
+https://forum.xda-developers.com/galaxy-star/orig-development/recovery-teamwin-recovery-project-3-0-0-t3314308 - TWRP port to this device (on which ROM is tested)
