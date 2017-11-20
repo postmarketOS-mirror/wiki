@@ -19,7 +19,27 @@ These are applications which already exist for Linux and could be reused in post
 |LLs Video Player
 |https://github.com/llelectronics/videoPlayer/tree/plasma
 |GPL2
-|Touch-based Wayland application.  Ported to Plasma Mobile.
+|Touch-based Qt Wayland application.  Ported to Plasma Mobile.
+|-
+|KCalc
+|https://github.com/KDE/kcalc
+|GPL2
+|Qt based application.  Made for desktop but also suitable for touchscreen use.
+|-
+|Maya
+|https://github.com/elementary/calendar
+|GPL3
+|GTK3 based calendar application from Elementary OS.  Supports the CalDAV sync protocol.<br>Resizes well to a phone's aspect ratio although a few dialog boxes may not be accessible easily.
+|-
+|Photos
+|https://github.com/elementary/photos
+|LGPL2.1
+|Photo gallery and editor for Elementary OS. Originally a fork of Shotwell.<br>Resizes well to a phone's aspect ratio although a few dialog boxes may not be accessible easily.
+|-
+|Thunar
+|https://docs.xfce.org/xfce/thunar/start
+|GPL2
+|Default file manager on XFCE (GTK2 based).  Reasonably touch friendly when menu bar and status bar are disabled.
 |-
 |Tuxemon
 |https://www.tuxemon.org/
