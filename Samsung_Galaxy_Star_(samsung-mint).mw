@@ -25,7 +25,7 @@
 * Kernel compilation (with GZIP)
 
 == What does not work ==
-Anything
+* Anything except kernel compilation
 
 == How to enter flash mode ==
 1. Hold Volume Down + Home + Power buttons for 6 seconds
