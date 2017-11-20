@@ -1,0 +1,42 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy Star
+| codename = mint
+| image = No photo currently
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = Android 4.1.2 on Linux 3.0.101
+| chipset = Spreadtrum SC8810
+| cpu = Single-core 1.0 GHz
+| gpu = Mali-400 MP
+| storage = 4 GB
+| display = 320x240 TFT
+| memory = 512 MB
+}}
+
+== Contributors ==
+* Michael Orishich (mishaor)
+
+== Maintainer(s) ==
+* Michael Orishich (mishaor)
+
+== What works ==
+Nothing
+
+== What does not work ==
+Anything
+
+== How to enter flash mode ==
+1. Hold Volume Down + Home + Power buttons for 6 seconds
+2. Phone will display [[Media:Mint_bootloader_warn.jpg]]. Pres Volume Up button to continue
+3. If anything is right, then phone will display [[Media:Mint_bootloader.jpg]]
+
+== Installation ==
+Currently no installation because kernel doesn't compiles.
+
+== Photos ==
+No photos
+
+== Links ==
+https://github.com/mint2g/kernel_mint2g/commit/6e0493ff61365f9cdd02bab84a5c7bccc67428e3
