@@ -22,8 +22,7 @@
 * Michael Orishich (mishaor)
 
 == What works ==
-* Kernel compilation (with GZIP)
-* Installation process (except generating boot.img)
+* Building system (without Mali and UMP drivers)
 
 == What does not work ==
 * Booting (stuck at bootloader's logo)
