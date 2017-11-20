@@ -89,7 +89,7 @@ These are applications which already exist for Linux and could be reused in post
 |Liri Browser
 |https://liri.io/apps/browser/
 |GPL3
-|QtWebEngine based browser built with complete touch support, Material Design, and support for coloured site windows
+|QtWebEngine based browser built with complete touch (including smartphone) support, Material Design, and support for coloured site windows
 |-
 |Liri Text
 |https://liri.io/apps/text/
