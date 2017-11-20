@@ -78,7 +78,8 @@ These are applications which already exist for Linux and could be reused in post
 |Transmission
 |https://transmissionbt.com/
 |GPL2/GPL3
-|BitTorrent client. Main interface is touch friendly but settings is not. 
+|BitTorrent client. Main interface is touch friendly but settings is not.
+|[https://pkgs.alpinelinux.org/packages?name=transmission&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |Tuxemon
 |https://www.tuxemon.org/
