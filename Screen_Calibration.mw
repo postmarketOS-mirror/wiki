@@ -30,5 +30,5 @@ udevadm trigger</source>
 
 === weston-calibrator (needed for resistive touch screens) ===
 * Connect to your phone via SSH
-* Run <code>weston-calibrator</code> as normal user
+* Run <code>weston-calibrator</code>
 * Adjust your udev rules-file to the output from <code>weston-calibrator</code> ([https://github.com/postmarketOS/pmbootstrap/blob/bf6f5cb884d9e2eb8c684bb04f9c3e9d634278f8/aports/device/device-nokia-rx51/udev/90-touchscreen-dev.rules example]).
