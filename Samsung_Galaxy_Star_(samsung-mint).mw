@@ -45,4 +45,6 @@ Currently no installation because firmware isn't tested.
 No photos
 
 == Links ==
-https://github.com/mint2g/kernel_mint2g/commit/6e0493ff61365f9cdd02bab84a5c7bccc67428e3
+https://github.com/mint2g/kernel_mint2g/commit/6e0493ff61365f9cdd02bab84a5c7bccc67428e3 - kernel commit it's compiling from
+
+https://github.com/mishaor/pmbootstrap - repository with device
