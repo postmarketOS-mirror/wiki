@@ -60,6 +60,11 @@ These are applications which already exist for Linux and could be reused in post
 |GPL2
 |GTK3-based simple maps application with routing. Reasonably touch friendly
 |-
+|GNOME Files
+|https://wiki.gnome.org/Apps/Nautilus
+|LGPL
+|GTK3-based file manager.
+|-
 |Tuxemon
 |https://www.tuxemon.org/
 |GPL2
