@@ -139,6 +139,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | sony-yuga
   |   ||   ||   ||   ||   ||   ||   || Y ||   ||   ||   || Y ||   || Y || Y ||   ||   || Y
 |-
+  | style="white-space: nowrap;" | [[Sony Xperia Z1 (sony-honami)|Sony Xperia Z1]]
+  | style="white-space: nowrap;" | sony-honami
+  |   ||   ||   ||   ||   ||   ||   || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || 
+|-
   | style="white-space: nowrap;" | [[Sony Xperia Z1 Compact (sony-amami)|Sony Xperia Z1 Compact]]
   | style="white-space: nowrap;" | sony-amami
   |   ||   ||   ||   ||   ||   ||   || Y ||   || P ||   || Y ||   || Y || Y ||   || Y || Y
@@ -285,10 +289,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
   | semc-anzu
   |
-|-
-  | [[Xperia-Z1|Sony Xperia Z1]]
-  | sony-honami
-  | Kernel compiles; boots into initramfs (via fastboot); more to come
 |-
   | [[Xperia-Z2|Sony Xperia Z2]]
   | sony-sirius
