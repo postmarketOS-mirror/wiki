@@ -22,7 +22,11 @@
 * ''[[user:drebrez|drebrez]]''
 
 == What works ==
-* Nothing yet
+* Kernel compilation
+* Flash Kernel (SP Flash Tool required)
+* Initramfs boot
+* USB Network
+* Framebuffer graphics (Splash screens)
 
 == What does not work ==
 * Everything else
