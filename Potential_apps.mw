@@ -90,16 +90,19 @@ These are applications which already exist for Linux and could be reused in post
 |https://liri.io/apps/browser/
 |GPL3
 |QtWebEngine based browser built with complete touch (including smartphone) support, Material Design, and support for coloured site windows
+|[https://repo.liri.io/flatpak/io.liri.Browser.flatpakref Flatpak]
 |-
 |Liri Text
 |https://liri.io/apps/text/
 |GPL3
 |Simple Qt5 text and code editor using Material Design and with touch support
+|[https://repo.liri.io/flatpak/io.liri.Text.flatpakref Flatpak]
 |-
 |Liri Calculator
 |https://liri.io/apps/calculator/
 |GPL3
 |Simple Qt5 calculator using Material Design and with touch support
+|[https://repo.liri.io/flatpak/io.liri.Calculator.flatpakref Flatpak]
 |-
 |}
 
