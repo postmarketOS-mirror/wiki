@@ -3,7 +3,7 @@
 
 * Join [[Matrix and IRC|Matrix/IRC]] to get help when you're stuck
 * Search the [[supported devices]] page for your device to avoid duplicate work
-* We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with Virtual Box] first.
+* We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
 
 === Initialization ===
 Run the following commands in a Linux terminal to get started.
