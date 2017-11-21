@@ -104,6 +104,12 @@ These are applications which already exist for Linux and could be reused in post
 |Simple Qt5 calculator using Material Design and with touch support
 |[https://repo.liri.io/flatpak/io.liri.Calculator.flatpakref Flatpak]
 |-
+|Peruse
+|https://peruse.kde.org/
+|LGPL2
+|Comic book reader app for plasma mobile with touch support (in development)
+|{{github|926}}
+|-
 |}
 
 === Apps that only work with proprietary services ===
