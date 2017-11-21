@@ -113,6 +113,7 @@ These are applications which already exist for Linux and could be reused in post
 !Website
 !License
 !Type
+!Package link (if available)
 |-
 |smtube (YouTube)
 |http://www.smtube.org/<br>https://app.assembla.com/spaces/smplayer/subversion/source/HEAD
@@ -148,6 +149,7 @@ These are applications which already exist for Linux and could be reused in post
 |https://corebird.baedert.org
 |GPL3
 |GTK+ Twitter client
+|[https://pkgs.alpinelinux.org/packages?name=corebird&branch=&repo=&arch=&maintainer= Alpine repo]
 |}
 
 ==See also==
