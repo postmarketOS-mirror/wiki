@@ -94,12 +94,12 @@ These are applications which already exist for Linux and could be reused in post
 |Liri Text
 |https://liri.io/apps/text/
 |GPL3
-|Simple text and code editor using Material Design and with touch support
+|Simple Qt5 text and code editor using Material Design and with touch support
 |-
 |Liri Calculator
 |https://liri.io/apps/calculator/
 |GPL3
-|Simple calculator using Material Design and with touch support
+|Simple Qt5 calculator using Material Design and with touch support
 |-
 |}
 
