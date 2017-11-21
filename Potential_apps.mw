@@ -140,6 +140,11 @@ These are applications which already exist for Linux and could be reused in post
 |https://github.com/sindresorhus/caprine
 |MIT
 |X11 application (Electron web wrapper). Touch friendly
+|-
+|Corebird (Twitter)
+|https://corebird.baedert.org
+|GPL3
+|GTK+ Twitter client
 |}
 
 ==See also==
