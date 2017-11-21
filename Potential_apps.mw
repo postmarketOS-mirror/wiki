@@ -157,5 +157,6 @@ These are applications which already exist for Linux and could be reused in post
 * [https://uappexplorer.com/ Ubuntu Touch app explorer] - some of these applications may be reusable on pmOS
 * [https://openrepos.net/ Meego/Sailfish/Nemo applications] - will require some reworking for pmOS
 * [http://www.tizenstore.com/main/getMain.as Tizen Store] - unknown compatibility with pmOS
+* [http://preware.pivotce.com/ LuneOS apps] - will require some reworking for pmOS
 * [https://anbox.io/ Anbox] - under construction Android compatibility layer
 * [http://www.ofono.org oFono] - Open Source Telephony Framework
