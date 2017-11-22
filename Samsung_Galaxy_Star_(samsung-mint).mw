@@ -25,7 +25,6 @@
 * Building system (without Mali and UMP drivers, also some modules are not found in <code>/lib/modules/3.0.101</code>, here's a list of them: <code>drm, drm_kms_helper, dm-crypt, ext4</code>)
 
 == What does not work ==
-* Booting (stuck at bootloader's logo)
 * Anything
 
 == What is not properly tested\or doesn't confirmed to work ==
