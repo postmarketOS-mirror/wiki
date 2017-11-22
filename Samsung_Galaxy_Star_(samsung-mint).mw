@@ -29,7 +29,7 @@
 * Anything
 
 == What is not properly tested\or doesn't confirmed to work ==
-* Booting (stuck at bootloader logo, boots in TWRP successfully)
+* Booting (stuck at bootloader logo, boots in TWRP successfully, backlight doesn't change)
 
 == How to enter flash mode ==
 1. Hold Volume Down + Home + Power buttons for 6 seconds
