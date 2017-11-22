@@ -22,7 +22,7 @@
 * Michael Orishich (mishaor)
 
 == What works ==
-* Building system (without Mali and UMP drivers)
+* Building system (without Mali and UMP drivers, also some modules are not found in <code>/lib/modules/3.0.101</code>, here's a list of them: drm, drm_kms_helper, dm-crypt, ext4)
 
 == What does not work ==
 * Booting (stuck at bootloader's logo)
