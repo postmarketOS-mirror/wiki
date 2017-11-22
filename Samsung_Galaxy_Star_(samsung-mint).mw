@@ -41,6 +41,17 @@
 == Installation ==
 There are no ready releases, so you need to build your own pmOS image (it's not that long)
 
+== Building ==
+You should to:
+
+1. Install Git and Python
+
+2. Clone [https://github.com/mishaor/pmbootstrap| my pmbootstrap fork]
+
+3. Change directory to your newly cloned repository
+
+4. Follow the official build guide 
+
 == Photos ==
 No photos of device booting postmarketOS
 
