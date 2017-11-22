@@ -36,7 +36,7 @@
 
 2. Phone will display [[Media:Mint_bootloader_warn.jpg|this warning]]. Pres Volume Up button to continue
 
-3. If anything is right, then phone will display [[Media:Mint_bootloader.jpg|this screen]]  
+3. If anything is right, then phone will display [[Media:Mint_bootloader.jpg|this screen]].
 
 == Installation ==
 There are no ready releases, so you need to build your own pmOS image (it's not that long)
