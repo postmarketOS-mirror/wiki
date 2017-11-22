@@ -46,7 +46,7 @@
 
 === Installation ===
 
-Flashing to device memory uses [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)].
+Flashing to device memory is close to being possible using [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)], but currently DOES NOT APPEAR TO WORK. The following steps may have functioned at one point, but do not seem to at present.
 
 Init pmbootstrap. Make sure to choose ''none'' for the user interface instead of ''weston'' because ''weston'' makes the image just a little bit too large for the unresized partition.
 
