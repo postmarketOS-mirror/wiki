@@ -31,9 +31,9 @@
 * SSH Connectivity
 * Weston on framebuffer
 * Xwayland
+* Touchscreen
 
 == What does not work ==
-* Touchscreen
 * Wifi
 * Audio playback
 * Everything else
