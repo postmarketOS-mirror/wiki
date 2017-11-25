@@ -26,6 +26,7 @@ Install:
 * luna-next-cardshell
 * luna-sysmgr
 * luneos-components
+* luna-init
 * mesa-dri-virtio (if in QEMU, mesa-dri-swrast otherwise)
 * mesa
 * mesa-egl
