@@ -10,13 +10,13 @@ User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and 
 
 == Current Status ==
 
-[[File:luna_qemu_pmos.png]]
+[[File:luna_qemu_pmos.png |thumb|left| LuneOS UI running in QEMU]]
 
 The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd).
 
 As of today, the mouse does not work, which precludes further testing to see what else may be broken.
 
-Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/postmarketos-ui-luna | magmastonealex]'s repository, soon to be merged in to the `postmarketos-ui-luna` feature branch.
+Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/postmarketos-ui-luna magmastonealex]'s repository, soon to be merged in to the `postmarketos-ui-luna` feature branch.
 
 
 == Running ==
