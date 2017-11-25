@@ -7,4 +7,49 @@
 
 User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and open sourced mobile operating system updated with Wayland and QT5). A UI port is under development.[https://github.com/postmarketOS/pmbootstrap/issues/629]
 
+
+== Current Status ==
+
+[[File:luna_qemu_pmos.png]]
+
+The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd).
+
+As of today, the mouse does not work, which precludes further testing to see what else may be broken.
+
+Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/postmarketos-ui-luna | magmastonealex]'s repository, soon to be merged in to the `postmarketos-ui-luna` feature branch.
+
+
+== Running ==
+
+Install:
+
+* luna-next-cardshell
+* luna-sysmgr
+* luneos-components
+* mesa-dri-virtio (if in QEMU, mesa-dri-swrast otherwise)
+* mesa
+* mesa-egl
+
+Run, in the same shell:
+
+* ''export LD_PRELOAD=/usr/lib/libwayland-server.so.0''
+* ''export QT_QPA_PLATFORM=eglfs''
+* ''export QT_QUICK_BACKEND=softwarerenderer''
+* ''export QML2_IMPORT_PATH=/''
+* ''/usr/sbin/ls-hubd --conf /etc/luna-service2/ls-private.conf & ''
+* ''/usr/sbin/ls-hubd --public --conf /etc/luna-service2/ls-public.conf &''
+* ''luna-prefs-service -d & ''
+* ''LunaSysMgr -l debug &''
+
+== Major to-dos ==
+
+* Getting the mouse to work (next priority for magmastonealex)
+* Running this on ARM (Needs a device with hardware acceleration & EGL support)
+* Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working)
+* Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
+* Getting webapps to run (should theoretically just need to package luna-webappmanager)
+* Packaging core luna apps (notes, messages, settings, etc.)
+* Create init service files 
+
+
 [[Category:Interface]]
