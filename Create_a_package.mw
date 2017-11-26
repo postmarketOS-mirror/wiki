@@ -14,12 +14,9 @@ Here is a practical approach on how to port packages from other Linux distributi
 
 === Packaging git commits ===
 * <code>pkgrel</code>: We use the following format: <code>$lastrelease_gitYYYYMMDD</code>, e.g. <code>1.0_git20171101</code> (that makes it easy to see how old the commit is and <code>apk</code> is able to upgrade the package properly when the next release, e.g. <code>1.1</code>, comes out)
-* Save the git commit in a variable <code>_commit=....</code> and use it throughout the <code>APKBUILD</code> (e.g. in the <code>builddir</code>!), so it's easy to update it.
-
-
+* Save the git commit in a variable <code>_commit=....</code> and use it throughout the <code>APKBUILD</code> (e.g. in the <code>builddir</code>), so it's easy to update it.
 
 === Porting packages from Arch Linux ===
-
 ==== Find the package ====
 
 [https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches appears).
