@@ -148,7 +148,7 @@ $ pmbootstrap kconfig_check
 </syntaxhighlight>
 
 ==== Kernel compilation ====
-Next up is the kernel compilation, which will fail a few times before you get it working. Run it once to see where it fails. Please note, that before actually compiling the kernel, pmbootstrap will build/install the required dependencies, such as <code>binutils</code> and <code>gcc</code> versions for cross-compilation (the plan is to provide them in binary form at some point in the future).
+Next up is the kernel compilation, which will fail a few times before you get it working. Run it once to see where it fails.
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap build linux-wiki-example
