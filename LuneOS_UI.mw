@@ -26,6 +26,7 @@ Install:
 * luna-next-cardshell
 * luna-sysmgr
 * luna-sysservice
+* luna-appmanager
 * luneos-components
 * luna-init
 * mesa-dri-virtio (if in QEMU, mesa-dri-swrast otherwise)
@@ -43,6 +44,7 @@ Run, in the same shell:
 * ''luna-prefs-service -d & ''
 * ''LunaSysMgr -l debug &''
 * ''LunaSysService -l debug &''
+* ''LunaAppManager -t -c -u luna &''
 * ''luna-next''
 
 == Major to-dos ==
