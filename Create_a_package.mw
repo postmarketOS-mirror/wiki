@@ -12,7 +12,12 @@ Here is a practical approach on how to port packages from other Linux distributi
 * Set up the git hook from the [[development guide]] article to automatically verify checksums in your APKBUILDs and therefore making your life easier
 * [[How to create a patch when packaging software]]
 
-=== Packaging git commits ===
+==== Beware of legacy APKBUILDs ====
+Alpine's program to build packages, <code>abuild</code> evolves constantly. But the APKBUILDs sometimes lack behind. Some APKBUILDs still have the following, which is unnecessary:
+* <code>|| return 1</code> statements after every line
+* a custom <code>prepare()</code> function that does nothing but apply patches ([https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#prepare.28.29 more information]))
+
+==== Packaging git commits ====
 * <code>pkgver</code>: We use the following format: <code>$lastrelease_gitYYYYMMDD</code>, e.g. <code>1.0_git20171101</code> (that makes it easy to see how old the commit is and <code>apk</code> is able to upgrade the package properly when the next release, e.g. <code>1.1</code>, comes out)
 * Save the git commit in a variable <code>_commit=....</code> and use it throughout the <code>APKBUILD</code> (e.g. in the <code>builddir</code>), so it's easy to update it.
 
