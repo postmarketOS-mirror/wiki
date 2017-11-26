@@ -88,12 +88,12 @@ Open <code>aports/device/device-wiki-example/deviceinfo</code> in your favorite 
 * <code>deviceinfo_screen_width</code> and <code>height</code>
 * <code>deviceinfo_flash_offset_</code> lines with [[How-to-find-device-specific-information#Fastboot_.28boot.img.29_flash_offsets|this guide]] (only if there are any!)
 
-Then regenerate the checksums and build your device package. Example commands:
+Then regenerate the checksums and build your device package (<code>-i</code> ignores the dependencies, as we don't have a working kernel package yet):
 
 <syntaxhighlight lang="shell-session">
 $ nano aports/device/device-wiki-example/deviceinfo
 $ pmbootstrap checksum device-wiki-example
-$ pmbootstrap build device-wiki-example
+$ pmbootstrap build -i device-wiki-example
 </syntaxhighlight>
 
 See [[deviceinfo reference]] for a listing of all available variables and their meanings.
