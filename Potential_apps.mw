@@ -52,6 +52,7 @@ These are applications which already exist for Linux and could be reused in post
 |[https://wiki.gnome.org/Apps/Nautilus GNOME Files]
 |LGPL
 |GTK3-based file manager.
+|[https://pkgs.alpinelinux.org/package/edge/testing/x86/nautilus Alpine repo]
 |-
 |[https://wiki.gnome.org/Apps/Cheese GNOME Cheese]
 |GPL2
