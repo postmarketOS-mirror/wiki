@@ -30,9 +30,10 @@
 
 == Problems ==
 
-* TWRP for this device does NOT contain busybox
-* fastboot cannot flash larger images (512 MB or above), it will error with <code>FAILED Unknown chunk type</code>. The latest pmbootstrap should warn you about this.
-* Wifi doesn't work
+* <del>TWRP for this device does NOT contain busybox</del> not a problem anymore, the recovery zip installer handles this now
+* fastboot cannot flash larger images (512 MB or above), it will error with <code>FAILED Unknown chunk type</code>. The latest pmbootstrap should warn you about this. A good fix for this would be implementing our own "postmarketOS flash method", see [https://github.com/postmarketOS/pmbootstrap/issues/456#issuecomment-343686341 #456]
+* Wifi doesn't work {{github|932}}
+* X11 only shows a flickering gray screen {{github|902}}
 
 == How to enter flash mode ==
 
