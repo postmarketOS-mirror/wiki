@@ -2,110 +2,90 @@ These are applications which already exist for Linux and could be reused in post
 
 {| class="wikitable sortable"
 !Application
-!Website
 !License
 !Type
 !Package link (if available)
 |-
-|nheko (Matrix)
-|https://github.com/mujx/nheko
+|[https://github.com/mujx/nheko nheko (Matrix)]
 |GPL3
 |X11 and Wayland application (Native).  Touch friendly version under development.
 |{{github|900}}
 |-
-|KDE Marble (maps)
-|https://cgit.kde.org/marble.git<br>https://marble.kde.org/
+|[https://cgit.kde.org/marble.git KDE Marble (maps)] [https://marble.kde.org/]
 |LGPL
 |Touch optimised mobile application. X11 and Wayland support.
 |-
-|LLs Video Player
-|https://github.com/llelectronics/videoPlayer/tree/plasma
+|[https://github.com/llelectronics/videoPlayer/tree/plasma LLs Video Player]
 |GPL2
 |Touch-based Qt Wayland application.  Ported to Plasma Mobile.
 |-
-|KCalc
-|https://github.com/KDE/kcalc
+|[https://github.com/KDE/kcalc KCalc]
 |GPL2
 |Qt based application.  Made for desktop but also suitable for touchscreen use.
 |-
-|Maya (calendar)
-|https://github.com/elementary/calendar
+|[https://github.com/elementary/calendar Maya (calendar)]
 |GPL3
 |GTK3 based calendar application from Elementary OS.  Supports the CalDAV sync protocol.<br>Resizes well to a phone's aspect ratio although a few dialog boxes may not be accessible easily.
 |-
-|Photos
-|https://github.com/elementary/photos
+|[https://github.com/elementary/photos Photos]
 |LGPL2.1
 |Photo gallery and editor for Elementary OS. Originally a fork of Shotwell.<br>Resizes well to a phone's aspect ratio although a few dialog boxes may not be accessible easily.
 |-
-|Thunar (file manager)
-|https://docs.xfce.org/xfce/thunar/start
+|[https://docs.xfce.org/xfce/thunar/start Thunar (file manager)]
 |GPL2
 |Default file manager on XFCE (GTK2 based).  Reasonably touch friendly when menu bar and status bar are disabled.
 |[https://pkgs.alpinelinux.org/packages?name=thunar&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
-|Evince (reader)
-|https://wiki.gnome.org/Apps/Evince
+|[https://wiki.gnome.org/Apps/Evince Evince (reader)]
 |GPL2
 |GTK3 document viewer (for PDFs and other formats).  Supports highlighting and is touchscreen friendly.
 |[https://pkgs.alpinelinux.org/packages?name=evince&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
-|GNOME Weather
-|https://wiki.gnome.org/Apps/Weather
+|[https://wiki.gnome.org/Apps/Weather GNOME Weather]
 |GPL2
 |GTK3-based simple weather application. Touch friendly
 |-
-|GNOME Maps
-|https://wiki.gnome.org/Apps/Maps
+|[https://wiki.gnome.org/Apps/Maps GNOME Maps]
 |GPL2
 |GTK3-based simple maps application with routing. Reasonably touch friendly
 |-
-|GNOME Files
-|https://wiki.gnome.org/Apps/Nautilus
+|[https://wiki.gnome.org/Apps/Nautilus GNOME Files]
 |LGPL
 |GTK3-based file manager.
 |-
-|GNOME Cheese
-|https://wiki.gnome.org/Apps/Cheese
+|[https://wiki.gnome.org/Apps/Cheese GNOME Cheese]
 |GPL2
 |Photobooth-style camera app. "Fullscreen mode" is touch friendly
 |-
-|GNOME Photos
-|https://wiki.gnome.org/Apps/Photos
+|[https://wiki.gnome.org/Apps/Photos GNOME Photos]
 |GPL3
 |Photo gallery application. Reasonably touch friendly
 |-
-|Transmission
-|https://transmissionbt.com/
+|[https://transmissionbt.com/ Transmission]
 |GPL2/GPL3
 |BitTorrent client. Main interface is touch friendly but settings is not.
 |[https://pkgs.alpinelinux.org/packages?name=transmission&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
-|Tuxemon
-|https://www.tuxemon.org/
+|[https://www.tuxemon.org/ Tuxemon]
 |GPL2
 |Monster fighting RPG. Capture and battle monsters against others! ([http://osgameclones.com/ more games])
 |-
-|Liri Browser
-|https://liri.io/apps/browser/
+|[https://liri.io/apps/browser/ Liri Browser]
 |GPL3
 |QtWebEngine based browser built with complete touch (including smartphone) support, Material Design, and support for coloured site windows
 |[https://repo.liri.io/flatpak/io.liri.Browser.flatpakref Flatpak]
 |-
-|Liri Text
-|https://liri.io/apps/text/
+|[https://liri.io/apps/text/ Liri Text]
 |GPL3
 |Simple Qt5 text and code editor using Material Design and with touch support
 |[https://repo.liri.io/flatpak/io.liri.Text.flatpakref Flatpak]
 |-
-|Liri Calculator
-|https://liri.io/apps/calculator/
+|[https://liri.io/apps/calculator/ Liri Calculator]
 |GPL3
 |Simple Qt5 calculator using Material Design and with touch support
 |[https://repo.liri.io/flatpak/io.liri.Calculator.flatpakref Flatpak]
 |-
-|Peruse
-|https://peruse.kde.org/
+|[https://peruse.kde.org/ Peruse]
 |LGPL2
 |Comic book reader app for plasma mobile with touch support (in development)
 |{{github|926}}
@@ -116,43 +96,35 @@ These are applications which already exist for Linux and could be reused in post
 {{note|Using proprietary networks takes away your freedom, consider not using these altogether (e.g. by replacing Skype/WhatsApp with [https://matrix.org/ Matrix]).}}
 {| class="wikitable sortable"
 !Application
-!Website
 !License
 !Type
 !Package link (if available)
 |-
-|smtube (YouTube)
-|http://www.smtube.org/<br>https://app.assembla.com/spaces/smplayer/subversion/source/HEAD
+|[https://app.assembla.com/spaces/smplayer/subversion/source/HEAD smtube (YouTube)] [http://www.smtube.org/]
 |GPL
 |X11 application (Native Qt5) with some touch optimisation
 |-
-|ghetto-skype
-|https://github.com/stanfieldr/ghetto-skype
+|[https://github.com/stanfieldr/ghetto-skype ghetto-skype]
 |GPL3
 |X11 application (Electron web wrapper).  Touch optimisation and notifications support.
 |-
-|whatsapp-desktop
-|https://github.com/Enrico204/Whatsapp-Desktop
+|[https://github.com/Enrico204/Whatsapp-Desktop whatsapp-desktop]
 |GPL3
 |X11 application (Electron web wrapper).
 |-
-|ramme (Instagram)
-|https://github.com/terkelg/ramme
+|[https://github.com/terkelg/ramme ramme (Instagram)]
 |MIT
 |X11 application (Electron web wrapper). Touch friendly
 |-
-|telegram-desktop
-|https://github.com/telegramdesktop/tdesktop
+|https://github.com/telegramdesktop/tdesktop telegram-desktop
 |GPL3
 |X11 application (Native)
 |-
-|caprine (FB Messenger)
-|https://github.com/sindresorhus/caprine
+|[https://github.com/sindresorhus/caprine caprine (FB Messenger)]
 |MIT
 |X11 application (Electron web wrapper). Touch friendly
 |-
-|Corebird (Twitter)
-|https://corebird.baedert.org
+|[https://corebird.baedert.org Corebird (Twitter)]
 |GPL3
 |GTK+ Twitter client
 |[https://pkgs.alpinelinux.org/packages?name=corebird&branch=&repo=&arch=&maintainer= Alpine repo]
