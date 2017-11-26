@@ -14,7 +14,7 @@ Here is a practical approach on how to port packages from other Linux distributi
 
 ==== Beware of legacy APKBUILDs ====
 Alpine's program to build packages, <code>abuild</code> evolves constantly. But the APKBUILDs sometimes lack behind. Some APKBUILDs still have the following, which is unnecessary:
-* <code>|| return 1</code> statements after every line
+* <code>|| return 1</code> statements after every line (e.g. <code>make || return 1</code> is not needed anymore, use <code>make</code> instead)
 * a custom <code>prepare()</code> function that does nothing but apply patches ([https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#prepare.28.29 more information]))
 
 ==== Packaging git commits ====
