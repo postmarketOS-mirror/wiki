@@ -12,7 +12,7 @@ User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and 
 
 [[File:luna_qemu_pmos.png |thumb|left| LuneOS UI running in QEMU]]
 
-The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd).
+The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd). You currently cannot proceed past the pulsing "LuneOS" logo because of missing services.
 
 As of today, the mouse does not work, which precludes further testing to see what else may be broken.
 
@@ -48,15 +48,15 @@ Run, in the same shell:
 * ''luna-next''
 
 == Major to-dos ==
-
-* Getting the mouse to work (next priority for magmastonealex)
+* Finish packaging coreapps (configurator, activitymanager, db8, firstuseapp, webappmanager)
+* Getting the mouse to work (probably a nyx-module)
 * Running this on ARM (Needs a device with hardware acceleration & EGL support)
 * Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working)
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
 * Getting webapps to run (should theoretically just need to package luna-webappmanager)
 * Packaging core luna apps (notes, messages, settings, etc.)
-* Create init service files 
-* More packaging: ''configurator'', ''luna-systemui'', ''luna-qml-launcher'', ''luna-applauncher'', ''luna-universalsearchmgr'' are all a start.
+* Create init service files
+* More packaging: ''luna-systemui'', ''luna-qml-launcher'', ''luna-applauncher'', ''luna-universalsearchmgr'' are all a start.
 
 
 [[Category:Interface]]
