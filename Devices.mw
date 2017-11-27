@@ -158,6 +158,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   |style="white-space: nowrap;" | [[Wiko_Lenny_3_(wiko-lenny3)|Wiko Lenny 3]]
   |style="white-space: nowrap;" | wiko-lenny3
   |   ||   ||   ||   ||   ||   ||   || P ||   ||   ||   || Y ||   || Y || Y ||   ||   || Y
+|-
+  |style="white-space: nowrap;" | [[Lenovo K6 Power (lenovo-karate)|Lenovo K6 Power]]
+  |style="white-space: nowrap;" | lenovo-karate
+  |   ||   ||   ||   ||   ||   ||   || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
