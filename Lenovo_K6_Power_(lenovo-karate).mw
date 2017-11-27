@@ -1,0 +1,49 @@
+{{Infobox device
+| manufacturer = Lenovo
+| name = Lenovo K6 Power
+| codename = karate
+| image = 
+| imagecaption = Lenovo K6 Power
+| releaseyear = 2016
+| originalsoftware = Android 6.0
+| cpu = Qualcomm MSM8937 Snapdragon 430
+| gpu = Adreno 505
+| storage = 32 GB
+| display = 1080x1920
+| memory = 3 GB
+}}
+
+== Contributors ==
+* shwsh
+
+== Maintainer(s) ==
+* shwsh
+
+== What works ==
+* Display
+* Touchscreen
+* Network through USB
+* Telnet in initramfs
+* SSH
+* Wifi
+* Xwayland
+
+== What has not been tested ==
+* 3D
+* Accelerometers
+* Audio
+* Bluetooth
+* Camera
+* Mobile data/SMS
+* Microphone
+
+== How to enter flash mode ==
+Press Volume down while holding the power button to boot to fastboot.
+
+== Photos ==
+WIP
+
+== Other Information ==
+
+== Links ==
+* [https://github.com/karthick111/android_kernel_lenovo_msm8937 Kernel source code]
