@@ -28,9 +28,9 @@
 * SSH
 * Wifi
 * Xwayland
+* 3D
 
 == What has not been tested ==
-* 3D
 * Accelerometers
 * Audio
 * Bluetooth
