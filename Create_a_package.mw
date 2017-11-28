@@ -19,6 +19,7 @@ Alpine's program to build packages, <code>abuild</code> evolves constantly. But 
 * ''not'' using the <code>builddir</code> variable to point to the extracted source location (usually: <code>builddir="$srcdir/$pkgname-$pkgver"</code>)
 
 ==== Packaging git commits ====
+Only package git commits when necessary. Stable releases are preferred. Consider asking upstream to tag releases.
 * <code>pkgver</code>: We use the following format: <code>$lastrelease_gitYYYYMMDD</code>, e.g. <code>1.0_git20171101</code> (that makes it easy to see how old the commit is and <code>apk</code> is able to upgrade the package properly when the next release, e.g. <code>1.1</code>, comes out)
 * Save the git commit in a variable <code>_commit=....</code> and use it throughout the <code>APKBUILD</code> (e.g. in the <code>builddir</code>), so it's easy to update it.
 
