@@ -28,7 +28,7 @@
 * SSH
 * Wifi
 * Xwayland
-* 3D
+* 3D (software rendering)
 
 == What has not been tested ==
 * Accelerometers
