@@ -48,7 +48,7 @@ Run, in the same shell:
 * ''luna-next''
 
 == Major to-dos ==
-* Finish packaging coreapps (configurator, activitymanager, {{strikethrough|db8}}, {{strikethrough|firstuseapp}}, {{strikethrough|webappmanager}})
+* Finish packaging coreapps (configurator, activitymanager, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
 * Getting the mouse to work (probably a nyx-module)
 * Running this on ARM (Needs a device with hardware acceleration & EGL support)
 * Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working)
@@ -56,7 +56,7 @@ Run, in the same shell:
 * Getting webapps to run (should theoretically just need to package luna-webappmanager)
 * Packaging core luna apps (notes, messages, settings, etc.)
 * Create init service files
-* More packaging: ''luna-systemui'', ''{{strikethrough|luna-qml-launcher}}'', ''luna-applauncher'', ''luna-universalsearchmgr'' are all a start.
+* More packaging: ''luna-systemui'', ''<s>luna-qml-launcher</s>'', ''luna-applauncher'', ''luna-universalsearchmgr'' are all a start.
 
 
 [[Category:Interface]]
