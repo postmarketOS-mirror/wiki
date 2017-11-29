@@ -48,7 +48,7 @@ Run, in the same shell:
 * ''luna-next''
 
 == Major to-dos ==
-* Finish packaging coreapps (configurator, activitymanager, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
+* Finish packaging coreapps (<s>configurator</s>, <s>activitymanager</s>, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
 * Getting the mouse to work (probably a nyx-module)
 * Running this on ARM (Needs a device with hardware acceleration & EGL support)
 * Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working)
