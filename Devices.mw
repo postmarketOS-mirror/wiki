@@ -23,6 +23,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | samsung-maguro
   |   ||   ||   ||   ||   ||   || Y || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
+  | style="white-space: nowrap;" | [[Google Glass (Explorer Edition)]]
+  | style="white-space: nowrap;" | google-glass
+  |   ||   || Y || Y || Y || Y || Y || Y ||   ||   ||   || Y ||   || P || Y ||   || Y || Y
+|-
   | style="white-space: nowrap;" | [[Google Nexus 4 (lg-mako)|Google Nexus 4]]
   | style="white-space: nowrap;" | lg-mako
   |   ||   ||   ||   ||   ||   || Y || Y ||   ||   ||   || Y ||   || Y || Y ||   ||   || 
@@ -304,10 +308,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
-  |
-|-
-  | [[Google Glass|Google Glass]]
-  | google-glass
   |
 |}
 <!--
