@@ -42,7 +42,7 @@ Run, in the same shell:
 
 == Major to-dos ==
 * Finish packaging coreapps (<s>configurator</s>, <s>activitymanager</s>, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
-* Package some more apps (luna-applauncher, luna-systemui, mojoservicelauncher, luna-universalsearchmanager, app-services, core-apps )
+* Package some more apps (luna-applauncher, luna-systemui, enyo, mojoservicelauncher, luna-universalsearchmanager, app-services, core-apps )
 * <s>Getting the mouse to work</s> (qt problem. Set QT_QPA_EGLFS_DISABLE_INPUT=1 & use -plugin evdevmouse:/dev/input/event3 -plugin evdevkeyboard:/dev/input
 /event1 to get things working).
 * Running this on ARM (Needs a device with hardware acceleration & EGL support)
