@@ -12,23 +12,16 @@ User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and 
 
 [[File:luna_qemu_pmos.png |thumb|left| LuneOS UI running in QEMU]]
 
-The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd). You currently cannot proceed past the pulsing "LuneOS" logo because of missing services.
+The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd). You currently cannot proceed past the first use app because of missing packages.
 
-As of today, the mouse does not work, which precludes further testing to see what else may be broken.
-
-Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/postmarketos-ui-luna magmastonealex]'s repository, soon to be merged in to the `postmarketos-ui-luna` feature branch.
+Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/make-luna-start-properly magmastonealex]'s repository, with some work currently in master.
 
 
 == Running ==
 
 Install:
 
-* luna-next-cardshell
-* luna-sysmgr
-* luna-sysservice
-* luna-appmanager
-* luneos-components
-* luna-init
+* postmarketos-ui-luna
 * mesa-dri-virtio (if in QEMU, mesa-dri-swrast otherwise)
 * mesa
 * mesa-egl
@@ -49,15 +42,14 @@ Run, in the same shell:
 
 == Major to-dos ==
 * Finish packaging coreapps (<s>configurator</s>, <s>activitymanager</s>, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
+* Package some more apps (luna-applauncher, luna-systemui, mojoservicelauncher, luna-universalsearchmanager, app-services, core-apps )
 * <s>Getting the mouse to work</s> (qt problem. Set QT_QPA_EGLFS_DISABLE_INPUT=1 & use -plugin evdevmouse:/dev/input/event3 -plugin evdevkeyboard:/dev/input
-/event1 to get things working.
+/event1 to get things working).
 * Running this on ARM (Needs a device with hardware acceleration & EGL support)
 * Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working)
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
-* Getting webapps to run (should theoretically just need to package luna-webappmanager)
-* Packaging core luna apps (notes, messages, settings, etc.)
 * Create init service files
-* More packaging: ''luna-systemui'', ''<s>luna-qml-launcher</s>'', ''luna-applauncher'', ''luna-universalsearchmgr'' are all a start.
+* More packaging: ''<s>luna-qml-launcher</s>'' are all a start.
 
 
 [[Category:Interface]]
