@@ -11,7 +11,7 @@ As everywhere else in the wiki, '''please expand this guide wherever information
 # The sources of the kernel are now extracted in <code>/home/pmos/build/src</code> in the chroot where it was building.
 # Use <code>pmbootstrap chroot</code> to enter the chroot and to create the patch. It will enter the native chroot by default, if you need another chroot, then look at <code>pmbootstrap chroot --help</code>. Then do the following inside the chroot shell:
 ## Install <code>git</code> and an editor such as <code>nano</code> with: <code>apk add git nano</code>
-## Switch from root to user: <code>su - user</code>
+## Switch from root to the user that we use for building: <code>su - pmos</code>
 ## Go into the source folder: <code>cd ~/build/src/</code>
 ## Patches get applied in the builddir, so usually there is another folder inside <code>src</code>, that you need to enter. You can check with <code>ls</code> which folders/files are inside the <code>src</code> folder. Enter that subfolder if necessary.
 ## We'll be using git to create a patch file, so we will initialize a new repository and add everything:
