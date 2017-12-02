@@ -34,6 +34,7 @@ This list is a collection of presentations, talks and other resources that are s
 
 === Reverse engineering ===
 * [https://simhacks.github.io/defcon-21/ simhacks] (Defcon 21)
+* [https://www.wpinternals.net/ WP internals] Windows phone internals, a proprietary hacking tool for Windows phones (''It beats the modern SecureBoot implementation. And furthermore, it brings custom ROM's, Mass Storage Mode, Root access and many more hacks to all Windows Phone 8 and Windows 10 Mobile-based Lumia-models.'') If you want to get postmarketOS on your Lumina phone, the author of that tool seems to be an expert you should talk to.
 
 === Mobile operating systems ===
 * [https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Architecture Firefox OS: Boot2Gecko Architecture] (discontinued)
