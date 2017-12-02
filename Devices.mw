@@ -286,6 +286,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | qemu-rx51
   |
 |-
+  | [[Samsung Galaxy Mini 2|Samsung Galaxy Mini 2]]
+  | samsung-s6500d
+  | Kernel does not compile
+|-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
   |
