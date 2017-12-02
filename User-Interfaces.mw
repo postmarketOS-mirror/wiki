@@ -55,14 +55,19 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more i
 You have to configure <code>pmbootstrap</code> before generating the system image either by <code>pmbootstrap init</code> or <code>pmbootstrap config</code>:
 
 <pre>$ ./pmbootstrap init
-[19:09:14] Target device (either an existing one, or a new one for porting).
-[19:09:14] Available (31): asus-flo, asus-grouper, fairphone-fp2, htc-ace, htc-bravo, huawei-angler, huawei-y530, lg-d285, lg-d855, lg-dory, lg-hammerhead, lg-lenok, lg-mako, motorola-osprey, motorola-titan, nokia-rx51, oneplus-bacon, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-i9003, samsung-i9070, samsung-i9100, samsung-i9305, samsung-maguro, samsung-n7100, sony-amami, sony-aries, sony-castor-windy, sony-yuga, t2m-flame
-[19:09:14] Device [motorola-titan]: 
-[19:09:16] Available user interfaces (3): 
-[19:09:16] * weston: (Wayland) Reference compositor (demo, not a phone interface)
-[19:09:16] * hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
-[19:09:16] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
-[19:09:16] * none: No graphical environment</pre>
+[13:15:24] Target device (either an existing one, or a new one for porting).
+[13:15:24] Available (38): amazon-thor, asus-flo, asus-grouper, fairphone-fp2, google-glass, htc-ace, htc-bravo, huawei-angler, huawei-y530, lenovo-karate, lg-d285, lg-d855, lg-dory, lg-hammerhead, lg-lenok, lg-mako, motorola-osprey, motorola-titan, nokia-rx51, oneplus-bacon, oneplus-onyx, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-i747m, samsung-i9003, samsung-i9070, samsung-i9100, samsung-i9305, samsung-maguro, samsung-n7100, sony-amami, sony-aries, sony-castor-windy, sony-honami, sony-yuga, t2m-flame, wiko-lenny3
+[13:15:24] Device [qemu-amd64]: 
+[13:15:25] Which mesa driver do you prefer for your Qemu device? Only select something other than the default if you are having graphical problems (such as glitches).
+[13:15:25] Mesa driver (dri-swrast/dri-virtio) [dri-swrast]: 
+[13:15:26] Username [user]: 
+[13:15:27] Available user interfaces (5): 
+[13:15:27] * hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
+[13:15:27] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
+[13:15:27] * luna: (Wayland) webOS UI, ported from the LuneOS project (Not working yet)
+[13:15:27] * plasma-mobile: (Wayland) Mobile variant of KDE Plasma, optimized for touchscreen (COMPILING TAKES FOREVER)
+[13:15:27] * none: No graphical environment
+[13:15:27] * weston: (Wayland) Reference compositor (demo, not a phone interface)</pre>
 <pre>$ ./pmbootstrap config ui weston</pre>
 
 [[Category:Interface]]
