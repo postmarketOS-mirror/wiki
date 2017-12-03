@@ -4,3 +4,4 @@ In android go to settings -> System -> About phone and tap the build number 7 ti
 Then go to settings -> system -> developer options and enable OEM unlocking
 
 Reboot to the bootloader and run "fastboot oem unlock"
+Now select "Yes" on the phone screen with the volume button and use the power button to accept.
