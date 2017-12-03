@@ -24,6 +24,8 @@ Now select "Yes" on the phone screen with the volume button and use the power bu
 
 == Booting serial output ==
 
+The serial output is only available after you oem unlock the device.
+
 <source>
 lt_params, Start
 D -       488 - sbl1_ddr_set_default_params, Delta
