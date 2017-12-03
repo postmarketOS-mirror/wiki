@@ -37,5 +37,46 @@ Press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code>
 
 Press and hold <code>Volume Up</code> + <code>Home</code> + <code>Power</code> simultaneously.
 
+== Additional info ==
+
+=== Partition layout ===
+
+<pre class="shell">~ # fdisk -l /dev/block/mmcblk0
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/block/mmcblk0: 30777344 sectors, 2740M
+Logical sector size: 512
+Disk identifier (GUID): 98101b32-bbe2-4bf2-a06e-2bb33d000c20
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 30777310
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            8192           38911       15.0M   0700  apnhlos
+   2           38912          156543       57.4M   0700  modem
+   3          156544          157567        512K   0700  sbl1
+   4          157568          157695       65536   0700  dbi
+   5          157696          157759       32768   0700  ddr
+   6          157760          161855       2048K   0700  aboot
+   7          161856          162879        512K   0700  rpm
+   8          162880          163903        512K   0700  tz
+   9          163904          170047       3072K   0700  fsg
+  10          170048          184319       7136K   0700  pad
+  11          184320          204799       10.0M   0700  param
+  12          204800          233471       14.0M   0700  efs
+  13          233472          239615       3072K   0700  modemst1
+  14          239616          245759       3072K   0700  modemst2
+  15          245760          272383       13.0M   0700  boot
+  16          272384          303103       15.0M   0700  recovery
+  17          303104          329727       13.0M   0700  fota
+  18          329728          344045       7159K   0700  backup
+  19          344046          344047        1024   0700  fsc
+  20          344048          344063        8192   0700  ssd
+  21          344064          360447       8192K   0700  persist
+  22          360448          378879       9216K   0700  persdata
+  23          378880         5498879       2500M   0700  system
+  24         5498880         5908479        200M   0700  cache
+  25         5908480         6010879       50.0M   0700  hidden
+  26         6010880        30777310       11.8G   0700  userdata</pre>
+
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
