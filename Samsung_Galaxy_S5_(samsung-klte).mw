@@ -1,0 +1,41 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S5
+| codename = klte
+| image = File:Klte.png
+| imagecaption = Samsung Galaxy S5
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 (KitKat)
+| chipset = Qualcomm MSM8974AC Snapdragon 801
+| cpu = Quad-core 2.5 GHz Krait 400
+| gpu = Adreno 330
+| storage = 16/32 GB
+| display = 1080 x 1920 AMOLED
+| memory = 2 GB
+}}
+
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
+
+== Maintainer(s) ==
+* ''[[user:drebrez|drebrez]]''
+
+== What works ==
+
+* Nothing yet
+
+== What does not work ==
+
+* Everything else
+
+== How to enter flash mode ==
+
+Press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
+
+== How to enter recovery mode ==
+
+Press and hold <code>Volume Up</code> + <code>Home</code> + <code>Power</code> simultaneously.
+
+== Links ==
+* [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
