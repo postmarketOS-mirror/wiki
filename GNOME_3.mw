@@ -1,0 +1,8 @@
+It is possible to run GNOME on pmOS, although there is no package yet.
+
+==Relevant links==
+* [https://github.com/postmarketOS/pmbootstrap/issues/662 Packaging issue on GitHub, includes screenshot]
+* [https://github.com/opendata26/pmbootstrap/tree/gnome postmarketos-gnome fork by opendata26]
+* [https://wiki.alpinelinux.org/wiki/Gnome_Setup Gnome Setup page on Alpine Wiki]
+
+[[Category:Interface]]
