@@ -45,6 +45,7 @@
 * When prompted, release all buttons and press volume up
 
 === Installation ===
+{{note|If you get a "no space left on device" error, see {{github|928}}.}}
 The normal installation does not work yet ({{github|581}}, we might fix that in the future with our own flashing method which basically automatizes the netcat method). Right now you have the following options. If you use any of these, please expand the wiki with details.
 * use <code>pmbootstrap install --sdcard</code> (you will need a real sd card, but this is the easiest method)
 * use the netcat method (see below)
