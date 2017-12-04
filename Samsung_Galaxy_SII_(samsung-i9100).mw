@@ -71,7 +71,7 @@ For the d710, on step 5 use ''/dev/mmcblk0p11'' as the install partition.
 
 On step 8, use <source lang="shell">pv /home/pmos/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
 
-==== Step by step guide for Flashing to device memory ====
+===== Step by step guide for Flashing to device memory =====
 
 ''Please do not hesitate to remove or edit if this does not belong here or match intended wiki content. This does not bring anything new just summary.''
 
