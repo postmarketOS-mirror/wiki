@@ -267,7 +267,8 @@ This is a wiki, so '''please adjust everything that isn't detailed enough or wou
 More importantly, if you are at this point, it is a good idea to start writing your porting '''progress to the [[Devices]] page''', even if you didn't get very far and the kernel does not compile (it will help others to continue from your work). Simply register in the wiki (you don't even need an e-mail address) and [[Help:Device Page|follow this tutorial]].
 
 === Installation ===
-If you want to install to the system partition of an image file, run the following:
+{{note|If you get a "no space left on device" error, see {{github|928}}.}}
+To install to the system partition of an image file, run the following:
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap install --no-fde
