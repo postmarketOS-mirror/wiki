@@ -51,8 +51,6 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 * use the recovery zip installer (you need to install a recovery like TWRP on your device, then run <code>pmbootstrap install --android-recovery-zip</code> and <code>pmbootstrap flasher --method=adb sideload</code>.)
 
 ==== netcat method ====
-{{note|There was a report that the method below did not work, but without any useful data. If you try it and it does not work for you, please open an [https://github.com/postmarketOS/pmbootstrap/issues issue] with logs so we can help with fixing this.}}
-
 Flashing to device memory should be possible using [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)].
 
 Init pmbootstrap. Make sure to choose ''none'' for the user interface instead of ''weston'' because ''weston'' makes the image just a little bit too large for the unresized partition.
