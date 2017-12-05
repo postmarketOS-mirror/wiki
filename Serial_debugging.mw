@@ -35,6 +35,11 @@ It should work with:
 * Samsung GT-S8500 (Wave)
 * Samsung i897 (Captivate)
 
+=== Galaxy Nexus (Samsung i9250) ===
+Changes to the above schematic:
+* Use 619K ohm resistor
+* Do not connect the Vcc
+
 == Mozilla Flame ==
 
 The Flame has open UART pads that are accessible underneath the outer and inner covers.
