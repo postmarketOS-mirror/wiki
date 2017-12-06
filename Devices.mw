@@ -290,6 +290,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-s6500d
   | Kernel does not compile
 |-
+  | [[Samsung-i9505-(Samsung-Galaxy-S4-int)|Samsung Galaxy S4 International]]
+  | samsung-i9505
+  |
+|-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
   |
