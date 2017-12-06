@@ -1,0 +1,58 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  S4 International
+| codename = i9505
+| image = File:i9505.jpg
+| imagecaption = S4 international
+| releaseyear = 2013
+| originalsoftware = CHANGE_ME
+| chipset = Qualcomm APQ8064T Snapdragon 600
+| cpu = Quad-core 1.9 GHz Krait 300
+| gpu = Adreno 320
+| storage = Internal storage and external micro SD
+| display = 1920x1080 AMOLED
+| memory = 2G ram
+}}
+
+== Contributors ==
+* i9505_someone
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+* Running menuconfig by removing the default patches from the source APKBUILD and adding the return_address patch
+
+== What does not work ==
+
+Kernel does not compile, fails with error:
+
+<nowiki>drivers/built-in.o: In function `psmouse_extensions':
+barcode_emul_ice4.c:(.text+0x2817e8): undefined reference to `lifebook_detect'
+barcode_emul_ice4.c:(.text+0x28181c): undefined reference to `fsp_detect'
+drivers/built-in.o:(.data.rel+0x934): undefined reference to `kgsl_iommu_sync_lock'
+drivers/built-in.o:(.data.rel+0x938): undefined reference to `kgsl_iommu_sync_unlock'
+make: *** [Makefile:901: .tmp_vmlinux1] Error 1
+</nowiki>
+
+== How to enter flash mode ==
+
+TODO
+
+== Installation ==
+
+TODO
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+TODO
+
+== Links ==
+
+* Kernel used: https://github.com/LineageOS/android_kernel_samsung_jf
