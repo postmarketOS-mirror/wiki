@@ -23,7 +23,7 @@ For the official KDE instructions on running Plasma Mobile you can use their web
 
 For now Plasma requires a device with (basic) OpenGL support.
 
-After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_plasma.sh</code> and <code>/bin/startkwin.sh</code>.
+After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_plasma.sh</code> and <code>/usr/bin/plasma-phone</code>.
 
 == Debugging ==
 
