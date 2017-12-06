@@ -49,6 +49,22 @@ More information on [https://github.com/postmarketOS/pmbootstrap/issues/54 issue
 
 You can set <code>deviceinfo_weston_pixman_type</code> (see [[deviceinfo reference]]) to enable this workaround.
 
+Proper fix is to patch the kernel: (06_fix_mdss_fb_rgb_mode.patch from lg-hammerhead, your mileage may vary)
+<syntaxhighlight lang="diff">
++diff --git a/drivers/video/msm/mdss/mdss_fb.c b/drivers/video/msm/mdss/mdss_fb.c
++index 53112ca6..69673017 100644
++--- a/drivers/video/msm/mdss/mdss_fb.c
+++++ b/drivers/video/msm/mdss/mdss_fb.c
++@@ -569,7 +569,7 @@ static int mdss_fb_probe(struct platform_device *pdev)
++ 	mfd->bl_level = 0;
++ 	mfd->bl_scale = 1024;
++ 	mfd->bl_min_lvl = 30;
++-	mfd->fb_imgType = MDP_RGBA_8888;
+++	mfd->fb_imgType = MDP_RGB_888;
++ 
++ 	mfd->pdev = pdev;
++ 	if (pdata->next)</syntaxhighlight>
+
 ==== Screen doesn't refresh ====
 
 Check if your screen refreshes when you do the following:
