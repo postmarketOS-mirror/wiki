@@ -25,6 +25,7 @@
 == What works ==
 
 * Compiling the latest lineageos kernel with some patches applied
+* Booting a graphical screen when installing PostmarketOS as recovery zip in TWRP.
 
 == What does not work ==
 
