@@ -28,6 +28,7 @@
 * Booting a graphical screen when installing PostmarketOS as recovery zip in TWRP.
 * Network connection via USB and SSH access
 * Screen works
+* Brightness can be changed by echoing a value to /sys/class/backlight/panel/device/backlight as root
 
 == What does not work ==
 
