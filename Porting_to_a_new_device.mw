@@ -139,6 +139,36 @@ $ pmbootstrap checksum linux-wiki-example
 </syntaxhighlight>
 
 ==== Kernel configuration ====
+The magic command, which lets you change the kernel configuration is <code>pmbootstrap menuconfig</code>. Don't try to manually change the defconfig file, because only by running menuconfig, the dependencies will get resolved properly. <code>menuconfig</code> always runs on the kernel with all patches applied, so we'll run it once to see if we need to remove patch files first.
+
+===== Remove failed patches =====
+You will find some example patches already in the generated kernel package. When a patch does not apply correctly, you will get something like the following in the log window (scroll up, the error is above the <code>^^^</code> line).
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap menuconfig linux-wiki-example
+</syntaxhighlight>
+<pre>
+>>> linux-wiki-example: Unpacking /var/cache/distfiles/linux-wiki-example-ffff.tar.gz...
+>>> linux-wiki-example: 01_msm-fix-perf_trace_counters.patch
+patching file arch/arm/mach-msm/perf_trace_counters.h
+Hunk #1 succeeded at 158 (offset 37 lines).
+>>> linux-wiki-example: 02_this_patch_fails.patch
+patching file arch/arm/mach-msm/perf_trace_counters.h
+Hunk #1 FAILED at 121.
+1 out of 1 hunk FAILED -- saving rejects to file arch/arm/mach-msm/perf_trace_counters.h.rej
+>>> ERROR: linux-wiki-example: all failed
+</pre>
+
+When this happens, remove the failing patch from the <code>source=</code> variable in the <code>APKBUILD</code>, and delete the patch file from the same folder. Finally, correct the checksums and try menuconfig again.
+
+<syntaxhighlight lang="shell-session">
+$ nano aports/device/linux-wiki-example/APKBUILD # remove from source
+$ rm aports/device/linux-wiki-example/02_this_patch_fails.patch
+$ pmbootstrap checksum linux-wiki-example
+$ pmbootstrap menuconfig linux-wiki-example
+</syntaxhighlight>
+
+===== Make kconfig_check happy =====
 Check what you need to adjust in the kernel config before it can be used with postmarketOS. Keep [[Kernel_configuration|changing the options]], until everything passes.
 
 <syntaxhighlight lang="shell-session">
@@ -154,33 +184,7 @@ Next up is the kernel compilation, which will fail a few times before you get it
 $ pmbootstrap build linux-wiki-example
 </syntaxhighlight>
 
-We most likely use a more modern version of GCC compared to what your device kernel was intended to be compiled with (which is good, we don't want outdated software). However, this means that you will probably need to patch your kernel before it compiles successfully. Don't be scared, we'll talk you through it.
-
-==== Remove failed patches ====
-You will find some example patches already in the generated kernel package. When a patch does not apply correctly, you will get something like the following in the log window (scroll up, the error is above the <code>^^^</code> line).
-
-<pre>
->>> linux-wiki-example: Unpacking /var/cache/distfiles/linux-wiki-example-ffff.tar.gz...
->>> linux-wiki-example: 01_msm-fix-perf_trace_counters.patch
-patching file arch/arm/mach-msm/perf_trace_counters.h
-Hunk #1 succeeded at 158 (offset 37 lines).
->>> linux-wiki-example: 02_this_patch_fails.patch
-patching file arch/arm/mach-msm/perf_trace_counters.h
-Hunk #1 FAILED at 121.
-1 out of 1 hunk FAILED -- saving rejects to file arch/arm/mach-msm/perf_trace_counters.h.rej
->>> ERROR: linux-wiki-example: all failed
-</pre>
-
-When this happens, remove the failing patch from the <code>source=</code> variable in the <code>APKBUILD</code>, and delete the patch file from the same folder. Finally, correct the checksums and build again.
-
-<syntaxhighlight lang="shell-session">
-$ nano aports/device/linux-wiki-example/APKBUILD # remove from source
-$ rm aports/device/linux-wiki-example/02_this_patch_fails.patch
-$ pmbootstrap checksum linux-wiki-example
-$ pmbootstrap build linux-wiki-example
-</syntaxhighlight>
-
-In the unlikely case, that everything runs through smoothly, continue reading [[#Documentation|here]].
+We most likely use a more modern version of GCC compared to what your device kernel was intended to be compiled with (which is good, we don't want outdated software). However, this means that you will probably need to patch your kernel before it compiles successfully. Don't be scared, we'll talk you through it. But in the unlikely case, that everything runs through smoothly, continue reading [[#Documentation|here]].
 
 ==== Find the error message ====
 In the log window, scroll up until you find the first message containing <code>error:</code> or <code>Error</code> (examples below). Read on for some tips on how to make this easier, if you can't find it right away.
