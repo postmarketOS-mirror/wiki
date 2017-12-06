@@ -30,13 +30,14 @@
 
 Kernel does not compile, fails with error:
 
-<nowiki>drivers/built-in.o: In function `psmouse_extensions':
+<code>
+drivers/built-in.o: In function `psmouse_extensions':
 barcode_emul_ice4.c:(.text+0x2817e8): undefined reference to `lifebook_detect'
 barcode_emul_ice4.c:(.text+0x28181c): undefined reference to `fsp_detect'
 drivers/built-in.o:(.data.rel+0x934): undefined reference to `kgsl_iommu_sync_lock'
 drivers/built-in.o:(.data.rel+0x938): undefined reference to `kgsl_iommu_sync_unlock'
 make: *** [Makefile:901: .tmp_vmlinux1] Error 1
-</nowiki>
+</code>
 
 == How to enter flash mode ==
 
