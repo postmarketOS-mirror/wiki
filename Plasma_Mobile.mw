@@ -12,8 +12,8 @@ The basic shell has been ported to postmarketOS, and can now be tested.
 
 To install it on your device run <code>./pmbootstrap.py init</code> and choose <code>plasma-mobile</code> in the interface section.
 
-Because compiling the entirety of KDE and Plasma may take a long time, a Git repository has been setup where pre-built packages can be downloaded for both x86_64 and armhf.
-Clone <code>https://github.com/puretryout/pmos-plasma-mobile</code> and copy the <code>armhf</code> and <code>x86_64</code> folders to <code>~/.local/var/pmbootstrap/packages/</code>, and copy the <code>config_apk_keys</code> folder to <code>~/.local/var/pmbootstrap/</code>. Afterwards run <code>./pmbootstrap.py index</code> from the root of your pmbootstrap installation.
+Because compiling the entirety of KDE and Plasma may take a long time, the binary repo provided by the project already contains KDE builds for x86_64, armhf and aarch64.
+Nothing has to be done to enable it.
 
 For the official KDE instructions on running Plasma Mobile you can use their website: https://community.kde.org/Plasma/Mobile/RunningApps
 
