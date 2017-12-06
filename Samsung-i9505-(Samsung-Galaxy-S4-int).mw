@@ -26,10 +26,15 @@
 
 * Compiling the latest lineageos kernel with some patches applied
 * Booting a graphical screen when installing PostmarketOS as recovery zip in TWRP.
+* Network connection via USB and SSH access
+* Screen works
 
 == What does not work ==
 
-* Still figuring out
+* Red glare on screen
+* Touch screen
+* Wifi
+* Probably more
 
 == How to enter flash mode ==
 
