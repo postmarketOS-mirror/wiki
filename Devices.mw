@@ -288,7 +288,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Samsung Galaxy Mini 2|Samsung Galaxy Mini 2]]
   | samsung-s6500d
-  | Kernel does not compile
+  | Red-screen, not ouch, no input, reboots after a while
 |-
   | [[Samsung-i9505-(Samsung-Galaxy-S4-int)|Samsung Galaxy S4 International]]
   | samsung-i9505
