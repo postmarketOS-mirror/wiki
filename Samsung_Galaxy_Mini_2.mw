@@ -19,13 +19,19 @@
 * halamix2
 
 == What works ==
-Nothing
+* Boots
+* ssh through USB 
+
 == What does not work ==
-Everything
+* Red screen error
+* Restart after ~2 minutes
+* no input (keys and screen)
+
+
 == How to enter flash mode ==
 Press power button and hold home button and VOL-
 == Installation ==
-
+TODO
 
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
 
