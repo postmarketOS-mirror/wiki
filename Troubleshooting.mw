@@ -242,3 +242,8 @@ See example patch: [https://github.com/postmarketOS/pmbootstrap/blob/master/apor
 === Packaging for aarch64: ./config.guess: unable to guess system type ===
 
 This happens in packages built with autoconf (./configure; make; make install), when it ships an outdated config.guess file in the source code. Adjust your APKBUILD's <code>prepare()</code> function like done in {{github|698}}.
+
+=== Device reboots ===
+* If your device always reboots after the same time (e.g. 2 minutes) after booting, you probably need to feed (or disable) a watchdog. Try to search your kernel config for watchdog, and also the internet for watchdog + your phone name.
+* Android: The kernel config option <code>CONFIG_ANDROID_LOW_MEMORY_KILLER</code> may cause reboots. Please check if you have disabled it. If this helps you, please let us know, so we can consider checking for this option.
+* Android: it is possible to get the <code>dmesg</code> log from just before the crash after the reboot [https://stackoverflow.com/questions/9682306/android-how-to-get-kernel-logs-after-kernel-panic if you enable some kernel options].
