@@ -171,6 +171,8 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/270 #270] for more
 
 Maybe you need to install udev rules on your host Linux distribution. Arch has the [https://www.archlinux.org/packages/community/any/android-udev/ android-udev] package for example, which uses the rules from [https://github.com/M0Rf30/android-udev-rules here].
 
+If that does not help, it might be necessary to set the <code>flash_fastboot_vendor_id</code> in your [[deviceinfo]] (this was necessary for the [[Amazon Kindle Fire HDX]]). Try to search the web for your device name and "fastboot vendor id".
+
 === Invalid sparse file format at header magi ===
 
 In some devices (e.g.: bullhead, titan), when flashing the system (<code>pmbootstrap flasher flash_system</code>), it works but fastboot complains of <code>Invalid sparse file format at header magi</code>.
