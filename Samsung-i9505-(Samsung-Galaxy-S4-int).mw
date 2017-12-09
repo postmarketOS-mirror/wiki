@@ -29,11 +29,11 @@
 * Network connection via USB and SSH access
 * Screen works
 * Brightness can be changed by echoing a value to /sys/class/backlight/panel/device/backlight as root
+* Wifi with properietary blobs
 
 == What does not work ==
 
 * Touch screen
-* Wifi
 * Probably more
 
 == How to enter flash mode ==
@@ -42,8 +42,13 @@ TODO
 
 == Installation ==
 
-TODO
+=== Wifi ===
 
+Add binary blobs from this page:
+
+https://github.com/TheMuppets/proprietary_vendor_samsung/tree/cm-14.1/jf-common/proprietary/etc/wifi
+
+In /system/etc/firmware/wifi. The path to the firmware files need to be changed in the default kernel configuration.
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
 
 
