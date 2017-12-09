@@ -38,7 +38,7 @@ Special cases, where this is not so obvious:
 === Porting packages from Arch Linux ===
 ==== Find the package ====
 
-[https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches appears).
+[https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches) appears.
 
 ==== Differences between APKBUILDs and PKGBUILDs ====
 
