@@ -32,7 +32,7 @@ Whenever you update a package, it must have a new version. A version consists of
 * <code>pkgrel</code>: Alpine/postmarketOS package release number. Starts at 0 (zero). Always increment <code>pkgrel</code> when making updates to an aport; reset <code>pkgrel</code> to 0 (zero) when incrementing <code>pkgver</code>.
 
 Special cases, where this is not so obvious:
-* <code>linux-*</code> packages: We always set the <code>pkgver</code> to the kernel version number and only increase it when the kernel source code has a new version number. All kernel config changes only increase the <code>pkgrel</code> number. In the case, that the linux kernel sources need to be updated, but the kernel version was not changed (Android kernel forks often do this), we could add a _git20171209-style suffix (see "Packaging git commits" above).
+* <code>linux-*</code> packages: We always set the <code>pkgver</code> to the kernel version number and only increase it when the kernel source code has a new version number. All kernel config changes only increase the <code>pkgrel</code> number. In the case, that the linux kernel sources need to be updated, but the kernel version was not changed (Android kernel forks often do this), we can add a <code>_gitYYYYMMDD</code> suffix (see "Packaging git commits" above).
 * <code>device-*</code> packages: This was not done consistently in the past, but it makes sense to update the <code>pkgver</code> when anything but the <code>APKBUILD</code> was changed. Because that is essentially the version of the software being packaged.
 
 == Porting packages from Arch Linux ==
