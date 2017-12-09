@@ -29,24 +29,36 @@ What is the official name (e.g. Google Nexus 5)?
 Name: Wiki Example
 Does the device have a hardware keyboard? (y/n) [n]:
 Does the device have a sdcard or other external storage medium? (y/n) [n]:
-Which flash method does the device support?
 </pre>
 
 ==== Flash method ====
 It depends on the flashing protocol, that comes with the device. For most Android devices, this is <code>fastboot</code>, some Samsung models need <code>heimdall</code> (which is compatible to "Odin") and some Nokia based phones work with <code>0xffff</code>. If you don't know which one it is, try to enter the bootloader on your device and check whether it says "Fastboot mode" or "Odin mode". Most of the time, that can be done by pressing the <code>Volume Down</code> key when it is just booting. In case you can't figure that one out, try to search the internet - there might even be videos on YouTube on how to do that if you're lucky.
 
 <pre>
+Which flash method does the device support?
 Flash method (fastboot/heimdall/0xffff) [fastboot]:
-Username [user]:
-Available user interfaces (3):
+</pre>
+
+Depending on your selection, <code>pmbootstrap</code> may ask you to analyze a <code>boot.img</code> file to get offset values required for the flash method. Get the right one for your device from [https://twrp.me/Devices/ TWRP] (<code>twrp-*.img</code>), [https://download.lineageos.org/ LineageOS] (<code>boot.img</code> inside the zip archive) or by [[Using_prebuilt_kernels#Extracting_boot.img_from_an_Android_device|extracting it from within a running Android]]. If you can't find any, you can skip this step for now by just pressing the return key.
+
+<pre>
+You can analyze a known working boot.img file to automatically fill out the flasher information for your deviceinfo file. Either specify the path to an image or press return to skip this step (you can do it later with 'pmbootstrap bootimg_analyze').
+Path: /home/user/Downloads/twrp-3.2.0-0-mako.img
+NOTE: You will be prompted for your sudo password, so we can set up a chroot to extract and analyze your boot.img file
+(native) install alpine-base
+(native) install file unpackbootimg
 </pre>
 
 ==== Interfaces ====
 We recommend, that you start with <code>weston</code> first, because that has been around the longest in postmarketOS and, while it is not really suitable for a phone, it works as a stable demo interface for making the graphics output work in the first place. After that one works, feel free to try out another interface (but expect, that it will not necessarily work out of the box).
 
 <pre>
+Username [user]:
+Available user interfaces (5):
 * none: No graphical environment
 * hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
+* luna: (Wayland) webOS UI, ported from the LuneOS project (Not working yet)
+* plasma-mobile: (Wayland) Mobile variant of KDE Plasma, optimized for touchscreen
 * weston: (Wayland) Reference compositor (demo, not a phone interface)
 * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
 User interface [weston]:
@@ -86,7 +98,9 @@ $ pmbootstrap log
 Open <code>aports/device/device-wiki-example/deviceinfo</code> in your favorite editor (replace <code>wiki-example</code>) and adjust:
 
 * <code>deviceinfo_screen_width</code> and <code>height</code>
-* <code>deviceinfo_flash_offset_</code> lines with [[How-to-find-device-specific-information#Fastboot_.28boot.img.29_flash_offsets|this guide]] (only if there are any!)
+* <code>deviceinfo_flash_offset_</code> lines if there are any, and you skipped the bootimg analyzing:
+** [[#Flash_method|Get a boot.img]]
+** Run <code>pmbootstrap bootimg_analyze path/to/boot.img</code>
 
 Then regenerate the checksums and build your device package (<code>-i</code> ignores the dependencies, as we don't have a working kernel package yet):
 
