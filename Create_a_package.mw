@@ -1,6 +1,6 @@
 Here is a practical approach on how to port packages from other Linux distributions to pmOS (because that is usually the fastest way). Feel free to extend this information, and to add other distributions.
 
-=== General information ===
+== General information ==
 
 * Please read [https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package#APKBUILD_variables.2Ffunctions this section] from our upstream friends wiki (''which we should also extend and improve'')
 * Please always package the latest version of a software (unless it is impossible because of software that depends on it, but try to avoid that!)
@@ -12,13 +12,13 @@ Here is a practical approach on how to port packages from other Linux distributi
 * Set up the git hook from the [[development guide]] article to automatically verify checksums in your APKBUILDs and therefore making your life easier
 * [[How to create a patch when packaging software]]
 
-==== Beware of legacy APKBUILDs ====
+=== Beware of legacy APKBUILDs ===
 Alpine's program to build packages, <code>abuild</code> evolves constantly. But the APKBUILDs sometimes lack behind. Some APKBUILDs still have the following, which is unnecessary:
 * <code>|| return 1</code> statements after every line (e.g. <code>make || return 1</code> is not needed anymore, use <code>make</code> instead)
 * a custom <code>prepare()</code> function that does nothing but apply patches ([https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#prepare.28.29 more information]))
 * ''not'' using the <code>builddir</code> variable to point to the extracted source location (usually: <code>builddir="$srcdir/$pkgname-$pkgver"</code>)
 
-==== Packaging git commits ====
+=== Packaging git commits ===
 Only package git commits when necessary. Stable releases are preferred. Consider asking upstream to tag releases.
 * <code>pkgver</code>: We use the following format: <code>$lastrelease_gitYYYYMMDD</code>, e.g. <code>1.0_git20171101</code> (that makes it easy to see how old the commit is and <code>apk</code> is able to upgrade the package properly when the next release, e.g. <code>1.1</code>, comes out)
 * Save the git commit in a variable <code>_commit=....</code> and use it throughout the <code>APKBUILD</code> (e.g. in the <code>builddir</code>), so it's easy to update it.
@@ -35,12 +35,12 @@ Special cases, where this is not so obvious:
 * <code>linux-*</code> packages: We always set the <code>pkgver</code> to the kernel version number and only increase it when the kernel source code has a new version number. All kernel config changes only increase the <code>pkgrel</code> number. In the case, that the linux kernel sources need to be updated, but the kernel version was not changed (Android kernel forks often do this), we could add a _git20171209-style suffix (see "Packaging git commits" above).
 * <code>device-*</code> packages: This was not done consistently in the past, but it makes sense to update the <code>pkgver</code> when anything but the <code>APKBUILD</code> was changed. Because that is essentially the version of the software being packaged.
 
-=== Porting packages from Arch Linux ===
-==== Find the package ====
+== Porting packages from Arch Linux ==
+=== Find the package ===
 
 [https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches) appears.
 
-==== Differences between APKBUILDs and PKGBUILDs ====
+=== Differences between APKBUILDs and PKGBUILDs ===
 
 * <code>APKBUILD</code>s do not have the arrays from bash, use flat strings instead
 * There's no <code>optdepends</code>
