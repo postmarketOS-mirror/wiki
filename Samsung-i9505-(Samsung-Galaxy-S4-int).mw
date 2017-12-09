@@ -30,11 +30,11 @@
 * Screen works
 * Brightness can be changed by echoing a value to /sys/class/backlight/panel/device/backlight as root
 * Wifi with properietary blobs
+* Touch screen
 
 == What does not work ==
 
-* Touch screen
-* Probably more
+* Touch screen requires a reboot to work in some rare cases
 
 == How to enter flash mode ==
 
