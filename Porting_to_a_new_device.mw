@@ -325,8 +325,8 @@ $ pmbootstrap flasher flash_kernel
 If the flashing method does not work, it is also possible to export all generated image files to a specific directory (with symlinks), so you can flash it manually with your host Linux system (or even on Windows with proprietary flashers such as Odin, if this is the only way it works for you):
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap flasher export
-$ pmbootstrap flasher export --odin
+$ pmbootstrap export
+$ pmbootstrap export --odin
 </syntaxhighlight>
 
 For Android based devices, where a recovery system such as TWRP is installed, you can generate an Android recovery zip compatible file, and sideload it.
