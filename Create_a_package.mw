@@ -25,7 +25,7 @@ Only package git commits when necessary. Stable releases are preferred. Consider
 * The [https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#source <code>source</code>] should be saved with the <code>$_commit</code> in the filename. For GitHub links, this means:
   <nowiki>source="$pkgname-$_commit.tar.gz::https://github.com/ORG/NAME/archive/$_commit.tar.gz"</nowiki>
 
-=== When should pkgrel/pkgver get increased? ===
+=== When should pkgver/pkgrel get increased? ===
 Whenever you update a package, it must have a new version. A version consists of <code>$pkgver-r$pkgrel</code>. The {{alpine|APKBUILD_Reference}} says:
 
 * <code>pkgver</code>: The version of the software being packaged.
