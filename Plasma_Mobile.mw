@@ -6,27 +6,28 @@
 | toolkit = Qt 5
 }}
 
-== Overview ==
+== Status ==
+The basic shell has been ported to postmarketOS, and can now be tested in Qemu. It does not work on a real device yet, see the related issues:
 
-The basic shell has been ported to postmarketOS, and can now be tested.
+* Alpine's QT5 is built with desktop OpenGL, but we need OpenGL ES2 ({{github|994}})
+* JIT is disabled for QML on armhf (not sure if that would only make it slow or if it really causes it not to be working at all) ({{github|878}})
+* Make plasma mobile work with software OpenGL (without this, it will only work on devices with freedreno or other accelerated graphics drivers, which most of our devices don't have right now) ({{github|987}})
 
-To install it on your device run <code>./pmbootstrap.py init</code> and choose <code>plasma-mobile</code> in the interface section.
-
-Because compiling the entirety of KDE and Plasma may take a long time, the binary repo provided by the project already contains KDE builds for x86_64, armhf and aarch64.
-Nothing has to be done to enable it.
-
-For the official KDE instructions on running Plasma Mobile you can use their website: https://community.kde.org/Plasma/Mobile/RunningApps
-
-''Packaging efforts have been documented [[Packaging-Plasma-Mobile|here]].''
-
-== Running ==
-
-For now Plasma requires a device with (basic) OpenGL support.
+== Installation ==
+Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. The binary repo provided by the project already contains KDE builds for x86_64, armhf and aarch64 (compiling takes a long time). Nothing has to be done to enable it.
 
 After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_plasma.sh</code> and <code>/usr/bin/plasma-phone</code>.
 
-== Debugging ==
+For the official KDE instructions on running Plasma Mobile, see [https://community.kde.org/Plasma/Mobile/RunningApps their website].
 
+== Troubleshooting ==
+=== Log output ===
+You can read the log output with <code>logread -f</code>. Anything related to Plasma and KDE will have a <code>username:plasma-mobile</code> prefix.
+
+=== KWin doesn't work ===
+Please follow [https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/ these instructions] for debugging.
+
+=== Enable debug output ===
 By default Plasma and KWin don't log anything significant or useful for this project. To tell them to, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
 
 <pre>[Rules]
@@ -100,7 +101,7 @@ kwin_qpa_plugin.warning=true
 kwin_qpa_plugin.critical=true
 kwin_qpa_plugin.debug=true</pre>
 
-You can read the log output with <code>logread -f</code>. Anything related to Plasma and KDE will have a <code>username:plasma-mobile</code> prefix.
-
+== See also ==
+* [[Packaging-Plasma-Mobile|Packaging efforts]]
 
 [[Category:Interface]]
