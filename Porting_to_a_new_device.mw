@@ -292,7 +292,7 @@ To install to the system partition of an image file, run the following:
 $ pmbootstrap install --no-fde
 </syntaxhighlight>
 
-If you want to install to a SD card, insert it and run the following. Replace mmcblk0 with the actual device name (<code>lsblk</code> is handy to find out the correct device name).
+If you want to install to a SD card, insert it and run the following. Replace mmcblk0 with the actual device name (<code>lsblk</code> is handy to find out the correct device name). You don't need to format or partition it beforehand, <code>pmbootstrap</code> will take care of that.
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0
