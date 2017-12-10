@@ -249,3 +249,22 @@ This happens in packages built with autoconf (./configure; make; make install), 
 * If your device always reboots after the same time (e.g. 2 minutes) after booting, you probably need to feed (or disable) a watchdog. Try to search your kernel config for watchdog, and also the internet for watchdog + your phone name.
 * Android: The kernel config option <code>CONFIG_ANDROID_LOW_MEMORY_KILLER</code> may cause reboots. Please check if you have disabled it. If this helps you, please let us know, so we can consider checking for this option.
 * Android: it is possible to get the <code>dmesg</code> log from just before the crash after the reboot [https://stackoverflow.com/questions/9682306/android-how-to-get-kernel-logs-after-kernel-panic if you enable some kernel options].
+
+=== ERROR: ... BAD archive ===
+If you <code>pmbootstrap log</code> shows something similar to the following:
+<pre>
+(005853) [22:25:47] (native) % apk --no-progress add -u qemu-user-static-repack qemu-user-static-repack-binfmt
+WARNING: Ignoring /mnt/pmbootstrap-packages/x86_64/APKINDEX.tar.gz: No such file or directory
+(1/2) Installing qemu-user-static-repack (2.8-r9)
+ERROR: qemu-user-static-repack-2.8-r9: BAD archive
+(2/2) Installing qemu-user-static-repack-binfmt (2.8-r9)
+1 error; 20 MiB in 36 packages
+(005853) [22:25:53] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+</pre>
+
+...then downloading a package (in this case <code>qemu-user-static-repack</code>) failed. Please delete the broken package and try it again:
+
+<syntaxhighlight lang="shell-session">
+$ cd ~/.local/var/pmbootstrap/ # go into your work folder, as specified in 'pmbootstrap init'
+$ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package name accordingly
+</syntaxhighlight>
