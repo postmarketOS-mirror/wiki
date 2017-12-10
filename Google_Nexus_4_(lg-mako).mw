@@ -52,18 +52,17 @@ You can properly turn the device off by unplugging the usb cable, then booting i
 * The rest (Wifi, bluetooth, making calls, ...)
 
 == Wifi ==
-
 Looks like, we need to package the [https://github.com/LineageOS/android_device_lge_mako/blob/12ac6e9aeb32d5ac9fc832f2214ede2c7690d0a6/proprietary-blobs.txt#L152-L157 wcnss.* files] for wifi. A version from 2015 can be found [https://github.com/TheMuppets/proprietary_vendor_lge/tree/cm-14.1/mako/proprietary/vendor/firmware here]. It's a Qualcomm chip.
 
-== Alternative kernels ==
-It *should* be possible to run [[The Mainline Kernel]] on the lg-mako, maybe we need to write a display driver, but there's a [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting tutorial for it]. I (ollieparanoid) didn't do enough research on this yet - if you're interested in doing this, please talk to opendata26 from postmarketOS and robclark from the freedreno project. With their help it should be quite feasible.
+== freedreno / Mainline ==
+The [https://github.com/freedreno/freedreno/wiki freedreno] project brings an open source kernel driver for 3D acceleration. You would still need to run the proprietary blob on the GPU, but it makes 3D acceleration possible at all. There is a backport of freedreno to the 3.4 kernel, but the display doesn't work there. According to robclark from Freedreno, it makes more sense to get [[The Mainline Kernel|mainline]] going:
 
-Non-mainline:
-* [https://github.com/ollieparanoid/pmbootstrap/tree/feature/lg-mako-freedreno-3.4.0/aports/device/linux-lg-mako Freedreno backport to 3.4.0] (couldn't make it work out of the box and I suggest trying to get mainline working instead of spending time on this one)
-* Freedreno backport to 3.0.8 ({{github|38}})
+: ''tbh, with the exception of perhaps making phone calls (modem), upstream support for 8064 should be decent (like the work that john stultz did on n7 tablet).. so I probably wouldn't try too hard on ancient 3.4 stuff''
+
+Let us know if you're interested in doing this and talk to opendata26 (from postmarketOS) and robclark (from freedreno). With their help it should be quite feasible.
 
 == Links ==
-
+* [https://github.com/freedreno/freedreno/wiki/Nexus-4 freedreno: Nexus 4]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-mako Device package]
 * [https://www.optiv.com/blog/building-a-nexus-4-uart-debug-cable Tutorial: UART debug cable]
 * [https://developers.google.com/android/drivers#mako Official proprietary drivers]
