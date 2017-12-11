@@ -65,6 +65,8 @@ index 53112ca6..69673017 100644
  	mfd->pdev = pdev;
  	if (pdata->next)</syntaxhighlight>
 
+Alternative patch: [https://cascardo.eti.br/patches/0001-fix-video-argb-setting.patch 0001-fix-video-argb-setting.patch] (requires <code>CONFIG_FB_MSM_DEFAULT_DEPTH_ARGB8888=y</code> in the kernel config).
+
 ==== Screen doesn't refresh ====
 
 Check if your screen refreshes when you do the following:
