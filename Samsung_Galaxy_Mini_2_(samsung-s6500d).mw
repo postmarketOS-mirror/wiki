@@ -1,0 +1,53 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Mini 2
+| codename = s6500d, s6500, jena
+| image = File:samsung-s6500d.jpg
+| imagecaption = Samsung s6500d
+| releaseyear = 2012
+| originalsoftware = Android 2.3.4
+| chipset =  Snapdragon S1 / MSM7227A
+| cpu = ARM Cortex-A5 800 Mhz
+| gpu = Adreno 200
+| storage = 4GB
+| display = 320×480
+| memory = 512MB
+}}
+
+== Contributors ==
+* halamix2
+
+== What works ==
+* It boots
+* SSH through USB 
+
+== What does not work ==
+* Restart after ~2 minutes 22 seconds (probably SMSM_RESET in SMS module)
+* Red screen error
+* No input (keys and screen)
+* No charging with turned off phone (is it even supported?)
+
+== To do ==
+* Fixing 2:22 restarts is a priority
+** the first thing that comes to my head is checking defconfig
+** second one is adding proprietary firmware.
+* Red screen error (kernel patch or weston config workaround)
+* Touch screen input, /dev/input/event1 should be screen, still nothing is working, including weston-calibrate
+
+== S6500d fork ==
+
+https://github.com/Halamix2/pmbootstrap/tree/device-samsung-s6500d
+
+== How to enter flash mode ==
+Press power button and hold home button and VOL-
+
+== Installation ==
+For now see [[Installation_guide|Installation Guide]] and [[Porting_to_a_new_device#Flashing|Flashing on Porting to a new device]]
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+== Links ==
