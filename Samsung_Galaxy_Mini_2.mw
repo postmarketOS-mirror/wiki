@@ -19,19 +19,24 @@
 * halamix2
 
 == What works ==
-* Boots
-* ssh through USB 
+* It boots
+* SSH through USB 
 
 == What does not work ==
 * Red screen error
-* Restart after ~2 minutes
-* no input (keys and screen)
+* Restart after ~2 minutes 22 seconds (probably SMSM_RESET in SMS module)
+* No input (keys and screen)
+* No charging with turned off phone (is it even supported?)
 
+== S6500d fork ==
+
+https://github.com/Halamix2/pmbootstrap/tree/device-samsung-s6500d
 
 == How to enter flash mode ==
 Press power button and hold home button and VOL-
+
 == Installation ==
-TODO
+For now see [[Installation_guide|Installation Guide]] and [[Porting_to_a_new_device#Flashing|Flashing on Porting to a new device]]
 
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
 
