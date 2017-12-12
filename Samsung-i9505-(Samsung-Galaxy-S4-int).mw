@@ -31,27 +31,19 @@
 * Brightness can be changed by echoing a value to /sys/class/backlight/panel/device/backlight as root
 * Wifi with properietary blobs
 * Touch screen
+* Wayland
+* X11
 
 == What does not work ==
 
 * Touch screen requires a reboot to work in some rare cases
+* 3D acceleration
+* Wayland default on screen keyboard
 
 == How to enter flash mode ==
 
 Press volume down + the power button to enter Download Mode. It is now possible
 to use Heimdall for flashing.
-
-== Installation ==
-
-=== Wifi ===
-
-Add binary blobs from this page:
-
-https://github.com/TheMuppets/proprietary_vendor_samsung/tree/cm-14.1/jf-common/proprietary/etc/wifi
-
-In /system/etc/firmware/wifi. The path to the firmware files need to be changed in the default kernel configuration.
-<!-- add more sections here as necessary, e.g. Wifi, ... -->
-
 
 == Photos ==
 
