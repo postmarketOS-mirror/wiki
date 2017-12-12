@@ -39,6 +39,7 @@
 * Touch screen requires a reboot to work in some rare cases
 * 3D acceleration
 * Wayland default on screen keyboard
+* Initramfs password entry for full disk encryption
 
 == How to enter flash mode ==
 
