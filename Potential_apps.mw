@@ -147,5 +147,7 @@ These are applications which already exist for Linux and could be reused in post
 * [https://openrepos.net/ Meego/Sailfish/Nemo applications] - will require some reworking for pmOS
 * [http://www.tizenstore.com/main/getMain.as Tizen Store] - unknown compatibility with pmOS
 * [http://preware.pivotce.com/ LuneOS apps] - will require some reworking for pmOS
+===Other frameworks===
 * [https://anbox.io/ Anbox] - under construction Android compatibility layer
 * [http://www.ofono.org oFono] - Open Source Telephony Framework
+* [https://launchpad.net/ginn/ Ginn] - allows non multitouch aware applications to support multitouch gestures making a lot more applications usable on a touchscreen. [https://www.youtube.com/watch?v=NKDLWrLaKKE]
