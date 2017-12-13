@@ -91,6 +91,16 @@ These are applications which already exist for Linux and could be reused in post
 |Comic book reader app for plasma mobile with touch support (in development)
 |{{github|926}}
 |-
+|[https://www.dillo.org Dillo]
+|GPL3
+|Extremely lightweight web browser, using very little RAM.  Not touch optimised but can display most mobile websites well (no HTML5 support), and hence may be the only usable browser on older devices. Uses ~20MB RAM.
+|[https://pkgs.alpinelinux.org/packages?name=dillo&branch=&repo=&arch=&maintainer= Alpine repo]
+|-
+|[http://www.midori-browser.org/ Midori]
+|LGPL2.1	
+|Fairly lightweight web browser, using very little RAM.  Not touch optimised but can display websites well, with HTML5 support. Uses ~40MB RAM.
+|[https://pkgs.alpinelinux.org/packages?name=midori&branch=&repo=&arch=&maintainer= Alpine repo]
+
 |}
 
 === Apps that only work with proprietary services ===
