@@ -36,7 +36,7 @@ If your device requires a specific X11 driver for example, it is possible to say
 Here is one example from [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-qemu-amd64 <code>device-qemu-amd64</code>]:
 <syntaxhighlight lang="bash">
 subpackages="$pkgname-x11"
-# ...
+
 x11() {
     install_if="$pkgname xorg-server"
     depends="xf86-video-qxl"
@@ -51,7 +51,7 @@ It might be, that you would like to disable Xweston for your device, because it 
 <syntaxhighlight lang="bash">
 subpackages="$pkgname-weston"
 source="deviceinfo weston.ini"
-# ...
+
 weston() {
     install_if="$pkgname weston"
     install -Dm644 "$srcdir"/weston.ini \
