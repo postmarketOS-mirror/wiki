@@ -12,7 +12,9 @@ User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and 
 
 [[File:luna_qemu_pmos.png |thumb|left| LuneOS UI running in QEMU]]
 
-The UI currently starts in QEMU, as do all of the core services (luna-sysmgr, luna-prefs, ls-hubd). You currently cannot proceed past the first use app because of missing packages.
+The UI currently starts in QEMU, along with most of the core services. With lots of manual post-install tweaking, you can complete first-use, and view the main launcher, as well as start apps. These tweaks are being packaged so that they don't need to be done manually.
+
+This does ''not'' mean porting work is done, there's still a ton of work to get something usable. See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board] for more up-to-date status.
 
 Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/make-luna-start-properly magmastonealex]'s repository, with some work currently in master.
 
@@ -26,18 +28,14 @@ Install:
 * mesa
 * mesa-egl
 
-Run /usr/bin/start_luna.sh
+Run /usr/bin/start_luna.sh to start 
 
 == Major to-dos ==
-* Finish packaging coreapps (<s>configurator</s>, <s>activitymanager</s>, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
-* Package some more apps (<s>luna-applauncher</s>, <s>luna-systemui</s>, <s>enyo</s>, mojoservicelauncher, luna-universalsearchmanager, app-services, core-apps )
-* <s>Getting the mouse to work</s> (qt problem. Set QT_QPA_EGLFS_DISABLE_INPUT=1 & use -plugin evdevmouse:/dev/input/event3 -plugin evdevkeyboard:/dev/input
-/event1 to get things working).
-* Running this on ARM (Needs a device with hardware acceleration & EGL support)
-* Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working)
-* Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
-* Create init service files
-* More packaging: ''<s>luna-qml-launcher</s>'' are all a start.
 
+* Running this on ARM (Blocked on JIT being broken on armhf. I don't have an aarch64 device to test yet.)
+* Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working). Zhuowei has a lot of research [https://github.com/postmarketOS/pmbootstrap/issues/629 here].
+* Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
+* Create init service files to get services starting at boot.
+* See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board
 
 [[Category:Interface]]
