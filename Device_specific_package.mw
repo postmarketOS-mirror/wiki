@@ -2,7 +2,7 @@ We aim to have ideally only one device specific package. Other packages should b
 
 However, in practice, we need an extra package for the kernel (unless the device has been [[The Mainline Kernel|mainlined]]). And sometimes one for device specific [[firmware]] (in theory it is possible to divide these in the firmware files for specific chips, and then share these chip-specific firmware packages across multiple devices, but we're not quite there yet).
 
-Every device specific package contains at least the [[deviceinfo]] file, and the {{alpine|APKBUILD}}.
+Every device specific package contains at least the [[deviceinfo]] file, and the {{alpine|APKBUILD}}. This article describes special characteristics of the device <code>APKBUILD</code>.
 
 == Generate a template ==
 The recommended way to start with a new device package is using <code>pmbootstrap init</code> and typing in a new device name. But it is also possible to directly call the device package wizard with <code>pmbootstrap aportgen device-changeme-changeme</code> (adjust <i>changeme</i> accordingly).
