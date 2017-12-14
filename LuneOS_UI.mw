@@ -26,19 +26,7 @@ Install:
 * mesa
 * mesa-egl
 
-Run, in the same shell:
-
-* ''export LD_PRELOAD=/usr/lib/libwayland-server.so.0''
-* ''export QT_QPA_PLATFORM=eglfs''
-* ''export QT_QUICK_BACKEND=software''
-* ''export QML2_IMPORT_PATH=/''
-* ''/usr/sbin/ls-hubd --conf /etc/luna-service2/ls-private.conf & ''
-* ''/usr/sbin/ls-hubd --public --conf /etc/luna-service2/ls-public.conf &''
-* ''luna-prefs-service -d & ''
-* ''LunaSysMgr -l debug &''
-* ''LunaSysService -l debug &''
-* ''LunaAppManager -t -c -u luna &''
-* ''luna-next''
+Run /usr/bin/start_luna.sh
 
 == Major to-dos ==
 * Finish packaging coreapps (<s>configurator</s>, <s>activitymanager</s>, <s>db8</s>, <s>firstuseapp</s>, <s>webappmanager</s>)
