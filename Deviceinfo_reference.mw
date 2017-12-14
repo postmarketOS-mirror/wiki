@@ -67,6 +67,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | Path to the touchscreen device (needed for initramfs on-screen-keyboard, [[deviceinfo_dev_touchscreen|more info]])
 | e.g. <code>/dev/input/event3</code>
 |-
+| <code>dev_touchscreen_calibration</code>
+| Touchscreen calibration values (only necessary for devices with resistive touchscreen, [[Screen_Calibration#weston-calibrator_.28needed_for_resistive_touch_screens.29|more info]])
+| e.g. <code>1.094563 -0.020949 -34.586121 0.009427 -1.148506 503.816956</code>
+|-
 | <code>dev_keyboard</code>
 | Path to the keyboard device, if your device has any (needed for initramfs password unlocking)
 | e.g. <code>/dev/input/event1</code> 
