@@ -1,0 +1,62 @@
+We aim to have ideally only one device specific package. Other packages should be shared between all devices.
+
+However, in practice, we need an extra package for the kernel (unless the device has been [[The Mainline Kernel|mainlined]]). And sometimes one for device specific [[firmware]] (in theory it is possible to divide these in the firmware files for specific chips, and then share these chip-specific firmware packages across multiple devices, but we're not quite there yet).
+
+Every device specific package contains at least the [[deviceinfo]] file, and the {{alpine|APKBUILD}}.
+
+== Generate a template ==
+The recommended way to start with a new device package is using <code>pmbootstrap init</code> and typing in a new device name. But it is also possible to directly call the device package wizard with <code>pmbootstrap aportgen device-changeme-changeme</code> (adjust <i>changeme</i> accordingly).
+
+== devicepkg-dev ==
+In order to share code between the <code>APKBUILD</code>s of these packages, all new device packages depend on a <code>devicepkg-dev</code> package and call its functions inside their <code>APKBUILD</code>s:
+
+<syntaxhighlight lang="bash">
+makedepends="devicepkg-dev"
+
+build() {
+    devicepkg_build $startdir $pkgname
+}
+
+package() {
+    devicepkg_package $startdir $pkgname
+}
+</syntaxhighlight>
+
+The variables <code>$startdir</code> and <code>$pkgname</code> are always available where they are used, and must be passed to these functions. <code>devicepkg_build</code> and <code>devicepkg_package</code> are simple shell scripts, and they get packaged from [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/main/devicepkg-dev here].
+
+=== devicepkg_build ===
+Optionally creates an udev rule for the device's touch screen, based on the data from the <code>deviceinfo</code>. We can extend this to do more when it makes sense.
+
+=== devicepkg_package ===
+Installs the <code>deviceinfo</code> file (to <code>/etc/deviceinfo</code>) and all other files, that may have been generated during <code>devicepkg_build</code>.
+
+== Use install_if to pull in packages ==
+If your device requires a specific X11 driver for example, it is possible to say: "Install this driver when this device package and Xorg are installed.".
+
+Here is one example from [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-qemu-amd64 <code>device-qemu-amd64</code>]:
+<syntaxhighlight lang="bash">
+subpackages="$pkgname-x11"
+# ...
+x11() {
+    install_if="$pkgname xorg-server"
+    depends="xf86-video-qxl"
+    mkdir "$subpkgdir"
+}
+</syntaxhighlight>
+
+We only create the <code>$subpkgdir</code>, because building subpackages fails, when the subpackage folder does not exist. You can add multiple subpackages per package, see {{alpine|APKBUILD_Reference#subpackages}}.
+
+== Add a device specific config file ==
+It might be, that you would like to disable Xweston for your device, because it does not work and then weston does not start. To accomplish this, we will also  make use of <code>install_if</code> and a subpackage. But this time we won't pull in another package, but install the config file:
+<syntaxhighlight lang="bash">
+subpackages="$pkgname-weston"
+source="deviceinfo weston.ini"
+# ...
+weston() {
+    install_if="$pkgname weston"
+    install -Dm644 "$srcdir"/weston.ini \
+        "$subpkgdir"/etc/xdg/weston/weston.ini
+}
+</syntaxhighlight>
+
+This will only install the custom Weston config, when <code>weston</code> is installed. The <code>$subpkgdir</code> is implicitly created with <code>install -D</code>.
