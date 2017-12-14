@@ -35,6 +35,6 @@ Run /usr/bin/start_luna.sh to start
 * Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working). Zhuowei has a lot of research [https://github.com/postmarketOS/pmbootstrap/issues/629 here].
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
 * Create init service files to get services starting at boot.
-* See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board
+* See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board]
 
 [[Category:Interface]]
