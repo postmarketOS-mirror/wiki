@@ -32,6 +32,7 @@
 * Touch screen
 * Wayland
 * X11
+* Keyboard and mouse with USB OTG adapter
 
 == What does not work ==
 
