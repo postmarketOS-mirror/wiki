@@ -1,8 +1,8 @@
-<!-- use `{{:The-big-list-of-who-has-what-device|user=<username>}}` on your wiki page to include autoupdated list of your devices -->
-<!-- of course you need to add includeonly block on beginning and end of yours devices -->
-
+<!--
+    PROTIP: use `{{:The-big-list-of-who-has-what-device|user=<username>}}` on your wiki page to include autoupdated list of your devices
+    of course you need to add onlyinclude block on beginning and end of yours devices
+-->
 === MartijnBraam ===
-
 <onlyinclude>{{#ifeq:{{{user|MartijnBraam}}}|MartijnBraam|
 * [[Google Nexus 5 (lg-hammerhead)]]
 * [[Nokia N900 (nokia-rx51)]]
@@ -17,21 +17,18 @@
 }}</onlyinclude>
 
 === PureTryOut ===
-
 * [[Sony Xperia Z1 Compact (sony-amami)]] (3 times)
 * [[Google Nexus 5X(lg-bullhead)]]
 * [[Jolla Phone (jolla-sbj)|Jolla (jolla-jolla) jolla?]]
 * Samsung Galaxy Apollo
 
 === ata2001 ===
-
 * [[Sony Xperia Z1 Compact (sony-amami)]]
 * [[Moto G 2015 (motorola-osprey)|Motorola Moto G 3rd gen. (motorola-osprey)]]
 * Motorola Defy+ (motorola-jordan_plus)
 * HTC Desire 510 (htc-a11)
 
 === drebrez ===
-
 <onlyinclude>{{#ifeq:{{{user|Drebrez}}}|Drebrez|
 * [[Samsung Galaxy S Advance (samsung-i9070)]]
 * [[Samsung Galaxy S5 (samsung-klte)]]
@@ -47,30 +44,29 @@
 }}</onlyinclude>
 
 === antonok ===
-
 * [[Google Nexus 7 2012 (asus-grouper)]]
 
 === pave1 Pavel Machek ===
-
 * Nokia N770, N800, N810, [[Nokia N900 (nokia-rx51)|N900]], [[Nokia N9|N9]], [[Nokia N950|N950]] (if someone wants N770, N800, N810 and will be able to put them to good use, we may talk)
 * OpenMoko gta01
 
 === z3ntu ===
-
 * [[Fairphone 2 (fairphone-fp2)]]
 * Fairphone 1
 * ZTE Racer II
 
 === halamix2 ===
-
 <onlyinclude>{{#ifeq:{{{user|Halamix2}}}|Halamix2|
 * [[Samsung Galaxy Mini 2 (samsung-s6500d)]]
 * broken LG L Fino (L70+n A.K.A. L70pn) - broken motherboard, probably eMMC
 }}</onlyinclude>
 
 === Opendata26 ===
-
 * [[Sony Xperia Z2 Tablet (sony-castor-windy)]]
 * Sony Xperia Z2
 * Nvidia shield android tv
 * iPod touch 2g (8gb new bootrom)
+
+=== ollieparanoid ===
+* [[Samsung_Galaxy SII (samsung-i9100)]]
+* [[Google Nexus 4 (lg-mako)]]
