@@ -23,11 +23,15 @@ Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree
 Install:
 
 * postmarketos-ui-luna
-* mesa-dri-virtio (if in QEMU, mesa-dri-swrast otherwise)
+* mesa-dri-virtio (if in QEMU)
 * mesa
 * mesa-egl
 
-Run /usr/bin/start_luna.sh to start 
+Run /usr/bin/start_luna.sh to start everything. The first-use app should open.
+
+Complete the steps, when you get to the black screen, click where the "next" button should be. It's not clear what causes that yet.
+
+Once the app exits and you're presented with the home screen, run '''luna-send -n 1 'luna://com.palm.configurator/run' '{"types":["dbkinds","dbpermissions","activities"]}'''' in another terminal. Stop luna, reboot, and start luna again, and everything should be usable.
 
 == Major to-dos ==
 
