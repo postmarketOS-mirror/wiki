@@ -20,19 +20,34 @@
 
 == Maintainer(s) ==
 
+* magmastonealex
+
 == What works ==
 
-* Touchscreen
+* Touchscreen/Display
 * Weston
 * WiFi
 * Bluetooth (ish)
 
 == What does not work ==
 
+* Everything Else
 
-== Notes ==
+== Bluetooth ==
 
-magmastonealex is currently working on getting Bluetooth to work. I've managed to get the hci0 interface to come up, and scan with hcitool, still trying to get the non-legacy bluez utils to work.
+Not generally packaged yet - I still need a way to integrate it with bluez5 utilities, which seem to need the driver to be in kernelspace. Still, it works with the legacy utils to scan, pair, and be usable.
+
+Steps:
+
+* Download [https://github.com/imilka/proprietary_vendor_samsung/blob/master/n7100/proprietary/system/bin/bcm4334.hcd the proprietary firmware blob] for the Bluetooth chip on to your device.
+* Download and build (in armhf build chroot) [https://github.com/AsteroidOS/brcm-patchram-plus/tree/master/src broadcom-patchram-plus], and move to your device. (install autoconf, automake, libtool, run '''./autogen.sh''', run '''make''')
+* Run '''./brcm_patchram_plus --patchram bcm4334.hcd --enable_hci --no2bytes --tosleep 50000 --use_baudrate_for_download --baudrate 4000000 /dev/
+ttyHS0'''
+* '''hciconfig hci0 up'''
+* '''hcitool dev'''
+* '''hcitool scan'''
+
+
 
 == How to enter flash mode ==
 
