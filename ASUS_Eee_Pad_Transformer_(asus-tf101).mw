@@ -18,24 +18,28 @@
 
 None of this work has been (merged/pushed/get correct terminology) upstream. Contact CmdrWgls on IRC if you're interested in working on it before he gets around to actually doing so.
 
+rrooij uploaded his progress here: https://github.com/rrooij/pmbootstrap/tree/device-asus-tf101
+
 == Contributors ==
 
 * CmdrWgls
+* rrooij
 * Everyone on IRC
 
 == What works ==
 
-* Nothing
+* Compiling the kernel
 
 == What does not work ===
 
-* Everything
+* Flashing it, the recovery zip fails and pmbootstrap doesn't support nvflash
 
 == Progress ==
 
 === What's been done ===
 
 * device-asus-tf101 builds
+* linux-asus-tf101 builds
 
 === What's been attempted ===
 
@@ -51,11 +55,14 @@ Attempted to fix by copying the declarations for <code>kern_path_create</code> f
 ==== [https://github.com/novaspirit/tf101-linux-2.6.36 novaspirit's kernel] ====
 Fails, multiple definitions of <code>return address</code> found in several files under <code>arch/arm/kernel</code>. No effort has been made yet to solve this problem, so this kernel is still in contention.
 
+==== [https://github.com/jmrohwer/TF101-GNU-kernel jmrohwer's kernel] ====
+
+Works after applying patches.
+
 == Next steps ==
 
-Fix novaspirit's kernel, or try a newer kernel.
+Try to flash the kernel and system
 
 New kernels to attempt:
 
-* [https://github.com/jmrohwer/TF101-GNU-kernel jmrohwer's kernel]
 * [https://github.com/rdnetto/linux-TF101 rdnetto's kernel]
