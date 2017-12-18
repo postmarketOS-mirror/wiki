@@ -30,7 +30,7 @@ rrooij uploaded his progress here: https://github.com/rrooij/pmbootstrap/tree/de
 
 * Compiling the kernel
 
-== What does not work ===
+== What does not work ==
 
 * Flashing it, the recovery zip fails and pmbootstrap doesn't support nvflash
 
@@ -66,3 +66,6 @@ Try to flash the kernel and system
 New kernels to attempt:
 
 * [https://github.com/rdnetto/linux-TF101 rdnetto's kernel]
+
+== Links ==
+* [https://forum.xda-developers.com/wiki/index.php?title=ASUS_Eee_Pad_Transformer/How_to_install_Ubuntu&ajax=0#Development Partition overview]
