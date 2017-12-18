@@ -268,3 +268,15 @@ ERROR: qemu-user-static-repack-2.8-r9: BAD archive
 $ cd ~/.local/var/pmbootstrap/ # go into your work folder, as specified in 'pmbootstrap init'
 $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package name accordingly
 </syntaxhighlight>
+
+
+
+=== My Android device does not have partition labels, how do I know where to put the boot.img file etc? ===
+* Search online for the partitions, they are probably documented somewhere.
+
+* Try to dump all partitions. Run `file` on them, it should roughly tell you the contents. If that does not help, run [https://github.com/ReFirmLabs/binwalk binwalk].
+** file output: check if it is a kernel (vmlinuz), <code>boot.img</code> file or just "data".
+** In case you have "data", don't flash anything there, we probably can't generate that format yet. Please open an issue in GitHub or ask on the channel.
+* You can also look at recovery zips from other Android ROMs, that were released for your device. Extract it and look at <code>META-INF/com/google/android/updater-script</code>, search for commands starting with <code>run_program("/sbin/busybox", "dd"</code>, they are for flashing partitions.
+
+** In one example, there was <code>run_program("/sbin/busybox", "dd", "if=/tmp/boot.blob", "of=/dev/block/mmcblk0p4");</code>, which means that a <code>boot.blob</code> file gets flashed to <code>/dev/block/mmcblk0p4</code>. That <code>boot.blob</code> file is also in the recovery zip - run the <code>file</code> program on it (see above).
