@@ -41,3 +41,6 @@ CoolReaper can perform the following tasks:
 * Send or insert arbitrary SMS or MMS messages into the phone.
 * Dial arbitrary phone numbers
 * Upload information about device, its location, application usage, calling and SMS history to a Coolpad server
+
+== See also ==
+* [https://github.com/ReFirmLabs/binwalk binwalk (firmware analysis tool)]
