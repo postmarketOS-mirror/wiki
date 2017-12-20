@@ -306,6 +306,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-mint
   | Prebuilt kernel reboots to recovery, pmOS kernel stucks at bootloader logo
 |-
+  | [[Samsung Galaxy Tab 2 10.1" (3G and Wifi) (samsung-espresso10)|Samsung Galaxy Tab 2 10.1"]]
+  | samsung-espresso10
+  | Successfully boots into a usable weston, but USB and Network does not work (no show in dmesg, lsusb or ifconfig.)
+|-
   | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
   | semc-anzu
   |
