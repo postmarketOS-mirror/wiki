@@ -16,9 +16,10 @@ The UI currently starts in QEMU, along with most of the core services. With lots
 
 This does ''not'' mean porting work is done, there's still a ton of work to get something usable. See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board] for more up-to-date status.
 
-Current work can be found in [https://github.com/magmastonealex/pmbootstrap/tree/make-luna-start-properly magmastonealex]'s repository, with some work currently in master.
+Current work can be found in master.
 
-== Running ==
+See [https://github.com/postmarketOS/pmbootstrap/issues/629 The github issue] related to this work as well.
+== Running (QEMU) ==
 
 Install:
 
@@ -35,8 +36,8 @@ Once the app exits and you're presented with the home screen, run '''luna-send -
 
 == Major to-dos ==
 
-* Running this on ARM (Blocked on JIT being broken on armhf. I don't have an aarch64 device to test yet.)
-* Trying to get this running with software rendering (Mesa seems to theoretically support this, though I (magmastonealex) never got it working). Zhuowei has a lot of research [https://github.com/postmarketOS/pmbootstrap/issues/629 here].
+* Running this on ARM (Everything is packaged. Currently seems to crash on non-hardware accellerated devices in swrast somewhere.)
+* Trying to get this running with software rendering (Appears to work somewhat, no luck on armhf yet.) Zhuowei has a lot of research [https://github.com/postmarketOS/pmbootstrap/issues/629 here].
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
 * Create init service files to get services starting at boot.
 * See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board]
