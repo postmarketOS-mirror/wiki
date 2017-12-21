@@ -22,6 +22,17 @@
 
 Power off the device. Hold <code>Back</code> as you plug the USB cable into the device.
 
+== Bootloader unlocking ==
+{{note|If you try any of this out, please rewrite this section into a nice step-by-step wiki format.}}
+[https://github.com/postmarketOS/pmbootstrap/pull/346#issuecomment-353199683 @mirh wrote]:
+<blockquote>
+Just for the records of you gentlemen, I wanted to let you know that all the 2011 xperia (manufactured before a not-so-clear 2012 week), are capable of *unofficial* bootloader unlock. 
+* https://forum.xda-developers.com/showthread.php?t=1285285
+* https://forum.xda-developers.com/showthread.php?t=1551494
+* https://forum.xda-developers.com/showthread.php?t=1730874
+* https://forum.xda-developers.com/showthread.php?t=2768514
+* https://forum.xda-developers.com/showthread.php?t=2070325
+</blockquote>
 == What works ==
 
 * Compiling kernel
@@ -41,3 +52,4 @@ Testing device had permanent locked bootloader, so flashing could not be tested.
 
 * [https://github.com/msm7x30/android_kernel_qcom_msm7x30 Kernel]
 * [http://www.flashtool.net/ Xperia Flashtool] that should probably work once it is unlocked. With [https://github.com/Androxyde/Flashtool source code!]
+* [https://github.com/LegacyHuawei/local_manifests/issues/9#issuecomment-168169631 there's possibly also a 3.10 branch in the wild]
