@@ -1,11 +1,14 @@
 [[Category:Supported Devices]]
 <blockquote>''This page is specific to running the <code>arm</code> version of Qemu. Make sure to also read the '''[[common Qemu notes]]'''!''
 </blockquote>
+
 This device is used to emulate an ARM Versatile Express for Cortex-A9.
 
 Vexpress (Versatile Express) is the reference architecture from the ARM Foundation. It simulates the armv7 architecture and a lot of other hardware (like graphics hardware).
 
 QEMU supports many other ARM architectures (see <code>qemu-system-arm -machine help</code>).
+
+Using the <code>--display=gtk</code> parameter is recommended. The default display, SDL, will show to windows (of which one is unused) and you won't be able to look at the serial output.
 
 === Contributors ===
 
