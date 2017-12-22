@@ -76,7 +76,7 @@ If your network uses DHCP, start the DHCP client:
 
 == Freedreno ==
 
-Freedreno is only supported with X atm as weston segfaults<br />
+Freedreno is only supported with X and kwin atm as weston segfaults<br />
 Here are some games being played https://imgur.com/a/ji6jl#jhR61Ww
 
 <source lang="bash"># Install mesa and X allong with the touchscreen driver
