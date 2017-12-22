@@ -7,13 +7,12 @@
 }}
 
 == Status ==
-The basic shell has been ported to postmarketOS, and can now be tested in Qemu. It does not work on a real device yet, see the related issues:
-
-* Alpine's QT5 is built with desktop OpenGL, but we need OpenGL ES2 ({{github|994}})
-* JIT is disabled for QML on armhf (not sure if that would only make it slow or if it really causes it not to be working at all) ({{github|878}})
-* Make plasma mobile work with software OpenGL (without this, it will only work on devices with freedreno or other accelerated graphics drivers, which most of our devices don't have right now) ({{github|987}})
-
-So far we were trying to run it with Wayland. We didn't try the X11 version yet, it might make some things easier as X11 is already working on some devices (X11 uses the same server for all desktop environments, while kwin differs greatly from weston regarding Wayland). In the long run, Wayland should be preferred of course.
+The basic shell has been ported to postmarketOS, and can now be tested in Qemu. bshah just got it working on a hammerhead:
+<blockquote>
+I just installed it, then edited [the /etc/profile.d/start_weston.sh] script for two bits:
+export KWIN_COMPOSE=Q 
+and made --drm a --framebuffer 
+</blockquote>
 
 == Installation ==
 Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. The binary repo provided by the project already contains KDE builds for x86_64, armhf and aarch64 (compiling takes a long time). Nothing has to be done to enable it.
