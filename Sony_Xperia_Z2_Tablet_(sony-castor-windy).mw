@@ -5,7 +5,7 @@
 | image = File:Sony Xperia Z2 Tablet.png
 | imagecaption = Sony Xperia Z2 Tablet
 | releaseyear = 2014
-| originalsoftware = Android 4.4.2 on Linux 3.10
+| originalsoftware = Android 4.4.2 on Linux 3.4
 | chipset = Qualcomm APQ8074AB Snapdragon 801
 | cpu = Quad-core 2.3 GHz Krait 400
 | gpu = Adreno 330
@@ -13,6 +13,7 @@
 | display = 1200x1920 TFT
 | memory = 3 GB
 }}
+
 == Contributors ==
 
 * bjorn andersson (ported device to 4.3)
