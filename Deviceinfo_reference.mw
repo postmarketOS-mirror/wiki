@@ -54,7 +54,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | Allow installing to sdcard
 | <code>true</code>, <code>false</code>
 |-
-| <code>flash_methods</code>
+| <code>flash_method</code>
 | Method used to flash the device ([[deviceinfo_flash_methods |more info]])
 |
 |-
