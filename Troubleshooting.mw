@@ -269,8 +269,6 @@ $ cd ~/.local/var/pmbootstrap/ # go into your work folder, as specified in 'pmbo
 $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package name accordingly
 </syntaxhighlight>
 
-
-
 === My Android device does not have partition labels, how do I know where to put the boot.img file etc? ===
 * Search online for the partitions, they are probably documented somewhere.
 
@@ -281,7 +279,6 @@ $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package 
 
 ** In one example, there was <code>run_program("/sbin/busybox", "dd", "if=/tmp/boot.blob", "of=/dev/block/mmcblk0p4");</code>, which means that a <code>boot.blob</code> file gets flashed to <code>/dev/block/mmcblk0p4</code>. That <code>boot.blob</code> file is also in the recovery zip - run the <code>file</code> program on it (see above).
 
-
 === mkbootimg: error: argument --dt: can't open '/boot/dt.img' ===
 This happens when you have <code>deviceinfo_bootimg_qcdt</code> enabled (which is correct when pmbootstrap generated it that way), but your kernel does not generate the <code>/boot/dt.img</code> file.
 Please adjust your kernel <code>APKBUILD</code> as follows:
@@ -290,3 +287,9 @@ Please adjust your kernel <code>APKBUILD</code> as follows:
 * and your <code>package()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L97-L99 like that]
 
 See {{github|688}} for a plan to automatically generate the linux APKBUILD right.
+
+=== pmbootstrap builds packages that it should download from the binary repo/that are already built ===
+Try to disable the "timestamp based rebuilds" feature in "pmbootstrap init" as a workaround and please report this as a bug. We need the following for the bug report:
+* *enable* timestamp based rebuilds
+* <code>pmbootstrap -v install</code> (let it run until it starts building the package it should not build)
+* <code>pmbootstrap log</code> (we need the log from here!)
