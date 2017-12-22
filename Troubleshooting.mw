@@ -280,3 +280,13 @@ $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package 
 * You can also look at recovery zips from other Android ROMs, that were released for your device. Extract it and look at <code>META-INF/com/google/android/updater-script</code>, search for commands starting with <code>run_program("/sbin/busybox", "dd"</code>, they are for flashing partitions.
 
 ** In one example, there was <code>run_program("/sbin/busybox", "dd", "if=/tmp/boot.blob", "of=/dev/block/mmcblk0p4");</code>, which means that a <code>boot.blob</code> file gets flashed to <code>/dev/block/mmcblk0p4</code>. That <code>boot.blob</code> file is also in the recovery zip - run the <code>file</code> program on it (see above).
+
+
+=== mkbootimg: error: argument --dt: can't open '/boot/dt.img' ===
+This happens when you have <code>deviceinfo_bootimg_qcdt</code> enabled, but your kernel does not generate the <code>/boot/dt.img</code> file.
+Please adjust your kernel <code>APKBUILD</code> as follows:
+* add <code>dtbtool</code> to <code>makedepends</code>
+* extend your <code>build()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L74-L75 like this]
+* and your <code>package()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L97-L99 like that]
+
+See {{github|688}} for a plan to automatically generate the linux APKBUILD right.
