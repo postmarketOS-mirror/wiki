@@ -283,7 +283,7 @@ $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package 
 
 
 === mkbootimg: error: argument --dt: can't open '/boot/dt.img' ===
-This happens when you have <code>deviceinfo_bootimg_qcdt</code> enabled, but your kernel does not generate the <code>/boot/dt.img</code> file.
+This happens when you have <code>deviceinfo_bootimg_qcdt</code> enabled (which is correct when pmbootstrap generated it that way), but your kernel does not generate the <code>/boot/dt.img</code> file.
 Please adjust your kernel <code>APKBUILD</code> as follows:
 * add <code>dtbtool</code> to <code>makedepends</code>
 * extend your <code>build()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L74-L75 like this]
