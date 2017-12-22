@@ -289,6 +289,7 @@ Please adjust your kernel <code>APKBUILD</code> as follows:
 See {{github|688}} for a plan to automatically generate the linux APKBUILD right.
 
 === pmbootstrap builds packages that it should download from the binary repo/that are already built ===
+{{note|Most likely, this is issue {{github|1023}}!}}
 Try to disable the "timestamp based rebuilds" feature in "pmbootstrap init" as a workaround and please report this as a bug. We need the following for the bug report:
 * *enable* timestamp based rebuilds
 * <code>pmbootstrap -v install</code> (let it run until it starts building the package it should not build)
