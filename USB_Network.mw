@@ -11,7 +11,8 @@ Power on your device and connect it to your USB port. pmOS uses the USB interfac
 [ 6285.287058] IPv6: ADDRCONF(NETDEV_UP): enp0s20f0u1: link is not ready</pre>
 And you'll have a new interface with IP in the range 172.16.42.0/24
 
-<pre>$ ifconfig enp0s20f0u1
+<source lang="shell-session">
+$ ifconfig enp0s20f0u1
 enp0s20f0u1 Link encap:Ethernet  HWaddr b2:c4:1e:03:64:b9  
           inet addr:172.16.42.107  Bcast:172.16.42.255  Mask:255.255.255.0
           inet6 addr: fe80::dbd2:4531:89f2:d2/64 Scope:Link
@@ -20,37 +21,40 @@ enp0s20f0u1 Link encap:Ethernet  HWaddr b2:c4:1e:03:64:b9
           TX packets:47 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1000 
           RX bytes:1226 (1.2 KB)  TX bytes:8375 (8.3 KB)</pre>
-It the interface doesn't automatically get an IP address on your system (for example on systems without NetworkManager) you need to start a dhcp client to get one.
+It the interface doesn't automatically get an IP address on your system (for example on systems without NetworkManager) you need to start a dhcp client to get one.</source>
 
-<source lang="bash"># Replace the interface name with the one on your machine
-# Some Linux distributions have "dhcpcd" installed instead of "dhclient"
-$ dhclient -v enp0s20f0u1</source>
+<source lang="shell-session">
+Replace the interface name with the one on your machine.
+Some Linux distributions have "dhcpcd" installed instead of "dhclient".
+$ dhclient -v enp0s20f0u1
+</source>
 If this fails, you may need to first assign an ethernet address to it:
 
-<pre># ip l set enp0s20f0u1 address 12:12:12:12:12:12</pre>
-Then you can try the above dhclient command.
+<source lang="shell-session">
+# ip l set enp0s20f0u1 address 12:12:12:12:12:12
+</source>
+Then you can try the above <code>dhclient</code> command.
 
-When your device is still in the initramfs (that's where it shows the keyboard to unlock the device when full disk encryption is enabled), you can connect via telnet now (make sure the last segment of the IP address is a &quot;1&quot; and not what is shown in the output of <code>ifconfig</code>!).
+If your device is stuck somewhere in the initramfs, you can [[Inspecting_the_initramfs|inspect it with telnet]].
 
-<pre>telnet 172.16.42.1 24
-Trying 172.16.42.1...
-Connected to 172.16.42.1.
-Escape character is '^]'.</pre>
 
-If you are already past the initramfs, you should be able to connect via <code>ssh</code> and the password you set during the install phase:
+When you are past the initramfs, you should be able to connect via <code>ssh</code> and the password you set during the install phase:
 
-<pre>$ ssh user@172.16.42.1
+<source lang="shell-session">
+$ ssh user@172.16.42.1
 user@172.16.42.1's password: 
 Welcome to postmarketOS!
 
 This distribution is based on Alpine Linux.
 Read both our wikis to find a large amount of how-to guides and
 general information about administrating and development.
-See &lt;https://postmarketos.org/wiki&gt; and &lt;https://wiki.alpinelinux.org&gt;.
+See &lt;https://wiki.postmarketos.org/&gt; and &lt;https://wiki.alpinelinux.org&gt;.
 
 You may change this message by editing /etc/motd.
 
-localhost:~$</pre>
+localhost:~$
+</source>
+
 Use <code>sudo</code> to run commands as <code>root</code>, it is configured.
 
 === See also ===
