@@ -1,15 +1,24 @@
-{{note|This is considered a '''security hole'''. Only use it for debugging, and uninstall the usb-shell hook afterwards.
+{{note|This is considered a '''security hole'''. Only use it for debugging, and uninstall the debug-shell hook afterwards.}}
 
-The port is for historic reasons, we used to have another telnet daemon on <code>:23</code>.}}
+This page explains how to connect to your device when it has booted to the [[Initramfs-development|initramfs]] by installing the debug-shell hook. This is useful if you want to know more about the boot process, simply inspect the initramfs or if you want to debug why something doesn't work.
 
-This page explains how to connect to your device when it has booted to the [[Initramfs-development|initramfs]] by installing the so-called [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/main/postmarketos-mkinitfs-hook-usb-shell/20-usb-shell.sh usb-shell hook]. This is useful if you want to know more about the boot process, simply inspect the initramfs or you want to debug why something doesn't work.
+It is possible to enable a telnet daemon that gives you a shell this way:
 
-It is possible to enable a telnet daemon on <code>:24</code> that gives you a shell this way:
+<source lang="shell-session">
+$ pmbootstrap initfs hook_add debug-shell
+$ pmbootstrap flasher boot # or however you flash/boot the kernel
+(wait until the device booted up and you are connected to it)
+$ telnet 172.16.42.1
+Trying 172.16.42.1...
+Connected to 172.16.42.1.
+Escape character is '^]'.
 
-<source lang="shell">./pmbootstrap.py initfs hook_add usb-shell
-./pmbootstrap.py initfs
-./pmbootstrap.py flasher boot # or however you flash/boot the kernel
-telnet 172.16.42.1 24</source>
+Type 'pmos_continue_boot' to continue booting:
+# echo "hello world"
+hello world
+# pmos_continue_boot
+Connection closed by foreign host.
+</source>
 
 If the telnet command does not work out of the box, read [[connect via USB Networking in the Initramfs]].
 
