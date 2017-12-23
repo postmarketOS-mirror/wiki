@@ -20,9 +20,9 @@
 
 == Progress ==
 
-The ipod can boot linux with the openiboot firmware which has to be build first. The openiboot firmware is not made for GCC6 and requires a few patches, it's also written for the arm-elf toolchain but I'm building it with the arm-eabi toolchain for now which seems to work.
+The iPod can boot Linux with the openiboot firmware which has to be build first. The openiboot firmware is not made for GCC6 and requires a few patches, it's also written for the arm-elf toolchain but it can be built with the arm-eabi toolchain for now which seems to work.
 
-This is also the slowest device yet since it uses a 412 Mhz ARMv6 single-core cpu (Samsung S5L8900) and 128 MB ram. It has also has the favorite GPU for any linux device porter: powervr (/s)
+This is also the slowest device yet since it uses a 412 Mhz ARMv6 single-core cpu (Samsung S5L8900) and 128 MB ram. It has also has a PowerVR GPU which can cause trouble with porting.
 
 == Links ==
 
