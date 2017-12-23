@@ -133,7 +133,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Samsung-i747m|Samsung Galaxy SIII (i747m)]]
   | style="white-space: nowrap;" | samsung-i747m, -i747
-  |   ||   || P ||   ||   ||   || P || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
+  |   ||   || P ||   || P  ||   || P || Y ||   ||   ||   || Y ||   || Y || Y ||   || Y || Y
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy SIII LTE (samsung-i9305)|Samsung Galaxy SIII (LTE)]]
   | style="white-space: nowrap;" | samsung-i9305, -i9300
