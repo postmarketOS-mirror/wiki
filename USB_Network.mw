@@ -14,7 +14,7 @@ $ ip a
 === SSH ===
 {{note|There is a dedicated article for [[Inspecting_the_initramfs|inspecting the initramfs]] via telnet.}}
 
-When you are past the initramfs, you should be able to connect via <code>ssh</code> and the password you set during the install phase:
+When you are past the initramfs, you should be able to connect via <code>ssh</code> and the username and password you set during the install phase:
 
 <source lang="shell-session">
 $ ssh user@172.16.42.1
