@@ -1,3 +1,4 @@
+== Connecting ==
 Power on your device and connect it to your USB port. pmOS uses the USB interface as a network interface and runs a DHCP server on it and <code>dmesg</code> will show something like
 
 <pre>[ 6284.442088] usb 1-1: new high-speed USB device number 36 using xhci_hcd
@@ -35,8 +36,8 @@ If this fails, you may need to first assign an ethernet address to it:
 </source>
 Then you can try the above <code>dhclient</code> command.
 
-If your device is stuck somewhere in the initramfs, you can [[Inspecting_the_initramfs|inspect it with telnet]].
-
+== SSH ==
+{{note|There is a dedicated article for [[Inspecting_the_initramfs|inspecting the initramfs]] via telnet.}}
 
 When you are past the initramfs, you should be able to connect via <code>ssh</code> and the password you set during the install phase:
 
