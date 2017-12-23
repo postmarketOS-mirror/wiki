@@ -49,7 +49,7 @@ Welcome to postmarketOS!
 This distribution is based on Alpine Linux.
 Read both our wikis to find a large amount of how-to guides and
 general information about administrating and development.
-See &lt;https://wiki.postmarketos.org/&gt; and &lt;https://wiki.alpinelinux.org&gt;.
+See <https://wiki.postmarketos.org> and <https://wiki.alpinelinux.org>.
 
 You may change this message by editing /etc/motd.
 
