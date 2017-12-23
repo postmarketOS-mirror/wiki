@@ -110,7 +110,7 @@ The description is using the alternative flash method because there it did not w
 
 -- Set image for NETCAT flash method
 
-  $ ./pmbootstrap.py initfs hook_add usb-shell
+  $ ./pmbootstrap.py initfs hook_add debug-shell
 
 -- Flash Kernel and Recovery (phone will reboot to screen "boot partition not found")
 
@@ -124,7 +124,7 @@ The description is using the alternative flash method because there it did not w
 
 -- Connect to phone with telnet
 
-  $ telnet 172.16.42.1 24
+  $ telnet 172.16.42.1
 
 -- Start netcat to listen for image (on the phone)
 ''/dev/mmcblk0p9 should be FACTORYFS partition you check by running fdisk -l /dev/mmcblk0''
@@ -144,12 +144,6 @@ The description is using the alternative flash method because there it did not w
   / # pv /home/pmos/rootfs/samsung-i9100.img | nc 172.16.42.1 60000
 
 -- Close both nc with CTRL+C when transfer finishes and reboot the phone with power button
-
--- Telnet to phone to enter password
-
-  $ telnet 172.16.42.1
-
--- Follow further instructions from telnet
 
 === Boot process ===
 
