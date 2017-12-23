@@ -1,6 +1,6 @@
 {{note|This is considered a '''security hole'''. Only use it for debugging, and uninstall the debug-shell hook afterwards.}}
 
-This page explains how to connect to your device when it has booted to the [[Initramfs-development|initramfs]] by installing the debug-shell hook. This is useful if you want to know more about the boot process, simply inspect the initramfs or if you want to debug why something doesn't work.
+This page explains how to connect to your device when it has booted to the [[Initramfs-development|initramfs]] by installing the '''debug-shell''' hook. This is useful if you want to know more about the boot process, simply inspect the initramfs or if you want to debug why something doesn't work.
 
 It is possible to enable a telnet daemon that gives you a shell this way:
 
