@@ -7,12 +7,7 @@
 }}
 
 == Status ==
-The basic shell has been ported to postmarketOS, and can now be tested in Qemu. bshah just got it working on a hammerhead:
-<blockquote>
-I just installed it, then edited [the /etc/profile.d/start_weston.sh] script for two bits:
-export KWIN_COMPOSE=Q 
-and made --drm a --framebuffer 
-</blockquote>
+The basic shell has been ported to postmarketOS, and can now be tested in Qemu. It also works on most devices with a working display, both with hardware acceleration and software rendering.
 
 == Installation ==
 Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. The binary repo provided by the project already contains KDE builds for x86_64, armhf and aarch64 (compiling takes a long time). Nothing has to be done to enable it.
@@ -22,6 +17,13 @@ After installation, the shell will automatically launch upon boot. If it doesn't
 For the official KDE instructions on running Plasma Mobile, see [https://community.kde.org/Plasma/Mobile/RunningApps their website].
 
 == Troubleshooting ==
+=== Software rendering ===
+Plasma can also be used if your device doesn't support hardware acceleration yet by using software rendering. Please note that the interface will be slow, and it might not be usable for the average user.
+
+To enable software rendering edit <code>/etc/profile.d/start_plasma.sh</code>. Add <code>export KWIN_COMPOSE=Q</code> before the <code>console-kit-daemon</code> command, and replace <code>--drm</code> with <code>--framebuffer</code> in the <code>kwin</code> launch command.
+
+Also make sure <code>mesa-dri-swrast</code> is installed.
+
 === Log output ===
 You can read the log output with <code>logread -f</code>. Anything related to Plasma and KDE will have a <code>username:plasma-mobile</code> prefix.
 
@@ -30,7 +32,9 @@ You can read the log output with <code>logread -f</code>. Anything related to Pl
 Please follow [https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/ these instructions] for debugging.
 
 === Enable debug output ===
-By default Plasma and KWin don't log anything significant or useful for this project. To tell them to, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
+
+{{note|The following has already been done by default using the <code>postmarketos-ui-plasma-mobile</code> package, but it'll stay here for future reference.}}
+To tell Plasma and <code>kwin</code> to log more, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
 
 <pre>[Rules]
 org.kde.kwindowsystem.info=true
