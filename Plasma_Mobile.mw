@@ -20,7 +20,7 @@ For the official KDE instructions on running Plasma Mobile, see [https://communi
 === Software rendering ===
 Plasma can also be used if your device doesn't support hardware acceleration yet by using software rendering. Please note that the interface will be slow, and it might not be usable for the average user.
 
-To enable software rendering edit <code>/etc/profile.d/start_plasma.sh</code>. Add <code>export KWIN_COMPOSE=Q</code> before the <code>console-kit-daemon</code> command, and replace <code>--drm</code> with <code>--framebuffer</code> in the <code>kwin</code> launch command.
+To enable software rendering edit <code>/etc/profile.d/start_plasma.sh</code>. Add <code>export KWIN_COMPOSE=Q</code> before the <code>ck-launch-session</code> command, and replace <code>--drm</code> with <code>--framebuffer</code>on the same line.
 
 Also make sure <code>mesa-dri-swrast</code> is installed.
 
