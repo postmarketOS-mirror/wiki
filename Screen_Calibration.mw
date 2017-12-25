@@ -9,8 +9,25 @@ If your framebuffer does not work out of the box, try the following:
 
 If the screen looks laggy, it might be a known issue with refresh rate. It can be solved by hardcoding the refresh rate in the video driver, see [https://github.com/postmarketOS/pmbootstrap/blob/ad17254e86b7dab4f87e139eaeb298222f37a031/aports/device/linux-sony-amami/mdss_fb_refresh_rate.patch mdss_fb_refresh_rate.patch].
 
-== Weston ==
+== Touch screen ==
+
+=== libinput ===
+This library is used by almost everything accessing your touch screen (e.g. Weston, X11, kwin). Just follow [[Osk-sdl#Set_touchscreen_device|these instructions]] to set your <code>deviceinfo_dev_touchscreen</code> variable in the [[deviceinfo]] file.
+
+Modern [[Device specific package|device specific packages]] will generate the udev-rule automatically then, and as nice side-effect it will also work in <code>osk-sdl</code>.
+
+==== Calibration (needed for resistive touch screens) ====
+Please test first if your device works without any special calibration - in most cases you don't need it!
+
+* Install postmarketOS with Weston on your phone
+* Connect to your phone via SSH
+* Run <code>weston-calibrator</code>
+* Adjust your <code>deviceinfo_dev_touchscreen_calibration</code> to the output from <code>weston-calibrator</code> ([https://github.com/postmarketOS/pmbootstrap/pull/1034/files#diff-21ee1b263b9df2c4b69bb4b6796dab37 example]).
+
+== Legacy ==
+=== libinput: old method ===
 {{syslog|weston}}
+Here is how to do it without <code>devicepkg-dev</code> (not recommended, for reference only).
 
 * Make sure, that Weston runs on the device
 * Look in the logs (via SSH) for the touch device name. For <code>lg-mako</code>, the name is <code>touch_dev</code>, but it may be different for your device.
@@ -26,9 +43,3 @@ Reload udev rules:
 udevadm control --reload
 # Re-apply those rules on all devices
 udevadm trigger</source>
-* This calibration will probably just work fine. If it does, you are done here, otherwise read on.
-
-=== weston-calibrator (needed for resistive touch screens) ===
-* Connect to your phone via SSH
-* Run <code>weston-calibrator</code>
-* Adjust your udev rules-file to the output from <code>weston-calibrator</code> ([https://github.com/postmarketOS/pmbootstrap/blob/bf6f5cb884d9e2eb8c684bb04f9c3e9d634278f8/aports/device/device-nokia-rx51/udev/90-touchscreen-dev.rules example]).
