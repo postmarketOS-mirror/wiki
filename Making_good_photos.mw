@@ -21,3 +21,10 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 ** add a shadow effect if you want to do that (Filters / Light and Shadow / Drop Shadow)
 ** possibly use "Filters / Artistic / Cartoon" on the device to improve the contrast some more
 * Use <code>exiftool -all= -overwrite_original file.jpg</code> to remove all metadata
+
+=== Creating a gif from a video ===
+Useful for new blog posts.
+<syntaxhighlight lang="shell-session">
+$ ffmpeg -y -i video.webm -vf palettegen palette.png
+$ ffmpeg -y -i video.webm -i palette.png -filter_complex paletteuse -r 10 -vf scale=320:240 video.gif
+</syntaxhighlight>
