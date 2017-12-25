@@ -23,7 +23,7 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 * Use <code>exiftool -all= -overwrite_original file.jpg</code> to remove all metadata
 
 === Creating a gif from a video ===
-Useful for new blog posts.
+Useful for new blog posts. See also: [https://superuser.com/a/141343 Cut up a video with ffmpeg]
 <syntaxhighlight lang="shell-session">
 $ ffmpeg -y -i video.webm -vf palettegen palette.png
 $ ffmpeg -y -i video.webm -vf scale=320:240 video-small.webm
