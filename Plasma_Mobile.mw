@@ -32,8 +32,7 @@ You can read the log output with <code>logread -f</code>. Anything related to Pl
 Please follow [https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/ these instructions] for debugging.
 
 === Enable debug output ===
-
-{{note|The following has already been done by default using the <code>postmarketos-ui-plasma-mobile</code> package, but it'll stay here for future reference.}}
+{{note|This will be installed by default as soon as {{github|1038}} is resolved.}}
 To tell Plasma and <code>kwin</code> to log more, create <code>~/.config/QtProject/qtlogging.ini</code> with the following content:
 
 <pre>[Rules]
