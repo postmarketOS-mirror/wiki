@@ -1,4 +1,5 @@
 [[Category:Supported Devices]]
+
 <blockquote>''This page is specific to running the <code>arm</code> version of Qemu. Make sure to also read the '''[[common Qemu notes]]'''!''
 </blockquote>
 
@@ -23,7 +24,7 @@ Using the <code>--display=gtk</code> parameter is recommended. The default displ
 * Network
 
 === What does not work ===
-
+* Qemu 2.0.0 is too old (but it's known to be working with 2.6.50)[https://github.com/postmarketOS/pmbootstrap/pull/1029#issuecomment-353819587]
 * Keyboard and mouse
 
 === Links ===
