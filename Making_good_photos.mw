@@ -1,0 +1,23 @@
+[[Image:Samsung-i9100-weston.jpg|thumb|right|To avoid reflections on the screen, you can take the photo from the side.]]
+Here are a few tips on how to make photos with devices running postmarketOS look relatively good, even if you just use another phone to make the photo.
+
+=== Taking the photo ===
+* Put your device on one or more pages of white piece of paper, so it's easy to see it.
+* Make sure that the whole device is on the photo.
+* Run something postmarketOS specific on it, for example:
+** postmarketos-demos program
+** postmarketOS background from the [https://github.com/postmarketOS/artwork artwork repository]
+** <code>uname -a</code> in a terminal showing <code>-postmarketOS</code> in the kernel name
+** tying something with "postmarketOS" in a text input
+* If you have problems with the flash of the camera reflecting on the phone's screen, just shoot at it from a different angle (see example on the right)
+* If you're trying to photograph the console, but it's too hard to do it, try to make one photo where the whole device is visible and another one where you just photograph the interesting part of the terminal.
+* Finally focus your device and take a non-blurry photo (or multiple ones just to make sure).
+
+=== Post processing ===
+* With GIMP:
+** Cut out the device
+** Cut out the screen and put it on an extra layer
+** Use "Colors / Brightness-Contrast" to improve both the device and screen contrast independently
+** add a shadow effect if you want to do that (Filters / Light and Shadow / Drop Shadow)
+** possibly use "Filters / Artistic / Cartoon" on the device to improve the contrast some more
+* Use <code>exiftool -all= -overwrite_original file.jpg</code> to remove all metadata
