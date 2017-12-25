@@ -346,6 +346,8 @@ It is quite easy to give your phone [[USB_Internet|Internet access via USB]], wh
 === Display ===
 To make the display work in the first place, read [[Troubleshooting:display]] and [[Tuning sysfs]]. Touch screen in <code>weston</code> is described [[Screen Calibration#Weston|here]].
 
+After you have the display working, please take some [[Making_good_photos|nice photos]] and add them to your device's wiki page. If you have a Reddit account, consider posting them in [https://www.reddit.com/r/postmarketOS/ /r/postmarketOS] as well.
+
 === osk-sdl support ===
 If the display and the touchscreen interface are working, then it's time to add support for <code>osk-sdl</code>, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting osk-sdl to New Devices]]
 
