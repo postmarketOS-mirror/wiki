@@ -16,6 +16,8 @@ This library is used by almost everything accessing your touch screen (e.g. West
 
 Modern [[Device specific package|device specific packages]] will generate the udev-rule automatically then, and as nice side-effect it will also work in <code>osk-sdl</code>.
 
+(If your device package does not generate the udev rule, please adjust the <code>build()</code> and <code>install()</code> functons as described [[Device specific package|here]].)
+
 ==== Calibration (needed for resistive touch screens) ====
 Please test first if your device works without any special calibration - in most cases you don't need it!
 
