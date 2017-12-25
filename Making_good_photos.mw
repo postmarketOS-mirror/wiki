@@ -26,5 +26,6 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 Useful for new blog posts.
 <syntaxhighlight lang="shell-session">
 $ ffmpeg -y -i video.webm -vf palettegen palette.png
-$ ffmpeg -y -i video.webm -i palette.png -filter_complex paletteuse -r 10 -vf scale=320:240 video.gif
+$ ffmpeg -y -i video.webm -vf scale=320:240 video-small.webm
+$ ffmpeg -y -i video-small.webm -i palette.png -filter_complex paletteuse -r 10 video.gif
 </syntaxhighlight>
