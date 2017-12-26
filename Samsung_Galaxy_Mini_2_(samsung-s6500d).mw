@@ -24,7 +24,7 @@
 * flashing
 
 == What does not work ==
-* Restart after ~2 minutes 22 seconds (probably ''SMSM: Modem SMSM state changed to SMSM_RESET'' )
+* Restart after ~2 minutes 22 seconds (probably ''SMSM: Modem SMSM state changed to SMSM_RESET'', message from file ''arch/arm/mach-msm/smd.c'' )
 * No input (keys and screen)
 * No charging with turned off phone (is it even supported?)
 
