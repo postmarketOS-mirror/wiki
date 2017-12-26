@@ -16,11 +16,12 @@
 }}
 
 == Contributors ==
-* halamix2
-
+* [[user:Halamix2|Halamix2]]
 == What works ==
 * It boots
 * SSH through USB 
+* display
+* flashing
 
 == What does not work ==
 * Restart after ~2 minutes 22 seconds (probably ''SMSM: Modem SMSM state changed to SMSM_RESET'' )
