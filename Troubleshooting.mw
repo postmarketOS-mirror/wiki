@@ -55,8 +55,38 @@ Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log 
 When your &quot;work&quot; folder is inside an ecryptfs mounted folder, [https://github.com/postmarketOS/pmbootstrap/issues/53 <code>/dev/random</code> may not work inside the chroot] and you may have other issues. Try to move your ''work'' folder to another location, you can use <code>/tmp</code> to test if this resolves the issue. You can change the location in <code>pmbootstrap init</code>. See also: [https://github.com/postmarketOS/pmbootstrap/issues/61 #61]. (This doesn't seem to be an issue with newer versions of ecryptfs anymore.)
 
 === ERROR: unsatisfiable constraints ===
+Unsatisfiable constraints means, that Alpine's package manager can't resolve packages properly. Most likely this is because Alpine updated a package and the postmarketOS repository has not been adjusted yet. Here are instructions on how you can fix this locally - but make sure that the postmarketOS community is informed as well, so the pmOS binary repos can be upgraded, too.
 
-postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
+This is how it looks like, when GCC got upgraded:
+<pre>
+ERROR: unsatisfiable constraints:
+libstdc++-6.4.0-r6:
+breaks:
+g++-armhf-6.4.0-r5[libstdc++=6.4.0-r5]
+satisfies: world[libstdc++]
+g++-6.4.0-r6[libstdc++=6.4.0-r6]
+g++-6.4.0-r6[libstdc++=6.4.0-r6]
+gcc-6.4.0-r6[so:libstdc++.so.6]
+lzip-1.19-r1[so:libstdc++.so.6]
+gcc-6.4.0-r6:
+breaks: g++-armhf-6.4.0-r5[gcc=6.4.0-r5]
+satisfies: world[gcc]
+g++-6.4.0-r6[gcc=6.4.0-r6]
+build-base-0.5-r0[gcc]
+</pre>
+
+So we need to update our GCC cross-compilers, too:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap aportgen gcc-armhf
+$ pmbootstrap zap
+$ pmbootstrap build --ignore-depends gcc-armhf
+</syntaxhighlight>
+
+This compiles a new armhf cross-compiler, that is compatible with the one from Alpine. We need the <code>--ignore-depends</code> switch, because <code>abuild</code> will try to install a <code>build-base-armhf</code> package otherwise, that we don't have (it probably gets generated if you use Alpine's official bootstrap scripts). Replace <code>armhf</code> with <code>aarch64</code> as necessary.
+
+
+==== upstream repo broken ====
+(This is very unlikely and has only happened once.) postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
 
 === Serial Console Debug Cable (early boot debugging) ===
 
