@@ -84,7 +84,6 @@ $ pmbootstrap build --ignore-depends gcc-armhf
 
 This compiles a new armhf cross-compiler, that is compatible with the one from Alpine. We need the <code>--ignore-depends</code> switch, because <code>abuild</code> will try to install a <code>build-base-armhf</code> package otherwise, that we don't have (it probably gets generated if you use Alpine's official bootstrap scripts). Replace <code>armhf</code> with <code>aarch64</code> as necessary.
 
-
 ==== upstream repo broken ====
 (This is very unlikely and has only happened once.) postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
 
