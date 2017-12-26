@@ -31,8 +31,8 @@
 * Fixing 2:22 restarts is a priority
 ** the first thing that comes to my head is checking defconfig
 ** second one is adding proprietary firmware.
-* Red screen error (kernel patch or weston config workaround)
 * Touch screen input, /dev/input/event1 should be screen, still nothing is working, including weston-calibrate
+** actually animation happens when pressing on buttons in weston demo menu but only once on first press, then nothing
 
 == S6500d fork ==
 
