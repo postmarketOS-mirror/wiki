@@ -11,6 +11,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 == Candidate Devices ==
 
 * Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release]
+* Kindle Fire 1st Generation (FOSS Bootloader, pretty much a PandaBoard devkit with a screen)
 * Fairphone 1 &amp; 2
 * [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
 * Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
