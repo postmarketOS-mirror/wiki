@@ -23,7 +23,7 @@
 * SSH through USB 
 
 == What does not work ==
-* Restart after ~2 minutes 22 seconds (probably SMSM_RESET in SMS module)
+* Restart after ~2 minutes 22 seconds (probably ''SMSM: Modem SMSM state changed to SMSM_RESET'' )
 * No input (keys and screen)
 * No charging with turned off phone (is it even supported?)
 
