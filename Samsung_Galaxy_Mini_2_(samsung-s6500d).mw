@@ -24,7 +24,6 @@
 
 == What does not work ==
 * Restart after ~2 minutes 22 seconds (probably SMSM_RESET in SMS module)
-* Red screen error
 * No input (keys and screen)
 * No charging with turned off phone (is it even supported?)
 
