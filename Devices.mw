@@ -292,7 +292,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Samsung Galaxy Mini 2 (samsung-s6500d)|Samsung Galaxy Mini 2]]
   | samsung-s6500d
-  | Red-screen, no touch, no input, reboots after a while
+  | No touch, no input, reboots after a while
 |-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
