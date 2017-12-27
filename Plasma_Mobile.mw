@@ -1,7 +1,7 @@
 {{Infobox interface
 | name = Plasma Mobile
-| image = File:Plasma-mobile.png
-| imagecaption = Plasma Mobile running in QEMU
+| image = File:Plasma-mobile-hammerhead.jpg
+| imagecaption = Plasma Mobile running on LG Nexus 5 (hammerhead)
 | graphics = KWin on Wayland or Xorg
 | toolkit = Qt 5
 }}
