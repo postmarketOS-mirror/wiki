@@ -1,5 +1,3 @@
-== Template ==
-<syntaxhighlight lang="moin">
 [[Category:booting]]
 {{Infobox device
 | manufacturer = Xiaomi
@@ -29,4 +27,3 @@
 == What does not work ==
 
 * everything else is untested
-</syntaxhighlight>
