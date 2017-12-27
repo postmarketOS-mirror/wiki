@@ -1,0 +1,32 @@
+== Template ==
+<syntaxhighlight lang="moin">
+[[Category:booting]]
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  RedMi 3
+| codename = ido
+| releaseyear = 2016
+| originalsoftware = no idea
+| chipset = Snapdragon 616
+| cpu = Octa-core (4x1.5 GHz Cortex-A53 & 4x1.2 GHz Cortex-A53)
+| gpu = Adreno 405
+| storage = 16 GB / 32 GB
+| display = IPS LCD capacitive touchscreen, 16M colors (720x1280)
+| memory = 2 GB / 3 GB
+}}
+
+== Contributors ==
+* lawl
+
+== What works ==
+
+* Boots
+* USB Networking
+* osk-sdl works to unlock root partition
+* battery
+* weston starts and displays shit, couldn't be fucked to configure eudev for it yet, so touchscreen works only in osk-sdl, not weston yet
+
+== What does not work ==
+
+* everything else is untested
+</syntaxhighlight>
