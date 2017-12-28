@@ -67,6 +67,7 @@ Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<boa
 
 ==== Useful links (mainly dts stuff) ====
 [[The_Mainline_Kernel|The Mainline Kernel]] – our docs about mainlining
+
 [[Qualcomm_mainline_porting|Qualcomm mainline porting]] — our sparse docs about Qualcomm mainlining
 
 [https://events.static.linuxfound.org/sites/events/files/slides/presentation_3.pdf Device Tree – The Disaster so Far](pdf) – introduction to DT and basic knowledge how to move from board files do DT
@@ -82,7 +83,6 @@ Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<boa
 [https://github.com/devicetree-org/devicetree-specification/releases Devicetree.org specification]
 
 ''Documentation/devicetree/'' inside linux kernel files, should contain newest documentation about dts files, should be most reliable source of information
-
 
 == S6500d fork ==
 
