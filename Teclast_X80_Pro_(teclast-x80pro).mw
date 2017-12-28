@@ -3,7 +3,7 @@
 | name =  X80 Pro
 | codename = teclast-x80pro
 | image = File:teclast-x80pro.jpg
-| imagecaption = Teclast X80 Pro
+| imagecaption = Teclast X80 Pro running Luna
 | releaseyear = 2017
 | originalsoftware = Windows 10 Home / Android 5.1
 | cpu = Intel Atom x5-Z8300 (4 core, 1.84GHz)
@@ -21,6 +21,10 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
+== Notes ==
+
+There are a ''ton'' of tablets on Amazon/Ebay with equivalent specifications - Intel processor, decent display, SDIO wifi, which are likely to be generally equivalent to this tablet.
+
 == What works ==
 
 * Wifi
@@ -28,6 +32,7 @@
 * 3D accelleration
 * Mainline
 * EFI boot
+
 
 == What does not work ==
 
