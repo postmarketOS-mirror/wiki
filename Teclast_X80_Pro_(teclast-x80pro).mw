@@ -49,6 +49,7 @@ There are a ''ton'' of tablets on Amazon/Ebay with equivalent specifications - I
 Installation is unlike most Android based devices, as the Teclast X80 Pro uses EFI to boot. This process is likely to be repeatable across many similar EFI based tablets (like the Surface Pro lineup, and many other cheap x86 Windows tablets on ebay/amazon).
 
 '''WARNING: this will remove your ability to boot into Android. Make backups!'''
+
 ''NOTE: You cannot remove the "OS Selection" screen. This method will replace the Android boot option with postmarketOS.''
 
 Much more detail to be added, but basic outline:
@@ -60,7 +61,7 @@ Much more detail to be added, but basic outline:
 * At the bottom, there are a list of overrides for this boot, select your USB stick.
 * Wait for Arch to boot and give you a shell.
 * <pre>mount /dev/mmcblk0p2 /boot/efi</pre>
-* <pre>refind-install --root /boot/efi}}
+* <pre>refind-install --root /boot/efi</pre>
 * <pre>cd /boot/efi && cp EFI/refind/refind_x64.efi EFI/BOOT/bootx64.efi && cp -rv EFI/refind/* EFI/BOOT/</pre>
 * Edit EFI/BOOT/refind.conf, you may want to uncomment ''enable_touch''.
 * <pre>mkdir /mnt/boot/EFI/pmos && cp vmlinuz-teclast-x80pro /mnt/boot/EFI/pmos/vmlinuz && cp initramfs-teclast-x80pro /mnt/boot/EFI/pmos/initramfs.img</pre>
