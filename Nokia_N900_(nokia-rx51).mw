@@ -6,6 +6,7 @@
 | imagecaption = Nokia N900 running cmus
 | releaseyear = 2009
 | originalsoftware = Maemo on Linux 2.6
+| pmoskernel = Mainline Linux
 | chipset = TI OMAP 3430
 | cpu = 600 MHz Cortex-A8
 | gpu = PowerVR SGX530
