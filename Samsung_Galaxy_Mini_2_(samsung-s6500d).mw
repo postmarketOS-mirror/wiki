@@ -6,6 +6,7 @@
 | imagecaption = Samsung s6500d
 | releaseyear = 2012
 | originalsoftware = Android 2.3.4
+| pmoskernel= not yet
 | chipset =  Snapdragon S1 / MSM7227A
 | cpu = ARM Cortex-A5 800 Mhz
 | gpu = Adreno 200
@@ -23,16 +24,64 @@
 * flashing
 
 == What does not work ==
-* Restart after ~2 minutes 22 seconds (probably ''SMSM: Modem SMSM state changed to SMSM_RESET'', message from file ''arch/arm/mach-msm/smd.c'' )
+* Restart after ~2 minutes 22 seconds
 * No input (keys and screen)
+* osk-keyboard
+* Wi-Fi
+* XWayland
+* FDE
+* Not mainlined
 * No charging with turned off phone (is it even supported?)
+* 3D acceleration
+* Accelerometers and other sensors
+* Audio
+* Bluetooth
+* Camera
+* GPS
+* Mobile data
+* SMS
+* Voice
 
 == To do ==
-* Fixing 2:22 restarts is a priority
-** the first thing that comes to my head is checking defconfig
-** second one is adding proprietary firmware.
-* Touch screen input, /dev/input/event1 should be screen, still nothing is working, including weston-calibrate
-** actually animation happens when pressing on buttons in weston demo menu but only once on first press, then nothing
+{{note|informations below may be chaotic and change often}}
+
+=== SMSM_RESET ===
+Most annoying problem sunce everything on the phone has to be done within 2 minutes.
+After about 2mins 22secs phone reboots with dmesg showing ''SMSM: Modem SMSM state changed to SMSM_RESET''
+This message is hardcoded into ''arch/arm/mach-msm/smd.c''
+Check what causes if, if it can be avoided by hanging defconfig or adding some drivers/blobs
+
+
+=== Touch screen ===
+The screen as well as two touch buttons (menu and back) are combined together as ''/dev/input/event1''.
+It displays some sort of animation when pressing buttons in postmarket demos window in weston but only for first press or two.
+''weston-calibrate'' does not work
+
+
+Home button and volume buttons are ''/dev/input/event1'', where power button is recognised as ''/dev/input/event6''
+
+=== Mainline ===
+Currently we have working 2.6 kernel, no DTS files for qcom-msm7227a.
+
+Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<board name>.c'' for starters and recreate it in .dts file(s).
+
+==== Useful links (mainly dts stuff) ====
+[[The_Mainline_Kernel|The Mainline Kernel]] – our docs about mainlining
+
+[https://events.static.linuxfound.org/sites/events/files/slides/presentation_3.pdf Device Tree – The Disaster so Far](pdf) – introduction to DT and basic knowledge how to move from board files do DT
+
+[https://free-electrons.com/pub/conferences/2014/elc/petazzoni-device-tree-dummies/petazzoni-device-tree-dummies.pdf Device Tree for dummies](pdf) – a little bit more complex infoa bout DT files
+
+[http://docs.halium.org/en/latest/supplementary/hardware-enablement.html Halium project docs on mainlining] – has a nice list where to look for ready solutions
+
+[https://elinux.org/Qualcomm_SOC_Mainlining_Project Qualcomm SOC Mainlining Project] – sadly no MSM7227a
+
+[http://linux-sunxi.org/Linux_mainlining_effort Allwinner SOC Mainlining Project] – not useful for this phone
+
+[https://github.com/devicetree-org/devicetree-specification/releases Devicetree.org specification]
+
+''Documentation/devicetree/'' inside linux kernel files, should contain newest documentation about dts files, should be most reliable source of information
+
 
 == S6500d fork ==
 
@@ -43,9 +92,6 @@ Press power button and hold home button and VOL-
 
 == Installation ==
 For now see [[Installation_guide|Installation Guide]] and [[Porting_to_a_new_device#Flashing|Flashing on Porting to a new device]]
-
-<!-- add more sections here as necessary, e.g. Wifi, ... -->
-
 
 == Photos ==
 
