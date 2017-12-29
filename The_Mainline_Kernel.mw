@@ -48,7 +48,7 @@ If you never worked on kernel before, you may want to help with some simple driv
 You probably need to copy over the device tree source, from which the <code>dtb</code> file gets generated, to the mainline kernel. ''Please expand this.''
 
 === Links ===
-* [[Mainline FAQ]] various information collected from #postmarketOS, that isn't in a howto format yet
+* [[Mainlining FAQ]] various information collected from #postmarketOS
 * [[Qualcomm mainline porting]]
 * Blog about [http://elektranox.org/droid4/ mainline kernel support for the Motorola Droid 4]
 * [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting Freedreno wiki: Display driver porting]
