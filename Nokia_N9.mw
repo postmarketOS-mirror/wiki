@@ -1,11 +1,54 @@
-This device is pretty similar to nokia N950, with minor differences in kernel. Bootloader has same problems.  https://elinux.org/N950
+{{Infobox device
+| manufacturer = Nokia
+| name = Nokia N9
+| codename = fixme
+| image = fixme
+| imagecaption = fixme
+| releaseyear = fixme
+| originalsoftware = fixme
+| chipset = TI Omap 3
+| cpu = Single-core 1.0 GHz
+| gpu = fixme
+| storage = 16 GB
+| display = oled
+| memory = 1 GB
+}}
 
+== Contributors ==
+* filippz
+* pavelmachek
 
-Filippz did some initial porting, at https://github.com/filippz/pmbootstrap/
+== Maintainer(s) ==
+* fixme
 
+== What works ==
+* Touchscreen/display
+* USB Networking
+* Battery voltage readout
 
-Kernel can be started without flashing, using:
+== What does not work ==
+* Battery charging
+
+== What could work ==
+* Bluetooth
+
+== How to enter flash mode ==
+This device is pretty similar to nokia N950, with minor differences in kernel. Bootloader has same problems. See https://elinux.org/N950
+
+Kernel can be started without flashing, using: 
 
 ```
 sudo /data/l/maemo/0xffff/src/0xFFFF -m kernel:vmlinuz-nokia-n9-dtb -m initfs:initramfs-nokia-n9 -l -b
 ```
+
+Note that attempt to pass command line arguments will result in kernel not booting on some devices, and that by booting custom kernel you get permanent boot slowdown with "you have modified your system" message.
+
+== Notes ==
+
+== Installation ==
+
+Might be possible using Nemo flashing image.
+
+== Photos ==
+
+== Links ==
