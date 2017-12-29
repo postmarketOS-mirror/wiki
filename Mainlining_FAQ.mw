@@ -1,0 +1,52 @@
+<blockquote>
+'''"Mainlining isn't fun, but it's hella rewarding"'''
+</blockquote>
+
+Various information collected from #postmarketOS. See [[The Mainline Kernel]] for a more howto-style page.
+
+== How to start? ==
+* serial cable highly recommended
+* first step will be to find out how much your device is already supported by mainline
+* Check if your soc is supported.. that will be basic building block
+
+== Serial cable ==
+=== Can I do it without a serial cable? ===
+* you can try
+* but doing it blindly is painful
+* once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel (see below)
+
+=== How to output the serial output over USB? (USB serial gadget) ===
+The Linux kernel can act like a serial device, and it's possible to output what you would get on the serial port over that fake serial device directly via USB to your PC.
+* if you manage to get USB working, you can set USB_G_SERIAL=y and enable USB as console, and add console=ttyGS0,115200 to the cmdline
+* it might also be ttySAC0 or ttyO0 (uppercase O for OMAP chipset)
+
+=== Is it possible to boot kernels with a serial cable? ===
+* flash with a normal cable and switch to the serial cable to read the log output
+* once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel 
+
+== There's no device tree source (dts) in the kernel fork for my device, how do I make one? ==
+
+* Example: https://android.googlesource.com/kernel/omap/+/android-omap-tuna-3.0/arch/arm/mach-omap2/
+* so you've got all these board-tuna-* files which describe the hardware
+* you need to convert them to dts 
+* for some things it might be easier to add support to an existing mainline driver (e.g. mms144 and mms114 are probably pretty similar) rather than forward-porting the old driver
+
+== What options are needed to get USB network? ==
+* USB_ETH IIRC 
+* also check the defconfig in aports/main/linux-postmarketos-mainline 
+
+== How to make OpenRC print it's output to the serial port? ==
+* just set <code>RC_LOGGING</code> to true in /etc/rc.conf
+* (it's the init system log like Starting etc.....[ok])
+
+== How can I compile kernel sources from a local git repo? ==
+{{note|pmbootstrap does not support that yet, see {{github|1041}}.}}
+* Install a cross-compiler on your host system (e.g. <code>pacman -S arm-none-eabi-gcc</code>)
+* Inside your kernel's git folder, compile the kernel like this:
+<syntaxhighlight lang="shell-session">
+$ export CROSS_COMPILE=arm-none-eabi-
+$ ARCH=arm
+$ make -j5
+</syntaxhighlight>
+* Select your device in pmbootstrap, run <code>pmbootstrap install</code> and <code>pmbootstrap export</code>. Use the initramfs it throws out there together with your new kernel.
+* Don't use kernel modules at this point, because you would need to put them in the initramfs otherwise. That just makes it complicated.
