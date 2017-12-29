@@ -40,7 +40,7 @@ The Linux kernel can act like a serial device, and it's possible to output what 
 * USB_ETH IIRC 
 * also check the defconfig in aports/main/linux-postmarketos-mainline 
 
-== How to make OpenRC print it's output to the serial port? ==
+== How to make OpenRC print its output to the serial port? ==
 * just set <code>RC_LOGGING</code> to true in /etc/rc.conf
 * (it's the init system log like Starting etc.....[ok])
 
