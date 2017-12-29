@@ -38,9 +38,9 @@ This device is pretty similar to nokia N950, with minor differences in kernel. B
 
 Kernel can be started without flashing, using: 
 
-```
-sudo /data/l/maemo/0xffff/src/0xFFFF -m kernel:vmlinuz-nokia-n9-dtb -m initfs:initramfs-nokia-n9 -l -b
-```
+<syntaxhighlight lang="shell-session">
+$ sudo /data/l/maemo/0xffff/src/0xFFFF -m kernel:vmlinuz-nokia-n9-dtb -m initfs:initramfs-nokia-n9 -l -b
+</syntaxhighlight>
 
 Note that attempt to pass command line arguments will result in kernel not booting on some devices, and that by booting custom kernel you get permanent boot slowdown with "you have modified your system" message.
 
@@ -51,5 +51,7 @@ Note that attempt to pass command line arguments will result in kernel not booti
 Might be possible using Nemo flashing image.
 
 == Photos ==
+* [https://twitter.com/fi1ippz/status/945692340194349056?s=09 PowerVR SGX (TI 4.10.00.01) drivers with v4.15-rc3 kernel]
 
 == Links ==
+* {{github|1046}} Add basic support for Nokia N9
