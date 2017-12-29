@@ -8,7 +8,7 @@
 | releaseyear = 2012
 | originalsoftware = Android 4.0.1 ICS
 | chipset = TI OMAP4430
-| cpu = 2x TI OMAP 4 @ 1GHz
+| cpu = 2x TI OMAP 4 (ARM Cortex A9 based) @ 1GHz
 | gpu = PowerVR SGX540 @ 307 MHz
 | storage = 16GB (expandable with up to 32GB MicroSD)
 | display = 1280x800
@@ -24,11 +24,20 @@
 == What works ==
 * Display
 * Weston
+* Touchscreen
+* USB
+* Wifi (if started up manually, there's still some problems on boot)
+* FDE w/ osk-sdl
 
 == What does not work ==
-* Touchscreen
-* USB (doesn't even show up in dmesg or lsusb with the current kernel options.)
-* Networking (since USB doesn't work)
+* RIL (hasn't been setup yet, but Replicant got it going on the android side so it should be possible.)
+* 2D + 3D acceleration (so most UIs slow down to a crawl, such as plasma-mobile.)
+
+== To test/do ==
+* Audio
+* Graphics Acceleration
+* GPS/Compass/Sensors
+* RIL
 
 == How to enter flash mode ==
 Press '''Power + Volume Up''' to enter download/odin mode.
