@@ -21,8 +21,8 @@
 * Boots
 * USB Networking
 * osk-sdl works to unlock root partition
-* Battery
-* Weston starts but the touchscreen isn't configured yet, so it works only in osk-sdl
+* battery
+* weston starts and displays shit, couldn't be fucked to configure eudev for it yet, so touchscreen works only in osk-sdl, not on weston yet. Easy to fix though.
 
 == What does not work ==
 
