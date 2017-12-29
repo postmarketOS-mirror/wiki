@@ -19,7 +19,7 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 ** Cut out the screen and put it on an extra layer
 ** Use "Colors / Brightness-Contrast" to improve both the device and screen contrast independently
 ** add a shadow effect if you want to do that (Filters / Light and Shadow / Drop Shadow)
-** possibly use "Filters / Artistic / Cartoon" on the device to improve the contrast some more
+** possibly use "Filters / Artistic / Cartoon" on the device to improve the contrast some more (device layer only)
 * Use <code>exiftool -all= -overwrite_original file.jpg</code> to remove all metadata
 
 === Creating a gif from a video ===
