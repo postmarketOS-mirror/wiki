@@ -89,7 +89,12 @@ This should always be set, otherwise you cannot get virtual terminal over USB.
 
 '''Location in menu'''
 
-Does not exist in menu
+<pre class="shell">
+Device Drivers -->
+  Multiple devices driver support (RAID and LVM) -->
+    Device mapper support -->
+      Crypt target support
+</pre>
 
 '''pmOS specific'''
 
