@@ -45,7 +45,7 @@ The Linux kernel can act like a serial device, and it's possible to output what 
 * (it's the init system log like Starting etc.....[ok])
 
 == How can I compile kernel sources from a local git repo? ==
-{{note|pmbootstrap does not support that yet, see {{github|1041}}.}}
+{{note|See {{github|1041}} for a feature request to directly implement it in pmbootstrap.}}
 * Install a cross-compiler on your host system (e.g. <code>pacman -S arm-none-eabi-gcc</code>)
 * Inside your kernel's git folder, compile the kernel like this:
 <syntaxhighlight lang="shell-session">
