@@ -52,6 +52,7 @@ You probably need to copy over the device tree source, from which the <code>dtb<
 * [[Qualcomm mainline porting]]
 * Blog about [http://elektranox.org/droid4/ mainline kernel support for the Motorola Droid 4]
 * [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting Freedreno wiki: Display driver porting]
+* [http://elixir.free-electrons.com/linux/v3.17/source/include/video/mipi_display.h#L28 List of DTSI -> panel driver function translations]
 * [https://github.com/postmarketOS/pmbootstrap/issues/91 #91: &quot;The Mainline Kernel&quot;]
 * [http://n900.elektranox.org/index.html Debian on N900]
 * [https://developer.sonymobile.com/open-devices/how-to-build-and-flash-a-linux-kernel/how-to-build-mainline-linux-for-xperia-devices/ Build Mainline for Xperia devices]
