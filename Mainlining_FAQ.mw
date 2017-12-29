@@ -26,8 +26,8 @@ The Linux kernel can act like a serial device, and it's possible to output what 
 * set CONFIG_USB_G_SERIAL=y and enable USB as console, and add console=ttyGS0,115200 to the cmdline
 
 === Is it possible to boot kernels with a serial cable? ===
-* flash with a normal cable and switch to the serial cable to read the log output
-* once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel
+* No. Just flash with a normal cable and switch to the serial cable to read the log output.
+* Once it reliably boots though, and USB comes up properly, you can use the USB serial gadget in the kernel
 
 == There's no device tree source (dts) in the kernel fork for my device, how do I make one? ==
 
