@@ -1,16 +1,16 @@
 {{Infobox device
 | manufacturer = Nokia
 | name = Nokia N9
-| codename = fixme
+| codename = Lankku, rm-969
 | image = fixme
 | imagecaption = fixme
-| releaseyear = fixme
-| originalsoftware = fixme
-| chipset = TI Omap 3
-| cpu = Single-core 1.0 GHz
-| gpu = fixme
-| storage = 16 GB
-| display = oled
+| releaseyear = 2011
+| originalsoftware = MeeGo
+| chipset = TI Omap 3630
+| cpu = Single-core 1.0 GHz Cortex A8
+| gpu =  PowerVR SGX530
+| storage = 16/64 GB
+| display = "Clear Black" AMOLED 854 × 480 px
 | memory = 1 GB
 }}
 
