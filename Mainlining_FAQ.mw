@@ -19,6 +19,7 @@ Various information collected from #postmarketOS. See [[The Mainline Kernel]] fo
 The Linux kernel can act like a serial device, and it's possible to output what you would get on the serial port over that fake serial device directly via USB to your PC.
 * if you manage to get USB working, you can set USB_G_SERIAL=y and enable USB as console, and add console=ttyGS0,115200 to the cmdline
 * it might also be ttySAC0 or ttyO0 (uppercase O for OMAP chipset)
+* there might be more options required depending on your chipset, such as: CONFIG_SERIAL_OMAP and CONFIG_SERIAL_OMAP_CONSOLE
 
 === Is it possible to boot kernels with a serial cable? ===
 * flash with a normal cable and switch to the serial cable to read the log output
