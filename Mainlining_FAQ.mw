@@ -5,9 +5,10 @@
 Various information collected from #postmarketOS. See [[The Mainline Kernel]] for a more howto-style page.
 
 == How to start? ==
-* serial cable highly recommended
-* first step will be to find out how much your device is already supported by mainline
+* Serial cable highly recommended
+* First step will be to find out how much your device is already supported by mainline
 * Check if your soc is supported.. that will be basic building block
+* There's really no point doing display till you have uart or USB working
 
 == Serial cable ==
 === Can I do it without a serial cable? ===
