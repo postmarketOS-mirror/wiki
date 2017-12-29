@@ -5,10 +5,10 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 * Put your device on one or more pages of white paper, so it's easy to see it.
 * Make sure that the whole device is on the photo.
 * Run something postmarketOS specific on it, for example:
-** postmarketos-demos program
+** <code>postmarketos-demos</code> program
 ** postmarketOS background from the [https://github.com/postmarketOS/artwork artwork repository]
 ** <code>uname -a</code> in a terminal showing <code>-postmarketOS</code> in the kernel name
-** tying something with "postmarketOS" in a text input
+** typing something with "postmarketOS" in a text input
 * If you have problems with the flash of the camera reflecting on the phone's screen, just shoot at it from a different angle (see example on the right)
 * If you're trying to photograph the console, but it's too hard to do it, try to make one photo where the whole device is visible and another one where you just photograph the interesting part of the terminal.
 * Finally focus your device and take a non-blurry photo (or multiple ones just to make sure).
