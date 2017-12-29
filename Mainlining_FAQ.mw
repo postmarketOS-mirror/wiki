@@ -16,15 +16,18 @@ Various information collected from #postmarketOS. See [[The Mainline Kernel]] fo
 * but doing it blindly is painful
 * once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel (see below)
 
-=== How to output the serial output over USB? (USB serial gadget) ===
+=== How to get serial output? (serial cable) ===
+* enable the serial device for your kernel (e.g. for OMAP: CONFIG_SERIAL_OMAP and CONFIG_SERIAL_OMAP_CONSOLE)
+* add console=ttySAC0,115200 to the kernel cmdline
+* it might also be ttyO0 (uppercase O for OMAP chipset)
+
+=== How to get serial output over USB? (USB serial gadget) ===
 The Linux kernel can act like a serial device, and it's possible to output what you would get on the serial port over that fake serial device directly via USB to your PC.
-* if you manage to get USB working, you can set USB_G_SERIAL=y and enable USB as console, and add console=ttyGS0,115200 to the cmdline
-* it might also be ttySAC0 or ttyO0 (uppercase O for OMAP chipset)
-* there might be more options required depending on your chipset, such as: CONFIG_SERIAL_OMAP and CONFIG_SERIAL_OMAP_CONSOLE
+* set CONFIG_USB_G_SERIAL=y and enable USB as console, and add console=ttyGS0,115200 to the cmdline
 
 === Is it possible to boot kernels with a serial cable? ===
 * flash with a normal cable and switch to the serial cable to read the log output
-* once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel 
+* once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel
 
 == There's no device tree source (dts) in the kernel fork for my device, how do I make one? ==
 
