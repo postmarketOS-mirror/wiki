@@ -23,10 +23,21 @@
 
 == What works ==
 
-* Nothing yet
+* Kernel compilation
+* Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+* Flash System (<code>pmbootstrap flasher flash_system</code>)
+* Initramfs boot
+* USB Network
 
 == What does not work ==
 
+* SSH Connectivity
+* Framebuffer graphics (Splash screens)
+* Weston on framebuffer
+* Touchscreen
+* Xwayland
+* Wifi
+* Audio playback
 * Everything else
 
 == How to enter flash mode ==
