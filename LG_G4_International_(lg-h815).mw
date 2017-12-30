@@ -1,0 +1,56 @@
+[[Category:Device]]
+{{Infobox device
+| manufacturer = LG
+| name =  G4 (International/H815)
+| codename = h815
+| image = File:h815.jpg
+| imagecaption = LG G4
+| releaseyear = 2015
+| originalsoftware = Android 5.1.1 (Upgradable to 7.0)
+| chipset = Qualcomm Snapdragon 808
+| cpu = Hexa-core 64-bit (2x 1.82 GHz Cortex A57, 4x 1.44 GHz Cortex A53)
+| gpu = Adreno 418
+| storage = 32GB
+| display = 2560x1440 IPS LCD
+| memory = 3GB LPDDR3
+}}
+
+== Contributors ==
+* kamnxt
+
+== Maintainer(s) ==
+* kamnxt
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+* Booting
+* USB ethernet
+* SSH
+
+== What does not work ==
+* Screen (only shows boot logo, haven't got anything displaying yet)
+* Sound?
+* Wifi? (wlan0 device comes up)
+* Bluetooth?
+* Possibly more
+
+== How to enter flash mode ==
+* <syntaxhighlight lang="bash">adb reboot bootloader</syntaxhighlight> to enter fastboot from TWRP or Android
+
+== Installation ==
+* Unlock bootloader
+* Build using pmbootstrap.py
+* Enter fastboot on phone
+<syntaxhighlight lang="bash">./pmbootstrap flasher flash_system
+./pmbootstrap flasher flash_kernel
+fastboot reboot</syntaxhighlight>
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+TODO
+
+== Links ==
+TODO
