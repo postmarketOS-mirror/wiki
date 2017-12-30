@@ -35,10 +35,24 @@ It should work with:
 * Samsung GT-S8500 (Wave)
 * Samsung i897 (Captivate)
 
-=== Galaxy Nexus (Samsung i9250) ===
-Changes to the above schematic:
-* Use 619K ohm resistor
-* Do not connect the Vcc
+{| class="wikitable sortable"
+  ! rowspan="2" | Device
+  ! rowspan="2" | Codename
+  ! colspan="2" | Connection
+  ! colspan="5" | Settings
+|-
+  !  Resistor !! Connected VCC !!  Speed  !!  Data bits  !!  Stop bits  !!  Parity  !!  Flow control
+|-
+  | style="white-space: nowrap;" | [[Google Galaxy Nexus GSM (samsung-maguro)|Google Galaxy Nexus (GSM)]]
+  | style="white-space: nowrap;" | samsung-maguro
+  | 619K ohm || No
+  |  ||  ||  ||  || 
+|-
+  | style="white-space: nowrap;" | [[Samsung Galaxy Mini 2 (samsung-s6500d)|Samsung Galaxy Mini 2]]
+  | style="white-space: nowrap;" | samsung-s6500d
+  | 530K ohm || No
+  | 115200 || 8 || 1 || No || None
+|}
 
 == Mozilla Flame ==
 
