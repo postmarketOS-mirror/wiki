@@ -9,7 +9,6 @@ Some approaches that can help debug appended DTB issues:
 * Repack the boot image with a working <code>dt.img</code> from another distribution (stock, Lineage, recovery, etc.)
 
 === Repack Procedure ===
-
 You need <code>mkbootimg</code> and <code>unpackbootimg</code> tools which are already packaged in pmbootstrap.
 
 <pre>$ ./pmbootstrap build mkbootimg unpackbootimg
@@ -18,3 +17,6 @@ $ ./unpackbootimg -i $OTHERDIR/boot.img -o other
 $ cp other/boot.img-dt pmos/boot.img-$vendor-$name-dt
 $ ./mkbootimg -o boot.repack.img -r pmos/boot.img-$vendor-$name-</pre>
 You can also get these from https://github.com/efidroid/build/tree/master/tools
+
+=== See also ===
+* [[dtbtool]]
