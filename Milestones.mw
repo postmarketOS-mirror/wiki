@@ -12,6 +12,7 @@ Basically all points listed below are done together with other community members
 * fix all pmbootstrap bugs
 * test / review / integrate pull-requests
 * help whenever someone is stuck with development
+* find, write down and resolve technical debt
 * work on features, that make development easier (e.g. {{github|688}} new kernel porting workflow, {{github|383}} split aports into its own git repository)
 * assist with implementation ideas in GitHub issues
 * improve documentation in the wiki
