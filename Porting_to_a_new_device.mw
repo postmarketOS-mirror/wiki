@@ -98,7 +98,7 @@ $ pmbootstrap log
 Open <code>aports/device/device-wiki-example/deviceinfo</code> in your favorite editor (replace <code>wiki-example</code>) and adjust:
 
 * <code>deviceinfo_screen_width</code> and <code>height</code>
-* <code>deviceinfo_flash_offset_</code> lines if there are any, and you skipped the bootimg analyzing:
+* <code>deviceinfo_flash_offset_</code> lines ('''only if you skipped the bootimg analyzing'''):
 ** [[#Flash_method|Get a boot.img]]
 ** Run <code>pmbootstrap bootimg_analyze path/to/boot.img</code>
 
