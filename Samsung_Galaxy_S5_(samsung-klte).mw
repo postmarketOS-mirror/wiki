@@ -28,13 +28,13 @@
 * Flash System (<code>pmbootstrap flasher flash_system</code>)
 * Initramfs boot
 * USB Network
+* SSH Connectivity
+* Touchscreen
 
 == What does not work ==
 
-* SSH Connectivity
 * Framebuffer graphics (Splash screens)
 * Weston on framebuffer
-* Touchscreen
 * Xwayland
 * Wifi
 * Audio playback
