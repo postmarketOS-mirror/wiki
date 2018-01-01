@@ -312,7 +312,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Samsung_Galaxy_S5_(samsung-klte)|Samsung Galaxy S5]]
   | samsung-klte
-  | Kernel, initramfs and usb network works, once pmOS system loads device reboots
+  | pmOS works with usb network, framebuffer doesn't work
 |-
   | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
   | samsung-g800f
