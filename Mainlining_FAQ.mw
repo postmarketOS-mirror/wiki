@@ -35,9 +35,11 @@ Previous kernels used <code>board-*.c</code> files instead of the <code>dts</cod
 The idea is that you'll need to convert these to <code>dts</code> files. Doing so manually for each of them is a huge and error-prone task, better use one of the following techniques:
 * Strip down <code>dts</code> from similar hardware (n900 in case of omap3?) and try to get it to boot
 * Add support to an existing mainline driver (e.g. mms1'''4'''4 and mms1'''1'''4 are probably pretty similar) rather than forward-porting the old driver
-* Forward-port the board files to recent kernels (new kernels still understand board files!), then strip them down to a bare minimum you can still test (where serial or usb is still working, so you know that the device boots), and then convert that do <code>dts</code>.
+* Forward-port the board files to recent kernels (new kernels still understand board files for some hardware, but not for all!), then strip them down to a bare minimum you can still test (where serial or usb is still working, so you know that the device boots), and then convert that do <code>dts</code>.
 
 Finding the best approach is very hardware specific. If you know C and think you have tried some of the methods above without success, consider asking the maintainers of the chipset in the kernel. Regarding OMAP, Pavel [https://github.com/postmarketOS/pmbootstrap/issues/1021#issuecomment-354669394 offered] that you could CC him.
+
+See also: {{github|1021}}
 
 == What options are needed to get USB network? ==
 * USB_ETH IIRC 
