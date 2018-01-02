@@ -13,12 +13,17 @@ There are closed source components (like firmware and bootloaders) in every phon
 
 === Bootloaders ===
 * [https://github.com/ucsb-seclab/BootStomp BootStomp] "a bootloader vulnerability finder" (also check the references at the bottom of README.md!)
+** [https://www.youtube.com/watch?v=ThXQ4oTowUQ 34c3 talk]
 
 ==== hboot (HTC) ====
 
 * [http://archive.hack.lu/2013/hacklu2013_hbootdbg.pdf hbootdbg] ''pdf presentation slides''
 * [https://github.com/unrevoked/hboot-tools hboot-tools]
 * [https://github.com/andreiw/nexus9_demo Nexus 9: Low level boot process analysis and demo] ''nvtboot -&gt; tos -&gt; hboot -&gt; demo code''
+
+==== sboot (Samsung) ====
+* [https://hexdetective.blogspot.lt/2017/02/exploiting-android-s-boot-getting.html Arbitrary Code Exec in the Samsung Bootloader]
+* [https://www.youtube.com/watch?v=JrsJvlij6V4 34c3 - eMMc hacking, or: how I fixed long-dead Galaxy S3]
 
 === Cellular modems ===
 
