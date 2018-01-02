@@ -5,7 +5,7 @@
 Various information collected from [[Matrix_and_IRC|#postmarketOS]]. See [[The Mainline Kernel]] for a more howto-style page.
 
 == How to start? ==
-* Serial cable highly recommended
+* [[Serial_debugging|Serial cable]] highly recommended
 * First step will be to find out how much your device is already supported by mainline
 * Check if your soc is supported.. that will be basic building block
 * There's really no point doing display till you have uart or USB working
