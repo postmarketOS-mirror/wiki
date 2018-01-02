@@ -33,6 +33,7 @@ This list is a collection of presentations, talks and other resources that are s
 * [http://www.etalabs.net/sh_tricks.html Rich's sh (POSIX shell) tricks]
 
 === Reverse engineering ===
+* See also the links in the [[Firmware]] article
 * [https://simhacks.github.io/defcon-21/ simhacks] (Defcon 21)
 * [https://www.wpinternals.net/ WP internals] Windows phone internals, a proprietary hacking tool for Windows phones (''It beats the modern SecureBoot implementation. And furthermore, it brings custom ROM's, Mass Storage Mode, Root access and many more hacks to all Windows Phone 8 and Windows 10 Mobile-based Lumia-models.'') If you want to get postmarketOS on your Lumina phone, the author of that tool seems to be an expert you should talk to.
 ** rrch on IRC: ''On XDA some users have managed to get Android running on a few older Lumias by porting over a ROM designed for an Xperia with similar hardware. WiFi works but I think there's still no modem support.''
