@@ -9,7 +9,7 @@ These are applications which already exist for Linux and could be reused in post
 |[https://github.com/mujx/nheko nheko (Matrix)]
 |GPL3
 |X11 and Wayland application (Native).  Touch friendly version under development.
-|{{github|900}}
+|[https://pkgs.alpinelinux.org/packages?name=nheko Alpine repo]
 |-
 |[https://cgit.kde.org/marble.git KDE Marble (maps)] [https://marble.kde.org/]
 |LGPL
