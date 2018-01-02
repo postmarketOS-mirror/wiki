@@ -1,0 +1,7 @@
+Various mirrors for open source code where the upstream link isn't useful for us (dead/not stable/one big tarball with too much stuff in it - sometimes there's the kernel, Android system, full chromium source code, ... mashed into one tarball).
+
+<blockquote>
+https://github.com/pmsourcedump
+</blockquote>
+
+Please note that these sources are the unpatched original ones. You can find our patches in the [https://github.com/postmarketOS/pmbootstrap/tree/master/aports aports folder].
