@@ -51,7 +51,7 @@ You will have to reboot, or manually restart the aforementioned services, before
 If you experience problems or just want to test wifi you can start wpa supplicant (using -Dwext or nl80211 driver) and the dhcp service:
 
 <pre>
-sudo wpa_supplicant -u -Dnl80211 -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
 sudo udhcpc -i wlan0
 </pre>
 
