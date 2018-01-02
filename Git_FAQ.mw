@@ -1,0 +1,9 @@
+Commands that make your life easier when working with <code>git</code> on postmarketOS.
+
+=== How do I fetch a pull request from GitHub? ===
+<syntaxhighlight lang="shell">
+git fetch origin pull/ID/head:BRANCHNAME
+git checkout BRANCHNAME
+</syntaxhighlight>
+
+...where ID is the ID of the pull request, and BRANCHNAME is the name of the branch as you want it locally.
