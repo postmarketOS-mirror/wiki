@@ -31,10 +31,13 @@ The Linux kernel can act like a serial device, and it's possible to output what 
 
 == There's no device tree source (dts) in the kernel fork for my device, how do I make one? ==
 
-* Example: https://android.googlesource.com/kernel/omap/+/android-omap-tuna-3.0/arch/arm/mach-omap2/
-* so you've got all these board-tuna-* files which describe the hardware
-* you need to convert them to dts 
-* for some things it might be easier to add support to an existing mainline driver (e.g. mms144 and mms114 are probably pretty similar) rather than forward-porting the old driver
+Previous kernels used <code>board-*.c</code> files instead of the <code>dts</code> files. These are in folders such as <code>arch/arm/mach-omap2</code> ([https://android.googlesource.com/kernel/omap/+/android-omap-tuna-3.0/arch/arm/mach-omap2/ example]).
+The idea is that you'll need to convert these to <code>dts</code> files. Doing so manually for each of them is a huge and error-prone task, better use one of the following techniques:
+* Strip down <code>dts</code> from similar hardware (n900 in case of omap3?) and try to get it to boot
+* Add support to an existing mainline driver (e.g. mms1'''4'''4 and mms1'''1'''4 are probably pretty similar) rather than forward-porting the old driver
+* Forward-port the board files to recent kernels (new kernels still understand board files!), then strip them down to a bare minimum you can still test (where serial or usb is still working, so you know that the device boots), and then convert that do <code>dts</code>.
+
+Finding the best approach is very hardware specific. If you know C and think you have tried some of the methods above without success, consider asking the maintainers of the chipset in the kernel. Regarding OMAP, Pavel [https://github.com/postmarketOS/pmbootstrap/issues/1021#issuecomment-354669394 offered] that you could CC him.
 
 == What options are needed to get USB network? ==
 * USB_ETH IIRC 
