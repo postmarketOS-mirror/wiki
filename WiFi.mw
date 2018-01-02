@@ -28,8 +28,8 @@ Try to [[Tuning sysfs|compare your sysfs]] and <code>dmesg</code> output with th
 == Connecting to APs ==
 postmarketOS currently configures the wpa_supplicant service to start on boot. This service will fail to start unless <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> has been defined. This can be configured using the <code>wpa_passphrase</code> utility:
 
-<pre>$ sudo wpa_passphrase YOUR_SSID &gt; /etc/wpa_supplicant/wpa_supplicant.conf
-&lt;enter your passphrase and press RETURN&gt;</pre>
+<pre>$ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+</pre>
 
 Note: If you are connecting to a hidden wireless network, make sure to add line "scan_ssid=1" after the ssid line in your generated conf file
 
