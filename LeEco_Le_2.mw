@@ -1,0 +1,36 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = LeEco
+| name =  Le 2
+| codename = s2
+| image = File:s2.jpg
+| imagecaption = Front
+| releaseyear = CHANGE_ME
+| originalsoftware = EUI 5.9.19S(X527) based on Android 6.0
+| chipset = MSM8976 
+| cpu = Snapdragon 652
+| gpu = Adreno 510
+| storage = 32/64 GB Internal, no SD card
+| display = 1920x1080, IPS LCD capacitive touchscreen, 16M colors, 5.5 inches, 83.4 cm2 (~74.4% screen-to-body ratio), Multitouch
+| memory = 3 GB RAM
+}}
+
+== Contributors ==
+* OctoNezd (put your username here!)
+
+== What works ==
+1. USB Networking
+
+== What does not work ==
+1. Screen
+
+== How to enter flash mode ==
+Recovery: Power+VolUp
+Fastboot: Power+VolDown
+== Installation ==
+1. Flash it with fastboot/twrp
+
+== Photos ==
+
+== Links ==
+[https://wiki.lineageos.org/devices/s2 Le 2 Page on LineageOS Wiki]
