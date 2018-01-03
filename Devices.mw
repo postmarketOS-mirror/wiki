@@ -59,6 +59,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | huawei-y530
   | Y  || P  || Y  || Y  || Y  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  |style="white-space: nowrap;" | [[LeEco_Le_2|LeEco Le 2]]
+  |style="white-space: nowrap;" | leeco-s2
+  | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   |style="white-space: nowrap;" | [[Lenovo K6 Power (lenovo-karate)|Lenovo K6 Power]]
   |style="white-space: nowrap;" | lenovo-karate
   | Y  || Y  || Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -190,10 +194,6 @@ These devices are included in the postmarketOS source tree, and it is at least p
   |style="white-space: nowrap;" | [[Xiaomi_RedMi3_(xiaomi-ido)|Xiaomi RedMi 3]]
   |style="white-space: nowrap;" | xiaomi-ido
   | Y  || Y  || P  || Y  ||  ||  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  || 
-|-
-  |style="white-space: nowrap;" | [[LeEco_Le_2|LeEco Le 2]]
-  |style="white-space: nowrap;" | leeco-s2
-  | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
