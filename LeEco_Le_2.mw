@@ -26,6 +26,7 @@
 
 == How to enter flash mode ==
 Recovery: Power+VolUp
+
 Fastboot: Power+VolDown
 == Installation ==
 1. Flash it with fastboot/twrp
