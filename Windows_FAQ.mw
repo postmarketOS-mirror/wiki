@@ -1,0 +1,15 @@
+== If your device gets detected as ADB Interface/Recovery ==
+1. Click Update Driver - choose "Composite USB Device"("Составное USB Устройство" in Russian locale of Windows)
+
+2. Unknown device with name RNDIS device would appear
+== Installing RNDIS ==
+
+1. Click Update Driver - choose "Browse my computer for driver software." and then "Let me pick from a list of device drivers on my computer."
+
+2. Choose "Network Adapter" section
+
+3. Choose "Microsoft" manufacturer
+
+4. Choose "Remote NDIS compatible device"
+
+5. That's all! Wait for Windows to install driver for your device and SSH into it!
