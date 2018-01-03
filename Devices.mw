@@ -342,13 +342,18 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | semc-anzu
   |
 |-
-  | [[Xperia-Z2|Sony Xperia Z2]]
-  | sony-sirius
-  |
-|-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
   |
+|-
+  | [[Xperia-J-(sony-jlo)|Sony Xperia J]]
+  | sony-jlo
+  |
+|-
+  | [[Xperia-Z2|Sony Xperia Z2]]
+  | sony-sirius
+  |
+
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
