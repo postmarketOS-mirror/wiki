@@ -32,7 +32,7 @@
 * Get everything else working.
 
 == How to enter flash mode ==
-Press '''Volume Up''' while plugging in a microUSB cable to enter fastboot.
+When the device is powered off, press '''Volume Up''' while plugging in a microUSB cable to enter fastboot.
 Nothing will be displayed on the screen when this occurs.
 
 == Installation ==
