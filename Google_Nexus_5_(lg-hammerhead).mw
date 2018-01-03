@@ -50,11 +50,7 @@ Workaround (on host, not inside chroot):
 
 <pre>mkbootimg --base 0 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x2900000 --second_offset 0x00f00000 --tags_offset 0x02700000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1' --kernel ~/.local/var/pmbootstrap/chroot_native/mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead --ramdisk ~/.local/var/pmbootstrap/chroot_native/mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead -o pmos.img
 fastboot boot pmos.img</pre>
-There is also a bug and the screen is not updated. Workaround: login using ssh and run the following command:
 
-<pre>ssh user@172.16.42.1
-sudo su
-while [ ! ]; do cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/mode; done</pre>
 === Links ===
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/linux-lg-hammerhead Kernel package]
