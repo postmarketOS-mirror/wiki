@@ -1,0 +1,31 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy Ace 2 x
+| codename = kylessopen
+| image = File:samsung-kylessopen.jpg
+| imagecaption = Samsung Galaxy Ace 2 x
+| releaseyear = 2012
+| originalsoftware = CHANGE_ME
+| chipset = ST-Ericsson NovaThor U8500
+| cpu = 1 GHz ARM Cortex-A5
+| gpu = Adreno 200
+| storage = 4GB
+| display = 480x800 WVGA
+| memory = 768MB
+}}
+
+== Contributors ==
+* platypro
+
+== Maintainer(s) ==
+
+== What works ==
+* Kernel compiles
+* Heimdall can flash
+
+== What does not work ==
+* Device does not boot
+
+== How to enter flash mode ==
+Hold down volume down + Home + Power for a few seconds.
