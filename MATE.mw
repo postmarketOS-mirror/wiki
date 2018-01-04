@@ -1,53 +1,59 @@
-[[File:MATE drebrez.jpg|thumb]]
-MATE is a desktop environment forked from the maintained code base of GNOME 3.  It is installable on postmarketOS.<br>
-== Install MATE Desktop ==
-{{note|This is a draft, installation will be as easy as selecting "mate" in pmbootstrap init, once a postmarketos-ui-mate package is created with the information from below. Contributions welcome - it is not that hard, simply look at the other postmarketos-ui- packages and make a PR.}}
-Install your X11 video drivers and do:
-<pre>
-sudo su
-apk update
-apk add xorg-server xf86-input-libinput libinput
-</pre>
-Now let us install a bunch of needed packages what includes all MATE Desktop packages avaliable in the repository:
-<pre>
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco dbus-x11 lxdm hicolor-icon-theme
-mate_pkgs=$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
-apk add $mate_pkgs
-ln -s /usr/etc/xdg/menus/ /etc/xdg/menus
-</pre>
-In the next step we add some services to start up with the operating system:
-<pre>
-rc-update add lxdm
-</pre>
-Adding avaliable True Type Fonts:
-<pre>
-ttfs=$(apk search -q ttf- | grep -v '\-doc')
-apk add $ttfs
-</pre>
-Configure lxdm with autologin:
-<pre>
-nano /etc/lxdm/lxdm.conf
-autologin=yourusername
-session=/usr/bin/mate-session
-skip_password=1
-</pre>
-And finally, reboot the device and you should be auto logged into MATE. If you see just a black screen try rebooting again - Mate should load.
-<pre>
-sync
-reboot
-</pre>
-=== Calibrating the touchscreen ===
+{{Infobox interface
+| image = File:MATE drebrez.jpg
+| imagecaption = MATE running on Samsung Galaxy S Advance (i9070)
+}}
 
-If you want to rotate the screen change/add a value in this file and reboot udev or the device:
+MATE is a desktop environment forked from the maintained code base of GNOME 3.  It is installable on postmarketOS.<br>
+
+== Status ==
+
+It works on most devices with a working display, works fine without hardware acceleration.
+
+After the postmarketOS loading splashscreen you will get a black screen for 20-30 seconds before the desktop appears.
+This seems due to an issue with <code>marco</code> (MATE window manager):
 <pre>
-sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
+mate-session[1377]: WARNING: Application 'marco.desktop' failed to register before timeout
 </pre>
+
+== Install MATE Desktop ==
+Run <code>pmbootstrap init</code> and choose <code>mate</code> in the interface section.
+The Alpine repository already contains all the packages for x86_64, armhf and aarch64 architectures.
+Nothing has to be done to enable it.
+
+After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_mate.sh</code> script.
+
+For the official MATE instructions, see [https://wiki.alpinelinux.org/wiki/MATE their website].
+
+== Troubleshooting ==
+
+Check the logs with <code>logread -f | grep x11</code>
+
+== Landscape mode ==
+
+=== Rotate the screen ===
+
+You can rotate adding the following configuration file: <code>/etc/X11/xorg.conf.d/00-fbdev-rotate.conf</code>
 <pre>
-ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
-# default			ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
-# Left - 90 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
-# 180 degree clockwise		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
-# Right - 270 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
-# reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
+Section "Device"
+  Identifier "LCD"
+  Driver "fbdev"
+  Option "Rotate" "CW"
+EndSection
 </pre>
+
+=== Rotate the touchscreen ===
+In order to also rotate the touchscreen you need to change the udev rule: <code>/etc/udev/rules.d/90-device-samsung-i9070.rules</code>
+And add one of the following line:
+<pre>
+# Left - 90 degree clockwise
+ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
+# 180 degree clockwise
+ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
+# Right - 270 degree clockwise
+ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
+# reflect along y axis
+ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
+</pre>
+and reboot udev or the device.
+
 [[Category:Interface]]
