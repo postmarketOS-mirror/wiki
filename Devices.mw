@@ -314,7 +314,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | qemu-rx51
   |
 |-
-  | [[Samsung_Galaxy_Ace_2_x_(samsung-kylessopen)|Samsung Galaxy Ace 2 x]]
+  | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II X]]
   | samsung-kylessopen
   | Kernel compiles, flashing works. Does not boot.
 |-
