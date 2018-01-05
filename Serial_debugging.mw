@@ -80,5 +80,9 @@ A off-the-shelf USB-TTL Adapter with 3.3V signal level can be used together with
 
 See http://elektranox.org/2017/02/0009-droid-4-root/
 
+== Sony Xperia ==
+
+See https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/
+
 == See also ==
 * [[Mainlining FAQ#Serial_cable]]
