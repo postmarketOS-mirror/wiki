@@ -3,7 +3,7 @@
 | manufacturer = Samsung
 | name =  Samsung Exhibit II 4G
 | codename = samsung-t679
-| image = File:http://phonesdata.com/files/models/Samsung-Exhibit-II-4G-T679-743.jpg
+| image = File:samsung_t679.jpg
 | imagecaption = Samsung Exhibit II 4G front and back
 | releaseyear = 2011
 | originalsoftware = Android 2.3.5 (Gingerbread)
@@ -15,14 +15,12 @@
 | memory = 512 MB
 }}
 
-== Note ==
-This is an active work in progress, which you can view/contribute to here:
-https://github.com/jkayani/pmbootstrap/tree/device-samsung-t679
+== Notes ==
+This is an active work in progress, which you can view/contribute to here: https://github.com/jkayani/pmbootstrap/tree/device-samsung-t679
 
 I'm waiting for a battery for the device to come in so I can try installing and booting pmOS. 
 
-You can view the original kernel sources for the device here:
-https://github.com/jkayani/exhibit-kernel
+You can view the original kernel sources for the device here: https://github.com/jkayani/exhibit-kernel. I originally obtained them from here (thanks Jocala!): https://github.com/Jocala/Samsung-Exhibit-II-Kernel, but had to put them in my own repo so that the source was in the root.
 
 == Contributors ==
 * jkayani
