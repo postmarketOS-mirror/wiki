@@ -21,8 +21,12 @@
 == What works ==
 1. USB Networking
 
+2. Screen
+
 == What does not work ==
-1. Screen
+1. Touch
+
+2. Other stuff?
 
 == How to enter flash mode ==
 Recovery: Power+VolUp
