@@ -1,0 +1,53 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Exhibit II 4G
+| codename = samsung-t679
+| image = File:http://phonesdata.com/files/models/Samsung-Exhibit-II-4G-T679-743.jpg
+| imagecaption = Samsung Exhibit II 4G front and back
+| releaseyear = 2011
+| originalsoftware = Android 2.3.5 (Gingerbread)
+| chipset = Qualcomm MSM8255 Snapdragon S2
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 205
+| storage = 1 GB internal, microSD slot for up to 32 GB
+| display = 400 x 800 pixels
+| memory = 512 MB
+}}
+
+== Note ==
+This is an active work in progress, which you can view/contribute to here:
+https://github.com/jkayani/pmbootstrap/tree/device-samsung-t679
+
+I'm waiting for a battery for the device to come in so I can try installing and booting pmOS. 
+
+You can view the original kernel sources for the device here:
+https://github.com/jkayani/exhibit-kernel
+
+== Contributors ==
+* jkayani
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* jkayani
+
+== What works ==
+
+Kernel compiles. 
+
+== What does not work ==
+
+Flashing nor booting have been tested yet, but will be soon.
+
+== How to enter flash mode ==
+
+== Installation ==
+
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+== Links ==
