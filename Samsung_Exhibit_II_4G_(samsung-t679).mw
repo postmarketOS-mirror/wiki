@@ -23,12 +23,12 @@ I'm waiting for a battery for the device to come in so I can try installing and 
 You can view the original kernel sources for the device here: https://github.com/jkayani/exhibit-kernel. I originally obtained them from here (thanks Jocala!): https://github.com/Jocala/Samsung-Exhibit-II-Kernel, but had to put them in my own repo so that the source was in the root.
 
 == Contributors ==
-* jkayani
+* Exhibit24g
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
-* jkayani
+* Exhibit24g
 
 == What works ==
 
@@ -36,7 +36,7 @@ Kernel compiles.
 
 == What does not work ==
 
-Flashing nor booting have been tested yet, but will be soon.
+Everything.
 
 == How to enter flash mode ==
 
@@ -49,3 +49,5 @@ Flashing nor booting have been tested yet, but will be soon.
 == Photos ==
 
 == Links ==
+Kernel: https://github.com/jkayani/exhibit-kernel
+postmarketOS port to Samsung Exhibit II 4G: https://github.com/jkayani/pmbootstrap/tree/device-samsung-t679
