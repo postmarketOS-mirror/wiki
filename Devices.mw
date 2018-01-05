@@ -314,6 +314,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | qemu-rx51
   |
 |-
+  | [[Samsung_Exhibit_II_4G_(samsung-t679)|Samsung Exhibit II 4G]]
+  | samsung-t679
+  | Kernel compiles; flashing and booting are to be tested soon. 
+|-
   | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II X]]
   | samsung-kylessopen
   | Kernel compiles, flashing works. Does not boot.
