@@ -46,6 +46,15 @@
 Press volume down + the power button to enter Download Mode. It is now possible
 to use Heimdall for flashing.
 
+== Installation ==
+
+# git clone git@github.com:postmarketOS/pmbootstrap.git && cd pmbootstrap
+# ./pmbootstrap.py init
+# ./pmbootstrap.py install --no-fde
+# Put your S4 in Download Mode (Volume Down + Power) and connect it with USB
+# ./pmbootstrap.py flasher flash_kernel
+# ./pmbootstrap.py flasher flash_system</nowiki>
+
 == Photos ==
 
 TODO
