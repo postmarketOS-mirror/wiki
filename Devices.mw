@@ -342,14 +342,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-mint
   | Prebuilt kernel reboots to recovery, pmOS kernel stucks at bootloader logo
 |-
-  | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
-  | semc-anzu
-  |
-|-
-  | [[Semc-anzu-(Xperia-Arc)|Sony Ericsson Xperia Arc]]
-  | semc-anzu
-  |
-|-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
   |
