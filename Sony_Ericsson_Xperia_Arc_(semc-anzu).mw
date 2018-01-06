@@ -60,7 +60,6 @@ Note that Wi-Fi and osk-sdl are untested and may require further work.
 * Page size may need to be adjusted in the future, as it is non-standard and presents a non-fatal error.
 
 == Links ==
-* rendeko's work merged into its own branch in the official pmbootstrap repository: {{github|346}} ([https://github.com/msm7x30/android_kernel_qcom_msm7x30 Kernel used])
-* [https://github.com/LegacyXperia/android_kernel_semc_msm7x30 "The correct and tested kernel"] that probably works better than the one which is used now [https://github.com/postmarketOS/pmbootstrap/pull/346#commitcomment-24116239]
+* [https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently being used]
 * [http://www.flashtool.net/ Xperia Flashtool] that should probably work once it is unlocked. With [https://github.com/Androxyde/Flashtool source code!]
 * [https://github.com/LegacyHuawei/local_manifests/issues/9#issuecomment-168169631 there's possibly also a 3.10 branch in the wild]
