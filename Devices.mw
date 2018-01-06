@@ -169,7 +169,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Sony Ericsson Xperia Arc (semc-anzu)|Sony Ericsson Xperia Arc]]
   | style="white-space: nowrap;" | semc-anzu
-  | Y  || Y  || Y  || Y  || P ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || Y  || P || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Sony Xperia Z (sony-yuga)|Sony Xperia Z]]
   | style="white-space: nowrap;" | sony-yuga
