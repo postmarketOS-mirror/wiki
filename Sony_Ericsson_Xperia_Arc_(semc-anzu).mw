@@ -36,8 +36,11 @@ Just for the records of you gentlemen, I wanted to let you know that all the 201
 </blockquote>
 == What works ==
 
-* Compiling kernel
-* Installing to system partition of image file
+* Building and installing to external SD card
+* Display
+* Touchscreen
+* USB networking
+* Xwayland
 
 == What does not work ==
 
