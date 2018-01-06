@@ -60,3 +60,42 @@ $ make -j5
 </syntaxhighlight>
 * Select your device in pmbootstrap, run <code>pmbootstrap install</code> and <code>pmbootstrap export</code>. Use the initramfs it throws out there together with your new kernel.
 * Don't use kernel modules at this point, because you would need to put them in the initramfs otherwise. That just makes it complicated.
+
+== How can I repackage the initramfs with custom modules? ==
+Run a normal installation to generate the initramfs:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install
+</syntaxhighlight>
+
+And then writing a short shell script, that repackages the postmarketOS initramfs with the modules you compiled.
+After reading through it, adjust it as needed and execute it as root:
+
+<syntaxhighlight lang="bash">
+#!/bin/sh
+# Config
+device="oneplus-bacon"
+tmpdir="/tmp/pmOS-initfs-with-mainline-kernel"
+work="$(pmbootstrap -q config work)"
+
+# Create temp folder
+[ -d "$tmpdir" ] && rm -rf "$tmpdir"
+mkdir -p "$tmpdir"
+
+# Extract the pmOS initramfs
+cp -v "$work/chroot_rootfs_$device/boot/initramfs-"* initramfs.gz
+gzip -d initramfs.gz
+cpio -i < initramfs
+
+# Remove existing modules
+rm -rf initramfs lib/modules
+
+#
+# CHANGEME: you need to write the commands that copy the kernel modules from your
+# kernel source folder into the initramfs here!
+#
+
+# Package the initramfs again
+cd "$tmpdir"
+find . -print0 | busybox cpio --quiet -o -H newc | gzip -1 > initramfs-repackaged
+</syntaxhighlight>
