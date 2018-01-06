@@ -1,0 +1,36 @@
+{{Infobox device
+| manufacturer = Google (Motorola)
+| name = Nexus 6
+| codename = shamu
+| releaseyear = 2014
+| originalsoftware = Android 5.0 (upgradable to Android 7.1.1)
+| chipset = Qualcomm Snapdragon 805
+| cpu = Quad-core 2.7 GHz Krait 450
+| gpu = Adreno 420
+| storage = 32/64 GB
+| display = 1440x2560 AMOLED
+| memory = 3 GB
+}}
+
+== Contributors ==
+
+* EricJ2190
+
+== What works ==
+
+* USB networking
+* Flashing
+* Screen (The display only works if the framebuffer is refreshed manually or if msm-fb-refresher is started after the device has finished booting. If msm-fb-refresher starts at boot, the postmarket splash is replaced by a black screen and further refreshing does nothing.)
+
+== What does not work ==
+
+* Touch
+* Wi-Fi (It probably just needs firmware.)
+
+== How to enter flash mode ==
+
+With the device powered off, hold Volume Down while booting.
+
+== Links ==
+
+* [https://github.com/LineageOS/android_kernel_moto_shamu LineageOS kernel]
