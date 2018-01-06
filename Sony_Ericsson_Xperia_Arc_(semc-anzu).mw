@@ -44,9 +44,16 @@ Just for the records of you gentlemen, I wanted to let you know that all the 201
 
 == What does not work ==
 
-* ???
+* Plasma Mobile
+* Hardware accelerated graphics
+* Audio
+* Bluetooth
+* GPS
+* Camera
+* Mobile data
+* Phone calls
 
-Testing device had permanent locked bootloader, so flashing could not be tested. However, everything built successfully. Further testing on a device with an unlocked bootloader will be needed to know what works and how to continue
+Note that Wi-Fi and osk-sdl are untested and may require further work.
 
 == Additional info ==
 
