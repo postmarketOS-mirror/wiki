@@ -1,0 +1,24 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Motorola
+| name =  Moto E Second Gen
+| codename = surnia
+| releaseyear = 2015
+}}
+
+== Summary ==
+Device does not boot, but can be accessed in the initramfs.
+See rrooij's branch for the progress he made.
+
+https://github.com/rrooij/pmbootstrap/tree/device-motorola-surnia
+
+== Contributors ==
+* rrooij
+
+== What works ==
+
+* Compiling the kernel
+
+== What does not work ==
+
+* Booting
