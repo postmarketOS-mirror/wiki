@@ -11,3 +11,4 @@ The <code>--image-size=2G</code> parameter will increase the image size to 2GB, 
 
 * [[qemu-amd64-(QEMU-for-x86_64)|Qemu for x86_64]]
 * [[qemu-vexpress-(Qemu-with-vexpress-soc)|Qemu for arm]]
+* [[QEMU_aarch64_(qemu-aarch64_)|Qemu for aarch64]]
