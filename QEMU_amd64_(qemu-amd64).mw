@@ -1,28 +1,30 @@
-[[Category:Supported Devices]]
-<blockquote>''This page is specific to running the <code>x86_64</code> version of Qemu. Make sure to also read the '''[[common Qemu notes]]'''!''
-</blockquote>
-This device is used for testing purposes. It is possible to run postmarketOS in a x86_64 Virtual Machine. Note that only 64bits CPUs work.
-
-QEMU will emulate the default x86_64 architecture (see <code>qemu-system-x86_64 -machine help</code> for more choices).
+This device is used for testing purposes. It is possible to run postmarketOS in a x86_64 Virtual Machine. QEMU will emulate the default x86_64 architecture (see <code>qemu-system-x86_64 -machine help</code> for more choices).
 
 === Contributors ===
-
 * ollieparanoid
 * MartijnBraam
 
-=== What works ===
+=== Usage ===
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init  # Choose device "qemu-amd64"
+$ pmbootstrap install --no-fde
+$ pmbootstrap qemu --image-size=2G
+</syntaxhighlight>
 
-* Compilation of kernel, system and initramfs
+See <code>pmbootstrap qemu --help</code> for more options. Notably <code>--spice</code> uses the SPICE protocol, which may give you better 3D acceleration. The <code>--display=gtk</code> switch allows you to see the serial output, but we didn't get 3D acceleration working with it. Default output is SDL (where 3D acceleration is working for most setups).
+
+=== What works ===
 * Storage
 * Network
 * Keyboard and mouse
-* Weston
+* Graphical interfaces (Weston, Plasma Mobile, ...)
 
 === What does not work ===
-
-* X11 over vesa: see issue #672
+* X11 over vesa: see {{github|672}}
 
 === Screenshot ===
-
 * QEMU running weston
 [[File:QEMU amd64 weston.png|500 px]]
+
+=== See also ===
+* [[common Qemu notes]]
