@@ -2,15 +2,13 @@
 | name = LuneOS UI
 | graphics = Wayland
 | toolkit = QT5
-| image = File:LuneOS Browser.png|Illustration image of LuneOS UI. Not running on pmOS
+| image = File:LuneOS Browser.png|LuneOS UI running on pmOS
 }}
 
 User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and open sourced mobile operating system updated with Wayland and QT5). A UI port is under development.[https://github.com/postmarketOS/pmbootstrap/issues/629]
 
 
 == Current Status ==
-
-[[File:luna_qemu_pmos_dec13.png |thumb|left| LuneOS UI running in QEMU]]
 
 The UI currently starts in QEMU and a couple of real devices, along with most of the core services.
 
@@ -20,7 +18,7 @@ Current work can be found in master.
 
 See [https://github.com/postmarketOS/pmbootstrap/issues/629 The github issue] related to this work as well.
 == Running (QEMU) ==
-
+{{note|Choosing luna in the UI selection in <code>pmbootstrap init</code> is not enough to make it start right now!}}
 Install:
 
 * postmarketos-ui-luna
@@ -41,5 +39,9 @@ Once the app exits and you're presented with the home screen, run '''luna-send -
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
 * Create init service files to get services starting at boot.
 * See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board]
+
+== Photos ==
+
+[[File:luna_qemu_pmos_dec13.png |thumb|left| LuneOS UI running in QEMU]]
 
 [[Category:Interface]]
