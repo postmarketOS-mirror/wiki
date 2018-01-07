@@ -75,7 +75,7 @@ After reading through it, adjust it as needed and execute it as root:
 #!/bin/sh
 # Config
 device="oneplus-bacon"
-tmpdir="/tmp/pmOS-initfs-with-mainline-kernel"
+tmpdir="/tmp/pmOS-initfs-with-mainline-modules"
 work="$(pmbootstrap -q config work)"
 
 # Create temp folder
