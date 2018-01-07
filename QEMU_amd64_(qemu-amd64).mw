@@ -18,9 +18,11 @@ See <code>pmbootstrap qemu --help</code> for more options. Notably <code>--spice
 * Network
 * Keyboard and mouse
 * Graphical interfaces (Weston, Plasma Mobile, ...)
+* <code>osk-sdl</code> (with --spice)
 
 === What does not work ===
 * X11 over vesa: see {{github|672}}
+* <code>osk-sdl</code> segfaults without --spice
 
 === Screenshot ===
 * QEMU running weston
