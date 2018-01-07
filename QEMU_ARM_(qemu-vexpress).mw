@@ -1,38 +1,39 @@
-[[Category:Supported Devices]]
-<blockquote>''This page is specific to running the <code>arm</code> version of Qemu. Make sure to also read the '''[[common Qemu notes]]'''!''
-</blockquote>
-
-This device is used to emulate an ARM Versatile Express for Cortex-A9.
-
-Vexpress (Versatile Express) is the reference architecture from the ARM Foundation. It simulates the armv7 architecture and a lot of other hardware (like graphics hardware).
-
-QEMU supports many other ARM architectures (see <code>qemu-system-arm -machine help</code>).
-
-Using the <code>--display=gtk</code> parameter is recommended. The default display, SDL, will show to windows (of which one is unused) and you won't be able to look at the serial output.
+{{note|CPU emulation is slow! Consider using [[Qemu-amd64-(QEMU-for-x86_64)|qemu-amd64]] instead if <code>x86_64</code> is your native architecture.}}
+This device is used to emulate an ARM Versatile Express for Cortex-A9. Vexpress (Versatile Express) is the reference architecture from the ARM Foundation. It simulates the armv7 architecture and a lot of other hardware (like graphics hardware). QEMU supports many other ARM architectures (see <code>qemu-system-arm -machine help</code>).
 
 === Contributors ===
-
 * MartijnBraam
 * mmaret
 
-=== What works ===
+=== Usage ===
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init  # Choose device "qemu-vexpress"
+$ pmbootstrap install --no-fde
+$ pmbootstrap qemu --image-size=2G --display=gtk
+</syntaxhighlight>
 
+Using the <code>--display=gtk</code> parameter is recommended. The default display, SDL, will show two windows (of which one is unused) and you won't be able to look at the serial output.
+
+=== What works ===
 * Compilation of kernel, system and initramfs
-* It boots but only if you specify a seperate <code>-dtb</code> flag, it doesn't use the embedded dtb
 * Storage
 * Network
 
 === What does not work ===
+* '''Keyboard and mouse'''
 * Qemu 2.0.0 is too old (but it's known to be working with 2.6.50)[https://github.com/postmarketOS/pmbootstrap/pull/1029#issuecomment-353819587]
-* Keyboard and mouse
+
+=== Notes ===
+* It boots only if you specify a separate <code>-dtb</code> flag, it doesn't use the dtb attached to the kernel (but pmbootstrap calls it right).
 
 === Links ===
-
 * https://wiki.linaro.org/PeterMaydell/QemuVersatileExpress
 
 === Screenshot ===
-
 * QEMU unlock screen
 [[File:Qemu unlock screen.png|500 px]]<br />
 * QEMU running weston
 [[File:Qemu weston.png|500 px]]
+
+=== See also ===
+* [[common Qemu notes]]
