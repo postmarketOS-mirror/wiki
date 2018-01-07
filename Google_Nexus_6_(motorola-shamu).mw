@@ -20,6 +20,7 @@
 
 * USB networking
 * Flashing
+* Touch
 * Screen (partial)
 ** The display only works if the framebuffer is refreshed manually or if msm-fb-refresher is started after the device has finished booting. If msm-fb-refresher starts at boot, the postmarket splash is replaced by a black screen and further refreshing does nothing.
 ** The brightness can be adjusted by writing a value from 0 to 255 to <code>/sys/devices/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.164/leds/lcd-backlight/brightness</code>.
@@ -32,9 +33,6 @@
 
 == What does not work ==
 
-* Touch
-** No devices at <code>/dev/input/eventX</code> respond to touch input.
-** Has an Atmel maXTouch device at <code>/sys/devices/f9966000.i2c/i2c-1/1-004a</code> mapped to <code>/dev/input/event0</code>.
 * Wi-Fi
 ** A <code>wlan0</code> interface is present, but it will not connect. It probably just needs firmware.
 
