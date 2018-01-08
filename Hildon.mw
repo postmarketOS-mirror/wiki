@@ -6,7 +6,7 @@
 | toolkit = GTK+2, [https://talk.maemo.org/showthread.php?t=96800 WIP: GTK+3]
 }}
 [[File:Asus flo hildon.jpg|thumb|Hildon on the [[Google Nexus 7 2013 (asus-flo)|Nexus 7 2013]]]]
-This is the desktop from Maemo, which is a Debian-based distribution that originally ran on the N900.<br />
+This is the desktop from Maemo, which is a Debian-based distribution that originally ran on the N900 and earlier Nokia Internet Tablets.<br />
 We do not have a <code>postmarketos-ui-hildon</code> yet (but that should be easy to make, look at <code>postmarketos-ui-weston</code> for reference if you're interested, dear reader).
 
 === Installation instructions ===
