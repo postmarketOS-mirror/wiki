@@ -16,8 +16,6 @@
 }}
 == NOTE ==
 
-None of this work has been (merged/pushed/get correct terminology) upstream. Contact CmdrWgls on IRC if you're interested in working on it before he gets around to actually doing so.
-
 rrooij uploaded his progress here: https://github.com/rrooij/pmbootstrap/tree/device-asus-tf101
 
 == Contributors ==
@@ -29,43 +27,30 @@ rrooij uploaded his progress here: https://github.com/rrooij/pmbootstrap/tree/de
 == What works ==
 
 * Compiling the kernel
+* Booting in Weston
 
 == What does not work ==
 
-* Flashing it, the recovery zip fails and pmbootstrap doesn't support nvflash
+* Flashing normally, since the device uses nvflash, a proprietary flashing protocol
+* USB Networking
+* Touch
 
-== Progress ==
+== Installation ==
 
-=== What's been done ===
+You have to flash a recovery like TWRP before doing this. You also have to use this tool: [https://github.com/AndroidRoot/BlobTools]
 
-* device-asus-tf101 builds
-* linux-asus-tf101 builds
+# <pre>./pmbootstrap.py install --no-fde</pre>
+# <pre>./pmbootstrap.py export</pre>
+# Reboot the device in recovery
+# <pre>./blobpack blob /tmp/postmarketOS-export/boot.img-asus-tf101 LNX</pre>
+# <pre>adb push blob /cache</pre>
+# <pre>adb push /tmp/postmarketOS-export/asus-tf101.img</pre>
 
-=== What's been attempted ===
+The following should be executed within adb shell:
 
-* Tried to build two kernels.
-
-==== [https://github.com/timduru/tf101-katkernel timduru's KatKiss kernel] ====
-Builds failed due to <code>devtmpfs</code> not being used in the Android ROM this was taken from. It appears to be missing code related to <code>kern_path_create</code>. See:
-* <code>dev/drivers/base/devtmpfs.c</code> <- source of error
-* <code>include/linux/namei.h</code> <- place where <code>kern_path_create</code> is defined in more recent kernels but apparently not in this one
-* another file I've forgotten ...
-Attempted to fix by copying the declarations for <code>kern_path_create</code> from the mainline kernel. Fix failed because this was much too small a change to solve the problem.
-
-==== [https://github.com/novaspirit/tf101-linux-2.6.36 novaspirit's kernel] ====
-Fails, multiple definitions of <code>return address</code> found in several files under <code>arch/arm/kernel</code>. No effort has been made yet to solve this problem, so this kernel is still in contention.
-
-==== [https://github.com/jmrohwer/TF101-GNU-kernel jmrohwer's kernel] ====
-
-Works after applying patches.
-
-== Next steps ==
-
-Try to flash the kernel and system
-
-New kernels to attempt:
-
-* [https://github.com/rdnetto/linux-TF101 rdnetto's kernel]
+# <pre>adb shell</pre>
+# <pre>dd if=/cache/blob of=/dev/block/mmcblk0p4</pre>
+# <pre>dd if=/cache/asus-tf101.img of=/dev/block/mmcblk0p1</pre>
 
 == Links ==
 * [https://forum.xda-developers.com/wiki/index.php?title=ASUS_Eee_Pad_Transformer/How_to_install_Ubuntu&ajax=0#Development Partition overview]
