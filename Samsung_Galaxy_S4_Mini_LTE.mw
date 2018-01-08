@@ -1,0 +1,39 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy S4 Mini LTE
+| codename = serrano
+| image = File:S4mini.jpg
+| imagecaption = S4 Mini running PostmarketOS
+| releaseyear = 2013
+| originalsoftware = Android 4.4.2
+| chipset = Qualcomm Snapdragon 400
+| cpu = 1.7 GHz dual-core Krait 300
+| gpu = Adreno 305
+| storage = Internal, with external SD slot
+| display = 960x540
+| memory = 1.5GB
+}}
+
+== Contributors ==
+* rrooij
+* Everyone else on IRC (feel free to put your name here!)
+
+== What works ==
+
+* Compiling the kernel
+* Flashing postmarketos
+* Booting
+* Screen display
+
+== What does not work ==
+
+* Touch screen
+* USB Networking (can't connect with either telnet or SSH)
+
+== How to enter flash mode ==
+
+* Hold home + volume down when booting the device
+
+== Links ==
+
+* Kernel used: https://github.com/LineageOS/android_kernel_samsung_universal8890
