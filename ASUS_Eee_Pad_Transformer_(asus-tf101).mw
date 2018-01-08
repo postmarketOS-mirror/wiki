@@ -1,4 +1,3 @@
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = ASUS
 | name = Eee Pad Transformer
@@ -14,6 +13,7 @@
 | display = 1280x800 IPS
 | memory = 1 GB
 }}
+
 == NOTE ==
 
 rrooij uploaded his progress here: https://github.com/rrooij/pmbootstrap/tree/device-asus-tf101
