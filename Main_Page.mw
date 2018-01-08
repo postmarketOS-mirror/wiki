@@ -27,10 +27,16 @@
 * [[Mainline kernel|The mainline kernel]] ''early work on getting device kernels into mainline Linux''
 * [[Development guide]] ''currently has a git hook for working on packages''
 
+
 '''Communication channels'''
 * [[Matrix and IRC]] ''live chat makes development easier''
 * [https://github.com/postmarketOS/pmbootstrap/issues Issuetracker] ''besides bugs, lots feature ideas and questions''
 * [https://reddit.com/r/postmarketOS Reddit] ''photos of devices running pmOS, blog posts, questions, official announcements''
+
+{| style="float:right; margin-left: 10px;"
+|[[File:MATE drebrez.jpg|200px]]
+|[[File:Asus flo hildon.jpg|200px]]
+|}
 
 '''Wiki editing'''
 * [[Templates]] ''list of postmarketOS Wiki specific templates''
