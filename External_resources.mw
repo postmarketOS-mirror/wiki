@@ -39,6 +39,7 @@ This list is a collection of presentations, talks and other resources that are s
 ** rrch on IRC: ''On XDA some users have managed to get Android running on a few older Lumias by porting over a ROM designed for an Xperia with similar hardware. WiFi works but I think there's still no modem support.''
 ** If you have more information on this topic, please create a dedicated Windows Phone page and move the content there. Thanks!
 * [http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/ Identifying serial ports]
+* [https://kakaroto.homelinux.net/2017/11/introduction-to-reverse-engineering-and-assembly/ Introduction to reverse engineering and assembly]
 
 === Mobile operating systems ===
 * [https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Architecture Firefox OS: Boot2Gecko Architecture] (discontinued)
