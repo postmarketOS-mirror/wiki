@@ -48,5 +48,11 @@ The following should be executed within adb shell:
 # <pre>dd if=/cache/blob of=/dev/block/mmcblk0p4</pre>
 # <pre>dd if=/cache/asus-tf101.img of=/dev/block/mmcblk0p1</pre>
 
+== Photos ==
+
+Boot log:
+
+[[File:Boot_tf101.jpg]]
+
 == Links ==
 * [https://forum.xda-developers.com/wiki/index.php?title=ASUS_Eee_Pad_Transformer/How_to_install_Ubuntu&ajax=0#Development Partition overview]
