@@ -323,3 +323,6 @@ Try to disable the "timestamp based rebuilds" feature in "pmbootstrap init" as a
 * *enable* timestamp based rebuilds
 * <code>pmbootstrap -v install</code> (let it run until it starts building the package it should not build)
 * <code>pmbootstrap log</code> (we need the log from here!)
+
+=== During initramfs generation: "modprobe: WARNING: Module drm not found in directory /lib/modules/..." ===
+This means, that a module can not be put in an initramfs. When you are not using a mainline kernel, it is likely that there are no modules configured, but the code is built directly into the kernel. This means, it is expected and can be ignored.
