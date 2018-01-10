@@ -309,6 +309,11 @@ If you want to install to the system partition, run the following (not for the S
 $ pmbootstrap flasher flash_system
 </syntaxhighlight>
 
+In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>dd</code> or simply install the known working OS, e.g. Android, on it). Using multiple partitions with LVM is planned ({{github|60}}).
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher flash_system --partition userdata
+</syntaxhighlight>
+
 If you have a device, that works with fastboot, you can boot the kernel now without flashing it:
 
 <syntaxhighlight lang="shell-session">
