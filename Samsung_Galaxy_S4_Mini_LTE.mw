@@ -29,6 +29,7 @@
 
 * Touch screen
 * USB Networking (can't connect with either telnet or SSH)
+* USB does not work either in initramfs debug-shell
 
 == How to enter flash mode ==
 
