@@ -26,7 +26,9 @@ Install:
 * mesa
 * mesa-egl
 
-Run /usr/bin/start_luna.sh to start everything. The first-use app should open.
+Edit /usr/bin/start_luna.sh, to set your desired input devices on the luna-next line. Run /usr/bin/start_luna.sh to start everything. The first-use app should open.
+
+See also [https://github.com/postmarketOS/pmbootstrap/issues/629 The Github issue] for more instructions and ideas for getting this running on non-accelerated phones.
 
 Complete the steps, when you get to the black screen, click where the "next" button should be. It's not clear what causes that yet.
 
