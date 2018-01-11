@@ -4,7 +4,7 @@
 * You know the location of the UART port on your device ([https://www.youtube.com/watch?v=_aedd8SUBgY video tutorial] | [http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/ Identifying serial ports])
 * A device that has one of the following Snapdragon processors
 ** '''S3''' (MSM8260 / MSM8660)
-** '''S4 Pro''' (MSM8960T / MSM8960DT)
+** '''S4 Pro''' (MSM8960T / MSM8960DT / APQ8064)
 ** '''410''' (MSM8916 / APQ8016)
 ** '''800''' (MSM8974)
 ** '''801''' (MSM8974AA / MSM8974AB / MSM8974AC / APQ8074AB)
