@@ -19,6 +19,5 @@ While some devices can be flashed with the open <code>fastboot</code>, some devi
 * Wireshark: Save the dump to a file
 * Send the dump to someone who's working on reversing flashing tools. Do not publicly upload them, they may contain sensitive data (all devices plugged into your PC etc.)
 
-
 === See also ===
 * [https://github.com/openrazer/openrazer/wiki/Reverse-Engineering-USB-Protocol OpenRazer: Reverse Engineering USB Protocol]
