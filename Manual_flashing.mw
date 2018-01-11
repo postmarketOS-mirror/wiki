@@ -1,4 +1,5 @@
-Because sometimes you just need to flash ready system image externally.
+{{note|If you only need to slightly adjust the way <code>pmbootstrap</code> runs a flasher, you can grab the exact command it uses from the <code>pmbootstrap log</code> and modify it when running manually.}}
+Sometimes you just need to flash ready system image externally.
 
 == Fastboot ==
 See <code>fastboot --help</code>, and expand this section if you find out something that would have helped you.
@@ -7,7 +8,6 @@ See <code>fastboot --help</code>, and expand this section if you find out someth
 Odin is an official flasher for many Samsung devices, runs only on Windows.
 
 To flash your phone with it you will need .pit file containing information about all partitions, you can find one online or download it from the device e.g using Heimdall.
-
 
 == Heimdall ==
 [[File:heimdall-frontend.png|thumb|400px|right|Flash tab in heimdall-frontend]]
@@ -21,8 +21,6 @@ On tab Utilities you can obtain .pit file from the device by choosing save locat
 
 {{note|NEVER select "Repartition", it will most certainly brick your phone!}}
 When you have .pit file and required img files you can go to Flash tab, select your .pit file, add new partition, configure it (name and flashed file), optionally add more partitions and click Start to flash everything to the device.
-
-
 
 === Hard way ===
 First, turn on your phone in download mode (You can use 
