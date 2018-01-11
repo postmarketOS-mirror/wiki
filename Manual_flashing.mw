@@ -1,7 +1,7 @@
 Because sometimes you just need to flash ready system image externally.
 
 == Fastboot ==
-I don't have any experience with fastbbot, it is however most popular flashing method available on almost all newer phones.
+See <code>fastboot --help</code>, and expand this section if you find out something that would have helped you.
 
 == Odin ==
 Odin is an official flasher for many Samsung devices, runs only on Windows.
