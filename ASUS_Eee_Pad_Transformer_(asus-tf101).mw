@@ -32,6 +32,7 @@
 * Touch
 
 == Installation ==
+{{note|We could [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-357035481 streamline this a lot] with your help.}}
 
 You have to flash a recovery like TWRP before doing this. You also have to use this tool: [https://github.com/AndroidRoot/BlobTools]
 
