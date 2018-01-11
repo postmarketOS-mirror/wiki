@@ -10,6 +10,7 @@ While some devices can be flashed with the open <code>fastboot</code>, some devi
 * If you have any questions, ask in the [[Matrix_and_IRC|channel]]
 
 === Creating the dump ===
+* Linux: [https://github.com/openrazer/openrazer/wiki/Reverse-Engineering-USB-Protocol#phase-2---setup prepare Wireshark with a filter for your mobile device]
 * Start wireshark
 * Wireshark: Start recording the USB port
 * Run the proprietary flash program
@@ -17,3 +18,7 @@ While some devices can be flashed with the open <code>fastboot</code>, some devi
 * Wireshark: Stop recording
 * Wireshark: Save the dump to a file
 * Send the dump to someone who's working on reversing flashing tools. Do not publicly upload them, they may contain sensitive data (all devices plugged into your PC etc.)
+
+
+=== See also ===
+* [https://github.com/openrazer/openrazer/wiki/Reverse-Engineering-USB-Protocol OpenRazer: Reverse Engineering USB Protocol]
