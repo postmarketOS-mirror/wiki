@@ -14,7 +14,7 @@ While some devices can be flashed with the open <code>fastboot</code>, some devi
 * Start wireshark
 * Wireshark: Start recording the USB port
 * Run the proprietary flash program
-* Flash exactly one file to the device (in case of SP Flash Tool: only flash the littlekernel (lk), otherwise you might brick your device!)
+* Flash exactly one file to the device, and only something rather uncritical like flashing TWRP to the recovery partition
 * Wireshark: Stop recording
 * Wireshark: Save the dump to a file
 * Send the dump to someone who's working on reversing flashing tools. Do not publicly upload them, they may contain sensitive data (all devices plugged into your PC etc.)
