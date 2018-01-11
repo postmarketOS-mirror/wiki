@@ -1,24 +1,35 @@
 {{note|Work in progress and untested. Please improve this page (or merge it together with the non-Qualcomm-specific [[The Mainline Kernel|mainlining wiki page]]) when you try any of this.}}
 == Prerequisites ==
 * A working device-tree based downstream kernel
-* You know the location of the uart port on your device ([https://www.youtube.com/watch?v=_aedd8SUBgY this video] shows how to find it)
-* A device that has one of the following snapdragon processors
-** S3
-** S4 Pro
-** 800
-** 801
-** 805
-** 410
-** 808
-** 810
-** 820
+* You know the location of the UART port on your device ([https://www.youtube.com/watch?v=_aedd8SUBgY video tutorial] | [http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/ Identifying serial ports])
+* A device that has one of the following Snapdragon processors
+** '''S3''' (MSM8260 / MSM8660)
+** '''S4 Pro''' (MSM8960T / MSM8960DT)
+** '''410''' (MSM8916 / APQ8016)
+** '''800''' (MSM8974)
+** '''801''' (MSM8974AA / MSM8974AB / MSM8974AC / APQ8074AB)
+** '''805''' (APQ8084)
+** '''808''' (MSM8992)
+** '''810''' (MSM8994)
+** '''820''' (MSM8996)
 
 == Relevant chat log ==
 Thanks to opendata and bshah for the following log. Let's make this more wiki friendly once we try it out.
 * Copy fairphone2 DTs and change device info
 ** (alas, if you are using Nexus 4, apq8064 based device would be good start i.e Nexus 7(?)) 
 *** Not sure about 8064, I would do the same thing but base off yuga
-* msm8974-regulator.dtsi in devices android kernel tree look for a file named this 
-* Look for pm8841_s1: regulator-s1 then look at the voltages and make sure your DTS is the same, if not change it. Do this for pm8841_s1: regulator-s1 - s4 and pm8941_s1: regulator-s1 - pm8841_l24: regulator-l24 
+* Look for a file named <code>msm8974-regulator.dtsi</code> in devices android kernel tree
+* Look for <code>pm8841_s1: regulator-s1</code> then look at the voltages and make sure your DTS is the same, if not change it.
+* Do the same operation for the other regulators:
+**<code>pm8841_s2: regulator-s2</code>
+**<code>pm8841_s3: regulator-s3</code>
+**<code>pm8841_s4: regulator-s4</code>
+**<code>pm8941_s1: regulator-s1</code>
+**<code>pm8941_s2: regulator-s2</code>
+**<code>pm8941_s3: regulator-s3</code>
+**<code>...</code>
+**<code>pm8941_l1: regulator-l1</code>
+**<code>...</code>
+**<code>pm8941_l24: regulator-l24</code>
 * Then look in your devices android DTSi and look for any regulator configs if you find any change the corresponding regulator in the dts 
 * This should be enough to boot with USB telnet
