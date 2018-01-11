@@ -1,0 +1,19 @@
+While some devices can be flashed with the open <code>fastboot</code>, some devices require a proprietary program to flash to the devices. In postmarketOS we want to use free and open source software for everything, hence we need open flashing tools as well. This guide describes how you can record the flashing process of the proprietary program we're trying to replace.
+
+=== Preparation ===
+* This should work on Linux and Windows (some flashers only work on Windows!)
+* To sandbox the proprietary code we're running and to avoid recording sensitive data by accident, consider setting up a virtual machine (e.g. [https://virtualbox.org/ VirtualBox]) for this task.
+* Install [https://www.wireshark.org/ Wireshark] (on Windows: from their homepage, on Linux: with your package manager)
+* Download the flashing program
+* Get a file you can safely flash on your device. If you flash the wrong file, you might brick your device (especially if you are flashing your bootloader)
+* Disconnect as many USB devices as possible, so their data does not get recorded in the dump. Do not transfer any files via USB and do not type in sensitive date on your keyboard, especially passwords and login information. '''Only use your keyboard to start the flashing process!'''
+* If you have any questions, ask in the [[Matrix_and_IRC|channel]]
+
+=== Creating the dump ===
+* Start wireshark
+* Wireshark: Start recording the USB port
+* Run the proprietary flash program
+* Flash exactly one file to the device (in case of SP Flash Tool: only flash the littlekernel (lk), otherwise you might brick your device!)
+* Wireshark: Stop recording
+* Wireshark: Save the dump to a file
+* Send the dump to someone who's working on reversing flashing tools. Do not publicly upload them, they may contain sensitive data (all devices plugged into your PC etc.)
