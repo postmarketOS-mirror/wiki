@@ -38,7 +38,7 @@ You have to flash a recovery like TWRP before doing this. You also have to use t
 # <pre>./pmbootstrap.py install --no-fde</pre>
 # <pre>./pmbootstrap.py export</pre>
 # Reboot the device in recovery
-# <pre>./blobpack blob /tmp/postmarketOS-export/boot.img-asus-tf101 LNX</pre>
+# <pre>./blobpack blob /tmp/postmarketOS-export/boot.img-asus-tf101 LNX</pre> (<code>LNX</code> is the partition name, this is not a placeholder [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-356984400])
 # <pre>adb push blob /cache</pre>
 # <pre>adb push /tmp/postmarketOS-export/asus-tf101.img</pre>
 
@@ -56,3 +56,4 @@ Boot log:
 
 == Links ==
 * [https://forum.xda-developers.com/wiki/index.php?title=ASUS_Eee_Pad_Transformer/How_to_install_Ubuntu&ajax=0#Development Partition overview]
+* {{github|1103}} initial PR
