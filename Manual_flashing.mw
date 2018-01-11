@@ -1,0 +1,47 @@
+Because sometimes you just need to flash ready system image externally.
+
+== Fastboot ==
+I don't have any experience with fastbbot, it is however most popular flashing method available on almost all newer phones.
+
+== Odin ==
+Odin is an official flasher for many Samsung devices, runs only on Windows.
+
+To flash your phone with it you will need .pit file containing information about all partitions, you can find one online or download it from the device e.g using Heimdall.
+
+
+== Heimdall ==
+[[File:heimdall-frontend.png|thumb|400px|right|Flash tab in heimdall-frontend]]
+Opensource alternative to Odin that runs on Windows, Mac and Linux and can flash many Samsung phones.
+Be aware that Heimdall doesn't support some Samsung phones (usually that uses different file than .pit).
+
+=== Easy way ===
+Use ''heimdall-frontend''
+
+On tab Utilities you can obtain .pit file from the device by choosing save location and clicking download
+
+{{note|NEVER select "Repartition", it will most certainly brick your phone!}}
+When you have .pit file and required img files you can go to Flash tab, select your .pit file, add new partition, configure it (name and flashed file), optionally add more partitions and click Start to flash everything to the device.
+
+
+
+=== Hard way ===
+First, turn on your phone in download mode (You can use 
+<code lang="bash">
+heimdall detect
+</code>
+to see if Heimdall detects it.)
+
+To download .pit from the device:
+
+<code lang="bash">
+heimdall download-pit --output file.pit
+</code>
+
+{{note|code below was not yet tested, I would advise against using it}}
+When you have .pit file and required img files you can flash your device with:
+
+<code lang="bash">
+heimdall flash --pit file.pit [--<partition name> <filename>] [--<partition identifier> <filename>]
+</code>
+
+You should be able to flash several partitions at once
