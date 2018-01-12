@@ -41,7 +41,7 @@ You have to flash a recovery like TWRP before doing this. You also have to use t
 # Reboot the device in recovery
 # <pre>./blobpack blob /tmp/postmarketOS-export/boot.img-asus-tf101 LNX</pre> (<code>LNX</code> is the partition name, this is not a placeholder [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-356984400])
 # <pre>adb push blob /cache</pre>
-# <pre>adb push /tmp/postmarketOS-export/asus-tf101.img</pre>
+# <pre>adb push /tmp/postmarketOS-export/asus-tf101.img /cache</pre>
 
 The following should be executed within adb shell:
 
