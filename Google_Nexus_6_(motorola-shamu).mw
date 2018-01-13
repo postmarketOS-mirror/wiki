@@ -21,9 +21,9 @@
 * USB networking
 * Flashing
 * Touch
-* Screen (partial)
-** The display only works if the framebuffer is refreshed manually or if msm-fb-refresher is started after the device has finished booting. If msm-fb-refresher starts at boot, the postmarket splash is replaced by a black screen and further refreshing does nothing.
-** The brightness can be adjusted by writing a value from 0 to 255 to <code>/sys/devices/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.164/leds/lcd-backlight/brightness</code>.
+* Screen
+** Requires msm-fb-refresher to update the framebuffer.
+** The brightness can be adjusted by writing a value from 0 to 255 to <code>/sys/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.164/leds/lcd-backlight/brightness</code>.
 * LEDs
 ** The green charging LED can be set by writing a value from 0 to 40 to <code>/sys/devices/leds-qpnp-10/leds/charging/brightness</code>.
 ** General purpose LEDs can be set by writing a value from 0 to 20 to the devices below, although there is no observable difference in brightness from 1 to 20.
