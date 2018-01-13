@@ -108,7 +108,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://github.com/navit-gps/navit Navit]
 |GPL2, LGPL
-|Open source car navigation software.  Uses OSM, Garmin and other map sources.
+|Open source GTK+ and SDL based car navigation software.  Uses OSM, Garmin and other map sources.
 |}
 
 === Apps that only work with proprietary services ===
