@@ -139,14 +139,23 @@ These are used for flashing and booting the device, and most of them are fastboo
 |
 
 |-
-| <code>generate_bootimg</code>
-| Set this to true for fastboot device, so the <code>mkinitfs</code> command will generate a <code>boot.img</code> file after creating the <code>initfs</code>. Add <code>mkbootimg</code> as dependency to your device's APKBUILD!
+| <code>bootimg_blobpack</code>
+| Create a flashable blob for the ASUS TF101 from <code>boot.img</code> using [https://github.com/AndroidRoot/BlobTools BlobTools]
 | <code>true, false</code>
+|-
+
 |-
 | <code>bootimg_qcdt</code>
 | Append <code>dtb</code> file to <code>boot.img</code> ([[deviceinfo_bootimg_qcdt|more info]])
 |
 |-
+
+|-
+| <code>generate_bootimg</code>
+| Set this to true for fastboot device, so the <code>mkinitfs</code> command will generate a <code>boot.img</code> file after creating the <code>initfs</code>. Add <code>mkbootimg</code> as dependency to your device's APKBUILD!
+| <code>true, false</code>
+|-
+
 | <code>generate_legacy_uboot_initfs</code>
 | For the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 N900], we use a legacy version of the [https://en.wikipedia.org/wiki/Das_U-Boot uboot] bootloader right now. When setting this variable to true, the initramfs will generate an uboot legacy compatible initramfs file. Modern versions of uboot can load regular initramfs files.
 | <code>true, false</code>
