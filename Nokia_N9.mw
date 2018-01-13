@@ -3,8 +3,8 @@
 | manufacturer = Nokia
 | name = Nokia N9
 | codename = Lankku, rm-969
-| image = fixme
-| imagecaption = fixme
+| image = File:N9_tty_side.jpg
+| imagecaption = postmarketOS loading screen with TTY on top
 | releaseyear = 2011
 | originalsoftware = MeeGo
 | chipset = TI Omap 3630
@@ -51,7 +51,9 @@ Note that attempt to pass command line arguments will result in kernel not booti
 Might be possible using Nemo flashing image.
 
 == Photos ==
+* [[Media:N9_xfce4.jpg|Running XFCE4]]
 * [https://twitter.com/fi1ippz/status/945692340194349056?s=09 PowerVR SGX (TI 4.10.00.01) drivers with v4.15-rc3 kernel]
+* [[Media:N9_tty.jpg|postmarketOS loading screen with TTY on top (alternative photo)]]
 
 == Links ==
 * {{github|1046}} Add basic support for Nokia N9
