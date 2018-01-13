@@ -100,7 +100,12 @@ These are applications which already exist for Linux and could be reused in post
 |LGPL2.1	
 |Fairly lightweight web browser, using very little RAM.  Not touch optimised but can display websites well, with HTML5 support. Uses ~40MB RAM.
 |[https://pkgs.alpinelinux.org/packages?name=midori&branch=&repo=&arch=&maintainer= Alpine repo]
-
+|-
+|[https://wiki.openstreetmap.org/wiki/MoNav MoNav]
+|GPL3
+|Lightweight touchscreen Qt-based map application.  Includes routing.
+|
+|-
 |}
 
 === Apps that only work with proprietary services ===
