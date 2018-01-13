@@ -1,0 +1,17 @@
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia T3
+| codename = seagull
+| releaseyear = 2014
+| originalsoftware = Android 4.4.4 on Linux 3.4.0
+| chipset = Qualcomm Snapdragon 400 MSM8928
+| cpu = Quad-core 1.4 GHz
+| gpu = Adreno 305
+| storage = 8 GB + SD card
+| display = 720x1280 TFT
+| memory = 1 GB
+}}
+
+== Links ==
+
+[https://developer.sonymobile.com/downloads/xperia-open-source-archives/open-source-archive-for-build-18-1-a-1-23/ Kernel source]
