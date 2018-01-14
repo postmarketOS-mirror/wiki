@@ -38,19 +38,18 @@
 == Installation ==
 {{note|We could [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-357035481 streamline this a lot] with your help.}}
 
-You have to flash a recovery like TWRP before doing this. You also have to use this tool: [https://github.com/AndroidRoot/BlobTools]
+You have to flash a recovery like TWRP before doing this.
 
 # <pre>./pmbootstrap.py install --no-fde</pre>
 # <pre>./pmbootstrap.py export</pre>
 # Reboot the device in recovery
-# <pre>./blobpack blob LNX /tmp/postmarketOS-export/boot.img-asus-tf101 </pre> (<code>LNX</code> is the partition name, this is not a placeholder [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-356984400])
-# <pre>adb push blob /cache</pre>
+# <pre>adb push /tmp/postmarketOS-export/blob-tf101 /cache</pre>
 # <pre>adb push /tmp/postmarketOS-export/asus-tf101.img /cache</pre>
 
 The following should be executed within adb shell:
 
 # <pre>adb shell</pre>
-# <pre>dd if=/cache/blob of=/dev/block/mmcblk0p4</pre>
+# <pre>dd if=/cache/blob-tf101 of=/dev/block/mmcblk0p4</pre>
 # <pre>dd if=/cache/asus-tf101.img of=/dev/block/mmcblk0p1</pre>
 
 == TODO ==
