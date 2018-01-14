@@ -12,6 +12,16 @@
 | memory = 1 GB
 }}
 
+
+== Contributors ==
+* MayeulC
+
+== How to enter flash mode ==
+* Power off the phone
+* Press volume up
+* Keep volume up pressed, and connect the phone to the computer
+* wait until the LED turns blue, then release volume up (this can take a few seconds)
+
 == Links ==
 
 [https://developer.sonymobile.com/downloads/xperia-open-source-archives/open-source-archive-for-build-18-1-a-1-23/ Kernel source]
