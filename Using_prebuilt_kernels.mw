@@ -34,7 +34,7 @@ uncompressed_boot/boot.img-zImage \
 ~/.local/var/pmboostrap/chroot_rootfs-XXX-XXXX/boot/initramfs-lg-hammerhead</source>
 
 == Maybe we can chainload the pmOS kernel? ==
-
+{{note|User forkbomb successfully kexec-booted a [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#mainline-linux-kernel bunch of Samsungs] [https://forkwhiletrue.me/posts/kexec-on-galaxy-s3/ with kexec]!}}
 Linux kernels can load other kernels via the [https://en.wikipedia.org/wiki/Kexec kexec] syscall. The deal is, that signed bootloaders only allow signed kernels. But what if we repackaged the signed kernel with our own initramfs, that loads our own kernel via kexecboot from the boot subpartition? Not sure if this will work because of SELinux etc, but if it did, it would be a nice way to get around the bootloader's signed kernel enforcement! '''If you have an usecase for this, please open a ticket to discuss this further.'''
 
 More research showed, that the <code>kexec</code> syscall is usually disabled in such kernels. However, it could be possible to do <code>kexec</code> without it being enabled in the kernel (such as it has been done in the PS4 hack, where a kexec gets done on the PS4's BSD kernel, which does obviously not support this feature, to load a Linux kernel). This is ''a lot'' of work, but it would be an impressive hack!
