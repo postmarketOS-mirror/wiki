@@ -121,6 +121,12 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * some interest in Nokia N9, N950, LG Optimus Chic E720
 * mild interest in OpenMoko gt01, Nokia N770, N800, N810
 
+
+=== MayeulC ===
+* [ ] Getting my Xperia T3 to work with pmos
+* [ ] Improve the documentation and the tools used to do so
+* [ ] Improve computer <-> phone communication (maybe trough a [https://cgit.kde.org/kdeconnect-kde.git kdeconnect] port)
+
 === [https://github.com/MoreRobustThanYou steamport] ===
 ✔ Basic Kindle Fire HDX (2013) support
 
