@@ -16,11 +16,29 @@
 == Contributors ==
 * MayeulC
 
+== Maintainer(s) ==
+* MayeulC
+
+== What works ==
+* Flash System
+* Flash kernel
+
+== What does not work ==
+* screen is blank
+* no network
+* unknown UART pinout
+(so basically we can't be sure that it boots, but it seems to stay powered on)
+
 == How to enter flash mode ==
 * Power off the phone
 * Press volume up
 * Keep volume up pressed, and connect the phone to the computer
 * wait until the LED turns blue, then release volume up (this can take a few seconds)
+
+== How to turn off the phone ==
+Since you can't remove the battery without opening the phone, you can do the following instead:
+* Long press volume up + power button
+* press the "off" button behind the SIM/SD card cover with a pin. This breaks the battery connection, so USB needs to be unplugged as well.
 
 == Links ==
 
