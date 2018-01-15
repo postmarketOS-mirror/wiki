@@ -22,7 +22,7 @@
 * chin123
 
 == What works ==
-* Flash Systen
+* Flash System
 * Boot Kernel through `pmbootstrap flasher boot`
 * USB internet
 * ssh
