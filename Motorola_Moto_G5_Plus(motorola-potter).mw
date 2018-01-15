@@ -23,7 +23,7 @@
 
 == What works ==
 * Flash System
-* Boot Kernel through `pmbootstrap flasher boot`
+* Boot Kernel through <code>pmbootstrap flasher boot</code>
 * USB internet
 * ssh
 
@@ -35,8 +35,9 @@
 * Power + Volume Down buttons
 
 == Installation ==
-* `pmbootstrap flasher flash_system`
-* `pmbootstrap flasher boot`
+<code>
+$ pmbootstrap flasher flash_system<br>$ pmbootstrap flasher boot
+</code>
 
 
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
