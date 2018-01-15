@@ -35,10 +35,8 @@
 * Power + Volume Down buttons
 
 == Installation ==
-<nowiki>
-$ pmbootstrap flasher flash_system 
-$ pmbootstrap flasher boot
-</nowiki>
+<code> $ pmbootstrap flasher flash_system </code> <br> 
+<code> $ pmbootstrap flasher boot </code> <br>
 
 
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
