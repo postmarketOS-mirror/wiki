@@ -36,7 +36,8 @@
 
 == Installation ==
 <code>
-$ pmbootstrap flasher flash_system<br>$ pmbootstrap flasher boot
+$ pmbootstrap flasher flash_system<br> 
+$ pmbootstrap flasher boot
 </code>
 
 
