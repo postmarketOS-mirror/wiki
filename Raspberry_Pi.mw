@@ -1,0 +1,6 @@
+The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux].
+
+It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
+
+[[Category:Devices]]
+https://wiki.postmarketos.org/wiki/Existing_Alpine_installation
