@@ -330,11 +330,11 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   |
   | kernel is booting
 |-
-  | [[Qemu Nokia N900|Qemu N900]]
+  | [[Qemu Nokia N900|Qemu N900]]🔼
   | qemu-rx51
   |
 |-
-  | [[Raspberry Pi]] (inc. PiTab, Noodle Pi..)
+  | [[Raspberry Pi]] (inc. PiTab, Noodle Pi..)🔼
   | rpi
   | Should be able to boot by converting existing Alpine image
 |-
