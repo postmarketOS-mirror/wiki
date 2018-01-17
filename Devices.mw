@@ -127,15 +127,15 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | ouya-ouya
   | Y  || Y  || -  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  || -  ||  || -  || -  || - 
 |-
-  | style="white-space: nowrap;" | [[QEMU aarch64 (qemu-aarch64 )|QEMU aarch64]]
+  | style="white-space: nowrap;" | [[QEMU aarch64 (qemu-aarch64 )|QEMU aarch64]]🔼
   | style="white-space: nowrap;" | qemu-aarch64
   | -  || -  || -  || Y  || -  || Y  || P  || Y  ||  ||  || -  ||  || -  || -  || -  || -  || -  || - 
 |-
-  | style="white-space: nowrap;" | [[QEMU amd64 (qemu-amd64)|QEMU AMD64]]
+  | style="white-space: nowrap;" | [[QEMU amd64 (qemu-amd64)|QEMU AMD64]]🔼
   | style="white-space: nowrap;" | qemu-amd64
   | -  || -  || -  || Y  || -  || Y  || P  || Y  ||  ||  || -  ||  || -  || -  || -  || -  || -  || - 
 |-
-  | style="white-space: nowrap;" | [[QEMU ARM (qemu-vexpress)|QEMU ARM]]
+  | style="white-space: nowrap;" | [[QEMU ARM (qemu-vexpress)|QEMU ARM]]🔼
   | style="white-space: nowrap;" | qemu-vexpress
   | -  || -  || -  || Y  || -  || Y  || P  || Y  ||  ||  || -  ||  || -  || -  || -  || -  || -  || - 
 |-
