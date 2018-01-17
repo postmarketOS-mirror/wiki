@@ -310,10 +310,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | lg-h220
   |
 |-
-  | [[Motorola_Moto_G5_Plus(motorola-potter)|Motorola Moto G5 Plus]]
-  | motorola-potter
-  | Can boot through fastboot kernel boot, display blank, not enough space for boot partition, ssh, usb net works
-|-
   | [[Moto X 2014|Moto X 2014]]
   | motorola-x-2014
   |
