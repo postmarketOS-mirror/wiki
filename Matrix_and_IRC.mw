@@ -3,8 +3,10 @@ Please join our chat, so we can help you with using postmarketOS in real time. T
 == Matrix ==
 In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser to enter the channel.
 
-* [https://matrix.to/#/#postmarketos:disroot.org #postmarketos:disroot.org]
-* [https://matrix.to/#/#postmarketos-offtopic:disroot.org #postmarketos-offtopic:disroot.org]
+* [https://matrix.to/#/#postmarketos:disroot.org #postmarketos:disroot.org] (main channel)
+* [https://matrix.to/#/#postmarketos-lowlevel:disroot.org #postmarketos-lowlevel:disroot.org] (bootloader hacking, assembly etc.)
+* [https://matrix.to/#/#osk-sdl-dev:disroot.org #osk-sdl-dev:disroot.org] ([[osk-sdl]] support and development)
+* [https://matrix.to/#/#postmarketos-offtopic:disroot.org #postmarketos-offtopic:disroot.org] (other topics)
 
 After you register at any matrix site and join the channel, the offline history will be saved automatically. So, your questions can be answered even when you are offline!
 
@@ -12,11 +14,11 @@ After you register at any matrix site and join the channel, the offline history 
 
 == IRC ==
 
-The following two channels are hosted on freenode (mind the <code>##</code> for offtopic!):
+The following two channels are bridged to freenode (mind the <code>##</code> for offtopic!):
   #postmarketos
   ##postmarketos-offtopic
 
-== Other channels ==
+== Other discussion platforms ==
 
 * [https://reddit.com/r/postmarketOS Reddit] (we share photos/videos/blog posts of our development work there)
 * [https://github.com/postmarketOS/pmbootstrap/issues GitHub issues] (for discussing bugs and features)
