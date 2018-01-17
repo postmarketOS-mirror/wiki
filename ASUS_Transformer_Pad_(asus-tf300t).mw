@@ -21,10 +21,12 @@ None of this work has been merged upstream. Check out the work-in-progress [http
 
 * jonty-comp
 * Jasper (working on [[ASUS Transformer Pad Infinity]])
+* MartijnBraam
 
 == What works ==
 
 * Compiling CM13 kernel ([https://github.com/LineageOS/android_kernel_asus_tf300t GitHub])
+* Compiling 4.14-rc3 with tf300t specific patches
 * Flashing via Android recovery zip (Boot image included)
 * System boots
 * Most sensors/cameras/devices seem to be detected (e.g. accelerometer values can be read from <code>/sys</code> etc)
@@ -36,3 +38,8 @@ None of this work has been merged upstream. Check out the work-in-progress [http
 
 The framebuffer issue is an interesting one as it works without issue on CM13-based Android ROMs with the same kernel and defconfig.  Possible toolchain issue or patch needed for GCC6.
 Devices with a working framebuffer output modesetting information in <code>dmesg</code> after loading the tegradc driver, but the PMOS compiled kernel does not.  Common fixes including setting values in <code>/sys</code> have no effect yet.
+
+== Fastboot issue ==
+It seems like the bootloader doesn't handle flashing the boot and userdata partition correctly, the official firmware package flashes an "Android blob" to the staging partition with fastboot which triggers an flashing screen on the tablet which copies the data to the correct partitions.
+
+It looks like someone made a tool to generate the android blob files here: https://github.com/AndroidRoot/BlobTools
