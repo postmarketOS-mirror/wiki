@@ -323,11 +323,11 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   |
 |-
   | [[Nokia N9]]🔼
-  |
-  | Basic support has beed merged
+  | rm-696
+  | Basic support has been merged
 |-
   | [[Nokia N950]]🔼
-  |
+  | rm-680
   | kernel is booting
 |-
   | [[Qemu Nokia N900|Qemu N900]]🔼
