@@ -99,3 +99,6 @@ rm -rf initramfs lib/modules
 cd "$tmpdir"
 find . -print0 | busybox cpio --quiet -o -H newc | gzip -1 > initramfs-repackaged
 </syntaxhighlight>
+
+== How to merge kernel configs? ==
+The idea is, that we have a shared <code>linux-postmarketos-stable</code> package, which all mainlined devices use. Check [[Kernel_configuration#Automatically_merging_kernel_configuration]] for instructions on how to merge kernel configs somewhat efficiently with a script.
