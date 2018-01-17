@@ -17,6 +17,8 @@
 
 None of this work has been merged upstream. Check out the work-in-progress [https://github.com/jonty-comp/pmbootstrap/tree/device-asus-tf300t here] or contact jonty-comp on IRC.
 
+There is a rebased version of jonty-comp's branch on [https://github.com/postmarketOS/pmbootstrap/tree/device-asus-tf300t postmarketos/device-asus-tf300t]
+
 == Contributors ==
 
 * jonty-comp
