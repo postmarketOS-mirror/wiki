@@ -44,7 +44,7 @@ We currently only support installing and running pmos from the microsd card on t
 Getting it to work with emmc and 0xffff is harder to implement and has no real benefit since<br />
 the built in emmc is quite slow and fragile.
 
-# Init pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source>
+# Init pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source> Choose 'nokia-rx51' as target device.
 # Start the build process and install the completed image to a sdcard<source lang="shell">
 # Replace /dev/sdX with the device for your sdcard
 $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
