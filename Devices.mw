@@ -103,6 +103,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | motorola-osprey
   | Y  || Y  || Y  || P  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Motorola Moto G5 Plus(motorola-potter)|Moto G5 Plus]]
+  | style="white-space: nowrap;" | motorola-potter
+  | Y  || P ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Mozilla Flame (t2m-flame)|Mozilla Flame]]🔼
   | style="white-space: nowrap;" | t2m-flame
   | Y  || Y  || Y  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
