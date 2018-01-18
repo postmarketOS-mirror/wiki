@@ -336,7 +336,7 @@ Set this if your device needs an appended device tree. If you are unsure, use <c
 
 This is a small python script that will find kernel config thats enabled in one kernel config but not in the other. You can use it by running it against the kernel config file in pmbootstrap and a defconfig from an android tree:
 
-<source lang="shell">$ diffconfig.py config-postmarketos-mainline.armhf hammerhead_defconfig
+<source lang="shell-session">$ diffconfig.py config-postmarketos-mainline.armhf hammerhead_defconfig
 CONFIG_ZSWAP=y
 CONFIG_ZPOOL=y
 CONFIG_Z3FOLD=y
@@ -389,7 +389,6 @@ if __name__ == '__main__':
     for line in diff:
         print(line)
 </source>
-
 
 = References =
 
