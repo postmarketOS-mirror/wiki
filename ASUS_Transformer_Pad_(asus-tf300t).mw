@@ -41,6 +41,9 @@ There is a rebased version of jonty-comp's branch on [https://github.com/postmar
 The framebuffer issue is an interesting one as it works without issue on CM13-based Android ROMs with the same kernel and defconfig.  Possible toolchain issue or patch needed for GCC6.
 Devices with a working framebuffer output modesetting information in <code>dmesg</code> after loading the tegradc driver, but the PMOS compiled kernel does not.  Common fixes including setting values in <code>/sys</code> have no effect yet.
 
+== Unlocking ==
+The first step to do anything with the device is unlocking, with this device its done by sideloading the unlock apk from asus and clicking a few buttons in the app. The apk can be found on [https://www.asus.com/Tablets/ASUS_Transformer_Pad_TF300T/HelpDesk_Download/ the asus support page].
+
 == Fastboot issue ==
 It seems like the bootloader doesn't handle flashing the boot and userdata partition correctly, the official firmware package flashes an "Android blob" to the staging partition with fastboot which triggers an flashing screen on the tablet which copies the data to the correct partitions.
 
