@@ -14,9 +14,6 @@
 | display = 480x800
 | memory = 512 MB
 }}
-== NOTE ==
-
-This work has been pulled, but I'm new to git.  If I've done something wrong, contact CmdrWgls on IRC.
 
 == Contributors ==
 
@@ -37,6 +34,8 @@ What's been done:
 
 * device-htc-vision builds
 * linux-htc-vision builds (using [https://github.com/milaq/android_kernel_htc_vision milaq's kernel])
+
+Cmdrwgls created pull request {{github|810}} with his work. It remained unfinished, so it '''was merged into the [https://github.com/postmarketOS/pmbootstrap/tree/device-htc-vision device-htc-vision] branch for now'''. If you also own this device, it makes sense to continue from there (rebase the branch to master first, then try to build the kernel etc. See the porting guide and ask for all the help you need).
 
 == Next steps ==
 
