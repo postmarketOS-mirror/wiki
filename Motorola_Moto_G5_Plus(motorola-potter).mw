@@ -25,9 +25,10 @@
 * Boot Kernel through <code>pmbootstrap flasher boot</code>
 * USB internet
 * ssh
+* screen
 
 == What does not work ==
-* screen is blank
+* touch
 * kernel cannot be flashed due to running out of space
 
 == How to enter flash mode ==
