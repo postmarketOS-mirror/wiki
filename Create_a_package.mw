@@ -1,6 +1,36 @@
-Here is a practical approach on how to port packages from other Linux distributions to pmOS (because that is usually the fastest way). Feel free to extend this information, and to add other distributions.
+== Quick start ==
+Create a template for a new package called <code>mynewpackage</code> in <code>aports/main</code>:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap newapkbuild main mynewpackage
+[21:34:27] Create /home/user/code/pmbootstrap/aports/main/mynewpackage
+[21:34:27] Done
+</syntaxhighlight>
+
+We directly use <code>newapkbuild</code> from Alpine, which has lots of parameters to quickly customize the templates it generates:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap newapkbuild main -h
+newapkbuild 3.1.0-r4 - generate a new APKBUILD
+Usage: newapkbuild [-n NAME] [-d DESC] [-l LICENSE] [-u URL]
+       [-aCpy] [-s] [-cfh]
+       PKGNAME[-PKGVER]|SRCURL
+Options:
+  -n  Set package name to NAME
+  -d  Set package description (pkgdesc) to DESC
+  -l  Set package license to LICENSE
+  -u  Set package URL
+  -a  Create autotools package (use ./configure ...)
+  -C  Create CMake pakckage (Assume cmake/ is there)
+  -m  Create meson package (Assume meson.build is there)
+  -p  Create perl package (Assume Makefile.PL is there)
+  -y  Create python package (Assume setup.py is there)
+  -s  Use sourceforge source URL
+  -c  Copy a sample init.d, conf.d, and install script to new directory
+  -f  Force even if directory already exist
+  -h  Show this help
+</syntaxhighlight>
 
 == General information ==
+{{note|This section is hard to read, feel free to rewrite.}}
 
 * Please read [https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package#APKBUILD_variables.2Ffunctions this section] from our upstream friends wiki (''which we should also extend and improve'')
 * Please always package the latest version of a software (unless it is impossible because of software that depends on it, but try to avoid that!)
@@ -36,6 +66,7 @@ Special cases, where this is not so obvious:
 * <code>device-*</code> packages: This was not done consistently in the past, but it makes sense to update the <code>pkgver</code> when anything but the <code>APKBUILD</code> was changed. Because that is essentially the version of the software being packaged.
 
 == Porting packages from Arch Linux ==
+Arch Linux' <code>PKBUILD</code> format is similar to <code>APKBUILD</code> of Alpine. If you don't know how to package a new program, check out how Arch does it.
 === Find the package ===
 
 [https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches) appears.
