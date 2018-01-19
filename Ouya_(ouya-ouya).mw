@@ -24,13 +24,13 @@
 == What works ==
 * Ethernet
 * USB Keyboard/Mouse
-* XWayland/Weston
+* XWayland/Weston, XFCE
 
 == What does not work ==
-* Bluetooth (requires binaries, WIP)
-* Booting without pmbootstrap (WIP. waiting for osk-sdl to be mainlined)
-* Wifi (requires binaries, WIP)
-
+* Bluetooth (requires binaries that can be extracted from the original ROM. See notes)
+* Booting without pmbootstrap (WIP)
+* Wifi (requires binaries that can be extracted from the original ROM. See notes)
+ 
 == How to enter flash mode ==
 # Connect Ouya to PC
 # Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
@@ -38,13 +38,19 @@
 == Notes ==
 * Flashing a kernel directly to the Ouya should be avoided at all costs, as [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] A tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] allows us to run the postmarketOS kernel in a kexec method, meaning we never have to flash our kernel. Even if we perfected the kernel, we should still use this tool to encourage other projects surrounding the Ouya to implement this failsafe, and allow booting of different kernels for development and dual booting.
 * Using Ouya Boot Menu, it may be possible to retain the original Ouya android ROM (or any Android ROM you choose to flash) while still being able to flash postmarketOS. This would require renaming the kernel image to <code>kernelA1.img</code> while having device-ouya-ouya built to launch from an external USB drive. 
+* The Ouya uses a BCM4330 radio chip for wifi and bluetooth. Drivers for this chip is built into the linux mainline as of 3.3. The Ouya kernel we use runs 3.x, but I could not get wifi working. This would be the last step after osk-sdl to making this port usable.
+* OSK-SDL support is in the works by rendeko.
 
 == Installation ==
-'''Work in progress. Do not attempt for now.'''
+'''Work in progress. Only attempt for development.'''
 
 # Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] using fastboot.
-# Flash the system image to the Ouya using <code>./pmbootstrap.py flasher flash_system</code>
+# Follow the [[Porting to a new device]] guide to build the kernel and chroot using the [https://github.com/postmarketOS/pmbootstrap/tree/device-ouya-ouya device-ouya-ouya branch of pmbootstrap]. Follow up to "flashing"
+# Enter your Ouya into bootloader mode using the power button, a monitor, and Ouya BootMenu
+# Follow the [[Inspecting the initramfs]] guide to add a debug shell and boot into pmOS
 
 == Photos ==
 
 == Links ==
+* [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)]
+* [https://forum.xda-developers.com/showthread.php?t=2295645 CWM]
