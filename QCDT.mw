@@ -1,0 +1,35 @@
+Some Androids only accept [[Glossary#boot.img|boot.img]] files in the QCDT format, which means the [[Glossary#dtb|dtb]] is appended to the end of it (and not at the end of the kernel, as with most other Android devices).
+
+== Does my device need a QCDT boot.img file? ==
+Analyze a known working boot.img file with pmbootstrap to find out, if it has the QCDT format or not. You can get such a file from downloading a TWRP image (it is directly in the boot.img format!) or by downloading a full Android ROM for your device and extracting the boot.img file.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap bootimg_analyze /path/to/boot.img
+</syntaxhighlight>
+
+If this prints <code>deviceinfo_bootimg_qcdt="true"</code>, then you have a QCDT device.
+
+== Properly package a QCDT device ==
+The easiest way is using <code>pmbootstrap init</code> to generate a new device, and let it analyze the boot.img file in the process. It will adjust the device and linux package as necessary. But if you want to do it manually:
+* Set <code>deviceinfo_bootimg_qcdt="true"</code> in the [[deviceinfo]]
+* Adjust your <code>linux-</code> APKBUILD to generate the <code>/boot/dt.img</code> (look at other QCDT devices to see how it's done, grep for qcdt in aports)
+
+== Debugging ==
+* Hook up the [[serial UART]] and see what kind of debug output the bootloader provides
+* Repack the boot image with a working <code>dt.img</code> from another distribution (stock, Lineage, recovery, etc.)
+
+=== Repack procedure ===
+You need <code>mkbootimg</code> and <code>unpackbootimg</code> tools which are already packaged in pmbootstrap.
+
+<syntaxhighlight lang="shell-session">
+$ ./pmbootstrap build mkbootimg unpackbootimg
+$ ./unpackbootimg -i $SOMEDIR/boot.img-$vendor-$name -o pmos
+$ ./unpackbootimg -i $OTHERDIR/boot.img -o other
+$ cp other/boot.img-dt pmos/boot.img-$vendor-$name-dt
+$ ./mkbootimg -o boot.repack.img -r pmos/boot.img-$vendor-$name-
+</syntaxhighlight>
+You can also get these from https://github.com/efidroid/build/tree/master/tools
+
+== See also ==
+* [[dtbtool]]
+* {{github|323}} related discussion
+* {{github|356}} first implementation
