@@ -1,4 +1,4 @@
-Some Androids only accept [[Glossary#boot.img|boot.img]] files in the QCDT format, which means the [[Glossary#dtb|dtb]] is appended to the end of it (and not at the end of the kernel, as with most other Android devices).
+Some Androids only accept [[Glossary#boot.img|boot.img]] files in the '''QCDT''' format, which means the [[Glossary#dtb|dtb]] is appended to the end of it (and not at the end of the kernel, as with most other Android devices).
 
 == Does my device need a QCDT boot.img file? ==
 Analyze a known working boot.img file with pmbootstrap to find out, if it has the QCDT format or not. You can get such a file from downloading a TWRP image (it is directly in the boot.img format!) or by downloading a full Android ROM for your device and extracting the boot.img file.
