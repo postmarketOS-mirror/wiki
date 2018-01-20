@@ -2,4 +2,7 @@ The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-exist
 
 It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
 
+== See also ==
+* {{github|1137}} Testing out Hildon and XFCE4 on Raspberry Pi after converting the Alpine installation
+
 [[Category:Devices]]
