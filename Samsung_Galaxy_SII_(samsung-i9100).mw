@@ -33,6 +33,7 @@
 * Xfce
 
 === What does not work ===
+{{note|This device is [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 supported by Replicant]. With some more research we should be able to get most stuff running with their free software userland drivers.}}
 * Audio (requires an userspace driver, we can probably use [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update this free software implementation])
 * The rest (bluetooth, making calls, ...)
 * Auto resizing partitions during installation to device memory (probably)
