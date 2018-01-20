@@ -240,8 +240,8 @@ microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 ==== Audio ====
 * Yamaha MC1N2
 * The Android kernel exposes the alsa API.
-* But when you play with the volume sliders, nothing happens
-* /dev/snd/hwC0D0 implements hardware-specific controls (via ioctl) [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update this free software implementation] (check the link for an Android userspace driver)
+* But when you play with the volume sliders in alsamixer, nothing happens
+* /dev/snd/hwC0D0 implements hardware-specific controls (via ioctl) [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update] (check the link for a free software Android userspace driver)
 * We could write a daemon, that watches the alsa sound levels, and unmutes channels (speaker, headphones etc.) via hwC0D0 as necessary. (This will only work with the downstream kernel, the sound is probably not implemented in the upstream kernel at all?)
 
 === Photos ===
