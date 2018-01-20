@@ -33,7 +33,7 @@
 * Xfce
 
 === What does not work ===
-
+* Audio (requires an userspace driver, we can probably use [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update this free software implementation])
 * The rest (bluetooth, making calls, ...)
 * Auto resizing partitions during installation to device memory (probably)
 
