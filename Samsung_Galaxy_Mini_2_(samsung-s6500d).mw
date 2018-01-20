@@ -91,6 +91,8 @@ https://github.com/Halamix2/pmbootstrap/tree/device-samsung-s6500d
 == How to enter flash mode ==
 Press power button and hold home button and VOL-
 
+Alternatively, plug in microUSB plug with GND and ID pins connected through 300KΩ resistor. (so-called USB jig)
+
 == Installation ==
 For now see [[Installation_guide|Installation Guide]] and [[Porting_to_a_new_device#Flashing|Flashing on Porting to a new device]]
 
