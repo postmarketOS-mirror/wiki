@@ -45,7 +45,7 @@ $ ./pmbootstrap.py install --no-fde --android-recovery-zip</source>
 The device will take roughly 60 seconds to boot to the Weston environment.
 
 == Photos ==
-File:Nexus-10-weston.jpg
+|[[File:Nexus-10-weston.jpg|400x400px]]
 
 == Links ==
 [https://github.com/postmarketOS/pmbootstrap/pull/1138 Original pull request]
