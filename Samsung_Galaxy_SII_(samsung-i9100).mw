@@ -221,7 +221,6 @@ Samsung Exynos 4 Dual 45 nm (GT-I9100, SHW-M250S/K/L) [https://en.wikipedia.org/
 ARM Mali-400 MP4 (GT-I9100, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
 ==== WiFi / Bluetooth / FM radio ====
-
 Broadcom BCM4330 (SWB-B42) Bluetooth 4.0 Dual Band WLAN FM [https://gsmserver.com/item/ic-and-processors/wi-fi-ic-bcm4330-swb-b42-for-samsung-i9100-galaxy-s2-cell-phone-for-bluetooth-for-fm-radio-4709-002054/ source] [https://www.techinsights.com/reports-and-subscriptions/open-market-reports/Report-Profile/?ReportKey=7587 source]
 
 Driver? - https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
@@ -229,21 +228,22 @@ Driver? - https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
 Firmware? - https://packages.debian.org/sid/kernel/firmware-brcm80211
 
 ==== Memory ====
-
-1 GB RAM [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+1 GB RAM [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 
 ==== Storage ====
-
-16 GB or 32 GB flash memory [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+16 GB or 32 GB flash memory [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 
 ==== Removable storage ====
+microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 
-microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
+==== Modem ====
+* XMM6260 [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update]
+* aka "X-GOLD 626", and it's also used in Nexus 7 [https://ruedigergad.com/2013/01/09/wanted-nexus-7-3g-linux-driver/]
+* it seems to be supported by the mainline kernel (big questionmark here) [http://www.omappedia.org/wiki/Infineon_Modems]
 
 ==== TODO ====
 
 gps, sensors, camera...
-
 
 === Photos ===
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/telnet.jpg Initramfs asking for the password via telnet]
