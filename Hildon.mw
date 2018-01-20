@@ -36,6 +36,7 @@ reference: https://www.x.org/archive//X11R6.8.0/doc/fbdev.4.html
 In order to rotate the screen using xrandr, you need to edit a file and put xrandr -o right or xrandr -o left:
 
 <pre>
+sudo apk add xrandr
 sudo nano /etc/postmarketos-ui/xinitrc_hildon.sh
 </pre>
 <pre>
