@@ -1,0 +1,51 @@
+{{Infobox device
+| manufacturer = Google (Samsung)
+| name =  Nexus 10
+| codename = manta
+| image = File:Nexus-10.jpg
+| imagecaption = Google Nexus 10
+| releaseyear = 2012
+| originalsoftware = Android 4.2.2 on Linux 3.0
+| chipset = Samsung Exynos 5250
+| cpu = 1.7 GHz Dual-core Cortex-A15
+| gpu = Mali T-604
+| storage = 16/32 GB
+| display = 2560x1600 IPS
+| memory = 2 GB
+}}
+
+== Contributors ==
+* BakaOsaka
+
+== What works ==
+* Boot process
+* Telnet/SSH over USB
+* Screen
+* Weston
+* USB keyboard
+
+== What does not work ==
+* Everything else (Touch, Wi-Fi, Bluetooth...)
+
+== How to enter flash mode ==
+* Connect a USB cable
+* Power the device off
+* Hold power + volume down + volume up
+* fastboot should work when the green android appears on the screen
+
+== Installation ==
+When installing, I found it easiest to sideload a ZIP via ClockworkMod Recovery.
+# Build a suitable LineageOS recovery image:<source lang="shell">
+$ ./pmbootstrap.py init # samsung-manta
+$ ./pmbootstrap.py install --no-fde --android-recovery-zip</source>
+# Boot the device in to recovery, by toggling to "RECOVERY MODE" using the volume rocker.
+# Select "INSTALL ZIP" and then "SIDELOAD ZIP FROM ADB"
+# Run the standard sideload command from pmbootstrap:<source lang="shell">
+./pmbootstrap.py flasher --method adb sideload</source>
+The device will take roughly 60 seconds to boot to the Weston environment.
+
+== Photos ==
+File:Nexus-10-weston.jpg
+
+== Links ==
+[https://github.com/postmarketOS/pmbootstrap/pull/1138 Original pull request]
