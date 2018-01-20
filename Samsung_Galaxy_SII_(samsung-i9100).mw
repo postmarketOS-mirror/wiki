@@ -39,7 +39,6 @@
 * Auto resizing partitions during installation to device memory (probably)
 
 === How to enter flash mode ===
-
 * Connect a USB cable
 * Make sure, the device is powered off
 * Hold power + Home + volume down
@@ -150,21 +149,6 @@ The description is using the alternative flash method because there it did not w
 
 We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flash_methods]] for more information.
 
-=== Links ===
-
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9100 Device package]
-* [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat installation method]
-
-=== Photos ===
-
-* [https://ollieparanoid.github.io/img/2017-05-26/i9100/telnet.jpg Initramfs asking for the password via telnet]
-* [https://ollieparanoid.github.io/img/2017-05-26/i9100/filled.jpg Weston with various programs opened]
-* [https://ollieparanoid.github.io/img/2017-05-26/i9100/demos.jpg postmarketOS demo menu (XWayland)]
-* [https://ollieparanoid.github.io/img/2017-05-26/i9100/firefox.jpg Firefox (XWayland)]
-* [https://ollieparanoid.github.io/img/2017-05-26/i9100/smoke.jpg Weston-smoke demo]
-* [https://wiki.postmarketos.org/wiki/File:Samsung-d710.jpg Weston-smoke demo running on a d710]
-* [https://wiki.postmarketos.org/images/3/36/I9100-xfce.jpeg xfce-ui running on i9100]
-
 === Wifi ===
 
 - Create conf for wpa_supplicant
@@ -222,21 +206,21 @@ Accelerometer sensor data can read from following file
 localhost:~$ cat /sys/class/accelerometer/accelerometer/acc_file 
 </source>
 
-== Hardware specifications for i9100 ==
+=== Hardware specifications for i9100 ===
 
-=== SoC ===
+==== SoC ====
 
 Samsung Exynos 4 Dual 45 nm (GT-I9100, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
-=== CPU ===
+==== CPU ====
 
 1.2 GHz dual-core ARM Cortex-A9 (GT-I9100, GT-I9105, GT-I9100G, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
-=== GPU ===
+==== GPU ====
 
 ARM Mali-400 MP4 (GT-I9100, SHW-M250S/K/L) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
-=== WiFi / Bluetooth / FM radio ===
+==== WiFi / Bluetooth / FM radio ====
 
 Broadcom BCM4330 (SWB-B42) Bluetooth 4.0 Dual Band WLAN FM [https://gsmserver.com/item/ic-and-processors/wi-fi-ic-bcm4330-swb-b42-for-samsung-i9100-galaxy-s2-cell-phone-for-bluetooth-for-fm-radio-4709-002054/ source] [https://www.techinsights.com/reports-and-subscriptions/open-market-reports/Report-Profile/?ReportKey=7587 source]
 
@@ -244,22 +228,34 @@ Driver? - https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
 
 Firmware? - https://packages.debian.org/sid/kernel/firmware-brcm80211
 
-=== Memory ===
+==== Memory ====
 
 1 GB RAM [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
-=== Storage ===
+==== Storage ====
 
 16 GB or 32 GB flash memory [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
-=== Removable storage ===
+==== Removable storage ====
 
 microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II source]
 
-=== TODO ===
+==== TODO ====
 
 gps, sensors, camera...
+
+
+=== Photos ===
+* [https://ollieparanoid.github.io/img/2017-05-26/i9100/telnet.jpg Initramfs asking for the password via telnet]
+* [https://ollieparanoid.github.io/img/2017-05-26/i9100/filled.jpg Weston with various programs opened]
+* [https://ollieparanoid.github.io/img/2017-05-26/i9100/demos.jpg postmarketOS demo menu (XWayland)]
+* [https://ollieparanoid.github.io/img/2017-05-26/i9100/firefox.jpg Firefox (XWayland)]
+* [https://ollieparanoid.github.io/img/2017-05-26/i9100/smoke.jpg Weston-smoke demo]
+* [https://wiki.postmarketos.org/wiki/File:Samsung-d710.jpg Weston-smoke demo running on a d710]
+* [https://wiki.postmarketos.org/images/3/36/I9100-xfce.jpeg xfce-ui running on i9100]
 
 === See also ===
 * [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update Galaxy S2 Replicant port status update]
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki device page]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9100 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat installation method]
