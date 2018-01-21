@@ -358,6 +358,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-g800f
   |
 |-
+  | [[Samsung-g930f-(Samsung-Galaxy-S7)|Samsung Galaxy S7]]
+  | samsung-g930f
+  | Kernel compiles; Not tested
+|-
   | [[Samsung-S7562|Samsung Galaxy S Duos]]
   | samsung-s7562
   |
