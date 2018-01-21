@@ -1,4 +1,4 @@
-The <code>dtbtool</code> is needed to combine multiple <code>dtb</code> (device tree blob) files into one <code>dt.img</code> file, that can then be attached to the end of the <code>boot.img</code> for Android devices (<code>postmarketos-mkinitfs</code> does that).
+The <code>dtbtool</code> is needed to combine multiple <code>dtb</code> ([[dtb|device tree blob]]) files into one <code>dt.img</code> file, that can then be attached to the end of the <code>boot.img</code> for Android devices (<code>postmarketos-mkinitfs</code> does that).
 
 === Do I need it? ===
 You only need this tool if <code>pmbootstrap bootimg_analyze</code> on a known working boot.img file for your device outputs:
