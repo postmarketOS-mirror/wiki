@@ -1,4 +1,4 @@
-The device tree blob (or binary) is a file containing information about the board and its hardware.
+The Device Tree Blob (or binary) is a file containing information about the board and its hardware.
 
 
 == Why is it needed? ==
