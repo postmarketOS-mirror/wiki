@@ -115,8 +115,8 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | t2m-flame
   | Y  || Y  || Y  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
-  | style="white-space: nowrap;" | [[nokia-rx51 (Nokia N900)|Nokia N900]]🔼
-  | style="white-space: nowrap;" | nokia-rx51
+  | style="white-space: nowrap;" | [[nokia-n900 (Nokia N900)|Nokia N900]]🔼
+  | style="white-space: nowrap;" | nokia-n900
   | Y  || Y  || Y  || Y  || Y  || Y  ||  || Y  || P  ||  || Y  || Y  ||  ||  || P  || P  || P  || 
 |-
   | style="white:space: nowrap;" | [[OnePlus One (oneplus-bacon)|OnePlus One]]
@@ -327,11 +327,11 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   |
 |-
   | [[Nokia N9]]🔼
-  | nokia-rm696
+  | nokia-n9
   | Basic support has been merged
 |-
   | [[Nokia N950]]🔼
-  | nokia-rm680
+  | nokia-n950
   | kernel is booting
 |-
   | [[Qemu Nokia N900|Qemu N900]]🔼
