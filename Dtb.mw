@@ -22,7 +22,7 @@ Those are generally present in the kernel fork your device uses. Look in the <co
 When a board is mainlined, the corresponding dts file is mainlined as well (though those may be put in a separate repository in the future).
 
 == See also ==
-[[Dtbtool]], a tool to compile dtb in the [[qcdt]] format.
+[[Dtbtool]], a tool to compile dtb in the [[QCDT]] format.
 
 == Links ==
 
