@@ -24,7 +24,7 @@ There are closed source components (like firmware and bootloaders) in every phon
 
 ==== sboot (Samsung) ====
 * [https://hexdetective.blogspot.lt/2017/02/exploiting-android-s-boot-getting.html Arbitrary Code Exec in the Samsung Bootloader]
-* [https://www.youtube.com/watch?v=JrsJvlij6V4 34c3 - eMMc hacking, or: how I fixed long-dead Galaxy S3]
+* [https://www.youtube.com/watch?v=OY7OlY0OW2Q 34c3 - eMMc hacking, or: how I fixed long-dead Galaxy S3]
 
 === Cellular modems ===
 
