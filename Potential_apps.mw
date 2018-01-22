@@ -23,6 +23,14 @@ These are applications which already exist for Linux and could be reused in post
 |GPL2
 |Qt based application.  Made for desktop but also suitable for touchscreen use.
 |-
+|[https://github.com/KaidanIM/Kaidan Kaidan]
+|GPL3
+|Kirigami (Qt) based XMPP application.
+|-
+|[https://dot.kde.org/2014/11/21/calligra-gemini-added-calligra-suite Calligra Gemini][https://github.com/KDE/calligra/tree/master/gemini]
+|GPL2
+|Word processor and presentation application designed for touchscreen devices.  Part of the KDE Calligra suite.
+|-
 |[https://github.com/elementary/calendar Maya (calendar)]
 |GPL3
 |GTK3 based calendar application from Elementary OS.  Supports the CalDAV sync protocol.<br>Resizes well to a phone's aspect ratio although a few dialog boxes may not be accessible easily.
