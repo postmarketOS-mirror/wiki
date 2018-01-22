@@ -361,3 +361,4 @@ If the display and the touchscreen interface are working, then it's time to add 
 * Cellular modems still need lots of work, see the software stack we have proposed and started to implement in {{github|598}}.
 * [[User-Interfaces]]
 * [[Mainline kernel]]
+* [[Existing Alpine installation]]
