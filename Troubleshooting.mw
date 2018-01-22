@@ -329,3 +329,8 @@ Try to disable the "timestamp based rebuilds" feature in "pmbootstrap init" as a
 
 === During initramfs generation: "modprobe: WARNING: Module drm not found in directory /lib/modules/..." ===
 This means, that a module can not be put in an initramfs. When you are not using a mainline kernel, it is likely that there are no modules configured, but the code is built directly into the kernel. This means, it is expected and can be ignored.
+
+=== du: unrecognized option: summarize ===
+If you are using Alpine Linux and you encounter this issue, you will need to install the <code>coreutils</code> package.
+
+<code>sudo apk add coreutils</code>
