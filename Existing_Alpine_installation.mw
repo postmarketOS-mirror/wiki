@@ -11,3 +11,5 @@ To turn Alpine into postmarketOS:
 <pre>apk add -u postmarketos-base device-nokia-rx51 postmarketos-ui-hildon</pre>
  
 (Use <code>device-qemu-amd64</code> for a x86_64 installation, but this will also install a kernel -- maybe it makes sense to introduce a new "docker device" without any kernel, you could experiment with that if you want.)
+
+If you want to use the postmarketOS initramfs, make sure that you adjust the [[Partition-layout|partition labels]] accordingly.
