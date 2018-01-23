@@ -1,7 +1,8 @@
 === General partition layout (installation image) ===
+{{note|The postmarketOS initramfs detects the partitions by their partition label.}}
+<pre class="shell">/dev/installp1 # label: pmOS_boot (contains kernel, initramfs, initramfs-extra)
+/dev/installp2 # label: pmOS_root (encrypted, unless --no-fde is specified)</pre>
 
-<pre class="shell">/dev/installp1 # pmOS boot (contains kernel, initramfs, initramfs-extra)
-/dev/installp2 # pmOS root (encrypted, unless --no-fde is specified)</pre>
 === SD card ===
 
 This is the least awkward layout - both partitions from above get directly created on the SD card. If your device has a sdcard slot, it is recommended to use it. Because then you don't wear down the internal flash storage of the device and don't need to worry about the phone's internal storage partition layout.
