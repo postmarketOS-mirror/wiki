@@ -1,0 +1,21 @@
+{{Infobox device
+| manufacturer = Motorola
+| name = Moto X
+| codename = ghost
+| image = File:MotoX.png
+| imagecaption = MotoX
+| releaseyear = 2013
+| originalsoftware = Android on Linux 3.4
+| chipset = Qualcomm MSM8960dt Snapdragon S4
+| cpu = Dual-core Krait 200 1.7 GHz
+| gpu = Adreno 320
+| storage = 16/32 GB
+| display = 1280x720 (316 PPI) AMOLED
+| memory = 2 GB
+}}
+
+
+
+== Entering &quot;Fastboot mode&quot; ==
+
+Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
