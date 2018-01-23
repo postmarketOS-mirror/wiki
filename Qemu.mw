@@ -1,3 +1,4 @@
+{{note|Right now we use the QEMU version installed on the host system, but we want to change that: {{github|1158}}}}
 === Building and starting a QEMU image ===
 
 <pre class="shell">pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
