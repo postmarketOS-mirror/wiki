@@ -1,0 +1,38 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S
+| codename = i9000
+| image = File:Samsung-i9003-galaxy-s-sl-1.jpg
+| imagecaption = Samsung Galaxy S
+| releaseyear = 2010
+| originalsoftware = Android 2.3.6 (Gingerbread)
+| chipset = Samsung Exynos 3
+| cpu = 1.0 GHz Cortex-A8
+| gpu = PowerVR SGX 540
+| storage = 2-16 GB
+| display = 480x800
+| memory = 512 MB
+}}
+
+== Contributors ==
+* Nicknack
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+
+
+<!-- add more sections here as necessary, e.g. Wifi, ... -->
+
+
+== Photos ==
+
+== Links ==
