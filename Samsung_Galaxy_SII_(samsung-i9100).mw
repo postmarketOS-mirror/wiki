@@ -243,6 +243,7 @@ microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 * But when you play with the volume sliders in alsamixer, nothing happens
 * /dev/snd/hwC0D0 implements hardware-specific controls (via ioctl) [https://code.paulk.fr/article9/galaxy-s2-replicant-port-status-update] (check the link for a free software Android userspace driver)
 * We could write a daemon, that watches the alsa sound levels, and unmutes channels (speaker, headphones etc.) via hwC0D0 as necessary. (This will only work with the downstream kernel, the sound is probably not implemented in the upstream kernel at all?)
+* Maybe all this is overkill and the strategy from [[Audio]] works as well.
 
 === Photos ===
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/telnet.jpg Initramfs asking for the password via telnet]
