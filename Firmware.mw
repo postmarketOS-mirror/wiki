@@ -31,9 +31,9 @@ There are closed source components (like firmware and bootloaders) in every phon
 * [https://osmocom.org/projects/quectel-modems/wiki Qualcomm based cellular data modems with Linux]
 
 === Wi-Fi modems ===
-
-* [https://www.blackhat.com/us-17/briefings.html#broadpwn-remotely-compromising-android-and-ios-via-a-bug-in-broadcoms-wi-fi-chipsets Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets]
+* [https://www.blackhat.com/us-17/briefings.html#broadpwn-remotely-compromising-android-and-ios-via-a-bug-in-broadcoms-wi-fi-chipsets Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets] <small>(note: [http://boosterok.com/blog/broadpwn/ doesn't affect] necessarily older firmware/chips versions)</small>
 * [https://github.com/seemoo-lab/nexmon nexmon]: "Firmware Patching Framework for Broadcom/Cypress WiFi Chips that enables Monitor Mode, Frame Injection and much more"
+* Please be careful "mainline" linux-firmware brcm blobs are [https://bugzilla.kernel.org/show_bug.cgi?id=196541 severely outdated]. Make sure to check [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware Google's tree] if handling such hardware.
 
 == Security risks ==
 
