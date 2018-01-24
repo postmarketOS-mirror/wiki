@@ -360,5 +360,6 @@ If the display and the touchscreen interface are working, then it's time to add 
 * [[WiFi]] (works on many devices now, but the guide needs some work, please expand it and look into the <code>aports</code> folder how it works for other devices and ask in the chat)
 * Cellular modems still need lots of work, see the software stack we have proposed and started to implement in {{github|598}}.
 * [[User-Interfaces]]
+* [[Audio]]
 * [[Mainline kernel]]
 * [[Existing Alpine installation]]
