@@ -2,6 +2,17 @@ The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-exist
 
 It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
 
+== postmarketOS device package ==
+{{note|We'd be happy if you own a Raspberry Pi and want to integrate it properly. Let us know in the [[Matrix_and_IRC|chat]] if you need any help!}}
+As of now, there is no device package, only the existing Alpine installation has been converted. But it should be not that hard to do. Rough notes on how it should be possible:
+* <code>pmbootstrap init</code>, create a new device aport
+* delete the generated aports/device/linux-* folder (check with <code>git status</code>)
+* change the device APKBUILD to use Alpine's raspberry pi kernel instead
+* add a new [[deviceinfo]] option for the boot partition type (default is ext2 as we do it now, for the pi it needs to be fat)
+* adjust pmbootstrap code to use that variable
+* test the installation with an sd card
+* make a pull request
+
 == See also ==
 * {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
 
