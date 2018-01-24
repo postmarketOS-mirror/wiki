@@ -33,6 +33,7 @@
 
 === What does not work ===
 * Audio, bluetooth, modem, ...
+* MHL (Video-out)
 * See "Hardware specifications" for ideas how to get them working.
 * Auto resizing partitions during installation to device memory (probably)
 
@@ -221,7 +222,7 @@ Broadcom BCM4330 (SWB-B42) Bluetooth 4.0 Dual Band WLAN FM [https://gsmserver.co
 
 Driver? - https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
 
-Firmware? - https://packages.debian.org/sid/kernel/firmware-brcm80211
+Firmware - https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware/bcm4330/
 
 ==== Memory ====
 1 GB RAM [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
@@ -245,6 +246,12 @@ microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 * We could write a daemon, that watches the alsa sound levels, and unmutes channels (speaker, headphones etc.) via hwC0D0 as necessary. (This will only work with the downstream kernel, the sound is probably not implemented in the upstream kernel at all?)
 * Maybe all this is overkill and the strategy from [[Audio]] works as well.
 
+==== MHL ====
+* Fairchild FSA3200UMX switch [https://forum.xda-developers.com/showthread.php?t=1316501&page=2#post25615680]
+* Maxim MAX8997 PMIC [https://forum.xda-developers.com/showthread.php?t=1316501&page=2#post25615680]
+* Silicon Image 9244 transmitter [https://forum.xda-developers.com/showthread.php?t=1316501&page=2#post25615680]
+* [https://forum.xda-developers.com/showpost.php?p=74099043&postcount=4 Should be all supported] to a certain extent in mainline 4.15 kernel <small><small>(of course the device is still stuck to 3.0 for the time being)</small></small>
+
 === Photos ===
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/telnet.jpg Initramfs asking for the password via telnet]
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/filled.jpg Weston with various programs opened]
@@ -259,4 +266,3 @@ microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki device page]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9100 Device package]
 * [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat installation method]
-* [https://forum.xda-developers.com/showpost.php?s=d75c0dfe2185eaaa1a05553709a847f9&p=74099043&postcount=4 MHL driver related post]
