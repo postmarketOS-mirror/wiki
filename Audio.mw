@@ -1,5 +1,5 @@
 {{note|If you're trying out anything and learn something that would have helped, please extend this wiki page.}}
-== Audio on Android devices ==
+== alsactl method ==
 Cascardo reported having success with the following method on Debian, this should work for postmarketOS as well:
 <blockquote>
 I ran a debian chroot on a cyanogenmod, set the volume up, then ran alsactl save on the chroot. booted into debian, then after alsactl restore was run, I had audio working
