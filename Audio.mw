@@ -8,3 +8,6 @@ so, in summary, it's hard to know which mixer settings will make it work, so my 
 </blockquote>
 
 This method may work for non-Android devices as well, as long as you see an audio device in <code>alsamixer</code>. Just boot the normal OS, save the volume settings somehow, then restore them.
+
+== See also ==
+* [https://arunraghavan.net/2016/01/audio-devices-and-configuration/  How to convert Android Audio configurations to alsa/pulseaudio]
