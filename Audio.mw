@@ -1,0 +1,9 @@
+== Audio on Android devices ==
+Cascardo reported having success with the following method on Debian, this should work for postmarketOS as well:
+<blockquote>
+I ran a debian chroot on a cyanogenmod, set the volume up, then ran alsactl save on the chroot. booted into debian, then after alsactl restore was run, I had audio working
+
+so, in summary, it's hard to know which mixer settings will make it work, so my strategy was running some android stack that correctly set the mixer, then saving the state with a chroot or any other tool that would allow you to save, copy and restore that state later on a gnu stack
+</blockquote>
+
+This method may work for non-Android devices as well, as long as you see an audio device in <code>alsamixer</code>. Just boot the normal OS, save the volume settings somehow, then restore them.
