@@ -15,5 +15,6 @@ As of now, there is no device package, only the existing Alpine installation has
 
 == See also ==
 * {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
+* [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
 
 [[Category:Devices]]
