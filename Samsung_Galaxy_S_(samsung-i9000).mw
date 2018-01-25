@@ -57,21 +57,31 @@ Flashing to device memory should be possible using [https://github.com/postmarke
 
 - Build image (on your computer) and prepare the installation as usual
 
+  $ pmbootstrap init
+  $ pmbootstrap build device-samsung-i9000 --arch=armhf
+  $ pmbootstrap install --no-fde
+
 -- Set phone to ODIN mode
 
 -- Set image for NETCAT flash method
 
-  $ ./pmbootstrap.py initfs hook_add debug-shell
+  $ pmbootstrap initfs hook_add debug-shell
 
 -- Flash Kernel and Recovery (phone will reboot to screen "boot partition not found")
 
-  $ ./pmbootstrap.py flasher flash_kernel
+  $ pmbootstrap flasher flash_kernel
 
 -- Check USB network connection to phone
 
   ping 172.16.42.1
 
 (if it does not ping, try replugging usb cable few times)
+
+-- If USB network connection is still not up:
+'' check for correct link with ip a''
+
+  $ sudo ip l set enp0s20u2 address 12:12:12:12:12:12
+  $ sudo dhclient -v enp0s20u2
 
 -- Connect to phone with telnet
 
