@@ -106,6 +106,24 @@ Flashing to device memory should be possible using [https://github.com/postmarke
 
 -- Close both nc with CTRL+C when transfer finishes and reboot the phone with power button
 
+=== Wifi ===
+
+- Create conf for wpa_supplicant
+
+  $ wpa_passphrase "SSID" "password" > wifi
+
+Note : If you are connecting to a hidden wireless network, make sure to add line "scan_ssid=1" after the ssid line in your generated conf file
+
+- Connect to wifi AP
+
+  $ sudo wpa_supplicant -i wlan0 -c wifi &
+
+- Get ip address from dhcp server (in another terminal)
+
+  $ sudo udhcpc -i wlan0
+
+To set wifi connection to start automatically on boot, please refer here [[wifi]]
+
 == Photos ==
 
 == Links ==
