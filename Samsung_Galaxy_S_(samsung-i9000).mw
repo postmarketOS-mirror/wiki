@@ -26,6 +26,7 @@
 * ☑ Kernel compilation
 * ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
 * ☐ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Flash System (<code>netcat</code>)
 * ☑ Initramfs boot
 * ☑ USB Network
 * ☑ Framebuffer graphics (Splash screens)
