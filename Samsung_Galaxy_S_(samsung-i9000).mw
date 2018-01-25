@@ -29,11 +29,11 @@
 * ☑ Initramfs boot
 * ☑ USB Network
 * ☑ Framebuffer graphics (Splash screens)
-* ☐ SSH Connectivity
-* ☐ Weston on framebuffer
-* ☐ Touchscreen
+* ☑ SSH Connectivity
+* ☑ Weston on framebuffer
+* ☑ Touchscreen
 * ☐ Xwayland
-* ☐ Wifi
+* ☐ Wifi (partial)
 * ☐ Audio playback
 
 == What does not work ==
