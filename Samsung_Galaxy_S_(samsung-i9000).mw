@@ -50,6 +50,52 @@
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
 
 
+==== netcat method ====
+Flashing to device memory should be possible using [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)] and [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_SII_(samsung-i9100) guide from Galaxy S II].
+
+===== Step by step guide for Flashing to device memory =====
+
+- Build image (on your computer) and prepare the installation as usual
+
+-- Set phone to ODIN mode
+
+-- Set image for NETCAT flash method
+
+  $ ./pmbootstrap.py initfs hook_add debug-shell
+
+-- Flash Kernel and Recovery (phone will reboot to screen "boot partition not found")
+
+  $ ./pmbootstrap.py flasher flash_kernel
+
+-- Check USB network connection to phone
+
+  ping 172.16.42.1
+
+(if it does not ping, try replugging usb cable few times)
+
+-- Connect to phone with telnet
+
+  $ telnet 172.16.42.1
+
+-- Start netcat to listen for image (on the phone)
+''/dev/mmcblk0p2 should be FACTORYFS partition you check by running fdisk -l /dev/mmcblk0''
+
+  / # nc -v -l -p 60000 > /dev/mmcblk0p2
+
+-- Switch to pmboostrap chroot (on the computer in other terminal)
+
+  $ ./pmbootstrap.py chroot --suffix native
+
+-- Install pv (in the chroot)
+
+  / # apk add pv
+
+-- Send image from computer to netcat (on the computer)
+
+  / # pv /home/pmos/rootfs/samsung-i9000.img | nc 172.16.42.1 60000
+
+-- Close both nc with CTRL+C when transfer finishes and reboot the phone with power button
+
 == Photos ==
 
 == Links ==
