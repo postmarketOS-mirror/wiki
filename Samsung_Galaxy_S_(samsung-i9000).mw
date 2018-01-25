@@ -46,9 +46,9 @@
 
 == Installation ==
 
+=== Boot process ===
 
-<!-- add more sections here as necessary, e.g. Wifi, ... -->
-
+We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flash_methods]] for more information.
 
 ==== netcat method ====
 Flashing to device memory should be possible using [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)] and [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_SII_(samsung-i9100) guide from Galaxy S II].
