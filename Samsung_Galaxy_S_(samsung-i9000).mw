@@ -45,7 +45,11 @@ device tree
 
 * [https://github.com/LineageOS/android_device_samsung_galaxysmtd LineageOS device tree]
 
-Kernels
+Current kernel
+
+* [https://github.com/xc-racer99/android_kernel_samsung_aries/tree/aosp-7.1-non-ubi ASOP 3.0.101]
+
+Alternative kernels
 
 * [https://github.com/LineageOS/android_kernel_samsung_aries LineageOS 2.6.35 and 3.0.8]
 
