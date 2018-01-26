@@ -43,7 +43,7 @@ Once you're in fastboot by holding down vol down and power, flashing it is as fo
 
 <source lang="bash">
 $ pmbootstrap init
-$ pmbootstrap install --no-fda
+$ pmbootstrap install --no-fde
 $ pmbootstrap flasher flash_system
 $ pmbootstrap flasher boot 
 </source>
