@@ -16,7 +16,7 @@ $ echo 0 0 > /sys/class/graphics/fb0/pan
 
 == MSM framebuffer doesn't work ==
 
-We found out that removing the 3D driver support makes the MSM framebuffer. See [https://github.com/postmarketOS/pmbootstrap/pull/66 #66].
+We found out that removing the 3D driver support makes the MSM framebuffer work. See [https://github.com/postmarketOS/pmbootstrap/pull/66 #66].
 
 <pre>CONFIG_MSM_KGSL=n</pre>
 
