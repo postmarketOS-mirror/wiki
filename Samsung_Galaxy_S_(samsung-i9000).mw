@@ -148,6 +148,10 @@ Alternative kernels
 
 * [https://github.com/xc-racer99/android_kernel_samsung_aries ASOP+UBIFS 2.6.35, 3.0.8, 3.0.86, and 3.0.89]
 
+Firmware files
+
+* [https://github.com/TheMuppets/proprietary_vendor_samsung/tree/cm-10.1/aries-common/proprietary vendor files]
+
 Replicant
 
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxySI9000 specification]
