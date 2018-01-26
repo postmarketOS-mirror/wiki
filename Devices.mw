@@ -364,7 +364,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Samsung_Galaxy_S_(samsung-i9000)|Samsung Galaxy S]]
   | samsung-i9000
-  | Kernel compiles; flashing and booting are to be tested soon. 
+  | Kernel compiles & boots; framebuffer, touchscreen and wifi (partial) working 
 |-
   | [[Samsung_Galaxy_S5_(samsung-klte)|Samsung Galaxy S5]]
   | samsung-klte
