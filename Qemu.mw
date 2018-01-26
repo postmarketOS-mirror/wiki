@@ -11,13 +11,13 @@ The <code>--image-size=2G</code> parameter will increase the image size to 2GB, 
 === Qemu on Debian stretch ===
 
 Qemu on Debian does not include SDL-support by default. To use pmbootstrap on Debian you have to do the following:
-# Ensure that /etc/apt/sources.list contains a deb-src line for your distribution.
-# <code>apt-get source qemu</code> (get the source code for the Debian package)
-# <code>cd qemu-*</code>
-# In debian/rules change common_configure_opts such that the line <code>--extra-ldflags="$(LDFLAGS) -Wl,--as-needed" \</code> to <code>--extra-ldflags="$(LDFLAGS) -Wl,--as-needed,-rpath-link,/lib/x86_64-linux-gnu" \</code> and add <code>"--enable-sdl --with-sdlabi=2.0 \</code> as the following line.
-# <code>apt-get build-dep qemu</code> (get build dependencies for qemu)
-# <code>fakeroot debian/rules binary</code> (compile the package)
-# Install the appropriate Debian packages which have been created in ..
+# Ensure that /etc/apt/sources.list contains a deb-src line for Debian buster or later.
+# <code>sudo apt-get build-dep libvirglrenderer-dev/buster</code> (install build dependencies for libvirglrenderer)
+# <code>fakeroot apt-get -b source libvirglrenderer-dev/buster</code> (download and build libvirglrenderer)
+# <code>sudo dpkg -i libvirglrenderer0_0.6.0-2_amd64.deb libvirglrenderer-dev_0.6.0-2_amd64.deb</code> (install it)
+# <code>sudo apt-get build-dep qemu/buster</code>
+# <code>fakeroot apt-get -b source qemu/buster</code>
+# Install the appropriate qemu Debian packages which have been created in the current directory.
 
 === See also ===
 
