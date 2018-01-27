@@ -10,7 +10,7 @@ That package is <code>linux-postmarketos-stable</code>. For devices, which are i
 To make the kernel work with multiple devices, it no longer appends the <code>dtb</code> file to the kernel image. Instead, it puts all <code>dtb</code> files for the current architecture in <code>/usr/share/dtb</code>. The <code>postmarketos-mkinitfs</code> package appends the <code>dtb</code> file defined in the [[deviceinfo]] to the linux image in the boot partition.
 
 == Device tree source (ARM architecture) ==
-To make your device boot, you will need a device tree source (<code>dts</code>) file (which will get compiled to a <code>dtb</code> mentioned above). Check the <code>arch/arm/boot/dts</code> folder in the kernel source code for relevant files ([http://elixir.free-electrons.com/linux/latest/source/arch/arm/boot/dts browse online]) with your device's codename. The general file naming is <code>$chipset_vendor-$chipset-$vendor-$codename.dts</code>.
+To make your device boot, you will need a device tree source (<code>dts</code>) file (which will get compiled to a <code>dtb</code> mentioned above). Check the <code>arch/arm/boot/dts</code> (replace <code>arm</code> with your architecture) folder in the kernel source code for relevant files ([http://elixir.free-electrons.com/linux/latest/source/arch/arm/boot/dts browse online]) with your device's codename. The general file naming is <code>$chipset_vendor-$chipset-$vendor-$codename.dts</code>.
 
 Examples:
 * <code>qcom-msm8974-lge-nexus5-hammerhead.dts</code>
