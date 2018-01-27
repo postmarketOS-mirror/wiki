@@ -26,7 +26,7 @@
 
 * Flashing (needs bootloader patch)
 * Booting
-* Screen (needs the msm framebuffer hack)
+* Screen (needs the msm framebuffer hack, but [https://github.com/postmarketOS/pmbootstrap/issues/604 #604] is blocking the packaged version)
 * Touchscreen
 * USB networking
 * USB OTG
