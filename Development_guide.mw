@@ -1,5 +1,4 @@
 == Tips ==
-
 If happens often that we commit changes and then we realize that we forgot to regenerate APKBUILD checksums. This is noticed by Travis ([https://travis-ci.org/postmarketOS/pmbootstrap/builds/261056579 example]) but you might want to avoid it.
 
 You can install the following git hook that is run every time before you commit.
@@ -35,9 +34,7 @@ index 99b811b..c4cee6c 100644
 After that, simply do <code>git commit -a --amend -n</code> (<code>-n</code> is necessary so that this time the hook is not triggered).
 
 == Code ==
-
 === pmb.helpers.run ===
-
 Use <code>pmb.helpers.run.root()</code> and <code>pmb.helpers.run.user()</code> instead of <code>subprocess</code> because these logs to the log file.
 
 For security reasons, you cannot write files by redirecting the output of the <code>echo</code> command using <code>pmb.helpers.run</code> functions. The following call will never work as you would expect
@@ -51,5 +48,7 @@ pmb.chroot.root(args, [&quot;mv&quot;, &quot;/tmp/somefile&quot;, &quot;/etc/som
 If you need to redirect the input instead, another solution is writing a bash script to a file and then executing it as in [https://github.com/postmarketOS/pmbootstrap/blob/1c13ca4fd9e32952a8e559987f82cd0925cddee9/pmb/chroot/initfs.py#L66-L76 pmb/chroot/initfs.py]
 
 === pmb.install ===
-
 Whenever you change the installation process, also adjustt the recovery zip installer (which performs a good part of the installation procedure directly on the Android device with a shell script).
+
+== See also ==
+* [[Testsuite]]
