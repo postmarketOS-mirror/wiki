@@ -1,0 +1,9 @@
+All testing related code is in the <code>test</code> folder in the <code>pmbootstrap</code> repository. We use continuous integration to execute the testsuite for every pull request (see [https://github.com/postmarketOS/pmbootstrap/blob/master/.travis.yml .travis.yml]).
+
+== Requirements ==
+* GNU grep (Alpine: <code>apk add grep</code>)
+* [https://shellcheck.net/ Shellcheck] ([https://bugs.alpinelinux.org/issues/7105 not packaged for Alpine yet])
+* Python programs (these can be installed via <code>pip</code> if your distribution does not have them packaged):
+** <code>pytest</code>
+** <code>pytest-cov</code>
+** <code>flake8</code>
