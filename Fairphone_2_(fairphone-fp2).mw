@@ -42,11 +42,11 @@ Hold vol-down while booting the device. The splash screen doesn't indicate, that
 
 == Installation ==
 
-As mentioned in [[#Installation]], the bootloader doesn't current support flashing images generated with the "img2simg" tool. It needs the patch [https://github.com/z3ntu/android_kernel_lk_fairphone_FP2/commit/0255581a47b96b8b0b3d7c5f0336d5f6bef8f2ad "app: aboot: Add support for CHUNK_FILL type for sparse image"] to work. This patch should be included in a future release from Fairphone. Contact @z3ntu to get instructions on how to patch the bootloader.
+A more-or-less guide is available in the [https://forum.fairphone.com/t/postmarketos-ten-years-support/32279/10?u=z3ntu Fairphone Forum].
+
+Older bootloaders do not support flashing images generated with the "img2simg" tool. It needs the patch [https://github.com/z3ntu/android_kernel_lk_fairphone_FP2/commit/0255581a47b96b8b0b3d7c5f0336d5f6bef8f2ad "app: aboot: Add support for CHUNK_FILL type for sparse image"] to work. This patch is included since the 18.01.1 release from Fairphone. See the [https://forum.fairphone.com/t/postmarketos-ten-years-support/32279/10?u=z3ntu Fairphone Forum] where @z3ntu also provides instructions on how to patch the bootloader.
 
 Installation procedure is the same as with most other devices and isn't special for this phone.
-
-A more-or-less guide is available in the [https://forum.fairphone.com/t/postmarketos-ten-years-support/32279/10?u=z3ntu Fairphone Forum].
 
 == Photos ==
 
