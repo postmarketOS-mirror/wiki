@@ -33,7 +33,9 @@
 == How to enter flash mode ==
 '''Fastboot''': Hold down POWER and VOL DOWN. Use volume buttons to navigate to Fastboot and press power.
 
-
 == Installation ==
 '''(Fastboot)'''
 Fastboot is the only tested method
+
+== See also ==
+* {{github|1145}} Initial pull request
