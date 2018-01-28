@@ -16,7 +16,7 @@ To rebuild the initramfs, run <code>mkinitfs</code> inside the chroot with the r
 * <code>pmbootstrap</code> parses <code>APKINDEX</code> and <code>APKBUILD</code> files on its own.
 * <code>APKINDEX</code> parsing is considered to be pretty good (because the format is dead simple!)
 * <code>APKBUILD</code> parsing would require a shell to be done perfectly (which would in turn kill performance). The way it is implemented right now, is that the variables we care about are hardcoded inside the <code>pbm/config/__config.py</code> or if not possible otherwise directly in <code>pmb/parse/apkbuild.py</code>. That is really fast and works for all packages we care about. If it breaks somewhere, it should be easy to patch. See {{github|351}} for a better implementation.
-* <code>pmbootstrap</code> does not remove build dependencies after a build is done. This is for performance reasons - if you want a clean start, run <code>pmbootstrap zap</code>.
+* <code>pmbootstrap</code> does not remove build dependencies after a build is done (except when using <code>--strict</code>). This is for performance reasons - if you want a clean start, run <code>pmbootstrap zap</code>.
 * <code>pmbootstrap</code> has a hack right now, that <code>gzip</code> always uses weak compression (also for speed)
 
 === Cross-compile types ===
