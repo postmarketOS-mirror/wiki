@@ -9,7 +9,7 @@ First of all, make sure the following options are configured as you'll probably 
 <pre>CONFIG_DEVTMPFS=y
 CONFIG_VT=y
 CONFIG_DM_CRYPT=y</pre>
-Note: <code>CONFIG_DEVTMPFS_MOUNT</code> is '''not''' needed but it doesn't hurt.
+Note: <code>CONFIG_DEVTMPFS_MOUNT</code> should '''not''' be set.
 
 Also, we are compiling kernels using gcc6, which probably didn't exist when your manufacturers released the kernel sources for your device. You need the file [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-lg-hammerhead/compiler-gcc6.h compiler-gcc6.h]. In your APKBUILD [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-motorola-titan/APKBUILD#L37 add it to source] and [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-motorola-titan/APKBUILD#L75-L76 copy it to the right location].
 
