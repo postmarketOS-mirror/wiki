@@ -358,6 +358,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-t679
   | Kernel compiles; flashing and booting are to be tested soon. 
 |-
+  | [[Samsung Galaxy Ace i (samsung-s5830i)|Samsung Galaxy Ace i]]
+  | samsung-s5830i
+  | Kernel compiles, haven't tried flashing yet.
+|-
   | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II X]]
   | samsung-kylessopen
   | Kernel compiles, flashing works. Does not boot.
