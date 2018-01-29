@@ -3,8 +3,8 @@
 | manufacturer = Samsung
 | name =  Samsung Galaxy Ace i
 | codename = s5830i
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:Samsung-S5830i.jpg
+| imagecaption = S5830i in recovery mode
 | releaseyear = 2011
 | originalsoftware = Android 2.3
 | chipset = Broadcom BCM21553
@@ -30,6 +30,8 @@
 
 == How to enter flash mode ==
 
+Power + Volume up + Home
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
@@ -41,3 +43,5 @@ Link to related GitHub issues or pull requests like the following (replace CHANG
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+
+* [https://www.gsmarena.com/samsung_galaxy_ace_s5830i-4664.php Specs on GSMArena]
