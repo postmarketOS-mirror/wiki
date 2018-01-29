@@ -1,0 +1,43 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy Ace i
+| codename = s5830i
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2011
+| originalsoftware = Android 2.3
+| chipset = Broadcom BCM21553
+| cpu = 
+| gpu = VideoCore IV
+| storage = 158 MB
+| display = 320 x 480
+| memory = 
+}}
+
+== Contributors ==
+* takluyver
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+* Kernel compiles (https://github.com/takluyver/pmbootstrap/tree/samsung-s5830i )
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
