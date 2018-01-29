@@ -1,6 +1,8 @@
 {{Infobox device
+| image = File:T3-weston.jpg
 | manufacturer = Sony
 | name = Xperia T3
+| imagecaption = Sony Xperia T3 running Weston
 | codename = seagull
 | releaseyear = 2014
 | originalsoftware = Android 4.4.4 on Linux 3.4.0
@@ -22,12 +24,20 @@
 == What works ==
 * Flash System
 * Flash kernel
+* USB Network
+* Screen
+* Touch
 
 == What does not work ==
-* screen is blank
-* no network
+* no Wifi/GSM
 * unknown UART pinout
 (so basically we can't be sure that it boots, but it seems to stay powered on)
+
+== What has not been tested ==
+* Compass, accelerometer, gyroscope, GPS, light sensor
+* Bluetooth, NFC
+* Camera
+* Audio
 
 == How to enter flash mode ==
 * Power off the phone
@@ -39,6 +49,9 @@
 Since you can't remove the battery without opening the phone, you can do the following instead:
 * Long press volume up + power button
 * press the "off" button behind the SIM/SD card cover with a pin. This breaks the battery connection, so USB needs to be unplugged as well.
+
+== Misc ==
+The device shares the <code>yukon</code> platform with other Xperia devices, such as the Xperia E3 (Flamingo), M2 (Eagle) and T2 Ultra (Tianchi). As such, the kernel likely works on all of these.
 
 == Links ==
 
