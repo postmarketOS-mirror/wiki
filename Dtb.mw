@@ -27,4 +27,5 @@ When a board is mainlined, the corresponding dts file is mainlined as well (thou
 == Links ==
 
 [http://www.informit.com/articles/article.aspx?p=1647051&seqNum=5]
+
 [https://github.com/torvalds/linux/blob/master/Documentation/arm/Booting Linux documentation on the ARM boot process]
