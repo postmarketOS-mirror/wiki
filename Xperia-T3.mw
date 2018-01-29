@@ -31,7 +31,6 @@
 == What does not work ==
 * no Wifi/GSM
 * unknown UART pinout
-(so basically we can't be sure that it boots, but it seems to stay powered on)
 
 == What has not been tested ==
 * Compass, accelerometer, gyroscope, GPS, light sensor
