@@ -19,6 +19,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   |style="white-space: nowrap;" | asus-tf101
   |    ||    ||  || Y  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  || -  || - 
 |-
+  |style="white-space: nowrap;" | [[Asus Zenfone 5 (asus-t00f)|ASUS Zenfone 5]]
+  |style="white-space: nowrap;" | asus-t00f
+  | Y  ||    || Y  || Y  ||   ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||   ||  
+|-
   | style="white-space: nowrap;" | [[Fairphone 2 (fairphone-fp2)|Fairphone 2]]
   | style="white-space: nowrap;" | fairphone-fp2
   | Y  || Y  || Y  || Y  || Y  || Y  ||  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
