@@ -27,7 +27,7 @@
 * USB Network
 * Screen
 * Touch (<code>/dev/input/event0</code>)
-* Flashlight (<code>/sys/devices/qcom,camera-led-flash.74/leds/torch-light/brightness</code>
+* Flashlight (<code>/sys/devices/qcom,camera-led-flash.74/leds/torch-light/brightness</code>)
 
 == What does not work ==
 * no Wifi/GSM
