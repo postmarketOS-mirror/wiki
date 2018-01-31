@@ -1,0 +1,29 @@
+Android devices usually have a recovery partition, where another boot.img file can be flashed. It contains another kernel, and an extra initramfs, which is basically the whole recovery system. TWRP is the most popular recovery system, and before that CWM was most popular.
+
+== Starting postmarketOS initramfs via adb ==
+<syntaxhighlight lang="shell">
+adb push ~/.local/var/pmbootstrap/chroot_rootfs_samsung-klte/boot/initramfs-samsung-klte /tmp/initramfs.cpio.gz
+adb shell "mkdir -p /tmp/usr/bin/"
+adb push ~/.local/var/pmbootstrap/chroot_rootfs_samsung-klte/usr/bin/strace /tmp/usr/bin/
+adb push ~/.local/var/pmbootstrap/chroot_rootfs_samsung-klte/usr/bin/hello-world /tmp/usr/bin/
+adb shell
+
+cd /tmp
+gzip -d initramfs.cpio.gz
+cpio -i < initramfs.cpio
+
+umount /data
+umount /system
+chroot /tmp/ /bin/sh
+. ./init_functions.sh
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+/bin/busybox --install -s
+/bin/busybox-extras --install -s
+
+mount_proc_sys_dev
+setup_mdev
+mount_subpartitions
+mount_boot_partition
+extract_initramfs_extra /boot/initramfs-samsung-klte-extra
+</syntaxhighlight>
