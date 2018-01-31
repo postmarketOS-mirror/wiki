@@ -3,9 +3,6 @@ Android devices usually have a recovery partition, where another boot.img file c
 == Starting postmarketOS initramfs via adb ==
 <syntaxhighlight lang="shell">
 adb push ~/.local/var/pmbootstrap/chroot_rootfs_samsung-klte/boot/initramfs-samsung-klte /tmp/initramfs.cpio.gz
-adb shell "mkdir -p /tmp/usr/bin/"
-adb push ~/.local/var/pmbootstrap/chroot_rootfs_samsung-klte/usr/bin/strace /tmp/usr/bin/
-adb push ~/.local/var/pmbootstrap/chroot_rootfs_samsung-klte/usr/bin/hello-world /tmp/usr/bin/
 adb shell
 
 cd /tmp
