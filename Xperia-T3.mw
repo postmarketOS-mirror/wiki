@@ -26,17 +26,18 @@
 * Flash kernel
 * USB Network
 * Screen
-* Touch
+* Touch (<code>/dev/input/event0</code>)
+* Flashlight (<code>/sys/devices/qcom,camera-led-flash.74/leds/torch-light/brightness</code>
 
 == What does not work ==
 * no Wifi/GSM
 * unknown UART pinout
+* Audio
 
 == What has not been tested ==
 * Compass, accelerometer, gyroscope, GPS, light sensor
 * Bluetooth, NFC
 * Camera
-* Audio
 
 == How to enter flash mode ==
 * Power off the phone
