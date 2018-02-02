@@ -2,7 +2,7 @@
 | manufacturer = Samsung
 | name = Galaxy S5
 | codename = klte
-| image = File:Klte.png
+| image = File:Samsung-s5-weston.jpg
 | imagecaption = Samsung Galaxy S5
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2 (KitKat)
@@ -27,14 +27,14 @@
 * Flash System (<code>pmbootstrap flasher flash_system</code>)
 * Initramfs boot
 * USB Network
+* Framebuffer graphics (Splash screens)
 * SSH Connectivity
+* Weston on framebuffer
 * Touchscreen
+* Xwayland
 
 == What does not work ==
 
-* Framebuffer graphics (Splash screens)
-* Weston on framebuffer
-* Xwayland
 * Wifi
 * Audio playback
 * Everything else
