@@ -121,6 +121,7 @@ These are applications which already exist for Linux and could be reused in post
 |[https://ekiga.im Ekiga]
 |GPL2
 |VoIP and video conferencing application for GNOME
+|-
 |[https://qtox.github.io/ QTox]
 |GPL3
 |Peer to peer (Tox) messaging client ([https://tox.chat/clients.html other FOSS clients also available])
