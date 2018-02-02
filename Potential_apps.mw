@@ -121,6 +121,14 @@ These are applications which already exist for Linux and could be reused in post
 |[https://ekiga.im Ekiga]
 |GPL2
 |VoIP and video conferencing application for GNOME
+|[https://qtox.github.io/ QTox]
+|GPL3
+|Peer to peer (Tox) messaging client ([https://tox.chat/clients.html other FOSS clients also available])
+|-
+[https://ring.cx/ GNU Ring]
+|GPL3
+|Peer to peer messaging client and protocol.  No registration required.
+|-
 |}
 
 === Apps that only work with proprietary services ===
@@ -159,6 +167,11 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |GTK+ Twitter client
 |[https://pkgs.alpinelinux.org/packages?name=corebird&branch=&repo=&arch=&maintainer= Alpine repo]
+|-
+|[https://github.com/signalapp/Signal-Desktop Signal Desktop
+|GPL3
+|Electron based client for the Signal messaging protocol
+|-
 |}
 
 ==See also==
