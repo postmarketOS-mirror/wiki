@@ -24,8 +24,8 @@
 * Kernel compiles
 * Booting
 * SSH over USB
-* Display (not committed)
-* Touch (not commited)
+* Display
+* Touch
 
 == What does not work ==
 * Everything else
