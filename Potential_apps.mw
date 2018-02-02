@@ -169,7 +169,7 @@ These are applications which already exist for Linux and could be reused in post
 |GTK+ Twitter client
 |[https://pkgs.alpinelinux.org/packages?name=corebird&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
-|[https://github.com/signalapp/Signal-Desktop Signal Desktop
+|[https://github.com/signalapp/Signal-Desktop Signal Desktop]
 |GPL3
 |Electron based client for the Signal messaging protocol
 |-
