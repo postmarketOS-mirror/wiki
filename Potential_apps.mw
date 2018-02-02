@@ -126,7 +126,7 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |Peer to peer (Tox) messaging client ([https://tox.chat/clients.html other FOSS clients also available])
 |-
-[https://ring.cx/ GNU Ring]
+|[https://ring.cx/ GNU Ring]
 |GPL3
 |Peer to peer messaging client and protocol.  No registration required.
 |-
