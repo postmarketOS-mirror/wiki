@@ -1,6 +1,5 @@
 The Device Tree Blob (or binary) is a file containing information about the board and its hardware.
 
-
 == Why is it needed? ==
 Most embedded platforms do not provide a way of discovering the hardware they have. You either have to resort to guesswork (which is not viable), or provide the Linux kernel with information about the board and the peripherals.
 
