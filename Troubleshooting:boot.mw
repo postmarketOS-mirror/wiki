@@ -1,0 +1,35 @@
+This page is about systematically debugging new postmarketOS device ports, where the kernel successfully compiles, but booting it appears not to be working at all. As always, please extend with everything you find out.
+
+== Preparation ==
+* Make sure you have created a [[Help:Device_Page|wiki page for your device]]
+* Document everything you have tried out there, so when the next person with the same device comes along, it is possible to start from the work you have already done.
+
+== Does the kernel boot? ==
+Even if it looks like your device does nothing (e.g. still displaying the OEM logo or displaying a black screen), it can be that the kernel is actually booted. So unless you know for sure that it does not boot at all (because it directly reboots), try the following to get clarity:
+* Check if you have a new network interface (run <code>ip a</code> or <code>ifconfig</code>)
+** If you have the network interface, but no IP, try [[USB_Network#Troubleshooting|manually running a DHCP client]]
+* Check the output of <code>lsusb</code> (before plugging the device in, then while it is in the bootloader mode, and finally after you have booted pmOS)
+** If the entry disappears, it got stuck while booting.
+* Check what <code>dmesg</code> says after booting
+** [[USB_Network#Troubleshooting|Example output for successfully booted device]]
+
+Depending on whether your kernel is booted or not, read on in the appropriate section below.
+
+== Kernel boots without network interface ==
+
+== postmarketOS is stuck somewhere in the boot process ==
+* system partition installed?
+* install debug-shell
+* initrams
+
+== Kernel doesn't even boot ==
+* compare dtb
+* debug by using a mixed boot.img file
+
+== When everything fails ==
+* Try different kernel sources for your device
+** Ideally you would use the kernel sources, that have been used to build a known working (Android) ROM or recovery image (e.g. TWRP) for your device
+*** Make sure that you are really able to boot that known working kernel with Android/TWRP etc.
+** For Android devices, if the usual LineageOS kernel does not work, try to find another one through GitHub search and on XDA
+* [https://wiki.postmarketos.org/wiki/Matrix_and_IRC Ask in IRC/Matrix]
+* [https://github.com/postmarketOS/pmbootstrap/issues Open an issue] (and link to it from your device's wiki page)
