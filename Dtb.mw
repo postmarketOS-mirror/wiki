@@ -21,7 +21,8 @@ Those are generally present in the kernel fork your device uses. Look in the <co
 When a board is mainlined, the corresponding dts file is mainlined as well (though those may be put in a separate repository in the future).
 
 == See also ==
-[[Dtbtool]], a tool to compile dtb in the [[QCDT]] format.
+* [[Dtbtool]], a tool to compile dtb in the [[QCDT]] format.
+* <code>extract-dtb</code> (<code>pmbootstrap build extract-dtb</code>) to extract <code>dtb</code> files from Linux kernels and QCDT-style boot.img files
 
 == Links ==
 
