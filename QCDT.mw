@@ -48,6 +48,8 @@ $ ./mkbootimg -o boot.repack.img -r pmos/boot.img-$vendor-$name-
 </syntaxhighlight>
 You can also get these from https://github.com/efidroid/build/tree/master/tools
 
+<code>abootimg</code> is packaged for postmarketOS as well, which allows to repackage the boot.img files without extracting them.
+
 == See also ==
 * [[dtbtool]]
 * {{github|323}} related discussion
