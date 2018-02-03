@@ -39,10 +39,4 @@
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-<!--
-Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{github|CHANGEME}} Initial pull request
-* {{github|CHANGEME}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
+* {{github|1200}} Initial pull request
