@@ -39,7 +39,7 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 ** Make sure that <code>pmbootstrap bootimg_analyze</code> outputs the same values, that you have put in your [[deviceinfo]]
 ** Analyze a bootimg file, for which you have verified that it boots on your device (with TWRP or Android).
 ** If you [[QCDT#Does_my_device_need_a_QCDT_boot.img_file.3F|have a QCDT device]], check out [[QCDT#Debugging|QCDT debugging]]
-* A less systematic approach is booting the postmarketOS initramfs with a [[Using_prebuilt_kernels|prebuilt kernel]]. This is listed for the sake of completeness, but building another kernel from source (like in the [[Porting_to_a_new_device|porting guide]]) is probably more fruitful and over all a lot cleaner approach.
+* A less systematic approach is booting the postmarketOS initramfs with a [[Using_prebuilt_kernels|prebuilt kernel]]. This is listed for the sake of completeness, but building another kernel from source (like in the [[Porting_to_a_new_device|porting guide]]) is probably more fruitful and over a much cleaner approach.
 ** If that works, maybe you can debug the issue from that point somehow
 ** Or even load the postmarketOS kernel with kexec
 ** There's a also a guide for [[Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system|building the kernel with Android's build system]]
