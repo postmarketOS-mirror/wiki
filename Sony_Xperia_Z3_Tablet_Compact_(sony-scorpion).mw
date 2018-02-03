@@ -30,10 +30,10 @@
 * The rest, I assmue
 
 == How to enter flash mode ==
-1) Completely turn off the device
-2) Hold down volume-up
-3) Insert your usb cable
-4) The status led should turn blue, congratulations you're in fastboot!
+# Completely turn off the device
+# Hold down volume-up
+# Insert your usb cable
+# The status led should turn blue, congratulations you're in fastboot!
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
