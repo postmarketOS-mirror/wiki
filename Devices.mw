@@ -223,6 +223,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   |style="white-space: nowrap;" | sony-aries
   |  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  |style="white-space: nowrap;" | [[Sony Xperia Z3 Tablet Compact (sony-scorpion)|Sony Xperia Z3 Tablet Compact]]
+  |style="white-space: nowrap;" | sony-scorpion
+  | Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   |style="white-space: nowrap;" | [[Teclast X80 Pro (teclast-x80pro) |Teclast X80 Pro]]
   |style="white-space: nowrap;" | teclast-x80pro
   | - || Y  || Y  || Y  || Y || Y || Y || Y || Y || Y ||  ||  ||  ||  ||  ||  ||  || 
