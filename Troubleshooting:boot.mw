@@ -22,7 +22,7 @@ The postmarketOS initramfs is able to configure two different USB systems in the
 * <code>CONFIG_USB_ETH</code> in combination with <code>CONFIG_USB_ETH_RNDIS</code>
 ** Usually used in mainline kernels (see also: [[Mainlining FAQ]])
 
-You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]).
+You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
 
 == postmarketOS is stuck somewhere in the boot process ==
 * Do you have the system partition flashed to your device (or put it on an SD card and inserted it)?
@@ -32,13 +32,20 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 ** Try to run the lines from the init script manually to see where it fails (see <code>aports/main/postmarketos-mkinitfs/init.sh.in</code> in the <code>pmbootstrap</code> code)
 
 == Kernel doesn't even boot ==
-* compare dtb
-* debug by using a mixed boot.img file
+* Check the output of the bootloader with a [[serial debugging|serial cable]] if you have one.
+** Making such a kernel takes some time, and it isn't even known how to do it for all devices. So if you don't have such a cable, try other methods.
+* Double-check that you have used the right [[Porting_to_a_new_device#Defconfig|defconfig]]
+* Android bootimg issues:
+** Make sure that <code>pmbootstrap bootimg_analyze</code> outputs the same values, that you have put in your [[deviceinfo]]
+** Analyze a bootimg file, for which you have verified that it boots on your device (with TWRP or Android).
+** If you [[QCDT#Does_my_device_need_a_QCDT_boot.img_file.3F|have a QCDT device]], check out [[QCDT#Debugging|QCDT debugging]]
+* A less systematic approach is booting the postmarketOS initramfs with a known working kernel (for Android devices, use <code>abootimg</code> or [[QCDT#Repack_procedure|this guide]]) and booting that. Using another kernel is probably more fruitful.
 
 == When everything fails ==
-* Try different kernel sources for your device
+* '''Try different kernel sources for your device'''
 ** Ideally you would use the kernel sources, that have been used to build a known working (Android) ROM or recovery image (e.g. TWRP) for your device
 *** Make sure that you are really able to boot that known working kernel with Android/TWRP etc.
 ** For Android devices, if the usual LineageOS kernel does not work, try to find another one through GitHub search and on XDA
 * [https://wiki.postmarketos.org/wiki/Matrix_and_IRC Ask in IRC/Matrix]
 * [https://github.com/postmarketOS/pmbootstrap/issues Open an issue] (and link to it from your device's wiki page)
+* Make a [[serial cable]] and look at the output of the bootloader
