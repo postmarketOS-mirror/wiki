@@ -23,7 +23,8 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == What works ==
-Kernel compiles at the moment, stil WIP
+Kernel compiles, requires psmouse_base patch
+WIP
 
 == What does not work ==
 
