@@ -314,6 +314,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | htc-monarudo
   |
 |-
+  | [[Htc-m8-(HTC-One-M8)|HTC One M8]]
+  | htc-m8
+  | Kernel compiles, not tested
+|-
   | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
