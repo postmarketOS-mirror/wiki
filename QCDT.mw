@@ -17,6 +17,25 @@ The easiest way is using <code>pmbootstrap init</code> to generate a new device,
 * Hook up the [[serial UART]] and see what kind of debug output the bootloader provides
 * Repack the boot image with a working <code>dt.img</code> from another distribution (stock, Lineage, recovery, etc.)
 
+=== Compare the appended dtb files ===
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install
+$ pmbootstrap chroot -r -- mkdir -p /tmp/extract-dtb-known-working
+$ sudo cp known_working_boot.img ~/.local/var/pmbootstrap/chroot_rootfs_*/tmp/extract-dtb-known-working/boot.img
+$ pmbootstrap chroot -r
+# apk add extract-dtb
+# mkdir -p /tmp/extract-dtb
+# ls /boot/
+# cp /boot/boot.img-* /tmp/extract-dtb-pmOS/boot.img
+# cd /tmp/extract-dtb-pmOS
+# extract-dtb boot.img
+# cd /tmp/extract-dtb-known-working
+# extract-dtb boot.img
+Now compare the output in both temp folders.
+Is there the same amount of dtb files, and are the files the same?
+If not, then the QCDT generation went wrong.
+</syntaxhighlight>
+
 === Repack procedure ===
 You need <code>mkbootimg</code> and <code>unpackbootimg</code> tools which are already packaged in pmbootstrap.
 
