@@ -9,5 +9,21 @@ so, in summary, it's hard to know which mixer settings will make it work, so my 
 
 This method may work for non-Android devices as well, as long as you see an audio device in <code>alsamixer</code>. Just boot the normal OS, save the volume settings somehow, then restore them.
 
+== WM1811 ==
+
+This audio chip is present in several Samsung devices that are based on the Exynos 4412 platform. There is a configuration for the Samsung Galaxy Note 10.1 available at [https://code.google.com/archive/p/opensgn/source/default/source the opensgn project]. Have a look at the files in <code>opensgn/data/n8000/usr/share/alsa/ucm/Midas_WM1811/</code>.
+In <code>opensgn/data/n8000/etc/rc.local</code> there are the commands to use the configuration:
+
+<pre>
+# restore alsa sinitial tate
+/usr/sbin/alsactl restore -f /usr/share/alsa/ucm/Midas_WM1811/init.state
+
+# enable speaker for output and builtin mic for input
+/usr/bin/alsaucm -c Midas_WM1811 set _verb HiFi set _enadev Speaker
+/usr/bin/alsaucm -c Midas_WM1811 set _verb HiFi set _enadev Mic
+</pre>
+
+For other devices the configuration might need to be adapted. On the Samsung Galaxy Note 8.0 for example, the audio device is named "Kona_WM1811". Replacing all occurrences in file names and file contents of <code>Midas</code> by <code>Kona</code> worked.
+
 == See also ==
 * [https://arunraghavan.net/2016/01/audio-devices-and-configuration/  How to convert Android Audio configurations to alsa/pulseaudio]
