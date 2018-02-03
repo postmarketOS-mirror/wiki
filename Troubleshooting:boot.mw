@@ -17,9 +17,9 @@ Depending on whether your kernel is booted or not, read on in the appropriate se
 
 == Kernel boots without network interface ==
 The postmarketOS initramfs is able to configure two different USB systems in the kernel in order to let your PC talk to your phone via networking. One of them has to be enabled (exclusively?):
-* <code>CONFIG_USB_G_ANDROID</code>
+* [[Kernel_configuration#CONFIG_USB_G_ANDROID|CONFIG_USB_G_ANDROID]]
 ** That is usually enabled in Android kernel forks.
-* <code>CONFIG_USB_ETH</code> in combination with <code>CONFIG_USB_ETH_RNDIS</code>
+* [[Kernel_configuration#CONFIG_USB_ETH|CONFIG_USB_ETH]] in combination with [[Kernel_configuration#CONFIG_USB_ETH_RNDIS|CONFIG_USB_ETH_RNDIS]]
 ** Usually used in mainline kernels (see also: [[Mainlining FAQ]])
 
 You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
