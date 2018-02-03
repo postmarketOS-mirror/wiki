@@ -1,0 +1,48 @@
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia Z3 Tablet Compact
+| codename = scorpion
+| image = File:PostmarketOS_on_SGP611.png
+| imagecaption = Z3 Tablet Compact running PostmarketOS
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 on Linux 3.4.0
+| chipset = Qualcomm MSM8974AB Snapdragon 801
+| cpu = Quad-core 2.5 GHz Krait 400
+| gpu = Adreno 330
+| storage = 16GB
+| display = 1200x1920
+| memory = 3GB
+}}
+
+== Contributors ==
+* [https://github.com/kiljacken kiljacken]
+
+== Maintainer(s) ==
+* [https://github.com/kiljacken kiljacken]
+
+== What works ==
+* Usb Net
+* Flashing
+* Touch
+* Screen
+
+== What does not work ==
+* The rest, I assmue
+
+== How to enter flash mode ==
+1) Completely turn off the device
+2) Hold down volume-up
+3) Insert your usb cable
+4) The status led should turn blue, congratulations you're in fastboot!
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
