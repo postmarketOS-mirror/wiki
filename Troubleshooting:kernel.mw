@@ -1,40 +1,36 @@
-While [[Porting_to_a_new_device|porting pmOS to a new device]] you probably will find common pitfalls that others have already solved. Here is a set of them.
+Here are some common kernel compilation problems listed. For debugging a kernel that compiles, but does not boot, see [[Troubleshooting:boot]].
 
+== How to create a patch ==
 Patching a kernel is as simple as putting a <code>.patch</code> file in your <code>aports/device/linux-vendor-flavor</code> folder and adding the patch name to the <code>source</code> variable in your <code>APKBUILD</code> file. See also: [[How to create a patch when packaging software]].
 
-
-==== undefined reference to kgsl_iommu_sync_lock ====
-
+== undefined reference to kgsl_iommu_sync_lock ==
 <pre>drivers/built-in.o:(.data.rel+0x68c): undefined reference to kgsl_iommu_sync_lock'
 drivers/built-in.o:(.data.rel+0x690): undefined reference to kgsl_iommu_sync_unlock'</pre>
 You need to apply the [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-lg-mako/gpu-msm-fix-gcc5-compile.patch gpu-msm-fix-gcc5-compile.patch] patch.
 
-==== How can I boot the kernel with some specific arguments? ====
-
+== How can I boot the kernel with some specific arguments? ==
 You can configure <code>CONFIG_CMDLINE</code> so that the arguments are permanent or change it in boot time using fastboot or pmbootstrap, for example:
 
 <pre>fastboot boot -c &quot;console=ttyHSL0,115200,n8&quot; ...
 
 pmbootstrap flasher boot --cmdline &quot;PMOS_NO_OUTPUT_REDIRECT&quot;</pre>
-==== MSM framebuffer doesn't work ====
-
+== MSM framebuffer doesn't work ==
 We found out that removing the 3D driver support makes the MSM framebuffer. See [https://github.com/postmarketOS/pmbootstrap/pull/66 #66].
 
 <pre>CONFIG_MSM_KGSL=n</pre>
-==== PTY allocation request failed ====
-
+== PTY allocation request failed ==
 <pre>PTY allocation request failed on channel 0
 -ash: a: unknown operand</pre>
 Go to [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting%3Akernel#common-configurations Common configurations], you have probably missed <code>CONFIG_DEVTMPFS</code>!
 
-==== Kernel compilation: (some header file): No such file or directory ====
-
+== Kernel compilation: (some header file): No such file or directory ==
 Busybox' <code>zip</code> implementation does not extract symlinks. There are two workarounds. One is to use another archive type (typically kernel sources are downloaded from GitHub, where you can also get the source as <code>.tar.gz</code> - simply by changing the extension in the URL).
 
 The other workaround is to add <code>unzip</code> to the makedepends, so it uses the original unzip instead of the busybox version.
 
-==== Kernel compilation: BusyBox lzma compression fails ====
+(This has been fixed in busybox in the meantime.)
 
+== Kernel compilation: BusyBox lzma compression fails ==
 In case you get the following output:
 
 <pre>LZMA    arch/arm/boot/compressed/piggy.lzma
@@ -56,14 +52,10 @@ lowest risk of introducing a reason for the kernel not to boot (because the kern
 * Reduce the compression ratio by adding [https://github.com/postmarketOS/pmbootstrap/blob/b4c9f93f0d7be1272f6a67de2128558ce58e1077/aports/linux-samsung-i9070/02_reduce_lzo_compression.patch this patch]. This will not introduce any dependency, but increase the kernel size.
 * Use another compression algorithm (run <code>pmbootstrap menuconfig linux-...</code> and change it there). Gzip should work, but will produce a big kernel, because pmbootstrap currently installs a workaround to always use the fastest compression method (<code>-1</code>), when the most compressing one (<code>-9</code>) is chosen. This will increase the kernel size the most.
 
-==== Android Kernel compilation fails on warnings (not on errors) (-Werror) ====
-
-Don't even bother fixing all those warnings, there are too many of them and we don't want the outdated Android kernels in the long run anyway! Write a patch, that removes <code>-Werror</code> from all <code>Makefiles</code> recursively instead ''(please expand on how to do that step by step, ask in the channel if you need help)''.
-
-See [https://github.com/postmarketOS/pmbootstrap/blob/0ae6a150e8ea2de77ebc7fc423f1159bdad5f7dc/aports/linux-motorola-titan/Wno-error.patch this patch] as example.
+== Android Kernel compilation fails on warnings (not on errors) (-Werror) ==
+Don't even bother fixing all those warnings, there are too many of them and we don't want the outdated Android kernels in the long run anyway! When you generate your kernel APKBUILD with <code>pmbootstrap init</code>, then you should have code in the <code>prepare()</code> that automatically removes the <code>-Werror</code> parameter in all Makefiles.
 
 ==== Building the kernel with Android's build system ====
-
 It might be useful for debugging to build Android's kernel with Android's build system.
 
 You can follow the LineageOS building guide for your device (see [https://wiki.lineageos.org/devices/titan/build this] for titan device as example).
