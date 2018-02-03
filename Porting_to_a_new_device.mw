@@ -348,6 +348,8 @@ If you are lucky, your screen may give some clues that you are booted into pmOS.
 
 It is quite easy to give your phone [[USB_Internet|Internet access via USB]], when your PC is connected to the Internet.
 
+In case it looks like your device did not even boot, have a look at [[Troubleshooting:boot]].
+
 === Display ===
 To make the display work in the first place, read [[Troubleshooting:display]] and [[Tuning sysfs]]. Then [[Screen_Calibration#Touch_screen|configure your touch screen]].
 
