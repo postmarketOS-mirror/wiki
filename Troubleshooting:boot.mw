@@ -25,9 +25,11 @@ The postmarketOS initramfs is able to configure two different USB systems in the
 You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]).
 
 == postmarketOS is stuck somewhere in the boot process ==
-* system partition installed?
-* install debug-shell
-* initrams
+* Do you have the system partition flashed to your device (or put it on an SD card and inserted it)?
+** If the initramfs can not find the [[Partition-layout|boot partition]], it will display an error splash screen and wait forever.
+** That means, if your screen does not work yet, it will just appear to be stuck and the SSH server will not come up.
+* Install the [[Inspecting_the_initramfs|debug shell]] initramfs hook to get a telnet shell directly from the initramfs
+** Try to run the lines from the init script manually to see where it fails (see <code>aports/main/postmarketos-mkinitfs/init.sh.in</code> in the <code>pmbootstrap</code> code)
 
 == Kernel doesn't even boot ==
 * compare dtb
