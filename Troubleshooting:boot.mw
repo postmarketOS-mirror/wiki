@@ -49,3 +49,4 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 * [https://wiki.postmarketos.org/wiki/Matrix_and_IRC Ask in IRC/Matrix]
 * [https://github.com/postmarketOS/pmbootstrap/issues Open an issue] (and link to it from your device's wiki page)
 * Make a [[serial cable]] and look at the output of the bootloader
+* If there is a similar device, that already has a postmarketOS port, take a look at its aport to see if it does anything special.
