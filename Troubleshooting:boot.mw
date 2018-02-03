@@ -13,9 +13,16 @@ Even if it looks like your device does nothing (e.g. still displaying the OEM lo
 * Check what <code>dmesg</code> says after booting
 ** [[USB_Network#Troubleshooting|Example output for successfully booted device]]
 
-Depending on whether your kernel is booted or not, read on in the appropriate section below.
+Depending on whether your kernel is booted or not, read on in the appropriate section below. If it turns out, that your kernel is booted, and you have a network interface and get an IP address, then you probably only need to [[Porting_to_a_new_device#Display|get your display working]].
 
 == Kernel boots without network interface ==
+The postmarketOS initramfs is able to configure two different USB systems in the kernel in order to let your PC talk to your phone via networking. One of them has to be enabled (exclusively?):
+* <code>CONFIG_USB_G_ANDROID</code>
+** That is usually enabled in Android kernel forks.
+* <code>CONFIG_USB_ETH</code> in combination with <code>CONFIG_USB_ETH_RNDIS</code>
+** Usually used in mainline kernels (see also: [[Mainlining FAQ]])
+
+You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]).
 
 == postmarketOS is stuck somewhere in the boot process ==
 * system partition installed?
