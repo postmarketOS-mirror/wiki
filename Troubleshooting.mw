@@ -6,6 +6,7 @@
 * {{alpine|Syslog}} is enabled, and will log to shared memory once the OS has booted. It can be read with the <code>logread</code> tool in BusyBox. The syslog is currently not preserved across reboots.
 
 = Specific troubleshooting pages =
+* [[Troubleshooting:boot]]
 * [[Troubleshooting:display]]
 * [[Troubleshooting:grsec]] (TL;DR: doesn't work)
 * [[Troubleshooting:kernel]]
