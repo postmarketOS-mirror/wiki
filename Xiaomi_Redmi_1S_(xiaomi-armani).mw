@@ -1,0 +1,82 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  Redmi 1S
+| codename = armani
+| image = File:Armani.jpg
+| imagecaption = PostmarketOS running on Xiaomi Redmi 1S
+| releaseyear = 2014
+| originalsoftware = MIUI 6.0 (based on Android 4.3)
+| chipset = Qualcomm MSM8226
+| cpu = Quad-core Snapdragon 400 1.6 GHz
+| gpu = Adreno 305
+| storage = 8GB EMMC, external micro-sd slot
+| display = WLED, 720x1280
+| memory = 1GB
+}}
+
+== Contributors ==
+* alive4ever
+
+== What works ==
+* USB ethernet
+* Flashing, via android-recovery-zip (twrp)
+* Touchscreen (ft5x06_i2c)
+* Screen: framebuffer (/dev/fb0), backlight & brigtness control (/sys/class/leds/wled:backlight/brightness)
+* Notification leds (/sys/class/leds/red/brigtness, /sys/class/leds/green/brightness, /sys/class/leds/blue/brightness)
+* Wifi: via wcnss-wlan and wlanarmani service (which does modprobe wlan on system boot after wcnss-wlan service has been initialized)
+* Xwayland
+* Battery: charging status (/sys/class/power_supply/battery/status), capacity reporting (/sys/class/power_supply/battery/capacity)
+
+== What does not work ==
+* Screen: framebuffer console (no kernel boot log printed on the display)
+* Wifi: rfkill (no support for blocking wireless via rfkill block wifi or nmcli radio wifi off). The only way to block wireless is unloading wlan module (``rmmod wlan`` or ``/etc/init.d/wlanarmani stop``)
+* Other hardware features are untested (3D, sound, bluetooth, modem, gps, accelerometer, buttons)
+
+== How to enter flash mode ==
+* Entering fastboot: hold VolumeKeyDown + Power buttons until fastboot mode displayed on the screen.
+* Entering recovery: hold VolumeKeyUp + Power buttons. The default is Mi Recovery. TWRP is needed for installation, which can be obtained [https://twrp.me/xiaomi/xiaomiredmi1s.html here]
+
+== Installation ==
+* Put the device into TWRP recovery, either by booting twrp image via fastboot directly or by pressing VolumeKeyUp + Power button after flashing TWRP recovery image.
+* Connect the device to the computer via usb cable
+* Bootstrap PostmarketOS
+
+:<code>$ pmbootstrap init #select xiaomi-armani</code>
+
+:<code>$ pmbootstrap build -i device-xiaomi-armani</code>
+
+:<code>$ pmbootstrap build linux-xiaomi-armani</code>
+
+:<code>$ pmbootstrap install --no-fde --android-recovery-zip</code>
+
+:<code>$ pmbootstrap export # generate symlinks inside /tmp/postmarketOS-export directory</code>
+
+* Put the twrp recovery into sideload mode
+
+:<code>$ adb shell "twrp sideload"</code>
+
+* Start sideloading the recovery file
+
+:<code>$ adb sideload /tmp/postmarketOS-export/pmos-xiaomi-armani.zip</code>
+
+* Reboot the device
+
+:<code>$ adb reboot</code>
+
+== Additional info ==
+It's necessary to unplug the usb cable after issuing ``poweroff`` command to properly shut down PostmarketOS.
+
+Don't leave screen on for a long time, otherwise there will be LED burn-in. If the display screen is not used, turn the screen off.
+
+:<code>$ echo 0 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
+
+The screen can be turned on with maximum value up to 4095
+
+:<code>$ echo 3072 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
+
+== See also ==
+
+* {{github|1204}} Initial pull request
+
+* [https://wiki.lineageos.org/devices/armani LineageOS wiki page]
