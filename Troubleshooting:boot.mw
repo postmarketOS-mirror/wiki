@@ -53,3 +53,8 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 * [https://github.com/postmarketOS/pmbootstrap/issues Open an issue] (and link to it from your device's wiki page)
 * Make a [[serial cable]] and look at the output of the bootloader
 * If there is a similar device, that already has a postmarketOS port, take a look at its aport to see if it does anything special.
+
+
+== See also ==
+* {{github|1203}} Debugging a non-booting HTC Wildfire
+* {{github|99}} Debugging a non-booting HTC Droid DNA (dlx)
