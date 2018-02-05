@@ -178,9 +178,11 @@ These are applications which already exist for Linux and could be reused in post
 ==See also==
 ===Other Mobile Linux platforms===
 * [https://uappexplorer.com/ Ubuntu Touch app explorer] - some of these applications may be reusable on pmOS
+* [http://maemo.org/packages/ Maemo packages] - these applications should be reusable in pmOS, and integrate well with the Hildon UI
 * [https://openrepos.net/ Meego/Sailfish/Nemo applications] - will require some reworking for pmOS
 * [http://www.tizenstore.com/main/getMain.as Tizen Store] - unknown compatibility with pmOS
 * [http://preware.pivotce.com/ LuneOS apps] - will require some reworking for pmOS
+
 ===Other frameworks===
 * [https://anbox.io/ Anbox] - under construction Android compatibility layer
 * [http://www.ofono.org oFono] - Open Source Telephony Framework
