@@ -65,6 +65,8 @@ $ ./pmbootstrap.py install --sdcard=/dev/mmcblk
 
   $ ./pmbootstrap.py flasher flash_kernel
 
+- If flashing fails, try plugging the device into a USB 2.0 port.
+
 == Boot ==
 
 Once postmarketOS is installed on the sdcard and the kernel is flashed, you need telnet to unlock the root partition
