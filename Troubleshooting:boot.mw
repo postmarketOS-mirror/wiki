@@ -62,7 +62,7 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 * If there is a similar device, that already has a postmarketOS port, take a look at its aport to see if it does anything special.
 
 == See also ==
-* {{github|1208}} HTC One M8 not booting
+* {{github|1206}} HTC One M8 not booting
 * {{github|1203}} HTC Wildfire not booting
 * {{github|99}} HTC Droid DNA (dlx) not booting
 * [https://developer.qualcomm.com/qfile/28821/lm80-p0436-1_little_kernel_boot_loader_overview.pdf Qualcomm LK Boot Loader Overview]
