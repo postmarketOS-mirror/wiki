@@ -45,6 +45,8 @@
 
 :<code>$ pmbootstrap build -i device-xiaomi-armani</code>
 
+:<code>$ pmbootstrap build -i firmware-xiaomi-armani</code>
+
 :<code>$ pmbootstrap build linux-xiaomi-armani</code>
 
 :<code>$ pmbootstrap install --no-fde --android-recovery-zip</code>
