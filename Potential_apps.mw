@@ -130,6 +130,10 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |Peer to peer messaging client and protocol.  No registration required.
 |-
+|[http://modest.garage.maemo.org/ Modest Mail]
+|BSD and LGPL
+|Lightweight touch friendly email client designed for Nokia Maemo devices
+|-
 |}
 
 === Apps that only work with proprietary services ===
@@ -172,11 +176,6 @@ These are applications which already exist for Linux and could be reused in post
 |[https://github.com/signalapp/Signal-Desktop Signal Desktop]
 |GPL3
 |Electron based client for the Signal messaging protocol
-|-
-|[http://modest.garage.maemo.org/ Modest Mail]
-|BSD and LGPL
-|Lightweight touch friendly email client designed for Nokia Maemo devices
-|-
 |}
 
 ==See also==
