@@ -173,6 +173,10 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |Electron based client for the Signal messaging protocol
 |-
+|[http://modest.garage.maemo.org/ Modest Mail]
+|BSD and LGPL
+|Lightweight touch friendly email client designed for Nokia Maemo devices
+|-
 |}
 
 ==See also==
