@@ -21,16 +21,13 @@ Even if it looks like your device does nothing (e.g. still displaying the OEM lo
 * Check if you have a new network interface (run <code>ip a</code> or <code>ifconfig</code>)
 ** If you have the network interface, but no IP, try [[USB_Network#Troubleshooting|manually running a DHCP client]]
 * Check the output of <code>lsusb</code> (before plugging the device in, then while it is in the bootloader mode, and finally after you have booted pmOS)
-** If the entry disappears, it got stuck while booting.
 * Check what <code>dmesg</code> says after booting
 ** [[USB_Network#Troubleshooting|Example output for successfully booted device]]
-* It might be, that the device does not talk to your PC via USB at all, but postmarketOS is still booted.
-** Some HTCs show this behavior (more on that below)
-** Create an initramfs hook that changes the LEDs to indicate successful boot:
-*** Boot TWRP or another known working OS
-*** Get the exact paths to the LEDs with a shell
-*** Create the following postmarketOS initfs hook and boot the device
-::: <syntaxhighlight lang="bash">
+* Let the device's LED indicate a successful boot
+** Boot TWRP or another known working OS
+** Get the exact paths to the LEDs with a shell
+** Create the following postmarketOS initfs hook and boot the device
+:: <syntaxhighlight lang="bash">
 while true; do
 	echo 255 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
 	sleep 1
