@@ -23,17 +23,10 @@ Even if it looks like your device does nothing (e.g. still displaying the OEM lo
 * Check the output of <code>lsusb</code> (before plugging the device in, then while it is in the bootloader mode, and finally after you have booted pmOS)
 * Check what <code>dmesg</code> says after booting
 ** [[USB_Network#Troubleshooting|Example output for successfully booted device]]
-* Let the device's LED indicate a successful boot
-** Boot TWRP or another known working OS
-** Get the exact paths to the LEDs with a shell
-** Create the following postmarketOS initfs hook and boot the device
-:: <syntaxhighlight lang="bash">
-while true; do
-	echo 255 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
-	sleep 1
-	echo 0 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
-done
-</syntaxhighlight>
+* Use an initramfs hook to signalize successful boot
+** Let the device's LED blink
+** Write data to another partition
+** [[Troubleshooting:boot:initfshooks|Examples]]
 
 Depending on whether your kernel is booted or not, read on in the appropriate section below. If it turns out, that your kernel is booted, and you have a network interface and get an IP address, then you probably only need to [[Porting_to_a_new_device#Display|get your display working]].
 
