@@ -1,0 +1,116 @@
+Here are various hooks that might help with initramfs debugging. They are raw pastes and need to be adjusted before using them. Boot a known working ROM to extract the right <code>/sys</code> paths etc.
+
+=== Blinking LED (simple) ===
+<syntaxhighlight lang="bash">
+#!/bin/sh
+while true; do
+	echo 255 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
+	sleep 1
+	echo 0 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
+done
+</syntaxhighlight>
+
+=== Blinking LED (with hotplugging) ===
+<syntaxhighlight lang="bash">
+#!/bin/sh
+
+# set usb settings
+write /sys/class/android_usb/android0/enable 0
+sleep 1
+write /sys/class/android_usb/android0/f_rndis/ethaddr 00:01:02:03:04:05
+write /sys/class/android_usb/android0/iManufacturer samsung
+write /sys/class/android_usb/android0/iProduct i9070
+write /sys/class/android_usb/android0/iSerial 123456789
+write /sys/class/android_usb/android0/enable 1
+sleep 1
+
+
+cat > /bin/hotplug.sh << EOF
+#!/bin/sh
+
+if [ "\${SUBSYSTEM}" = "android_usb" ]; then
+
+    if [ "\${USB_STATE}" = "CONNECTED" ]; then
+        echo 255 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    fi
+    if [ "\${USB_STATE}" = "DISCONNECTED" ]; then
+        echo 0 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    fi
+
+    sleep 5
+
+    echo 255 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    sleep 1
+    echo 0 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    sleep 1
+    echo 255 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    sleep 1
+    echo 0 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    sleep 1
+    echo 255 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+    sleep 1
+    echo 0 > /sys/devices/platform/i2c-gpio.5/i2c-5/5-0020/leds/button-backlight/brightness
+fi
+EOF
+
+chmod +x /bin/hotplug.sh
+echo "/bin/hotplug.sh" > /proc/sys/kernel/hotplug
+</syntaxhighlight>
+
+=== Dump sysfs to SD card ===
+<syntaxhighlight lang="bash">
+#!/bin/sh
+. ./init_functions.sh
+
+setup_usb_network
+start_udhcpd
+
+TELNET_PORT=24
+telnetd -b "${IP}:${TELNET_PORT}" -l /bin/sh
+
+
+
+mkdir -p /sdcard
+mount /dev/mmcblk0p1 /sdcard
+
+if [ -e /sdcard/drebrez ]; then
+    echo 255 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
+fi
+
+
+walk() {
+    for file in $(ls $1); do
+        path="$1/$file"
+        if test -L "$path"; then
+            continue
+        fi
+        if test -f "$path"; then
+            echo "$path"
+            cat "$path"
+        fi
+        if test -d "$path"; then
+            walk "$path"
+        fi
+    done
+    cat /proc/cpuinfo
+    cat /proc/cmdline
+}
+
+walk /sys/devices/ > /sdcard/sysdump2.txt
+
+cat /pmOS_init.log > /sdcard/pmOS_init2.log
+
+show_splash /splash2.ppm.gz
+
+while true; do
+    echo 255 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
+    sleep 1
+    echo 0 > /sys/devices/i2c-0/0-0066/leds/blue/brightness
+    echo 255 > /sys/devices/i2c-0/0-0066/leds/amber/brightness
+    sleep 1
+    echo 0 > /sys/devices/i2c-0/0-0066/leds/amber/brightness
+    echo 255 > /sys/devices/i2c-0/0-0066/leds/green/brightness
+    sleep 1
+    echo 0 > /sys/devices/i2c-0/0-0066/leds/green/brightness
+done
+</syntaxhighlight>
