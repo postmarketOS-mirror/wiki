@@ -1,0 +1,113 @@
+== Introduction ==
+Phones may have some buttons. Those buttons can be configured to execute specific command when pressed.
+
+== Getting input device information using udevadm ==
+
+Make sure that buttons are recognized as eventX inside /dev/input directory
+
+To make sure that the input buttons are recognized, run the following command
+
+<code># udevadm info -a /dev/input/event0 </code>
+
+The command will print udev properties which can be used to assign udev rules, for example tagging specified device as touchscreen.
+
+Note that HID input device doesn't trigger udev event, so the following command can't be used to detect key-presses from HID input device.
+
+<code># udevadm monitor </code>
+
+== Getting input device events using evtest ==
+
+evtest can be used to detect events sent by input devices. To use it, install evtest package.
+
+<code> # apk add evtest </code>
+
+Launch evtest to troubleshoot the input device
+
+<code> # evtest /dev/input/event0 </code>
+
+The information obtained from evtest can be used as reference to configure triggerhappy or creating acpi.map for busybox acpid
+
+== Using triggerhappy to handle HID input events ==
+
+Triggerhappy can be used to handle HID input device. To install triggerhappy, fetch the initial pull request for triggerhappy.
+
+<code>$ cd $PMBOOTSTRAP # the directory where pmbootstrap git source code is laying around </code>
+
+<code>$ git fetch origin pull/1211/head:triggerhappy </code>
+
+<code>$ git checkout triggerhappy </code>
+
+<code>$ ./pmbootstrap.py build triggerhappy --arch=armhf </code>
+
+The built package is ~/.local/var/pmbootstrap/packages/armhf/triggerhappy-0.5.0-r0.apk (assuming default location during pmbootstrap.py init), which can be transferred to the device via scp / sftp.
+
+<code>$ scp ~/.local/var/pmbootstrap/packages/armhf/triggerhappy-0.5.0-r0.apk user@172.16.42.1:~/ </code>
+
+Install the package
+
+<code>$ ssh user@172.16.42.1 </code>
+
+<code>$ sudo apk add --allow-untrusted ./triggerhappy-0.5.0-r0.apk </code>
+
+Run thd on the device to find what is sent
+
+<code>$ sudo thd --dump /dev/input/event* </code>
+
+With thd --dump running, touch the touchscreen and press the available buttons. There will be information related to the input device printed on the ssh session.
+
+<pre>
+EV_ABS	ABS_MT_TRACKING_ID	16	/dev/input/event0
+# ABS_MT_TRACKING_ID	16	command
+EV_ABS	ABS_MT_TRACKING_ID	0	/dev/input/event0
+# ABS_MT_TRACKING_ID	0	command
+EV_ABS	ABS_MT_POSITION_X	312	/dev/input/event0
+# ABS_MT_POSITION_X	312	command
+EV_ABS	ABS_MT_POSITION_Y	1013	/dev/input/event0
+# ABS_MT_POSITION_Y	1013	command
+EV_ABS	ABS_MT_TOUCH_MAJOR	123	/dev/input/event0
+# ABS_MT_TOUCH_MAJOR	123	command
+EV_ABS	ABS_MT_WIDTH_MAJOR	144	/dev/input/event0
+# ABS_MT_WIDTH_MAJOR	144	command
+EV_KEY  KEY_POWER       1       /dev/input/event1
+# KEY_POWER     1       command
+EV_KEY  KEY_POWER       0       /dev/input/event1
+# KEY_POWER     0       command
+EV_KEY  KEY_VOLUMEDOWN  1       /dev/input/event1
+# KEY_VOLUMEDOWN        1       command
+EV_KEY  KEY_VOLUMEDOWN  0       /dev/input/event1
+# KEY_VOLUMEDOWN        0       command
+EV_KEY  KEY_VOLUMEUP    1       /dev/input/event2
+# KEY_VOLUMEUP  1       command
+EV_KEY  KEY_VOLUMEUP    0       /dev/input/event2
+# KEY_VOLUMEUP  0       command
+</pre>
+
+The information can be used to create a triggerhappy configuration, for example assigning command when the home touch button is pressed.
+
+<code> /etc/triggerhappy/triggers.d/buttons.conf </code>
+
+<pre>
+KEY_POWER 1 poweroff
+KEY_VOLUMEDOWN+KEY_POWER 1 reboot
+#ABS_MT_POSITION_Y@ 1344 @home
+#ABS_MT_POSITION_X@home 360 logger "Home button is pressed"
+#ABS_MT_POSITION_Y@home 1344 @
+</pre>
+
+The triggerhappy service needs to be enabled to listen HID button keypresses.
+
+<code># rc-update add triggerhappy default </code>
+
+== Using busybox acpid ==
+
+Some device buttons can trigger acpi events. Busybox acpid can be used to handle these events, for example nokia n900.
+
+For this to work, an acpi.map is needed. Look at [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/device-nokia-n900 device-nokia-n900] for more information.
+
+== See also ==
+
+* [https://cgit.freedesktop.org/evtest/tree/ evtest source code]
+
+* [https://github.com/wertarbyte/triggerhappy triggerhappy source code]
+
+* [https://git.busybox.net/busybox/tree/util-linux/acpid.c busybox acpid source code]
