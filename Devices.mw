@@ -131,6 +131,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | nokia-n900
   | Y  || Y  || Y  || Y  || Y  || Y  ||  || Y  || P  ||  || Y  || Y  ||  ||  || P  || P  || P  || 
 |-
+  | style="white-space: nowrap;" | [[Nokia N9]]🔼 / [[Nokia N950]]🔼
+  | style="white-space: nowrap;" | nokia-n9
+  | Y  || Y  || Y  || Y  || Y  || Y  ||  || Y  ||  || P ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white:space: nowrap;" | [[OnePlus One (oneplus-bacon)|OnePlus One]]
   | style="white-space: nowrap;" | oneplus-bacon
   | Y  || Y  || Y  || P  ||  ||  ||  || P ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -357,14 +361,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[NEC Terrain]]
   | nec-ne-201a1a
   |
-|-
-  | [[Nokia N9]]🔼
-  | nokia-n9
-  | Basic support has been merged
-|-
-  | [[Nokia N950]]🔼
-  | nokia-n950
-  | kernel is booting
 |-
   | [[Qemu Nokia N900|Qemu N900]]🔼
   | qemu-rx51
