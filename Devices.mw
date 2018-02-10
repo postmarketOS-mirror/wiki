@@ -252,7 +252,6 @@ These devices are included in the postmarketOS source tree, and it is at least p
 -->
 
 === Status Legend ===
-
 {| class="wikitable feature-colors"
 ! Code
 ! Meaning
@@ -270,9 +269,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | non-Android based device
 |}
 
-
 === Status Columns ===
-
 {| class="wikitable"
 ! Column
 ! Meaning
