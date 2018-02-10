@@ -1,5 +1,5 @@
 __NOTOC__
-Please [[Help:Device Page|add devices you're porting here]], and write your porting progress in the wiki page.
+Please [[Help:Device Page|add devices you're porting here]], and write your porting progress in the wiki page. The status values and columns are described below the table.
 
 == Feature matrix ==
 These devices are included in the postmarketOS source tree, and it is at least possible to boot them. To confirm that, either the screen or networking/serial output must be working. If your device fulfills these requirements and is not yet on the list, please make a [https://help.github.com/articles/about-pull-requests/ pull-request] and edit the list after it has been accepted.
@@ -9,7 +9,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
   ! rowspan="2" | Codename
   ! colspan="18" | Status
 |-
-  !  Usb net  !! Flashing  !! Touch  !! Screen  !! Wifi  !! XWayland  !! FDE  !! Mainline  !! Battery  !! 3D  !! Accelerometers  !! Audio  !! Bluetooth  !! Camera  !! GPS  !! Mobile data  !! SMS  !! Voice 
+  !  USB Net  !! Flashing  !! Touch  !! Screen  !! Wifi  !! XWayland  !! FDE  !! Mainline  !! Battery  !! 3D  !! Accelerometers  !! Audio  !! Bluetooth  !! Camera  !! GPS  !! Mobile Data  !! SMS  !! Calls 
 |-
   |style="white-space: nowrap;" | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX 7"]]
   |style="white-space: nowrap;" | amazon-thor
@@ -129,11 +129,11 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Nokia N900]]🔼
   | style="white-space: nowrap;" | nokia-n900
-  | Y  || Y  || Y  || Y  || Y  || Y  ||  || Y  || P  ||  || Y  || Y  ||  ||  || P  || P  || P  || 
+  | Y  ||  || Y  || Y  || Y  || Y  ||  || Y  || P  ||  || Y  || Y  ||  ||  || P  || P  || P  || 
 |-
   | style="white-space: nowrap;" | [[Nokia N9]]🔼 / [[Nokia N950]]🔼
   | style="white-space: nowrap;" | nokia-n9
-  | Y  || Y  || Y  || Y  || Y  || Y  ||  || Y  ||  || P ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  ||  || Y  || Y  || Y  || Y  ||  || Y  ||  || P ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white:space: nowrap;" | [[OnePlus One (oneplus-bacon)|OnePlus One]]
   | style="white-space: nowrap;" | oneplus-bacon
@@ -268,6 +268,68 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="text-align: center" | 🔼
   | non-Android based device
+|}
+
+
+=== Status Columns ===
+
+{| class="wikitable"
+! Column
+! Meaning
+|-
+  | USB Net
+  | After connecting the device with USB to your PC, you can [[Inspecting_the_initramfs|connect to it via telnet (initramfs)]] or [[USB_Network|SSH (booted system)]].
+|-
+  | Flashing
+  | It is possible to flash the device with `pmbootstrap flasher`.
+|-
+  | Touch
+  | Touching the screen is recognized properly.
+|-
+  | Screen
+  | The device's display is working.
+|-
+  | Wifi
+  | Connecting to wireless network is possible.
+|-
+  | XWayland
+  | Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works.
+|-
+  | FDE
+  | Full disk encryption and unlocking with [[osk-sdl]].
+|-
+  | Mainline
+  | Instead of a Linux kernel fork, it is possible to run [[The_Mainline_Kernel|mainline]].
+|-
+  | Battery
+  | Charging the battery is possible (this seems to be largely untested, please update your device's column if charging is possible).
+|-
+  | 3D
+  | Hardware accelerated 3D graphics
+|-
+  | Accelerometers
+  | The sensor that measures [https://en.wikipedia.org/wiki/Proper_acceleration proper acceleration] works.
+|-
+  | Audio
+  | Using the device's speakers/headphone jack works.
+|-
+  | Bluetooth
+  | It's possible to pair and use other devices via the bluetooth protocol.
+|-
+  | Camera
+  | Taking photos and videos works.
+|-
+  | GPS
+  | The [https://en.wikipedia.org/wiki/Global_Positioning_System Global Positioning System] sensor works.
+|-
+  | Mobile Data
+  | Connecting to the Internet via cellular network.
+|-
+  | SMS
+  | Sending and receiving short messages works as intended.
+|-
+  | Calls
+  | Talking to other people over the cellular network.
 |}
 
 == Not booting ==
@@ -435,4 +497,4 @@ Atheros [[AR9271]] chipset
 [[Category:Hardware]]
 
 ===See also===
-[[Milestones]] for the current goals and activities, the [[Device_Wishlist]] and [[The-big-list-of-who-has-what-device]].
+[[Milestones]] for the current goals and activities, the [[Device Wishlist]] and [[The-big-list-of-who-has-what-device]].
