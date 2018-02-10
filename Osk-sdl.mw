@@ -79,6 +79,8 @@ After running the calibration, re-run osk-sdl to confirm that touch input is bei
 
 If you had to create this file for osk-sdl to properly handle the touchscreen input on your device, make sure to include the <code>/etc/pointercal</code> file in your device package.
 
+The file format is quite similar to the calibration for [[Screen_Calibration#libinput|libinput]]. The file consists of 9 values. It starts with two groups of three values, the first is for the x coordinate and the second for the y coordinate. Each group consists of a multiplier for the x and a multiplier for the y coordinate and then an offset. However, as all values need to be integers, the values are scaled by a scaling factor. This is the 7th number in the file and is always 65536. The last two values are the screen width and height. Similar to the calibration matrix for libinput, some of the first two values of every group should be 0. While one might think that the other values should always be around the scaling factor or, for the offsets, 0 or the scaling factor times device width/height (as for libinput), this is not the case. E.g. for the [[Google_Nexus_7_2012_(asus-grouper)]] the x/y multipliers are around 0.6 (see [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/device-asus-grouper/pointercal pointercal]) even though for Weston no such scaling is necessary. This could actually be the width/height ratio (0.625) or something unrelated. If you have more information on this, please add it here so we can get more precise calibration files!
+
 === Porting References ===
 
 * [https://linux.die.net/man/5/fb.modes fb.modes man page]
