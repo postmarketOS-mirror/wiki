@@ -194,8 +194,28 @@ Please enable it for postmarketOS, so busybox' syslogd can log to a ringbuffer i
 
 These kernel options are optional and for some devices required to fix some issues.
 
-=== CONFIG_USB_G_ANDROID ===
+=== CONFIG_LBDAF ===
+'''About'''
 
+''Support for large (2TB+) block devices and files''
+
+''The ext4 filesystem requires that this feature be enabled in order to support filesystems that have the huge_file feature enabled. Otherwise, it will refuse to mount in the read-write mode any filesystems that use the huge_file feature, which is enabled by default by mke2fs.ext4.''
+
+'''Location in menu'''
+
+<pre class="shell>
+-*- Enable the block layer  --->
+    [*]   Support for large (2TB+) block devices and files
+</pre>
+
+'''pmOS specific'''
+
+This is recommended for all 32bit (armhf, x86) devices. The option is not present on 64bit (aarch64, x86_64) devices, which means we currently can not check for it with <code>pmbootstrap kconfig_check</code>.
+
+Without this option, it is not possible to mount ext4 partitions that have been created with the default settings. The postmarketOS SD card installation uses these default parameters. There doesn't seem to be a point in changing that to work around badly configured kernels: even if the postmarketOS installation did not require this option, you might come across an SD card with ext4, that does not work on your device.
+
+
+=== CONFIG_USB_G_ANDROID ===
 '''About'''
 
 ''The Android Composite Gadget supports multiple USB functions: adb, acm, mass storage, mtp, accessory and rndis.''
@@ -217,7 +237,6 @@ Device Drivers -->
 Enabling this option is needed for usb networking on some of the android kernels.
 
 === CONFIG_USB_ETH ===
-
 '''About'''
 
 ''This driver implements Ethernet style communication, in one of several ways:
@@ -245,7 +264,6 @@ Device Drivers -->
 Most devices do not need this to be set. If telnet/SSH does not work you can try and set this option to Y.
 
 === CONFIG_USB_ETH_RNDIS ===
-
 '''About'''
 
 ''Microsoft Windows XP bundles the "Remote NDIS" (RNDIS) protocol, and Microsoft provides redistributable binary RNDIS drivers for older versions of Windows.''
@@ -269,7 +287,6 @@ Device Drivers -->
 Required if you set <code>CONFIG_USB_ETH</code> to 'Y'.
 
 === CONFIG_MSM_KGSL ===
-
 '''About'''
 
 ''3D graphics driver. Required to use hardware accelerated OpenGL ES 2.0 and 1.1.''
@@ -289,7 +306,6 @@ Device Drivers -->
 If framebuffer does not work set this to 'N'
 
 === CONFIG_CMDLINE ===
-
 '''About'''
 
 ''Enter arguments here that should be compiled into the kernel image and used at boot time. If the boot loader provides a command line at boot time, it is appended to this string to form the full kernel command line, when the system boots.''
@@ -309,7 +325,6 @@ General Setup -->
 No
 
 === CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE ===
-
 '''About'''
 
 ''Build a concatenated zImage/dtb by default''
