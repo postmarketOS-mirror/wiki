@@ -101,9 +101,7 @@ Some device buttons can trigger acpi events. Busybox acpid can be used to handle
 For this to work, an acpi.map is needed. Look at [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/device-nokia-n900 device-nokia-n900] for more information.
 
 == See also ==
-
+* [https://github.com/postmarketOS/pmbootstrap/pull/1211#issuecomment-363972138 Difference between busybox acpid and triggerhappy]
 * [https://cgit.freedesktop.org/evtest/tree/ evtest source code]
-
 * [https://github.com/wertarbyte/triggerhappy triggerhappy source code]
-
 * [https://git.busybox.net/busybox/tree/util-linux/acpid.c busybox acpid source code]
