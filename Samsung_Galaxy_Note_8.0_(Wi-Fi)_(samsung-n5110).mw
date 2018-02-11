@@ -1,0 +1,62 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy Note 8.0 (Wi-Fi)
+| codename = samsung-n5110
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = Android 4.4.2 KitKat
+| chipset = Samsung Exynos 4412 quad-core processor
+| cpu = Quad-core Cortex-A9 1.6 GHz
+| gpu = ARM Mali-400 MP
+| storage = 16 GB
+| display = 1280x800 (189 PPI) TFT LCD
+| memory = 2 GB
+}}
+
+== Contributors ==
+* michitux
+
+== Maintainer(s) ==
+* michitux
+
+== What works ==
+
+* Weston including touch
+* Xfce4 (recommended) including touch and pen
+* WiFi using the <code>firmware-samsung-i9305</code>
+* Bluetooth works partially as described for the [[Samsung_Galaxy_SIII_I747_(samsung-i747m)#Bluetooth|Galaxy SIII]] but the device is <code>/dev/ttySAC0</code>
+* Audio, see [[Audio#WM1811]] for more instructions. Both an pre-configured saved state as well as the ucm profiles are included.
+
+== What does not work ==
+
+* Bluetooth pairing
+* GPS
+* Camera
+* Sleep etc.
+* poweroff on shutdown (<code>halt</code>) command - make sure you really turn the device off or your battery will be totally depleted.
+* 3D acceleration (plasma mobile is very slow)
+
+== How to enter flash mode ==
+
+Hold power and volume down simultaneously.
+
+== Installation ==
+
+Flashing of the kernel works with heimdall, installation on the system partition works at least with <code>adb sideload</code> using TWRP (did not try heimdall). Installation on the sdcard should work, too (untested).
+
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+
+* {{github|1219}} Initial pull request
+* [https://forum.xda-developers.com/showthread.php?t=2070139 GNU/Linux@N80XX] XDA thread on porting GNU/Linux to the very similar Note 10.1.
+* [https://code.google.com/archive/p/opensgn/source/default/source opensgn] The Google Code repo of this port, includes audio configuration and some configuration regarding sleep
+
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
