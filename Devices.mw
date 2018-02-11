@@ -167,6 +167,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | samsung-n7100
   | Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Samsung Galaxy Note 8.0 (Wi-Fi) (samsung-n5110)|Samsung Galaxy Note 8.0 (Wi-Fi)]]
+  | style="white-space: nowrap;" | samsung-n5110
+  | Y  || Y  || Y  || Y  || Y || Y ||  ||  ||  ||  ||  || P || P ||  ||  || - || - || -
+|-
   | style="white-space: nowrap;" | [[Samsung Galaxy S Advance (samsung-i9070)|Samsung Galaxy S Advance]]
   | style="white-space: nowrap;" | samsung-i9070
   | Y  || Y  || Y  || Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
