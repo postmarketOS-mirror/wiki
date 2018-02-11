@@ -28,32 +28,27 @@ Launch evtest to troubleshoot the input device
 The information obtained from evtest can be used as reference to configure triggerhappy or creating acpi.map for busybox acpid
 
 == Using triggerhappy to handle HID input events ==
+=== Installation ===
+Triggerhappy can be used to handle HID input device. After postmarketOS is installed, add it with:
 
-Triggerhappy can be used to handle HID input device. To install triggerhappy, fetch the initial pull request for triggerhappy.
+<syntaxhighlight lang="shell-session">
+$ apk add triggerhappy
+</syntaxhighlight>
 
-<code>$ cd $PMBOOTSTRAP # the directory where pmbootstrap git source code is laying around </code>
+If you did not install it yet, you can also request it to be added to the installation in <code>pmbootstrap init</code> or by using the <code>--add</code> parameter for the install action:
 
-<code>$ git fetch origin pull/1211/head:triggerhappy </code>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --add=triggerhappy
+</syntaxhighlight>
 
-<code>$ git checkout triggerhappy </code>
+=== Usage ===
+Run thd on the device to find what is sent:
 
-<code>$ ./pmbootstrap.py build triggerhappy --arch=armhf </code>
+<syntaxhighlight lang="shell-session">
+$ sudo thd --dump /dev/input/event*
+</syntaxhighlight>
 
-The built package is ~/.local/var/pmbootstrap/packages/armhf/triggerhappy-0.5.0-r0.apk (assuming default location during pmbootstrap.py init), which can be transferred to the device via scp / sftp.
-
-<code>$ scp ~/.local/var/pmbootstrap/packages/armhf/triggerhappy-0.5.0-r0.apk user@172.16.42.1:~/ </code>
-
-Install the package
-
-<code>$ ssh user@172.16.42.1 </code>
-
-<code>$ sudo apk add --allow-untrusted ./triggerhappy-0.5.0-r0.apk </code>
-
-Run thd on the device to find what is sent
-
-<code>$ sudo thd --dump /dev/input/event* </code>
-
-With thd --dump running, touch the touchscreen and press the available buttons. There will be information related to the input device printed on the ssh session.
+With <code>thd --dump</code> running, touch the touchscreen and press the available buttons. There will be information related to the input device printed on the ssh session. 
 
 <pre>
 EV_ABS	ABS_MT_TRACKING_ID	16	/dev/input/event0
@@ -82,10 +77,9 @@ EV_KEY  KEY_VOLUMEUP    0       /dev/input/event2
 # KEY_VOLUMEUP  0       command
 </pre>
 
-The information can be used to create a triggerhappy configuration, for example assigning command when the home touch button is pressed.
+The information can be used to create a triggerhappy configuration, for example assigning a command when the home touch button is pressed.
 
-<code> /etc/triggerhappy/triggers.d/buttons.conf </code>
-
+Example <code>/etc/triggerhappy/triggers.d/buttons.conf</code>:
 <pre>
 KEY_POWER 1 poweroff
 KEY_VOLUMEDOWN+KEY_POWER 1 reboot
@@ -94,9 +88,11 @@ KEY_VOLUMEDOWN+KEY_POWER 1 reboot
 #ABS_MT_POSITION_Y@home 1344 @
 </pre>
 
-The triggerhappy service needs to be enabled to listen HID button keypresses.
+The triggerhappy service needs to be enabled to listen HID button keypresses:
 
-<code># rc-update add triggerhappy default </code>
+<syntaxhighlight lang="shell-session">
+# rc-update add triggerhappy default
+</syntaxhighlight>
 
 == Using busybox acpid ==
 
