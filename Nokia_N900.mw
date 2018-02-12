@@ -285,8 +285,14 @@ make gps2
 gps2 will not talk to gpsd, so it is only useful to verify that hardware is working.
 
 ==== GUI ====
-
 [[XFCE4]] should work well.
+
+==== i3 config ====
+{{note|If you enjoy using these configs, how about we add them as default configs to the n900 package? they are pretty specific to the n900 keyboard anyway, so it would make sense.}}
+MartijnBraam created some nice configs:
+* [https://gist.github.com/MartijnBraam/2b54f617b1741ff1a67082fb5c9db3b6 i3config]
+* [https://gist.github.com/MartijnBraam/dbef8c0e89bd5568e61ce4c5e02816b7 i3status]
+* [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ in action]
 
 === Helpful Links for Porting ===
 
