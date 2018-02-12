@@ -294,6 +294,27 @@ MartijnBraam created some nice configs:
 * [https://gist.github.com/MartijnBraam/dbef8c0e89bd5568e61ce4c5e02816b7 i3status]
 * [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ in action]
 
+==== Power button ====
+If you want to make use of the power button, bind <code>XF86PowerOff</code> to this script:
+<syntaxhighlight lang="sh">
+FILE=~/.screenoff
+if [ -f $FILE ]; then
+    xinput set-prop 8 "Device Enabled" 1
+    xinput set-prop 6 "Device Enabled" 1
+    xinput set-prop 9 "Device Enabled" 1
+    xset dpms force on
+    rm ~/.screenoff
+else
+    xinput set-prop 8 "Device Enabled" 0
+    xinput set-prop 6 "Device Enabled" 0
+    xinput set-prop 9 "Device Enabled" 0
+    xset dpms force off
+    touch ~/.screenoff
+fi
+</syntaxhighlight>
+
+{{note|You cannot use this to turn the screen back on if i3lock or similar is running, as they would grab the keys}}
+
 === Helpful Links for Porting ===
 
 * [https://neo900.org/stuff/block-diagrams/n900/n900.html Device schematic]
