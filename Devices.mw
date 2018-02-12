@@ -373,6 +373,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | coolpad-modena2
   |
 |-
+  | [[Geeksphone Peak (gp-peak)|Geeksphone Peak]]
+  | gp-peak
+  | Boots but display does not work
+|-
   | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]🔼
   | hp-tenderloin
   | Need novacom packaged for Alpine
