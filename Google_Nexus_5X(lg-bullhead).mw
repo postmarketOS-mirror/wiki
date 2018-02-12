@@ -14,6 +14,26 @@
 | memory = 2 GB
 }}
 
+
+== Contributors ==
+
+* PureTryOut
+* MartijnBraam
+
+== What works ==
+
+* Compiling the LineageOS kernel
+* Flashing
+* Booting
+* Telnet
+
+== What does not work ==
+
+* SSH
+* Display
+* WiFi
+* Led
+
 == Unlocking == 
 
 In android go to settings -> System -> About phone and tap the build number 7 times.
@@ -21,6 +41,11 @@ Then go to settings -> system -> developer options and enable OEM unlocking
 
 Reboot to the bootloader and run "fastboot oem unlock"
 Now select "Yes" on the phone screen with the volume button and use the power button to accept.
+
+== Special key combo's ==
+
+Boot to bootloader: hold volume down + power button till the screen turns on
+Launch recovery: first boot to the bootloader, press the volume down button twice and press the power button to select
 
 == Booting serial output ==
 
