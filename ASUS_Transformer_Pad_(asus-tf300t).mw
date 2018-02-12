@@ -33,7 +33,7 @@ There is a rebased version of jonty-comp's branch on [https://github.com/postmar
 * System boots
 * Most sensors/cameras/devices seem to be detected (e.g. accelerometer values can be read from <code>/sys</code> etc)
 
-== What does not work ===
+== What does not work ==
 
 * Flashing via fastboot (device appears to write successfully but then locks up and does not apply the uploaded image)
 * Framebuffer (stuck on ASUS bootloader graphic)
