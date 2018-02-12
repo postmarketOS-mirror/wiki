@@ -1,0 +1,36 @@
+{{Infobox device
+| manufacturer = Geeksphone
+| name =  Peak
+| codename = gp-peak
+| image = File:gp-peak.jpg
+| imagecaption = Geeksphone Peak boot screen
+| releaseyear = 2013
+| originalsoftware = Firefox OS 1.1 on Linux 3.0
+| chipset = Qualcomm Snapdragon S4 MSM8225
+| cpu = Dual core 1.2 GHz
+| gpu = Adreno 203
+| storage = 4 GB
+| display = 540×960
+| memory = 512 MB
+}}
+
+== Contributors ==
+* [[User:Rudloff|Pierre Rudloff]]
+
+== Maintainer(s) ==
+* [[User:Rudloff|Pierre Rudloff]]
+
+== What works ==
+* Flashing
+* USB network
+
+== What does not work ==
+* The screen stays black and weston fails with this error: <code>Failed to open frame buffer device ‘/dev/fb0’: Permission denied</code>
+
+== How to enter flash mode ==
+Press both volume keys + power key until you see the Geeksphone logo.
+
+== See also ==
+* {{github|1214}} Initial pull request
+* [https://github.com/gp-b2g/gp-peak-kernel Geeksphone kernel source]
+* [http://downloads.geeksphone.com/ Firefox OS images]
