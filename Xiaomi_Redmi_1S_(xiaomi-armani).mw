@@ -31,7 +31,8 @@
 == What does not work ==
 * Screen: framebuffer console (no kernel boot log printed on the display)
 * Wifi: rfkill (no support for blocking wireless via rfkill block wifi or nmcli radio wifi off). The only way to block wireless is unloading wlan module (``rmmod wlan`` or ``/etc/init.d/wlanarmani stop``)
-* Other hardware features are untested (3D, sound, bluetooth, modem, gps, accelerometer, buttons)
+* Other hardware features are untested (3D, sound, bluetooth, modem, gps, accelerometer)
+* Xorg based UI: postmarketos-ui-xfce4 displays nothing on the screen.
 
 == How to enter flash mode ==
 * Entering fastboot: hold VolumeKeyDown + Power buttons until fastboot mode displayed on the screen.
