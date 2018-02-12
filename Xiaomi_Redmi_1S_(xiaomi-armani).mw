@@ -45,11 +45,13 @@
 
 :<code>$ pmbootstrap init #select xiaomi-armani</code>
 
-:<code>$ pmbootstrap build -i device-xiaomi-armani</code>
+:* Optional: build the device specific packages. Actually, there is no need to build the device specific packages since they are available on PostmarketOS repository.
 
-:<code>$ pmbootstrap build -i firmware-xiaomi-armani</code>
+::<code>$ pmbootstrap build -i device-xiaomi-armani</code>
 
-:<code>$ pmbootstrap build linux-xiaomi-armani</code>
+::<code>$ pmbootstrap build -i firmware-xiaomi-armani</code>
+
+::<code>$ pmbootstrap build linux-xiaomi-armani</code>
 
 :<code>$ pmbootstrap install --no-fde --android-recovery-zip</code>
 
