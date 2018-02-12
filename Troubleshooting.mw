@@ -159,7 +159,7 @@ See: [[Troubleshooting:grsec]]
 
 === sh: can't create /proc/sys/fs/binfmt_misc/register: nonexistent directory ===
 
-This issue is known to happen in Alpine Virthardened. These commands should fix it:
+This issue is known to happen in Alpine Virthardened. It also happened in Void Linux for one user. These commands should fix it:
 
 <pre class="shell">sudo modprobe binfmt_misc
 sudo mount -t binfmt_misc none /proc/sys/fs/binfmt_misc</pre>
