@@ -355,7 +355,33 @@ To make the display work in the first place, read [[Troubleshooting:display]] an
 
 After you have it working, please take some [[Making_good_photos|nice photos]] and add them to your device's wiki page. If you have a Reddit account, consider posting them in [https://www.reddit.com/r/postmarketOS/ /r/postmarketOS] as well.
 
-=== osk-sdl support ===
+=== Changing your installation ===
+==== Install packages over SSH ====
+Get Internet access via [[USB Internet|USB]] (easier) or [[Wifi]], then use the package manager to install new packages:
+<syntaxhighlight lang="shell-session">
+$ apk add hello-world
+</syntaxhighlight>
+
+You can also [[Installing_packages_on_a_running_phone|host packages you have built yourself]] from your PC. Just make sure to increase the package version when you build your own version of a package, that already exists. Otherwise the package manager can not know that your package is the newest one and should be installed. Check the output of <code>apk</code> to see whether it is really installing the package or not.
+
+==== Building a new system image ====
+Whenever you rebuild a package (or pick a new one to be installed by default in <code>pmbootstrap init</code>), you need to make sure that the package is actually installed in the chroot from which the system image gets generated. Achieve that by running <code>pmbootstrap install</code> again, it should update all outdated packages. Pay attention to the output of <code>pmbootstrap log</code> to see if it actually has been updated.
+If something did not work as expected, you can always <code>pmbootstrap zap</code> your chroots to start over with a clean installation.
+
+==== Kernel ====
+A simple way to recompile your kernel (e.g. because you want to change your kernel config) and flash it to your device is running the following commands:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap build --force linux-wiki-example
+$ pmbootstrap install --no-fde
+$ pmbootstrap flasher flash_kernel
+</syntaxhighlight>
+
+The last flash_kernel step is only needed if your device has the kernel stored on an extra boot partition.
+Android/fastboot compatible devices have such a partition, Nokia devices (N900 etc.) don't. If your device does ''not'' have a boot partition, update your system partition or SD card.
+
+After you've gotten more familiar with postmarketOS, you could try out the <code>postmarketos-update-kernel</code> as well. It allows you to flash a new kernel to the device's <code>boot</code> partition ([[Partition-layout#Android_internal_storage|not to be confused]] with postmarketOS' own boot subpartition <code>systemp1</code>).
+
+=== Full disk encryption: osk-sdl support ===
 If the display and the touchscreen interface are working, then it's time to add support for <code>osk-sdl</code>, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting osk-sdl to New Devices]]
 
 === Advanced topics ===
