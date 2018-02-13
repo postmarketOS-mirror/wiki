@@ -1,0 +1,43 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Geeksphone
+| name =  Revolution
+| codename = gp-revolution
+| image = File:gp-revolution.jpg
+| imagecaption = Geeksphone Revolution boot screen
+| releaseyear = 2014
+| originalsoftware = * Firefox OS 1.3
+* Firefox OS 2.0
+* Android 4.2
+* CyanogeMod 11
+| chipset = Intel Atom Z2560
+| cpu = Dual core 1.6 GHz
+| gpu = PowerVR SGX544
+| storage = 4 GB
+| display = 540×960
+| memory = 1 GB
+}}
+
+== Contributors ==
+* Rudloff
+
+== Maintainer(s) ==
+* Rudloff
+
+== What works ==
+The kernel builds.
+
+== What does not work ==
+It does not boot (it goes straight to recovery).
+
+== How to enter flash mode ==
+Press volume down and power button at the same time.
+
+== Installation ==
+The Revolution uses the Intel bootimg format, similar to the [[Asus Zenfone 5 (asus-t00f)]].
+
+[https://github.com/coldnew-gp-revolution/revolution-boot-tools This tool] can be used to generate an image in this format.
+
+== See also ==
+* [https://github.com/Rudloff/pmbootstrap/tree/feature/gp-revolution WIP kernel branch]
+* [https://github.com/coldnew-gp-revolution/gp-revolution-kernel Geeksphone kernel (mirror)]
