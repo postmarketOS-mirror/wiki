@@ -284,7 +284,7 @@ make gps2
 
 gps2 will not talk to gpsd, so it is only useful to verify that hardware is working.
 
-==== GUI ====
+=== GUI ===
 [[XFCE4]] should work well.
 
 ==== i3 config ====
