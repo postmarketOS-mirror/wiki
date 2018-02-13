@@ -31,6 +31,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
 * DooGee x5/x5Pro (MediaTek MT6735M) [SnowCat Kernel](https://github.com/SnowCat6/DOOGEE-kernel-3.18) (Also requires non-kernel code, firmware & drivers)[https://github.com/SnowCat6?utf8=%E2%9C%93&tab=repositories&q=x5pro&type=&language=]
 * ARK Benefit A3 (cheaper Elephone Trunk clone) — https://wiki.lineageos.org/devices/peach (currently unmaintained)
+* LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
 
 == Low Priority Devices ==
 
