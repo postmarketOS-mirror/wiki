@@ -25,6 +25,10 @@ Basically all points listed below are done together with other community members
 * research on how we could implement "daily driver" stuff (e.g. {{github|161}} plasma-mobile, {{github|598}} cellular modem, {{github|592}} firmware patching)
 * binary package repository
 
+'''My plan for telephony:'''
+* Mainline the [[Google_Nexus_4_(lg-mako)|Nexus 4]], improve <code>pmbootstrap</code> tooling for mainlining (e.g. {{github|1210}}) and [[The_Mainline_Kernel|writing a guide on doing so]] in the process. I've learned a lot about mainlining, and for the most part it's writing the dts file from what I understand, at least when all the phone's components are in upstream already (which is the case for the Nexus 4 from what I know).
+* Get telephony working on that with ofono and [[QMI]] (there's a QMI driver in the mainline kernel)
+
 === MartijnBraam ===
 
 # Try to post as much different devices as portable to find edgecases in the build process
