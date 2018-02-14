@@ -45,6 +45,7 @@ Now select "Yes" on the phone screen with the volume button and use the power bu
 == Special key combo's ==
 
 Boot to bootloader: hold volume down + power button till the screen turns on
+
 Launch recovery: first boot to the bootloader, press the volume down button twice and press the power button to select
 
 == Booting serial output ==
