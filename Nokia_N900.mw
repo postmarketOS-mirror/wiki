@@ -75,15 +75,12 @@ $ sudo iw wlan0 set type managed</pre>
 Configure wpa_supplicant (only necessary on encrypted networks):
 
 <pre>$ sudo su -
-# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wlan0.conf
+# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wpa_supplicant.conf
 &lt;enter passphrase here and press Enter&gt;
 # exit</pre>
 Connect to network using wpa_supplicant:
 
-<pre>$ sudo wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
-If your network uses DHCP, start the DHCP client:
-
-<pre>$ sudo udhcpc -i wlan0</pre>
+<pre>$ service wpa_supplicant restart </pre>
 
 ==== Sound ====
 
