@@ -1,0 +1,68 @@
+{{note|This is a work in progress document where we are collecting sources and all kind of information that might be useful to support QMI in postmarketOS}}
+
+Related issues:
+
+* {{github|373}} wlan-prima (wireless module) and wcnss-service
+* {{github|410}} flame: Wifi firmware and driver errors
+* {{github|358}} Building and packaging external modules
+* {{github|598}} Let's get the cellular modem working!
+
+== QMI ==
+
+QMI (Qualcomm MSM Interface) is a proprietary protocol used between Qualcomm cellular processors and their software stacks. It was found for the first time in Qualcomm chipsets like the MSM7k series that show up in Android handsets Qualcomm Gobi data cards.
+
+In case of data cards / data modems, QMI is often exposed to the host PC via USB.
+
+QMI offers various different services (e.g. WDS, the wireless data service) which are exposed via the QMI protocol stack on one or many QMI ports.
+
+In the context of multi-processor Qualcomm chipsets, which is also the case of Android smartphones, QMI ports are exposed to the Linux-running application CPU core inside the chip. There can be many different transport mechanisms, but in the case of modern integrated chips, it is primarily SMD (Shared Memory Device).
+
+On the OE based Linux in the cellular modems, there is a proprietary QMI multiplex daemon (qmuxd), which acts as a proxy between the shared memory device and various userspace processes accessing QMI services. Those client programs communicate with qmuxd over a unix-domain socket. There are (proprietary) libraries (libqmi.so, libqmi-framework.so) that encapsulate the qmuxd and QMI communication protocols, the message encoding/decoding and state machines.
+
+On Android phones using integrated Qualcomm chipsets, there is an Android RIL daemon that converts from RIL to QMI.
+
+== Open source ==
+
+For a long time, the only way to use such QMI+net pair in the Linux kernel was to use the out-of-tree GobiNet drivers provided by Qualcomm or by other manufacturers, along with user-space tools also developed by them (some of them free/open, some of them proprietary).
+
+Luckily, a couple of years ago a new <code>qmi_wwan</code> driver was developed by Bjørn Mork and merged into the upstream kernel. This new driver provided access to both the QMI port and the network interface, but was much simpler than the original GobiNet one. The scope was reduced so much, that most of the work that the GobiNet driver was doing in kernel-space, now it had to be done by userspace applications. There are now at least 3 different user-space implementations allowing to use QMI devices through the qmi_wwan port: ofono, uqmi and libqmi.
+
+The QMI protocol is easily accessible in Linux kernels &gt;= 3.4, through the cdc-wdm and qmi_wwan drivers. Once these drivers are in place and the modem gets plugged in, the kernel will expose a new /dev/cdc-wdm device which can talk QMI, along with a wwan interface associated to each QMI port.
+
+== GobiNet vs libqmi ==
+
+What should we use in PostmarketOS? The upstream qmi_wwan kernel driver and user-space utilities like libqmi? Or rather, the out-of-tree GobiNet driver and user-space utilities provided by manufacturers?
+
+[https://sigquit.wordpress.com/2014/06/11/qmiwwan-or-gobinet/ According to the author], these are some differences:
+
+* The GobiNet driver is much more complex than qmi_wwan
+* GobiNet is maintained out-of-tree, while qmi_wwan is in the upstream kernel
+* GobiNet is more kernel-space, while qmi_wwan is more user-space
+* In qmi_wwan, only one process is capable of using the control port at a given time, while the GobiNet driver allows multiple processes to concurrently access the device. In order to handle this issue in qmi_wwan libqmi 1.8 implemented a <code>qmi-proxy</code> process which would be the only one accessing the QMI port, but which would allow different process to communicate with the device concurrently
+* The process of loading new firmware into a QMI-based device is not straightforward and qmi_wwan doesn't not provide a way to perform this operation in its user-space tools. So, updating the firmware of a device is only possible by using the GobiNet driver plus the vendor-provided programs.
+* The ofono support for qmi_wwan is a big plus since this is also what the n900 uses to do modem stuff and in combination with networkmanager also provides easy user-manageable mobile data
+
+It looks like using qmi_wwan is the way to go here.
+
+== Questions ==
+
+* ''Note: It is not (yet) possible to mix GobiAPI with qmi_wwan and e.g. libqmi with GobiNet. Therefore, it is not (yet) possible to use libqmi or qmicli in e.g. an Android device with a QMI-capable chipset.'' ([https://sigquit.wordpress.com/2014/06/11/qmiwwan-or-gobinet/ source])
+** This quote is from 2014. Is it still like that?
+* Can we totally replace the interface initialization done by <code>wcnss-service</code> with the <code>qmi_wwan</code> driver and <code>libqmi</code>?
+
+== References ==
+
+* https://sigquit.wordpress.com/2012/08/20/an-introduction-to-libqmi/
+* https://sigquit.wordpress.com/2014/06/11/qmiwwan-or-gobinet/
+* https://sigquit.wordpress.com/tag/libqmi/
+* https://osmocom.org/projects/quectel-modems/wiki/QMI
+* https://wiki.openwrt.org/doc/recipes/ltedongle
+* https://blogs.gnome.org/dcbw/2010/04/15/mobile-broadband-and-qualcomm-proprietary-protocols/
+* [https://archive.fosdem.org/2014/schedule/event/deviot10/ Fosdem 2014 talk: LTE in your Linux-based system]
+* [http://www.lanedo.com/documents/Qualcomm%20Gobi%20devices%20on%20Linux.pdf Qualcomm Gobi devices on Linux (PDF)]
+
+Software:
+
+* [https://www.freedesktop.org/wiki/Software/libqmi/ libqmi]
+* [https://github.com/torvalds/linux/blob/master/drivers/net/usb/qmi_wwan.c qmi_wwan.c]
+* [https://portland.source.codeaurora.org/patches/quic/gobi/ Gobi reference code and patches]. Modem, GPS and network drivers
