@@ -1,5 +1,17 @@
 Here are various hooks that might help with initramfs debugging. They are raw pastes and need to be adjusted before using them. Boot a known working ROM to extract the right <code>/sys</code> paths etc.
 
+=== General usage ===
+* <code>pmbootstrap install</code>
+* save the hook in the device chroot:
+: <syntaxhighlight lang="bash">
+$ pmbootstrap chroot -r
+$ apk add nano
+$ export TERM=xterm
+$ nano /etc/postmarketos-mkinitfs/hooks/my-debug-hook.sh
+</syntaxhighlight>
+* <code>pmbootstrap initfs</code> to regenerate the initramfs
+* <code>pmbootstrap flasher boot</code>
+
 === Blinking LED (simple) ===
 <syntaxhighlight lang="bash">
 #!/bin/sh
