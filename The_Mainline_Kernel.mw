@@ -59,3 +59,4 @@ You probably need to copy over the device tree source, from which the <code>dtb<
 * [https://forum.xda-developers.com/android/software-hacking/reference-how-to-upstream-android-kernel-t3626913 How to get an Android kernel up to date with Linux upstream]
 * [https://nickdesaulniers.github.io/blog/2017/05/16/submitting-your-first-patch-to-the-linux-kernel-and-responding-to-feedback/ Submitting your first patch to the Linux kernel and responding to feedback]
 * [http://kroah.com/log/blog/2018/02/05/linux-kernel-release-model/ Linux Kernel Release Model] (reasons why we should all be using mainlined kernels)
+* [https://talk.maemo.org/showthread.php?t=99357 Documenting devices with mainline Linux support]
