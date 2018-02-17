@@ -1,0 +1,114 @@
+==Introduction==
+
+Battery state can be monitored periodically. When the capacity is
+below certain level, an action can be triggered.
+
+Battery capacity change doesn't trigger udev events, so udev can't be
+used for this purpose. Monitoring is performed periodically, using
+crond to perform the job.
+
+==Preparation==
+
+Create an executable script for action at various capacity level. The example script below will blink the notification light when the battery is at 25 percent and will blink the notificaion light again when the battery is at 15 percent and shutdown. The script below is for [[Xiaomi Redmi 1S (xiaomi-armani)]], so modification of sysfs path is needed for use on another devices.
+
+<pre>
+#!/bin/sh
+# Replace BATTERY variable with the actual battery device
+# found under sysfs
+BATTERY="battery"
+
+# Turn off notification leds
+# Replace the value of leds according to the sysfs entry
+ledsoff() {
+local leds="red green blue"
+for led in $leds; do
+	echo 0 > /sys/class/leds/"$led"/brightness
+done
+}
+
+# Blink notification leds for 100 times
+# Replace the red variable with actual red led device
+# found under sysfs
+blink() {
+local countdown=100
+local red=red
+until [ "$countdown" -eq 0 ]; do
+	a="$(($countdown-1))" &&
+	echo 100 > /sys/class/leds/"$red"/brightness && sleep 1
+	echo 0 > /sys/class/leds/"$red"/brightness
+done
+}
+
+if [ -d /sys/class/power_supply/"$BATTERY" ]; then
+	CAPACITY="$(cat /sys/class/power_supply/${BATTERY}/capacity)"
+
+if [ "$CAPACITY" -lt 25 ]; then
+	logger "Battery capacity is less than 25 percent"
+	ledsoff
+	blink	
+	ledsoff
+fi
+
+if [ "$CAPACITY" -lt 15 ]; then
+	logger "Battery capacity is less than 15 percent"
+	ledsoff
+	blink	
+	logger "Battery low. Powering off"
+	poweroff
+fi
+
+fi
+</pre>
+
+Place the script above as check_battery_state.sh inside
+/etc/periodic/2min directory. Create the directory if needed.
+
+<code># mkdir -p /etc/periodic/2min </code>
+
+Make the script file executable.
+
+<code># chmod 755 /etc/periodic/2min/check_battery_state.sh </code>
+
+==Adding a crontab entry to do the job==
+
+A crontab entry is needed to perform the scheduled battery
+check. Modify root's crontab to do the scheduled task.
+
+<code># crontab -u root -e </code>
+
+The command will open root's crontab file /var/spool/crontabs/root
+inside vi text editor.
+
+Note that the busybox crontab command doesn't
+parse EDITOR environment variable, so if another text editor is
+pereferred, open the root crontab file directly.
+
+<code># nano /var/spool/crontabs/root </code>
+
+Add a line to indicate that a new 2 minutes action will be performed.
+
+<pre>
+# min   hour    day     month   weekday command
+*/2     *       *       *       *       run-parts /etc/periodic/2min
+</pre>
+
+==Enabling crond service==
+
+To enable crond service so that crontab will be executed, execute the
+following command.
+
+<code># rc-update add crond default </code>
+
+The crond service will be started automatically after rebooting.
+
+To start the service immediately, run the following command.
+
+<code># /etc/init.d/crond start </code>
+
+The crond will execute check_battery_state.sh every 2 minutes and the
+predefined low battery actions will be performed.
+
+==See also==
+
+* [https://git.busybox.net/busybox/tree/miscutils/crond.c Busybox crond source code]
+* [https://wiki.gentoo.org/wiki/Cron Gentoo cron wiki page]
