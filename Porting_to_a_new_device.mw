@@ -12,13 +12,15 @@ Run the following commands in a Linux terminal to get started.
 $ git clone https://github.com/postmarketOS/pmbootstrap
 $ cd pmbootstrap
 $ ./pmbootstrap.py init
+Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+Work path [/home/user/.local/var/pmbootstrap]:
 </syntaxhighlight>
 
 Type in the code name of your device to start a new port, and fill out everything else you get asked for. Check out [[how to find device specific information]] if necessary.
 
 <pre>
 Target device (either an existing one, or a new one for porting).
-Available (31): asus-flo, asus-grouper, fairphone-fp2, ...
+Available (60): asus-flo, asus-grouper, fairphone-fp2, ...
 Device [samsung-i9100]: wiki-example
 You are about to do a new device port for 'wiki-example'.
 Continue? (y/n) [y]:
@@ -62,12 +64,8 @@ Available user interfaces (5):
 * weston: (Wayland) Reference compositor (demo, not a phone interface)
 * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
 User interface [weston]:
-Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
-Work path [/home/user/.local/var/pmbootstrap]:
-How many jobs should run parallel on this machine, when compiling?
-Jobs [3]:
-Rebuild packages, when the last modified timestamp changed, even if the version did not change? This makes pmbootstrap behave more like 'make'.
-Timestamp based rebuilds (y/n) [n]:
+Build options: Parallel jobs: 3, ccache per arch: 5G
+Change them? (y/n) [n]:
 Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
 Extra packages [none]:
 Your host timezone: Europe/London
