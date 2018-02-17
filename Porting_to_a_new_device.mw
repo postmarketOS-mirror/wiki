@@ -84,7 +84,7 @@ Done!
 $ sudo ln -s $PWD/pmbootstrap.py /usr/local/bin/pmbootstrap
 </syntaxhighlight>
 
-Optionally, follow the steps in <code>helpers/pmbootstrap-autocompletion.zsh</code> for <code>zsh</code> auto-completion.
+For optional <code>zsh</code> auto-completion, follow the steps in <code>helpers/pmbootstrap-autocompletion.zsh</code>.
 
 ==== Logging ====
 Open a second terminal and run the following command to see detailed logging (such as compiler output). Whenever reporting, that something does not work, please attach the detailed log output from this window.
