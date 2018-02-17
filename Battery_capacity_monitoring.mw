@@ -33,7 +33,7 @@ blink() {
 local countdown=100
 local red=red
 until [ "$countdown" -eq 0 ]; do
-	a="$(($countdown-1))" &&
+	countdown="$((countdown-1))" &&
 	echo 100 > /sys/class/leds/"$red"/brightness && sleep 1
 	echo 0 > /sys/class/leds/"$red"/brightness
 done
