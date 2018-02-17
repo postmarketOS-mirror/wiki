@@ -77,13 +77,14 @@ Done!
 </pre>
 
 ==== Shortcut ====
+{{note|You can skip this step and simply use <code>./pmbootstrap.py</code> whenever <code>pmbootstrap</code> is mentioned in the documentation.}}
 <code>./pmbootstrap.py</code> is the key program for postmarketOS development, so you might want to set up <code>pmbootstrap</code> as shortcut, that works from any folder:
 
 <syntaxhighlight lang="shell-session">
 $ sudo ln -s $PWD/pmbootstrap.py /usr/local/bin/pmbootstrap
 </syntaxhighlight>
 
-The rest of the documentation assumes, that you have this shortcut set up. If you skipped this step, simply use <code>./pmbootstrap.py</code> whenever <code>pmbootstrap</code> is mentioned.
+Optionally, follow the steps in <code>helpers/pmbootstrap-autocompletion.zsh</code> for <code>zsh</code> auto-completion.
 
 ==== Logging ====
 Open a second terminal and run the following command to see detailed logging (such as compiler output). Whenever reporting, that something does not work, please attach the detailed log output from this window.
