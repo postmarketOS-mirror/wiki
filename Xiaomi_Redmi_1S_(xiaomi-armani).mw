@@ -80,6 +80,8 @@ The screen can be turned on with maximum value up to 4095
 
 :<code>$ echo 3072 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
 
+Battery state can be monitored. Refer to [[Battery capacity monitoring]] for more information.
+
 == See also ==
 
 * {{github|1204}} Initial pull request
