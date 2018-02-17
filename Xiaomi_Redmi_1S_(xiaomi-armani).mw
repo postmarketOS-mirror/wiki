@@ -26,7 +26,7 @@
 * Wifi: via wcnss-wlan and wlanarmani service (which does modprobe wlan on system boot after wcnss-wlan service has been initialized)
 * Xwayland
 * Battery: charging status (/sys/class/power_supply/battery/status), capacity reporting (/sys/class/power_supply/battery/capacity)
-* Buttons: KEY_POWER, KEY_VOLUMEUP, and KEY_VOLUMEDOWN (triggerhappy can be used to handle them)
+* Buttons: KEY_POWER, KEY_VOLUMEUP, and KEY_VOLUMEDOWN (triggerhappy can be used to handle them, see [[Troubleshooting:HID_buttons]])
 
 == What does not work ==
 * Screen: framebuffer console (no kernel boot log printed on the display)
