@@ -385,6 +385,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | hp-tenderloin
   | Need novacom packaged for Alpine
 |-
+  | [[Htc-buzz-(HTC-Buzz)|HTC Buzz/Wildfire]]
+  | htc-buzz
+  | Kernel compiles but does not boot
+|-
   | [[Htc-vision-(HTC-Desire-Z)|HTC Desire Z]]
   | htc-vision
   | Kernel compiles, not tested
