@@ -40,6 +40,8 @@ Hold the '''Volume Down''' button, and then press the '''Power''' button
 
 == Installation ==
 {{note|Flashing the partitions does not work yet (except for the kernel), so you will need an SD card.}}
+
+* Unlock (s-off) the bootloader if it hasn't been unlocked before ([https://www.htcdev.com/bootloader/ htcdev unlock site])
 * Install everything using an SD card <code>pmbootstrap install --sdcard=/dev/sd?</code>
 * Insert the SD-Card on the device
 * Boot the device in HBOOT mode and select fastboot
