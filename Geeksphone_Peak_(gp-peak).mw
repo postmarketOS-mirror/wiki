@@ -23,9 +23,23 @@
 == What works ==
 * Flashing
 * USB network
+* Display
+* Touchscreen
+* Weston
+
+== Not tested ==
+* Full disk encryption
+* Wifi
+* Accelerometers
+* Bluetooth
+* Audio
+* GPS
+* Camera
+* Cellular network
 
 == What does not work ==
-udev does not work correctly so weston can't access the framebuffer or the touchscreen.
+udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-gp-peak/linux-gp-peak.start trigger rules manually].
+Also the device freezes when not used for a few minutes (might be related).
 
 == How to enter flash mode ==
 Press both volume keys + power key until you see the Geeksphone logo.
