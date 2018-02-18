@@ -1,0 +1,40 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = HTC
+| name = Wildfire
+| codename = buzz
+| imagecaption = HTC Wildfire
+| releaseyear = 2010
+| originalsoftware = Android 2.1
+| chipset = Qualcomm MSM7225 Snapdragon S1
+| cpu = 528 MHz ARM 11
+| gpu = No
+| storage = 512 MB
+| display = 240x320
+| memory = 384 MB
+}}
+
+== Contributors ==
+* feinerer
+
+== Maintainer(s) ==
+* feinerer
+
+== What works ==
+* Kernel compilation
+
+== What does not work ==
+* Everything else
+
+== How to enter flash mode ==
+Hold the '''Volume Down''' button, and then press the '''Power''' button. Choose FASTBOOT.
+
+== Installation ==
+{{note|Flashing the partitions does not work yet, so you will need an SD card.}}
+* Install everything using an SD card <code>pmbootstrap install --no-fde --sdcard=/dev/sd?</code>
+* Insert the SD-Card on the device
+* Enter flash mode
+* Boot kernel using <code>pmbootstrap flasher boot</code>
+
+== See also ==
+* {{github|1203}} HTC Wildfire status report
