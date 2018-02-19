@@ -54,9 +54,12 @@ Since you can't remove the battery without opening the phone, you can do the fol
 The device shares the <code>yukon</code> platform with other Xperia devices, such as the Xperia E3 (Flamingo), M2 (Eagle) and T2 Ultra (Tianchi). As such, the kernel likely works on all of these.
 
 === Boot command line ===
-* When in charging mode: <code>androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.emmc=true androidboot.bootloader=s1 oemandroidboot.s1boot=1274-7024_S1_Boot_MSM8x26_LA1.0_1021 androidboot.serialno=YT91XXXXXX ta_info=1,16,256 startup=0x00010004 warmboot=0x77665501 oemandroidboot.imei=3548XXXXXXXXXXXX oemandroidboot.phoneid=0000:35480506XXXXXXXX oemandroidboot.security=0 oemandroidboot.babe1234=00000200 display_status=on androidboot.baseband=msm</code>
+* When in charging mode: 
+ androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.emmc=true androidboot.bootloader=s1 oemandroidboot.s1boot=1274-7024_S1_Boot_MSM8x26_LA1.0_1021 androidboot.serialno=YT91XXXXXX ta_info=1,16,256 startup=0x00010004 warmboot=0x77665501 oemandroidboot.imei=3548XXXXXXXXXXXX oemandroidboot.phoneid=0000:35480506XXXXXXXX oemandroidboot.security=0 oemandroidboot.babe1234=00000200 display_status=on androidboot.baseband=msm
 
-* When starting up normally: <code>androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.emmc=true androidboot.bootloader=s1 oemandroidboot.s1boot=1274-7024_S1_Boot_MSM8x26_LA1.0_1021 androidboot.serialno=YT91XXXXXX ta_info=1,16,256 startup=0x00000001 warmboot=0x00000000 oemandroidboot.imei=3548XXXXXXXXXXXX oemandroidboot.phoneid=0000:35480506XXXXXXXX oemandroidboot.security=0 oemandroidboot.babe1234=00000200 display_status=on androidboot.baseband=msm</code>
+* When starting up normally:
+ androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.emmc=true androidboot.bootloader=s1 oemandroidboot.s1boot=1274-7024_S1_Boot_MSM8x26_LA1.0_1021 androidboot.serialno=YT91XXXXXX ta_info=1,16,256 startup=0x00000001 warmboot=0x00000000 oemandroidboot.imei=3548XXXXXXXXXXXX oemandroidboot.phoneid=0000:35480506XXXXXXXX oemandroidboot.security=0 oemandroidboot.babe1234=00000200 display_status=on androidboot.baseband=msm
+
 == Links ==
 
 [https://developer.sonymobile.com/downloads/xperia-open-source-archives/open-source-archive-for-build-18-1-a-1-23/ Kernel source]
