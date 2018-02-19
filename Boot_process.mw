@@ -18,3 +18,7 @@ The boot partition is mounted, and the second (bigger) initramfs is loaded (a sp
 
 == In the root partition ==
 TODO: complete this section
+
+== See also ==
+* [[Troubleshooting:boot]]
+* [[Troubleshooting:boot:initfshooks]]
