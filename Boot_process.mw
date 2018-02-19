@@ -6,7 +6,9 @@ This isn't something controlled by postmarketOS, and most of the time the user d
 Usually there is a first stage bootloader (actually, more of a second or more stage, depending on the device) installed somewhere on the device.
 That bootloader loads the linux kernel compiled by pmbootstrap in memory, as well as an initramfs ([[Initramfs development]]), which contains the smallest possible set of tools for the rest. It then passes the execution on to the kernel, which extracts the initramfs in memory and mounts it as a root filesystem. It does so, while passing on the kernel command line option, and sometimes the [[Device Tree (dtb)|Device Tree Blob (dtb)]].
 
-Various devices have various ways of doing this (''It would be nice to document this here'').
+Various devices have various ways of doing this (''It would be nice to document this here''):
+
+* [[Deviceinfo_flash_methods#heimdall-isorec|heimdall-isorec]] devices expect to find the initramfs packed with the vmlinuz image, as they can't load it themselves. For these, postmarketOS has a small initramfs in the vmlinuz image that loads the usual minimalist initramfs from another partition.
 
 == Inside the initramfs ==
 The task goes on to the Linux kernel, which initializes some of the peripherals, then executes the postmarketOS initramfs init script[https://github.com/postmarketOS/pmbootstrap/blob/2fb49d2a159eaeeb362247552d242f3765be3c90/aports/main/postmarketos-mkinitfs/init.sh.in].
