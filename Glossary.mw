@@ -72,3 +72,7 @@ The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disa
 [https://github.com/wayland-project/weston Weston] is the reference implementation of a [https://en.wikipedia.org/wiki/Wayland_(display_server_protocol) Wayland] compositor. It has various backends that lets it run on Linux kernel modesetting and evdev input as well as under X11.
 
 We have chosen Weston as a demo because we didn't want to use X11, as this is slowly dying. Also there's libweston, which might come in handy later (you can write your own desktop environment and inherit the hardware compatibility from weston). Weston is nice as a demo and useful at this moment of the development, but not usable as phone interface, so we'll need different desktop environments packaged sooner or later. See [https://github.com/postmarketOS/pmbootstrap/issues/62 issue #62]
+
+=== pmic ===
+
+This stands for power management integrated circuit. It is the chip that controls the power to the various components of the phone.
