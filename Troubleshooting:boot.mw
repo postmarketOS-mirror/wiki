@@ -55,6 +55,7 @@ This is probably a kernel configuration problem, see [[USB_Network#Kernel config
 ** There's a also a guide for [[Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system|building the kernel with Android's build system]]
 
 == See also ==
+* [[Boot process]]
 * {{github|1206}} HTC One M8 not booting
 * {{github|1203}} HTC Wildfire not booting
 * {{github|99}} HTC Droid DNA (dlx) not booting
