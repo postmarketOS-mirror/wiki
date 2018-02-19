@@ -1,0 +1,24 @@
+{{Infobox interface
+| name = i3wm
+| image = File:i3wm-n900.jpg
+| imagecaption = i3wm on the [[Nokia N900]]
+| graphics = i3wm on Xorg
+| toolkit = 
+}}
+
+== Status ==
+According to MartijnBraam, it's working quite well on the N900. It does not make sense to run this interface on a device without a hardware keyboard, because it is a tiling window manager. Since the N900 keyboard does not provide the same keys, as a regular keyboard does, the N900 device package has its own i3 config. It is easy to add such a config to your device as well, just look at how it's done in <code>device-nokia-n900</code>, modify your device package accordingly and make a pull request.
+
+== Installation ==
+Run <code>pmbootstrap init</code> and choose <code>i3wm</code> in the interface section.
+
+Currently this installs <code>lxdm</code> as display manager (a common display manager is planned, see {{github|656}}). When booting for the first time, you need to select i3 in the top left dropdown, where it allows you to choose the session.
+
+== Ideas ==
+* How about a wallpaper for the N900 with i3wm, that is based on the postmarketOS wallpaper, but shows the keybindings on the desktop?
+
+== See also ==
+* [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ Popular /r/unixporn post]
+* {{github|1225}} initial pull request
+
+[[Category:Interface]]
