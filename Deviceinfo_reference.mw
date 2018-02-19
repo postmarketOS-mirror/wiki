@@ -86,7 +86,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 
 == flash ==
 
-These are used for flashing and booting the device, and most of them are fastboot specific. '''[https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets Here is a guide on how to get these values for a specific Android device (by extracting the <code>boot.img</code>)]'''
+These are used for flashing and booting the device, and most of them are fastboot specific. '''[[How to find device specific information|Here is a guide on how to get these values for a specific Android device (by extracting the <code>boot.img</code>)]]'''
 
 {|  class="wikitable sortable"
 ! Variable
