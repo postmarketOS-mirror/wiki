@@ -1,3 +1,6 @@
+USB connectivity is generally one of the first things you want up and running on your phone when porting to a new device.
+postmarketOS uses [[USB Network]]ing for every communication between the device and computer.
+
 === Connecting ===
 Power on your device and connect it to your USB port. You should get the IP <code>172.16.42.2</code> assigned to your PC, check it with <code>ip a</code> or <code>ifconfig</code>.
 
@@ -34,6 +37,8 @@ localhost:~$
 Use <code>sudo</code> to run commands as <code>root</code>, it is configured.
 
 === Troubleshooting ===
+
+==== Making sure the USB is detected ====
 In case you don't get an IP address directly, make sure that your PC recognizes the phone after it booted into postmarketOS at all. It should show the following in <code>dmesg</code>.
 
 <source lang="shell-session">
@@ -48,9 +53,38 @@ In case you don't get an IP address directly, make sure that your PC recognizes 
 [ 6285.287058] IPv6: ADDRCONF(NETDEV_UP): enp0s20f0u1: link is not ready
 </source>
 
+It should also show up on <code>lsusb</code> (the name doesn't necessarily match the model):
+<source lang="shell-session">
+Bus 001 Device 023: ID 18d1:d001 Google Inc. Nexus 4 (fastboot)
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+</source>
+
+And <code>ip link</code> should show an additional entry as well (the last one, in the following list):
+<source lang="shell-session">
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether e2:88:85:58:0f:99 brd ff:ff:ff:ff:ff:ff
+3: wlp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+    link/ether e2:08:85:58:0f:99 brd ff:ff:ff:ff:ff:ff
+14: enp0s29f7u3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 86:11:85:5e:df:fa brd ff:ff:ff:ff:ff:ff
+</source>
+
+If that's the case and you can't connect, your computer probably just doesn't have an IP address on its side of the link.
+
+If however, nothing shows up (even when [[Inspecting the initramfs]]), the most likely reason is a wrong [[Kernel_configuration]]. This is highly device-specific, but some hints can be found in [[#Kernel configuration parameters]]
+
+==== Assigning an IP address ====
 If it gets detected, then you probably don't have a network manager installed, that automatically requests IP addresses from new ethernet interfaces. Use the following command to manually start a DHCP client. Replace the interface name with the one on your machine (see <code>ip a</code> before and after connecting the device via USB). Some Linux distributions have <code>dhcpcd</code> installed instead of <code>dhclient</code>.
 <source lang="shell-session">
 $ dhclient -v enp0s20f0u1
+</source>
+
+Some distribution use other tools that might interfere with <code>dhclient</code> and <code>dhcpcd</code>. In most cases, you should be able to set an IP address with
+<source lang="shell-session">
+# ip address add dev enp0s20f0u1 172.16.42.2/24
 </source>
 
 If this fails, you may need to first assign an ethernet address to it.
@@ -58,6 +92,23 @@ If this fails, you may need to first assign an ethernet address to it.
 # ip l set enp0s20f0u1 address 12:12:12:12:12:12
 </source>
 Then you can try the above <code>dhclient</code> command.
+
+==== Kernel configuration parameters ====
+If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig_check</code> that the required parameters are all set.
+The postmarketOS initramfs is able to configure two different USB systems in the kernel in order to let your PC talk to your phone via networking. One of them has to be enabled (exclusively?):
+* [[Kernel_configuration#CONFIG_USB_ETH|CONFIG_USB_ETH]]
+** [[Kernel_configuration#CONFIG_USB_ETH_RNDIS|CONFIG_USB_ETH_RNDIS]] is usually needed as well, it enables a compatibility interface for microsoft hosts.
+** Usually used in mainline kernels (see also: [[Mainlining FAQ]])
+* [[Kernel_configuration#CONFIG_USB_G_ANDROID|CONFIG_USB_G_ANDROID]]
+** This option is usually enabled in Android kernel forks
+
+You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
+
+=== Note about HTC devices ===
+* HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
+* The [[HTC_Desire_(htc-bravo)|HTC desire]] does work, and it required [https://github.com/postmarketOS/pmbootstrap/blob/bd4ebb3473764108daa92b308511be7e0a1b6948/aports/device/device-htc-bravo/initfs-hook.sh#L8 this line in the initfs-hook] to get USB network
+* It was hard to discover: drebrez used the [[tuning sysfs]] instructions, but he had to write it as a initfs hook and save it in the <code>cache</code> partition of the device, then reboot in TWRP to get that file.
+* Without a working display, no USB network and no serial output, you can use the LEDs for debugging and the other partitions to store files.
 
 === See also ===
 * [[USB Internet]]: Let your phone access the Internet by sharing your PC's Internet connection via USB.
