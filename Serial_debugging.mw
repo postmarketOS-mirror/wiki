@@ -84,5 +84,10 @@ See http://elektranox.org/2017/02/0009-droid-4-root/
 
 See https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/
 
+== Finding the serial port on your device ==
+* If you intend to solder an UART connection on your phone, do you have some spare cables (the ideal would actually be a pin connector).
+* For finding the UART, send either garbage, or a repeating pattern to the serial port /dev/ttysomething (if you have a kernel where it's working), and then try to probe the tx pin with a scope.
+* tx is usually good enough for debugging, but rx should be quite close, with a high impedance, or more likely a pulling resistor.
+
 == See also ==
 * [[Mainlining FAQ#Serial_cable]]
