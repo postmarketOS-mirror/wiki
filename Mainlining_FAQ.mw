@@ -50,16 +50,12 @@ See also: {{github|1021}}
 * (it's the init system log like Starting etc.....[ok])
 
 == How can I compile kernel sources from a local git repo? ==
-{{note|See {{github|1041}} for a feature request to directly implement it in pmbootstrap.}}
-* Install a cross-compiler on your host system (e.g. <code>pacman -S arm-none-eabi-gcc</code>)
-* Inside your kernel's git folder, compile the kernel like this:
+* Clone the kernel with git (~5GB!)
+* Use the following command to build the mainline kernel package with the checked out sources
 <syntaxhighlight lang="shell-session">
-$ export CROSS_COMPILE=arm-none-eabi-
-$ export ARCH=arm
-$ make -j5
+$ pmbootstrap build linux-postmarketos-mainline --src=~/code/linux
 </syntaxhighlight>
-* Select your device in pmbootstrap, run <code>pmbootstrap install</code> and <code>pmbootstrap export</code>. Use the initramfs it throws out there together with your new kernel.
-* Don't use kernel modules at this point, because you would need to put them in the initramfs otherwise. That just makes it complicated.
+* [https://github.com/postmarketOS/pmbootstrap/pull/1210#issuecomment-364590002 Implementation details]
 
 == How can I repackage the initramfs with custom modules? ==
 Run a normal installation to generate the initramfs:
