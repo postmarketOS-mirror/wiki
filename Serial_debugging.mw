@@ -85,9 +85,24 @@ See http://elektranox.org/2017/02/0009-droid-4-root/
 See https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/
 
 == Finding the serial port on your device ==
-* If you intend to solder an UART connection on your phone, do you have some spare cables (the ideal would actually be a pin connector).
-* For finding the UART, send either garbage, or a repeating pattern to the serial port /dev/ttysomething (if you have a kernel where it's working), and then try to probe the tx pin with a scope.
+Sometimes there is no other solution but to poke at random motherboard pins to find the serial port. This is mostly a lucky process, but you can:
+* send either garbage, or a repeating pattern to the serial port at <code>/dev/ttysomething</code> (if you have a kernel where it's working), and then try to find the tx pin with a scope.
+** If you can't, you can also reboot your phone and hope it writes something during boot (but that's really trying luck)
 * tx is usually good enough for debugging, but rx should be quite close, with a high impedance, or more likely a pulling resistor.
+** a pull-up or pull-down resistor will make the pin look like gnd or vcc
+
+== Soldering a connector on your device ==
+This can be a bit involved, but is generally necessary if you want to use it:
+* This procedure is ''dangerous'' for your device, even more so if you are not very experienced
+** Prefer to ask help in a fablab or similar ''you'll practice another day on something easier''
+** If you have to solder it yourself, it's probably a good idea to practice on an old motherboard before
+* Prefer soldering short cables to the PCB instead of full-length ones
+** The smaller (diameter) the cables, the better, generally
+** too long or too thick and the pads you have soldered risk being teared apart by the cables
+** too small and it will be a hassle to work with
+** The best is to have them a couple (4-8) centimeters long, to solder them, solder a connector on the other end, and scotch tape them to the pcb
+** Please, don't forget to pick insulated wires
+
 
 == See also ==
 * [[Mainlining FAQ#Serial_cable]]
