@@ -485,9 +485,9 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | sony-jlo
   |
 |-
-  | [[Xperia-T3|Sony Xperia T3]]
+  | [[Sony Xperia T3 (sony-seagull)|Sony Xperia T3]]
   | sony-seagull
-  |
+  | screen and USB working, pending kernel upgrade before merging
 |-
   | [[Xperia-Z2|Sony Xperia Z2]]
   | sony-sirius
