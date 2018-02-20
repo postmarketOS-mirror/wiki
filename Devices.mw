@@ -47,6 +47,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | lg-hammerhead
   | Y  || Y  || Y  || P  ||  ||  ||  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Google Nexus 5X (lg-bullhead)|Google Nexus 5X]]
+  | style="white-space: nowrap;" | lg-bullhead
+  | Y  || Y  || Y  || Y  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Google Nexus 6 (motorola-shamu)|Google Nexus 6]]
   | style="white-space: nowrap;" | motorola-shamu
   | Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
