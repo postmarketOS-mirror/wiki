@@ -7,7 +7,7 @@ When chip is powered on the dram controller pushes the address of brom (boot rom
 == Brom execution ==
 # UART1 gets initialized to some predetermined baudrate. Baud usually depends in chip input clock source. Observation has been made that UART1 is disabled on many phones, but can be enabled if proper firmware is used and eFuses are not blown.
 # Initialize storage with low clock. Reason why it's using low clock is because muxes are not programmed at this stage.
-# Wait for "Start" string on UART1 for unknown amount of time, the internet keeps buzzing about 150ms. After start is recieved, listen to commands from host until jump is observed (refer to brom spec in further reading section). If start is not sent then Preloader image will be loaded from the storage to the SRAM (static ram) and brom loads it according to the flags set in header.
+# Wait for "Start" string on UART1 for unknown amount of time, the internet keeps buzzing about 150ms. After start is recieved, listen to commands from host until jump is observed (refer to brom spec in further reading section). If start is not sent then Preloader image will be loaded from the storage to the SRAM (static ram) and brom loads it. Not sure if flags SP flash tool needs are used at bootup phase.
 # If KCOL0 pin is shorted to the ground, preloader loading is avoided and download protocol is rolled up on USB port.
 
 == Memory maps of different system on chips ==
