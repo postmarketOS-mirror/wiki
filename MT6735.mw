@@ -1,0 +1,13 @@
+{{note|This page is WiP.}}
+
+Memory map of MT6735P. It might apply to MT6735M but has to be verified
+
+=== File info image format ===
+{| class="wikitable"
+! Address
+! Functional block
+|-
+  | 0x10001000 
+  | Chip config
+
+|}
