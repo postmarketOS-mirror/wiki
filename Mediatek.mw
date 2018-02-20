@@ -10,10 +10,13 @@ When chip is powered on the dram controller pushes the address of brom (boot rom
 # Wait for "Start" string on UART1 for unknown amount of time, the internet keeps buzzing about 150ms. After start is recieved, listen to commands from host until jump is observed (refer to brom spec in further reading section). If start is not sent then Preloader image will be loaded from the storage to the SRAM (static ram) and brom loads it according to the flags set in header.
 # If KCOL0 pin is shorted to the ground, preloader loading is avoided and download protocol is rolled up on USB port.
 
-== Image format ==
-{{note|Incomplete and has missing information. Feel free to coordinate corrections on Matrix chat.}}
+== Memory maps of different system on chips ==
+* [[MT6735]]
 
-This format is used in brom and preloader(has to be verified). All fields are in little endian.
+== Image format ==
+{{note|Incomplete and has missing information. Feel free to coordinate corrections on Matrix chat. Information here is only for reference. Flashing the binaries to storage will be done using brom protocol and custom flashing software.}}
+
+This format is used in brom and preloader(has to be verified) while flashing with SP flash tool. All fields are in little endian.
 
 === File info image format ===
 {| class="wikitable"
