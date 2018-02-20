@@ -22,7 +22,7 @@
 
 == What works ==
 
-* Compiling the LineageOS kernel
+* Compiling the kernel kernel
 * Flashing
 * Booting
 * Telnet
