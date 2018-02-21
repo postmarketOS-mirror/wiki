@@ -83,6 +83,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | huawei-y530
   | Y  || P  || Y  || Y  || Y  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  |style="white-space: nowrap;" | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]
+  |style="white-space: nowrap;" | jolla-sbj
+  | P  || P  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   |style="white-space: nowrap;" | [[LeEco_Le_2|LeEco Le 2]]
   |style="white-space: nowrap;" | leeco-s2
   | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -408,10 +412,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
-|-
-  | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]🔼
-  | jolla-sbj
-  | Kernel compiles, can't get fastboot to work
 |-
   | [[Landrover-a9|Land Rover A9]]
   | landrover-a9
