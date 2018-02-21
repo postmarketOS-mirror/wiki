@@ -2,16 +2,16 @@
 | manufacturer = Motorola
 | name = Droid 4
 | codename = maserati
-| image = File:Fairphone 2.jpg
+| image = File:Droid4-android.jpg
 | imagecaption = Motorola Droid 4
-| releaseyear = 2015
-| originalsoftware = Android 5.1 on Linux 3.4
-| chipset = Qualcomm MSM8974AB-AB Snapdragon 801
-| cpu = Quad-core 2.26 GHz
-| gpu = Adreno 330
-| storage = 32 GB
-| display = 1080x1920 IPS
-| memory = 2 GB
+| releaseyear = 2012
+| originalsoftware = Android 4.0 on Linux 3.0
+| chipset = TI OMAP 4430
+| cpu = Dual-core 1.2 GHz Cortex-A9
+| gpu = PowerVR SGX540
+| storage = 16 GB
+| display = 540 x 960 TFT
+| memory = 1 GB
 }}
 
 == Contributors ==
