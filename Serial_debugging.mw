@@ -82,7 +82,15 @@ See http://elektranox.org/2017/02/0009-droid-4-root/
 
 == Sony Xperia ==
 
-See https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/
+See [https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/|this page], and [https://developer.sony.com/develop/open-devices/guides/access-uart-ports|that one] (basically a new formatting for the same page, as of 2018-02-21, but that [https://talk.sonymobile.com/t5/General-Discussion/UART-on-Sony-Xperia-X-F5121/m-p/1302566/highlight/true#M1341|might change soon])
+
+Also, a sony employee gave an alternative method [https://talk.sonymobile.com/t5/General-Discussion/xperia-xz1-compact-boot-sequence/m-p/1274488/highlight/true#M1240|here], that might be worth a go:
+
+ Unfortunately the only way to access the serial port is to open the device but....
+ You have the other option to debug - pstore:
+ 1. flash an aosp recovery image with a working kernel to the recovery partition
+ 2. to flash your new kernel on the main partition and boot
+ After your new kernel crashes keep volume down pressed and you will boot the working kernel from the recovery partition. From recovery you have access to adb and you can extract the logs from pstore
 
 == Finding the serial port on your device ==
 Sometimes there is no other solution but to poke at random motherboard pins to find the serial port. This is mostly a lucky process, but you can:
