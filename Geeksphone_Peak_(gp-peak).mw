@@ -39,7 +39,12 @@
 
 == What does not work ==
 udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-gp-peak/linux-gp-peak.start trigger rules manually].
-Also the device freezes when not used for a few minutes (might be related).
+
+Also the device freezes after a few minutes. This seems to be caused by a modem failure:
+<pre>
+Jan  1 01:59:59 localhost kern.err kernel: [  574.209688] SMSM: Modem SMSM state changed to SMSM_RESET.
+Jan  1 01:59:59 localhost kern.err kernel: [  574.209948] Notify: start reset
+</pre>
 
 == How to enter flash mode ==
 Press both volume keys + power key until you see the Geeksphone logo.
