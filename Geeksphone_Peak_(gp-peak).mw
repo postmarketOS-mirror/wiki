@@ -26,6 +26,7 @@
 * Display
 * Touchscreen
 * Weston
+* XWayland
 
 == Not tested ==
 * Full disk encryption
