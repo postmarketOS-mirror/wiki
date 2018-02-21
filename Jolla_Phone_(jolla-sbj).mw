@@ -20,7 +20,10 @@
 
 == What works ==
 
-* Compiling the kernel from the jolla sources which should provide everything to run wayland since that's what sailfish uses
+* Compiling the kernel from the Jolla sources which should provide everything to run Wayland since that's what Sailfish uses
+* Booting
+* USB
+* SSH (after some manual configuration)
 
 == What does not work ==
 
