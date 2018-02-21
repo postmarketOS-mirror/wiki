@@ -31,7 +31,7 @@
 
 == Flashing mode ==
 
-The jolla does use fastboot from the mer project instead of android. To enter fastboot shut down the device, then plug in the USB lead while holding down volume down.
+The Jolla phone uses fastboot from the Mer project rather than Android. To enter fastboot shut down the device, then plug in the USB lead while holding down volume down.
 
 == Links ==
 
