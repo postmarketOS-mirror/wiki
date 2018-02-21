@@ -33,11 +33,11 @@
 * Bluetooth
 * Audio
 * GPS
-* Camera
 * Cellular network
 
 == What does not work ==
 * Wifi
+* Camera
 
 udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-gp-peak/linux-gp-peak.start trigger rules manually].
 
