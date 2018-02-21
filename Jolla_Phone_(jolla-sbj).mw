@@ -34,6 +34,24 @@
 
 The Jolla phone uses fastboot from the Mer project rather than Android. To enter fastboot shut down the device, then plug in the USB lead while holding down volume down.
 
+== USB connection ==
+
+The USB connection works, but needs some manual configuration (as found [https://wiki.postmarketos.org/wiki/USB_Network#Assigning_an_IP_address here]).
+
+First, find the interface name using <code>ip a</code>.
+Then, we have to assign the device a mac address (replace the interface name with what you found from the previous command).
+<source>
+# ip l set enp1s0f0u3: address 12:12:12:12:12:12
+</source>
+
+Lastly, add an IP address.
+
+<source>
+# ip address add dev enp1s0f0u3 172.16.42.2/24
+</source>
+
+You can now use SSH to connect to the device on <code>172.16.42.1</code>.
+
 == Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/device-jolla-sbj/aports/device-jolla-sbj Device package]
