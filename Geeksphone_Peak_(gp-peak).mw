@@ -29,7 +29,6 @@
 
 == Not tested ==
 * Full disk encryption
-* Wifi
 * Accelerometers
 * Bluetooth
 * Audio
@@ -38,6 +37,8 @@
 * Cellular network
 
 == What does not work ==
+* Wifi
+
 udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-gp-peak/linux-gp-peak.start trigger rules manually].
 
 Also the device freezes after a few minutes. This seems to be caused by a modem failure:
