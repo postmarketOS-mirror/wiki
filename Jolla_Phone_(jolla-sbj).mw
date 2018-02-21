@@ -22,13 +22,10 @@
 == What works ==
 
 * Compiling the kernel from the Jolla sources which should provide everything to run Wayland since that's what Sailfish uses
+* Flashing
 * Booting
 * USB
 * SSH (after some manual configuration)
-
-== What does not work ==
-
-* Flashing, still need to find the correct offsets
 
 == Flashing mode ==
 
