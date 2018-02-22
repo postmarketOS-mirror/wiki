@@ -389,6 +389,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | gp-revolution
   | Kernel compiles but does not boot
 |-
+  | [[Generic PC]] hardware (inc. BIOS based Windows tablets)🔼
+  | N/A
+  | Should be able to boot by converting existing Alpine image
+|-
   | [[Hp-tenderloin-(HP-Touchpad)|HP Touchpad]]🔼
   | hp-tenderloin
   | Need novacom packaged for Alpine
@@ -443,7 +447,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Raspberry Pi]] (inc. PiTab, Noodle Pi..)🔼
   | rpi
-  | Should be able to boot by converting existing Alpine image
+  | Boots by converting existing Alpine image
 |-
   | [[Samsung_Exhibit_II_4G_(samsung-t679)|Samsung Exhibit II 4G]]
   | samsung-t679
