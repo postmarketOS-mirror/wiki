@@ -61,6 +61,7 @@ echo 4 > /sys/devices/platform/android_usb/usb_function_switch
 ** If that works, maybe you can debug the issue from that point somehow
 ** Or even load the postmarketOS kernel with kexec
 ** There's a also a guide for [[Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system|building the kernel with Android's build system]]
+* Alpine Linux' <code>armhf</code> architecture requires armv6 with FPU {{github|1203}}
 
 == See also ==
 * [[Boot process]]
