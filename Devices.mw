@@ -399,7 +399,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Htc-buzz-(HTC-Buzz)|HTC Buzz/Wildfire]]
   | htc-buzz
-  | Kernel compiles but does not boot
+  | Kernel compiles. But ARMv6 devices without FPU are not supported by Alpine's armhf
 |-
   | [[Htc-vision-(HTC-Desire-Z)|HTC Desire Z]]
   | htc-vision
