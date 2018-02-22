@@ -6,7 +6,7 @@
 | toolkit = GTK+2, [https://talk.maemo.org/showthread.php?t=96800 WIP: GTK+3]
 }}
 [[File:Asus flo hildon.jpg|thumb|Hildon on the [[Google Nexus 7 2013 (asus-flo)|Nexus 7 2013]]]]
-This is the desktop from Maemo, which is a Debian-based distribution that originally ran on the N900 and earlier Nokia Internet Tablets.<br />
+This is the desktop from Maemo, which is a Debian-based distribution that originally ran on the N900 and earlier Nokia Internet Tablets.
 
 === Installation instructions ===
 
@@ -61,6 +61,9 @@ ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
 
 === Performance issues ===
 Software rendering is slow. A possible fix is in the [[Software OpenGL]] article with TinyGLES and similar software.
+
+=== Relation to Maemo Leste ===
+The [http://maemo-leste.github.io/ Maemo Leste] project runs Hildon on top of a recent Devuan (Debian fork) with OpenRC (the same init system that Alpine uses), and all the devices they are targeting run the mainline kernel (Droid 4, N900, N9, ...). postmarketOS has the Hildon packages as maintained by Leste packaged, and we're collaborating.
 
 === See also ===
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in Qemu)
