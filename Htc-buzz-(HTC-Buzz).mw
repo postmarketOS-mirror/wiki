@@ -1,3 +1,4 @@
+{{note|Unfortunately this device doesn't have an FPU, so it doesn't work with Alpine's <code>armhf</code> architecture.}}
 [[Category:Not booting]]
 {{Infobox device
 | manufacturer = HTC
