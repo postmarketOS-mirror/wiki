@@ -23,15 +23,23 @@ Even if it looks like your device does nothing (e.g. still displaying the OEM lo
 * Check the output of <code>lsusb</code> (before plugging the device in, then while it is in the bootloader mode, and finally after you have booted pmOS)
 * Check what <code>dmesg</code> says after booting
 ** [[USB_Network#Troubleshooting|Example output for successfully booted device]]
-* Use an initramfs hook to signalize successful boot
-** Let the device's LED blink
-** Write data to another partition
-** [[Troubleshooting:boot:initfshooks|Examples]]
+* Run with an initramfs hook, that signalizes a successful boot with LEDs and the vibrator:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap initfs hook_add maximum-attention
+$ pmbootstrap flasher boot
+(or however you boot the kernel/initramfs)
+</syntaxhighlight>
 
 Depending on whether your kernel is booted or not, read on in the appropriate section below. If it turns out, that your kernel is booted, and you have a network interface and get an IP address, then you probably only need to [[Porting_to_a_new_device#Display|get your display working]].
 
 == Kernel boots without network interface ==
-This is probably a kernel configuration problem, see [[USB_Network#Kernel configuration parameters]].
+* [[USB_Network#Kernel_configuration_parameters|Check your kernel configuration]].
+* Some downstream kernels require writing a value to sysfs before the network comes up. Example from <code>device-htc-bravo</code>:
+<syntaxhighlight lang="shell">
+echo 4 > /sys/devices/platform/android_usb/usb_function_switch
+</syntaxhighlight>
+* It is possible to dump the sysfs from an initramfs hook to a partition on the device, and read it out and comparing with another system (such as TWRP).
+* See the [[Troubleshooting:boot:initfshooks|initramfs hooks examples]].
 
 == postmarketOS is stuck somewhere in the boot process ==
 * Do you have the system partition flashed to your device (or put it on an SD card and inserted it)?
