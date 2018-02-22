@@ -1,0 +1,9 @@
+There are pre-existing ports of Alpine Linux for i386 and AMD64 generic PC hardware and virtual machines.[https://alpinelinux.org/downloads/]
+
+It should be possible to [[Existing Alpine installation|convert a pre-existing Alpine install to a pmOS install]].
+
+This could be used for x86 Windows tablets with a BIOS.
+
+==See also==
+* [[Raspberry Pi]], also uses this method currently
+* [[Teclast X80 Pro (teclast-x80pro)]], a better method for UEFI devices
