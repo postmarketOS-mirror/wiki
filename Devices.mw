@@ -29,7 +29,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Geeksphone Peak (gp-peak)|Geeksphone Peak]]🔼
   | style="white-space: nowrap;" | gp-peak
-  | Y  || Y  || Y || Y ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y || Y ||  || Y || Y ||  ||  ||  ||  || Y ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Google Galaxy Nexus GSM (samsung-maguro)|Google Galaxy Nexus (GSM)]]
   | style="white-space: nowrap;" | samsung-maguro
