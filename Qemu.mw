@@ -21,6 +21,6 @@ Qemu on Debian does not include SDL-support by default. To use pmbootstrap on De
 
 === See also ===
 
-* [[qemu-amd64-(QEMU-for-x86_64)|Qemu for x86_64]]
-* [[qemu-vexpress-(Qemu-with-vexpress-soc)|Qemu for arm]]
-* [[QEMU_aarch64_(qemu-aarch64_)|Qemu for aarch64]]
+* [[QEMU_amd64_(qemu-amd64)|Qemu for x86_64]]
+* [[QEMU_ARM_(qemu-vexpress)|Qemu for arm]]
+* [[QEMU_aarch64_(qemu-aarch64)|Qemu for aarch64]]
