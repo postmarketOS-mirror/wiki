@@ -25,14 +25,14 @@
 * USB network
 * Display
 * Touchscreen
+* Full disk encryption
+* Audio
 * Weston
 * XWayland
 
 == Not tested ==
-* Full disk encryption
 * Accelerometers
 * Bluetooth
-* Audio
 * GPS
 * Cellular network
 
