@@ -1,3 +1,4 @@
+[[Not booting]]
 {{Infobox device
 | manufacturer = InFocus
 | name =  New Tab F1
@@ -21,8 +22,10 @@
 * Rudloff
 
 == What works ==
+Building the kernel
 
 == What does not work ==
+It does not boot yet.
 
 == How to enter flash mode ==
 The original bootloader can't boot in fastboot mode so you need to flash a new one.
@@ -34,4 +37,5 @@ With the new bootloader, you can now boot into fast boot mode:
 * When the boot logo (Firefox OS Contribution Program) appears, press and HOLD the Volume+ key until the Fastboot logo appears. You may now release both buttons.
 
 == See also ==
+* [https://github.com/Rudloff/pmbootstrap/tree/feature/infocus-flatfish WIP kernel branch]
 * [http://linux-sunxi.org/Sun6i More info about the SoC]
