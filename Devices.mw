@@ -417,6 +417,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
 |-
+  | [[InFocus New Tab F1 (infocus-flatfish)|InFocus New Tab F1]]🔼
+  | infocus-flatfish
+  | Kernel compiles but does not boot
+|-
   | [[Landrover-a9|Land Rover A9]]
   | landrover-a9
   |
