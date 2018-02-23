@@ -27,4 +27,33 @@
 
 == Rooting ==
 
-Root instructions here
+The Droid 4 doesn't have an unlockable bootloader, so rooting the device requires an exploit.
+
+The easiest exploit is called "Saferoot", which was originally intended for Samsung devices, but also works for many others, including the Droid 4. You can find a saferoot .zip file in this XDA-Developers thread:
+
+[https://forum.xda-developers.com/showthread.php?t=2565758 https://forum.xda-developers.com/showthread.php?t=2565758]
+
+Download '''saferoot.zip''', extract it somewhere, then enable USB debugging on the Droid 4 and connect it to your computer. With it connected, open a command line, cd to where you extracted the files, then run '''install.sh''' if you're on a Linux machine, or '''install.bat''' if you're on a Windows machine.
+
+Following the on-screen instructions, you should eventually have a rooted device!
+
+== Custom Recovery: Safestrap ==
+
+While there's no official version of TWRP for the '''maserati''', there is a custom recovery based on early versions: SafeStrap! 
+
+'''YOU MUST ROOT AS LISTED ABOVE, FIRST!'''
+
+You can download that here (make sure to get the one with '''maserati''' in the name!):
+
+[http://droid.cs.fau.de/Safestrap/ Download Safestrap]
+
+It's an APK file, so enable untrusted sources on your Droid 4 and install it. Once installed, if you're properly rooted, launching it should give you three options: Install recovery, uninstall recovery, and reboot to recovery.
+
+Tapping "install recovery" should install the SafeStrap recovery! If it's successful, tapping "Reboot to recovery" should take you to the custom SafeStrap recovery.
+
+
+=== Additional Info ===
+
+Safestrap recovery has support for what it calls "ROM slots." At the time of this writing, you must select a non-stock slot in order to flash anything besides Android. 
+
+To repeat: '''DO NOT TRY TO INSTALL pmOS TO THE STOCK SLOT! IT COULD BRICK YOUR DEVICE!'''.
