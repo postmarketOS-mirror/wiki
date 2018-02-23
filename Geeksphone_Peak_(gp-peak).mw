@@ -43,6 +43,8 @@
 
 udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-gp-peak/linux-gp-peak.start trigger rules manually].
 
+<code>poweroff</code>/<code>reboot</code> does not work correctly, it stops all the services but does not shutdown the device.
+
 Also the device freezes after a few minutes. This seems to be caused by a modem failure:
 <pre>
 Jan  1 01:59:59 localhost kern.err kernel: [  574.209688] SMSM: Modem SMSM state changed to SMSM_RESET.
