@@ -1,0 +1,32 @@
+{{Infobox device
+| manufacturer = InFocus
+| name =  New Tab F1
+| codename = infocus-flatfish
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2014
+| originalsoftware = Firefox OS 1.4
+| chipset = Allwinner A31
+| cpu = Quad core 1.0 GHz
+| gpu = PowerVR SGX544MP2
+| storage = 16 GB
+| display =  800×1280
+| memory = 2 GB
+}}
+
+== Contributors ==
+* Rudloff
+
+== Maintainer(s) ==
+* Rudloff
+
+== What works ==
+
+== What does not work ==
+
+== How to enter flash mode ==
+The original bootloader can't boot in fastboot mode so you need to flash a new one.
+You can follow the instructions [https://wiki.mozilla.org/Firefox_OS/TCP/Flashing_the_Flatfish_bootloader here].
+
+== See also ==
+* [http://linux-sunxi.org/Sun6i More info about the SoC]
