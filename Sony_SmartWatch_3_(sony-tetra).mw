@@ -1,0 +1,40 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Sony
+| name =  SmartWatch 3
+| codename = sony-tetra
+| image = File:sony-tetra.jpg
+| imagecaption = SmartWatch 3 in fastboot mode
+| releaseyear = 2014
+| originalsoftware = Android Wear 1.5 (Android 6.0)
+| chipset = ARM Cortex A7
+| cpu = Quad core 1.2 Ghz
+| gpu = 
+| storage = 4 GB
+| display = 320×320
+| memory = 512 MB
+}}
+
+== Contributors ==
+* Rudloff
+
+== Maintainer(s) ==
+* Rudloff
+
+== What works ==
+The kernel builds.
+
+== Not tested ==
+Everything else
+
+== What does not work ==
+
+== How to enter flash mode ==
+# Hold the power button until you see "Insert USB" (do not insert USB cable yet).
+# Double press the power button.
+# Double press the power button again.
+
+== See also ==
+* [https://github.com/Rudloff/pmbootstrap/tree/feature/sony-tetra WIP kernel branch]
+* [https://android.googlesource.com/kernel/bcm/+/android-bcm-tetra-3.10-lollipop-mr1-wear-release Android kernel]
+* [https://github.com/AsteroidOS/meta-tetra-hybris AsteroidOS port]
