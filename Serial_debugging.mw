@@ -86,10 +86,10 @@ See [https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-x
 
 == Alternatives to a serial cable ==
 There might not be a need for a serial cable if you think it is too complicated to make one for your device (although it is much more convenient when it works).
-From [there|https://github.com/crondog/arch-flo], about the [[Google Nexus 7 2013 (asus-flo)]]:
+From [https://github.com/crondog/arch-flo there], about the [[Google Nexus 7 2013 (asus-flo)]]:
  If you cannot get it booting you will need to reboot into recovery and check /proc/last_kmsg for the errors. Or try and build the UART cable (which I failed at)
 
-Also, a sony employee gave an alternative method [https://talk.sonymobile.com/t5/General-Discussion/xperia-xz1-compact-boot-sequence/m-p/1274488/highlight/true#M1240|here], that might be worth a go:
+Also, a sony employee gave an alternative method [https://talk.sonymobile.com/t5/General-Discussion/xperia-xz1-compact-boot-sequence/m-p/1274488/highlight/true#M1240 here], that might be worth a go:
  Unfortunately the only way to access the serial port is to open the device but....
  You have the other option to debug - pstore:
  1. flash an aosp recovery image with a working kernel to the recovery partition
