@@ -94,19 +94,18 @@ $ pmbootstrap log
 </syntaxhighlight>
 
 === Device specific package ===
-Open <code>aports/device/device-wiki-example/deviceinfo</code> in your favorite editor (replace <code>wiki-example</code>) and adjust:
+Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>).
+
+<syntaxhighlight lang="shell-session">
+$ nano aports/device/device-wiki-example/deviceinfo
+</syntaxhighlight>
+
+Now adjust:
 
 * <code>deviceinfo_screen_width</code>
 * <code>deviceinfo_screen_height</code>
 
 In case you were asked for <code>boot.img</code> analyzing, and skipped that section during [[#Flash_method|init]]: You can run <code>pmbootstrap bootimg_analyze path/to/boot.img</code> to get the right values for the <code>deviceinfo_flassh_offset_</code> lines now. Filling out manually also works, but that is error-prone and therefore not recommended.
-
-When you're done with editing the deviceinfo file, regenerate the checksum:
-
-<syntaxhighlight lang="shell-session">
-$ nano aports/device/device-wiki-example/deviceinfo
-$ pmbootstrap checksum device-wiki-example
-</syntaxhighlight>
 
 See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
 
