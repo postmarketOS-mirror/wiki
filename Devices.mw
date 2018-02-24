@@ -493,6 +493,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | sony-jlo
   |
 |-
+  | [[Sony SmartWatch 3 (sony-tetra)|Sony SmartWatch 3]]
+  | sony-tetra
+  | Kernel compiles, not tested
+|-
   | [[Sony Xperia T3 (sony-seagull)|Sony Xperia T3]]
   | sony-seagull
   | screen and USB working, pending kernel upgrade before merging
