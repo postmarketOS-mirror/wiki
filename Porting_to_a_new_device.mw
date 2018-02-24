@@ -284,6 +284,13 @@ More importantly, if you are at this point, it is a good idea to start writing y
 
 === Installation ===
 {{note|If you get a "no space left on device" error, please report in {{github|928}}.}}
+
+Create checksums and build the device package once to make sure it doesn't contain errors at this point (we didn't do that earlier, because <code>pmbootstrap</code> would have complained about the invalid <code>pkgver</code> of the kernel package):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap checksum device-wiki-example
+$ pmbootstrap build device-wiki-example
+</syntaxhighlight>
+
 To install to the system partition of an image file, run the following:
 
 <syntaxhighlight lang="shell-session">
