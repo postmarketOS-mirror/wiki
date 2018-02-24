@@ -3,8 +3,8 @@
 | manufacturer = InFocus
 | name =  New Tab F1
 | codename = infocus-flatfish
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:Infocus-flatfish.jpg
+| imagecaption = InFocus New Tab F1 running Weston
 | releaseyear = 2014
 | originalsoftware = Firefox OS 1.4
 | chipset = Allwinner A31
@@ -22,10 +22,26 @@
 * Rudloff
 
 == What works ==
-Building the kernel
+* Flashing
+* USB network
+* Display (but it only uses a part of the screen)
+* Touchscreen
+* Weston
+* XWayland
+
+== Not tested ==
+* Full disk encryption
+* Audio
+* Accelerometers
+* Bluetooth
+* GPS
+* Cellular network
+* Wifi
+* Camera
+* Battery
 
 == What does not work ==
-It does not boot yet.
+
 
 == How to enter flash mode ==
 The original bootloader can't boot in fastboot mode so you need to flash a new one.
@@ -37,5 +53,6 @@ With the new bootloader, you can now boot into fast boot mode:
 * When the boot logo (Firefox OS Contribution Program) appears, press and HOLD the Volume+ key until the Fastboot logo appears. You may now release both buttons.
 
 == See also ==
-* [https://github.com/Rudloff/pmbootstrap/tree/feature/infocus-flatfish WIP kernel branch]
+* {{github|1251}} Initial pull request
 * [http://linux-sunxi.org/Sun6i More info about the SoC]
+* [https://wiki.mozilla.org/Firefox_OS/TCP Firefox OS Tablet Contribution Program]
