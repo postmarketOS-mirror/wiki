@@ -13,3 +13,9 @@
 4. Choose "Remote NDIS compatible device"
 
 5. That's all! Wait for Windows to install driver for your device and SSH into it!
+
+== Using PuTTY instead of the Terminal inside the VM ==
+If your phone only connects successfully to the VM, but you want to use PuTTY (or another Windows SSH client) for Telnet/SSH:
+* Start a SSH server in the VM
+* Connect via PuTTY to the VM
+* Then connect to the device from that SSH session
