@@ -15,26 +15,23 @@
 }}
 
 == Contributors ==
-* rrooij
+* rrooij (initial port)
+* scintill (USB network)
 * Everyone else on IRC (feel free to put your name here!)
 
 == What works ==
-
 * Compiling the kernel
 * Flashing postmarketos
 * Booting
 * Screen display
+* USB Networking ({{github|1260}})
 
 == What does not work ==
-
 * Touch screen
-* USB Networking (can't connect with either telnet or SSH)
-* USB does not work either in initramfs debug-shell
 
 == How to enter flash mode ==
-
 * Hold home + volume down when booting the device
 
 == Links ==
-
+* {{github|1099}} initial pull request
 * Kernel used: https://github.com/LineageOS/android_kernel_samsung_msm8930-common
