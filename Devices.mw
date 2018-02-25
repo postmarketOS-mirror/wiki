@@ -85,7 +85,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   |style="white-space: nowrap;" | [[InFocus New Tab F1 (infocus-flatfish)|InFocus New Tab F1]]🔼
   |style="white-space: nowrap;" | infocus-flatfish
-  | Y  || Y  || P || P ||  || Y ||   ||  ||   ||  ||  ||  ||  ||  ||  || - || - || -
+  | Y  || Y  || Y || P ||  || Y || Y ||  ||   ||  ||  || P ||  ||  ||  || - || - || -
 |-
   |style="white-space: nowrap;" | [[Jolla_Phone_(jolla-sbj)|Jolla Phone]]
   |style="white-space: nowrap;" | jolla-sbj
