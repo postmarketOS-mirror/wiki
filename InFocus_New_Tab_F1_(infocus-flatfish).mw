@@ -34,12 +34,11 @@
 * Accelerometers
 * Bluetooth
 * GPS
-* Wifi
-* Camera
-* Battery
 
 == What does not work ==
-
+* Wifi (needs bcm40183b2 firmware)
+* Camera
+* Battery
 
 == How to enter flash mode ==
 The original bootloader can't boot in fastboot mode so you need to flash a new one.
