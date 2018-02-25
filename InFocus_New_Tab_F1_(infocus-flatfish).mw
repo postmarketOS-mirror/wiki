@@ -25,12 +25,12 @@
 * USB network
 * Display (but it only uses a part of the screen)
 * Touchscreen
+* Full disk encryption
+* Audio (only with headset)
 * Weston
 * XWayland
 
 == Not tested ==
-* Full disk encryption
-* Audio
 * Accelerometers
 * Bluetooth
 * GPS
