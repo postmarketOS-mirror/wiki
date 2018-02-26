@@ -88,6 +88,28 @@ Number  Start (sector)    End (sector)  Size       Code  Name
   25         5908480         6010879       50.0M   0700  hidden
   26         6010880        30777310       11.8G   0700  userdata</pre>
 
+== Component support table ==
+
+{| class="wikitable"
+|-
+ ! Component !! Module !! Android Kernel !! Mainline kernel
+|-
+| Debug serial ||  || Yes <code>/dev/ttyHSL0</code> || Yes <code>/dev/ttyMSM0</code>
+|-
+| GPIO keys ||  || Yes || No
+|-
+| Regulator nodes (pma8084) ||  || Yes || No
+|-
+| Storage || sdhci || Yes || No
+|-
+| USB Networking ||  || Yes || No
+|-
+| 2D Video || mdss_fb || Yes (msm_fb_refresher) || No
+|}
+
+Mainline kernel patches:
+* https://patchwork.kernel.org/patch/10150807/
+
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
 * [https://github.com/postmarketOS/pmbootstrap/tree/device/samsung-klte Development branch]
