@@ -38,7 +38,7 @@
 
 == How to enter flash mode ==
 
-You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ the bootloader is unlocked first] if you haven't yet. Hold power and volume down button to enter fastboot mode if phone is turned on, or just volume down when connecting USB to turned off device.
+You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ unlock your bootloader] first if you haven't yet. Hold power and volume down button to enter fastboot mode if phone is turned on, or just volume down when connecting USB to turned off device.
 
 == Installation ==
 
