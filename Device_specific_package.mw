@@ -61,7 +61,7 @@ weston() {
 
 This will only install the custom Weston config, when <code>weston</code> is installed. The <code>$subpkgdir</code> is implicitly created with <code>install -D</code>.
 
-== Add non-free firmware or userland blobs for your device ==
+== Proprietary firmware or userland blobs ==
 The actual blobs don't belong into the device package, but into their own package:
 * Either a <code>linux-firmware-*</code> package [https://pkgs.alpinelinux.org/packages?name=linux-firmware-*&branch=edge&repo=main&arch=armhf from Alpine]
 * Or a <code>firmware-</code> package (for firmware, use another name for userland blobs) from postmarketOS' aports
