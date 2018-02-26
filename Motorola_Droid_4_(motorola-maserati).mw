@@ -59,3 +59,7 @@ Tapping "install recovery" should install the SafeStrap recovery! If it's succes
 Safestrap recovery has support for what it calls "ROM slots." At the time of this writing, you must select a non-stock slot in order to flash anything besides Android. 
 
 To repeat: '''DO NOT TRY TO INSTALL pmOS TO THE STOCK SLOT! IT COULD BRICK YOUR DEVICE!'''.
+
+
+=== See also ===
+* {{github|1039}} WIP pull request
