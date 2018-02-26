@@ -44,11 +44,11 @@ You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootload
 
 Typical fastboot flashing procedure should be fine:
 
-<source lang="bash">
+<source lang="shell-session">
 $ pmbootstrap init
 $ pmbootstrap install --no-fde
 $ pmbootstrap flasher flash_system
-$ pmbootstrap flasher 
+$ pmbootstrap flasher boot # or flash_kernel
 </source>
 
 == See also ==
