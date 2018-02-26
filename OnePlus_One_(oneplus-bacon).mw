@@ -33,11 +33,19 @@
 == What doesn't work ==
 
 * Wi-Fi (blob needed)
+* Graphics
 * ...
 
 == Display refresh ==
 There is a bug whereby the screen is not automatically refreshed. To work around this, run the following command as root on the device:
 <pre># while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
+
+== Graphics (hardware-accelerated) ==
+The Adreno 330 GPU is supported by Freedreno.  The firmware is required, and is available in the adreno-firmware package.
+
+The latest commit of xf86-video-freedreno will compile, but crashes in libdrm when it tries to initialize kgsl+fbdev.  The kernel log states that it won't initialize a drawing context using the "legacy method".
+
+linux-oneplus-bacon uses an old (~3.4) kernel version from LineageOS, which most likely uses an incompatible implementation of kgsl.  Getting graphics up will probably require the kernel to be mainlined.  I ([[User:jrg|jrg]]) think that's what [[User:Flacks|flacks]] was most recently working on.
 
 == Links ==
 
