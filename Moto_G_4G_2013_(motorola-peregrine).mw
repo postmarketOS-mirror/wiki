@@ -1,0 +1,56 @@
+{{Infobox device
+| manufacturer = Motorola
+| name =  Moto G 4G (2013)
+| codename = peregrine
+| image = File:peregrine-weston.jpg
+| imagecaption = Moto G 4G 2013 running Weston
+| releaseyear = 2013
+| originalsoftware = Android 4.4
+| chipset = Qualcomm MSM8226 Snapdragon 400
+| cpu = Quad-core 1.2 GHz Cortex-A7
+| gpu = Adreno 305
+| storage = 8GB
+| display = 720x1280 IPS LCD
+| memory = 1GB
+}}
+
+== Contributors ==
+* pikpok
+
+== Maintainer(s) ==
+* pikpok
+
+== What works ==
+
+* booting
+* flashing
+* WiFi
+* Weston
+* XWayland (tested with Firefox)
+
+== What does not work ==
+
+* Xorg interfaces (XFCE/Hildon tested only)
+
+== Not tested ==
+
+* Full disk encryption
+
+== How to enter flash mode ==
+
+You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ the bootloader is unlocked first] if you haven't yet. Hold power and volume down button to enter fastboot mode if phone is turned on, or just volume down when connecting USB to turned off device.
+
+== Installation ==
+
+Typical fastboot flasing procedure should be fine:
+
+<source lang="bash">
+$ pmbootstrap init
+$ pmbootstrap install --no-fde
+$ pmbootstrap flasher flash_system
+$ pmbootstrap flasher 
+</source>
+
+== See also ==
+
+* {{github|1264}} Initial pull request
