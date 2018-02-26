@@ -42,7 +42,7 @@ You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootload
 
 == Installation ==
 
-Typical fastboot flasing procedure should be fine:
+Typical fastboot flashing procedure should be fine:
 
 <source lang="bash">
 $ pmbootstrap init
