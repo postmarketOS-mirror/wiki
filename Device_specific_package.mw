@@ -76,7 +76,7 @@ Once you have that package, modify your device package:
 ** Change <code>firmware-motorola-titan</code> to the blob package that you found/made for your device.
 ** Adjust the <code>pkgdesc</code> accordingly. It will be shown to the user in <code>pmbootstrap init</code> when deciding how libre they want their postmarketOS installation to be.
 ** Keep the <code>$subpkgdir</code> variable, that variable exists in this context.
-<syntaxhighlight lang="bash">
+: <syntaxhighlight lang="bash">
 nonfree_firmware() {
     pkgdesc="Wifi firmware"
     depends="firmware-motorola-titan"
