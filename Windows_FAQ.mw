@@ -11,6 +11,7 @@
 3. Choose "Microsoft" manufacturer
 
 4. Choose "Remote NDIS compatible device"
+: On Windows 10 version 1709, the device is "Remote NDIS based Internet Sharing Device"
 
 5. That's all! Wait for Windows to install driver for your device and SSH into it!
 
