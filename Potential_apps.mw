@@ -6,6 +6,10 @@ These are applications which already exist for Linux and could be reused in post
 !Type
 !Package link (if available)
 |-
+|[https://github.com/ev3dev/brickman brickman ui]
+|GPL2
+|Simple retro-themed touch ui written in vala
+|-
 |[https://github.com/mujx/nheko nheko (Matrix)]
 |GPL3
 |X11 and Wayland application (Native).  Touch friendly version under development.
