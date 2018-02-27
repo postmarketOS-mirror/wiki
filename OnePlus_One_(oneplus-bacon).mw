@@ -43,6 +43,8 @@ There is a bug whereby the screen is not automatically refreshed. To work around
 == Graphics (hardware-accelerated) ==
 The Adreno 330 GPU is supported by Freedreno.  The firmware is required, and is available in the adreno-firmware package.
 
+The MSM_KGSL_DRM kernel flag must be set to provide the DRM interface to kgsl.
+
 The latest commit of xf86-video-freedreno will compile, but crashes in libdrm when it tries to initialize kgsl+fbdev.  The kernel log states that it won't initialize a drawing context using the "legacy method".
 
 linux-oneplus-bacon uses an old (~3.4) kernel version from LineageOS, which most likely uses an incompatible implementation of kgsl.  Getting graphics up will probably require the kernel to be mainlined.  I ([[User:jrg|jrg]]) think that's what [[User:Flacks|flacks]] was most recently working on.
