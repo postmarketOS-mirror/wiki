@@ -31,7 +31,15 @@
 == What does not work ==
 * Screen: framebuffer console (no kernel boot log printed on the display)
 * Wifi: rfkill (no support for blocking wireless via rfkill block wifi or nmcli radio wifi off). The only way to block wireless is unloading wlan module (``rmmod wlan`` or ``/etc/init.d/wlanarmani stop``)
-* Other hardware features are untested (3D, sound, bluetooth, modem, gps, accelerometer)
+* Sound: msm8226-asoc-tapan can't be built into kernel directly, since the module requests probe deferral.
+: Here is part of kernel log with msm8226-asoc-tapan built directly into the kernel.
+<pre>
+[    2.116756] msm8226-asoc-tapan sound-9302.43: Property 'qcom,audio-routing' does not exist or its length is not even
+[    2.116772] msm8226-asoc-tapan: probe of sound-9302.43 failed with error -22
+[    2.136644] platform sound.42: Driver msm8226-asoc-tapan requests probe deferral
+</pre>
+: Will investigate it later.
+* Other hardware features are untested (3D, bluetooth, modem, gps, accelerometer)
 * Xorg based UI: postmarketos-ui-xfce4 displays nothing on the screen.
 
 == How to enter flash mode ==
