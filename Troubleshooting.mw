@@ -91,21 +91,13 @@ After that it should work - if this still does not resolve it, please open up an
 === can't create <code>/dev/null</code>: Permission denied ===
 Make sure that your working directory is mounted correctly. This can happen when working over NFS, or when you mounted the drive your working directory is on trough the file explorer (if that's the case, <code>umount</code> it, and <code>mount</code> it manually). This can probably happen on every drive mounted with <code>nosuid</code> or similar.
 
-=== Problems with installing <code>gcc-armhf</code> or <code>gcc-aarch64</code> ===
-The cross-compiler version of gcc needs to be in sync with Alpine's official version of gcc (otherwise there will be dependency errors regarding libc++.so or something like that). Please pull the latest pmbootstrap code, zap your chroots and try again. If it still does not work, run <code>pmbootstrap aportgen gcc-armhf</code>. It should give you the newest version. Details in {{github|1272}}.
-
-Please make an issue about this, if there is none in the tracker.
-
 === Figuring out booting problems ===
-
 Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>. If you managed to get the system to boot far enough to have telnet access, add [[Inspecting-the-initramfs|the port 24 telnet listener]] and you can mount the root device to view said log.
 
 === SSH / udev / touch screen do not work ===
-
 * Make sure, that <code>DEVTMPFS</code> is enabled in your kernel config. Do not enable <code>DEVTMPFS_MOUNT</code>.
 
 === I can't access the framebuffer device ===
-
 * <code>cat /dev/random &gt; /dev/fb0</code> returns: <code>cat: write error: No such device</code>
 * This could be caused by a proprietary 3d driver enabled in the kernel config. [https://github.com/postmarketOS/pmbootstrap/pull/66/ Try to disable it (the actual config options may be different).]
 
