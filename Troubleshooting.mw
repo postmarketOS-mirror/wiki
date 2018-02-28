@@ -15,13 +15,73 @@
 
 = Uncategorized errors =
 
+=== ERROR: unsatisfiable constraints ===
+Read on if you get an error like the following:
+<pre>
+ERROR: unsatisfiable constraints:
+libstdc++-6.4.0-r6:
+breaks:
+g++-armhf-6.4.0-r5[libstdc++=6.4.0-r5]
+satisfies: world[libstdc++]
+g++-6.4.0-r6[libstdc++=6.4.0-r6]
+g++-6.4.0-r6[libstdc++=6.4.0-r6]
+gcc-6.4.0-r6[so:libstdc++.so.6]
+lzip-1.19-r1[so:libstdc++.so.6]
+gcc-6.4.0-r6:
+breaks: g++-armhf-6.4.0-r5[gcc=6.4.0-r5]
+satisfies: world[gcc]
+g++-6.4.0-r6[gcc=6.4.0-r6]
+build-base-0.5-r0[gcc]
+</pre>
+
+==== Explanation ====
+Unsatisfiable constraints means, that Alpine's package manager can't resolve packages properly. Most likely this is because there's a library packaged in Alpine that just got updated and a postmarketOS package depends on it. We detect such breakage automatically (with our Travis CI job, which runs with each new pull request, so at least once a day). If you get this error, try the following:
+
+==== Fixes ====
+1. Update the APKINDEX files, it might be that we already fixed this issue and built the new packages.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap update
+</syntaxhighlight>
+
+2. If that does not help, try to pull from git to see if we already increased the version in <code>master</code>.
+<syntaxhighlight lang="shell-session">
+$ git pull
+</syntaxhighlight>
+
+In case we did not increase it yet, you can increase the versions on your own. Please let the others know, that the update needs to be done, either in the [https://github.com/postmarketOS/pmbootstrap/issues issues] or in the [[Matrix_and_IRC|chat]].
+
+3.a) If the error looks just like the above, with <code>libstdc++</code> and <code>gcc-armhf</code> involved, regenerate your <code>gcc-armhf</code> aport based on the latest <code>gcc</code> aport from Alpine:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap aportgen gcc-armhf
+</syntaxhighlight>
+
+Check with <code>git diff</code> if the aport got updated correctly. In case it got ''downgraded'' instead of upgraded, you have an old git checkout of Alpine's aports folder (updating this easily is planned in {{github|1272}}). Update it like this:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap chroot
+# apk add git
+# su - pmos
+$ cd ~/git/aports_upstream
+$ git pull
+$ exit
+# exit
+</syntaxhighlight>
+
+3.b) For all other soname bumps, use the following command to automatically increase the <code>pkgrel</code>:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap pkgrel_bump --auto
+</syntaxhighlight>
+
+There's also a <code>--dry</code> parameter if you just want to see which packages would get a <code>pkgrel</code> bump.
+
+==== upstream repo broken ====
+If the packages are not related to postmarketOS packages at all, there might be a bug in the upstream repositories (this is very unlikely and only happened once). postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
+
+=== pmbootstrap is broken! But it worked yesterday! ===
+Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the IRC/matrix channel to find out, which commit was the last one that worked.
+
 === <code>musl-*</code>/<code>busybox-static-*</code> fails to build with a 404 error ===
 
 Run <code>pmbootstrap aportgen musl-armhf musl-aarch64</code>. The reason why this fails from time to time is, that we use Alpine's binary <code>musl</code> lib c package for <code>armhf</code>/<code>aarch64</code> in the native chroot, to get the cross-compiler working. So the download URL inside the <code>aports/cross/musl-*/APKBUILD</code> file must be in sync with the upstream version. This pmbootstrap command safely gets the new version, uses <code>apk</code> to verify the signature of the package, generates the hash, and updates the <code>APKBUILD</code> file. To make sure, that <code>pmbootstrap aportgen</code> receives the latest <code>musl</code> version, delete your HTTP cache right before by executing this command: <code>pmbootstrap zap -hc</code>. Don't bother making a pull-request for this, as the fix is really trivial (see [https://github.com/postmarketOS/pmbootstrap/commit/0f3b2ea4277679056079000eac581d1b9d05afc8 this commit]). Just report it as issue, if it happens.
-
-=== pmbootstrap is broken! But it worked yesterday! ===
-
-Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the IRC/matrix channel to find out, which commit was the last one that worked.
 
 === Permission denied: .../pmbootstrap/work/chroot_native/proc/1/cwd' ===
 It looks like you have created your work folder as: <code>pmbootstrap/work</code>, where <code>pmbootstrap</code> is the folder with the checked out source code. That is not supported. Please run <code>pmbootstrap shutdown</code>, then delete that folder, then run <code>pmbootstrap init</code> again and choose another work folder (e.g. <code>~/.local/var/pmbootstrap</code>).
@@ -58,67 +118,6 @@ Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log 
 === Errors with ecryptfs ===
 
 When your &quot;work&quot; folder is inside an ecryptfs mounted folder, [https://github.com/postmarketOS/pmbootstrap/issues/53 <code>/dev/random</code> may not work inside the chroot] and you may have other issues. Try to move your ''work'' folder to another location, you can use <code>/tmp</code> to test if this resolves the issue. You can change the location in <code>pmbootstrap init</code>. See also: [https://github.com/postmarketOS/pmbootstrap/issues/61 #61]. (This doesn't seem to be an issue with newer versions of ecryptfs anymore.)
-
-=== ERROR: unsatisfiable constraints ===
-Read on if you get an error like the following:
-<pre>
-ERROR: unsatisfiable constraints:
-libstdc++-6.4.0-r6:
-breaks:
-g++-armhf-6.4.0-r5[libstdc++=6.4.0-r5]
-satisfies: world[libstdc++]
-g++-6.4.0-r6[libstdc++=6.4.0-r6]
-g++-6.4.0-r6[libstdc++=6.4.0-r6]
-gcc-6.4.0-r6[so:libstdc++.so.6]
-lzip-1.19-r1[so:libstdc++.so.6]
-gcc-6.4.0-r6:
-breaks: g++-armhf-6.4.0-r5[gcc=6.4.0-r5]
-satisfies: world[gcc]
-g++-6.4.0-r6[gcc=6.4.0-r6]
-build-base-0.5-r0[gcc]
-</pre>
-
-==== Explanation ====
-Unsatisfiable constraints means, that Alpine's package manager can't resolve packages properly. Most likely this is because there's a library packaged in Alpine that just got updated and a postmarketOS package depends on it. We detect such breakage automatically (with our Travis CI job, which runs with each new pull request, so at least once a day). If you get this error, try the following:
-
-==== Fixes ====
-1. Update the APKINDEX files, it might be that we already fixed this issue and built the new packages.
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap update
-</syntaxhighlight>
-
-2. If that does not help, try to pull from git to see if we already increased the version in <code>master</code>.
-<syntaxhighlight lang="shell-session">
-$ git pull
-</syntaxhighlight>
-
-In case we did not increase it yet, you can increase the versions on your own.
-
-3.a) If the error looks just like the above, with <code>libstdc++</code> and <code>gcc-armhf</code> involved, regenerate your <code>gcc-armhf</code> aport based on the latest <code>gcc</code> aport from Alpine:
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap aportgen gcc-armhf
-</syntaxhighlight>
-
-Check with <code>git diff</code> if the aport got updated correctly. In case it got ''downgraded'' instead of upgraded, you have an old git checkout of Alpine's aports folder (updating this easily is planned in {{github|1272}}). Update it like this:
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap chroot
-# apk add git
-# su - pmos
-$ cd ~/git/aports_upstream
-$ git pull
-$ exit
-# exit
-</syntaxhighlight>
-
-3.b) For all other soname bumps, use the following command to automatically increase the <code>pkgrel</code>:
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap pkgrel_bump --auto
-</syntaxhighlight>
-
-There's also a <code>--dry</code> parameter if you just want to see which packages would get a <code>pkgrel</code> bump.
-
-==== upstream repo broken ====
-If the packages are not related to postmarketOS packages at all, there might be a bug in the upstream repositories (this is very unlikely and only happened once). postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
 
 === Serial Console Debug Cable (early boot debugging) ===
 
