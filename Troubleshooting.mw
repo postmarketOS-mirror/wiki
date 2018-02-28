@@ -32,7 +32,7 @@ After that it should work - if this still does not resolve it, please open up an
 Make sure that your working directory is mounted correctly. This can happen when working over NFS, or when you mounted the drive your working directory is on trough the file explorer (if that's the case, <code>umount</code> it, and <code>mount</code> it manually). This can probably happen on every drive mounted with <code>nosuid</code> or similar.
 
 === Problems with installing <code>gcc-armhf</code> or <code>gcc-aarch64</code> ===
-The cross-compiler version of gcc needs to be in sync with Alpine's official version of gcc (otherwise there will be dependency errors regarding libc++.so or something like that). Please pull the latest pmbootstrap code, zap your chroots and try again. If it still does not work, run <code>pmbootstrap aportgen gcc-armhf</code>. It should give you the newest version.
+The cross-compiler version of gcc needs to be in sync with Alpine's official version of gcc (otherwise there will be dependency errors regarding libc++.so or something like that). Please pull the latest pmbootstrap code, zap your chroots and try again. If it still does not work, run <code>pmbootstrap aportgen gcc-armhf</code>. It should give you the newest version. Details in {{github|1272}}.
 
 Please make an issue about this, if there is none in the tracker.
 
