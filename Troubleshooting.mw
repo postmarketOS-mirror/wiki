@@ -60,9 +60,7 @@ Add <code>rc_logging=YES</code> to <code>/etc/rc.conf</code> to have openrc log 
 When your &quot;work&quot; folder is inside an ecryptfs mounted folder, [https://github.com/postmarketOS/pmbootstrap/issues/53 <code>/dev/random</code> may not work inside the chroot] and you may have other issues. Try to move your ''work'' folder to another location, you can use <code>/tmp</code> to test if this resolves the issue. You can change the location in <code>pmbootstrap init</code>. See also: [https://github.com/postmarketOS/pmbootstrap/issues/61 #61]. (This doesn't seem to be an issue with newer versions of ecryptfs anymore.)
 
 === ERROR: unsatisfiable constraints ===
-Unsatisfiable constraints means, that Alpine's package manager can't resolve packages properly. Most likely this is because Alpine updated a package and the postmarketOS repository has not been adjusted yet. Here are instructions on how you can fix this locally - but make sure that the postmarketOS community is informed as well, so the pmOS binary repos can be upgraded, too.
-
-This is how it looks like, when GCC got upgraded:
+Read on if you get an error like the following:
 <pre>
 ERROR: unsatisfiable constraints:
 libstdc++-6.4.0-r6:
@@ -80,17 +78,47 @@ g++-6.4.0-r6[gcc=6.4.0-r6]
 build-base-0.5-r0[gcc]
 </pre>
 
-So we need to update our GCC cross-compilers, too:
+==== Explanation ====
+Unsatisfiable constraints means, that Alpine's package manager can't resolve packages properly. Most likely this is because there's a library packaged in Alpine that just got updated and a postmarketOS package depends on it. We detect such breakage automatically (with our Travis CI job, which runs with each new pull request, so at least once a day). If you get this error, try the following:
+
+==== Fixes ====
+1. Update the APKINDEX files, it might be that we already fixed this issue and built the new packages.
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap aportgen gcc-armhf
-$ pmbootstrap zap
-$ pmbootstrap build --ignore-depends gcc-armhf
+$ pmbootstrap update
 </syntaxhighlight>
 
-This compiles a new armhf cross-compiler, that is compatible with the one from Alpine. We need the <code>--ignore-depends</code> switch, because <code>abuild</code> will try to install a <code>build-base-armhf</code> package otherwise, that we don't have (it probably gets generated if you use Alpine's official bootstrap scripts). Replace <code>armhf</code> with <code>aarch64</code> as necessary.
+2. If that does not help, try to pull from git to see if we already increased the version in <code>master</code>.
+<syntaxhighlight lang="shell-session">
+$ git pull
+</syntaxhighlight>
+
+In case we did not increase it yet, you can increase the versions on your own.
+
+3.a) If the error looks just like the above, with <code>libstdc++</code> and <code>gcc-armhf</code> involved, regenerate your <code>gcc-armhf</code> aport based on the latest <code>gcc</code> aport from Alpine:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap aportgen gcc-armhf
+</syntaxhighlight>
+
+Check with <code>git diff</code> if the aport got updated correctly. In case it got ''downgraded'' instead of upgraded, you have an old git checkout of Alpine's aports folder (updating this easily is planned in {{github|1272}}). Update it like this:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap chroot
+# apk add git
+# su - pmos
+$ cd ~/git/aports_upstream
+$ git pull
+$ exit
+# exit
+</syntaxhighlight>
+
+3.b) For all other soname bumps, use the following command to automatically increase the <code>pkgrel</code>:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap pkgrel_bump --auto
+</syntaxhighlight>
+
+There's also a <code>--dry</code> parameter if you just want to see which packages would get a <code>pkgrel</code> bump.
 
 ==== upstream repo broken ====
-(This is very unlikely and has only happened once.) postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
+If the packages are not related to postmarketOS packages at all, there might be a bug in the upstream repositories (this is very unlikely and only happened once). postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
 
 === Serial Console Debug Cable (early boot debugging) ===
 
