@@ -31,14 +31,133 @@
 == What does not work ==
 * Screen: framebuffer console (no kernel boot log printed on the display)
 * Wifi: rfkill (no support for blocking wireless via rfkill block wifi or nmcli radio wifi off). The only way to block wireless is unloading wlan module (``rmmod wlan`` or ``/etc/init.d/wlanarmani stop``)
-* Sound: msm8226-asoc-tapan can't be built into kernel directly, since the module requests probe deferral.
-: Here is part of kernel log with msm8226-asoc-tapan built directly into the kernel.
+* Sound: msm8226-asoc-tapan requests probe deferral.
+: Here is part of initial kernel log.
 <pre>
 [    2.116756] msm8226-asoc-tapan sound-9302.43: Property 'qcom,audio-routing' does not exist or its length is not even
 [    2.116772] msm8226-asoc-tapan: probe of sound-9302.43 failed with error -22
 [    2.136644] platform sound.42: Driver msm8226-asoc-tapan requests probe deferral
 </pre>
 : Will investigate it later.
+: Update: after copying adsp.* blob from firmware partition (/dev/mmcblk0p23) into /lib/firmware/postmarketos
+: and issuing 'echo 1 | sudo tee /dev/subsys_adsp', the audio subsystem seems to be brought up.
+: 
+: Another error occurs:
+<pre>
+[  110.709577] pil-q6v5-lpass fe200000.qcom,lpass: adsp: loading from 0x0dc00000 to 0x0f000000
+[  111.056698] pil-q6v5-lpass fe200000.qcom,lpass: adsp: Brought out of reset
+[  111.113959] pil-q6v5-lpass fe200000.qcom,lpass: adsp: Power/Clock ready interrupt received
+[  111.136388] pil-q6v5-lpass fe200000.qcom,lpass: Subsystem error monitoring/handling services are up
+[  111.141865] pil-q6v5-lpass fe200000.qcom,lpass: adsp: loading from 0x0dc00000 to 0x0f000000
+[  111.448920] pil-q6v5-lpass fe200000.qcom,lpass: adsp: Brought out of reset
+[  111.506053] pil-q6v5-lpass fe200000.qcom,lpass: adsp: Power/Clock ready interrupt received
+[  111.528204] pil-q6v5-lpass fe200000.qcom,lpass: Subsystem error monitoring/handling services are up
+[  111.529063] apr_tal:Q6 Is Up
+[  111.529133] platform sound.42: Driver msm8226-asoc-tapan requests probe deferral
+[  111.532050] diag: In diag_send_msg_mask_update, invalid status 0
+[  111.631719] diag: In diag_send_log_mask_update, invalid status 0
+[  111.631720] platform sound.42: Driver msm8226-asoc-tapan requests probe deferral
+[  111.637853] sps:BAM 0xfe104000 (va:0xf05c0000) enabled: ver:0x15, number of pipes:19
+[  111.639032] sps:BAM 0xfe104000 is registered.
+[  111.639032] tapan-slim tapan-slim-pgd: Platform data from device tree
+[  111.639088] tapan-slim tapan-slim-pgd: cdc-vdd-h: vol=[1800000 1800000]uV, curr=[25000]uA, ond 0
+[  111.639103] tapan-slim tapan-slim-pgd: cdc-vdd-px: vol=[1800000 1800000]uV, curr=[25000]uA, ond 0
+[  111.639117] tapan-slim tapan-slim-pgd: cdc-vdd-cx: vol=[1200000 1200000]uV, curr=[2000]uA, ond 0
+[  111.639131] tapan-slim tapan-slim-pgd: cdc-vdd-buck: vol=[1800000 2150000]uV, curr=[650000]uA, ond 1
+[  111.639148] tapan-slim tapan-slim-pgd: cdc-vdd-buckhelper: vol=[1775000 2125000]uV, curr=[10000]uA, ond 1
+[  111.639188] tapan-slim tapan-slim-pgd: Looking up qcom,cdc-micbias4-cfilt-sel property in node /soc/slim@fe12f000/tapan_codec failed
+[  111.699016] tapan-slim tapan-slim-pgd: Looking up qcom,cdc-dmic-sample-rate property in node /soc/slim@fe12f000/tapan_codec failed
+[  111.699034] slimbus:1 laddr:0xcb, EAPC:0x1:0xe0
+[  111.699034] tapan-slim tapan-slim-pgd: wcd9xxx_slim_device_up: slim device up
+[  111.705328] slimbus:1 laddr:0xca, EAPC:0x0:0xe0
+[  111.705329] tapan-slim tapan-slim-pgd: wcd9xxx_check_codec_type: detected tapan_codec, major 0x103, minor 0x1, ver 0x1
+[  111.705335] wcd9xxx_core_res_init: num_irqs = 31, num_irq_regs = 4
+[  111.715205] tapan_codec tapan_codec: tapan_check_wcd9306: wcd9306 detected
+[  111.727617] tapan_codec tapan_codec: tapan_codec_probe()
+[  111.749331] asoc: snd-soc-dummy-dai <-> MultiMedia1 mapping ok
+[  111.749570] asoc: snd-soc-dummy-dai <-> MultiMedia2 mapping ok
+[  111.749775] asoc: snd-soc-dummy-dai <-> CS-VOICE mapping ok
+[  111.749980] asoc: snd-soc-dummy-dai <-> VoIP mapping ok
+[  111.750185] asoc: snd-soc-dummy-dai <-> MultiMedia3 mapping ok
+[  111.750390] asoc: snd-soc-dummy-dai <-> SLIMBUS0_HOSTLESS mapping ok
+[  111.750601] asoc: snd-soc-dummy-dai <-> INT_FM_HOSTLESS mapping ok
+[  111.750759] asoc: msm-stub-rx <-> msm-dai-q6-dev.241 mapping ok
+[  111.750917] asoc: msm-stub-tx <-> msm-dai-q6-dev.240 mapping ok
+[  111.751164] compress asoc: snd-soc-dummy-dai <-> MultiMedia4 mapping ok
+[  111.751369] asoc: snd-soc-dummy-dai <-> AUXPCM_HOSTLESS mapping ok
+[  111.751582] asoc: snd-soc-dummy-dai <-> SLIMBUS1_HOSTLESS mapping ok
+[  111.751783] asoc: snd-soc-dummy-dai <-> SLIMBUS3_HOSTLESS mapping ok
+[  111.751983] asoc: snd-soc-dummy-dai <-> SLIMBUS4_HOSTLESS mapping ok
+[  111.752175] asoc: snd-soc-dummy-dai <-> Voice2 mapping ok
+[  111.752422] asoc: snd-soc-dummy-dai <-> MultiMedia5 mapping ok
+[  111.752656] asoc: snd-soc-dummy-dai <-> MultiMedia9 mapping ok
+[  111.752849] asoc: snd-soc-dummy-dai <-> VoLTE mapping ok
+[  111.753064] asoc: snd-soc-dummy-dai <-> QCHAT mapping ok
+[  111.753239] asoc: snd-soc-dummy-dai <-> LSM1 mapping ok
+[  111.753467] asoc: snd-soc-dummy-dai <-> MultiMedia8 mapping ok
+[  111.753649] asoc: snd-soc-dummy-dai <-> LSM2 mapping ok
+[  111.753837] asoc: snd-soc-dummy-dai <-> LSM3 mapping ok
+[  111.754031] asoc: snd-soc-dummy-dai <-> LSM4 mapping ok
+[  111.754222] asoc: snd-soc-dummy-dai <-> LSM5 mapping ok
+[  111.754388] asoc: snd-soc-dummy-dai <-> LSM6 mapping ok
+[  111.754563] asoc: snd-soc-dummy-dai <-> LSM7 mapping ok
+[  111.754760] asoc: snd-soc-dummy-dai <-> LSM8 mapping ok
+[  111.754977] asoc: snd-soc-dummy-dai <-> INT_HFP_BT_HOSTLESS mapping ok
+[  111.755218] asoc: snd-soc-dummy-dai <-> MultiMedia6 mapping ok
+[  111.755440] asoc: snd-soc-dummy-dai <-> VoWLAN mapping ok
+[  111.755597] asoc: msm-stub-rx <-> msm-dai-q6-dev.12288 mapping ok
+[  111.755736] asoc: msm-stub-tx <-> msm-dai-q6-dev.12289 mapping ok
+[  111.755885] asoc: msm-stub-rx <-> msm-dai-q6-dev.12292 mapping ok
+[  111.756045] asoc: msm-stub-tx <-> msm-dai-q6-dev.12293 mapping ok
+[  111.756181] asoc: msm-stub-rx <-> msm-dai-q6-dev.224 mapping ok
+[  111.756336] asoc: msm-stub-tx <-> msm-dai-q6-dev.225 mapping ok
+[  111.756528] asoc: snd-soc-dummy-dai <-> HDMI_HOSTLESS mapping ok
+[  111.756687] asoc: msm-stub-rx <-> msm-dai-q6-auxpcm.1 mapping ok
+[  111.756826] asoc: msm-stub-tx <-> msm-dai-q6-auxpcm.1 mapping ok
+[  111.756982] asoc: msm-stub-tx <-> msm-dai-q6-dev.32772 mapping ok
+[  111.757119] asoc: msm-stub-tx <-> msm-dai-q6-dev.32771 mapping ok
+[  111.757256] asoc: msm-stub-rx <-> msm-dai-q6-dev.32773 mapping ok
+[  111.757396] asoc: msm-stub-rx <-> msm-dai-q6-dev.32770 mapping ok
+[  111.757715] apr_register: adsp not up
+[  111.757717] afe_q6_interface_prepare: Unable to register AFE
+[  111.757721] afe_set_config: Q6 interface prepare failed -19
+[  111.757724] msm_afe_set_config: Failed to set codec registers config -19
+[  111.757727] msm_audrx_init: Failed to set AFE config -19
+[  111.757732] msm8226-asoc-tapan sound.42: asoc: failed to init SLIMBUS_0_RX: -19
+[  111.757736] asoc: failed to instantiate card msm8226-tapan-snd-card: -19
+[  111.760208] apr_register: adsp not up
+[  111.760212] afe_q6_interface_prepare: Unable to register AFE
+[  111.760214] apr_register: adsp not up
+[  111.760217] afe_q6_interface_prepare: Unable to register AFE
+[  111.760850] ------------[ cut here ]------------
+[  111.760863] WARNING: at kernel/irq/manage.c:1219 __free_irq+0xb4/0x22c()
+[  111.760866] Trying to free already-free IRQ 650
+[  111.760871] Modules linked in:
+[  111.760872]  wlan(C)
+
+[  111.760891] [<c010eebc>] (unwind_backtrace+0x0/0x160) from [<c01b3b10>] (warn_slowpath_common+0x60/0x88)
+[  111.760901] [<c01b3b10>] (warn_slowpath_common+0x60/0x88) from [<c01b3b68>] (warn_slowpath_fmt+0x30/0x48)
+[  111.760910] [<c01b3b68>] (warn_slowpath_fmt+0x30/0x48) from [<c0230c9c>] (__free_irq+0xb4/0x22c)
+[  111.760918] [<c0230c9c>] (__free_irq+0xb4/0x22c) from [<c0230ee8>] (free_irq+0x58/0xec)
+[  111.760927] [<c0230ee8>] (free_irq+0x58/0xec) from [<c08bd0e4>] (wcd9xxx_mbhc_deinit+0x88/0xdc)
+[  111.760937] [<c08bd0e4>] (wcd9xxx_mbhc_deinit+0x88/0xdc) from [<c08b101c>] (tapan_codec_remove+0xcc/0x198)
+[  111.760947] [<c08b101c>] (tapan_codec_remove+0xcc/0x198) from [<c0899a20>] (soc_remove_codec+0x20/0x84)
+[  111.760956] [<c0899a20>] (soc_remove_codec+0x20/0x84) from [<c0899da0>] (soc_remove_dai_links+0x27c/0x2c4)
+[  111.760965] [<c0899da0>] (soc_remove_dai_links+0x27c/0x2c4) from [<c089a76c>] (snd_soc_register_card+0x984/0x1560)
+[  111.760975] [<c089a76c>] (snd_soc_register_card+0x984/0x1560) from [<c0b06740>] (msm8226_asoc_machine_probe+0x34c/0xb20)
+[  111.760986] [<c0b06740>] (msm8226_asoc_machine_probe+0x34c/0xb20) from [<c0581394>] (driver_probe_device+0xc4/0x418)
+[  111.760994] [<c0581394>] (driver_probe_device+0xc4/0x418) from [<c057f1e4>] (bus_for_each_drv+0x6c/0xac)
+[  111.761002] [<c057f1e4>] (bus_for_each_drv+0x6c/0xac) from [<c0581238>] (device_attach+0xac/0xc4)
+[  111.761009] [<c0581238>] (device_attach+0xac/0xc4) from [<c058043c>] (bus_probe_device+0x98/0xd0)
+[  111.761017] [<c058043c>] (bus_probe_device+0x98/0xd0) from [<c0580a84>] (deferred_probe_work_func+0x40/0xd8)
+[  111.761027] [<c0580a84>] (deferred_probe_work_func+0x40/0xd8) from [<c01d2274>] (process_one_work+0x150/0x5d8)
+[  111.761036] [<c01d2274>] (process_one_work+0x150/0x5d8) from [<c01d3fe0>] (worker_thread+0x1cc/0x4d8)
+[  111.761045] [<c01d3fe0>] (worker_thread+0x1cc/0x4d8) from [<c01d92d4>] (kthread+0x94/0xa0)
+[  111.761054] [<c01d92d4>] (kthread+0x94/0xa0) from [<c01085b4>] (kernel_thread_exit+0x0/0x8)
+[  111.761058] ---[ end trace db43699416a22410 ]---
+[  111.763258] msm8226-asoc-tapan sound.42: snd_soc_register_card failed (-19)
+</pre>
+: For now, the sound doesn't work at all.
 * Other hardware features are untested (3D, bluetooth, modem, gps, accelerometer)
 * Xorg based UI: postmarketos-ui-xfce4 displays nothing on the screen.
 
