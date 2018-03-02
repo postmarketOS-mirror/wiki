@@ -14,11 +14,11 @@ In order to share code between the <code>APKBUILD</code>s of these packages, all
 makedepends="devicepkg-dev"
 
 build() {
-    devicepkg_build $startdir $pkgname
+	devicepkg_build $startdir $pkgname
 }
 
 package() {
-    devicepkg_package $startdir $pkgname
+	devicepkg_package $startdir $pkgname
 }
 </syntaxhighlight>
 
@@ -38,9 +38,9 @@ Here is one example from [https://github.com/postmarketOS/pmbootstrap/tree/maste
 subpackages="$pkgname-x11"
 
 x11() {
-    install_if="$pkgname xorg-server"
-    depends="xf86-video-qxl"
-    mkdir "$subpkgdir"
+	install_if="$pkgname xorg-server"
+	depends="xf86-video-qxl"
+	mkdir "$subpkgdir"
 }
 </syntaxhighlight>
 
@@ -53,9 +53,9 @@ subpackages="$pkgname-weston"
 source="deviceinfo weston.ini"
 
 weston() {
-    install_if="$pkgname weston"
-    install -Dm644 "$srcdir"/weston.ini \
-        "$subpkgdir"/etc/xdg/weston/weston.ini
+	install_if="$pkgname weston"
+	install -Dm644 "$srcdir"/weston.ini \
+		"$subpkgdir"/etc/xdg/weston/weston.ini
 }
 </syntaxhighlight>
 
@@ -78,8 +78,8 @@ Once you have that package, modify your device package:
 ** Keep the <code>$subpkgdir</code> variable, that variable exists in this context.
 : <syntaxhighlight lang="bash">
 nonfree_firmware() {
-    pkgdesc="Wifi firmware"
-    depends="firmware-motorola-titan"
-    mkdir "$subpkgdir"
+	pkgdesc="Wifi firmware"
+	depends="firmware-motorola-titan"
+	mkdir "$subpkgdir"
 }
 </syntaxhighlight>
