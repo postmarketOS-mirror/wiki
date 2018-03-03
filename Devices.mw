@@ -223,6 +223,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | samsung-i9003
   | Y  || P  || Y  || Y  ||  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Samsung Galaxy Tab 10.1" (samsung-p4wifi)|Samsung Galaxy Tab 10.1"]]
+  | style="white-space: nowrap;" | samsung-p4wifi, -p4, -p4tmo
+  | Y || Y || Y || Y || Y ||  ||  || P || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Samsung Galaxy Tab 2 10.1" (3G and Wifi) (samsung-espresso10)|Samsung Galaxy Tab 2 10.1"]]
   | style="white-space: nowrap;" | samsung-espresso10
   | Y  || P  || Y  || Y  || P ||   || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
