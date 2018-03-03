@@ -20,6 +20,10 @@
 == Maintainer(s) ==
 * decatf
 
+== Introduction ==
+
+postmarketOS for the Samsung Galaxy Tab 10.1 runs on a Linux 4.14 kernel using both mainline and forward ported drivers. Some peripherals are using mainline device driver where applicable. Some peripherals which are not working on or don't have mainline drivers are using drivers forward ported from the stock 3.1.10 kernel.
+
 == What works ==
 * Flashing with heimdall
 * USB SSH access
@@ -55,7 +59,101 @@ $ insmod /lib/modules/brcmfmac.ko alternative_fw_path=postmarketos</source>
 # Start wpa_supplicant<source lang="shell">$ wpa_supplicant -B -D nl80211 -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</source>
 # Configure the IP address<source lang="shell">$ udhcpc -i wlan0</source>
 
+== Other Information ==
+==== Hardware Information & Driver Status ====
+
+The Linux 4.14 mainlining effort contains drivers forward ported from the stock Samsung Linux 3.1.10 kernel which shipped with the device. Some peripheral devices have been transitioned over to the mainline driver.
+
+Other drivers are not in the mainline kernel or the device is not compatible with the mainline driver
+
+{| class="wikitable"
+!Peripheral Type
+!Hardware
+!Driver Status
+|-
+|Audio
+|wm8994
+|mainline
+|-
+|Battery
+|p4_battery
+|forward port
+|-
+|Camera
+|s5k5ccgx (front)<br/>s5k6bbgx (back)
+|stock (3.1.10) kernel only
+|-
+|CPU Temperature Sensor
+|nct1008
+|mainline
+|-
+|Display Panel
+|cmc623
+|forward port
+|-
+|Fuel Gauge
+|max17042
+|forward port
+|-
+|GPIO Expander
+|stmpe811
+|forward port
+|-
+|GPU
+|tegra host1x
+|mainline 
+|-
+|HDMI Connector
+|sii9234
+|stock (3.1.10) kernel only
+|-
+|GPS
+|bcm4751
+|userspace (no kernel driver)
+|-
+|Sensors
+* gyroscope
+* accelerometer
+* compass
+* light sensor
+|<br/>
+* mpu3050
+* kxtf9
+* ak8975
+* bh1721fvc
+|forward port
+|-
+|Touch Digitizer
+|mxt1386
+|forward port
+|-
+|Voltage Regulators
+|tps6586x
+|mainline
+|-
+|Wifi / Bluetooth
+|bcm4330
+|mainline
+|-
+|3G Modem
+|xmm6260
+|stock (3.1.10) kernel only
+|-
+|3.5mm Jack
+|sec_jack
+|forward port
+|-
+|30-pin accessory port
+|unknown
+|stock (3.1.10) kernel only
+|-
+|}
+
+
+
+
 == See also ==
 * {{github|1279}} Initial pull request
 * [https://github.com/Decatf/linux/ decatf mainline Linux kernel]
+* [https://github.com/Decatf/android_kernel_samsung_p4 stock Samsung 3.1.10 kernel]
 * [https://github.com/grate-driver/ Grate driver]
