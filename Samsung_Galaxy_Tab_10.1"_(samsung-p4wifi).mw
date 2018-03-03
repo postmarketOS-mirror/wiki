@@ -1,0 +1,63 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Tab 10.1
+| codename = p4wifi
+| image = File:P4wifi infobox.png
+| imagecaption = Xcfe4 running on Samsung Galaxy Tab 10.1 (p4wifi)
+| releaseyear = 2011
+| originalsoftware = Android 3.1 Honeycomb
+| chipset = Nvidia Tegra 2
+| cpu = 1Ghz ARM Cortex-A9
+| gpu = Tegra 2
+| storage = 16/32 GB
+| display = 1280×800
+| memory = 1GB
+}}
+
+== Contributors ==
+* decatf
+
+== Maintainer(s) ==
+* decatf
+
+== What works ==
+* Flashing with heimdall
+* USB SSH access
+* Touch
+* DRM fbdev / 2D acceleration (Grate driver)
+* Wifi
+* Battery
+
+== What does not work ==
+* 3D acceleration
+* Audio
+* Bluetooth
+* Camera
+* GPS
+* Accelerometers
+
+== How to enter flash mode ==
+Press and hold Power + Volume Down buttons
+
+== Installation ==
+
+# Init pmbootstrap<source lang="shell">$ ./pmbootstrap.py init</source> Choose 'samsung-p4wifi' as target device.
+# Start the build process<source lang="shell">$ ./pmbootstrap.py build linux-samsung-p4wifi
+$ ./pmbootstrap.py build device-samsung-p4wifi
+$ ./pmbootstrap.py install --no-fde</source>
+# Enter flash (download) mode
+# Flash the kernel and system images<source lang="shell">$./pmbootstrap.py flasher flash_kernel
+$./pmbootstrap.py flasher flash_system</source>
+
+== Wifi ==
+# Load brcmfmac driver<source lang="shell">$ insmod /lib/modules/brcmutil.ko
+$ insmod /lib/modules/brcmfmac.ko alternative_fw_path=postmarketos</source>
+# Start wpa_supplicant<source lang="shell">$ wpa_supplicant -B -D nl80211 -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</source>
+# Configure the IP address<source lang="shell">$ udhcpc -i wlan0</source>
+
+== See also ==
+<!--
+* {{github|1279}} Initial pull request
+* [https://github.com/Decatf/linux/ decatf mainline Linux kernel]
+* [https://github.com/grate-driver/ Grate driver]
+-->
