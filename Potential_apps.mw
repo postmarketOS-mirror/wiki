@@ -185,6 +185,11 @@ These are applications which already exist for Linux and could be reused in post
 |MIT
 |Open source Google Hangouts client
 |[https://github.com/yakyak/yakyak/releases Flatpak (x86)]
+|-
+|[https://github.com/FreeTubeApp/FreeTube FreeTube]
+|GPL3
+|Electron-based YouTube client
+|[https://github.com/FreeTubeApp/FreeTube/releases x64 tar]
 |}
 
 ==See also==
