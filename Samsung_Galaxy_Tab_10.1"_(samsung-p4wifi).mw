@@ -56,8 +56,6 @@ $ insmod /lib/modules/brcmfmac.ko alternative_fw_path=postmarketos</source>
 # Configure the IP address<source lang="shell">$ udhcpc -i wlan0</source>
 
 == See also ==
-<!--
 * {{github|1279}} Initial pull request
 * [https://github.com/Decatf/linux/ decatf mainline Linux kernel]
 * [https://github.com/grate-driver/ Grate driver]
--->
