@@ -27,15 +27,15 @@
 == What does not work ==
 * Everything else
 
-= Additional info =
-== Entering &quot;Factory data reset mode&quot; ==
+== Additional info ==
+=== Entering &quot;Factory data reset mode&quot; ===
 # Turn off the device
 # Press and hold Volume Down key + Power Key
 # Release Power key when LG logo appear
 # When still pressing Volume Down key, press and hold Power key again
 # Release Volume Down key when Factory Data Reset menu appears
 
-== Entering &quot;LG Download mode&quot; ==
+=== Entering &quot;LG Download mode&quot; ===
 # Turn off the device
 # Press and hold Volume Up key
 # Connect the USB cable
