@@ -1,5 +1,6 @@
-Enable the wlan0 interface and set it up for networking
+{{note|In {{github|388}} we enabled NetworkManager. You might need to set your wlan interface to unmanaged in NetworkManager to configure it manually.}}
 
+Enable the wlan0 interface and set it up for networking
 
     $ sudo ip link set wlan0 up
     $ sudo iw wlan0 set type managed
