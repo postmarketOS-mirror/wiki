@@ -60,56 +60,56 @@ $ insmod /lib/modules/brcmfmac.ko alternative_fw_path=postmarketos</source>
 # Configure the IP address<source lang="shell">$ udhcpc -i wlan0</source>
 
 == Other Information ==
-==== Hardware Information & Driver Status ====
+==== Hardware Information & Mainline Driver Status ====
 
 The Linux 4.14 mainlining effort contains drivers forward ported from the stock Samsung Linux 3.1.10 kernel which shipped with the device. Some peripheral devices have been transitioned over to the mainline driver.
 
 Other drivers are not in the mainline kernel or the device is not compatible with the mainline driver
 
-{| class="wikitable"
+{| class="wikitable feature-colors"
 !Peripheral Type
 !Hardware
-!Driver Status
+! Mainline Driver<br/>Status
 |-
 |Audio
 |wm8994
-|mainline
+|Y
 |-
 |Battery
 |p4_battery
-|forward port
+|P
 |-
 |Camera
 |s5k5ccgx (front)<br/>s5k6bbgx (back)
-|stock (3.1.10) kernel only
+| - 
 |-
 |CPU Temperature Sensor
 |nct1008
-|mainline
+|Y
 |-
 |Display Panel
 |cmc623
-|forward port
+|P
 |-
 |Fuel Gauge
 |max17042
-|forward port
+|P
 |-
 |GPIO Expander
 |stmpe811
-|forward port
+|P
 |-
 |GPU
 |tegra host1x
-|mainline 
+|Y 
 |-
 |HDMI Connector
 |sii9234
-|stock (3.1.10) kernel only
+| - 
 |-
 |GPS
 |bcm4751
-|userspace (no kernel driver)
+| - 
 |-
 |Sensors
 * gyroscope
@@ -121,36 +121,48 @@ Other drivers are not in the mainline kernel or the device is not compatible wit
 * kxtf9
 * ak8975
 * bh1721fvc
-|forward port
+|P
 |-
 |Touch Digitizer
 |mxt1386
-|forward port
+|P
 |-
 |Voltage Regulators
 |tps6586x
-|mainline
+|Y
 |-
 |Wifi / Bluetooth
 |bcm4330
-|mainline
+|Y
 |-
 |3G Modem
 |xmm6260
-|stock (3.1.10) kernel only
+| - 
 |-
 |3.5mm Jack
 |sec_jack
-|forward port
+|P
 |-
 |30-pin accessory port
-|unknown
-|stock (3.1.10) kernel only
+|unknown 
+| - 
 |-
 |}
 
-
-
+===== Mainline Driver Status Legend =====
+{| class="wikitable feature-colors"
+! Code
+! Meaning
+|-
+  | Y
+  | Mainline driver
+|-
+  | P
+  | Forward ported driver
+|-
+  | -
+  | No driver -- driver has not been forward ported
+|}
 
 == See also ==
 * {{github|1279}} Initial pull request
