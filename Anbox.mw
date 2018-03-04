@@ -3,6 +3,4 @@
 
 '''[https://anbox.io Anbox]''' runs Android apps on Linux by running a (trimmed down?) version of Android next to Linux in a container.
 
-[[User:MartijnBraam]] started packaging anbox [https://github.com/postmarketOS/pmbootstrap/commit/6412d5947c6c601c6928ac221ac8c85f732f54ec here].
-
-Please contact him in the [[Matrix and IRC]] chat, or open up an [https://github.com/postmarketOS/pmbootstrap/issues issue] if you want to help with packaging.
+See issue {{github|1286}} for current progress.
