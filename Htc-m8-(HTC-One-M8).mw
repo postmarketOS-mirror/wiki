@@ -36,6 +36,7 @@ Select fastboot
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+Can't flash system from fastboot, must be installed on sdcard or with flashable zip via recoevery
 
 == See also ==
 <!--
