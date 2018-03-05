@@ -1,0 +1,50 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Wiko
+| name =  Sunset 2
+| codename = sunset2
+| image = 
+| imagecaption = Wiko Sunset 2
+| releaseyear = 2015
+| originalsoftware = Android 4.4 (KitKat)
+| chipset = Mediatek MT6572W
+| cpu = Dual-core 1.3 GHz Cortex-A7
+| gpu = Mali-400
+| storage = 4 GB
+| display = 480x800
+| memory = 512 MB
+}}
+
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
+
+== Maintainer(s) ==
+* ''[[user:drebrez|drebrez]]''
+
+== What works ==
+* Nothing yet
+
+== What does not work ==
+* Everything else
+
+== How to enter flash mode ==
+* Start <code>SP Flash Tool</code>
+* Select the <code>MT6572</code> scatter file
+* Check the partition to flash
+* Specify the location of the file to flash
+* Click <code>Download</code> button
+* Remove the battery from the device
+* Connect the USB cable
+* Flash process should start
+
+== How to enter Recovery Mode ==
+* Hold the <code>Volume Up</code> and <code>Volume Down</code> button, and then press the <code>Power</code> button
+* Press <code>Volume Up</code> when prompted
+
+== How to enter Factory Mode ==
+* Hold the <code>Volume Up</code> and <code>Volume Down</code> button, and then press the <code>Power</code> button
+* Press <code>Volume Up</code> when prompted
+
+== Links ==
+* [https://www.gsmarena.com/wiko_sunset2-7457.php Full phone specifications]
+* [http://www.wikogeek.com/index.php?telephone=SUNSET2 Official Kernel source]
