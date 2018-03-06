@@ -109,7 +109,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-huawei-y530 Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-huawei-y530 Kernel package]
-* [https://github.com/EfranDev/android_kernel_huawei_Soulfire Soulfire Kernel]
+* [https://github.com/PieroV/android_kernel_huawei_msm8x1x PieroV's Kernel]
 * [https://github.com/PieroV/android_vendor_huawei_y530/tree/cm-11.0 PieroV's vendor files]
 
 == Photos ==
