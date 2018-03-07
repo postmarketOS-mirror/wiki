@@ -46,12 +46,8 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |
 
 |-
-| <code>external_disk</code>
+| <code>external_storage</code>
 | Does the device have an sdcard or other external storage medium?
-| <code>true</code>, <code>false</code>
-|-
-| <code>external_disk_install</code>
-| Allow installing to sdcard
 | <code>true</code>, <code>false</code>
 |-
 | <code>flash_method</code>
