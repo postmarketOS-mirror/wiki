@@ -197,6 +197,22 @@ Here's an example using the test scripts to enable the modem and send a SMS:
 # python2 send-sms 5033784582 "I like pizza." 0 
 </pre>
 
+==== Console switching ====
+
+You can use the <code>[[File:Nokia-n900-blue-arrow.PNG|30px]] blue arrow</code> key in combination with the <code>Volume Up/Down</code> to switch to a different virtual terminal.
+
+If you installed postmarketOS with a UI, you first have to enable again the other VT by editing the <code>/etc/inittab</code> file and uncomment the following lines:
+<syntaxhighlight lang="sh">
+...
+# Set up a couple of getty's
+tty1::respawn:/sbin/getty 38400 tty1
+tty2::respawn:/sbin/getty 38400 tty2
+tty3::respawn:/sbin/getty 38400 tty3
+tty4::respawn:/sbin/getty 38400 tty4
+tty5::respawn:/sbin/getty 38400 tty5
+tty6::respawn:/sbin/getty 38400 tty6
+...
+</syntaxhighlight>
 === GPRS ===
 
 GPRS can be managed by [https://pkgs.alpinelinux.org/package/edge/testing/armhf/connman connman]. Either install connman using <code>apk</code> or add it when installing pmOS by passing <code>--add connman</code> to <code>pmbootstrap</code>.
