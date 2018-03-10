@@ -27,6 +27,9 @@
 == What does not work ==
 * Everything
 
+== Additional Info ==
+I'm using the T-Mobile LG-K330 variant of the M1. There are a bunch of variants and it's unclear to me how they're all related
+
 <!-- 
 == How to enter flash mode ==
 
@@ -35,3 +38,9 @@
 
 == See also ==
 * {{github|1307}} aport progress
+* [https://github.com/Bughora/cyanogenmod_kernel_lge_m1 Bughora kernel]
+* [https://github.com/EdwinMoq/android_kernel_lge_msm8909 EdwinMoq kernel]
+* [https://github.com/TheOddTaco/android_kernel_lge_msm8909 TheOddTaco kernel]
+* [https://github.com/culots/kernel_lge_m1 culots kernel]
+* [https://github.com/xperiafan13-rom/FenomenalMOD-m1 FenomenalMOD kernel (only MS3030 variant tested)]
+* [https://forum.xda-developers.com/lg-k7/development/kernel-fenomenalmod-t3578700 FenomenalMOD xda kernel thread]
