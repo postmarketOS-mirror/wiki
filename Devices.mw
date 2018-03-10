@@ -437,7 +437,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | lg-h220
   |
 |-  
-  | [[LG K7_(lg-k330)|LG K7]]
+  | [[LG K7_(lg-m1)|LG K7]]
   | lg-m1
   | Kernel compiles, haven't tried flashing yet.
 |-
