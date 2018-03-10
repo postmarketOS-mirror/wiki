@@ -107,3 +107,12 @@
 * [[Sony Xperia SP (sony-huashan)]] (broken? should receive it soon)
 * [[LG Optimus Black (lg-p970)]] (I have to retrieve it)
 }}</onlyinclude>
+
+=== Mossroy ===
+<onlyinclude>{{#ifeq:{{{user|Mossroy}}}|Mossroy|
+* [[Geeksphone Peak (gp-peak)]] (very weak battery, unused so I can flash it as much as needed)
+* [[InFocus New Tab F1 (infocus-flatfish)]] (often used, so can not easily be flashed)
+* [[Samsung Galaxy SIII LTE (samsung-i9305)]] (sometimes used, so can not easily be flashed, seems to have a hardware issue with current consumption)
+* [[Mozilla Flame (t2m-flame)]] (sometimes used, so can not easily be flashed, broken touchscreen with an unactive zone)
+* ZTE Open C, FR version (I have several of these devices, which have a hardware similar to the Mozilla Flame. I might be able to flash one of them)
+}}</onlyinclude>
