@@ -1,0 +1,37 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = LG
+| name =  K7
+| codename = m1
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2016
+| originalsoftware = Android 5.1.1 (Lollipop)
+| chipset = Qualcomm MSM8909 Snapdragon 210
+| cpu = 1.1Ghz Quad-Core ARM Cortex-A7
+| gpu = Qualcomm Adreno 304
+| storage = 8 GB
+| display = 480x854 IPS
+| memory = 1.5 GB
+}}
+
+== Contributors ==
+* bug
+
+== Maintainer(s) ==
+* bug
+
+== What works ==
+* Nothing yet
+
+== What does not work ==
+* Everything
+
+<!-- 
+== How to enter flash mode ==
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+* {{github|1307}} aport progress
