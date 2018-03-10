@@ -436,6 +436,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[LG_Joy_(lg-h220)|LG Joy]]
   | lg-h220
   |
+|-  
+  | [[LG K7_(lg-k330)|LG K7]]
+  | lg-m1
+  | Kernel compiles, haven't tried flashing yet.
 |-
   | [[Moto X|Moto X]]
   | motorola-ghost
