@@ -27,13 +27,7 @@
 * WiFi
 * Weston
 * XWayland (tested with Firefox)
-
-== What does not work ==
-
-* Xorg interfaces (XFCE/Hildon tested only)
-
-== Not tested ==
-
+* Xorg (XFCE/Mate)
 * Full disk encryption
 
 == How to enter flash mode ==
