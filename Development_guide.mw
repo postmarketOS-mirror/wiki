@@ -37,18 +37,33 @@ After that, simply do <code>git commit -a --amend -n</code> (<code>-n</code> is 
 === pmb.helpers.run ===
 Use <code>pmb.helpers.run.root()</code> and <code>pmb.helpers.run.user()</code> instead of <code>subprocess</code> because these logs to the log file.
 
-For security reasons, you cannot write files by redirecting the output of the <code>echo</code> command using <code>pmb.helpers.run</code> functions. The following call will never work as you would expect
+==== Shell commands ====
+{{note|See also: {{github|1316}} Properly escape commands in pmb.chroot.user()}}
+The passed commands gets interpreted as single command, and not executed in a shell. This means something like the following '''will not work''':
 
-<pre>pmb.chroot.root(args, [&quot;echo&quot;, &quot;test&quot;, &quot;&gt;&quot;, &quot;/tmp/test&quot;])</pre>
-In order to write a file inside of a chroot, the recommended way is to write the file normally as you would do in Python and then copy the file to the correct location, like
+<syntaxhighlight lang="python">
+pmb.chroot.root(args, ["echo", "test", ">", "/tmp/test"])
+</syntaxhighlight>
 
-<pre>with open(&quot;/tmp/somefile&quot;, &quot;w&quot;) as handle:
-    handle.write(&quot;It works&quot;)
-pmb.chroot.root(args, [&quot;mv&quot;, &quot;/tmp/somefile&quot;, &quot;/etc/somefile&quot;])</pre>
-If you need to redirect the input instead, another solution is writing a bash script to a file and then executing it as in [https://github.com/postmarketOS/pmbootstrap/blob/1c13ca4fd9e32952a8e559987f82cd0925cddee9/pmb/chroot/initfs.py#L66-L76 pmb/chroot/initfs.py]
+Instead, if you need shell functionality in the call, you can wrap the call with <code>sh -c</code>. Here's one example with the parameters correctly escaped (you don't need to do that for the strings in this example, but if you pass variables then they should be escaped properly):
+
+<syntaxhighlight lang="python">
+shell_cmd = "echo " + shutil.quote("test") + " > " + shutil.quote("/tmp/test")
+pmb.chroot.root(args, ["sh", "-c", shell_cmd])
+</syntaxhighlight>
+
+Another technique (especially if you need to run many commands in the shell at once) is writing all commands down into a temporary file and executing it with the shell, see for example [https://github.com/postmarketOS/pmbootstrap/blob/1c13ca4fd9e32952a8e559987f82cd0925cddee9/pmb/chroot/initfs.py#L66-L76 pmb/chroot/initfs.py].
+
+==== Writing files to the chroot ====
+The users in the chroots (root and pmos) have different user IDs than the user of the host system. Therefore we can't just write a file to anywhere in the chroot. But we can write to <code>/tmp</code> and move the file afterwards:
+<syntaxhighlight lang="python">
+with open("tmp/somefile", "w") as handle:
+    handle.write("It works")
+pmb.chroot.root(args, ["mv", "/tmp/somefile", "/etc/somefile"])
+</syntaxhighlight>
 
 === pmb.install ===
-Whenever you change the installation process, also adjustt the recovery zip installer (which performs a good part of the installation procedure directly on the Android device with a shell script).
+Whenever you change the installation process, also adjust the recovery zip installer (which performs a good part of the installation procedure directly on the Android device with a shell script).
 
 == See also ==
 * [[Testsuite]]
