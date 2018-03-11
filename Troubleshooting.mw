@@ -55,17 +55,6 @@ In case we did not increase it yet, you can increase the versions on your own. P
 $ pmbootstrap aportgen gcc-armhf
 </syntaxhighlight>
 
-Check with <code>git diff</code> if the aport got updated correctly. In case it got ''downgraded'' instead of upgraded, you have an old git checkout of Alpine's aports folder (updating this easily is planned in {{github|1272}}). Update it like this:
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap chroot
-# apk add git
-# su - pmos
-$ cd ~/git/aports_upstream
-$ git pull
-$ exit
-# exit
-</syntaxhighlight>
-
 3.b) For all other soname bumps, use the following command to automatically increase the <code>pkgrel</code>:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap pkgrel_bump --auto
