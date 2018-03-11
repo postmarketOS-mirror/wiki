@@ -274,6 +274,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   |style="white-space: nowrap;" | [[Xiaomi_RedMi3_(xiaomi-ido)|Xiaomi RedMi 3]]
   |style="white-space: nowrap;" | xiaomi-ido
   | Y  || Y  || P  || Y  ||  ||  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
+  |style="white-space: nowrap;" | [[ZTE_Kis_3_(zte-kis3)|ZTE Kis 3]]
+  |style="white-space: nowrap;" | zte-kis3
+  | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
