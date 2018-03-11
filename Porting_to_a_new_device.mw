@@ -386,6 +386,7 @@ Android/fastboot compatible devices have such a partition, Nokia devices (N900 e
 After you've gotten more familiar with postmarketOS, you could try out the <code>postmarketos-update-kernel</code> as well. It allows you to flash a new kernel to the device's <code>boot</code> partition ([[Partition-layout#Android_internal_storage|not to be confused]] with postmarketOS' own boot subpartition <code>systemp1</code>).
 
 === Full disk encryption: osk-sdl support ===
+{{note|Our charging application <code>charging-sdl</code> uses the same software stack as <code>osk-sdl</code>, so following the instructions should make both components work.}}
 If the display and the touchscreen interface are working, then it's time to add support for <code>osk-sdl</code>, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting osk-sdl to New Devices]]
 
 === Advanced topics ===
