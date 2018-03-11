@@ -1,0 +1,56 @@
+{{Infobox device
+| manufacturer = ZTE
+| name =  Kis 3
+| codename = zte-kis3
+| releaseyear = 2013
+| originalsoftware = Android 4.4.2 (Kis 3) / Firefox OS 1.3 (Open C)
+| chipset = Qualcomm Snapdragon 200 MSM8210
+| cpu = Dual core 1.2 GHz
+| gpu = Adreno 302
+| storage = 4 GB
+| display = 480×800
+| memory = 512 MB
+}}
+
+== Contributors ==
+* [[User:ethanrjones97 | Ethan R. Jones]]
+
+== Maintainer(s) ==
+* [[User:ethanrjones97 | Ethan R. Jones]]
+''Note: I only have the ZTE Open C (ebay version)''
+
+== What works ==
+* Flashing
+* Booting
+* USB network
+Flashed using an external SD card for system, Fastboot for kernel/initramfs. Fastboot seems to crash when flashing system and using an Android recovery zip seemed unsuccessful as well.
+
+== Not tested ==
+* Accelerometers
+* Bluetooth
+* GPS
+* Cellular network
+* Wifi
+* Camera
+* Battery
+* Weston
+* XWayland
+* Audio
+* Full Disk Encryption
+
+== What does not work ==
+* Display
+
+Lacks any kind of display output at the moment. Unable to test most features, however SSH does give a stable shell.
+Bootup takes a while, requires patience. 
+
+== How to enter flash mode ==
+Press volume down + power key until you see the, the boot logo will stay displayed.
+Press volume up + power key to enter recovery.
+
+== See also ==
+* {{github|1311}} Initial pull request
+* [https://github.com/KonstaT/android_device_zte_kis3 Android Source]
+* [https://github.com/KonstaT/android_kernel_zte_msm8610 Android Kernel sources]
+* [https://github.com/KonstaT/proprietary_vendor_zte Proprietary blobs]
+* [http://builds.firefoxos.mozfr.org/ Open C Firefox OS related resources]
