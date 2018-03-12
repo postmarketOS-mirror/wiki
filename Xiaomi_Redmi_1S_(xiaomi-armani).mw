@@ -29,6 +29,9 @@
 * Buttons: KEY_POWER, KEY_VOLUMEUP, and KEY_VOLUMEDOWN (triggerhappy can be used to handle them, see [[Troubleshooting:HID_buttons]])
 
 == What does not work ==
+
+'''Note: after pulling current postmarketos sources (commit 263578ec43c3d6b1cbb24d34495a93a1e3a3f6be), the device encounters a boot loop. Still investigating.'''
+
 * Screen: framebuffer console (no kernel boot log printed on the display)
 * Wifi: rfkill (no support for blocking wireless via rfkill block wifi or nmcli radio wifi off). The only way to block wireless is unloading wlan module (``rmmod wlan`` or ``/etc/init.d/wlanarmani stop``)
 * Sound: msm8226-asoc-tapan requests probe deferral.
