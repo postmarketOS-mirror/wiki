@@ -51,12 +51,13 @@ echo 4 > /sys/devices/platform/android_usb/usb_function_switch
 
 == Kernel doesn't even boot ==
 * Check the output of the bootloader with a [[serial debugging|serial cable]] if you have one.
-** Making such a kernel takes some time, and it isn't even known how to do it for all devices. So if you don't have such a cable, try other methods.
+** Making such a cable takes some time, and it isn't even known how to do it for all devices. So if you don't have such a cable, try other methods.
 * Double-check that you have used the right [[Porting_to_a_new_device#Defconfig|defconfig]]
 * Android bootimg issues:
 ** Make sure that <code>pmbootstrap bootimg_analyze</code> outputs the same values, that you have put in your [[deviceinfo]]
 ** Analyze a bootimg file, for which you have verified that it boots on your device (with TWRP or Android).
 ** If you [[QCDT#Does_my_device_need_a_QCDT_boot.img_file.3F|have a QCDT device]], check out [[QCDT#Debugging|QCDT debugging]]
+** use <code>extract-dtb</code> and <code>unpackbootimg</code> (both packaged in postmarketOS) to compare the [[dtb]] files appended to the kernel and boot.img file (compare the postmarketOS version against the one from a known working ROM or recovery OS such as TWRP)
 * A less systematic approach is booting the postmarketOS initramfs with a [[Using_prebuilt_kernels|prebuilt kernel]]. This is listed for the sake of completeness, but building another kernel from source (like in the [[Porting_to_a_new_device|porting guide]]) is probably more fruitful and over a much cleaner approach.
 ** If that works, maybe you can debug the issue from that point somehow
 ** Or even load the postmarketOS kernel with kexec
