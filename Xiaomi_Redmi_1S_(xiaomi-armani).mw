@@ -183,6 +183,12 @@
 
 ::<code>$ pmbootstrap build linux-xiaomi-armani</code>
 
+{{Note|With boot loop issue with latest pmbootstrap, a debug shell is needed.}}
+
+: Install the debug shell to help troubleshoot the boot loop issue
+
+:<code>$ pmbootstrap initfs hook_add debug-shell</code>
+
 :<code>$ pmbootstrap install --no-fde --android-recovery-zip</code>
 
 :<code>$ pmbootstrap export # generate symlinks inside /tmp/postmarketOS-export directory</code>
