@@ -391,9 +391,9 @@ If the display and the touchscreen interface are working, then it's time to add 
 
 === Advanced topics ===
 {{note|Out of ideas what to do next with postmarketOS? Check out the [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#how-can-you-help how can you help?] section from the last blog post!}}
-* [[WiFi]] (works on many devices now, but the guide needs some work, please expand it and look into the <code>aports</code> folder how it works for other devices and ask in the chat)
-* Cellular modems still need lots of work, see the software stack we have proposed and started to implement in {{github|598}}.
 * [[User-Interfaces]]
+* [[WiFi]]
 * [[Audio]]
+* [[Modem]]
 * [[Mainline kernel]]
 * [[Existing Alpine installation]]
