@@ -1,0 +1,8 @@
+== Relevant issues ==
+* {{github|520}} N900: integrate ofono
+* {{github|598}} Let's get the cellular modem working! (presenting various stacks, general discussion)
+* {{github|1054}} Get qualcomm modems working (at the end of the thread scintill wrote a few wrappers and made SMS on a QC modem work with a downstream kernel without userspace blobs!)
+* {{github|1314}} i9195/Qualcomm modem support (scintill's work integrated)
+
+== See also ==
+* Maemo Leste {{github|27|bugtracker|maemo-leste}} Call/Phone support
