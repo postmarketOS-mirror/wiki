@@ -54,10 +54,10 @@ $ ./pmbootstrap.py install --no-fde</source>
 $./pmbootstrap.py flasher flash_system</source>
 
 == Wifi ==
-# Load brcmfmac driver<source lang="shell">$ insmod /lib/modules/brcmutil.ko
-$ insmod /lib/modules/brcmfmac.ko alternative_fw_path=postmarketos</source>
-# Start wpa_supplicant<source lang="shell">$ wpa_supplicant -B -D nl80211 -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</source>
-# Configure the IP address<source lang="shell">$ udhcpc -i wlan0</source>
+# Edit <code>/etc/conf.d/wpa_supplicant</code> and change the wpa_supplicant driver from  <code>wext,nl80221</code> to <code>nl80211 </code>
+# Set up a WIFI access point <source lang="shell">$ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf</source>
+# Restart wpa_supplicant service <source lang="shell">$ service wpa_supplicant restart</source>
+# Request an IP address <source lang="shell">$ udhcpc -i wlan0</source>
 
 == Other Information ==
 ==== Hardware Information & Mainline Driver Status ====
