@@ -20,25 +20,38 @@ Android audio HALs make use of [https://android.googlesource.com/platform/extern
 Android kernels use <code>switch_class</code> kernel driver to notify the Android frameworks of headphone jack events. The driver source code can be located at:
 <code>drivers/switch/switch_class.c</code>
 or
-<code>drivers/staging/android/switch/switch_class.c</code>.
+<code>drivers/staging/android/switch/switch_class.c</code>. Note that the switch class driver is an Android specific driver. It has not been upstreamed to the mainline kernel.
 
-The [https://android.googlesource.com/platform/frameworks/base/+/kitkat-release/services/java/com/android/server/WiredAccessoryManager.java WiredAccessoryManager] monitors the <code>/sys/class/switch/h2w</code> for uevents when the headphone is (un)plugged.
-
-''Note: The switch class driver is an Android specific driver. It has not been upstreamed to the mainline kernel.''
+In userspace the [https://android.googlesource.com/platform/frameworks/base/+/kitkat-release/services/java/com/android/server/WiredAccessoryManager.java WiredAccessoryManager] monitors the <code>/sys/class/switch/h2w</code> for uevents when the headphone is (un)plugged.
 
 == Converting Android configurations using xml2ucm ==
 {{note|This section is incomplete. It requires a reference to more complete documentation of the device config XML format.}}
 
-The audio routes in Linux userspace can be defined in ALSA UCM configuration files. There is a tool called [https://github.com/ford-prefect/xml2ucm xml2ucm] which will convert the Android <code>mixer_paths.xml</code> and a <code><device>-config.xml</code> to UCM files. The <code>xml2ucm</code> tool introduces the device config XML which provides necessary routing information that was hardcoded in the audio HAL on Android.
+The audio routes in Linux userspace can be defined in ALSA UCM configuration files. There is a tool called [https://github.com/ford-prefect/xml2ucm xml2ucm] which will convert the Android <code>mixer_paths.xml</code> and a device config XML to UCM files. The <code>xml2ucm</code> tool introduces the device config XML which provides necessary routing information that was hardcoded in the audio HAL on Android.
 
 The <code>mixer_path.xml</code> is commonly found in the Android device repository. (e.g. <code>android_device_lge_hammerhead</code>). You must write the device config XML for your device.
 
 ==== Format of device config XML ====
-Android audio HALs can and do select multiple audio routes at once. For example a headset can have an output route and a microphone input route. To handle this a <code>device</code> element (the headset) can contain multiple <code>path</code> elements (audio routes). Example device config XML files are provided in the <code>xml2ucm</code> repository.
 
-Once the <code>mixer_path.xml</code> and <code><device>-config.xml</code> are converted to UCM format then an audio route can be set by using <code>alsaucm</code>.
+A device config XML describes a sound card with use cases and sets of audio routes. In the examples available at the moment there is only one use case named HiFi. Under each <code><use-case></code> there are multiple <code><device></code> elements. In this context a <code><device></code> means audio route(s) which comprise a logical audio device (e.g. Headphone, Headset, Speaker).
 
-Example: <code>alsaucm -c <ctl-device> set _verb <use-case> set _enadev <device></code>
+Android audio HALs can and do select multiple audio routes at once. For example a headset can have a headphone output route and a microphone input route. To handle this a <code><device></code> element (the headset) can contain multiple <code><path></code> elements (audio routes). Example device config XML files are provided in the <code>xml2ucm</code> repository.
+
+The <code>ctl-device</code> must be the name of the sound card which can be obtained using <code>aplay</code>. In the following example from the Samsung p4wifi the <code>ctl-device</code> is the sound card named <code>wm8994aif1</code>.
+<source lang="shell">$ aplay -L
+null
+    Discard all samples (playback) or generate zero samples (capture)
+default:CARD=wm8994aif1
+    wm8994-aif1, 
+    Default Audio Device
+sysdefault:CARD=wm8994aif1
+    wm8994-aif1, 
+    Default Audio Device
+</source>
+
+Once the <code>mixer_path.xml</code> and device config XML are converted to UCM format then an audio route can be set by using <code>alsaucm</code>.
+Example:
+<source lang="shell>$ alsaucm -c wm8994aif1 set _verb HiFi set _enadev Headphones</source>
 
 == alsactl method ==
 Cascardo reported having success with the following method on Debian, this should work for postmarketOS as well:
