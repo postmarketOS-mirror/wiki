@@ -169,6 +169,23 @@
 * Entering recovery: hold VolumeKeyUp + Power buttons. The default is Mi Recovery. TWRP is needed for installation, which can be obtained [https://twrp.me/xiaomi/xiaomiredmi1s.html here]
 
 == Installation ==
+
+=== pmbootstrap flasher method ===
+{{Note|This method provides complete root filesystem contents. Even with this method, the boot loop issue remains.}}
+* Put the device into fastboot mode by holding both VolumeKeyDown + Power buttons or rebooting into bootloader from the twrp reboot menu.
+* Connect the device to the computer via usb cable
+* Bootstrap PostmarketOS, adding debug-shell hook during the process
+::<code>$ pmbootstrap init #select xiaomi-armani</code>
+::<code>$ pmbootstrap initfs hook_add debug-shell</code>
+::<code>$ pmbootstrap install --no-fde</code>
+* Flash the kernel and system
+::<code>$ pmbootstrap flasher flash_kernel</code>
+::<code>$ pmbootstrap flasher flash_system</code>
+* Reboot the device
+::<code>$ fastboot reboot</code>
+
+=== Android recovery.zip sideload method ===
+{{Note|With {{github|1333}}, installation using recovery.zip doesn't provide complete root filesystem.}}
 * Put the device into TWRP recovery, either by booting twrp image via fastboot directly or by pressing VolumeKeyUp + Power button after flashing TWRP recovery image.
 * Connect the device to the computer via usb cable
 * Bootstrap PostmarketOS
