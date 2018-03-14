@@ -31,10 +31,10 @@ postmarketOS for the Samsung Galaxy Tab 10.1 runs on a Linux 4.14 kernel using b
 * DRM fbdev / 2D acceleration (Grate driver)
 * Wifi
 * Battery
+* Audio (headphone & speaker only)
 
 == What does not work ==
 * 3D acceleration
-* Audio
 * Bluetooth
 * Camera
 * GPS
@@ -52,6 +52,18 @@ $ ./pmbootstrap.py install --no-fde</source>
 # Enter flash (download) mode
 # Flash the kernel and system images<source lang="shell">$./pmbootstrap.py flasher flash_kernel
 $./pmbootstrap.py flasher flash_system</source>
+
+== Graphics ==
+The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not working. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
+
+grate-drver packaging can be found at [http://github.com/Decatf/pmbootstrap/tree/mesa-grate github.com/Decatf/pmbootstrap/tree/mesa-grate]
+
+== Audio ==
+
+Headphone and speaker output are working on the mainline wm8994 driver. Microphone inputs are not working.
+
+The ALSA UCM config files were generated using the <code>xml2ucm</code> tool. The <code>mixer_paths.xml</code> and <code>p4wifi.config.xml</code> can be found in this [https://gist.github.com/Decatf/c37dda86a96f953f8b77eb9502d6681b github gist].
+<source lang="shell">$ stack exec -- xml2ucm -m mixer_paths.xml -c p4wifi-config.xml -o examples</source>
 
 == Wifi ==
 # Edit <code>/etc/conf.d/wpa_supplicant</code> and change the wpa_supplicant driver from  <code>wext,nl80221</code> to <code>nl80211 </code>
