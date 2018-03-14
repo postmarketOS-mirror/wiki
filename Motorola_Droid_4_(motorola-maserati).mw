@@ -21,7 +21,11 @@
 * MartijnBraam
 
 == What works ==
-
+* Device boots
+* Framebuffer graphics
+* Touchscreen
+* Wi-Fi
+* Hardware keyboard
 
 == What does not work ==
 
@@ -53,6 +57,44 @@ It's an APK file, so enable untrusted sources on your Droid 4 and install it. On
 
 Tapping "install recovery" should install the SafeStrap recovery! If it's successful, tapping "Reboot to recovery" should take you to the custom SafeStrap recovery.
 
+=== Installation ===
+
+<source lang="bash">
+$ pmbootstrap init
+$ pmbootstrap install --no-fde
+$ pmbootstrap export
+</source>
+
+Create ROM slot with minimal possible space for system, data, and cache partitions.
+
+First flash [http://droid.cs.fau.de/cm-11.0/unofficial/cm-11-20160815-UNOFFICIAL-maserati.zip CyanogenMod 11] to install files needed by SafeStrap for kexec. Then connect the phone via USB in SafeStrap and do the following (android-platform-tools need to be installed):
+
+<source lang="bash">
+$ cd /tmp/postmarketOS-export
+$ adb shell mount /system
+$ adb push initramfs-motorola-maserati /system/etc/kexec/ramdisk.img
+$ adb push vmlinuz-motorola-maserati /system/etc/kexec/kernel
+$ adb shell
+
+# In ADB shell (needed to make sure files are written before reboot):
+$ umount /cache
+$ umount /system
+$ umount /data
+$ losetup -d /dev/block/loop-cache 
+$ losetup -d /dev/block/loop-userdata 
+$ losetup -d /dev/block/loop-system
+$ umount /ss
+</source>
+
+Now you can either flash motorola-maserati.img to sdcard or resize the image on host to desired size and replace userdata.img of ROM slot you created:
+
+<source lang="bash">
+$ resize2fs -s 2G motorola-maserati.img
+$ adb shell mount /ss
+$ slot_number=1 # Number of SafeStrap slot used
+$ adb push motorola-maserati.img /ss/safestrap/rom-slot{$slot_number}/userdata.img
+$ adb shell umount /ss
+</source>
 
 === Additional Info ===
 
