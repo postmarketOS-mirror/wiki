@@ -57,7 +57,13 @@ It's an APK file, so enable untrusted sources on your Droid 4 and install it. On
 
 Tapping "install recovery" should install the SafeStrap recovery! If it's successful, tapping "Reboot to recovery" should take you to the custom SafeStrap recovery.
 
-=== Installation ===
+=== Additional Info ===
+
+Safestrap recovery has support for what it calls "ROM slots." At the time of this writing, you must select a non-stock slot in order to flash anything besides Android. 
+
+To repeat: '''DO NOT TRY TO INSTALL pmOS TO THE STOCK SLOT! IT COULD BRICK YOUR DEVICE!'''.
+
+== Installation ==
 
 <source lang="bash">
 $ pmbootstrap init
@@ -96,12 +102,5 @@ $ adb push motorola-maserati.img /ss/safestrap/rom-slot{$slot_number}/userdata.i
 $ adb shell umount /ss
 </source>
 
-=== Additional Info ===
-
-Safestrap recovery has support for what it calls "ROM slots." At the time of this writing, you must select a non-stock slot in order to flash anything besides Android. 
-
-To repeat: '''DO NOT TRY TO INSTALL pmOS TO THE STOCK SLOT! IT COULD BRICK YOUR DEVICE!'''.
-
-
-=== See also ===
+== See also ==
 * {{github|1039}} WIP pull request
