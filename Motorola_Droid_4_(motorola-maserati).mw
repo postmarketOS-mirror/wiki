@@ -97,8 +97,8 @@ Now you can either flash motorola-maserati.img to sdcard or resize the image on 
 <source lang="bash">
 $ resize2fs -s 2G motorola-maserati.img
 $ adb shell mount /ss
-$ slot_number=1 # Number of SafeStrap slot used
-$ adb push motorola-maserati.img /ss/safestrap/rom-slot{$slot_number}/userdata.img
+$ export slot_number=1 # Number of SafeStrap slot used
+$ adb push motorola-maserati.img /ss/safestrap/rom-slot${slot_number}/userdata.img
 $ adb shell umount /ss
 </source>
 
