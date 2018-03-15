@@ -15,6 +15,10 @@ Various information collected from [[Matrix_and_IRC|#postmarketOS]]. See [[The M
 * you can try
 * but doing it blindly is painful
 * once it reliably boots though, and USB comes up properly, I just use the USB serial gadget in the kernel (see below)
+* logging to RAM instead of serial:
+** on msm8974 at least (and probably all qcom devices), reboot to bootloader doesnt clear memory
+** so you can use that to get a log (write to a fixed address and read it back from twrp with /dev/mem)
+** not as good as uart but good enough
 
 === How to get serial output? (serial cable) ===
 * enable the serial device for your kernel (e.g. for OMAP: CONFIG_SERIAL_OMAP and CONFIG_SERIAL_OMAP_CONSOLE)
