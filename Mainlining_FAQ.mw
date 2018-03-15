@@ -16,8 +16,10 @@ Various information collected from [[Matrix_and_IRC|#postmarketOS]]. See [[The M
 * but doing it blindly is painful
 * once it reliably boots though, and USB comes up properly, you can use the USB serial gadget in the kernel (see below)
 * logging to RAM instead of serial:
+** requirement is that your kernel starts init in the initramfs
 ** on msm8974 at least (and probably all qcom devices), reboot to bootloader doesnt clear memory
 ** so you can use that to get a log (write to a fixed address and read it back from twrp with /dev/mem)
+** more detailed: in the initramfs (e.g. postmarketOS initramfs hook), copy /dev/kmsg to the reserved region in /dev/mem and write the reboot registers
 ** not as good as uart but good enough
 
 === How to get serial output? (serial cable) ===
