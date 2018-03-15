@@ -166,3 +166,7 @@ lrwxrwxrwx root     root              1969-12-31 19:10 tzbk -> /dev/block/mmcblk
 lrwxrwxrwx root     root              1969-12-31 19:10 usbmsc -> /dev/block/mmcblk0p30
 lrwxrwxrwx root     root              1969-12-31 19:10 userdata -> /dev/block/mmcblk0p29
 </source>
+
+=== Photos ===
+
+[[File:T2m-flame-irl-pic.jpg|200px]]  [[File:T2m-flame-screen-dump-1.png|200px]]
