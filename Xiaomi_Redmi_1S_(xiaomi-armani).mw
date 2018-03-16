@@ -19,7 +19,7 @@
 
 == What works ==
 * USB ethernet
-* Flashing, via android-recovery-zip (twrp)
+* Flashing, via android-recovery-zip (twrp) and pmbootstrap flasher
 * Touchscreen (ft5x06_i2c)
 * Screen: framebuffer (/dev/fb0), backlight & brigtness control (/sys/class/leds/wled:backlight/brightness)
 * Notification leds (/sys/class/leds/red/brigtness, /sys/class/leds/green/brightness, /sys/class/leds/blue/brightness)
@@ -30,11 +30,74 @@
 
 == What does not work ==
 
-{{Note|After pulling current postmarketos sources (commit d3818cd2e7c8fed121b1e957624ae00e4b8e39c5), the device encounters a boot loop. [[Inspecting_the_initramfs]] is needed to troubleshoot this issue.}}
-
-* Screen: framebuffer console (no kernel boot log printed on the display)
+* Screen: framebuffer console (no kernel boot log printed on the display), directfb applications (osk-sdl and charging-sdl)
 * Wifi: rfkill (no support for blocking wireless via rfkill block wifi or nmcli radio wifi off). The only way to block wireless is unloading wlan module (``rmmod wlan`` or ``/etc/init.d/wlanarmani stop``)
-* Sound: msm8226-asoc-tapan requests probe deferral.
+* Sound: don't know how to initialize the sound card
+
+* Other hardware features are untested (3D, bluetooth, modem, gps, accelerometer)
+* Xorg based UI: postmarketos-ui-xfce4 displays nothing on the screen.
+
+== How to enter flash mode ==
+* Entering fastboot: hold VolumeKeyDown + Power buttons until fastboot mode displayed on the screen.
+* Entering recovery: hold VolumeKeyUp + Power buttons. The default is Mi Recovery. TWRP is needed for installation, which can be obtained [https://twrp.me/xiaomi/xiaomiredmi1s.html here]
+
+== Installation ==
+
+=== pmbootstrap flasher method ===
+
+* Put the device into fastboot mode by holding both VolumeKeyDown + Power buttons or rebooting into bootloader from the twrp reboot menu.
+* Connect the device to the computer via usb cable
+* Bootstrap PostmarketOS
+::<code>$ pmbootstrap init #select xiaomi-armani</code>
+::<code>$ pmbootstrap install --no-fde</code>
+* Flash the kernel and system
+::<code>$ pmbootstrap flasher flash_kernel</code>
+::<code>$ pmbootstrap flasher flash_system</code>
+* Reboot the device
+::<code>$ fastboot reboot</code>
+
+=== Android recovery.zip sideload method ===
+
+* Put the device into TWRP recovery, either by booting twrp image via fastboot directly or by pressing VolumeKeyUp + Power button after flashing TWRP recovery image.
+* Connect the device to the computer via usb cable
+* Bootstrap PostmarketOS
+
+:<code>$ pmbootstrap init #select xiaomi-armani</code>
+
+:<code>$ pmbootstrap install --no-fde --android-recovery-zip</code>
+
+:<code>$ pmbootstrap export # generate symlinks inside /tmp/postmarketOS-export directory</code>
+
+* Put the twrp recovery into sideload mode
+
+:<code>$ adb shell "twrp sideload"</code>
+
+* Start sideloading the recovery file
+
+:<code>$ adb sideload /tmp/postmarketOS-export/pmos-xiaomi-armani.zip</code>
+
+* Reboot the device
+
+:<code>$ adb reboot</code>
+
+== Additional info ==
+It's necessary to unplug the usb cable after issuing ``poweroff`` command to properly shut down PostmarketOS.
+
+Don't leave screen on for a long time, otherwise there will be LED burn-in. If the display screen is not used, turn the screen off.
+
+:<code>$ echo 0 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
+
+The screen can be turned on with maximum value up to 4095
+
+:<code>$ echo 3072 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
+
+Battery state can be monitored. Refer to [[Battery capacity monitoring]] for more information.
+
+== Hardware enablement effort ==
+
+* Framebuffer: directfb based applications don't work (osk-sdl and charging sdl)
+* Sound: still figuring out how to initialize the sound card
+: /proc/asound/cards: no soundcards
 : Here is part of initial kernel log.
 <pre>
 [    2.116756] msm8226-asoc-tapan sound-9302.43: Property 'qcom,audio-routing' does not exist or its length is not even
@@ -161,79 +224,6 @@
 [  111.763258] msm8226-asoc-tapan sound.42: snd_soc_register_card failed (-19)
 </pre>
 : For now, the sound doesn't work at all.
-* Other hardware features are untested (3D, bluetooth, modem, gps, accelerometer)
-* Xorg based UI: postmarketos-ui-xfce4 displays nothing on the screen.
-
-== How to enter flash mode ==
-* Entering fastboot: hold VolumeKeyDown + Power buttons until fastboot mode displayed on the screen.
-* Entering recovery: hold VolumeKeyUp + Power buttons. The default is Mi Recovery. TWRP is needed for installation, which can be obtained [https://twrp.me/xiaomi/xiaomiredmi1s.html here]
-
-== Installation ==
-
-=== pmbootstrap flasher method ===
-{{Note|This method provides complete root filesystem contents. Even with this method, the boot loop issue remains.}}
-* Put the device into fastboot mode by holding both VolumeKeyDown + Power buttons or rebooting into bootloader from the twrp reboot menu.
-* Connect the device to the computer via usb cable
-* Bootstrap PostmarketOS, adding debug-shell hook during the process
-::<code>$ pmbootstrap init #select xiaomi-armani</code>
-::<code>$ pmbootstrap initfs hook_add debug-shell</code>
-::<code>$ pmbootstrap install --no-fde</code>
-* Flash the kernel and system
-::<code>$ pmbootstrap flasher flash_kernel</code>
-::<code>$ pmbootstrap flasher flash_system</code>
-* Reboot the device
-::<code>$ fastboot reboot</code>
-
-=== Android recovery.zip sideload method ===
-{{Note|With {{github|1333}}, installation using recovery.zip doesn't provide complete root filesystem.}}
-* Put the device into TWRP recovery, either by booting twrp image via fastboot directly or by pressing VolumeKeyUp + Power button after flashing TWRP recovery image.
-* Connect the device to the computer via usb cable
-* Bootstrap PostmarketOS
-
-:<code>$ pmbootstrap init #select xiaomi-armani</code>
-
-:* Optional: build the device specific packages. Actually, there is no need to build the device specific packages since they are available on PostmarketOS repository.
-
-::<code>$ pmbootstrap build -i device-xiaomi-armani</code>
-
-::<code>$ pmbootstrap build -i firmware-xiaomi-armani</code>
-
-::<code>$ pmbootstrap build linux-xiaomi-armani</code>
-
-{{Note|With boot loop issue with latest pmbootstrap, a debug shell is needed.}}
-
-: Install the debug shell to help troubleshoot the boot loop issue
-
-:<code>$ pmbootstrap initfs hook_add debug-shell</code>
-
-:<code>$ pmbootstrap install --no-fde --android-recovery-zip</code>
-
-:<code>$ pmbootstrap export # generate symlinks inside /tmp/postmarketOS-export directory</code>
-
-* Put the twrp recovery into sideload mode
-
-:<code>$ adb shell "twrp sideload"</code>
-
-* Start sideloading the recovery file
-
-:<code>$ adb sideload /tmp/postmarketOS-export/pmos-xiaomi-armani.zip</code>
-
-* Reboot the device
-
-:<code>$ adb reboot</code>
-
-== Additional info ==
-It's necessary to unplug the usb cable after issuing ``poweroff`` command to properly shut down PostmarketOS.
-
-Don't leave screen on for a long time, otherwise there will be LED burn-in. If the display screen is not used, turn the screen off.
-
-:<code>$ echo 0 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
-
-The screen can be turned on with maximum value up to 4095
-
-:<code>$ echo 3072 | sudo tee "/sys/class/leds/wled:backlight/brightness"</code>
-
-Battery state can be monitored. Refer to [[Battery capacity monitoring]] for more information.
 
 == See also ==
 
