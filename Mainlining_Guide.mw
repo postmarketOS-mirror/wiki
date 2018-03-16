@@ -1,0 +1,223 @@
+{{note|This is a draft of an idea, not reviewed by people who have actually done some mainlining yet. The commands are not tested at this point. '''The steps are not meant to be followed until this is reviewed!'''}}
+
+== Introduction ==
+This guide will walk you through mainlining your device. Starting by collecting all required information, setting up your build environment and picking a mentor that will guide you through the tricky parts. For the devices where this will work, you should be fine with basic shell knowledge, and you will be rewarded with learning a lot of new stuff and booting the mainline kernel on your device!
+
+== Requirements ==
+=== postmarketOS port ===
+To make the instructions easier, this guide assumes that postmarketOS was already ported with a downstream kernel to your device, and that you can [[USB_Network|enter a shell after it booted via USB]] (SSH or telnet). Downstream kernels are the ones from the vendor, that ship with the device, and all derivatives from that (e.g. your typical Android / LineageOS ROM). You can check if it was ported already on the [[devices]] page, and start a [[Porting_guide|new port]] if necessary.
+
+=== Mainlining section ===
+Please follow [[Help:Device_Mainline_Information_Guide|these instructions]] to extend your device's wiki page with a mainlining section that has all required information before proceeding. It will serve both as reference of which peripherals are in the device, and as progress indicator of what the status is on each of these components.
+
+=== Mentor ===
+The mainlining process varies greatly for each device, which means we can't just write down straight forward instructions here. But luckily there are skilled people who have a bigger picture of a specific [https://en.wikipedia.org/wiki/System_on_a_chip SoC] and they know how to help you out efficiently.
+
+{| class="wikitable"
+! SoC
+! Mentors
+|-
+| Qualcomm (msm...)
+| opendata26 ([[Matrix_and_IRC|#postmarketOS]]), linux-msm folks?
+|-
+| OMAP3
+| pavel?
+|}
+
+Make sure that your SoC is in the list (if it isn't then we don't have an easy way for mainlining right now, sorry). Let's do some more preparation now, so everything is in place before you kindly ask your mentor to help you with the process.
+
+== Preparation ==
+=== pmbootstrap setup ===
+If you have not done this already, please download and initialize <code>pmbootstrap</code>. You can stay with the defaults, just make sure to select the right device, and (to save you some time) <code>none</code> as user interface. Replace <code>~/code</code> with the path where you would like to store the source code.
+<syntaxhighlight lang="shell-session">
+$ cd ~/code
+$ git clone https://github.com/postmarketOS/pmbootstrap
+$ cd pmbootstrap
+$ alias pmbootstrap=$PWD/pmbootstrap.py
+$ pmbootstrap init
+</syntaxhighlight>
+
+Generate an initramfs with the debug-shell hook:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap initfs hook_add debug-shell
+$ pmbootstrap export
+</syntaxhighlight>
+
+=== Development tools on host system ===
+{{note|See also: [https://kernelnewbies.org/KernelBuild What tools do I need? - kernelnewbies.org]}}
+The idea of <code>pmbootstrap</code> is, that you don't need to install anything on your host system, and we do everything in Alpine chroots. But this does not work with the process outlined in this guide yet, so we need to diverge from that idea during this step. Please install the following tools on your host system with your package manager:
+
+* libncurses5-dev
+* gcc
+* make
+* bc
+* libssl-dev
+* gcc cross-compiler, depending on your device architecture:
+** <code>aarch64</code> device: look for a <code>aarch64</code>/<code>arm64</code> cross-compiler
+** <code>armhf</code> device: look for a <code>armhf</code>/<code>armv6</code>/<code>armv7</code> cross-compiler
+
+=== Kernel ===
+Download a copy of <code>linux-next</code>:
+<syntaxhighlight lang="shell-session">
+$ cd ~/code
+$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-next.git linux
+$ cd linux
+</syntaxhighlight>
+
+If you have already checked out the regular linux repository, you can add the <code>linux-next</code> branch as follows:
+<syntaxhighlight lang="shell-session">
+$ cd ~/code/linux
+$ git remote add linux-next https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
+$ git fetch --tags linux-next
+$ git checkout -b development linux-next/master
+</syntaxhighlight>
+
+After running the commands of one of the two blocks above, add a new branch for your device (replace <code>lg-mako</code> with your device's name):
+<syntaxhighlight lang="shell-session">
+$ cd ~/code/linux
+$ git checkout -b "device-lg-mako"
+</syntaxhighlight>
+
+During the mainlining process, you will be required to fire up <code>menuconfig</code> and to compile everything. Let's do this once to make sure that everything works. You can exit menuconfig right away after it starts. If anything does not run through, you are most likely missing a dependency as listed in the step above.
+
+==== Menuconfig ====
+<code>armhf</code> device:
+<syntaxhighlight lang="shell-session">
+$ export ARCH=arm
+$ export CROSS_COMPILE="arm-none-eabi-"
+$ make defconfig
+$ make menuconfig
+</syntaxhighlight>
+
+<code>aarch64</code> device:
+<syntaxhighlight lang="shell-session">
+$ export ARCH=arm64
+$ export CROSS_COMPILE="aarch64-none-eabi-"
+$ make defconfig
+$ make menuconfig
+</syntaxhighlight>
+
+==== Kernel compilation ====
+{{note|Make sure you did the exports from [[#Menuconfig]] above!}}
+Replace <code>3</code> with the amount of CPUs on your host machine plus one (e.g. quad-core: means <code>-j5</code>).
+<syntaxhighlight lang="shell-session">
+$ make -j3
+</syntaxhighlight>
+
+=== Got everything? ===
+Please double check with the following checklist that you meet '''all the requirements''' before proceeding further. If you need any help with the above, just ask [[Matrix_and_IRC|in the channel]] or [https://github.com/postmarketOS/pmbootstrap/issues on GitHub] as usually.
+
+* [[#pmbootstrap setup|Device ported to postmarketOS]]
+* [[#Mainlining section|Mainlining section added to device page]]
+* [[#Mentor|Mentor]]
+* [[#pmbootstrap setup|Initramfs with debug-shell generated]]
+* [[#Development tools on host system|Development tools on host system]]
+* [[#Menuconfig|Menuconfig]] tested
+* [[#Kernel compilation|Kernel compilation]] tested
+
+== Contact your mentor ==
+Hop on [[Matrix_and_IRC|Matrix or IRC]] and ask the mentor if they have time to walk you through the further steps. This should be obvious, but remember to be nice and understanding if the mentor does not have time right away, they are supporting you for free so you'll need to be grateful and patient.
+
+The following steps are meant to be taken together with the mentor.
+
+== Device Tree Source ==
+=== Start with an existing file ===
+The DTS file describes how the peripherals of the device are connected to the SoC. Your mentor probably knows which file you should use to start your work on. This may either be a file in the existing Linux source tree, or a file your mentor uploaded somewhere.
+
+Example for copying an existing file:
+<syntaxhighlight lang="shell-session">
+$ cd ~/code/linux/arch/arm/boot/dts
+$ cp qcom-apq8064-asus-nexus7-flo.dts qcom-apq8064-lg-nexus4-mako.dts
+</syntaxhighlight>
+
+Let's commit that directly, so it will be easy to see what you have changed later on by running <code>git diff</code> (adjust the description of the commit accordingly):
+<syntaxhighlight lang="shell-session">
+$ git add -A
+$ git commit -m "Starting with: qcom-apq8064-asus-nexus7-flo.dts"
+</syntaxhighlight>
+
+=== Adjust model and compatible ===
+Open the DTS file in an editor and replace the <code>model</code> and <code>compatible</code> strings at the top of the file:
+
+<syntaxhighlight lang="c">
+// SPDX-License-Identifier: GPL-2.0
+#include "qcom-apq8064-v2.0.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
+/ {
+	model = "Asus Nexus7(flo)";
+	compatible = "asus,nexus7-flo", "qcom,apq8064";
+
+// ...
+</syntaxhighlight>
+
+In the example, we replace <code>model</code> with <code>"LG Nexus4(mako)"</code> and the first string after compatible with <code>"lg,nexus4-mako</code> (we leave the second string in place, as this is the name of the SoC, which is the same).
+
+And again, let's commit this change. It's recommended to commit after every change you make to the DTS files so you can revert easily to the last known working state if necessary:
+<syntaxhighlight lang="shell-session">
+$ git add -A
+$ git commit -m "Adjusted model and compatible"
+</syntaxhighlight>
+
+=== Minimal booting version ===
+Your mentor will instruct you how to modify the file further, so you have a minimal configuration that allows you to boot into the mainline kernel if everything went right. Almost nothing will work at this point, except for initializing RAM and serial output. We will work our way to enabling one feature after another throughout the process.
+
+== Testing ==
+=== Defconfig and compilation ===
+Ask your mentor for the right defconfig to use and export the variables as in [[#Menuconfig|menuconfig]] (mind the <code>armhf</code> and <code>aarch64</code> differences). Then configure the kernel to use the defconfig and finally build it (like in [[#Kernel compilation|kernel compilation]] above). Example:
+
+<syntaxhighlight lang="shell-session">
+$ export ARCH=arm
+$ export CROSS_COMPILE="arm-none-eabi-"
+$ yes "" | make 8974_defconfig
+$ make -j5
+</syntaxhighlight>
+
+=== Append DTB ===
+Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel:
+<syntaxhighlight lang="shell-session">
+$ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-msm8974-sony-xperia-castor.dtb > zImage-dtb
+</syntaxhighlight>
+
+=== Execute on the device ===
+This greatly depends on your device, and you can figure out the correct method by looking at your [[deviceinfo]] and at the <code>postmarketos-mkinitfs</code> code if necessary. But typically for fastboot based Android devices, you can patch the <code>boot.img</code> file as follows.
+
+==== Fasboot example ====
+Prepare your current shell session once:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap chroot -- apk add abootimg android-tools
+$ export DEVICE="$(pmbootstrap config device)"
+$ export WORK="$(pmbootstrap config work)"
+$ export TEMP="$PMBWORK/chroot_native/tmp/mainline/"
+$ mkdir -p "$TEMP"
+</syntaxhighlight>
+
+Then run the following everytime you would like to replace the kernel inside the <code>boot.img</code> file and flash it to the device:
+<syntaxhighlight lang="shell-session">
+$ cp ~/code/linux/zImage-dtb "$TEMP"
+$ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
+$ pmbootstrap chroot
+# abootimg -u /tmp/mainline/boot.img -k /tmp/mainline/zImage-dtb
+# fastboot boot /tmp/mainline/boot.img
+</syntaxhighlight>
+
+=== dmesg on your PC ===
+Before booting the first time, run <code>dmesg -w</code> on your PC. If everything went right, you should see something like the following as soon as the device boots:
+
+<pre>
+[27166.665566] usb 3-9: new high-speed USB device number 16 using xhci_hcd
+[27166.793111] usb 3-9: New USB device found, idVendor=0525, idProduct=a4a7
+[27166.793117] usb 3-9: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[27166.793121] usb 3-9: Product: Gadget Serial v2.4
+[27166.793125] usb 3-9: Manufacturer: Linux 4.16.0-rc5-next-20180314-dirty with ci_hdrc_msm
+[27166.809593] cdc_acm 3-9:2.0: ttyACM0: USB ACM device
+[27166.809777] usbcore: registered new interface driver cdc_acm
+[27166.809778] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+</pre>
+
+= TODO =
+* "Mainline section" link is just a stub
+* Extend initramfs debug-shell hook to dump dmesg to RAM with userspace tools, so it can be read from /proc/lastkmesg from an Android kernel (that way we don't need serial working to get USB going, right?)
+* Add steps to upstream the changes made into the kernel (there are already good tutorials out there)
+* Add step to integrate the changes with the pmbootstrap source tree (might need changes in pmbootstrap architecture for that)
