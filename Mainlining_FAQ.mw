@@ -47,6 +47,9 @@ Finding the best approach is very hardware specific. If you know C and think you
 
 See also: {{github|1021}}
 
+
+Consider updating your device's kernel to the latest Android stable version first ([https://github.com/android-linux-stable/notes these instruction] might make it easier to convert the board files to dtbs) and then going to real mainline from there.
+
 == What options are needed to get USB network? ==
 * USB_ETH IIRC 
 * also check the defconfig in aports/main/linux-postmarketos-mainline 
