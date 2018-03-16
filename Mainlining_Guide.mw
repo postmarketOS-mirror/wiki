@@ -170,7 +170,7 @@ Ask your mentor for the right defconfig to use and export the variables as in [[
 <syntaxhighlight lang="shell-session">
 $ export ARCH=arm
 $ export CROSS_COMPILE="arm-none-eabi-"
-$ yes "" | make 8974_defconfig
+$ make qcom_defconfig
 $ make -j5
 </syntaxhighlight>
 
