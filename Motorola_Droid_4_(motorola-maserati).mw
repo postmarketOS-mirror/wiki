@@ -66,9 +66,9 @@ To repeat: '''DO NOT TRY TO INSTALL pmOS TO THE STOCK SLOT! IT COULD BRICK YOUR 
 == Installation ==
 
 <source lang="bash">
-$ pmbootstrap init
-$ pmbootstrap install --no-fde
-$ pmbootstrap export
+$ pmbootstrap.py init
+$ pmbootstrap.py install --no-fde
+$ pmbootstrap.py export
 </source>
 
 Create ROM slot with minimal possible space for system, data, and cache partitions.
@@ -78,6 +78,7 @@ First flash [http://droid.cs.fau.de/cm-11.0/unofficial/cm-11-20160815-UNOFFICIAL
 <source lang="bash">
 $ cd /tmp/postmarketOS-export
 $ adb shell mount /system
+# FIXME: you really want to backup original ramdisk.img and kernel here. At least for me Cyanogen no longer boots with modified ramdisk/kernel
 $ adb push initramfs-motorola-maserati /system/etc/kexec/ramdisk.img
 $ adb push vmlinuz-motorola-maserati /system/etc/kexec/kernel
 $ adb shell
@@ -95,6 +96,7 @@ $ umount /ss
 Now you can either flash motorola-maserati.img to sdcard or resize the image on host to desired size and replace userdata.img of ROM slot you created:
 
 <source lang="bash">
+# FIXME: at least my resize2fs does not know about -s option; plus .img file contains partitions, not ext4 filesystem
 $ resize2fs -s 2G motorola-maserati.img
 $ adb shell mount /ss
 $ export slot_number=1 # Number of SafeStrap slot used
