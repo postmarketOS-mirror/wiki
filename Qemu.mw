@@ -8,7 +8,9 @@ pmbootstrap qemu --image-size=2G</pre>
 
 The <code>--image-size=2G</code> parameter will increase the image size to 2GB, so you don't instantly run out of space (by default the image size is as small as possible). Check out <code>pmbootstrap qemu --help</code> for more options, such as performance tweaks.
 
+
 === Qemu on Debian stretch ===
+{{note|This also applies to '''Ubuntu''' Artful and below, Bionic likely will not have it enabled either - [https://bugs.launchpad.net/ubuntu/+source/qemu/+bug/1553999 Launchpad bug.]}}
 
 Qemu on Debian does not include SDL-support by default. To use pmbootstrap on Debian you have to do the following:
 # Ensure that /etc/apt/sources.list contains a deb-src line for Debian buster or later.
