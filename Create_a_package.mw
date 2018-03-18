@@ -1,32 +1,47 @@
 == Quick start ==
 Create a template for a new package called <code>mynewpackage</code> in <code>aports/main</code>:
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap newapkbuild main mynewpackage
+$ pmbootstrap newapkbuild mynewpackage
 [21:34:27] Create /home/user/code/pmbootstrap/aports/main/mynewpackage
 [21:34:27] Done
 </syntaxhighlight>
 
-We directly use <code>newapkbuild</code> from Alpine, which has lots of parameters to quickly customize the templates it generates:
+We directly use {{alpine|newapkbuild}} from Alpine, which has lots of parameters to quickly customize the templates it generates. It is even possible to just specify the URL and let it download the tarball and automatically recognize the build system, package name and version:
+
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap newapkbuild main -h
-newapkbuild 3.1.0-r4 - generate a new APKBUILD
-Usage: newapkbuild [-n NAME] [-d DESC] [-l LICENSE] [-u URL]
-       [-aCpy] [-s] [-cfh]
-       PKGNAME[-PKGVER]|SRCURL
-Options:
-  -n  Set package name to NAME
-  -d  Set package description (pkgdesc) to DESC
-  -l  Set package license to LICENSE
-  -u  Set package URL
-  -a  Create autotools package (use ./configure ...)
-  -C  Create CMake pakckage (Assume cmake/ is there)
-  -m  Create meson package (Assume meson.build is there)
-  -p  Create perl package (Assume Makefile.PL is there)
-  -y  Create python package (Assume setup.py is there)
-  -s  Use sourceforge source URL
-  -c  Copy a sample init.d, conf.d, and install script to new directory
-  -f  Force even if directory already exist
-  -h  Show this help
+$ pmbootstrap newapkbuild "https://github.com/alpinelinux/abuild/archive/v3.1.0.tar.gz"
+</syntaxhighlight>
+
+For reference, see the full help output:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap newapkbuild -h
+usage: pmbootstrap newapkbuild [-h] [--folder FOLDER] [-n PKGNAME]
+                               [-d PKGDESC] [-l LICENSE] [-u URL]
+                               [-a | -C | -m | -p | -y] [-s] [-c] [-f]
+                               PKGNAME[-PKGVER] | SRCURL
+
+positional arguments:
+  PKGNAME[-PKGVER] | SRCURL
+                        set either the package name (optionally with the
+                        PKGVER at the end, e.g. 'hello-world-1.0') or the
+                        download link to the source archive
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --folder FOLDER       set postmarketOS aports folder (default: main)
+  -n PKGNAME            set package name (only use with SRCURL)
+  -d PKGDESC            set package description
+  -l LICENSE            set package license identifier from
+                        <https://spdx.org/licenses/>
+  -u URL                set package URL
+  -a                    create autotools package (use ./configure ...)
+  -C                    create CMake package (assume cmake/ is there)
+  -m                    create meson package (assume meson.build is there)
+  -p                    create perl package (assume Makefile.PL is there)
+  -y                    create python package (assume setup.py is there)
+  -s                    use sourceforge source URL
+  -c                    copy a sample init.d, conf.d and install script
+  -f                    force even if directory already exists
 </syntaxhighlight>
 
 == General information ==
