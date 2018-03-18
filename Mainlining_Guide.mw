@@ -229,7 +229,7 @@ Writing Boot Image /tmp/mainline/boot.img
 </syntaxhighlight>
 
 ==== Boot ====
-Bring your device into fastboot mode, connect it via USB and then boot (or flash) the kernel:
+First start <code>dmesg</code> (see below). Then bring your device into fastboot mode, connect it via USB and boot (or flash) the kernel:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher list_devices
 $ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
