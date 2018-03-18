@@ -10,6 +10,19 @@ Various information collected from [[Matrix_and_IRC|#postmarketOS]]. See [[The M
 * Check if your soc is supported.. that will be basic building block
 * There's really no point doing display till you have uart or USB working
 
+== Writing dmesg to RAM and reading it out after reboot ==
+During the mainlining process you need to be able to get the <code>dmesg</code> output from the device. Typically this is done with a serial cable (see below). Sometimes making such a cable is relatively easy by using the audio jack, but in other cases it requires opening the device or is not possible at all. Here is a less comfortable alternative.
+
+In Android kernels it is possible to write the output of <code>dmesg</code> to memory, and read it out after reboot from <code>/proc/last_kmsg</code>. So while you are mainlining, you can use Android's <code>ram_console</code> driver from your downstream kernel to dump <code>dmesg</code> to memory as well, then reboot to the downstream kernel and read out <code>/proc/last_kmesg</code>. Quote from decatf:
+<blockquote>
+The Andriod ram_console does this. It should exist in many if not most Android kernels. The driver is registered the board/machine init. I am still using it even on kernel 4.16
+* Make sure to allocate the same memory block as your downstream or recovery kernel,
+https://github.com/Decatf/linux/blob/next-p4wifi_pmos/arch/arm/mach-tegra/board-p4wifi.c#L480-L481
+* Make sure the driver is using the same ram console signature as your downstream kernel.
+https://github.com/Decatf/linux/blob/next-p4wifi_pmos/drivers/staging/android/ram_console.c#L41
+On my device I can force reboot to a downstream recovery kernel and read last_kmsg from a kernel that booted nothing but the bare device tree and the ram_console driver.
+</blockquote>
+
 == Serial cable ==
 === Can I do it without a serial cable? ===
 * you can try
