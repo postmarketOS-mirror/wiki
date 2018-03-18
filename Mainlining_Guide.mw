@@ -1,9 +1,7 @@
-{{note|This is a draft of an idea, not reviewed by people who have actually done some mainlining yet. The commands are not tested at this point. '''The steps are not meant to be followed until this is reviewed!'''}}
-
 == Introduction ==
 {{note|Please have realistic expectations: Booting mainline even if nothing else is working is already a great achievement!}}
 
-This guide will walk you through mainlining your device. Starting by collecting all required information, setting up your build environment and picking a mentor that will guide you through the tricky parts. For the devices where this will work, you should be fine with basic shell knowledge, and you will be rewarded with learning a lot of new stuff and booting the mainline kernel on your device!
+This guide will walk you through mainlining your device. Starting by collecting all required information, setting up your build environment and picking a mentor that will guide you through the tricky parts. For the devices where this will work, you should be fine with basic shell knowledge, and you will be rewarded with learning a lot of new stuff and (if it works out) booting the mainline kernel on your device!
 
 == Requirements ==
 === postmarketOS port ===
