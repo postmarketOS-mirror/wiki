@@ -6,7 +6,7 @@ $ pmbootstrap newapkbuild mynewpackage
 [21:34:27] Done
 </syntaxhighlight>
 
-We directly use {{alpine|newapkbuild}} from Alpine, which has lots of parameters to quickly customize the templates it generates. It is even possible to just specify the URL and let it download the tarball and automatically recognize the build system, package name and version:
+We pass the arguments to {{alpine|newapkbuild}} from Alpine, which has lots of parameters to quickly customize the templates it generates. It is even possible to just specify the URL and let it download the tarball and automatically recognize the build system, package name and version:
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap newapkbuild "https://github.com/alpinelinux/abuild/archive/v3.1.0.tar.gz"
