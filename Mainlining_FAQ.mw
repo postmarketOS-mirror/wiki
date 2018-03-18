@@ -25,15 +25,8 @@ On my device I can force reboot to a downstream recovery kernel and read last_km
 
 == Serial cable ==
 === Can I do it without a serial cable? ===
-* you can try
-* but doing it blindly is painful
+* in theory, yes by dumping dmesg to RAM (see above)
 * once it reliably boots though, and USB comes up properly, you can use the USB serial gadget in the kernel (see below)
-* logging to RAM instead of serial:
-** requirement is that your kernel starts init in the initramfs
-** on msm8974 at least (and probably all qcom devices), reboot to bootloader doesnt clear memory
-** so you can use that to get a log (write to a fixed address and read it back from twrp with /dev/mem)
-** more detailed: in the initramfs (e.g. postmarketOS initramfs hook), copy /dev/kmsg to the reserved region in /dev/mem and write the reboot registers
-** not as good as uart but good enough
 
 === How to get serial output? (serial cable) ===
 * enable the serial device for your kernel (e.g. for OMAP: CONFIG_SERIAL_OMAP and CONFIG_SERIAL_OMAP_CONSOLE)
