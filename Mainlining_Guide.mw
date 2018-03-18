@@ -24,6 +24,9 @@ The mainlining process varies greatly for each device, which means we can't just
 Make sure that your SoC is in the list (if it isn't then we don't have an easy way for mainlining right now, sorry). Let's do some more preparation now, so everything is in place before you kindly ask your mentor to help you with the process.
 
 == Preparation ==
+=== Serial cable ===
+It is recommended to have a working [[Serial_debugging|serial cable]] for your device. In case you can not make one, it might be possible to [[Mainlining_FAQ#Writing_dmesg_to_RAM_and_reading_it_out_after_reboot|use a workaround]] for retrieving log messages but that isn't straight forward.
+
 === pmbootstrap setup ===
 If you have not done this already, please download and initialize <code>pmbootstrap</code>. You can stay with the defaults, just make sure to select the right device, and (to save you some time) <code>none</code> as user interface. Replace <code>~/code</code> with the path where you would like to store the source code.
 <syntaxhighlight lang="shell-session">
@@ -104,6 +107,7 @@ $ make -j3
 === Got everything? ===
 Please double check with the following checklist that you meet '''all the requirements''' before proceeding further. If you need any help with the above, just ask [[Matrix_and_IRC|in the channel]] or [https://github.com/postmarketOS/pmbootstrap/issues on GitHub] as usually.
 
+* [[#Serial_cable|Serial cable]] (or suitable workaround)
 * [[#pmbootstrap setup|Device ported to postmarketOS]]
 * [[#Mentor|Mentor]]
 * [[#pmbootstrap setup|Initramfs with debug-shell generated]]
