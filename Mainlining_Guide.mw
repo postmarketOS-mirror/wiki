@@ -220,6 +220,5 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 
 = TODO =
 * "Mainline section" link is just a stub
-* Extend initramfs debug-shell hook to dump dmesg to RAM with userspace tools, so it can be read from /proc/lastkmesg from an Android kernel (that way we don't need serial working to get USB going, right?)
 * Add steps to upstream the changes made into the kernel (there are already good tutorials out there)
 * Add step to integrate the changes with the pmbootstrap source tree (might need changes in pmbootstrap architecture for that)
