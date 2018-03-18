@@ -56,6 +56,7 @@ fastboot boot pmos.img</pre>
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/linux-lg-hammerhead Kernel package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-lg-hammerhead Device package]
 * [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
+* [https://github.com/flto/linux/wiki/hammerhead-upstream flto's hammerhead-upstream status page]
 
 == Photos ==
 
