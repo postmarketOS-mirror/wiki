@@ -212,7 +212,7 @@ Prepare your current shell session once:
 $ pmbootstrap chroot -- apk add abootimg android-tools
 $ export DEVICE="$(pmbootstrap config device)"
 $ export WORK="$(pmbootstrap config work)"
-$ export TEMP="$PMBWORK/chroot_native/tmp/mainline/"
+$ export TEMP="$WORK/chroot_native/tmp/mainline/"
 $ mkdir -p "$TEMP"
 </syntaxhighlight>
 
