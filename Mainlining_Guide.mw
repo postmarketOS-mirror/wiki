@@ -129,7 +129,7 @@ The DTS file describes how the peripherals of the device are connected to the So
 Example for copying an existing file:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code/linux/arch/arm/boot/dts
-$ cp qcom-apq8064-asus-nexus7-flo.dts qcom-apq8064-lg-nexus4-mako.dts
+$ cp qcom-apq8064-asus-nexus7-flo.dts qcom-apq8064-lge-nexus4-mako.dts
 </syntaxhighlight>
 
 Let's commit that directly, so it will be easy to see what you have changed later on by running <code>git diff</code> (adjust the description of the commit accordingly):
@@ -154,7 +154,7 @@ Open the DTS file in an editor and replace the <code>model</code> and <code>comp
 // ...
 </syntaxhighlight>
 
-In the example, we replace <code>model</code> with <code>"LG Nexus4(mako)"</code> and the first string after compatible with <code>"lg,nexus4-mako</code> (we leave the second string in place, as this is the name of the SoC, which is the same).
+In the example, we replace <code>model</code> with <code>"LGE Nexus4 (mako)"</code> and the first string after compatible with <code>"lge,nexus4-mako</code> (we leave the second string in place, as this is the name of the SoC, which is the same).
 
 And again, let's commit this change. It's recommended to commit after every change you make to the DTS files so you can revert easily to the last known working state if necessary:
 <syntaxhighlight lang="shell-session">
@@ -177,9 +177,9 @@ $ make -j5
 </syntaxhighlight>
 
 === Append DTB ===
-Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lg-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
+Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lge-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
 <syntaxhighlight lang="shell-session">
-$ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-apq8064-lg-nexus4-mako.dtb > zImage-dtb
+$ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-apq8064-lge-nexus4-mako.dtb > zImage-dtb
 </syntaxhighlight>
 
 === Execute on the device ===
