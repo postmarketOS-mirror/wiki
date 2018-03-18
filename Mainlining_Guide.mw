@@ -177,9 +177,9 @@ $ make -j5
 </syntaxhighlight>
 
 === Append DTB ===
-Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel:
+Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lg-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
 <syntaxhighlight lang="shell-session">
-$ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-msm8974-sony-xperia-castor.dtb > zImage-dtb
+$ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-apq8064-lg-nexus4-mako.dtb > zImage-dtb
 </syntaxhighlight>
 
 === Execute on the device ===
