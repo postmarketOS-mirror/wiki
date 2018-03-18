@@ -204,9 +204,9 @@ $ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-apq8064-lge-nexus4-mako.dtb > 
 </syntaxhighlight>
 
 === Execute on the device ===
-This greatly depends on your device, and you can figure out the correct method by looking at your [[deviceinfo]] and at the <code>postmarketos-mkinitfs</code> code if necessary. But typically for fastboot based Android devices, you can patch the <code>boot.img</code> file as follows.
+This greatly depends on your device, and you can figure out the correct method by looking at your [[deviceinfo]] and at the <code>postmarketos-mkinitfs</code> code if necessary. But typically for fastboot based Android devices, you can patch the <code>boot.img</code> and boot it as follows.
 
-==== Fasboot example ====
+==== Patch boot.img ====
 Prepare your current shell session once:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap chroot -- apk add abootimg android-tools
@@ -228,10 +228,14 @@ Writing Boot Image /tmp/mainline/boot.img
 [20:00:00] Done
 </syntaxhighlight>
 
+==== Boot ====
 Bring your device into fastboot mode, connect it via USB and then boot (or flash) the kernel:
 <syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher list_devices
 $ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
 </syntaxhighlight>
+
+The <code>list_devices</code> line instructs <code>pmbootstrap</code> to mount the USB device nodes inside the chroot, so without this line being executed at least once in the session, fastboot will not find any devices (see {{github|1345}}).
 
 === dmesg on your PC ===
 Before booting the first time, run <code>dmesg -w</code> on your PC. If everything went right, you should see something like the following as soon as the device boots:
