@@ -250,6 +250,7 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 </pre>
 
 = TODO =
+* Maybe put all environment variables we export plus the DT name into a shell script that we source at the beginning of every operation? That might make it a lot easier.
 * Put zImage-dtb into another folder, so <code>git add -A</code> doesn't grab it
 * Add steps to upstream the changes made into the kernel (there are already good tutorials out there)
 * Add step to integrate the changes with the pmbootstrap source tree (might need changes in pmbootstrap architecture for that)
