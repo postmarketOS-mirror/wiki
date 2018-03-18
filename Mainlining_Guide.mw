@@ -165,6 +165,27 @@ $ git commit -m "Adjusted model and compatible"
 === Minimal booting version ===
 Your mentor will instruct you how to modify the file further, so you have a minimal configuration that allows you to boot into the mainline kernel if everything went right. Almost nothing will work at this point, except for initializing RAM and serial output. We will work our way to enabling one feature after another throughout the process.
 
+== Adjust DTS Makefile ==
+Open <code>arch/arm/boot/dts/Makefile</code> in an editor and add one line for your new device tree. First find the right location by searching for the prefix in the file (e.g. all <code>qcom-</code> lines are in the <code>dtb-$(CONFIG_ARCH_QCOM) += \</code> section). Then insert the name of your <code>dts</code> file there, but use <code>dtb</code> as extenssion and don't forget the backslash <code>\</code> at the end of the line. Save, check the diff (it should be similar to the one below) and commit your change:
+
+<syntaxhighlight lang="shell-session">
+$ git diff
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index 3b4cc1b64a1e..af74d95b63fa 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -756,6 +756,7 @@ dtb-$(CONFIG_ARCH_QCOM) += \
+        qcom-apq8064-ifc6410.dtb \
+        qcom-apq8064-sony-xperia-yuga.dtb \
+        qcom-apq8064-asus-nexus7-flo.dtb \
++       qcom-apq8064-lge-nexus4-mako.dtb \
+        qcom-apq8074-dragonboard.dtb \
+        qcom-apq8084-ifc6540.dtb \
+        qcom-apq8084-mtp.dtb \
+$ git add arch/arm/boot/dts/Makefile
+$ git commit -m "Enable my new DTS in the Makefile"
+</syntaxhighlight>
+
 == Testing ==
 === Defconfig and compilation ===
 Ask your mentor for the right defconfig to use and export the variables as in [[#Menuconfig|menuconfig]] (mind the <code>armhf</code> and <code>aarch64</code> differences). Then configure the kernel to use the defconfig and finally build it (like in [[#Kernel compilation|kernel compilation]] above). Example:
