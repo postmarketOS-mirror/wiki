@@ -216,7 +216,7 @@ $ export TEMP="$WORK/chroot_native/tmp/mainline/"
 $ mkdir -p "$TEMP"
 </syntaxhighlight>
 
-Then run the following everytime you would like to replace the kernel inside the <code>boot.img</code> file and flash it to the device:
+Then run the following everytime you would like to replace the kernel inside the <code>boot.img</code> file:
 <syntaxhighlight lang="shell-session">
 $ cp ~/code/linux/zImage-dtb "$TEMP"
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
@@ -224,7 +224,13 @@ $ pmbootstrap chroot
 # abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
 reading kernel from /tmp/mainline/zImage-dtb
 Writing Boot Image /tmp/mainline/boot.img
-# fastboot boot /tmp/mainline/boot.img
+# exit
+[20:00:00] Done
+</syntaxhighlight>
+
+Bring your device into fastboot mode, connect it via USB and then boot (or flash) the kernel:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
 </syntaxhighlight>
 
 === dmesg on your PC ===
