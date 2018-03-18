@@ -250,6 +250,7 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 </pre>
 
 = TODO =
+* Put zImage-dtb into another folder, so <code>git add -A</code> doesn't grab it
 * Add steps to upstream the changes made into the kernel (there are already good tutorials out there)
 * Add step to integrate the changes with the pmbootstrap source tree (might need changes in pmbootstrap architecture for that)
 * Describe how to add a "Mainline section" to each device specific page (with a template!) - something like [http://elektranox.org/droid4/ this overview] would be great to have for every device. This can be done while doing the first kernel compilation when following this guide, because that takes a while anyway.
