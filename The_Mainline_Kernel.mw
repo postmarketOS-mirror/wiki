@@ -4,6 +4,9 @@ We want to get as many devices working with one shared kernel package (based on 
 === Why bother? ===
 Carrying around forks of the kernel is not sustainable as it becomes impossible to provide security patches after a short time. The only way to truly fix this for a device is mainlining it.
 
+=== Mainlining guide ===
+See [[Mainlining Guide]].
+
 === Kernel packaging ===
 That package is <code>linux-postmarketos-stable</code>. For devices, which are in the kernel's <code>mainline</code> release, but not yet in <code>stable</code> (see [https://www.kernel.org/category/releases.html kernel releases]), we also have <code>linux-postmarketos-mainline</code>. It is even allowed to carry temporary patches around on top of these kernels, as long as work is being done to get them upstreamed properly. The kernel packages based on the official one are in <code>aports/main/postmarketos-linux*</code>, while the device-specific forks are in <code>aports/device/linux-*</code>.
 
@@ -28,24 +31,6 @@ When you don't have a result, try to find a <code>dts</code> file with the same 
 # Add the name of the generated dtb file (without path or extension) to the <code>deviceinfo_dtb</code> file in the deviceinfo file.
 
 A good example of a device using a mainline kernel is the <code>device-nokia-rx51</code> package.
-
-== Porting drivers from a Linux fork to the mainline kernel ==
-
-''This is a massive amount of work, and you will need C knowledge, as well as knowledge about [https://kernelnewbies.org/KernelHacking how to contribute to the kernel]. It is probably a very frustrating path, so make sure that you are either up to that or consider contributing in pmOS in another, from a developers point of view, more enjoyable way. Documentation from our side is also pretty thin on this, so if you actually work on this, please expand it. Thanks!''
-
-If you never worked on kernel before, you may want to help with some simple driver on already-working device. Nokia N900 should be easy, Nokia N9, N950 and Motorola Droid 4 are a bit harder. You might also try to revive support for something older, Nokia N770, N800 or N810 may not be too hard. Next in difficulty is unsupported phone based on supported SoC. TI OMAPs have pretty good support, so Samsung i9100g might be good target... Preparing mainline support for new SoC may be too much work for individual developer.
-
-=== Preparation ===
-
-* Select a device where support is doable. Get a suitable one if necessary.
-* Get a working [[Serial-debugging|serial cable]]
-* Find out hardware details about your device, such as CPU, GPU, display, ...
-* Find out which drivers are missing from mainline.
-* Configure bootloader
-
-=== Boot with serial output and shell ===
-
-You probably need to copy over the device tree source, from which the <code>dtb</code> file gets generated, to the mainline kernel. ''Please expand this.''
 
 === Links ===
 * [[Mainlining FAQ]] various information collected from #postmarketOS
