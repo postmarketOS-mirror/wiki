@@ -221,7 +221,9 @@ Then run the following everytime you would like to replace the kernel inside the
 $ cp ~/code/linux/zImage-dtb "$TEMP"
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ pmbootstrap chroot
-# abootimg -u /tmp/mainline/boot.img -k /tmp/mainline/zImage-dtb
+# abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
+reading kernel from /tmp/mainline/zImage-dtb
+Writing Boot Image /tmp/mainline/boot.img
 # fastboot boot /tmp/mainline/boot.img
 </syntaxhighlight>
 
