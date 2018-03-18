@@ -1,3 +1,4 @@
+{{note|If you know what you are doing, using <code>pmbootstrap build hello-world --src /path/to/source/code</code> is probably a lot easier. It requires the APKBUILD to use the builddir variable to work properly.}}
 === Introduction ===
 The most common use-case is, that you want to package an Android kernel. But it does not compile with our GCC6, so you need to patch the kernel. Unlike in the Android world, we do not fork the kernel repository and apply our patches there. Instead we ship our custom patches with the package build recipe in the aport folder.
 
