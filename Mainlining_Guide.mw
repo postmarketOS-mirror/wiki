@@ -80,9 +80,9 @@ $ cd ~/code/linux
 $ git checkout -b "device-lg-mako"
 </syntaxhighlight>
 
-During the mainlining process, you will be required to fire up <code>menuconfig</code> and to compile everything. Let's do this once to make sure that everything works. You can exit menuconfig right away after it starts. If anything does not run through, you are most likely missing a dependency as listed in the step above.
-
 ==== Menuconfig ====
+During the mainlining process, you will be required to fire up <code>menuconfig</code> and to compile everything. Let's do this once to make sure that everything works. You can exit menuconfig right away after it starts. If anything does not run through, you are most likely [[#Development tools on host system|missing a dependency]].
+
 <code>armhf</code> device:
 <syntaxhighlight lang="shell-session">
 $ export ARCH=arm
