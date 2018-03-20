@@ -212,14 +212,34 @@ This greatly depends on your device, and you can figure out the correct method b
 ==== Patch boot.img ====
 Prepare your current shell session once:
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap chroot -- apk add abootimg android-tools
+$ pmbootstrap chroot -- apk add abootimg android-tools mkbootimg
 $ export DEVICE="$(pmbootstrap config device)"
 $ export WORK="$(pmbootstrap config work)"
 $ export TEMP="$WORK/chroot_native/tmp/mainline/"
 $ mkdir -p "$TEMP"
 </syntaxhighlight>
 
-Then run the following everytime you would like to replace the kernel inside the <code>boot.img</code> file:
+Then run one of the following every time you would like to replace the kernel inside the <code>boot.img</code> file. The non-[[QCDT]] version is easier, so check if you have a QCDT or not in the <code>deviceinfo</code> first.
+
+===== QCDT devices =====
+All flasher offsets must be replaced with the values from the [[deviceinfo]] (you might want to save the command as a shell script for quick usage).
+<syntaxhighlight lang="shell-session">
+$ cp ~/code/linux/zImage-dtb "$TEMP"
+$ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
+$ pmbootstrap chroot -- mkbootimg \
+--kernel "/tmp/mainline/zImage-dtb" \
+--ramdisk "/tmp/mainline/initramfs" \
+--base "0x00000000" \
+--second_offset "0x00f00000" \
+--cmdline "console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT" \
+--kernel_offset "0x00008000" \
+--ramdisk_offset "0x02000000" \
+--tags_offset "0x01e00000" \
+--pagesize "2048" \
+-o "/tmp/mainline/boot.img"
+</syntaxhighlight>
+
+===== non-QCDT devices =====
 <syntaxhighlight lang="shell-session">
 $ cp ~/code/linux/zImage-dtb "$TEMP"
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
