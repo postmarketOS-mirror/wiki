@@ -221,6 +221,18 @@ $ mkdir -p "$TEMP"
 
 Then run one of the following every time you would like to replace the kernel inside the <code>boot.img</code> file. The non-[[QCDT]] version is easier, so check if you have a QCDT or not in the <code>deviceinfo</code> first.
 
+===== non-QCDT devices =====
+<syntaxhighlight lang="shell-session">
+$ cp ~/code/linux/zImage-dtb "$TEMP"
+$ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
+$ pmbootstrap chroot
+# abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
+reading kernel from /tmp/mainline/zImage-dtb
+Writing Boot Image /tmp/mainline/boot.img
+# exit
+[20:00:00] Done
+</syntaxhighlight>
+
 ===== QCDT devices =====
 All flasher offsets must be replaced with the values from the [[deviceinfo]] (you might want to save the command as a shell script for quick usage).
 <syntaxhighlight lang="shell-session">
@@ -237,18 +249,6 @@ $ pmbootstrap chroot -- mkbootimg \
 --tags_offset "0x01e00000" \
 --pagesize "2048" \
 -o "/tmp/mainline/boot.img"
-</syntaxhighlight>
-
-===== non-QCDT devices =====
-<syntaxhighlight lang="shell-session">
-$ cp ~/code/linux/zImage-dtb "$TEMP"
-$ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
-$ pmbootstrap chroot
-# abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
-reading kernel from /tmp/mainline/zImage-dtb
-Writing Boot Image /tmp/mainline/boot.img
-# exit
-[20:00:00] Done
 </syntaxhighlight>
 
 ==== Boot ====
