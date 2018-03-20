@@ -24,9 +24,12 @@ See <code>pmbootstrap qemu --help</code> for more options. Notably <code>--spice
 * X11 over vesa: see {{github|672}}
 * <code>osk-sdl</code> segfaults without --spice
 
-=== Screenshot ===
+=== Screenshots ===
 * QEMU running weston
 [[File:QEMU amd64 weston.png|500 px]]
+
+* QEMU running Plasma Mobile
+[[File:PlasmaMobileInQemu.png|500px||all is awesome the world is great]]
 
 === See also ===
 * [[common Qemu notes]]
