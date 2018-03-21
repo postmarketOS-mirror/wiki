@@ -284,3 +284,4 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 * Describe how to add a "Mainline section" to each device specific page (with a template!) - something like [http://elektranox.org/droid4/ this overview] would be great to have for every device. This can be done while doing the first kernel compilation when following this guide, because that takes a while anyway. Get the components from:
 ** downstream dts or teardown results like from ifixit
 ** decipher from downstream dmesg
+** <code>grep compatible</code> in downstream DTS decompiled also works
