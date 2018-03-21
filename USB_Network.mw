@@ -38,6 +38,12 @@ Use <code>sudo</code> to run commands as <code>root</code>, it is configured.
 
 === Troubleshooting ===
 
+==== Try IPv4 only ====
+Especially while mainlining, getting an IP oftentimes only works with the following command:
+<source lang="shell-session">
+$ dhcpcd interface --nohook ipv6
+</source>
+
 ==== Making sure the USB is detected ====
 In case you don't get an IP address directly, make sure that your PC recognizes the phone after it booted into postmarketOS at all. It should show the following in <code>dmesg</code>.
 
