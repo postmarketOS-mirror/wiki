@@ -14,9 +14,10 @@ After you register at any matrix site and join the channel, the offline history 
 
 == IRC ==
 
-The following two channels are bridged to freenode (mind the <code>##</code> for offtopic!):
+The following three channels are bridged to freenode (mind the <code>##</code> for offtopic!):
   #postmarketos
   ##postmarketos-offtopic
+  #postmarketos-lowlevel
 
 == Other discussion platforms ==
 
