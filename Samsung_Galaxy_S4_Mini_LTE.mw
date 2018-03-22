@@ -16,7 +16,7 @@
 
 == Contributors ==
 * rrooij (initial port)
-* scintill (USB network)
+* scintill (USB network, modem)
 * Everyone else on IRC (feel free to put your name here!)
 
 == What works ==
@@ -25,6 +25,7 @@
 * Booting
 * Screen display
 * USB Networking ({{github|1260}})
+* Sending SMS via terminal ({{github|1314}}
 
 == What does not work ==
 * Touch screen
