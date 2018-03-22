@@ -35,4 +35,4 @@
 Because of the age of the HD2, there are serval 3rd party bootloaders available, most commonly used:
 * Haret, Haret is a bootloader (provided as haret.exe) to boot linux or android from WITHIN windows mobile, you start windows mobile, not a great choice for postmarketOS.
 * a(MagLDR), Propitary 3rd party bootloader developed by Cotulla, some folks over at [https://androidforum.tytung.com Tytung's android forum], reverse egineered it and created aMagLdr, still propietary (?)
-* [https://www.mediafire.com/?tzg7whl9wwaih BlackLK][https://forum.xda-developers.com/showthread.php?t=1114053 cLK], cLK has the source listed, BlackLK doesn't, there isn't a lot of information about BlackLK available either, one of these seems to be the best option for postmarketOS, they are littlekernel based, thus have the littlekernel fastboot implementation.
+*[https://forum.xda-developers.com/showthread.php?t=1114053 cLK], based on littlekernel and download possible with cwm or twrp recovery embedded, seems to be the best option. Littlekernel also provides fastboot wich is handy.
