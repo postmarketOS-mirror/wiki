@@ -27,8 +27,10 @@
 * Flashing
 * Battery
 * USB host mode
+* HID buttons (KEY_POWER, KEY_VOLUMEDOWN and KEY_VOLUMEUP)
 == What does not work ==
 * USB Networking
+** In /sys/devices/soc/78db000.usb/msm_hsusb/ there are two files (is_peripheral and is_otg) that might have to do with switching device-type, but they're both 0 and writing 1 to either results in I/O errors
 * USB device mode
 * Wireless LAN
 * Audio
@@ -41,6 +43,7 @@
 * Accelerometers
 * Bluetooth
 * Accelerated 3D graphics
+* Backlight stays on when the phone goes into "sleep" because of a lack of user interaction
 
 == How to enter flash mode ==
 Turn the phone off and press and hold both the power and volume button at the same time.
