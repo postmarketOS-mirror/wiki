@@ -1,0 +1,56 @@
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  Redmi 4x
+| codename = xiaomi-santoni
+<!--| image = File:santoni.jpg
+| imagecaption = No pic yet -->
+| releaseyear = 2017
+| originalsoftware = Android
+| chipset = msm8940 Snapdragon 435
+| cpu = Octa-core 1.4 GHz Cortex-A53
+| gpu = Adreno 505
+| storage = 16 GB / 32 GB / 64GB
+| display = 720x1280
+| memory = 2 GB / 3 GB / 4 GB
+}}
+
+== Contributors ==
+* pinoaffe
+
+== Maintainer(s) ==
+* pinoaffe
+
+== What works ==
+* Boots
+* Screen
+* Touch
+* Flashing
+* Battery
+* USB host mode
+== What does not work ==
+* USB Networking
+* USB device mode
+* Wireless LAN
+* Audio
+* Mainline
+* Camera
+* GPS
+* Mobile Data
+* SMS
+* Calls
+* Accelerometers
+* Bluetooth
+* Accelerated 3D graphics
+
+== How to enter flash mode ==
+Turn the phone off and press and hold both the power and volume button at the same time.
+Keep holding those buttons untill a picture of the Xiaomi bunny appears.
+
+== Installation ==
+Installation over fastboot works, 
+android recovery zip installation is untested.
+
+== See also ==
+* [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php gsmarena page]
+* [https://twrp.me/xiaomi/xiaomiredmi4x.html twrp page]
+* [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss recently released official kernel sources]
