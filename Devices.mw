@@ -425,6 +425,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | htc-buzz
   | Kernel compiles. But ARMv6 devices without FPU are not supported by Alpine's armhf
 |-
+  | [[Htc-leo-(HTC-HD2)|HTC HD2]]🔼
+  | htc-leo
+  | kernel compiles. working on flashing.
+|-
   | [[Htc-vision-(HTC-Desire-Z)|HTC Desire Z]]
   | htc-vision
   | Kernel compiles, not tested
