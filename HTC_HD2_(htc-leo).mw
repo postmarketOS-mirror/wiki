@@ -1,0 +1,32 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = HTC
+| name =  HD 2
+| codename = leo
+| image = File:Htc-leo.jpg
+| imagecaption = HTC HD2
+| releaseyear = 2009
+| originalsoftware = Windows Mobile 6.5 Professional
+| chipset = Qualcomm QSD8250 Snapdragon S1
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 200
+| display = 480x800
+| storage = 512 MB
+| memory = 448 MB
+}}
+
+== Contributors ==
+* Langoor
+* (others on IRC)
+
+== What works ==
+* Nothing
+
+== What does not work ==
+* Everything
+
+== Progress ==
+* Got the kernel to compile, based on [https://github.com/maniacx/android_kernel_htc_qsd8k maniacx's nougat android kernel]
+
+== Next steps ==
+* Find a way to test the kernel on the device (black cLK?)
