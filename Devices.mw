@@ -37,11 +37,11 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Google Glass (Explorer Edition)]]
   | style="white-space: nowrap;" | google-glass
-  | Y  || Y  || P  || Y  || Y  || Y  || Y  ||  || Y  ||  ||  || Y  || Y  || Y  ||  ||  ||  || 
+  | Y  || Y  || P  || Y  || Y  || Y  || Y  ||  ||  ||  ||  || Y  || Y  || Y  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Google Nexus 4 (lg-mako)|Google Nexus 4]]
   | style="white-space: nowrap;" | lg-mako
-  | Y  || Y  || Y  || Y  ||  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || Y  ||  ||  || Y  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Google Nexus 5 (lg-hammerhead)|Google Nexus 5 (GSM)]]
   | style="white-space: nowrap;" | lg-hammerhead
@@ -49,7 +49,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Google Nexus 5X(lg-bullhead)|Google Nexus 5X]]
   | style="white-space: nowrap;" | lg-bullhead
-  | Y  || Y  || Y  || Y  ||  || Y ||  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || Y  ||  || Y ||  ||  || ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Google Nexus 6 (motorola-shamu)|Google Nexus 6]]
   | style="white-space: nowrap;" | motorola-shamu
@@ -145,7 +145,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Mozilla Flame (t2m-flame)|Mozilla Flame]]🔼
   | style="white-space: nowrap;" | t2m-flame
-  | Y  || Y  || Y  || Y  || P  || Y ||  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || Y  || P  || Y ||  ||  || ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Nextbit Robin|Nextbit Robin]]
   | style="white-space: nowrap;" | nextbit-robin
@@ -153,7 +153,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Nokia N900]]🔼
   | style="white-space: nowrap;" | nokia-n900
-  | Y  ||  || Y  || Y  || Y  || Y  ||  || Y  || P  ||  || Y  || Y  ||  ||  || P  || P  || P  || 
+  | Y  ||  || Y  || Y  || Y  || Y  ||  || Y  ||  ||  || Y  || Y  ||  ||  || P  || P  || P  || 
 |-
   | style="white-space: nowrap;" | [[Nokia N9]]🔼 / [[Nokia N950]]🔼
   | style="white-space: nowrap;" | nokia-n9
@@ -229,7 +229,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy Tab 10.1" (samsung-p4wifi)|Samsung Galaxy Tab 10.1"]]
   | style="white-space: nowrap;" | samsung-p4wifi, -p4, -p4tmo
-  | Y || Y || Y || Y || Y ||  ||  || P || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y || Y || Y || Y || Y ||  ||  || P ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy Tab 2 10.1" (3G and Wifi) (samsung-espresso10)|Samsung Galaxy Tab 2 10.1"]]
   | style="white-space: nowrap;" | samsung-espresso10
@@ -265,7 +265,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   |style="white-space: nowrap;" | [[Teclast X80 Pro (teclast-x80pro) |Teclast X80 Pro]]
   |style="white-space: nowrap;" | teclast-x80pro
-  | - || Y  || Y  || Y  || Y || Y || Y || Y || Y || Y ||  ||  ||  ||  ||  ||  ||  || 
+  | - || Y  || Y  || Y  || Y || Y || Y || Y || || Y ||  ||  ||  ||  ||  ||  ||  || 
 |-
   |style="white-space: nowrap;" | [[Wiko_Lenny_3_(wiko-lenny3)|Wiko Lenny 3]]
   |style="white-space: nowrap;" | wiko-lenny3
@@ -273,15 +273,15 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   |style="white-space: nowrap;" | [[Xiaomi_Redmi_1S_(xiaomi-armani)|Xiaomi Redmi 1S]]
   |style="white-space: nowrap;" | xiaomi-armani
-  | Y  || Y  || Y  || Y  || Y  || Y  ||  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   |style="white-space: nowrap;" | [[Xiaomi_RedMi3_(xiaomi-ido)|Xiaomi RedMi 3]]
   |style="white-space: nowrap;" | xiaomi-ido
-  | Y  || Y  || P  || Y  ||  ||  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || P  || Y  ||  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   |style="white-space: nowrap;" | [[Xiaomi_RedMi4x_(xiaomi-santoni)|Xiaomi RedMi 4x]]
   |style="white-space: nowrap;" | xiaomi-santoni
-  |  || Y  || Y  || Y  ||  ||  ||   ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  |  || Y  || Y  || Y  ||  ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   |style="white-space: nowrap;" | [[ZTE_Kis_3_(zte-kis3)|ZTE Kis 3]]
   |style="white-space: nowrap;" | zte-kis3
@@ -339,7 +339,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | Instead of a Linux kernel fork, it is possible to run [[The_Mainline_Kernel|mainline]].
 |-
   | Battery
-  | Charging the battery is possible (this seems to be largely untested, please update your device's column if charging is possible).
+  | Charging the battery with [https://github.com/postmarketOS/charging-sdl charging-sdl] is possible (this seems to be largely untested, please update your device's column if charging is possible).
 |-
   | 3D
   | Hardware accelerated 3D graphics
