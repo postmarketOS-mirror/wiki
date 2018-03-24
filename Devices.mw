@@ -489,10 +489,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-s5830i
   | Kernel compiles, haven't tried flashing yet.
 |-
-  | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II X]]
-  | samsung-kylessopen
-  | Kernel compiles, flashing works. Does not boot.
-|-
   | [[Samsung_Galaxy_S_(samsung-i9000)|Samsung Galaxy S]]
   | samsung-i9000
   | Kernel compiles & boots; framebuffer, touchscreen and wifi (partial) working 
