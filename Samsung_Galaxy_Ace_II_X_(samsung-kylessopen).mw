@@ -4,8 +4,8 @@
 | name =  Samsung Galaxy Ace 2 x
 | codename = kylessopen
 | releaseyear = 2012
-| originalsoftware = CHANGE_ME
-| chipset = ST-Ericsson NovaThor U8500
+| originalsoftware = Android 4.0.4
+| chipset = Qualcomm Snaprdagon S1 MSM7227A
 | cpu = 1 GHz ARM Cortex-A5
 | gpu = Adreno 200
 | storage = 4GB
@@ -17,13 +17,18 @@
 * platypro
 
 == Maintainer(s) ==
+* racer123
 
 == What works ==
 * Kernel compiles
 * Heimdall can flash
+* Boots
+* SSH over USB works
+* Display works with Weston
 
 == What does not work ==
-* Device does not boot
+* XFCE4
+* WiFi
 
 == How to enter flash mode ==
 Hold down volume down + Home + Power for a few seconds.
