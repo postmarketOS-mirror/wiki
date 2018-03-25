@@ -22,17 +22,22 @@
 * bug
 
 == What works ==
-* Nothing yet
+* compiling
+* flashing
+* booting
+* ssh
+* display
 
 == What does not work ==
-* Everything
+* Everything else
 
 == Additional Info ==
 I'm using the T-Mobile LG-K330 variant of the M1 with TheOddTaco kernel. There are a bunch of variants and a bunch of kernels and it's unclear to me how they're all related
 
-<!-- 
 == How to enter flash mode ==
+* run "adb reboot bootloader" from a terminal
 
+<!--
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
