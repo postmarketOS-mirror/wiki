@@ -30,7 +30,8 @@
 
 == What does not work ==
 
-* Bluetooth pairing
+* Bluetooth pairing with bluez5 (bluez4 is working, more on that soon)
+* [[osk-sdl]], charging-sdl - neither the charging animation nor FDE work. The problem is somewhere in SDL2 that no renderer can be initialized, it seems that it cannot get the surface of the window.
 * GPS
 * Camera
 * Sleep etc.
@@ -46,6 +47,10 @@ Hold power and volume down simultaneously.
 Flashing of the kernel works with heimdall, installation on the system partition works at least with <code>adb sideload</code> using TWRP (did not try heimdall). Installation on the sdcard should work, too (untested).
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== Mainline Kernel ==
+
+There is currently no mainline kernel available but it should be possible to mainline this device. Have a look at [http://blog.forkwhiletrue.me/pages/midas-mainline/ Midas on Mainline] for work on mainlining very similar devices.
 
 == See also ==
 
