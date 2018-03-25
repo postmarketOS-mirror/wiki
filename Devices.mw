@@ -459,7 +459,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-  
   | [[LG K7_(lg-m1)|LG K7]]
   | lg-m1
-  | Kernel compiles and flashes, display doesn't work
+  | display works, touchscreen doesn't work
 |-
   | [[Moto X|Moto X]]
   | motorola-ghost
