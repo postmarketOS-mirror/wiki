@@ -22,6 +22,8 @@ Connection closed by foreign host.
 
 If the telnet command does not work out of the box, read [[connect via USB Networking in the Initramfs]].
 
-=== Tips and tricks ===
+=== Additional programs ===
+After installing the <code>debug-shell</code> initramfs hook, the <code>evtest</code>, <code>fftest</code> and <code>fbdebug</code> programs are available in the initramfs ({{github|1358}}).
 
+=== Tips and tricks ===
 * [http://www.microhowto.info/howto/copy_a_file_from_one_machine_to_another_using_netcat.html copy files to/from the initramfs with <code>nc</code> while it is running]
