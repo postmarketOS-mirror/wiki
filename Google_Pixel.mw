@@ -51,6 +51,12 @@ Coming soon
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
+== To Do List ==
+
+* Re-enable LZMA kernel image compression, add via makedepends
+* Test device flashing using fastboot
+* Investigate Kernel upgrade path to 4.X where MSM8996 has better support in mainline
+
 == See also ==
 * [https://gitlab.com/ojbr/pmbootstrap/tree/wip-google-pixel ojbr's postmarketOS google-pixel fork on GitLab]
 <!--
