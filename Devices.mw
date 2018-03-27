@@ -201,7 +201,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy S Advance (samsung-i9070)|Samsung Galaxy S Advance]]
   | style="white-space: nowrap;" | samsung-i9070
-  | Y  || Y  || Y  || Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || Y  || Y  || Y  || Y  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy SII (samsung-i9100)|Samsung Galaxy SII]]
   | style="white-space: nowrap;" | samsung-i9100, -d710
@@ -343,7 +343,7 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | Instead of a Linux kernel fork, it is possible to run [[The_Mainline_Kernel|mainline]].
 |-
   | Battery
-  | Charging the battery with [https://github.com/postmarketOS/charging-sdl charging-sdl] is possible (this seems to be largely untested, please update your device's column if charging is possible).
+  | Charging the battery with [[charging-sdl]] is possible (this seems to be largely untested, please update your device's column if charging is possible).
 |-
   | 3D
   | Hardware accelerated 3D graphics
