@@ -71,6 +71,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | samsung-manta
   | Y  || Y  ||   || Y  || Y  || Y  ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
 |-
+  | style="white-space: nowrap;" | [[Google Pixel|Google Pixel]]
+  | style="white-space: nowrap;" | google-pixel
+  |   ||  ||   ||  ||  ||   ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
+|-
   | style="white-space: nowrap;" | [[HTC Desire (htc-bravo)|HTC Desire]]
   | style="white-space: nowrap;" | htc-bravo
   | Y  || P  || Y  || Y  ||  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
