@@ -29,7 +29,8 @@
 === What does not work ===
 
 * weston-keyboard
-* Can't boot without reflashing boot (!) [https://github.com/postmarketOS/pmbootstrap/issues/834#issuecomment-341231881]
+* <s>Can't boot without reflashing boot (!) [https://github.com/postmarketOS/pmbootstrap/issues/834#issuecomment-341231881]</s> '''Update:''' Does not seem to be an issue any more
+* Full-disk Encrpyion. Use <code>install --no-fde</code>
 
 === How to enter flash mode ===
 
@@ -38,21 +39,38 @@
 * Hold power + volume down
 * <code>fastboot</code> should work when the green android appears on the screen
 
+=== Installation process: ===
+
+<syntaxhighlight lang="shell" line='line'>
+$ git clone https://github.com/postmarketOS/pmbootstrap
+$ cd pmbootstrap
+$ ./pmbootstrap.py init
+$ ./pmbootstrap.py install --no-fde
+$ ./pmbootstrap.py flasher flash_kernel (optional?)
+$ ./pmbootstrap.py flasher flash_system
+</syntaxhighlight>
+
+=== UI options: ===
+
+* Weston: Boots, but also occasionally reboots on its own.
+* Hildon: Boots into a black screen. Poking some <code>/sys/</code> variables might make the screen flash or turn on, but it remains unusable
+* KDE: Never finishes the flash, which in turn wrecks your device partitions. This has happened even with <code>flasher flash_system --partition userdata</code>
+
 === Notes ===
 
 * I am using the LineageOS kernel found [https://github.com/LineageOS/android_kernel_asus_grouper here]
 * The kernel cannot be compiled on versions of gcc newer than 4.9 without the appropriate patch
 * I could not get UART debugging through the headphone jack to work - as far as I can tell, and according to a few other sources I found, the 2012 version of the Nexus 7 does not have this feature.
 * CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.
-* /sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.
+* <s>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</s> '''Update:''' Seems to be correctly set now
 * xwayland does not work.
 * weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.
 * The touchscreen input device is named <code>elan-touchscreen</code>.
 * The wifi chip is the Broadcom 4330.
-* <strike>This device was once officially supported on Ubuntu, so it has a firmware package in the [https://packages.ubuntu.com/trusty/linux-firmware-nexus7 Ubuntu repositories]</strike>
+* This device was once officially supported on Ubuntu, so it has a firmware package in the [https://packages.ubuntu.com/trusty/linux-firmware-nexus7 Ubuntu repositories]
 * "Desktop" Linux firmware are outdated. Check [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware/bcm4330/ here] for latest one. 
 * [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux.
-* I was able to get networking over USB with an RTL8150 ethernet USB adapter by enabling the RTL8150 kernel config and following the [https://wiki.alpinelinux.org/wiki/Configure_Networking network setup guide on the Alpine Linux wiki].
+* <s>I was able to get networking over USB with an RTL8150 ethernet USB adapter by enabling the RTL8150 kernel config and following the [https://wiki.alpinelinux.org/wiki/Configure_Networking network setup guide on the Alpine Linux wiki].</s> '''Update:''' Nothing special required anymore. Just boot up and use the [https://wiki.postmarketos.org/wiki/USB_Network#Assigning_an_IP_address DHCP networking process for USB networks]
 * I was able to get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, I ran <code>/etc/init.d/networking restart</code>, which gave an error about being unable to get a MAC address. I restarted the device to find that wifi Just Worked™, and was able to successfully scan for wireless networks and establish a connection to my secured wireless AP.
 * A newer kernel, that should work, can be found here (thanks to Jasper in IRC): https://github.com/Unlegacy-Android
 
