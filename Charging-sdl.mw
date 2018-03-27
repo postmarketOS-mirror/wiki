@@ -1,0 +1,42 @@
+This is an application developed by the postmarketOS community to display the charging status when the device is powered on in "charge mode".
+
+It is written in C and uses SDL2/SDL_power to query the battery information. The <code>charging-sdl</code> package is part of postmarketOS's aports.
+
+== Reporting Issues ==
+
+Issues with <code>charging-sdl</code> should be reported on [https://github.com/postmarketOS/charging-sdl/issues the project github issues page].
+
+== Current implementation ==
+
+If you connect the usb cable to the phone while it's powered off, it should start the device as usual and in the initramfs it should detect that it's started in "charge mode" and show the <code>charging-sdl</code> for 5 seconds.
+
+Then you can show again the <code>charging-sdl</code> for another 5 seconds by pressing the power key.
+
+If the <code>charging-sdl</code> shows a lightning icon in the top left of the screen, it means that the battery it's charging, if you unplug it, the icon should disappear.
+
+== Run charging-sdl manually ==
+
+You first have to boot the device into the <code>debug-shell</code>. (See [[Inspecting_the_initramfs]])
+
+After you connected to the device using telnet, you can run:
+<syntaxhighlight lang="shell-session">
+$ source /init_functions.sh
+$ mount_boot_partition
+$ extract_initramfs_extra /path/to/initramfs-extra      (e.g. /boot/initramfs-samsung-i9070-extra)
+$ setup_directfb_tslib
+$ fontpath=$(awk '/^keyboard-font/{print $3}' /etc/osk.conf)
+$ charging-sdl -pcf "$fontpath"
+</syntaxhighlight>
+
+== Troubleshooting ==
+
+==== Charge mode not detected ====
+
+In order to detect if the device has been powered on in "charge mode", the initramfs script looks for specific options in the kernel cmdline (e.g.: androidboot.mode=charger)
+
+Compare your kernel cmdline when powered on normally and when you power on by connecting the usb cable only. 
+If you find a specific option to distinguish the two boot modes, please update the [https://github.com/postmarketOS/pmbootstrap/blob/a7afd519eff34237dfe2766634ac6b2c5076e9f5/aports/main/postmarketos-mkinitfs/init_functions.sh#L289-L297 initramfs script].
+
+==== DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ====
+
+See [https://wiki.postmarketos.org/wiki/Osk-sdl#DirectFB.2FFBDev:_No_supported_modes_found_in_.2Fetc.2Ffb.modes_and_current_mode_not_supported.21 osk-sdl troubleshooting page]
