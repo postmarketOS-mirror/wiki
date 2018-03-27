@@ -1,0 +1,62 @@
+[[Category:Not booting]]
+<!--
+
+Will upload this image soon!
+
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+-->
+{{Infobox device
+| manufacturer = Google
+| name =  Pixel
+| codename = sailfish, marlin
+| releaseyear = 2016
+| originalsoftware = Android 7.1 (Nougat)
+| chipset = Qualcomm MSM8996 Snapdragon 821
+| cpu = Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)
+| gpu = Adreno 530
+| storage = 32/128GB
+| display = 5.0 inch AMOLED capacitive multi-touch screen, 1280x1920
+| memory = 4GB Dual Channel LPDDR4
+}}
+
+== Contributors ==
+* [https://gitlab.com/ojbr Oliver 'ojbr' Brammer]
+
+== Maintainer(s) ==
+* [mailto:oliver@octo.im Oliver 'ojbr' Brammer]
+
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== Note on device codenames and compatibility ==
+
+The sailfish variant of the Google Pixel shares the same kernel builds as the Pixel XL (marlin). Therefore, anything here referencing sailfish should also be relevant to marlin.
+
+== What works ==
+
+Untested as of 2018-03-28.
+
+== What does not work ==
+
+Watch this space.
+
+== How to enter flash mode ==
+
+It is required that the device is '''cell carrier unlocked''' before attempting to perform an OEM unlock using fastboot.
+
+== Installation ==
+
+Coming soon
+
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+* [https://gitlab.com/ojbr/pmbootstrap/tree/wip-google-pixel ojbr's postmarketOS google-pixel fork on GitLab]
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
