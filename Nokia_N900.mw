@@ -64,9 +64,6 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
 * Martijn's N900 has uboot installed a long time ago, I'm using sdcard boot from the bootmenu shell using <code>run sdboot</code>
 * The [https://neo900.org/ Neo900] (still in development) will upgrade the hardware inside of the N900, and has some nice features such as hardware sandboxing the modem.
 
-==== Keyboard layout ====
-* X11: Tab is ctrl+i
-
 ==== Wifi ====
 
 The <code>linux-firmware</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/158 #158])
@@ -110,22 +107,44 @@ With DRM enabled ([https://github.com/postmarketOS/pmbootstrap/pull/197 #197]), 
 For example, the display can be turned off by:
 
 <pre># echo 1 &gt; /sys/devices/platform/omapdrm.0/graphics/fb0/blank</pre>
-==== Keyboard layout in console ====
 
-(FIXME: is this still needed?)
+==== Keyboard layout ====
 
-In order to set the keyboard layout for the virtual console (e.g. to take advantage of number keys on the N900 keyboard), obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one.]. (TODO: Need to pull 'official' vconsole keymaps from Maemo5 if they exist..).
+===== Console =====
 
-On the N900, install <code>kbd-bkeymaps</code>, either by using <code>pmbootstrap install --add kbd-bkeysmaps</code> on the host system or by running <code>apk add kbd-bkeysmaps</code> on the device itself.
+The keyboard layout for the virtual console is asked during <code>pmbootstrap init</code> after you select the <code>nokia-n900</code> device.
 
-The keymap must be in binary format, bmap. This can be accomplished using the <code>loadkeys</code> tool:
+Available keymaps:
+
+* <code>us/rx51_us</code>
+[[File:N900 keymap us.jpg|800px]]
+* <code>ch/rx51_ch-de</code>
+[[File:N900 keymap ch-de.jpg|800px]]
+
+
+To obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one]:
+
+* On the N900, install <code>kbd-bkeymaps</code>, either by using <code>pmbootstrap install --add kbd-bkeysmaps</code> on the host system or by running <code>apk add kbd-bkeysmaps</code> on the device itself.
+
+* The keymap must be in binary format, bmap. This can be accomplished using the <code>loadkeys</code> tool:
 
 <source lang="shell">$ apk add kbd kbd-bkeymaps
 $ loadkeys -b rx51_us.map > rx51_us.bmap
 $ gzip rx51_us.bmap</source>
-Compress it and copy it to <code>/usr/share/bkeymaps/us/</code> on the N900.
 
-Log into the N900, and run <code>sudo setup-keymap</code>, then select <code>us</code> and finally <code>rx51_us</code>.
+* Compress it and copy it to <code>/usr/share/bkeymaps/us/</code> on the N900.
+
+* Log into the N900, and run <code>sudo setup-keymap</code>, then select <code>us</code> and finally <code>rx51_us</code>.
+
+(TODO: Need to pull 'official' vconsole keymaps from Maemo5 if they exist..)
+
+===== X11 =====
+
+In X11 you can use <code>setxkbmap</code> to configure the desired layout.
+
+Right now it's configured to use the <code>nokiarx51/us</code> layout by default (see [https://github.com/postmarketOS/pmbootstrap/blob/a7afd519eff34237dfe2766634ac6b2c5076e9f5/aports/device/device-nokia-n900/keymaps/40-xkb.conf 40-xkb.conf]).
+
+{{note| Info: Tab is ctrl+i}}
 
 ==== Battery Capacity Reporting ====
 
