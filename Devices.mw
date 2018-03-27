@@ -71,10 +71,6 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | samsung-manta
   | Y  || Y  ||   || Y  || Y  || Y  ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
 |-
-  | style="white-space: nowrap;" | [[Google Pixel|Google Pixel]]
-  | style="white-space: nowrap;" | google-pixel
-  |   ||  ||   ||  ||  ||   ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
-|-
   | style="white-space: nowrap;" | [[HTC Desire (htc-bravo)|HTC Desire]]
   | style="white-space: nowrap;" | htc-bravo
   | Y  || P  || Y  || Y  ||  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -420,6 +416,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Geeksphone Revolution (gp-revolution)|Geeksphone Revolution]]
   | gp-revolution
   | Kernel compiles but does not boot
+|-
+  | [[Google Pixel]]
+  | google-pixel
+  | Kernel compiles, untested on hardware as of 2018-03-28
 |-
   | [[Generic PC]] hardware (inc. BIOS based Windows tablets)🔼
   | N/A
