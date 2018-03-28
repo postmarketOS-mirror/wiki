@@ -45,7 +45,7 @@ From a power off state, hold the '''volume up''' and '''power''' buttons until t
 
 == Installation ==
 
-I had some issues with default installation procedure ( install-> flash_system -> flash_kernel)
+I ran into networking issues with default installation procedure ( install-> flash_system -> flash_kernel)
 Get it working by installing recovery with TWRP:
  <pre>pmbootstrap install --no-fde --android-recovery-zip</pre> 
 
