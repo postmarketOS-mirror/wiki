@@ -1,0 +1,60 @@
+{{Infobox device
+| name = Two
+| manufacturer = OnePlus
+| codename = oneplus2
+| image = File:[[File:oneplus2-weston.jpg|200px]]
+| imagecaption = OnePlus Two running Weston
+| releaseyear = 2015
+| originalsoftware =  Android 5.1.1
+| chipset = Qualcomm Snapdragon 810
+| cpu = Octa-core 64-bit Quad-core 1.77 GHz Cortex-A57
+| gpu = Adreno 430 650 MHz
+| display = 1080x1920 Full HD IPS LCD In-Cell
+| storage = 16 or 64 GB eMMC v5.0
+| memory = 3 or 4 GB LPDDR4 RAM
+}}
+
+== Contributors ==
+* NotKit 
+* lduboeuf
+
+== Maintainer(s) ==
+
+
+== What works ==
+
+* Kernel compilation
+* Flashing system
+* Booting kernel via fastboot
+* initramfs boot
+* Flashing kernel
+* USB network
+* SSH connectivity
+* Weston
+* Touchscreen
+
+== What does not work ==
+
+* Wi-Fi (blob needed)
+* Hardware-accelerated graphics
+* ...
+
+== How to enter flash mode ==
+
+From a power off state, hold the '''volume up''' and '''power''' buttons until the device vibrates. The display should then light up and say "Fastboot Mode".
+
+== Installation ==
+
+I had some issues with default installation procedure ( install-> flash_system -> flash_kernel)
+Get it working by installing recovery with TWRP:
+ <pre>pmbootstrap install --no-fde --android-recovery-zip</pre> 
+
+next copy zip file to device and install using twrp 
+
+in flash boot mode : <pre>pmbootstrap flasher flash_kernel</pre>
+
+
+== Links ==
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-oneplus2 Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-oneplus2 Kernel package]
