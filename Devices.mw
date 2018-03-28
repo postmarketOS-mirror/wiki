@@ -449,6 +449,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | htc-m8
   | Kernel compiles, tested
 |-
+  | [[HTC_Incredible_S_(htc-vivo)|HTC Incredible S]]
+  | htc-vivo
+  | Stuck in pmOS loading splash.
+|-
   | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
