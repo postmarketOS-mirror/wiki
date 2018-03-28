@@ -101,11 +101,11 @@ These devices are included in the postmarketOS source tree, and it is at least p
 |-
   | style="white-space: nowrap;" | [[LG_G_Watch_(lg-dory)|LG G Watch]]
   | style="white-space: nowrap;" | lg-dory
-  | Y  || Y  || Y  || Y  || -  || Y  ||  ||  ||  ||  || Y  ||  ||  || -  || -  || -  || -  || 
+  | Y  || Y  || Y  || Y  || -  || Y  ||  ||  ||  ||  || Y  || - ||  || -  || -  || -  || -  || -
 |-
   | style="white-space: nowrap;" | [[LG G Watch R (lg-lenok)|LG G Watch R]]
   | style="white-space: nowrap;" | lg-lenok
-  | Y  || Y  || Y  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  || -  || -  || -  || -  || 
+  | Y  || Y  || Y  || Y  ||  || Y  ||  ||  ||  ||  ||  || - ||  || -  || -  || -  || -  || -
 |-
   | style="white-space: nowrap;" | [[LG G3 Europe (lg-d855)|LG G3 Europe]]
   | style="white-space: nowrap;" | lg-d855
