@@ -525,6 +525,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-mint
   | Prebuilt kernel reboots to recovery, pmOS kernel stucks at bootloader logo
 |-
+  | [[Samsung_Galaxy_Tab_S2_9.7_Wifi_(samsung-gts210vewifi)|Samsung Galaxy Tab S2 9.7 Wifi]]
+  | samsung-gts210vewifi
+  | Kernel compiles, booting pmOS does not work yet: black screen, no connectivity
+|-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
   |
