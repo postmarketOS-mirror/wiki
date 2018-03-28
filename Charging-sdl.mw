@@ -8,11 +8,11 @@ Issues with <code>charging-sdl</code> should be reported on [https://github.com/
 
 == Current implementation ==
 
-If you connect the usb cable to the phone while it's powered off, it should start the device as usual and in the initramfs it should detect that it's started in "charge mode" and show the <code>charging-sdl</code> for 5 seconds.
+Connecting the usb cable to the phone while it's powered off should start the device as usual and in the initramfs it should detect that it's started in "charge mode", showing the <code>charging-sdl</code> for 5 seconds.
 
-Then you can show again the <code>charging-sdl</code> for another 5 seconds by pressing the power key.
+You can show this <code>charging-sdl</code> screen again for another 5 seconds by pressing the power key.
 
-If the <code>charging-sdl</code> shows a lightning icon in the top left of the screen, it means that the battery it's charging, if you unplug it, the icon should disappear.
+<code>charging-sdl</code> will show a lightning icon in the top left of the screen when the battery is charging, and if you unplug it the icon should disappear.
 
 == Run charging-sdl manually ==
 
@@ -34,7 +34,7 @@ $ charging-sdl -pcf "$fontpath"
 
 In order to detect if the device has been powered on in "charge mode", the initramfs script looks for specific options in the kernel cmdline (e.g.: androidboot.mode=charger)
 
-Compare your kernel cmdline when powered on normally and when you power on by connecting the usb cable only. 
+Compare your kernel cmdline when powered on normally to when you power on by connecting the usb cable only. 
 If you find a specific option to distinguish the two boot modes, please update the [https://github.com/postmarketOS/pmbootstrap/blob/a7afd519eff34237dfe2766634ac6b2c5076e9f5/aports/main/postmarketos-mkinitfs/init_functions.sh#L289-L297 initramfs script].
 
 ==== DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ====
