@@ -71,6 +71,10 @@ endmode
 
 If you had to create this file for osk-sdl to display on your device, make sure to include the <code>/etc/fb.modes</code> file in your device package.
 
+Source:
+<br>• [https://github.com/DirectFB/directfb/blob/e97c8d40ae10585ad10cb55800efcd2ea13fbdf8/systems/fbdev/fbdev.c#L1726 DirectFB modes]
+<br>• [https://github.com/SDL-mirror/SDL/blob/1aeeb6e96a9c19b4d73cbb492996910b5c69a55e/src/video/directfb/SDL_DirectFB_video.c#L312 SDL2 modes]
+
 === Create touchscreen calibration file ===
 
 Some devices require touchscreen calibration for osk-sdl to properly handle taps on the screen. To create the calibration file necessary for osk-sdl, run the <code>ts_calibrate</code> utility and tap the small X's on screen as accurately as you can. This will generate a file <code>/etc/pointercal</code>.
