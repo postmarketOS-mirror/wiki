@@ -345,64 +345,8 @@ General Setup -->
 Set this if your device needs an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image. Not to be confused with <code>CONFIG_ARM_APPENDED_DTB</code>!
 
 = Automatically merging kernel configuration =
-
-{{note|This hasn't been tested a lot and will probably break something.}}
-
-This is a small python script that will find kernel config thats enabled in one kernel config but not in the other. You can use it by running it against the kernel config file in pmbootstrap and a defconfig from an android tree:
-
-<source lang="shell-session">$ diffconfig.py config-postmarketos-mainline.armhf hammerhead_defconfig
-CONFIG_ZSWAP=y
-CONFIG_ZPOOL=y
-CONFIG_Z3FOLD=y
-....</source>
-
-It should be save to append the output from the diff command to the existing config*.armhf file to merge the extra kernel config needed for a device into the more generic postmarketOS kernel.
-Make sure that the outputted diff lines don't contain lines that change the more general kernel options like CONFIG_KERNEL_LZMA and make sure you run the menuconfig command after appending the
-config so the new kernel config is sanitized.
-
-<source lang="python">#!/usr/bin/env python3
-def parse_config(raw):
-    result = {}
-    for line in raw.splitlines():
-        if line.startswith("#"):
-            continue
-        if line.strip() == "":
-            continue
-
-        key, value = line.split("=", maxsplit=1)
-        result[key] = value
-
-    return result
-
-
-def diff_configs(a, b):
-    result = []
-    config_a = parse_config(a)
-    config_b = parse_config(b)
-    for key, value in config_b.items():
-        if key not in config_a:
-            result.append("{}={}".format(key, value))
-    return result
-
-
-if __name__ == '__main__':
-    import argparse
-
-    parser = argparse.ArgumentParser(description="defconfig diff utility")
-    parser.add_argument('config_a', type=open)
-    parser.add_argument('config_b', type=open)
-    args = parser.parse_args()
-
-    with args.config_a:
-        a = args.config_a.read()
-
-    with args.config_b:
-        b = args.config_b.read()
-
-    diff = diff_configs(a, b)
-    for line in diff:
-        print(line)
-</source>
+Use this script, which is present in the kernel source:
+<code>./scripts/kconfig/merge_config.sh</code>
 
 = References =
 
