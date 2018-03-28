@@ -49,9 +49,9 @@ I had some issues with default installation procedure ( install-> flash_system -
 Get it working by installing recovery with TWRP:
  <pre>pmbootstrap install --no-fde --android-recovery-zip</pre> 
 
-next copy zip file to device and install using twrp 
+next copy zip file to device and install it using twrp 
 
-in flash boot mode : <pre>pmbootstrap flasher flash_kernel</pre>
+in fastboot mode : <pre>pmbootstrap flasher flash_kernel</pre>
 
 
 == Links ==
