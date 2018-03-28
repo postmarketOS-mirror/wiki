@@ -1,0 +1,52 @@
+{{Infobox device
+| image = File:Stock_vivo.jpeg
+| manufacturer = hTC
+| name = Incredible S
+| imagecaption = Stock vivo running ICS
+| codename = vivo
+| releaseyear = 2011
+| originalsoftware = Android 4.0.4 on Linux 3.0.16
+| chipset = Qualcomm Snapdragon 200 MSM8255
+| cpu = Single-core 1.0 GHz
+| gpu = Adreno 205
+| storage = 2 GB + SD card
+| display = 480x800 4" SLCD
+| memory = 768 MB
+}}
+
+
+== Contributors ==
+* Aerotinge
+
+== Maintainer(s) ==
+* Aerotinge
+
+== What works ==
+* Booting with fastboot
+* USB Network
+* SSH
+* Screen
+* Vibrator
+* Flashlight
+
+== What does not work ==
+* The device stuck at the pmOS loading screen.
+
+== What has not been tested ==
+* accelerometer, GPS, light sensor
+* Wifi,Bluetooth, RIL
+* Camera
+
+== How to enter flash mode ==
+* Power off the phone
+* Press volume down
+* Keep volume down pressed, and connect the phone to the computer
+
+== How to turn off the phone ==
+Simply remove the battery.
+
+== Misc ==
+The device shares the <code>msm8x55</code> platform with other hTC devices, such as the One V (Primou).
+
+== Links ==
+[https://github.com/szezso/T.E.S.C.O-kernel_vivo/ Current working kernel source]
