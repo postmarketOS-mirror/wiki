@@ -79,6 +79,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | htc-ace
   | Y  ||  || Y  || Y  || Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[HTC_Incredible_S_(htc-vivo)|HTC Incredible S]]
+  | style="white-space: nowrap;" | htc-vivo
+  | Y  || Y  ||   || Y  ||   ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Huawei-Ascend-Y530|Huawei Ascend Y530]]
   | style="white-space: nowrap;" | huawei-y530
   | Y  || P  || Y  || Y  || Y  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
