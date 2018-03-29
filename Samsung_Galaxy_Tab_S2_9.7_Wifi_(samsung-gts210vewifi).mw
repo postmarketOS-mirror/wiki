@@ -159,7 +159,7 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
     pmbootstrap flasher flash_system --partition USERDATA
   '''but does not''', as userdata partition size is 0 after that command (seen by TWRP recovery)
   same for "SYSTEM" and "BOOT" partitions
-* so did flash via TWRP recovery zip file, but after trying to boot: no screen output, no connectivity.
+* flashing via TWRP recovery zip file, also installing the recovery zipfile via TWRP does '''not''' seem to work, system partition size is 0MB afterwards, seen in TWRP recovery in backup menu. ... this explains why device does not boot after pmOS is "installed" - it isn't in reality?!
 
 == See also ==
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
