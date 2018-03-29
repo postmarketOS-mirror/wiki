@@ -33,11 +33,12 @@
 * The device stuck at the pmOS loading screen.
 
 == What has not been tested ==
-* accelerometer, GPS, light sensor
-* Wifi,Bluetooth, RIL
+* Accelerometer, GPS, light sensor
+* Wifi, Bluetooth, RIL
 * Camera
+* Battery
 
-== How to enter flash mode ==
+== How to enter flash mode (HBOOT) ==
 * Power off the phone
 * Press volume down
 * Keep volume down pressed, and press power button.
@@ -45,8 +46,21 @@
 == How to turn off the phone ==
 Hold power button for ten seconds, or simply remove the battery.
 
+== Installation ==
+{{note|The bootloader have to been unlocked (s-off). If not, see [https://www.htcdev.com/bootloader/ htcdev here].}}
+
+* Install 
+**using an microsd card (replace mmcblk0 with your sd slot)<code>pmbootstrap install --sdcard=/dev/mmcblk0</code>(recommended)
+**using /data partition <code>pmbootstrap flasher flash_system --partition userdata</code> 
+* Insert the microsd card on the device
+* Boot the device in flash mode (HBOOT) and select "Fastboot" by volumes and power button.
+** Boot kernel using <code>pmbootstrap flasher boot</code>(recommended)
+** Flash kernel using <code>pmbootstrap flasher flash_kernel</code>,then reboot.
+
 == Misc ==
 The device shares the <code>msm8x55</code> platform with other hTC devices, such as the One V (Primou).
 
 == Links ==
 [https://github.com/szezso/T.E.S.C.O-kernel_vivo/ Current working kernel source]
+
+[https://forum.xda-developers.com/showpost.php?p=75757495&postcount=117/ Detailed device partitions]
