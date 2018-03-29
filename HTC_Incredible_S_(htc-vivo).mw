@@ -53,7 +53,8 @@ Hold power button for ten seconds, or simply remove the battery.
 **using an microsd card (replace mmcblk0 with your sd slot)<code>pmbootstrap install --sdcard=/dev/mmcblk0</code>(recommended)
 **using /data partition <code>pmbootstrap flasher flash_system --partition userdata</code> 
 * Insert the microsd card on the device
-* Boot the device in flash mode (HBOOT) and select "Fastboot" by volumes and power button.
+* Connect usb cable to your phone and boot it into flash mode (HBOOT)
+* Select "FASTBOOT" by volumes and power button. Make sure it displays "FASTBOOT USB" on top.
 ** Boot kernel using <code>pmbootstrap flasher boot</code>(recommended)
 ** Flash kernel using <code>pmbootstrap flasher flash_kernel</code>, then reboot.
 
