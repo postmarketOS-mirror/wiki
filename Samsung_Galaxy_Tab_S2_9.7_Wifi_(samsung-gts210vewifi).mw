@@ -40,6 +40,14 @@ In Android go to settings -> System -> About phone and tap the build number 7 ti
 
 == Installation ==
 * had problems with "heimdall flash --KERNEL ..." command used by "pmbootstrap flasher flash_kernel", it did stop with "ERROR: Partition "KERNEL" does not exist in the specified PIT."
+* flashing via heimdall does not seem to work - device uses lowercase partition labels which are not supported by heimdall, e.g.
+    pmbootstrap flasher flash_system --partition userdata
+  gives:
+    ERROR: Partition "userdata" does not exist in the specified PIT.
+  if using uppercase "USERDATA" then flashing ''seems'' to work:
+    pmbootstrap flasher flash_system --partition USERDATA
+  '''but does not''', as userdata partition size is 0 after that command (seen by TWRP recovery)
+  same for "SYSTEM" and "BOOT" partitions
 * so did flash via TWRP recovery zip file, but after trying to boot: no screen output, no connectivity.
 
 == See also ==
