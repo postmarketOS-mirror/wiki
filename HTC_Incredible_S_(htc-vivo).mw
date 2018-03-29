@@ -55,7 +55,7 @@ Hold power button for ten seconds, or simply remove the battery.
 * Insert the microsd card on the device
 * Boot the device in flash mode (HBOOT) and select "Fastboot" by volumes and power button.
 ** Boot kernel using <code>pmbootstrap flasher boot</code>(recommended)
-** Flash kernel using <code>pmbootstrap flasher flash_kernel</code>,then reboot.
+** Flash kernel using <code>pmbootstrap flasher flash_kernel</code>, then reboot.
 
 == Misc ==
 The device shares the <code>msm8x55</code> platform with other hTC devices, such as the One V (Primou).
