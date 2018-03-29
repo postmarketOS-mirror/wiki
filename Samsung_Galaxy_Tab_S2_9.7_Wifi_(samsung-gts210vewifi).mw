@@ -150,6 +150,7 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
 </pre>
 
 == Installation ==
+ATTENTION - DEVICE DOES NOT BOOT YET, here's what I tried up to now:
 * had problems with "heimdall flash --KERNEL ..." command used by "pmbootstrap flasher flash_kernel", it did stop with "ERROR: Partition "KERNEL" does not exist in the specified PIT."
 * flashing via heimdall does not seem to work - device uses lowercase partition labels which are not supported by heimdall, e.g.
     pmbootstrap flasher flash_system --partition userdata
