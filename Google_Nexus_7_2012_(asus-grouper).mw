@@ -47,14 +47,14 @@ $ cd pmbootstrap
 $ ./pmbootstrap.py init
 $ ./pmbootstrap.py install --no-fde
 $ ./pmbootstrap.py flasher flash_kernel (optional?)
-$ ./pmbootstrap.py flasher flash_system
+$ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
 === UI options: ===
 
 * Weston: Boots, but also occasionally reboots on its own.
 * Hildon: Boots into a black screen. Poking some <code>/sys/</code> variables might make the screen flash or turn on, but it remains unusable
-* KDE: Never finishes the flash, which in turn wrecks your device partitions. This has happened even with <code>flasher flash_system --partition userdata</code>
+* KDE: Never finishes the flash, which in turn wrecks your device partitions. This has happened even with <code>flasher flash_rootfs --partition userdata</code>
 
 === Notes ===
 
