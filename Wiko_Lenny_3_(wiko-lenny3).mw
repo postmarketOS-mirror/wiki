@@ -23,7 +23,7 @@
 == What works ==
 * Kernel compilation
 * Flash Kernel (SP Flash Tool required)
-* Flash System (SP Flash Tool required)
+* Flash Rootfs (SP Flash Tool required)
 * Initramfs boot
 * USB Network
 * Framebuffer graphics (Splash screens)
