@@ -23,7 +23,7 @@
 pmbootstrap init
 pmbootstrap install
 (enter fastboot, see below)
-pmbootstrap flasher flash_system
+pmbootstrap flasher flash_rootfs
 pmbootstrap flasher boot
 </pre>
 
