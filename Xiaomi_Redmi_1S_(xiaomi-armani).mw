@@ -52,7 +52,7 @@
 ::<code>$ pmbootstrap install --no-fde</code>
 * Flash the kernel and system
 ::<code>$ pmbootstrap flasher flash_kernel</code>
-::<code>$ pmbootstrap flasher flash_system</code>
+::<code>$ pmbootstrap flasher flash_rootfs</code>
 * Reboot the device
 ::<code>$ fastboot reboot</code>
 
