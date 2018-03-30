@@ -61,7 +61,7 @@ Afterwards, you can boot into fastboot by following these steps:
 3. Plug in USB-cable while still holding Vol. Up until fastboot pops up</pre>
 === Signing the boot image ===
 
-pmbootstrap will successfully flash system and kernel, however the device will only boot if you use the<br />
+pmbootstrap will successfully flash rootfs and kernel, however the device will only boot if you use the<br />
 <code>pmbootstrap flasher boot</code> command, as it will otherwise show this error:
 
 <pre>ERROR : boot certification verify
@@ -85,7 +85,7 @@ python2 open_bump.py &quot;/tmp/pmOS_export/boot.img-lg-d855&quot;</pre>
 This will create a signed image called <code>boot_bumped.img-lg-d855</code> in <code>/tmp/pmOS_export/</code>.<br />
 Now first flash System and kernel images using pmbootstrap and then manually flash the signed image over these:
 
-<pre>pmbootstrap flasher flash_system
+<pre>pmbootstrap flasher flash_rootfs
 pmbootstrap flasher flash_kernel
 fastboot flash boot /tmp/pmOS_export/boot_bumped.img-lg-d855</pre>
 === Links ===
