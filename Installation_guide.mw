@@ -92,12 +92,12 @@ $ pmbootstrap install --help
 This command wraps various flash programs (e.g. fastboot and heimdall) with a common syntax and with automatically filling out the paths to the generated files. Usually you need to flash the system image (unless you did the SD card or recovery zip installation):
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap flasher flash_system
+$ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
 In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>dd</code> or simply install the known working OS, e.g. Android, on it). Using multiple partitions with LVM is planned ({{github|60}}).
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap flasher flash_system --partition userdata
+$ pmbootstrap flasher flash_rootfs --partition userdata
 </syntaxhighlight>
 
 And then you need to boot or flash the kernel (so run only one of the commands). Again, this is not necessary when you have used the recovery zip. But it is necessary in most cases with the SD card (unless the device can boot the kernel from the SD card like the N900).
@@ -109,7 +109,7 @@ $ pmbootstrap flasher flash_kernel
 As with all <code>pmbootstrap</code> commands, you can check the help pages for details:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher --help
-$ pmbootstrap flasher flash_system --help
+$ pmbootstrap flasher flash_rootfs --help
 </syntaxhighlight>
 
 == See also ==
