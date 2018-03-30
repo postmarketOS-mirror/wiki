@@ -192,11 +192,11 @@ If that does not help, it might be necessary to set the <code>flash_fastboot_ven
 
 === Invalid sparse file format at header magi ===
 
-In some devices (e.g.: bullhead, titan), when flashing the system (<code>pmbootstrap flasher flash_system</code>), it works but fastboot complains of <code>Invalid sparse file format at header magi</code>.
+In some devices (e.g.: bullhead, titan), when flashing the system (<code>pmbootstrap flasher flash_rootfs</code>), it works but fastboot complains of <code>Invalid sparse file format at header magi</code>.
 
-<pre>$ ./pmbootstrap.py flasher flash_system
+<pre>$ ./pmbootstrap.py flasher flash_rootfs
 [23:02:58] (native) install android-tools
-[23:02:58] (native) flash system image
+[23:02:58] (native) flash rootfs image
 target reported max download size of 536870912 bytes
 Invalid sparse file format at header magi
 sending sparse 'system' 1/1 (274101 KB)...
