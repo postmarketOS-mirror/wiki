@@ -30,7 +30,7 @@
 * Xwayland
 
 == What does not work ==
-* Flash System (<code>pmbootstrap flasher flash_system</code>)
+* Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
 * Wifi
 * Audio playback
 
