@@ -47,7 +47,7 @@
 
 <source lang="bash"># Replace /dev/sdX with the device for your sdcard
 $ ./pmbootstrap.py install
-$ ./pmbootstrap.py flasher flash_system
+$ ./pmbootstrap.py flasher flash_rootfs
 $ ./pmbootstrap.py flasher flash_kernel</source>
 
 == Links ==
