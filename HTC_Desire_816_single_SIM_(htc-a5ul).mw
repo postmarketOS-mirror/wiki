@@ -1,0 +1,66 @@
+{{Infobox device
+| image = File:Stock_a5.jpeg
+| manufacturer = hTC
+| name = Desire 816
+| imagecaption = Desire 816 running stock Android
+| codename = a5ul
+| releaseyear = 2014
+| originalsoftware = Android 6.0 on Linux 3.4.0
+| chipset = Qualcomm Snapdragon S400 MSM8228
+| cpu = Quad-core 1.6 GHz (ARM Cortex-A7)
+| gpu = Adreno 305
+| storage = 8 GB + microSD card
+| display = 720x1280 5.5" SLCD
+| memory = 1.5 GB
+}}
+
+
+== Contributors ==
+* Aerotinge
+
+== Maintainer(s) ==
+* Aerotinge
+
+== What works ==
+* Booting with fastboot
+* USB Network
+* SSH
+* Screen
+
+== What does not work ==
+* The device stuck at the pmOS loading screen.
+
+== What has not been tested ==
+* Accelerometer, GPS, light sensor
+* Wifi, Bluetooth, RIL
+* Vibrator
+* Camera, Flashlight
+* Battery
+
+== How to enter flash mode (HBOOT) ==
+* Power off the phone
+* Press volume down
+* Keep volume down pressed, and press power button.
+
+== How to turn off the phone ==
+Hold power button for ten seconds.
+
+== Installation ==
+{{note|The bootloader have to been unlocked (s-off). If not, see [https://www.htcdev.com/bootloader/ htcdev here].}}
+
+* Install 
+**using an microsd card (replace mmcblk0 with your sd slot)<code>pmbootstrap install --sdcard=/dev/mmcblk0</code>(recommended)
+**using /data partition <code>pmbootstrap flasher flash_rootfs --partition userdata</code> 
+* Insert the microsd card on the device
+* Connect usb cable to your phone and boot it into flash mode (HBOOT)
+* Select "FASTBOOT" by volumes and power button. Make sure it displays "FASTBOOT USB" on top.
+** Boot kernel using <code>pmbootstrap flasher boot</code>(recommended)
+** Flash kernel using <code>pmbootstrap flasher flash_kernel</code>, then reboot.
+
+== Misc ==
+The device is similar to the flagship in 2014, hTC One (m8) in many aspect.
+
+Some resources can be shared between two devices.
+
+== Links ==
+[https://github.com/bigsuperprojects/android_kernel_htc_msm8974/ Current working kernel source]
