@@ -31,7 +31,7 @@
 * [ ] Flash light
 * [ ] RGB front LED
 * [ ] Backlight control
-* [x] flash_system
+* [x] flash_rootfs
 * [x] boot
 * [ ] flash_kernel
 * [ ] wifi
