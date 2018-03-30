@@ -42,7 +42,7 @@
 * Unlock bootloader
 * Build using pmbootstrap.py
 * Enter fastboot on phone
-<syntaxhighlight lang="bash">./pmbootstrap flasher flash_system
+<syntaxhighlight lang="bash">./pmbootstrap flasher flash_rootfs
 ./pmbootstrap flasher flash_kernel
 fastboot reboot</syntaxhighlight>
 
