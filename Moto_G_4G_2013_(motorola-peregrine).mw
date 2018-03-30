@@ -41,7 +41,7 @@ Typical fastboot flashing procedure should be fine:
 <source lang="shell-session">
 $ pmbootstrap init
 $ pmbootstrap install --no-fde
-$ pmbootstrap flasher flash_system
+$ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher boot # or flash_kernel
 </source>
 
