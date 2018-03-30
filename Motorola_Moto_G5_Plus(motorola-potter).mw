@@ -21,7 +21,7 @@
 * chin123
 
 == What works ==
-* Flash System
+* Flash Rootfs
 * Boot Kernel through <code>pmbootstrap flasher boot</code>
 * USB internet
 * ssh
@@ -35,7 +35,7 @@
 * Power + Volume Down buttons
 
 == Installation ==
-<code> $ pmbootstrap flasher flash_system </code> <br> 
+<code> $ pmbootstrap flasher flash_rootfs </code> <br> 
 <code> $ pmbootstrap flasher boot </code> <br>
 
 
