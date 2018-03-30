@@ -51,7 +51,7 @@ $ ./pmbootstrap.py build device-samsung-p4wifi
 $ ./pmbootstrap.py install --no-fde</source>
 # Enter flash (download) mode
 # Flash the kernel and system images<source lang="shell">$./pmbootstrap.py flasher flash_kernel
-$./pmbootstrap.py flasher flash_system</source>
+$./pmbootstrap.py flasher flash_rootfs</source>
 
 == Graphics ==
 The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not working. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
