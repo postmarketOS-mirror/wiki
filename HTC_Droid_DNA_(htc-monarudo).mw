@@ -22,7 +22,7 @@
 
 * Kernel builds
 * Trying to boot the kernel with <code>fastboot boot ...</code> freezes the phone, as does using <code>pmbootstrap.py flasher boot</code>
-* Trying to flash the kernel with <code>pmboostrap.py flasher flash_system</code> or <code>flash_kernel</code> results in a <code>remote:not allowed</code> error, although this may be related to a corrupted partition table on my particular device.
+* Trying to flash the kernel with <code>pmboostrap.py flasher flash_rootfs</code> or <code>flash_kernel</code> results in a <code>remote:not allowed</code> error, although this may be related to a corrupted partition table on my particular device.
 
 == What works ==
 
