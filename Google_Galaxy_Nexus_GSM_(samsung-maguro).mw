@@ -23,7 +23,7 @@
 
 * ☑ Kernel compilation
 * ☑ Flash kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☑ Flash system (<code>pmbootstrap flasher flash_system</code>) (System is only 654M and may be too small to flash postmarketOS on, in that case add <code>--partition userdata</code>)
+* ☑ Flash system (<code>pmbootstrap flasher flash_rootfs</code>) (System is only 654M and may be too small to flash postmarketOS on, in that case add <code>--partition userdata</code>)
 * ☑ Initramfs boot
 * ☑ USB network
 * ☑ Framebuffer graphics (Splash screens)
