@@ -71,6 +71,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | samsung-manta
   | Y  || Y  ||   || Y  || Y  || Y  ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
 |-
+  | style="white-space: nowrap;" | [[HTC_Desire_816_single_SIM_(htc-a5ul)|HTC Desire 816]]
+  | style="white-space: nowrap;" | htc-a5ul
+  | Y  ||    ||   || Y  ||   ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[HTC Desire (htc-bravo)|HTC Desire]]
   | style="white-space: nowrap;" | htc-bravo
   | Y  || P  || Y  || Y  ||  || Y  || Y  ||  || - ||  ||  ||  ||  ||  ||  ||  ||  || 
