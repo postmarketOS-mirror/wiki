@@ -24,7 +24,7 @@ Weston is started at shell autologin init time by <code>/etc/profile.d/start_wes
 Prerequisite:
 
 * <code>apk add weston-backend-rdp</code>
-* <code>apk add onpenssl</code>
+* <code>apk add openssl</code>
 
 Create a Self-Signed SSL Certificate:
 * <code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mypublic.key -out mycrt.crt</code>
