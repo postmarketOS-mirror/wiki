@@ -153,11 +153,11 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
 ATTENTION - DEVICE DOES NOT BOOT YET, here's what I tried up to now:
 * had problems with "heimdall flash --KERNEL ..." command used by "pmbootstrap flasher flash_kernel", it did stop with "ERROR: Partition "KERNEL" does not exist in the specified PIT."
 * flashing via heimdall does not seem to work - device uses lowercase partition labels which are not supported by heimdall, e.g.
-    pmbootstrap flasher flash_system --partition userdata
+    pmbootstrap flasher flash_rootfs --partition userdata
   gives:
     ERROR: Partition "userdata" does not exist in the specified PIT.
   if using uppercase "USERDATA" then flashing ''seems'' to work:
-    pmbootstrap flasher flash_system --partition USERDATA
+    pmbootstrap flasher flash_rootfs --partition USERDATA
   '''but does not''', as userdata partition size is 0 after that command (seen by TWRP recovery)
   same for "SYSTEM" and "BOOT" partitions
 * flashing via TWRP recovery zip file, also installing the recovery zipfile via TWRP does '''not''' seem to work, system partition size is 0MB afterwards, seen in TWRP recovery in backup menu. ... this explains why device does not boot after pmOS is "installed" - it isn't in reality?!
