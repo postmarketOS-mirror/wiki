@@ -6,10 +6,35 @@
 | toolkit =
 }}
 
-Weston is the reference implementation of a Wayland compositor.
+Weston is the reference implementation of a [https://wayland.freedesktop.org/ Wayland] compositor.
+
 
 === Installation ===
 * <code>pmbootstrap init</code>
 * <code>User interface: weston</code>
+
+This will package weston libraries as well as demos for your device, see <code>weston*</code> commands.
+
+Weston is started at shell autologin init time by <code>/etc/profile.d/start_weston.sh</code> script
+
+
+=== [https://en.wikipedia.org/wiki/Remote_Desktop_Protocol RDP] ===
+
+
+Prerequisite:
+
+* <code>apk add weston-backend-rdp</code>
+* <code>apk add onpenssl</code>
+
+Create a Self-Signed SSL Certificate:
+* <code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mypublic.key -out mycrt.crt</code>
+
+
+Start weston with RDP backend:
+* <code>weston --backend=rdp-backend.so --rdp-tls-cert=/path/to/mycrt.crt --rdp-tls-key=/path/to/mypublic.key --socket=wayland-1 --width=540 --height=600</code>
+
+On host:
+* <code>xfreerdp /v:172.16.42.1 /sec:tls</code>
+
 
 more info here about using Weston
