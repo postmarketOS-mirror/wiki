@@ -21,7 +21,7 @@
 
 * ☑ Kernel compilation
 * ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☑ Flash System (<code>pmbootstrap flasher flash_system</code>)
+* ☑ Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
 * ☑ Initramfs boot
 * ☑ USB Network
 * ☑ Framebuffer graphics (Splash screens)
@@ -47,7 +47,7 @@ Turn on your watch and swipe from the top left corner (so that'd be where 11 wou
 
 It's important to remember to flash the system image to `userdata` as the system partition is not big enough for PostmarketOS.
 
-<code>pmbootstrap flasher flash_system --partition userdata</code>
+<code>pmbootstrap flasher flash_rootfs --partition userdata</code>
 
 === Accelerometer ===
 
