@@ -6,6 +6,8 @@
 | toolkit = Qt 5
 }}
 
+A mobile variant of the KDE Plasma [[User-Interfaces|user interface]], optimized for touchscreen.
+
 == Status ==
 The basic shell has been ported to postmarketOS, and can now be tested in Qemu. It also works on most devices with a working display, both with hardware acceleration and software rendering.
 
