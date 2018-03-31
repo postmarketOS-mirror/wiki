@@ -6,34 +6,36 @@ Here is a list showing examples and the on-going work on this topic.
 
 === Weston ===
 
-Project page: https://github.com/wayland-project/weston
-
-Default minimal interface based on XWayland. It allows developers to do &quot;simple&quot; things like running firefox and opening a terminal, plus testing the touchscreen and other peripherals.
-
-Photos:
+'''[[Weston]]''' is the default, minimal, interface based on XWayland. It allows developers to do &quot;simple&quot; things like running firefox and opening a terminal, plus testing the touchscreen and other peripherals.
 
 * [http://i.imgur.com/5XtSNzp.jpg Running Youtube in Weston]
 
-See '''[[Weston]]'''.
+Project page: https://github.com/wayland-project/weston
+
 === Plasma Mobile ===
 
-Project page: https://plasma-mobile.org/
-
-Based on KDE.
+'''[[Plasma Mobile]]''' is a mobile variant of the KDE Plasma user interface, optimized for touchscreen.
 
 Work in Progress.
 
-For more information, see '''[[Plasma Mobile]]''' and issues [https://github.com/postmarketOS/pmbootstrap/issues/161 #161], [https://github.com/postmarketOS/pmbootstrap/issues/378 #378].
+For more information, see issues [https://github.com/postmarketOS/pmbootstrap/issues/161 #161], and [https://github.com/postmarketOS/pmbootstrap/issues/378 #378].
+
+Project page: https://plasma-mobile.org/
 
 === Hildon ===
 
-Hildon is an application framework originally developed for mobile devices (PDAs, mobile phones, etc.) running the Linux operating system as well as the Symbian operating system. It was developed by Nokia for the Maemo operating system and is now a part of GNOME. It focuses on providing a finger-friendly interface. It is primarily a set of GTK+ extensions that provide mobile-device–oriented functionality, but also provides a desktop environment that includes a task navigator for opening and switching between programs, a control panel for user settings, and status bar, task bar and home applets. It is standard on the Maemo platform used by the Nokia Internet Tablets and the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 Nokia N900] smartphone.
+'''[[Hildon]]''' is an application framework originally developed for mobile devices (PDAs, mobile phones, etc.) running the Linux operating system as well as the Symbian operating system. It was developed by Nokia for the Maemo operating system and is now a part of GNOME. It focuses on providing a finger-friendly interface. It is primarily a set of GTK+ extensions that provide mobile-device–oriented functionality, but also provides a desktop environment that includes a task navigator for opening and switching between programs, a control panel for user settings, and status bar, task bar and home applets. It is standard on the Maemo platform used by the Nokia Internet Tablets and the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 Nokia N900] smartphone.
 
 Hildon is based on GTK2 and there is a work in progress port to GTK3.
 
-For more information, see '''[[Hildon]]''' and PR [https://github.com/postmarketOS/pmbootstrap/pull/461 #461].
+For more information, see PR [https://github.com/postmarketOS/pmbootstrap/pull/461 #461].
+
 ===MATE===
-Desktop environment forked from the now-unmaintained code base of GNOME 2. See '''[[MATE]]'''.
+'''[[MATE]]''' is a full GTK-based desktop environment forked from the code base of GNOME 2.
+
+===Xfce4===
+'''[[XFCE4|Xfce4]]''' is another full GTK-based desktop environment, aiming to be fast and lightweight.
+
 === Others ===
 
 See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more information on other UIs that could be ported to postmarketOS. Some of these are:
