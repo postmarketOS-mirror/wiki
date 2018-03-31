@@ -113,3 +113,16 @@ find . -print0 | busybox cpio --quiet -o -H newc | gzip -1 > initramfs-repackage
 
 == How to merge kernel configs? ==
 The idea is, that we have a shared <code>linux-postmarketos-stable</code> package, which all mainlined devices use. Check [[Kernel_configuration#Automatically_merging_kernel_configuration]] for instructions on how to merge kernel configs somewhat efficiently with a script.
+
+== How to flash each postmarketOS partition from the rootfs to a different partition on the phone ==
+Usually pmOS writes the whole rootfs (which has its own /boot and / partitions) to one partition on the device ([[Partition-layout|more]]). If your mainline kernel isn't able to find the postmarketOS partition by label (even if you have enabled device mapper in the kernel config), then you could use the following workaround to flash each partition from the rootfs image to a real partition on the device.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install
+$ pmbootstrap export
+$ losetup <pathtoimage> /dev/loop0
+$ dd if=/dev/loop0p1 of=boot_partition.img
+$ dd if=/dev/loop0p2 of=root_partition.img
+$ fastboot flash system root_partition.img
+$ fastboot flash cache boot_partition.img
+</syntaxhighlight>
