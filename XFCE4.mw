@@ -16,7 +16,7 @@ It works on most devices with a working display, and runs fine without hardware 
 ** Add <code>matchbox-keyboard</code> to get an on-screen keyboard [https://postmarketos.org/static/img/2017-12/xfce4-i9505.jpg]
 
 == Calibrate the touchscreen ==
-If you rotate the screen change/add a value in this file:
+If you rotate the screen, change/add a value in this file:
 <pre>
 sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
 </pre>
@@ -29,32 +29,27 @@ ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
 # reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
 </pre>
 
-== Controlling display power management ==
-To control display from a terminal first set DISPLAY environment variable like:
+== Display Power Management ==
+To control display from a terminal, first set DISPLAY environment variable:
 <source lang="shell">
 export DISPLAY=:0.0
 </source>
 
-<B>xset</B> command can be used to turn diplay on and off or set a display timeout value
+The <B>xset</B> command can be used to turn diplay on and off, or set a display timeout value.
 <source lang="shell">
 xset dpms force off    # To turn off display
 xset dpms force on     # To turn the display back on
 xset q                 # Prints current display status info
 </source>
 
-applications| settings| windowmanager
-Default-xhdpi
-Font ... 16?
+==Improving Touchscreen-Friendliness==
 
-settings|panels, panel1, hide panel inteligently, 53 pixels.
-settings|panels, panel2, hide panel inteligently.
+[[File:Scrot4.png|thumb|200px|Example configuration with matchbox-keyboard running on [[Samsung_Galaxy_SII_(samsung-i9100)|Galaxy SII]]]]
 
-With configuration above, you get this. Only obvious problem is waste of space at top of the screen.
+In <code>Window Manager</code> settings, changing the theme to <code>Default-hdpi</code> or <code>Default-xhdpi</code> will make window buttons and title bars larger. A font size of about 16 can work well with these themes.
 
-[[File:17090009.jpg|600px]]
+In <code>Panel</code> settings, increasing panel height, and setting panels to hide <code>Intelligently</code>, will make them easier to interact with, without losing effective screen real estate.
 
-Simple status window without decorations can be put there. Plan is to display battery / signal status there:
-
-[[File:17090008.jpg|600px]]
+This results in something like the right. The only obvious problem is the large, permanent, title bars.
 
 [[Category:Interface]]
