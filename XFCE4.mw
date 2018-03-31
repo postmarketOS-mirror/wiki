@@ -1,13 +1,21 @@
-Xfce4 is a GTK-based [[User-Interfaces|desktop environment]] aiming to be fast and lightweight.
-[[Image:I9100-xfce.jpeg|thumb|right|[[Samsung Galaxy SII (samsung-i9100)|i9100]] running XFCE]]
+{{Infobox interface
+| image = File:I9100-xfce.jpeg
+| imagecaption = [[Samsung_Galaxy_SII_(samsung-i9100)|Samsung Galaxy SII]] running XFCE
+}}
 
-=== Installation ===
+Xfce4 is a GTK-based [[User-Interfaces|desktop environment]] aiming to be fast and lightweight.<br>
+
+== Status ==
+
+It works on most devices with a working display, and runs fine without hardware acceleration.
+
+== Installation ==
 * <code>pmbootstrap init</code>
 * <code>User interface: xfce4</code>
 * <code>Extra packages: xf86-video-vesa mesa-egl</code>
 ** Add <code>matchbox-keyboard</code> to get an on-screen keyboard [https://postmarketos.org/static/img/2017-12/xfce4-i9505.jpg]
 
-=== Calibrate the touchscreen ===
+== Calibrate the touchscreen ==
 If you rotate the screen change/add a value in this file:
 <pre>
 sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
@@ -21,7 +29,7 @@ ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
 # reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
 </pre>
 
-=== Controlling display power management ===
+== Controlling display power management ==
 To control display from a terminal first set DISPLAY environment variable like:
 <source lang="shell">
 export DISPLAY=:0.0
