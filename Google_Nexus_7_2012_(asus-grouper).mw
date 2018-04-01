@@ -14,11 +14,9 @@
 | memory = 1 GB
 }}
 === Contributors ===
-
 * antonok
 
 === What works ===
-
 * Boot process
 * Telnet/SSH over USB
 * Screen
@@ -27,20 +25,17 @@
 * Wifi (somewhat hacky so far, will improve soon!)
 
 === What does not work ===
-
 * weston-keyboard
 * <s>Can't boot without reflashing boot (!) [https://github.com/postmarketOS/pmbootstrap/issues/834#issuecomment-341231881]</s> '''Update:''' Does not seem to be an issue any more
 * Full-disk Encrpyion. Use <code>install --no-fde</code>
 
 === How to enter flash mode ===
-
 * Connect a USB cable
 * Power the device off
 * Hold power + volume down
 * <code>fastboot</code> should work when the green android appears on the screen
 
-=== Installation process: ===
-
+=== Installation process ===
 <syntaxhighlight lang="shell" line='line'>
 $ git clone https://github.com/postmarketOS/pmbootstrap
 $ cd pmbootstrap
@@ -50,14 +45,12 @@ $ ./pmbootstrap.py flasher flash_kernel (optional?)
 $ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
-=== UI options: ===
-
+=== UI options ===
 * Weston: Boots, but also occasionally reboots on its own.
 * Hildon: Boots into a black screen. Poking some <code>/sys/</code> variables might make the screen flash or turn on, but it remains unusable
 * KDE: Never finishes the flash, which in turn wrecks your device partitions. This has happened even with <code>flasher flash_rootfs --partition userdata</code>
 
 === Notes ===
-
 * I am using the LineageOS kernel found [https://github.com/LineageOS/android_kernel_asus_grouper here]
 * The kernel cannot be compiled on versions of gcc newer than 4.9 without the appropriate patch
 * I could not get UART debugging through the headphone jack to work - as far as I can tell, and according to a few other sources I found, the 2012 version of the Nexus 7 does not have this feature.
