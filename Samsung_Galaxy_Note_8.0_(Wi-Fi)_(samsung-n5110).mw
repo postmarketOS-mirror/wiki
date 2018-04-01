@@ -31,7 +31,7 @@
 == What does not work ==
 
 * Bluetooth pairing with bluez5 (bluez4 is working, more on that soon)
-* [[osk-sdl]], charging-sdl - neither the charging animation nor FDE work. The problem is somewhere in SDL2 that no renderer can be initialized, it seems that it cannot get the surface of the window.
+* [[osk-sdl]], charging-sdl - neither the charging animation nor FDE work. See [https://github.com/postmarketOS/osk-sdl/pull/78 osk-sdl#78] for details including a possible fix (which needs patching sdl2).
 * GPS
 * Camera
 * Sleep etc.
