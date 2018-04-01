@@ -68,3 +68,6 @@ $ ./pmbootstrap.py flasher flash_rootfs
 * A newer kernel, that should work, can be found here (thanks to Jasper in IRC): https://github.com/Unlegacy-Android
 
 ''Fun fact: <code>grouper</code> was the first tablet to run pmOS!''
+
+== See also ==
+* {{github|445}}: Unfinished pull request to add wifi drivers
