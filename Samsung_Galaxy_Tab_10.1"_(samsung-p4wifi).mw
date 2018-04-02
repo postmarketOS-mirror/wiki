@@ -22,7 +22,7 @@
 
 == Introduction ==
 
-postmarketOS for the Samsung Galaxy Tab 10.1 runs on a Linux 4.14 kernel using both mainline and forward ported drivers. Some peripherals are using mainline device driver where applicable. Some peripherals which are not working on or don't have mainline drivers are using drivers forward ported from the stock 3.1.10 kernel.
+postmarketOS for the Samsung Galaxy Tab 10.1 runs on mainline Linux kernel fork. The kernel uses both mainline and forward ported drivers. Some peripherals are using mainline device driver where applicable. Some peripherals which are not working on or don't have mainline drivers are using drivers forward ported from the stock 3.1.10 kernel.
 
 == What works ==
 * Flashing with heimdall
@@ -74,9 +74,7 @@ The ALSA UCM config files were generated using the <code>xml2ucm</code> tool. Th
 == Other Information ==
 ==== Hardware Information & Mainline Driver Status ====
 
-The Linux 4.14 mainlining effort contains drivers forward ported from the stock Samsung Linux 3.1.10 kernel which shipped with the device. Some peripheral devices have been transitioned over to the mainline driver.
-
-Other drivers are not in the mainline kernel or the device is not compatible with the mainline driver
+The Linux mainlining effort contains drivers forward ported from the stock Samsung Linux 3.1.10 kernel which shipped with the device. Some peripheral devices have been transitioned over to the mainline driver. Other drivers are not in the mainline kernel or the device is not compatible with the mainline driver.
 
 {| class="wikitable feature-colors"
 !Peripheral Type
