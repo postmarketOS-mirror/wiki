@@ -141,7 +141,7 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * [ ] Improve computer <-> phone communication (maybe trough a [https://cgit.kde.org/kdeconnect-kde.git kdeconnect] port)
 
 === [[User:Jrg|Julian Goldsmith]] ===
-* ☐ Mainline the OnePlus One: I've gotten [[https://github.com/flto/linux/ flto's kernel]] running, which gives us linux-next from 3/15/18
+* ☐ Mainline the OnePlus One: I've gotten [https://github.com/flto/linux/ flto's kernel] running, which gives us linux-next from 3/15/18
 * ☐ Get Freedreno working on the OnePlus One: I have Freedreno working, but the screen is only updated about once a minute.  I suspect it has to do with the panel driver
 * ☐ Get oFono working on the OnePlus One
 * ☐ Get WiFi working on the OnePlus One
