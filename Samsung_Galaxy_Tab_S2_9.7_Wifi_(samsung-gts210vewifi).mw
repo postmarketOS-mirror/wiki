@@ -103,7 +103,11 @@ major minor  #blocks  name
  179       32       4096 mmcblk0rpmb
 </pre>
 
-gts210vewifi:/ $ ls -la /dev/block/platform/soc.0/7824900.sdhci/by-name/                                  <
+gts210vewifi:/ $ ls -la /dev/block/bootdevice                                                     
+<pre>lrwxrwxrwx 1 root root 39 2016-01-17 22:21 /dev/block/bootdevice -> /dev/block/platform/soc.0/7824900.sdhci
+</pre>
+
+gts210vewifi:/ $ ls -la /dev/block/platform/soc.0/7824900.sdhci/by-name/
 <pre>
 total 0
 drwxr-xr-x 2 root root 820 2016-01-11 20:43 .
@@ -150,17 +154,45 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
 </pre>
 
 == Installation ==
-ATTENTION - DEVICE DOES NOT BOOT YET, here's what I tried up to now:
-* had problems with "heimdall flash --KERNEL ..." command used by "pmbootstrap flasher flash_kernel", it did stop with "ERROR: Partition "KERNEL" does not exist in the specified PIT."
-* flashing via heimdall does not seem to work - device uses lowercase partition labels which are not supported by heimdall, e.g.
-    pmbootstrap flasher flash_rootfs --partition userdata
-  gives:
-    ERROR: Partition "userdata" does not exist in the specified PIT.
-  if using uppercase "USERDATA" then flashing ''seems'' to work:
-    pmbootstrap flasher flash_rootfs --partition USERDATA
-  '''but does not''', as userdata partition size is 0 after that command (seen by TWRP recovery)
-  same for "SYSTEM" and "BOOT" partitions
-* flashing via TWRP recovery zip file, also installing the recovery zipfile via TWRP does '''not''' seem to work, system partition size is 0MB afterwards, seen in TWRP recovery in backup menu. ... this explains why device does not boot after pmOS is "installed" - it isn't in reality?!
+ATTENTION - DEVICE DOES NOT BOOT YET, it hangs at the initial boot screen while displaying "
+KERNEL IS NOT SEANDROID ENFORCING
+Set Warranty Bit : kernel
+
+SAMSUNG
+Galaxy Tab S2
+
+POWEREd BY 
+android
+"
+
+Not reachable via SSH/telnet - too early?
+
+Here's what I tried up to now, all with same result - hangs with message above:
+* installed system on sdcard pmbootstrap install --no-fde --sdcard=/dev/..., pmbootstrap flasher flash_kernel 
+* or flashed both system and boot image to boot and system partitions
+* tried also via TWRP recovery zip file
+
+flashing works, read out boot partition after flashing via TWRP, and it did contain the pmOS boot image.
+
+Not mentioned in the porting docu yet: Had to use '''uppercase''' partition labels in deviceinfo_flash_heimdall_partition_(kernel|system) variables in deviceinfo file, even if their symlinks are lowercase (e.g. "system -> /dev/block/mmcblk0p36"), otherwise get 'ERROR: Partition "system" does not exist in the specified PIT.'
+
+boot.img compared with LineageOS 15.1 boot.img looks quite identical:
+<pre>$ unpackbootimg -i boot.img -o boot.img.dir
+BOARD_KERNEL_CMDLINE console=null androidboot.hardware=qcom androidboot.wificountrycode=00 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk buildvariant=userdebug
+BOARD_KERNEL_BASE 80000000
+BOARD_NAME
+BOARD_PAGE_SIZE 2048
+BOARD_HASH_TYPE sha1
+BOARD_KERNEL_OFFSET 00008000
+BOARD_RAMDISK_OFFSET 02000000
+BOARD_SECOND_OFFSET 00f00000
+BOARD_TAGS_OFFSET 01e00000
+BOARD_DT_SIZE 800768
+</pre>
+except that LineageOS boot image sets a BOARD_NAME, BOARD_OS_VERSION and BOARD_OS_PATCH_LEVEL. boot.img-dtb files inside are identical.
+
+
+
 
 == See also ==
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
