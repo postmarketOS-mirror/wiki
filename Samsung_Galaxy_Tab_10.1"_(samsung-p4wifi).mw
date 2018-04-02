@@ -81,6 +81,10 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 !Hardware
 ! Mainline Driver<br/>Status
 |-
+|Analog Digital Converter
+|stmpe811
+|Y
+|-
 |Audio
 |wm8994
 |Y
@@ -105,8 +109,8 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |max17042
 |P
 |-
-|GPIO Expander
-|stmpe811
+|GPS
+|bcm4751
 |P
 |-
 |GPU
@@ -115,11 +119,7 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |-
 |HDMI Connector
 |sii9234
-| - 
-|-
-|GPS
-|bcm4751
-|P
+| -
 |-
 |Sensors
 * gyroscope
@@ -135,7 +135,12 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |-
 |Touch Digitizer
 |mxt1386
-|P
+|Y
+
+|-
+|Vibration Motor
+|isa1200
+| P 
 |-
 |Voltage Regulators
 |tps6586x
