@@ -32,10 +32,10 @@ postmarketOS for the Samsung Galaxy Tab 10.1 runs on a Linux 4.14 kernel using b
 * Wifi
 * Battery
 * Audio (headphone & speaker only)
+* Bluetooth
 
 == What does not work ==
 * 3D acceleration
-* Bluetooth
 * Camera
 * GPS
 * Accelerometers
