@@ -42,9 +42,6 @@ Hold POWER + VOLDOWN, press Power to confirm Fastboot mode
 * $ pmbootstrap flasher flash_system
 
 == See also ==
-<!--
 Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{github|1309}} Initial pull request
 * {{github|1384}} Kernel panic
-
--->
