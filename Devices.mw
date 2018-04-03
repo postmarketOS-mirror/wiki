@@ -67,6 +67,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | asus-flo
   | Y  || Y  || Y  || Y  || Y  || Y  || P  || P  ||  || Y  ||  ||  ||  ||  ||  || -  || -  || 
 |-
+  | style="white-space: nowrap;" | [[Google Nexus 9 (htc-flounder)|Google Nexus 9]]
+  | style="white-space: nowrap;" | htc-flounder
+  | Y  || Y  ||   || P  ||    ||    ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
+|-
   | style="white-space: nowrap;" | [[Google Nexus 10 (samsung-manta)|Google Nexus 10]]
   | style="white-space: nowrap;" | samsung-manta
   | Y  || Y  ||   || Y  || Y  || Y  ||   ||   ||  ||   ||  ||  ||  ||  ||  || -  || -  || 
