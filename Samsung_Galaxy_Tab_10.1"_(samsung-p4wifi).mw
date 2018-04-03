@@ -188,3 +188,4 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 * [https://github.com/Decatf/linux/ decatf mainline Linux kernel]
 * [https://github.com/Decatf/android_kernel_samsung_p4 stock Samsung 3.1.10 kernel]
 * [https://github.com/grate-driver/ Grate driver]
+* {{github|1386}} Update linux-samsung-p4wifi to kernel 4.16 (with some comments about what's left to do before we could have a shared mainline kernel)
