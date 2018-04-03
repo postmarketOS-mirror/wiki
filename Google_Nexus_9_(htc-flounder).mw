@@ -1,0 +1,50 @@
+[[Category:Booting]]
+{{Infobox device
+| manufacturer = HTC
+| name =  Nexus 9 (Wifi)
+| codename = Flounder
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = Nexus 9
+| releaseyear = 2014
+| originalsoftware = CHANGE_ME
+| chipset = NVIDIA Tegra K1
+| cpu = 2.3 GHz dual-core 64-bit Denver
+| gpu = 192-core Kepler, 16M colors
+| storage = 16GB/32GB
+| display = 2048×1536 LCD IPS
+| memory = 2 GB LPDDR3-1600 RAM
+}}
+
+== Contributors ==
+* Alexandroid99
+
+== What works ==
+USB Ethernet
+SSH
+Initfs Telnet
+Display (Google Logo disappears after short while, cyan mouse cursor visible if Mate is installed)
+Vibration
+Camera
+
+== What does not work ==
+Wifi
+Bluetooth
+Touch
+Starting any GUI
+Staying up and responsive for more than ~5min (kworker hangs and then panics the kernel)
+
+== How to enter flash mode ==
+
+Hold POWER + VOLDOWN, press Power to confirm Fastboot mode
+
+== Installation ==
+$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_system
+
+== See also ==
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|1309}} Initial pull request
+* {{github|1384}} Kernel panic
+
+-->
