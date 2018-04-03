@@ -148,10 +148,12 @@ You can enable <code>CONFIG_VT</code> using <code>pmbootstrap menuconfig</code> 
 
 === My screen is red! ===
 
-There are some buggy framebuffer drivers (e.g. in LG Nexus 5) that report incorrect data. You can override it with:
+There are some buggy framebuffer drivers (e.g. in LG Nexus 5) that report incorrect data. You can override it by launching weston with:
 
 <pre>weston --pixman-type=2</pre>
-More information on [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54]
+To make it persistent, you can set it in the [[Deviceinfo_reference#weston|deviceinfo]]:
+<pre>deviceinfo_weston_pixman_type=2</pre>
+More information on [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54] and [[Troubleshooting:display#My_screen_is_red.21]]
 
 === Errors with grsec-based kernel on the host system ===
 
