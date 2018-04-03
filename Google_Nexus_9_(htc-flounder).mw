@@ -39,7 +39,7 @@ Hold POWER + VOLDOWN, press Power to confirm Fastboot mode
 
 == Installation ==
 * $ pmbootstrap flasher flash_kernel
-* $ pmbootstrap flasher flash_system
+* $ pmbootstrap flasher flash_rootfs
 
 == See also ==
 * {{github|1309}} Initial pull request
