@@ -24,8 +24,8 @@
 * Framebuffer works
 * Network through USB
 * SSH
-* Touchscreen (broken see [https://github.com/postmarketOS/pmbootstrap/issues/322 #322])
-* Weston with demo menu (broken see [https://github.com/postmarketOS/pmbootstrap/issues/322 #322])
+* Touchscreen
+* Weston with demo menu
 * Wifi
 
 === What does not work ===
