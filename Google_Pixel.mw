@@ -35,7 +35,12 @@ The sailfish variant of the Google Pixel shares the same kernel builds as the Pi
 
 == What works ==
 
-Untested as of 2018-03-28.
+TLDR;
+
+* Nothing
+
+Installation using normal measures does not successfully boot. This is likely due to the fact that the Google Pixel's fastboot has two boot slots (A and B).
+What this effectively means is that fastboot allows you to dual boot. That's nice and all, but it's annoying. What we will likely have to do is flash via TWRP. Needs more investigation.
 
 == What does not work ==
 
