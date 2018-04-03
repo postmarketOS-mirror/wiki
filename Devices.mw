@@ -259,6 +259,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | semc-anzu
   | Y  || Y  || Y  || Y  || P || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Sony Xperia T3 (sony-seagull)|Sony Xperia T3]]
+  | style="white-space: nowrap;" | sony-seagull
+  | Y  || Y  || Y  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Sony Xperia Z (sony-yuga)|Sony Xperia Z]]
   | style="white-space: nowrap;" | sony-yuga
   | Y  || Y  || Y  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -548,10 +552,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Sony SmartWatch 3 (sony-tetra)|Sony SmartWatch 3]]
   | sony-tetra
   | Kernel compiles, not tested
-|-
-  | [[Sony Xperia T3 (sony-seagull)|Sony Xperia T3]]
-  | sony-seagull
-  | screen and USB working, pending kernel upgrade before merging
 |-
   | [[Xperia-Z2|Sony Xperia Z2]]
   | sony-sirius
