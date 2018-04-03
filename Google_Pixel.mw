@@ -51,7 +51,19 @@ Coming soon
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
+== Serial Debugging ==
+
+Sounds like this is possible, given kernel has serial debugging enabled.
+
+http://www.viruss.eu/malware/practical-android-debugging-via-kgdb/
+
 == To Do List ==
+
+=== Doing ===
+
+* [ojbr] - Investigate serial debugging. Obtained a USB FTDI device, just need to hack together a 3.5mm TRRS cable
+
+=== Backlog === 
 
 * Re-enable LZMA kernel image compression, add via makedepends
 * Test device flashing using fastboot
