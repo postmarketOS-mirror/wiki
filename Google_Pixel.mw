@@ -50,6 +50,22 @@ Watch this space.
 
 It is required that the device is '''cell carrier unlocked''' before attempting to perform an OEM unlock using fastboot.
 
+* Enter fastboot by shutting down the device, and hold volume down + power until you see the fastboot screen.
+* Depending on the phone's previous sleep state, you may be alerted that a RAM dump is in progress. Ignore these, keep holding the buttons until you end up in fastboot.
+
+Once cell unlocked, you must OEM unlock from fastboot through the standard command:
+<pre>
+<nowiki>#fastboot oem unlock</nowiki>
+</pre>
+
+Be sure that you are using fastboot slot A. If you need to change slots, perform:
+<pre>
+<nowiki>#fastboot set_active a
+#fastboot reboot bootloader</nowiki>
+</pre>
+
+At this point, you should be ready to test pmOS deployments.
+
 == Installation ==
 
 Coming soon
