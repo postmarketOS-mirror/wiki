@@ -50,28 +50,7 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 * use the netcat method (see below)
 * use the recovery zip installer (you need to install a recovery like TWRP on your device, then run <code>pmbootstrap install --android-recovery-zip</code> and <code>pmbootstrap flasher --method=adb sideload</code>.)
 
-==== netcat method ====
-Flashing to device memory should be possible using [https://github.com/postmarketOS/pmbootstrap/issues/456 drebrez's netcat method (#456)].
-
-Init pmbootstrap. Make sure to choose ''none'' for the user interface instead of ''weston'' because ''weston'' makes the image just a little bit too large for the unresized partition.
-
-<source lang="shell">$ ./pmbootstrap.py init</source>
-
-Start the build process
-
-<source lang="shell">$ ./pmbootstrap.py install</source>
-
-Flash postmarketOS to the device:
-
-https://github.com/postmarketOS/pmbootstrap/issues/456
-
-For the d710, on step 5 use ''/dev/mmcblk0p11'' as the install partition.
-
-On step 8, use <source lang="shell">pv /home/pmos/rootfs/samsung-i9100.img | nc 172.16.42.1 60000</source> instead.
-
-===== Step by step guide for Flashing to device memory =====
-
-''Please do not hesitate to remove or edit if this does not belong here or match intended wiki content. This does not bring anything new just summary.''
+===== Step by step guide for Flashing via netcat [https://github.com/postmarketOS/pmbootstrap/issues/456 (#456)] =====
 
 - Build image (on your computer)
 
@@ -97,8 +76,7 @@ On step 8, use <source lang="shell">pv /home/pmos/rootfs/samsung-i9100.img | nc 
 
   $ ./pmbootstrap.py install
 
-- Flash to phone memory - This will replace (break) your current phone system!
-The description is using the alternative flash method because there it did not work for me with heimdall - https://github.com/Benjamin-Dobell/Heimdall/issues/418
+- Flash to phone memory - This will replace (break) your current phone system! This uses the alternative flash method because it currently doesn't seem to work with heimdall - https://github.com/Benjamin-Dobell/Heimdall/issues/418
 
 -- Set phone to ODIN mode
 
@@ -107,7 +85,7 @@ The description is using the alternative flash method because there it did not w
   3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
   4. Push VOLUME_UP to continue to ODIN mode screen
 
--- Set image for NETCAT flash method
+-- Setup image for NETCAT flash method
 
   $ ./pmbootstrap.py initfs hook_add debug-shell
 
@@ -126,19 +104,19 @@ The description is using the alternative flash method because there it did not w
   $ telnet 172.16.42.1
 
 -- Start netcat to listen for image (on the phone)
-''/dev/mmcblk0p9 should be FACTORYFS partition you check by running fdisk -l /dev/mmcblk0''
+''/dev/mmcblk0p9 should be FACTORYFS partition. Check by running fdisk -l /dev/mmcblk0''
 
   / # nc -v -l -p 60000 > /dev/mmcblk0p9
 
--- Switch to pmboostrap chroot (on the computer in other terminal)
+-- Switch to pmboostrap chroot (on the computer in another terminal)
 
   $ ./pmbootstrap.py chroot --suffix native
 
--- Install pv (in the chroot)
+-- Install pv in the chroot
 
   / # apk add pv
 
--- Send image from computer to netcat (on the computer)
+-- Send image from computer to netcat (via the chroot)
 
   / # pv /home/pmos/rootfs/samsung-i9100.img | nc 172.16.42.1 60000
 
