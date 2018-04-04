@@ -78,6 +78,18 @@ To this:
     echo "$path"
     cat "$path"
 fi</pre>
+If there are two or more entries to skip, combine them with a logical OR (||) like this:
+<pre class="shell">if test -f "$path"; then
+    if [ "$path" = "/sys/devices/mdss_dsi_panel/interval_array" ] ||
+       [ "$path" = "/sys/devices/iio:device0/self_test_run" ] ||
+       [ "$path" = "/sys/devices/iio:device1/self_test_run" ]
+    then
+        continue
+    fi
+    echo "$path"
+    cat "$path"
+fi</pre>
+
 
 == Examples ==
 
