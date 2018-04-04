@@ -83,3 +83,32 @@ nonfree_firmware() {
 	mkdir "$subpkgdir"
 }
 </syntaxhighlight>
+
+== Multiple kernels ==
+This is relevant in case it is possible to boot your device with multiple kernels (most common case is the downstream kernel from the vendor <code>linux-$devicename</code>, and one of the upstream <code>linux-postmarketos-*</code> kernels).
+
+* Remove the current kernel package from <code>depends</code> of your device's <code>APKBUILD</code>
+* Add the kernel subpackages and subpackage functions. One example from <code>device-sony-amami</code>:
+: <syntaxhighlight lang="bash">
+...
+subpackages="
+	$pkgname-kernel-downstream:kernel_downstream
+	$pkgname-kernel-mainline:kernel_mainline
+	$pkgname-nonfree-firmware:nonfree_firmware
+"
+...
+kernel_downstream() {
+	pkgdesc="Display and wifi works (see device table for details)"
+	depends="linux-sony-amami"
+	mkdir "$subpkgdir"
+}
+
+kernel_mainline() {
+	pkgdesc="For kernel development only (most features aren't working)"
+	depends="linux-postmarketos-mainline"
+	mkdir "$subpkgdir"
+}
+...
+</syntaxhighlight>
+* See <code>device-qemu-amd64</code> for another example:
+* Implementation details and discussion in {{github|1363}}
