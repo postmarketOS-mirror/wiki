@@ -49,7 +49,7 @@ Hold power button for ten seconds.
 
 * Install 
 ** using an microsd card (replace mmcblk0 with your sd slot, recommended): <code>pmbootstrap install --sdcard=/dev/mmcblk0</code>
-** until {{github|1206}} is fixed, it is necessary to copy the extracted DTB from a known working ROM such as the TWRP image (see {{github|1378}}):
+** until {{github|1206}} is fixed, it is necessary to copy the extracted [[QCDT]] from a known working ROM such as the TWRP image (see {{github|1378}}):
 *** <code>sudo cp ~/mkbootimg/boot.img-dtb ~/.local/var/pmbootstrap/chroot_rootfs_htc-a5ul/boot/dt.img</code>
 ** using /data partition <code>pmbootstrap flasher flash_rootfs --partition userdata</code> 
 * Insert the microsd card on the device
