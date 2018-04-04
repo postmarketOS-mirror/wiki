@@ -25,9 +25,12 @@
 
 == What works ==
 * compiling kernel
+* booting
+* ssh connection
+* screen output
 
 == What does not work ==
-* booting
+* touch-screen
 * everything else
 
 == How to enter flash mode ==
@@ -154,7 +157,19 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
 </pre>
 
 == Installation ==
-ATTENTION - DEVICE DOES NOT BOOT YET, it hangs at the initial boot screen while displaying "
+
+* installed system on sdcard:
+** put (empty/overwritable) SD-card into host cardreader
+** pmbootstrap install --no-fde --sdcard=/dev/...
+** put SD-Card, now containing pmOS into tablet
+** pmbootstrap flasher flash_kernel     # after this command finishes, device reboots and pmOS starts :-)
+** had to follow [[USB_Network#Assigning_an_IP_address]] as IP to host computer was not automatically assigned:
+*** sudo ip link set TheNetDevName address 12:12:12:12:12:12
+*** sudo ip address add dev TheNetDevName 172.16.42.2/24
+*** sudo dhclient -v TheNetDevName
+
+=== More Historical Details / Hints for Developers ===
+Without proper kernel setting that allows [[USB_Network#Kernel_configuration_parameters|RNDIS via USB connection]] (CONFIG_USB_ETH with CONFIG_USB_ETH_RNDIS, or CONFIG_USB_G_ANDROID), device did '''''seem to''''' hang at the initial boot screen while displaying "
 KERNEL IS NOT SEANDROID ENFORCING
 Set Warranty Bit : kernel
 
@@ -164,15 +179,13 @@ Galaxy Tab S2
 POWEREd BY 
 android
 "
+but this was only due to not having an RNDIS connection via USB!
 
-Not reachable via SSH/telnet - too early?
-
-Here's what I tried up to now, all with same result - hangs with message above:
 * installed system on sdcard pmbootstrap install --no-fde --sdcard=/dev/..., pmbootstrap flasher flash_kernel 
 * or flashed both system and boot image to boot and system partitions
 * tried also via TWRP recovery zip file
 
-flashing works, read out boot partition after flashing via TWRP, and it did contain the pmOS boot image.
+Flashing works, read out boot partition after flashing via TWRP, and it did contain the pmOS boot image.
 
 Not mentioned in the porting docu yet: Had to use '''uppercase''' partition labels in deviceinfo_flash_heimdall_partition_(kernel|system) variables in deviceinfo file, even if their symlinks are lowercase (e.g. "system -> /dev/block/mmcblk0p36"), otherwise get 'ERROR: Partition "system" does not exist in the specified PIT.'
 
