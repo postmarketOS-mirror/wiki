@@ -19,9 +19,9 @@ The Nexus 7 2012 (grouper) does not work with this setup and likely does not hav
 
 Google open sourced their own [https://android.googlesource.com/device/google/debugcable/+/master debug cable design] in the AOSP repository.
 
-== Nexus USB debug cable ==
+== Samsung USB debug cable ==
 
-The nexus S and galaxy nexus have the serial port multiplexed with the USB connector instead of the headphone connector. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
+The Nexus S, Galaxy Nexus and other Samsung devices have the serial port multiplexed with the USB connector instead of the headphone connector. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
 
 [[File:Nexus-usb-debug.png]]
 
@@ -34,24 +34,39 @@ It should work with:
 * Samsung GT-P1000 (Galaxy Tab P1000)
 * Samsung GT-S8500 (Wave)
 * Samsung i897 (Captivate)
+* Samsung GT-i9195 (Galaxy S4 mini)
+* Samsung klte (Galaxy S5)
+
+{| class="wikitable"
+  ! colspan="5" | Serial Settings
+|-
+  !  Speed  !!  Data bits  !!  Stop bits  !!  Parity  !!  Flow control
+|-
+  | 115200 || 8 || 1 || No || None
+|}
 
 {| class="wikitable sortable"
   ! rowspan="2" | Device
   ! rowspan="2" | Codename
   ! colspan="2" | Connection
-  ! colspan="5" | Settings
 |-
-  !  Resistor !! Connected VCC !!  Speed  !!  Data bits  !!  Stop bits  !!  Parity  !!  Flow control
+  !  Resistor (R3) !! Connected VCC
 |-
   | style="white-space: nowrap;" | [[Google Galaxy Nexus GSM (samsung-maguro)|Google Galaxy Nexus (GSM)]]
   | style="white-space: nowrap;" | samsung-maguro
   | 619K ohm || No
-  |  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy Mini 2 (samsung-s6500d)|Samsung Galaxy Mini 2]]
   | style="white-space: nowrap;" | samsung-s6500d
   | 530K ohm || No
-  | 115200 || 8 || 1 || No || None
+|-
+  | style="white-space: nowrap;" | [[Samsung Galaxy S4 Mini LTE]]
+  | style="white-space: nowrap;" | samsung-i9195
+  | 619K ohm || No
+|-
+  | style="white-space: nowrap;" | [[Samsung_Galaxy_S5_(samsung-klte)|Samsung Galaxy S5]]
+  | style="white-space: nowrap;" | samsung-klte
+  | 619K ohm || No
 |}
 
 == Mozilla Flame ==
