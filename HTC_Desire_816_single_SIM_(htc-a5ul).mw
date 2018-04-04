@@ -14,7 +14,6 @@
 | memory = 1.5 GB
 }}
 
-
 == Contributors ==
 * Aerotinge
 
@@ -49,8 +48,10 @@ Hold power button for ten seconds.
 {{note|The bootloader have to been unlocked (s-off). If not, see [https://www.htcdev.com/bootloader/ htcdev here].}}
 
 * Install 
-**using an microsd card (replace mmcblk0 with your sd slot)<code>pmbootstrap install --sdcard=/dev/mmcblk0</code>(recommended)
-**using /data partition <code>pmbootstrap flasher flash_rootfs --partition userdata</code> 
+** using an microsd card (replace mmcblk0 with your sd slot, recommended): <code>pmbootstrap install --sdcard=/dev/mmcblk0</code>
+** until {{github|1206}} is fixed, it is necessary to copy the extracted DTB from a known working ROM such as the TWRP image (see {{github|1378}}):
+*** <code>sudo cp ~/mkbootimg/boot.img-dtb ~/.local/var/pmbootstrap/chroot_rootfs_htc-a5ul/boot/dt.img</code>
+** using /data partition <code>pmbootstrap flasher flash_rootfs --partition userdata</code> 
 * Insert the microsd card on the device
 * Connect usb cable to your phone and boot it into flash mode (HBOOT)
 * Select "FASTBOOT" by volumes and power button. Make sure it displays "FASTBOOT USB" on top.
@@ -63,4 +64,5 @@ The device is similar to the flagship in 2014, hTC One (m8) in many aspect.
 Some resources can be shared between two devices.
 
 == Links ==
-[https://github.com/bigsuperprojects/android_kernel_htc_msm8974/ Current working kernel source]
+* {{github|1378}} initial pull request
+* [https://github.com/bigsuperprojects/android_kernel_htc_msm8974/ Current working kernel source]
