@@ -158,15 +158,16 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
 
 == Installation ==
 
-* installed system on sdcard:
-** put (empty/overwritable) SD-card into host cardreader
-** pmbootstrap install --no-fde --sdcard=/dev/...
-** put SD-Card, now containing pmOS into tablet
-** pmbootstrap flasher flash_kernel     # after this command finishes, device reboots and pmOS starts :-)
-** had to follow [[USB_Network#Assigning_an_IP_address]] as IP to host computer was not automatically assigned:
-*** sudo ip link set TheNetDevName address 12:12:12:12:12:12
-*** sudo ip address add dev TheNetDevName 172.16.42.2/24
-*** sudo dhclient -v TheNetDevName
+installed system on sdcard:
+* put (empty/overwritable) SD-card into host cardreader
+* pmbootstrap install --no-fde --sdcard=/dev/...
+* put SD-Card, now containing pmOS into tablet
+* pmbootstrap flasher flash_kernel     # after this command finishes, device reboots and pmOS starts :-)
+* had to follow [[USB_Network#Assigning_an_IP_address]] as IP to host computer was not automatically assigned:
+** sudo ip link set TheNetDevName address 12:12:12:12:12:12
+** sudo ip address add dev TheNetDevName 172.16.42.2/24
+** sudo dhclient -v TheNetDevName
+* ssh -p 22 user@172.16.42.1
 
 === More Historical Details / Hints for Developers ===
 Without proper kernel setting that allows [[USB_Network#Kernel_configuration_parameters|RNDIS via USB connection]] (CONFIG_USB_ETH with CONFIG_USB_ETH_RNDIS, or CONFIG_USB_G_ANDROID), device did '''''seem to''''' hang at the initial boot screen while displaying "
@@ -203,9 +204,6 @@ BOARD_TAGS_OFFSET 01e00000
 BOARD_DT_SIZE 800768
 </pre>
 except that LineageOS boot image sets a BOARD_NAME, BOARD_OS_VERSION and BOARD_OS_PATCH_LEVEL. boot.img-dtb files inside are identical.
-
-
-
 
 == See also ==
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
