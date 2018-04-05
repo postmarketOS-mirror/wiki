@@ -23,7 +23,9 @@
 
 == What works ==
 Kernel compiles
+
 Kernel boots
+
 USB Networking
 
 == What does not work ==
