@@ -120,7 +120,7 @@ Usually pmOS writes the whole rootfs (which has its own /boot and / partitions) 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap install
 $ pmbootstrap export
-$ losetup <pathtoimage> /dev/loop0
+$ losetup /dev/loop0 <pathtoimage>
 $ dd if=/dev/loop0p1 of=boot_partition.img
 $ dd if=/dev/loop0p2 of=root_partition.img
 $ fastboot flash system root_partition.img
