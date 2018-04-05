@@ -91,6 +91,10 @@ These devices are included in the postmarketOS source tree, and it is at least p
   | style="white-space: nowrap;" | htc-vivo
   | Y  || Y  ||   || Y  ||   ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[HTC One M8 (htc-m8)|HTC One M8]]
+  | style="white-space: nowrap;" | htc-m8
+  | Y  || Y  ||   ||   ||   ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Huawei-Ascend-Y530|Huawei Ascend Y530]]
   | style="white-space: nowrap;" | huawei-y530
   | Y  || P  || Y  || Y  || Y  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
