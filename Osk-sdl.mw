@@ -92,6 +92,12 @@ The file format is quite similar to the calibration for [[Screen_Calibration#lib
 * [https://linux.die.net/man/5/directfbrc directfbrc man page]
 
 == Troubleshooting ==
+=== Updating osk-sdl without flashing the rootfs ===
+<code>osk-sdl</code> does not get updated when flashing the kernel/initramfs/boot.img to your device. That is, because it is in the <code>initramfs-extra</code> file inside the boot partition of the rootfs. Here's a rough description of the steps you need to take to update it without flashing the entire rootfs (which is the easy way), in case you have flashed a version that doesn't boot up anymore. As usually, just ask in the channel for help if you get stuck.
+* Install the [[Inspecting_the_initramfs|debug-shell]] initramfs hook and connect via telnet
+* Mount the boot partition of the rootfs image
+* use netcat to upload the new <code>initramfs-extra</code> file via telnet
+
 === Unlocking via telnet ===
 If osk-sdl does not work for some reason, but you really need to access your data, you can [[Inspecting_the_initramfs|connect to the initramfs via telnet]], then run the following to unlock it:
 
