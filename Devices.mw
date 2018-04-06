@@ -2,7 +2,7 @@ __NOTOC__
 Please [[Help:Device Page|add devices you're porting here]], and write your porting progress in the wiki page. The status values and columns are described below the table.
 
 == Feature matrix ==
-These devices are included in the postmarketOS source tree, and it is at least possible to boot them. To confirm that, either the screen or networking/serial output must be working. If your device fulfills these requirements and is not yet on the list, please make a [https://help.github.com/articles/about-pull-requests/ pull-request] and edit the list after it has been accepted.
+It is possible to boot these devices at the very least. To confirm that, either the screen or networking/serial output must be working. If your device fulfills these requirements and is not yet on the list, please add it to the table below and then make a [https://help.github.com/articles/about-pull-requests/ pull-request].
 
 {| class="wikitable sortable feature-colors"
   ! rowspan="2" | Device
