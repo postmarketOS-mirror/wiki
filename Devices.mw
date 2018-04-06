@@ -539,7 +539,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Samsung_Galaxy_Tab_S2_9.7_Wifi_(samsung-gts210vewifi)|Samsung Galaxy Tab S2 9.7 Wifi]]
   | samsung-gts210vewifi
-  | Kernel compiles, booting pmOS does not work yet: black screen, no connectivity
+  | Kernel compiles, booting and SSH connectivity ok, touchscreen not yet
 |-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
