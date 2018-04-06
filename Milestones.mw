@@ -136,8 +136,12 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 ✖ Get wifi working on the HDX...
 
 === MayeulC ===
-* [X] Getting my Xperia T3 to work with pmos
+* [X] Get my Xperia T3 to work with pmos
 * [WIP] Improve the documentation and the tools used to do so
+* [ ] Improve Xperia T3 support
+** [ ] [https://github.com/postmarketOS/pmbootstrap/pull/1389#issuecomment-378878902 More recent] kernel fork
+** [ ] Mainline the device
+* [ ] Add support for my other devices
 * [ ] Improve computer <-> phone communication (maybe trough a [https://cgit.kde.org/kdeconnect-kde.git kdeconnect] port)
 
 === [[User:Jrg|Julian Goldsmith]] ===
