@@ -1,16 +1,148 @@
-'''GPE Palmtop environment''' is an old school touch interface for PDAs and such. See [https://en.wikipedia.org/wiki/GPE_Palmtop_Environment the Wikipedia article] for more information. User duncan^ has put quite some work in an attempt to package it for postmarketOS, but he came to the conclusion that it is a '''dead end'''. He wrote the following in #postmarketOS:
-<blockquote>
-My quick'n'dirty port of GPE is entirely broken
+== What is the GPE Palmtop Environment? ==
 
-The configuration program segfaults because it expects strange things to do with time (it reads /etc/timezone, which does not exist on standard POSIX systems or indeed most non-standard Unixy systems); it depends on archaic libraries, some of which have known remote code execution (one of them via a maliciously crafted vcard file)
+The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
 
-and I could not get their login-manager to compile. It won't link properly.
+Let's identify some the components of GPE:
 
-It seems like a rewrite would be easier at this stage tbh, or to use more modern mobile interfaces.
+; gpe-announce 
+: Announcement application
+; gpe-appmgr              
+: Install/uninstall/update programs
+; gpe-calculator          
+: Calculator application
+; gpe-calendar            
+: Calendar application
+; gpe-clock               
+: Clock application
+; gpe-conf                
+: Main configuration application
+; gpe-contacts            
+: Contacts application
+; gpe-edit                
+: Simple text-editor application
+; gpe-expenses            
+: Expenses application
+; gpe-gallery             
+: Image gallery application
+; gpe-icons               
+: GPE icon set
+; gpe-login               
+: Display manager for GPE
+; gpe-mixer              
+: Sound mixer application
+; gpe-ownerinfo           
+: Display device owner information
+; gpe-su                  
+: Graphical su application
+; gpe-taskmanager         
+: Task manager application
+; gpe-todo                
+: Todo application
 
-and it would not be a good idea to let people use it, as they would be putting themselves in danger.
+Additionally these programs pull in various libraries, an on-screen keyboard, and the designated window manager seems to be Matchbox (in OpenEmbedded Classic). Additionally something like ipkg or opkg was used as package manager typically, and OpenEmbedded was used as a base system by most of the systems that shipped GPE (for instance, see the Ångström distribution).
 
-I don't know where the latest code is; it seems to have died in about 2007 and then had a prolonged existence on the handhelds.org website, which is now lost in the realms of dead projects and petty spats.
+Furthermore, the last version of Debian that shipped the suite was Wheezy. The project appears to have suffered from a lack of maintainers, a trademark and copyright spat between the handhelds.org website and linuxtogo website, as well as very slow development. 
 
-It seems a shame but the amount of work that would go into porting it properly seems like it would be doing users a disservice, given it's entirely unmaintained, poorly-documented, and not useful to a lot of people.
-</blockquote>
+== Problems with the system today ==
+
+The GPE code is entirely unmaintained and has dependencies which are unmaintained, for instance SQLite versions from around 2005.
+It also has its main configuration program running as setuid root, which presents quite a large attack surface for a simple program.
+It also depended on non-standard components such as /etc/timezone (this is not portable to systems not based on Debian, let alone
+POSIX-compliant Unix-like systems). 
+
+Additionally, certain libraries, that the suite depends on, ship with some terrible security issues, for instance old versions of sqlite.
+
+The most immediate problems, however are with compiling the thing. There are simple issues with config.sub in the autoconf build system in many of the packages not understanding Alpine Linux's triples or any triple including the form "musl" or "armv6". There are more serious problems such as some of the packages not linking properly. This was the main problem in the end.
+
+Another immediate problem is that the homepage for GPE is now gone. The source code archives that were used came from Debian. They are to my knowledge the latest (they shipped with Debian Wheezy, which came out in May 2013)
+
+=== Programs and requisite libraries ===
+
+In total, the following components were ported.
+
+==== Programs ====
+
+; gpe-announce
+: Provides alarm support
+; gpe-appmgr
+: Manage apps, but it may be useless and depend on ipkg/opkg.
+; gpe-calendar
+: Simple calendar program. Useful on its own.
+; gpe-clock
+: Clock program. Useful on its own. Segfaults due to non-existence of /etc/timezone. Probably fixable.
+; gpe-conf
+: Central configuration program. SetUID root. Segfaults when other components are broken.
+; gpe-contacts
+: Contacts program. Useful on its own.
+; gpe-edit
+: Text editor. Useful on its own.
+; gpe-gallery
+: Image gallery. Useful on its own.
+; gpe-icons
+: GPE's icon set. Most of the other components depend on it.
+; gpe-ownerinfo
+: Set owner information. Designed to integrate with the login screen. Probably not useful without gpe-login.
+
+==== Libraries and utilities ====
+
+; audiofile
+: Audio package which supports a large number of codecs and media types. Barely maintained.
+; esound
+: The Enlightened Sound Daemon. It was once the sound daemon for Enlightenment and GNOME. Now defunct and unmaintained.
+; libcontactsdb
+: Contacts database library
+; libdisplaymigration
+: Provides display migration support for GTK
+; libeventdb
+: Provides access to GPE calendar data
+; libgpelaunch
+: App launcher library
+; libgpepimc
+: Category management for GPE applications 
+; libgpeschedule
+: Provides access to scheduling data from gpe-schedule
+; libgpevtype
+: Data interchange library for GPE applications
+; libgpewidget
+: GPE widget library, a core component of the GPE suite
+; libhandoff
+: Used in the GPE Palmtop Environment to cause another program instance to come to the foreground. E.g. alarm triggers.
+; libmimedir
+: A MIME Directory Profile implementation
+; libsoundgen
+: GPE sound generator library.
+; libtododb
+: Provides access to gpe-todo's database
+; libxsettings
+: Implements the Xsettings protocol
+; libxsettings-client
+: Accesses the Xsettings protocol
+; sqlite2
+: Old sqlite version. Dependency on this is a bug - libgpeschedule is the sole program that would otherwise need to be refactored to work with sqlite3.
+
+== Going forward ==
+
+Porting GPE would be probably not be worth it, as it is wholly unmaintained and would need an audit, or, even better, a full rewrite. That being said, it would still be useful to finish porting certain components:
+
+; gpe-login
+: Login manager for GPE
+: It needs to be made to link properly. Currently it does not seem to want to link with libx11 (despite patches that would otherwise make it do this) and does not link with Musl's obstack implementation.
+; gpe-su
+: Give programs root access after user authentication
+; Miscellaneous
+: There were once various programs designed to work with GPE that offer useful functionality e.g. gpe-sketch, gpe-calculator, gpe-expenses.
+: It is not clear where the code is.
+
+=== Priorities ===
+
+* Fix dependency on that ancient sqlite version.
+* Fix dependency on the enlightened sound daemon, and on the audiofile library.
+* Make certain programs link properly.
+* Fix security bugs.
+
+== Relevant links ==
+
+* [https://pkg-gpe.alioth.debian.org/ Debian GPE Packaging homepage]
+* [https://pkg-gpe.alioth.debian.org/status.php Tracking status of GPE packages in Debian]
+* [https://web.archive.org/web/20120218044923/http://www.kernelconcepts.de/~fuchs/gpe/doc/ Archived documentation for GPE]
+* [https://web.archive.org/web/20160429103350/http://gpe.linuxtogo.org/projects/gpe-conf.shtml Archive of GPE development website]
