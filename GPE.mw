@@ -146,3 +146,4 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 * [https://pkg-gpe.alioth.debian.org/status.php Tracking status of GPE packages in Debian]
 * [https://web.archive.org/web/20120218044923/http://www.kernelconcepts.de/~fuchs/gpe/doc/ Archived documentation for GPE]
 * [https://web.archive.org/web/20160429103350/http://gpe.linuxtogo.org/projects/gpe-conf.shtml Archive of GPE development website]
+* [https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]
