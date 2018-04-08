@@ -48,7 +48,7 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more i
 * sway
 ** [http://i.imgur.com/rwCM4AY.jpg Photo]
 * '''[[LuneOS]]''' ([https://github.com/postmarketOS/pmbootstrap/issues/629 link]) (UI from continuation of webOS, HP's discontinued and open sourced mobile operating system with Wayland and QT5)
-* PDA interfaces, such as Open Palmtop Integrated Environment and GPE Palmtop Environment may be viable. Both suited to devices capable of stylus input, such as the Nokia N900 and Galaxy Note devices.
+* PDA interfaces, such as Open Palmtop Integrated Environment <del>and [[GPE|GPE Palmtop Environment]]</del> may be viable. Both suited to devices capable of stylus input, such as the Nokia N900 and Galaxy Note devices.
 
 *''[https://wiki.alpinelinux.org/wiki/Category:Desktop Other graphical interfaces supported by Alpine]'' should work to some extent on pmOS.  These include [[GNOME 3]].
 
