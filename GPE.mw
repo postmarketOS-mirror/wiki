@@ -140,6 +140,26 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 * Make certain programs link properly.
 * Fix security bugs.
 
+== What about OPIE and others? ==
+
+=== OPIE ===
+OPIE is an alternative to GPE. It's similarly targeted at embedded systems and is similar in function. However, it uses QT Extended (QTE), which is no longer under active development, and does not compile on more recent systems, let alone under Musl.
+
+* [https://github.com/opieproject/opie OPIE Project]
+
+=== QTMoko ===
+Another alternative is QTMoko. QTMoko is similar to OPIE but they forked QTE and now use a custom patched version of QT (Itself unmaintained). QTMoko is the fork of QTE for OpenMoko handsets. They are looking into moving away from this in the future, though, so this is probably a viable alternative.
+
+* [https://www.mail-archive.com/gta04-owner@goldelico.com/ Main conversation about QTMoko for GTA04 owners]
+* [https://www.mail-archive.com/gta04-owner@goldelico.com/msg00853.html Message about QTMoko potentially moving away from QTE]
+* [http://projects.goldelico.com/p/gta04-qtmoko/ Maintained QTMoko (now at version 2)]
+
+=== SHR ===
+SHR is an OpenEmbedded-based system which combines Enlightenment with the freesmartphone stack, among other things. They use the illume2 Enlightenment module to make Enlightenment fit handhelds' form factor more easily, and provide an on-screen keyboard.
+
+* [http://wiki.openmoko.org/wiki/SHR SHR overview]
+* [http://wiki.openmoko.org/wiki/SHR_User_Manual SHR user manual]
+
 == Relevant links ==
 
 * [https://pkg-gpe.alioth.debian.org/ Debian GPE Packaging homepage]
@@ -147,3 +167,4 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 * [https://web.archive.org/web/20120218044923/http://www.kernelconcepts.de/~fuchs/gpe/doc/ Archived documentation for GPE]
 * [https://web.archive.org/web/20160429103350/http://gpe.linuxtogo.org/projects/gpe-conf.shtml Archive of GPE development website]
 * [https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]
+* [http://wiki.openmoko.org/wiki/Distributions OpenMoko's list of distributions]
