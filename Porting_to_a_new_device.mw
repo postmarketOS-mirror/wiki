@@ -78,13 +78,18 @@ Done!
 
 ==== Shortcut ====
 {{note|You can skip this step and simply use <code>./pmbootstrap.py</code> whenever <code>pmbootstrap</code> is mentioned in the documentation.}}
-<code>./pmbootstrap.py</code> is the key program for postmarketOS development, so you might want to set up <code>pmbootstrap</code> as shortcut, that works from any folder:
+<code>./pmbootstrap.py</code> is the key program for postmarketOS development, so you might want to set up <code>pmbootstrap</code> as shortcut, that works from any folder. For optional <code>zsh</code> auto-completion, follow the steps in <code>helpers/pmbootstrap-autocompletion.zsh</code>.
 
+===== Current shell session =====
+<syntaxhighlight lang="shell-session">
+$ source helpers/envsetup.sh
+</syntaxhighlight>
+This also gives you a <code>pmbroot</code> alias to quickly change to the <code>pmbootstrap</code> folder.
+
+===== Persistent =====
 <syntaxhighlight lang="shell-session">
 $ sudo ln -s $PWD/pmbootstrap.py /usr/local/bin/pmbootstrap
 </syntaxhighlight>
-
-For optional <code>zsh</code> auto-completion, follow the steps in <code>helpers/pmbootstrap-autocompletion.zsh</code>.
 
 ==== Logging ====
 Open a second terminal and run the following command to see detailed logging (such as compiler output). Whenever reporting, that something does not work, please attach the detailed log output from this window.
