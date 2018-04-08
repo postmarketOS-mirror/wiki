@@ -1,0 +1,16 @@
+'''GPE Palmtop environment''' is an old school touch interface for PDAs and such. See [https://en.wikipedia.org/wiki/GPE_Palmtop_Environment the Wikipedia article] for more information. User duncan^ has put quite some work in an attempt to package it for postmarketOS, but he came to the conclusion that it is a '''dead end'''. He wrote the following in #postmarketOS:
+<blockquote>
+My quick'n'dirty port of GPE is entirely broken
+
+The configuration program segfaults because it expects strange things to do with time (it reads /etc/timezone, which does not exist on standard POSIX systems or indeed most non-standard Unixy systems); it depends on archaic libraries, some of which have known remote code execution (one of them via a maliciously crafted vcard file)
+
+and I could not get their login-manager to compile. It won't link properly.
+
+It seems like a rewrite would be easier at this stage tbh, or to use more modern mobile interfaces.
+
+and it would not be a good idea to let people use it, as they would be putting themselves in danger.
+
+I don't know where the latest code is; it seems to have died in about 2007 and then had a prolonged existence on the handhelds.org website, which is now lost in the realms of dead projects and petty spats.
+
+It seems a shame but the amount of work that would go into porting it properly seems like it would be doing users a disservice, given it's entirely unmaintained, poorly-documented, and not useful to a lot of people.
+</blockquote>
