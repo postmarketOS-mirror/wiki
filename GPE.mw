@@ -162,7 +162,7 @@ SHR is an OpenEmbedded-based system which combines Enlightenment with the freesm
 
 A thought: It would be useful to port Enlightenment to Alpine at any rate. It can work as an X11 window manager or as a Wayland compositor, and it is used for instance by Tizen. However, it's codebase is "interesting", particularly the EFL libraries.
 
-== Relevant links ==
+== Relevant resources ==
 
 * [https://pkg-gpe.alioth.debian.org/ Debian GPE Packaging homepage]
 * [https://pkg-gpe.alioth.debian.org/status.php Tracking status of GPE packages in Debian]
