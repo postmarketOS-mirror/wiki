@@ -40,14 +40,18 @@
 There is a bug whereby the screen is not automatically refreshed. To work around this, run the following command as root on the device:
 <pre># while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
 
-== Graphics (hardware-accelerated) ==
+== Mainlining ==
+[[User:jrg|Julian Goldsmith]] is currently [https://github.com/julian-goldsmith/linux working on] mainlining the OnePlus One, based on flacks's [https://github.com/flacks/linux/blob/bacon/v4.15-rc6/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts initial DTS].  Right now, he's using [https://github.com/flto/linux/ flto's kernel], and is starting by trying to get graphics up and running.
+
+=== Graphics ===
 The Adreno 330 GPU is supported by Freedreno.  The firmware is required, and is available in the adreno-firmware package.
 
-The MSM_KGSL_DRM kernel flag must be set to provide the DRM interface to kgsl.
+Julian Goldsmith has been working on getting hardware-accelerated graphics up and running, but is stuck on an issue with the display not updating properly.  Right now, the screen is updated slowly enough to be visible (causing a "screen wipe" effect), and is only updated about once a minute.  The issue affects both the framebuffer console and kmscube.
 
-The latest commit of xf86-video-freedreno will compile, but crashes in libdrm when it tries to initialize kgsl+fbdev.  The kernel log states that it won't initialize a drawing context using the "legacy method".
+The graphics issue is possibly due to an issue with the configuration of the TE pin.  Vblank interrupts are only received about once a minute, which coincides with the screen updating.
 
-linux-oneplus-bacon uses an old (~3.4) kernel version from LineageOS, which most likely uses an incompatible implementation of kgsl.  Getting graphics up will probably require the kernel to be mainlined.  I ([[User:jrg|jrg]]) think that's what [[User:Flacks|flacks]] was most recently working on.
+=== Cell usage ===
+oFono support shouldn't take too much to get up and running.  Adding the remoteproc node, using qmictl (possibly more utilities), and using a patched oFono should get basic support up and running.
 
 == Links ==
 
