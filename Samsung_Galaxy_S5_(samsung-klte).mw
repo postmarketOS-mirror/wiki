@@ -92,19 +92,35 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 
 {| class="wikitable"
 |-
- ! Component !! Module !! Android Kernel !! Mainline kernel
+ ! Component !! Codename !! Mainline kernel !! Since when
 |-
-| Debug serial ||  || Yes <code>/dev/ttyHSL0</code> || Yes <code>/dev/ttyMSM0</code>
+| Debug serial || /dev/ttyMSM0 || Working || v4.17-rc1
 |-
-| GPIO keys ||  || Yes || No
+| Volume &amp; home buttons || gpio-keys || Working|| locally
 |-
-| Regulator nodes (pma8084) ||  || Yes || No
+| Regulator nodes || pma8084 || Working|| locally
 |-
-| Storage || sdhci || Yes || No
+| Internal storage || sdhci1 || Working|| locally
 |-
-| USB Networking ||  || Yes || No
+| SD card storage || sdhci2 || Not working || 
 |-
-| 2D Video || mdss_fb || Yes (msm_fb_refresher) || No
+| USB Networking ||  || Not working || 
+|-
+| Display ||  || Not working || 
+|-
+| Touchscreen  ||  || Not working || 
+|-
+| Vibration motor ||  || Not working || 
+|-
+| Notification LED ||  || Not working || 
+|-
+| WiFi ||  || Not working || 
+|-
+| Bluetooth ||  || Not working || 
+|-
+| GPU ||  || Not working || 
+|-
+| Modem ||  || Not working || 
 |}
 
 Mainline kernel patches:
