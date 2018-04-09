@@ -1,3 +1,11 @@
+{{Infobox interface
+| image = File:gpe-c1000.png
+| imagecaption = GPE running on a Sharp Zaurus C1000 PDA
+| name = GPE Palmtop Environment
+| graphics = Matchbox (or similar) on Xorg
+| toolkit = GTK+2
+}}
+
 == What is the GPE Palmtop Environment? ==
 
 The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
@@ -162,7 +170,7 @@ SHR is an OpenEmbedded-based system which combines Enlightenment with the freesm
 
 A thought: It would be useful to port Enlightenment to Alpine at any rate. It can work as an X11 window manager or as a Wayland compositor, and it is used for instance by Tizen. However, it's codebase is "interesting", particularly the EFL libraries.
 
-== Relevant resources ==
+== Relevant links ==
 
 * [https://pkg-gpe.alioth.debian.org/ Debian GPE Packaging homepage]
 * [https://pkg-gpe.alioth.debian.org/status.php Tracking status of GPE packages in Debian]
@@ -170,3 +178,4 @@ A thought: It would be useful to port Enlightenment to Alpine at any rate. It ca
 * [https://web.archive.org/web/20171201032443/http://gpe.linuxtogo.org/ Archive of GPE development website]
 * [https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]
 * [http://wiki.openmoko.org/wiki/Distributions OpenMoko's list of distributions]
+* [https://elinux.org/User_Interfaces#Application_Frameworks elinux.org page on user interfaces for embedded systems]
