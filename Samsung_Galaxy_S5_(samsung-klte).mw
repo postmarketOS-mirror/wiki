@@ -126,6 +126,9 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 Mainline kernel patches:
 * https://patchwork.kernel.org/patch/10150807/
 
+Development branch:
+* https://github.com/drebrez/linux/tree/samsung-klte
+
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
 * [https://github.com/postmarketOS/pmbootstrap/tree/device/samsung-klte Development branch]
