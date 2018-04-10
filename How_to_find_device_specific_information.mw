@@ -78,6 +78,7 @@ Translate the variables as follows into your deviceinfo:
 * Download a working recovery OS (TWRP/CWM), and [https://stackoverflow.com/a/37689814 extract the Linux version string from the kernel], then search for that kernel on GitHub / on the web
 
 == Kernel defconfig (default config) ==
+{{note|Sometimes the Android build process uses more than one kernel config and merges them, see [https://github.com/postmarketOS/pmbootstrap/issues/1307#issuecomment-377407456 #1307 (comment)]}}
 
 * <code>DEFCONFIG=</code> line inside the <code>build.config</code> inside the kernel repository (if available) ([https://github.com/LineageOS/android_kernel_lge_hammerhead/blob/cm-14.1/build.config#L4 example])
 * [https://source.android.com/source/building-kernels Official listing]
