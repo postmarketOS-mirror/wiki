@@ -127,7 +127,6 @@ In total, the following components were ported.
 : Accesses the Xsettings protocol
 ; sqlite2
 : Old sqlite version. Dependency on this is a bug.
-: libgpeschedule is the sole library that would otherwise need to be refactored to work with sqlite3. Unfortunately, a number of programs depend on this library.
 
 == Going forward ==
 
