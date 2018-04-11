@@ -321,3 +321,12 @@ This means, that a module can not be put in an initramfs. When you are not using
 If you are using Alpine Linux and you encounter this issue, you will need to install the <code>coreutils</code> package.
 
 <code>sudo apk add coreutils</code>
+
+=== Touch screen device present but not outputting any touch events ===
+For some devices (at least motorola-shamu and motorola-lux), the touch screen I2C device is present but not activated at boot, and must be activated before it produces any output.
+
+For the motorola-lux, this is done in the following way:
+
+<code>echo 1 > /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/drv_irq</code>
+
+The path to the correct touch device depends on the device. This can be added to an initfs hook to activate the touch screen automatically at boot.
