@@ -143,7 +143,7 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 
 === Priorities ===
 
-* Fix dependency on that ancient sqlite version.
+* Fix dependency on that ancient sqlite version. It should not be too difficult to rewrite, however, the old functions cannot always be subsituted directly for the equivalent new sqlite3 function.
 * Fix dependency on the enlightened sound daemon, and on the audiofile library. PulseAudio should probably replace this.
 * Make certain programs link properly.
 * Fix security bugs.
