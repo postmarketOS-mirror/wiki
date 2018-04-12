@@ -15,13 +15,30 @@ During the mainlining process you need to be able to get the <code>dmesg</code> 
 
 In Android kernels it is possible to write the output of <code>dmesg</code> to memory, and read it out after reboot from <code>/proc/last_kmsg</code>. So while you are mainlining, you can use Android's <code>ram_console</code> driver from your downstream kernel to dump <code>dmesg</code> to memory as well, then reboot to the downstream kernel and read out <code>/proc/last_kmesg</code>. Quote from decatf:
 <blockquote>
-The Andriod ram_console does this. It should exist in many if not most Android kernels. The driver is registered the board/machine init. I am still using it even on kernel 4.16
-* Make sure to allocate the same memory block as your downstream or recovery kernel,
+The Android ram_console does this. It should exist in many if not most Android kernels. The driver is registered the board/machine init. I am still using it even on kernel 4.16. On my device I can force reboot to a downstream recovery kernel and read last_kmsg from a kernel that booted nothing but the bare device tree and the ram_console driver.
+
+* Allocate the same memory block as your downstream or recovery kernel. Do this by specifying reserved-memory in device tree.
+https://github.com/Decatf/linux/blob/tegra-next-p4wifi_pmos/arch/arm/boot/dts/tegra20-samsung_p3.dts#L47-L50
+* Initialize the ram_console driver with the appropriate memory address and size in the <code>machine_init</code> function for your device.
 https://github.com/Decatf/linux/blob/next-p4wifi_pmos/arch/arm/mach-tegra/board-p4wifi.c#L480-L481
 * Make sure the driver is using the same ram console signature as your downstream kernel.
 https://github.com/Decatf/linux/blob/next-p4wifi_pmos/drivers/staging/android/ram_console.c#L41
-On my device I can force reboot to a downstream recovery kernel and read last_kmsg from a kernel that booted nothing but the bare device tree and the ram_console driver.
 </blockquote>
+
+On more recent devices Android has transitioned over to using the mainline kernels pstore ramoops functionality. If your device is recent enough that the recovery uses pstore then you only need to add a node for the ramoops driver to device tree.
+
+The memory allocation address of the ram_console and pstore are logged to dmesg. The memory address in following example corresponds to the samsung-p4wifi device in the steps above. To find the memory allocation address of ram_console:
+
+<syntaxhighlight lang="shell-session">
+$ dmesg | grep ram_console
+[    0.906530] ram_console: got buffer at 2e600000, size 100000
+</syntaxhighlight>
+
+To find the memory allocation address of pstore ramoops:
+<syntaxhighlight lang="shell-session">
+$ dmesg | grep attached
+[    0.074293] ramoops: attached 0x100000@0x2e500000, ecc: 0/0
+</syntaxhighlight>
 
 == Serial cable ==
 === Can I do it without a serial cable? ===
