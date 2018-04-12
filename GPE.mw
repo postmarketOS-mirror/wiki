@@ -495,6 +495,57 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 * Make certain programs link properly.
 * Fix security bugs.
 
+== PIM suite components + mobile interface components ==
+
+{| class="wikitable"
+|-
+! scope="col"| Functionality
+! scope="col"| Package(s) providing it
+|-
+! scope="row"| Calendar
+| gpe-calendar
+|-
+! scope="row"| Contacts
+| gpe-contacts
+|-
+! scope="row"| Time and date
+| gpe-clock, gpe-alarm
+|-
+! scope="row"| Image gallery
+| gpe-calendar,gpicview
+|-
+! scope="row"| Camera
+| gpe-calendar,cheese
+|-
+! scope="row"| E-mail
+| sylpheed,claws-mail,mutt,thunderbird
+|-
+! scope="row"| Expenses
+| gpe-expenses
+|-
+! scope="row"| Notetaking
+| gpe-todo,gpe-edit,leafpad
+|-
+! scope="row"| Terminal
+| xterm,rxvt,lxterminal,xfce4-terminal,st
+|-
+! scope="row"| File manager
+| pcmanfm,gpe-filemanager
+|-
+! scope="row"| Ebook reader
+| fbreader
+|-
+! scope="row"| On-screen keyboard
+| matchbox-keyboard,osk-sdl
+|-
+! scope="row"| Media player
+| mpv,vlc
+|-
+! scope="row"| Dialer
+| fbreader
+|-
+|}
+
 == What about OPIE and others? ==
 
 === OPIE ===
