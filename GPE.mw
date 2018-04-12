@@ -33,6 +33,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 ! scope="col"| Package version in PMOS
 ! scope="col"| Description
 ! scope="col"| Comments
+! scope="col"| Priority
 |-
 ! scope="row"| audiofile
 | Fully ported
@@ -40,6 +41,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.3.6
 | Audio package which supports a large number of codecs and media types.
 | Possibly not maintained; no update since 2016.
+| High - keep it maintained or look for alternative
 |-
 ! scope="row"| esd
 | Fully ported
@@ -47,13 +49,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.2.41
 | Enlightened sound daemon. Once the sound daemon for Enlightenment and GNOME.
 | Not maintained upstream. Switch to PulseAudio may be desirable.
+| High - switch to PulseAudio
 |-
 ! scope="row"| gpe-aerial
 | Not ported
 | N/A
 | N/A
 | Wireless connectivity tool
-| Not worth porting this.
+| 
+| Low - not worth porting this.
 |-
 ! scope="row"| gpe-announce
 | Ported
@@ -61,13 +65,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.14
 | Provides alarm support
 | 
+| High - key part of suite
 |-
 ! scope="row"| gpe-autostarter
 | Not ported
 | N/A
 | N/A
 | Autostarts applications
-| Not worth porting this. It is fairly niche and could be easily rewritten to be generic; alternatives probably already exist.
+| It is fairly niche and could be easily rewritten to be generic; alternatives probably already exist.
+| Low - not worth porting this
 |-
 ! scope="row"| gpe-beam
 | Not ported
@@ -75,6 +81,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | IrDa file transfer tool
 | This is very niche and there are very few devices currently in PMOS that support IR transfer (the only one that comes to mind is the LG G3 which had an IR blaster, but it is unknown if this would work).
+| Low - not worth porting this yet
 |-
 ! scope="row"| gpe-bluetooth
 | Not ported
@@ -82,6 +89,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Bluetooth connectivity tool
 | Modern programs exist for bluetooth transfer. It is unknown as to whether this program would still work.
+| Low - not maintained; find alternatives
 |-
 ! scope="row"| gpe-bootsplash
 | Not ported
@@ -89,13 +97,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | A boot splash screen. 
 | Not suitable for PMOS, as we already have a boot splash screen which offers more functionality.
+| Low - defunct
 |-
 ! scope="row"| gpe-calculator/gpe-calculator2
 | Not ported
 | N/A
 | N/A
 | Calculator program for GPE
-| This would perhaps be useful to have, but galculator is already packaged, which is at least as fully-featured.
+| This would perhaps be useful to have, but e.g. galculator is already packaged, which is at least as fully-featured.
+| Low - near identical alternatives i.e. galculator 
 |-
 ! scope="row"| gpe-calendar
 | Ported
@@ -103,6 +113,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.92
 | Calendar application for GPE
 | A useful and lightweight calendar application. However, gpe-contacts does not currently work, so it may be missing any associated functionality.
+| High - key part of suite
 |-
 ! scope="row"| gpe-clock
 | Does not work
@@ -110,6 +121,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Clock application for GPE
 | The program does work on PMOS due to not using /etc/timezone like Debian. We can work around this using a script to populate /etc/timezone, or it may be necessary to rewrite the timezone functionality altogether.
+| High - desktop clock key part of suite
 |-
 ! scope="row"| gpe-dm
 | Not ported
@@ -117,6 +129,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Desktop manager for GPE
 | There is not a lot of information about this program. It probably refers to a display manager. However, there are alternative display managers to use for now.
+| Low - unknown about status or what it did
 |-
 ! scope="row"| gpe-edit
 | Ported
@@ -124,6 +137,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.41
 | Text editor for GPE
 | Works really well.
+| High - really useful
 |-
 ! scope="row"| gpe-expenses
 | Partially ported
@@ -131,6 +145,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Expenses application for GPE
 | The program depends on libraries that weren't all ported yet.
+| High - useful part of suite
 |-
 ! scope="row"| gpe-filemanager
 | Not ported
@@ -138,6 +153,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | An extremely lightweight file manager.
 | Users can stick with file managers like PCManFM in the meantime.
+| High - integrates with the suite nicely
 |-
 ! scope="row"| gpe-gallery
 | Ported
@@ -145,6 +161,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.97
 | Image gallery application for GPE
 | This works really well and stands on its own fine.
+| High - integrates well
 |-
 ! scope="row"| gpe-go
 | Not ported
@@ -152,6 +169,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | A go game for GPE
 | Should work on its own. But it is probably more valuable to port the CGoBan game, as this is an online Go game (as well as offline) and is more fully featured
+| Medium - it is just a game
 |-
 ! scope="row"| gpe-icons
 | Ported
@@ -159,6 +177,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.25
 | Basic icon set for GPE
 | Depended on by almost every GPE program. It is a fairly inoffensive icon set. GPE does allow one to theme its programs, it should be noted.
+| High - key part of suite
 |-
 ! scope="row"| gpe-lights
 | Not ported
@@ -166,6 +185,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Lights-out game for GPE
 | Low priority. Not particularly fun.
+| Medium - it is just a game 
 |-
 ! scope="row"| gpe-login
 | Partially ported
@@ -173,6 +193,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Login screen for GPE
 | It is packaged, but it does not build or link properly, and it appears non-trivial to fix. Not really needed, if we use a generic display manager instead (this is more desirable; unknown if gpe-login allows logging in to arbitrary user interfaces).
+| Medium - not necessarily needed
 |-
 ! scope="row"| gpe-mini-browser
 | Not ported
@@ -180,6 +201,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | A tiny web browser for GPE
 | Not maintained (and this is bad for a web browser). Use Dillo, Netsurf, text-only web browsers instead on low-end devices.
+| Low - 
 |-
 ! scope="row"| gpe-mininet
 | Not ported
@@ -187,6 +209,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Network connectivity monitor for GPE
 | Probably not worth porting. Modern alternatives exist that are more fully-featured.
+| Low
 |-
 ! scope="row"| gpe-mixer
 | Not ported
@@ -194,6 +217,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Audio mixer frontend for GPE
 | If we switch GPE to use PulseAudio instead, this becomes defunct (PulseAudio volume control program has plugins for panels and is very usable). As such, unlikely to port this.
+| Low - move to PulseAudio
 |-
 ! scope="row"| gpe-othello
 | Not ported
@@ -201,6 +225,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Othello board game for GPE
 | Not particularly fun. May be useful to some.
+| Medium - it is just a game
 |-
 ! scope="row"| gpe-question
 | Not ported
@@ -208,6 +233,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | GPE interface for asking questions from shell scripts 
 | 
+| High
 |-
 ! scope="row"| gpe-screenshot
 | Not ported
@@ -215,6 +241,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Screenshot program for GPE
 | Definitely worth porting. In the meantime, see shutter or gnome-screenshot
+| High
 |-
 ! scope="row"| gpe-shield
 | Not ported
@@ -222,6 +249,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | GPE firewall configuration tool
 | Not ported. Similarly to gpe-mininet, there are modern equivalents which are more fully-featured, e.g. gufw.
+| Medium
 |-
 ! scope="row"| gpe-sketchbook
 | Not ported
@@ -229,6 +257,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Sketchbook program for GPE
 | A useful and fun application for PDAs. Well worth porting as it is not as complicated and heavy as, say, GIMP or InkScape. There are slightly larger programs such as mtpaint that are also useful.
+| High
 |-
 ! scope="row"| gpe-soundbite
 | Not ported
@@ -236,6 +265,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | GPE tool to record sounds
 | Probably worth porting.
+| High
 |-
 ! scope="row"| gpe-su
 | Not ported
@@ -243,6 +273,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | GKSU equivalent for GPE. 
 | Potentially dangerous program. May still be useful.
+| Medium
 |-
 ! scope="row"| gpe-taskmanager
 | Not ported
@@ -250,6 +281,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | A task manager program for GPE
 | Useful to have, although likely other programs that are still maintained offer the same features.
+| High
 |-
 ! scope="row"| gpe-terminal
 | Not ported
@@ -257,13 +289,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Terminal program for GPE
 | Not worth porting. Just use an existing X terminal program.
+| Low - generic
 |-
 ! scope="row"| gpe-tetris
 | Not ported
 | N/A
 | N/A
 | A Tetris game for GPE
-| It is Tetris. It is not particularly unique. Not a high priority.
+| It is Tetris. It is not particularly unique. 
+| Medium - it is just a game
 |-
 ! scope="row"| gpe-timesheet
 | Not ported
@@ -271,6 +305,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | A timesheet application for GPE
 | A useful PIM application. Reasonably high priority.
+| High - useful part of suite
 |-
 ! scope="row"| gpe-today
 | Not ported
@@ -278,6 +313,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | A daily summary.
 | Back in 2007 it was marked as "not really maintained". Not a high priority.
+| Low
 |-
 ! scope="row"| gpe-todo
 | Not ported
@@ -285,20 +321,23 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Record a todo list.
 | 
+| High
 |-
 ! scope="row"| gpe-watch
 | Not ported
 | N/A
 | N/A
 | A program for GPE that performs the functionality of a watch for a small screen.
-| Maybe useful. Especially for smartwatches. But it is probably not a high priority.
+| Maybe useful. Especially for smartwatches.
+| High
 |-
 ! scope="row"| gpe-syncd
 | Not ported
 | N/A
 | N/A
 | PIM data syncronisation daemon.
-| Not a lot of information about what this thing did  Appears to be related to GPE's functionality as a PalmOS replacement.
+| Not a lot of information about what this thing did. It appears to be related to GPE's functionality as a PalmOS replacement.
+| Low
 |-
 ! scope="row"| gsoko
 | Not ported
@@ -306,6 +345,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | Sokoban game for GPE
 | Rather fun. Worth porting.
+| Medium
 |-
 ! scope="row"| libcontactsdb
 | Ported
@@ -313,6 +353,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.5
 | Library to interface with gpe-contacts' database of contacts
 | Uses sqlite2. Required for gpe-contacts.
+|
 |-
 ! scope="row"| libdisplaymigration
 | Ported
@@ -320,6 +361,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.28
 | Display migration support library for GTK+
 | Not clear if this is at all maintained. It seems to derive from an upstream GNOME library that was abandoned.
+|
 |-
 ! scope="row"| libeventdb
 | Ported
@@ -327,6 +369,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.90
 | Library that provides access to data from gpe-calendar
 | Depends on sqlite2. 
+|
 |-
 ! scope="row"| libgpelaunch
 | Ported
@@ -334,6 +377,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.14
 | Helper library for launching programs in GPE
 | Not clear why this is needed when the window manager will launch programs. 
+|
 |-
 ! scope="row"| libgpepimc
 | Ported
@@ -341,12 +385,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.9
 | Category management for GPE applications
 | Depends on sqlite2
+|
 |-
 ! scope="row"| libgpevtype
 | Ported
 | libgpevtype
 | 0.50
 | Data interchange library for GPE
+|
 | 
 |-
 ! scope="row"| libgpewidget
@@ -355,6 +401,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.117
 | Main widget library for GPE
 | 
+|
 |-
 ! scope="row"| libmimedir
 | Ported
@@ -362,6 +409,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.4.2
 | Library that implements MIME directory profiles
 | This library seems defunct
+|
 |-
 ! scope="row"| libhandoff
 | Ported
@@ -369,6 +417,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.1
 | Handoff library for GPE
 | 
+|
 |-
 ! scope="row"| libsoundgen
 | Ported
@@ -376,12 +425,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.6
 | GPE sound generator library
 | There are probably modern alternatives
+|
 |-
 ! scope="row"| libtododb
 | Ported
 | libtododb
 | 0.11
 | Library that provides access to gpe-todo's database
+|
 | 
 |-
 ! scope="row"| libxsettings-client
@@ -390,6 +441,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.17
 | Utility functions for Xsettings protocol
 | Due to conflicts with libxsettings, there is no -dev package; the package builds a library that libxsettings also builds, which Alpine automatically brings in to its dev package. This should be trivial to fix.
+|
 |-
 ! scope="row"| libxsettings
 | Ported
@@ -397,6 +449,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.11
 | Xsettings protocol library fro GPE
 | 
+|
 |-
 ! scope="row"| sqlite2
 | Ported
@@ -404,6 +457,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 2.8.17
 | Legacy Sqlite version
 | Not maintained at all. The existence of this package is a bug.
+|
 |-
 ! scope="row"| gpe-ownerinfo
 | Ported
@@ -411,13 +465,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 0.28
 | Owner details program
 | This is probably not worth using without gpe-login. And gpe-login doesn't really compile, nor is it really worth porting.
+| Low
 |-
 ! scope="row"| gpe-appmgr
 | Ported
 | gpe-appmgr
 | 2.8
 | Application manager for GPE
-| It manages ipkg/opkg applications. It can probably be trivially converted to be a frontend to Alpine's apk.
+| It manages ipkg/opkg applications. It can probably be trivially converted to be a frontend to Alpine's apk, and would be useful.
+| High
 |-
 ! scope="row"| matchbox-window-manager-2
 | Not ported
@@ -425,6 +481,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | X environment for resource-limited systems
 | Matchbox is useful for PDAs as it only displays one window at a time, and the panel is stylus-friendly. Similarly it scales well for small displays. So it is worth porting it (at the time of writing, matchbox-keyboard is already packaged) either as a single package or as each separate component packaged.
+| High
 |}
 
 == Going forward ==
