@@ -542,7 +542,13 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 | mpv,vlc
 |-
 ! scope="row"| Dialer
-| fbreader
+| 
+|-
+! scope="row"| SMS
+|
+|-
+! scope="row"| Instant messaging
+| pidgin
 |-
 |}
 
