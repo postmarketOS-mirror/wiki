@@ -53,6 +53,13 @@ $ ./pmbootstrap.py install --no-fde</source>
 # Flash the kernel and system images<source lang="shell">$./pmbootstrap.py flasher flash_kernel
 $./pmbootstrap.py flasher flash_rootfs</source>
 
+== Battery ==
+The battery in this device is the <code>max17042</code>. The downstream kernel provides an early implementation of a driver for the <code>max17042</code> battery. The implementation of the battery and charger driver are split across <code>p4_battery.c</code> and <code>max17042_battery.c</code> in the downstream kernel. The name of the charger hardware in this tablet is an unknown.
+
+The downstream drivers have references to <code>max8903</code> which is a charger used in other Samsung devices. The <code>max8903</code> has similar hardware characteristics as the charger in this tablet. The two are definitely not the same but there is a <code>max8903</code> driver in mainline which a useful reference.
+
+The mainline max17042 battery driver works but the downstream driver provided a much more complex implementation of the battery/charger drivers. There is no driver for the charging circuit so much important the functionality is not present in the mainline kernel. The downstream charger driver implements logic to handle charge full and low battery which affect the health of the battery. For these reasons it is safer for regular use to keep using drivers forward ported from the downstream kernel.
+
 == Graphics ==
 The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not working. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
 
