@@ -1,7 +1,7 @@
 Here's a step-by-step guide to resolving <code>Could not find dependency</code> errors coming from <code>pmbootstrap</code>, as well as <code>unsatisfiable constraints</code> errors coming from <code>apk</code>.
 
 == Why does this happen? ==
-The errors indicate that there is an issue with the binary package repositories either of postmarketOS or of Alpine Linux. pmOS is built upon Alpine's "edge" repository (as in [https://en.wikipedia.org/wiki/Bleeding_edge_technology bleeding edge]), so a certain amount of breakage is expected. (When pmOS becomes more stable, we will switch to Alpine's stable branches[https://github.com/postmarketOS/pmbootstrap/pull/1400#issuecomment-379549100]).
+The errors indicate that there is an issue with the binary package repositories either of postmarketOS or of Alpine Linux. pmOS is built upon Alpine's "edge" repository (as in [https://en.wikipedia.org/wiki/Bleeding_edge_technology bleeding edge]), so a certain amount of breakage is expected. (When pmOS becomes more stable, we will switch to Alpine's stable branches [https://github.com/postmarketOS/pmbootstrap/pull/1400#issuecomment-379549100]).
 
 In most cases a library (e.g. <code>libcrypto.so</code> from libressl/openssl) has been updated with an incompatible change ([https://en.wikipedia.org/wiki/Soname soname bump]), and a package that was built against the previous version did not get rebuilt yet.
 
@@ -10,25 +10,25 @@ Triggering rebuilds is done by both Alpine and pmOS by increasing the <code>pkgr
 === Alpine Linux ===
 The package maintainers from Alpine trigger a rebuild for all packages that depend on a certain library at the same time as they update that library. But building packages takes time, and when a big number of packages depend on such a library, build bots may even get stuck at a package that used to compile fine a few months ago, but doesn't compile in the current environment (let's say because they don't build with the latest GCC version that Alpine has packaged).
 
-There is a dedicated build bot for each architecture and branch combination (e.g. `armhf-edge`), and once it is stuck, it won't continue with compiling other packages in the queue. If you have some time to spare, you could actually help out with getting these packages to compile again by finding out which one is failing [http://build.alpinelinux.org/ here] (click the packages to see the build logs) and figuring out why it is stuck and how it can be patched in [https://wiki.alpinelinux.org/wiki/Alpine_Linux:IRC #alpine-devel]. The quick version is rebuilding just the packages you need by yourself, as explained below.
+There is a dedicated build bot for each architecture and branch combination (e.g. <code>build-edge-armhf</code>), and once it is stuck, it won't continue with compiling other packages in the queue. If you have some time to spare, you could actually help out with getting these packages to compile again by finding out which one is failing [http://build.alpinelinux.org/ here] (click the packages to see the build logs) and assissting Alpine developers in [https://wiki.alpinelinux.org/wiki/Alpine_Linux:IRC #alpine-devel]. However, the quick workaround is rebuilding just the packages you need, as explained below.
 
 === postmarketOS ===
-For postmarketOS packages, we need to trigger the rebuild manually, as soon as a library gets updated in Alpine on which one of our packages depend. We have a testcase in place, that detects such breakage and we fix it in `master` and our binary repository as soon as we see it, typically within a day.
+For postmarketOS packages, we need to trigger the rebuild manually, as soon as a library gets updated in Alpine on which one of our packages depend. We have a testcase in place, that detects such breakage and we fix it in <code>master</code> and our binary repository as soon as we see it, typically within a day.
 
 == Update your package index ==
 Maybe the issue has already been resolved in the package repositories of postmarketOS or Alpine. <code>pmbootstrap</code> will automatically download the newest package indexes when they are older than four hours. Force it to download the currrent index files with:
-<syntaxhighlight lang="shell">
+<syntaxhighlight lang="shell-session">
 $ pmbootstrap update
 </syntaxhighlight>
 
 From inside the postmarketOS installation, you can do the same with:
-<syntaxhighlight lang="shell">
-# apk update
+<syntaxhighlight lang="shell-session">
+$ sudo apk update
 </syntaxhighlight>
 
 == Find the package name ==
 === apk ===
-All packages are mentioned that depend on the shared library. Find the package that depends on the lower version of it. In the example below, this is <code>g++-armhf-6.4.0-r5[libstdc++=6.4.0-r5]</code> (the higher version would be <code>libstdc++=6.4.0-r6</code>). This means the package that needs to be rebuilt is <code>g++-armhf</code>).
+All packages are mentioned that depend on the shared library. Find the package that depends on the lower version of it. In the example below, this is <code>g++-armhf-6.4.0-r5[libstdc++=6.4.0-r5]</code> (the higher version would be <code>libstdc++=6.4.0-r6</code>). This means the package that needs to be rebuilt is <code>g++-armhf</code>.
 
 <pre>
 ERROR: unsatisfiable constraints:
