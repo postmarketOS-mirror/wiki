@@ -10,48 +10,7 @@
 
 The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
 
-Let's identify some the components of GPE:
-
-; gpe-announce 
-: Announcement application
-; gpe-appmgr              
-: Install/uninstall/update programs
-; gpe-calculator          
-: Calculator application
-; gpe-calendar            
-: Calendar application
-; gpe-clock               
-: Clock application
-; gpe-conf                
-: Main configuration application
-; gpe-contacts            
-: Contacts application
-; gpe-edit                
-: Simple text-editor application
-; gpe-expenses            
-: Expenses application
-; gpe-gallery             
-: Image gallery application
-; gpe-icons               
-: GPE icon set
-; gpe-login               
-: Display manager for GPE
-; gpe-mixer              
-: Sound mixer application
-; gpe-ownerinfo           
-: Display device owner information
-; gpe-su                  
-: Graphical su application
-; gpe-taskmanager         
-: Task manager application
-; gpe-todo                
-: Todo application
-
-Additionally these programs pull in various libraries, an on-screen keyboard, and the designated window manager seems to be Matchbox (in OpenEmbedded Classic). Additionally something like ipkg or opkg was used as package manager typically, and OpenEmbedded was used as a base system by most of the systems that shipped GPE (for instance, see the Ångström distribution).
-
-Furthermore, the last version of Debian that shipped the suite was Wheezy. The project appears to have suffered from a lack of maintainers, a trademark and copyright spat between the handhelds.org website and linuxtogo website, as well as very slow development. 
-
-== Problems with the system today ==
+However, the last version of Debian that shipped the suite was Wheezy. The project appears to have suffered from a lack of maintainers, a trademark and copyright spat between the handhelds.org website and linuxtogo website, as well as very slow development. 
 
 The GPE code is entirely unmaintained and has dependencies which are unmaintained, for instance SQLite versions from around 2005.
 It also has its main configuration program running as setuid root, which presents quite a large attack surface for a simple program.
@@ -62,84 +21,415 @@ Additionally, certain libraries, that the suite depends on, ship with some terri
 
 The most immediate problems, however are with compiling the thing. There are simple issues with config.sub in the autoconf build system in many of the packages not understanding Alpine Linux's triples or any triple including the form "musl" or "armv6". There are more serious problems such as some of the packages not linking properly. This was the main problem in the end.
 
-Another immediate problem is that the homepage for GPE is now gone. The source code archives that were used came from Debian. They are to my knowledge the latest (they shipped with Debian Wheezy, which came out in May 2013)
+Another immediate problem is that the homepage for GPE is now gone. The source code archives that were used came from Debian. They appear to be the latest - they shipped with Debian Wheezy, which came out in May 2013.
 
-=== Programs and requisite libraries ===
+== Status of GPE in PostmarketOS ==
 
-In total, the following components were ported.
-
-==== Programs ====
-
-; gpe-announce
-: Provides alarm support
-; gpe-appmgr
-: Manage apps, but it may be useless and depend on ipkg/opkg.
-; gpe-calendar
-: Simple calendar program. Useful on its own.
-; gpe-clock
-: Clock program. Useful on its own. Segfaults due to non-existence of /etc/timezone. Probably fixable.
-; gpe-conf
-: Central configuration program. SetUID root. Segfaults when other components are broken.
-; gpe-contacts
-: Contacts program. Useful on its own.
-; gpe-edit
-: Text editor. Useful on its own.
-; gpe-gallery
-: Image gallery. Useful on its own.
-; gpe-icons
-: GPE's icon set. Most of the other components depend on it.
-; gpe-ownerinfo
-: Set owner information. Designed to integrate with the login screen. Probably not useful without gpe-login.
-
-==== Libraries and utilities ====
-
-; audiofile
-: Audio package which supports a large number of codecs and media types. Barely maintained.
-; esound
-: The Enlightened Sound Daemon. It was once the sound daemon for Enlightenment and GNOME. Now defunct and unmaintained.
-; libcontactsdb
-: Contacts database library
-; libdisplaymigration
-: Provides display migration support for GTK
-; libeventdb
-: Provides access to GPE calendar data
-; libgpelaunch
-: App launcher library
-; libgpepimc
-: Category management for GPE applications 
-; libgpeschedule
-: Provides access to scheduling data from gpe-schedule
-; libgpevtype
-: Data interchange library for GPE applications
-; libgpewidget
-: GPE widget library, a core component of the GPE suite
-; libhandoff
-: Used in the GPE Palmtop Environment to cause another program instance to come to the foreground. E.g. alarm triggers.
-; libmimedir
-: A MIME Directory Profile implementation
-; libsoundgen
-: GPE sound generator library.
-; libtododb
-: Provides access to gpe-todo's database
-; libxsettings
-: Implements the Xsettings protocol
-; libxsettings-client
-: Accesses the Xsettings protocol
-; sqlite2
-: Old sqlite version. Dependency on this is a bug.
+{| class="wikitable"
+|-
+! scope="col"| Component name
+! scope="col"| Status
+! scope="col"| Package name in PMOS
+! scope="col"| Package version in PMOS
+! scope="col"| Description
+! scope="col"| Comments
+|-
+! scope="row"| audiofile
+| Fully ported
+| audiofile
+| 0.3.6
+| Audio package which supports a large number of codecs and media types.
+| Possibly not maintained; no update since 2016.
+|-
+! scope="row"| esd
+| Fully ported
+| esound
+| 0.2.41
+| Enlightened sound daemon. Once the sound daemon for Enlightenment and GNOME.
+| Not maintained upstream. Switch to PulseAudio may be desirable.
+|-
+! scope="row"| gpe-aerial
+| Not ported
+| N/A
+| N/A
+| Wireless connectivity tool
+| Not worth porting this.
+|-
+! scope="row"| gpe-announce
+| Ported
+| gpe-announce
+| 0.14
+| Provides alarm support
+| 
+|-
+! scope="row"| gpe-autostarter
+| Not ported
+| N/A
+| N/A
+| Autostarts applications
+| Not worth porting this. It is fairly niche and could be easily rewritten to be generic; alternatives probably already exist.
+|-
+! scope="row"| gpe-beam
+| Not ported
+| N/A
+| N/A
+| IrDa file transfer tool
+| This is very niche and there are very few devices currently in PMOS that support IR transfer (the only one that comes to mind is the LG G3 which had an IR blaster, but it is unknown if this would work).
+|-
+! scope="row"| gpe-bluetooth
+| Not ported
+| N/A
+| N/A
+| Bluetooth connectivity tool
+| Modern programs exist for bluetooth transfer. It is unknown as to whether this program would still work.
+|-
+! scope="row"| gpe-bootsplash
+| Not ported
+| N/A
+| N/A
+| A boot splash screen. 
+| Not suitable for PMOS, as we already have a boot splash screen which offers more functionality.
+|-
+! scope="row"| gpe-calculator/gpe-calculator2
+| Not ported
+| N/A
+| N/A
+| Calculator program for GPE
+| This would perhaps be useful to have, but galculator is already packaged, which is at least as fully-featured.
+|-
+! scope="row"| gpe-calendar
+| Ported
+| gpe-calendar
+| 0.92
+| Calendar application for GPE
+| A useful and lightweight calendar application. However, gpe-contacts does not currently work, so it may be missing any associated functionality.
+|-
+! scope="row"| gpe-clock
+| Does not work
+| N/A
+| N/A
+| Clock application for GPE
+| The program does work on PMOS due to not using /etc/timezone like Debian. We can work around this using a script to populate /etc/timezone, or it may be necessary to rewrite the timezone functionality altogether.
+|-
+! scope="row"| gpe-dm
+| Not ported
+| N/A
+| N/A
+| Desktop manager for GPE
+| There is not a lot of information about this program. It probably refers to a display manager. However, there are alternative display managers to use for now.
+|-
+! scope="row"| gpe-edit
+| Ported
+| gpe-edit
+| 0.41
+| Text editor for GPE
+| Works really well.
+|-
+! scope="row"| gpe-expenses
+| Partially ported
+| gpe-expenses
+| N/A
+| Expenses application for GPE
+| The program depends on libraries that weren't all ported yet.
+|-
+! scope="row"| gpe-filemanager
+| Not ported
+| N/A
+| N/A
+| An extremely lightweight file manager.
+| Users can stick with file managers like PCManFM in the meantime.
+|-
+! scope="row"| gpe-gallery
+| Ported
+| gpe-gallery
+| 0.97
+| Image gallery application for GPE
+| This works really well and stands on its own fine.
+|-
+! scope="row"| gpe-go
+| Not ported
+| N/A
+| N/A
+| A go game for GPE
+| Should work on its own. But it is probably more valuable to port the CGoBan game, as this is an online Go game (as well as offline) and is more fully featured
+|-
+! scope="row"| gpe-icons
+| Ported
+| gpe-icons
+| 0.25
+| Basic icon set for GPE
+| Depended on by almost every GPE program. It is a fairly inoffensive icon set. GPE does allow one to theme its programs, it should be noted.
+|-
+! scope="row"| gpe-lights
+| Not ported
+| N/A
+| N/A
+| Lights-out game for GPE
+| Low priority. Not particularly fun.
+|-
+! scope="row"| gpe-login
+| Partially ported
+| N/A
+| N/A
+| Login screen for GPE
+| It is packaged, but it does not build or link properly, and it appears non-trivial to fix. Not really needed, if we use a generic display manager instead (this is more desirable; unknown if gpe-login allows logging in to arbitrary user interfaces).
+|-
+! scope="row"| gpe-mini-browser
+| Not ported
+| N/A
+| N/A
+| A tiny web browser for GPE
+| Not maintained (and this is bad for a web browser). Use Dillo, Netsurf, text-only web browsers instead on low-end devices.
+|-
+! scope="row"| gpe-mininet
+| Not ported
+| N/A
+| N/A
+| Network connectivity monitor for GPE
+| Probably not worth porting. Modern alternatives exist that are more fully-featured.
+|-
+! scope="row"| gpe-mixer
+| Not ported
+| N/A
+| N/A
+| Audio mixer frontend for GPE
+| If we switch GPE to use PulseAudio instead, this becomes defunct (PulseAudio volume control program has plugins for panels and is very usable). As such, unlikely to port this.
+|-
+! scope="row"| gpe-othello
+| Not ported
+| N/A
+| N/A
+| Othello board game for GPE
+| Not particularly fun. May be useful to some.
+|-
+! scope="row"| gpe-question
+| Not ported
+| N/A
+| N/A
+| GPE interface for asking questions from shell scripts 
+| 
+|-
+! scope="row"| gpe-screenshot
+| Not ported
+| N/A
+| N/A
+| Screenshot program for GPE
+| Definitely worth porting. In the meantime, see shutter or gnome-screenshot
+|-
+! scope="row"| gpe-shield
+| Not ported
+| N/A
+| N/A
+| GPE firewall configuration tool
+| Not ported. Similarly to gpe-mininet, there are modern equivalents which are more fully-featured, e.g. gufw.
+|-
+! scope="row"| gpe-sketchbook
+| Not ported
+| N/A
+| N/A
+| Sketchbook program for GPE
+| A useful and fun application for PDAs. Well worth porting as it is not as complicated and heavy as, say, GIMP or InkScape. There are slightly larger programs such as mtpaint that are also useful.
+|-
+! scope="row"| gpe-soundbite
+| Not ported
+| N/A
+| N/A
+| GPE tool to record sounds
+| Probably worth porting.
+|-
+! scope="row"| gpe-su
+| Not ported
+| N/A
+| N/A
+| GKSU equivalent for GPE. 
+| Potentially dangerous program. May still be useful.
+|-
+! scope="row"| gpe-taskmanager
+| Not ported
+| N/A
+| N/A
+| A task manager program for GPE
+| Useful to have, although likely other programs that are still maintained offer the same features.
+|-
+! scope="row"| gpe-terminal
+| Not ported
+| N/A
+| N/A
+| Terminal program for GPE
+| Not worth porting. Just use an existing X terminal program.
+|-
+! scope="row"| gpe-tetris
+| Not ported
+| N/A
+| N/A
+| A Tetris game for GPE
+| It is Tetris. It is not particularly unique. Not a high priority.
+|-
+! scope="row"| gpe-timesheet
+| Not ported
+| N/A
+| N/A
+| A timesheet application for GPE
+| A useful PIM application. Reasonably high priority.
+|-
+! scope="row"| gpe-today
+| Not ported
+| N/A
+| N/A
+| A daily summary.
+| Back in 2007 it was marked as "not really maintained". Not a high priority.
+|-
+! scope="row"| gpe-todo
+| Not ported
+| N/A
+| N/A
+| Record a todo list.
+| 
+|-
+! scope="row"| gpe-watch
+| Not ported
+| N/A
+| N/A
+| A program for GPE that performs the functionality of a watch for a small screen.
+| Maybe useful. Especially for smartwatches. But it is probably not a high priority.
+|-
+! scope="row"| gpe-syncd
+| Not ported
+| N/A
+| N/A
+| PIM data syncronisation daemon.
+| Not a lot of information about what this thing did  Appears to be related to GPE's functionality as a PalmOS replacement.
+|-
+! scope="row"| gsoko
+| Not ported
+| N/A
+| N/A
+| Sokoban game for GPE
+| Rather fun. Worth porting.
+|-
+! scope="row"| libcontactsdb
+| Ported
+| libcontactsdb
+| 0.5
+| Library to interface with gpe-contacts' database of contacts
+| Uses sqlite2. Required for gpe-contacts.
+|-
+! scope="row"| libdisplaymigration
+| Ported
+| libdisplaymigration
+| 0.28
+| Display migration support library for GTK+
+| Not clear if this is at all maintained. It seems to derive from an upstream GNOME library that was abandoned.
+|-
+! scope="row"| libeventdb
+| Ported
+| libeventdb
+| 0.90
+| Library that provides access to data from gpe-calendar
+| Depends on sqlite2. 
+|-
+! scope="row"| libgpelaunch
+| Ported
+| libgpelaunch
+| 0.14
+| Helper library for launching programs in GPE
+| Not clear why this is needed when the window manager will launch programs. 
+|-
+! scope="row"| libgpepimc
+| Ported
+| libgpepimc
+| 0.9
+| Category management for GPE applications
+| Depends on sqlite2
+|-
+! scope="row"| libgpevtype
+| Ported
+| libgpevtype
+| 0.50
+| Data interchange library for GPE
+| 
+|-
+! scope="row"| libgpewidget
+| Ported
+| libgpewidget
+| 0.117
+| Main widget library for GPE
+| 
+|-
+! scope="row"| libmimedir
+| Ported
+| libmimedir
+| 0.4.2
+| Library that implements MIME directory profiles
+| This library seems defunct
+|-
+! scope="row"| libhandoff
+| Ported
+| libhandoff
+| 0.1
+| Handoff library for GPE
+| 
+|-
+! scope="row"| libsoundgen
+| Ported
+| libsoundgen
+| 0.6
+| GPE sound generator library
+| There are probably modern alternatives
+|-
+! scope="row"| libtododb
+| Ported
+| libtododb
+| 0.11
+| Library that provides access to gpe-todo's database
+| 
+|-
+! scope="row"| libxsettings-client
+| Ported
+| libxsettings-client
+| 0.17
+| Utility functions for Xsettings protocol
+| Due to conflicts with libxsettings, there is no -dev package; the package builds a library that libxsettings also builds, which Alpine automatically brings in to its dev package. This should be trivial to fix.
+|-
+! scope="row"| libxsettings
+| Ported
+| libxsettings
+| 0.11
+| Xsettings protocol library fro GPE
+| 
+|-
+! scope="row"| sqlite2
+| Ported
+| sqlite2
+| 2.8.17
+| Legacy Sqlite version
+| Not maintained at all. The existence of this package is a bug.
+|-
+! scope="row"| gpe-ownerinfo
+| Ported
+| gpe-ownerinfo
+| 0.28
+| Owner details program
+| This is probably not worth using without gpe-login. And gpe-login doesn't really compile, nor is it really worth porting.
+|-
+! scope="row"| gpe-appmgr
+| Ported
+| gpe-appmgr
+| 2.8
+| Application manager for GPE
+| It manages ipkg/opkg applications. It can probably be trivially converted to be a frontend to Alpine's apk.
+|-
+! scope="row"| matchbox-window-manager-2
+| Not ported
+| N/A
+| N/A
+| X environment for resource-limited systems
+| Matchbox is useful for PDAs as it only displays one window at a time, and the panel is stylus-friendly. Similarly it scales well for small displays. So it is worth porting it (at the time of writing, matchbox-keyboard is already packaged) either as a single package or as each separate component packaged.
+|}
 
 == Going forward ==
 
 Porting GPE would be probably not be worth it, as it is wholly unmaintained and would need an audit, or, even better, a full rewrite. That being said, it would still be useful to finish porting certain components:
-
-; gpe-login
-: Login manager for GPE
-: It needs to be made to link properly. Currently it does not seem to want to link with libx11 (despite patches that would otherwise make it do this) and does not link with Musl's obstack implementation.
-; gpe-su
-: Give programs root access after user authentication
-; Miscellaneous
-: There were once various programs designed to work with GPE that offer useful functionality e.g. gpe-sketch, gpe-calculator, gpe-expenses.
-: It is not clear where the code is.
 
 === Priorities ===
 
@@ -179,3 +469,4 @@ A thought: It would be useful to port Enlightenment to Alpine at any rate. It ca
 * [https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]
 * [http://wiki.openmoko.org/wiki/Distributions OpenMoko's list of distributions]
 * [https://elinux.org/User_Interfaces#Application_Frameworks elinux.org page on user interfaces for embedded systems]
+* [https://web.archive.org/web/20090810033753/http://ipkgfind.handhelds.org:80/result.phtml?query=gpe*&searchtype=package&section= IpkgFind search results for GPE]
