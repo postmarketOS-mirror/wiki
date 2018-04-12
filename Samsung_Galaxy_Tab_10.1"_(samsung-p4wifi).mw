@@ -94,12 +94,16 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |Y
 |-
 |Battery
-|p4_battery
+|max17042
 |P
 |-
 |Camera
 |s5k5ccgx (front)<br/>s5k6bbgx (back)
 | - 
+|-
+|Charger
+|p4_battery
+|P
 |-
 |CPU Temperature Sensor
 |nct1008
@@ -107,10 +111,6 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |-
 |Display Panel
 |cmc623
-|P
-|-
-|Fuel Gauge
-|max17042
 |P
 |-
 |GPS
