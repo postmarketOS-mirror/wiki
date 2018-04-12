@@ -7,6 +7,7 @@
 
 = Specific troubleshooting pages =
 * [[Troubleshooting:boot]]
+* [[Troubleshooting:dependencies]]
 * [[Troubleshooting:display]]
 * [[Troubleshooting:grsec]] (TL;DR: doesn't work)
 * [[Troubleshooting:kernel]]
@@ -16,54 +17,7 @@
 = Uncategorized errors =
 
 === ERROR: unsatisfiable constraints ===
-Read on if you get an error like the following:
-<pre>
-ERROR: unsatisfiable constraints:
-libstdc++-6.4.0-r6:
-breaks:
-g++-armhf-6.4.0-r5[libstdc++=6.4.0-r5]
-satisfies: world[libstdc++]
-g++-6.4.0-r6[libstdc++=6.4.0-r6]
-g++-6.4.0-r6[libstdc++=6.4.0-r6]
-gcc-6.4.0-r6[so:libstdc++.so.6]
-lzip-1.19-r1[so:libstdc++.so.6]
-gcc-6.4.0-r6:
-breaks: g++-armhf-6.4.0-r5[gcc=6.4.0-r5]
-satisfies: world[gcc]
-g++-6.4.0-r6[gcc=6.4.0-r6]
-build-base-0.5-r0[gcc]
-</pre>
-
-==== Explanation ====
-Unsatisfiable constraints means, that Alpine's package manager can't resolve packages properly. Most likely this is because there's a library packaged in Alpine that just got updated and a postmarketOS package depends on it. We detect such breakage automatically (with our Travis CI job, which runs with each new pull request, so at least once a day). If you get this error, try the following:
-
-==== Fixes ====
-1. Update the APKINDEX files, it might be that we already fixed this issue and built the new packages.
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap update
-</syntaxhighlight>
-
-2. If that does not help, try to pull from git to see if we already increased the version in <code>master</code>.
-<syntaxhighlight lang="shell-session">
-$ git pull
-</syntaxhighlight>
-
-In case we did not increase it yet, you can increase the versions on your own. Please let the others know, that the update needs to be done, either in the [https://github.com/postmarketOS/pmbootstrap/issues issues] or in the [[Matrix_and_IRC|chat]].
-
-3.a) If the error looks just like the above, with <code>libstdc++</code> and <code>gcc-armhf</code> involved, regenerate your <code>gcc-armhf</code> aport based on the latest <code>gcc</code> aport from Alpine:
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap aportgen gcc-armhf
-</syntaxhighlight>
-
-3.b) For all other soname bumps, use the following command to automatically increase the <code>pkgrel</code>:
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap pkgrel_bump --auto
-</syntaxhighlight>
-
-There's also a <code>--dry</code> parameter if you just want to see which packages would get a <code>pkgrel</code> bump.
-
-==== upstream repo broken ====
-If the packages are not related to postmarketOS packages at all, there might be a bug in the upstream repositories (this is very unlikely and only happened once). postmarketOS is based on Alpine Linux ''testing''. Maybe they have triggered a rebuild and it failed, so now the package is not available. You ''could'' try to install the latest stable package, as a workaround (although that may introduce other bugs!). [https://github.com/postmarketOS/pmbootstrap/issues/4#issuecomment-304508729 Here's an example.]
+Moved to [[Troubleshooting:dependencies]].
 
 === pmbootstrap is broken! But it worked yesterday! ===
 Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the IRC/matrix channel to find out, which commit was the last one that worked.
