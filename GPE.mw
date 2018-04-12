@@ -546,6 +546,10 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 |-
 |}
 
+== GPE phone edition ==
+
+There was also a now-defunct GPE phone edition. It provided Email, SMS, voicemail, and calling components. This could be useful.
+
 == What about OPIE and others? ==
 
 === OPIE ===
@@ -579,3 +583,4 @@ A thought: It would be useful to port Enlightenment to Alpine at any rate. It ca
 * [https://elinux.org/User_Interfaces#Application_Frameworks elinux.org page on user interfaces for embedded systems]
 * [https://web.archive.org/web/20090810033753/http://ipkgfind.handhelds.org:80/result.phtml?query=gpe*&searchtype=package&section= IpkgFind search results for GPE]
 * [https://wiki.debian.org/Mobile Information about Debian on mobile]
+* [https://web.archive.org/web/20111120035822/http://www.linuxtogo.org:80/new-project-gpe-phone-edition GPE phone edition announcement]
