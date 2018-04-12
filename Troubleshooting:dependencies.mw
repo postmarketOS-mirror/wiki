@@ -92,6 +92,12 @@ $ pmbootstrap pkgrel_bump --auto
 
 When you execute the command that caused the error next time, the package should get built locally and the problem should be gone.
 
+==== Cross compilers ====
+This is a special case, because we generate the cross compilers directly from Alpine: If the error has <code>libstdc++</code> and <code>gcc-armhf</code> involved, regenerate your <code>gcc-armhf</code> aport based on the latest <code>gcc</code> aport from Alpine (replace armhf with aarch64 etc. as necessary):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap aportgen gcc-armhf
+</syntaxhighlight>
+
 === Alpine Linux ===
 Clone Alpine's packages to a folder outside of your <code>pmbootstrap</code> folder:
 <syntaxhighlight lang="shell-session">
