@@ -13,7 +13,7 @@ The package maintainers from Alpine trigger a rebuild for all packages that depe
 There is a dedicated build bot for each architecture and branch combination (e.g. <code>build-edge-armhf</code>), and once it is stuck, it won't continue with compiling other packages in the queue. If you have some time to spare, you could actually help out with getting these packages to compile again by finding out which one is failing [http://build.alpinelinux.org/ here] (click the packages to see the build logs) and assissting Alpine developers in [https://wiki.alpinelinux.org/wiki/Alpine_Linux:IRC #alpine-devel]. However, the quick workaround is rebuilding just the packages you need, as explained below.
 
 === postmarketOS ===
-For postmarketOS packages, we need to trigger the rebuild manually, as soon as a library gets updated in Alpine on which one of our packages depend. We have a testcase in place, that detects such breakage and we fix it in <code>master</code> and our binary repository as soon as we see it, typically within a day.
+For postmarketOS packages, we need to trigger the rebuild manually, as soon as a library gets updated in Alpine on which one of our packages depend. We have a test case in place, that detects such breakage and we fix it in <code>master</code> and our binary repository as soon as we see it, typically within a day.
 
 == Update your package index ==
 Maybe the issue has already been resolved in the package repositories of postmarketOS or Alpine. <code>pmbootstrap</code> will automatically download the newest package indexes when they are older than four hours. Force it to download the currrent index files with:
