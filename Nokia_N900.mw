@@ -35,6 +35,7 @@
 * Keyboard backlight (see Additional Info below)
 * Battery capacity reporting (see Additional Info below)
 * Keyboard in virtual terminal
+* USB Mass Storage (see USB Gadget below)
 
 === What does not work ===
 * Front cameras
@@ -236,6 +237,23 @@ tty5::respawn:/sbin/getty 38400 tty5
 tty6::respawn:/sbin/getty 38400 tty6
 ...
 </syntaxhighlight>
+
+=== USB Gadget ===
+==== Mass Storage ====
+The Mass Storage class exposes a block device as a flash drive on your host machine. 
+
+For example, to use the "MyDocs" partition as Mass Storage Device, make sure you unmount the partition first (if mounted), then execute:
+
+<code>
+echo /dev/mmcblk1p1 > /sys/devices/platform/68000000.ocp/480ab000.usb_otg_hs/musb-hdrc.0.auto/gadget/lun0/file
+</code>
+ 
+If you only need read permissions on the device, you can set read-only flag before exporting it:
+
+<code>
+echo 1 > /sys/devices/platform/68000000.ocp/480ab000.usb_otg_hs/musb-hdrc.0.auto/gadget/lun0/ro
+</code>
+
 === GPRS ===
 
 GPRS can be managed by [https://pkgs.alpinelinux.org/package/edge/testing/armhf/connman connman]. Either install connman using <code>apk</code> or add it when installing pmOS by passing <code>--add connman</code> to <code>pmbootstrap</code>.
