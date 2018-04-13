@@ -536,7 +536,7 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 | fbreader
 |-
 ! scope="row"| On-screen keyboard
-| matchbox-keyboard,osk-sdl
+| matchbox-keyboard
 |-
 ! scope="row"| Media player
 | mpv,vlc
