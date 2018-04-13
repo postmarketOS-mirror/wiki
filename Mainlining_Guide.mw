@@ -65,7 +65,7 @@ The idea of <code>pmbootstrap</code> is, that you don't need to install anything
 Download a copy of <code>linux-next</code>:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code
-$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-next.git linux
+$ git clone https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
 $ cd linux
 </syntaxhighlight>
 
