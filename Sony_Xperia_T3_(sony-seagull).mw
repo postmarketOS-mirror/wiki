@@ -61,5 +61,5 @@ The device shares the <code>yukon</code> platform with other Xperia devices, suc
  androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.emmc=true androidboot.bootloader=s1 oemandroidboot.s1boot=1274-7024_S1_Boot_MSM8x26_LA1.0_1021 androidboot.serialno=YT91XXXXXX ta_info=1,16,256 startup=0x00000001 warmboot=0x00000000 oemandroidboot.imei=3548XXXXXXXXXXXX oemandroidboot.phoneid=0000:35480506XXXXXXXX oemandroidboot.security=0 oemandroidboot.babe1234=00000200 display_status=on androidboot.baseband=msm
 
 == Links ==
-
-[https://developer.sonymobile.com/downloads/xperia-open-source-archives/open-source-archive-for-build-18-1-a-1-23/ Kernel source]
+* [https://developer.sonymobile.com/downloads/xperia-open-source-archives/open-source-archive-for-build-18-1-a-1-23/ Kernel source]
+* {{github|1389}} Initial PR
