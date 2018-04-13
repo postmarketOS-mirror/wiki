@@ -88,7 +88,6 @@ Connect to network using wpa_supplicant:
 <pre>$ service wpa_supplicant restart </pre>
 
 ==== Sound ====
-
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
 
 <pre>
@@ -97,6 +96,8 @@ sudo udevadm trigger
 # setup mixers somehow
 sudo aplay /usr/share/sounds/alsa/Front_Left.wav
 </pre>
+
+NikkSaan provided an advanced audio configuration in [https://github.com/postmarketOS/pmbootstrap/pull/702#issuecomment-380999740 #702 (comment)].
 
 ==== Keyboard Backlight ====
 
