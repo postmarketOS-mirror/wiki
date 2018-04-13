@@ -248,7 +248,7 @@ For example, to use the "MyDocs" partition as Mass Storage Device, make sure you
 echo /dev/mmcblk1p1 > /sys/devices/platform/68000000.ocp/480ab000.usb_otg_hs/musb-hdrc.0.auto/gadget/lun0/file
 </code>
  
-If you only need read permissions on the device, you can set the read-only flag before exporting it:
+If you only need read permissions on the partition, you can set the read-only flag before exporting it:
 
 <code>
 echo 1 > /sys/devices/platform/68000000.ocp/480ab000.usb_otg_hs/musb-hdrc.0.auto/gadget/lun0/ro
