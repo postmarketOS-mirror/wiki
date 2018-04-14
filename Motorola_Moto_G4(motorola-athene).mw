@@ -1,0 +1,41 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Motorola
+| name =  Motorola Moto G4
+| codename = athene
+| image = File:motorola-athene.jpg
+| imagecaption = Moto G4
+| releaseyear = 2016
+| originalsoftware =  Android 6.0.1
+| chipset = Qualcomm MSM8952 Snapdragon 617
+| cpu = Octa-core 1.5GHz Cortex-A53
+| gpu = Adreno 405 GPU
+| storage = 16 or 32 GB
+| display = Full HD (1920 x 1080)
+| memory = 2 or 3 GB
+}}
+
+== Contributors ==
+* fengjiongmax
+
+== Maintainer(s) ==
+
+== What works ==
+* Boot
+* Display
+* USB Network
+
+== What does not work ==
+* Touchscreen
+* `pmbootstrap flasher flash_kernel`
+
+== How to enter flash mode ==
+* Power + Volume Down buttons
+
+== Installation ==
+<code> $ pmbootstrap flasher flash_rootfs </code> <br> 
+<code> $ pmbootstrap flasher boot </code> <br>
+
+== See also ==
+* https://github.com/postmarketOS/pmbootstrap/issues/1401
+*
