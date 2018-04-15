@@ -162,9 +162,16 @@ The current battery capacity can be found under <code>/sys/class/power_supply/bq
 
 3) Unplug the device and allow the battery to run all the way down until it powers off. This may take quite a while to happen (&gt;24hrs, but can be made shorter by running a CPU intensive workload)
 
-4) When device powers off, plug it back into wall adapter and allow to charge up fully again. The battery and charging chip should now be calibrated.
+4) When device powers off, plug it back into wall adapter and allow to charge up fully again. The battery and charge gauge chip should now be calibrated.
 
-[http://www.ti.com/lit/ds/symlink/bq27200.pdf Datasheet for the bq27200 charging chip]
+[http://www.ti.com/lit/ds/symlink/bq27200.pdf Datasheet for the bq27200 charge gauge chip]
+
+
+'''Hint: '''To disable the LED charging indication, disable the charging chip's status pin. 
+
+<code>echo 0 > /sys/class/power_supply/bq24150a-0/stat_pin_enable</code>.
+
+[http://www.ti.com/lit/ds/symlink/bq24150.pdf Datasheet for the bq24150 charging chip]
 
 ==== Setting the hardware clock ====
 
