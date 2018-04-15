@@ -71,7 +71,7 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
 
 ==== Wifi ====
 
-The <code>linux-firmware</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/158 #158])
+The <code>linux-firmware-ti-connectivity</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/1414 #1414])
 
 Once the device has been successfully initialized, enable it:
 
@@ -154,7 +154,7 @@ Right now it's configured to use the <code>nokiarx51/us</code> layout by default
 
 ==== Battery Capacity Reporting ====
 
-The current battery capacity can be found under <code>/sys/class/power_supply/bq27200-0/capacity</code>, and is represented as a percentage. For example, a value of <code>11</code> equates to <code>11%</code>. If <code>capacity</code> does not exist or contains erroneous information, then your battery needs to be calibrated first. To calibrate the battery:
+The current battery capacity can be found under <code>/sys/class/power_supply/bq27200-0/capacity</code>, and is represented as a percentage. For example, a value of <code>11</code> equates to <code>11%</code>. If <code>capacity</code> does not exist or contains erroneous information, then your battery needs to be calibrated. To calibrate the battery:
 
 1) Charge it up fully, using a wall power adapter.
 
@@ -162,7 +162,7 @@ The current battery capacity can be found under <code>/sys/class/power_supply/bq
 
 3) Unplug the device and allow the battery to run all the way down until it powers off. This may take quite a while to happen (&gt;24hrs, but can be made shorter by running a CPU intensive workload)
 
-4) When device powers off, plug it back into wall adapter and allow to charge up fully again. The battery and charge gauge chip should now be calibrated.
+4) When device powers off, the battery and charge gauge chip should then be calibrated. You may charge it up again to use the device.
 
 [http://www.ti.com/lit/ds/symlink/bq27200.pdf Datasheet for the bq27200 charge gauge chip]
 
