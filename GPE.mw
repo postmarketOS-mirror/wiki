@@ -192,7 +192,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | N/A
 | Login screen for GPE
-| It is packaged, but it does not build or link properly, and it appears non-trivial to fix. Not really needed, if we use a generic display manager instead (this is more desirable; unknown if gpe-login allows logging in to arbitrary user interfaces).
+| It is packaged, but it does not build or link properly, and it appears non-trivial to fix. Not really needed, if we use a generic display manager instead (this is more desirable; unknown if gpe-login allows logging in to arbitrary user interfaces). It also provides a lock screen which can lock on suspend, which is useful. However, given the program is not maintained, it seems questionable whether to rely on it to actually secure a given device.
 | Medium - not necessarily needed
 |-
 ! scope="row"| gpe-mini-browser
