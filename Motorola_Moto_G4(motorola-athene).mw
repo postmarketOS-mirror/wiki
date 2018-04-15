@@ -37,5 +37,5 @@
 <code> $ pmbootstrap flasher boot </code> <br>
 
 == See also ==
-* https://github.com/postmarketOS/pmbootstrap/issues/1401
-* first PR:https://github.com/postmarketOS/pmbootstrap/pull/1412
+* {{github|1412}} initial PR
+* {{github|1401}} initial port issue
