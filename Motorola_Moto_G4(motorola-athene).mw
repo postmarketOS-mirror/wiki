@@ -27,7 +27,7 @@
 
 == What does not work ==
 * Touchscreen
-* `pmbootstrap flasher flash_kernel`
+* <code>pmbootstrap flasher flash_kernel</code>
 
 == How to enter flash mode ==
 * Power + Volume Down buttons
