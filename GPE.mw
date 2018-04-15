@@ -553,6 +553,9 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 ! scope="row"| Lock screen
 | [https://wiki.maemo.org/QtLockscreen QtLockscreen]
 |-
+! scope="row"| Display manager
+| sddm
+|-
 |}
 
 == GPE phone edition ==
