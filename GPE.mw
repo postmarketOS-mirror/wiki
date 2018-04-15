@@ -475,7 +475,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | It manages ipkg/opkg applications. It can probably be trivially converted to be a frontend to Alpine's apk, and would be useful.
 | High
 |-
-! scope="row"| matchbox-window-manager-2
+! scope="row"| matchbox-window-manager
 | Not ported
 | N/A
 | N/A
