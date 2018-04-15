@@ -166,7 +166,6 @@ The current battery capacity can be found under <code>/sys/class/power_supply/bq
 
 [http://www.ti.com/lit/ds/symlink/bq27200.pdf Datasheet for the bq27200 charge gauge chip]
 
-
 '''Hint: '''To disable the LED charging indication, disable the charging chip's status pin. 
 
 <code>echo 0 > /sys/class/power_supply/bq24150a-0/stat_pin_enable</code>.
