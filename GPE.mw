@@ -495,7 +495,7 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 * Make certain programs link properly.
 * Fix security bugs.
 
-== PIM suite components + mobile interface components ==
+== Potential PIM suite and mobile interface components ==
 
 {| class="wikitable"
 |-
@@ -549,6 +549,9 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 |-
 ! scope="row"| Instant messaging
 | pidgin
+|-
+! scope="row"| Lock screen
+| [https://wiki.maemo.org/QtLockscreen QtLockscreen]
 |-
 |}
 
