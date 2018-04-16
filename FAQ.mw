@@ -21,7 +21,7 @@ You will still have the "vendor implementation", which is different for every de
 Also keep in mind, that this will work for newer Android O phones only. We already have an alarmingly high number of phones, which will never get that improvement. They can be saved from being electronic waste with projects like postmarketOS.
 
 == Is dual boot supported? ==
-It is possible to boot postmarketOS from an sd card without overwriting the existing OS, if you can load a kernel and initramfs with your USB cable (or load it from the sd card as well, like it's possible with the N900). Typically this will work with fastboot devices that have an sd card slot.
+It is possible to boot postmarketOS from an sd card without overwriting the existing OS, if you can load a kernel and initramfs with your USB cable (or load it from the sd card as well, like it's possible with the N900). Typically this will work with fastboot devices that have an sd card slot. See [[Dual Booting]] for more details and supported options.
 
 Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
 
