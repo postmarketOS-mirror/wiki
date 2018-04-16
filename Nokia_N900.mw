@@ -163,13 +163,11 @@ Right now it's configured to use the <code>nokiarx51/us</code> layout by default
 
 The current battery capacity can be found under <code>/sys/class/power_supply/bq27200-0/capacity</code>, and is represented as a percentage. For example, a value of <code>11</code> equates to <code>11%</code>. If <code>capacity</code> does not exist or contains erroneous information, then your battery needs to be calibrated. To calibrate the battery:
 
-1) Charge it up fully, using a wall power adapter.
+1) Charge it up '''fully''', using a wall power adapter.
 
-2) Once it is charged up, power on the device
+2) Unplug the device and allow the battery to run all the way down until it powers off. This may take quite a while to happen (&gt;24hrs, but can be made shorter by running a CPU intensive workload). Do not let it charge at all during this time. This means you may not use USB for example, as this automatically causes the device to start charging, albeit slowly.
 
-3) Unplug the device and allow the battery to run all the way down until it powers off. This may take quite a while to happen (&gt;24hrs, but can be made shorter by running a CPU intensive workload)
-
-4) When device powers off, the battery and charge gauge chip should then be calibrated. You may charge it up again to use the device.
+3) When device eventually powers off, the battery charge gauge chip should then be calibrated. You may charge it up again to use the device.
 
 [http://www.ti.com/lit/ds/symlink/bq27200.pdf Datasheet for the bq27200 charge gauge chip]
 
