@@ -20,6 +20,11 @@ You will still have the "vendor implementation", which is different for every de
 
 Also keep in mind, that this will work for newer Android O phones only. We already have an alarmingly high number of phones, which will never get that improvement. They can be saved from being electronic waste with projects like postmarketOS.
 
+== Is dual boot supported? ==
+It is possible to boot postmarketOS from an sd card without overwriting the existing OS, if you can load a kernel and initramfs with your USB cable (or load it from the sd card as well, like it's possible with the N900). Typically this will work with fastboot devices that have an sd card slot.
+
+Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
+
 = Development =
 See also: [[Development guide]]
 == Why don't we use firmware files from Android's firmware partition? ==
@@ -39,8 +44,3 @@ The big reason for "squash and merge" is, that the reviewer usually tests and re
 If you feel like multiple commits should be merged without being squashed, please make multiple PRs for them. Especially when you note somewhere, that you have another PR coming, that depends on the other one, we will do our best to prioritize getting that PR in, so you are not blocked.
 
 Just to avoid confusion, ''we'' squash the commit for you, it's totally okay to have multiple commits in one PR (it even makes the history easier to read, when commits come after a code review for example).
-
-== Is dual boot supported? ==
-It is possible to boot postmarketOS from an sd card without overwriting the existing OS, if you can load a kernel and initramfs with your USB cable (or load it from the sd card as well, like it's possible with the N900). Typically this will work with fastboot devices that have an sd card slot.
-
-Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
