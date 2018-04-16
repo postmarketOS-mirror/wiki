@@ -4,4 +4,4 @@ Dual Booting, also sometimes called Multiboot, is a process by which you can ins
 PostmarketOS doesn't currently support dual booting trough recovery, yet there are a few ways this can be achieved:
 
 * On the [[Nokia N900]], u-boot provides a mechanism to select the OS. See [[Nokia N900#Installation]]
-* On fastboot devices that have an SD card, it is possible to install PostmarketOS on the SD card, and boot trough <syntaxhighlight inline>pmbootstrap flasher boot</syntaxhighlight>. This has the advantage of not modifying anything on the phone itself, but a USB cable and a host device (like a computer) are needed to boot the device with this procedure.
+* On fastboot devices that have an SD card, it is possible to install PostmarketOS on the SD card, and boot trough <syntaxhighlight lang="bash" inline>pmbootstrap flasher boot</syntaxhighlight>. This has the advantage of not modifying anything on the phone itself, but a USB cable and a host device (like a computer) are needed to boot the device with this procedure.
