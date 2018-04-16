@@ -1,4 +1,3 @@
-== Dual Booting ==
 Dual Booting, also sometimes called Multiboot, is a process by which you can install multiple operating systems on your device, and select between them when booting it up.
 
 PostmarketOS doesn't currently support dual booting trough recovery, yet there are a few ways this can be achieved:
