@@ -114,6 +114,13 @@ For example, the display can be turned off by:
 
 <pre># echo 1 &gt; /sys/devices/platform/omapdrm.0/graphics/fb0/blank</pre>
 
+To adjust brightness:
+
+<pre>
+# # Replace $VAL with a value from 0 to 255:
+# echo $VAL > /sys/class/backlight/acx565akm/brightness
+</pre>
+
 ==== Keyboard layout ====
 
 ===== Console =====
