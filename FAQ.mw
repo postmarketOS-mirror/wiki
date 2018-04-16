@@ -40,4 +40,7 @@ If you feel like multiple commits should be merged without being squashed, pleas
 
 Just to avoid confusion, ''we'' squash the commit for you, it's totally okay to have multiple commits in one PR (it even makes the history easier to read, when commits come after a code review for example).
 
-==
+== Is dual boot supported? ==
+It is possible to boot postmarketOS from an sd card without overwriting the existing OS, if you can load a kernel and initramfs with your USB cable (or load it from the sd card as well, like it's possible with the N900). Typically this will work with fastboot devices that have an sd card slot.
+
+Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
