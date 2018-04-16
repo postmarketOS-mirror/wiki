@@ -80,6 +80,16 @@ Special cases, where this is not so obvious:
 * <code>linux-*</code> packages: We always set the <code>pkgver</code> to the kernel version number and only increase it when the kernel source code has a new version number. All kernel config changes only increase the <code>pkgrel</code> number. In the case, that the linux kernel sources need to be updated, but the kernel version was not changed (Android kernel forks often do this), we can add a <code>_gitYYYYMMDD</code> suffix (see "Packaging git commits" above).
 * <code>device-*</code> packages: This was not done consistently in the past, but it makes sense to update the <code>pkgver</code> when anything but the <code>APKBUILD</code> was changed. Because that is essentially the version of the software being packaged.
 
+=== Outdated config.sub/config.guess from autotools ===
+In case the <code>config.sub</code> or <code>config.guess</code> are outdated, change the APKBUILD's prepare block to the following:
+<syntaxhighlight lang="bash">
+prepare() {
+	default_prepare
+	update_config_sub
+	update_config_guess
+}
+</syntaxhighlight>
+
 == Porting packages from Arch Linux ==
 Arch Linux' <code>PKBUILD</code> format is similar to <code>APKBUILD</code> of Alpine. If you don't know how to package a new program, check out how Arch does it.
 === Find the package ===
