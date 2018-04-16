@@ -23,7 +23,7 @@ The most immediate problems, however are with compiling the thing. There are sim
 
 Another immediate problem is that the homepage for GPE is now gone. The source code archives that were used came from Debian. They appear to be the latest - they shipped with Debian Wheezy, which came out in May 2013.
 
-== Status of GPE in PostmarketOS ==
+== Status of GPE and associated programs in PostmarketOS ==
 
 {| class="wikitable"
 |-
@@ -66,6 +66,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Provides alarm support
 | 
 | High - key part of suite
+|-
+! scope="row"| gpe-appmgr
+| Ported
+| gpe-appmgr
+| 2.8
+| Application manager for GPE
+| Application launcher for GPE
+| High
 |-
 ! scope="row"| gpe-autostarter
 | Not ported
@@ -226,6 +234,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Othello board game for GPE
 | Not particularly fun. May be useful to some.
 | Medium - it is just a game
+|-
+! scope="row"| gpe-ownerinfo
+| Ported
+| gpe-ownerinfo
+| 0.28
+| Owner details program
+| This is probably not worth using without gpe-login. And gpe-login doesn't really compile, nor is it really worth porting.
+| Low
 |-
 ! scope="row"| gpe-question
 | Not ported
@@ -451,6 +467,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 
 |
 |-
+! scope="row"| matchbox-window-manager
+| Not ported
+| N/A
+| N/A
+| X environment for resource-limited systems
+| Matchbox is useful for PDAs as it only displays one window at a time, and the panel is stylus-friendly. Similarly it scales well for small displays. So it is worth porting it (at the time of writing, matchbox-keyboard is already packaged) either as a single package or as each separate component packaged.
+| High
+|-
 ! scope="row"| sqlite2
 | Ported
 | sqlite2
@@ -459,29 +483,6 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Not maintained at all. The existence of this package is a bug.
 |
 |-
-! scope="row"| gpe-ownerinfo
-| Ported
-| gpe-ownerinfo
-| 0.28
-| Owner details program
-| This is probably not worth using without gpe-login. And gpe-login doesn't really compile, nor is it really worth porting.
-| Low
-|-
-! scope="row"| gpe-appmgr
-| Ported
-| gpe-appmgr
-| 2.8
-| Application manager for GPE
-| It manages ipkg/opkg applications. It can probably be trivially converted to be a frontend to Alpine's apk, and would be useful.
-| High
-|-
-! scope="row"| matchbox-window-manager
-| Not ported
-| N/A
-| N/A
-| X environment for resource-limited systems
-| Matchbox is useful for PDAs as it only displays one window at a time, and the panel is stylus-friendly. Similarly it scales well for small displays. So it is worth porting it (at the time of writing, matchbox-keyboard is already packaged) either as a single package or as each separate component packaged.
-| High
 |}
 
 == Going forward ==
