@@ -186,6 +186,32 @@ $ date -s "2017-08-14 16:34:50"
 
 # Write the current system time to the hardware clock
 $ hwclock -w</source>
+
+==== Setting the hardware alarm clock ====
+
+Realtime clock at /dev/rtc0 is on the twl4030 (PMU), and allows waking the device from sleep, poweroff states. 
+
+Control trough <code>rtcwake</code> [https://linux.die.net/man/8/rtcwake (Manual Page)].
+<source lang="shell">
+# Suspends the device to memory for 10 seconds
+rtcwake --verbose --seconds 10 --mode mem
+
+# Power off the device and power it on after $TIME, where $TIME is the number of seconds since epoch (1970-01-01)
+rtcwake --verbose --time_t $TIME --mode no
+/sbin/poweroff
+</source>
+
+Manual control from sysfs:
+<source lang="shell">
+# To set the wakealarm directly, set $TIME to number of seconds since epoch (1970-01-01). Then poweroff or suspend:
+echo $TIME > /sys/class/rtc/rtc0/wakealarm
+ 	
+# To set new wakealarm time, first reset time to 0!
+echo 0 > /sys/class/rtc/rtc0/wakealarm
+</source>
+
+{{note| When setting number of seconds since epoch, make sure you account for your timezone and see how your realtime clock keeps the time (utc or local)!}}
+
 ==== Configuring U-boot ====
 
 In order to configure pmos to boot by default on the N900, using U-boot, you will need to boot into Maemo and create a <code>/etc/bootmenu.d/10-pmos.item</code> file as the root user with these contents:
