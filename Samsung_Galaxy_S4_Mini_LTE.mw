@@ -26,6 +26,12 @@
 * Screen display
 * USB Networking ({{github|1260}})
 * Sending SMS via terminal ({{github|1314}})
+* Accelerometer (<code>echo 1 > /sys/class/input/input2/enable</code>)
+* Proximity sensor (<code>echo 1 > /sys/class/input/input4/enable</code>)
+* Light sensor (<code>echo 1 > /sys/class/input/input5/enable</code>)
+* Power button (<code>/dev/input/event0</code>)
+* Volume/Home buttons (<code>/dev/input/event8</code>)
+* Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
 * Touch screen
