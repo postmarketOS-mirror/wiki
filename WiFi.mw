@@ -54,7 +54,7 @@ It is possible to use NetworkManager to connect to a wifi access point using nmc
 
 <pre>$ sudo nmcli device wifi list ifname wlan0 </pre>
 
-<pre>$ sudo nmcli device wifi ifname wlan0 connect "$SSID" password "$PASSWORD" </pre>
+<pre>$ sudo nmcli device wifi connect "$SSID" password "$PASSWORD" ifname wlan0</pre>
 
 == Start WIFI manually ==
 If you experience problems or just want to test wifi you can start wpa supplicant (using -Dwext or nl80211 driver) and the dhcp service:
