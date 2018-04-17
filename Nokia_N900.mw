@@ -189,7 +189,7 @@ $ hwclock -w</source>
 
 ==== Setting the hardware alarm clock ====
 
-Realtime clock at /dev/rtc0 is on the twl4030 (PMU), and allows waking the device from sleep, poweroff states. 
+Realtime clock at /dev/rtc0 is on the twl4030 (PMU), and allows setting an alarm to wake the device from sleep, poweroff states. 
 
 Control trough <code>rtcwake</code> [https://linux.die.net/man/8/rtcwake (Manual Page)].
 <source lang="shell">
