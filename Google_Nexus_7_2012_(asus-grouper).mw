@@ -49,10 +49,10 @@ $ ./pmbootstrap.py flasher flash_rootfs
 * Weston: Boots, but also occasionally reboots on its own.
 * Hildon: Boots into a black screen. Poking some <code>/sys/</code> variables might make the screen flash or turn on, but it remains unusable
 * XFCE4: Boots into a black screen.
-* KDE: Never finishes the flash, which in turn wrecks your device partitions. This has happened even with <code>flasher flash_rootfs --partition userdata</code>
 * I3WM: Never finishes boot, keeps on rebooting after some time <code>Loading...</code>
 * Mate: Can't flash. This is due to the <code>.img</code> file being bigger than the system partition size. See GitHub issues [https://github.com/postmarketOS/pmbootstrap/issues/1422] and [https://github.com/postmarketOS/pmbootstrap/issues/60].
 * Luna: Can't flash. Same as Mate.
+* KDE (Plasma-Mobile): Can't flash. Same as Mate. Which in turn wrecks your device partitions. This has happened even with <code>flasher flash_rootfs --partition userdata</code>
 
 === Notes ===
 * I am using the LineageOS kernel found [https://github.com/LineageOS/android_kernel_asus_grouper here]
