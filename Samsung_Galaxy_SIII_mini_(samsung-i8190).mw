@@ -1,0 +1,48 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy SIII mini
+| codename = golden
+| image = File:samsung-golden.jpg
+| imagecaption = Samsung Galaxy SIII mini
+| releaseyear = 2012
+| originalsoftware = Android 4.1.1
+| chipset = ST-Ericsson NovaThor U8500
+| cpu = 1 GHz dual-core ARM Cortex-A9
+| gpu = ARM Mali-400 MP1
+| storage = 8GB
+| display = 480x800 AMOLED
+| memory = 1GB
+}}
+
+== Contributors ==
+* ''[[user:CUB3D|CUB3D]]''
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* ''[[user:CUB3D|CUB3D]]''
+
+== What works ==
+* Screen
+
+== What does not work ==
+* USB (Including ethernet, Not detected by host)
+* Most likely everything else
+
+== How to enter flash mode ==
+Download mode: Hold volume down + home + power together, then press volume up to bypass warning.
+
+== How to enter recovery mode ==
+Recovery mode: Hold volume up + home + power together.
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
