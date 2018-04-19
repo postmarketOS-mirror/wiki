@@ -23,10 +23,14 @@
 * ''[[user:CUB3D|CUB3D]]''
 
 == What works ==
-* Screen
+* Display
+* Touchscreen
+* USB network
+* FDE
+* weston
+* osk-sdl
 
 == What does not work ==
-* USB (Including ethernet, Not detected by host)
 * Most likely everything else
 
 == How to enter flash mode ==
