@@ -40,12 +40,10 @@ You can flash the postmarketOS kernel, but instead of charging the battery, it w
 You can properly turn the device off by unplugging the usb cable, then booting into fastboot, then choosing power off.
 
 == What works ==
-
 * Touchscreen
 * Weston (has the red screen bug, but we have a workaround for that now 👍 )
 
 == What does not work ==
-
 * XWayland
 * fbsplash only displays splash images very shortly, then goes to black screen
 * osk-sdl has graphical bugs (but it works for unlocking!) ({{github|59|osk-sdl}})
@@ -54,12 +52,13 @@ You can properly turn the device off by unplugging the usb cable, then booting i
 == Wifi ==
 Looks like, we need to package the [https://github.com/LineageOS/android_device_lge_mako/blob/12ac6e9aeb32d5ac9fc832f2214ede2c7690d0a6/proprietary-blobs.txt#L152-L157 wcnss.* files] for wifi. A version from 2015 can be found [https://github.com/TheMuppets/proprietary_vendor_lge/tree/cm-14.1/mako/proprietary/vendor/firmware here]. It's a Qualcomm chip.
 
-== freedreno / Mainline ==
-The [https://github.com/freedreno/freedreno/wiki freedreno] project brings an open source kernel driver for 3D acceleration. You would still need to run the proprietary blob on the GPU, but it makes 3D acceleration possible at all. There is a backport of freedreno to the 3.4 kernel, but the display doesn't work there. According to robclark from Freedreno, it makes more sense to get [[The Mainline Kernel|mainline]] going:
+== Mainline ==
+{{note|See [[The Mainline Kernel]] for a general introduction to mainlining.}}
+Currently we only have a downstream vendor kernel packaged, not the mainline kernel. The <code>lg-mako</code> has the same [https://en.wikipedia.org/wiki/System_on_a_chip SoC] as the <code>asus-flo</code>, and on the latter it is possible to run [https://plus.google.com/111524780435806926688/posts/fkQ1BMjNNcn Android on a kernel close to mainline].
 
-: ''tbh, with the exception of perhaps making phone calls (modem), upstream support for 8064 should be decent (like the work that john stultz did on n7 tablet).. so I probably wouldn't try too hard on ancient 3.4 stuff''
+This means, that most peripherals of the <code>mako</code> should work with mainline as well, once they are enabled in the DTS file. In fact, @vetzki reported in {{github|1079}} that the <code>mako</code> boots when using exactly the same DTS as the one from <code>flo</code> (this is not recommended, as misconfiguring your device like that may damage it). SSH appears to be working for a short time before getting kicked out, the display does not work.
 
-Let us know if you're interested in doing this and talk to opendata26 (from postmarketOS) and robclark (from freedreno). With their help it should be quite feasible.
+A good way forward would be using a minimal version of the <code>flo</code> DTS, where everything but USB is deleted, and fixing USB / trying to get the display working with the [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting DSI Panel Porting Guide]. The downstream DTSI files that need to be ported to the upstream kernel are probably located [https://github.com/LineageOS/android_kernel_lge_mako/tree/lineage-15.1/arch/arm/boot/dts here], and I guess the exact panel name appears when running <code>dmesg</code> after a successful boot (I did not verify this). Please expand this when you're working on it, and report your progress in #postmarketOS. Check out the [[Mainline Guide]].
 
 == Links ==
 * [https://github.com/freedreno/freedreno/wiki/Nexus-4 freedreno: Nexus 4]
