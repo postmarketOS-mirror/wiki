@@ -98,6 +98,12 @@ fastboot boot pmos.img</pre>
 | Not in kernel
 | No
 |-
+| Touchscreen
+|
+
+| Yes
+| Yes
+|-
 | Debug serial
 |
 
