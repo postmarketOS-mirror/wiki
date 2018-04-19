@@ -85,7 +85,7 @@ fastboot boot pmos.img</pre>
 |
 
 | Yes
-| No
+| Yes
 |-
 | 2D Video
 | mdss_fb
