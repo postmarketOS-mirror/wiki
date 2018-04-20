@@ -104,6 +104,12 @@ fastboot boot pmos.img</pre>
 | Yes
 | Yes
 |-
+| Camera
+|
+
+| ?
+| No
+|-
 | Debug serial
 |
 
