@@ -106,3 +106,4 @@ $ adb shell umount /ss
 
 == See also ==
 * {{github|1039}} WIP pull request
+* [https://github.com/tmlind/droid4-kexecboot KexecBoot for the Droid 4] - quite possibly more desirable than Safestrap
