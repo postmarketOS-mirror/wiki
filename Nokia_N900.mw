@@ -91,9 +91,6 @@ Connect to network using wpa_supplicant:
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
 
 <pre>
-sudo udevadm trigger
-# now /dev/ entries appear. 
-# setup mixers somehow
 sudo aplay /usr/share/sounds/alsa/Front_Left.wav
 </pre>
 
