@@ -1,0 +1,36 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Motorola
+| name =  Moto G4 Play
+| codename = harpia
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2016
+| originalsoftware = Android 6.0.1
+| chipset = Qualcomm MSM8916 Snapdragon 410
+| cpu = Quad-core 1.21GHz Cortex A53
+| gpu = Adreno 306
+| storage = 8GB or 16GB
+| display = HD (720x1280)
+| memory = 1GB or 2GB
+}}
+
+== Contributors ==
+* the-returning-void
+
+== Maintainer(s) ==
+
+== What works ==
+* Nothing
+
+== What does not work ==
+* Everything - working build not yet created
+
+== How to enter flash mode ==
+Hold down POWER + Vol Down while booting to enter Flash Mode.
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+* Kernel builds just fine, however `xz` was missing in the chroot, which caused the build to fail. I had to install it myself (<code>pmbootstrap chroot</code> and <code>apk add xz</code>)
