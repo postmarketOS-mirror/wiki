@@ -109,7 +109,7 @@ $ adb shell umount /ss
 === So you accidentally overwrote the stock slot in SafeStrap. What should you do? ===
 
 * Use Fastboot to write stock image back. Press the two volume buttons while pressing power to enter the factory bootloader. Find the files in VRZ_XT894_9.8.2O-72_VZW-18-8_CFC.xml.zip and rewrite system.img, boot.img, recovery.img, etc.
-* Install kexecboot to mbm partition to avoid SafeStrap altogether and boot from SD card see droid4-kexecboot in [[##See_also]].
+* Install kexecboot to mbm partition to avoid SafeStrap altogether and boot from SD card see droid4-kexecboot in [[#See_also|the additional information]].
 
 === Fastboot won't work due to too low a battery ===
 
