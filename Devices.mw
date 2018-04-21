@@ -497,7 +497,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | lg-m1
   | display works, touchscreen doesn't work
 |-
-  | [[Moto G4 Play|Moto G4 Play]]
+  | [[Moto G4 Play (motorola-harpia)|Moto G4 Play]]
   | motorola-harpia
   | Porting still in progress; no usable build yet
 |-
