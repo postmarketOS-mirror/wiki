@@ -104,6 +104,20 @@ $ adb push motorola-maserati.img /ss/safestrap/rom-slot${slot_number}/userdata.i
 $ adb shell umount /ss
 </source>
 
+== I have a brick! Help! (DANGEROUS) ==
+
+=== So you accidentally overwrote the stock slot in SafeStrap. What should you do? ===
+
+* Use Fastboot to write stock image back. Press the two volume buttons while pressing power to enter the factory bootloader. Find the files in VRZ_XT894_9.8.2O-72_VZW-18-8_CFC.xml.zip and rewrite system.img, boot.img, recovery.img, etc.
+* Install kexecboot to mbm partition to avoid SafeStrap altogether and boot from SD card see droid4-kexecboot in [[##See_also]].
+
+=== Fastboot won't work due to too low a battery ===
+
+* Charge battery with external LiPo charger - B+ and B- are clearly marked.
+* Insert pins into relevant battery terminals and give appropriate power from lab bench supply. Increasing current past a threshold (but be VERY careful) should fool the bootloader into thinking it has a well-charged battery.
+* It may also be possible to charge via the rear 4-pin connector, which goes through the charging circuitry: https://forum.xda-developers.com/showthread.php?t=1887365
+* Build a "factory cable" that bridges ID (micro-USB type-B pin 4) with 5V VCC (pin 1), which is how the factory flashes the devices without any battery at all.
+
 == See also ==
 * {{github|1039}} WIP pull request
 * [https://github.com/tmlind/droid4-kexecboot KexecBoot for the Droid 4] - quite possibly more desirable than Safestrap
