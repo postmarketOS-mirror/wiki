@@ -94,6 +94,7 @@ See the following links:
 A off-the-shelf USB-TTL Adapter with 3.3V signal level can be used together with a MicroUSB connector to access the phone's UART. By using a standard MicroUSB &lt;-&gt; USB A cable and just combine a USB jack with a cheap chinese USB-TTL adapter is space-saving and allows you to use the same MicroUSB cable to access the device in USB mode
 
 See http://elektranox.org/2017/02/0009-droid-4-root/
+and http://muru.com/linux/d4/
 
 == Sony Xperia ==
 
