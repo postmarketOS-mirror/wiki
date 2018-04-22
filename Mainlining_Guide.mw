@@ -123,7 +123,7 @@ The DTS file describes how the peripherals of the device are connected to the So
 
 Example for copying an existing file:
 <syntaxhighlight lang="shell-session">
-$ cd ~/code/linux/.output/arch/arm/boot/dts
+$ cd ~/code/linux/arch/arm/boot/dts
 $ cp qcom-apq8064-asus-nexus7-flo.dts qcom-apq8064-lge-nexus4-mako.dts
 </syntaxhighlight>
 
