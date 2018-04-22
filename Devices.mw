@@ -499,7 +499,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Moto G4 Play (motorola-harpia)|Moto G4 Play]]
   | motorola-harpia
-  | Boots, but no display
+  | Boots with graphical display, preparing for upstream merge
 |-
   | [[Moto X|Moto X]]
   | motorola-ghost
