@@ -159,6 +159,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | motorola-athene
   | Y  || P ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Moto G4 Play (motorola-harpia)|Moto G4 Play]]
+  | style="white-space: nowrap;" | motorola-harpia
+  | Y  || Y  || Y  || Y  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||   ||  
+|-
   | style="white-space: nowrap;" | [[Motorola Moto G5 Plus(motorola-potter)|Moto G5 Plus]]
   | style="white-space: nowrap;" | motorola-potter
   | Y  || P ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -496,10 +500,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[LG K7_(lg-m1)|LG K7]]
   | lg-m1
   | display works, touchscreen doesn't work
-|-
-  | [[Moto G4 Play (motorola-harpia)|Moto G4 Play]]
-  | motorola-harpia
-  | Boots with graphical display, preparing for upstream merge
 |-
   | [[Moto X|Moto X]]
   | motorola-ghost
