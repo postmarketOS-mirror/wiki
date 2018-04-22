@@ -21,10 +21,11 @@
 == Maintainer(s) ==
 
 == What works ==
-* Nothing
+* Kernel boots - <code>maximum-attention</code> initramfs hook causes device to vibrade and flash notification led and camera flash
 
 == What does not work ==
-* Everything - working build not yet created
+* Graphical display - sits at boot splash
+* USB Networking - device is not seen at all when plugged in to USB
 
 == How to enter flash mode ==
 Hold down POWER + Vol Down while booting to enter Flash Mode.
@@ -33,4 +34,3 @@ Hold down POWER + Vol Down while booting to enter Flash Mode.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-* Kernel builds just fine, however `xz` was missing in the chroot, which caused the build to fail. I had to install it myself (<code>pmbootstrap chroot</code> and <code>apk add xz</code>)
