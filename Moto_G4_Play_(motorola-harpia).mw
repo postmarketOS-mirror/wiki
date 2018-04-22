@@ -21,11 +21,10 @@
 == Maintainer(s) ==
 
 == What works ==
-* Kernel boots - <code>maximum-attention</code> initramfs hook causes device to vibrate and flash notification led and camera flash
 * USB Networking
+* Graphical display
 
 == What does not work ==
-* Graphical display - sits at boot splash
 
 == How to enter flash mode ==
 Hold down POWER + Vol Down while booting to enter Flash Mode.
@@ -34,3 +33,5 @@ Hold down POWER + Vol Down while booting to enter Flash Mode.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
+* Device requires msm-refresher to get a display past the boot splash, even though <code>cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode</code> doesn't fix the display
+* Steps outlined for [[Troubleshooting:display#Screen_is_blank_outside_of_Weston|Screen is blank outside of Weston]] is still required to get a display after the boot splash
