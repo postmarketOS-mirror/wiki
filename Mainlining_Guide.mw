@@ -48,24 +48,11 @@ $ pmbootstrap initfs hook_add debug-shell
 $ pmbootstrap export
 </syntaxhighlight>
 
-=== Development tools on host system ===
-{{note|See also: [https://kernelnewbies.org/KernelBuild What tools do I need? - kernelnewbies.org]}}
-The idea of <code>pmbootstrap</code> is, that you don't need to install anything on your host system, and we do everything in Alpine chroots. But this does not work with the process outlined in this guide yet, so we need to diverge from that idea during this step. Please install the following tools on your host system with your package manager:
-
-* libncurses5-dev
-* gcc
-* make
-* bc
-* libssl-dev
-* gcc cross-compiler, depending on your device architecture:
-** <code>aarch64</code> device: look for a <code>aarch64</code>/<code>arm64</code> cross-compiler
-** <code>armhf</code> device: look for a <code>armhf</code>/<code>armv6</code>/<code>armv7</code> cross-compiler
-
 === Kernel ===
 Download a copy of <code>linux-next</code>:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code
-$ git clone https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
+$ git clone https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git linux
 $ cd linux
 </syntaxhighlight>
 
@@ -83,30 +70,37 @@ $ cd ~/code/linux
 $ git checkout -b "device-lg-mako"
 </syntaxhighlight>
 
-==== Menuconfig ====
-During the mainlining process, you will be required to fire up <code>menuconfig</code> and to compile everything. Let's do this once to make sure that everything works. You can exit menuconfig right away after it starts. If anything does not run through, you are most likely [[#Development tools on host system|missing a dependency]].
-
-<code>armhf</code> device:
+=== envkernel.sh ===
+Usually when compiling a kernel, you would install [https://kernelnewbies.org/KernelBuild all dependencies] and a cross compiler in your host system. To make it easier, we have the <code>envkernel.sh</code> script (for firsh shell: <code>envkernel.fish</code>). It sets up an Alpine Linux chroot with all the dependencies by using <code>pmbootstrap</code> internally, exports the environment variables to use the right cross compiler and creates an alias to <code>make</code>. This means, whenever you type <code>make</code> after sourcing that script, it will actually run <code>make</code> in the chroot. Please try the script out once to make sure everything is working as expected:
 <syntaxhighlight lang="shell-session">
-$ export ARCH=arm
-$ export CROSS_COMPILE="arm-none-eabi-"
+$ cd ~/code/linux
+$ source ~/code/pmbootstrap/helpers/envkernel.sh
+Initializing Alpine chroot (details: 'pmbootstrap log')
+pmbootstrap envkernel.sh activated successfully.
+ * kernel source:  /home/user/code/linux
+ * output folder:  /home/user/code/linux/.output
+ * architecture:   arm (samsung-i9100 is armhf)
+ * aliases: make, kernelroot, pmbootstrap, pmbroot (see 'type make' etc.)
 $ make defconfig
-$ make menuconfig
-</syntaxhighlight>
-
-<code>aarch64</code> device:
-<syntaxhighlight lang="shell-session">
-$ export ARCH=arm64
-$ export CROSS_COMPILE="aarch64-none-eabi-"
-$ make defconfig
-$ make menuconfig
-</syntaxhighlight>
-
-==== Kernel compilation ====
-{{note|Make sure you did the exports from [[#Menuconfig]] above!}}
-Replace <code>3</code> with the amount of CPUs on your host machine plus one (e.g. quad-core: means <code>-j5</code>).
-<syntaxhighlight lang="shell-session">
-$ make -j3
+*** pmbootstrap envkernel.sh active for /home/user/code/linux! ***
+make: Entering directory '/mnt/linux'
+make[1]: Entering directory '/mnt/linux/.output'
+getconf: LFS_CFLAGS: unknown variable
+getconf: LFS_LDFLAGS: unknown variable
+getconf: LFS_LIBS: unknown variable
+  HOSTCC  scripts/basic/fixdep
+  GEN     ./Makefile
+  HOSTCC  scripts/kconfig/conf.o
+  YACC    scripts/kconfig/zconf.tab.c
+  LEX     scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+*** Default configuration is based on 'multi_v7_defconfig'
+#
+# configuration written to .config
+#
+make[1]: Leaving directory '/mnt/linux/.output'
+make: Leaving directory '/mnt/linux'
 </syntaxhighlight>
 
 === Got everything? ===
@@ -116,9 +110,7 @@ Please double check with the following checklist that you meet '''all the requir
 * [[#pmbootstrap setup|Device ported to postmarketOS]]
 * [[#Mentor|Mentor]]
 * [[#pmbootstrap setup|Initramfs with debug-shell generated]]
-* [[#Development tools on host system|Development tools on host system]]
-* [[#Menuconfig|Menuconfig]] tested
-* [[#Kernel compilation|Kernel compilation]] tested
+* [[#envkernel.sh|envkernel.sh test run]]
 
 == Contact your mentor ==
 Hop on [[Matrix_and_IRC|Matrix or IRC]] and ask the mentor if they have time to walk you through the further steps. This should be obvious, but remember to be nice and understanding if the mentor does not have time right away, they are supporting you for free so you'll need to be grateful and patient.
@@ -191,11 +183,11 @@ $ git commit -m "Enable my new DTS in the Makefile"
 
 == Testing ==
 === Defconfig and compilation ===
-Ask your mentor for the right defconfig to use and export the variables as in [[#Menuconfig|menuconfig]] (mind the <code>armhf</code> and <code>aarch64</code> differences). Then configure the kernel to use the defconfig and finally build it (like in [[#Kernel compilation|kernel compilation]] above). Example:
+Ask your mentor for the right defconfig to use. Then configure the kernel to use the defconfig and finally build it. Example:
 
 <syntaxhighlight lang="shell-session">
-$ export ARCH=arm
-$ export CROSS_COMPILE="arm-none-eabi-"
+$ cd ~/code/linux
+$ source ~/code/pmbootstrap/helpers/envkernel.sh
 $ make qcom_defconfig
 $ make -j5
 </syntaxhighlight>
@@ -203,7 +195,8 @@ $ make -j5
 === Append DTB ===
 Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lge-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
 <syntaxhighlight lang="shell-session">
-$ cat arch/arm/boot/zImage arch/arm/boot/dts/qcom-apq8064-lge-nexus4-mako.dtb > zImage-dtb
+$ cd ~/code/linux/.output/arch/arm/boot
+$ cat zImage dts/qcom-apq8064-lge-nexus4-mako.dtb > ~/code/linux/.zImage-dtb
 </syntaxhighlight>
 
 === Execute on the device ===
@@ -223,7 +216,7 @@ Then run one of the following every time you would like to replace the kernel in
 
 ===== non-QCDT devices =====
 <syntaxhighlight lang="shell-session">
-$ cp ~/code/linux/zImage-dtb "$TEMP"
+$ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ pmbootstrap chroot
 # abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
@@ -236,7 +229,7 @@ Writing Boot Image /tmp/mainline/boot.img
 ===== QCDT devices =====
 All flasher offsets must be replaced with the values from the [[deviceinfo]] (you might want to save the command as a shell script for quick usage).
 <syntaxhighlight lang="shell-session">
-$ cp ~/code/linux/zImage-dtb "$TEMP"
+$ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ pmbootstrap chroot -- mkbootimg \
 --kernel "/tmp/mainline/zImage-dtb" \
@@ -277,8 +270,6 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 = TODO =
 * Mention this is ARM only
 * Explain how to get dmesg from the device via telnet (<code>dhcpcd interface --nohook ipv6</code> might be necessary etc.)
-* Maybe put all environment variables we export plus the DT name into a shell script that we source at the beginning of every operation? That might make it a lot easier (see {{github|1356}}).
-* Put zImage-dtb into another folder, so <code>git add -A</code> doesn't grab it
 * Add steps to upstream the changes made into the kernel (there are already good tutorials out there)
 * Add step to integrate the changes with the pmbootstrap source tree (might need changes in pmbootstrap architecture for that)
 * Describe how to add a "Mainline section" to each device specific page (with a template!) - something like [http://elektranox.org/droid4/ this overview] would be great to have for every device. This can be done while doing the first kernel compilation when following this guide, because that takes a while anyway. Get the components from:
