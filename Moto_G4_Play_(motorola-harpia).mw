@@ -21,7 +21,7 @@
 == Maintainer(s) ==
 
 == What works ==
-* Kernel boots - <code>maximum-attention</code> initramfs hook causes device to vibrade and flash notification led and camera flash
+* Kernel boots - <code>maximum-attention</code> initramfs hook causes device to vibrate and flash notification led and camera flash
 
 == What does not work ==
 * Graphical display - sits at boot splash
