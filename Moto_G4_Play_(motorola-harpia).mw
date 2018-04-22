@@ -22,10 +22,10 @@
 
 == What works ==
 * Kernel boots - <code>maximum-attention</code> initramfs hook causes device to vibrate and flash notification led and camera flash
+* USB Networking
 
 == What does not work ==
 * Graphical display - sits at boot splash
-* USB Networking - device is not seen at all when plugged in to USB
 
 == How to enter flash mode ==
 Hold down POWER + Vol Down while booting to enter Flash Mode.
