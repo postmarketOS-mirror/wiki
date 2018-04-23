@@ -114,7 +114,7 @@ $ adb shell umount /ss
 === Fastboot won't work due to too low a battery ===
 
 * Charge battery with external LiPo charger - B+ and B- are clearly marked.
-* Insert pins into relevant battery terminals and give appropriate power from lab bench supply. Increasing current past a threshold (but be VERY careful) should fool the bootloader into thinking it has a well-charged battery.
+* Remove the battery, and insert pins into relevant battery terminals and give appropriate power from lab bench supply. Increasing current past a threshold (but be VERY careful) should fool the bootloader into thinking it has a well-charged battery.
 * It may also be possible to charge via the rear 4-pin connector, which goes through the charging circuitry: https://forum.xda-developers.com/showthread.php?t=1887365
 * Build a "factory cable" that bridges ID (micro-USB type-B pin 4) with 5V VCC (pin 1), which is how the factory flashes the devices without any battery at all.
 
