@@ -32,8 +32,6 @@
 <source lang="bash">fastboot boot /mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead /mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead</source>
 === What does not work ===
 
-* Proprietary video driver ([https://github.com/postmarketOS/pmbootstrap/issues/29 #29])
-* Flashing the compiled LineageOS kernel via pmbootstrap ([https://github.com/postmarketOS/pmbootstrap/issues/35 #35])
 * WiFi (firmware needed)
 * Front led
 
