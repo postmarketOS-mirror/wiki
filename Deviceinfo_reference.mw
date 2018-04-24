@@ -71,10 +71,6 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | Path to the keyboard device, if your device has any (needed for initramfs password unlocking)
 | e.g. <code>/dev/input/event1</code> 
 |-
-| <code>msm_refresher</code>
-| Enable msm-fb-refresher for devices that only implement double buffering (graphics). See also [[Troubleshooting:display#Screen_doesn.27t_refresh|Troubleshooting:Screen doesn't refresh]]
-| <code>true</code>,<code>false</code>(default)
-|-
 | <code>swap_size_recommended</code>
 | Set recommended swap file size for device. If unset, no swap file will be created for the device.
 | Integer, in MB.
