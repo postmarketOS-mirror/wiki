@@ -70,7 +70,7 @@ Check if your screen refreshes when you do the following:
 $ cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode
 </syntaxhighlight>
 
-If it does, enable <code>deviceinfo_msm_refresher</code> (see [[deviceinfo reference]]) and add <code>msm-fb-refresher</code> to the <code>depends=</code> of your device-package. It will basically do the same automatically.
+If it does, add <code>msm-fb-refresher</code> to the <code>depends=</code> of your device-package. It will basically do the same automatically.
 
 (If the above command does ''not'' refresh your screen, you could try the <code>msm-fb-refresher</code> anyway.)
 
