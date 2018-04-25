@@ -44,7 +44,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | High - keep it maintained or look for alternative
 |-
 ! scope="row"| esd
-| Fully ported
+| Ported
 | esound
 | 0.2.41
 | Enlightened sound daemon. Once the sound daemon for Enlightenment and GNOME.
@@ -468,7 +468,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 |
 |-
 ! scope="row"| matchbox-window-manager
-| Not ported
+| Ported
 | N/A
 | N/A
 | X environment for resource-limited systems
