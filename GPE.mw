@@ -36,7 +36,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 ! scope="col"| Priority
 |-
 ! scope="row"| audiofile
-| Fully ported
+| Ported
 | audiofile
 | 0.3.6
 | Audio package which supports a large number of codecs and media types.
