@@ -21,7 +21,7 @@ One of the following:
 
 * Android app format
 * Alpine Linux package (also ends in <code>.apk</code>, but totally incompatible!), which are actually gzipped tar files
-* Alpine Linux package manager (apk)
+* [https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management Alpine Linux package manager (apk)]
 
 === boot.img ===
 
