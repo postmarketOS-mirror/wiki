@@ -22,6 +22,7 @@
 * ''[https://github.com/craftyguy craftyguy]''
 * ''[https://github.com/pavelmachek Pavel Machek]''
 * ''[[user:drebrez|drebrez]]''
+* ''[https://github.com/fxkrait FXKrait]''
 
 === What works ===
 * Framebuffer & DRM graphics
@@ -63,6 +64,7 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-n900 Device package]
 * [https://kernel.org Kernel source]
+* [https://web.archive.org/web/20131117073524/http://skeiron.org/tablets-dev/nokia_N900/ Images and Flashers for Maemo]
 
 === Additional info ===
 
