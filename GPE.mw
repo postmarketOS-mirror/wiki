@@ -187,6 +187,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Depended on by almost every GPE program. It is a fairly inoffensive icon set. GPE does allow one to theme its programs, it should be noted.
 | High - key part of suite
 |-
+! scope="row"| gpe-julia
+| Ported
+| gpe-julia
+| 0.0.6
+| Julia set manipulation game for GPE
+| Cute little game that lets users manipulate Julia sets
+| Medium - it is just a game 
+|-
 ! scope="row"| gpe-lights
 | Not ported
 | N/A
@@ -208,7 +216,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | N/A
 | N/A
 | A tiny web browser for GPE
-| Not maintained (and this is bad for a web browser). Use Dillo, Netsurf, text-only web browsers instead on low-end devices.
+| Not maintained (and this is bad for a web browser). Use Dillo, Netsurf, text-only web browsers instead on low-end devices. Midori also works reasonably well
 | Low - 
 |-
 ! scope="row"| gpe-mininet
@@ -244,19 +252,19 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Low
 |-
 ! scope="row"| gpe-question
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-question
+| 0.04
 | GPE interface for asking questions from shell scripts 
 | 
 | High
 |-
 ! scope="row"| gpe-screenshot
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-screenshot
+| 0.4
 | Screenshot program for GPE
-| Definitely worth porting. In the meantime, see shutter or gnome-screenshot
+|
 | High
 |-
 ! scope="row"| gpe-shield
@@ -268,9 +276,9 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Medium
 |-
 ! scope="row"| gpe-sketchbook
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-sketchbook
+| 0.2.9
 | Sketchbook program for GPE
 | A useful and fun application for PDAs. Well worth porting as it is not as complicated and heavy as, say, GIMP or InkScape. There are slightly larger programs such as mtpaint that are also useful.
 | High
@@ -292,9 +300,9 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Medium
 |-
 ! scope="row"| gpe-taskmanager
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-taskmanager
+| 0.20
 | A task manager program for GPE
 | Useful to have, although likely other programs that are still maintained offer the same features.
 | High
