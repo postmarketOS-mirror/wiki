@@ -559,6 +559,8 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 |-
 |}
 
+Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications] for some overview of possible options.
+
 == GPE phone edition ==
 
 There was also a now-defunct GPE phone edition. It provided Email, SMS, voicemail, and calling components. This could be useful.
