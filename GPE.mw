@@ -19,7 +19,7 @@ POSIX-compliant Unix-like systems).
 
 Additionally, certain libraries, that the suite depends on, ship with some terrible security issues, for instance old versions of sqlite.
 
-The most immediate problems, however are with compiling the thing. There are simple issues with config.sub in the autoconf build system in many of the packages not understanding Alpine Linux's triples or any triple including the form "musl" or "armv6". There are more serious problems such as some of the packages not linking properly. This was the main problem in the end.
+The most immediate problems, however are with compiling the thing. Many of the packages do not link properly or make assumptions about obscure glibc functions (such as the undocumented __isleap macro in glibc's time.h).
 
 Another immediate problem is that the homepage for GPE is now gone. The source code archives that were used came from Debian. They appear to be the latest - they shipped with Debian Wheezy, which came out in May 2013.
 
