@@ -22,7 +22,12 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == What works ==
-* XFCE4
+* Booting
+* FDE
+* Flashing
+* Screen
+* Wifi
+* XWayland
 
 == What does not work ==
 
