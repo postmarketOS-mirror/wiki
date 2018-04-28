@@ -1,1 +1,34 @@
-kaendfinger has got XFCE4 running on it, see {{github|957}}. This stub should be replaced with a proper [[Help:Device_Page|device page]].
+{{Infobox device
+| manufacturer = Foxconn
+| name =  Google Glass (Explorer Edition)
+| codename = google-glass
+| image = File:google-glass-screenshot.png
+| imagecaption = Running XFCE4
+| releaseyear = 2013
+| originalsoftware = Glass OS
+| chipset = 
+| cpu = 	OMAP 4430 System on a chip, dual-core processor
+| gpu = 
+| storage = 	16 GB flash memory total[6] (12 GB of usable memory)
+| display = Prism projector, 640×360 pixels (equivalent of a 25 in/64 cm screen from 8 ft/2.4 m away)
+| memory = 2GB RAM
+}}
+
+== Contributors ==
+* kaendfinger
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+* XFCE4
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+
+== See also ==
+* {{github|957}} Initial pull request
