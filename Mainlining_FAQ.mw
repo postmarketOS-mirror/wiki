@@ -143,3 +143,18 @@ $ dd if=/dev/loop0p2 of=root_partition.img
 $ fastboot flash system root_partition.img
 $ fastboot flash cache boot_partition.img
 </syntaxhighlight>
+
+== How to let the bootloader initialize the panel? ==
+opendata found a cool hack to let the bootloader initialize the display, which makes everything a lot easier. It probably only works with Sony devices.
+
+* Make sure to base of downstream 3.4 kernel
+* Basically extract the dts from your downstream 3.4 kernel
+* Use DTC to convert it to a dts
+* Then delete everything after main header apart from display stuff and anything in the spmi nodr
+* Then in spmi node delete everything apart from wled and pm8941@1 gpios
+* That should be enough for bootloader to init display
+* Example:
+** 1. Stock downstream: https://ptpb.pw/hRmy.dts
+** 2. Minimum for display init: https://ptpb.pw/f2ye.dts
+** 3. mainline dts with second added intonit: https://ptpb.pw/q28L.dts
+** Then just add it to simple panel with video mode and video hse
