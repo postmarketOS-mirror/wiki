@@ -145,7 +145,7 @@ $ fastboot flash cache boot_partition.img
 </syntaxhighlight>
 
 == How to let the bootloader initialize the panel? ==
-opendata found a cool hack to let the bootloader initialize the display, which makes everything a lot easier. It probably only works with Sony devices.
+opendata found a cool hack to let the bootloader initialize the display, which makes everything a lot easier. It only works with Sony Shinano and Rhine devices.
 
 * Make sure to base of downstream 3.4 kernel
 * Basically extract the dts from your downstream 3.4 kernel
