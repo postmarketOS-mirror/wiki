@@ -144,7 +144,8 @@ $ fastboot flash system root_partition.img
 $ fastboot flash cache boot_partition.img
 </syntaxhighlight>
 
-== How to let the bootloader initialize the panel? ==
+== Display panel ==
+=== How to let the bootloader initialize the panel? ===
 opendata found a cool hack to let the bootloader initialize the display, which makes everything a lot easier. It only works with Sony Shinano and Rhine devices.
 
 * Make sure to base of downstream 3.4 kernel
@@ -158,3 +159,6 @@ opendata found a cool hack to let the bootloader initialize the display, which m
 ** 2. Minimum for display init: https://ptpb.pw/f2ye.dts
 ** 3. mainline dts with second added intonit: https://ptpb.pw/q28L.dts
 ** Then just add it to simple panel with video mode and video hse
+
+=== Can I use the simple panel driver? ===
+* If your device shows the boot splash with mainline, simple panel should work
