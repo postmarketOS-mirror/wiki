@@ -291,6 +291,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | sony-amami
   | Y  || Y  || Y  || Y  || Y  || Y  ||  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Sony Xperia Z2 (sony-sirius)|Sony Xperia Z2]]
+  | style="white-space: nowrap;" | sony-sirius
+  | Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y || Y  ||  ||  || Y ||  || - || -  || -  || -
+|-
   | style="white-space: nowrap;" | [[Sony Xperia Z2 Tablet (sony-castor-windy)|Sony Xperia Z2 Tablet]]
   | style="white-space: nowrap;" | sony-castor-windy
   | Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y || Y  ||  ||  || Y ||  || - || -  || -  || -
