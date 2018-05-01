@@ -293,7 +293,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |-
   | style="white-space: nowrap;" | [[Sony Xperia Z2 (sony-sirius)|Sony Xperia Z2]]
   | style="white-space: nowrap;" | sony-sirius
-  | Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y || Y  ||  ||  || Y ||  || - || -  || -  || -
+  | Y  || Y  || Y  || Y  || Y  || Y  || Y  || Y  ||   || Y  ||  ||  ||  ||  ||  ||   ||   || 
 |-
   | style="white-space: nowrap;" | [[Sony Xperia Z2 Tablet (sony-castor-windy)|Sony Xperia Z2 Tablet]]
   | style="white-space: nowrap;" | sony-castor-windy
@@ -572,11 +572,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Sony SmartWatch 3 (sony-tetra)|Sony SmartWatch 3]]
   | sony-tetra
   | Kernel compiles, not tested
-|-
-  | [[Xperia-Z2|Sony Xperia Z2]]
-  | sony-sirius
-  |
-
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
