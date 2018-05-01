@@ -27,14 +27,17 @@
 * Fastboot flash
 * SSH
 * Setting Brightness
+* Freedreno
+* WiFi
+* Battery Capacity
+* Temperature Sensors
+* Display
+* Touch Screen
+* Venus
+* Probably more
 
-'''Current status''': The framebuffer doesent seem to work correctly (it just sits on boot logo) running cat <code>/dev/urandom &gt; /dev/fb0</code> does nothing and running <code>cat /dev/urandom &gt; /dev/fb2</code> makes the screen go black<br />
-the same happens with <code>cat /sys/devices/virtual/graphics/fb0/mode &gt; /sys/devices/virtual/graphics/fb0/modes</code>
-
-'''What i've tried''':
-
-* Using 3.10 instead of 3.4 (Gives same isue as anami -&gt; [https://github.com/postmarketOS/pmbootstrap/pull/348/files try out this fix!])
-* Setting fb settings same as twrp (does nothing)
+'''Current status''':
+Uses mainline and works very well, kernel is on pmos github.
 
 == Links ==
 
