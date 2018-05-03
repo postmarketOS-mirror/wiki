@@ -134,15 +134,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 ! scope="row"| gpe-conf
 | Ported
 | gpe-conf
-| 
+| 0.2.9
 | Configuration toolset for GPE
 | Not working very well. It segfaults in a few places due to components it is communicating with not working (gpe-clock is the culprit). It also depends on gpe-confd which doesn't yet exist. It should be rewritten ideally.
 | High
 |-
 ! scope="row"| gpe-confd
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-confd
+| 0.16
 | Persistent XSettings storage daemon for GPE
 | Key dependency of gpe-conf
 | High - gpe-conf can't apply settings without it.
@@ -220,11 +220,11 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Medium - it is just a game 
 |-
 ! scope="row"| gpe-login
-| Partially ported
-| N/A
-| N/A
+| Ported
+| gpe-login
+| 0.95
 | Login screen for GPE
-| It is packaged, but it does not build or link properly, and it appears non-trivial to fix. Not really needed, if we use a generic display manager instead (this is more desirable; unknown if gpe-login allows logging in to arbitrary user interfaces). It also provides a lock screen which can lock on suspend, which is useful. However, given the program is not maintained, it seems questionable whether to rely on it to actually secure a given device.
+| It also provides a lock screen which can lock on suspend, which is useful. However, given the program is not maintained, it seems questionable whether to rely on it to actually secure a given device.
 | Medium - not necessarily needed
 |-
 ! scope="row"| gpe-mini-browser
