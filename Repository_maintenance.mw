@@ -10,3 +10,4 @@ See {{github|978}} for an idea to automatize this and for more information.
 
 == See also ==
 * [https://github.com/postmarketOS/pmOS-repo-scripts pmOS-repo-scripts]
+* {{github|1458}} Fixing the repo after QT upgrade to 5.10.1
