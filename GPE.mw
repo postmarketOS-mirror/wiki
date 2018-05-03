@@ -124,12 +124,28 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | High - key part of suite
 |-
 ! scope="row"| gpe-clock
-| Does not work
-| N/A
-| N/A
+| Ported
+| gpe-clock
+| 
 | Clock application for GPE
-| The program does work on PMOS due to not using /etc/timezone like Debian. We can work around this using a script to populate /etc/timezone, or it may be necessary to rewrite the timezone functionality altogether.
+| It does work currently due to not using /etc/timezone like Debian. We can work around this using a script to populate /etc/timezone, or it may be necessary to rewrite the timezone functionality altogether.
 | High - desktop clock key part of suite
+|-
+! scope="row"| gpe-conf
+| Ported
+| gpe-conf
+| 
+| Configuration toolset for GPE
+| Not working very well. It segfaults in a few places due to components it is communicating with not working (gpe-clock is the culprit). It also depends on gpe-confd which doesn't yet exist. It should be rewritten ideally.
+| High
+|-
+! scope="row"| gpe-confd
+| Not ported
+| N/A
+| N/A
+| Persistent XSettings storage daemon for GPE
+| Key dependency of gpe-conf
+| High - gpe-conf can't apply settings without it.
 |-
 ! scope="row"| gpe-dm
 | Not ported
@@ -489,6 +505,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | 2.8.17
 | Legacy Sqlite version
 | Not maintained at all. The existence of this package is a bug.
+|
+|-
+! scope="row"| xsd
+| Ported
+| xsd
+| 0.15
+| XSettings daemon
+| Required for gpe-conf
 |
 |-
 |}
