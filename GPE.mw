@@ -493,16 +493,16 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 |-
 |}
 
-== Going forward ==
+=== Issues ===
 
-Porting GPE would be probably not be worth it, as it is wholly unmaintained and would need an audit, or, even better, a full rewrite. That being said, it would still be useful to finish porting certain components:
-
-=== Priorities ===
-
-* Fix dependency on that ancient sqlite version. It should not be too difficult to rewrite, however, the old functions cannot always be subsituted directly for the equivalent new sqlite3 function.
-* Fix dependency on the enlightened sound daemon, and on the audiofile library. PulseAudio should probably replace this.
-* Make certain programs link properly.
-* Fix security bugs.
+* Move from SQLite version 2 to modern SQLite version 3
+* Move from gconf to gsettings and dconf.
+* Proper GTK theme support.
+* Move to GTK+3
+* Move from the Enlightened sound daemon (esound) to PulseAudio or similar.
+* Fix dependencies on non-standard system infrastructure such as /etc/timezone.
+* Investigate modern replacement for the audiofile program.
+* Modern configuration program for wireless networking with privilege separation.
 
 == Potential PIM suite and mobile interface components ==
 
