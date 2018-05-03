@@ -527,7 +527,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 * Fix dependencies on non-standard system infrastructure such as /etc/timezone.
 * Investigate modern replacement for the audiofile program.
 * Modern configuration program for wireless networking with privilege separation.
-* Matchbox is not themed by GPE's theme program nor are GTK programs that don't use GPE's widget library. Enhance gpe-conf to be able to do this (or get rid of the xsettings-based theme system and just use GTK+.)
+* GTK programs that don't use xsettings aren't able to be configured by its theme support. Enhance gpe-conf to be able to do this (or get rid of the xsettings-based theme system and just use GTK+.)
 * Sound does not appear to work. This may be device-specific.
 
 == Potential PIM suite and mobile interface components ==
