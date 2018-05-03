@@ -124,9 +124,9 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | High - key part of suite
 |-
 ! scope="row"| gpe-clock
-| Ported
-| gpe-clock
-| 
+| Not ported
+| N/A
+| N/A
 | Clock application for GPE
 | It does work currently due to not using /etc/timezone like Debian. We can work around this using a script to populate /etc/timezone, or it may be necessary to rewrite the timezone functionality altogether.
 | High - desktop clock key part of suite
