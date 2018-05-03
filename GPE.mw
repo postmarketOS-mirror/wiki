@@ -524,7 +524,7 @@ Porting GPE would be probably not be worth it, as it is wholly unmaintained and 
 | gpe-calendar,gpicview
 |-
 ! scope="row"| Camera
-| gpe-calendar,cheese
+|
 |-
 ! scope="row"| E-mail
 | sylpheed,claws-mail,mutt,thunderbird
