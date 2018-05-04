@@ -22,14 +22,15 @@
 
 === What works ===
 
-* Compiling the LineageOS kernel
+* Mainline linux
 * SSH
-* Booting
-* Flash light
 * Battery
-* Weston + Touchscreen (with [https://github.com/postmarketOS/pmbootstrap/pull/66 ugly hacks] and the [https://github.com/postmarketOS/pmbootstrap/issues/54 red screen bug])
+* Display
+* Touchscreen
+* 3D acceleration
+* Calls?
+* WiFi
 
-<source lang="bash">fastboot boot /mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead /mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead</source>
 === What does not work ===
 
 * WiFi (firmware needed)
