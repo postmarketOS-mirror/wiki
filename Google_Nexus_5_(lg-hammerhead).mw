@@ -2,7 +2,7 @@
 | name = Nexus 5
 | manufacturer = LG
 | codename = hammerhead
-| image = File:20180505_0011_01.jpg
+| image = File:Lg-hammerhead.jpg
 | imagecaption = Nexus 5 running the weston demo
 | releaseyear = 2013
 | originalsoftware = Android 4.4-6 on Linux 3.4
@@ -64,3 +64,4 @@ $ nmcli radio all on
 
 * [https://user-images.githubusercontent.com/6033024/26851053-3f5512fe-4af9-11e7-93da-cf9dd94b6b75.jpg Weston running (with the red screen bug)]
 * [https://www.reddit.com/r/postmarketOS/comments/6fovjp/postmarketos_running_on_the_the_nexus_5/ /r/postmarketOS post]
+* [[File:20180505_0011_01.jpg|frame|TTY on mainline]]
