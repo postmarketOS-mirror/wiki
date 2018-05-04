@@ -33,8 +33,7 @@
 
 === What does not work ===
 
-* WiFi (firmware needed)
-* Front led
+* Flashlight and Front led
 
 <pre>[00:33:38] (native) flash kernel 'lg-hammerhead'
 creating boot image...
