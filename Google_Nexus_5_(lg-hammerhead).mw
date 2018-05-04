@@ -75,13 +75,13 @@
 | 2D Video
 | mdss_fb
 | Screen not refreshing automatically
-| No
+| Yes
 |-
 | 3D Video
 |
 
 | Not in kernel
-| No
+| Yes
 |-
 | Touchscreen
 |
