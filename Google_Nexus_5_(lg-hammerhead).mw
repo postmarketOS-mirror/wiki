@@ -40,6 +40,19 @@
 * Backlight works partially
 * Serial console
 
+=== Additional info ===
+
+==== WiFi workaround on boot ====
+
+The wifi adapter works in networkmanager but it seems it boots in airplane mode. To make it detect wifi networks you need to disable and re-enable the wifi adapter.
+This can be done in the graphic shell (Plasma Mobile has an airplane mode switch in the pull-down menu) or through the shell:
+
+<source lang="shell-session">
+$ nmcli radio all off
+$ nmcli radio all on
+</source>
+
+
 === Links ===
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
