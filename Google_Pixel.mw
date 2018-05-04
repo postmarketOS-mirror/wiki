@@ -103,18 +103,20 @@ At this point, you should be ready to test pmOS deployments.
 
 More details to this section are coming soon.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-=== Untested steps ===
 
-Take precaution here, and keep backups. This section is all theoretical and has not been tested as of writing.
+==== Backup with TWRP ===
+Take precaution, and keep backups if this is your primary device.
 
 * [https://twrp.me/google/googlepixel.html Download the latest TWRP (both img and zip)]
 * From the TWRP directory, run the fastboot command: <pre>#fastboot boot <nowiki><your-twrp.img></nowiki></pre>
 * At this point, TWRP will load
-* Be sure that slot A is active before continuing:
+* Take your backup, note this does not include the user data directory. You need to copy that over with MTP as well.
+
+=== Fastboot without flashing ===
 <pre><nowiki>
 #fastboot set_active a
 #fastboot reboot bootloader
-#fastboot reboot recovery
+#pmbootstrap flasher boot
 </nowiki></pre>
 
 == Serial Debugging ==
