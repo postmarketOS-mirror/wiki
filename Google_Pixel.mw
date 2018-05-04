@@ -35,16 +35,49 @@ The sailfish variant of the Google Pixel shares the same kernel builds as the Pi
 
 == What works ==
 
-TLDR;
-
-* Nothing
-
-Installation using normal measures does not successfully boot. This is likely due to the fact that the Google Pixel's fastboot has two boot slots (A and B).
-What this effectively means is that fastboot allows you to dual boot. That's nice and all, but it's annoying. What we will likely have to do is flash via TWRP. Needs more investigation.
+* Kernel compilation
 
 == What does not work ==
 
-Watch this space.
+* Booting kernel via fastboot
+* Flashing (install script mods required, see below)
+* Touch
+* Screen
+* WiFi
+* Bluetooth
+* Camera
+* GPS
+* Modem
+
+Installation using normal measures does not successfully boot via the typical flashing method, however it is possible to direct boot to the initramfs without flashing.
+The Pixel/Pixel XL also have encrypted partitions by default, which is troublesome for TWRP. The Pixels also differ from the standard Android boot partition format, since they have
+two partition slots (dubbed slot A & B).
+
+=== Partition Layout ===
+
+<pre>
+~#: fdisk -l /dev/block/sda
+
+
+bootlocker_a    bootlocker_b
+keymaster_a     keymaster_b
+tz_a            tz_b
+rpm_a           rpm_b
+pmic_a          pmic_b
+hyp_a           hyp_b
+cmnlib32_a      cmnlib32_b
+cmnlib64_a      cmnlib64_b
+aboot_a         aboot_b
+hosd_a          hosd_b
+devcfg_a        devcfg_b
+modem_a         modem_b
+msadp_a         msadp_b
+apdp_a          apdp_b
+vendor_a        vendor_b
+system_a        system_b
+userdata
+reserve0
+</pre>
 
 == How to enter flash mode ==
 
