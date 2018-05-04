@@ -34,6 +34,8 @@ Just for the records of you gentlemen, I wanted to let you know that all the 201
 * https://forum.xda-developers.com/showthread.php?t=2768514
 * https://forum.xda-developers.com/showthread.php?t=2070325
 </blockquote>
+
+* The above methods are "s1tool" and will not get around "Bootloader unlock allowed: No". There doesn't seem to be a way to get around "Bootloader unlock allowed: No" except for a software+hardware box combination called SETool2 that can be used to modify any Sony Ericsson device. This is what likely what has referred to as a "paid unlock" - rendeko
 == What works ==
 
 * Building and installing to external SD card
