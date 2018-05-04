@@ -77,10 +77,7 @@ Take precaution here, and keep backups. This section is all theoretical and has 
 * [https://twrp.me/google/googlepixel.html Download the latest TWRP (both img and zip)]
 * From the TWRP directory, run the fastboot command: <pre>#fastboot boot <nowiki><your-twrp.img></nowiki></pre>
 * At this point, TWRP will load
-* Navigate to Advanced > ADB Sideload
-* Install TWRP to your recovery partitions. This will overwrite '''both''' recovery partition slots (A and B): <pre>adb sideload <nowiki><your-twrp.zip></nowiki></pre>
-* Reboot the phone into fastboot
-* At this point you can run recovery from slot A. Be sure that slot A is active before continuing:
+* Be sure that slot A is active before continuing:
 <pre><nowiki>
 #fastboot set_active a
 #fastboot reboot bootloader
