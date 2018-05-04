@@ -90,6 +90,13 @@ Sounds like this is possible, given kernel has serial debugging enabled.
 
 http://www.viruss.eu/malware/practical-android-debugging-via-kgdb/
 
+Should also be possible with a [[Serial debugging|Nexus Serial debug cable]]. Awaiting a parts delivery for this.
+
+Must be enabled via fastboot first:
+<pre>
+fastboot oem uart enable
+</pre>
+
 == To Do List ==
 
 === Doing ===
