@@ -35,20 +35,6 @@
 
 * Flashlight and Front led
 
-<pre>[00:33:38] (native) flash kernel 'lg-hammerhead'
-creating boot image...
-creating boot image - 3600384 bytes
-sending 'SHLVL=1' (3516 KB)...
-OKAY [  0.331s]
-writing 'SHLVL=1'...
-FAILED (remote: partition table doesn't exist)
-finished. total time: 0.511s
-[00:33:38] ERROR: Command failed: (native) % fastboot --base 0 --kernel-offset 0x00008000 --ramdisk-offset 0x02900000 --tags-offset 0x02700000 --page-size 2048 flash:raw /mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead /mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead</pre>
-Workaround (on host, not inside chroot):
-
-<pre>mkbootimg --base 0 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x2900000 --second_offset 0x00f00000 --tags_offset 0x02700000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1' --kernel ~/.local/var/pmbootstrap/chroot_native/mnt/rootfs_lg-hammerhead/boot/vmlinuz-lg-hammerhead --ramdisk ~/.local/var/pmbootstrap/chroot_native/mnt/rootfs_lg-hammerhead/boot/initramfs-lg-hammerhead -o pmos.img
-fastboot boot pmos.img</pre>
-
 === Links ===
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
