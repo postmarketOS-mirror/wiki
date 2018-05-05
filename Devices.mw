@@ -259,6 +259,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | samsung-klte
   | Y || Y || Y || Y ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Samsung_Galaxy_S5_mini_(samsung-g800f)|Samsung Galaxy S5 Mini]]
+  | style="white-space: nowrap;" | samsung-kminilte
+  | Y || Y || Y || Y ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Samsung Galaxy SL (samsung-i9003)|Samsung Galaxy SL]]
   | style="white-space: nowrap;" | samsung-i9003
   | Y  || P  || Y  || Y  ||  || Y  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -540,10 +544,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Samsung_Galaxy_S_(samsung-i9000)|Samsung Galaxy S]]
   | samsung-i9000
   | Kernel compiles & boots; framebuffer, touchscreen and wifi (partial) working 
-|-
-  | [[Samsung-g800f-(Samsung-Galaxy-S5-mini)|Samsung Galaxy S5 mini]]
-  | samsung-g800f
-  |
 |-
   | [[Samsung-g930f-(Samsung-Galaxy-S7)|Samsung Galaxy S7]]
   | samsung-g930f
