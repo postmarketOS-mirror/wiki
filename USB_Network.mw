@@ -110,6 +110,8 @@ The postmarketOS initramfs is able to configure two different USB systems in the
 
 You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
 
+Related: {{github|1462}} linux-postmarketos-qcom: Remove composite usb gadget for networking
+
 === Note about HTC devices ===
 * HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
 * The [[HTC_Desire_(htc-bravo)|HTC desire]] does work, and it required [https://github.com/postmarketOS/pmbootstrap/blob/bd4ebb3473764108daa92b308511be7e0a1b6948/aports/device/device-htc-bravo/initfs-hook.sh#L8 this line in the initfs-hook] to get USB network
