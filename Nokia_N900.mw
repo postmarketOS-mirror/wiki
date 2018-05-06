@@ -23,6 +23,7 @@
 * ''[https://github.com/pavelmachek Pavel Machek]''
 * ''[[user:drebrez|drebrez]]''
 * ''[https://github.com/fxkrait FXKrait]''
+* ''[https://github.com/sicelo Sicelo]''
 
 === What works ===
 * Framebuffer & DRM graphics
@@ -195,16 +196,18 @@ To adjust brightness:
 </pre>
 
 ==== GUI ====
+
+===== XFCE4 =====
 [[XFCE4]] works well.
 
-===== i3 config =====
-{{note|If you enjoy using these configs, how about we add them as default configs to the n900 package? they are pretty specific to the n900 keyboard anyway, so it would make sense.}}
-MartijnBraam created some nice configs:
-* [https://gist.github.com/MartijnBraam/2b54f617b1741ff1a67082fb5c9db3b6 i3config]
-* [https://gist.github.com/MartijnBraam/dbef8c0e89bd5568e61ce4c5e02816b7 i3status]
+===== i3wm =====
+[[I3wm]] also works very well with the N900 due to the hardware keyboard, and MartijnBraam created some nice configs which have are included in the standard postmarketos-ui-i3wm installation.
 * [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ in action]
 
-===== Power button =====
+===== Others =====
+There are also Hildon, Mate, Matchbox, etc.
+
+===== Misc: Power button =====
 If you want to make use of the power button, bind <code>XF86PowerOff</code> to this script:
 <syntaxhighlight lang="sh">
 FILE=~/.screenoff
@@ -225,7 +228,7 @@ fi
 
 {{note|You cannot use this to turn the screen back on if i3lock or similar is running, as they would grab the keys}}
 
-===== Middle click =====
+===== Misc: Middle click =====
 Obviously, you can't middle click with a touchscreen, but this can be annoying when it's one of the few ways to paste in the terminal.
 This script simulates a middle click:
 <syntaxhighlight lang="sh">
