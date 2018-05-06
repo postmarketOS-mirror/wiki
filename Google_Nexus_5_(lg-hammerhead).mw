@@ -22,7 +22,6 @@
 * opendata
 
 === What works ===
-
 * Mainline linux
 * SSH
 * Battery
@@ -34,7 +33,6 @@
 * WiFi
 
 === What does not work ===
-
 * Flashlight and Front led
 * Camera
 * Backlight works partially
@@ -45,7 +43,6 @@
 === Additional info ===
 
 ==== WiFi workaround on boot ====
-
 The wifi adapter works in networkmanager but it seems it boots in airplane mode. To make it detect wifi networks you need to disable and re-enable the wifi adapter.
 This can be done in the graphic shell (Plasma Mobile has an airplane mode switch in the pull-down menu) or through the shell:
 
@@ -54,16 +51,13 @@ $ nmcli radio all off
 $ nmcli radio all on
 </source>
 
-
 === Links ===
-
 * [https://github.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-lg-hammerhead Device package]
 * [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
 * [https://github.com/flto/linux/wiki/hammerhead-upstream flto's hammerhead-upstream status page]
 
 == Photos ==
-
 [[File:20180505_0011_01.jpg|thumb|TTY on mainline]]
 
 * [https://user-images.githubusercontent.com/6033024/26851053-3f5512fe-4af9-11e7-93da-cf9dd94b6b75.jpg Weston running (with the red screen bug)]
