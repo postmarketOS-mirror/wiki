@@ -40,6 +40,16 @@
 * Splash screens
 * The SDL programs
 
+=== Installation ===
+{{note|There's a timing issue with the mainline kernel, hence we need the <code>--split</code> installation for now.}}
+<source lang="shell-session">
+$ pmbootstrap init # select lg-hammerhead
+$ pmbootstrap install --split --no-fde
+$ pmbootstrap export
+$ fastboot flash system /tmp/postmarketOS-export/lg-mako-boot.img
+$ fastboot flash userdata /tmp/postmarketOS-export/lg-mako-root.img
+</source>
+
 === Additional info ===
 
 ==== WiFi workaround on boot ====
