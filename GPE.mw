@@ -547,7 +547,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | gpe-clock, gpe-alarm
 |-
 ! scope="row"| Image gallery
-| gpe-calendar,gpicview
+| gpe-gallery,gpicview
 |-
 ! scope="row"| Camera
 |
@@ -593,7 +593,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 |-
 |}
 
-Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications] for some overview of possible options.
+Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications] for some overview of possible options that were made to work at least with OpenMoko.
 
 == GPE phone edition ==
 
