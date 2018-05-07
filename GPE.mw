@@ -531,67 +531,126 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 * Sound does not appear to work. This may be device-specific.
 * Rewrite gpe-conf's passwd.c interface, as it seems to make assumptions that are incorrect about standard systems.
 
-== Potential PIM suite and mobile interface components ==
+== Tracking PIM suite and mobile interface components ==
+
+We should be able build a basic, lightweight system aimed at low-end PDA-like devices from Matchbox, GPE, and a few other components.
 
 {| class="wikitable"
 |-
 ! scope="col"| Functionality
-! scope="col"| Package(s) providing it
+! scope="col"| Status
+! scope="col"| Packages providing this
+! scope="col"| Evaluating
 |-
 ! scope="row"| Calendar
+| Working fully
 | gpe-calendar
+| Pimlico Dates
 |-
 ! scope="row"| Contacts
+| Working fully
 | gpe-contacts
+| Pimlico Contacts
 |-
 ! scope="row"| Time and date
-| gpe-clock, gpe-alarm
+| Not working - gpe-clock is broken
+| gpe-clock
+|
 |-
 ! scope="row"| Image gallery
-| gpe-gallery,gpicview
+| Working fully
+| gpe-gallery
+| gpicview
 |-
 ! scope="row"| Camera
-|
+| Not working - v4l-utils (Video4Linux) typically needed for camera support e.g. on N900
+| 
+| GNOME-Cheese
 |-
 ! scope="row"| E-mail
-| sylpheed,claws-mail,mutt,thunderbird
+| Working fully
+| sylpheed
+| Thunderbird, Claws-mail
 |-
 ! scope="row"| Expenses
+| Working partially
 | gpe-expenses
-|-
-! scope="row"| Notetaking
-| gpe-todo,gpe-edit,leafpad
-|-
-! scope="row"| Terminal
-| xterm,rxvt,lxterminal,xfce4-terminal,st
-|-
-! scope="row"| File manager
-| pcmanfm,gpe-filemanager
-|-
-! scope="row"| Ebook reader
-| fbreader
-|-
-! scope="row"| On-screen keyboard
-| matchbox-keyboard
-|-
-! scope="row"| Media player
-| mpv,vlc
-|-
-! scope="row"| Dialer
 | 
 |-
-! scope="row"| SMS
+! scope="row"| Note-taking and text-exiting
+| Working fully
+| gpe-todo, gpe-edit, leafpad
+| 
+|-
+! scope="row"| Terminal
+| Working partially
+| gpe-terminal, xterm
+| rxvt, xfce4-terminal, st
+|-
+! scope="row"| File manager
+| Working fully
+| pcmanfm, gpe-filemanager
 |
 |-
+! scope="row"| Ebook reader
+| Working partially - fbreader is not in Alpine [yet]
+| fbreader
+|
+|-
+! scope="row"| On-screen keyboard
+| Working partially
+| matchbox-keyboard
+| qwo, implementation of https://www.gkos.com, other novel input methods such as CellWriter
+|-
+! scope="row"| Media player
+| Working partially
+| VLC, mpv
+| Sato Linux's gaku player
+|-
+! scope="row"| Dialer
+| Not working at all 
+| 
+| GPE Mobile Edition's dialer (?)
+|-
+! scope="row"| SMS
+| Not working at all
+| 
+| GPE Mobile Edition's SMS messanger (?)
+|-
 ! scope="row"| Instant messaging
-| pidgin
+| Working partially
+| nheko, pidgin
+| A frontend for Signal's API would be very nice, or some Matrix client supporting e2e encryption e.g. Riot.im (Electron app, relatively resource heavy), RocketChat client, Conversations web client etc.
 |-
-! scope="row"| Lock screen
-| [https://wiki.maemo.org/QtLockscreen QtLockscreen]
+! scope="row"| Login / lock screen
+| Not working
+| gpe-login, [https://wiki.maemo.org/QtLockscreen QtLockscreen]
+|
 |-
-! scope="row"| Display manager
-| sddm
+! scope="row"| Connect to wireless networks
+| Not working
+| 
+| gpe-aerial (?), gpe-bluetooth (?)
 |-
+! scope="row"| IR blaster manipulation
+| Not working
+|
+| gpe-beam (?)
+|-
+! scope="row"| Alarm support
+| Partially working
+| gpe-alarm
+| Apparently gpe-alarm [https://www.mail-archive.com/community@lists.openmoko.org/msg45737.html was prone] to randomly going off without users being able to stop it.
+|-
+! scope="row"| Planning ('todo' apps)
+| Not working 
+| gpe-todo
+| Pimlico-Tasks
+|-
+! scope="row"| FM radio
+| Not working 
+|
+| Likely v4lutils is required as that had support for certain radio transceivers e.g. OMAP4's FM radio
 |}
 
 Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications] for some overview of possible options that were made to work at least with OpenMoko.
