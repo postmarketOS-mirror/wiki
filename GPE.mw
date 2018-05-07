@@ -529,6 +529,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 * Modern configuration program for wireless networking with privilege separation.
 * GTK programs that don't use xsettings aren't able to be configured by its theme support. Enhance gpe-conf to be able to do this (or get rid of the xsettings-based theme system and just use GTK+.)
 * Sound does not appear to work. This may be device-specific.
+* Rewrite gpe-conf's passwd.c interface, as it seems to make assumptions that are incorrect about standard systems.
 
 == Potential PIM suite and mobile interface components ==
 
