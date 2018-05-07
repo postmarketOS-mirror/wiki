@@ -1,0 +1,57 @@
+== Inroduction ==
+
+There are, in theory, several ways to input text on PMOS already. These are: 
+* Matchbox-keyboard (a lightweight on-screen keyboard)
+* Hardware keyboard
+* Bluetooth and other wireless keyboards
+
+This page intends to track these as well as other, novel, input methods.
+
+== Conventional on-screen keyboards ==
+
+Ubuntu used to come with [https://launchpad.net/onboard/ Onboard], which is actually designed not for tablets, but as an assistive technology in conjunction with an external pointing device.
+
+Other options might include:
+* [http://www.gok.ca/ GOK] (The Gnome on-screen keyboard), which apparently won awards
+* [http://florence.sourceforge.net/english.html Florence], an virtual keyboard for X11
+* [https://doc.qt.io/qt-5/qtvirtualkeyboard-index.html QT virtual keyboard]
+
+== Chorded keyboards ==
+
+GKOS is an implementation of a chorded keyboard that is semi-open. A chord for a musician is a combination of three or more notes that create a new note; the chorded keyboard is analogous to this in that key presses are created by combinations of a few key presses, albeit the GKOS method only uses single button presses or a combination of two presses.
+* http://gkos.com/gkos/index-gkos-com.html
+
+Unfortunately, GKOS's apps are not open-source. However, the standard itself is straightforward to implement either in hardware or software, and is entirely suitable for handhelds and PDAs.
+
+According to its website, GKOS has been superseded by ComboKey. The ComboKey seems to apply some of the ideas behind the GKOS system to a user using the device single-handedly in a tight area.
+* http://combokey.com/
+
+== Handwriting/pointer-based systems ==
+
+=== Graffiti and Quikwriting ===
+
+Graffiti was the single-stroke handwriting system for Palm OS. It was the subject of a lawsuit from Xerox, which Palm lost.
+
+Quikwriting was a research project that produced an alternative to the Graffiti method of text input. There is an open-source implementation called [http://nongnu.org/qwo/ QWO], but the program appears not to work. Nonetheless, it can be made to work with a little bit of effort, most likely.
+
+Other relevant links regarding Graffitti:
+* http://blog.monstuff.com/archives/000012.html
+
+=== Cellwriter ===
+
+Similarly to Quikwriting, Cellwriter is the product of a research project. It is an accomplished handwriting system:
+* https://web.archive.org/web/20160322130201/http://risujin.org/cellwriter/
+
+=== Dasher ===
+
+Dasher is a keyboard designed for when one only has a single pointing device and one wants to work quickly. To that extent it may be especially convenient for devices with styluses. It is free software and is designed also for accessibility to the impaired.
+* http://www.inference.org.uk/dasher/DasherSummary.html
+
+== Miscellaneous ==
+
+* [https://wiki.gnome.org/Design/OS/ScreenKeyboard GNOME's design page concerning on-screen keyboards] has some of these and a few other items, not all of them freely-licensed.
+* [http://wiki.openmoko.org/wiki/Literki Literki] keyboard, a keyboard for X11 that overlays over the current window, which may be convenient for handhelds, but may not be very accessible.
+* [https://olofsj.github.io/enscribi/ Enscrebi] input method, similar to CellWriter.
+* [http://wiki.openmoko.org/wiki/GridPad GridpPad] input method, yet another grid-based handwriting system.
+* [http://wiki.openmoko.org/wiki/Wishlist/Text_Input OpenMoko Wiki's overview of input methods] in a wish-list format.
+* [http://patrickbaudisch.com/publications/2007-Vogel-CHI07-Shift.pdf Vogel and Baudisch, 2007] - 'Shift: A Technique for Operating Pen-Based Interfaces Using Touch'.
