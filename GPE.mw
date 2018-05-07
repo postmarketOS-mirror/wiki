@@ -602,7 +602,14 @@ The Pimlico Project was created by OpenHand as part of their Sato Linux distribu
 * https://arstechnica.com/information-technology/2007/08/openedhand-releases-poky-linux-3-0-with-sato/
 * https://web.archive.org/web/20110727175129/http://pimlico-project.org/index.html
 
-These are useful programs.
+It is composed of the following four components:
+* Dates - a calendar application
+* Tasks - plan tasks etc
+* Contacts - make a record of contact information
+* Sync - synchronise the applications with external sources
+
+Furthermore, it depends on EDS, the Embedded Evolution Data Server.
+Sync is based on the (seemingly) now-defunct OpenSync project.
 
 == GPE phone edition ==
 
