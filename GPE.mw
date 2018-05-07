@@ -595,6 +595,15 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 
 Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications] for some overview of possible options that were made to work at least with OpenMoko.
 
+== Pimlico Project ==
+
+The Pimlico Project was created by OpenHand as part of their Sato Linux distribution (based on OpenEmbedded-core). Sato seems primarily based on OE-core, Matchbox, and Gnome components.
+
+* https://arstechnica.com/information-technology/2007/08/openedhand-releases-poky-linux-3-0-with-sato/
+* https://web.archive.org/web/20110727175129/http://pimlico-project.org/index.html
+
+These are useful programs.
+
 == GPE phone edition ==
 
 There was also a now-defunct GPE phone edition. It provided Email, SMS, voicemail, and calling components. This could be useful.
