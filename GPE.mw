@@ -136,7 +136,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | gpe-conf
 | 0.2.9
 | Configuration toolset for GPE
-| Not working very well. It segfaults in a few places due to components it is communicating with not working (gpe-clock is the culprit). It also depends on gpe-confd which doesn't yet exist. It should be rewritten ideally.
+| Not working very well. It segfaults in a few places due to components it is communicating with not working (gpe-clock is the culprit). It also depends on gpe-confd which doesn't yet exist. It also doesn't allow a user to enter and authenticate with the root password, possibly because the infrastructure it uses to do this is making incorrect assumptions about what is available to an unprivileged user (despite it being setuid root). A rewrite may be fruitful and useful.
 | High
 |-
 ! scope="row"| gpe-confd
