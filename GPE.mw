@@ -604,18 +604,16 @@ The Pimlico Project was created by OpenHand as part of their Sato Linux distribu
 * [https://arstechnica.com/uncategorized/2007/04/gnome-foundation-announces-mobile-and-embedded-initiative/ GNOME on Mobile and Embedded]
 
 It is composed of the following four components:
-* Dates - a calendar application
-* Tasks - plan tasks etc
-* Contacts - make a record of contact information
+* [https://git.gnome.org/contacts Dates] - a calendar application
+* [https://git.gnome.org/tasks Tasks] - plan tasks etc
+* [https://git.gnome.org/contacts Contacts] - make a record of contact information
 * Sync - synchronise the applications with external sources
-
-Furthermore, it depends on EDS, the Embedded Evolution Data Server.
-Sync is based on the (seemingly) now-defunct OpenSync project.
+** Unfortunately, OpenHand's website is now defunct, so Sync's source code appears to be inaccessible there. However, Sync appears to have been mirrored at https://git.yoctoproject.org/cgit/cgit.cgi/sync/. That being said, it's not clear if they're the same program.
+** Sync is based on the (seemingly) now-defunct OpenSync project, so it is probably not worth porting. Other mobile synchronisation programs such as KDEConnect are probably worth looking at.
 
 Thoughts:
 * It should be possible to make the programs use the modern Evolution data server.
 * The programs may fit in nicely with existing GNOME components e.g. Evolution mail itself.
-* OpenSync should be reevaluated, as it is not clear what the status of the project is.
 
 == GPE phone edition ==
 
