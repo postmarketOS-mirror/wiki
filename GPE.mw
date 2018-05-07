@@ -597,10 +597,11 @@ Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applicat
 
 == Pimlico Project ==
 
-The Pimlico Project was created by OpenHand as part of their Sato Linux distribution (based on OpenEmbedded-core). Sato seems primarily based on OE-core, Matchbox, and Gnome components.
+The Pimlico Project was created by OpenHand as part of their Sato Linux distribution (based on OpenEmbedded-core). Sato seems primarily based on OE-core, Matchbox, and Gnome components (this is related to the Gnome embedded initiative in ~2007).
 
-* https://arstechnica.com/information-technology/2007/08/openedhand-releases-poky-linux-3-0-with-sato/
-* https://web.archive.org/web/20110727175129/http://pimlico-project.org/index.html
+* [https://arstechnica.com/information-technology/2007/08/openedhand-releases-poky-linux-3-0-with-sato/ Sato release announcement]
+* [https://web.archive.org/web/20110727175129/http://pimlico-project.org/index.html Pimlico project archive]
+* [https://arstechnica.com/uncategorized/2007/04/gnome-foundation-announces-mobile-and-embedded-initiative/ GNOME on Mobile and Embedded]
 
 It is composed of the following four components:
 * Dates - a calendar application
@@ -610,6 +611,11 @@ It is composed of the following four components:
 
 Furthermore, it depends on EDS, the Embedded Evolution Data Server.
 Sync is based on the (seemingly) now-defunct OpenSync project.
+
+Thoughts:
+* It should be possible to make the programs use the modern Evolution data server.
+* The programs may fit in nicely with existing GNOME components e.g. Evolution mail itself.
+* OpenSync should be reevaluated, as it is not clear what the status of the project is.
 
 == GPE phone edition ==
 
