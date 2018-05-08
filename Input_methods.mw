@@ -9,8 +9,13 @@ This page intends to track these as well as other, novel, input methods.
 
 == Conventional on-screen keyboards ==
 
+=== Onboard ===
 Ubuntu used to come with [https://launchpad.net/onboard/ Onboard], which is actually designed not for tablets, but as an assistive technology in conjunction with an external pointing device.
 
+=== Maliit ===
+[https://maliit.github.io/ Maliit] is a cross-platform text-input system based on client-server model. Input methods are supported by plugins, which means it is quite extensible.
+
+=== Other ===
 Other options might include:
 * [http://www.gok.ca/ GOK] (The Gnome on-screen keyboard), which apparently won awards
 * [http://florence.sourceforge.net/english.html Florence], an virtual keyboard for X11
