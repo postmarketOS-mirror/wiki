@@ -23,6 +23,8 @@ The most immediate problems, however are with compiling the thing. Many of the p
 
 Another immediate problem is that the homepage for GPE is now gone. The source code archives that were used came from Debian. They appear to be the latest - they shipped with Debian Wheezy, which came out in May 2013.
 
+* [http://www.sky.sannet.ne.jp/morostar/OpenZaurus/OpenZaurus.html Some high-quality (?) screenshots]
+
 == Status of GPE and associated programs in PostmarketOS ([https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]) ==
 
 {| class="wikitable"
