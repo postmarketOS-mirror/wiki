@@ -54,3 +54,32 @@ You can try to reinstall with a different cipher, by editing <code>install_optio
 This can be done via <code>./pmbootstrap.py flasher flash_kernel</code>
 
 It should boot, and show the Samsung splash screen. After that you should be able to [https://github.com/postmarketOS/pmbootstrap/wiki/Boot-process connect via telnet]
+
+== What works ==
+
+* Booting off a microSD card
+* Display
+* Touchscreen
+* USB Networking
+* Full disk encryption
+* Proximity sensor
+* Light sensor
+* Heart rate sensor
+* Magnetic sensor
+* Audio jack events
+* Physical buttons
+* Touch keys
+* Notification LED
+* Vibration motor
+* Gyroscope
+
+== What does not work ==
+
+* X11-based DEs
+* Flashlight
+
+Everything else is untested as of writing this.
+
+== Links ==
+
+* {{github|1467}} Add support for the Samsung Galaxy S5 Mini (kminilte)
