@@ -23,6 +23,7 @@ When a board is mainlined, the corresponding dts file is mainlined as well (thou
 == See also ==
 * [[Dtbtool]], a tool to compile dtb in the [[QCDT]] format.
 * <code>extract-dtb</code> (<code>pmbootstrap build extract-dtb</code>) to extract <code>dtb</code> files from Linux kernels and QCDT-style boot.img files
+* [[Mainlining_Guide#Device_Tree_Source | The dedicated section in the mainlining guide]]
 
 == Links ==
 
