@@ -519,7 +519,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 |-
 |}
 
-=== Issues ===
+=== Next steps ===
 
 * Move from SQLite version 2 to modern SQLite version 3
 * Move from gconf to gsettings and dconf.
@@ -529,9 +529,14 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 * Fix dependencies on non-standard system infrastructure such as /etc/timezone.
 * Investigate modern replacement for the audiofile program.
 * Modern configuration program for wireless networking with privilege separation.
-* GTK programs that don't use xsettings aren't able to be configured by its theme support. Enhance gpe-conf to be able to do this (or get rid of the xsettings-based theme system and just use GTK+.)
+* GTK programs that don't use xsettings aren't able to be configured by its theme support (as far as it appears). Enhance gpe-conf to be able to do this (or get rid of the xsettings-based theme system and just use GTK+.)
+
+=== Active issues ===
 * Sound does not appear to work. This may be device-specific.
 * Rewrite gpe-conf's passwd.c interface, as it seems to make assumptions that are incorrect about standard systems.
+* Disk space isn't reported, just system memory usage (which arguably isn't very useful anyway)
+* Battery status is not shown in gpe-conf.
+* gpe-su always looks for the command <code>x-terminal-emulator</code>. A really dirty solution is to patch this to say <code>xterm</code> or similar. A more interesting solution would be to implement infrastructure similar to Debian's update-alternatives system, or at least some program that can create a few of the necessary simlinks for GPE programs.
 
 == Tracking PIM suite and mobile interface components ==
 
