@@ -549,6 +549,16 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 ! scope="col"| Packages providing this
 ! scope="col"| Evaluating
 |-
+! scope="row"| Alarm support
+| Partially working
+| gpe-alarm
+| Apparently gpe-alarm [https://www.mail-archive.com/community@lists.openmoko.org/msg45737.html was prone] to randomly going off without users being able to stop it.
+|-
+! scope="row"| Camera
+| Not working - v4l-utils (Video4Linux) typically needed for camera support e.g. on N900
+| 
+| GNOME-Cheese
+|-
 ! scope="row"| Calendar
 | Working fully
 | gpe-calendar
@@ -559,20 +569,15 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | gpe-contacts
 | Pimlico Contacts
 |-
-! scope="row"| Time and date
-| Not working - gpe-clock is broken
-| gpe-clock
-|
-|-
-! scope="row"| Image gallery
-| Working fully
-| gpe-gallery
-| gpicview
-|-
-! scope="row"| Camera
-| Not working - v4l-utils (Video4Linux) typically needed for camera support e.g. on N900
+! scope="row"| Dialer
+| Not working at all 
 | 
-| GNOME-Cheese
+| GPE Mobile Edition's dialer (?)
+|-
+! scope="row"| Ebook reader
+| Partially working - fbreader is not in Alpine [yet]
+| fbreader
+|
 |-
 ! scope="row"| E-mail
 | Working fully
@@ -584,110 +589,107 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | gpe-expenses
 | gnucash, beancount/plaintext accounting/hledger-web etc - we need a lightweight web browser optimised for mobile that can run scripts
 |-
-! scope="row"| Spreadsheets
-| Working fully
-| gnumeric
-| gnumeric is lightweight and on the whole works well, albeit not being optimised for a stylus-based interface, and stands apart from expenses programs. LibreOffice-calc also exists, but it's incredibly heavy and even more unsuitable.
-|-
-! scope="row"| Note-taking and text-exiting
-| Working fully
-| gpe-todo, gpe-edit, leafpad
-| 
-|-
-! scope="row"| Terminal
-| Partially working - gpe-terminal is a bit defunct though
-| xterm
-| rxvt, xfce4-terminal, st, gpe-terminal
-|-
 ! scope="row"| File manager
 | Working fully
 | pcmanfm, gpe-filemanager
 |
-|-
-! scope="row"| Ebook reader
-| Partially working - fbreader is not in Alpine [yet]
-| fbreader
-|
-|-
-! scope="row"| On-screen keyboard
-| Fully working
-| matchbox-keyboard
-| https://wiki.postmarketos.org/wiki/Input_methods, especially Maliit
-|-
-! scope="row"| Media player
-| Working partially
-| VLC, mpv
-| Sato Linux's gaku player, which is really nothing more than a GTK+2-based frontend for GStreamer
-|-
-! scope="row"| Dialer
-| Not working at all 
-| 
-| GPE Mobile Edition's dialer (?)
-|-
-! scope="row"| SMS
-| Not working at all
-| 
-| GPE Mobile Edition's SMS messanger (?)
-|-
-! scope="row"| Instant messaging
-| Working partially
-| nheko, pidgin
-| A frontend for Signal's API would be very nice, or some Matrix client supporting e2e encryption e.g. Riot.im (Electron app, relatively resource heavy), RocketChat client, Conversations web client etc.
-|-
-! scope="row"| Login / lock screen
-| Not working
-| gpe-login, [https://wiki.maemo.org/QtLockscreen QtLockscreen]
-|
-|-
-! scope="row"| Connect to wireless networks and mobile broadband
-| Not working
-| 
-| gpe-aerial (?), gpe-bluetooth (?), networkt\manager
-|-
-! scope="row"| IR blaster manipulation
-| Not working
-|
-| gpe-beam (?), [https://sourceforge.net/projects/girda Girda] - the GNOME IR Monitor
-|-
-! scope="row"| Alarm support
-| Partially working
-| gpe-alarm
-| Apparently gpe-alarm [https://www.mail-archive.com/community@lists.openmoko.org/msg45737.html was prone] to randomly going off without users being able to stop it.
-|-
-! scope="row"| Planning ('todo' apps)
-| Not working 
-| gpe-todo
-| Pimlico-Tasks
 |-
 ! scope="row"| FM radio
 | Not working 
 |
 | Likely v4lutils is required as that had support for certain radio transceivers e.g. OMAP4's FM radio. Also see http://wiki.openmoko.org/wiki/Wishlist:Digital_Radio
 |-
+! scope="row"| Image gallery
+| Working fully
+| gpe-gallery
+| gpicview
+|-
+! scope="row"| Instant messaging
+| Working partially
+| nheko, pidgin
+| A frontend for Signal's API would be very nice, or some Matrix client supporting e2e encryption e.g. Riot.im (Electron app, relatively resource heavy), RocketChat client, Conversations web client etc.
+|-
+! scope="row"| IR blaster manipulation
+| Not working
+|
+| gpe-beam (?), [https://sourceforge.net/projects/girda Girda] - the GNOME IR Monitor
+|-
+! scope="row"| Login / lock screen
+| Not working
+| gpe-login, [https://wiki.maemo.org/QtLockscreen QtLockscreen]
+|
+|-
+! scope="row"| Media player
+| Working partially
+| VLC, mpv
+| Sato Linux's gaku player, which is really nothing more than a GTK+2-based frontend for GStreamer
+|-
 ! scope="row"| Navigation
 | Not working
 |
 | gpsd is already packaged in Alpine, components that can use it include: navit, tango-gps, Geocaching tools like SHR's [http://wiki.openmoko.org/wiki/Advanced_Geocaching_Tool_for_Linux Advanced Geocaching Tool for Linux].
 |-
-! scope="row"| Web browsing
-| Partially working
-| dillo
-| Dillo works for low-end devices, but the modern web wants to run scripts, and accessing the web on handhelds and PDAs is one of their main attractions. One option, Midori, will run reasonably quickly but it is not well-optimized for handhelds or touch screens. 
+! scope="row"| Note-taking and text-exiting
+| Working fully
+| gpe-todo, gpe-edit, leafpad
+| 
+|-
+! scope="row"| On-screen keyboard
+| Working fully
+| matchbox-keyboard
+| https://wiki.postmarketos.org/wiki/Input_methods, especially Maliit
+|-
+! scope="row"| Planning ('todo' apps)
+| Not working 
+| gpe-todo
+| Pimlico-Tasks
 |-
 ! scope="row"| RFID/NFC
 | Not working/implemented
 |
 | There don't seem to be any usage of NFC on desktop Linux. There is an NFC subsystem in the Linux kernel, and libhybris has adaptations for NFC to be made available. All that is needed is for applications to make use of it.
 |-
+! scope="row"| SMS
+| Not working at all
+| 
+| GPE Mobile Edition's SMS messanger (?)
+|-
+! scope="row"| Spreadsheets
+| Working fully
+| gnumeric
+| gnumeric is lightweight and on the whole works well, albeit not being optimised for a stylus-based interface, and stands apart from expenses programs. LibreOffice-calc also exists, but it's incredibly heavy and even more unsuitable.
+|-
+! scope="row"| System panel
+| Partially working
+| matchbox-panel
+| Applets can be added to the panel and the panel sits at the bottom of the display.
+|-
+! scope="row"| Time and date
+| Not working - gpe-clock is broken
+| gpe-clock
+|
+|-
+! scope="row"| Terminal
+| Partially working - gpe-terminal is a bit defunct though
+| xterm
+| rxvt, xfce4-terminal, st, gpe-terminal
+|-
+! scope="row"| Web browsing
+| Partially working
+| dillo
+| Dillo works for low-end devices, but the modern web wants to run scripts, and accessing the web on handhelds and PDAs is one of their main attractions. One option, Midori, will run reasonably quickly but it is not well-optimized for handhelds or touch screens. 
+|-
+
 ! scope="row"| Windowing system
 | Partially working
 | matchbox
 | Window manager, and graphical desktop builds, but not yet working with PNG themes
 |- 
-! scope="row"| System panel
-| Partially working
-| matchbox-panel
-| Applets can be added to the panel and the panel sits at the bottom of the display.
+! scope="row"| Wireless networks and mobile broadband
+| Not working
+| 
+| gpe-aerial (?), gpe-bluetooth (?), networkt\manager
+|-
 |}
 
 == Pimlico Project, Sync, and miscellaneous PIM applications ==
