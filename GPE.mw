@@ -647,7 +647,7 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 ! scope="row"| IR blaster manipulation
 | Not working
 |
-| gpe-beam (?), [https://sourceforge.net/projects/girda Girda], the GNOME IR Monitor
+| gpe-beam (?), [https://sourceforge.net/projects/girda Girda] - the GNOME IR Monitor
 |-
 ! scope="row"| Alarm support
 | Partially working
