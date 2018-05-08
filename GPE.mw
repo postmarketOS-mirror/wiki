@@ -580,9 +580,14 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | Thunderbird, Claws-mail
 |-
 ! scope="row"| Expenses
-| Working partially
+| Partially working
 | gpe-expenses
 | gnucash, beancount/plaintext accounting/hledger-web etc - we need a lightweight web browser optimised for mobile that can run scripts
+|-
+! scope="row"| Spreadsheets
+| Working fully
+| gnumeric
+| gnumeric is lightweight and on the whole works well, albeit not being optimised for a stylus-based interface, and stands apart from expenses programs. LibreOffice-calc also exists, but it's incredibly heavy and even more unsuitable.
 |-
 ! scope="row"| Note-taking and text-exiting
 | Working fully
@@ -590,9 +595,9 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | 
 |-
 ! scope="row"| Terminal
-| Working partially
-| gpe-terminal, xterm
-| rxvt, xfce4-terminal, st
+| Partially working - gpe-terminal is a bit defunct though
+| xterm
+| rxvt, xfce4-terminal, st, gpe-terminal
 |-
 ! scope="row"| File manager
 | Working fully
@@ -600,19 +605,19 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 |
 |-
 ! scope="row"| Ebook reader
-| Working partially - fbreader is not in Alpine [yet]
+| Partially working - fbreader is not in Alpine [yet]
 | fbreader
 |
 |-
 ! scope="row"| On-screen keyboard
-| Working partially
+| Fully working
 | matchbox-keyboard
-| qwo, implementation of https://www.gkos.com, other novel input methods such as CellWriter
+| https://wiki.postmarketos.org/wiki/Input_methods, especially Maliit
 |-
 ! scope="row"| Media player
 | Working partially
 | VLC, mpv
-| Sato Linux's gaku player
+| Sato Linux's gaku player, which is really nothing more than a GTK+2-based frontend for GStreamer
 |-
 ! scope="row"| Dialer
 | Not working at all 
@@ -634,15 +639,15 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | gpe-login, [https://wiki.maemo.org/QtLockscreen QtLockscreen]
 |
 |-
-! scope="row"| Connect to wireless networks
+! scope="row"| Connect to wireless networks and mobile broadband
 | Not working
 | 
-| gpe-aerial (?), gpe-bluetooth (?)
+| gpe-aerial (?), gpe-bluetooth (?), networkt\manager
 |-
 ! scope="row"| IR blaster manipulation
 | Not working
 |
-| gpe-beam (?)
+| gpe-beam (?), [https://sourceforge.net/projects/girda Girda], the GNOME IR Monitor
 |-
 ! scope="row"| Alarm support
 | Partially working
@@ -673,6 +678,16 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | Not working/implemented
 |
 | There don't seem to be any usage of NFC on desktop Linux. There is an NFC subsystem in the Linux kernel, and libhybris has adaptations for NFC to be made available. All that is needed is for applications to make use of it.
+|-
+! scope="row"| Windowing system
+| Partially working
+| matchbox
+| Window manager, and graphical desktop builds, but not yet working with PNG themes
+|- 
+! scope="row"| System panel
+| Partially working
+| matchbox-panel
+| Applets can be added to the panel and the panel sits at the bottom of the display.
 |}
 
 == Pimlico Project, Sync, and miscellaneous PIM applications ==
