@@ -582,7 +582,7 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 ! scope="row"| Expenses
 | Working partially
 | gpe-expenses
-| 
+| gnucash, beancount/plaintext accounting/hledger-web etc - we need a lightweight web browser optimised for mobile that can run scripts
 |-
 ! scope="row"| Note-taking and text-exiting
 | Working fully
@@ -658,9 +658,22 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | Not working 
 |
 | Likely v4lutils is required as that had support for certain radio transceivers e.g. OMAP4's FM radio
+|-
+! scope="row"| Navigation
+| Not working
+|
+| gpsd is already packaged in Alpine, components that can use it include: navit, tango-gps, Geocaching tools like SHR's [http://wiki.openmoko.org/wiki/Advanced_Geocaching_Tool_for_Linux Advanced Geocaching Tool for Linux].
+|-
+! scope="row"| Web browsing
+| Partially working
+| dillo
+| Dillo works for low-end devices, but the modern web wants to run scripts, and accessing the web on handhelds and PDAs is one of their main attractions. One option, Midori, will run reasonably quickly but it is not well-optimized for handhelds or touch screens. 
+|-
+! scope="row"| RFID/NFC
+| Not working/implemented
+|
+| There don't seem to be any usage of NFC on desktop Linux. There is an NFC subsystem in the Linux kernel, and libhybris has adaptations for NFC to be made available. All that is needed is for applications to make use of it.
 |}
-
-Also see [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications] for some overview of possible options that were made to work at least with OpenMoko.
 
 == Pimlico Project, Sync, and miscellaneous PIM applications ==
 
