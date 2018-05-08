@@ -599,6 +599,11 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 |
 | Likely v4lutils is required as that had support for certain radio transceivers e.g. OMAP4's FM radio. Also see http://wiki.openmoko.org/wiki/Wishlist:Digital_Radio
 |-
+! scope="row"| Games
+| Partially working 
+| gpe-julia, openttd
+| gpe-tetris, gpe-lights, gsoko, xdemineur (minesweeper clone), cgoban (needs internet connection to be really fun), 2048-qt
+|-
 ! scope="row"| Image gallery
 | Working fully
 | gpe-gallery
@@ -616,8 +621,8 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 |-
 ! scope="row"| Login / lock screen
 | Not working
-| gpe-login, [https://wiki.maemo.org/QtLockscreen QtLockscreen]
-|
+| gpe-login
+| [https://wiki.maemo.org/QtLockscreen QtLockscreen]
 |-
 ! scope="row"| Media player
 | Working partially
