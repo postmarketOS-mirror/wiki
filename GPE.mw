@@ -627,7 +627,7 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 ! scope="row"| Media player
 | Working partially
 | VLC, mpv
-| Sato Linux's gaku player, which is really nothing more than a GTK+2-based frontend for GStreamer
+| [https://git.yoctoproject.org/cgit/cgit.cgi/gaku/ Sato Linux's gaku] player, which is really nothing more than a GTK+2-based frontend for GStreamer
 |-
 ! scope="row"| Navigation
 | Not working
