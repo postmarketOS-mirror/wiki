@@ -119,7 +119,7 @@ The following steps are meant to be taken together with the mentor.
 
 == Device Tree Source ==
 === Start with an existing file ===
-The DTS file describes how the peripherals of the device are connected to the SoC. Your mentor probably knows which file you should use to start your work on. This may either be a file in the existing Linux source tree, or a file your mentor uploaded somewhere.
+The [[DTS]] file describes how the peripherals of the device are connected to the SoC. Your mentor probably knows which file you should use to start your work on. This may either be a file in the existing Linux source tree, or a file your mentor uploaded somewhere.
 
 Example for copying an existing file:
 <syntaxhighlight lang="shell-session">
