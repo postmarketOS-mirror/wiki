@@ -310,9 +310,9 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | High
 |-
 ! scope="row"| gpe-su
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-su
+| 
 | GKSU equivalent for GPE. 
 | Potentially dangerous program. May still be useful.
 | Medium
