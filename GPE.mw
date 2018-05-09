@@ -322,7 +322,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | gpe-taskmanager
 | 0.20
 | A task manager program for GPE
-| Useful to have, although likely other programs that are still maintained offer the same features.
+| Presents a simple list of running programs (excluding Xorg and the like) and offers the user an opportunity to kill/stop (etc) the programs in question.
 | High
 |-
 ! scope="row"| gpe-terminal
