@@ -522,7 +522,7 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 === Next steps ===
 
 * Move from SQLite version 2 to modern SQLite version 3
-* Move from gconf to gsettings and dconf.
+* Move from gconf and xsettings to gsettings and dconf. O-hand made [https://git.yoctoproject.org/cgit/cgit.cgi/xsettings-daemon/ xsettings-daemon], a bridge between xsettings and gconf. This can be useful for GPE, as it makes heavy use of xsettings.
 * Proper GTK theme support.
 * Move to GTK+3
 * Move from the Enlightened sound daemon (esound) to PulseAudio or similar.
