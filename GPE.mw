@@ -597,7 +597,7 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 ! scope="row"| FM radio
 | Not working 
 |
-| Likely v4lutils is required as that had support for certain radio transceivers e.g. OMAP4's FM radio. Also see http://wiki.openmoko.org/wiki/Wishlist:Digital_Radio
+| [https://projects-old.gnome.org/gnomeradio/ Gnomeradio] is an FM radio tuner for the GNOME desktop and works reasonably well on mobile/handhelds etc; it also supports recording. Video4Linux is required as that has support for certain radio tuners e.g. OMAP4's FM radio tuner. Also see http://wiki.openmoko.org/wiki/Wishlist:Digital_Radio.
 |-
 ! scope="row"| Games
 | Partially working 
