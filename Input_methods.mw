@@ -1,9 +1,10 @@
 == Inroduction ==
 
 There are, in theory, several ways to input text on PMOS already. These are: 
-* Matchbox-keyboard (a lightweight on-screen keyboard)
-* Hardware keyboard
-* Bluetooth and other wireless keyboards
+* Matchbox-keyboard - a lightweight on-screen keyboard for X11.
+* [https://doc.qt.io/qt-5/qtvirtualkeyboard-index.html QT virtual keyboard], used in Plasma Mobile.
+* Hardware keyboards, e.g. on devices such as the Nokia N900 or the Droid 4.
+* Bluetooth and other wireless keyboards (if support exists for Bluetooth devices).
 
 This page intends to track these as well as other, novel, input methods.
 
