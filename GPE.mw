@@ -495,8 +495,8 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 |-
 ! scope="row"| matchbox-window-manager
 | Ported
-| N/A
-| N/A
+|
+|
 | X environment for resource-limited systems
 | Matchbox is useful for PDAs as it only displays one window at a time, and the panel is stylus-friendly. Similarly it scales well for small displays. So it is worth porting it (at the time of writing, matchbox-keyboard is already packaged) either as a single package or as each separate component packaged.
 | High
