@@ -17,14 +17,18 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
 * Intex Aqua Fish and Other Sailfish running devices
 * Oneplus One
+* Oneplus 6
 * Ubuntu phones
 * BQ Aquaris E4.5
 * BQ Aquaris E5
 * BQ Aquaris M10
+* BQ Aquaris X2 (Pro)
 * Meizu MX4
 * Meizu PRO 5
+* Purism Librem 5
 * Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
 * Samsung S8500 Wave - runs originally on Bada 2.0, has a bootloader and an Android port, see XDA
+* Samsung Galaxy Tab Pro 10.1 TM-525/PicassoLTE
 * Moto G LTE (1st Gen, 2013)
 * Possibly Nokia Lumia 520 and 525 and/or other unlocked Lumia devices
 * HTC HD2 (the phone which famously runs ''any'' operating system)
@@ -34,7 +38,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
 * ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
-
+* Nintendo Switch
 == Low Priority Devices ==
 
 * Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine, see also: [https://github.com/postmarketOS/pmbootstrap/issues/238 #238])
