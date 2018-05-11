@@ -68,7 +68,7 @@ Its main components are as follows:
 
 
 
-== What is the GPE Palmtop Environment? ==
+== The GPE Palmtop Environment ==
 
 The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
 
@@ -87,7 +87,8 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 
 * [http://www.sky.sannet.ne.jp/morostar/OpenZaurus/OpenZaurus.html Some high-quality (?) screenshots]
 
-== Status of GPE and associated programs in PostmarketOS ([https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]) ==
+=== Status ===
+The status of GPE and associated programs in PostmarketOS ([https://github.com/duncanguthrie/pmbootstrap/tree/feature/gpe WIP branch]) is as follows:
 
 {| class="wikitable"
 |-
@@ -554,14 +555,6 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 | Xsettings protocol library fro GPE
 | 
 |
-|-
-! scope="row"| matchbox-window-manager
-| Ported
-|
-|
-| X environment for resource-limited systems
-| Matchbox is useful for PDAs as it only displays one window at a time, and the panel is stylus-friendly. Similarly it scales well for small displays. So it is worth porting it (at the time of writing, matchbox-keyboard is already packaged) either as a single package or as each separate component packaged.
-| High
 |-
 ! scope="row"| sqlite2
 | Ported
