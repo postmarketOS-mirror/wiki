@@ -1,9 +1,6 @@
 {{Infobox interface
 | image = File:SL-C860-Angstrom-GPE.jpg
-| imagecaption = GPE running on a Sharp Zaurus model SL-C860 PDA
-| name = GPE Palmtop Environment
-| graphics = Matchbox (or similar) on Xorg
-| toolkit = GTK+2
+| imagecaption = The GPE Palmtop Environment running on a Sharp Zaurus model SL-C860 PDA, with the original implementation of Matchbox
 }}
 
 == What is the GPE Palmtop Environment? ==
