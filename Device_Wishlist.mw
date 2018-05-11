@@ -12,11 +12,10 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 
 * Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release]
 * Kindle Fire 1st Generation (FOSS Bootloader, pretty much a PandaBoard devkit with a screen)
-* Fairphone 1 &amp; 2
+* Fairphone 1
 * [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
 * Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
 * Intex Aqua Fish and Other Sailfish running devices
-* Oneplus One
 * Oneplus 6
 * Ubuntu phones
 * BQ Aquaris E4.5
@@ -29,7 +28,6 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
 * Samsung S8500 Wave - runs originally on Bada 2.0, has a bootloader and an Android port, see XDA
 * Samsung Galaxy Tab Pro 10.1 TM-525/PicassoLTE
-* Moto G LTE (1st Gen, 2013)
 * Possibly Nokia Lumia 520 and 525 and/or other unlocked Lumia devices
 * HTC HD2 (the phone which famously runs ''any'' operating system)
 * [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
