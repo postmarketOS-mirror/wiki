@@ -775,15 +775,16 @@ The Pimlico Project was created by OpenHand as part of their Sato Linux distribu
 * [https://arstechnica.com/uncategorized/2007/04/gnome-foundation-announces-mobile-and-embedded-initiative/ GNOME on Mobile and Embedded]
 * [http://maemo.org/community/maemo-users/gpe_and_pimlico/ Forum post about the Pimlico suite]
 * [https://wiki.maemo.org/Sync Sync support discussion page]
+* [http://pimlico-mirror.yoctoproject.org/sources/ Mirror of source tarballs]
 
 It is composed of the following four components:
 * [https://git.gnome.org/dates Dates] - a calendar application
 * [https://git.gnome.org/tasks Tasks] - plan tasks etc
 * [https://web.archive.org/web/20090817064327/http://pimlico-project.org:80/sources/contacts/ Contacts] - make a record of contact information
-** Unfortunately, the last release, 0.9, appears to be lost forever. The file is not available on the internet archive, nor is it available on any mirror I could find. 0.8 is available on the internet archive, however.
+** [https://web.archive.org/web/20120216152657/http://pimlico-project.org/sources/contacts/contacts-0.12.tar.gz Mystery 0.12 version]
 * Sync - synchronise the applications with external sources
 ** Unfortunately, OpenHand's website is now defunct, so Sync's source code appears to be inaccessible there. However, Sync appears to have been mirrored at https://git.yoctoproject.org/cgit/cgit.cgi/sync/. That being said, it's not clear if they're the same program.
-** Sync is based on the (seemingly) now-defunct OpenSync project, so it is probably not worth porting. Other mobile synchronisation programs such as KDEConnect are probably worth looking at.
+** Sync is based on the (seemingly) now-defunct (or at least dormant?) [https://web.archive.org/web/20081229232422/http://opensync.org/ OpenSync] project, so it is probably not worth porting. Other mobile synchronisation programs such as KDEConnect are probably worth looking at.
 
 Thoughts:
 * It should be possible to make the programs use the modern Evolution data server.
