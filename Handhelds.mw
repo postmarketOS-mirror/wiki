@@ -3,6 +3,71 @@
 | imagecaption = The GPE Palmtop Environment running on a Sharp Zaurus model SL-C860 PDA, with the original implementation of Matchbox
 }}
 
+== Matchbox Window Manager ==
+
+A major component of embedded Linux distributions targeted at handhelds and PDAs, such as OpenZaurus, the Ångström distribution, and even Maemo, was the Matchbox Window Manager.
+
+The main raison d'être for Matchbox is that:
+* It is very lightweight. It consumes a couple of MB of memory and has little CPU usage.
+* It presents only one window at a time, like traditional PDA interfaces e.g. Palm OS.
+
+=== Status ===
+
+Its main components are as follows:
+{| class="wikitable"
+|-
+! scope="col"| Component name
+! scope="col"| Status
+! scope="col"| Package name in PMOS
+! scope="col"| Package version in PMOS
+! scope="col"| Description
+! scope="col"| Comments
+|-
+! scope="row"| libmatchbox
+| Ported
+| libmatchbox
+| 1.12
+| Library for matchbox window manager
+| The main library behind Matchbox. It is used so that window managers can use and customise its window management functionality without having to bundle the full matchbox-window-manager.
+|-
+! scope="row"| matchbox-common
+| Ported
+| matchbox-common
+| 0_git20070606
+| Common data files for Matchbox
+| Includes files like the session, some basic configuration data like which directories are shown by the matchbox-desktop (via the [https://developer.gnome.org/integration-guide/stable/desktop-files.html.en Desktop Menu Specification]). It starts the panel, the desktop interface and the window manager.
+|-
+! scope="row"| matchbox-desktop
+| Ported
+| matchbox-desktop
+| 2.0
+| Desktop system for handhelds using the GTK+2 stack
+| A desktop interface that runs behind the programs in Matchbox. The panel includes a home button that can bring this to the front, so that other programs can be switched to.
+|-
+! scope="row"| matchbox-keyboard
+| Ported
+| matchbox-keyboard
+| 0.1.1
+| An on-screen virtual keyboard
+| It has GTK+2 and GTK+3 input method support, and can build a (currently non-working) panel applet for matchbox panel version 2. It also has cairo integration.
+|-
+! scope="row"| matchbox-panel
+| Ported
+| matchbox-panel
+| 2.11_git20161123
+| Simple GTK+3-based panel for handheld devices
+| This is a rewrite of the original matchbox-panel. It has GTK+3 support. However, some of the panel applets don't work quite how they should, e.g. the systray is seemingly always empty. However, e.g. notifications show up and the user can press a button to view the desktop. Ideally they would be able to control system reboot/shutdown/logout from the panel, too.
+|-
+! scope="row"| matchbox-window-manager
+| Ported
+| matchbox-window-manager
+| 2.0_git20171119
+| Window manager intended for non-desktop embedded platforms such as handhelds and set-top boxes
+| This is a rewrite of the original matchbox-window-manager. It removes xsettings support in favor of GTK+2 integration and also has PNG theme support (not enabled yet). It also has pango integration.
+|}
+
+
+
 == What is the GPE Palmtop Environment? ==
 
 The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
@@ -771,3 +836,4 @@ A thought: It would be useful to port Enlightenment to Alpine at any rate. It ca
 * [https://web.archive.org/web/20111120035822/http://www.linuxtogo.org:80/new-project-gpe-phone-edition GPE phone edition announcement]
 * [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications]
 * [https://web.archive.org/web/20070216052756/http://www.linuxdevices.com/articles/AT7621761066.html 'Building consumer products with open source'] - Insightful essay by Ari Jaaksi, Nokia's director of open source
+* [https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/allum/allum_html/matchbox.html 'Matchbox: Window-management not for the desktop']
