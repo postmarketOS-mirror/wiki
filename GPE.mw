@@ -524,8 +524,8 @@ Another immediate problem is that the homepage for GPE is now gone. The source c
 * Move from SQLite version 2 to modern SQLite version 3
 * Move from gconf and xsettings to gsettings and dconf. O-hand made [https://git.yoctoproject.org/cgit/cgit.cgi/xsettings-daemon/ xsettings-daemon], a bridge between xsettings and gconf. This can be useful for GPE, as it makes heavy use of xsettings.
 * Proper GTK theme support.
-* Move to GTK+3
-* Move from the Enlightened sound daemon (esound) to PulseAudio or similar.
+* Move to GTK+3. Reworking libgpewidget should do the trick. Getting rid of it altogether may be desirable.
+* Move from the Enlightened sound daemon (esound) to PulseAudio or similar. In fact, esdcompat is part of pulseaudio-utils. So, we can build against esd development libraries, but not actually install esd itself.
 * Fix dependencies on non-standard system infrastructure such as /etc/timezone.
 * Investigate modern replacement for the audiofile program.
 * Modern configuration program for wireless networking with privilege separation.
