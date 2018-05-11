@@ -716,6 +716,16 @@ One might also comment that creation of users is a function of pmbootstrap curre
 | gpe-todo
 | Pimlico-Tasks
 |-
+! scope="row"| Power management and monitoring
+| Not working 
+| 
+| Goals:
+* Be able to monitor and display battery status (For Nokia N900: [https://github.com/postmarketOS/pmbootstrap/issues/1448 related])
+* Respond to low-battery status
+* Respond to presses of the power-off button
+* Dim the screen automatically (already turns off after a while on N900)
+* There should be a proper panel plugin and associated battery-monitoring program, e.g. see [https://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin xfce4-battery-plugin] which appears to also provide a panel applet
+|-
 ! scope="row"| RFID/NFC
 | Not working/implemented
 |
