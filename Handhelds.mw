@@ -66,8 +66,6 @@ Its main components are as follows:
 | This is a rewrite of the original matchbox-window-manager. It removes xsettings support in favor of GTK+2 integration and also has PNG theme support (not enabled yet). It also has pango integration.
 |}
 
-
-
 == The GPE Palmtop Environment ==
 
 The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
