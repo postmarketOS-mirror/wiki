@@ -801,7 +801,7 @@ OPIE is an alternative to GPE. It's similarly targeted at embedded systems and i
 * [https://github.com/opieproject/opie OPIE Project]
 
 === QTMoko ===
-Another alternative is QTMoko. QTMoko is similar to OPIE but they forked QTE and now use a custom patched version of QT (Itself unmaintained). QTMoko is the fork of QTE for OpenMoko handsets. They are looking into moving away from this in the future, though, so this is probably a viable alternative.
+Another alternative is QTMoko. QTMoko is similar to OPIE but they forked QTE and now use a custom patched version of QT (Itself unmaintained). QTMoko is the fork of QTE for OpenMoko handsets. The developers are looking into moving away from this in the future, though, so this is probably a viable alternative. In particular, they will at some point make QTMoko2 work on Debian Stretch, and that had similar compiling issues as on Alpine. The following pages are relevant:
 
 * [https://www.mail-archive.com/gta04-owner@goldelico.com/ Main conversation about QTMoko for GTA04 owners]
 * [https://www.mail-archive.com/gta04-owner@goldelico.com/msg00853.html Message about QTMoko potentially moving away from QTE]
