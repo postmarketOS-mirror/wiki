@@ -28,6 +28,16 @@
 
 == How to enter flash mode ==
 
+=== Flashing using the Preloader ===
+
+# Remove jumper J5. This will disable the USB hub on the board and enable you to connect the board to the host PC via USB. If you don't do this, USB errors will appear in dmesg.
+# Start the MediaTek Smartphone Flash Tool (SPFT) as root.
+# Select the scatter file and the partitions you want to flash.
+# Click "Download".
+# Plug the board into your computer via its micro-USB port.
+# Wait for flashing to complete.
+# If that fails, repeat steps 4-6 until it works.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
