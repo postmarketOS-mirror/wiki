@@ -604,6 +604,20 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | gpe-julia, openttd
 | gpe-tetris; gpe-lights; gsoko; xdemineur (minesweeper clone); cgoban (needs internet connection to be really fun); 2048-qt; Cave Story (in form of open-source NXEngine) also works fine without any hardware acceleration, and is very fun.
 |-
+! scope="row"| Graphical package-management
+| Not working 
+| 
+| [https://github.com/postmarketOS/pmbootstrap/issues/1417 #1417]: Add apk backend support to PackageKit. This is a real blocker. We could also bungle some support onto one of the OPKG/IPKG frontends that have been lost to the mists of time (Ångström had such a package management tool).
+|-
+! scope="row"| Graphical installer/set-up tool
+| Not working 
+| 
+| These are actually two different issues, but they're related. The former can be solved in pmbootstrap and isn't really essential as it stands. The latter can be partially worked-around by having good defaults. Nonetheless, there is a need for a simple tool to e.g.
+# Set up users,
+# Set up a wireless network and/or mobile network,
+# Teach users the basic layout of the system.
+One might also comment that creation of users is a function of pmbootstrap currently, but that it may not be desirable in the future, depending on which direction things go.
+|-
 ! scope="row"| Image gallery
 | Working fully
 | gpe-gallery
@@ -691,9 +705,9 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 | Window manager, and graphical desktop builds, but not yet working with PNG themes
 |- 
 ! scope="row"| Wireless networks and mobile broadband
-| Not working
-| 
-| gpe-aerial (?), gpe-bluetooth (?), networkt\manager
+| Partially working
+| wpa_gui mostly works
+| wpa_gui works (with minor manual configuration) but is merely a frontend for wpa_supplicant. I'd like to get NetworkManager working properly.
 |-
 |}
 
