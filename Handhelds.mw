@@ -769,12 +769,14 @@ One might also comment that creation of users is a function of pmbootstrap curre
 ! scope="row"| Wireless networks and mobile broadband
 | Partially working
 | nm-applet
-| * wpa_gui also works (with some manual configuration)
+| Options:
+* wpa_gui works (with some manual configuration)
 ** It is merely a frontend for wpa_supplicant. 
 ** It appears in the systray, with no icon, which is non-intuitive, especially given the panel isn't actually a visible widget (only the panel applets display their respective icons).
 * Priority: get NetworkManager and nm-applet working properly. 
 ** Add "nm-applet &" to matchbox-session, and it will appear in the panel's system tray. A better solution is to check if it is installed, and only then start it. 
-** Connecting to wireless networks has not been tested, only that the matchbox-panel systray displays it. NetworkManager at least allows connections to mobile broadband.
+** Connecting to wireless networks has not been tested, only that the matchbox-panel systray displays it. 
+** One advantage of NetworkManager is that it allows connections to mobile broadband.
 |-
 |}
 
