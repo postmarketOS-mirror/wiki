@@ -57,7 +57,7 @@ Dasher is a keyboard designed for when one only has a single pointing device and
 * [https://wiki.gnome.org/Design/OS/ScreenKeyboard GNOME's design page concerning on-screen keyboards] has some of these and a few other items, not all of them freely-licensed.
 * [http://wiki.openmoko.org/wiki/Literki Literki] keyboard, a keyboard for X11 that overlays over the current window, which may be convenient for handhelds, but may not be very accessible.
 * [https://olofsj.github.io/enscribi/ Enscrebi] input method, similar to CellWriter.
-* [http://wiki.openmoko.org/wiki/GridPad GridpPad] input method, yet another grid-based handwriting system.
+* [http://wiki.openmoko.org/wiki/GridPad GridPad] input method, yet another grid-based handwriting system.
 * [http://wiki.openmoko.org/wiki/Wishlist/Text_Input OpenMoko Wiki's overview of input methods] in a wish-list format.
 * [http://patrickbaudisch.com/publications/2007-Vogel-CHI07-Shift.pdf Vogel and Baudisch, 2007] - 'Shift: A Technique for Operating Pen-Based Interfaces Using Touch'.
 * [http://wiki.openmoko.org/wiki/Keyboard_Debate 'Keyboard Debate'] article on OpenMoko Wiki
