@@ -35,7 +35,7 @@ Its main components are as follows:
 | matchbox-common
 | 0_git20070606
 | Common data files for Matchbox
-| Includes files like the session, some basic configuration data like which directories are shown by the matchbox-desktop (via the [https://developer.gnome.org/integration-guide/stable/desktop-files.html.en Desktop Menu Specification]). It starts the panel, the desktop interface and the window manager.
+| Includes files like the session, some basic configuration data like which directories are shown by the matchbox-desktop (via the [https://developer.gnome.org/integration-guide/stable/desktop-files.html.en Desktop Menu Specification]). It starts the panel, the desktop interface, the keyboard in daemon mode, and the window manager.
 |-
 ! scope="row"| matchbox-desktop
 | Ported
