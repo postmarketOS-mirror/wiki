@@ -49,7 +49,7 @@ Its main components are as follows:
 | matchbox-keyboard
 | 0.1.1
 | An on-screen virtual keyboard
-| It has GTK+2 and GTK+3 input method support, and can build a (currently non-working) panel applet for matchbox panel version 2. It also has cairo integration.
+| It has GTK+2 and GTK+3 input method support, and can build a (currently non-working) panel applet for matchbox panel version 2. It also has cairo integration. It should be started in daemon mode so that the panel applet can send the signal to make it show itself.
 |-
 ! scope="row"| matchbox-panel
 | Ported
