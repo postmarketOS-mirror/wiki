@@ -1,0 +1,40 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Sony Ericsson
+| name = Xperia mini
+| codename = smultron
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = Sony Ericsson Xperia mini
+| releaseyear = 2011
+| originalsoftware = Android 2.3 Gingerbread
+| chipset = Qualcomm MSM8255 Snapdragon S2
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 205
+| storage = 302 MB internal, up to 32 GB microSD support
+| display = 3.0" LED-backlit LCD
+| memory = 512 MB RAM
+}}
+
+== Contributors ==
+* mishaor
+
+== Maintainer(s) ==
+* mishaor
+
+== What works ==
+* Building the kernel
+
+== What does not work ==
+* Everything else
+
+== How to enter Fastboot ==
+1. Hold the Volume Up button
+2. Connect the USB cable while holding the button
+3. If the blue LED is on, then you successfully entered the Fastboot mode!
+
+== Installation ==
+Currently no installation progress :(
+
+== See also ==
+[https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently used]
+[https://www.gsmarena.com/sony_ericsson_xperia_mini-3947.php Device specifications]
