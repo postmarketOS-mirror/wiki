@@ -98,6 +98,11 @@ Additional desirable applets:
 * Screen rotation control (xrandr frontend?)
 * Shortcut to settings etc.
 
+=== Active issues ===
+
+* There is an odd issue with window focus. Under some circumstances (seemingly to do with the window-switching panel applet), it will become impossible to use the mouse to select GTK widgets etc. Opening and closing windows works. (Probably remove the window-switching panel applet for now.)
+* After launching nm-applet from the systray, the panel sometimes grows in scale. This may be related to the 'allow-smaller-icons.patch' patch that was applied to it, which set small sizes to systray icons where applicable (it is a simple patch). Consider reverting the patch if this behaviour doesn't persist without the patch, obviously.
+
 == The GPE Palmtop Environment ==
 
 The GPE Palmtop Environment is a GTK+-based user interface for PDA devices. It's similar to OPIE (The Open Palmtop Integrated Environment) or QtMoko. GPE is designed to be extremely lightweight and small in size.
