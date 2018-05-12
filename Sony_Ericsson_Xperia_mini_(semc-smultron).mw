@@ -29,7 +29,9 @@
 
 == How to enter Fastboot ==
 1. Hold the Volume Up button
+
 2. Connect the USB cable while holding the button
+
 3. If the blue LED is on, then you successfully entered the Fastboot mode!
 
 == Installation ==
