@@ -56,7 +56,7 @@ Its main components are as follows:
 | matchbox-panel
 | 2.11_git20161123
 | Simple GTK+3-based panel for handheld devices
-| This is a rewrite of the original matchbox-panel. It has GTK+3 support. However, some of the panel applets don't work quite how they should, e.g. the systray is seemingly always empty. However, e.g. notifications show up and the user can press a button to view the desktop. Ideally they would be able to control system reboot/shutdown/logout from the panel, too.
+| This is a rewrite of the original matchbox-panel. It has GTK+3 support. However, some of the panel applets don't work quite how they should, e.g. the systray is seemingly always empty. However, e.g. notifications show up and the user can press a button to view the desktop.
 |-
 ! scope="row"| matchbox-window-manager
 | Ported
@@ -65,6 +65,38 @@ Its main components are as follows:
 | Window manager intended for non-desktop embedded platforms such as handhelds and set-top boxes
 | This is a rewrite of the original matchbox-window-manager. It removes xsettings support in favor of GTK+2 integration and also has PNG theme support (not enabled yet). It also has pango integration.
 |}
+
+=== Next steps ===
+
+Old panel applets; ideally these would be packaged to work properly with matchbox-panel version 2, rather than to appear in the systray etc:
+* [https://git.yoctoproject.org/cgit/cgit.cgi/mb-applet-input-manager/ Matchbox Panel Input Manager Applet]
+** Toggles an input method on and off
+** It does actually show up in the panel, seemingly in systray (with no icon). The package was removed from the repository but can be added again if an icon can be added.
+** Worth combining this functionality with the other applet's GTK signalling to call the keyboard (which runs daemonised).
+* [https://git.yoctoproject.org/cgit/cgit.cgi/mb-applet-light/ Matchbox Panel Screen Brightness Applet] 
+** Controls display brightness.
+** Untested. Should be trivial to create something similar for the version 2 panel.
+* [https://git.yoctoproject.org/cgit/cgit.cgi/mb-applet-startup-monitor/ Matchbox Panel Startup Monitor Applet]
+** Monitors and notifies users of applications as they start. 
+** The equivalent seems to already be integrated into Matchbox Panel version 2, but it's not clear if it's in a working state.
+* [https://git.yoctoproject.org/cgit/cgit.cgi/mb-applet-volume/ Matchbox Panel Volume Control Applet]
+** Controls ALSA volume
+** PulseAudio is all the rage and succeeds esd. Perhaps we should create a PulseAudio volume control applet.
+* Battery Monitor Applet
+** Built in to the original Matchbox Panel, and an equivalent exists for version 2.
+** However, it uses apmd, which is old and not widely used any more. 
+** A battery monitor applet, making use of modern interfaces, similar to the XFCE4 battery monitor, would be very useful. (Perhaps we can use the XFCE4 Battery Monitor for this purpose?)
+* Wireless Network Applet
+** Like the Battery Monitor Applet, this is also built into the panel.
+** It uses wireless tools. Modern systems use wpa_supplicant.
+** nm-applet actually runs in the systray, which supports mobile broadband as well as some other connections in addition to WiFi. wpa_gui also runs in the systray but it has no tray icon, which makes it difficult to use.
+
+Additional desirable applets:
+* An applet to control shutdown/reboot, logging out of the graphical interface (back to some display manager?), screen-locking, etc.
+* Calendar
+* Alarm and more advanced clock
+* Screen rotation control (xrandr frontend?)
+* Shortcut to settings etc.
 
 == The GPE Palmtop Environment ==
 
