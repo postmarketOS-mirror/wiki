@@ -36,7 +36,9 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
 * ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
+* OpenPandora handheld games console, should run mainline without too much trouble
 * Nintendo Switch
+
 == Low Priority Devices ==
 
 * Zipit Z2 (well supported kernels, but runs <code>armv5te</code> which is currently unsupported on Alpine, see also: [https://github.com/postmarketOS/pmbootstrap/issues/238 #238])
