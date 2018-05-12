@@ -41,6 +41,7 @@ Once the app exits and you're presented with the home screen, run '''luna-send -
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
 * Create init service files to get services starting at boot.
 * See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board]
+* Applying the LuneOS patches for <code>qt5-qtwebengine</code> again. magmastonealex [https://github.com/postmarketOS/pmbootstrap/tree/ac17316441ab522b9d7bbfcf53dc6f41d1420754/aports/main/qt5-qtwebengine made a version] that worked with QT 5.9, but these patches are incompatible with later QT versions (details: {{github|1459}})
 
 == Photos ==
 
