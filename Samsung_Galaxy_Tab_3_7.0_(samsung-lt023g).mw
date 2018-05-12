@@ -1,0 +1,52 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy Tab 3 7.0
+| codename = lt023g
+| image = File:Samsung Galaxy Tab 3 7.0.png
+| imagecaption = Samsung Galaxy Tab 3 7.0
+| releaseyear = 2013
+| originalsoftware = Android 4.4.2 on Linux 3.4.5
+| cpu = Dual-core 1.2 GHz Cortex-A9 (Marvell PXA986 SoC)
+| gpu = PowerVR SGX540
+| storage = 8GB
+| display = 1024×600 TFT
+| memory = 1GB
+}}
+
+[[File:P1030915.JPG|thumb|right|Firefox on Matchbox]]
+
+== Entering flash mode ==
+* Power down the device, then press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code> simultaneously.
+* Once the device vibrates, release <code>Power</code>, but keep <code>Volume Down</code> and <code>Home</code> held.
+* The device will ask you if you wish upload a custom OS. Press <code>Volume Up</code> to confirm.
+* Once the device displays &quot;Odin mode&quot; in the top-left of the screen, it is ready for flashing.
+
+== Entering recovery mode ==
+* Power down the device, then press and hold <code>Volume Up</code> + <code>Home</code> + <code>Power</code> simultaneously.
+* Once the device vibrates, release <code>Power</code>, but keep <code>Volume Up</code> and <code>Home</code> held.
+
+== Installing the kernel ==
+This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Entering flash mode|entering flash mode]].
+
+== What works ==
+* Booting off a microSD card
+* Display
+* Touchscreen
+* USB networking
+* Full disk encryption
+* Physical buttons
+* Touch keys
+* Backlight brightness
+* Battery indicator
+* Wayland
+* X11
+
+== What does not work ==
+* Bluetooth
+* Wi-Fi
+* Cellular networking
+
+Everything else is untested as of writing this.
+
+== Links ==
+* [https://github.com/kumajaya/android_kernel_samsung_lt02 Kernel source]
