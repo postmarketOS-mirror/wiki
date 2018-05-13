@@ -105,6 +105,7 @@ Additional desirable applets:
 * Currently, the X cursor is displayed; there is a command-line option for matchbox-window-manager version 2 to enable/disable this, as well as set themes etc. This is fine, given that Matchbox is best suited to handhelds with touch screens. Nonetheless, the X cursor might be unsuitable for devices with capacitive touchscreens (i.e. likely without a stylus, although devices in the Galaxy Note series have a stylus with advanced features) and no hardware keyboard. It might be worth:
 # devising a method of being able to check hardware features, e.g. have some kind of interactive setup program (or pmbootstrap) create some file
 # just turning off the X cursor altogether, given it should be obvious for users using styluses where the cursor is likely to be
+* The keyboard applet sends MBKeyboardRemoteToggle. This is not generic. It should call any GTK+2 or GTK+3 input method that is configured, and allow users to select the keyboard to call. This would allow one to call alternative keyboards and input methods.
 
 == The GPE Palmtop Environment ==
 
