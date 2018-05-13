@@ -37,7 +37,7 @@ According to its website, GKOS has been superseded by ComboKey. The ComboKey see
 
 Graffiti was the single-stroke handwriting system for Palm OS. It was the subject of a lawsuit from Xerox, which Palm lost.
 
-Quikwriting was a research project that produced an alternative to the Graffiti method of text input. There is an open-source implementation called [http://nongnu.org/qwo/ QWO], but the program appears not to work. Nonetheless, it can be made to work with a little bit of effort, most likely.
+Quikwriting was a research project that produced an alternative to the Graffiti method of text input. There is an open-source implementation called [http://nongnu.org/qwo/ QWO]. It is a little awkward to use, but it does work rather well, once one learns. See https://mrl.nyu.edu/~perlin/demos/quikwriting.html.
 
 Other relevant links regarding Graffitti:
 * http://blog.monstuff.com/archives/000012.html
