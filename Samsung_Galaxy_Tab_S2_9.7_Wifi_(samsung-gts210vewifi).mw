@@ -1,4 +1,4 @@
-[[Category:Not booting]]
+
 {{Infobox device
 | manufacturer = Samsung
 | name =  Galaxy Tab S2 9.7 Wifi
@@ -182,28 +182,7 @@ android
 "
 but this was only due to not having an RNDIS connection via USB!
 
-* installed system on sdcard pmbootstrap install --no-fde --sdcard=/dev/..., pmbootstrap flasher flash_kernel 
-* or flashed both system and boot image to boot and system partitions
-* tried also via TWRP recovery zip file
-
-Flashing works, read out boot partition after flashing via TWRP, and it did contain the pmOS boot image.
-
 Not mentioned in the porting docu yet: Had to use '''uppercase''' partition labels in deviceinfo_flash_heimdall_partition_(kernel|system) variables in deviceinfo file, even if their symlinks are lowercase (e.g. "system -> /dev/block/mmcblk0p36"), otherwise get 'ERROR: Partition "system" does not exist in the specified PIT.'
-
-boot.img compared with LineageOS 15.1 boot.img looks quite identical:
-<pre>$ unpackbootimg -i boot.img -o boot.img.dir
-BOARD_KERNEL_CMDLINE console=null androidboot.hardware=qcom androidboot.wificountrycode=00 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk buildvariant=userdebug
-BOARD_KERNEL_BASE 80000000
-BOARD_NAME
-BOARD_PAGE_SIZE 2048
-BOARD_HASH_TYPE sha1
-BOARD_KERNEL_OFFSET 00008000
-BOARD_RAMDISK_OFFSET 02000000
-BOARD_SECOND_OFFSET 00f00000
-BOARD_TAGS_OFFSET 01e00000
-BOARD_DT_SIZE 800768
-</pre>
-except that LineageOS boot image sets a BOARD_NAME, BOARD_OS_VERSION and BOARD_OS_PATCH_LEVEL. boot.img-dtb files inside are identical.
 
 == See also ==
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
