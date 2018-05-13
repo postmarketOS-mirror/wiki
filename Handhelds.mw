@@ -102,6 +102,9 @@ Additional desirable applets:
 
 * There is an odd issue with window focus. Under some circumstances (seemingly to do with the window-switching panel applet), it will become impossible to use the mouse to select GTK widgets etc. Opening and closing windows works. (Probably remove the window-switching panel applet for now.)
 * After launching nm-applet from the systray, the panel sometimes grows in scale. This may be related to the 'allow-smaller-icons.patch' patch that was applied to it, which set small sizes to systray icons where applicable (it is a simple patch). Consider reverting the patch if this behaviour doesn't persist without the patch, obviously.
+* Currently, the X cursor is displayed; there is a command-line option for matchbox-window-manager version 2 to enable/disable this, as well as set themes etc. This is fine, given that Matchbox is best suited to handhelds with touch screens. Nonetheless, the X cursor might be unsuitable for devices with capacitive touchscreens (i.e. likely without a stylus, although devices in the Galaxy Note series have a stylus with advanced features) and no hardware keyboard. It might be worth:
+# devising a method of being able to check hardware features, e.g. have some kind of interactive setup program (or pmbootstrap) create some file
+# just turning off the X cursor altogether, given it should be obvious for users using styluses where the cursor is likely to be
 
 == The GPE Palmtop Environment ==
 
