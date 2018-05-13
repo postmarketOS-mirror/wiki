@@ -38,6 +38,9 @@ Basically this means the following:
 
 If you have doubts if a certain value should be 0 or not, a good test is also to just run <code>weston-calibrator</code> multiple times. If the value is sometimes positive, sometimes negative, it should be 0.
 
+=== tslib ===
+If <code>weston-calibrator</code> does not work for you, consider using <code>tslib</code> and converting the resulting calibration data afterwards (see {{github|1493}} and [https://lists.freedesktop.org/archives/wayland-devel/2014-September/017581.html this mail]).
+
 == Legacy ==
 === libinput: old method ===
 {{syslog|weston}}
