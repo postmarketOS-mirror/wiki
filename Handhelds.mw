@@ -106,6 +106,7 @@ Additional desirable applets:
 # devising a method of being able to check hardware features, e.g. have some kind of interactive setup program (or pmbootstrap) create some file
 # just turning off the X cursor altogether, given it should be obvious for users using styluses where the cursor is likely to be
 * The keyboard applet sends MBKeyboardRemoteToggle. This is not generic. It should call any GTK+2 or GTK+3 input method that is configured, and allow users to select the keyboard to call. This would allow one to call alternative keyboards and input methods.
+* Input methods are not overlayed on top of the current windows. In the case of input methods that don't span the whole display, this causes the empty space where the keyboard would normally span right across to not be updated. The original matchbox-window-manager had a configure flag called 'enable-alt-input-wins' which should fix this. It can be forward-ported.
 
 == The GPE Palmtop Environment ==
 
