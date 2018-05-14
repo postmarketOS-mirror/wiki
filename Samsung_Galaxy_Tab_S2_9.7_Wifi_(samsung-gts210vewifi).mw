@@ -275,6 +275,7 @@ Sequence 567 pressure: min:   0 max: 255 avg:  23 median:   0 tags: down palm
 </pre>
 
 == See also ==
+* {{github|1493}} initial pull request
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
 * [https://github.com/LineageOS/android_device_samsung_gts210vewifi LineageOS android_device_samsung_gts210vewifi repo]
 * [https://github.com/LineageOS/android_kernel_samsung_msm8976/archive/82d475a1952b9bbb6652b35e87671b5031bcf934.tar.gz (LineageOS) Kernel 3.10.102 used]
