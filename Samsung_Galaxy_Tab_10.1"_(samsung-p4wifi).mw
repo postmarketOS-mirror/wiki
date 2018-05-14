@@ -63,7 +63,7 @@ The mainline max17042 battery driver works but the downstream driver provided a 
 == Graphics ==
 The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not working. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
 
-grate-drver packaging can be found at [http://github.com/Decatf/pmbootstrap/tree/mesa-grate github.com/Decatf/pmbootstrap/tree/mesa-grate]
+grate-drver packaging can be found at [http://github.com/Decatf/pmbootstrap/tree/mesa-grate github.com/Decatf/pmbootstrap/tree/feature/mesa-grate]
 
 == Audio ==
 
