@@ -35,12 +35,13 @@ A good example of a device using a mainline kernel is the <code>device-nokia-rx5
 === Links ===
 * [[Mainlining FAQ]] various information collected from #postmarketOS
 * [[Qualcomm mainline porting]]
+* [http://linux-sunxi.org/Linux_mainlining_effort Allwinner mainline effort]
 * Blog about [http://elektranox.org/droid4/ mainline kernel support for the Motorola Droid 4]
 * [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting Freedreno wiki: Display driver porting]
 * [http://elixir.free-electrons.com/linux/v3.17/source/include/video/mipi_display.h#L28 List of DTSI -> panel driver function translations]
 * [https://github.com/postmarketOS/pmbootstrap/issues/91 #91: &quot;The Mainline Kernel&quot;]
 * [http://n900.elektranox.org/index.html Debian on N900]
-* [https://developer.sonymobile.com/open-devices/how-to-build-and-flash-a-linux-kernel/how-to-build-mainline-linux-for-xperia-devices/ Build Mainline for Xperia devices]
+* [https://developer.sony.com/develop/open-devices/guides/kernel-compilation-guides/how-to-build-mainline-linux-kernel-for-xperia-devices Build Mainline for Xperia devices]
 * [https://forum.xda-developers.com/android/software-hacking/reference-how-to-upstream-android-kernel-t3626913 How to get an Android kernel up to date with Linux upstream]
 * [https://nickdesaulniers.github.io/blog/2017/05/16/submitting-your-first-patch-to-the-linux-kernel-and-responding-to-feedback/ Submitting your first patch to the Linux kernel and responding to feedback]
 * [http://kroah.com/log/blog/2018/02/05/linux-kernel-release-model/ Linux Kernel Release Model] (reasons why we should all be using mainlined kernels)
