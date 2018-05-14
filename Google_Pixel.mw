@@ -142,13 +142,14 @@ Without the patch, you'll encounter:
 
 === Done ===
 
+* [ojbr] - Fix kernel panic on boot (skip_initramfs)
 * [ojbr] - Serial debugging is possible with the kernel builds available on my mirror repository
 * [ojbr] - Re-enable LZMA kernel image compression, add via makedepends
 * [ojbr] - Test device flashing using fastboot
 
 === Doing ===
 
-* [ojbr] - Fix kernel panic on boot
+* Investigate boot process; attempt to get SSH over USB
 
 === Backlog === 
 
