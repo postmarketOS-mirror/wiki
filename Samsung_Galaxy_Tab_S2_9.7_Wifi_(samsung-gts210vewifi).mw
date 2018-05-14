@@ -189,6 +189,7 @@ Not mentioned in the porting docu yet: Had to use '''uppercase''' partition labe
 Touchpad pressure does not seem return pressure but is related to the number of fingers touched at the same time, see below ("# x finger down" comments added by me). Unfortunately, tweaking the pressure like https://wayland.freedesktop.org/libinput/doc/latest/touchpad_pressure.html tells does not work.
 
 gts210vewifi:~# libinput measure touchpad-pressure                                                                                                                 
+<pre>
 Using sec_touchscreen: /dev/input/event2                                                                                                                           
 
 Ready for recording data.             
@@ -271,6 +272,7 @@ Sequence 567 pressure: min:   0 max: 255 avg:  31 median:   0 tags: down palm
 Sequence 567 pressure: min:   0 max: 255 avg:  28 median:   0 tags: down palm
 Sequence 567 pressure: min:   0 max: 255 avg:  25 median:   0 tags: down palm
 Sequence 567 pressure: min:   0 max: 255 avg:  23 median:   0 tags: down palm
+</pre>
 
 == See also ==
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
