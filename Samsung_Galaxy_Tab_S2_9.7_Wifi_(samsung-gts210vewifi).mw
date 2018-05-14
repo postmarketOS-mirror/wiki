@@ -185,6 +185,93 @@ but this was only due to not having an RNDIS connection via USB!
 
 Not mentioned in the porting docu yet: Had to use '''uppercase''' partition labels in deviceinfo_flash_heimdall_partition_(kernel|system) variables in deviceinfo file, even if their symlinks are lowercase (e.g. "system -> /dev/block/mmcblk0p36"), otherwise get 'ERROR: Partition "system" does not exist in the specified PIT.'
 
+====libinput measure touchpad-pressure====
+Touchpad pressure does not seem return pressure but is related to the number of fingers touched at the same time, see below ("# x finger down" comments added by me). Unfortunately, tweaking the pressure like https://wayland.freedesktop.org/libinput/doc/latest/touchpad_pressure.html tells does not work.
+
+gts210vewifi:~# libinput measure touchpad-pressure                                                                                                                 
+Using sec_touchscreen: /dev/input/event2                                                                                                                           
+
+Ready for recording data.             
+Pressure range used: 30:25        
+Palm pressure range used: 130
+Place a single finger on the touchpad to measure pressure values.                                                                                                  
+Ctrl+C to exit 
+
+# 1 finger down
+Sequence 496 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm                                                                                      
+ 
+# 2 finger down
+Sequence 508 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm                                                                                      
+Sequence 508 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm                                                                                      
+                                
+# 3 finger down
+Sequence 511 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm                                                                                      
+Sequence 511 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm                                                                                      
+Sequence 511 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm                                                                                      
+
+# 4 fingers down                                                                                                                                                                   
+Sequence 522 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm                                                                                      
+Sequence 522 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm                                                                                      
+Sequence 522 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm                                                                                      
+Sequence 522 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm                                                                                      
+
+# 5 fingers down
+Sequence 527 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm                                                                                      
+Sequence 527 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm                                                                                      
+Sequence 527 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm                                                                                      
+Sequence 527 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm                                                                                      
+Sequence 527 pressure: min:   0 max: 255 avg:  42 median:   0 tags: down palm                                                                                      
+
+# 6 fingers down
+Sequence 533 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm
+Sequence 533 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm
+Sequence 533 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm
+Sequence 533 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm
+Sequence 533 pressure: min:   0 max: 255 avg:  42 median:   0 tags: down palm
+Sequence 533 pressure: min:   0 max: 255 avg:  36 median:   0 tags: down palm
+
+# 7 fingers down
+Sequence 540 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm
+Sequence 540 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm
+Sequence 540 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm
+Sequence 540 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm
+Sequence 540 pressure: min:   0 max: 255 avg:  42 median:   0 tags: down palm
+Sequence 540 pressure: min:   0 max: 255 avg:  36 median:   0 tags: down palm
+Sequence 540 pressure: min:   0 max: 255 avg:  31 median:   0 tags: down palm
+
+# 8 fingers down
+Sequence 548 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  42 median:   0 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  36 median:   0 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  31 median:   0 tags: down palm
+Sequence 548 pressure: min:   0 max: 255 avg:  28 median:   0 tags: down palm
+
+# 9 fingers down
+Sequence 557 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  42 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  36 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  31 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  28 median:   0 tags: down palm
+Sequence 557 pressure: min:   0 max: 255 avg:  25 median:   0 tags: down palm
+
+# 10 fingers down
+Sequence 567 pressure: min:   0 max: 255 avg: 127 median: 255 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  85 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  63 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  51 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  42 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  36 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  31 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  28 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  25 median:   0 tags: down palm
+Sequence 567 pressure: min:   0 max: 255 avg:  23 median:   0 tags: down palm
+
 == See also ==
 * [https://wiki.lineageos.org/devices/gts210vewifi Device Info (LineageOS)]
 * [https://github.com/LineageOS/android_device_samsung_gts210vewifi LineageOS android_device_samsung_gts210vewifi repo]
