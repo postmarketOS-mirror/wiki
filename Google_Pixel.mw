@@ -53,7 +53,7 @@ Standard fastboot flashing is known working, however the kernel currently panics
 [   14.033436] c2      1 Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(253,0)
 </pre>
 
-This seems pretty easy to solve; just need the time to look at where the filesystem is attempting to go.
+This seems pretty easy to solve; just need the time to look at where the filesystem is attempting to go. Might be unable to find the initramfs.
 
 === Default Partition Layout ===
 
