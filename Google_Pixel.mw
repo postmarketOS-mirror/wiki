@@ -32,10 +32,11 @@ The sailfish variant of the Google Pixel shares the same kernel builds as the Pi
 
 * Kernel compilation
 * Flashing
+* Booting kernel (serial only)
 
 == What does not work ==
 
-* Booting kernel via fastboot (see details below)
+* SSH over USB
 * Touch
 * Screen
 * WiFi
@@ -45,15 +46,6 @@ The sailfish variant of the Google Pixel shares the same kernel builds as the Pi
 * Modem
 
 N.B: The Pixel/Pixel XL are slightly different in format to a typical Android ecosystem. They are given two partition slots, dubbed slot A & B. Out-of-the-box Android installations also enable filesystem encryption by default. However, this is a non-issue for pmOS, since TWRP can reformat the partition layout to drop FDE for testing.
-
-Standard fastboot flashing is known working, however the kernel currently panics on boot:
-
-<pre>
-[   14.025620] No filesystem could mount root, tried:  ext3 ext2 ext4 vfat msdos fuseblk
-[   14.033436] c2      1 Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(253,0)
-</pre>
-
-This seems pretty easy to solve; just need the time to look at where the filesystem is attempting to go. Might be unable to find the initramfs.
 
 === Default Partition Layout ===
 
@@ -131,6 +123,20 @@ It is possible to debug the Pixel/Pixel XL with a standard [[Serial debugging|Ne
 </pre>
 
 The baud rate is 115200.
+
+== Known Issues ==
+
+==== skip_initramfs ====
+
+This is something added specific to Android, which skips the initramfs loading - something that shouldn't happen on pmOS.
+
+A patch exists which strips the offending commit. However, a more comprehensive patch might be worth investing time into - since this does not remove the extra cmdline parameters.
+
+Without the patch, you'll encounter:
+<pre>
+[   14.025620] No filesystem could mount root, tried:  ext3 ext2 ext4 vfat msdos fuseblk
+[   14.033436] c2      1 Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(253,0)
+</pre>
 
 == To Do List ==
 
