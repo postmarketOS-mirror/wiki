@@ -475,7 +475,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Google Pixel]]
   | google-pixel
-  | Kernel compiles, untested on hardware as of 2018-03-28
+  | Kernel compiles, panics on boot
 |-
   | [[Generic PC]] hardware (inc. BIOS based Windows tablets)🔼
   | N/A
