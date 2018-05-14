@@ -170,7 +170,7 @@ installed system on sdcard:
 ** sudo dhclient -v TheNetDevName
 * ssh -p 22 user@172.16.42.1
 
-== Developer Notes ===
+== Developer Notes ==
 Without proper kernel setting that allows [[USB_Network#Kernel_configuration_parameters|RNDIS via USB connection]] (CONFIG_USB_ETH with CONFIG_USB_ETH_RNDIS, or CONFIG_USB_G_ANDROID), device did '''''seem to''''' hang at the initial boot screen while displaying "
 KERNEL IS NOT SEANDROID ENFORCING
 Set Warranty Bit : kernel
