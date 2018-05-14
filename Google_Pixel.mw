@@ -36,24 +36,31 @@ The sailfish variant of the Google Pixel shares the same kernel builds as the Pi
 == What works ==
 
 * Kernel compilation
+* Flashing
 
 == What does not work ==
 
-* Booting kernel via fastboot
-* Flashing (install script mods required, see below)
+* Booting kernel via fastboot (see details below)
 * Touch
 * Screen
 * WiFi
-* Bluetooth
+* Bluetooth (might actually work!)
 * Camera
 * GPS
 * Modem
 
-Installation using normal measures does not successfully boot via the typical flashing method, however it is possible to direct boot to the initramfs without flashing.
-The Pixel/Pixel XL also have encrypted partitions by default, which is troublesome for TWRP. The Pixels also differ from the standard Android boot partition format, since they have
-two partition slots (dubbed slot A & B).
+N.B: The Pixel/Pixel XL are slightly different in format to a typical Android ecosystem. They are given two partition slots, dubbed slot A & B. Out-of-the-box Android installations also enable filesystem encryption by default. However, this is a non-issue for pmOS, since TWRP can reformat the partition layout to drop FDE for testing.
 
-=== Partition Layout ===
+Standard fastboot flashing is known working, however the kernel currently panics on boot:
+
+<pre>
+[   14.025620] No filesystem could mount root, tried:  ext3 ext2 ext4 vfat msdos fuseblk
+[   14.033436] c2      1 Kernel panic - not syncing: VFS: Unable to mount ront fs on unknown-block(253,0)
+</pre>
+
+This seems pretty easy to solve; just need the time to look at where the filesystem is attempting to go.
+
+=== Default Partition Layout ===
 
 <pre>
 ~#: fdisk -l /dev/block/sda
@@ -112,36 +119,38 @@ Take precaution, and keep backups if this is your primary device.
 * At this point, TWRP will load
 * Take your backup, note this does not include the user data directory. You need to copy that over with MTP as well.
 
-=== Fastboot without flashing ===
+=== Installation Steps ===
 <pre><nowiki>
 #fastboot set_active a
 #fastboot reboot bootloader
-#pmbootstrap flasher boot
+#pmbootstrap flasher flash_rootfs
+#pmbootstrap flasher flash_kernel
+#fastboot reboot
 </nowiki></pre>
 
 == Serial Debugging ==
 
-Sounds like this is possible, given kernel has serial debugging enabled.
-
-http://www.viruss.eu/malware/practical-android-debugging-via-kgdb/
-
-Should also be possible with a [[Serial debugging|Nexus Serial debug cable]]. Awaiting a parts delivery for this.
-
-Must be enabled via fastboot first:
+It is possible to debug the Pixel/Pixel XL with a standard [[Serial debugging|Nexus Serial debug cable]]. This must be enabled in fastboot first:
 <pre>
-fastboot oem uart enable
+#fastboot oem uart enable
 </pre>
+
+The baud rate is 115200.
 
 == To Do List ==
 
+=== Done ===
+
+* [ojbr] - Serial debugging is possible with the kernel builds available on my mirror repository
+* [ojbr] - Re-enable LZMA kernel image compression, add via makedepends
+* [ojbr] - Test device flashing using fastboot
+
 === Doing ===
 
-* [ojbr] - Investigate serial debugging. Obtained a USB FTDI device, just need to hack together a 3.5mm TRRS cable
+* [ojbr] - Fix kernel panic on boot
 
 === Backlog === 
 
-* Re-enable LZMA kernel image compression, add via makedepends
-* Test device flashing using fastboot
 * Investigate Kernel upgrade path to 4.X where MSM8996 has better support in mainline
 
 == See also ==
