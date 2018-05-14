@@ -170,7 +170,7 @@ installed system on sdcard:
 ** sudo dhclient -v TheNetDevName
 * ssh -p 22 user@172.16.42.1
 
-=== More Historical Details / Hints for Developers ===
+== Developer Notes ===
 Without proper kernel setting that allows [[USB_Network#Kernel_configuration_parameters|RNDIS via USB connection]] (CONFIG_USB_ETH with CONFIG_USB_ETH_RNDIS, or CONFIG_USB_G_ANDROID), device did '''''seem to''''' hang at the initial boot screen while displaying "
 KERNEL IS NOT SEANDROID ENFORCING
 Set Warranty Bit : kernel
@@ -185,7 +185,7 @@ but this was only due to not having an RNDIS connection via USB!
 
 Not mentioned in the porting docu yet: Had to use '''uppercase''' partition labels in deviceinfo_flash_heimdall_partition_(kernel|system) variables in deviceinfo file, even if their symlinks are lowercase (e.g. "system -> /dev/block/mmcblk0p36"), otherwise get 'ERROR: Partition "system" does not exist in the specified PIT.'
 
-====libinput measure touchpad-pressure====
+===libinput measure touchpad-pressure===
 Touchpad pressure does not seem return pressure but is related to the number of fingers touched at the same time, see below ("# x finger down" comments added by me). Unfortunately, tweaking the pressure like https://wayland.freedesktop.org/libinput/doc/latest/touchpad_pressure.html tells does not work.
 
 gts210vewifi:~# libinput measure touchpad-pressure                                                                                                                 
