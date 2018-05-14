@@ -26,6 +26,7 @@
 * Can be flashed with fastboot (small system image required, requires <code>0x1949</code> as deviceinfo_flash_fastboot_vendor_id), or TWRP terminal
 * Boots successfully
 * Weston
+* Plasma Mobile (colors are off, though)
 * SSH/RNDIS
 
 == Problems ==
@@ -34,7 +35,7 @@
 * fastboot cannot flash larger images (512 MB or above), it will error with <code>FAILED Unknown chunk type</code>. The latest pmbootstrap should warn you about this. A good fix for this would be implementing our own "postmarketOS flash method", see [https://github.com/postmarketOS/pmbootstrap/issues/456#issuecomment-343686341 #456]
 * Wifi doesn't work {{github|932}}
 * X11 only shows a flickering gray screen {{github|902}}
-* Plasma Mobile doesn't work, even with --framebuffer
+* <del>Plasma Mobile doesn't work, even with --framebuffer</del> Works, albeit with off colors, as of [https://github.com/postmarketOS/pmbootstrap/issues/1252 #1252]
 
 == How to enter flash mode ==
 
