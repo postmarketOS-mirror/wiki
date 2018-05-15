@@ -141,7 +141,7 @@ These are applications which already exist for Linux and could be reused in post
 |}
 
 === Apps that only work with proprietary services ===
-{{note|Using proprietary networks takes away your freedom, consider not using these altogether (e.g. by replacing Skype/WhatsApp with [https://matrix.org/ Matrix]).}}
+{{note|Using proprietary networks takes away your freedom, consider not using these altogether (e.g. by replacing Skype/WhatsApp with XMPP or [https://matrix.org/ Matrix]).}}
 {| class="wikitable sortable"
 !Application
 !License
