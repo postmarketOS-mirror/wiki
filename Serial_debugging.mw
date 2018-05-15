@@ -8,8 +8,9 @@ The nexus phones multiplexed the serial debug lines with the headphone audio lin
 
 This cable has been tested with:
 
-* Nexus 5 hammerhead
-* Nexus 5x bullhead
+* Nexus 5 (hammerhead)
+* Nexus 5X (bullhead)
+* Pixel (sailfish)
 
 It should work fine with:
 
