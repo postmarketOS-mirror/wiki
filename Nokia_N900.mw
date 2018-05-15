@@ -204,8 +204,12 @@ To adjust brightness:
 [[I3wm]] also works very well with the N900 due to the hardware keyboard, and MartijnBraam created some nice configs which have are included in the standard postmarketos-ui-i3wm installation.
 * [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ in action]
 
+===== Hildon =====
+
+As of 15th May 2018, Hildon is unusably slow. This is due to the fact that Hildon requires acceleration which is not supported at the date of writing.
+
 ===== Others =====
-There are also Hildon, Mate, Matchbox, etc.
+There are also Mate, Matchbox, etc.
 
 ===== Misc: Power button =====
 If you want to make use of the power button, bind <code>XF86PowerOff</code> to this script:
