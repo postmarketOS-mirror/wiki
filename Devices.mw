@@ -437,6 +437,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 ! Codename
 ! Status
 |-
+  | [[Amazon_Fire-Phone|Amazon Fire Phone]]
+  | amazon-kodiak
+  | Kernel won't build
+|-
   | [[Apple-iPod-Touch-1G|Apple iPod Touch 1G]]🔼
   | apple-ipt1g
   |
