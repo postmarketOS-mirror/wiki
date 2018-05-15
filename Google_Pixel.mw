@@ -138,6 +138,14 @@ Without the patch, you'll encounter:
 [   14.033436] c2      1 Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(253,0)
 </pre>
 
+==== Firmware images not available ====
+
+Need to include the [https://developers.google.com/android/drivers#sailfish proprietary vendor drivers].
+
+<pre>
+[TP]: [ERR]:fwu_start_reflash: Firmware image synaptics_bl71.img not available
+</pre>
+
 == To Do List ==
 
 === Done ===
@@ -150,6 +158,7 @@ Without the patch, you'll encounter:
 === Doing ===
 
 * Investigate boot process; attempt to get SSH over USB
+* Investigate missing driver binaries
 
 === Backlog === 
 
