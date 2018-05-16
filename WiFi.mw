@@ -43,7 +43,7 @@ iface wlan0 inet dhcp</pre>
 Finally, set the networking service to start on boot:
 
 <pre>$ sudo rc-update add networking default</pre>
-Note that on some systems (e.g. the RX51) you may have to configure wpa_supplicant to use the Linux kernel wireless extensions by editing <code>/etc/conf.d/wpa_supplicant</code>:
+Note that on some systems (e.g. the RX51 [this seems not to be required on RX-51 as of 16th May 2018 but YMMV]) you may have to configure wpa_supplicant to use the Linux kernel wireless extensions by editing <code>/etc/conf.d/wpa_supplicant</code>:
 
 <pre>wpa_supplicant_args=&quot;-Dwext&quot;</pre>
 You will have to reboot, or manually restart the aforementioned services, before your device will connect to the access point.
