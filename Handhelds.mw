@@ -771,7 +771,7 @@ One might also comment that creation of users is a function of pmbootstrap curre
 ! scope="row"| RFID/NFC
 | Not working/implemented
 |
-| There don't seem to be any usage of NFC on desktop Linux. There is an NFC subsystem in the Linux kernel, and libhybris has adaptations for NFC to be made available. All that is needed is for applications to make use of it.
+| There don't seem to be any usage of NFC on desktop Linux. There is an NFC subsystem in the Linux kernel, and libhybris has adaptations for NFC to be made available. All that is needed is for applications to make use of it. See also [https://mirrors.edge.kernel.org/pub/linux/network/nfc/ neard] for NFC (analogous to BlueZ or wpa_supplicant for Bluetooth and wireless networking respectively).
 |-
 ! scope="row"| SMS
 | Not working at all
