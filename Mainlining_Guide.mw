@@ -192,12 +192,7 @@ $ make qcom_defconfig
 $ make -j5
 </syntaxhighlight>
 
-=== Append DTB ===
-Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lge-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
-<syntaxhighlight lang="shell-session">
-$ cd ~/code/linux/.output/arch/arm/boot
-$ cat zImage dts/qcom-apq8064-lge-nexus4-mako.dtb > ~/code/linux/.zImage-dtb
-</syntaxhighlight>
+
 
 === Execute on the device ===
 This greatly depends on your device, and you can figure out the correct method by looking at your [[deviceinfo]] and at the <code>postmarketos-mkinitfs</code> code if necessary. But typically for fastboot based Android devices, you can patch the <code>boot.img</code> and boot it as follows.
@@ -215,6 +210,14 @@ $ mkdir -p "$TEMP"
 Then run one of the following every time you would like to replace the kernel inside the <code>boot.img</code> file. The non-[[QCDT]] version is easier, so check if you have a QCDT or not in the <code>deviceinfo</code> first.
 
 ===== non-QCDT devices =====
+
+====== Append DTB ======
+Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lge-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
+<syntaxhighlight lang="shell-session">
+$ cd ~/code/linux/.output/arch/arm/boot
+$ cat zImage dts/qcom-apq8064-lge-nexus4-mako.dtb > ~/code/linux/.zImage-dtb
+</syntaxhighlight>
+
 <syntaxhighlight lang="shell-session">
 $ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
@@ -229,10 +232,10 @@ Writing Boot Image /tmp/mainline/boot.img
 ===== QCDT devices =====
 All flasher offsets must be replaced with the values from the [[deviceinfo]] (you might want to save the command as a shell script for quick usage).
 <syntaxhighlight lang="shell-session">
-$ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
+$ cp ~/code/linux/.output/arch/arm/boot/zImage  "$TEMP"/zImage
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ pmbootstrap chroot -- mkbootimg \
---kernel "/tmp/mainline/zImage-dtb" \
+--kernel "/tmp/mainline/zImage" \
 --ramdisk "/tmp/mainline/initramfs" \
 --base "0x00000000" \
 --second_offset "0x00f00000" \
