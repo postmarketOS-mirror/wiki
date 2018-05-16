@@ -210,15 +210,10 @@ $ mkdir -p "$TEMP"
 Then run one of the following every time you would like to replace the kernel inside the <code>boot.img</code> file. The non-[[QCDT]] version is easier, so check if you have a QCDT or not in the <code>deviceinfo</code> first.
 
 ===== non-QCDT devices =====
-
-====== Append DTB ======
-Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel. Replace <code>qcom-apq8064-lge-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
+Now append the DTB (device tree blob), which has been generated from your DTS file, to the kernel, then create a bootimage from it. Replace <code>qcom-apq8064-lge-nexus4-mako</code> accordingly, and mind the <code>dtb</code> at the end instead of <code>dts</code>:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code/linux/.output/arch/arm/boot
 $ cat zImage dts/qcom-apq8064-lge-nexus4-mako.dtb > ~/code/linux/.zImage-dtb
-</syntaxhighlight>
-
-<syntaxhighlight lang="shell-session">
 $ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ pmbootstrap chroot
