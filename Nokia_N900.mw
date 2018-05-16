@@ -106,7 +106,7 @@ Configure wpa_supplicant (only necessary on encrypted networks):
 # exit</pre>
 Connect to network using wpa_supplicant:
 
-<pre>$ service wpa_supplicant restart </pre>
+<pre>$ sudo rc-service wpa_supplicant restart </pre>
 
 ==== Sound ====
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
