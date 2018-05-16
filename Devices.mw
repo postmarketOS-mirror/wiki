@@ -201,15 +201,19 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |-
   | style="white-space: nowrap;" | [[QEMU aarch64 (qemu-aarch64 )|QEMU aarch64]]🔼
   | style="white-space: nowrap;" | qemu-aarch64
-  | -  || -  || -  || Y  || -  || Y  || P  || Y  ||  ||  || -  ||  || -  || -  || -  || -  || -  || - 
+  | -  || -  || -  || Y  || -  || Y  || P  || Y  || - ||  || -  ||  || -  || -  || -  || -  || -  || - 
 |-
   | style="white-space: nowrap;" | [[QEMU amd64 (qemu-amd64)|QEMU AMD64]]🔼
   | style="white-space: nowrap;" | qemu-amd64
-  | -  || -  || -  || Y  || -  || Y  || P  || Y  ||  ||  || -  ||  || -  || -  || -  || -  || -  || - 
+  | -  || -  || -  || Y  || -  || Y  || P  || Y  || - ||  || -  ||  || -  || -  || -  || -  || -  || - 
 |-
   | style="white-space: nowrap;" | [[QEMU ARM (qemu-vexpress)|QEMU ARM]]🔼
   | style="white-space: nowrap;" | qemu-vexpress
-  | -  || -  || -  || Y  || -  || Y  || P  || Y  ||  ||  || -  ||  || -  || -  || -  || -  || -  || - 
+  | -  || -  || -  || Y  || -  || Y  || P  || Y  || - ||  || -  ||  || -  || -  || -  || -  || -  || - 
+|-
+  | style="white-space: nowrap;" | [[Raspberry Pi]]🔼
+  | style="white-space: nowrap;" | raspberry-pi
+  | -  || -  || - || Y ||  || Y ||  || Y || - ||  || - ||  || - || - || - || - || - || - 
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II x]]
   | style="white-space: nowrap;" | samsung-kylessopen
