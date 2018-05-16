@@ -117,3 +117,9 @@
 * [[Mozilla Flame (t2m-flame)]] (sometimes used : it can not be flashed easily. Broken touchscreen with an unactive zone, and some hardware USB issues)
 * ZTE Open C, FR version (I have several of these devices, which have a hardware similar to the Mozilla Flame. I might be able to flash one of them)
 }}</onlyinclude>
+
+=== steamport ===
+<onlyinclude>{{#ifeq:{{{user|steamport}}}|steamport |
+* [[Amazon Kindle Fire HDX (amazon-thor)]]
+* [[Nextbook Premium HD (nextbook-nx008hd8g)]]
+}}</onlyinclude>
