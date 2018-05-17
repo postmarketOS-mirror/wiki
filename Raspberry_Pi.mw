@@ -1,19 +1,48 @@
-The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux].
+{{Infobox device
+| manufacturer = Raspberry Pi Foundation
+| name = Raspberry Pi
+| codename = raspberry-pi
+| image = File:Raspberry-Pi-3-hero-1-1571x1080.jpg
+| releaseyear = 2013-2018
+| originalsoftware = Raspbian
+| chipset = Broadcom BCM2835<br/>Broadcom BCM2836<br/>Broadcom BCM2837
+| cpu = ARM1176JZF-S<br/>ARM Cortex-A7<br/>ARM Cortex-A53<br/>700 MHz - 1.4 GHz
+| gpu = Broadcom VideoCore IV
+| storage = MicroSDHC slot
+| display = HDMI port
+| memory = 256/512/1024 MB
+}}
+[[File:Raspberry-pi-xfce1.jpg|thumb|right|Running XFCE]]
+[[File:Raspberry-pi-xfce2.jpg|thumb|right|Running XFCE]]
 
-It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
 
-== postmarketOS device package ==
-{{note|We'd be happy if you own a Raspberry Pi and want to integrate it properly. Let us know in the [[Matrix_and_IRC|chat]] if you need any help!}}
-As of now, there is no device package, only the existing Alpine installation has been converted. But it should be not that hard to do. Rough notes on how it should be possible:
-* <code>pmbootstrap init</code>, create a new device aport
-* delete the generated aports/device/linux-* folder (check with <code>git status</code>)
-* change the device APKBUILD to use Alpine's raspberry pi kernel instead
-* add a new [[deviceinfo]] option for the boot partition type (default is ext2 as we do it now, for the pi it needs to be fat)
-* adjust pmbootstrap code to use that variable
-* test the installation with an sd card
-* make a pull request
+== What works ==
+
+* ...
+
+== What does not work ==
+
+* ...
+
+== Installation ==
+
+# Init pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source> Choose <code>raspberry-pi</code> as target device.
+# Select the kernel for your Raspberry Pi version <source lang="shell">
+[10:47:03] Which kernel do you want to use with your device?
+[10:47:03] Available kernels (2):
+[10:47:03] * rpi: Kernel for the Raspberry Pi Zero & 1
+[10:47:03] * rpi2: Kernel for the Raspberry Pi 2 & 3
+</source>
+# Start the build process and install the completed image to a sdcard<source lang="shell">
+# Replace /dev/sdX with the device for your sdcard
+$ ./pmbootstrap.py install --sdcard /dev/sdX</source>
+# Place the sdcard into the Raspberry Pi and boot it
 
 == See also ==
+* The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux]
+* It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
 * {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
 * [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
 
