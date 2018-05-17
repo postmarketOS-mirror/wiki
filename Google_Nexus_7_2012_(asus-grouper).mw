@@ -74,3 +74,4 @@ $ ./pmbootstrap.py flasher flash_rootfs
 
 == See also ==
 * {{github|445}}: Unfinished pull request to add wifi drivers
+* {{github|1199}}: Unfinished pull request to use "unlegacy's kernel"
