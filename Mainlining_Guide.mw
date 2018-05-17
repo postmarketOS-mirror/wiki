@@ -233,6 +233,7 @@ $ cp "/tmp/postmarketOS-export/initramfs-$DEVICE" "$TEMP/initramfs"
 $ pmbootstrap chroot -- mkbootimg \
 --kernel "/tmp/mainline/zImage" \
 --ramdisk "/tmp/mainline/initramfs" \
+--dt "/tmp/mainline/dt.img" \
 --base "0x00000000" \
 --second_offset "0x00f00000" \
 --cmdline "console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT" \
