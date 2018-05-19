@@ -1,7 +1,7 @@
 To turn Alpine into postmarketOS:
 
 * Install Alpine Linux
-* Add [https://github.com/postmarketOS/pmbootstrap/blob/master/keys/pmos-5a03a13a.rsa.pub this key] to <code>/etc/apk/keys</code>
+* Add [https://raw.githubusercontent.com/postmarketOS/pmbootstrap/master/keys/pmos-5a03a13a.rsa.pub this key] to <code>/etc/apk/keys</code>
 * Add this mirror to the top of <code>/etc/apk/repositories</code>:
  
 <pre>http://postmarketos.brixit.nl</pre>
