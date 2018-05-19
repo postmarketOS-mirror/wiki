@@ -13,7 +13,7 @@ This should even create a
 
 == Known issues ==
 
-At the first start Gajim used 100% CPU for a longer time - this was probably due to the fact that I was a member of a few big MUCs.
+* [N900] At the first start Gajim used 100% CPU for a longer time - this was probably due to the fact that I was a member of a few big MUCs.
 
 == Possible first steps ==
 
