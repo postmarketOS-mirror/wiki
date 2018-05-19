@@ -28,6 +28,7 @@
 * USB networking
 
 == What does not work ==
+* MTD flash (not tested) - this means your pmOS image has to be on an SD card.
 
 == How to enter flash mode ==
 
