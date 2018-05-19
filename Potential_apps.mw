@@ -34,7 +34,7 @@ These are applications which already exist for Linux and could be reused in post
 |[https://gajim.org Gajim]
 |GPL3
 |An XMPP client written in Python with Gtk+3.0
-| WIP by marmistrz
+|[[Gajim|manual instalation]]
 |-
 |[https://dino.im Dino]
 |GPL3
