@@ -1,0 +1,23 @@
+# Installation
+First setup the dependencies
+
+    sudo apk add g++ python3-dev py3-gobject3 alpine-sdk openssl-dev libffi-dev gettext
+
+Then download the source tarball from https://gajim.org/downloads.php?lang=en#source
+unpack it, enter the directory and execute
+
+    pip3 install --user .
+
+This should even create a 
+
+# Known issues
+
+At the first start Gajim used 100% CPU for a longer time - this was probably due to the fact that I was a member of a few big MUCs.
+
+# Possible first steps
+
+It may be a good idea to start the MUCs minimized.
+
+# Which server should I choose?
+
+See this page for information about compliance with modern XMPP extensions: https://conversations.im/compliance/
