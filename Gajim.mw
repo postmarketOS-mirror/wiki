@@ -14,6 +14,7 @@ This should even create a
 == Known issues ==
 
 * [N900] At the first start Gajim used 100% CPU for a longer time - this was probably due to the fact that I was a member of a few big MUCs.
+* [N900] It's not extremely fast...
 * some icons seem to be missing
 
 == Possible first steps ==
