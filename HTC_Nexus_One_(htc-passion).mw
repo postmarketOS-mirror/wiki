@@ -1,0 +1,41 @@
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = HTC
+| name = Nexus One
+| codename = passion
+| image = File:Nexus_one_20180518.jpg
+| imagecaption = 
+| releaseyear = 2010
+| originalsoftware = Android 2.1
+| chipset = Qualcomm QSD8250 Snapdragon S1
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 200
+| storage = 512MB
+| display = 480x800, 3.7 inches
+| memory = 512MB
+}}
+
+== Contributors ==
+* scintill
+
+== Maintainer(s) ==
+* scintill
+
+== What works ==
+* Boots to Weston
+* Display
+* Touch screen
+* USB networking
+
+== What does not work ==
+* MTD flash (not tested) - this means your pmOS image has to be on an SD card.
+
+== How to enter flash mode ==
+
+While powering on, hold trackball plus volume-up.
+
+== Port Status ==
+
+Code is at https://github.com/scintill/pmbootstrap/tree/device/htc-passion .
+
+Code should be cleaned up. Notably, I backported gcc 4 because the kernel compiled with gcc 6 doesn't boot. It's a bit Frankensteinish and not ideal, so it would be good to figure out how to get it working with gcc 6.
