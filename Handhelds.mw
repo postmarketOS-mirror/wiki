@@ -277,11 +277,11 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 | High - useful part of suite
 |-
 ! scope="row"| gpe-filemanager
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-filemanager
+| 0.31
 | An extremely lightweight file manager.
-| Users can stick with file managers like PCManFM in the meantime.
+| It renames/deletes/moves files. It complements beefier file managers nicely. Midnight commander also works well in the terminal.
 | High - integrates with the suite nicely
 |-
 ! scope="row"| gpe-gallery
