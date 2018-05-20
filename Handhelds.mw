@@ -317,9 +317,9 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 | Medium - it is just a game 
 |-
 ! scope="row"| gpe-lights
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-lights
+| 0.13
 | Lights-out game for GPE
 | Low priority. Not particularly fun.
 | Medium - it is just a game 
