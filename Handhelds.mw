@@ -229,11 +229,11 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 | High - key part of suite
 |-
 ! scope="row"| gpe-clock
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-clock
+| 0.27
 | Clock application for GPE
-| It does work currently due to not using /etc/timezone like Debian. We can work around this using a script to populate /etc/timezone, or it may be necessary to rewrite the timezone functionality altogether.
+| 
 | High - desktop clock key part of suite
 |-
 ! scope="row"| gpe-conf
@@ -241,7 +241,7 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 | gpe-conf
 | 0.2.9
 | Configuration toolset for GPE
-| Not working very well. It segfaults in a few places due to components it is communicating with not working (gpe-clock is the culprit). It also depends on gpe-confd which doesn't yet exist. It also doesn't allow a user to enter and authenticate with the root password, possibly because the infrastructure it uses to do this is making incorrect assumptions about what is available to an unprivileged user (despite it being setuid root). A rewrite may be fruitful and useful.
+| Not working very well. It depends on gpe-confd which needs to be running in the background. It also doesn't allow a user to enter and authenticate with the root password, possibly because the infrastructure it uses to do this is making incorrect assumptions about what is available to an unprivileged user (despite it being setuid root). A rewrite may be fruitful and useful.
 | High
 |-
 ! scope="row"| gpe-confd
