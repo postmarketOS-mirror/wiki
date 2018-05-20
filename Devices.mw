@@ -565,6 +565,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-i9000
   | Kernel compiles & boots; framebuffer, touchscreen and wifi (partial) working 
 |-
+  | [[Samsung_Galaxy_S2(G)_(samsung-i9100G)|Samsung Galaxy S2(G)]]
+  | samsung-i9100G
+  | Kernel compiles, Not booting.
+|-
   | [[Samsung-g930f-(Samsung-Galaxy-S7)|Samsung Galaxy S7]]
   | samsung-g930f
   | Kernel compiles; Not tested
