@@ -45,5 +45,6 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
 * It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
 * {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
 * [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
+* {{github|1501}} initial PR
 
 [[Category:Devices]]
