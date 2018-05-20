@@ -1,3 +1,19 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S2(G)
+| codename = i9100g
+| image = File:Gt-i9100g.jpg
+| imagecaption = Samsung Galaxy S2(G)
+| releaseyear = 2011
+| originalsoftware = Android 4.1.2 (Jelly Bean)
+| chipset = TI OMAP 4430
+| cpu = Dual-core 1.2 GHz Cortex-A9
+| gpu = PowerVR SGX540
+| storage = 16 GB
+| display = 480x800
+| memory = 1 GB
+}}
+
 == Contributors ==
 
 * hpagseddy
