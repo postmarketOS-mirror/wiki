@@ -4,3 +4,15 @@
 
 == What works ==
 The kernel builds.
+
+== What does not work ==
+It does not boot.
+
+== How to enter flash mode ==
+* Make sure, the device is powered off
+* Hold power + Home + volume down
+* Connect a USB cable
+
+== See also ==
+* [https://github.com/LineageOS/android_kernel_samsung_t1 Kernel sources by LineageOS]
+* [https://github.com/hpagseddy/postmarketos-i9100g My build]
