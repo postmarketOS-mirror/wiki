@@ -293,9 +293,9 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 | High - integrates well
 |-
 ! scope="row"| gpe-go
-| Not ported
-| N/A
-| N/A
+| Ported
+| gpe-go
+| 0.05| 
 | A go game for GPE
 | Should work on its own. But it is probably more valuable to port the CGoBan game, as this is an online Go game (as well as offline) and is more fully featured
 | Medium - it is just a game
