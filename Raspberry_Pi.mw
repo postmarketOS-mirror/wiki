@@ -28,16 +28,16 @@
 
 == Installation ==
 
-# Init pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source> Choose <code>raspberry-pi</code> as target device.
-# Select the kernel for your Raspberry Pi version <source lang="shell">
+# Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source> Choose <code>raspberry-pi</code> as target device.
+# Select the kernel for your Raspberry Pi version <source lang="shell-session">
 [10:47:03] Which kernel do you want to use with your device?
 [10:47:03] Available kernels (2):
 [10:47:03] * rpi: Kernel for the Raspberry Pi Zero & 1
 [10:47:03] * rpi2: Kernel for the Raspberry Pi 2 & 3
 </source>
-# Start the build process and install the completed image to a sdcard<source lang="shell">
-# Replace /dev/sdX with the device for your sdcard
-$ ./pmbootstrap.py install --sdcard /dev/sdX</source>
+# Start the build process and install the completed image to a sdcard<source lang="shell-session">
+$ ./pmbootstrap.py install --sdcard /dev/sdX
+(replace /dev/sdX with the device for your sdcard)</source>
 # Place the sdcard into the Raspberry Pi and boot it
 
 == See also ==
