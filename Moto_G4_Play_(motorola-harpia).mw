@@ -23,6 +23,7 @@
 == What works ==
 * USB Networking
 * Graphical display
+* Xorg
 
 == What does not work ==
 
