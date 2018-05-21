@@ -710,7 +710,7 @@ We should be able build a basic, lightweight system aimed at low-end PDA-like de
 ! scope="row"| Graphical package-management
 | Not working 
 | 
-| [https://github.com/postmarketOS/pmbootstrap/issues/1417 #1417]: Add apk backend support to PackageKit. This is a real blocker. We could also bungle some support onto one of the OPKG/IPKG frontends that have been lost to the mists of time (Ångström had such a package management tool).
+| [https://github.com/postmarketOS/pmbootstrap/issues/1417 #1417]: Add apk backend support to PackageKit. This is a real blocker. We could also bungle some support onto one of the OPKG/IPKG frontends that have been lost to the mists of time (e.g. gpe-package).
 |-
 ! scope="row"| Graphical installer/set-up tool
 | Not working 
