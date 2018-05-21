@@ -372,6 +372,14 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 | This is probably not worth using without gpe-login. And gpe-login doesn't really compile, nor is it really worth porting.
 | Low
 |-
+! scope="row"| gpe-package
+| Not ported
+|
+|
+| OPKG/IPKG package manager
+| Can probably be hacked up to use apk, maybe dpkg etc
+| 
+|-
 ! scope="row"| gpe-question
 | Ported
 | gpe-question
