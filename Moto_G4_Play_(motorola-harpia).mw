@@ -36,3 +36,4 @@ Hold down POWER + Vol Down while booting to enter Flash Mode.
 == See also ==
 * Device requires msm-refresher to get a display past the boot splash, even though <code>cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode</code> doesn't fix the display
 * Steps outlined for [[Troubleshooting:display#Screen_is_blank_outside_of_Weston|Screen is blank outside of Weston]] is still required to get a display after the boot splash
+* Xorg starts with a blank display, to make the screen show ssh into the device and run <code>sudo osk-sdl -t</code> to fix display
