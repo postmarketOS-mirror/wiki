@@ -71,7 +71,7 @@ $ git checkout -b "device-lg-mako"
 </syntaxhighlight>
 
 === envkernel.sh ===
-Usually when compiling a kernel, you would install [https://kernelnewbies.org/KernelBuild all dependencies] and a cross compiler in your host system. To make it easier, we have the <code>envkernel.sh</code> script (for firsh shell: <code>envkernel.fish</code>). It sets up an Alpine Linux chroot with all the dependencies by using <code>pmbootstrap</code> internally, exports the environment variables to use the right cross compiler and creates an alias to <code>make</code>. This means, whenever you type <code>make</code> after sourcing that script, it will actually run <code>make</code> in the chroot. Please try the script out once to make sure everything is working as expected:
+Usually when compiling a kernel, you would install [https://kernelnewbies.org/KernelBuild all dependencies] and a cross compiler in your host system. To make it easier, we have the <code>envkernel.sh</code> script (for fish shell: <code>envkernel.fish</code>). It sets up an Alpine Linux chroot with all the dependencies by using <code>pmbootstrap</code> internally, exports the environment variables to use the right cross compiler and creates an alias to <code>make</code>. This means, whenever you type <code>make</code> after sourcing that script, it will actually run <code>make</code> in the chroot. Please try the script out once to make sure everything is working as expected:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code/linux
 $ source ~/code/pmbootstrap/helpers/envkernel.sh
