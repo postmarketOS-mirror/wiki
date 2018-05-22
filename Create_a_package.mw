@@ -1,3 +1,4 @@
+This page explains how to create packages in postmarketOS, so they can be built with the usual <code>pmbootstrap build hello-world</code>.
 == Quick start ==
 Create a template for a new package called <code>mynewpackage</code> in <code>aports/main</code>:
 <syntaxhighlight lang="shell-session">
@@ -42,6 +43,11 @@ optional arguments:
   -s                    use sourceforge source URL
   -c                    copy a sample init.d, conf.d and install script
   -f                    force even if directory already exists
+</syntaxhighlight>
+
+Remember to update the checksums after changing the sources:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap checksum hello-world
 </syntaxhighlight>
 
 == General information ==
