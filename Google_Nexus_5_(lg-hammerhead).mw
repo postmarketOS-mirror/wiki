@@ -45,9 +45,10 @@
 <source lang="shell-session">
 $ pmbootstrap init # select lg-hammerhead
 $ pmbootstrap install --split --no-fde
-$ pmbootstrap export
-$ fastboot flash system /tmp/postmarketOS-export/lg-mako-boot.img
-$ fastboot flash userdata /tmp/postmarketOS-export/lg-mako-root.img
+$ pmbootstrap -s export
+$ pmbootstrap -s flasher flash_kernel
+$ fastboot flash system /tmp/postmarketOS-export/lg-hammerhead-boot.img
+$ fastboot flash userdata /tmp/postmarketOS-export/lg-hammerhead-root.img
 </source>
 
 === Additional info ===
