@@ -201,7 +201,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |-
   | style="white:space: nowrap;" | [[Ouya (ouya-ouya)|Ouya]]
   | style="white-space: nowrap;" | ouya-ouya
-  | Y  || Y  || -  || Y  ||  || Y  ||  ||  ||  ||  ||  ||  ||  || -  ||  || -  || -  || - 
+  | Y  || P  || -  || Y  ||  || Y  ||  ||  || - ||  || - ||  ||  || -  ||  || -  || -  || - 
 |-
   | style="white-space: nowrap;" | [[QEMU aarch64 (qemu-aarch64 )|QEMU aarch64]]🔼
   | style="white-space: nowrap;" | qemu-aarch64
