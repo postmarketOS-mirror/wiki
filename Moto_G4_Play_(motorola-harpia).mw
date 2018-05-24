@@ -51,38 +51,37 @@ On the device
 
 == Firmware {Wifi/Modem} (TODO: package it) ==
 On the device extract firmware
-<code>
-cd /lib/firmware
-mkdir postmarketos
-cd postmarketos
+<code>cd /lib/firmware</code>
+<code>mkdir postmarketos</code>
+<code>cd postmarketos</code>
+<code>mount /dev/disk/by-partlabel/system /mnt</code>
+<code>cp -ap /mnt/etc/firmware/* /lib/firmware/postmarketos</code>
+<code>umount /mnt</code>
+<code>mount /dev/disk/by-partlabel/fsg /mnt</code>
+<code>cp -ap /mnt/* /lib/firmware/postmarketos</code>
+<code>umount /mnt</code>
+<code>mount /dev/disk/by-partlabel/modem /mnt</code>
+<code>cp -ap /mnt/image/* /lib/firmware/postmarketos</code>
+<code>umount /mnt</code>
+<code>mount /dev/disk/by-partlabel/persist /mnt</code>
+<code>mkdir -p wlan/prima</code>
+<code>cp -ap /mnt/WCNSS_wlan_dictionary.dat wlan/prima/</code>
+<code>umount /mnt</code>
 
-mount /dev/disk/by-partlabel/system /mnt 
-cp -ap /mnt/etc/firmware/* /lib/firmware/postmarketos
-umount /mnt
-mount /dev/disk/by-partlabel/fsg /mnt
-cp -ap /mnt/* /lib/firmware/postmarketos
-umount /mnt
-mount /dev/disk/by-partlabel/modem /mnt
-cp -ap /mnt/image/* /lib/firmware/postmarketos
-umount /mnt
-mount /dev/disk/by-partlabel/persist /mnt
-mkdir -p wlan/prima
-cp -ap /mnt/WCNSS_wlan_dictionary.dat wlan/prima/
-umount /mnt
+Make a link in case the firmware path doesn't include /lib/firmware/postmarketos
 
-#make a link in case the firmware path doesn't include /lib/firmware/postmarketos
-cd /lib/firmware
-ln -s /lib/firmware/postmarketos/* /lib/firmware/
-</code>
+<code>cd /lib/firmware</code>
+<code>ln -s /lib/firmware/postmarketos/* /lib/firmware/</code>
+
 
 == Modem ==
 Make the necesary links for qcom_rmtfs
-<code>
-cd /boot
-ln -s /dev/disk/by-partlabel/modemst1 modem_fs1
-ln -s /dev/disk/by-partlabel/modemst2 modem_fs2
-ln -s /dev/disk/by-partlabel/fsg modem_fsg
-</code>
+
+<code>cd /boot</code>
+<code>ln -s /dev/disk/by-partlabel/modemst1 modem_fs1</code>
+<code>ln -s /dev/disk/by-partlabel/modemst2 modem_fs2</code>
+<code>ln -s /dev/disk/by-partlabel/fsg modem_fsg</code>
+
 
 Install necessary software
 
@@ -98,31 +97,26 @@ Start a tmux for multiple windows
 
 Start qcom_rmtfs on a terminal
 
-<code>
-export LD_PRELOAD=/usr/lib/preload/libqipcrtr4msmipc.so
-qcom_rmtfs -v
-</code>
+<code>export LD_PRELOAD=/usr/lib/preload/libqipcrtr4msmipc.so</code>
+<code>qcom_rmtfs -v</code>
 
 Start ofonod on another terminal
 
-<code>
-export LD_PRELOAD=/usr/lib/preload/libsmdpkt_wrapper.so
-ofonod -d -n
-</code>
+<code>export LD_PRELOAD=/usr/lib/preload/libsmdpkt_wrapper.so</code>
+<code>ofonod -d -n</code>
 
 Send an SMS!
 
-<code>
-export PHONE_NUMBER="<number to send sms to ex: 1234567890>"
+<code>export PHONE_NUMBER="<number to send sms to ex: 1234567890>"</code>
 
-sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Powered" variant:boolean:"true"
-sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.GetProperties
-sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Online" variant:boolean:"true"
-sudo dbus-send --system --print-reply --dest=org.ofono /gobi_0 org.ofono.MessageManager.SendMessage string:"$PHONE_NUMBER" string:"Hello world! -postmarketOS"
+<code>sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Powered" variant:boolean:"true"</code>
+<code>sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.GetProperties</code>
+<code>sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Online" variant:boolean:"true"</code>
+<code>sudo dbus-send --system --print-reply --dest=org.ofono /gobi_0 org.ofono.MessageManager.SendMessage string:"$PHONE_NUMBER" string:"Hello world! -postmarketOS"</code>
 
 # receive SMS like this (might be spammy if you have other DBus apps):
-sudo dbus-monitor
-</code>
+<code>sudo dbus-monitor</code>
+
 
 
 == See also ==
