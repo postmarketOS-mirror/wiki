@@ -24,6 +24,7 @@
 * Flashing postmarketos
 * Booting
 * Screen display
+* Touch screen ({{github|1313}})
 * USB Networking ({{github|1260}})
 * Sending SMS via terminal ({{github|1314}})
 * Accelerometer (<code>echo 1 > /sys/class/input/input2/enable</code>)
@@ -34,7 +35,6 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* Touch screen
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
