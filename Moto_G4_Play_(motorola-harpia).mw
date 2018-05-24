@@ -106,7 +106,7 @@ Make the necesary links for qcom_rmtfs
 Install necessary software
 
 <code>
-apk add modem-qcom-msm-downstream-common qcom_rmtfs libsmdpkt_wrapper libqipcrtr4msmipc
+apk add modem-qcom-msm-downstream-common qcom_rmtfs libsmdpkt_wrapper libqipcrtr4msmipc ofono
 </code>
 
 Start the wcnss-wlan service to initialize the wifi card (helps the modem?)
@@ -141,8 +141,6 @@ Send an SMS!
 
 Receive SMS like this (might be spammy if you have other DBus apps):
 <code>sudo dbus-monitor</code>
-
-
 
 == See also ==
 * Device requires msm-refresher to get a display past the boot splash, even though <code>cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode</code> doesn't fix the display
