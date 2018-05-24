@@ -1,0 +1,43 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Wave 2
+| codename = samsung-s8530
+| image = File:samsung-s8530.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2010
+| originalsoftware = Bada
+| chipset = CHANGE_ME
+| cpu = Hummingbird 1 GHz
+| gpu = PowerVR SGX540
+| storage = 2GB+SD
+| display = 800x480
+| memory = 512MB
+}}
+
+== Contributors ==
+* ragon000
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+It Compiles
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
