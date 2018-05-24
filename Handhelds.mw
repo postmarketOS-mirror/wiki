@@ -638,7 +638,7 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 * Sound does not appear to work. This may be device-specific.
 * Rewrite gpe-conf's passwd.c interface, as it seems to make assumptions that are incorrect about standard systems.
 * Disk space isn't reported, just system memory usage (which arguably isn't very useful anyway)
-* Battery status is not shown in gpe-conf. This appears to be because some parts of GPE are built around the old apmd system, which is now deprecated in favour of acpid.
+* Battery status is not shown in gpe-conf. This appears to be because some parts of GPE are built around the old apmd system, which is now deprecated in favour of acpid. But ACPI support has to be implemented in firmware. So, the apmd might be desirable to experiment with on very old devices.
 * gpe-su always looks for the command <code>x-terminal-emulator</code>. A really dirty solution is to patch this to say <code>xterm</code> or similar. In Alpine, update-alternatives is actually provided by the dpkg package.
 
 == Tracking PIM suite and mobile interface components ==
