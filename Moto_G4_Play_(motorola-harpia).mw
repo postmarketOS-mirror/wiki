@@ -50,9 +50,8 @@ On the device
 <code>/etc/init.d/wcnss-wlan start</code>
 
 == Firmware {Wifi/Modem} (TODO: package it) ==
-
+On the device extract firmware
 <code>
-#on the device extract firmware
 cd /lib/firmware
 mkdir postmarketos
 cd postmarketos
