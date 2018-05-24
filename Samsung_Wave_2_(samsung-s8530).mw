@@ -18,10 +18,6 @@
 == Contributors ==
 * ragon000
 
-== Maintainer(s) ==
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
-
 == What works ==
 
 It Compiles
@@ -30,14 +26,9 @@ It Compiles
 
 == How to enter flash mode ==
 
-== Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+* Not Sure how to flash yet, probably like you do [https://forum.xda-developers.com/samsung-tizen/bada-android/rom-omnirom-t3276734 here]
 
 == See also ==
-<!--
-Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{github|CHANGEME}} Initial pull request
-* {{github|CHANGEME}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
+== Links ==
+* [https://github.com/Badadroid/android_kernel_samsung_aries/tree/cma Kernel used]
+* [https://github.com/postmarketOS/pmbootstrap/pull/1147 Pull Request]
