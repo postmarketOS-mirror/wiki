@@ -203,6 +203,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | ouya-ouya
   | Y  || P  || -  || Y  ||  || Y  ||  ||  || - ||  || - ||  ||  || -  ||  || -  || -  || - 
 |-
+  | style="white:space: nowrap;" | [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Planet Computers Gemini PDA]]
+  | style="white-space: nowrap;" | planet-geminipda
+  | Y  || P  || Y  || Y  || P || Y  || Y ||  ||  || P ||  ||  ||  ||  ||  ||  ||  ||  
+|-
   | style="white-space: nowrap;" | [[QEMU aarch64 (qemu-aarch64 )|QEMU aarch64]]🔼
   | style="white-space: nowrap;" | qemu-aarch64
   | -  || -  || -  || Y  || -  || Y  || P  || Y  || - ||  || -  ||  || -  || -  || -  || -  || -  || - 
