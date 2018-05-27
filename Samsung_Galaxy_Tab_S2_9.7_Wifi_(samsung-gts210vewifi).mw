@@ -279,7 +279,7 @@ commit 59eb10e593213403c301a5ce3fbd0a22b6e52efd 'util: allow for palm pressure >
 With this new libinput version, the mouse pointer from plasma-mobile can be moved and clicking also does work as expected. Not yet working: 90-degree left rotation is not applied.
 
 === touchscreen works ===
-[https://github.com/postmarketOS/pmbootstrap/issues/1516]: if using ATTRS{name}=="sec_touchscreen" in udev rule instead of ENV{DEVNAME}=="/dev/input/event2" then touchscreen works as expected as touchscreen, not touchpad, and is always detected.
+[https://github.com/postmarketOS/pmbootstrap/issues/1516 PR#1516]: if using ATTRS{name}=="sec_touchscreen" in udev rule instead of ENV{DEVNAME}=="/dev/input/event2" then touchscreen works as expected as touchscreen, not touchpad, and is always detected.
 Additionally, this helps to detect/configure touchscreen on cold boots properly - previously, touchscreen input event nodes were only present if booting pmOS from within TWRP via Reboot>System.
 
 == See also ==
