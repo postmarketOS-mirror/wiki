@@ -30,7 +30,7 @@
 * screen output
 
 == What does not work ==
-* touch-screen
+* touch-screen is not detected if started from pmOS (some initialization missing), but it works if first booting TWRP and from within TWRP pmOS is booted via Reboot > System.
 * everything else
 
 == How to enter flash mode ==
