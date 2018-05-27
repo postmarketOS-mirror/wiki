@@ -28,6 +28,7 @@
 * booting
 * ssh connection
 * screen output
+* touch screen if pmOS is booted from TWRP via Reboot -> System
 
 == What does not work ==
 * touch-screen is not detected if started from pmOS (some initialization missing), but it works if first booting TWRP and from within TWRP pmOS is booted via Reboot > System.
