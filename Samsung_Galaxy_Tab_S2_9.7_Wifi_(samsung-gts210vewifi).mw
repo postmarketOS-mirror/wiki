@@ -280,6 +280,7 @@ With this new libinput version, the mouse pointer from plasma-mobile can be move
 
 === touchscreen works ===
 if using ATTRS{name}=="sec_touchscreen" in udev rule instead of ENV{DEVNAME}=="/dev/input/event2" then touchscreen works as expected as touchscreen, not touchpad, and is always detected.
+Additionally, this helps to detect/configure touchscreen on cold boots properly - previously, touchscreen input event nodes were only present if booting pmOS from within TWRP via Reboot>System.
 
 == See also ==
 * {{github|1493}} initial pull request
