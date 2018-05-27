@@ -24,14 +24,15 @@
 
 * Weston including touch
 * Xfce4 (recommended) including touch and pen
-* WiFi using the <code>firmware-samsung-i9305</code>
+* WiFi using the <code>firmware-samsung-i9305</code> - but: NetworkManager does not work, see https://github.com/postmarketOS/pmbootstrap/issues/1461
 * Bluetooth works partially as described for the [[Samsung_Galaxy_SIII_I747_(samsung-i747m)#Bluetooth|Galaxy SIII]] but the device is <code>/dev/ttySAC0</code>
 * Audio, see [[Audio#WM1811]] for more instructions. Both an pre-configured saved state as well as the ucm profiles are included.
+* charging-sdl
 
 == What does not work ==
 
 * Bluetooth pairing with bluez5 (bluez4 is working, more on that soon)
-* [[osk-sdl]], charging-sdl - neither the charging animation nor FDE work. See [https://github.com/postmarketOS/osk-sdl/pull/78 osk-sdl#78] for details including a possible fix (which needs patching sdl2).
+* [[osk-sdl]] - FDE most likely does not work as some kernel options are missing (can be easily fixed probably if FDE is desired).
 * GPS
 * Camera
 * Sleep etc.
