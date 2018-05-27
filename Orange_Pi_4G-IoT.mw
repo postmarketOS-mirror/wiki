@@ -6,12 +6,12 @@
 | image = File:orange-pi-4g-iot.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2018
-| originalsoftware = CHANGE_ME
+| originalsoftware = Android 6.0 on Linux 3.18
 | chipset = MT6737M
-| cpu = Cortex-A53
+| cpu = Quad-core Cortex-A53
 | gpu = Mali-T720 MP1
 | storage = 8GB
-| display = 720p
+| display = 720p @ 48Hz (incompatible with most displays)
 | memory = 1GB DDR3
 }}
 
