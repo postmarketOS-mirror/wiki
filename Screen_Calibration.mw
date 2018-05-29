@@ -16,7 +16,7 @@ This library is used by almost everything accessing your touch screen (e.g. West
 
 Modern [[Device specific package|device specific packages]] will generate the udev-rule automatically then, and as nice side-effect it will also work in <code>osk-sdl</code>.
 
-(If your device package does not generate the udev rule, please adjust the <code>build()</code> and <code>install()</code> functions as described [[Device specific package|here]].)
+If your device package does not generate the udev rule, please adjust the <code>build()</code> and <code>install()</code> functions as described [[Device specific package|here]]. For debugging use the [https://wayland.freedesktop.org/libinput/doc/latest/tools.html libinput Helper tools], e.g. <code>libinput debug-events '''--verbose'''</code>; [https://wayland.freedesktop.org/libinput/doc/latest/udev_config.html Static device configuration via udev] lists the configuration possibilities via udev.
 
 ==== Calibration (needed for resistive touch screens and or when the touch screen is rotated) ====
 Please test first if your device works without any special calibration - in most cases you don't need it!
