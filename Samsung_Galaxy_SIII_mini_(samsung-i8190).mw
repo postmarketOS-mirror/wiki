@@ -24,7 +24,7 @@
 
 == What works ==
 * Display
-* Touchscreen
+* Touchscreen 
 * USB network
 * FDE
 * weston
@@ -32,6 +32,7 @@
 * WIFI
 
 == What does not work ==
+* Camera
 * Most likely everything else
 
 == How to enter flash mode ==
@@ -61,7 +62,11 @@ If it worked then <pre>ip a</pre> Should show an ip address
 
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+View [https://wiki.postmarketos.org/wiki/Installation_guide Installation guide.]
 
+== Experience ==
+The best user interface to install is XFCE4.
+Other ones are lagging, or just don't respond.
+Especially KDE Plasma.
 == See also ==
 * {{github|1428}} initial PR
