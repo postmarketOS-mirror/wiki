@@ -12,13 +12,13 @@
 | gpu = Adreno 200
 | storage = 4GB
 | display = 320×480
-| memory = 512MB
+| memory = physically 512MiB, limited by kernel to ~385MiB (faulty dices?)
 }}
 
 == Contributors ==
 * [[user:Halamix2|Halamix2]]
 == What works ==
-* It boots
+* Boots
 * SSH through USB 
 * display
 * flashing
@@ -83,10 +83,6 @@ Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<boa
 [https://github.com/devicetree-org/devicetree-specification/releases Devicetree.org specification]
 
 ''Documentation/devicetree/'' inside linux kernel files, should contain newest documentation about dts files, should be most reliable source of information
-
-== S6500d fork ==
-
-https://github.com/Halamix2/pmbootstrap/tree/device-samsung-s6500d
 
 == How to enter flash mode ==
 Press power button and hold home button and VOL-
