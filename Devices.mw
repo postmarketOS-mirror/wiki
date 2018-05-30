@@ -485,6 +485,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | coolpad-modena2
   |
 |-
+  | [[Fairphone_1_(fairphone-fp1)|Fairphone 1]]
+  | fairphone-fp1
+  | kernel compiles
+|-
   | [[Geeksphone Revolution (gp-revolution)|Geeksphone Revolution]]
   | gp-revolution
   | Kernel compiles but does not boot
