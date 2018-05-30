@@ -1,0 +1,45 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Fairphone
+| name =  Fairphone 1
+| codename = FP1
+| image = File:1200px-Fairphone_1_-_front.jpg
+| imagecaption = Fairphone 1
+| releaseyear = 2013
+| originalsoftware = Android 4.2
+| chipset = MediaTek MT6589
+| cpu = Quad-core 1.2 GHz
+| gpu = PowerVR SGX544MP @ 286 MHz
+| storage = 16 GB
+| display = 960x540 IPS
+| memory = 1 GB
+}}
+
+== Contributors ==
+* Luca Weiss (z3ntu)
+
+== Maintainer(s) ==
+* Luca Weiss (z3ntu)
+
+== What works ==
+* Kernel compilation
+
+== What does not work ==
+* The rest
+
+== How to enter flash mode ==
+* ?
+
+== Installation ==
+* ?
+
+== See also ==
+* https://github.com/z3ntu/pmbootstrap/tree/device-fairphone-fp1
+* https://github.com/z3ntu/android_kernel_fairphone_FP1
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
