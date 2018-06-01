@@ -36,3 +36,16 @@ In order to maintain a clean history of commits (without commits such as "fix sp
 * two commits did not change the same code (e.g. each commit changes one package in aports)
 
 With that being said, it would make reviewing much easier if individual pull requests were created instead.
+
+Here's how PRs can be merged without squashing on the command line.
+<syntaxhighlight lang="shell-session">
+$ git fetch origin pull/1/head:pr1
+$ git checkout pr1
+$ git rebase
+if there were any conflicts that needed to be resolved, it should be pushed to
+the PR branch at this point. When continous integration ran through:
+$ git rebase -i master
+replace "pick" with "reword" to change the commit message and add the PR ID at the end
+$ git checkout master
+$ git merge pr1
+</syntaxhighlight>
