@@ -1,0 +1,48 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Kobo
+| name =  Aura
+| codename = kobo-aura
+| image = 
+| imagecaption = 
+| releaseyear = 2013
+| originalsoftware = Kobo Firmware 3.19.5761
+| chipset = 
+| cpu = 1 GHz Freescale i.MX507
+| gpu = 
+| storage = 4 GB Sandisk embedded flash (SDIN7DP2-4G), external microSD slot
+| display = 6 in diagonal, 16-level grayscale 1024 × 758 electronic paper
+| memory = 
+}}
+
+== Contributors ==
+* rendeko
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* rendeko
+
+<!--== What works ==-->
+
+== What does not work ==
+Kernel compilation. The lowest working kernel for postmarketOS is 3.x, while the kobo-aura uses a fork of 2.6. 
+
+== Notes ==
+* Maybe possible to diff changes between official 2.6 kernel and kobo's fork, create patch, and apply to 3.x to create working kernel? Working on this
+* Newer kobo devices might run 3.0? Unsure.
+
+<!--== How to enter flash mode ==-->
+
+<!--== Installation ==-->
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+[https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aura Official kernel source (Linux 2.6)]
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
