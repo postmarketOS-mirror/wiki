@@ -33,6 +33,7 @@
 * WiFi
 
 === What does not work ===
+* Race condition: it won't always boot
 * Flashlight and Front led
 * Camera
 * Backlight works partially
