@@ -525,6 +525,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
 |-
+  | [[Kobo Aura_(kobo-aura)|Kobo Aura]]
+  | kobo-aura
+  | Kernel is 2.6, will require patching.
+|-
   | [[Landrover-a9|Land Rover A9]]
   | landrover-a9
   |
