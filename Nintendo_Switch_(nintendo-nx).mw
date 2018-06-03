@@ -1,0 +1,84 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Nintendo
+| name = Switch
+| codename = nx
+| image =
+| imagecaption =
+| releaseyear = 2017
+| originalsoftware = Nintendo Switch system software 1.0.0 (upgradeable to 5.1.0)
+| chipset = Nvidia Tegra X1
+| cpu = Quad-core 1.02GHz Cortex-A57
+| gpu = Maxwell
+| storage = 32GB
+| display = 1280x720
+| memory = 4GB
+}}
+
+== Contributors ==
+* zhuowei
+* the Fail0verflow developers (mainline kernel and bootloader port)
+
+== Maintainer(s) ==
+* zhuowei
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== Software used ==
+
+This uses [https://fail0verflow.com/blog/2018/shofel2/ Fail0verflow's Linux port] for the Switch. They ported the mainline 4.16 kernel to the Switch, and ported Coreboot and U-Boot as the bootloader. They also developed a tool, ShofEL2, to boot the Switch to Linux from its recovery mode.
+
+So the boot process is this:
+
+* Switch boots to Tegra RCM flashing mode over USB
+* ShofEL2 boots Coreboot
+* Coreboot initializes hardware and launches U-Boot as its payload
+* U-Boot starts [https://github.com/u-boot/u-boot/blob/master/doc/README.sdp SDP flashing mode] over USB
+* [https://github.com/boundarydevices/imx_usb_loader imx-usb-loader] loads Linux kernel, device tree, and U-Boot script via SDP
+* U-Boot script decompresses and boots Linux
+
+== What works ==
+
+* Kernel compiles
+* U-Boot and Coreboot compiles
+* The ShofEL2 tool added to flashing methods in `pmbootstrap flasher` and can boot compiled Coreboot bootloader to USB SDP loading mode
+
+== What does not work ==
+
+Everything.
+
+Coreboot, U-Boot, and shofel2 built in pmbootstrap seems to work on their own: u-boot correctly enters the USB SDP flashing mode, and imx-usb-loader can interact with it.
+
+The kernel itself also seems to work on its own: when booted with a [https://github.com/natinusala/painless-linux known good coreboot/u-boot] it does start, although it then immediately panics since no initramfs is provided by the known good bootloader and there's no rootfs on my test SD card.
+
+However, attempting to boot the kernel with initramfs support freezes the device, either with coreboot/u-boot built with pmbootstrap or with the known good coreboot/u-boot. Unfortunately, postmarketOS needs the initramfs to setup encryption, so this will need to be addressed.
+
+== How to enter flash mode ==
+
+The Switch, like some other Nvidia Tegra devices, uses the Tegra RCM flashing mode.
+
+First, Pin 10 (the rightmost pin) needs to be grounded on the right JoyCon. To do this, one can use a wire, a paperclip, or a 3D printed jig. Guides can be found [https://gbatemp.net/threads/the-ultimate-list-of-mods-to-enter-rcm.502145/ here].
+
+Next, hold down Volume +, then press Power. The device should boot into RCM mode: the screen should stay blank, and "lsusb" should show:
+
+<pre>
+$ lsusb
+Bus 002 Device 078: ID 0955:7321 NVidia Corp. 
+</pre>
+
+
+== Installation ==
+
+postmarketOS needs to be flashed to a microSD using "./pmbootstrap.py install --sdcard". 
+
+This device only supports tethered boot, so on each boot, one must enter flashing mode, then run "pmbootstrap flasher boot".
+
+== Debugging ==
+
+This device exposes two serial ports, one in each JoyCon slot: Fail0verflow's Linux kernel uses [https://github.com/fail0verflow/switch-linux/blob/switch/arch/arm64/boot/dts/nvidia/tegra210-nintendo-switch.dts#L30 the port in the left JoyCon slot]. The pinout can be found [https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering here]. I don't have a serial adapter, so I'm examining alternative kernel debugging methods.
+
+== See also ==
+
+* [https://github.com/zhuowei/pmbootstrap/tree/nintendo-nx Work in progress branch]
+* [https://github.com/fail0verflow/shofel2 Fail0verflow's guide to booting their Linux port on Switch]
+* [https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/ another tutorial for booting Linux]
