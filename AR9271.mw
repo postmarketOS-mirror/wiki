@@ -1,7 +1,7 @@
 The Atheros AR9271 is a widely-available wifi chipset which has both drivers and firmware released under free software licences. Given that the majority of wifi chipsets used in mobile phones (particularly Samsung models) are not free software, it is a viable alternative to use as an external adapter, plugged into the USB port. As such, we should ensure that it is working correctly under pmOS for the devices and kernels supported here.
 
 ==Devices using this chipset==
-* Technoethical N150: TET-N150
+https://wikidevi.com/wiki/Special:Ask?title=Special%3AAsk&q=[[Chip1+model::~AR9271*]]
 
 
 [[Category:Hardware]]
