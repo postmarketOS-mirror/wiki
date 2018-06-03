@@ -557,6 +557,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | nec-ne-201a1a
   |
 |-
+  | [[Nintendo_Switch_(nintendo-nx)|Nintendo Switch]]🔼
+  | nintendo-nx
+  | Kernel and bootloader compiles, but freezes on boot
+|-
   | [[Orange Pi 4G-IoT]]
   | orange-pi-4g-iot
   |
