@@ -633,6 +633,7 @@ The status of GPE and associated programs in PostmarketOS ([https://github.com/d
 * Investigate modern replacement for the audiofile program.
 * Modern configuration program for wireless networking with privilege separation.
 * GTK programs that don't use xsettings aren't able to be configured by its theme support (as far as it appears). Enhance gpe-conf to be able to do this (or get rid of the xsettings-based theme system and just use GTK+.)
+* It might be worth pulling out gpe-su and making use of pkexec (it's polkit; but it is at least maintained and works reasonably well for the purpose of running programs as root)
 
 === Active issues ===
 * Sound does not appear to work. This may be device-specific.
