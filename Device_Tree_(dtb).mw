@@ -21,7 +21,7 @@ Those are generally present in the kernel fork your device uses. Look in the <co
 When a board is mainlined, the corresponding dts file is mainlined as well (though those may be put in a separate repository in the future).
 
 == Writing a device tree ==
-When mainlining a board, it is often needed to write one's own device tree. Indeed, while the physical description part won't change, the name of the drivers will probably. Thus, you need to find kernel drivers that are compatible with your own device, and put them in the device tree (assuming there is one). You should at least read carefully the description [https://elinux.org/Device_Tree_Usage | on elinux.org]. Another good tutorial to writing your device trees is present on [http://xillybus.com/tutorials/device-tree-zynq-1 xillybus.com].
+When mainlining a board, it is often needed to write one's own device tree. Indeed, while the physical description part won't change, the name of the drivers will probably. Thus, you need to find kernel drivers that are compatible with your own device, and put them in the device tree (assuming there is one). You should at least read carefully the description [https://elinux.org/Device_Tree_Usage on elinux.org]. Another good tutorial to writing your device trees is present on [http://xillybus.com/tutorials/device-tree-zynq-1 xillybus.com].
 
 == See also ==
 * [[Dtbtool]], a tool to compile dtb in the [[QCDT]] format.
