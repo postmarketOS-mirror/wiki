@@ -62,7 +62,7 @@ Translate the variables as follows into your deviceinfo:
 
 * [http://wiki.lineageos.org/devices.html LineageOS List]
 * [http://www.droidviews.com/codenames-of-samsung-galaxy-devices/ List for Samsung Galaxy Devices]
-* [https://github.com/jaredrummler/AndroidDeviceNames/blob/master/json/manufacturers/SAMSUNG.json List of Samsung codenames from the AndroidDeviceNames library]
+* [https://github.com/jaredrummler/AndroidDeviceNames/blob/master/json/manufacturers/ List of codenames from the AndroidDeviceNames library]
 
 == LineageOS kernel source repository ==
 
