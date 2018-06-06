@@ -54,19 +54,20 @@ Installation is unlike most Android based devices, as the Teclast X80 Pro uses E
 
 Much more detail to be added, but basic outline:
 
-* Install Arch Linux to USB key (Download ISO, dd if=archlinux-*.iso of=/dev/sdXY status=progress)
-* Connect keyboard and USB stick to tablet (through hub usually works best)
+* Install Arch Linux to USB key (Download ISO, dd if=archlinux-*.iso of=/dev/sdXY status=progress). Note: The Arch Linux is only used once to modify the boot files and to install postmarketOS.
+* Connect keyboard and USB stick to tablet (through USB hub usually works best).
+* The postmarketOS files (vmlinuz-teclast-x80pro, initramfs-teclast-x80pro, teclast-x80pro.img) should be available, e.g. on an SD card inserted in the Teclast device.
 * Enter EFI/BIOS (Either enter bios directly by tapping esc/del, or through Windows -> settings -> Update/Recovery -> Recovery -> Advanced -> Reboot Now -> Additional Options -> UEFI Firmware Interface)
 * Scroll over to "Boot"
 * At the bottom, there are a list of overrides for this boot, select your USB stick.
-* Wait for Arch to boot and give you a shell.
+* Wait for Arch Linux to boot and give you a shell.
 * <pre>mount /dev/mmcblk0p2 /boot/efi</pre>
 * <pre>refind-install --root /boot/efi</pre>
 * <pre>cd /boot/efi && cp EFI/refind/refind_x64.efi EFI/BOOT/bootx64.efi && cp -rv EFI/refind/* EFI/BOOT/</pre>
 * Edit EFI/BOOT/refind.conf, you may want to uncomment ''enable_touch''.
 * <pre>mkdir /mnt/boot/EFI/pmos && cp vmlinuz-teclast-x80pro /mnt/boot/EFI/pmos/vmlinuz && cp initramfs-teclast-x80pro /mnt/boot/EFI/pmos/initramfs.img</pre>
 * <pre>dd if=teclast-x80pro.img of=/dev/mmcblk0p9</pre>
-* Reboot. At OS selection, choose Android. You will see the rEFInd menu, select the postmarketos kernel. You should be booted into postmarketOS!
+* Reboot. At OS selection, choose Android. You will see the rEFInd menu, select the postmarketOS kernel (the file name under the icon should contain pmos). You should be booted into postmarketOS!
 
 
 == Wifi ==
