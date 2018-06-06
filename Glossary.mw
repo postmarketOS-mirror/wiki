@@ -59,6 +59,10 @@ Flat device tree. This is just another name for [[Glossary#dtb|dtb]][https://eli
 
 The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disassembler] is state of the art in the reverse engineering scene. It can be used to reverse engineer all kinds of blobs where the source code is not available, such as closed-source [[firmware]]. Disassembling is hard, and there's a high learning curve involved. It also features a decompiler, which produces (non-working) C code for better understanding.
 
+=== isorec ===
+
+[https://forum.xda-developers.com/galaxy-s2/orig-development/isorec-isolated-recovery-galaxy-s2-t3291176]
+
 === lk (little kernel) ===
 
 [https://github.com/littlekernel/lk <code>lk</code>] is the kernel which fastboot runs on. At least all new-ish Qualcomm devices use <code>lk</code> and new-ish mediatek devices too
