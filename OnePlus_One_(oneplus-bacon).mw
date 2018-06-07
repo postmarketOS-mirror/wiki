@@ -46,9 +46,9 @@ There is a bug whereby the screen is not automatically refreshed. To work around
 === Graphics ===
 The Adreno 330 GPU is supported by Freedreno.  The firmware is required, and is available in the adreno-firmware package.
 
-Julian Goldsmith has been working on getting hardware-accelerated graphics up and running, but is stuck on an issue with the display not updating properly.  Right now, the screen is updated slowly enough to be visible (causing a "screen wipe" effect), and is only updated about once a minute.  The issue affects both the framebuffer console and kmscube.
+Julian Goldsmith currently has partially-working graphics support on mainline.  XFCE4 displays properly, but other environments haven't been tested yet.  There is an issue where the screen doesn't properly update, which requires a workaround to disable the tearcheck pin.
 
-The graphics issue is possibly due to an issue with the configuration of the TE pin.  Vblank interrupts are only received about once a minute, which coincides with the screen updating.
+Actual 3D applications, such as glxgears, run very poorly at the moment.  This may be due to the tearcheck workaround.
 
 === Cell usage ===
 oFono support shouldn't take too much to get up and running.  Adding the remoteproc node, using qmictl (possibly more utilities), and using a patched oFono should get basic support up and running.
