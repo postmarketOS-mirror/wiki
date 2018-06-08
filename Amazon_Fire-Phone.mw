@@ -16,7 +16,7 @@
 }}
 
 == Contributors ==
-* [https://github.com/lramage94 Lucas Ramage <oxr463>]
+* [https://gitlab.com/lramage94 Lucas Ramage <oxr463>]
 
 == Maintainer(s) ==
 * [mailto:ramage.lucas@protonmail.com Lucas Ramage <oxr463>]
@@ -65,5 +65,5 @@ Bootloader is locked down.
 * Investigate missing driver binaries
 
 == See also ==
-* [https://github.com/lramage94/pmbootstrap/tree/device-amazon-kodiak postmarketOS amazon-kodiak fork on Github]
+* [https://gitlab.com/lramage94/pmbootstrap/tree/device-amazon-kodiak postmarketOS amazon-kodiak fork on Gitlab]
 * [https://wiki.gentoo.org/wiki/User:Rage/Drafts/Amazon_Fire_Phone_(Kodiak) Gentoo Wiki - Amazon Fire Phone (Draft)]
