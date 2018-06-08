@@ -32,7 +32,7 @@ The device might be identified as a Samsung Galaxy Trend Lite, Samsung Galaxy Fr
 
 == What does not work ==
 
-* unknown UART pinout
+* Audio
 
 == What has not been tested ==
 * Compass, accelerometer, gyroscope, GPS, light sensor
@@ -40,9 +40,7 @@ The device might be identified as a Samsung Galaxy Trend Lite, Samsung Galaxy Fr
 * Wifi/GSM
 * Camera
 * Flash Rootfs
-* Flashlight
 * Vibration motor
-* Audio
 
 == How to enter flash mode ==
 * Press volume down and the home key, then press the power button.
@@ -92,6 +90,9 @@ Copy-pasted from [https://github.com/eduardoclasheiro/android_device_samsung_kyl
     lpcharge=0
 * common:
     console=ttyS2,115200n8 mem=482M cma0=0M carveout0=0M vmalloc=136M androidboot.console=ttyS2 logbuf_nocache=1 sec_debug.reset_reason=0x1A2B3C00 sec_debug.level=0 androidboot.debug_level=0x4f4c loglevel=0 sec_log=0x70000@0x9e900000 bootloaderfb=0x9e980000,0x180000 lpcharge=0 cordon=a96d6276bb2e489960e841dda003e846 androidboot.emmc_checksum=3 brd_ver=0 androidboot.serialno=42xxxxxxxxxxxxx
+
+== Pictures ==
+[[File:UART-kylevess.jpg|200px| UART location]]
 
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_fresh_s7390-5841.php Galaxy fresh on GSM Arena]
