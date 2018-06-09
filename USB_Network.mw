@@ -100,7 +100,7 @@ If this fails, you may need to first assign an ethernet address to it.
 Then you can try the above <code>dhclient</code> command.
 
 ==== Kernel configuration parameters ====
-If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig_check</code> that the required parameters are all set.
+If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig check</code> that the required parameters are all set.
 The postmarketOS initramfs is able to configure two different USB systems in the kernel in order to let your PC talk to your phone via networking. One of them has to be enabled (exclusively?):
 * [[Kernel_configuration#CONFIG_USB_ETH|CONFIG_USB_ETH]]
 ** [[Kernel_configuration#CONFIG_USB_ETH_RNDIS|CONFIG_USB_ETH_RNDIS]] is usually needed as well, it enables a compatibility interface for microsoft hosts.
@@ -108,7 +108,7 @@ The postmarketOS initramfs is able to configure two different USB systems in the
 * [[Kernel_configuration#CONFIG_USB_G_ANDROID|CONFIG_USB_G_ANDROID]]
 ** This option is usually enabled in Android kernel forks
 
-You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap menuconfig</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
+You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap kconfig edit</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
 
 Related: {{github|1462}} linux-postmarketos-qcom: Remove composite usb gadget for networking
 
