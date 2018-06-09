@@ -852,7 +852,7 @@ It is composed of the following four components:
 ** Sync is based on the (seemingly) now-defunct (or at least dormant?) [https://web.archive.org/web/20081229232422/http://opensync.org/ OpenSync] project, so it is probably not worth porting. Other mobile synchronisation programs such as KDEConnect are probably worth looking at.
 
 Thoughts:
-* It should be possible to make the programs use the modern Evolution data server.
+* It should be possible to make the programs use the modern Evolution data server. It currently is not possible to compile them because they use APIs that are deprecated and removed from upstream Evolution data server
 * The programs may fit in nicely with existing GNOME components e.g. Evolution mail itself.
 
 == GPE phone edition ==
