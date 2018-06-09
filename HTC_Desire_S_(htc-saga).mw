@@ -1,0 +1,53 @@
+{{Infobox device
+| manufacturer = HTC
+| name = Desire S
+| codename = saga
+| image = [[File:https://i.imgur.com/jT4YjCh.jpg]]
+| imagecaption = HTC Desire S running the Weston demo
+| releaseyear = 2011, March
+| originalsoftware = Android 2.2
+| chipset = Qualcomm MSM8255 Snapdragon S2
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 205
+| storage = 1.1 GB
+| display = 480 x 800, Super LCD
+| memory = 768 MB
+}}
+== Contributors ==
+
+* ''[[user:hauau|hauau]]''
+
+== What works ==
+
+* Kernel compilation
+* Boot from fastboot (<code>pmbootstrap flasher boot</code>)
+* Initramfs boot
+* USB Network
+* Framebuffer graphics (Splash screens)
+* SSH Connectivity
+* Weston on framebuffer
+
+== What does not work ==
+* Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
+* Wifi
+* Audio playback
+* Touchscreen
+
+== Entering "HBOOT mode" ==
+
+Hold the '''Volume Down''' button, and then press the '''Power''' button
+
+== Booting ==
+{{note|Flashing the partitions does not work yet.}}
+
+* Unlock (s-off) the bootloader if it hasn't been unlocked before ([https://www.htcdev.com/bootloader/ htcdev unlock site])
+* Boot the device in HBOOT mode and select FASTBOOT (Make sure it says "FASTBOOT USB", not "HBOOT USB PLUG")
+* Boot kernel using <code>pmbootstrap flasher boot</code>
+
+== Links ==
+
+* [https://github.com/OpenDesireProject/android_kernel_htc_msm7x30 OpenDesireProject's Kernel]
+
+== Photos ==
+
+* [https://i.imgur.com/jT4YjCh.jpg PostmarketOS demo menu (XWayland)]
