@@ -896,3 +896,4 @@ A thought: It would be useful to port Enlightenment to Alpine at any rate. It ca
 * [http://wiki.openmoko.org/wiki/Applications OpenMoko's list of applications]
 * [https://web.archive.org/web/20070216052756/http://www.linuxdevices.com/articles/AT7621761066.html 'Building consumer products with open source'] - Insightful essay by Ari Jaaksi, Nokia's director of open source
 * [https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/allum/allum_html/matchbox.html 'Matchbox: Window-management not for the desktop']
+* [http://www.freesmartphone.org/implementations/ Potentially useful tools and libraries from the FreeSmartphone project] (especially apm2, which replaces apm commands with equivalent DBUS commands)
