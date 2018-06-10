@@ -2,6 +2,7 @@
 It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches.
 
 === Successful ===
+* <code>2017-09-22</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
 * <code>2017-09-22</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3840 Fix directfb compile error relating to C90]
 * <code>2017-09-11</code> ofono: [https://git.kernel.org/pub/scm/network/ofono/ofono.git/commit/drivers?id=cbac15cdd9858e797f223bf9d16116f82e184d88 Fix initialization of isimodem driver]
 * <code>2017-08-28</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3783 Default libGL path for directFB on Linux differs from x11 path]
@@ -16,7 +17,6 @@ It is important for us to contribute the patches and improvements we made to var
 * ofono: [https://lists.ofono.org/pipermail/ofono/2017-September/017557.html Disable auto symlink creation for nokia-gpio]
 * alpine: [https://lists.alpinelinux.org/alpine-aports/4908.html add directfb]
 * alpine: [https://lists.alpinelinux.org/alpine-aports/4907.html add tslib]
-* alpine: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
 * weston: [https://bugs.freedesktop.org/show_bug.cgi?id=101472 add parameter --pixman-type], see also: [https://github.com/postmarketOS/pmbootstrap/issues/141 #141]
 * weston: [https://patchwork.freedesktop.org/patch/167681/ add support for ABGR]
 * alpine: [https://bugs.alpinelinux.org/issues/7556 Weston can only be run by root user] (PR [https://github.com/postmarketOS/pmbootstrap/issues/199 #199])
