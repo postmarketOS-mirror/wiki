@@ -24,6 +24,7 @@ The mainlining process varies greatly for each device, which means we can't just
 |-
 | Exynos
 | forkbomb
+| #replicant on Freenode (Putti, forkbomb)
 |}
 
 Make sure that your SoC is in the list (if it isn't then we don't have an easy way for mainlining right now, sorry). Let's do some more preparation now, so everything is in place before you kindly ask your mentor to help you with the process.
