@@ -16,35 +16,35 @@
 This phone is an unknown manufacturer Samsung S4 Mini clone produced in 2014. I got scammed while buying this counterfeit product but hey hackers (or wannabes like me) still can see an opportunity in this thing right? It's very low end phone with 256MB ram with 512MB nand storage. This project is a learning experience for me and don't expect a working thing soon. 
 
 == Phone Info (according to manufacturer) ==
-Hardware : MT6572
-Model : GT-I9190
-Build number : ALPS.JB3.MP.V1
-Build date UTC : 20140825-084936
-Android  v : 4.2.2
-Baseband v: MOLY.WR8.W1315.MD.WG.MP.V1.P1, 2013/09/24 12:14
-Kernel v : 3.4.5 (sw07@server5) (gcc version 4.6.x-google 20120106 (prerelease) (GCC) ) #1 SMP  Mon Aug 25 16:48:30 CST 2014
-Uboot build v : -----
+Hardware : MT6572<br>
+Model : GT-I9190<br>
+Build number : ALPS.JB3.MP.V1<br>
+Build date UTC : 20140825-084936<br>
+Android  v : 4.2.2<br>
+Baseband v: MOLY.WR8.W1315.MD.WG.MP.V1.P1, 2013/09/24 12:14<br>
+Kernel v : 3.4.5 (sw07@server5) (gcc version 4.6.x-google 20120106 (prerelease) (GCC) ) #1 SMP  Mon Aug 25 16:48:30 CST 2014<br>
+Uboot build v : -----<br>
 LCD Driver IC : 1-nt35512_fwvga_dsi_vdo_auo
 
 == Proc/mtd ==
-dev:    size   erasesize  name
-mtd0: 00100000 00040000 "preloader"
-mtd1: 00100000 00040000 "pro_info"
-mtd2: 00300000 00040000 "nvram"
-mtd3: 00300000 00040000 "protect_f"
-mtd4: 00300000 00040000 "protect_s"
-mtd5: 00040000 00040000 "seccnfg"
-mtd6: 00080000 00040000 "uboot"
-mtd7: 00600000 00040000 "boot"
-mtd8: 00600000 00040000 "recovery"
-mtd9: 00040000 00040000 "secstatic"
-mtd10: 000c0000 00040000 "misc"
-mtd11: 00100000 00040000 "logo"
-mtd12: 00200000 00040000 "expdb"
-mtd13: 01400000 00040000 "fat"
-mtd14: 0f000000 00040000 "system"
-mtd15: 00700000 00040000 "cache"
-mtd16: 0cec0000 00040000 "userdata"
+dev:    size   erasesize  name<br>
+mtd0: 00100000 00040000 "preloader"<br>
+mtd1: 00100000 00040000 "pro_info"<br>
+mtd2: 00300000 00040000 "nvram"<br>
+mtd3: 00300000 00040000 "protect_f"<br>
+mtd4: 00300000 00040000 "protect_s"<br>
+mtd5: 00040000 00040000 "seccnfg"<br>
+mtd6: 00080000 00040000 "uboot"<br>
+mtd7: 00600000 00040000 "boot"<br>
+mtd8: 00600000 00040000 "recovery"<br>
+mtd9: 00040000 00040000 "secstatic"<br>
+mtd10: 000c0000 00040000 "misc"<br>
+mtd11: 00100000 00040000 "logo"<br>
+mtd12: 00200000 00040000 "expdb"<br>
+mtd13: 01400000 00040000 "fat"<br>
+mtd14: 0f000000 00040000 "system"<br>
+mtd15: 00700000 00040000 "cache"<br>
+mtd16: 0cec0000 00040000 "userdata"<br>
 
 == Contributors ==
 * echza
