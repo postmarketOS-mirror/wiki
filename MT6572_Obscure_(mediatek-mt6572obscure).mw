@@ -8,30 +8,22 @@
 | cpu = ARM-A7 @ 1.2GHz (2 cores) (32 bit)
 | gpu = ARM Mali-400
 | storage = 512MB
-| display = 480x800 WVGA
+| display = 480x854
 | memory = 256MB
 }}
 
 == Why this? ==
-This phone is an unknown manufacturer Samsung S4 Mini clone produced in 2014. I got scammed while buying this counterfeit product but hey hackers (or wannabes like me) can see an opportunity in this thing right? It's very low end phone with 256MB ram with 512MB nand storage. This project is a learning experience for me and don't expect a working thing soon. 
+This phone is an unknown manufacturer Samsung S4 Mini clone produced in 2014. I got scammed while buying this counterfeit product but hey hackers (or wannabes like me) still can see an opportunity in this thing right? It's very low end phone with 256MB ram with 512MB nand storage. This project is a learning experience for me and don't expect a working thing soon. 
 
 == Phone Info (according to manufacturer) ==
 Hardware : MT6572
-
 Model : GT-I9190
-
 Build number : ALPS.JB3.MP.V1
-
 Build date UTC : 20140825-084936
-
 Android  v : 4.2.2
-
 Baseband v: MOLY.WR8.W1315.MD.WG.MP.V1.P1, 2013/09/24 12:14
-
 Kernel v : 3.4.5 (sw07@server5) (gcc version 4.6.x-google 20120106 (prerelease) (GCC) ) #1 SMP  Mon Aug 25 16:48:30 CST 2014
-
 Uboot build v : -----
-
 LCD Driver IC : 1-nt35512_fwvga_dsi_vdo_auo
 
 == Proc/mtd ==
@@ -67,4 +59,4 @@ mtd16: 0cec0000 00040000 "userdata"
 * Everything
 
 == How to enter flash mode ==
-To use it
+Take out the battery. Open SP Flash Tool program. Insert micro usb cable to the phone and then insert the battery.
