@@ -14,7 +14,7 @@
 | memory = 768 MB
 }}
 
-== What works ==
+=== What works ===
 
 * Kernel compilation
 * Boot from fastboot (<code>pmbootstrap flasher boot</code>)
@@ -24,27 +24,20 @@
 * SSH Connectivity
 * Weston on framebuffer
 
-== What does not work ==
+=== What does not work ===
 * Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
-* Wifi
-* Audio playback
-* Touchscreen
+* Everything else
 
-== Entering "HBOOT mode" ==
-
-Hold the '''Volume Down''' button, and then press the '''Power''' button
-
-== Booting ==
-{{note|Flashing the partitions does not work yet.}}
-
+=== Booting ===
 * Unlock (s-off) the bootloader if it hasn't been unlocked before ([https://www.htcdev.com/bootloader/ htcdev unlock site])
-* Boot the device in HBOOT mode and select FASTBOOT (Make sure it says "FASTBOOT USB", not "HBOOT USB PLUG")
+* Hold the '''Volume Down''' button, and then press the '''Power''' button
+* Wait for device to boot in HBOOT mode and select FASTBOOT (Make sure it says "FASTBOOT USB", not "HBOOT USB PLUG")
 * Boot kernel using <code>pmbootstrap flasher boot</code>
 
-== Links ==
+=== Links ===
 
 * [https://github.com/OpenDesireProject/android_kernel_htc_msm7x30 OpenDesireProject's Kernel]
 
-== Photos ==
+=== Photos ===
 
 * [https://i.imgur.com/jT4YjCh.jpg PostmarketOS demo menu (XWayland)]
