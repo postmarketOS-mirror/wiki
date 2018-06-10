@@ -71,3 +71,8 @@ Now you can flash the boot image:
 We're using <code>flash_kernel</code> because the N7100 packages its kernel and initfs file into one boot image, where as some other phones have separate partitions for each '''unlike''' the N7100.
 
 If everything checks out OK, your N7100 should reboot and you should see the Samsung logo. Dont worry if the screen is flashing on and off and its taking a while, after a minute or 2 it should show up the pmOS splash!
+
+
+== Mainline Kernel ==
+There is currently no mainline kernel available but it should be possible to mainline this device. Have a look at [http://blog.forkwhiletrue.me/pages/midas-mainline/ Midas on Mainline] for work on mainlining very similar devices.
+Replicant is also interested in mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/293#issuecomment-395889596].
