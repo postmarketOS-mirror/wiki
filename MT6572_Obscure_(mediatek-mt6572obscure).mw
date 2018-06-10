@@ -17,13 +17,21 @@ This phone is an unknown manufacturer Samsung S4 Mini clone produced in 2014. I 
 
 == Phone Info (according to manufacturer) ==
 Hardware : MT6572
+
 Model : GT-I9190
+
 Build number : ALPS.JB3.MP.V1
+
 Build date UTC : 20140825-084936
+
 Android  v : 4.2.2
+
 Baseband v: MOLY.WR8.W1315.MD.WG.MP.V1.P1, 2013/09/24 12:14
+
 Kernel v : 3.4.5 (sw07@server5) (gcc version 4.6.x-google 20120106 (prerelease) (GCC) ) #1 SMP  Mon Aug 25 16:48:30 CST 2014
+
 Uboot build v : -----
+
 LCD Driver IC : 1-nt35512_fwvga_dsi_vdo_auo
 
 == Proc/mtd ==
