@@ -47,11 +47,11 @@ mtd15: 00700000 00040000 "cache"<br>
 mtd16: 0cec0000 00040000 "userdata"<br>
 
 == Serial Connection (UART Debug)==
-[http://www.stevenhoneyman.co.uk/2014/11/mtk-mediatek-debug-cable.html How to Prepare Mtk Debug Cable]
-You can see UART messages on serial monitor with 115200 baudrate but after the kernel booted no message is shown. 
-fastboot oem p2u on
-fastboot oem p2u 1 
-codes entered in fastboot but no luck. This problem needs to be solved.
+[http://www.stevenhoneyman.co.uk/2014/11/mtk-mediatek-debug-cable.html How to Prepare Mtk Debug Cable]<br>
+You can see UART messages on serial monitor with 115200 baudrate but after the kernel booted no message is shown. <br>
+fastboot oem p2u on<br>
+fastboot oem p2u 1 <br>
+codes entered in fastboot but no luck. This problem needs to be solved.<br>
 Here is the uart output: READY Uncompressing Linux... done, booting the kernel.
 
 == How to enter flash mode ==
