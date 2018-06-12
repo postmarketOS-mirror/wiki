@@ -26,25 +26,68 @@ Kernel v : 3.4.5 (sw07@server5) (gcc version 4.6.x-google 20120106 (prerelease) 
 Uboot build v : -----<br>
 LCD Driver IC : 1-nt35512_fwvga_dsi_vdo_auo
 
-== Proc/mtd ==
-dev:    size   erasesize  name<br>
-mtd0: 00100000 00040000 "preloader"<br>
-mtd1: 00100000 00040000 "pro_info"<br>
-mtd2: 00300000 00040000 "nvram"<br>
-mtd3: 00300000 00040000 "protect_f"<br>
-mtd4: 00300000 00040000 "protect_s"<br>
-mtd5: 00040000 00040000 "seccnfg"<br>
-mtd6: 00080000 00040000 "uboot"<br>
-mtd7: 00600000 00040000 "boot"<br>
-mtd8: 00600000 00040000 "recovery"<br>
-mtd9: 00040000 00040000 "secstatic"<br>
-mtd10: 000c0000 00040000 "misc"<br>
-mtd11: 00100000 00040000 "logo"<br>
-mtd12: 00200000 00040000 "expdb"<br>
-mtd13: 01400000 00040000 "fat"<br>
-mtd14: 0f000000 00040000 "system"<br>
-mtd15: 00700000 00040000 "cache"<br>
-mtd16: 0cec0000 00040000 "userdata"<br>
+== Partitions ==
+<source lang="bash">
+shell@android:/ # cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00100000 00040000 "preloader"
+mtd1: 00100000 00040000 "pro_info"
+mtd2: 00300000 00040000 "nvram"
+mtd3: 00300000 00040000 "protect_f"
+mtd4: 00300000 00040000 "protect_s"
+mtd5: 00040000 00040000 "seccnfg"
+mtd6: 00080000 00040000 "uboot"
+mtd7: 00600000 00040000 "boot"
+mtd8: 00600000 00040000 "recovery"
+mtd9: 00040000 00040000 "secstatic"
+mtd10: 000c0000 00040000 "misc"
+mtd11: 00100000 00040000 "logo"
+mtd12: 00200000 00040000 "expdb"
+mtd13: 01400000 00040000 "fat"
+mtd14: 0f000000 00040000 "system"
+mtd15: 00700000 00040000 "cache"
+mtd16: 0cec0000 00040000 "userdata"
+
+shell@android:/ # df
+Filesystem             Size   Used   Free   Blksize
+/dev                   112M    52K   112M   4096
+/mnt/secure            112M     0K   112M   4096
+/mnt/asec              112M     0K   112M   4096
+/mnt/obb               112M     0K   112M   4096
+/system                213M   179M    34M   4096
+/data                  183M   143M    39M   4096
+/fat                    13M     9M     3M   4096
+/protect_f               3M     1M     1M   4096
+/protect_s               3M     1M     1M   4096
+/mnt/cd-rom              1M     1M     0K   2048
+/storage/sdcard0        12M     1M    10M   4096
+/mnt/secure/asec        12M     1M    10M   4096
+
+shell@android:/ # cat /proc/partitions
+major minor  #blocks  name
+
+   7        0       1254 loop0
+   7        1      12476 loop1
+ 253        0     196608 zram0
+  31        0       1024 mtdblock0
+  31        1       1024 mtdblock1
+  31        2       3072 mtdblock2
+  31        3       3072 mtdblock3
+  31        4       3072 mtdblock4
+  31        5        256 mtdblock5
+  31        6        512 mtdblock6
+  31        7       6144 mtdblock7
+  31        8       6144 mtdblock8
+  31        9        256 mtdblock9
+  31       10        768 mtdblock10
+  31       11       1024 mtdblock11
+  31       12       2048 mtdblock12
+  31       13      20480 mtdblock13
+  31       14     245760 mtdblock14
+  31       15       7168 mtdblock15
+  31       16     211712 mtdblock16
+
+</source>
 
 == Serial Connection (UART Debug)==
 [http://www.stevenhoneyman.co.uk/2014/11/mtk-mediatek-debug-cable.html How to Prepare Mtk Debug Cable]<br>
