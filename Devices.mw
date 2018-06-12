@@ -9,7 +9,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
   ! rowspan="2" | Codename
   ! colspan="18" | Status
 |-
-  !  USB Net  !! Flashing  !! Touch  !! Screen  !! Wifi  !! XWayland  !! FDE  !! Mainline  !! Battery  !! 3D  !! Accelerometers  !! Audio  !! Bluetooth  !! Camera  !! GPS  !! Mobile Data  !! SMS  !! Calls 
+  !  [[USB Network|USB Net]] !! Flashing  !! Touch  !! Screen  !! [[WiFi]] !! XWayland !! [[Osk-sdl|FDE]] !! [[The Mainline Kernel|Mainline]] !! Battery  !! 3D  !! Accelerometers  !! [[Audio]] !! Bluetooth  !! Camera  !! GPS  !! Mobile Data  !! SMS  !! Calls 
 |-
   |style="white-space: nowrap;" | [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX 7"]]
   |style="white-space: nowrap;" | amazon-thor
