@@ -97,6 +97,67 @@ fastboot oem p2u 1 <br>
 codes entered in fastboot but no luck. This problem needs to be solved.<br>
 Here is the uart output: READY Uncompressing Linux... done, booting the kernel.
 
+== Memory Info ==
+<source lang="bash">shell@android:/proc # cat /proc/meminfo
+MemTotal:         230124 kB
+MemFree:            5144 kB
+Buffers:               8 kB
+Cached:            36788 kB
+SwapCached:         2208 kB
+Active:            68648 kB
+Inactive:          64156 kB
+Active(anon):      49888 kB
+Inactive(anon):    47452 kB
+Active(file):      18760 kB
+Inactive(file):    16704 kB
+Unevictable:        1292 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         230124 kB
+LowFree:            5144 kB
+SwapTotal:        196604 kB
+SwapFree:         127640 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         96724 kB
+Mapped:            41440 kB
+Shmem:                40 kB
+Slab:              13348 kB
+SReclaimable:       4428 kB
+SUnreclaim:         8920 kB
+KernelStack:        4464 kB
+PageTables:         4848 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      311664 kB
+Committed_AS:    2063136 kB
+VmallocTotal:     778240 kB
+VmallocUsed:       97476 kB
+VmallocChunk:     411652 kB
+</source>
+
+== CPU ==
+<source lang="bash">
+shell@android:/proc # cat /proc/cpuinfo
+Processor	: ARMv7 Processor rev 3 (v7l)
+processor	: 0
+BogoMIPS	: 1993.93
+
+Features	: swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 3
+
+Hardware	: MT6572
+Revision	: 0000
+Serial		: 0000000000000000
+</source>
+
+
 == How to enter flash mode ==
 Take out the battery. Open SP Flash Tool program. Insert micro usb cable to the phone and then insert the battery.
 
