@@ -35,7 +35,7 @@ After that, simply do <code>git commit -a --amend -n</code> (<code>-n</code> is 
 
 == Code ==
 === pmb.helpers.run ===
-Use <code>pmb.helpers.run.root()</code> and <code>pmb.helpers.run.user()</code> instead of <code>subprocess</code> because these logs to the log file.
+Use <code>pmb.helpers.run.root()</code> and <code>pmb.helpers.run.user()</code> instead of <code>subprocess</code> because these write to the log file.
 
 ==== Shell commands ====
 {{note|See also: {{github|1316}} Properly escape commands in pmb.chroot.user()}}
