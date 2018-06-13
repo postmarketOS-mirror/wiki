@@ -32,8 +32,8 @@
 
 == Untested ==
 
-* Interfaces other than weston
-* Using full disk encryption 
+* Interfaces other than weston (plasma, xfce4 are not working yet)
+* Using full disk encryption
 
 == Installing ==
 
