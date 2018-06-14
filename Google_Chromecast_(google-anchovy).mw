@@ -1,3 +1,5 @@
+{{note|This may work with first-generation Chromecasts with old firmware. '''Do not connect your Chromecast to the Internet,''' or it will automatically update itself!}}
+
 [[Category:Not booting]]
 {{Infobox device
 | manufacturer = Google
@@ -31,4 +33,5 @@
 See [https://forum.xda-developers.com/showthread.php?t=2452838 FlashCast], [https://forum.xda-developers.com/android-tv/chromecast/root-hubcap-chromecast-root-release-t2855893 HubCap]
 
 == See also ==
-* {{github|1562}} Initial pull request
+* {{github|1562}}, {{github|1563}} Initial pull request
+* [https://old.reddit.com/r/postmarketOS/comments/8qxpzk/if_anyone_has_an_old_firstgeneration_chromecast/ Reddit discussion]
