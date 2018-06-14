@@ -27,6 +27,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   |style="white-space: nowrap;" | asus-t00f
   | Y  ||    || Y  || Y  ||   ||  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||   ||  
 |-
+  | style="white-space: nowrap;" | [[Fairphone_1_(fairphone-fp1)|Fairphone 1]]
+  | style="white-space: nowrap;" | fairphone-fp1
+  | Y  || Y  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Fairphone 2 (fairphone-fp2)|Fairphone 2]]
   | style="white-space: nowrap;" | fairphone-fp2
   | Y  || Y  || Y  || Y  || Y  || Y  ||  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -496,10 +500,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Coolpad-Sky-3-E502-(Modena-2)|Coolpad Modena 2]]
   | coolpad-modena2
   |
-|-
-  | [[Fairphone_1_(fairphone-fp1)|Fairphone 1]]
-  | fairphone-fp1
-  | kernel compiles
 |-
   | [[Geeksphone Revolution (gp-revolution)|Geeksphone Revolution]]
   | gp-revolution
