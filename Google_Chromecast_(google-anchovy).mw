@@ -1,0 +1,35 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Google
+| name = Chromecast
+| codename = anchovy
+| image = File:google-anchovy.jpg
+| imagecaption = Google Chromecast
+| releaseyear = 2013
+| originalsoftware = CHANGE_ME
+| chipset = Marvell Armada 1500-Mini 88DE3005 
+| cpu = 2 Marvell SMP cores, 1.2GHz
+| gpu = GC1000
+| storage = 2GiB flash NAND
+| display = None, connects over HDMI
+| memory = 512 MB
+}}
+
+== Contributors ==
+* steamp0rt
+
+== What works ==
+* Kernel compiles
+* chromecast-tools can successful mangle a bootimg
+
+== What does not work ==
+* Unknown
+
+== How to enter flash mode ==
+* Unknown
+
+== Installation ==
+See [https://forum.xda-developers.com/showthread.php?t=2452838 FlashCast], [https://forum.xda-developers.com/android-tv/chromecast/root-hubcap-chromecast-root-release-t2855893 HubCap]
+
+== See also ==
+* {{github|1562}} Initial pull request
