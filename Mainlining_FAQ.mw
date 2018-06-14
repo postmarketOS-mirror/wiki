@@ -157,7 +157,7 @@ opendata found a cool hack to let the bootloader initialize the display, which m
 * Example:
 ** 1. Stock downstream: https://ptpb.pw/hRmy.dts
 ** 2. Minimum for display init: https://ptpb.pw/f2ye.dts
-** 3. mainline dts with second added intonit: https://ptpb.pw/q28L.dts
+** 3. mainline dts with second added into it: https://ptpb.pw/q28L.dts
 ** Then just add it to simple panel with video mode and video hse
 
 === Can I use the simple panel driver? ===
