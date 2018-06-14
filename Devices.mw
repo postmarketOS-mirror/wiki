@@ -624,6 +624,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Sony SmartWatch 3 (sony-tetra)|Sony SmartWatch 3]]
   | sony-tetra
   | Kernel compiles, not tested
+|-
+  | [[Google Chromecast (google-anchovy)|Google Chromecast 1st gen]]
+  | google-anchovy
+  | Kernel compiles, my personal Chromecast's bootloader is too new to load from USB.
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
