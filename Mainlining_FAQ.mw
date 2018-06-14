@@ -151,8 +151,8 @@ opendata found a cool hack to let the bootloader initialize the display, which m
 * Make sure to base of downstream 3.4 kernel
 * Basically extract the dts from your downstream 3.4 kernel
 * Use DTC to convert it to a dts
-* Then delete everything after main header apart from display stuff and anything in the spmi nodr
-* Then in spmi node delete everything apart from wled and pm8941@1 gpios
+* Then delete everything after main header apart from display stuff (mdp, gpu) and anything in the spmi node
+* Then in the spmi node delete everything apart from wled and pm8941@1 gpios
 * That should be enough for bootloader to init display
 * Example:
 ** 1. Stock downstream: https://ptpb.pw/hRmy.dts
