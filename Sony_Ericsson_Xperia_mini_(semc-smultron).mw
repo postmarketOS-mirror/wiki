@@ -22,7 +22,8 @@
 * mishaor
 
 == What works ==
-* Building the kernel
+* Boot
+* Display
 
 == What does not work ==
 * Everything else
