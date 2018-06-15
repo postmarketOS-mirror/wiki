@@ -41,7 +41,7 @@
 * Camera
 * Battery
 
-udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-gp-peak/linux-gp-peak.start trigger rules manually].
+udev does not work correctly so we have to [https://github.com/postmarketOS/pmbootstrap/blob/416c1109a4769c7493a33beedb3762e138a328e5/aports/device/device-gp-peak/device-gp-peak.start#L2 trigger rules manually].
 
 <code>poweroff</code>/<code>reboot</code> does not work correctly, it stops all the services but does not shutdown the device.
 
