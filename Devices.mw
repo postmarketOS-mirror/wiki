@@ -628,6 +628,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Google Chromecast (google-anchovy)|Google Chromecast 1st gen]]
   | google-anchovy
   | Kernel compiles, my personal Chromecast's bootloader is too new to load from USB.
+|-
+  | [[Sony_Ericsson_Xperia_mini_(semc-smultron)|Sony Ericsson Xperia mini]]
+  | semc-smultron
+  | builds, boots, works with Weston but osk-sdl doesn't work
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
