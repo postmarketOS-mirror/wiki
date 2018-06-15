@@ -78,7 +78,7 @@ The ALSA UCM config files were generated using the <code>xml2ucm</code> tool. Th
 <source lang="shell">$ stack exec -- xml2ucm -m mixer_paths.xml -c p4wifi-config.xml -o examples</source>
 
 == Wifi ==
-
+The wifi chip in this device is the Broadcom BCM4330 B1 revision. There is a B2 revision which is much more common. The only distinguishing factor is the firmware. Only the B1 firmware will work on this device. The most common BCM4330 firmware found from various sources (such as <code>linux-firmware</code>) is for the B2 revision.
 
 == Cellular Modem ==
 The xmm6260 modem was used in quite a few Samsung Android devices from the same era as this tablet. The Samsung Galaxy Tab 10.1 3G (p4) and Samsung Galaxy Tab 10.1 from T-Mobile (p4tmo) are otherwise identical to the WiFi only version of the tablet (p4wifi). The cellular modem is connected via an internal USB interface called USB HSIC. The mainline Tegra USB driver does not implement this functionality. Much of the work in enabling the cellular stack would involve adding USB HSIC support to the mainline USB driver.
