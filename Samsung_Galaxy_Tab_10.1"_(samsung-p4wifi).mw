@@ -78,10 +78,7 @@ The ALSA UCM config files were generated using the <code>xml2ucm</code> tool. Th
 <source lang="shell">$ stack exec -- xml2ucm -m mixer_paths.xml -c p4wifi-config.xml -o examples</source>
 
 == Wifi ==
-# Edit <code>/etc/conf.d/wpa_supplicant</code> and change the wpa_supplicant driver from  <code>wext,nl80221</code> to <code>nl80211 </code>
-# Set up a WIFI access point <source lang="shell">$ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf</source>
-# Restart wpa_supplicant service <source lang="shell">$ service wpa_supplicant restart</source>
-# Request an IP address <source lang="shell">$ udhcpc -i wlan0</source>
+
 
 == Cellular Modem ==
 The xmm6260 modem was used in quite a few Samsung Android devices from the same era as this tablet. The Samsung Galaxy Tab 10.1 3G (p4) and Samsung Galaxy Tab 10.1 from T-Mobile (p4tmo) are otherwise identical to the WiFi only version of the tablet (p4wifi). The cellular modem is connected via an internal USB interface called USB HSIC. The mainline Tegra USB driver does not implement this functionality. Much of the work in enabling the cellular stack would involve adding USB HSIC support to the mainline USB driver.
