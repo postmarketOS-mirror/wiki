@@ -25,6 +25,7 @@
 * Boot
 * Display
 * Touchscreen
+* USB networking
 
 == What does not work ==
 * Everything else
@@ -35,9 +36,6 @@
 2. Connect the USB cable while holding the button
 
 3. If the blue LED is on, then you successfully entered the Fastboot mode!
-
-== Installation ==
-Currently no installation progress :(
 
 == See also ==
 [https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently used]
