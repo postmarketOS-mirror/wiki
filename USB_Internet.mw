@@ -10,7 +10,7 @@ Substitute 8.8.8.8 for your own internal DNS server if you want.
 </syntaxhighlight>
 To make the configuration persistent after reboot do:
 <syntaxhighlight lang="shell-session">
-$ sudo echo 'route add default gw 172.16.42.2' > /etc/local.d/usb_internet.start
+$ echo 'route add default gw 172.16.42.2' | sudo tee /etc/local.d/usb_internet.start
 $ sudo chmod +x /etc/local.d/usb_internet.start
 $ sudo rc-update add local
 </syntaxhighlight>
