@@ -22,7 +22,7 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
   pmbootstrap flasher boot_kernel
 
 
-=== Flashing system + libinput-list-devices ===
-Alternatively, run <code>pmbootstrap install --no-fde</code> and flash the system partition again. The initramfs will boot through without asking you for a password (because you disabled encryption). Then you can use the program <code>libinput-list-devices</code> to get the list of devices - with probably more useful names.
+=== Flashing system + libinput list-devices ===
+Alternatively, run <code>pmbootstrap install --no-fde</code> and flash the system partition again. The initramfs will boot through without asking you for a password (because you disabled encryption). Then you can use the program <code>libinput list-devices</code> to get the list of devices - with probably more useful names.
 
 When you have the right device name, put it into your <code>deviceinfo</code> (as outlined above), then re-flash the encrypted system image. It should work now.
