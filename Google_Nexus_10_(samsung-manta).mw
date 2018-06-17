@@ -23,6 +23,7 @@
 * Screen
 * Weston
 * USB keyboard
+* Touchscreen
 
 == What does not work ==
 * Everything else (Touch, Wi-Fi, Bluetooth...)
@@ -35,7 +36,7 @@
 
 == Installation ==
 When installing, I found it easiest to sideload a ZIP via ClockworkMod Recovery.
-# Build a suitable LineageOS recovery image:<source lang="shell">
+# Build a suitable postmarketOS recovery image:<source lang="shell">
 $ ./pmbootstrap.py init # samsung-manta
 $ ./pmbootstrap.py install --no-fde --android-recovery-zip</source>
 # Boot the device in to recovery, by toggling to "RECOVERY MODE" using the volume rocker.
@@ -48,4 +49,5 @@ The device will take roughly 60 seconds to boot to the Weston environment.
 |[[File:Nexus-10-weston.jpg|400x400px]]
 
 == Links ==
-[https://github.com/postmarketOS/pmbootstrap/pull/1138 Original pull request]
+* [https://github.com/postmarketOS/pmbootstrap/pull/1138 Original pull request]
+* [https://github.com/postmarketOS/pmbootstrap/pull/1572 Touchscreen pull request]
