@@ -1,0 +1,35 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = LG
+| name = G Pad 8.3
+| codename = lg-v500
+| image = [
+| imagecaption = LG G Pad 8.3
+| releaseyear = 2013
+| originalsoftware = Android 4.2.2
+| chipset = Qualcomm APQ8064T
+| cpu = Snapdragon 600
+| gpu = Adreno 320
+| storage = 16 GB
+| display = 1920x1200 (~273 PPI) IPS LCD
+| memory = 2GB
+}}
+
+== Contributors ==
+* Thomasdhale
+
+== Maintainer(s) ==
+* Thomasdhale
+
+== What works ==
+Nothing yet
+
+== What does not work ==
+Kernel does not compile
+
+== How to enter flash mode ==
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
