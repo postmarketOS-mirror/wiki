@@ -555,7 +555,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[LG V500 | LG G Pad 8.3 ]]
   | lg-v500
-  | kernel won't compile, "arch/arm/include/asm/io.h:30:26: fatal error: mach/msm_rtb.h: No such file or directory"
+  | kernel won't compile
 |-
   | [[Moto X|Moto X]]
   | motorola-ghost
