@@ -37,14 +37,19 @@ If not, then the QCDT generation went wrong.
 </syntaxhighlight>
 
 === Repack procedure ===
+{{note|Please update these instructions when trying them out as they seem outdated, check the <code>--help</code> pages of the tools for help.}}
 You need <code>mkbootimg</code> and <code>unpackbootimg</code> tools which are already packaged in pmbootstrap.
 
 <syntaxhighlight lang="shell-session">
-$ ./pmbootstrap build mkbootimg unpackbootimg
-$ ./unpackbootimg -i $SOMEDIR/boot.img-$vendor-$name -o pmos
-$ ./unpackbootimg -i $OTHERDIR/boot.img -o other
+$ sudo mkdir -p ~/.local/var/pmbootstrap/chroot_native/tmp/bootimg_repack
+$ sudo cp pmos-boot.img ~/.local/var/pmbootstrap/chroot_native/tmp/bootimg_repack/
+$ sudo cp other-.img ~/.local/var/pmbootstrap/chroot_native/tmp/bootimg_repack/
+$ pmbootstrap chroot --add=mkbootimg-osm0sis
+# cd /tmp/bootimg_repack
+# unpackbootimg -i pmos-boot.img -o pmos
+# unpackbootimg -i other-boot.img -o other
 $ cp other/boot.img-dt pmos/boot.img-$vendor-$name-dt
-$ ./mkbootimg -o boot.repack.img -r pmos/boot.img-$vendor-$name-
+$ mkbootimg-osm0sis -o boot.repack.img -r pmos/boot.img-$vendor-$name-
 </syntaxhighlight>
 You can also get these from https://github.com/efidroid/build/tree/master/tools
 
