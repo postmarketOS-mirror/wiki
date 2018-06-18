@@ -233,7 +233,7 @@ All flasher offsets must be replaced with the values from the [[deviceinfo]] (yo
 $ cp ~/code/linux/.output/arch/arm/boot/zImage  "$TEMP"/zImage
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ cp "/tmp/postmarketOS-export/initramfs-$DEVICE" "$TEMP/initramfs"
-$ pmbootstrap chroot -- mkbootimg \
+$ pmbootstrap chroot -- mkbootimg-osm0sis \
 --kernel "/tmp/mainline/zImage" \
 --ramdisk "/tmp/mainline/initramfs" \
 --dt "/tmp/mainline/dt.img" \
