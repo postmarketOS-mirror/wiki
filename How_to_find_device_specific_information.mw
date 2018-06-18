@@ -11,9 +11,9 @@
 <ol>
 <li>Find the download link for a full image on https://download.lineageos.org/</li>
 <li><p>Run the following commands (replace the download link accordingly)</p>
-<pre class="shell">pmbootstrap build mkbootimg
+<pre class="shell">pmbootstrap build mkbootimg-osm0sis
 pmbootstrap chroot
-apk add mkbootimg
+apk add mkbootimg-osm0sis
 su - user
 mkdir /tmp/bootimg_info
 cd /tmp/bootimg_info
