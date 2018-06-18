@@ -27,8 +27,8 @@ Nothing yet
 == What does not work ==
 Kernel does not compile.
 
-kernel/pid.c:81:15: error: 'PROC_PID_INIT_INO' undeclared here (not in a function)
-  .proc_inum = PROC_PID_INIT_INO,
+   kernel/pid.c:81:15: error: 'PROC_PID_INIT_INO' undeclared here (not in a function)
+      .proc_inum = PROC_PID_INIT_INO,
 
 == How to enter flash mode ==
 
