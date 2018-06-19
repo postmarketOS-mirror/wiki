@@ -43,7 +43,7 @@ follow this advice: https://github.com/Benjamin-Dobell/Heimdall/issues/340
 
 build Heimdall
 
-flash boot.img with your newly compiled Heimdall
+flash boot.img with your newly compiled Heimdall (to KERNEL partition. DEFINITELY NOT TO "BOOT" partition, that's BOOTloader)
 
 if it doesn't work:
 
