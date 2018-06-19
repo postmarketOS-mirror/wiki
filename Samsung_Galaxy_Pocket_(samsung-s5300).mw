@@ -27,20 +27,31 @@
 Volume down + Home button while powering up
 == Downloads? ==
 contact me if you're interested, and I'll share my aports/device/*-samsung-s5300
+
 until I get a "DIY UART jig" from eBay, there's not gonna be much
 
 == Installation ==
 enter flash mode
+
 try to flash boot.img with Heimdall
+
 when it doesn't work:
+
 clone Heimdall sources from https://gitlab.com/BenjaminDobell/Heimdall.git
+
 follow this advice: https://github.com/Benjamin-Dobell/Heimdall/issues/340
+
 build Heimdall
+
 flash boot.img with your newly compiled Heimdall
+
 if it doesn't work:
+
 make sure to reboot after every unsuccessful attempt
 
+
 watch it not work
+
 get a UART and help me find what's going on
 
 == See also ==
