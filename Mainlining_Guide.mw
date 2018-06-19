@@ -203,7 +203,7 @@ This greatly depends on your device, and you can figure out the correct method b
 ==== Patch boot.img ====
 Prepare your current shell session once:
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap chroot -- apk add abootimg android-tools mkbootimg
+$ pmbootstrap chroot -- apk add abootimg android-tools mkbootimg dtbtool
 $ export DEVICE="$(pmbootstrap config device)"
 $ export WORK="$(pmbootstrap config work)"
 $ export TEMP="$WORK/chroot_native/tmp/mainline/"
@@ -233,6 +233,7 @@ All flasher offsets must be replaced with the values from the [[deviceinfo]] (yo
 $ cp ~/code/linux/.output/arch/arm/boot/zImage  "$TEMP"/zImage
 $ cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"
 $ cp "/tmp/postmarketOS-export/initramfs-$DEVICE" "$TEMP/initramfs"
+$ $WORK/chroot_native/usr/bin/dtbTool -s 2048 -p ~/code/linux/scripts/dtc/ -o "$TEMP/dt.img" ~/code/linux/.output/arch/arm/boot/dts
 $ pmbootstrap chroot -- mkbootimg-osm0sis \
 --kernel "/tmp/mainline/zImage" \
 --ramdisk "/tmp/mainline/initramfs" \
