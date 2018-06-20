@@ -27,7 +27,7 @@
 * booting
 * ssh connection
 * screen output
-* touch screen
+* touch screen (if warm-booted from TWRP)
 
 == What does not work ==
 * everything else
