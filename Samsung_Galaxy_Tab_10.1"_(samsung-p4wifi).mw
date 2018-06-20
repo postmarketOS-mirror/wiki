@@ -55,11 +55,13 @@ $ ./pmbootstrap.py install --no-fde</source>
 $./pmbootstrap.py flasher flash_rootfs</source>
 
 == Battery ==
-The battery in this device is the <code>max17042</code>. The downstream kernel provides an early implementation of a driver for the <code>max17042</code> battery. The implementation of the battery and charger driver are split across <code>p4_battery.c</code> and <code>max17042_battery.c</code> in the downstream kernel. The name of the charger hardware in this tablet is an unknown.
+The battery in this device is the <code>max17042</code>. A tear down of the (nearly) identical Galaxy Tab 8.9 reveals that the charger is <code>max8903</code>.
 
-The downstream drivers have references to <code>max8903</code> which is a charger used in other Samsung devices. The <code>max8903</code> has similar hardware characteristics as the charger in this tablet. The two are definitely not the same but there is a <code>max8903</code> driver in mainline which a useful reference.
+Differences between mainline and downstream drivers:  
 
-The mainline max17042 battery driver works but the downstream driver provided a much more complex implementation of the battery/charger drivers. There is no driver for the charging circuit so much important functionality is not present in the mainline kernel. The downstream charger driver implements logic to handle charge full and low battery which affect the health of the battery. For these reasons it is safer for regular use to keep using drivers forward ported from the downstream kernel.
+The downstream kernel provides an early implementation of a driver for the <code>max17042</code> battery. The implementation of the battery and charger driver are split across <code>p4_battery.c</code> and <code>max17042_battery.c</code>. The downstream charger driver implements additional logic to handle charge full and low battery events which may affect the health of the battery. The implementation details are not clear but the overall functionality appears to dynamically tune the full charge value. The mainline driver does not have this sort of functionality. The downstream driver reports the current in milliamp whereas the mainline driver is in microamp.
+
+The <code>max8903</code> datasheet shows that there are separate GPIOs for USB and DC power connectors. This device has one connect GPIO for both USB and DC mode. The type of connector is determined by reading the <code>usb-sel</code> GPIOs. It's unclear which piece of hardware the usb-sel is coming from (max8903 / tegra soc / 30-pin connector ???).
 
 == Graphics ==
 The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not working. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
@@ -104,15 +106,15 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |-
 |Battery
 |max17042
-|P
+|Y
 |-
 |Camera
 |s5k5ccgx (front)<br/>s5k6bbgx (back)
 | - 
 |-
 |Charger
-|unknown
-|P
+|max8903
+|Y
 |-
 |CPU Temperature Sensor
 |nct1008
