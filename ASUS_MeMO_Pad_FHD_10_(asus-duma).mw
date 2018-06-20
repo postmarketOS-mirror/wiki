@@ -1,0 +1,38 @@
+{{Infobox device
+| manufacturer = ASUS
+| name = MeMO Pad FHD 10 (ME302KL)
+| codename = duma
+| image = File:Asus_duma_weston.jpg
+| imagecaption = Duma running Weston
+| release year = 2013 July 26
+| original software = Android 4.2 on Linux 3.4
+| chipset = Qualcomm APQ8064-1AA Snapdragon S4 Pro (Snapdragon 600)
+| cpu = Quad-core 1.5 GHz Krait 300
+| gpu = Adreno 320
+| storage = 16/32 GB
+| display = 1200x1920 FHD IPS
+| memory = 2 GB
+}}
+
+Current status: [https://github.com/postmarketOS/pmbootstrap/pull/1581 pull request]
+
+=== Contributors ===
+
+* myfreeweb
+
+=== Key combinations ===
+
+* Boot to bootloader: Power + Volume Down
+* Boot to recovery: Power + Volume Up
+* Shutdown: Power
+
+=== What works ===
+
+* Flashing with pmbootstrap/fastboot
+* Screen
+* Touchscreen input
+* USB Internet
+* TWRP Recovery
+
+=== Links ===
+* [https://archive.org/download/asus-duma-unlock-twrp ME302KL_UnLock + TWRP image + unlocking README] (unlock from [https://www.asus.com/Tablets/ASUS_MeMO_Pad_FHD_10_ME302KL/HelpDesk_Download/ ASUS], TWRP port by SevenMaxs [https://forum.xda-developers.com/android/general/recovery-twrp-3-1-1-0-asus-me302kl-t3609759 xda]/[https://4pda.ru/forum/index.php?s=&showtopic=545744&view=findpost&p=52654784 4pda])
