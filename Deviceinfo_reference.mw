@@ -75,7 +75,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | Set recommended swap file size for device. If unset, no swap file will be created for the device.
 | Integer, in MB.
 |-
-| <code>deviceinfo_disable_dhcpd</code>
+| <code>disable_dhcpd</code>
 | Do not set the static ip to the network interface and do not run the DHCP daemon on it. This makes sense for devices with an ethernet port, like the Raspberry Pi ({{github|1580}}).
 | "true" or "false"
 |}
