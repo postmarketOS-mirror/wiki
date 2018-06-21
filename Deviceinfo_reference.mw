@@ -77,7 +77,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |-
 | <code>disable_dhcpd</code>
 | Do not set the static ip to the network interface and do not run the DHCP daemon on it. This makes sense for devices with an ethernet port, like the Raspberry Pi ({{github|1580}}).
-| "true" or "false"
+| <code>true</code>, <code>false</code>
 |}
 
 == flash ==
