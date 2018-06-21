@@ -14,8 +14,6 @@
 | memory = 2 GB
 }}
 
-Current status: [https://github.com/postmarketOS/pmbootstrap/pull/1581 pull request]
-
 === Contributors ===
 
 * myfreeweb
@@ -35,4 +33,5 @@ Current status: [https://github.com/postmarketOS/pmbootstrap/pull/1581 pull requ
 * TWRP Recovery
 
 === Links ===
+* {{github|1581}} Initial PR
 * [https://archive.org/download/asus-duma-unlock-twrp ME302KL_UnLock + TWRP image + unlocking README] (unlock from [https://www.asus.com/Tablets/ASUS_MeMO_Pad_FHD_10_ME302KL/HelpDesk_Download/ ASUS], TWRP port by SevenMaxs [https://forum.xda-developers.com/android/general/recovery-twrp-3-1-1-0-asus-me302kl-t3609759 xda]/[https://4pda.ru/forum/index.php?s=&showtopic=545744&view=findpost&p=52654784 4pda])
