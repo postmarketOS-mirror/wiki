@@ -40,7 +40,7 @@
 * Touchscreen input
 * USB Internet
 * WIFI Internet
-* X11 Hildon, Mate, Xfce, Xwayland-Weston
+* X11 Hildon, Mate, Xfce, Xwayland-Weston, Plasma-mobile, matchbox
 * TWRP Recovery
 * PREEMPT_RT (not on by default)
 
