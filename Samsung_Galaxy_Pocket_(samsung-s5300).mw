@@ -54,6 +54,52 @@ watch it not work
 
 get a UART and help me find what's going on
 
+== Partition layout ==
+
+{| class="wikitable"
+|-
+! /dev/block/* !! PIT id !! partition name !! offset   !! size     !! purpose                            !! format
+|-
+| none         || 1      || BOOT           || 0B       || 512B     || primary bootloader                 || ¨\_/('-')\_/¨
+|-
+| none         || 0      || GANG           || 512B     || 512B     || ¨\_/('-')\_/¨                      || ¨\_/('-')\_/¨
+|-
+| mmcblk0p1    || 2      || SBL1           || 1024B    || 4096B    || Samsung secondary bootloader       || ¨\_/('-')\_/¨
+|-
+| mmcblk0p2    || 3      || SBL2           || 5120B    || 4096B    || usually almost same as SBL1        || ¨\_/('-')\_/¨
+|-
+| mmcblk0p3    || 4      || modem          || 9216B    || 25600B   || something to do with GPS           || ¨\_/('-')\_/¨
+|-
+| mmcblk0p4    || 5      || PARAM          || 34816B   || 10240B   || contains data for SBL              || j4fs filesystem
+|-
+| mmcblk0p5    || 6      || KERNEL         || 45056B   || 10240B   || kernel, ramdisk & recovery ramdisk || android boot image
+|-
+| mmcblk0p6    || 7      || boot_backup    || 55296B   || 10240B   || just zeros ¨\_/('-')\_/¨           || ¨\_/('-')\_/¨
+|-
+| mmcblk0p7    || 8      || system         || 65536B   || 614400B  || android /system                    || ext4 filesystem
+|-
+| mmcblk0p8    || 9      || CSC            || 679936B  || 204800B  || android /cache                     || ext4 filesystem
+|-
+| mmcblk0p9    || 10     || userdata       || 884736B  || 2097152B || android /data                      || ext4 filesystem
+|-
+| mmcblk0p10   || 11     || efs            || 2981888B || 20480B   || stores IMEI etc.                   || ¨\_/('-')\_/¨ ❕must be copied with dd (count,skip)
+|-
+| mmcblk0p11   || 12     || UMS            || 3002368B || 4604895B || android /sdcard                    || vfat filesystem
+|-
+| mmcblk0p12   || 13   ! || Reserved       || 7607263B || 20480B   || ¨\_/('-')\_/¨                      || ¨\_/('-')\_/¨
+|-
+| mmcblk0p13   || 14     || sysparm_dep    || 7627743B || 512B     || ¨\_/('-')\_/¨                      || probably just binary data in random places
+|-
+| mmcblk0p14   || 15     || RF_CAL_FILE    || 7628255B || 512B     || ¨\_/('-')\_/¨                      || ¨\_/('-')\_/¨
+|-
+| mmcblk0p15   || 16     || cal            || 7628767B || 2048B    || ¨\_/('-')\_/¨                      || ¨\_/('-')\_/¨
+|-
+| mmcblk0p16   || 17     || S-GPT          || 7630815B || 33B      || some sort of partition table?      || if it was GPT, file(1) would recognize it, right?
+|}
+
+If you wish to help with analysis: http://Mis012.nejlepsiserialy.cz/nextcloud/index.php/s/5jL92J6rL6LbMR8
+(images extracted with binwalk, PARAM mounted within CWM; efs dd'd from /dev/block/mmcblk0, mmcblk0p10 is all zeros. 'security' :P)
+
 == See also ==
 https://github.com/MoltenMotherBoard/platform_kernel_samsung_cori - downstream kernel I used
 
