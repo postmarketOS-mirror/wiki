@@ -1,0 +1,36 @@
+{{Infobox device
+| manufacturer = Sony
+| name =  Live With Walkman
+| codename = sony-coconut
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = The device
+| releaseyear = 2011
+| originalsoftware = Android 2.3, upgradable to 4.0
+| cpu = Qualcomm MSM8255 1 GHz Scorpion (Snapdragon S2)
+| gpu = Adreno 205
+| storage = internal: 320 MB; microSD: 2 GB included (expandable up to 32 GB)
+| display = 3.2 inch 320×480 px TFT LCD at 180 PPI, 16M Colors
+| memory = 512 MB of RAM
+}}
+
+== Contributors ==
+* praticamentetilde
+
+== Maintainer(s) ==
+
+== What works ==
+The device does boot fine. SSH via USB is available. 
+
+== What does not work ==
+The display does not work. Other features not mentioned are untested.
+
+== How to enter flash mode ==
+With the device powered off, hold the "volume up" button while connecting the USB cable. The LED should turn blue.
+
+== Installation ==
+Due to the insufficent capacity of the internal memory, the ''rootfs'' image must be installed on an microSD card.
+It is suggested to install using the [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] method, using
+as target device the entire microSD card (''/dev/mmcblk0'').
+
+== See also ==
+* {{github|1590}} Initial pull request
