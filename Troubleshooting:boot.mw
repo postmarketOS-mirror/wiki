@@ -48,6 +48,7 @@ echo 4 > /sys/devices/platform/android_usb/usb_function_switch
 * Install the [[Inspecting_the_initramfs|debug shell]] initramfs hook to get a telnet shell directly from the initramfs
 ** Try to run the lines from the init script manually to see where it fails (see <code>aports/main/postmarketos-mkinitfs/init.sh.in</code> in the <code>pmbootstrap</code> code)
 * If you have powered off the device while it was not fully booted yet, it could be that you killed it while it was generating SSH keys. That means, it may have empty files instead of actual keys, so they will not get generated again, but also SSHD fails to start. When this could be the case with your issue, try to flash again and make sure that you do not turn off the device during the boot process this time.
+* See {{github|1582}} for steps to log OpenRC's output to <code>kmesg</code>
 
 == Kernel doesn't even boot ==
 * Check the output of the bootloader with a [[serial debugging|serial cable]] if you have one.
