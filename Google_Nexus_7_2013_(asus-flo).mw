@@ -55,7 +55,8 @@
 === Issues ===
 
 * WIFI firmware sometimes does not load on boot. WIFI connection is very slow. You need to start [[WiFi#Start_WIFI_manually]] as the firmware loads late in the boot process.
-
+<pre>sudo wpa_supplicant -u -Dnl80211 -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+sudo nmcli device wifi connect "ssd" password "pass" ifname wlan0</pre>
 === Other information ===
 
 * Flash the system to a userdata partition to have 10GB free space. If you don't see 10GB install TWRP recovery and format system/all partitions and start again:
