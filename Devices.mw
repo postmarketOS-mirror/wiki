@@ -621,6 +621,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-mint
   | Prebuilt kernel reboots to recovery, pmOS kernel stucks at bootloader logo
 |-
+  | [[Samsung Galaxy Note 10.1]] 
+  | Kernel compiles, flasher fails
+  |
+|-
   | [[Samsung_Wave_2_(samsung-s8530)|Samsung Wave 2]]
   | samsung-s8530
   | kernel compiles
