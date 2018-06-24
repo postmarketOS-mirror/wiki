@@ -54,7 +54,7 @@
 
 === Issues ===
 
-* WIFI firmware sometimes does not load on boot. WIFI connection is very slow. You need to start [[WiFi#Start_WIFI_manually]] as the firmware loads late in the boot process.
+* WIFI firmware sometimes does not load on boot. WIFI connection is very slow - probably to the wcn36xx driver still being a work in progress. You need to start [[WiFi#Start_WIFI_manually]] as the firmware loads late in the boot process.
 <pre>sudo wpa_supplicant -u -Dnl80211 -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
 sudo nmcli device wifi connect "ssd" password "pass" ifname wlan0</pre>
 === Other information ===
