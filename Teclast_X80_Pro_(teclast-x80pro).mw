@@ -66,6 +66,7 @@ Much more detail to be added, but basic outline:
 * <pre>cd /boot/efi && cp EFI/refind/refind_x64.efi EFI/BOOT/bootx64.efi && cp -rv EFI/refind/* EFI/BOOT/</pre>
 * Edit EFI/BOOT/refind.conf, you may want to uncomment ''enable_touch''.
 * <pre>mkdir /mnt/boot/EFI/pmos && cp vmlinuz-teclast-x80pro /mnt/boot/EFI/pmos/vmlinuz && cp initramfs-teclast-x80pro /mnt/boot/EFI/pmos/initramfs.img</pre>
+This should probably be: <pre>mkdir /efi/boot/EFI/pmos && cp vmlinuz-teclast-x80pro /efi/boot/EFI/pmos/vmlinuz && cp initramfs-teclast-x80pro /efi/boot/EFI/pmos/initramfs.img</pre>
 * <pre>dd if=teclast-x80pro.img of=/dev/mmcblk0p9</pre>
 * Reboot. At OS selection, choose Android. You will see the rEFInd menu, select the postmarketOS kernel (the file name under the active icon should contain pmos). You should be booted into postmarketOS!
 
