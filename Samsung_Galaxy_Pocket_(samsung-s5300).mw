@@ -82,11 +82,11 @@ get a UART and help me find what's going on
 |-
 | mmcblk0p9    || 10     || userdata       || 884736B  || 2097152B || android /data                      || ext4 filesystem
 |-
-| mmcblk0p10   || 11     || efs            || 2981888B || 20480B   || stores IMEI etc.                   || ¨\_/('-')\_/¨ ❕must be copied with dd (count,skip)
+| mmcblk0p10   || 11   ! || efs            || 2981888B || 20480B   || stores IMEI etc.                   || ¨\_/('-')\_/¨ ❕must be copied with dd (count,skip)
 |-
 | mmcblk0p11   || 12     || UMS            || 3002368B || 4604895B || android /sdcard                    || vfat filesystem
 |-
-| mmcblk0p12   || 13   ! || Reserved       || 7607263B || 20480B   || ¨\_/('-')\_/¨                      || ¨\_/('-')\_/¨
+| mmcblk0p12   || 13   ! || Reserved       || 7607263B || 20480B   || ¨\_/('-')\_/¨                      || ¨\_/('-')\_/¨ ❕must be copied with dd (count,skip)
 |-
 | mmcblk0p13   || 14     || sysparm_dep    || 7627743B || 512B     || ¨\_/('-')\_/¨                      || probably just binary data in random places
 |-
@@ -98,7 +98,7 @@ get a UART and help me find what's going on
 |}
 
 If you wish to help with analysis: http://Mis012.nejlepsiserialy.cz/nextcloud/index.php/s/5jL92J6rL6LbMR8
-(images extracted with binwalk, PARAM mounted within CWM; efs dd'd from /dev/block/mmcblk0, mmcblk0p10 is all zeros. 'security' :P)
+(images extracted with binwalk, PARAM mounted within CWM; efs and Reserved dd'd from /dev/block/mmcblk0, mmcblk0p10 is all zeros. 'security' :P)
 
 == See also ==
 https://github.com/MoltenMotherBoard/platform_kernel_samsung_cori - downstream kernel I used
