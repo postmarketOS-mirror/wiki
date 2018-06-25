@@ -19,10 +19,10 @@
 == Maintainer(s) ==
 
 == What works ==
-The device does boot fine. SSH via USB is available. 
+The device does boot fine. SSH via USB is available. The display works.
 
 == What does not work ==
-The display does not work. Other features not mentioned are untested.
+The touchscreen does not work. Other features not mentioned are untested.
 
 == How to enter flash mode ==
 With the device powered off, hold the "volume up" button while connecting the USB cable. The LED should turn blue.
