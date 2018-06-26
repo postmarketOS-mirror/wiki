@@ -55,6 +55,7 @@
 == Issues ==
 
 * No splash in initramfs.
+* When USB charger plugged in when device is off, PostmarketOS "Loading..." screen is displayed continuously.
 
 == Building and Flashing ==
 
@@ -85,10 +86,6 @@ After flashing, you can unplug the USB cable, and he device will be off.  Then h
 == UI Usability ==
 
 If you select `xfce4` UI when building, after you boot it, you can make it more usable on the small display by doing to menu item "Applications -> Settings -> Appearance", then selecting the "Fonts" tab, then adjusting the DPI up.  If you can't press the tiny GUI buttons to adjust the DPI, you can first adjust the font size up (and if the scrollbar for the font size is too small, you can adjust it up in small increments).
-
-== Quirks ==
-
-* When USB charger plugged in when device is off, PostmarketOS "Loading..." screen is displayed continuously.
 
 == Links ==
 
