@@ -61,7 +61,7 @@
 <source lang="bash">./pmbootstrap.py init</source>
 
 User interface support:
-* Works: weston
+* Works: matchbox, weston
 * Believed NOT to work: hildon (yellow trees on square area of display), plasma-mobile (needs acceleration?)
 
 Build with FDE disabled (because, with FDE enabled, it looks like the device will just hang on boot at "Loading..." screen).
@@ -77,6 +77,8 @@ To get the device into fastboot mode: power it off, remove USB cable, hold down 
 
 <source lang="bash">./pmbootstrap.py flasher flash_rootfs
 ./pmbootstrap.py flasher flash_kernel</source>
+
+The `flash_rootfs` took about 45 seconds, and `flash_kernel` took 1-2 seconds.
 
 == Links ==
 
