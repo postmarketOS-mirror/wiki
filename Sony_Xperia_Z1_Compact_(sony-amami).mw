@@ -61,7 +61,7 @@
 <source lang="bash">./pmbootstrap.py init</source>
 
 User interface support:
-* Works: matchbox, weston
+* Works: mate (takes a while to display), matchbox, weston
 * Believed NOT to work: hildon (yellow trees on square area of display), plasma-mobile (needs acceleration?)
 
 Build with FDE disabled (because, with FDE enabled, it looks like the device will just hang on boot at "Loading..." screen).
