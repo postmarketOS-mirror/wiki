@@ -56,6 +56,22 @@
 
 * No splash in initramfs.
 
+== Building and Flashing ==
+
+
+Build with FDE disabled (because, with FDE enabled, it looks like the device will just hang on boot at "Loading..." screen).
+
+<source lang="bash">./pmbootstrap.py install --no-fde</source>
+
+Before unlocking the bootloader, you might want to back up your TA partition, so that you could restore the device to more of a factory state.  TODO: instructions for how to do this.
+
+Before flashing, you must make sure that the bootloader is unlocked (or `flash_rootfs` will fail with "writing 'system'... FAILED", which seems to require an IMEI-specific unlock code from Sony, which is sent to the device using `fastboot`: https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/how-to-unlock-bootloader/
+
+To get the device into fastboot mode: power it off, remove USB cable, hold down Volume-Up while plugging in USB cable.  The notification light bar at the top of the phone will very briefly flash red, and then turn blue.  Then you can stop holding down Volume-Up, and the device should in fastboot mode.
+
+<source lang="bash">./pmbootstrap.py flasher flash_rootfs
+./pmbootstrap.py flasher flash_kernel</source>
+
 == Links ==
 
 * [https://web.archive.org/web/20161225005457/https://wiki.cyanogenmod.org/w/Amami_Info CM wiki archive]
