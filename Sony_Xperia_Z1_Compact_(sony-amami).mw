@@ -61,9 +61,9 @@
 
 <source lang="bash">./pmbootstrap.py init</source>
 
-User interface support (with current downstream kernel; might change when replaced with mainline kernel):
-* Works: xfce4, mate (might need programs installed), matchbox, weston
-* Believed NOT to work: hildon (yellow trees on square area of display), plasma-mobile (needs acceleration?)
+[[User-Interfaces|User interface]] support (with current downstream kernel; might change when replaced with mainline kernel):
+* Works: [[XFCE4]], [[MATE]] (might need programs installed), [[Handhelds#Matchbox_Window_Manager|Matchbox]], [[Weston]]
+* Believed NOT to work: [[Hildon]] (yellow trees on square area of display), [[Plasma-Mobile]] (needs acceleration?)
 
 Build with FDE disabled (because, with FDE enabled, it looks like the device will just hang on boot at "Loading..." screen).
 
