@@ -78,7 +78,7 @@ To get the device into fastboot mode: power it off, remove USB cable, hold down 
 <source lang="bash">./pmbootstrap.py flasher flash_rootfs
 ./pmbootstrap.py flasher flash_kernel</source>
 
-The `flash_rootfs` took about 45 seconds, and `flash_kernel` took 1-2 seconds.
+The `flash_rootfs` took about 1 minute, and `flash_kernel` took 5-10 seconds.
 
 == Links ==
 
