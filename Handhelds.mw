@@ -777,6 +777,16 @@ One might also comment that creation of users is a function of pmbootstrap curre
 * Dim the screen automatically (already turns off after a while on N900)
 * There should be a proper panel plugin and associated battery-monitoring program, e.g. see [https://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin xfce4-battery-plugin] which appears to also provide a panel applet
 |-
+! scope="row"| Program launcher
+| Partially working
+|
+| There are a number of programs that will merely launch programs. However, they are quite varied and naturally satisfy different niches, or are not suitable as standalone programs. Some examples include:
+* The Matchbox desktop program (works well with caveats)
+* [http://en.qi-hardware.com/wiki/Gmenu2x Gmenu2x], a graphical launcher suitable for handheld games consoles and was used on the Ben Nanonote handheld
+* Various window managers'/desktop environments' panels and app launcher programs
+* Sugar desktop (used to use Matchbox, moved to Metacity)
+* It should be possible to customise AwesomeWM for handheld form-factor etc.
+|-
 ! scope="row"| RFID/NFC
 | Not working/implemented
 |
