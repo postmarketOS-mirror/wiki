@@ -61,7 +61,8 @@
 
 Build with FDE disabled (because, with FDE enabled, it looks like the device will just hang on boot at "Loading..." screen).
 
-<source lang="bash">./pmbootstrap.py install --no-fde</source>
+<source lang="bash">./pmbootstrap.py init
+./pmbootstrap.py install --no-fde</source>
 
 Before unlocking the bootloader, you might want to back up your TA partition, so that you could restore the device to more of a factory state.  TODO: instructions for how to do this.
 
