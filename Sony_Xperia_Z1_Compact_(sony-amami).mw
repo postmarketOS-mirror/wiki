@@ -58,11 +58,15 @@
 
 == Building and Flashing ==
 
+<source lang="bash">./pmbootstrap.py init</source>
+
+User interface support:
+* Works: weston
+* Believed NOT to work: hildon (yellow trees on square area of display), plasma-mobile (needs acceleration?)
 
 Build with FDE disabled (because, with FDE enabled, it looks like the device will just hang on boot at "Loading..." screen).
 
-<source lang="bash">./pmbootstrap.py init
-./pmbootstrap.py install --no-fde</source>
+<source lang="bash">./pmbootstrap.py install --no-fde</source>
 
 Before unlocking the bootloader, you might want to [https://forum.xda-developers.com/crossdevice-dev/sony/universal-dirtycow-based-ta-backup-t3514236 back up your TA partition], so that you could restore the device to more of a factory state (including DRM keys for a lot of proprietary enchantments to display and camera)
 
