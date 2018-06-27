@@ -315,6 +315,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | samsung-kylevess
   |  Y || Y || Y || Y ||  ||  ||  || P || Y ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Samsung Galaxy Trend Plus (s7580)]]
+  | style="white-space: nowrap;" | samsung-kylepro
+  |  Y ||  || Y || P ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Sony Ericsson Xperia Arc (semc-anzu)|Sony Ericsson Xperia Arc]]
   | style="white-space: nowrap;" | semc-anzu
   | Y  || Y  || Y  || Y  || P || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
