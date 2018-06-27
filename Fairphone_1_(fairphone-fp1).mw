@@ -22,18 +22,24 @@
 * Luca Weiss (z3ntu)
 
 == What works ==
-* Kernel compilation
+* USB network
+* Screen
+* Touchscreen (partially)
 
 == What does not work ==
+* Touchscreen (partially)
+* WiFi
 * The rest
 
-== How to enter flash mode ==
-* ?
+== How to enter flash mode (boot.img) ==
+* Flash the newest lk.bin (see https://github.com/z3ntu/android_kernel_fairphone_FP1/wiki/More-stuff#fastboot)
+* Press vol-up during booting and select "fastboot"
 
 == Installation ==
 * ?
 
 == See also ==
+* {{github|1566}} Initial pull request
 * https://github.com/z3ntu/pmbootstrap/tree/device-fairphone-fp1
 * https://github.com/z3ntu/android_kernel_fairphone_FP1
 <!--
