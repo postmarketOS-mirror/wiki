@@ -39,7 +39,7 @@
 * Matchbox (X11)
 * MATE (X11)
 
-note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device. 
+Note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device.
 
 == Installation ==
 ; 1. init
