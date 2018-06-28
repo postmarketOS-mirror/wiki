@@ -25,16 +25,30 @@
 * Kernel compiles
 * Heimdall can flash
 * Boots
-*  Weston (Wayland)
-*  Plasma Mobile (not recommended, to slow) (Wayland)
+
+'''Graphical interfaces'''
+* Weston (Wayland) (recommended)
+* Plasma Mobile (not recommended, to slow) (Wayland)
 
 == What does not work ==
+* SSH over USB
+
+'''Graphical interfaces'''
 * XFCE4 (X11)
 * Hildon (X11)
 * Matchbox (X11)
 * MATE (X11)
-* WiFi
-* SSH over USB
 
-== How to enter flash mode ==
-Hold down volume down + Home + Power for a few seconds.
+note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device. 
+
+== Installation ==
+; 1. init
+<source>$ ./pmbootstrap.py init</source>
+Select "samsung-kylessopen" as the target device.
+
+; 2. install
+<source>$ ./pmbootstrap.py install --no-fde</source>
+--no-fde disables full disk encryption, which doesn't work on this device to the best of my knowledge. Select a working recommended graphical interface. 
+
+; 3. flash
+Ensure that the USB cable is disconnected, then hold down volume down + Home + Power for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source>$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source>$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
