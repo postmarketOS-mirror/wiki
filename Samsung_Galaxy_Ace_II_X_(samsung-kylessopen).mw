@@ -28,7 +28,7 @@
 
 '''Graphical interfaces'''
 * Weston (Wayland) (recommended)
-* Plasma Mobile (not recommended, to slow) (Wayland)
+* Plasma Mobile (not recommended, too slow) (Wayland)
 
 == What does not work ==
 * SSH over USB
