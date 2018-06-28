@@ -28,8 +28,12 @@
 * Display works with Plasma Mobile (not recommended, to slow)
 
 == What does not work ==
-* XFCE4
+* XFCE4 (X11)
+* Hildon (X11)
+* Matchbox (X11)
+* MATE (X11)
 * WiFi
+* SSH over USB
 
 == How to enter flash mode ==
 Hold down volume down + Home + Power for a few seconds.
