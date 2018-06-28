@@ -24,8 +24,8 @@
 * Kernel compiles
 * Heimdall can flash
 * Boots
-* SSH over USB works
 * Display works with Weston
+* Display works with Plasma Mobile (not recommended, to slow)
 
 == What does not work ==
 * XFCE4
