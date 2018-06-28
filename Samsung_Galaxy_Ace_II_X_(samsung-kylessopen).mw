@@ -24,8 +24,8 @@
 * Kernel compiles
 * Heimdall can flash
 * Boots
-* Display works with Weston
-* Display works with Plasma Mobile (not recommended, to slow)
+*  Weston (Wayland)
+*  Plasma Mobile (not recommended, to slow) (Wayland)
 
 == What does not work ==
 * XFCE4 (X11)
