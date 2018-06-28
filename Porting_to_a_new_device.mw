@@ -347,7 +347,7 @@ $ pmbootstrap export --odin
 For Android based devices, where a recovery system such as TWRP is installed, you can generate an Android recovery zip compatible file, and sideload it.
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap install --no-fde --android-recovery-zip
-$ pmbootstrap flasher sideload
+$ pmbootstrap flasher --method adb sideload
 </syntaxhighlight>
 
 When all else fails, you might have success with installing via [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] or booting via [https://github.com/postmarketOS/pmbootstrap/pull/547 NFS].
