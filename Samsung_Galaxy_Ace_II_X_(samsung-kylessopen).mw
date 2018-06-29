@@ -46,8 +46,8 @@ Note that all of the working interfaces are using Wayland and the ones that don'
 Select "samsung-kylessopen" as the target device.
 
 ; 2. install
-<source>$ ./pmbootstrap.py install --no-fde</source>
---no-fde disables full disk encryption, which doesn't work on this device to the best of my knowledge. Select a working recommended graphical interface. 
+<source>$ ./pmbootstrap.py install</source>
+Select a working recommended graphical interface. 
 
 ; 3. flash
 Ensure that the USB cable is disconnected, then hold down volume down + Home + Power for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source>$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source>$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
