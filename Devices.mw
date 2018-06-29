@@ -549,6 +549,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | htc-monarudo
   |
 |-
+  | [[Huawei_Ascend-G510(huawei-g510)|Huawei Ascend G510]]
+  | huawei-g510
+  | Kernel compiles, graphic output does not work
+|-
   | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
