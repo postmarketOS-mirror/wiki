@@ -20,13 +20,21 @@
 
 == What works ==
 - Boot
+
 - USB Network (ssh and tethering)
+
 - Display (with a workaround script)
+
 - Touchscreen
+
 - XFCE4
+
 - Weston
+
 - MATE
+
 - Plasma (for about 15s, then crashes)
+
 == What does not work ==
 - Wifi
 - Modem
