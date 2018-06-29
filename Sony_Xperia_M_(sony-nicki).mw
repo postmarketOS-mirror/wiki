@@ -1,0 +1,46 @@
+[[Category:Booting]]
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia M
+| codename = nicki
+| image = File:nicki.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = Android 4.1.x
+| chipset = MSM8x27
+| cpu = MSM8x27
+| gpu = Adreno 305
+| storage = 4 GB
+| display = 4", 480x854 px
+| memory = 1 GB
+}}
+
+== Contributors ==
+* Ewentual
+
+== What works ==
+- Boot
+- USB Network (ssh and tethering)
+- Display (with a workaround script)
+- Touchscreen
+- XFCE4
+- Weston
+- MATE
+- Plasma (for about 15s, then crashes)
+== What does not work ==
+- Wifi
+- Modem
+- GPS
+- Audio
+- Camera
+- 3D
+- Sensors
+- Notification LED
+== How to enter flash mode ==
+With device powered off, hold VOLUME + and plug USB cable in. Device's LED will turn blue and device will enter fastbootm ode
+
+== Installation ==
+Works with both pmbootstrap flasher and TWRP zip. No errors were found in that process.
+
+== See also ==
+* {{github| }} Initial pull request
