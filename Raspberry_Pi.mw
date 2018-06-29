@@ -27,18 +27,23 @@
 * ...
 
 == Installation ==
-
-# Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source> Choose <code>raspberry-pi</code> as target device.
-# Select the kernel for your Raspberry Pi version <source lang="shell-session">
+1. Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source>
+::* Choose <code>raspberry-pi3</code> for the Raspberry 3B and 3B+ (aarch64 installation)
+::* Choose <code>raspberry-pi</code> for all other versions (armhf installation)
+2. Select the kernel for your Raspberry Pi version <source lang="shell-session">
 [10:47:03] Which kernel do you want to use with your device?
 [10:47:03] Available kernels (2):
 [10:47:03] * rpi: Kernel for the Raspberry Pi Zero & 1
 [10:47:03] * rpi2: Kernel for the Raspberry Pi 2 & 3
 </source>
-# Start the build process and install the completed image to a sdcard<source lang="shell-session">
+3. Optionally add <code>bluetooth-raspberry-pi</code> as extra package. It will install a service that starts the built-in bluetooth device at boot. <source lang="shell-session">
+[17:14:37] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+[17:14:37] Extra packages [none]: bluetooth-raspberry-pi
+</source>
+4. Start the build process and install the completed image to a sdcard <source lang="shell-session">
 $ ./pmbootstrap.py install --sdcard /dev/sdX
 (replace /dev/sdX with the device for your sdcard)</source>
-# Place the sdcard into the Raspberry Pi and boot it
+5. Place the sdcard into the Raspberry Pi and boot it
 
 == See also ==
 * The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux]
