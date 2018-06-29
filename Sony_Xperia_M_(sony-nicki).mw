@@ -37,13 +37,21 @@
 
 == What does not work ==
 - Wifi
+
 - Modem
+
 - GPS
+
 - Audio
+
 - Camera
+
 - 3D
+
 - Sensors
+
 - Notification LED
+
 == How to enter flash mode ==
 With device powered off, hold VOLUME + and plug USB cable in. Device's LED will turn blue and device will enter fastbootm ode
 
