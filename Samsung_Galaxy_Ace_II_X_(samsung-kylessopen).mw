@@ -25,14 +25,13 @@
 * Kernel compiles
 * Heimdall can flash
 * Boots
+* SSH over USB
 
 '''Graphical interfaces'''
 * Weston (Wayland) (recommended)
 * Plasma Mobile (not recommended, too slow) (Wayland)
 
 == What does not work ==
-* SSH over USB
-
 '''Graphical interfaces'''
 * XFCE4 (X11)
 * Hildon (X11)
@@ -52,3 +51,6 @@ Select "samsung-kylessopen" as the target device.
 
 ; 3. flash
 Ensure that the USB cable is disconnected, then hold down volume down + Home + Power for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source>$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source>$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
+
+== Troubleshooting ==
+If you can't get SSH over USB to work, see [[USB_Network]].
