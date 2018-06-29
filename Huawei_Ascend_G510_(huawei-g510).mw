@@ -1,0 +1,57 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Huawei
+| name =  Ascend G510
+| codename = u8951
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = WIP
+| releaseyear = 2013
+| originalsoftware = Android 4.1
+| chipset = Qualcomm MSM8225 Snapdragon S4 Play
+| cpu = Dual-core 1.2 GHz Cortex-A5
+| gpu = Adreno 203
+| display = 480x854 TFT
+| storage = 4 GB
+| memory = 512 MB
+}}
+
+== Contributors ==
+* [https://wiki.postmarketos.org/wiki/User:Lausek lausek]
+
+== What works ==
+* ☑ Kernel compilation
+* ☑ Flash Kernel (pmbootstrap flasher flash_kernel)
+* ☑ Flash Rootfs (pmbootstrap flasher flash_rootfs)
+* ☐ Initramfs boot
+* ☐ USB Network
+* ☐ Framebuffer graphics (Splash screens)
+* ☐ SSH Connectivity
+* ☐ Weston on framebuffer
+* ☐ Touchscreen
+* ☐ Xwayland
+* ☐ Wifi
+* ☐ Audio playback
+
+== Device info ==
+* [https://www.gsmarena.com/huawei_ascend_g510-5250.php Full phone specifications]
+
+== Additional info ==
+
+=== Entering "Fastboot mode" ===
+
+Hold the '''Volume Down''' button, and then press the '''Power''' button
+
+=== Entering "Recovery mode" ===
+
+Hold the '''Volume Up''' button, and then press the '''Power''' button
+
+=== Obtaining the OEM unlock key ===
+
+The Android version running on the device does not support unlocking OEM. A special key has to be retrieved from a [https://emui.huawei.com/en/unlock_detail form] on the manufacturers  website.
+
+All necessary data can be found in the phones system information. Only the IMEI number seems to be wrong. Dump the displayed number into the search help on this [https://imei24.com/imei_check/Huawei/ site] and take the correct returend one instead.  
+
+Finally unlock the connected device via:
+<syntaxhighlight lang="highlight">
+fastboot oem unlock <key>
+</syntaxhighlight>
