@@ -99,6 +99,8 @@ If this fails, you may need to first assign an ethernet address to it.
 </source>
 Then you can try the above <code>dhclient</code> command.
 
+If after assigning an IP address and <code>ip a</code> shows your device status as "DOWN" instead of "UNKNOWN", try to bring it up with <code>ip link set enp0s20f0u1 up</code>.
+
 ==== Kernel configuration parameters ====
 If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig check</code> that the required parameters are all set.
 The postmarketOS initramfs is able to configure two different USB systems in the kernel in order to let your PC talk to your phone via networking. One of them has to be enabled (exclusively?):
