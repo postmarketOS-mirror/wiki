@@ -53,7 +53,7 @@
 - Notification LED
 
 == How to enter flash mode ==
-With device powered off, hold VOLUME + and plug USB cable in. Device's LED will turn blue and device will enter fastbootm ode
+With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue and device will enter fastbootm ode
 
 == Installation ==
 Works with both pmbootstrap flasher and TWRP zip. No errors were found in that process.
