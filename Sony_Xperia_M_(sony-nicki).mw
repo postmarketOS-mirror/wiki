@@ -59,4 +59,4 @@ With device powered off, hold VOLUME + and plug USB cable in. Device's LED will 
 Works with both pmbootstrap flasher and TWRP zip. No errors were found in that process.
 
 == See also ==
-* {{github| 1604}} Initial pull request
+* [https://github.com/postmarketOS/pmbootstrap/pull/1604  Initial pull request]
