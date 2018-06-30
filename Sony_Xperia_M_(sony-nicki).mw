@@ -54,6 +54,8 @@
 
 - Notification LED
 
+- charging-sdl // technically it shows up and shows (probably) accurate percentage yet the display won't go off after charger disconnect
+
 == How to enter flash mode ==
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
 
