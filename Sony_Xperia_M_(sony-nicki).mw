@@ -58,5 +58,7 @@ With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED wil
 == Installation ==
 Works with both pmbootstrap flasher and TWRP zip. No errors were found in that process.
 
+If using a large rootfs (like with plasma-mobile) fastboot with throw a "no space left on device" error. Flashing as a .zip with TWRP solves the problem.
+
 == See also ==
 * [https://github.com/postmarketOS/pmbootstrap/pull/1604  Initial pull request]
