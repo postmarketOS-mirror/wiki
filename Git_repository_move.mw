@@ -1,0 +1,11 @@
+[https://postmarketos.org/blog/2018/06/27/moving-to-gitlab/ We have moved from github.com to gitlab.com.]
+
+Please configure your git repositories to point to the new location by editing <code>.git/config</code> in your <code>pmbootstrap</code> (or other postmarketOS git repository) folder.
+
+Simply replace <code>github.com</code> with <code>gitlab.com</code>, then run:
+
+<syntaxhighlight lang="shell-session">
+$ git checkout master
+$ git pull
+$ git reset --hard origin/master
+</syntaxhighlight>
