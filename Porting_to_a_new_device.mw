@@ -3,7 +3,17 @@
 
 * Join [[Matrix and IRC|Matrix/IRC]] to get help when you're stuck
 * Search the [[devices]] page for your device to avoid duplicate work (read potentially existing device pages and check for links to existing branches).
+
+=== Requirements ===
+==== Host PC ====
 * We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
+* Python 3.4+ and git must be installed (look at your distribution's documentation on installing packages)
+* A few gigabytes of free space
+
+==== Target Device ====
+If your target device has an ARM processor, it needs to have an [https://en.wikipedia.org/wiki/Floating-point_unit FPU].
+
+Most phones fulfill this requirement: in the first > 80 ports we have had, only twice we had phones without an FPU ({{issue|1203}}, {{issue|1592}}). These are from 2010 and 2011, so it is worth checking if your device is from that time. Otherwise just go ahead.
 
 === Initialization ===
 Run the following commands in a Linux terminal to get started.
