@@ -9,7 +9,7 @@
 Run the following commands in a Linux terminal to get started.
 
 <syntaxhighlight lang="shell-session">
-$ git clone https://github.com/postmarketOS/pmbootstrap
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 $ cd pmbootstrap
 $ ./pmbootstrap.py init
 Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
