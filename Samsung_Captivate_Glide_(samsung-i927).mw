@@ -1,0 +1,41 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Captivate Glide
+| codename = sgh-i927
+| image = File:sgh-i927.jpg
+| imagecaption = Samsung Captivate Glide with its keyboard extended and back lights on
+| releaseyear = 2011
+| originalsoftware = Android 4.0.4
+| chipset = Nvidia Tegra 2 AP20H
+| cpu = Dual-core 1.0 GHz Cortex-A9
+| gpu = ULP GeForce
+| storage = 8 GB
+| display = 480x800 AMOLED
+| memory = 1 GB
+}}
+
+== Contributors ==
+* Moocow9m
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
