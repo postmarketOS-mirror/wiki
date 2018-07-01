@@ -239,6 +239,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | raspberry-pi, raspberry-pi3
   | -  || -  || - || Y ||  || Y ||  || Y || - ||  || - ||  || - || - || - || - || - || - 
 |-
+  | style="white-space: nowrap;" | [[Samsung Captivate Glide (samsung-i927)|Samsung Captivate Glide]]
+  | style="white-space: nowrap;" | samsung-i927
+  |   ||    ||    ||    ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II x]]
   | style="white-space: nowrap;" | samsung-kylessopen
   |   || Y  || Y  || Y  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
