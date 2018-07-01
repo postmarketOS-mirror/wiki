@@ -65,4 +65,5 @@ Works with both pmbootstrap flasher and TWRP zip. No errors were found in that p
 If using a large rootfs (like with plasma-mobile) fastboot with throw a "no space left on device" error. Flashing as a .zip with TWRP solves the problem.
 
 == See also ==
-* [https://github.com/postmarketOS/pmbootstrap/pull/1604  Initial pull request]
+* {{MR|1611}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1604#note_85239812 display hack] (needs to be reworked in the future to make it compatible with a display manager)
