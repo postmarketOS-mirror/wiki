@@ -18,6 +18,7 @@
 * ''[[user:drebrez|drebrez]]''
 
 == What works ==
+(☑: working, ☐: not working)
 
 * ☑ Kernel compilation
 * ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
@@ -31,6 +32,7 @@
 * ☑ Xwayland
 * ☑ Wifi
 * ☐ Audio playback
+* ☐ Xorg (see [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1602#note_85282453 !1602], open a new issue if you'd like discuss debug this)
 
 == Device info ==
 
