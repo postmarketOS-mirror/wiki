@@ -239,10 +239,6 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | raspberry-pi, raspberry-pi3
   | -  || -  || - || Y ||  || Y ||  || Y || - ||  || - ||  || - || - || - || - || - || - 
 |-
-  | style="white-space: nowrap;" | [[Samsung Captivate Glide (samsung-i927)|Samsung Captivate Glide]]
-  | style="white-space: nowrap;" | samsung-i927
-  |   ||    ||    ||    ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
-|-
   | style="white-space: nowrap;" | [[Samsung Galaxy Ace II X (samsung-kylessopen)|Samsung Galaxy Ace II x]]
   | style="white-space: nowrap;" | samsung-kylessopen
   |   || Y  || Y  || Y  ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -608,6 +604,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Qemu Nokia N900|Qemu N900]]🔼
   | qemu-rx51
   |
+|-
+  | [[Samsung Captivate Glide (samsung-i927)|Samsung Captivate Glide]]
+  | samsung-i927
+  | Fails to flash
 |-
   | [[Samsung_Exhibit_II_4G_(samsung-t679)|Samsung Exhibit II 4G]]
   | samsung-t679
