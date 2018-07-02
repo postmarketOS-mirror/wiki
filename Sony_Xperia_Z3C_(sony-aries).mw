@@ -39,7 +39,7 @@ and all IRC/Matrix folks
 == Build Instructions == 
 
 <code>
-git clone https://github.com/postmarketos/pmbootstrap 
+git clone https://gitlab.com/postmarketOS/pmbootstrap 
 
 cd pmbootstrap
 
