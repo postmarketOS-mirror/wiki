@@ -16,21 +16,20 @@
 == Contributors ==
 * praticamentetilde
 
-== Maintainer(s) ==
-
 == What works ==
-The device does boot fine. SSH via USB is available. The display works.
+The device does boot fine. SSH via USB is available. The display and touchscreen work.
 
 == What does not work ==
-The touchscreen does not work. Other features not mentioned are untested.
+Other features not mentioned are untested.
 
 == How to enter flash mode ==
 With the device powered off, hold the "volume up" button while connecting the USB cable. The LED should turn blue.
 
 == Installation ==
 Due to the insufficent capacity of the internal memory, the ''rootfs'' image must be installed on an microSD card.
-It is suggested to install using the [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] method, using
+It is suggested to install using the [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 netcat] method, using
 as target device the entire microSD card (''/dev/mmcblk0'').
 
 == See also ==
-* {{github|1590}} Initial pull request
+* {{MR|1590}} Initial pull request
+* {{MR|1614}} Touchscreen support pull request
