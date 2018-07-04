@@ -128,3 +128,9 @@
 <onlyinclude>{{#ifeq:{{{user|Moocow9m}}}|Moocow9m |
 * [[Samsung Captivate Glide (samsung-i927)|Samsung Captivate Glide (samsung-i927)]]
 }}</onlyinclude>
+
+=== Ojbr ===
+<onlyinclude>{{#ifeq:{{{user|Ojbr}}}|Ojbr |
+* [[Google Pixel|Google Pixel (google-sailfish)]]
+* Motorola C (motorola-namath)
+}}</onlyinclude>
