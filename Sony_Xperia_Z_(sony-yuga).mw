@@ -41,7 +41,7 @@ To install a custom recovery on the Xperia Z:
 * ssh
 * adjusting the led, torch and the lcd backlight
 * display
-** Weston: works only when running `cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode` after being logged in using SSH.
+** Weston
 ** Xwayland
 * touchscreen
 
@@ -61,6 +61,7 @@ To install a custom recovery on the Xperia Z:
 === Issues ===
 
 * Launching Weston is delayed by 135 seconds to let udev settle down
+* Display works only when running <code>cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode</code> after being logged in using SSH.
 
 === Other information ===
 
