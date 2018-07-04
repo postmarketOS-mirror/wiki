@@ -29,7 +29,6 @@
 == What does not work ==
 * Flashing via odin
 * Flashing via recovery zip.
-* (Rest untested)
 
 == How to enter flash mode ==
 Press and hold <code>Volume Up</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
