@@ -165,7 +165,7 @@ Need to include the [https://developers.google.com/android/drivers#sailfish prop
 * Investigate Kernel upgrade path to 4.X where MSM8996 has better support in mainline
 
 == See also ==
-* [https://gitlab.com/ojbr/pmbootstrap/tree/wip-google-pixel ojbr's postmarketOS google-pixel fork on GitLab]
+* [https://octo.sh/ojbr/pmbootstrap/tree/wip-google-pixel ojbr's postmarketOS google-pixel fork on GitLab]
 <!--
 Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{github|CHANGEME}} Initial pull request
