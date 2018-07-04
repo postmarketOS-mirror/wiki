@@ -607,7 +607,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Samsung Captivate Glide (samsung-i927)|Samsung Captivate Glide]]
   | samsung-i927
-  | Fails to flash
+  | Fails to boot
 |-
   | [[Samsung_Exhibit_II_4G_(samsung-t679)|Samsung Exhibit II 4G]]
   | samsung-t679
