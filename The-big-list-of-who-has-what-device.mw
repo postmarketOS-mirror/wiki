@@ -134,3 +134,12 @@
 * [[Google Pixel|Google Pixel (google-sailfish)]]
 * Motorola C (motorola-namath)
 }}</onlyinclude>
+
+=== Neilvandyke ===
+<onlyinclude>{{#ifeq:{{{user|Neilvandyke}}}|Neilvandyke |
+* [[Google Nexus 5 (lg-hammerhead)]]
+* [[Google Nexus 7 2013 (asus-flo)]]
+* [[LG G Watch (lg-dory)]]
+* [[Samsung Galaxy SIII LTE (samsung-i9305)]] (has GT-i9300, which [[Devices]] conflates with GT-i9305)
+* [[Sony Xperia Z1 Compact (sony-amami)]]
+}}</onlyinclude>
