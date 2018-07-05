@@ -1,0 +1,36 @@
+This page is about debugging problems with <code>pmbootstrap qemu</code>.
+
+== Alternative display options ==
+=== GTK instead of SDL ===
+The virtual machine's output window can be drawn with either SDL or GTK. The default is SDL, and in case that does not work, you can try to switch to GTK:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap qemu --display=gtk
+</syntaxhighlight>
+
+=== Disable OpenGL ===
+{{note|Some user interfaces may not work properly with OpenGL disabled.}}
+Graphics rendering with OpenGL is enabled by default. You can disable it by appending <code>,gl=off</code> to your display option. Examples:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap qemu --display=sdl,gl=off
+$ pmbootstrap qemu --display=gtk,gl=off
+</syntaxhighlight>
+
+==== Using SPICE ====
+Another option is using the SPICE protocol. The following command will cause QEMU to start a [https://en.wikipedia.org/wiki/SPICE_(protocol) SPICE] server, that listens on localhost, and connect a client right afterwards. 
+Supported clients are <code>remote-viewer</code> and <code>spicy</code> (one of these needs to be installed on your host system). This method supports 3D hardware accelleration as well.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap qemu --spice
+</syntaxhighlight>
+
+=== Using QEMU from the host system ===
+Since {{MR|1612}}, pmbootstrap is using the QEMU binary from the Alpine chroots. That way you don't have to install QEMU on your host system and everybody uses the same version. However, for debugging purpose you might want to use the QEMU binaries from your host system instead:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap qemu --host-qemu
+</syntaxhighlight>
+
+This option can be combined with <code>--display</code> or 
+<code>--spice</code>.
