@@ -10,9 +10,10 @@
 * [[Troubleshooting:dependencies]]
 * [[Troubleshooting:display]]
 * [[Troubleshooting:grsec]] (TL;DR: doesn't work)
-* [[Troubleshooting:kernel]]
-* [[Troubleshooting:Xorg]]
 * [[Troubleshooting:HID buttons]]
+* [[Troubleshooting:kernel]]
+* [[Troubleshooting:QEMU]]
+* [[Troubleshooting:Xorg]]
 
 = Uncategorized errors =
 
