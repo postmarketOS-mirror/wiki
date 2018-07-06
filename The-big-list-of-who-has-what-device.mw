@@ -148,3 +148,8 @@
 <onlyinclude>{{#ifeq:{{{user|Lofenyy}}}|Lofenyy |
 * [[Samsung Galaxy Ace II X (samsung-kylessopen)]]
 }}</onlyinclude>
+
+=== wfranken ===
+<onlyinclude>{{#ifeq:{{{user|wfranken}}}|wfranken|
+* [[Sony Xperia Z (sony-yuga)]]
+}}</onlyinclude>
