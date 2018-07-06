@@ -143,3 +143,8 @@
 * [[Samsung Galaxy SIII LTE (samsung-i9305)]] (has GT-i9300, which [[Devices]] conflates with GT-i9305)
 * [[Sony Xperia Z1 Compact (sony-amami)]]
 }}</onlyinclude>
+
+=== Lofenyy ===
+<onlyinclude>{{#ifeq:{{{user|Lofenyy}}}|Lofenyy |
+* [[Samsung Galaxy Ace II X (samsung-kylessopen)]]
+}}</onlyinclude>
