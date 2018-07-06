@@ -13,12 +13,14 @@
 | display = 1080x1920 TFT
 | memory = 2 GB
 }}
-=== Contributors ===
+== Contributors ==
 
 * wfranken (porting and testing)
 * ollieparanoid (help via IRC)
 * ata2001 (help via IRC)
 * opendata (help via IRC)
+
+== Device knowledge ==
 
 === Special keycombo's ===
 
@@ -41,6 +43,8 @@ To install a custom recovery on the Xperia Z:
 * run <code>fastboot flash boot recovery.img</code> (replace <code>recovery.img</code> with the filename of your recovery of choice)
 
 This is also the reason why LineageOS boot.img is far larger than postmarketOS boot image (the recovery is inside it).
+
+== Current state ==
 
 === What works ===
 
@@ -69,7 +73,15 @@ This is also the reason why LineageOS boot.img is far larger than postmarketOS b
 * SD card
 * Wifi
 
-=== Installation procedure ==
+=== Mainline support ===
+
+* It should be possible to run [[The Mainline Kernel]] on the device. At least there is a <code>dts</code> file already in the 4.14 kernel: <code>arch/arm/boot/dts/qcom-apq8064-sony-xperia-yuga.dts</code>
+
+At the moment this is not tested yet.
+
+== Install ==
+
+=== Installation procedure ===
 
 Follow the [[Installation guide]].
 
@@ -79,10 +91,6 @@ Follow the [[Installation guide]].
 ** Open the back (eg. with a hairdryer) and try to unplug and plug the battery
 ** If all else fails: buy a new battery
 
-=== Other information ===
-
-* It should be possible to run [[The Mainline Kernel]] on the device. At least there is a <code>dts</code> file already in the 4.14 kernel: <code>arch/arm/boot/dts/qcom-apq8064-sony-xperia-yuga.dts</code>
-
-=== Links ===
+== References ==
 
 * [https://github.com/LineageOS/android_kernel_sony_msm8974 Kernel Source]
