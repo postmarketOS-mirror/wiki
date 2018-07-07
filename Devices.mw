@@ -557,6 +557,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
 |-
+  | [[Huawei_U8160_(huawei-u8160)|Huawei U8160]]
+  | huawei-u8160
+  | Kernel compiles, doesn't boot
+|-
   | [[Kobo Aura_(kobo-aura)|Kobo Aura]]
   | kobo-aura
   | Kernel is 2.6, will require patching.
