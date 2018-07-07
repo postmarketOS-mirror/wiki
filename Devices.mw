@@ -557,10 +557,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
 |-
-  | [[Huawei_U8160_(huawei-u8160)|Huawei U8160]]
-  | huawei-u8160
-  | Kernel compiles, doesn't boot
-|-
   | [[Kobo Aura_(kobo-aura)|Kobo Aura]]
   | kobo-aura
   | Kernel is 2.6, will require patching.
@@ -672,6 +668,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Sony_Ericsson_Xperia_mini_(semc-smultron)|Sony Ericsson Xperia mini]]
   | semc-smultron
   | builds, boots, works with Weston but osk-sdl doesn't work
+|-
+  | [[Vodafone_858_Smart_(huawei-u8160)|Vodafone 858 Smart (Huawei U8160)]]
+  | huawei-u8160
+  | Kernel compiles, doesn't boot
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
