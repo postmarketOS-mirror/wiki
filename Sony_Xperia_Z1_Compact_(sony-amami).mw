@@ -81,7 +81,7 @@ To get the device into fastboot mode: power it off, remove USB cable, hold down 
 
 The `flash_rootfs` took about 1 minute, and `flash_kernel` took 5-10 seconds.
 
-After flashing, you can unplug the USB cable, and he device will be off.  Then hold down the power button for a second or few, to turn it on, like normally.
+After flashing, you can unplug the USB cable, and the device will be off.  Then hold down the power button for a second or few, to turn it on, like normally.
 
 == UI Usability ==
 
