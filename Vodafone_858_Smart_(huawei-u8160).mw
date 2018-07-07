@@ -1,0 +1,46 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Huawei
+| name = Vodafone 858 Smart
+| codename = huawei-u8160
+| image = File:Vodafone-858-smart.jpg
+| imagecaption = Vodafone 858 Smart
+| releaseyear = 2011
+| originalsoftware = Google Android 2.2 (Froyo)
+| chipset = Qualcomm MSM7225 
+| cpu = 528 MHz ARM1136EJ-S
+| gpu = -
+| storage = 512 MiB ROM
+| display = 240x320
+| memory = 256 MiB RAM
+}}
+
+== Contributors ==
+* joshas
+
+== Maintainer(s) ==
+* joshas
+
+== What works ==
+* Kernel compilation (2.6.32.61)
+
+== What does not work ==
+* Everything else
+
+== How to enter flash mode ==
+* While holding Volume down, press and hold Power for 5-10 seconds. There are no visual cues when fastboot loads.
+
+== Recovery mode ==
+* While holding Volume up, press and hold Power button until recovery options appear.
+
+== Installation ==
+* Install system partition to SD card <code>pmbootstrap install --no-fde --sdcard=/dev/sd?</code>
+* Boot kernel using <code>pmbootstrap flasher boot</code>
+
+== Issues ==
+Current assumption is that CPU is not supported by armhf architecture, so it won't boot [https://gitlab.com/postmarketOS/pmbootstrap/issues/1203#note_85244831]
+
+== See also ==
+* Device package: [https://gitlab.com/joshas/pmbootstrap/commits/device-huawei-u8160]
+* Kernel source: [https://github.com/Alberto96/android_kernel_huawei_msm7x25]
+* Device information: [http://phonedb.net/index.php?m=device&id=2874&c=vodafone_858_smart__huawei_u8160]
