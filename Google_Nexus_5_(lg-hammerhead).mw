@@ -66,7 +66,7 @@ $ fastboot flash system /tmp/postmarketOS-export/lg-hammerhead-boot.img
 $ fastboot flash userdata /tmp/postmarketOS-export/lg-hammerhead-root.img
 </source>
 
-NOTE: The above --split instructions didn't work on 2018-07-07, for a D821.  It would either get a black screen during boot, or would show the postmarketOS logo with the message "system partition not found".  But doing the below did boot into Plasma Mobile on the first attempt, and it seems like it might be working, although the screen is dim (and especially dim in the lower-left corner):
+NOTE: The above --split instructions didn't work on 2018-07-07, for a D821.  It would either get a black screen during boot, or would show the postmarketOS logo with the message "system partition not found".  But doing the below did boot into Plasma Mobile on the first attempt, and it seemed like it might be working, although the screen is dim (and especially dim in the lower-left corner), and screen suddenly went black while using it after a few minutes:
 
 <source lang="shell-session">
 $ ./pmbootstrap.py init
