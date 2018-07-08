@@ -42,3 +42,4 @@
 == Links ==
 * {{github|1099}} initial pull request
 * Kernel used: https://github.com/LineageOS/android_kernel_samsung_msm8930-common
+* {{issue|1612}} Unable to install on S4 Mini (samsung-i9195)
