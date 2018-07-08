@@ -26,7 +26,7 @@ When you don't have a result, try to find a <code>dts</code> file with the same 
 == Enable the mainline kernel for a new device ==
 ''Before proceeding, make sure that you know that your device is supported by the mainline kernel. Otherwise use the source code of a vendor's fork of the kernel, which is known to work as described in the [[porting guide]].''
 
-# run <code>pmbootstrap.py menuconfig linux-postmarketos</code> and adjust the kernel config to add the drivers for the device if they are not enabled yet. Set as much drivers to build as external module as possible so the main vmlinuz filesize doesn't increase too much.
+# run <code>pmbootstrap.py kconfig edit postmarketos-qcom</code> and adjust the kernel config to add the drivers for the device if they are not enabled yet. Set as much drivers to build as external module as possible so the main vmlinuz filesize doesn't increase too much. Replace <code>qcom</code> with the kernel config you want to modify (see <code>ls aports/main/linux-postmarketos-*</code>).
 # Set the kernel dependency to <code>linux-postmarketos</code> in the APKBUILD for the device package if you want to make it the default kernel ([https://github.com/postmarketOS/pmbootstrap/issues/91#issuecomment-318825285 more information]).
 # Add the name of the generated dtb file (without path or extension) to the <code>deviceinfo_dtb</code> file in the deviceinfo file.
 
