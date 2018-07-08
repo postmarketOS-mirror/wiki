@@ -40,7 +40,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * OpenPandora handheld games console, mainline DTS
 * [http://projects.goldelico.com/p/gta04-main/ GTA04] - replacement board for OpenMoko Neo 1973/Freerunner (GTA01/02) with OMAP3 SoC, mainline DTS, supported by Replicant
 * Nintendo Switch
-* [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, OMAP3, PowerVR SGX 530, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloader might still be locked])
+* [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
 
 == Low Priority Devices ==
 
