@@ -1,0 +1,37 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Trend Plus
+| codename = KYLEPRO
+| image = File:kylepro.jpg
+| imagecaption =
+| releaseyear = 2013
+| originalsoftware = Android 4.2.2
+| chipset = BCM21664T
+| cpu = Cortex-A9 (Little endian, Dual Core)
+| gpu = Broadcom VideoCore IV
+| storage = 4GB
+| display = 480x800 (240dpi)
+| memory = 768MB
+}}
+
+== Contributors ==
+* Deata
+
+== Maintainer(s) ==
+
+== What works ==
+
+== What does not work ==
+
+== How to enter flash mode ==
+
+== Installation ==
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
