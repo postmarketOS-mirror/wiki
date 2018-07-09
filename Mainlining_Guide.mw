@@ -50,6 +50,7 @@ $ pmbootstrap export
 </syntaxhighlight>
 
 === Kernel ===
+{{note|The kernel source code is several gigabytes in size, this will take a while!}}
 Download a copy of <code>linux-next</code>:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code
