@@ -1,0 +1,52 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy SIII mini Value Edition
+| codename = golden ve
+| image = File:golden.png
+| imagecaption = Galaxy SIII mini VE
+| releaseyear = 2014
+| originalsoftware = Android 4.2.2 (Jelly Bean)
+| chipset = Marvell PXA986
+| cpu = Dual-core 1.2 GHz Cortex-A9
+| wifi = Marvell 88w8787
+| display = 480x800 4in
+| memory = 1 GB
+}}
+
+[[File:PmOS-i8200.jpg|thumb|right|Midori browser on Weston]]
+
+== Contributors ==
+* Ashymad
+
+== What works ==
+* Wi-Fi
+* Bluetooth (although untested it should work because it's the same chipset as Wi-Fi)
+* FDE
+* Touchscreen
+* Wayland
+* XWayland
+
+== What does not work ==
+* Flashing rootfs through Heimdall {{issue|581}}
+* Cell
+* Audio
+* ...
+
+== How to enter flash mode ==
+Hold <code>Home</code>+<code>Volume Down</code>+<code>Power</code> then release <code>Power</code> when phone vibrates. Press <code>Volume Up</code> upon seeing warning.
+
+== Installation ==
+<code>pmbootstrap init<br>
+pmbootstrap install<br>
+pmbootstrap flasher flash_kernel</code>
+* You can flash rootfs to sdcard or use netcat {{issue|456}}
+
+== See also ==
+* [https://github.com/MasterPlexus/kernel_i8200/tree/kk4.4 Kernel]
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
