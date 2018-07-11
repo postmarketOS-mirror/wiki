@@ -522,7 +522,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | Kernel compiles but does not boot
 |-
   | [[Google Pixel]]
-  | google-pixel
+  | google-sailfish
   | Kernel compiles, panics on boot
 |-
   | [[Generic PC]] hardware (inc. BIOS based Windows tablets)🔼
