@@ -23,7 +23,7 @@
 
 == What works ==
 
-* '''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII without LTE).'''
+* '''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII international GSM version without LTE).  (Neither of these SIII models should be confused with the North American SIII models, which require OS builds.)'''
 
 * Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
 * Touchscreen
