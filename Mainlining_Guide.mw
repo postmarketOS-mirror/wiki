@@ -37,7 +37,7 @@ It is recommended to have a working [[Serial_debugging|serial cable]] for your d
 If you have not done this already, please download and initialize <code>pmbootstrap</code>. You can stay with the defaults, just make sure to select the right device, and (to save you some time) <code>none</code> as user interface. Replace <code>~/code</code> with the path where you would like to store the source code.
 <syntaxhighlight lang="shell-session">
 $ cd ~/code
-$ git clone https://github.com/postmarketOS/pmbootstrap
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap
 $ cd pmbootstrap
 $ alias pmbootstrap=$PWD/pmbootstrap.py
 $ pmbootstrap init
