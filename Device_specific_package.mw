@@ -22,7 +22,7 @@ package() {
 }
 </syntaxhighlight>
 
-The variables <code>$startdir</code> and <code>$pkgname</code> are always available where they are used, and must be passed to these functions. <code>devicepkg_build</code> and <code>devicepkg_package</code> are simple shell scripts, and they get packaged from [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/main/devicepkg-dev here].
+The variables <code>$startdir</code> and <code>$pkgname</code> are always available where they are used, and must be passed to these functions. <code>devicepkg_build</code> and <code>devicepkg_package</code> are simple shell scripts, and they get packaged from [https://gitlab.com/postmarketOS/pmbootstrap/tree/master/aports/main/devicepkg-dev here].
 
 === devicepkg_build ===
 Optionally creates an udev rule for the device's touch screen, based on the data from the <code>deviceinfo</code>. We can extend this to do more when it makes sense.
