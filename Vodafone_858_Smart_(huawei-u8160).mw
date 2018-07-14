@@ -38,8 +38,8 @@
 * Boot kernel using <code>pmbootstrap flasher boot</code>
 
 == Issues ==
-Current assumption is that CPU is not supported by armhf architecture, so it won't boot [https://gitlab.com/postmarketOS/pmbootstrap/issues/1203#note_85244831]
-Looks like that only boot.img that can be booted using fastboot boot command is the one from stock device image. CyanogenMod boot.img fails to boot, but works when flashed to device.
+* Current assumption is that CPU is not supported by armhf architecture, so it won't boot [https://gitlab.com/postmarketOS/pmbootstrap/issues/1203#note_85244831]
+* boot.img that can be booted using fastboot boot command is the one from stock device image. CyanogenMod boot.img fails to boot, but works when flashed to device.
 
 == See also ==
 * Device package: [https://gitlab.com/joshas/pmbootstrap/commits/device-huawei-u8160]
