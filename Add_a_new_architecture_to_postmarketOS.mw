@@ -1,0 +1,27 @@
+If you would like to port to a device architecture, that is supported by Alpine, but not by postmarketOS, you can bootstrap the architecture in pmOS with the following steps. As usually, please correct this manual if you find errors or outdated information in it.
+
+1. Run all <code>pmbootstrap</code> calls with the following parameter to avoid querying the pmOS repos for the new architecture and therefore failing: <code>--mirror-pmOS=""</code>
+
+2. Add the architecture to <code>build_device_architectures</code> in <code>pmb/config/__init__.py</code>.
+
+3. Create aports for cross compilation (replace <code>armhf</code> with your new architecture):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap --mirror-pmOS="" aportgen binutils-armhf gcc-armhf musl-armhf
+</syntaxhighlight>
+
+4. Try to build one package for the new architecture. pmbootstrap will build necessary packages first, such as the cross compiler. If you get any Python errors, you might need to adjust architecture mappings in <code>pmb/parse/arch.py</code>.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap --mirror-pmOS="" build hello-world --arch=armhf
+</syntaxhighlight>
+
+5. Build your device's linux-... package.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap --mirror-pmOS="" build linux-samsung-i9100
+</syntaxhighlight>
+
+6. Do a full installation:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap --mirror-pmOS="" install
+</syntaxhighlight>
+
+If everything worked out, please make one separate merge request to add the new architecture and mention there which device you have ported. After that merge request is through, make another one for the device.
