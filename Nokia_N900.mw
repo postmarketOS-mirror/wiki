@@ -426,14 +426,12 @@ make gps2
 gps2 will not talk to gpsd, so it is only useful to verify that hardware is working.
 
 === Resources ===
-
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-n900 Device package]
+* [https://gitlab.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-n900 Device package]
 * [https://kernel.org Kernel source]
 * [https://web.archive.org/web/20131117073524/http://skeiron.org/tablets-dev/nokia_N900/ Images and Flashers for Maemo]
-
+* {{issue|1617}} issue about Wi-Fi Setup and Keyboard layout
 
 === Helpful Links for Porting ===
-
 * [https://neo900.org/stuff/block-diagrams/n900/n900.html Device schematic]
 * [http://plan9.stanleylieber.com/hardware/n900/n900.schematics.pdf Very detailed schematic]
 * [https://github.com/archlinuxarm-n900/alarm-n900/wiki/Hardware-support Arch Linux ARM - N900 hardware components list]
