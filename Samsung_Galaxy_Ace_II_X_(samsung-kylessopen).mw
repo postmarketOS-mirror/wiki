@@ -41,6 +41,8 @@
 Note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device.
 
 == Installation ==
+Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
+
 ; 1. init
 <source>$ ./pmbootstrap.py init</source>
 Select "samsung-kylessopen" as the target device.
