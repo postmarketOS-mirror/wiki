@@ -33,10 +33,10 @@
 
 == What does not work ==
 '''Graphical interfaces'''
-* XFCE4 (X11)
-* Hildon (X11)
-* Matchbox (X11)
-* MATE (X11)
+* Hildon (X11) (possibly recommended)
+* Matchbox (X11) (possibly recommended)
+* MATE (X11) (not recommended)
+* XFCE4 (X11) (not recommended)
 
 Note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device.
 
