@@ -38,7 +38,7 @@
 * MATE (X11) (not recommended)
 * XFCE4 (X11) (not recommended)
 
-Note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device.
+Note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device (see {{issue|1618}}).
 
 == Installation ==
 Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
