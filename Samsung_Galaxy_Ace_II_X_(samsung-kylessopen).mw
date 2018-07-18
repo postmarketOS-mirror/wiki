@@ -52,7 +52,7 @@ Select "samsung-kylessopen" as the target device and select a working recommende
 Full disk encryption is the default, though it may not work. Try --no-fde if your device isn't working. 
 
 ; 3. flash
-Ensure that the USB cable is disconnected, then hold down volume down + Home + Power for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source>$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source>$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
+Ensure that the USB cable is disconnected, then hold down volume down + Home for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source>$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source>$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
 
 == Troubleshooting ==
 If you can't get SSH over USB to work, see [[USB_Network]].
