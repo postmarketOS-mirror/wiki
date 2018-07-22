@@ -1,5 +1,5 @@
 <!--Maybe it's time to replace the Weston screenshot here?-->
-[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://github.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
+[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://gitlab.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
 
 <!-- NOTE: when we change the bold text into headlines, for some reason they get collapsed in the mobile view and can *not* be un-collapsed. This only happens on the start page. If you know more, please write in: https://github.com/postmarketOS/wiki/issues -->
 
