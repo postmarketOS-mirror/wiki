@@ -17,6 +17,7 @@
 
 == Contributors ==
 * mishaor
+* joshas
 
 == Maintainer(s) ==
 * mishaor
@@ -38,5 +39,6 @@
 3. If the blue LED is on, then you successfully entered the Fastboot mode!
 
 == See also ==
-[https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently used]
-[https://www.gsmarena.com/sony_ericsson_xperia_mini-3947.php Device specifications]
+* [https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently used]
+* [https://www.gsmarena.com/sony_ericsson_xperia_mini-3947.php Device specifications]
+* {{MR|1644}} initial merge request
