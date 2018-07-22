@@ -7,6 +7,8 @@ This gives you a menu where you can select and deselect all kernel configuration
 
 [[File:KernelConfig.png|800px]]
 
+If you don't like the terminal user interface, you can also use <code>pmbootstrap kconfig edit -x</code> or <code>pmbootstrap kconfig edit -g</code>. See <code>pmbootstrap kconfig edit -h</code> for details.
+
 == Options aren't always visible! ==
 If you're looking for an option and you just can't find it, then it might not show up because it depends on other options that have been disabled. In that case, press <code>/</code> and search for the option in question. You will see the dependencies. Then use the search again to find these dependencies, and enable them until you can finally enable the option you wanted to change in the first place.
 
