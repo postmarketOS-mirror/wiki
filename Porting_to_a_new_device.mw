@@ -196,7 +196,7 @@ $ pmbootstrap kconfig edit linux-wiki-example
 </syntaxhighlight>
 
 ===== Make kconfig check happy =====
-{{note|Consider using <code>kconfig edit -x</code> or <code>-g</code> instead to get a GUI instead of the terminal interface. Details: <code>pmbootstrap kconig edit -h</code>}}
+{{note|Consider using <code>kconfig edit -x</code> or <code>-g</code> to get a GUI instead of the terminal interface. Details: <code>pmbootstrap kconig edit -h</code>}}
 Check what you need to adjust in the kernel config before it can be used with postmarketOS. Keep [[Kernel_configuration|changing the options]], until everything passes.
 
 <syntaxhighlight lang="shell-session">
