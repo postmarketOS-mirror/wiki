@@ -331,6 +331,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | sony-coconut
   | Y  ||  || Y || Y ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Sony Ericsson Xperia mini (semc-smultron)|Sony Ericsson Xperia mini]]
+  | style="white-space: nowrap;" | sony-smultron
+  | Y  ||  || Y || Y ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   | style="white-space: nowrap;" | [[Sony Xperia M (sony-nicki)|Sony Xperia M]]
   | style="white-space: nowrap;" | sony-nicki
   | Y  || Y || Y || Y || - ||  ||  || - || P ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -672,10 +676,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[Google Chromecast (google-anchovy)|Google Chromecast 1st gen]]
   | google-anchovy
   | Kernel compiles, my personal Chromecast's bootloader is too new to load from USB.
-|-
-  | [[Sony_Ericsson_Xperia_mini_(semc-smultron)|Sony Ericsson Xperia mini]]
-  | semc-smultron
-  | builds, boots, works with Weston but osk-sdl doesn't work
 |-
   | [[Vodafone_858_Smart_(huawei-u8160)|Vodafone 858 Smart (Huawei U8160)]]
   | huawei-u8160
