@@ -82,3 +82,6 @@ Something like that should help, see [https://github.com/postmarketOS/pmbootstra
 $ echo 0 > /sys/class/graphics/fb0/blank
 $ echo 1 > /sys/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.134/leds/lcd-backlight/brightness
 </syntaxhighlight>
+
+== Debugging the kernel driver ==
+If you have some time to spend on getting your video driver working right, consider adding <code>printk</code> statements in your kernel to understand what it does and where it fails. After building your kernel and flashing, check <code>dmesg</code> for your debug output. See [https://gitlab.com/postmarketOS/pmbootstrap/issues/1618#note_88908569 #1618 (comment)] for a detailed example.
