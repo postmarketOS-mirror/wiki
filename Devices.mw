@@ -187,6 +187,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   | style="white-space: nowrap;" | motorola-potter
   | Y  || P ||  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
+  | style="white-space: nowrap;" | [[Moto X|Moto X (2013)]]
+  | style="white-space: nowrap;" | motorola-ghost
+  | Y  || Y ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||   ||  ||  ||
+|-
   | style="white-space: nowrap;" | [[Mozilla Flame (t2m-flame)|Mozilla Flame]]🔼
   | style="white-space: nowrap;" | t2m-flame
   | Y  || Y  || Y  || Y  || P  || Y ||  ||  || ||  ||  ||  ||  ||  ||  ||  ||  || 
@@ -205,7 +209,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |-
   | style="white:space: nowrap;" | [[OnePlus One (oneplus-bacon)|OnePlus One]]
   | style="white-space: nowrap;" | oneplus-bacon
-  | Y  || Y  || Y  || P  ||  ||  ||  || P ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  || Y  || P  ||  ||  ||  || P ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
 |-
   | style="white:space: nowrap;" | [[OnePlus Two (oneplus-oneplus2)|OnePlus Two]]
   | style="white-space: nowrap;" | oneplus-oneplus2
@@ -584,10 +588,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[LG V500 | LG G Pad 8.3 ]]
   | lg-v500
   | kernel won't compile
-|-
-  | [[Moto X|Moto X]]
-  | motorola-ghost
-  |
 |-
   | [[Moto X 2014|Moto X 2014]]
   | motorola-x-2014
