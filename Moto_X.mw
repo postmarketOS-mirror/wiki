@@ -14,8 +14,11 @@
 | memory = 2 GB
 }}
 
-
+== Contributors ==
+* Xinayder
 
 == Entering &quot;Fastboot mode&quot; ==
-
 Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
+
+== See also ==
+* {{MR|1646}} initial merge requests
