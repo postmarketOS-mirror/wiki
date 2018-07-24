@@ -20,8 +20,7 @@ What I do:
 * [https://github.com/postmarketOS/osk-sdl OSK-SDL], a touchscreen keyboard for running in initramfs, used for unlocking LUKS rootfs on boot for touch-only devices
 
 === Oliver Smith (ollieparanoid) ===
-Donate via:
-* [https://liberapay.com/ollieparanoid Liberapay] ([https://ollieparanoid.github.io/page/donate/ why?])
+I am not accepting donations currently. If you would like to donate something, take a look at the organizations that craftyguy listed above: FSF, EFF, MSF. You can also show your support by adding a star to the postmarketOS gitlab projects, subscribing and posting to our subreddit and by telling your favorite journalists (bloggers, podcasters, ...) about postmarketOS.
 
 What I do:
 * Worked on <code>pmboostrap</code> and postmarketOS about one year before [https://ollieparanoid.github.io/post/postmarketOS/ releasing] it
