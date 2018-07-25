@@ -27,7 +27,7 @@ pmbootstrap flasher flash_kernel
 pmbootstrap flasher flash_rootfs
 </pre>
 
-For the instructions to work, the device must be in the bootloader mode. While flashing, it's normal to see "variable not supported!" messages.
+The device must be in bootloader mode. While flashing, it's normal to see "variable not supported!" messages.
 
 == See also ==
 * {{MR|1646}} initial merge requests
