@@ -149,3 +149,8 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * ☐ Get Freedreno working on the OnePlus One: XFCE4 works, but 3D applications don't
 * ☐ Get WiFi working on the OnePlus One
 * ☐ Get oFono working on the OnePlus One
+
+=== neilvandyke ===
+# Get the DrRacket IDE polished and usable on smartphone-sized devices with a particular pmOS UI (probably Matchbox), as a proof of viability of building out userland with cross-platform handheld&desktop apps in Racket ([http://www.neilvandyke.org/racket-postmarketos/])
+# Get a daily driver configured with WiFi (including AP UI), email, IRC, Web, offline OpenStreetMap, DrRacket.
+# Recruit programmers for both systems-level device support and userland.
