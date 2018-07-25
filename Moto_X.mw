@@ -20,5 +20,14 @@
 == Entering &quot;Fastboot mode&quot; ==
 Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
 
+== Installation ==
+<pre>
+pmbootstrap install
+pmbootstrap flasher flash_kernel
+pmbootstrap flasher flash_rootfs
+</pre>
+
+For the instructions to work, the device must be in the bootloader mode. While flashing, it's normal to see "variable not supported!" messages.
+
 == See also ==
 * {{MR|1646}} initial merge requests
