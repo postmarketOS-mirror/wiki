@@ -81,6 +81,11 @@ finished. total time: 415.840s</pre>
 
 * I would recommend installing and using [[MATE]] as it is very complete
 * To run Internet via USB see [[USB Internet]]
+
+* Correct battery charge info appears to be in: /sys/bus/i2c/drivers/bq27xxx-battery/0-0055/power_supply/bq27541-0/charge_now
+
+* It's possible that Nexus 7 2013 units have flash hardware problems: [https://www.androidpolice.com/2015/04/19/reports-suggest-2013-nexus-7-units-are-failing-at-an-alarming-rate-not-likely-a-result-of-firmware-updates/ AndroidPolice.com 2015-04-19], [https://appleinsider.com/articles/13/06/18/googles-nexus-7-tablets-dying-early-possibly-due-to-cheap-memory appleinsider.com 2013-06-18]
+
 === Links ===
 
 
