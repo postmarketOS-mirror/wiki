@@ -63,7 +63,7 @@ sudo nmcli device wifi connect "ssd" password "pass" ifname wlan0</pre>
 <pre>./pmbootstrap.py flasher flash_rootfs --partition userdata
 ./pmbootstrap.py flasher flash_kernel</pre>
 
-When I tried flashing rootfs, it would fail almost immediately after erasing.  I installed TWRP, and tried a few things to "wipe" it, which worked, and then permitted the good flash below.  (Note that, although the instructions for TWRP 3.2.2-0 for asus-flo suggest that you might need to do "fastboot reboot" and then hold down the buttons, that only resulted in what appeared to be boot loops of TWRP -- what worked instead was to use the buttons to power off, and then use the buttons to boot recovery.)
+When I tried flashing rootfs, it would fail almost immediately after erasing.  I installed TWRP, and tried a few things to "wipe" it, which worked, and then permitted the good flash (with hildon UI) below.  (Note that, although the instructions for TWRP 3.2.2-0 for asus-flo suggest that you might need to do "fastboot reboot" and then hold down the buttons, that only resulted in what appeared to be boot loops of TWRP -- what worked instead was to use the buttons to power off, and then use the buttons to boot recovery.)
 
 <pre>(native) flash rootfs image
 target didn't report max-download-size
