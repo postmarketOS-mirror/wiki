@@ -77,6 +77,8 @@ finished. total time: 415.840s</pre>
 
 * When I tried flashing with the Hildon UI (on 2018-07-27), it booted to the blue Hildon wallpaper, but the wallpaper only filled a square subset of the display.
 
+* For unknown reasons, I'm seeing rootfs flash times that seem slow.  For example, a flash of plasma-mobile ui (808 MB) took 850.323s, with 808.169s of that in sending phase.  This is approx. 10 times the duration for flashing sony-amami from the same laptop.
+
 * I would recommend installing and using [[MATE]] as it is very complete
 * To run Internet via USB see [[USB Internet]]
 === Links ===
