@@ -62,6 +62,19 @@ sudo nmcli device wifi connect "ssd" password "pass" ifname wlan0</pre>
 * Flash the system to a userdata partition to have 10GB free space. If you don't see 10GB install TWRP recovery and format system/all partitions and start again:
 <pre>./pmbootstrap.py flasher flash_rootfs --partition userdata
 ./pmbootstrap.py flasher flash_kernel</pre>
+
+When I tried flashing rootfs, it would fail almost immediately after erasing.  I installed TWRP, and tried a few things to "wipe" it, which worked, and then permitted the good flash below.  (Note that, although the instructions for TWRP 3.2.2-0 for asus-flo suggest that you might need to do "fastboot reboot" and then hold down the buttons, that only resulted in what appeared to be boot loops of TWRP -- what worked instead was to use the buttons to power off, and then use the buttons to boot recovery.)
+
+<pre>(native) flash rootfs image
+target didn't report max-download-size
+erasing 'userdata'...
+OKAY [  0.977s]
+sending 'userdata' (395264 KB)...
+OKAY [395.414s]
+writing 'userdata'...
+OKAY [ 19.449s]
+finished. total time: 415.840s</pre>
+
 * I would recommend installing and using [[MATE]] as it is very complete
 * To run Internet via USB see [[USB Internet]]
 === Links ===
