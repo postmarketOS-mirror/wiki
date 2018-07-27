@@ -1,0 +1,182 @@
+As a proper Linux distribution, postmarketOS wants to provide the user multiple interfaces to choose from.
+We try to list each possible interface we can use, and if they require maintenance from our side or not.
+
+= Interfaces =
+
+There are several types of interfaces which we divide into categories based on their use-cases.
+
+== Smartphones ==
+
+{| class="wikitable"
+! style="text-align: center;" | Packaged
+! Name
+! Source
+! From project
+! Unmaintained
+! Notes
+|-
+| style="text-align: center;" | Y
+| [https://www.plasma-mobile.org/ Plasma Mobile]
+| [https://github.com/kde link]
+| KDE
+| 
+| 
+|-
+| style="text-align: center;" | Y
+| [https://maemo-leste.github.io/ Hildon]
+| [https://github.com/maemo-leste link]
+| Maemo
+| 
+| Still uses GTK2
+|-
+| style="text-align: center;" | P
+| Luna
+| [https://github.com/webOS-ports link]
+| WebOS
+| 
+| No Meta UI package yet
+|-
+| style="text-align: center;" | P
+| Phosh
+| [https://source.puri.sm/Librem5/phosh link]
+| Librem 5/PureOS
+| 
+| Has a [https://gitlab.com/postmarketOS/pmbootstrap/tree/feature/phosh WIP branch]
+|-
+| style="text-align: center;" | 
+| [https://ubports.com/ Unity 8]
+| [https://github.com/ubports link]
+| UBPorts
+| 
+|-
+| style="text-align: center;" | 
+| Glacier
+| [https://github.com/nemomobile-ux link]
+| Nemo
+|
+| [https://github.com/NotKit/archlinux-nemo Arch Linux PKGBUILDs we can use as reference]
+|-
+| style="text-align: center;" | 
+| Gaia
+| [https://github.com/mozilla-b2g/gaia link]
+| FirefoxOS
+| Yes
+| 
+|}
+
+== Feature phones ==
+{| class="wikitable"
+! style="text-align: center;" | Packaged
+! Name
+! Source
+! From project
+! Unmaintained
+! Notes
+|-
+| style="text-align: center;" | 
+| [https://projects.goldelico.com/p/gta04-qtmoko/ QtMoko2]
+| [https://projects.goldelico.com/p/gta04-qtmoko/source/tree/master/ link]
+| QtMoko2
+|
+|
+|}
+
+== PDA's ==
+{| class="wikitable"
+! style="text-align: center;" | Packaged
+! Name
+! Source
+! From project
+! Unmaintained
+! Notes
+|-
+| style="text-align: center;" | Y
+| [https://www.yoctoproject.org/software-item/matchbox/ Matchbox]
+| [https://git.yoctoproject.org/ link]
+| The Yocto Project
+| 
+|-
+| style="text-align: center;" | 
+| Open Palmtop Integrated Environment
+| [https://github.com/opieproject/opie link]
+|
+| Yes
+|
+|}
+
+== Smart Watches ==
+{| class="wikitable"
+! style="text-align: center;" | Packaged
+! Name
+! Source
+! From project
+! Unmaintained
+! Notes
+|-
+| style="text-align: center;" | 
+| [https://asteroidos.org/ AsteroidUI]
+| [https://github.com/AsteroidOS/ link]
+| AsteroidOS
+| 
+| Bloo, from Matrix, has APKBUILDs but can't yet access them
+|}
+
+== Smart TV's ==
+{| class="wikitable"
+! style="text-align: center;" | Packaged
+! Name
+! Source
+! From project
+! Unmaintained
+! Notes
+|}
+
+== Desktop ==
+{| class="wikitable"
+! style="text-align: center;" | Packaged
+! Name
+! Source
+! From project
+! Unmaintained
+! Notes
+|-
+| style="text-align: center;" | Y
+| [https://xfce.org/ XFCE4]
+| [https://git.xfce.org/ link]
+| XFCE
+|
+| Uses Alpine's packaging
+|-
+| style="text-align: center;" | Y
+| [https://mate-desktop.org/ Mate]
+| [https://github.com/mate-desktop link]
+| Mate
+|
+| Uses Alpine's packaging
+|-
+| style="text-align: center;" | Y
+| [https://i3wm.org/ i3]
+| [https://github.com/i3 link]
+| i3
+|
+| Uses Alpine's packaging
+|-
+| style="text-align: center;" | P
+| [https://www.gnome.org/ GNOME3]
+| [https://gitlab.gnome.org/GNOME link]
+| GNOME
+|
+| Alpine has it packaged for x86_64 only, and there is no UI meta package for it yet
+|-
+| style="text-align: center;" | P
+| [https://www.kde.org/plasma-desktop Plasma Desktop]
+| [https://github.com/kde link]
+| KDE
+|
+| Most of it is packaged already because of Plasma Mobile, except for a few packages
+|}
+
+= Related issues =
+
+* [https://gitlab.com/postmarketOS/pmbootstrap/issues/62 #62], Mobile UI
+* [https://gitlab.com/postmarketOS/pmbootstrap/issues/944 #944], Feature phone UI
