@@ -1,3 +1,6 @@
+This page is outdated, and Plasma Mobile nowadays is fully packaged.
+
+
 This page keeps track of what needs to be packaged to get Plasma Mobile working ([https://github.com/postmarketOS/pmbootstrap/issues/161 #161]). The minimal set of programs is already packaged (thanks to PureTryOut!). See [[Plasma Mobile]] for further documentation on getting it running.
 
 The dependencies listed are dependencies of packages not packaged by Alpine. This list is subject to change. The list is based on [https://github.com/blue-systems/pm-arch/tree/master/packages this Arch repository].
