@@ -35,7 +35,7 @@ To control display from a terminal, first set DISPLAY environment variable:
 export DISPLAY=:0.0
 </source>
 
-The <B>xset</B> command can be used to turn diplay on and off, or set a display timeout value.
+The <B>xset</B> command can be used to turn display on and off, or set a display timeout value.
 <source lang="shell">
 xset dpms force off    # To turn off display
 xset dpms force on     # To turn the display back on
