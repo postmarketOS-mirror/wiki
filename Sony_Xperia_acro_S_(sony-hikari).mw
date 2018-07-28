@@ -1,0 +1,41 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia acro S
+| codename = hikari
+| image = File:Sony Xperia acro S.jpg
+| imagecaption = Sony Xperia acro S with its included dock
+| releaseyear = 2012
+| originalsoftware = Android 4.0 (Ice Cream Sandwich), Linux 3.4.0
+| chipset = Qualcomm MSM8260 Snapdragon S3
+| cpu = 1.5 GHz Scorpion
+| gpu = Adreno 220
+| storage = 16 GB
+| display = 720 x 1280
+| memory = 1 GB
+}}
+
+== Contributors ==
+* intgr
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+Nothing so far.
+
+== What does not work ==
+
+== How to enter flash mode ==
+Power off the device. Hold Volume Up as you plug the USB cable into the device.
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+-->
