@@ -77,7 +77,7 @@ Source:
 
 === Create touchscreen calibration file ===
 
-Some devices require touchscreen calibration for osk-sdl to properly handle taps on the screen. To create the calibration file necessary for osk-sdl, run the <code>ts_calibrate</code> utility and tap the small X's on screen as accurately as you can. This will generate a file <code>/etc/pointercal</code>.
+Some devices require touchscreen calibration for osk-sdl to properly handle taps on the screen. To create the calibration file necessary for osk-sdl, run the <code>ts_calibrate</code> utility and tap the small X's on screen as accurately as you can. This will generate a file <code>/etc/pointercal</code>. Use <code>ts_test</code> utility to check if touchscreen is working correctly after calibration.
 
 After running the calibration, re-run osk-sdl to confirm that touch input is being appropriately handled.
 
