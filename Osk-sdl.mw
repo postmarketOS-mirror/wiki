@@ -32,7 +32,7 @@ To run osk-sdl from pmOS (not in initramfs):
 
 <syntaxhighlight lang="shell-session">
 $ sudo su
-# export DFBARGS="system=fbdev,no-cursor,linux-input-grab"
+# export DFBARGS="system=fbdev,no-cursor,disable-module=linux_input"
 # export TSLIB_TSDEVICE=/dev/input/eventX
 # osk-sdl -d a -n a -c /etc/osk.conf -v
 </syntaxhighlight>
