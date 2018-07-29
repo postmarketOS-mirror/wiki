@@ -1,0 +1,49 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  Mi 3
+| codename = cancro
+| image = File:cancro.jpg
+| imagecaption = Xiaomi Mi 3 running Weston
+| releaseyear = 2013
+| originalsoftware = Android 4.3
+| chipset = Snapdragon 800 8274AB
+| cpu = Quad Core Krait 400
+| gpu = Adreno 330
+| storage = 16GB / 64GB ROM eMMC 4.5
+| display = IPS Display 5 inches @ 1920px x 1080px (441 PPI) (Manufactured by Sharp or LG)
+| memory =  2GB RAM LPDDR3
+}}
+
+== Contributors ==
+* atheris84
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+* Flashing
+* USB Network
+* Display
+
+== What does not work ==
+
+* Touchscreen
+* WiFi
+
+== How to enter flash mode ==
+* Power + Vol-down (fastboot)
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
+* {{MR|https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1650}} Initial merge request
