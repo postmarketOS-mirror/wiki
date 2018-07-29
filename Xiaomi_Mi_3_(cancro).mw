@@ -46,4 +46,4 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* {{MR|https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1650}} Initial merge request
+* {{MR|1650}} Initial merge request
