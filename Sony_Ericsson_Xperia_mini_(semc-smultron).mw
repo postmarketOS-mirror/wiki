@@ -32,6 +32,9 @@
 == What does not work ==
 * Everything else
 
+== How to unlock bootloader ==
+[https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader#unlock-code Official method]
+
 == How to enter Fastboot ==
 1. Hold the Volume Up button
 
