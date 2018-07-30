@@ -1,3 +1,16 @@
+=== SSH Config ===
+When postmarketOS is reinstalled, a new ssh host key will be generated. Your SSH client will detect this, and refuse to connect, requiring you to run <code>ssh-keygen -R 172.16.42.1</code> each time a new host key is generated.
+
+To disable this check, and to allow you to connect by running <code>ssh postmarketos</code>, add the following to your <code>~/.ssh/config</code>:
+ Host postmarketos
+     HostName 172.16.42.1
+     StrictHostKeyChecking no
+     UserKnownHostsFile=/dev/null
+
+{{note|'''Warning''': Ignoring host keys could leave you vulnerable to a [https://en.wikipedia.org/wiki/Man-in-the-middle_attack Man-in-the-middle attack]}}
+
+=== Misc ===
+
 * The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
 * Browse the Linux source with links to all references [http://elixir.free-electrons.com here]
 * Qualcomm and maybe some other Androids can simply reboot from postmarketOS (or any Linux distro) into your bootloader or recovery with <code>reboot -f bootloader</code> and <code>reboot -f recovery</code>
