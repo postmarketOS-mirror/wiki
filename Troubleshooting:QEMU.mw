@@ -34,3 +34,6 @@ $ pmbootstrap qemu --host-qemu
 
 This option can be combined with <code>--display</code> or 
 <code>--spice</code>.
+
+=== See also ===
+* {{issue|1623}} <code>pmbootstrap qemu</code> with proprietary nvidia drivers
