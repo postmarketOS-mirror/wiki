@@ -33,7 +33,7 @@ Power off the device. Hold Volume Up as you plug the USB cable into the device.
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
-Follow [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader|Sony's instructions to unlock the bootloader].
+Follow [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader Sony's instructions to unlock the bootloader].
 
 == See also ==
 <!--
