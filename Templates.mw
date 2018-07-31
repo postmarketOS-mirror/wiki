@@ -9,6 +9,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 ** [[Template:Infobox_device|device]]
 * [[Template:issue|issue]] ''gitlab issue link''
 * [[Template:MR|MR]] ''gitlab merge request link''
+* [[Template:File|file]] ''gitlab or github file link''
 * [[Template:Note|note]]
 * [[Template:Outdated|outdated]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
