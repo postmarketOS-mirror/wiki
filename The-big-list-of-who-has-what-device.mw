@@ -152,3 +152,11 @@
 <onlyinclude>{{#ifeq:{{{user|wfranken}}}|wfranken|
 * [[Sony Xperia Z (sony-yuga)]]
 }}</onlyinclude>
+
+=== Oxr463 ===
+<onlyinclude>{{#ifeq:{{{user|Oxr463}}}|Oxr463 |
+* [[Amazon_Fire-Phone| Amazon Fire Phone]]
+* Asus T100TA
+* Motorola Droid RAZR (spyder)
+* [[Samsung_Galaxy SII (samsung-i9100)]]
+}}</onlyinclude>
