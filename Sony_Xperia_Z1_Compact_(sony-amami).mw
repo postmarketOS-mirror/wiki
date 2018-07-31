@@ -59,6 +59,8 @@
 
 == Building and Flashing ==
 
+Follow [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader Sony's instructions to unlock the bootloader].
+
 <source lang="bash">./pmbootstrap.py init</source>
 
 [[User-Interfaces|User interface]] support (with current downstream kernel; might change when replaced with mainline kernel):
