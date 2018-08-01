@@ -152,7 +152,7 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 
 === [[User:Neilvandyke|neilvandyke]] ===
 <onlyinclude>{{#ifeq:{{{user|Neilvandyke}}}|Neilvandyke |
-* Get the DrRacket IDE polished and usable on smartphone and tablet devices with a particular pmOS UI (probably Matchbox), as a proof of viability of building out userland with cross-platform handheld&desktop apps in Racket ([http://www.neilvandyke.org/racket-postmarketos/ racket-postmarketos])
+* Build out a developer-friendly PostmarketOS UI option, emphasizing the Racket programming language platform ([http://www.neilvandyke.org/postmarketos/])
 * Get a daily driver configured with WiFi (including AP UI), email, IRC, Web, offline OpenStreetMap, DrRacket.
 * Find volunteer programmers for systems-level device support, UI, and apps.
 }}</onlyinclude>
