@@ -1,5 +1,24 @@
 A Micro-USB Interface Controller (MUIC) is a USB multiplexer/switch. (Not a USB Host Controller like the name might imply)
 
+{| class="wikitable"
+|+UART Modes
+! Resistance
+! Jig
+! Boot
+|-
+|150k
+|Inactive
+|Inactive
+|-
+|523k
+|Active
+|Inactive
+|-
+|619k
+|Active
+|Active
+|}
+
 = Links =
 
 [[Serial_debugging#Samsung_USB_debug_cable]]
