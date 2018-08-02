@@ -1,6 +1,96 @@
-{{note|If you know what you are doing, using <code>pmbootstrap build hello-world --src /path/to/source/code</code> is probably a lot easier. It requires the APKBUILD to use the builddir variable to work properly.}}
-=== Introduction ===
-The most common use-case is, that you want to package an Android kernel. But it does not compile with our GCC6, so you need to patch the kernel. Unlike in the Android world, we do not fork the kernel repository and apply our patches there. Instead we ship our custom patches with the package build recipe in the aport folder.
+This wiki article explains how to patch the source code of a package. Such patching enables you to do the following:
+* fix compiler errors
+* add debug output to understand bugs
+* fix bugs in the software
+* develop new features
+
+== Finding the aport ==
+First of all, you need to find the aport of the package. The aport is the package build recipe, consisting at least of one APKBUILD file. In postmarketOS, these can be found in <code>pmbootstrap/aports</code> (that may change in the future, see {{issue|383}}). If you found it there already, you can continue with the next section.
+
+postmarketOS is building on Alpine Linux, which means if you can't find a certain package in our aports folder, you need to grab the aport from Alpine. They store their aports in a git repository as well. You can either manually download one file after another for your aport from a git frontend such as [https://github.com/alpinelinux/aports/tree/master/main/busybox GitHub] or clone the entire git repository to your harddrive (see listing below). Make sure you put the original aport from Alpine into the <code>temp</code> folder of the postmarketOS aports.
+
+<syntaxhighlight lang="shell-session">
+$ git clone "https://git.alpinelinux.org/cgit/aports"
+$ cd aports
+$ cp -r main/busybox ~/code/pmbootstrap/aports/temp/
+(adjust the pmbootstrap path as necessary)
+</syntaxhighlight>
+
+== Using "build --src" ==
+Let's quickly take a look at the aport's <code>APKBUILD</code>. If it has a <code>builddir=</code> line inside it, you can use pmbootstrap's <code>build --src</code> feature, in that case read on here. Otherwise, see the legacy guide below.
+
+=== Get the package's source code ===
+With this approach, we extract the package's source code somewhere on your disk (so you can easily modify it outside of the chroots). To directly use the source tarball, which pmbootstrap also uses to build the aport, do the following:
+* start building the package: <code>pmbootstrap build hello-world</code>
+* open a second terminal with <code>pmbootstrap log</code>
+* in that terminal, you will see that it starts downloading the source package. mind the file name displayed there, and wait until the source has been downloaded.
+* then abort the build with <code>^C</code> (or let it run through once to make sure this works, if the aport was not from pmOS but from Alpine - the compiler output will be cached, so it will be faster next time)
+
+Now extract the source in your desired location:
+<syntaxhighlight lang="shell-session">
+$ mkdir -p ~/code/hello-world
+$ cd ~/code/hello-world
+$ tar -xvf ~/.local/var/pmbootstrap/cache_distfiles/source-1234.tar.gz
+</syntaxhighlight>
+
+Initialize a git repository in that folder, so we can generate patch files from what you have changed in the source later:
+
+<syntaxhighlight lang="shell-session">
+$ git init .
+Initialized empty Git repository in /home/user/code/hello-world/.git/
+$ git add -A
+$ git commit -m "initial"
+</syntaxhighlight>
+
+As alternative to extracting the tarball, you can also directly clone the upstream's git URL.
+
+== Apply the aport's existing patches ==
+If the aport already has patches, which may be necessary to compile the package with musl, you can add them to your checked out source as follows:
+
+<syntaxhighlight lang="shell-session">
+$ patch -p1 < ~/code/pmbootstrap/aports/main/yourpackage/first.patch
+$ patch -p1 < ~/code/pmbootstrap/aports/main/yourpackage/second.patch
+$ git add -A
+$ git commit -m "applied the aports patches"
+</syntaxhighlight>
+
+=== Building ===
+Now build the package once without modifying anything else, just to make sure
+that it works:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap build hello-world --src=~/code/hello-world
+</syntaxhighlight>
+
+As usually, the compiled packages can be found in <code>~/.local/var/pmbootstrap/packages</code>. You can copy the resulting apk file to your device via SCP and install it on the target device with <code>apk add -u</code> if you like to.
+
+=== Making changes ===
+Change the source code now, and commit your change:
+<syntaxhighlight lang="shell-session">
+$ git add -A
+$ git status
+$ git commit -m "trying to fix the bug"
+</syntaxhighlight>
+
+Then you can compile and test again.
+
+=== Create a patch file ===
+With git you can create the patch now. Some examples:
+
+<syntaxhighlight lang="shell-session">
+$ git diff HEAD~1 > mypatch.patch
+Puts the last two commit into a patch file.
+$ git diff HEAD~2 > mypatch.patch
+Puts the last two commits into a patch file.
+$ git diff HEAD~1 HEAD~2 > mypatch.patch
+Puts the commit before the last one into a patch file
+$ git diff ffffff > mypatch.patch
+Put everything that changed after commit ffffff into the patch file. You can
+get the commit hashes easily by looking at "git log". Using the long commit
+hashes also works.
+</syntaxhighlight>
+
+== Legacy Guide ==
+This guide was written with the following use case in mind: you want to package an Android kernel. But it does not compile with our GCC6, so you need to patch the kernel. Unlike in the Android world, we do not fork the kernel repository and apply our patches there. Instead we ship our custom patches with the package build recipe in the aport folder.
 
 This guide assumes, that you already know what to patch - if you don't know what to patch and only have the error, try to search the web for that error message. More often than not, there is a patch already available, that will fix it. If you don't have any luck, ask in the [[Matrix and IRC|chat]].
 
