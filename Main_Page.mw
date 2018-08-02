@@ -27,6 +27,7 @@
 * [[Creating a package]] ''and how to recycle package recipes from other distributions''
 * [[Mainline kernel|The mainline kernel]] ''early work on getting device kernels into mainline Linux''
 * [[Development guide]] ''currently has a git hook for working on packages''
+* [[Patching]] ''using pmbootstrap build --src to create patches for packages''
 * [[Repository maintenance]] ''taking care of the official postmarketOS repository''
 
 '''Communication channels'''
