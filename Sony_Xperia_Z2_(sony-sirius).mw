@@ -38,6 +38,8 @@
 '''Current status''':
 Uses mainline and works very well, kernel is on pmos github.
 
+'''WARNING:''' Not all Sony Xperia Z2 bootloaders can be unlocked.  Reportedly, carriers and countries can elect to make the bootloader unlockable (even if Sony provides you with the unlock code for your IMEI), and even removing any carrier lock on the phone will not make the bootloader unlockable.
+
 == Links ==
 
 * [https://github.com/rcstar6696/android_kernel_sony_msm8974 Kernel Source]
