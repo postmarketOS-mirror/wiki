@@ -1,4 +1,4 @@
-All testing related code is in the <code>test</code> folder in the <code>pmbootstrap</code> repository. We use continuous integration to execute the testsuite for every pull request (see [https://github.com/postmarketOS/pmbootstrap/blob/master/.travis.yml .travis.yml]).
+All testing related code is in the <code>test</code> folder in the <code>pmbootstrap</code> repository. We use continuous integration to execute the testsuite for every pull request (see [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/.gitlab-ci.yml .gitlab-ci.yml]).
 
 == Requirements ==
 * GNU grep (Alpine: <code>apk add grep</code>)
