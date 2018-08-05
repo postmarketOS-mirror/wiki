@@ -26,9 +26,12 @@ If the telnet command does not work out of the box, read [[connect via USB Netwo
 
 To enable functionality from initramfs-extra, run the following commands in the shell:
 <source lang="shell-session">
-. init_functions.sh
-mount_boot_partition
-extract_initramfs_extra $initramfs_extra
+# . init_functions.sh
+# mount_boot_partition
+Mount boot partition (/dev/dm-0)
+# extract_initramfs_extra $initramfs_extra
+Extract /boot/initramfs-sony-amami-extra
+24128 blocks
 </source>
 
 === Additional programs ===
