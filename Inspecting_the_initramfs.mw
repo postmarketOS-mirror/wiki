@@ -22,6 +22,15 @@ Connection closed by foreign host.
 
 If the telnet command does not work out of the box, read [[connect via USB Networking in the Initramfs]].
 
+=== Enable initramfs-extra ===
+
+To enable functionality from initramfs-extra, run the following commands in the shell:
+<source lang="shell-session">
+. init_functions.sh
+mount_boot_partition
+extract_initramfs_extra $initramfs_extra
+</source>
+
 === Additional programs ===
 After installing the <code>debug-shell</code> initramfs hook, the <code>evtest</code>, <code>fftest</code> and <code>fbdebug</code> programs are available in the initramfs ({{github|1358}}).
 
