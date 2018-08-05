@@ -6,7 +6,7 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 * Make sure that the whole device is on the photo.
 * Run something postmarketOS specific on it, for example:
 ** <code>postmarketos-demos</code> program
-** postmarketOS background from the [https://github.com/postmarketOS/artwork artwork repository]
+** postmarketOS background from the [https://gitlab.com/postmarketOS/artwork artwork repository]
 ** <code>uname -a</code> in a terminal showing <code>-postmarketOS</code> in the kernel name
 ** typing something with "postmarketOS" in a text input
 * If you have problems with the flash of the camera reflecting on the phone's screen, just shoot at it from a different angle (see example on the right)
