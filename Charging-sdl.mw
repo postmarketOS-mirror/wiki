@@ -16,7 +16,7 @@ You can show this <code>charging-sdl</code> screen again for another 5 seconds b
 
 == Run charging-sdl manually ==
 
-You first have to boot the device into the <code>debug-shell</code>. (See [[Inspecting_the_initramfs]])
+You first have to boot the device into the <code>debug-shell</code>. (See [[Inspecting the initramfs]])
 
 After you connected to the device using telnet, you can run:
 <syntaxhighlight lang="shell-session">
