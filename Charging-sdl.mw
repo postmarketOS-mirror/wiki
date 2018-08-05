@@ -2,9 +2,9 @@ This is an application developed by the postmarketOS community to display the ch
 
 It is written in C and uses SDL2/SDL_power to query the battery information. The <code>charging-sdl</code> package is part of postmarketOS's aports.
 
-== Reporting Issues ==
+== Reporting issues ==
 
-Issues with <code>charging-sdl</code> should be reported on [https://github.com/postmarketOS/charging-sdl/issues the project github issues page].
+Issues with <code>charging-sdl</code> should be reported on [https://gitlab.com/postmarketOS/charging-sdl/issues the project GitLab issues page].
 
 == Current implementation ==
 
@@ -35,7 +35,7 @@ $ charging-sdl -pcf "$fontpath"
 In order to detect if the device has been powered on in "charge mode", the initramfs script looks for specific options in the kernel cmdline (e.g.: androidboot.mode=charger)
 
 Compare your kernel cmdline when powered on normally to when you power on by connecting the usb cable only. 
-If you find a specific option to distinguish the two boot modes, please update the [https://github.com/postmarketOS/pmbootstrap/blob/a7afd519eff34237dfe2766634ac6b2c5076e9f5/aports/main/postmarketos-mkinitfs/init_functions.sh#L289-L297 initramfs script].
+If you find a specific option to distinguish the two boot modes, please update the [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/aports/main/postmarketos-mkinitfs/init_functions.sh#L296-307 initramfs script].
 
 ==== DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ====
 
