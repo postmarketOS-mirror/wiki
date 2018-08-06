@@ -141,11 +141,13 @@ A quick fix is deleting all packages:
 
 See issue [https://github.com/postmarketOS/pmbootstrap/issues/270 #270] for more information and don't hesitate to reopen if this didn't work for you.
 
-=== Fastboot does not detect my device! ===
+=== flasher (fastboot) is stuck in < waiting for any device > ===
 
 Maybe you need to install udev rules on your host Linux distribution. Arch has the [https://www.archlinux.org/packages/community/any/android-udev/ android-udev] package for example, which uses the rules from [https://github.com/M0Rf30/android-udev-rules here].
 
 If that does not help, it might be necessary to set the <code>flash_fastboot_vendor_id</code> in your [[deviceinfo]] (this was necessary for the [[Amazon Kindle Fire HDX]]). Try to search the web for your device name and "fastboot vendor id".
+
+If you were previously able to use fastboot and it stopped working, sometimes <code>pmbootstrap shutdown</code> to restart the chroot helps.
 
 === Invalid sparse file format at header magi ===
 
