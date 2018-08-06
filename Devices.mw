@@ -2,7 +2,7 @@ __NOTOC__
 Please [[Help:Device Page|add devices you're porting here]], and write your porting progress in the wiki page. The status values and columns are described below the table.
 
 == Feature matrix ==
-It is possible to boot these devices at the very least. To confirm that, either the screen or networking/serial output must be working. If your device fulfills these requirements and is not yet on the list, please add it to the table below and then make a [https://help.github.com/articles/about-pull-requests/ pull-request].
+It is possible to boot these devices at the very least. To confirm that, either the screen or networking/serial output must be working. If your device fulfills these requirements and is not yet on the list, please add it to the table below and then make a [https://docs.gitlab.com/ce/gitlab-basics/add-merge-request.html merge-request].
 
 {| class="wikitable sortable feature-colors"
   ! rowspan="2" | Device
@@ -494,7 +494,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |}
 
 == Not booting ==
-These devices are not integrated into the postmarketOS source tree yet. That is either because the devices do not boot at all, or because it does boot, but there has not been done a successful pull-request to integrate the code. In the latter case, if you have the device and can verify that it can be booted, please [https://help.github.com/articles/about-pull-requests/ make a pull-request].
+These devices are not integrated into the postmarketOS source tree yet. That is either because the devices do not boot at all, or because it does boot, but there has not been done a successful pull-request to integrate the code. In the latter case, if you have the device and can verify that it can be booted, please [https://docs.gitlab.com/ce/gitlab-basics/add-merge-request.html make a merge-request].
 
 {| class="wikitable sortable"
 ! Device
