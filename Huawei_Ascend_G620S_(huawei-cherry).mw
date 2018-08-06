@@ -1,0 +1,32 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Huawei
+| name =  Ascend G620S
+| codename = cherry
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2
+| chipset = Qualcomm MSM8916 Snapdragon 410
+| cpu = Quad-core 1.2 GHz Cortex-A53
+| gpu = Adreno 306
+| storage = 8GB
+| display = 720x1280
+| memory = 1GB
+}}
+
+== Contributors ==
+* Bonn333
+
+== What works ==
+* Kernel compilation
+* Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
+
+== What does not work ==
+* Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
+* Framebuffer graphics (Splash screens)
+
+== How to enter flash mode ==
+Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
+
+== See also ==
+* [https://github.com/LineageOS/android_kernel_huawei_msm8916 Kernel source]
+* [https://gitlab.com/bonn333/pmbootstrap/tree/device-huawei-cherry Device package]
