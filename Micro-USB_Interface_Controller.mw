@@ -1,3 +1,5 @@
+{{todo|Add more information (which devices have one, how they are useful to us, what do jig and boot do, etc.)}}
+
 A Micro-USB Interface Controller (MUIC) is a USB multiplexer/switch. (Not a USB Host Controller like the name might imply)
 
 {| class="wikitable"
