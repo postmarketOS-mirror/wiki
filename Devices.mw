@@ -677,6 +677,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-s8530
   | kernel compiles
 |-
+  | [[Sony Ericsson Xperia acro S (semc-hikari)]]
+  | semc-hikari
+  | Uses unusual ELF-format boot.img that is not supported by pmOS
+|-
   | [[Xperia-E-Dual|Sony Xperia E Dual]]
   | sony-nanhu
   |
