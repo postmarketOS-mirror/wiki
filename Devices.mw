@@ -573,6 +573,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | huawei-g510
   | Kernel compiles, graphic output does not work
 |-
+  | [[Huawei_Ascend_G620S_(huawei-cherry)|Huawei Ascend G620S]]
+  | huawei-cherry
+  | Kernel compiles, graphic output does not work
+|-
   | [[Huawei_Honor_5X_(huawei-kiwi)|Huawei Honor 5X]]
   | huawei-kiwi
   | Kernel compiles, graphic output does not work
