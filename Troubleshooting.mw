@@ -147,7 +147,7 @@ Maybe you need to install udev rules on your host Linux distribution. Arch has t
 
 If that does not help, it might be necessary to set the <code>flash_fastboot_vendor_id</code> in your [[deviceinfo]] (this was necessary for the [[Amazon Kindle Fire HDX]]). Try to search the web for your device name and "fastboot vendor id".
 
-If you were previously able to use fastboot and it stopped working, sometimes <code>pmbootstrap shutdown</code> to restart the chroot helps.
+If you were previously able to use fastboot and it stopped working, sometimes <code>pmbootstrap shutdown</code> to restart the chroot helps. Also try to reboot the device into fastboot again.
 
 === Invalid sparse file format at header magi ===
 
