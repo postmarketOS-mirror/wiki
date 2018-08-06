@@ -633,6 +633,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-s5830i
   | Kernel compiles, haven't tried flashing yet.
 |-
+  | [[Samsung Galaxy Mini (samsung-s5570i)|Samsung Galaxy Mini]]
+  | samsung-tassve
+  | Kernel compiles, flashing doesn't work.
+|-
   | [[Samsung Galaxy GT-i7500 (samsung-gt-i7500)|Samsung Galaxy GT-i7500]]
   | samsung-gt-i7500
   | Has no FPU due to /proc/cpuinfo but [https://wiki.postmarketos.org/wiki/Porting_to_a_new_device#Target_Device needed], [https://gitlab.com/postmarketOS/pmbootstrap/issues/1614 #1614]
