@@ -286,7 +286,7 @@ For the motorola-lux, this is done in the following way:
 
 The path to the correct touch device depends on the device. This can be added to an initfs hook to activate the touch screen automatically at boot.
 
-=== CHARGING MODE: error running charging-sdl ===
+=== CHARGING MODE: error starting charging-sdl ===
 When attaching the power cable while the device is off, Android devices boot into a special "charging mode". postmarketOS's [[charging-sdl]] display does not work yet on all devices.
 
 To debug the issue, follow instructions at [[Inspecting the initramfs]] including activating the initramfs-extra, then execute <code>start_charging_mode</code> in the shell.
