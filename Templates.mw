@@ -12,6 +12,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:File|file]] ''gitlab or github file link''
 * [[Template:Note|note]]
 * [[Template:Outdated|outdated]]
+* [[Template:Todo|todo]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
 
 == See also ==
