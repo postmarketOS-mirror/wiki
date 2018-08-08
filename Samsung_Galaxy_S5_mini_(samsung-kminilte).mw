@@ -38,6 +38,8 @@ First, [https://eu.dl.twrp.me/kminilte/ download the TWRP recovery ROM]. You'll 
 <pre>$ heimdall flash --RECOVERY recovery.img --BOOT twrp-3.1.1-1-kminilte.img</pre>
 Now you should be able to connect to the device using <code>adb</code>.
 
+Note: Be aware that the stock Android ROM reflashes stock recovery upon boot, wiping TWRP out if you let it start booting.
+
 === Installing system ===
 
 Follow [https://github.com/ata2001/android-recovery-zip the android-recovery-zip steps], substituting <code>samsung-g800f</code> for <code>your-device</code> in all the commands. If you get an error <code>lddtree not found</code>, simply run <code>apk add lddtree</code> in the chroot environment and try again.
