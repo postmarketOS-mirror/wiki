@@ -22,9 +22,10 @@ Cortex A7 (32 bit ARM), quad core 1.4GHz; 1.5GB RAM, 16GB storage.
 * [https://github.com/cm-3470/android_device_samsung_kminilte Unofficial LineageOS repo]
 * [https://github.com/cm-3470/android_kernel_samsung_kminilte Unofficial LineageOS kernel repo]
 
-=== How to enter flash mode ===
+=== Special keycombo's ===
 
-Press and hold &quot;volume down + home + power&quot; simultaneously. Then click volume up to confirm.
+Download/Flash/ODIN mode - Press and hold &quot;volume down + home + power&quot; simultaneously. Then click volume up to confirm.
+Recovery - Press and hold VOL+, PWR and HOME
 
 === Problems ===
 
