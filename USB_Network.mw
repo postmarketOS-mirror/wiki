@@ -82,8 +82,15 @@ If that's the case and you can't connect, your computer probably just doesn't ha
 
 If however, nothing shows up (even when [[Inspecting the initramfs]]), the most likely reason is a wrong [[Kernel_configuration]]. This is highly device-specific, but some hints can be found in [[#Kernel configuration parameters]]
 
-==== Assigning an IP address ====
-If it gets detected, then you probably don't have a network manager installed, that automatically requests IP addresses from new ethernet interfaces. Use the following command to manually start a DHCP client. Replace the interface name with the one on your machine (see <code>ip a</code> before and after connecting the device via USB). Some Linux distributions have <code>dhcpcd</code> installed instead of <code>dhclient</code>.
+==== No IP assigned or MAC address is 00:00:00:00:00:00 ====
+If USB gets detected, then you probably don't have a network manager that automatically requests IP addresses from new ethernet interfaces, so you'll have to set the interface up manually.
+
+If there's no MAC address assigned(00:00:00:00:00:00), you need to assign one.
+<source lang="shell-session">
+# ip link set dev enp0s20f0u1 address 12:12:12:12:12:12
+</source>
+
+Use the following command to start a DHCP client. Replace the interface name with the one on your machine (see <code>ip a</code> before and after connecting the device via USB). Some Linux distributions have <code>dhcpcd</code> installed instead of <code>dhclient</code>.
 <source lang="shell-session">
 $ dhclient -v enp0s20f0u1
 </source>
@@ -93,13 +100,7 @@ Some distribution use other tools that might interfere with <code>dhclient</code
 # ip address add dev enp0s20f0u1 172.16.42.2/24
 </source>
 
-If this fails, you may need to first assign an ethernet address to it.
-<source lang="shell-session">
-# ip l set enp0s20f0u1 address 12:12:12:12:12:12
-</source>
-Then you can try the above <code>dhclient</code> command.
-
-If after assigning an IP address and <code>ip a</code> shows your device status as "DOWN" instead of "UNKNOWN", try to bring it up with <code>ip link set enp0s20f0u1 up</code>. You may have to assign an ethernet address (12:12:12:12:12:12) to the device before this step.
+If after assigning an IP address and <code>ip a</code> shows your device status as "DOWN" instead of "UNKNOWN", bring it up with <code>ip link set enp0s20f0u1 up</code>. 
 
 ==== Kernel configuration parameters ====
 If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig check</code> that the required parameters are all set.
@@ -113,17 +114,6 @@ The postmarketOS initramfs is able to configure two different USB systems in the
 You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap kconfig edit</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
 
 Related: {{github|1462}} linux-postmarketos-qcom: Remove composite usb gadget for networking
-
-==== No MAC address assigned ====
-
-If no MAC is assigned(00:00:00:00:00:00), assign some manually - <code>sudo ip link set dev enp0s20u1 address e8:2a:ea:01:02:03</code>
-
-Then you'll most likely also have to set up an IP and set link up. You can either follow the DHCP advice above or do it manually:
-
-If no IP is assigned - Add it manually - <code>sudo ip addr add 172.16.42.2/24 dev enp0s20u1</code>
-
-If the interface is listed as DOWN, set it UP (UNKNOWN is fine) - <code>sudo ip link set enp0s20u1 up</code>
-
 
 === Note about HTC devices ===
 * HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
