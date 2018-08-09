@@ -14,14 +14,6 @@ $ ip a
        valid_lft forever preferred_lft forever
 </source>
 
-==== Troubleshooting ====
-
-If no MAC is assigned(00:00:00:00:00:00), assign some manually - <code>sudo ip link set dev enp0s20u1 address e8:2a:ea:01:02:03</code>
-
-If no IP is assigned - Add it manually - <code>sudo ip addr add 172.16.42.2/24 dev enp0s20u1</code>
-
-If the interface is listed as DOWN, set it UP (UNKNOWN is fine) - <code>sudo ip link set enp0s20u1 up</code>
-
 === SSH ===
 {{note|There is a dedicated article for [[Inspecting_the_initramfs|inspecting the initramfs]] via telnet.}}
 
@@ -121,6 +113,17 @@ The postmarketOS initramfs is able to configure two different USB systems in the
 You can use <code>grep</code> on your kernel config to check which of these options are enabled or not (<code>option=y</code> means it is enabled). If you want to change the options, don't modify the file directly, but use <code>pmbootstrap kconfig edit</code> ([[Kernel_configuration|usage instructions]]). Otherwise the dependencies in that configuration file will not get resolved properly and cause other issues.
 
 Related: {{github|1462}} linux-postmarketos-qcom: Remove composite usb gadget for networking
+
+==== No MAC address assigned ====
+
+If no MAC is assigned(00:00:00:00:00:00), assign some manually - <code>sudo ip link set dev enp0s20u1 address e8:2a:ea:01:02:03</code>
+
+Then you'll most likely also have to set up an IP and set link up. You can either follow the DHCP advice above or do it manually:
+
+If no IP is assigned - Add it manually - <code>sudo ip addr add 172.16.42.2/24 dev enp0s20u1</code>
+
+If the interface is listed as DOWN, set it UP (UNKNOWN is fine) - <code>sudo ip link set enp0s20u1 up</code>
+
 
 === Note about HTC devices ===
 * HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
