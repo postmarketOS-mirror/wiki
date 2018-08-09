@@ -100,7 +100,10 @@ Some distribution use other tools that might interfere with <code>dhclient</code
 # ip address add dev enp0s20f0u1 172.16.42.2/24
 </source>
 
-If after assigning an IP address and <code>ip a</code> shows your device status as "DOWN" instead of "UNKNOWN", bring it up with <code>ip link set enp0s20f0u1 up</code>. 
+If after assigning an IP address and <code>ip a</code> shows your device status as "DOWN" instead of "UNKNOWN", bring it up with 
+<source lang="shell-session">
+# ip link set enp0s20f0u1 up
+</source>
 
 ==== Kernel configuration parameters ====
 If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig check</code> that the required parameters are all set.
