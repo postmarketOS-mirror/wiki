@@ -14,6 +14,14 @@ $ ip a
        valid_lft forever preferred_lft forever
 </source>
 
+==== Troubleshooting ====
+
+If no MAC is assigned(00:00:00:00:00:00), assign some manually - <code>sudo ip link set dev enp0s20u1 address e8:2a:ea:01:02:03</code>
+
+If no IP is assigned - Add it manually - <code>sudo ip addr add 172.16.42.2/24 dev enp0s20u1</code>
+
+If the interface is listed as DOWN, set it UP (UNKNOWN is fine) - <code>sudo ip link set enp0s20u1 up</code>
+
 === SSH ===
 {{note|There is a dedicated article for [[Inspecting_the_initramfs|inspecting the initramfs]] via telnet.}}
 
