@@ -61,9 +61,9 @@ You can try to reinstall with a different cipher, by editing <code>install_optio
 
 === Installing kernel ===
 
-This can be done via <code>./pmbootstrap.py flasher flash_kernel</code>
+This can be done via <code>./pmbootstrap.py flasher flash_kernel</code>, but if you followed the recovery ROM steps then you don't need to do this.
 
-It should boot, and show the Samsung splash screen. After that you should be able to [https://github.com/postmarketOS/pmbootstrap/wiki/Boot-process connect via telnet]
+It should boot, and show the Samsung splash screen. After that you should be able to [https://wiki.postmarketos.org/wiki/USB_Network setup and connect via SSH]
 
 == What works ==
 
