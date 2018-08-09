@@ -44,9 +44,7 @@ Note: Be aware that the stock Android ROM reflashes stock recovery upon boot, wi
 
 === Installing system ===
 
-{{outdated|This page is no longer on github}}
-
-Follow [https://github.com/ata2001/android-recovery-zip the android-recovery-zip steps], substituting <code>samsung-g800f</code> for <code>your-device</code> in all the commands. If you get an error <code>lddtree not found</code>, simply run <code>apk add lddtree</code> in the chroot environment and try again.
+Follow [https://wiki.postmarketos.org/wiki/Installation_guide the android-recovery-zip steps], using <code>samsung-kminilte</code> when the init commands asks. If you get an error <code>lddtree not found</code>, simply run <code>apk add lddtree</code> in the chroot environment and try again.
 
 If you get the following errors:
 
