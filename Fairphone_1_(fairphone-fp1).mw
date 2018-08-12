@@ -38,7 +38,7 @@
 
 == Installation ==
 * Load the MT6589_Android_scatter_emmc.txt with SP Flash Tool (e.g. v5.1352.01)
-* Deselect all partitions and choose boot.img-fairphone-fp1 for the BOOTIMG and fairphone-fp1.img for the ANDROID partition.
+* Deselect all partitions and choose boot.img-fairphone-fp1 for the BOOTIMG and fairphone-fp1.img for the <s>ANDROID</s> USRDATA partition.
 * Press 'Download' and plug in your phone while it's turned off
 
 == See also ==
