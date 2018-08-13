@@ -410,6 +410,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   |style="white-space: nowrap;" | [[ZTE_Kis_3_(zte-kis3)|ZTE Kis 3]]
   |style="white-space: nowrap;" | zte-kis3
   | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
+  |style="white-space: nowrap;" | [[Aquaris-U|Aquaris U]]
+  |style="white-space: nowrap;" | bq-chaozu
+  |   || Y  ||   || Y ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
@@ -528,10 +532,6 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | [[BlackBerry-Bold-Touch-9900-(Dakota)|BlackBerry Bold Touch 9900]]🔼
   | blackberry-dakota
   |
-|-
-  | [[Aquaris-U|bq Aquaris U]]
-  | chaozu
-  | kernel compiles, more is not yet tested
 |-
   | [[Coolpad-Sky-3-E502-(Modena-2)|Coolpad Modena 2]]
   | coolpad-modena2
