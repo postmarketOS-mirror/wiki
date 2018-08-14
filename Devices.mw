@@ -15,6 +15,10 @@ It is possible to boot these devices at the very least. To confirm that, either 
   |style="white-space: nowrap;" | amazon-thor
   | Y  || Y  || Y  || Y  || P  ||  || P  ||  ||  ||  ||  ||  ||  ||  ||  ||  || -  || - 
 |-
+  |style="white-space: nowrap;" | [[Aquaris-U|Aquaris U]]
+  |style="white-space: nowrap;" | bq-chaozu
+  |   || Y  ||   || Y ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
+|-
   |style="white-space: nowrap;" | [[Asus-tf101-(ASUS-Transformer-TF101)|ASUS Eee Pad Transformer]]
   |style="white-space: nowrap;" | asus-tf101
   |    ||    ||  || Y  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||  || -  || - 
@@ -409,11 +413,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |-
   |style="white-space: nowrap;" | [[ZTE_Kis_3_(zte-kis3)|ZTE Kis 3]]
   |style="white-space: nowrap;" | zte-kis3
-  | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
-|-
-  |style="white-space: nowrap;" | [[Aquaris-U|Aquaris U]]
-  |style="white-space: nowrap;" | bq-chaozu
-  |   || Y  ||   || Y ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  || 
+  | Y  || Y  ||   ||   ||  ||  ||   ||  ||   ||  ||  ||  ||  ||  ||  ||  ||  ||
 |}
 <!--
     NOTE: Please keep the table above alphabetically sorted.
