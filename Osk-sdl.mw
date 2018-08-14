@@ -131,36 +131,5 @@ $ pmbootstrap index
 You will need to create a <code>fb.modes</code> file for your device. See the above section [[#Create fb.modes]]
 
 == Building osk-sdl from repo ==
-
-This is an example APKBUILD you can use to build osk-sdl from a branch instead of a tag. Don't forget to generate a new checksum (<code>pmbootstrap checksum osk-sdl</code>) before trying to build it.
-
-<syntaxhighlight lang="bash">
-# Change out the hash here with the hash of the git commit you want to build
-_hash=617c1cf407160329535d6dbc6a315fd0dc72de70
-pkgname=osk-sdl
-pkgver=0.48
-pkgrel=0
-pkgdesc="Onscreen keyboard for unlocking LUKS devices"
-url="https://github.com/postmarketOS/osk-sdl"
-arch="all"
-license="GPL3"
-depends="sdl2 sdl2_ttf cryptsetup-libs mesa-gl directfb"
-makedepends="linux-headers sdl2-dev sdl2_ttf-dev cryptsetup-dev"
-subpackages=""
-
-source="${pkgname}-${_hash}.tar.gz::https://github.com/postmarketOS/osk-sdl/archive/${_hash}.tar.gz"
-
-options="!strip !check"
-
-build() {
-    cd $srcdir/${pkgname}-${_hash}
-    make
-}
-
-package() {
-    install -D -m755 "${srcdir}/${pkgname}-${_hash}"/osk-sdl \
-        "$pkgdir"/usr/bin/osk-sdl
-    install -D -m755 "${srcdir}/${pkgname}-${_hash}"/osk.conf \
-        "$pkgdir"/etc/osk.conf
-}
-</syntaxhighlight>
+* clone the <code>osk-sdl</code> source code
+* use <code>pmbootstrap build osk-sdl --src=path/to/checked-out-source</code> to build it from there
