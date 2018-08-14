@@ -6,14 +6,15 @@
 * {{alpine|Syslog}} is enabled, and will log to shared memory once the OS has booted. It can be read with the <code>logread</code> tool in BusyBox. The syslog is currently not preserved across reboots.
 
 = Specific troubleshooting pages =
-* [[Troubleshooting:boot]]
-* [[Troubleshooting:dependencies]]
-* [[Troubleshooting:display]]
-* [[Troubleshooting:grsec]] (TL;DR: doesn't work)
-* [[Troubleshooting:HID buttons]]
-* [[Troubleshooting:kernel]]
-* [[Troubleshooting:QEMU]]
-* [[Troubleshooting:Xorg]]
+* [[Troubleshooting:boot|boot]]
+* [[Troubleshooting:dependencies|dependencies]]
+* [[Troubleshooting:display|display]]
+* [[Troubleshooting:grsec|grsec]] (TL;DR: doesn't work)
+* [[Troubleshooting:HID buttons|HID buttons]]
+* [[Troubleshooting:kernel|kernel]]
+* [[Osk-sdl#Troubleshooting|osk-sdl]]
+* [[Troubleshooting:QEMU|QEMU]]
+* [[Troubleshooting:Xorg|Xorg]]
 
 = Uncategorized errors =
 
