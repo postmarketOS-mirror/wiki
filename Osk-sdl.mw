@@ -127,12 +127,11 @@ $ pmbootstrap index
 </syntaxhighlight>
 
 === DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ===
-
 You will need to create a <code>fb.modes</code> file for your device. See the above section [[#Create fb.modes]]
+
+=== ERROR: Unknown dfb pixelformat ===
+osk-sdl is using SDL2 and DirectFB for rendering to the framebuffer (which is what we need to do for most devices, because they only have framebuffer drivers in the kernel, not the more modern DRI/DRM drivers). The error message means, that the SDL2 mode is not mapped to a DirectFB mode. See {{issue|85|osk-sdl}} for detailed instructions on how to patch SDL2 to add a mapping for your mode.
 
 == Building osk-sdl from repo ==
 * clone the <code>osk-sdl</code> source code
 * use <code>pmbootstrap build osk-sdl --src=path/to/checked-out-source</code> to build it from there
-
-== ERROR: Unknown dfb pixelformat ==
-osk-sdl is using SDL2 and DirectFB for rendering to the framebuffer (which is what we need to do for most devices, because they only have framebuffer drivers in the kernel, not the more modern DRI/DRM drivers). The error message means, that the SDL2 mode is not mapped to a DirectFB mode. See {{issue|85|osk-sdl}} for detailed instructions on how to patch SDL2 to add a mapping for your mode.
