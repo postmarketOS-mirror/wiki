@@ -19,6 +19,16 @@ The following three channels are bridged to freenode (mind the <code>##</code> f
   ##postmarketos-offtopic
   #postmarketos-lowlevel
 
+== I'm getting kicked out of the channels! ==
+There was a spam wave coming in recently on Freenode, so now you might need to register with Freenode to let them know that you are not a spam bot.
+
+* Open a new chat with "NickServ" (Matrix/Riot: open a new chat with <code>@freenode_NickServ:matrix.org</code>)
+* Register your account by sending this to NickServ: <code>register <password> <email></code> (example: <code>register dhg235h234jbb you@hello.world</code>)
+* Confirm the registration e-mail
+* Login by sending this to NickServ: <code>identify [<nickname>] <password></code>
+
+You can probably configure your chat client to identify you automatically. Instructions for automatic login with matrix are [https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically here].
+
 == Other discussion platforms ==
 
 * [https://reddit.com/r/postmarketOS Reddit] (we share photos/videos/blog posts of our development work there)
