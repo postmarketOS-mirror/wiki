@@ -293,3 +293,7 @@ The path to the correct touch device depends on the device. This can be added to
 When attaching the power cable while the device is off, Android devices boot into a special "charging mode". postmarketOS's [[charging-sdl]] display does not work yet on all devices.
 
 To debug the issue, follow instructions at [[Inspecting the initramfs]] including activating the initramfs-extra, then execute <code>start_charging_mode</code> in the shell.
+
+=== Heimdall: Flashing fails at 7% ===
+
+It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try setting <code>deviceinfo_flash_sparse="true"</code> in the [[deviceinfo]].
