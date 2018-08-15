@@ -32,6 +32,7 @@
 * Bluetooth
 * Xorg (FBDEV(0): FBIOBLANK: Resource busy (Screen blanking not supported by kernel - disabling))
 * fde or osk-sdl (creates bootloop)
+* Flashing rootfs through fastboot (but works with heimdall)
 
 == How to enter flash mode ==
 * Connect a USB cable
