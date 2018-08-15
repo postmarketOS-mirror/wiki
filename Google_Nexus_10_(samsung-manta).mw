@@ -37,8 +37,8 @@
 == How to enter flash mode ==
 * Connect a USB cable
 * Power the device off
-* Hold power + volume down + volume up
-* fastboot should work when the green android appears on the screen
+* Hold power + volume up
+* You should get a bootloader screen saying "Downloading... Do not turn off target !!"
 
 == Installation ==
 When installing, I found it easiest to sideload a ZIP via ClockworkMod Recovery.
