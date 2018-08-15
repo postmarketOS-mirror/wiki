@@ -25,6 +25,7 @@
 * Weston
 * USB keyboard
 * Touchscreen
+* Flashing in odin mode
 
 == What does not work ==
 * WiFi
