@@ -44,11 +44,9 @@
 When installing, I found it easiest to sideload a ZIP via ClockworkMod Recovery.
 # Build a suitable postmarketOS recovery image:<source lang="shell">
 $ ./pmbootstrap.py init # samsung-manta
-$ ./pmbootstrap.py install --no-fde --android-recovery-zip</source>
-# Boot the device in to recovery, by toggling to "RECOVERY MODE" using the volume rocker.
-# Select "INSTALL ZIP" and then "SIDELOAD ZIP FROM ADB"
-# Run the standard sideload command from pmbootstrap:<source lang="shell">
-./pmbootstrap.py flasher --method adb sideload</source>
+$ ./pmbootstrap.py install --no-fde
+$ ./pmbootstrap.py flasher flash_kernel
+$ ./pmbootstrap.py flasher flash_rootfs</source>
 The device will take roughly 60 seconds to boot to the Weston environment.
 
 == Photos ==
