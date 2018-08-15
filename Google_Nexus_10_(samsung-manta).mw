@@ -26,7 +26,10 @@
 * Touchscreen
 
 == What does not work ==
-* Everything else (Wi-Fi, Bluetooth...)
+* WiFi
+* Bluetooth
+* Xorg (FBDEV(0): FBIOBLANK: Resource busy (Screen blanking not supported by kernel - disabling))
+* fde or osk-sdl (creates bootloop)
 
 == How to enter flash mode ==
 * Connect a USB cable
