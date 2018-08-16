@@ -164,3 +164,7 @@ opendata found a cool hack to let the bootloader initialize the display, which m
 * If your device shows the boot splash with mainline, simple panel should work
 * Adapt [https://github.com/flto/linux/commit/41bcfbe5f8f00a4a93e0a838456da51a50965e03 this commit] to make it use your panels values (hfp hbp etc)
 * now in flags add: <code>MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_HSE</code>
+
+== Kernel is stuck during boot without any output ==
+* enable debug output with the kernel command line
+* consider adding kprint statements to narrow down where it hangs
