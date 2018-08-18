@@ -1,0 +1,19 @@
+{{ todo | Watch {{issue|1646}} }}
+
+{| class="wikitable"
+|+ Renamed
+! Old Name
+! New Name
+! Merge Request
+|}
+
+{| class="wikitable"
+|+ Pending
+! Old Name
+! New Name
+! Merge Request
+|-
+| samsung-i9505
+| samsung-jflte
+| {{MR|1668}}
+|}
