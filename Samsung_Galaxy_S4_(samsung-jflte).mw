@@ -1,0 +1,82 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  S4 International
+| codename = i9505
+| image = File:I9505.jpg
+| imagecaption = S4 international
+| releaseyear = 2013
+| originalsoftware = Android 4.2.2 (Jelly Bean)
+| chipset = Qualcomm APQ8064T Snapdragon 600
+| cpu = Quad-core 1.9 GHz Krait 300
+| gpu = Adreno 320
+| storage = Internal storage and external micro SD
+| display = 1920x1080 AMOLED
+| memory = 2G ram
+}}
+
+== Contributors ==
+* i9505_someone (rrooij on GitHub)
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== What works ==
+
+* Compiling the latest lineageos kernel with some patches applied
+* Booting a graphical screen when installing PostmarketOS as recovery zip in TWRP.
+* Network connection via USB and SSH access
+* Screen works
+* Brightness can be changed by echoing a value to /sys/class/backlight/panel/device/backlight as root
+* Wifi with properietary blobs
+* Touch screen
+* Wayland
+* X11
+* Keyboard and mouse with USB OTG adapter
+
+== What does not work ==
+
+* Touch screen requires a reboot to work in some rare cases
+* 3D acceleration
+* Wayland default on screen keyboard
+* Initramfs password entry for full disk encryption
+
+== How to enter flash mode ==
+
+Press volume down + the power button to enter Download Mode. It is now possible
+to use Heimdall for flashing.
+
+== Installation ==
+
+# <pre>git clone git@github.com:postmarketOS/pmbootstrap.git && cd pmbootstrap</pre>
+# <pre>./pmbootstrap.py init</pre>
+# <pre>./pmbootstrap.py install --no-fde</pre>
+# Put your S4 in Download Mode (Volume Down + Power) and connect it with USB
+# <pre>./pmbootstrap.py flasher flash_kernel</pre>
+# <pre>./pmbootstrap.py flasher flash_rootfs</pre>
+
+== Wifi ==
+
+Once the device has been successfully initialized, enable it:
+
+<pre>$ sudo ip link set wlan0 up</pre>
+Configure wpa_supplicant (only necessary on encrypted networks):
+
+<pre>$ sudo su -
+# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wlan0.conf
+&lt;enter passphrase here and press Enter&gt;
+# exit</pre>
+Connect to network using wpa_supplicant:
+
+<pre>$ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
+If your network uses DHCP, start the DHCP client:
+
+<pre>$ sudo udhcpc -i wlan0</pre>
+
+== Photos ==
+
+[[File:I9505_libreoffice_xfce.jpg|400px]]
+
+== Links ==
+
+* Kernel used: https://github.com/LineageOS/android_kernel_samsung_jf
