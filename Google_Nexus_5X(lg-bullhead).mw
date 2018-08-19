@@ -33,6 +33,7 @@
 
 * WiFi
 * Led
+* osk-sdl (patch available, please test and report back: {{MR|1294}})
 
 == Unlocking == 
 
