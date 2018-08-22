@@ -1,4 +1,3 @@
-{{ todo | Watch {{issue|1646}} }}
 
 {| class="wikitable"
 |+ Renamed
@@ -17,3 +16,8 @@
 | samsung-jflte
 | {{MR|1668}}
 |}
+
+
+== See also ==
+* {{issue|1646}} Use codename instead of model number
+* {{MR|1682}} Check if device was renamed
