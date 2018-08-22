@@ -1,13 +1,5 @@
-
 {| class="wikitable"
 |+ Renamed
-! Old Name
-! New Name
-! Merge Request
-|}
-
-{| class="wikitable"
-|+ Pending
 ! Old Name
 ! New Name
 ! Merge Request
@@ -17,6 +9,13 @@
 | {{MR|1668}}
 |}
 
+{| class="wikitable"
+|+ Pending
+! Old Name
+! New Name
+! Merge Request
+|-
+|}
 
 == See also ==
 * {{issue|1646}} Use codename instead of model number
