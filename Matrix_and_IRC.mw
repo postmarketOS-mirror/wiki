@@ -34,7 +34,7 @@ Remember that when you close your IRC client to go sleep, you miss out on half t
 
 Special note for Matrix user: you can set the notifications setting to "Mentions only" so that you will only disturbed when someone writes your name.
 
-== I'm getting kicked out of the channels! ==
+== I'm getting kicked out of the channels! Or nobody hears me when I speak! ==
 There was a spam wave coming in recently on Freenode, so now you might need to register with Freenode to let them know that you are not a spam bot.
 
 * Open a new chat with "NickServ" (Matrix/Riot: open a new chat with <code>@freenode_NickServ:matrix.org</code>)
