@@ -43,6 +43,7 @@ The Xperia Z does not have a recovery partition, so flashing PostmarketOS erases
 To install a custom recovery on the Xperia Z:
 * put the device in fastboot mode
 * run <code>fastboot flash boot recovery.img</code> (replace <code>recovery.img</code> with the filename of your recovery of choice)
+* run <code>fastboot reboot</code> to reboot into the recovery
 
 This is also the reason why LineageOS boot.img is far larger than postmarketOS boot image (the recovery is inside it).
 
