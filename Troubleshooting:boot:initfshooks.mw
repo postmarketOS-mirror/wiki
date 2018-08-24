@@ -70,6 +70,7 @@ echo "/bin/hotplug.sh" > /proc/sys/kernel/hotplug
 </syntaxhighlight>
 
 === Dump sysfs to SD card ===
+You will probably need to adjust the path to the sd card, check the device name from a working OS on the phone - if the kernel is roughly the same, then the device path to the SD card should be the same as well. For Android devices, you could use TWRP for example.
 <syntaxhighlight lang="bash">
 #!/bin/sh
 . ./init_functions.sh
