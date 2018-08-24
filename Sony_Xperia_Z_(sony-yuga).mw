@@ -63,6 +63,7 @@ This is also the reason why LineageOS boot.img is far larger than postmarketOS b
 === Known issues ===
 
 * Splash screens works but disappears long before Weston comes up
+* FDE does not work, password unlock screen does not appear
 
 === What has not been tested ===
 
