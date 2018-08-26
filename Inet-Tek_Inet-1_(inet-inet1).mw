@@ -27,4 +27,4 @@ ToDo
 == Device info ==
 
 * [http://linux-sunxi.org/Inet_1 Sunxi info page]
-* [https://github.com/linux-sunxi/u-boot-sunxi/wiki Sunxi u-boot]
+* [https://github.com/u-boot/u-boot/commit/05e4d62a634e911cedcf88e4b91f3623e1c4b2f6 Mainline u-boot]
