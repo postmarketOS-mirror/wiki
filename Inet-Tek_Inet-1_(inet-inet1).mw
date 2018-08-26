@@ -22,7 +22,8 @@ This is a white-label device, you can find it rebranded as "Point of View Protab
 
 == What works ==
 
-ToDo
+* u-boot from mainline, installed on sd card
+* loading a kernel/initrd from the sd card
 
 == Device info ==
 
