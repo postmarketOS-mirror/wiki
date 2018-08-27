@@ -6,45 +6,44 @@ $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 </syntaxhighlight>
 
 ==== Create a link ====
-If the directory <code>~/.local/bin</code> does not already exist, create it with
+If the directory <code>~/.local/bin</code> does not already exist, create it with:
 <syntaxhighlight lang="shell-session">
 $ mkdir --parents ~/.local/bin
 </syntaxhighlight>
 
-Create a symbolic link in <code>~/.local/bin</code> named <code>pmbootstrap</code>
+Create a symbolic link in <code>~/.local/bin</code> named <code>pmbootstrap</code>:
 <syntaxhighlight lang="shell-session">
 $ ln -s "$PWD/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
 </syntaxhighlight>
 
 ==== Test installation ====
-To test that pmbootstrap is installed correctly, open a new terminal and run
+To test that pmbootstrap is installed correctly, open a new terminal and run:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap --version
 </syntaxhighlight>
 
-If this returns something like <code>pmbootstrap: command not found</code> instead of a version number, ensure that the following lines are in <code>~/.profile</code> (zsh: <code>~/.zprofile</code>), then open a new terminal and try again.
-
+If this returns something like <code>pmbootstrap: command not found</code> instead of a version number, ensure that the following lines are in <code>~/.profile</code> (zsh: <code>~/.zprofile</code>): 
 <syntaxhighlight lang="shell">
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 </syntaxhighlight>
+Then open a new terminal and try again.
 
-== Tab Completion ==
-{{todo | This is not yet implemented, watch {{MR|1656}} }}
+== Tab completion ==
+{{note|Make sure you have created and tested the symlink as described above!}}
 
 [https://en.wikipedia.org/wiki/Command-line_completion Tab completion] is an optional feature that saves you time by automatically filling in the rest of a command when you press the tab key. You can also see a list of possible commands by double pressing the tab key.
 
-Install [https://argcomplete.readthedocs.io/en/latest/ argcomplete] with
+Install [https://argcomplete.readthedocs.io/en/latest/ argcomplete] with:
 <syntaxhighlight lang="shell-session">
 $ pip3 install --user argcomplete
 </syntaxhighlight>
 
-Next, do one of the following depending on the shell you use:
-{{note | Note: The following assumes you run pmbootstrap with <code>pmbootstrap</code>. If you use <code>pmbootstrap.py</code>, use that instead}}
-==== Bash ====
+Next, do one of the following depending on the shell you use.
 
+==== Bash ====
 Add the following line to <code>~/.bashrc</code>:
 <syntaxhighlight lang="shell">
 eval "$(register-python-argcomplete pmbootstrap)"
