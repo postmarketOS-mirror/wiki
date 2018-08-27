@@ -16,7 +16,7 @@ Create a symbolic link in <code>~/.local/bin</code> named <code>pmbootstrap</cod
 To test that pmbootstrap is installed correctly, open a new terminal and run
  pmbootstrap --version
 
-If this returns something like <code>pmbootstrap: command not found</code> instead of a version number, ensure that the following lines are in <code>~/.profile</code>, then open a new terminal and try again
+If this returns something like <code>pmbootstrap: command not found</code> instead of a version number, ensure that the following lines are in <code>~/.profile</code> (zsh: <code>~/.zprofile</code>), then open a new terminal and try again.
  # set PATH so it includes user's private bin if it exists
  if [ -d "$HOME/.local/bin" ] ; then
      PATH="$HOME/.local/bin:$PATH"
