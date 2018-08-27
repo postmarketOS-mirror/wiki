@@ -60,3 +60,6 @@ eval "$(register-python-argcomplete pmbootstrap)"
 </syntaxhighlight>
 
 Then reload your configuration by opening a new terminal or by running <code>source ~/.zshrc</code>.
+
+== See also ==
+* {{MR|1656}} implement bash tab completion
