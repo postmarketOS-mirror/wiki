@@ -20,7 +20,7 @@ Fortunately, most Android-based devices are fairly foolproof; even if your flash
 {{Todo|Explain what alterations can hard-brick a device. Where is fastboot itself stored? Can the partition table be fixed via fastboot? What's the significance of all the extra partitions on Android devices? etc...}}
 
 === Initialization ===
-Run the following commands in a Linux terminal to get started.
+Run the following commands in a Linux terminal to get started. See [[installing pmbootstrap]] for more detailed instructions with a shortcut and tab completion.
 
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
