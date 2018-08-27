@@ -97,9 +97,7 @@ $ source helpers/envsetup.sh
 This also gives you a <code>pmbroot</code> alias to quickly change to the <code>pmbootstrap</code> folder.
 
 ===== Persistent =====
-<syntaxhighlight lang="shell-session">
-$ sudo ln -s $PWD/pmbootstrap.py /usr/local/bin/pmbootstrap
-</syntaxhighlight>
+Read [[Installing_pmbootstrap#Create_a_link|installing pmbootstrap]] to learn how to make a persistent shortcut. This wiki page also explains how to set up tab completion for <code>bash</code> and <code>zsh</code>.
 
 ==== Logging ====
 Open a second terminal and run the following command to see detailed logging (such as compiler output). Whenever reporting, that something does not work, please attach the detailed log output from this window.
