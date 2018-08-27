@@ -99,3 +99,5 @@ This format is used in brom and preloader(has to be verified) while flashing wit
 * http://www.lieberbiber.de/2015/07/04/mediatek-details-partitions-and-preloader/
 * https://forum.xda-developers.com/u/repair/coolpad-sky-3-e502-modena-2-unbrick-t3610163 (KCOL0 unbrick)
 * [http://read.pudn.com/downloads119/sourcecode/comm/mtk/507390/System_and_Debug/System_Service/BROM_Design_V2.0.0.pdf Bootrom specification]
+
+[[Category:low-level]]
