@@ -29,6 +29,7 @@
 * [[Development guide]] ''currently has a git hook for working on packages''
 * [[Patching]] ''using pmbootstrap build --src to create patches for packages''
 * [[Repository maintenance]] ''taking care of the official postmarketOS repository''
+* [[:Category:Low-level|Low-level hacking]] ''everything below the kernel, bootloaders, modem firmware etc.''
 
 '''Communication channels'''
 * [[Matrix and IRC]] ''live chat makes development easier''
