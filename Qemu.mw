@@ -1,15 +1,17 @@
-{{note|Right now we use the QEMU version installed on the host system, but we want to change that: {{github|1158}}}}
 === Building and starting a QEMU image ===
 
-<pre class="shell">pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
-pmbootstrap install --no-fde
-pmbootstrap qemu --image-size=2G</pre>
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
+$ pmbootstrap install --no-fde
+$ pmbootstrap qemu --image-size=2G
+</syntaxhighlight>
+
 ''Note: The <code>amd64</code> version is recommended if you don't know which one to choose. See the device specific pages (links below) for the differences.''
 
 The <code>--image-size=2G</code> parameter will increase the image size to 2GB, so you don't instantly run out of space (by default the image size is as small as possible). Check out <code>pmbootstrap qemu --help</code> for more options, such as performance tweaks.
 
-
 === Qemu on Debian stretch ===
+{{note|This is only needed if you want to use <code>--host-qemu</code>, otherwise Alpine's QEMU will be used.}}
 {{note|This also applies to '''Ubuntu''' Artful and below, Bionic likely will not have it enabled either - [https://bugs.launchpad.net/ubuntu/+source/qemu/+bug/1553999 Launchpad bug.]}}
 
 Qemu on Debian does not include SDL-support by default. To use pmbootstrap on Debian you have to do the following:
@@ -22,7 +24,8 @@ Qemu on Debian does not include SDL-support by default. To use pmbootstrap on De
 # Install the appropriate qemu Debian packages which have been created in the current directory.
 
 === See also ===
-
 * [[QEMU_amd64_(qemu-amd64)|Qemu for x86_64]]
 * [[QEMU_ARM_(qemu-vexpress)|Qemu for arm]]
 * [[QEMU_aarch64_(qemu-aarch64)|Qemu for aarch64]]
+* [[Troubleshooting:QEMU]]
+* {{MR|1612}} Use Alpine's QEMU rather than host system QEMU
