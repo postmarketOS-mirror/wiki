@@ -45,3 +45,5 @@ This option can be combined with <code>--display</code> or
 === See also ===
 * [[Qemu]]
 * {{issue|1623}} <code>pmbootstrap qemu</code> with proprietary nvidia drivers
+* {{issue|1641}} pmbootstrap qemu booting the kernel for ever (with screenshot)
+* {{issue|75|osk-sdl}} osk-sdl segfaults in qemu-amd64
