@@ -6,10 +6,10 @@
 | imagecaption = Running XFCE4
 | releaseyear = 2013
 | originalsoftware = Glass OS
-| chipset = 
-| cpu = 	OMAP 4430 System on a chip, dual-core processor
-| gpu = 
-| storage = 	16 GB flash memory total[6] (12 GB of usable memory)
+| chipset = TI OMAP 4430
+| cpu = Dual-Core ARM Cortex-A9
+| gpu = PowerVR SGX540
+| storage = 16 GB flash memory total[6] (12 GB of usable memory)
 | display = Prism projector, 640×360 pixels (equivalent of a 25 in/64 cm screen from 8 ft/2.4 m away)
 | memory = 2GB RAM
 }}
