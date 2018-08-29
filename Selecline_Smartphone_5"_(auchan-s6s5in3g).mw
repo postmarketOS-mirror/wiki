@@ -1,0 +1,200 @@
+Rough sketch of Auchan Selecline Smartphone 5" page.
+A.K.A Maysun M5016
+
+have in mind that it's hard to find info about this phone (also it looks like this is not the only ''' Selecline Smartphone 5"''', maybe I should use M5016 codename as official(ish) name?
+
+I won't put this on wiki as separate page until I find more info and decide on the used name.
+
+{{Infobox device
+| manufacturer = Auchan
+| name =  Selecline Smartphone 5"
+| codename = S6S5IN3G, 877977/M5016
+| image = File:Auchan-s6s5in3g.jpg
+| imagecaption = with Android as I am unable to progress further
+| releaseyear = 2016-2017
+| originalsoftware = Andorid 6.0 with 3.10.65 kernel
+| chipset = Spreadtrum SC7731G
+| cpu = ARM Cortex-A7 4x1.3GHz
+| gpu = Mali-400 MP
+| storage = 8GiB
+| display = 854x480
+| memory = 512MiB
+}}
+
+== Hardware ==
+=== Motherboard ===
+Front of the motherboard
+
+Test points: NBOOT, DM & DP (USB data -/+), 
+
+VBAT, VCHG, GND (battery voltage, USB power),
+
+INT & VDD & GND & SCL & SDA & RST (I2C)
+
+[[File:auchan-s6s5in3g-front.jpg|500px]]
+[[File:auchan-s6s5in3g-front2.jpg|500px]]
+
+Back of the motherboard
+
+RF shield is soldered in place, under sticker is SoC and WI-FI/BT chip
+
+[[File:auchan-s6s5in3g-back.jpg|500px]]
+[[File:auchan-s6s5in3g-back2.jpg|500px]]
+=== Specs ===
+[http://specdevice.com/showspec.php?id=0015-d4c2-33ea-07250033c587 link to even more data about the phone]
+
+CPU: ARM Cortex-A7 4x1.3GHz
+armv7l
+
+GPU: Mali-400 MP (openglES 2.0)
+
+Fingerprint SELECLINE/S6S5IN3G/S6S5IN3G:6.0/MRA58K/W17.07.3-15:USER/RELEASE-KEYS
+id MRA58K
+
+
+AIDA64 reports:
+
+hardware sp7731g_fs066_32v4
+
+platform sc8830
+
+
+Two cams, front 0.3mpx and back 2mpx
+
+Sensors:
+
+MC3XXX 3-axis Accelerometer
+
+CTP Light sensor(Noexist) (doesn't show anything)
+
+CTP Proximity sensor (probably just uses front camera, I didn't see anything soldered in place for the sensors)
+
+
+=== Partitions (WIP) ===
+<source lang="bash">
+$ cat /proc/partitions                                      
+major minor  #blocks  name
+
+ 253        0     409600 zram0
+ 179        0    7570432 mmcblk0
+ 179        1       5120 mmcblk0p1
+ 179        2       1024 mmcblk0p2
+ 179        3      15360 mmcblk0p3
+ 179        4       2048 mmcblk0p4
+ 179        5       1024 mmcblk0p5
+ 179        6       1024 mmcblk0p6
+ 179        7       1024 mmcblk0p7
+ 179        8       1024 mmcblk0p8
+ 179        9       1024 mmcblk0p9
+ 179       10       1024 mmcblk0p10
+ 179       11       1024 mmcblk0p11
+ 179       12       1024 mmcblk0p12
+ 179       13       1024 mmcblk0p13
+ 179       14       1024 mmcblk0p14
+ 179       15       1024 mmcblk0p15
+ 179       16      15360 mmcblk0p16
+ 179       17    2355200 mmcblk0p17
+ 179       18       3072 mmcblk0p18
+ 179       19       6144 mmcblk0p19
+ 179       20     153600 mmcblk0p20
+ 179       21      16384 mmcblk0p21
+ 179       22       1024 mmcblk0p22
+ 179       23       1024 mmcblk0p23
+ 179       24       1024 mmcblk0p24
+ 179       25       1024 mmcblk0p25
+ 179       26    4980719 mmcblk0p26
+ 179       96       4096 mmcblk0rpmb
+ 179       64       4096 mmcblk0boot1
+ 179       32       4096 mmcblk0boot0
+
+
+$ df
+Filesystem               Size     Used     Free   Blksize
+/dev                   223.8M    72.0K   223.7M   4096
+/sys/fs/cgroup         223.8M    12.0K   223.8M   4096
+/mnt                   223.8M     0.0K   223.8M   4096
+/system                  2.1G     1.5G   672.7M   4096
+/data                    4.6G     2.6G     2.0G   4096
+/cache                 143.6M   320.0K   143.3M   4096
+/productinfo           928.0K    88.0K   840.0K   4096
+/sale                  928.0K   172.0K   756.0K   4096
+/storage               223.8M     0.0K   223.8M   4096
+/sys/fs/cgroup/blkio: Permission denied
+/mnt/runtime/default/emulated: Permission denied
+/storage/emulated        4.6G     2.6G     2.0G   4096
+/mnt/runtime/read/emulated: Permission denied
+/mnt/runtime/write/emulated: Permission denied
+
+$ cat /proc/mounts                                            
+rootfs / rootfs ro,seclabel 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+none /sys/fs/cgroup tmpfs rw,seclabel,relatime,mode=750,gid=1000 0 0
+tmpfs /mnt tmpfs rw,seclabel,relatime,mode=755,gid=1000 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+/dev/block/platform/sdio_emmc/by-name/system /system ext4 ro,seclabel,relatime,data=ordered 0 0
+/dev/block/platform/sdio_emmc/by-name/userdata /data ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,data=ordered 0 0
+/dev/block/platform/sdio_emmc/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,data=ordered 0 0
+/dev/block/platform/sdio_emmc/by-name/prodnv /productinfo ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,data=ordered 0 0
+/dev/block/platform/sdio_emmc/by-name/sysinfo /sale ext4 rw,seclabel,relatime,data=ordered 0 0
+adb /dev/usb-ffs/adb functionfs rw,relatime 0 0
+tmpfs /storage tmpfs rw,seclabel,relatime,mode=755,gid=1000 0 0
+none /sys/fs/cgroup/blkio cgroup rw,relatime,blkio 0 0
+/dev/fuse /mnt/runtime/default/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /mnt/runtime/read/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /mnt/runtime/write/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+</source>
+
+== Original software ==
+Android 6.0 with 3.10.65 kernel, might be the most stock system I've ever saw
+
+I've managed to flash TWRP from different phone on it, so only adb. Unfortunately that made Android to be stuck on boot logo. Adb works fine in Android and recovery, whereas in recovery the shell runs on root priviledges
+
+
+== Contributors ==
+* [[User:Halamix2|Halamix2]]
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* [[User:Halamix2|Halamix2]]
+
+== What works ==
+* Nothing
+
+== What does not work ==
+* Everythng
+
+== How to enter flash mode ==
+Probably unlocked bootloader by default, needs proper images
+
+<s>Probably AOSP recovery or similar</s>
+
+Reflashed with TWRP, unfortunately I don't have copy of original bootloader
+
+Key combination:
+
+* Press and hold power,
+* Quickly press and hold VOL-,
+* Release both buttons as soon as boot logo shows on screen
+* You're in recovery mode now, navigate to "bootloader" (VOL+/-) and press power to enter fastboot mode.
+`
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+Not there yet.
+
+== See also ==
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
