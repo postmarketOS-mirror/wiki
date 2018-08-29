@@ -4,11 +4,10 @@
 | name =  Wave 2
 | codename = samsung-s8530
 | image = File:samsung-s8530.jpg
-| imagecaption = CHANGE_ME
 | releaseyear = 2010
 | originalsoftware = Bada
-| chipset = CHANGE_ME
-| cpu = Hummingbird 1 GHz
+| chipset = Samsung S5PC110 Hummingbird
+| cpu = 1.0 GHz Cortex-A8
 | gpu = PowerVR SGX540
 | storage = 2GB+SD
 | display = 800x480
