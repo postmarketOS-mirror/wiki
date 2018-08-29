@@ -55,7 +55,7 @@ the built in emmc is quite slow and fragile.
 # Start the build process and install the completed image to a sdcard<source lang="shell">
 # Replace /dev/sdX with the device for your sdcard
 $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
-# [http://maemo.org/downloads/product/Maemo5/u-boot-flasher/ Install u-boot from pali] on the n900 in Maemo [https://gitlab.com/postmarketOS/pmbootstrap/issues/1371#note_85245259 from the terminal], if you haven't installed it already. See Additional Info below for instructions on configuring pmos to boot by default.
+# [http://maemo.org/downloads/product/Maemo5/u-boot-flasher/ Install u-boot from pali] on the n900 in Maemo. If this does not work from the graphical interface you may run "apt-get install uboot-flasher" in maemo terminal.  See Additional Info below for instructions on configuring pmos to boot by default.
 # Place the sdcard into the n900 and boot it with the keyboard slide open
 # Choose the u-boot shell
 # enter <code>run sdboot</code> into the shell
