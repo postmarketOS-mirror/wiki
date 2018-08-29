@@ -7,9 +7,9 @@
 | imagecaption = SmartWatch 3 in fastboot mode
 | releaseyear = 2014
 | originalsoftware = Android Wear 1.5 (Android 6.0)
-| chipset = ARM Cortex A7
-| cpu = Quad core 1.2 Ghz
-| gpu = 
+| chipset = Qualcomm Snapdragon 400 APQ8026
+| cpu = ARM Cortex-A7, 1200 MHz
+| gpu = Adreno 305
 | storage = 4 GB
 | display = 320×320
 | memory = 512 MB
