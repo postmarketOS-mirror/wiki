@@ -7,8 +7,8 @@
 | imagecaption = Galaxy Tab 2 10.1" booted into postmarketOS with weston
 | releaseyear = 2012
 | originalsoftware = Android 4.0.1 ICS
-| chipset = TI OMAP4430
-| cpu = 2x TI OMAP 4 (ARM Cortex A9 based) @ 1GHz
+| chipset = TI OMAP 4430
+| cpu = Dual-core 1.0 GHz Cortex-A9
 | gpu = PowerVR SGX540 @ 307 MHz
 | storage = 16GB (expandable with up to 32GB MicroSD)
 | display = 1280x800
