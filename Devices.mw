@@ -681,6 +681,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | samsung-s8530
   | kernel compiles
 |-
+  | [[Selecline_Smartphone_5"_(auchan-s6s5in3g)|Selecline Smartphone 5"]]
+  | auchan-s6s5in3g
+  | partially working TWRP (adb-only), initial port with binary kernel should be doable
+|-
   | [[Sony Ericsson Xperia acro S (semc-hikari)]]
   | semc-hikari
   | Uses unusual ELF-format boot.img that is not supported by pmOS
