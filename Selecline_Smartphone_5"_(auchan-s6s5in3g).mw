@@ -21,6 +21,39 @@ I won't put this on wiki as separate page until I find more info and decide on t
 | memory = 512MiB
 }}
 
+== Contributors ==
+* [[User:Halamix2|Halamix2]]
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* [[User:Halamix2|Halamix2]]
+
+== What works ==
+* Nothing
+
+== What does not work ==
+* Everythng
+
+== How to enter flash mode ==
+Probably unlocked bootloader by default, needs proper images
+
+<s>Probably AOSP recovery or similar</s>
+
+Reflashed with TWRP, unfortunately I don't have copy of original bootloader
+
+Key combination:
+
+* Press and hold power,
+* Quickly press and hold VOL-,
+* Release both buttons as soon as boot logo shows on screen
+* You're in recovery mode now, navigate to "bootloader" (VOL+/-) and press power to enter fastboot mode.
+`
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+Not there yet.
+
 == Hardware ==
 === Motherboard ===
 Front of the motherboard
@@ -156,39 +189,6 @@ Android 6.0 with 3.10.65 kernel, might be the most stock system I've ever saw
 
 I've managed to flash TWRP from different phone on it, so only adb. Unfortunately that made Android to be stuck on boot logo. Adb works fine in Android and recovery, whereas in recovery the shell runs on root priviledges
 
-
-== Contributors ==
-* [[User:Halamix2|Halamix2]]
-
-== Maintainer(s) ==
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
-* [[User:Halamix2|Halamix2]]
-
-== What works ==
-* Nothing
-
-== What does not work ==
-* Everythng
-
-== How to enter flash mode ==
-Probably unlocked bootloader by default, needs proper images
-
-<s>Probably AOSP recovery or similar</s>
-
-Reflashed with TWRP, unfortunately I don't have copy of original bootloader
-
-Key combination:
-
-* Press and hold power,
-* Quickly press and hold VOL-,
-* Release both buttons as soon as boot logo shows on screen
-* You're in recovery mode now, navigate to "bootloader" (VOL+/-) and press power to enter fastboot mode.
-`
-
-== Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-Not there yet.
 
 == See also ==
 <!--
