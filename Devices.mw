@@ -697,6 +697,10 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
   | sony-jlo
   |
 |-
+  | [[Sony Xperia L (sony-taoshan)|Sony Xperia L]]
+  | sony-taoshan
+  | I don't have phone yet to test it
+|-
   | [[Sony SmartWatch 3 (sony-tetra)|Sony SmartWatch 3]]
   | sony-tetra
   | Kernel compiles, not tested
