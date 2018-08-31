@@ -82,6 +82,25 @@ Device Drivers -->
 
 This should always be set, required for full disk encyption.
 
+=== CONFIG_EXT4_FS ===
+
+'''About'''
+
+''This is the next generation of the ext3 filesystem.''
+
+[https://cateee.net/lkddb/web-lkddb/EXT4_FS.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell">
+File systems -->
+  The Extended 4 (ext4) filesystem
+</pre>
+
+'''pmOS specific'''
+
+This should always be set. {{todo | Why?}}
+
 === CONFIG_KERNEL_GZIP, CONFIG_KERNEL_XZ, CONFIG_KERNEL_LZO and CONFIG_KERNEL_LZMA ===
 
 '''About'''
