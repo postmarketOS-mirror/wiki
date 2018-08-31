@@ -1,0 +1,46 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia L
+| codename = taoshan
+| image = File:Sony-Taoshan.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = 4.1.2/4.2.2
+| chipset = Qualcomm Snapdragon S4 Plus MSM823
+| cpu = 1 GHz Dual-Core Krait
+| gpu = Adreno 305
+| storage = 8 GiB
+| display = 480x854
+| memory = 1 GiB
+}}
+
+== Contributors ==
+* [[User:Halamix2|Halamix2]]
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* [[User:Halamix2|Halamix2]]
+
+== What works ==
+* Nothing
+
+== What does not work ==
+* Everything
+
+== How to enter flash mode ==
+From LineageOS wiki: With the device powered off, hold Volume Up and connect the USB cable. The notification light should turn blue.
+
+
+== Installation ==
+[[Installation guide]]
+
+
+<!--== See also ==
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
