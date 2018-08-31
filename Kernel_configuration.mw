@@ -99,7 +99,7 @@ File systems -->
 
 '''pmOS specific'''
 
-This should always be set. {{todo | Why?}}
+This should always be set since pmbootstrap creates an ext4 rootfs.
 
 === CONFIG_KERNEL_GZIP, CONFIG_KERNEL_XZ, CONFIG_KERNEL_LZO and CONFIG_KERNEL_LZMA ===
 
