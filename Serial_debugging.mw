@@ -20,9 +20,9 @@ The Nexus 7 2012 (grouper) does not work with this setup and likely does not hav
 
 Google open sourced their own [https://android.googlesource.com/device/google/debugcable/+/master debug cable design] in the AOSP repository.
 
-== Samsung USB debug cable ==
+== USB debug cable ==
 
-The Nexus S, Galaxy Nexus and other Samsung devices have the serial port multiplexed with the USB connector instead of the headphone connector. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
+The Nexus S, Galaxy Nexus and other many other devices have the serial port multiplexed with the micro/mini USB connector, initially implemented as part of [[Micro-USB_Interface_Controller|carkit standard]]. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
 
 [[File:Nexus-usb-debug.png]]
 
@@ -30,13 +30,16 @@ It should work with:
 
 * Nexus S
 * Galaxy Nexus
-* Samsung GT-I8190 (Galaxy S3 mini)
-* Samsung GT-I5800 (Galaxy 3)
+* Samsung GT-I8190 (Galaxy S3 mini) (PMIC: AB8505)
+* Samsung GT-I5800 (Galaxy 3) (PMIC: MAX8998)
 * Samsung GT-P1000 (Galaxy Tab P1000)
 * Samsung GT-S8500 (Wave)
+* Samsung GT-S5570 (Tass) (IC: FSA9280A)
 * Samsung i897 (Captivate)
-* Samsung GT-i9195 (Galaxy S4 mini)
+* Samsung GT-i9195 (Galaxy S4 mini) (IC: TSU6721)
 * Samsung klte (Galaxy S5)
+* LG P700/P705 (IC: LP8727)
+* LG P500 (IC: TS5USBA)
 
 {| class="wikitable"
   ! colspan="5" | Serial Settings
