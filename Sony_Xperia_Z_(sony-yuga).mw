@@ -24,8 +24,8 @@
 
 === Special keycombo's ===
 
-* Boot to bootloader (fastboot): unplug device, hold volume up and plug usb into device
-* Boot to recovery: repeatedly press volume up during bootup.
+* Boot to bootloader (fastboot): unplug device, hold volume up and plug usb into device. LED turns blue when in fastboot
+* Boot to recovery(when flashed to FOTAkernel only?): repeatedly press volume up during bootup
 * Reboot if stuck: hold volume up and power button till the phone vibrates once
 * Shutdown phone: hold volume up and power button till phone vibrates three times
 
