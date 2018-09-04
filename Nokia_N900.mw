@@ -13,6 +13,24 @@
 | storage = 32 GB
 | display = 800x480 TFT resistive
 | memory = 256 MB
+| status_usbnet = Y
+| status_flashing =
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = Y
+| status_mainline = Y
+| status_battery =
+| status_3d = 
+| status_accel = Y
+| status_audio = Y
+| status_bluetooth =
+| status_camera =
+| status_gps = P
+| status_mobiledata = Y
+| status_sms = P
+| status_calls =
 }}
 [[File:I3wm-n900.jpg|thumb|right|Running i3wm]]
 [[File:20170724 0002.jpg|thumb|right|Splash screen]]
