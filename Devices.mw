@@ -699,7 +699,7 @@ These devices are not integrated into the postmarketOS source tree yet. That is 
 |-
   | [[Sony Xperia L (sony-taoshan)|Sony Xperia L]]
   | sony-taoshan
-  | I don't have phone yet to test it
+  | Kernel builds, after flashing it doesn't boot, doesn't vibrate/blink with maximum_attention  hook
 |-
   | [[Sony SmartWatch 3 (sony-tetra)|Sony SmartWatch 3]]
   | sony-tetra
