@@ -113,10 +113,9 @@ $ find -name uboot-tools
 
 Build it with <code>pmbootstrap</code> for the architecture in question (replace the path to <code>pmbootstrap</code> accordigly):
 <syntaxhighlight lang="shell-session">
-$ mkdir -p ~/code/pmbootstrap/aports/_temp
-$ cp -r ./testing/uboot-tools ~/code/pmbootstrap/aports/_temp/
+$ cp -r ./testing/uboot-tools ~/code/pmbootstrap/aports/temp/
 $ pmbootstrap build uboot-tools --arch=armhf
-$ rm -r ~/code/pmbootstrap/aports/_temp
+$ rm -r ~/code/pmbootstrap/aports/temp
 </syntaxhighlight>
 
 = See also =
