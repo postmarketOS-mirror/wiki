@@ -1,4 +1,8 @@
 == Code ==
+
+=== What is this <code>args</code> variable used everywhere? ===
+See the big comment at the top of [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/helpers/args.py <code>pmb/helpers/args.py</code>].
+
 === pmb.helpers.run ===
 Use <code>pmb.helpers.run.root()</code> and <code>pmb.helpers.run.user()</code> instead of <code>subprocess</code> because these write to the log file.
 
