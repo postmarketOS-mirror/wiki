@@ -297,7 +297,7 @@ This is a wiki, so '''please adjust everything that isn't detailed enough or wou
 More importantly, if you are at this point, it is a good idea to start writing your porting '''progress to the [[Devices]] page''', even if you didn't get very far and the kernel does not compile (it will help others to continue from your work). Simply register in the wiki (you don't even need an e-mail address) and [[Help:Device Page|follow this tutorial]].
 
 === Installation ===
-{{note|If you get a "no space left on device" error, please report in {{github|928}}.}}
+{{note|If you get a "no space left on device" error, please report in {{issue|928}}.}}
 
 Create checksums and build the device package once to make sure it doesn't contain errors at this point (we didn't do that earlier, because <code>pmbootstrap</code> would have complained about the invalid <code>pkgver</code> of the kernel package):
 <syntaxhighlight lang="shell-session">
@@ -328,7 +328,7 @@ If you want to install to the system partition, run the following (not for the S
 $ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>dd</code> or simply install the known working OS, e.g. Android, on it). Using multiple partitions with LVM is planned ({{github|60}}).
+In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>dd</code> or simply install the known working OS, e.g. Android, on it). Using multiple partitions with LVM is planned ({{issue|60}}).
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher flash_rootfs --partition userdata
 </syntaxhighlight>
