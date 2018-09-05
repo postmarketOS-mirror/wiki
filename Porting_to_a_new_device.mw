@@ -107,7 +107,7 @@ $ pmbootstrap log
 </syntaxhighlight>
 
 === Device specific package ===
-Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>).
+Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>). In case you have ''not'' cloned <code>pmbootstrap</code> from git, the aports folder will be in <code>cache_git/pmaports</code> inside your work folder (default: <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>).
 
 <syntaxhighlight lang="shell-session">
 $ nano aports/device/device-wiki-example/deviceinfo
