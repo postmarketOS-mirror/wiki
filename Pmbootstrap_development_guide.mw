@@ -1,12 +1,20 @@
-== Code ==
+=== Installation code (<code>pmb.install.*</code>) ===
+Whenever you change the installation process, also adjust the recovery zip installer (which performs a good part of the installation procedure directly on the Android device with a shell script).
 
 === What is this <code>args</code> variable used everywhere? ===
 See the big comment at the top of [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/helpers/args.py <code>pmb/helpers/args.py</code>].
 
-=== pmb.helpers.run ===
-Use <code>pmb.helpers.run.root()</code> and <code>pmb.helpers.run.user()</code> instead of <code>subprocess</code> because these write to the log file.
+=== Executing shell commands ===
+Use one of the following functions instead of Python's built in <code>subprocess</code>:
 
-==== Shell commands ====
+* [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/helpers/run.py <code>pmb.helpers.run.user()</code>]
+* [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/helpers/run.py <code>pmb.helpers.run.root()</code>]
+* [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/chroot/user.py <code>pmb.chroot.user()</code>]
+* [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/chroot/root.py <code>pmb.chroot.root()</code>]
+
+These functions call [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/helpers/run_core.py <code>pmb.helpers.run_core.core()</code>] internally to write to the log file (that you can read with <code>pmbootstrap log</code>) and timeout when there is no output. A lot of function parameters are passed through to <code>core()</code> as well, see its docstring for a detailed description of what these parameters do.
+
+==== Writing to files ====
 {{note|See also: {{github|1316}} Properly escape commands in pmb.chroot.user()}}
 The passed commands gets interpreted as single command, and not executed in a shell. This means something like the following '''will not work''':
 
@@ -30,9 +38,6 @@ with open("tmp/somefile", "w") as handle:
     handle.write("It works")
 pmb.chroot.root(args, ["mv", "/tmp/somefile", "/etc/somefile"])
 </syntaxhighlight>
-
-=== pmb.install ===
-Whenever you change the installation process, also adjust the recovery zip installer (which performs a good part of the installation procedure directly on the Android device with a shell script).
 
 == See also ==
 * [[Testsuite]]
