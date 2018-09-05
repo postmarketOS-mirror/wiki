@@ -34,9 +34,9 @@
 
 === What does not work ===
 * Race condition: it won't always boot ({{issue|5|linux-postmarketos}})
+* Backlight works partially ([https://gitlab.com/postmarketOS/pmbootstrap/issues/1427 #1427], more?)
 * Flashlight and Front led
 * Camera
-* Backlight works partially ([https://gitlab.com/postmarketOS/pmbootstrap/issues/1427 #1427], more?)
 * Serial console
 * Splash screens
 * The SDL programs
