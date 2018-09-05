@@ -405,7 +405,7 @@ After you've gotten more familiar with postmarketOS, you could try out the <code
 If the display and the touchscreen interface are working, then it's time to add support for <code>osk-sdl</code>, so that you are able to use full disk encryption on the root filesystem. Instructions for adding support can be found here: [[Osk-sdl#Porting_to_New_Devices|Porting osk-sdl to New Devices]]
 
 === Advanced topics ===
-{{note|Out of ideas what to do next with postmarketOS? Check out the [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#how-can-you-help how can you help?] section from the last blog post!}}
+{{note|Out of ideas what to do next with postmarketOS? Check out the [https://postmarketos.org/blog/2018/06/09/one-year/#get-involved get involved] section from the last big blog post!}}
 * [[User-Interfaces]]
 * [[WiFi]]
 * [[Audio]]
