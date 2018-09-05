@@ -26,7 +26,7 @@
 * [[Deviceinfo reference]] ''our work-in-progress device-specific file format''
 * [[Creating a package]] ''and how to recycle package recipes from other distributions''
 * [[Mainline kernel|The mainline kernel]] ''early work on getting device kernels into mainline Linux''
-* [[Development guide]] ''currently has a git hook for working on packages''
+* [[pmbootstrap development guide]] ''getting started with hacking on the code''
 * [[Patching]] ''using pmbootstrap build --src to create patches for packages''
 * [[Repository maintenance]] ''taking care of the official postmarketOS repository''
 * [[:Category:Low-level|Low-level hacking]] ''everything below the kernel, bootloaders, modem firmware etc.''
