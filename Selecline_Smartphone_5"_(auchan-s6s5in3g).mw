@@ -35,6 +35,7 @@ have in mind that it's hard to find info about this phone (also it looks like th
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
+| status_status = Trying to get dtb from the phone and use it with generic Spreadtrum kernel
 | booting = no
 }}
 
