@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Qemu
-| name =  Amd64
+| name =  amd64
 | codename = qemu-amd64
 | architecture = x86_64
 | status_usbnet = -
