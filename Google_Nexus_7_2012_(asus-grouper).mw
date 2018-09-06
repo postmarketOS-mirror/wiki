@@ -28,7 +28,7 @@
 | status_bluetooth =
 | status_camera =
 | status_gps = 
-| status_mobiledata = 
+| status_mobiledata = -
 | status_sms = -
 | status_calls = -
 | booting = yes
