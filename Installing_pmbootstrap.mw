@@ -56,7 +56,7 @@ Add the following lines to <code>~/.zshrc</code>:
 <syntaxhighlight lang="shell">
 autoload bashcompinit
 bashcompinit
-eval "$(register-python-argcomplete3 pmbootstrap)"
+eval "$(register-python-argcomplete pmbootstrap)"
 </syntaxhighlight>
 
 Then reload your configuration by opening a new terminal or by running <code>source ~/.zshrc</code>.
