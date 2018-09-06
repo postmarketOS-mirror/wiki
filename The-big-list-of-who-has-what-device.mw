@@ -18,17 +18,21 @@
 }}</onlyinclude>
 
 === PureTryOut ===
+<onlyinclude>{{#ifeq:{{{user|PureTryOut}}}|PureTryOut|
 * [[Sony Xperia Z1 Compact (sony-amami)]] (3 times)
 * [[Google Nexus 5X(lg-bullhead)]]
 * [[Jolla Phone (jolla-sbj)|Jolla (jolla-jolla) jolla?]]
 * Samsung Galaxy Apollo
 * Sony Xperia Miro (broken touchscreen)
+}}</onlyinclude>
 
 === ata2001 ===
+<onlyinclude>{{#ifeq:{{{user|ata2001}}}|ata2001|
 * [[Sony Xperia Z1 Compact (sony-amami)]]
 * [[Moto G 2015 (motorola-osprey)|Motorola Moto G 3rd gen. (motorola-osprey)]]
 * Motorola Defy+ (motorola-jordan_plus)
 * HTC Desire 510 (htc-a11)
+}}</onlyinclude>
 
 === drebrez ===
 <onlyinclude>{{#ifeq:{{{user|Drebrez}}}|Drebrez|
@@ -48,16 +52,20 @@
 }}</onlyinclude>
 
 === antonok ===
+<onlyinclude>{{#ifeq:{{{user|antonok}}}|antonok|
 * [[Google Nexus 7 2012 (asus-grouper)]]
+}}</onlyinclude>
 
 === pave1 Pavel Machek ===
 * Nokia N770, N800, N810, [[Nokia N900 (nokia-rx51)|N900]], [[Nokia N9|N9]], [[Nokia N950|N950]] (if someone wants N770, N800, N810 and will be able to put them to good use, we may talk)
 * OpenMoko gta01
 
 === z3ntu ===
+<onlyinclude>{{#ifeq:{{{user|z3ntu}}}|z3ntu|
 * [[Fairphone 2 (fairphone-fp2)]]
 * Fairphone 1
 * ZTE Racer II
+}}</onlyinclude>
 
 === [[User:Halamix2|Halamix2]] ===
 <onlyinclude>{{#ifeq:{{{user|Halamix2}}}|Halamix2|
@@ -67,16 +75,20 @@
 }}</onlyinclude>
 
 === Opendata26 ===
+<onlyinclude>{{#ifeq:{{{user|Opendata26}}}|Opendata26|
 * [[Sony Xperia Z2 Tablet (sony-castor-windy)]]
 * Sony Xperia Z2
 * Nvidia shield android tv
 * iPod touch 2g (8gb new bootrom)
+}}</onlyinclude>
 
 === ashirviskas ===
+<onlyinclude>{{#ifeq:{{{user|ashirviskas}}}|ashirviskas|
 * [[Nextbit Robin (nextbit-ether)]]
 * [[Google Nexus 5 (lg-hammerhead)]] without a functioning display
 * Samsung Galaxy S2+ (i9105)
 * LG P500 Optimus One
+}}</onlyinclude>
 
 === ollieparanoid ===
 <onlyinclude>{{#ifeq:{{{user|Ollieparanoid}}}|Ollieparanoid|
@@ -85,13 +97,16 @@
 }}</onlyinclude>
 
 === rrooij ===
+<onlyinclude>{{#ifeq:{{{user|rrooij}}}|rrooij|
 * [[ASUS Eee Pad Transformer (asus-tf101)]]
 * [[Samsung-i9505-(Samsung-Galaxy-S4-int)]]
 * [[Samsung Galaxy S4 Mini LTE]]
 * [[Samsung Galaxy S (samsung-i9000)]]
 * [[Motorola E Second Gen]]
+}}</onlyinclude>
 
 === Rudloff ===
+<onlyinclude>{{#ifeq:{{{user|Rudloff}}}|Rudloff|
 * [[Fairphone 2 (fairphone-fp2)]]
 * [[Geeksphone Peak (gp-peak)]]
 * [[Geeksphone Revolution (gp-revolution)]]
@@ -99,6 +114,7 @@
 * [[Samsung Galaxy SII (samsung-i9100)]]
 * [[InFocus New Tab F1 (infocus-flatfish)]]
 * [[Sony SmartWatch 3 (sony-tetra)]]
+}}</onlyinclude>
 
 === [[User:MayeulC|MayeulC]] ===
 <onlyinclude>{{#ifeq:{{{user|MayeulC}}}|MayeulC|
