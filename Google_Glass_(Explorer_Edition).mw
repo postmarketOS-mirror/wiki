@@ -12,6 +12,26 @@
 | storage = 16 GB flash memory total[6] (12 GB of usable memory)
 | display = Prism projector, 640×360 pixels (equivalent of a 25 in/64 cm screen from 8 ft/2.4 m away)
 | memory = 2GB RAM
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = P
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = Y
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = Y
+| status_bluetooth = Y
+| status_camera = Y
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
 }}
 
 == Contributors ==
