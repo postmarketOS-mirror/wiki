@@ -68,12 +68,12 @@ to use Heimdall for flashing.
 
 == Installation ==
 
-# <pre>git clone https://gitlab.com/postmarketOS/pmbootstrap.git && cd pmbootstrap</pre>
-# <pre>./pmbootstrap.py init</pre>
-# <pre>./pmbootstrap.py install --no-fde</pre>
+# [[Installing_pmbootstrap | Install pmbootstrap]]
+# <pre>pmbootstrap init</pre>
+# <pre>pmbootstrap install --no-fde</pre>
 # Put your S4 in Download Mode (Volume Down + Power) and connect it with USB
-# <pre>./pmbootstrap.py flasher flash_kernel</pre>
-# <pre>./pmbootstrap.py flasher flash_rootfs</pre>
+# <pre>pmbootstrap flasher flash_kernel</pre>
+# <pre>pmbootstrap flasher flash_rootfs</pre>
 
 == Wifi ==
 
