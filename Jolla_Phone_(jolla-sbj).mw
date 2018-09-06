@@ -34,18 +34,20 @@
 | status_calls = 
 | booting = yes
 }}
+
+== Feature matrix ==
+
+{{#cargo_query:
+tables=Devices
+|fields=StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
+|format=table
+|where=Devices.manufacturer = "Jolla"  AND Devices.name = "Jolla Phone"
+}}
+
 == Contributors ==
 
 * MartijnBraam
 * PureTryOut
-
-== What works ==
-
-* Compiling the kernel from the Jolla sources which should provide everything to run Wayland since that's what Sailfish uses
-* Flashing
-* Booting
-* USB
-* SSH (after some manual configuration)
 
 == Backup the Jolla system ==
 
