@@ -12,6 +12,26 @@
 | storage = 16 GB / 32 GB / 64GB
 | display = 720x1280
 | memory = 2 GB / 3 GB / 4 GB
+| architecture = aarch64
+| status_usbnet = 
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
 }}
 
 == Contributors ==
