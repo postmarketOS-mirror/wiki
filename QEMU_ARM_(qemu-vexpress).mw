@@ -1,5 +1,6 @@
 {{Infobox device
-| name =  Qemu armhf
+| manufacturer =Qemu
+| name =  vexpress
 | codename = qemu-vexpress
 | architecture = armhf
 | status_usbnet = -
