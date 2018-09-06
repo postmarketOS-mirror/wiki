@@ -12,6 +12,26 @@
 | storage = 16 GB
 | display = 720x1280 AMOLED 
 | memory = 2 GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = P
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = P
+| status_bluetooth = P
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
 }}
 
 == Contributors ==
