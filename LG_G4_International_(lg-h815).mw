@@ -13,7 +13,7 @@
 | storage = 32GB
 | display = 2560x1440 IPS LCD
 | memory = 3GB LPDDR3
-| architecture = armhf
+| architecture = aarch64
 | status_usbnet = Y
 | status_flashing =Y
 | status_touch = Y
