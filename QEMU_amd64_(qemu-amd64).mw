@@ -1,4 +1,6 @@
 {{Infobox device
+| name =  Qemu amd64
+| codename = qemu-amd64
 | architecture = x86_64
 | status_usbnet = -
 | status_flashing = -
