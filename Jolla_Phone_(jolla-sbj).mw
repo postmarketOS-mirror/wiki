@@ -47,6 +47,30 @@
 * USB
 * SSH (after some manual configuration)
 
+== Backup the Jolla system ==
+
+If you want to flash postmarketOS to your phone itself rather than an sdcard, it might be smart to first backup your system.
+
+'''Backup:'''
+
+# Shutdown the device and remove all cables and the battery
+# Insert the battery while holding down the volume down button
+# While still holding down the volume down button, press the power button till the phone shakes. If done correctly, the Jolla logo will be shown constantly in combination with the led lighting up white
+# Plug in the phone to a PC with telnet installed
+# On your PC, open a terminal and use telnet to get into the recovery <pre>telnet 10.42.66.66</pre>
+# A menu will be shown, press 4 and enter to get a shell. The device will ask for your devicelock code
+# Insert a sdcard into your phone with a partition on it big enough to fit the system. The sdcard will show up as "/dev/mmcblk1"
+# Mount the sdcard partition to a directory. <pre>mkdir /tmp/phone-backup; mount /dev/mmcblk1p1 /tmp/phone-backup</pre>
+# dd your system to an image file on the sdcard. <pre>dd if=/dev/mmcblk0p28 of=/mnt/backup/jolla-fullBackup.img</pre>
+# When the disk image is made, unmount the sdcard. <pre>umount /tmp/phone-backup</pre>
+
+'''Restore:'''
+
+# Telnet to the device like before
+# Mount the sdcard to a partition again
+# dd the backup image to the device <pre>dd if=/mnt/backup/jolla-fullBackup.img of=/dev/mmcblk0p28</pre>
+# Reboot
+
 == Flashing mode ==
 
 The Jolla phone uses fastboot from the Mer project rather than Android. To enter fastboot shut down the device, then plug in the USB lead while holding down volume down.
