@@ -84,9 +84,9 @@ The downstream kernel provides an early implementation of a driver for the <code
 The <code>max8903</code> datasheet shows that there are separate GPIOs for USB and DC power connectors. This device has one connect GPIO for both USB and DC mode. The type of connector is determined by reading the <code>usb-sel</code> GPIOs. It's unclear which piece of hardware the usb-sel is coming from (max8903 / tegra soc / 30-pin connector ???).
 
 == Graphics ==
-The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not working. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
+The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not implemented. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
 
-grate-drver packaging can be found at [http://github.com/Decatf/pmbootstrap/tree/feature/mesa-grate github.com/Decatf/pmbootstrap/tree/feature/mesa-grate]
+grate-drver packaging can be found at: [https://gitlab.com/ryang2678/pmaports/tree/feature/grate-driver https://gitlab.com/ryang2678/pmaports/tree/feature/grate-driver]
 
 === Video Decoding ===
 
