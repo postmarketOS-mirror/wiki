@@ -317,7 +317,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy Tab 10.1" (samsung-p4wifi)|Samsung Galaxy Tab 10.1"]]
   | style="white-space: nowrap;" | samsung-p4wifi, -p4, -p4tmo
-  | Y || Y || Y || Y || Y ||  ||  || P ||  ||  ||  || P || Y ||  ||  ||  ||  || 
+  | Y || Y || Y || Y || Y ||  || Y || P || Y ||  ||  || P || Y ||  ||  ||  ||  || 
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy Tab 2 10.1" (3G and Wifi) (samsung-espresso10)|Samsung Galaxy Tab 2 10.1"]]
   | style="white-space: nowrap;" | samsung-espresso10
