@@ -91,7 +91,6 @@ Get UART working, then test basic DTS with just basics to get earlycon working:
 * needed resistor is *probably* 619kΩ, need to test that
 * unknown name of the port in original kernel, candidates are ttyMSM0, tty0, ttyHS0 and ttyGS0
 
-{{
 
 ==== Useful links (mainly dts stuff) ====
 [[The_Mainline_Kernel|The Mainline Kernel]] – our docs about mainlining
