@@ -85,6 +85,14 @@ Currently we have working 2.6 kernel, no DTS files for qcom-msm7227a.
 
 Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<board name>.c'' for starters and recreate it in .dts file(s).
 
+Get UART working, then test basic DTS with just basics to get earlycon working:
+
+* used voltage is 1.8V
+* needed resistor is *probably* 619kΩ, need to test that
+* unknown name of the port in original kernel, candidates are ttyMSM0, tty0, ttyHS0 and ttyGS0
+
+{{
+
 ==== Useful links (mainly dts stuff) ====
 [[The_Mainline_Kernel|The Mainline Kernel]] – our docs about mainlining
 
