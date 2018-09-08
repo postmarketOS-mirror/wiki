@@ -40,20 +40,6 @@
 
 == Maintainer(s) ==
 * kamnxt
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
-
-== What works ==
-* Booting
-* USB ethernet
-* SSH
-
-== What does not work ==
-* Screen (only shows boot logo, haven't got anything displaying yet)
-* Sound?
-* Wifi? (wlan0 device comes up)
-* Bluetooth?
-* Possibly more
 
 == How to enter flash mode ==
 * <syntaxhighlight lang="bash">adb reboot bootloader</syntaxhighlight> to enter fastboot from TWRP or Android
