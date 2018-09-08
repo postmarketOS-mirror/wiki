@@ -40,11 +40,6 @@
 == Maintainer(s) ==
 * JBBgameich
 
-== What works ==
-Building, more not tested yet
-
-== What does not work ==
-
 == How to enter flash mode ==
 Run adb reboot bootloader from the recovery or stock ROM. Alternatively choose fastboot in the early boot menu (only appears if your bootloader is unlocked) by using the volume buttons.
 
