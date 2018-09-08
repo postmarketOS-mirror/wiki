@@ -40,13 +40,6 @@
 == Maintainer(s) ==
 * Aerotinge
 
-== What has not been tested ==
-* Accelerometer, GPS, light sensor
-* Wifi, Bluetooth, RIL
-* Vibrator
-* Camera, Flashlight
-* Battery
-
 == How to enter flash mode (HBOOT) ==
 * Power off the phone
 * Press volume down
