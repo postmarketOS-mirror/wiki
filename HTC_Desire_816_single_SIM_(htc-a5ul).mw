@@ -40,15 +40,6 @@
 == Maintainer(s) ==
 * Aerotinge
 
-== What works ==
-* Booting with fastboot
-* USB Network
-* SSH
-* Screen
-
-== What does not work ==
-* The device stuck at the pmOS loading screen.
-
 == What has not been tested ==
 * Accelerometer, GPS, light sensor
 * Wifi, Bluetooth, RIL
