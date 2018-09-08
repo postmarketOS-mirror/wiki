@@ -37,19 +37,6 @@
 
 * [https://github.com/rymate1234/ rymate1234]
 
-== What works ==
-
-* Device boots
-* Framebuffer graphics
-* Splashscreen
-* Weston
-* Touchscreen
-* Flashing the kernel and system image via fastboot
- 
-== What doesn't work ==
-
-* Anything not mentioned (wifi, bluetooth, etc.)
-
 == Untested ==
 
 * Interfaces other than weston (plasma, xfce4 are not working yet)
