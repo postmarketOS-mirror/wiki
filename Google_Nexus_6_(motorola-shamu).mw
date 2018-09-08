@@ -36,29 +36,19 @@
 
 * [[User:EricJ2190|EricJ2190]]
 
-== What works ==
-
-* USB networking
-* Flashing
-* Touch
-* Screen
-** Requires msm-fb-refresher to update the framebuffer.
-** The brightness can be adjusted by writing a value from 0 to 255 to <code>/sys/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.164/leds/lcd-backlight/brightness</code>.
-* LEDs
-** The green charging LED can be set by writing a value from 0 to 40 to <code>/sys/devices/leds-qpnp-10/leds/charging/brightness</code>.
-** General purpose LEDs can be set by writing a value from 0 to 20 to the devices below, although there is no observable difference in brightness from 1 to 20.
-*** Red: <code>/sys/devices/leds-qpnp-11/leds/red/brightness</code>
-*** Green: <code>/sys/devices/leds-qpnp-12/leds/green/brightness</code>
-*** Blue: <code>/sys/devices/leds-qpnp-13/leds/blue/brightness</code>
-
-== What does not work ==
-
-* Wi-Fi
-** A <code>wlan0</code> interface is present, but it will not connect. It probably just needs firmware.
-
 == How to enter flash mode ==
 
 With the device powered off, hold Volume Down while booting.
+
+== Additional info ==
+The screen brightness can be adjusted by writing a value from 0 to 255 to <code>/sys/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.164/leds/lcd-backlight/brightness</code>.
+
+=== LEDs ===
+The green charging LED can be set by writing a value from 0 to 40 to <code>/sys/devices/leds-qpnp-10/leds/charging/brightness</code>.
+General purpose LEDs can be set by writing a value from 0 to 20 to the devices below, although there is no observable difference in brightness from 1 to 20.
+* Red: <code>/sys/devices/leds-qpnp-11/leds/red/brightness</code>
+* Green: <code>/sys/devices/leds-qpnp-12/leds/green/brightness</code>
+* Blue: <code>/sys/devices/leds-qpnp-13/leds/blue/brightness</code>
 
 == Links ==
 
