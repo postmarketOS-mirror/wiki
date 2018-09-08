@@ -37,21 +37,7 @@
 == Contributors ==
 * zhenyolka
 
-=== What works ===
-
-* Kernel compilation
-* Initramfs boot
-* USB Network
-* SSH Connectivity
-* Weston on framebuffer
-* Touchscreen
-* Xwayland
-
-=== What does not work ===
-
-* Unknown, but probably everything else
-
-=== Links ===
+== Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-d285 Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-lg-d285 Kernel package]
