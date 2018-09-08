@@ -39,23 +39,6 @@
 * BakaOsaka
 * MartijnBraam
 
-== What works ==
-* Boot process
-* Telnet/SSH over USB
-* Screen
-* Weston
-* USB keyboard
-* Touchscreen
-* Flashing in odin mode
-
-== What does not work ==
-* WiFi
-* Bluetooth
-* Xorg (FBDEV(0): FBIOBLANK: Resource busy (Screen blanking not supported by kernel - disabling))
-* fde or osk-sdl (creates bootloop)
-* Flashing rootfs through fastboot (but works with heimdall)
-* Charging
-
 == How to enter flash mode ==
 * Connect a USB cable
 * Power the device off
