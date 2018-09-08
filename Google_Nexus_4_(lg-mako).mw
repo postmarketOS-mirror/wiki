@@ -59,16 +59,6 @@ You can flash the postmarketOS kernel, but instead of charging the battery, it w
 
 You can properly turn the device off by unplugging the usb cable, then booting into fastboot, then choosing power off.
 
-== What works ==
-* Touchscreen
-* Weston (has the red screen bug, but we have a workaround for that now 👍 )
-
-== What does not work ==
-* XWayland
-* fbsplash only displays splash images very shortly, then goes to black screen
-* osk-sdl has graphical bugs (but it works for unlocking!) ({{github|59|osk-sdl}})
-* The rest (Wifi, bluetooth, making calls, ...)
-
 == Wifi ==
 Looks like, we need to package the [https://github.com/LineageOS/android_device_lge_mako/blob/12ac6e9aeb32d5ac9fc832f2214ede2c7690d0a6/proprietary-blobs.txt#L152-L157 wcnss.* files] for wifi. A version from 2015 can be found [https://github.com/TheMuppets/proprietary_vendor_lge/tree/cm-14.1/mako/proprietary/vendor/firmware here]. It's a Qualcomm chip.
 
