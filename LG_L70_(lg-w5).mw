@@ -1,0 +1,37 @@
+[[Category:Devices]]
+{{Infobox device
+| manufacturer = LG
+| name =  LG L70
+| codename = lg-w5
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 (KitKat)
+| chipset = Qualcomm MSM8210 Snapdragon 200
+| cpu = Dual-core 1.2 GHz Cortex-A7
+| gpu = Adreno 302
+| storage = 4 GB
+| display = 480 x 800 IPS LCD
+| memory = 1 GB
+| architecture = CHANGE_ME
+| status_usbnet = Y
+| status_flashing = CHANGE_ME
+| status_touch = CHANGE_ME
+| status_screen = N
+| status_wifi = CHANGE_ME
+| status_xwayland = CHANGE_ME
+| status_fde = CHANGE_ME
+| status_mainline = CHANGE_ME
+| status_battery = CHANGE_ME
+| status_3d = CHANGE_ME
+| status_accel = CHANGE_ME
+| status_audio = CHANGE_ME
+| status_bluetooth = CHANGE_ME
+| status_camera = CHANGE_ME
+| status_gps = CHANGE_ME
+| status_mobiledata = CHANGE_ME
+| status_sms = CHANGE_ME
+| status_calls = CHANGE_ME
+| booting = Y
+}}
+
+== Contributors ==
+* Paakke
