@@ -39,17 +39,6 @@
 * filippz
 * pavelmachek
 
-== What works ==
-* Touchscreen/display
-* USB Networking
-* Battery voltage readout
-
-== What does not work ==
-* Battery charging
-
-== What could work ==
-* Bluetooth
-
 == How to enter flash mode ==
 This device is pretty similar to nokia N950, with minor differences in kernel. Bootloader has same problems. See https://elinux.org/N950
 
