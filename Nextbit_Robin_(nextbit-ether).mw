@@ -40,16 +40,6 @@
 == Maintainer(s) ==
 * ashirviskas
 
-== What works ==
-* Kernel compiles
-* Booting
-* SSH over USB
-* Display
-* Touch
-
-== What does not work ==
-* Everything else
-
 == How to enter flash mode ==
 '''Fastboot''': Hold down POWER and VOL DOWN. Use volume buttons to navigate to Fastboot and press power.
 
