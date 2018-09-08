@@ -40,26 +40,6 @@
 == Maintainer(s) ==
 * Rudloff
 
-== What works ==
-* Flashing
-* USB network
-* Display (but it only uses a part of the screen)
-* Touchscreen
-* Full disk encryption
-* Audio (only with headset)
-* Weston
-* XWayland
-
-== Not tested ==
-* Accelerometers
-* Bluetooth
-* GPS
-
-== What does not work ==
-* Wifi (needs bcm40183b2 firmware)
-* Camera
-* Battery
-
 == How to enter flash mode ==
 The original bootloader can't boot in fastboot mode so you need to flash a new one.
 You can follow the instructions [https://wiki.mozilla.org/Firefox_OS/TCP/Flashing_the_Flatfish_bootloader here].
