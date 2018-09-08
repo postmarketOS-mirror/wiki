@@ -36,19 +36,6 @@
 === Contributors ===
 * antonok
 
-=== What works ===
-* Boot process
-* Telnet/SSH over USB
-* Screen
-* USB keyboard, mouse
-* Touchscreen
-* Wifi (somewhat hacky so far, will improve soon!)
-
-=== What does not work ===
-* weston-keyboard
-* <s>Can't boot without reflashing boot (!) [https://github.com/postmarketOS/pmbootstrap/issues/834#issuecomment-341231881]</s> '''Update:''' Does not seem to be an issue any more
-* Full-disk Encrpyion. Use <code>install --no-fde</code>
-
 === How to enter flash mode ===
 * Connect a USB cable
 * Power the device off
