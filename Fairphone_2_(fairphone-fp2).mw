@@ -42,20 +42,6 @@
 
 * Luca Weiss (z3ntu)
 
-== What works ==
-
-* Flashing (needs bootloader patch)
-* Booting
-* Screen (needs the msm framebuffer hack, but [https://github.com/postmarketOS/pmbootstrap/issues/604 #604] is blocking the packaged version)
-* Touchscreen
-* USB networking
-* USB OTG
-* WiFi
-
-== What does not work ==
-
-* The rest (probably)
-
 == How to enter flash mode ==
 
 Hold vol-down while booting the device. The splash screen doesn't indicate, that the phone is in fastboot mode, but you can test it by running "fastboot devices" on a PC that's connected via USB to the phone.
