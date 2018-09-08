@@ -40,27 +40,14 @@
 == Maintainer(s) ==
 * chin123
 
-== What works ==
-* Flash Rootfs
-* Boot Kernel through <code>pmbootstrap flasher boot</code>
-* USB internet
-* ssh
-* screen
-
-== What does not work ==
-* touch
-* kernel cannot be flashed due to running out of space
-
 == How to enter flash mode ==
 * Power + Volume Down buttons
 
 == Installation ==
-<code> $ pmbootstrap flasher flash_rootfs </code> <br> 
-<code> $ pmbootstrap flasher boot </code> <br>
-
-
-<!-- add more sections here as necessary, e.g. Wifi, ... -->
-
+<source>
+$ pmbootstrap flasher flash_rootfs
+$ pmbootstrap flasher boot
+</source>
 
 == Photos ==
 
