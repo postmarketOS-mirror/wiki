@@ -41,20 +41,6 @@
 * LongnoseRob 
 * Everyone on IRC
 
-== What works ==
-
-* Compiling the kernel
-* Booting in Weston
-* USB mouse and keyboard on the dock
-* The dock keyboard
-
-== What does not work ==
-
-* Flashing normally, since the device uses nvflash, a proprietary flashing protocol
-* USB Networking
-* Touch
-* The dock touchpad
-
 == Installation ==
 {{note|We could [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-357035481 streamline this a lot] with your help.}}
 
