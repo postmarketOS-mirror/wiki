@@ -44,8 +44,10 @@
 * Power + Volume Down buttons
 
 == Installation ==
-<code> $ pmbootstrap flasher flash_rootfs </code> <br> 
-<code> $ pmbootstrap flasher boot </code> <br>
+<source>
+$ pmbootstrap flasher flash_rootfs
+$ pmbootstrap flasher boot
+</source>
 
 == See also ==
 * {{github|1412}} initial PR
