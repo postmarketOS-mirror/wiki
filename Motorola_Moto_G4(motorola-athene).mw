@@ -40,15 +40,6 @@
 
 == Maintainer(s) ==
 
-== What works ==
-* Boot
-* Display
-* USB Network
-
-== What does not work ==
-* Touchscreen
-* <code>pmbootstrap flasher flash_kernel</code>
-
 == How to enter flash mode ==
 * Power + Volume Down buttons
 
