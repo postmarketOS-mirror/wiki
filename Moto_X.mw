@@ -37,9 +37,6 @@
 == Contributors ==
 * Xinayder
 
-== What does not work ==
-* The device freezes on the first boot after flashing. Rebooting it fixes the issue.
-
 == Entering &quot;Fastboot mode&quot; ==
 Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
 
@@ -52,6 +49,8 @@ pmbootstrap flasher flash_rootfs
 
 The device must be in bootloader mode. While flashing, it's normal to see "variable not supported!" messages.
 
+== Additional info ==
+The device freezes on the first boot after flashing. Rebooting it fixes the issue.
 
 == See also ==
 * {{MR|1646}} initial merge requests
