@@ -37,23 +37,6 @@
 
 * ''[[user:drebrez|drebrez]]''
 
-== What works ==
-
-* Kernel compilation
-* Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* Initramfs boot
-* USB Network
-* Framebuffer graphics (Splash screens)
-* SSH Connectivity
-* Weston on framebuffer
-* Touchscreen
-* Xwayland
-
-== What does not work ==
-* Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
-* Wifi
-* Audio playback
-
 == Entering "HBOOT mode" ==
 
 Hold the '''Volume Down''' button, and then press the '''Power''' button
