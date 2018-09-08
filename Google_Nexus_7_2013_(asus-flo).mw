@@ -22,7 +22,7 @@
 | status_fde = P
 | status_mainline = P
 | status_battery =
-| status_3d = 
+| status_3d = Y
 | status_accel = 
 | status_audio = 
 | status_bluetooth =
@@ -47,27 +47,6 @@
 * Boot to bootloader: Power + Volume Down
 * Boot to recovery: Power + Volume Up
 * Shutdown: Power
-
-=== What works ===
-
-* 3D Freedreno hardware acceleration
-* Flashing with pmbootstrap/fastboot
-* Upstream stable Kernel 4.11.12 + patches
-* Screen
-* Touchscreen input
-* USB Internet
-* WIFI Internet
-* X11 Hildon, Mate, Xfce, Xwayland-Weston, Plasma-mobile, matchbox
-* TWRP Recovery
-* PREEMPT_RT (not on by default)
-
-=== What does not work yet ===
-
-* Audio
-* Hardware Video decoding
-* Bluetooth
-* Sensors
-* Camera
 
 === Issues ===
 
