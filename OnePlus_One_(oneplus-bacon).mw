@@ -38,24 +38,6 @@
 
 * flacks
 
-== What works ==
-
-* Kernel compilation
-* Flashing system
-* Booting kernel via fastboot
-* initramfs boot
-* Flashing kernel
-* USB network
-* SSH connectivity
-* Weston
-* Touchscreen
-
-== What doesn't work ==
-
-* Wi-Fi (blob needed)
-* Hardware-accelerated graphics
-* ...
-
 == Display refresh ==
 There is a bug whereby the screen is not automatically refreshed. To work around this, run the following command as root on the device:
 <pre># while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
