@@ -37,24 +37,6 @@
 == Contributors ==
 yxist
 
-== What works ==
-* Installing manually to SD card
-* Kernel compilation (LineageOS unofficial)
-* Initramfs boot
-* USB Network
-* Framebuffer graphics (Splash screens)
-* SSH Connectivity
-* Touchscreen
-
-== What does not work ==
-* Flashing using <code>pmbootstrap flasher</code>
-* Sensors
-* GPS
-* Wayland
-* Wifi
-* Audio playback
-* Probably everything else
-
 == How to enter flash mode ==
 Hold power button and volume up while device is turned off
 
