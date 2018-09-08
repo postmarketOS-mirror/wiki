@@ -34,7 +34,7 @@
 | booting = yes
 }}
 
-=== Contributors ===
+== Contributors ==
 
 * kskarthik
 * MartijnBraam
@@ -44,15 +44,7 @@
 * lawl
 * yuvadm
 
-=== What works ===
-
-* Compiling the kernel
-* Building a base image
-* Fastboot flash
-* SD card install
-* Modules and firmware installation (sort of)
-
-==== Current Build / Boot Process ====
+== Installation ==
 
 Build and install to SD card:
 
@@ -62,9 +54,7 @@ Boot the phone into fastboot mode (power + volume down) and flash the boot parti
 <pre>$ ./pmbootstrap.py flasher flash_kernel</pre>
 Insert SD card and boot.
 
-=== Known Issues ===
-
-==== Modules / Firmware Support ====
+== Modules / Firmware Support ==
 
 Most modules and firmware while built and installed do not load correctly. Ongoing work is in progress to support:
 
@@ -73,7 +63,7 @@ Most modules and firmware while built and installed do not load correctly. Ongoi
 * Audio
 * etc.
 
-==== Unknown chunk type ====
+=== Unknown chunk type ===
 
 <code>mozilla-flame.img</code> cannot be flashed to either the <code>system</code>/<code>userdata</code> partitions due to bootloader limitations (probably because the system image is larger than the max download size and it forces the download into sparse mode, which is handled badly.)
 
@@ -87,14 +77,6 @@ writing 'userdata' 1/2...
 FAILED (remote: Unknown chunk type)
 finished. total time: 11.275s</pre>
 Workaround is to install to SD card, or to init your build with <code>none</code> UI instead of <code>weston</code>, which will produce a system image under the limitation.
-
-=== Links ===
-* [https://sizeofcat.github.io/post/postmarketos-on-mozilla-flame/ postmarketOS on Mozilla Flame] blog post with installation instructions and screenshots of Plasma Mobile and Weston
-* [https://github.com/mozilla-b2g/codeaurora_kernel_msm/tree/t2m-flame-3.4-kk Kernel Source]
-* Bleeding edge [https://github.com/postmarketOS/pmbootstrap/tree/device/mozilla-flame <code>device/mozilla-flame</code>] branch
-* [https://gist.github.com/yuvadm/238db856f1a81a572b0cd2a02a51ae8a UART/serial debug logs]
-* [https://github.com/postmarketOS/pmbootstrap/wiki/Serial-debugging#mozilla-flame Serial debugging]
-* [https://yuv.al/flame/ Mozilla Flame B2G build artifacts mirror]
 
 === Internal Data ===
 
@@ -187,6 +169,15 @@ lrwxrwxrwx root     root              1969-12-31 19:10 usbmsc -> /dev/block/mmcb
 lrwxrwxrwx root     root              1969-12-31 19:10 userdata -> /dev/block/mmcblk0p29
 </source>
 
-=== Photos ===
+
+== Links ==
+* [https://sizeofcat.github.io/post/postmarketos-on-mozilla-flame/ postmarketOS on Mozilla Flame] blog post with installation instructions and screenshots of Plasma Mobile and Weston
+* [https://github.com/mozilla-b2g/codeaurora_kernel_msm/tree/t2m-flame-3.4-kk Kernel Source]
+* Bleeding edge [https://github.com/postmarketOS/pmbootstrap/tree/device/mozilla-flame <code>device/mozilla-flame</code>] branch
+* [https://gist.github.com/yuvadm/238db856f1a81a572b0cd2a02a51ae8a UART/serial debug logs]
+* [https://github.com/postmarketOS/pmbootstrap/wiki/Serial-debugging#mozilla-flame Serial debugging]
+* [https://yuv.al/flame/ Mozilla Flame B2G build artifacts mirror]
+
+== Photos ==
 
 [[File:T2m-flame-irl-pic.jpg|200px]]  [[File:T2m-flame-screen-dump-1.png|200px]]
