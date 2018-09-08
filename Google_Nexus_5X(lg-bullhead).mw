@@ -40,21 +40,6 @@
 * PureTryOut
 * MartijnBraam
 
-== What works ==
-
-* Compiling the kernel kernel
-* Flashing
-* Booting
-* Telnet
-* SSH
-* Display
-
-== What does not work ==
-
-* WiFi
-* Led
-* osk-sdl (patch available, please test and report back: {{MR|1294}})
-
 == Unlocking == 
 
 In android go to settings -> System -> About phone and tap the build number 7 times.
