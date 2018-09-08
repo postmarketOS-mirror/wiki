@@ -44,23 +44,10 @@
 * [https://forum.xda-developers.com/nokia-lumia-520/development/bootloader-littlekernel-bootloader-t3480347 Littlekernel Bootloader with fastboot support]
 * [https://github.com/Android4Lumia/android_kernel_nokia_msm8x27 Kernel source]
 
-== What works ==
-* Compiling the kernel
-* Flashing with Fastboot
-* Booting initramfs
-* SSH
-* Display (pmos loading screen)
-* Touchscreen
-* Weston
-
-== What does not work ==
+== Additional info ==
 * Possible emmc corruption when flashing? From Android4Lumia page: <q>My phone has Samsung eMMC, can I still use this? You can, but be aware, that those eMMCs are more probable to die unexpectedly than Hynix or Toshiba ones.</q>. Files are randomly corrupted on my device as well.
 * <s>Booting from SD card failed as the files there also seems to become corrupted.</s> 2GB Kingston seems to work without problems
 * X crashes: <code>[   118.028] (EE) Segmentation fault at address 0x4</code>
-* plasma-mobile doesn't start, screen stuck on "loading..."
-
-== Not tested ==
--
 
 == Unlocking / installing bootloader ==
 Bootloader is unlocked with a proprietary windows application, [https://www.wpinternals.net/ WP Internals]. Windows Device Recovery Tool (thor2.exe) is also needed.
