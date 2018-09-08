@@ -37,23 +37,6 @@
 
 * ''[[user:drebrez|drebrez]]''
 
-== What works ==
-(☑: working, ☐: not working)
-
-* ☑ Kernel compilation
-* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☐ Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
-* ☑ Initramfs boot
-* ☑ USB Network
-* ☑ Framebuffer graphics (Splash screens)
-* ☑ SSH Connectivity
-* ☑ Weston on framebuffer
-* ☑ Touchscreen
-* ☑ Xwayland
-* ☑ Wifi
-* ☐ Audio playback
-* ☐ Xorg (see [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1602#note_85282453 !1602], open a new issue if you'd like discuss debug this)
-
 == Device info ==
 
 * [http://www.gsmarena.com/huawei_ascend_y530-6103.php Full phone specifications]
