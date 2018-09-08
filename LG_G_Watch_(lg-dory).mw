@@ -37,22 +37,6 @@
 
 * ''[[user:drebrez|drebrez]]''
 
-== What works ==
-
-* ☑ Kernel compilation
-* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☑ Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
-* ☑ Initramfs boot
-* ☑ USB Network
-* ☑ Framebuffer graphics (Splash screens)
-* ☑ SSH Connectivity
-* ☑ Weston on framebuffer
-* ☑ Touchscreen
-* ☑ Xwayland
-* ☑ Accelerometer
-* ☐ Audio playback
-* ☐ Bluetooth
-
 == Device info ==
 
 * [http://www.gsmarena.com/lg_g_watch_w100-7718.php Full phone specifications]
