@@ -37,31 +37,6 @@
 
 * Nutcake
 
-=== What works ===
-
-* Compiling the LineageOS kernel
-* SSH
-* Booting (see &quot;Signing the boot image&quot; to boot without pmbootstrap command)
-* Flash light
-** Use led:flash_torch in /sys/class/leds. led:flash_0 and led:flash_1 can be used to individually address the dual-tone flash LEDs but they turn off again after a second.
-* RGB front LED
-* Backlight control
-* Battery
-* Weston + Touchscreen
-
-=== What does not work ===
-
-* WiFi, Bluetooth, etc...
-* USB OTG
-* Graphical terminal in weston crashes instantly
-
-There is also a bug where the screen is not updated. Workaround: login using ssh and run the following command:
-
-<pre>ssh user@172.16.42.1
-sudo su
-while [ ! ]; do cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/mode; done</pre>
-As this devices' screen is 1440x2560px, small elements in weston are extremely hard to click and the on-screen keyboard is pretty much unusable, so DPI scaling is needed in weston. However, right now the fbdev backend doesn't support scaling.
-
 === Fastboot ===
 
 Before you can use fastboot on this device you need to remove LGs Download mode, which hides the standard fastboot mode. You can do this by zeroing out a partition called 'laf':
