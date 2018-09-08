@@ -38,20 +38,6 @@
 == Contributors ==
 * Alexandroid99
 
-== What works ==
-* USB Ethernet
-* SSH
-* Initfs Telnet
-* Display (Google Logo disappears after short while, cyan mouse cursor visible if Mate is installed)
-* Vibration (maximum-attention initfs hook)
-
-== What does not work ==
-* Wifi
-* Bluetooth
-* Touch
-* Starting any GUI
-* Staying up and responsive for more than ~5min (kworker hangs and then panics the kernel)
-
 == How to enter flash mode ==
 
 Hold POWER + VOLDOWN, press Power to confirm Fastboot mode
