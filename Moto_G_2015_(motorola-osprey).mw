@@ -39,24 +39,6 @@
 == Maintainer(s) ==
 * ata2001
 
-== What works ==
-* Flashing
-* Screen
-* Touch
-* Networking trough USB
-* Xwayland
-
-== What does not work ==
-* Initfs splash and osk-sdl
-* Wifi
-* GPU acceleration
-* Audio
-* Bluetooth
-* GPS
-* Camera
-* Mobile data
-* Phone calls
-
 == How to enter flash mode ==
 Power off the device, hold down the power and the volume up key for 1-2 seconds.
 
