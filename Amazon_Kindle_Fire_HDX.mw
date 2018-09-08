@@ -40,15 +40,6 @@
 == Maintainer(s) ==
 * steamport (MoreRobustThanYou)
 
-== What works ==
-
-* Kernel compiles
-* Can be flashed with fastboot (small system image required, requires <code>0x1949</code> as deviceinfo_flash_fastboot_vendor_id), or TWRP terminal
-* Boots successfully
-* Weston
-* Plasma Mobile (colors are off, though)
-* SSH/RNDIS
-
 == Problems ==
 
 * <del>TWRP for this device does NOT contain busybox</del> not a problem anymore, the recovery zip installer handles this now
