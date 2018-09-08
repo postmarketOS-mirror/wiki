@@ -37,21 +37,6 @@
 
 * zhuowei
 
-== What works ==
-
-* Building kernel
-* Booting kernel via fastboot
-* Telnet to initramfs, ssh to running system
-* Mounting rootfs via NFS over USB (needs the [https://github.com/postmarketOS/pmbootstrap/pull/547 nfs-root PR])
-* Graphics (using msm_fb_refresher)
-* Touchscreen
-* Wi-Fi: Follow [[Wifi#Connecting_to_APs]] to enable; currently using firmware extracted from AOSP.
-
-== What does not work ==
-
-* Flashing and mounting rootfs on internal storage (untested)
-* Everything else (no Bluetooth, audio, modem, accelerometer, you tell me)
-
 == Kernel configs applied ==
 
 Configs changed from stock Lineage kernel:
