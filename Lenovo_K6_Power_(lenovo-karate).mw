@@ -40,24 +40,6 @@
 == Maintainer(s) ==
 * shwsh
 
-== What works ==
-* Display
-* Touchscreen
-* Network through USB
-* Telnet in initramfs
-* SSH
-* Wifi
-* Xwayland
-* 3D (software rendering)
-
-== What has not been tested ==
-* Accelerometers
-* Audio
-* Bluetooth
-* Camera
-* Mobile data/SMS
-* Microphone
-
 == How to enter flash mode ==
 Hold the volume down button and the power button while before the Lenovo splash screen appears to boot to fastboot.
 
