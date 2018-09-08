@@ -41,16 +41,6 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
-== What works ==
-* Booting
-* FDE
-* Flashing
-* Screen
-* Wifi
-* XWayland
-
-== What does not work ==
-
 == How to enter flash mode ==
 
 == Installation ==
