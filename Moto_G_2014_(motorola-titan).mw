@@ -33,41 +33,18 @@
 | status_calls = 
 | booting = yes
 }}
-=== Contributors ===
+== Contributors ==
 
 * [https://github.com/PabloCastellano/ PabloCastellano]
 
-=== What works ===
+== Aditional info ==
 
-* [x] Kernel compiles (LineageOS)
-* [x] Booting the system
-* [ ] Splash screens
-* [x] Unlock the root encrypted partition
-* [x] Framebuffer graphics
-* [x] Weston
-* [x] Touchscreen
-* [ ] XWayland
-* [ ] Battery
-* [ ] Flash light
-* [ ] RGB front LED
-* [ ] Backlight control
-* [x] flash_rootfs
-* [x] boot
-* [ ] flash_kernel
-* [ ] wifi
-
-=== What doesn't work well ===
-
-* I had to disable -Werror in order to compile the kernel
-* initfs hook is not executed
-* Splash screens don't work and I cannot get framebuffer working in initramfs
-* Screen is black after I've entered the password. Workaround:
+* Screen is black after the password is entered. Workaround:
 
 <source lang="bash">sh /etc/postmarketos-mkinitfs/hooks/00-device-motorola-titan.sh`</source>
 * Cannot boot if kernel is XZ-compressed (it boots if you build it using [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting%3Akernel#building-the-kernel-with-androids-build-system Android's build system])
 * flash_kernel: [https://github.com/postmarketOS/pmbootstrap/issues/126 boot image is too big]
 * wifi: requires wcnss-service (see issue [https://github.com/postmarketOS/pmbootstrap/issues/373 #373] and the wiki page [https://github.com/postmarketOS/pmbootstrap/wiki/QMI-(Qualcomm-MSM-Interface) Qualcomm MSM Interface]).
-* show_splash
 
 <pre># From initramfs
 /tmp # show_splash splash1.ppm.gz 
@@ -95,14 +72,13 @@ This is written to dmesg everytime you type the previous command:
 [   74.194804,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
 [   74.194960,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
 [   74.196516,0] lm3630a_bl 0-0038: wake up and re-init chip</pre>
-=== Useful stuff ===
 
-White LED:
+* White LED:
 
 <source lang="bash">echo 255 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness</source>
 [https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/drivers/leds/leds-qpnp.c#L187-L189 RGB LED documentation]
 
-=== Links ===
+== Links ==
 
 * [https://github.com/LineageOS/android_kernel_motorola_msm8226 android_kernel_motorola_msm8226]
 * [https://github.com/LineageOS/lineage_wiki/blob/master/_data/devices/titan.yml titan.yml]
@@ -111,7 +87,7 @@ White LED:
 * [https://cve.lineageos.org/android_kernel_motorola_msm8226 CVE security status]
 * [http://termbin.com/84rz dmesg.txt]
 
-=== Drivers table ===
+== Drivers table ==
 
 {| class="wikitable sortable"
 ! Component
