@@ -55,18 +55,6 @@ pmbootstrap flasher export
 
 fastboot flash userdata /tmp/postmarketOS-export/device-name.img
 
-=== What works ===
-
-* Weston
-* XWayland
-* Touch screen
-* Vibration motor? (if I hold the side button down for 5 seconds it vibrates...)
-
-=== What doesn't work ===
-* we still use the ugly "while true..." hack instead of msm-fb-refresher {{github|584}} (this is easy to fix: just remove the hack, use msm-fb-refresher instead and check if it is still working!)
-* fbsplash (further research needed, LG logo is stuck on screen until weston is launched)
-* The usual (wifi, bluetooth, everything else)
-
 === Links ===
 
 * [https://github.com/JamesHealdUK/pmbootstrap/tree/device-lg-g-watch-r My repo with the device-lg-g-watch-r branch] (until merged with the postmarketOS repo)
