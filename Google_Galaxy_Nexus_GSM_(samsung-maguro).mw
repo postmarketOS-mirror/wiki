@@ -39,26 +39,6 @@
 * Pneumaticat
 * ''[[user:drebrez|drebrez]]''
 
-= What works =
-
-* ☑ Kernel compilation
-* ☑ Flash kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☑ Flash system (<code>pmbootstrap flasher flash_rootfs</code>) (System is only 654M and may be too small to flash postmarketOS on, in that case add <code>--partition userdata</code>)
-* ☑ Initramfs boot
-* ☑ USB network
-* ☑ Framebuffer graphics (Splash screens)
-* ☑ SSH connectivity (via USB and Wifi)
-* ☑ Weston on framebuffer
-* ☑ Touchscreen
-* ☑ Xwayland
-* ☑ Wifi
-* ☐ Audio playback (untested)
-* ☐ Bluetooth
-* ☐ GPS
-* ☐ Front camera
-* ☐ Rear camera
-* ☐ ...
-
 = Links =
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-maguro Device package]
