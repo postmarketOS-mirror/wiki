@@ -41,15 +41,6 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
-== What works ==
-
-* Booting
-* USB network
-* Wifi (when using only wlan0 and not p2p0)
-** Using networkmanager may cause issues.
-
-== What does not work ==
-
 == How to enter flash mode ==
 
 Volume up + power
