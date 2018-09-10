@@ -37,6 +37,14 @@
 === Contributors ===
 * ''[[user:MartijnBraam|MartijnBraam]]''
 
+== Serial console ==
+
+The Pine board has a 3.3v UART on the EXP 10-pin header.
+
+* Pin 6 is GND
+* Pin 7 is TX
+* Pin 8 is RX
+
 == See also ==
 * {{gitlabmr|6}} Initial merge request request
 * [https://github.com/ayufan-pine64/boot-tools Tools for FEL mode]
