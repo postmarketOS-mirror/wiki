@@ -39,22 +39,15 @@
 == Installation ==
 At the moment flashing is not working, so it is necessary to install to sdcard and then live boot from fastboot.
 
-First the initialization commands are needed
-<source lang="shell">
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
-$ cd pmbootstrap
-$ ./pmbootstrap.py init
-</source>
-Choose 'lg-w5' as target device.
-
-After that, installing to sdcard works with the command
+Installing to sdcard works with the command
 <source lang="shell">
 # Replace /dev/sdX with the device for your sdcard
-$ ./pmbootstrap.py install --no-fde --sdcard /dev/sdX</source>
+$ pmbootstrap install --no-fde --sdcard /dev/sdX</source>
 
 Now place the sdcard into the phone. Assuming that the bootloader is unlocked, it is possible to get to fastboot by following steps
 # Disconnect and reconnect the battery.
 # Hold volume up while connecting phone to computer with a usb cable.
-Now it is possible to live boot <source lang="shell">$ ./pmbootstrap.py flasher boot</source>
+Now it is possible to live boot.
+<source lang="shell">$ pmbootstrap flasher boot</source>
 
-Screen is also not yet working, so for now the only way to find out if it booted is by [[USB_Network | usb networking]].
+The screen doesn't work yet, so for now the only way to find out if it booted is by [[USB_Network | usb networking]] or the [[Troubleshooting:boot#Does_the_kernel_boot.3F | maximum attention hook]].
