@@ -1,8 +1,7 @@
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = Sony Ericsson
 | name = Xperia mini
-| codename = smultron
+| codename = sony-smultron
 | image = File:Semc-smultron.png
 | imagecaption = Sony Ericsson Xperia mini
 | releaseyear = 2011
@@ -13,8 +12,10 @@
 | storage = 302 MB internal, up to 32 GB microSD support
 | display = 3.0" LED-backlit LCD
 | memory = 512 MB RAM
+| booting = yes
 }}
 
+{{ToDo|Fix infobox}}
 == Contributors ==
 * mishaor
 * joshas
