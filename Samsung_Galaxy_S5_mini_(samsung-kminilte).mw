@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name = Galaxy S5 mini
-| codename = kminilte
+| codename = samsung-kminilte
 | image = File:Samsung Galaxy S5 mini.png
 | imagecaption = Samsung Galaxy S5 mini
 | releaseyear = 2014
@@ -12,7 +12,11 @@
 | storage = 16GB
 | display = 720x1280 AMOLED
 | memory = 1.5GB
+| booting = yes
 }}
+
+{{Todo|Fix infobox}}
+
 == Basic info ==
 
 Device: Samsung Galaxy S5 mini (SM-G800F; European version)
