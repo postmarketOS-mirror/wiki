@@ -30,6 +30,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
+| status = Mainline u-boot compiles but doesn't start correctly, downstream kernel compiles and probably works
 | booting = no
 | non_android = 🔼
 }}
