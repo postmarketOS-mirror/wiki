@@ -125,7 +125,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[http://doc.qt.io/QtWebBrowser/ QtWebBrowser]
 |GPL3
-|Lightweight and touch friendly web browser based on qt.
+|Lightweight and touch friendly web browser based on qt (source [http://code.qt.io/cgit/qt-apps/qtwebbrowser.git/]).
 |
 |-
 |[https://wiki.openstreetmap.org/wiki/MoNav MoNav]
