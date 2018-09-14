@@ -46,6 +46,12 @@ The Pine board has a 3.3v UART on the EXP 10-pin header.
 * Pin 7 is TX
 * Pin 8 is RX
 
+== Headphone jack ==
+
+Install alsa-utils with apk, launch alsamixer, unmute (press M) "Headphone", "AIF1 Slot 0 Digi" and "DAC" (or "DAC Reversed"), increase the volume of "Headphone" to something over zero.
+
+Then you can play some music (e.g. a .wav file) with aplay.
+
 == See also ==
 * {{MR|6}} Initial merge request request
 * [https://github.com/ayufan-pine64/boot-tools Tools for FEL mode]
