@@ -19,19 +19,19 @@
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
-| status_mainline = 
+| status_mainline = Y
 | status_battery =
 | status_3d = 
 | status_accel = 
-| status_audio = 
+| status_audio = Y
 | status_bluetooth =
 | status_camera =
 | status_gps = 
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| status = Mainline u-boot compiles but doesn't start correctly, downstream kernel compiles and probably works
-| booting = no
+| status = Boots
+| booting = yes
 | non_android = 🔼
 }}
 
