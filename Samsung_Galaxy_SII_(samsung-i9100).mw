@@ -76,7 +76,7 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 
 -- Install pmboostrap
 
-  $ git clone https://github.com/postmarketOS/pmbootstrap.git
+  $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 
 -- Change working directory to the pmboostrap
 
