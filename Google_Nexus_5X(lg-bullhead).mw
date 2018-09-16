@@ -77,10 +77,8 @@ update the boot.img to include your local kernel
 <syntaxhighlight lang="shell-session">
 $ cp "/tmp/postmarketOS-export/boot.img-lg-bullhead" "$TEMP/boot.img"
 $ cd .output/arch/arm64/boot/
-$ cat Image.gz dts/qcom/msm8992-bullhead-rev-101.dtb > ../../../../.zImage-dtb
-$ pmbootstrap chroot
-# abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
-# exit
+$ cat Image.gz dts/qcom/msm8992-bullhead-rev-101.dtb > "$TEMP/zImage-dtb"
+$ pmbootstrap chroot -- abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
 $ pmbootstrap flasher list_devices
 </syntaxhighlight>
 You can communicate with the device using screen (or other software), so in a separate terminal start it
@@ -93,3 +91,7 @@ Boot mainline kernel using fastboot
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
 </syntaxhighlight>
+
+Device Teardown:
+
+https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
