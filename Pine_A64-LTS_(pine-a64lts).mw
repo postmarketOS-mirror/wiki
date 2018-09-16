@@ -14,8 +14,8 @@
 | architecture = aarch64
 | status_usbnet = 
 | status_flashing = -
-| status_touch = N
-| status_screen = N
+| status_touch =
+| status_screen =
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
