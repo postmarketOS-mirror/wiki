@@ -156,3 +156,4 @@ Device          Boot   Start     End Sectors  Size Id Type
 /dev/mmcblk0p22      3478336 3580735  102400   50M 67 unknown              HIDDEN
 /dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS
 /dev/mmcblk0p24      7429804 7437995    8192    4M 58 unknown              MODEM_BKP
+</source>
