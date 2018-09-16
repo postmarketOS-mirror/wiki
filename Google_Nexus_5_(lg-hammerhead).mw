@@ -94,8 +94,8 @@ The backlight is not regular and is disproportionately dim in lower-left corner 
 
 
 === Links ===
-* [https://github.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device-lg-hammerhead Device package]
+* [https://gitlab.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-lg-hammerhead Device package]
 * [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
 * [https://github.com/flto/linux/wiki/hammerhead-upstream flto's hammerhead-upstream status page]
 
