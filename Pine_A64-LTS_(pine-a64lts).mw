@@ -15,7 +15,7 @@
 | status_usbnet = 
 | status_flashing = -
 | status_touch = N
-| status_screen = 
+| status_screen = N
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
@@ -27,9 +27,9 @@
 | status_bluetooth =
 | status_camera =
 | status_gps = -
-| status_mobiledata = 
-| status_sms = 
-| status_calls =
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
 | status = Boots
 | booting = yes
 | non_android = 🔼
