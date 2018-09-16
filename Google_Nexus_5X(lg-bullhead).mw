@@ -95,3 +95,6 @@ $ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
 Device Teardown:
 
 https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
+
+Downstream DTS:
+https://github.com/franciscofranco/bullhead/blob/oreo-mr1/arch/arm/boot/dts/qcom/msm8992.dtsi
