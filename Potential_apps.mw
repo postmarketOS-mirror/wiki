@@ -128,6 +128,11 @@ These are applications which already exist for Linux and could be reused in post
 |Lightweight and touch friendly web browser based on qt (source [http://code.qt.io/cgit/qt-apps/qtwebbrowser.git/]).
 |
 |-
+|[https://github.com/KDE/plasma-angelfish Angelfish]
+|GPL2
+|This is an experimental web browser designed to be used on small mobile devices, integrate well in Plasma workspaces.
+|
+|-
 |[https://wiki.openstreetmap.org/wiki/MoNav MoNav]
 |GPL3
 |Lightweight touchscreen Qt-based map application (using OSM).  Includes routing.
