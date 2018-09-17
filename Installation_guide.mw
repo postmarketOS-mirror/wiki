@@ -108,7 +108,7 @@ In case your system partition is too small for the generated image (e.g. because
 $ pmbootstrap flasher flash_rootfs --partition userdata
 </syntaxhighlight>
 
-And then you need to boot or flash the kernel (so run only one of the commands). Again, this is not necessary when you have used the recovery zip. But it is necessary in most cases with the SD card (unless the device can boot the kernel from the SD card like the N900).
+And then you need to boot or flash the kernel (so run only one of the commands). Again, this is not necessary when you have used the recovery zip. But it is necessary in most cases with the SD card (unless the device can boot the kernel from the SD card like the N900). To boot from SD, with the device in fastboot mode (with device off, press Power + Volume Down), type the following on your computer:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher boot
 $ pmbootstrap flasher flash_kernel
