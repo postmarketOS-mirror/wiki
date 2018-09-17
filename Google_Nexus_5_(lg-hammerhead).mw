@@ -51,7 +51,7 @@ Then with device powered off, hold down Volume-Down and Power buttons simultaneo
 Get device into Fastboot Mode, plug in USB cable, then:
 
 <source lang="shell-session">
-$ fastboot oem unlock
+$ sudo fastboot oem unlock
 </source>
 
 When prompted on device, use Volume-Up/Down buttons to highlight choice, then Power button to select it.  The Fastboot Mode screen will appear again, and a message regarding flashing will appear briefly.
