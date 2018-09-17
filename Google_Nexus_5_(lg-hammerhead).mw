@@ -60,6 +60,8 @@ When prompted on device, use Volume-Up/Down buttons to highlight choice, then Po
 
 First build the image:
 <source lang="shell-session">
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap
+$ cd pmbootstrap/
 $ ./pmbootstrap.py init
 $ ./pmbootstrap.py install --no-fde
 </source>
