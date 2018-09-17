@@ -133,6 +133,11 @@ These are applications which already exist for Linux and could be reused in post
 |This is an experimental web browser designed to be used on small mobile devices, integrate well in Plasma workspaces.
 |
 |-
+|[https://github.com/ubports/webbrowser-app Ubports webbroswer-app]
+|GPL3
+|Webbrowser-app is a lightweight touch-friendly web browser tailored for Ubuntu based on the Oxide web engine.
+|
+|-
 |[https://wiki.openstreetmap.org/wiki/MoNav MoNav]
 |GPL3
 |Lightweight touchscreen Qt-based map application (using OSM).  Includes routing.
