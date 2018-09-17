@@ -45,7 +45,7 @@ Hold down POWER + Vol Down while booting to enter Flash Mode.
 Configure your kernel and enable the prima wifi staging driver
 
 <source>
-pmbootstrap menuconfig linux-motorola-harpia
+pmbootstrap menuconfig motorola-harpia
 pmbootstrap build linux-motorola-harpia
 </source>
 
