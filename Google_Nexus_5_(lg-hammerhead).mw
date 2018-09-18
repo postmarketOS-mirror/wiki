@@ -93,6 +93,7 @@ The backlight is not regular and is disproportionately dim in lower-left corner 
 
 
 === Links ===
+* [https://www.youtube.com/watch?v=u9zw_ewkBJ0 Demonstration video of a Nexus 5 with postmarketOS and plasma]
 * [https://gitlab.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-lg-hammerhead Device package]
 * [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
