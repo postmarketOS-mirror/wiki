@@ -140,7 +140,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://github.com/ubports/webbrowser-app Gnome web (epiphany)]
 |GPL3
-|The web browser for the GNOME desktop. Purism is working on making it touch-friendly for their librem 5 phone.
+|The web browser for the GNOME desktop. Purism is working on making it phone-friendly for their librem 5 phone.
 |
 |-
 |[https://wiki.openstreetmap.org/wiki/MoNav MoNav]
