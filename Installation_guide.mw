@@ -103,7 +103,7 @@ This command wraps various flash programs (e.g. fastboot and heimdall) with a co
 $ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>dd</code> or simply install the known working OS, e.g. Android, on it). Using multiple partitions with LVM is planned ({{github|60}}).
+In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>fastboot format system</code> for fastboot compatible devices, or simply install the known working OS, e.g. Android, on it. And if you really know what you are doing, you might consider using <code>dd</code>). Using multiple partitions with LVM is planned ({{github|60}}).
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher flash_rootfs --partition userdata
 </syntaxhighlight>
