@@ -120,7 +120,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[http://www.midori-browser.org/ Midori]
 |LGPL2.1	
-|Fairly lightweight web browser, using very little RAM.  Not touch optimised but can display websites well, with HTML5 support. Uses ~40MB RAM.
+|Fairly lightweight web browser, using very little RAM.  Touch-capapble but not touch-optimised and not hardware-accelerated. It can display websites well, with HTML5 support. Uses ~40MB RAM.
 |[https://pkgs.alpinelinux.org/packages?name=midori&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |[http://doc.qt.io/QtWebBrowser/ QtWebBrowser]
