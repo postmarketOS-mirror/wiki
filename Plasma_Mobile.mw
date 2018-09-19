@@ -13,7 +13,7 @@ A mobile variant of the KDE Plasma [[User-Interfaces|user interface]], optimized
 It works on most devices with a working display, both with hardware acceleration and software rendering. There is however an issue making it unable to run on armhf devices without hardware acceleration.
 
 == Installation ==
-Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. The binary repo provided by the project already contains KDE builds for x86_64, armhf and aarch64 (compiling takes a long time). Nothing has to be done to enable it.
+Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section.
 
 After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_plasma.sh</code> and <code>/usr/bin/plasma-phone</code>.
 
