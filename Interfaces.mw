@@ -41,14 +41,14 @@ There are several types of interfaces which we divide into categories based on t
 | [https://source.puri.sm/Librem5/phosh link]
 | Librem 5/PureOS
 | 
-| Has a [https://gitlab.com/postmarketOS/pmbootstrap/tree/feature/phosh WIP branch]
+| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/phosh WIP branch]
 |-
-| style="text-align: center;" | 
+| style="text-align: center;" | P
 | [https://ubports.com/ Unity 8]
 | [https://github.com/ubports link]
 | UBPorts
 | 
-| 
+| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/unity8 WIP branch]
 |-
 | style="text-align: center;" | 
 | Glacier
