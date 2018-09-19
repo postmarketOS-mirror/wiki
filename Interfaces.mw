@@ -115,12 +115,12 @@ There are several types of interfaces which we divide into categories based on t
 ! Unmaintained
 ! Notes
 |-
-| style="text-align: center;" | 
+| style="text-align: center;" | P
 | [https://asteroidos.org/ AsteroidUI]
 | [https://github.com/AsteroidOS/ link]
 | AsteroidOS
 | 
-| Bloo, from Matrix, has APKBUILDs but can't yet access them
+| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/asteroidui WIP branch]
 |}
 
 == Smart TV's ==
