@@ -71,4 +71,7 @@ You have to configure <code>pmbootstrap</code> before generating the system imag
 [09:22:56] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)</pre>
 <pre>$ ./pmbootstrap config ui weston</pre>
 
+== See also ==
+[[Interfaces | Work in progress new interface page]]
+
 [[Category:Interface]]
