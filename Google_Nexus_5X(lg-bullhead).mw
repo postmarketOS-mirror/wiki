@@ -42,15 +42,15 @@
 
 == Unlocking == 
 
-In android go to settings -> System -> About phone and tap the build number 7 times.
-Then go to settings -> system -> developer options and enable OEM unlocking
+In android go to Settings -> System -> About Phone and tap the build number 7 times.
+Then go to Settings -> System -> Developer Options and enable OEM unlocking
 
 Reboot to the bootloader and run "fastboot oem unlock"
 Now select "Yes" on the phone screen with the volume button and use the power button to accept.
 
-== Special key combo's ==
+== Special key combos ==
 
-Boot to bootloader: hold volume down + power button till the screen turns on
+Boot to bootloader: hold volume down + power button until the screen turns on
 
 Launch recovery: first boot to the bootloader, press the volume down button twice and press the power button to select
 
@@ -92,7 +92,7 @@ Boot mainline kernel using fastboot
 $ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
 </syntaxhighlight>
 
-Device Teardown:
+Device teardown:
 
 https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
 
