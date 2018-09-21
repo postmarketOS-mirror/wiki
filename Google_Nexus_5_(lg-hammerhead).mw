@@ -44,7 +44,7 @@
 === Fastboot Mode ===
 
 First make sure to enable USB debugging in Android ([https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android-5-lollipop.htm])
-Then with device powered off, hold down Volume-Down and Power buttons simultaneously for a few seconds, until Fastboot Mode screen appears.
+Then with device powered off, hold down {{button|Volume Down}} and {{button|Power}} buttons simultaneously for a few seconds, until Fastboot Mode screen appears.
 
 === OEM Unlock ===
 
