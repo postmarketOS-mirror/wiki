@@ -12,6 +12,7 @@
 | storage = 512 MB
 | display = 480x800 AMOLED
 | memory = 576 MB
+| pmoskernel = 3.0.16 (spezi77)
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = P
