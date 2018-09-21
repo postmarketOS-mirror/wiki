@@ -14,6 +14,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:Outdated|outdated]]
 * [[Template:Todo|todo]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
+* [[Template:button|button]] ''Visual representation for a button or sequence of buttons''
 
 == See also ==
 * [[Special:UncategorizedTemplates]]
