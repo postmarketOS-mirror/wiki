@@ -12,6 +12,25 @@
 | storage = 8/16 GB
 | display = 1x HDMI
 | memory = 1 GB
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = -
+| status_screen = -
+| status_wifi = 
+| status_xwayland = Y
+| status_fde = P
+| status_mainline = 
+| status_battery = -
+| status_3d = 
+| status_accel = -
+| status_audio = 
+| status_bluetooth =
+| status_camera = -
+| status_gps = 
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| booting = no
 }}
 
 == Contributors ==
@@ -21,27 +40,22 @@
 == Maintainer(s) ==
 * rendeko
 
-== What works ==
-* Ethernet
-* USB Keyboard/Mouse
-* XWayland/Weston, XFCE
-
-== What does not work ==
-* Bluetooth (requires binaries that can be extracted from the original ROM. See notes)
-* Booting without pmbootstrap (WIP)
-* Wifi (requires binaries that can be extracted from the original ROM. See notes)
- 
-== How to enter flash mode ==
-# Connect Ouya to PC
-# Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
-
-== Notes ==
-* Flashing a kernel directly to the Ouya should be avoided at all costs, as [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] A tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] allows us to run the postmarketOS kernel in a kexec method, meaning we never have to flash our kernel. Even if we perfected the kernel, we should still use this tool to encourage other projects surrounding the Ouya to implement this failsafe, and allow booting of different kernels for development and dual booting.
-* Using Ouya Boot Menu, it may be possible to retain the original Ouya android ROM (or any Android ROM you choose to flash) while still being able to flash postmarketOS. This would require renaming the kernel image to <code>kernelA1.img</code> while having device-ouya-ouya built to launch from an external USB drive. 
+== Development Notes ==
+===Radio===
 * The Ouya uses a BCM4330 radio chip for wifi and bluetooth. Drivers for this chip is built into the linux mainline as of 3.3. The Ouya kernel we use runs 3.x, but I could not get wifi working. This would be the last step after osk-sdl to making this port usable.
-* OSK-SDL support is in the works by rendeko.
+
+* Two later releases (the completely white special edition and completely black 2nd generation) [https://www.s-config.com/cyanogen-mod-and-the-ouya/ allegedly use a BCM4334 chipset.] This needs to be implemented and tested at a future date.
+
+===Kernel===
+* Currently we avoid flashing directly to the device as  [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] We use a tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] that allows us to run the postmarketOS kernel through a kexec method. This implements an extra failsafe to prevent bricking and in theory allows dualbooting and kernel development.
+
+* Using Ouya Boot Menu, it may be possible to retain the original Ouya android ROM (or any Android ROM you choose to flash) while still being able to boot postmarketOS. This would require renaming the pmOS kernel image to <code>kernelA1.img</code> while having the device configuration to launch from external storage.
 
 == Installation ==
+=== How to enter flash mode ===
+# Connect Ouya to PC
+# Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
+===pmbootstrap===
 '''Work in progress. Only attempt for development.'''
 
 # Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] using fastboot.
@@ -54,3 +68,4 @@
 == Links ==
 * [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)]
 * [https://forum.xda-developers.com/showthread.php?t=2295645 CWM]
+* [https://www.s-config.com/cyanogen-mod-and-the-ouya/ CyanogenMod documentation blog]
