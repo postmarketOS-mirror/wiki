@@ -42,11 +42,11 @@
 
 == Unlocking == 
 
-In android go to Settings -> System -> About Phone and tap the build number 7 times.
-Then go to Settings -> System -> Developer Options and enable OEM unlocking
+In android go to {{button|Settings|System|About Phone}} and tap the build number 7 times.
+Then go to {{button|Settings|System|Developer Options}} and enable OEM unlocking
 
-Reboot to the bootloader and run "fastboot oem unlock"
-Now select "Yes" on the phone screen with the volume button and use the power button to accept.
+Reboot to the bootloader and run "<kbd>fastboot oem unlock</kbd>"
+Now select {{button|Yes}} on the phone screen with the volume button and use the power button to accept.
 
 == Special key combos ==
 
