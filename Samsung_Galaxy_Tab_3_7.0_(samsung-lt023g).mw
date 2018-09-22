@@ -66,6 +66,8 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Bluetooth
 * Wi-Fi
 * Cellular networking
+* 3D Acceleration
+* Video decoding is like 2-3FPS
 
 Everything else is untested as of writing this.
 
