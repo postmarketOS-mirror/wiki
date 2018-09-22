@@ -10,20 +10,23 @@ There are several types of interfaces which we divide into categories based on t
 {| class="wikitable"
 ! style="text-align: center;" | Packaged
 ! Name
+! Project page
 ! Source
 ! From project
 ! Unmaintained
 ! Notes
 |-
 | style="text-align: center;" | Y
-| [https://www.plasma-mobile.org/ Plasma Mobile]
+| [[Plasma Mobile]]
+| [https://www.plasma-mobile.org/ link]
 | [https://github.com/kde link]
 | KDE
 | 
 | 
 |-
 | style="text-align: center;" | Y
-| [https://maemo-leste.github.io/ Hildon]
+| [[Hildon]]
+| [https://maemo-leste.github.io/ link]
 | [https://github.com/maemo-leste link]
 | Maemo
 | 
@@ -31,6 +34,7 @@ There are several types of interfaces which we divide into categories based on t
 |-
 | style="text-align: center;" | P
 | Luna
+|
 | [https://github.com/webOS-ports link]
 | WebOS
 | 
@@ -38,13 +42,15 @@ There are several types of interfaces which we divide into categories based on t
 |-
 | style="text-align: center;" | P
 | Phosh
+|
 | [https://source.puri.sm/Librem5/phosh link]
 | Librem 5/PureOS
 | 
 | Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/phosh WIP branch]
 |-
 | style="text-align: center;" | P
-| [https://ubports.com/ Unity 8]
+| Unity 8
+| [https://ubports.com/ link]
 | [https://github.com/ubports link]
 | UBPorts
 | 
@@ -52,6 +58,7 @@ There are several types of interfaces which we divide into categories based on t
 |-
 | style="text-align: center;" | 
 | Glacier
+|
 | [https://github.com/nemomobile-ux link]
 | Nemo
 |
@@ -59,6 +66,7 @@ There are several types of interfaces which we divide into categories based on t
 |-
 | style="text-align: center;" | 
 | Gaia
+|
 | [https://github.com/mozilla-b2g/gaia link]
 | FirefoxOS
 | Yes
@@ -69,30 +77,42 @@ There are several types of interfaces which we divide into categories based on t
 {| class="wikitable"
 ! style="text-align: center;" | Packaged
 ! Name
+! Project page
 ! Source
 ! From project
 ! Unmaintained
 ! Notes
 |-
 | style="text-align: center;" | 
-| [https://projects.goldelico.com/p/gta04-qtmoko/ QtMoko2]
+| QtMoko2
+| [https://projects.goldelico.com/p/gta04-qtmoko/ link]
 | [https://projects.goldelico.com/p/gta04-qtmoko/source/tree/master/ link]
 | QtMoko2
 |
 |
+|-
+| style="text-align: center;" | 
+| ZPUI
+| [https://zpui.rtfd.org link]
+| [https://github.com/zerophone/zpui link]
+| ZeroPhone
+|
+| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/zpui WIP branch]
 |}
 
 == PDA's ==
 {| class="wikitable"
 ! style="text-align: center;" | Packaged
 ! Name
+! Project page
 ! Source
 ! From project
 ! Unmaintained
 ! Notes
 |-
 | style="text-align: center;" | Y
-| [https://www.yoctoproject.org/software-item/matchbox/ Matchbox]
+| Matchbox
+| [https://www.yoctoproject.org/software-item/matchbox/ link]
 | [https://git.yoctoproject.org/ link]
 | The Yocto Project
 | 
@@ -100,6 +120,7 @@ There are several types of interfaces which we divide into categories based on t
 |-
 | style="text-align: center;" | 
 | Open Palmtop Integrated Environment
+|
 | [https://github.com/opieproject/opie link]
 |
 | Yes
@@ -110,13 +131,15 @@ There are several types of interfaces which we divide into categories based on t
 {| class="wikitable"
 ! style="text-align: center;" | Packaged
 ! Name
+! Project page
 ! Source
 ! From project
 ! Unmaintained
 ! Notes
 |-
 | style="text-align: center;" | P
-| [https://asteroidos.org/ AsteroidUI]
+| AsteroidUI
+| [https://asteroidos.org/ link]
 | [https://github.com/AsteroidOS/ link]
 | AsteroidOS
 | 
@@ -127,6 +150,7 @@ There are several types of interfaces which we divide into categories based on t
 {| class="wikitable"
 ! style="text-align: center;" | Packaged
 ! Name
+! Project page
 ! Source
 ! From project
 ! Unmaintained
@@ -137,41 +161,47 @@ There are several types of interfaces which we divide into categories based on t
 {| class="wikitable"
 ! style="text-align: center;" | Packaged
 ! Name
+! Project page
 ! Source
 ! From project
 ! Unmaintained
 ! Notes
 |-
 | style="text-align: center;" | Y
-| [https://xfce.org/ XFCE4]
+| [[XFCE4]]
+| [https://xfce.org/ link]
 | [https://git.xfce.org/ link]
 | XFCE
 |
 | Uses Alpine's packaging
 |-
 | style="text-align: center;" | Y
-| [https://mate-desktop.org/ Mate]
+| [[Mate]]
+| [https://mate-desktop.org/ link]
 | [https://github.com/mate-desktop link]
 | Mate
 |
 | Uses Alpine's packaging
 |-
 | style="text-align: center;" | Y
-| [https://i3wm.org/ i3]
+| [[i3]
+| [https://i3wm.org/ link]
 | [https://github.com/i3 link]
 | i3
 |
 | Uses Alpine's packaging
 |-
 | style="text-align: center;" | P
-| [https://www.gnome.org/ GNOME3]
+| [[GNOME 3]]
+| [https://www.gnome.org/ link]
 | [https://gitlab.gnome.org/GNOME link]
 | GNOME
 |
 | Alpine has it packaged for x86_64 only, and there is no UI meta package for it yet
 |-
 | style="text-align: center;" | P
-| [https://www.kde.org/plasma-desktop Plasma Desktop]
+| Plasma Desktop
+| [https://www.kde.org/plasma-desktop link]
 | [https://github.com/kde link]
 | KDE
 |
