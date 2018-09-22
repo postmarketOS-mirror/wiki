@@ -86,7 +86,7 @@ $ nmcli radio all on
 </source>
 
 ==== Race condition on boot ====
-Due to a race condition, the device might not always boot properly. With non-split installation you often need to reboot the device several times before it boots. ({{issue|5|linux-postmarketos}})
+Due to a race condition, the device will not always boot properly.You often need to reboot the device several times before it boots. ({{issue|5|linux-postmarketos}})
 
 ==== Backlight issues ====
 The backlight is not regular and is disproportionately dim in lower-left corner (uneven backlighting?). [[User:Neilvandyke]] reported that backlight is very dim in general although a in a test in 09/2018 by [[User:pparent]] overall brightness is pretty good when setting backlight to 100% in plasma-mobile, while remaining uneven.
