@@ -61,6 +61,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Battery indicator
 * Wayland
 * X11
+* Front Camera(and probably back but didnt figure out how to switch cams)
 
 == What does not work ==
 * Bluetooth
