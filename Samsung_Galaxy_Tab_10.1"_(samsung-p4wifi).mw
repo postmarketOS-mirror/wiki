@@ -44,23 +44,6 @@
 
 postmarketOS for the Samsung Galaxy Tab 10.1 runs on mainline Linux kernel fork. The kernel uses both mainline and forward ported drivers. Some peripherals are using mainline device driver where applicable. Some peripherals which are not working on or don't have mainline drivers are using drivers forward ported from the stock 3.1.10 kernel.
 
-== What works ==
-* Flashing with heimdall
-* USB SSH access
-* Touch
-* DRM fbdev / 2D acceleration (Grate driver)
-* VDPAU h264 hardware decoding
-* Wifi
-* Battery
-* Audio (headphone & speaker only)
-* Bluetooth
-
-== What does not work ==
-* 3D acceleration
-* Camera
-* GPS
-* Accelerometers
-
 == How to enter flash mode ==
 Press and hold Power + Volume Down buttons
 
