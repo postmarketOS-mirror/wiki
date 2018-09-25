@@ -1,6 +1,6 @@
 postmarketOS is based on Alpine Linux, and pmbootstrap uses Alpine chroots for the installation, building packages and basically everything else it does. This makes pmbootstrap fairly independent of the host system, however some issues might still arise.
 
 == Host system kernel is older than 3.17 ==
-As of writing (2018-09-25), the libressl version in Alpine requires at least Linux 3.17 or newer ({{issue|1662}}, {{albug|9419}}). libressl is used for example, when cloning from git repositories or when downloading source code in the preparation of building a package.
+As of writing (2018-09-25), the libressl version in Alpine edge requires at least Linux 3.17 or newer ({{issue|1662}}, {{albug|9419}}). libressl is used for example, when cloning from git repositories or when downloading source code in the preparation of building a package.
 
 If your host system is running a 3.16 or older kernel, consider upgrading the kernel. For example in Debian 8 (Jessie), you can [https://packages.debian.org/jessie-backports/linux-image-amd64 enable the backports] and install [https://packages.debian.org/jessie-backports/linux-image-amd64 a more recent kernel].
