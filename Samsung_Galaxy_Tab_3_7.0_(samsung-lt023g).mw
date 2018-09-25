@@ -72,7 +72,7 @@ Right now it's not usable for daily use, just for testing camera quality and che
 * Cellular networking
 * 3D Acceleration
 * Video decoding is like 2-3FPS
-
+* Installing rootfs to SYSTEM partition
 Everything else is untested as of writing this.
 
 == Links ==
