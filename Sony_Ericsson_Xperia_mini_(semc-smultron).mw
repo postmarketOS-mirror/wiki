@@ -13,9 +13,27 @@
 | display = 3.0" LED-backlit LCD
 | memory = 512 MB RAM
 | booting = yes
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = 
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland =
+| status_fde = Y
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
 }}
 
-{{Todo|Fix infobox}}
 == Contributors ==
 * mishaor
 * joshas
