@@ -266,8 +266,6 @@ There are several types of interfaces which we divide into categories based on t
 
 = How to choose a different UI =
 
-== How to choose a different UI ==
-
 You have to configure <code>pmbootstrap</code> before generating the system image either by <code>pmbootstrap init</code> or <code>pmbootstrap config</code>:
 
 <pre>$ ./pmbootstrap init
