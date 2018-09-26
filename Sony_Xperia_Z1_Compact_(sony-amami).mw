@@ -49,29 +49,6 @@
 * Boot to bootloader: unplug device, hold volume up and plug usb into device
 * Reset if stuck: hold volume up and power button till the phone shakes
 
-== What works ==
-
-* charging
-* network through USB
-* telnet in initramfs
-* ssh
-* adjusting the led, torch and the lcd backlight
-* display
-* touchscreen
-* wifi (may be unreliable)
-
-== What does not work ==
-
-
-== What have not been tested ==
-
-* Bluetooth
-* 3G
-* Sound
-* Phone calls
-* SD card
-* Hardware buttons
-
 == Issues ==
 
 * No splash in initramfs.
