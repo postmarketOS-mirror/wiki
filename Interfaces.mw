@@ -5,6 +5,8 @@ We try to list each possible interface we can use, and if they require maintenan
 
 There are several types of interfaces which we divide into categories based on their use-cases.
 
+Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Desktop other graphical interfaces supported by Alpine] should work to some extent on postmarketOS.
+
 == Smartphones ==
 
 {| class="wikitable"
