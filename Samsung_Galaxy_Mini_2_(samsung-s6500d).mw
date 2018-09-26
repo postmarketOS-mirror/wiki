@@ -77,7 +77,6 @@ The screen as well as two touch buttons (menu and back) are combined together as
 It displays some sort of animation when pressing buttons in postmarket demos window in weston but only for first press or two.
 ''weston-calibrate'' does not work
 
-
 Home button and volume buttons are ''/dev/input/event1'', where power button is recognised as ''/dev/input/event6''
 
 === Mainline ===
@@ -85,34 +84,26 @@ Currently we have working 2.6 kernel, no DTS files for qcom-msm7227a.
 
 Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<board name>.c'' for starters and recreate it in .dts file(s).
 
-Get UART working, then test basic DTS with just basics to get earlycon working:
+Get UART working, then test basic DTS with just basics to get earlycon/earlyprintk working:
 
 * used voltage is 1.8V
-* needed resistor is *probably* 619kΩ, need to test that
-* unknown name of the port in original kernel, candidates are ttyMSM0, tty0, ttyHS0 and ttyGS0
+* needed resistor is *probably* 619kΩ
+* unknown name of the port in original kernel, candidates are ttyMSM0, tty0, ttyHS0, ttyHSL0 and ttyGS0
+{{note|This dtb file goal is to get working UART, nothing more, rest of the work will be continued on regular git repository when/if UART starts working}}
 
+[https://gist.github.com/Halamix2/a21195b4cc589bf7af2fadc32aad6292 Unfinished, not working dtb]
 
 ==== Useful links (mainly dts stuff) ====
 [[The_Mainline_Kernel|The Mainline Kernel]] – our docs about mainlining
 
 [[Qualcomm_mainline_porting|Qualcomm mainline porting]] — our sparse docs about Qualcomm mainlining
 
-[https://events.static.linuxfound.org/sites/events/files/slides/presentation_3.pdf Device Tree – The Disaster so Far](pdf) – introduction to DT and basic knowledge how to move from board files do DT
-
-[https://free-electrons.com/pub/conferences/2014/elc/petazzoni-device-tree-dummies/petazzoni-device-tree-dummies.pdf Device Tree for dummies](pdf) – a little bit more complex infoa bout DT files
-
-[http://docs.halium.org/en/latest/supplementary/hardware-enablement.html Halium project docs on mainlining] – has a nice list where to look for ready solutions
-
 [https://elinux.org/Qualcomm_SOC_Mainlining_Project Qualcomm SOC Mainlining Project] – sadly no MSM7227a
-
-[http://linux-sunxi.org/Linux_mainlining_effort Allwinner SOC Mainlining Project] – not useful for this phone
-
-[https://github.com/devicetree-org/devicetree-specification/releases Devicetree.org specification]
 
 ''Documentation/devicetree/'' inside linux kernel files, should contain newest documentation about dts files, should be most reliable source of information
 
 == How to enter flash mode ==
-Press power button and hold home button and VOL-
+Press power button and hold home button and VOL-, then press VOL+ to continue
 
 Alternatively, plug in microUSB plug with GND and ID pins connected through 300KΩ resistor. (so-called USB jig)
 
