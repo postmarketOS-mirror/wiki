@@ -264,6 +264,26 @@ There are several types of interfaces which we divide into categories based on t
 |
 |}
 
+= How to choose a different UI =
+
+== How to choose a different UI ==
+
+You have to configure <code>pmbootstrap</code> before generating the system image either by <code>pmbootstrap init</code> or <code>pmbootstrap config</code>:
+
+<pre>$ ./pmbootstrap init
+[09:22:39] Target device (either an existing one, or a new one for porting).
+[09:22:39] Available (49): amazon-thor, asus-flo, asus-grouper, asus-tf101, fairphone-fp2, google-glass, htc-ace, htc-bravo, huawei-angler, huawei-y530, leeco-s2, lenovo-karate, lg-d285, lg-d855, lg-dory, lg-h815, lg-hammerhead, lg-lenok, lg-mako, motorola-osprey, motorola-shamu, motorola-titan, nokia-rx51, oneplus-bacon, oneplus-onyx, qemu-aarch64, qemu-amd64, qemu-vexpress, samsung-espresso10, samsung-i747m, samsung-i9003, samsung-i9070, samsung-i9100, samsung-i9195, samsung-i9305, samsung-i9505, samsung-maguro, samsung-n7100, samsung-s6500d, semc-anzu, sony-amami, sony-aries, sony-castor-windy, sony-honami, sony-yuga, t2m-flame, teclast-x80pro, wiko-lenny3, xiaomi-ido
+[09:22:39] Device [qemu-amd64]:
+[09:22:56] Available user interfaces (6): 
+[09:22:56] * none: No graphical environment
+[09:22:56] * hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
+[09:22:56] * luna: (Wayland) webOS UI, ported from the LuneOS project (Not working yet)
+[09:22:56] * mate: (X11) MATE Desktop Environment, fork of GNOME2 (stylus recommended)
+[09:22:56] * plasma-mobile: (Wayland) Mobile variant of KDE Plasma, optimized for touchscreen
+[09:22:56] * weston: (Wayland) Reference compositor (demo, not a phone interface)
+[09:22:56] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)</pre>
+<pre>$ ./pmbootstrap config ui weston</pre>
+
 = Related issues =
 
 * [https://gitlab.com/postmarketOS/pmbootstrap/issues/62 #62], Mobile UI
