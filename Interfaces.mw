@@ -284,7 +284,11 @@ You have to configure <code>pmbootstrap</code> before generating the system imag
 [09:22:56] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)</pre>
 <pre>$ ./pmbootstrap config ui weston</pre>
 
-= Related issues =
+= See also =
+
+* [https://wiki.postmarketos.org/wiki/User-Interfaces Old user-interfaces wiki page]
+
+=== Related issues ===
 
 * [https://gitlab.com/postmarketOS/pmbootstrap/issues/62 #62], Mobile UI
 * [https://gitlab.com/postmarketOS/pmbootstrap/issues/944 #944], Feature phone UI
