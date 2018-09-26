@@ -176,6 +176,14 @@ There are several types of interfaces which we divide into categories based on t
 ! Notes
 |-
 | style="text-align: center;" | Y
+| [[Weston]]
+| [https://github.com/wayland-project/weston link]
+| [https://github.com/wayland-project/weston link]
+| Wayland
+|
+| Mainly used for development, not suitable for a daily driver
+|-
+| style="text-align: center;" | Y
 | [[XFCE4]]
 | [https://xfce.org/ link]
 | [https://git.xfce.org/ link]
@@ -214,6 +222,46 @@ There are several types of interfaces which we divide into categories based on t
 | KDE
 |
 | Most of it is packaged already because of Plasma Mobile, except for a few packages
+|-
+| style="text-align: center;" | 
+| Sway
+| [https://swaywm.org link]
+| [https://github.com/swaywm/sway link]
+| Sway
+|
+|
+|-
+| style="text-align: center;" | 
+| Budgie
+| [https://budgie-desktop.org/ link]
+| [https://github.com/budgie-desktop/budgie-desktop link]
+| Solus
+|
+|
+|-
+| style="text-align: center;" | 
+| Cinnamon
+| [https://developer.linuxmint.com/projects/cinnamon-projects.html link]
+| [https://github.com/linuxmint/Cinnamon link]
+| Linux Mint
+|
+|
+|-
+| style="text-align: center;" | 
+| LXQt
+| [http://lxqt.org link]
+| [https://github.com/lxqt/lxqt link]
+| LXQt
+|
+| Since this is made as a replacement for LXDE, it's probably not useful for us to package LXDE
+|-
+| style="text-align: center;" | 
+| Pantheon
+| [https://github.com/elementary link]
+| [https://github.com/elementary link]
+| ElementaryOS
+|
+|
 |}
 
 = Related issues =
