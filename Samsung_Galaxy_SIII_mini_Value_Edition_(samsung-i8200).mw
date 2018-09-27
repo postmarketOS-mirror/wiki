@@ -64,8 +64,8 @@ pmbootstrap flasher flash_kernel
 * You can flash rootfs to sdcard or use netcat {{issue|456}}
 * Flash rootfs to sdcard:
 <code>
-pmbootstrap export <br>
-pmbootstrap shutdown
+pmbootstrap shutdown<br>
+pmbootstrap export
 </code><br>
 Change <code><device></code> in the following command to your sdcard!<br>
 <code>sudo dd if=/tmp/postmarketOS-export/samsung-i8200.img of=/dev/<device></code>
