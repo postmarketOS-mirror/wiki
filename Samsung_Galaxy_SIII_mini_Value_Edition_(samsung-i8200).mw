@@ -56,12 +56,17 @@
 Hold <code>Home</code>+<code>Volume Down</code>+<code>Power</code> then release <code>Power</code> when phone vibrates. Press <code>Volume Up</code> upon seeing warning.
 
 == Installation ==
-<code>pmbootstrap init<br>
+<code>
+pmbootstrap init<br>
 pmbootstrap install<br>
-pmbootstrap flasher flash_kernel</code>
+pmbootstrap flasher flash_kernel
+</code>
 * You can flash rootfs to sdcard or use netcat {{issue|456}}
 * Flash rootfs to sdcard:
-<code>pmbootstrap export </code><br>
+<code>
+pmbootstrap export <br>
+pmbootstrap shutdown
+</code><br>
 Change <code><device></code> in the following command to your sdcard!<br>
 <code>sudo dd if=/tmp/postmarketOS-export/samsung-i8200.img of=/dev/<device></code>
 
