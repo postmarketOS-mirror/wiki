@@ -1,0 +1,84 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = ASUS
+| name =  Zenfone Go
+| codename = asus-z00vd (or sometimes zc500tg)
+| image = File:ASUS Z00VD.jpg
+| imagecaption = Wayland running on Zenfone Go (Z00VD)
+| releaseyear = August 2015
+| originalsoftware = Android 5.1
+| chipset = Mediatek MT6580
+| cpu = Quad-core 1.3 GHz Cortex-A7
+| gpu = Mali-400MP2
+| storage = 8/16 GB
+| display = 720x1280 IPS
+| memory = 2 GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| booting = Y
+}}
+
+== Contributors ==
+* Danct12
+
+== Maintainer(s) ==
+* Danct12
+
+== Unlocking bootloader ==
+
+Since ASUS removed OEM unlocking option in v27 update, you'll have to downgrade to v25 in order to unlock your bootloader.
+
+'''DOWNGRADING WILL ERASE YOUR DATA FROM INTERNAL STORAGE, INCLUDING APPS. PLEASE BACKUP ALL YOUR DATA BEFORE DOWNGRADE.'''
+
+# Download v25 firmware (https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZC500TG/UL-ZC500TG_ASUS_Z00VD-WW-12.1.0.25-user.zip)
+# Put the zip file into a SD Card (or you can sideload the image)
+# Turn on/Reboot the phone while holding volume up button, select "Recovery Mode"
+# After that, you'll see a Android lying down with "No Command" underneath him, press volume up and down button in the same time.
+
+'''SD Card''': 
+* Choose '''Wipe data/factory Reset''' and '''Wipe Cache partition'''
+* Then choose '''apply update from sdcard''' and find your v25 firmware in your SD card.
+* Make sure keep your phone in the charger!
+
+'''Sideload'''
+* Choose '''Wipe data/factory Reset''' and '''Wipe Cache partition'''
+* Then choose '''apply update from adb''' and plug your phone to your computer.
+* Type '''adb devices''' in the console, you should see your device in there, if it isn't detected, make sure you have installed '''android-udev'''!
+* Now when you're ready, run "adb sideload v25firmware.zip" (replace v25firmware.zip with the file name of the firmware you downloaded from ASUS)
+
+After done, you should be able to enable OEM Unlocking from developer settings and unlock the bootloader to flash TWRP.
+
+== How to enter flash mode ==
+* '''Fastboot:''' Hold down the volume up button and turn on your phone, select Fastboot in the menu and press volume down to confirm.
+* '''Recovery:''' Same method as entering fastboot, just select Recovery instead of Fastboot.
+
+== Installation ==
+Disable FDE (Full Disk Encryption) when install in the current state.
+
+<code>pmbootstrap install --no-fde</code>
+
+* '''Fastboot''': Works fine, however you'll have to flash the kernel, as fastboot on this device doesn't support booting.
+* '''Recovery''': Untested, but if it works, please let me know.
+
+== Photos ==
+[[File:ASUS Z00VD htop.jpg|200px|thumb|none|htop]]
+
+== See also ==
+* [https://github.com/nik124seleznev/ZC500TG Kernel Source Code]
