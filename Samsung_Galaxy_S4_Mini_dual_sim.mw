@@ -40,6 +40,7 @@
 == Maintainer(s) ==
 
 == Current main issues ==
+- Due to current gcc6->8 upgrade, merge request is pending
 - Device only boots to pmOS right after pmbootstrap flasher flash_kernel
 - Charging doesn't work
 - Screen has worked exactly once, on the initial flash (hence no image here)
