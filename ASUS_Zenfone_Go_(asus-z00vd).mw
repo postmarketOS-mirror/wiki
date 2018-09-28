@@ -82,3 +82,4 @@ Disable FDE (Full Disk Encryption) when install in the current state.
 
 == See also ==
 * [https://github.com/nik124seleznev/ZC500TG Kernel Source Code]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/21 Pull Request]
