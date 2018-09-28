@@ -1,0 +1,47 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy S4 mini dual sim
+| codename = samsung-i9192 (serrano-ds)
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = Android 4.2
+| chipset = Qualcomm Snapdragon 400
+| cpu = 1.7 GHz dual-core Krait 300
+| gpu = Adreno 305
+| storage = Internal, with external SD slot
+| display = 960x540
+| memory = 1.5GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = P
+| status_screen = P
+| status_wifi = N
+| status_xwayland = Y
+| status_fde = N
+| status_mainline = N
+| status_battery = N
+| status_3d = N
+| status_accel = N
+| status_audio = N
+| status_bluetooth = N
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N
+| status_sms = N
+| status_calls = N
+| booting = Y
+}}
+
+== Contributors ==
+* rogier.oudshoorn (only kernel configuration; rest is taken from the LTE version of this device)
+
+== Maintainer(s) ==
+
+== How to enter flash mode ==
+* Hold home + volume down when booting the device
+
+== Installation ==
+
+== See also ==
