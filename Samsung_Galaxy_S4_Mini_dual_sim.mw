@@ -31,13 +31,18 @@
 | status_mobiledata = N
 | status_sms = N
 | status_calls = N
-| booting = Y
+| booting = P
 }}
 
 == Contributors ==
 * rogier.oudshoorn (only kernel configuration; rest is taken from the LTE version of this device)
 
 == Maintainer(s) ==
+
+== Current main issues ==
+- Device only boots to pmOS right after pmbootstrap flasher flash_kernel
+- Charging doesn't work
+- Screen has worked exactly once, on the initial flash (hence no image here)
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
