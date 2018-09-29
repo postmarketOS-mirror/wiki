@@ -1,5 +1,5 @@
 {{Infobox device
-| manufacturer = Qemu
+| manufacturer = QEMU
 | name =  amd64
 | codename = qemu-amd64
 | architecture = x86_64
