@@ -12,7 +12,7 @@
 | gpu = Adreno 200
 | storage = 4GB
 | display = 320×480
-| memory = physically 512MiB, limited by kernel to ~385MiB (faulty dices?)
+| memory = physically probably 512MiB, limited by kernel to ~385MiB (faulty dices/Java something?)
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
@@ -21,7 +21,7 @@
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
-| status_mainline = 
+| status_mainline = N
 | status_battery =
 | status_3d = 
 | status_accel = 
@@ -89,6 +89,8 @@ Get UART working, then test basic DTS with just basics to get earlycon/earlyprin
 * used voltage is 1.8V
 * needed resistor is *probably* 619kΩ
 * unknown name of the port in original kernel, candidates are ttyMSM0, tty0, ttyHS0, ttyHSL0 and ttyGS0
+* trying to get UART on 0xa9a00000 (ttyMSM0)
+* dtb probably misses clocks, maybe interrupts and other things
 {{note|This dtb file goal is to get working UART, nothing more, rest of the work will be continued on regular git repository when/if UART starts working}}
 
 [https://gist.github.com/Halamix2/a21195b4cc589bf7af2fadc32aad6292 Unfinished, not working dtb]
