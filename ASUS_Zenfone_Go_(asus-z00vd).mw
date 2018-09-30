@@ -20,9 +20,9 @@
 | status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = Y
-| status_fde = 
+| status_fde = N
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_battery = N
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
@@ -65,13 +65,27 @@ Since ASUS removed OEM unlocking option in v27 update, you'll have to downgrade 
 
 After done, you should be able to enable OEM Unlocking from developer settings and unlock the bootloader to flash TWRP.
 
+== What works ==
+* Install to SD Card and boot off it
+* Display
+* Touch Screen
+* Wayland
+* XWayland
+* USB Internet
+
+== What doesn't work ==
+* FDE (if enabled, will cause a reboot loop)
+* Battery (device reboots when plugged the charger in)
+
+== What untested ==
+Anything that aren't filled in aren't tested.
+
 == How to enter flash mode ==
 * '''Fastboot:''' Hold down the volume up button and turn on your phone, select Fastboot in the menu and press volume down to confirm.
 * '''Recovery:''' Same method as entering fastboot, just select Recovery instead of Fastboot.
 
 == Installation ==
-Disable FDE (Full Disk Encryption) when install in the current state.
-
+Disable FDE (Full Disk Encryption):
 <code>pmbootstrap install --no-fde</code>
 
 * '''Fastboot''': Works fine, however you'll have to flash the kernel, as fastboot on this device doesn't support booting.
