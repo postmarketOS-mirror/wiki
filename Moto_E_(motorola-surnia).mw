@@ -51,7 +51,7 @@ So far only booting from fastboot kernel with sdcard image works. I tried flashi
 
 
 == See also ==
-Work in progress based on motorola-harpia (not yet ready for MR as of Sep 2018): https://gitlab.com/unrznbl/pmaports/tree/motorola-surnia
+* https://gitlab.com/postmarketOS/pmaports/merge_requests/29 Initial merge request
 
 == Modem Setup (same as for motorola-harpia so far) ==
 Content below copied from https://wiki.postmarketos.org/wiki/Moto_G4_Play_(motorola-harpia). 
