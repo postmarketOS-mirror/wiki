@@ -1,7 +1,8 @@
+There are two variants of Zenfone Go, a Mediatek (Z00VD) and Snapdragon (ZB551KL, ZB452KL). This wiki page is for the MTK variant.
 [[Category:Not booting]]
 {{Infobox device
 | manufacturer = ASUS
-| name =  Zenfone Go
+| name =  Zenfone Go (MTK)
 | codename = asus-z00vd
 | image = File:ASUS Z00VD.jpg
 | imagecaption = Wayland running on Zenfone Go (Z00VD)
@@ -66,7 +67,7 @@ Since ASUS removed OEM unlocking option in v27 update, you'll have to downgrade 
 After done, you should be able to enable OEM Unlocking from developer settings and unlock the bootloader to flash TWRP.
 
 == What works ==
-* Install to SD Card and boot off it
+* Install to SD Card
 * Display
 * Touch Screen
 * Wayland
@@ -74,10 +75,12 @@ After done, you should be able to enable OEM Unlocking from developer settings a
 * USB Internet
 
 == What doesn't work ==
-* FDE (if enabled, will cause a reboot loop)
-* Battery (device reboots when plugged the charger in)
+* FDE (reboot loop)
+* Battery (device reboots when plugged the charger while device is off)
 
 == What untested ==
+* Wifi (need proprietary 6620_launcher and firmware blobs)
+
 Anything that aren't filled in aren't tested.
 
 == How to enter flash mode ==
@@ -88,8 +91,8 @@ Anything that aren't filled in aren't tested.
 Disable FDE (Full Disk Encryption):
 <code>pmbootstrap install --no-fde</code>
 
-* '''Fastboot''': Works fine, however you'll have to flash the kernel, as fastboot on this device doesn't support booting.
-* '''Recovery''': Untested, but if it works, please let me know.
+* '''Fastboot''': Works, you'll need to flash the kernel due to booting is not supported
+* '''Recovery''': Install through recovery is untested.
 
 == Photos ==
 [[File:ASUS Z00VD htop.jpg|200px|thumb|none|htop]]
