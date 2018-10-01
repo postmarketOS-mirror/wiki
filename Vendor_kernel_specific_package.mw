@@ -4,3 +4,37 @@ Unless a device has been [[The Mainline Kernel|mainlined]], we need to package t
 Usually you would generate both a new [[device specific package]] and a new vendor kernel package by running <code>pmbootstrap init</code> and typing in a new device name. In case you should only have a device package, but not a kernel package, you can regenerate the latter with <code>pmbootstrap aportgen linux-changeme-changeme</code> (you guessed it, <i>changeme</i> needs to be adjusted).
 
 The template gets improved every now and then to make porting easier, so don't be surprised when you are looking at older ports and their APKBUILDs look a bit more complicated than what gets generated from the latest <code>pmbootstrap</code> version. Essentially they are doing the same thing.
+
+== GCC version ==
+The kernel gets compiled with {{wikipedia|GCC}}. Alpine Linux has been shipping version GCC 6 for a long time, but changed the default GCC version to GCC 8 in September 2018. It was discovered that at least one vendor kernel does not boot when compiled with GCC 8 ({{issue|103|pmaports}}), so we ended up packaging GCC 6 side by side with GCC 8. All existing vendor kernels that were packaged have been adjusted to use GCC 6 at this point in time, just to make sure we don't introduce any breakage there. The default for new packages is using the current GCC version that is packaged in Alpine (usually GCC 8).
+
+=== Use GCC 6 ===
+If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works than. In order to do that, replace these lines:
+
+<syntaxhighlight lang="bash">
+HOSTCC="${CC:-gcc}"
+HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
+</syntaxhighlight>
+
+with the following ones:
+
+<syntaxhighlight lang="bash">
+# This kernel only boots when compiled with GCC 6
+CC="gcc6-$CC"
+HOSTCC="gcc6-gcc"
+CROSS_COMPILE="gcc6-$CROSS_COMPILE"
+</syntaxhighlight>
+
+Then add <code>gcc6</code> to the kernel's <code>makedepends</code> line.
+
+=== Use the newest GCC from Alpine ===
+When you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer kernel, then you will need to reverse the above steps first. Delete the <code>CC</code>, <code>HOSTCC</code> and <code>CROSS_COMPILE</code> lines and insert this code block where you have deleted them:
+
+<syntaxhighlight lang="bash">
+HOSTCC="${CC:-gcc}"
+HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
+</syntaxhighlight>
+
+Then remove the <code>gcc6</code> package from the <code>makedepends</code> line.
+
+Afterwards, remove the <code>compiler-gcc6.h</code> file from the aport folder, and from the <code>source</code> line. Instead you will probably need [https://gitlab.com/postmarketOS/pmaports/issues/103#note_104926654 other patches as linked here]. First try compiling without patches, then add one patch at a time to fix a specific problem. As usually, with <code>pmbootstrap checksum</code>, you can regenerate the checksums at the bottom of the file, this needs to be done whenever you change <code>source</code>.
