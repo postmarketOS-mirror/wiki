@@ -12,6 +12,7 @@ The kernel gets compiled with {{wikipedia|GCC}}. Alpine Linux has been shipping 
 If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works than. In order to do that, replace these lines:
 
 <syntaxhighlight lang="bash">
+# Compiler: latest GCC from Alpine
 HOSTCC="${CC:-gcc}"
 HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
 </syntaxhighlight>
@@ -19,7 +20,7 @@ HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
 with the following ones:
 
 <syntaxhighlight lang="bash">
-# This kernel only boots when compiled with GCC 6
+# Compiler: GCC 6 (doesn't boot when compiled with newer versions)
 CC="gcc6-$CC"
 HOSTCC="gcc6-gcc"
 CROSS_COMPILE="gcc6-$CROSS_COMPILE"
@@ -31,6 +32,7 @@ Then add <code>gcc6</code> to the kernel's <code>makedepends</code> line.
 When you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer kernel, then you will need to reverse the above steps first. Delete the <code>CC</code>, <code>HOSTCC</code> and <code>CROSS_COMPILE</code> lines and insert this code block where you have deleted them:
 
 <syntaxhighlight lang="bash">
+# Compiler: latest GCC from Alpine
 HOSTCC="${CC:-gcc}"
 HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
 </syntaxhighlight>
