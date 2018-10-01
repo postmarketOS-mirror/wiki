@@ -113,3 +113,7 @@ kernel_mainline() {
 * Run <code>pmbootstrap init</code> afterwards to test the change. It should ask you for the kernel now.
 * See <code>device-qemu-amd64</code> for another example.
 * Implementation details and discussion in {{github|1363}}
+
+== See also ==
+* [[deviceinfo]]
+* [[vendor kernel specific package]]
