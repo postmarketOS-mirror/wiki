@@ -3,6 +3,8 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 == Available templates ==
 * [[Template:alpine|alpine]] ''link to a page on the [https://wiki.alpinelinux.org/ Alpine Wiki]''
 * [[Template:albug|albug]] ''link to a bug over at https://bugs.alpinelinux.org/''
+* [[Template:button|button]] ''Visual representation for a button or sequence of buttons''
+* [[Template:File|file]] ''gitlab or github file link''
 * [[Template:github|github]] ''github issue or pull-request link'' (obsolete for postmarketOS code, use [[Template:issue|issue]] or [[Template:MR|MR]] instead)
 * [[Template:Hc|hc]] ''block code with header (can be used for listing the contents of a file, with the file location on top)''
 * [[Template:Infobox|infobox]] ''on the top right of every device / user interface article''
@@ -10,12 +12,11 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 ** [[Template:Infobox_device|device]]
 * [[Template:issue|issue]] ''gitlab issue link''
 * [[Template:MR|MR]] ''gitlab merge request link''
-* [[Template:File|file]] ''gitlab or github file link''
 * [[Template:Note|note]]
 * [[Template:Outdated|outdated]]
-* [[Template:Todo|todo]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
-* [[Template:button|button]] ''Visual representation for a button or sequence of buttons''
+* [[Template:Todo|todo]]
+* [[Template:wikipedia|wikipedia]] ''link to an wikipedia article''
 
 == See also ==
 * [[Special:UncategorizedTemplates]]
