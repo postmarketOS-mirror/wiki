@@ -38,3 +38,7 @@ HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
 Then remove the <code>gcc6</code> package from the <code>makedepends</code> line.
 
 Afterwards, remove the <code>compiler-gcc6.h</code> file from the aport folder, and from the <code>source</code> line. Instead you will probably need [https://gitlab.com/postmarketOS/pmaports/issues/103#note_104926654 other patches as linked here]. First try compiling without patches, then add one patch at a time to fix a specific problem. As usually, with <code>pmbootstrap checksum</code>, you can regenerate the checksums at the bottom of the file, this needs to be done whenever you change <code>source</code>.
+
+== See also ==
+* [[device specific package]]
+* {{issue|103|pmaports}} Adjust to GCC8 upgrade in Alpine edge
