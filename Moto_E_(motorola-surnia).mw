@@ -30,7 +30,7 @@
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = not tested
 | status_mobiledata = not tested
-| status_sms = using instructions from motorola_harpia seems to partially work, able to receive notification in logs of received text
+| status_sms = Y
 | status_calls = not tested
 | booting = Y
 }}
