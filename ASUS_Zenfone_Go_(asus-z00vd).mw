@@ -78,7 +78,7 @@ After done, you should be able to enable OEM Unlocking from developer settings a
 * FDE (reboot loop)
 * Battery (device reboots when plugged the charger while device is off)
 
-== What untested ==
+== What is untested ==
 * Wifi (need proprietary 6620_launcher and firmware blobs)
 
 Anything that aren't filled in aren't tested.
