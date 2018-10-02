@@ -1,6 +1,5 @@
 {{note|This may work with first-generation Chromecasts with old firmware. '''Do not connect your Chromecast to the Internet,''' or it will automatically update itself!}}
 
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = Google
 | name = Chromecast
@@ -14,6 +13,27 @@
 | storage = 2GiB flash NAND
 | display = None, connects over HDMI
 | memory = 512 MB
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Kernel compiles, my personal Chromecast's bootloader is too new to load from USB
+| booting = no
 }}
 
 == Contributors ==
