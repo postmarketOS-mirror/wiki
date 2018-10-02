@@ -12,6 +12,27 @@
 | storage = 4 GB
 | display = 1024x600
 | memory = 512 MB
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = 
+| booting = no
 }}
 
 This is a white-label device, you can find it rebranded as "Point of View Protab 2 XXL" and "Cherry M1007"
