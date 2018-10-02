@@ -1,3 +1,5 @@
+Some devices already have modem support. Check the devices table!
+
 == Relevant issues ==
 * {{github|520}} N900: integrate ofono
 * {{github|598}} Let's get the cellular modem working! (presenting various stacks, general discussion)
