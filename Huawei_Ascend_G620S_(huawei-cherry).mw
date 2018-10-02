@@ -1,4 +1,3 @@
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = Huawei
 | name =  Ascend G620S
@@ -11,6 +10,27 @@
 | storage = 8GB
 | display = 720x1280
 | memory = 1GB
+| architecture = aarch64
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Kernel compiles, graphic output does not work 
+| booting = no
 }}
 
 == Contributors ==
