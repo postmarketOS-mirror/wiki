@@ -44,3 +44,4 @@ Afterwards, remove the <code>compiler-gcc6.h</code> file from the aport folder, 
 == See also ==
 * [[device specific package]]
 * {{issue|103|pmaports}} Adjust to GCC8 upgrade in Alpine edge
+* {{MR|30|pmaports}} device/linux-*: use GCC-6 for all 3.x kernels
