@@ -1,3 +1,31 @@
+{{Infobox device
+| manufacturer = QEMU
+| name =  armhf
+| codename = qemu-armhf
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = 
+| booting = no
+| non_android = 🔼
+}}
+
 With 4.6 kernel, [https://github.com/pali/linux-n900/commit/eb080ecdcfc5868d8e36d0f5f42d9cb7f13b4db9 Pali's patch to mmc] and right config with command line inside, qemu works for N900 emulation, including running Weston.
 
 I'm using this config option to configure kernel:
