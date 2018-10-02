@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = QEMU
 | name =  armhf
-| codename = qemu-armhf
+| codename = qemu-rx51
 | architecture = armhf
 | status_usbnet = 
 | status_flashing = 
