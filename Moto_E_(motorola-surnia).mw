@@ -99,7 +99,6 @@ cd /lib/firmware
 ln -s /lib/firmware/postmarketos/* /lib/firmware/
 </source>
 
-
 == Modem ==
 Make the necesary links for qcom_rmtfs
 
