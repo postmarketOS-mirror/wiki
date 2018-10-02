@@ -1,4 +1,3 @@
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = Wiko
 | name =  Sunset 2
@@ -13,6 +12,27 @@
 | storage = 4 GB
 | display = 480x800
 | memory = 512 MB
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = 
+| booting = no
 }}
 
 == Contributors ==
