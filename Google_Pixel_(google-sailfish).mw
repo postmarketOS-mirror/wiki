@@ -1,4 +1,3 @@
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = Google
 | name =  Pixel
@@ -13,6 +12,27 @@
 | memory = 4GB Dual Channel LPDDR4
 | image = File:Sailfish.jpg
 | imagecaption = Google Pixel (sailfish)
+| architecture = aarch64
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Kernel compiles, panics on boot
+| booting = no
 }}
 
 == Contributors ==
