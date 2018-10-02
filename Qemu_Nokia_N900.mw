@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = QEMU
-| name =  armhf
+| name =  N900
 | codename = qemu-rx51
 | architecture = armhf
 | status_usbnet = 
