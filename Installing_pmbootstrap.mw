@@ -1,3 +1,15 @@
+== Installing automatically ==
+
+==== Download pmbootstrap ====
+<syntaxhighlight lang="shell-session">
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+</syntaxhighlight>
+
+==== Install ====
+<syntaxhighlight lang="shell-session">
+$ python3 "$PWD/pmbootstrap/setup.py" install
+</syntaxhighlight>
+
 == Installing Manually ==
 
 ==== Download pmbootstrap ====
