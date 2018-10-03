@@ -59,6 +59,11 @@ To adjust brightness:
 <pre># # Replace $VAL with a value from 0 to 255:
 # echo $VAL > /sys/class/backlight/omap_bl/brightness</pre>
 
+== Keyboard Backlight ==
+
+<pre>To enable, and turn off the keyboard backlight, insert instead of $ VAL 0 or 1:
+echo $VAL >> /sys/class/leds/button-backlight/brightness</pre>
+
 == Device info ==
 
 * [https://www.gsmarena.com/samsung_i9003_galaxy_sl-3761.php Full phone specifications]
