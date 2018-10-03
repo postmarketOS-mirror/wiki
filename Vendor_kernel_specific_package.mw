@@ -31,6 +31,10 @@ fi
 
 Then add <code>gcc6</code> to the kernel's <code>makedepends</code> line.
 
+<span style="font-size:80%; font-style: italic">
+Technical detail: the <code>if...</code> guard around setting the variables is necessary, because the <code>CC</code> and <code>CROSS_COMPILE</code> variables extend themselves. <code>abuild</code> will parse the <code>APKBUILD</code> a second time while running the <code>package()</code> step (inside a fakeroot). So without the <code>if</code> statement, we will end up with <code>CC="gcc6-gcc6-gcc"</code> instead of <code>CC="gcc6-gcc"</code> which gets problematic if you are calling <code>make</code> to install kernel modules in the package section (as done in <code>linux-asus-tf101</code> for example).
+</span>
+
 === Use the newest GCC from Alpine ===
 Let's say you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer compiler.
 
