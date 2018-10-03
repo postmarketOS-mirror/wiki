@@ -9,8 +9,9 @@ The template gets improved every now and then to make porting easier, so don't b
 The kernel gets compiled with {{wikipedia|GCC}}. Alpine Linux has been shipping version GCC 6 for a long time, but changed the default GCC version to GCC 8 in September 2018. It was discovered that at least one vendor kernel does not boot when compiled with GCC 8 ({{issue|103|pmaports}}), so we ended up packaging GCC 6 side by side with GCC 8. All existing 3.x vendor kernels that were packaged have been adjusted to use GCC 6 at this point in time, just to make sure we don't introduce any breakage there. The default for new packages is using the current GCC version that is packaged in Alpine (usually GCC 8).
 
 === Use GCC 6 ===
-If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works then. In order to do that, '''replace these lines:'''
+If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works then.
 
+'''Replace these lines:'''
 <syntaxhighlight lang="bash">
 # Compiler: latest GCC from Alpine
 HOSTCC="${CC:-gcc}"
@@ -31,8 +32,21 @@ fi
 Then add <code>gcc6</code> to the kernel's <code>makedepends</code> line.
 
 === Use the newest GCC from Alpine ===
-Let's say you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer compiler. First reverse the above steps: delete the whole
-<code># Compiler: GCC 6 ...</code> code block (the comment and the whole <code>if</code>...<code>fi</code> statement below) and insert this code block instead:
+Let's say you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer compiler.
+
+'''Replace these lines:'''
+<syntaxhighlight lang="bash">
+# Compiler: this kernel was only tested with GCC6. Feel free to make a merge
+# request if you find out that it is booting working with newer GCCs as
+# well. See <https://postmarketos.org/vendorkernel> for instructions.
+if [ "$HOSTCC" != "gcc6-gcc" ]; then
+	CC="gcc6-"$CC"
+	HOSTCC="gcc6-gcc"
+	CROSS_COMPILE="gcc6-$CROSS_COMPILE"
+fi
+</syntaxhighlight>
+
+with the following ones:
 
 <syntaxhighlight lang="bash">
 # Compiler: latest GCC from Alpine
@@ -43,6 +57,8 @@ HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
 Then remove the <code>gcc6</code> package from the <code>makedepends</code> line.
 
 Afterwards, remove the <code>compiler-gcc6.h</code> file from the aport folder, and from the <code>source</code> line. Instead you will probably need [https://gitlab.com/postmarketOS/pmaports/issues/103#note_104926654 other patches as linked here]. First try compiling without patches, then add one patch at a time to fix a specific problem. As usually, with <code>pmbootstrap checksum</code>, you can regenerate the checksums at the bottom of the file, this needs to be done whenever you change <code>source</code>.
+
+When you made it boot successfully, please increase the <code>pkgrel</code> and make a merge request.
 
 == See also ==
 * [[device specific package]]
