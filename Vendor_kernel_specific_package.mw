@@ -36,7 +36,7 @@ with the following ones:
 
 <syntaxhighlight lang="bash">
 # Compiler: GCC 6 (doesn't boot when compiled with newer versions)
-if [ "$HOSTCC" != "gcc6-gcc" ]; then
+if [ "${CC:0:5}" != "gcc6-" ]; then
 	CC="gcc6-$CC"
 	HOSTCC="gcc6-gcc"
 	CROSS_COMPILE="gcc6-$CROSS_COMPILE"
@@ -46,7 +46,7 @@ fi
 Then add <code>gcc6</code> to the kernel's <code>makedepends</code> line.
 
 <span style="font-size:80%; font-style: italic">
-Technical detail: the <code>if...</code> guard around setting the variables is necessary, because the <code>CC</code> and <code>CROSS_COMPILE</code> variables extend themselves. <code>abuild</code> will parse the <code>APKBUILD</code> a second time while running the <code>package()</code> step (inside a fakeroot). So without the <code>if</code> statement, we will end up with <code>CC="gcc6-gcc6-gcc"</code> instead of <code>CC="gcc6-gcc"</code> which gets problematic if you are calling <code>make</code> to install kernel modules in the package section (as done in <code>linux-asus-tf101</code> for example).
+Technical detail: the <code>if...</code> guard around setting the variables is necessary, because the <code>CC</code> and <code>CROSS_COMPILE</code> variables extend themselves. <code>abuild</code> will parse the <code>APKBUILD</code> a second time while running the <code>package()</code> step (inside fakeroot). So without the <code>if</code> statement, we will end up with <code>CC="gcc6-gcc6-gcc"</code> instead of <code>CC="gcc6-gcc"</code> which gets problematic if you are calling <code>make</code> to install kernel modules in the package section (as done in <code>linux-asus-tf101</code> for example). Interestingly, only <code>CC</code> and <code>CROSS_COMPILE</code> gets passed through, hence we can't simply check the <code>HOSTCC</code> variable.
 </span>
 
 === Use the newest GCC from Alpine ===
@@ -57,7 +57,7 @@ Let's say you are using a device that has already been packaged, and you want to
 # Compiler: this kernel was only tested with GCC6. Feel free to make a merge
 # request if you find out that it is booting working with newer GCCs as
 # well. See <https://postmarketos.org/vendorkernel> for instructions.
-if [ "$HOSTCC" != "gcc6-gcc" ]; then
+if [ "${CC:0:5}" != "gcc6-" ]; then
 	CC="gcc6-$CC"
 	HOSTCC="gcc6-gcc"
 	CROSS_COMPILE="gcc6-$CROSS_COMPILE"
