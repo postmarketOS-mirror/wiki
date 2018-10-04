@@ -47,6 +47,8 @@ Hold down POWER + Vol Down while booting to enter Flash Mode.
 == Installation ==
 So far only booting from fastboot kernel with sdcard image works. I tried flashing boot.img and that fails to reboot.
 
+I got a spare device and will get to the motherboard and see if I can get some serial/uart pads.
+
 == See also ==
 * https://gitlab.com/postmarketOS/pmaports/merge_requests/29 Initial merge request
 
