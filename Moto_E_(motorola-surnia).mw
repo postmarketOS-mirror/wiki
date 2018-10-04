@@ -136,7 +136,7 @@ ofonod -d -n
 Send an SMS!
 
 <source>
-export PHONE_NUMBER="<number to send sms to ex: 1234567890>"</code>
+export PHONE_NUMBER="<number to send sms to ex: 1234567890>"
 sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Powered" variant:boolean:"true"
 sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.GetProperties
 sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Online" variant:boolean:"true"
