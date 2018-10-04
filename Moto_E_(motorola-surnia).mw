@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Motorola
 | name =  Moto E (2nd Gen)
-| codename = surnia
+| codename = motorola-surnia
 | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2015
@@ -29,7 +29,7 @@
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = 
 | status_mobiledata = 
-| status_sms = Y
+| status_sms = P
 | status_calls =
 | booting = Y
 }}
