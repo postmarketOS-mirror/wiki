@@ -61,12 +61,16 @@ Enable the <code>device-fairphone-fp2-nonfree-firmware</code> package during <co
 Then run as root on the device:
 
 <source>
+# Stop NetworkManager as it interferes with wpa_supplicant
+service networkmanager stop
+# Start wpa_supplicant
 wpa_supplicant -Dnl80211 -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf
 </source>
 
 Connect to a network using [https://wiki.archlinux.org/index.php/WPA_supplicant#Connecting_with_wpa_cli this guide].
 
 <source>
+# Start a DHCP client on the wlan0 interface to get an IP address
 udhcpc -iwlan0
 </source>
 
