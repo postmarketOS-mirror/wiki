@@ -44,7 +44,7 @@
 
 == How to enter flash mode ==
 
-Hold vol-down while booting the device. The splash screen doesn't indicate, that the phone is in fastboot mode, but you can test it by running "fastboot devices" on a PC that's connected via USB to the phone.
+Hold vol-down while booting the device. The splash screen doesn't indicate, that the phone is in fastboot mode, but you can test it by running <code>fastboot devices</code> on a PC that's connected via USB to the phone.
 
 == Installation ==
 
