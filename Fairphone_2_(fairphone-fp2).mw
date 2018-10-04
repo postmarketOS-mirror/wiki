@@ -48,11 +48,29 @@ Hold vol-down while booting the device. The splash screen doesn't indicate, that
 
 == Installation ==
 
-A more-or-less guide is available in the [https://forum.fairphone.com/t/postmarketos-ten-years-support/32279/10?u=z3ntu Fairphone Forum].
-
-Older bootloaders do not support flashing images generated with the "img2simg" tool. It needs the patch [https://github.com/z3ntu/android_kernel_lk_fairphone_FP2/commit/0255581a47b96b8b0b3d7c5f0336d5f6bef8f2ad "app: aboot: Add support for CHUNK_FILL type for sparse image"] to work. This patch is included since the 18.01.1 release from Fairphone. See the [https://forum.fairphone.com/t/postmarketos-ten-years-support/32279/10?u=z3ntu Fairphone Forum] where @z3ntu also provides instructions on how to patch the bootloader.
+Note, that you have to have a recent bootloader installed, you can download a zip to flash from the recovery [https://github.com/WeAreFairphone/modem_zip_generator/releases at this link].
 
 Installation procedure is the same as with most other devices and isn't special for this phone.
+
+== WiFi ==
+
+Using NetworkManager (preinstalled) doesn't work for me / my WiFi network because of some dhcp issue.
+
+Enable the <code>device-fairphone-fp2-nonfree-firmware</code> package during <code>pmbootstrap init</code>
+
+Then run as root on the device:
+
+<source>
+wpa_supplicant -Dnl80211 -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf
+</source>
+
+Connect to a network using [https://wiki.archlinux.org/index.php/WPA_supplicant#Connecting_with_wpa_cli this guide].
+
+<source>
+udhcpc -iwlan0
+</source>
+
+Then you should have a working WiFi connection!
 
 == Photos ==
 
