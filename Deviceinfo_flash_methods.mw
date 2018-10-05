@@ -39,7 +39,7 @@ Usually the initramfs would get packed into the vmlinuz file, when it has no sup
 
 So what we do instead, is putting the real initramfs on the recovery partition (or any other free partition, such as &quot;kernel2&quot;, but the name comes from &quot;isolated recovery&quot; and was coined by [https://forum.xda-developers.com/galaxy-s2/orig-development/isorec-isolated-recovery-galaxy-s2-t3291176 Lanchon]). The initramfs baked into the kernel only extracts the real initramfs, and executes its init script.
 
-You will need to adjust the <code>init</code> script of your kernel's built in initramfs to point to the right partition. Use the <code>linux-samsung-i9100</code> package for reference.
+You will need to adjust the <code>init</code> script of your kernel's built in initramfs to point to the right partition. See [[Vendor_kernel_specific_package#heimdall-isorec|this section]] for reference.
 
 ==== Odin ====
 
