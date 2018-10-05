@@ -78,6 +78,21 @@ Afterwards, remove the <code>compiler-gcc6.h</code> file from the aport folder, 
 
 When you made it boot successfully, please increase the <code>pkgrel</code> and make a merge request.
 
+== heimdall-isorec ==
+If you have a device that only boots with [[Deviceinfo_flash_methods#heimdall-isorec|heimdall-isorec]], you will need to adjust your linux APKBUILD as follows:
+* add <code>busybox-static-armhf</code> to makedepends
+* copy the "init" file from <code>linux-samsung-i9100</code> and customize the partition
+* add "init" to <code>source=</code> in the APKBUILD
+* ajust your <code>prepare()</code> like it's done in <code>linux-samsung-i9100</code> and adjust the paths in there
+
+To see more examples of heimdall-isorec devices, search for them with 
+You can search for more examples of heimdall-isorec deviecs with grep:
+<syntaxhighlight lang="shell-session">
+$ grep -r 'deviceinfo_flash_method="heimdall-isorec"' aports
+aports/device/device-samsung-i9070/deviceinfo:deviceinfo_flash_method="heimdall-isorec"
+aports/device/device-samsung-i9100/deviceinfo:deviceinfo_flash_method="heimdall-isorec"
+</syntaxhighlight>
+
 == See also ==
 * [[device specific package]]
 * {{issue|103|pmaports}} Adjust to GCC8 upgrade in Alpine edge
