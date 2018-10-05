@@ -83,7 +83,7 @@ If you have a device that only boots with [[Deviceinfo_flash_methods#heimdall-is
 * add <code>busybox-static-armhf</code> to makedepends
 * copy the "init" file from <code>linux-samsung-i9100</code> and customize the partition
 * add "init" to <code>source=</code> in the APKBUILD
-* ajust your <code>prepare()</code> like it's done in <code>linux-samsung-i9100</code> and adjust the paths in there
+* adjust your <code>prepare()</code> like it's done in <code>linux-samsung-i9100</code> and adjust the paths in there
 
 You can search for more examples of heimdall-isorec deviecs with grep:
 <syntaxhighlight lang="shell-session">
