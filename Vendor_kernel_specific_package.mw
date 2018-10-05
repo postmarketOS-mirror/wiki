@@ -85,7 +85,6 @@ If you have a device that only boots with [[Deviceinfo_flash_methods#heimdall-is
 * add "init" to <code>source=</code> in the APKBUILD
 * ajust your <code>prepare()</code> like it's done in <code>linux-samsung-i9100</code> and adjust the paths in there
 
-To see more examples of heimdall-isorec devices, search for them with 
 You can search for more examples of heimdall-isorec deviecs with grep:
 <syntaxhighlight lang="shell-session">
 $ grep -r 'deviceinfo_flash_method="heimdall-isorec"' aports
