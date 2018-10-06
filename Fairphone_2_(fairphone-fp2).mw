@@ -76,6 +76,83 @@ udhcpc -iwlan0
 
 Then you should have a working WiFi connection!
 
+== Input devices ==
+<source>
+# Input device
+/dev/input/event0:      synaptics_dsx
+
+# Touchscreen events
+</source>
+
+<source>
+# Input device
+/dev/input/event1:      qpnp_pon
+
+# Power button
+Event: time 7644.433669, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 7644.433673, -------------- SYN_REPORT ------------
+Event: time 7644.682747, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 7644.682750, -------------- SYN_REPORT ------------
+</source>
+
+<source>
+# Input device
+/dev/input/event2:      gpio-keys
+
+# Volume up
+Event: time 7575.930067, type 1 (EV_KEY), code 115 (KEY_VOLUMEUP), value 1
+Event: time 7575.930083, -------------- SYN_REPORT ------------
+Event: time 7576.100068, type 1 (EV_KEY), code 115 (KEY_VOLUMEUP), value 0
+Event: time 7576.100083, -------------- SYN_REPORT ------------
+
+# Volume down
+Event: time 7577.650077, type 1 (EV_KEY), code 114 (KEY_VOLUMEDOWN), value 1
+Event: time 7577.650093, -------------- SYN_REPORT ------------
+Event: time 7577.840067, type 1 (EV_KEY), code 114 (KEY_VOLUMEDOWN), value 0
+Event: time 7577.840082, -------------- SYN_REPORT ------------
+
+# Camera
+Event: time 7579.180072, type 1 (EV_KEY), code 766 (?), value 1
+Event: time 7579.180089, -------------- SYN_REPORT ------------
+Event: time 7579.430052, type 1 (EV_KEY), code 766 (?), value 0
+Event: time 7579.430067, -------------- SYN_REPORT ------------
+</source>
+
+<source>
+# Input device
+/dev/input/event3:      msm8974-taiko-mtp-snd-card Button Jack
+
+# Button on headphones
+Event: time 7490.180845, type 1 (EV_KEY), code 226 (KEY_MEDIA), value 1
+Event: time 7490.180865, -------------- SYN_REPORT ------------
+Event: time 7492.228265, type 1 (EV_KEY), code 226 (KEY_MEDIA), value 0
+Event: time 7492.228270, -------------- SYN_REPORT ------------
+</source>
+
+<source>
+# Input device
+/dev/input/event4:      msm8974-taiko-mtp-snd-card Headset Jack
+
+# Plug in headphones Nr.1
+Event: time 7329.700387, type 5 (EV_SW), code 2 (SW_HEADPHONE_INSERT), value 1
+Event: time 7329.700389, type 5 (EV_SW), code 4 (SW_MICROPHONE_INSERT), value 1
+Event: time 7329.700394, type 5 (EV_SW), code 17 (?), value 1
+Event: time 7329.700396, -------------- SYN_REPORT ------------
+
+# Unplug headphones Nr.1
+Event: time 7336.406334, type 5 (EV_SW), code 2 (SW_HEADPHONE_INSERT), value 0
+Event: time 7336.406337, type 5 (EV_SW), code 4 (SW_MICROPHONE_INSERT), value 0
+Event: time 7336.406339, type 5 (EV_SW), code 17 (?), value 0
+Event: time 7336.406341, -------------- SYN_REPORT ------------
+
+# Plug in headphones Nr.2
+Event: time 7406.442631, type 5 (EV_SW), code 2 (SW_HEADPHONE_INSERT), value 1
+Event: time 7406.442636, -------------- SYN_REPORT ------------
+
+# Unplug headphones Nr.2
+Event: time 7433.144596, type 5 (EV_SW), code 2 (SW_HEADPHONE_INSERT), value 0
+Event: time 7433.144600, -------------- SYN_REPORT ------------
+</source>
 == Photos ==
 
 * [https://wiki.postmarketos.org/images/7/7e/Fairphone_2.jpg Weston running]
