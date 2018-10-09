@@ -138,9 +138,8 @@ _config="config-${_flavor}.${arch}"
 source="
     $pkgname-$_commit.tar.gz::https://github.com/LineageOS/${_repository}/archive/${_commit}.tar.gz
     $_config
-    compiler-gcc6.h
-    01_msm-fix-perf_trace_counters.patch
-    02_gpu-msm-fix-gcc5-compile.patch
+    gcc7-give-up-on-ilog2-const-optimizations.patch
+    gcc8-fix-put-user.patch
 "
 builddir="$srcdir/${_repository}-${_commit}"
 </syntaxhighlight>
