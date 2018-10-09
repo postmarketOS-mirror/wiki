@@ -88,7 +88,7 @@ $ nmcli radio all on
 In plasma-mobile, Angelfish webbrowser does not run. You may want to install and use qtwebbrowser, which runs and is kind of usable despite the fact that it still has some crashes happening.
 
 ==== Race condition on boot ====
-Due to a race condition, the device will not always boot properly.You often need to reboot the device several times before it boots. ({{issue|5|linux-postmarketos}})
+Due to a race condition, the device will not always boot properly. You often need to reboot the device several times before it boots. ({{issue|5|linux-postmarketos}})
 
 === Links ===
 * [https://www.youtube.com/watch?v=u9zw_ewkBJ0 Demonstration video of a Nexus 5 with postmarketOS and plasma]
