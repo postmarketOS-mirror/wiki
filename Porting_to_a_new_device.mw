@@ -124,7 +124,7 @@ In case you were asked for <code>boot.img</code> analyzing, and skipped that sec
 See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
 
 === Kernel package ===
-While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kernel mainline kernel] for all devices in the long run, this certainly can not be done in one step when porting to a new device. What we do in the meantime is shipping a Linux kernel fork, that is known to work with this device (e.g. from Android).
+While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kernel mainline kernel] for all devices in the long run, this certainly can not be done in one step when porting to a new device. What we do in the meantime is shipping a Linux kernel fork, that is known to work with this device (e.g. from Android). The steps below are the straight forward changes you need to compile your kernel. For details see the [[vendor kernel specific package]] article.
 
 ==== Source code ====
 {{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
