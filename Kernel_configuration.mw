@@ -3,7 +3,7 @@ You can change the kernel configuration with pmbootstrap, for the linux-sony-yug
 
 <pre class="shell">pmbootstrap kconfig edit sony-yuga</pre>
 
-This gives you a menu where you can select and deselect all kernel configuration options. Press the <code>/</code> key to get a search dialog.
+This gives you a menu where you can select and deselect all kernel configuration options. Press the <code>/</code> key to get a search dialog. After finding something, type the number of the search result to quickly jump to it.
 
 [[File:KernelConfig.png|800px]]
 
