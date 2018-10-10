@@ -24,7 +24,7 @@
 | status_battery =
 | status_3d = 
 | status_accel = 
-| status_audio = 
+| status_audio = Y
 | status_bluetooth =
 | status_camera =
 | status_gps = 
@@ -75,6 +75,10 @@ udhcpc -iwlan0
 </source>
 
 Then you should have a working WiFi connection!
+
+== Audio ==
+
+For audio, read {{MR|38|pmaports}} for now until it's more integrated.
 
 == Input devices ==
 <source>
