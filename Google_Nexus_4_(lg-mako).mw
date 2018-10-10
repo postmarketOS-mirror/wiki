@@ -70,14 +70,14 @@ This means, that most peripherals of the <code>mako</code> should work with main
 
 A good way forward would be using a minimal version of the <code>flo</code> DTS, where everything but USB is deleted, and fixing USB / trying to get the display working with the [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting DSI Panel Porting Guide]. The downstream DTSI files that need to be ported to the upstream kernel are probably located [https://github.com/LineageOS/android_kernel_lge_mako/tree/lineage-15.1/arch/arm/boot/dts here], and I guess the exact panel name appears when running <code>dmesg</code> after a successful boot (I did not verify this). Please expand this when you're working on it, and report your progress in #postmarketOS. Check out the [[Mainline Guide]].
 
-== Links ==
+== Photos ==
+* [https://ollieparanoid.github.io/img/2017-05-26/mako/editor.jpg Weston running with framebuffer issues]
+* [https://cloud.githubusercontent.com/assets/6033024/26761940/2e3273e0-4928-11e7-8800-0b4ddb14e239.jpg robb4 patched Weston to display the right colors]
+
+== See also ==
 * [https://github.com/freedreno/freedreno/wiki/Nexus-4 freedreno: Nexus 4]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-mako Device package]
 * [https://www.optiv.com/blog/building-a-nexus-4-uart-debug-cable Tutorial: UART debug cable]
 * [https://developers.google.com/android/drivers#mako Official proprietary drivers]
-* {{github|1079}} The Nexus 7 DTB is so similar, it even boots
-
-== Photos ==
-
-* [https://ollieparanoid.github.io/img/2017-05-26/mako/editor.jpg Weston running with framebuffer issues]
-* [https://cloud.githubusercontent.com/assets/6033024/26761940/2e3273e0-4928-11e7-8800-0b4ddb14e239.jpg robb4 patched Weston to display the right colors]
+* {{issue|1079}} The Nexus 7 DTB is so similar, it even boots
+* {{issue|9|linux-postmarketos}} Attempt at writing a new DTS for the Nexus 4
