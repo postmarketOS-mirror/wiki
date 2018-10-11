@@ -63,4 +63,4 @@ Exec=MOZ_USE_XINPUT2=1 GDK_SCALE=2  firefox %u
 == Upcoming versions ==
 
 With upcoming versions (> 55) we will be able to use the multi-touch zoom extension to get fluid zooming. 
-https://addons.mozilla.org/en-US/firefox/addon/multi-touch-zoom/
+https://github.com/haxiomic/firefox-multi-touch-zoom
