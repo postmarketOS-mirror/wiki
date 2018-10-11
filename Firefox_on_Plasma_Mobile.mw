@@ -24,7 +24,7 @@ Edit ~/.config/gtk-3.0/settings.ini with:
 [Settings]
 gtk-icon-theme-name = Paper
 gtk-cursor-theme-name = Paper
-gtk-fallback-icon-theme = Hicolor
+gtk-fallback-icon-theme = Gnome
 gtk-font-name = Sans 13
 gtk-cursor-theme-size = 0
 gtk-toolbar-style = GTK_TOOLBAR_BOTH
@@ -39,7 +39,7 @@ gtk-xft-hintstyle = hintfull
 gtk-xft-rgba = rgb
 </source>
 
-apk add paper-icon-theme paper-gtk-theme font-noto as recommended by Alpine for desktop use [https://wiki.alpinelinux.org/wiki/Desktop-notes]
+Make sure to install '''gnome-icon-theme''' and '''paper-icon-theme''' packages
 
 You may ajust Font size for your screen.
 
