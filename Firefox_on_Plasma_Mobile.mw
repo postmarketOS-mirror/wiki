@@ -25,7 +25,7 @@ Edit ~/.config/gtk-3.0/settings.ini with:
 gtk-icon-theme-name = Paper
 gtk-cursor-theme-name = Paper
 gtk-fallback-icon-theme = Gnome
-gtk-font-name = Sans 13
+gtk-font-name = Sans 10
 gtk-cursor-theme-size = 0
 gtk-toolbar-style = GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size = GTK_ICON_SIZE_LARGE_TOOLBAR
@@ -48,7 +48,7 @@ You may ajust Font size for your screen.
 You can start firefox with:
 
 <source lang="C">
-MOZ_USE_XINPUT2=1 GDK_SCALE=2  firefox %u
+MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
 </source>
 
 You may ajust scale to your device screen size, but it may only be integers.
@@ -56,7 +56,7 @@ You may ajust scale to your device screen size, but it may only be integers.
 You can edit your desktop shortcut /usr/share/applications/firefox.desktop :
 <source lang="C">
 [Desktop Entry]
-Exec=MOZ_USE_XINPUT2=1 GDK_SCALE=2  firefox %u
+Exec=MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
 ...
 </source>
 
