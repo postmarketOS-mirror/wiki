@@ -18,11 +18,10 @@ echo 'user_pref("general.useragent.override", "Mozilla/5.0 (Linux; Android 5.1.1
 And restart the browser.
 
 === Configuration on gtk ===
-Edit .config/gtk-3.0/settings.ini with:
+Edit ~/.config/gtk-3.0/settings.ini with:
 
 <source lang="C">
 [Settings]
-gtk-icon-theme-name = Gnome
 gtk-font-name = Sans 13 
 gtk-cursor-theme-name = Numix
 gtk-fallback-icon-theme = Numix
