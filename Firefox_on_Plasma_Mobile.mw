@@ -22,9 +22,10 @@ Edit ~/.config/gtk-3.0/settings.ini with:
 
 <source lang="C">
 [Settings]
-gtk-font-name = Sans 13 
-gtk-cursor-theme-name = Numix
-gtk-fallback-icon-theme = Numix
+gtk-icon-theme-name = Paper
+gtk-cursor-theme-name = Paper
+gtk-fallback-icon-theme = Hicolor
+gtk-font-name = Sans 13
 gtk-cursor-theme-size = 0
 gtk-toolbar-style = GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size = GTK_ICON_SIZE_LARGE_TOOLBAR
@@ -33,13 +34,14 @@ gtk-menu-images = 1
 gtk-enable-event-sounds = 1
 gtk-enable-input-feedback-sounds = 1
 gtk-xft-antialias = 1
-gtk-xft-hinting = 0 
+gtk-xft-hinting = 0
 gtk-xft-hintstyle = hintfull
 gtk-xft-rgba = rgb
-gtk-icon-theme-name = Numix
 </source>
 
-You may ajust Font size for your screen
+apk add paper-icon-theme paper-gtk-theme font-noto as recommended by Alpine for desktop use [https://wiki.alpinelinux.org/wiki/Desktop-notes]
+
+You may ajust Font size for your screen.
 
 === Environment variables for starting Firefox ===
 
