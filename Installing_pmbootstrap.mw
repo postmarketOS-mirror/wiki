@@ -1,5 +1,12 @@
 == Installing automatically ==
+=== Latest release with pip ===
+pmbootstrap is up on [https://pypi.org/project/pmbootstrap/ pypi] now, so it can be installed with:
+<syntaxhighlight lang="shell-session">
+$ pip3 install --user pmbootstrap
+</syntaxhighlight>
 
+That's it. The steps below are for alternative methods of installing <code>pmbootstrap</code>. Read on at [[#Tab completion]] if you are interested.
+=== Latest development version from git ===
 ==== Download pmbootstrap ====
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
@@ -11,7 +18,6 @@ $ python3 "$PWD/pmbootstrap/setup.py" install
 </syntaxhighlight>
 
 == Installing Manually ==
-
 ==== Download pmbootstrap ====
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
