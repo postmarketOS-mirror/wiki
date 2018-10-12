@@ -1,5 +1,5 @@
 This page explains how to make firefox usable in plasma-mobile.
-
+[[File:Plasma-firefox.png|thumb|right|frame|none|alt=Alt text|Firefox running on plasma-mobile]]
 == Firefox 52 ==
 Install firefox-esr package from alpine. It is currently firefox 52.9.0-r1
 
