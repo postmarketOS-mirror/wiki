@@ -15,4 +15,5 @@ To turn Alpine into postmarketOS:
 If you want to use the postmarketOS initramfs, make sure that you adjust the [[Partition-layout|partition labels]] accordingly.
 
 == See also ==
-* {{github|1137}} troubleshooting the first installation which was done this way
+* {{gitlab|106|pmaports}} Turning an existing x86_64 Alpine Linux installation into a postmarketOS one fails
+* {{gitlab|66|pmaports}} troubleshooting the first installation which was done this way
