@@ -168,6 +168,16 @@ These are applications which already exist for Linux and could be reused in post
 |BSD and LGPL
 |Lightweight touch friendly email client designed for Nokia Maemo devices
 |-
+|Firefox Desktop [[Firefox on Plasma Mobile|with modifications for Plasma Mobile]]
+|MPL2
+|Standard Firefox web-browser. DIY modifications can enable better use on a touchscreen.
+|Alpine repo
+|-
+|[http://links.twibright.com/ links2]
+|GPL2
+|Simple web browser for saving on data consumption.  Can be resized to a phone's aspect ratio when running in graphical mode.
+|Alpine repo
+|-
 |}
 
 === Apps that only work with proprietary services ===
