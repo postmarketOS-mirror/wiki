@@ -61,9 +61,7 @@ Exec=MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
 </source>
 
 == User agent ==
-If you would like the mobile-friendly versions of sites to load by default, there are two ways to do this:
-#[https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher-revived/ Install the User Agent switcher] extension - this allows for easy switching between different user agents.
-#A more permanent option is to go into <code>about:config</code>, right click, New → String, enter <code>general.useragent.override</code> and then type in the user agent you wish to use.
+If you would like to switch between mobile and desktop page editions easily, the [https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher-revived/ User Agent switcher] extension will allow for easy switching between different user agents.
 
 == Upcoming versions ==
 
