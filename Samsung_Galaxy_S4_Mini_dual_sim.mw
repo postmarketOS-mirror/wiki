@@ -42,7 +42,7 @@
 == Current main issues ==
 * Device doesn't automatically give itself mac address, ip, etc - you need to [[USB_Network | configure the network manually ]]
 * Device reboots immediately after flasher usage
-* Screen only works after flashing kernel; after normal reboots it will not turn on
+* Charging seems to work, but there's no indication of it actually happening
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
