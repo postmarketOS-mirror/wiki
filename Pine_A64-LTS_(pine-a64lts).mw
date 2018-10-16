@@ -54,7 +54,7 @@ Install alsa-utils with apk, launch alsamixer, unmute (press M) "Headphone", "AI
 Then you can play some music (e.g. a .wav file) with aplay.
 
 == See also ==
-* [https://gitlab.com/postmarketOS/pmaports/merge_requests/6] Initial merge request
+* {{MR|6|pmaports}} Initial merge request
 * [https://github.com/ayufan-pine64/boot-tools Tools for FEL mode]
 * [http://wiki.pine64.org/index.php/PINE_A64-LTS/SOPine_Main_Page pine64's own wiki page]
 * [https://github.com/armbian/build/blob/99a34c7be1e342247a981f99c7930ee73c144f3e/patch/u-boot/u-boot-sunxi/board_pine64so/fix-sopine-defconfig.patch Patch for u-boot for board support]
