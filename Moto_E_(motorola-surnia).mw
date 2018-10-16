@@ -50,7 +50,7 @@ So far only booting from fastboot kernel with sdcard image works. I tried flashi
 I got a spare device and will get to the motherboard and see if I can get some serial/uart pads.
 
 == See also ==
-* https://gitlab.com/postmarketOS/pmaports/merge_requests/29 Initial merge request
+* https://gitlab.com/postmarketOS/pmaports/merge_requests/29 Initial merge request, status: merged.
 
 == Modem Setup (same as for motorola-harpia so far) ==
 Content below copied from https://wiki.postmarketos.org/wiki/Moto_G4_Play_(motorola-harpia). 
