@@ -99,6 +99,14 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 !Hardware
 ! Mainline Driver<br/>Status
 |-
+|Accelerometer
+|kxtf9<sup>1</sup>
+|
+|-
+|Ambient light sensor
+|bh1721fvc
+|Y
+|-
 |Analog Digital Converter
 |stmpe811
 |Y
@@ -119,6 +127,10 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |max8903
 |Y
 |-
+|Compass
+|ak8975c<sup>2</sup>
+|
+|-
 |CPU Temperature Sensor
 |nct1008
 |Y
@@ -135,26 +147,17 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 |tegra host1x
 |Y 
 |-
-|HDMI Connector
-|sii9234
-| -
+|Gyroscope
+|mpu3050
+|Y
 |-
-|Sensors
-* gyroscope
-* accelerometer
-* compass
-* light sensor
-|<br/>
-* mpu3050
-* kxtf9
-* ak8975
-* bh1721fvc
-|P
+|HDMI Connector
+|sii9234<sup>3</sup>
+|
 |-
 |Touch Digitizer
 |mxt1386
 |Y
-
 |-
 |Vibration Motor
 |isa1200
@@ -181,6 +184,15 @@ The Linux mainlining effort contains drivers forward ported from the stock Samsu
 | - 
 |-
 |}
+
+Notes:
+
+: 1: kxt9f driver exists in mainline. The driver needs support device tree bindings.
+
+: 2: ak8975 driver exists in mainline. The device id for ak8975c needs to be added to the driver. I (decatf) can't test it because the compass seems to report nonsense data. The compass on my tablet might be broken.
+
+: 3: sii9234 driver exists in mainline. Requires someone with an MHL cable to implement / test it.
+
 
 ===== Mainline Driver Status Legend =====
 {| class="wikitable feature-colors"
