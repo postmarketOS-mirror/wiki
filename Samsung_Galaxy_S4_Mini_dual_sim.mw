@@ -15,7 +15,7 @@
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = P
+| status_touch = Y
 | status_screen = P
 | status_wifi = 
 | status_xwayland = 
@@ -31,7 +31,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| booting = P
+| booting = Y
 }}
 
 == Contributors ==
