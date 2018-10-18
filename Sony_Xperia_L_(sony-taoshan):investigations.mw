@@ -22,8 +22,6 @@ To resolve a ''xz not found'' error, the ''xz'' utility was added in the ''maked
 
 == Packing boot.img ==
 
-Is seems like boot.img may not be exactly regular boot.img as unpacking tools for working ones says these files were packed with non-standard mkbootimg, way to test would be to find a way to unpack existing boot.img, repack it again with proper tools/options until it boots, then try the same tools with pmos kernel and/or initramfs
-{{note| The tool I use may be wrong one but it worked with Samsung ones (samsung-s6500d)}}
 <source lang="bash">
 Boot = boot.img
 unmkbootimg version 1.2 - Mikael Q Kuisma <kuisma@ping.se>
