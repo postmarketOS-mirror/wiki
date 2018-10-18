@@ -20,6 +20,10 @@ To resolve a ''xz not found'' error, the ''xz'' utility was added in the ''maked
   makedepends="perl sed installkernel bash gmp-dev bc linux-headers elfutils-dev devicepkg-dev xz" 
 </pre>
 
+== Packing boot.img ==
+
+Is seems like boot.img may not be exactly regular boot.img as unpacking tools for working ones says these files were packed with non-standard mkbootimg, way to test would be to find a way to unpack existing boot.img, repack it again with proper tools/options until it boots, then try the same tools with pmos kernel and/or initramfs
+
 == Motherboard ==
 
 [[File:Taoshan_motherboard_sa77GA341.JPG|thumb|left|SA77_GA-341 motherboard]]
