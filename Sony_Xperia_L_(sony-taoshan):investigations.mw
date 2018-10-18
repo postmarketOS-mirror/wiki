@@ -23,6 +23,36 @@ To resolve a ''xz not found'' error, the ''xz'' utility was added in the ''maked
 == Packing boot.img ==
 
 Is seems like boot.img may not be exactly regular boot.img as unpacking tools for working ones says these files were packed with non-standard mkbootimg, way to test would be to find a way to unpack existing boot.img, repack it again with proper tools/options until it boots, then try the same tools with pmos kernel and/or initramfs
+{{note| The tool I use may be wrong one but it worked with Samsung ones (samsung-s6500d)}}
+<source lang="bash">
+Boot = boot.img
+unmkbootimg version 1.2 - Mikael Q Kuisma <kuisma@ping.se>
+Kernel size 5847800
+Kernel address 0x80208000
+Ramdisk size 7421021
+Ramdisk address 0x82200000
+Secondary size 0
+Secondary address 0x81100000
+Kernel tags address 0x80200100
+Flash page size 2048
+Board name is ""
+Command line "console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug"
+
+*** WARNING ****
+This image is built using NON-standard mkbootimg!
+OFF_RAMDISK_ADDR is 0x02000000
+Please modify mkbootimg.c using the above values to build your image.
+****************
+
+Extracting kernel to file zImage ...
+Extracting root filesystem to file initramfs.cpio.gz ...
+All done.
+---------------
+To recompile this image, use:
+  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x80200000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' -o new_boot.img
+---------------
+24525 blocks
+</source>
 
 == Motherboard ==
 
