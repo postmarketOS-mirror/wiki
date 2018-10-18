@@ -166,7 +166,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[http://modest.garage.maemo.org/ Modest Mail]
 |BSD and LGPL
-|Lightweight touch friendly email client designed for Nokia Maemo devices
+|Lightweight touch friendly email client designed for Nokia Maemo devices. (Not updated since 2010. Their source link is broken, but the code can be found [https://gitorious.org/maemo-garage/modest.git/ here.])
 |-
 |Firefox Desktop [[Firefox on Plasma Mobile|with modifications for Plasma Mobile]]
 |MPL2
