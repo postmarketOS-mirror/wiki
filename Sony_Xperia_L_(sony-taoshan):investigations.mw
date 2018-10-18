@@ -1,0 +1,20 @@
+Presently, the kernel from Lineage OS can be compiled, but it does not boot...
+
+
+== Kernel compilation ==
+
+The kernel used comes from Lineage OS. 
+
+The ''android_device_sony_taoshan'' github repository contains a file named ''lineage.dependencies'' witch indicates the name of the kernel used : ''android_kernel_sony_msm8930''.
+
+* [https://github.com/LineageOS/android_device_sony_taoshan XPeria L Github repository]
+* [https://github.com/LineageOS/android_kernel_sony_msm8930 kernel Github repository]
+* [https://raw.githubusercontent.com/LineageOS/android_kernel_sony_msm8930/cm-14.1/arch/arm/configs/taoshan_defconfig| Taoshan kernel configuration file on msm8930 Github repository]
+
+The patch [[https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch  gpu-msm-fix-gcc5-compile.patch]] is necessary to fix the following error : ''undefined reference to kgsl_iommu_sync_lock''.
+
+To resolve a ''xz not found'' error, the ''xz'' utility was added in the ''makedepends'' directive of the ''APKBUILD'' file : 
+
+<syntaxhighlight>
+  makedepends="perl sed installkernel bash gmp-dev bc linux-headers elfutils-dev devicepkg-dev xz" 
+</syntaxhighlight>
