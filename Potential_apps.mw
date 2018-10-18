@@ -8,16 +8,16 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://github.com/ev3dev/brickman brickman ui]
 |GPL2
-|Simple retro-themed touch ui written in vala
+|Simple retro-themed touch UI written in vala
 |-
 |[https://github.com/mujx/nheko nheko (Matrix)]
 |GPL3
-|X11 and Wayland application (Native).  Touch friendly version under development.
+|X11 and Wayland application (Native).  Touch-friendly version under development.
 |[https://pkgs.alpinelinux.org/packages?name=nheko Alpine repo]
 |-
 |[https://cgit.kde.org/marble.git KDE Marble (maps)] [https://marble.kde.org/]
 |LGPL
-|Touch optimised mobile application. X11 and Wayland support.
+|Touch-optimised mobile application. X11 and Wayland support.
 |-
 |[https://github.com/llelectronics/videoPlayer/tree/plasma LLs Video Player]
 |GPL2
@@ -25,11 +25,11 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://github.com/KDE/kcalc KCalc]
 |GPL2
-|Qt based application.  Made for desktop but also suitable for touchscreen use.
+|Qt-based application.  Made for desktop but also suitable for touchscreen use.
 |-
 |[https://github.com/KaidanIM/Kaidan Kaidan]
 |GPL3
-|Kirigami (Qt) based XMPP application.
+|Kirigami-based (QT) XMPP application
 |-
 |[https://gajim.org Gajim]
 |GPL3
@@ -55,21 +55,21 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://docs.xfce.org/xfce/thunar/start Thunar (file manager)]
 |GPL2
-|Default file manager on XFCE (GTK2 based).  Reasonably touch friendly when menu bar and status bar are disabled.
+|Default file manager on XFCE (GTK2-based).  Reasonably touch friendly when menu bar and status bar are disabled.
 |[https://pkgs.alpinelinux.org/packages?name=thunar&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |[https://wiki.gnome.org/Apps/Evince Evince (reader)]
 |GPL2
-|GTK3 document viewer (for PDFs and other formats).  Supports highlighting and is touchscreen friendly.
+|GTK3 document viewer (for PDFs and other formats).  Supports highlighting and is touch-friendly.
 |[https://pkgs.alpinelinux.org/packages?name=evince&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |[https://wiki.gnome.org/Apps/Weather GNOME Weather]
 |GPL2
-|GTK3-based simple weather application. Touch friendly
+|GTK3-based simple weather application. Touch-friendly.
 |-
 |[https://wiki.gnome.org/Apps/Maps GNOME Maps]
 |GPL2
-|GTK3-based simple maps application with routing. Reasonably touch friendly
+|GTK3-based simple maps application with routing. Reasonably touch-friendly.
 |-
 |[https://wiki.gnome.org/Apps/Nautilus GNOME Files]
 |LGPL
@@ -78,11 +78,11 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://wiki.gnome.org/Apps/Cheese GNOME Cheese]
 |GPL2
-|Photobooth-style camera app. "Fullscreen mode" is touch friendly
+|Photobooth-style camera app. "Fullscreen mode" is touch-friendly.
 |-
 |[https://wiki.gnome.org/Apps/Photos GNOME Photos]
 |GPL3
-|Photo gallery application. Reasonably touch friendly
+|Photo gallery application. Reasonably touch-friendly.
 |-
 |[https://transmissionbt.com/ Transmission]
 |GPL2/GPL3
@@ -95,52 +95,52 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://liri.io/apps/browser/ Liri Browser]
 |GPL3
-|QtWebEngine based browser built with complete touch (including smartphone) support, Material Design, and support for coloured site windows
+|QtWebEngine-based browser built with complete touch (including smartphone) support, Material Design, and support for coloured-site windows
 |[https://repo.liri.io/flatpak/io.liri.Browser.flatpakref Flatpak]
 |-
 |[https://liri.io/apps/text/ Liri Text]
 |GPL3
-|Simple Qt5 text and code editor using Material Design and with touch support
+|Simple Qt5 text and code editor using Material Design, with touch support
 |[https://repo.liri.io/flatpak/io.liri.Text.flatpakref Flatpak]
 |-
 |[https://liri.io/apps/calculator/ Liri Calculator]
 |GPL3
-|Simple Qt5 calculator using Material Design and with touch support
+|Simple Qt5 calculator using Material Design, with touch support
 |[https://repo.liri.io/flatpak/io.liri.Calculator.flatpakref Flatpak]
 |-
 |[https://peruse.kde.org/ Peruse]
 |LGPL2
-|Comic book reader app for plasma mobile with touch support (in development)
+|Comic book reader with touch support, for plasma mobile (in development)
 |{{github|926}}
 |-
 |[https://www.dillo.org Dillo]
 |GPL3
-|Extremely lightweight web browser, using very little RAM.  Not touch optimised but can display most mobile websites well (no HTML5 support), and hence may be the only usable browser on older devices. Uses ~20MB RAM.
+|Extremely lightweight web browser, using very little RAM.  Not touch-optimised but can display most mobile websites well (no HTML5 support), and hence may be the only usable browser on older devices. Uses ~20MB RAM.
 |[https://pkgs.alpinelinux.org/packages?name=dillo&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |[http://www.midori-browser.org/ Midori]
 |LGPL2.1	
-|Fairly lightweight web browser, using very little RAM.  Touch-capapble but not touch-optimised and not hardware-accelerated. It can display websites well, with HTML5 support. Uses ~40MB RAM.
+|Fairly lightweight web browser, using very little RAM.  Touch-capable but not touch-optimised and not hardware-accelerated. It can display websites well, with HTML5 support. Uses ~40MB RAM.
 |[https://pkgs.alpinelinux.org/packages?name=midori&branch=&repo=&arch=&maintainer= Alpine repo]
 |-
 |[http://doc.qt.io/QtWebBrowser/ QtWebBrowser]
 |GPL3
-|Lightweight and touch friendly web browser based on qt (source [http://code.qt.io/cgit/qt-apps/qtwebbrowser.git/]).
+|Lightweight and touch-friendly web browser based on qt (source [http://code.qt.io/cgit/qt-apps/qtwebbrowser.git/]).
 |
 |-
 |[https://github.com/KDE/plasma-angelfish Angelfish]
 |GPL2
-|This is an experimental web browser designed to be used on small mobile devices, integrate well in Plasma workspaces.
+|This is an experimental web browser designed to be used on small mobile devices, and to integrate well in Plasma workspaces.
 |
 |-
 |[https://github.com/ubports/webbrowser-app Ubports webbroswer-app]
 |GPL3
-|Webbrowser-app is a lightweight touch-friendly web browser tailored for Ubuntu based on the Oxide web engine.
+|Webbrowser-app is a lightweight touch-friendly web browser tailored for Ubuntu, based on the Oxide web engine.
 |
 |-
 |[https://github.com/ubports/webbrowser-app Gnome web (epiphany)]
 |GPL3
-|The web browser for the GNOME desktop. Purism is working on making it phone-friendly for their librem 5 phone.
+|The web browser for the GNOME desktop. Purism is working on making it phone-friendly for their Librem 5 phone.
 |
 |-
 |[https://wiki.openstreetmap.org/wiki/MoNav MoNav]
@@ -158,19 +158,19 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://qtox.github.io/ QTox]
 |GPL3
-|Peer to peer (Tox) messaging client ([https://tox.chat/clients.html other FOSS clients also available])
+|Peer-to-peer (Tox) messaging client ([https://tox.chat/clients.html other FOSS clients also available])
 |-
 |[https://ring.cx/ GNU Ring]
 |GPL3
-|Peer to peer messaging client and protocol.  No registration required.
+|Peer-to-peer messaging client and protocol.  No registration required.
 |-
 |[http://modest.garage.maemo.org/ Modest Mail]
 |BSD and LGPL
-|Lightweight touch friendly email client designed for Nokia Maemo devices. (Not updated since 2010. Their source link is broken, but the code can be found [https://gitorious.org/maemo-garage/modest.git/ here.])
+|Lightweight, touch-friendly email client designed for Nokia Maemo devices. (Not updated since 2010. Their source link is broken, but the code can be found [https://gitorious.org/maemo-garage/modest.git/ here].)
 |-
 |Firefox Desktop [[Firefox on Plasma Mobile|with modifications for Plasma Mobile]]
 |MPL2
-|Standard Firefox web-browser. DIY modifications can enable better use on a touchscreen.
+|Standard Firefox web browser. DIY modifications can improve touch-friendliness.
 |Alpine repo
 |-
 |[http://links.twibright.com/ links2]
@@ -194,11 +194,11 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://app.assembla.com/spaces/smplayer/subversion/source/HEAD smtube (YouTube)] [http://www.smtube.org/]
 |GPL
-|X11 application (Native Qt5) with some touch optimisation
+|X11 application (Native Qt5) with some touch-optimisation
 |-
 |[https://github.com/stanfieldr/ghetto-skype ghetto-skype]
 |GPL3
-|X11 application (Electron web wrapper).  Touch optimisation and notifications support.
+|X11 application (Electron web wrapper).  Touch-optimisation and notifications support.
 |-
 |[https://github.com/Enrico204/Whatsapp-Desktop whatsapp-desktop]
 |GPL3
@@ -206,7 +206,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://github.com/terkelg/ramme ramme (Instagram)]
 |MIT
-|X11 application (Electron web wrapper). Touch friendly
+|X11 application (Electron web wrapper). Touch-friendly
 |-
 |[https://github.com/telegramdesktop/tdesktop telegram-desktop]
 |GPL3
@@ -214,7 +214,7 @@ These are applications which already exist for Linux and could be reused in post
 |-
 |[https://github.com/sindresorhus/caprine caprine (FB Messenger)]
 |MIT
-|X11 application (Electron web wrapper). Touch friendly
+|X11 application (Electron web wrapper). Touch-friendly
 |-
 |[https://corebird.baedert.org Corebird (Twitter)]
 |GPL3
@@ -238,14 +238,14 @@ These are applications which already exist for Linux and could be reused in post
 
 ==See also==
 ===Other Mobile Linux platforms===
-* [https://open-store.io/ Ubuntu Touch app store] - some of these applications may be reusable on pmOS
-* [http://maemo.org/packages/ Maemo packages] - these applications should be reusable in pmOS, and integrate well with the Hildon UI
-* [https://openrepos.net/ Meego/Sailfish/Nemo applications] - will require some reworking for pmOS
-* [http://www.tizenstore.com/main/getMain.as Tizen Store] - unknown compatibility with pmOS
-* [http://preware.pivotce.com/ LuneOS apps] - will require some reworking for pmOS
+* [https://open-store.io/ Ubuntu Touch app store] - Some of these applications may be reusable on pmOS
+* [http://maemo.org/packages/ Maemo packages] - These applications should be reusable in pmOS, and integrate well with the Hildon UI
+* [https://openrepos.net/ Meego/Sailfish/Nemo applications] - Will require some reworking for pmOS
+* [http://www.tizenstore.com/main/getMain.as Tizen Store] - Unknown compatibility with pmOS
+* [http://preware.pivotce.com/ LuneOS apps] - Will require some reworking for pmOS
 
 ===Other frameworks===
-* [https://anbox.io/ Anbox] - under construction Android compatibility layer
+* [https://anbox.io/ Anbox] - Under-construction Android compatibility layer
 * [http://www.ofono.org oFono] - Open Source Telephony Framework
-* [https://launchpad.net/ginn/ Ginn] - allows non multitouch aware applications to support multitouch gestures making a lot more applications usable on a touchscreen. [https://www.youtube.com/watch?v=NKDLWrLaKKE]
-* [https://code.google.com/archive/p/microemu/ MicroEmulator] - runs J2ME MIDP feature phone applications on Linux devices.  Can be used to run apps e.g. Opera Mini and Facebook, for the pmOS feature phone idea
+* [https://launchpad.net/ginn/ Ginn] - Allows non-multitouch-aware applications to support multitouch gestures making a lot more applications usable on a touchscreen. [https://www.youtube.com/watch?v=NKDLWrLaKKE]
+* [https://code.google.com/archive/p/microemu/ MicroEmulator] - Runs J2ME MIDP feature phone applications on Linux devices.  Can be used to run apps e.g. Opera Mini and Facebook, for the pmOS feature phone idea.
