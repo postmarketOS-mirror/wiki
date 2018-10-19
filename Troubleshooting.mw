@@ -68,7 +68,7 @@ For some devices it's possible to get early boot output using a debug cable that
 
 On fastboot devices, you may have to enable UART debugging with <code>fastboot oem uart-on</code>.
 
-By default, all output from the initramfs get redirected to <code>/pmOS_init.log</code>. If you want the output through the debug cable you need to add <code>PMOS_NO_OUTPUT_REDIRECT</code> to your [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting:kernel#how-can-i-boot-the-kernel-with-some-specific-arguments kernel command line].
+By default, all output from the initramfs get redirected to <code>/pmOS_init.log</code>. If you want the output through the debug cable you need to add <code>PMOS_NO_OUTPUT_REDIRECT</code> to your [[Troubleshooting:kernel#How_can_I_boot_the_kernel_with_some_specific_arguments.3F|kernel command line]].
 
 See [[Serial_debugging]]
 
