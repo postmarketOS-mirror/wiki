@@ -18,7 +18,7 @@ Beware that by following these instructions, you will '''overwrite''' everything
 
 Fortunately, most Android-based devices are fairly foolproof; even if your flashed images don't boot, you can still access the flashing mode and fix the mistakes. For details, have a look at your [[devices|device-specific wiki page]].
 
-{{Todo:|Explain what alterations can hard-brick a device. Where is fastboot itself stored? Can the partition table be fixed via fastboot? What's the significance of all the extra partitions on Android devices? etc...}}
+{{Todo|Explain what alterations can hard-brick a device. Where is fastboot itself stored? Can the partition table be fixed via fastboot? What's the significance of all the extra partitions on Android devices? etc...}}
 
 === Initialization ===
 Run the following commands in a Linux terminal to get started. See [[installing pmbootstrap]] for more detailed instructions with a shortcut and tab completion.
