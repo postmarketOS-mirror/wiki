@@ -1,0 +1,45 @@
+{{Infobox interface
+| name = Unity 8
+| image = 
+| imagecaption = P
+| graphics = Mir on Wayland
+| toolkit = Qt 5
+}}
+
+The convergent desktop environment.
+
+== Status ==
+Still being packaged. All required individual packages are packaged but configuration is needed.
+
+== Installation ==
+Since it isn't yet finished, there is no UI meta package for it yet and it can not be selected in <code>pmbootstrap</code>. It can however be installed manually for now.
+
+<source>
+pmbootstrap config ui none # Assuming the pmbootstrap init step has already been done, otherwise just select "none" as user interface
+pmbootstrap install --add unity8
+</source>
+
+Once the device has launched, Unity 8 can be started with the following:
+
+<source>
+# "unity7-schemas"
+wget -O /usr/share/glib-2.0/schemas/com.canonical.Unity.gschema.xml https://pastebin.com/raw/ixPuAuv9
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+
+if test -z "${XDG_RUNTIME_DIR}"; then
+  export XDG_RUNTIME_DIR=/tmp/$(id -u)-runtime-dir
+  if ! test -d "${XDG_RUNTIME_DIR}"; then
+    mkdir "${XDG_RUNTIME_DIR}"
+    chmod 0700 "${XDG_RUNTIME_DIR}"
+  fi
+fi
+
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
+
+mkdir -p $HOME/.config/ubuntu-system-settings
+touch $HOME/.config/ubuntu-system-settings/wizard-has-run
+
+# set a password!
+env LD_LIBRARY_PATH=/usr/lib/qt5/plugins/platforms:/usr/lib/unity8/qml/mocks/Indicators MIR_SERVER_CURSOR=null QT_QPA_PLATFORM=mirserver unity8
+</source>
