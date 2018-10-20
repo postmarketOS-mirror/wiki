@@ -8,7 +8,7 @@ $ ls
 </syntaxhighlight>
 
 === Requirements ===
-* We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
+* We assume that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
 * Python 3.4+ and git must be installed (look at your distribution's documentation on installing packages)
 * The host operating system needs to run Linux 3.17 or newer (first kernel with getrandom syscall)
 * A few gigabytes of free space
@@ -18,7 +18,7 @@ Beware that by following these instructions, you will '''overwrite''' everything
 
 Fortunately, most Android-based devices are fairly foolproof; even if your flashed images don't boot, you can still access the flashing mode and fix the mistakes. For details, have a look at your [[devices|device-specific wiki page]].
 
-{{Todo|Explain what alterations can hard-brick a device. Where is fastboot itself stored? Can the partition table be fixed via fastboot? What's the significance of all the extra partitions on Android devices? etc...}}
+{{Todo:|Explain what alterations can hard-brick a device. Where is fastboot itself stored? Can the partition table be fixed via fastboot? What's the significance of all the extra partitions on Android devices? etc...}}
 
 === Initialization ===
 Run the following commands in a Linux terminal to get started. See [[installing pmbootstrap]] for more detailed instructions with a shortcut and tab completion.
@@ -29,7 +29,7 @@ $ cd pmbootstrap
 $ ./pmbootstrap.py init
 </syntaxhighlight>
 
-Type in the code name of your device as listed [[Devices|here]] and optionally a custom username.
+Type in the code name of your device as listed [[Devices|here]], and optionally a custom username.
 <pre>
 Target device (either an existing one, or a new one for porting).
 Available (39): amazon-thor, asus-flo, asus-grouper, fairphone-fp2, google-glass, ...
@@ -38,7 +38,7 @@ Username [user]: yourusernamegoeshere
 </pre>
 
 ==== User interface ====
-Carefully choose the user interface you would like to install. Check your [[devices|device's wiki page]] for interfaces, that are known to be working with your device. Weston and XFCE4 are usable on devices which do not have hardware 3D acceleration (most of them!), the others are notably slowed down. Please read the corresponding [[User-Interfaces|user interface]] article for information about how usable each interface is and keep in mind that most of them are not that usable yet.
+Carefully choose the user interface you would like to install. Check your [[devices|device's wiki page]] for interfaces that are known to be working with your device. Weston and XFCE4 are usable on devices which do not have hardware 3D acceleration (most of them!), the others are notably slowed down. Please read the corresponding [[User-Interfaces|user interface]] article for information about how usable each interface is and keep in mind that most of them are not that usable yet.
 <pre>
 Available user interfaces (5):
 * none: No graphical environment
@@ -51,7 +51,7 @@ User interface [weston]:
 </pre>
 
 ==== Work path ====
-Make sure that the location has a few GB of space available, and that it is a relatively standard Linux filesystem (so it supports device nodes and symbolic links). Notably ''unsupported'' are: eCryptFS, encfs, fat, ntfs, nfs shares, tmpvs, VirtualBox shared folders.
+Make sure that the location has a few GB of space available, and that it is a relatively standard Linux filesystem (one that supports device nodes and symbolic links). Notably ''unsupported'' are: eCryptFS, encfs, fat, ntfs, nfs shares, tmpvs, and VirtualBox shared folders.
 <pre>
 Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
 Work path [/home/user/.local/var/pmbootstrap]:
@@ -74,15 +74,15 @@ Done!
 
 === Installation and flashing ===
 {{note|We assume that you have a [[Porting_to_a_new_device#Shortcut|shortcut]] for <code>pmbootstrap</code> set up, that points to <code>./pmbootstrap.py</code>.}}
-{{note|Not all installation and flash methods work for all devices. '''Please check your [[devices|device wiki page]] for further instructions!''' Below you will find generic explanations of what the <code>install</code> and <code>flash</code> actions do, just in case the installation instructions are missing for your device. If that is the case, please extend the wiki accordingly.}}
+{{note|Not all installation and flash methods work for all devices. '''Please check your [[devices|device wiki page]] for further instructions!''' Below you will find generic explanations of what the <code>install</code> and <code>flash</code> actions do, just in case the installation instructions are missing for your device. If that is the case, please extend the device wiki accordingly.}}
 
 ==== pmbootstrap install ====
 The install action essentially does the following:
-* build a chroot with the full installation as it will be placed on the device
-* copy that to an encrypted system image file
-* ask you for the user and encryption passwords
+* Build a chroot with the full installation as it will be placed on the device
+* Copy that to an encrypted system image file
+* Ask you for the user and encryption passwords
 
-It is possible to disable the full disk encryption (FDE) with the <code>--no-fde</code> parameter (it might be that the FDE interface [[osk-sdl]] has not been ported to your device yet).
+It is possible to disable the full disk encryption (FDE) with the <code>--no-fde</code> parameter (if, for example, the FDE interface [[osk-sdl]] has not been ported to your device yet).
 
 Furthermore you can change the output type (system image) to something else with the following parameters.
 * <code>--sdcard</code>: Format and copy everything to an SD card
@@ -97,13 +97,13 @@ $ pmbootstrap install --help
 </syntaxhighlight>
 
 ==== pmbootstrap flash ====
-This command wraps various flash programs (e.g. fastboot and heimdall) with a common syntax and with automatically filling out the paths to the generated files. Usually you need to flash the system image (unless you did the SD card or recovery zip installation):
+This command wraps various flash programs (e.g. fastboot and heimdall) with a common syntax, and automatically fills out the paths to the generated files. Usually you need to flash the system image (unless you did the SD card or recovery zip installation):
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>fastboot format system</code> for fastboot compatible devices, or simply install the known working OS, e.g. Android, on it. And if you really know what you are doing, you might consider using <code>dd</code>). Using multiple partitions with LVM is planned ({{github|60}}).
+In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as your UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>fastboot format system</code> for fastboot compatible devices, or simply install the known working OS, e.g. Android, on it. And if you really know what you are doing, you might consider using <code>dd</code>). Using multiple partitions with LVM is planned ({{github|60}}).
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher flash_rootfs --partition userdata
 </syntaxhighlight>
