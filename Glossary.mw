@@ -80,3 +80,11 @@ We have chosen Weston as a demo because we didn't want to use X11, as this is sl
 === pmic ===
 
 This stands for power management integrated circuit. It is the chip that controls the power to the various components of the phone.
+
+=== qmi ===
+
+Qualcomm Modem Interface. The internal interface inside Qualcomm SoCs that connect the modem and the application processor.
+
+=== slpi ===
+
+Sensor Low Power Interface. The interface that connect sensors like the accelerometer to the application processor in Qualcomm Socs
