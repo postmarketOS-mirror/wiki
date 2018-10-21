@@ -23,11 +23,11 @@ To resolve a ''xz not found'' error, the ''xz'' utility was added in the ''maked
   makedepends="perl sed installkernel bash gmp-dev bc linux-headers elfutils-dev devicepkg-dev xz" 
 </pre>
 
-== Unpacking boot.img ==
+== Unpacking boot.img and non-standard warning ==
 
-Unpacking the pmbootstrap boot.img file with the Juisma's unmkbootimg utility prints a warning message indicating that the '''OFF_RAMDISK_ADDR''' is non-standard :
+The Juisma's unmkbootimg utility prints a warning message indicating that the '''OFF_RAMDISK_ADDR''' is non-standard :
 
-<source lang="bash">
+<pre>
 Boot = boot.img
 unmkbootimg version 1.2 - Mikael Q Kuisma <kuisma@ping.se>
 Kernel size 5847800
@@ -50,14 +50,32 @@ Please modify mkbootimg.c using the above values to build your image.
 Extracting kernel to file zImage ...
 Extracting root filesystem to file initramfs.cpio.gz ...
 All done.
----------------
+---------------source
 To recompile this image, use:
   mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x80200000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' -o new_boot.img
 ---------------
 24525 blocks
-</source>
+</pre>
 
-The [http://whiteboard.ping.se/Android/Unmkbootimg Kuisma's unmkbootimg utility home page] was not modified since 2015-12-07 : It seems to be out of date... And there is no way to download the source code to investigate...
+The [http://whiteboard.ping.se/Android/Unmkbootimg Kuisma's unmkbootimg utility home page] was not modified since 2015-12-07 : it seems to be out of date... And there is no way to download the source code to investigate...
+
+
+As this warning is shown for both files (pmboostrap and Lineage), I think it can be ignored safely : 
+
+Lineage :
+<pre>
+$ unzip  ~/postmarket/taoshan/lineage-14.1-20180909-nightly-taoshan-signed.zip boot.img
+$ mv boot.img boot.img.lineage
+$ ./unmkbootimg  boot.img.pmbootstrap | grep NON
+This image is built using NON-standard mkbootimg!
+</pre>
+
+PmBootStrap :
+<pre>
+$ cp /home/dom/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/boot.img-sony-taoshan boot.img.pmbootstrap
+$ ./unmkbootimg  boot.img.lineage | grep NON
+This image is built using NON-standard mkbootimg!
+</pre>
 
 == Motherboard ==
 
