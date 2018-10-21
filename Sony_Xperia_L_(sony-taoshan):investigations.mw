@@ -7,7 +7,7 @@ Presently, the kernel from Lineage OS can be compiled, but it does not boot...
 
 == Kernel compilation ==
 
-The kernel used comes from Lineage OS. 
+The kernel used comes from Lineage OS. The kernel version is '''3.4.0'''.
 
 The ''android_device_sony_taoshan'' github repository contains a file named ''lineage.dependencies'' witch indicates the name of the kernel used : ''android_kernel_sony_msm8930''.
 
