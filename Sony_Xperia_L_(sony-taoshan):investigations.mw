@@ -17,11 +17,30 @@ The ''android_device_sony_taoshan'' github repository contains a file named ''li
 
 The patch [[https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch  gpu-msm-fix-gcc5-compile.patch]] is necessary to fix the following error : ''undefined reference to kgsl_iommu_sync_lock''.
 
-To resolve a ''xz not found'' error, the ''xz'' utility was added in the ''makedepends'' directive of the ''APKBUILD'' file : 
+=== XZ compression error ===
 
+By default, the kernel compilation (<code>pmbootstrap build linux-sony-taoshan</code>) fails with the following error in the log : 
+<pre>
+  AS      arch/arm/boot/compressed/ashldi3.o
+/home/pmos/build/src/android_kernel_sony_msm8930-df6292bc628cece5925d0f67fbc8c8a2cab2d524/scripts/xz_wrap.sh: exec: line 23: xz: not found
+make[2]: *** [/home/pmos/build/src/android_kernel_sony_msm8930-df6292bc628cece5925d0f67fbc8c8a2cab2d524/arch/arm/boot/compressed/Makefile:190: arch/arm/boot/compressed/piggy.xzkern] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [/home/pmos/build/src/android_kernel_sony_msm8930-df6292bc628cece5925d0f67fbc8c8a2cab2d524/arch/arm/boot/Makefile:52: arch/arm/boot/compressed/vmlinux] Error 2
+make: *** [/home/pmos/build/src/android_kernel_sony_msm8930-df6292bc628cece5925d0f67fbc8c8a2cab2d524/arch/arm/Makefile:292: zImage] Error 2
+>>> ERROR: linux-sony-taoshan: build failed
+</pre>
+
+'''Explanation :''' The kernel compilation needs the '''xz''' utility to build the kernel because the original taoshan kernel configuration file (from Lineage OS) has the <code>CONFIG_KERNEL_XZ</code> option enabled and ''pmbootstrap'' did not install this utility when installing the Alpine OS base.
+
+The first solution is to add ''xz'' in the <code>makedepends</code> directive of the <code>linux-sony-taoshan/APKBUILD</code> file  : 
 <pre>
   makedepends="perl sed installkernel bash gmp-dev bc linux-headers elfutils-dev devicepkg-dev xz" 
 </pre>
+Then you must clear all caches with <code>pmboostrap zap</code> and restart a new compilation.
+
+The second solution is to choose another compression mode. To do that, run <code>pmbootstrap kconfig edit sony-taoshan</code>, go in the menu "'''General setup'''" and select ''GZIP'' for the "'''Kernel compression mode'''" option.
+
+With this two methods, the kernel compilation is successfull, but the phone does not boot...
 
 == Unpacking boot.img and non-standard warning ==
 
