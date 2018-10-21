@@ -17,6 +17,13 @@ The ''android_device_sony_taoshan'' github repository contains a file named ''li
 
 The patch [[https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch  gpu-msm-fix-gcc5-compile.patch]] is necessary to fix the following error : ''undefined reference to kgsl_iommu_sync_lock''.
 
+The screen resolution must be updated in the <code>device-sony-taoshan/deviceinfo</code> file : 
+<pre>
+deviceinfo_screen_width="854"
+deviceinfo_screen_height="480"
+</pre>
+
+
 === XZ compression error ===
 
 By default, the kernel compilation (<code>pmbootstrap build linux-sony-taoshan</code>) fails with the following error in the log : 
