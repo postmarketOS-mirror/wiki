@@ -141,9 +141,15 @@ These are used for flashing and booting the device, and most of them are fastboo
 |-
 
 |-
+| <code>bootimg_mtk_mkimage</code>
+| Prepend a header required for MediaTek MT6589 phones (such as the [[Fairphone_1_(fairphone-fp1)|Fairphone 1]], [http://rex-shen.net/customize-flash-mt6589-rom/ more info])
+| <code>true, false</code>
+|-
+
+|-
 | <code>bootimg_qcdt</code>
 | Append <code>dtb</code> file to <code>boot.img</code> ([[deviceinfo_bootimg_qcdt|more info]])
-|
+| <code>true, false</code>
 |-
 
 |-
