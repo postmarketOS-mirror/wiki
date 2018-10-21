@@ -57,7 +57,7 @@ To recompile this image, use:
 24525 blocks
 </source>
 
-The [http://whiteboard.ping.se/Android/Unmkbootimg | Kuisma's unmkbootimg utility home page] was not modified since 2015-12-07 : It seems to be out of date... And there is no way to download the source code to investigate...
+The [http://whiteboard.ping.se/Android/Unmkbootimg Kuisma's unmkbootimg utility home page] was not modified since 2015-12-07 : It seems to be out of date... And there is no way to download the source code to investigate...
 
 == Motherboard ==
 
