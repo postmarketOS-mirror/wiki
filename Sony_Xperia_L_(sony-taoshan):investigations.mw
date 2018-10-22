@@ -109,4 +109,20 @@ This image is built using NON-standard mkbootimg!
 
 The reference of the motherboard is ''''sa77_GA-341''''
 
+=== Serial connector ===
+[[File:Taoshan_motherboard_pinout.png|thumb|SA77_GA-341 pinout]]
 Presently, we have no idea where the UART pins (TX, RX and ground) are located. Maybe at the top left, under the 'D' letter...
+
+Light blue is voltage when the phone is powered on.
+
+Measured voltage on pin marked "strange" is weird:
+* when voltmeter test leads touch this pad and ground (shield in my case) it shows varying 1.6V - 1.7V
+* when measuring after boot OR taking voltmeter leads from the pad and touching it again it shows 0.0V
+
+Small pad on bottom between ground and BATT_MID is 1.8V: after connecting it to TX and right after inserting the battery it sends similar string:
+{{note| Occasional 9 may be caused by transmission error, I was holding wires in hand}}
+<pre>
+(8888888988998898888888888888888888888988898898888898888888888898888888889888889888988888888888888988988889888888888888988988888889888888988888988888989888888898888888989888988888988898888888888888888B 
+(8888888888988889888888898988888988888888888898888888889888888888898899888888889888888888888888988888888889898889888889888888988889988889889888888888898898988888888888888889889888988888888988888888988B
+(8988989888988888888888888898888898888888889988888988898888888888888889989888888988888998888898889889898988988888888898888888889888898888888888888988888888888888888888888888888888988888888888888889888B
+</pre>
