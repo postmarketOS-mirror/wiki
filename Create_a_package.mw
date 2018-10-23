@@ -82,7 +82,13 @@ Whenever you update a package, it must have a new version. A version consists of
 * <code>pkgver</code>: The version of the software being packaged.
 * <code>pkgrel</code>: Alpine/postmarketOS package release number. Starts at 0 (zero). Always increment <code>pkgrel</code> when making updates to an aport; reset <code>pkgrel</code> to 0 (zero) when incrementing <code>pkgver</code>.
 
-Special cases, where this is not so obvious:
+As a general rule, whenever a change is made to upstream sources, pkgver should be increased.
+When packaging-related files (APKBUILD, any post-install scripts, patch files to upstream sources, etc) are changed, pkgrel should be increased.
+
+Edge cases are packages without upstream sources (ex. gr. main/postmarketos-mkinitfs), where the source files are included in the package directory.
+In those cases, the packaged sources should be treated as upstream sources, and the pkgver should increase when they are edited.
+
+Other special cases, where this is not so obvious:
 * <code>linux-*</code> packages: We always set the <code>pkgver</code> to the kernel version number and only increase it when the kernel source code has a new version number. All kernel config changes only increase the <code>pkgrel</code> number. In the case, that the linux kernel sources need to be updated, but the kernel version was not changed (Android kernel forks often do this), we can add a <code>_gitYYYYMMDD</code> suffix (see "Packaging git commits" above).
 * <code>device-*</code> packages: This was not done consistently in the past, but it makes sense to update the <code>pkgver</code> when anything but the <code>APKBUILD</code> was changed. Because that is essentially the version of the software being packaged.
 
