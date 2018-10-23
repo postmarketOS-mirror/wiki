@@ -11,6 +11,7 @@ To recreate your vendor kernel aport on top of the latest (and therefore most re
 $ mv aports/device/linux-wiki-example aports/device/linux-wiki-example-old
 $ pmbootstrap aportgen linux-wiki-example
 (now adjust the new aport to use the sources and patches from the "-old" folder)
+$ pmbootstrap checksum linux-wiki-example
 $ pmbootstrap build --force linux-wiki-example
 (now test it on your device and make sure it boots, e.g. with 'pmbootstrap zap', 'pmbootstrap install', 'pmbootstrap flasher boot')
 $ rm -r aports/device/linux-wiki-example-old
