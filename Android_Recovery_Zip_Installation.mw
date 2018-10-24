@@ -14,6 +14,12 @@ $ pmbootstrap init
 $ pmbootstrap install --no-fde --android-recovery-zip
 </syntaxhighlight>
 
+By default, this will install to the <code>system</code> partition of your Android device. If you want to install to a different partition (e.g. because your <code>system</code> partition is too small), use the <code>--recovery-install-partition</code> parameter:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --no-fde --android-recovery-zip --recovery-install-partition "userdata"
+</syntaxhighlight>
+
 == Sideload ==
 This allows downloading the zip file on the fly directly from your computer. If you don't want to sideload, you can also [[#Copy_the_generated_image_to_an_SD_card|copy the generated zip file to an SD card]].
 * Boot the recovery system
