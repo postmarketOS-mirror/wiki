@@ -1,3 +1,5 @@
+[[File:twrp.png|right|200px]]
+
 Most Android devices have a "recovery" partition, on which a second kernel and initramfs can be installed. The recovery systems installed there allow overwriting the main OS with a special zip file, and it is possible to generate such a file for postmarketOS.
 
 == Preparation ==
