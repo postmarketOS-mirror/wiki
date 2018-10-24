@@ -24,3 +24,6 @@ mount_subpartitions
 mount_boot_partition
 extract_initramfs_extra /boot/initramfs-samsung-klte-extra
 </syntaxhighlight>
+
+== See also ==
+* [[Android Recovery Zip Installation]]
