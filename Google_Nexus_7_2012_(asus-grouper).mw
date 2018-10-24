@@ -44,7 +44,7 @@
 
 === Installation process ===
 <syntaxhighlight lang="shell" line='line'>
-$ git clone https://github.com/postmarketOS/pmbootstrap
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 $ cd pmbootstrap
 $ ./pmbootstrap.py init
 $ ./pmbootstrap.py install --no-fde
