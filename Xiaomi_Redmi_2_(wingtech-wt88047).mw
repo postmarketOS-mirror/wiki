@@ -1,0 +1,60 @@
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  Redmi 2
+| codename = wingtech-wt88047
+| image = 
+| imagecaption = 
+| releaseyear = 2015
+| originalsoftware = MIUI 6.0 (Android 4.4.4)
+| chipset = Qualcomm Snapdragon 410 (MSM8916)
+| cpu = Quad-core ARM Cortex-A53 1.2 GHz
+| gpu = Adreno 306
+| storage = 8GB / 16GB, external microSD (up to 32GB)
+| display = 720 x 1280
+| memory = 1GB / 2GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = 
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* sylvieon
+
+== What works ==
+* USB Networking (SSH)
+* Flashing (only tested with sdcard)
+* Display
+
+== What does not work ==
+* Everything else
+
+== How to enter flash mode ==
+* Fastboot: hold Volume Down + Power buttons
+
+== Installation ==
+1. Bootstrap
+::<code>$ pmbootstrap init</code>
+::<code># select wingtech-wt88047</code>
+2. Build and install to SD card
+::<code># replace /dev/sdX with actual sdcard device</code>
+::<code>$ pmbootstrap install --no-fde --sdcard=/dev/sdX</code>
+3. Boot
+::<code># with device in fastboot mode</code>
+::<code>$ pmbootstrap flasher boot</code>
