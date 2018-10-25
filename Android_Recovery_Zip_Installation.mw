@@ -25,17 +25,14 @@ This allows downloading the zip file on the fly directly from your computer. If 
 * Boot the recovery system
 * Click on "Advanced / ADB Sideload", then "Swipe to start sideload"
 * Connect your phone to your PC
-* Start the sideloading process from your PC
+* Start the sideloading process from your PC:
 
-Usually this would be done with:
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap flasher --method=adb sideload # broken: #1638
+$ pmbootstrap flasher --method=adb sideload
 </syntaxhighlight>
 
-However, this is broken right now (see {{issue|1638}}). Read on for a workaround.
-
 === Sideload without pmbootstrap ===
-Install <code>adb</code> on your host Linux distribution (usually in an <code>android-tools</code> package that you can install with your distribution's package manager), then run the following commands. The special <code>cd</code> is necessary, because <code>adb</code> can't resolve the symlink on its own.
+If sideloading with pmbootstrap fails (it was broken in {{issue|1638}}), you can do it ''without'' pmbootstrap as a workaround. Install <code>adb</code> on your host Linux distribution (usually in an <code>android-tools</code> package that you can install with your distribution's package manager), then run the following commands. The special <code>cd</code> is necessary, because <code>adb</code> can't resolve the symlink on its own.
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap export
 [07:48:04] NOTE: To export the rootfs image, run 'pmbootstrap install' first (without the 'sdcard' parameter).
