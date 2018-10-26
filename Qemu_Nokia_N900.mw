@@ -3,6 +3,7 @@
 | name =  N900
 | codename = qemu-rx51
 | architecture = armhf
+| n-android = ✔
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
