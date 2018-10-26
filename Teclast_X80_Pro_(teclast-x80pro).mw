@@ -12,6 +12,7 @@
 | display = 1920x1200
 | memory = 2GB
 | architecture = x86_64
+| n-android = ✔
 | status_usbnet = -
 | status_flashing = Y
 | status_touch = Y
