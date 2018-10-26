@@ -14,6 +14,7 @@
 | display = 540x960 IPS
 | memory = 1 GB
 | architecture = armhf
+| n-android = ✔
 | status_usbnet = P
 | status_flashing = P
 | status_touch = 
