@@ -45,7 +45,7 @@
 
 == What works ==
 * Kernel compilation
-* Flash via Heimdall (Tested on Windows)
+* Flash via Heimdall
 
 == What does not work ==
 * Flashing via odin
