@@ -12,6 +12,7 @@
 | display = 320x480
 | memory = 128MB
 | architecture = armhf
+| n-android = ✔
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
