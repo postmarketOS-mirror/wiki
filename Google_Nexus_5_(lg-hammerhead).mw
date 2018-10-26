@@ -85,7 +85,7 @@ $ nmcli radio all on
 </source>
 
 ==== Webbrowser ====
-In plasma-mobile, Angelfish webbrowser does not run. You may want to install and use qtwebbrowser, which runs and is kind of usable despite the fact that it still has some crashes happening.
+In plasma-mobile, Angelfish webbrowser does not run. You may want to install, configure and use qtwebbrowser, [[Firefox]] and/or [[Chromium]].
 
 === Links ===
 * [https://www.youtube.com/watch?v=u9zw_ewkBJ0 Demonstration video of a Nexus 5 with postmarketOS and plasma]
