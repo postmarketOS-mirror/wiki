@@ -1,3 +1,38 @@
+{{Infobox device
+| manufacturer = Various
+| name = Generic PC (BIOS based)
+| codename = ibm-pc
+| releaseyear = 
+| originalsoftware = Majority: various Microsoft Windows versions
+| chipset = Intel/AMD various
+| cpu = various
+| gpu = 
+| storage = 
+| display = 
+| memory = 
+| architecture = i386 / amd64
+| n-android = ✔
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Dependency clashes
+| booting = no
+}}
 There are pre-existing ports of Alpine Linux for i386 and AMD64 generic PC hardware and virtual machines.[https://alpinelinux.org/downloads/]
 
 It should be possible to [[Existing Alpine installation|convert a pre-existing Alpine install to a pmOS install]].
