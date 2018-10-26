@@ -7,3 +7,4 @@ This could be used for x86 Windows tablets with a BIOS.
 ==See also==
 * [[Raspberry Pi]], has used this method previously
 * [[Teclast X80 Pro (teclast-x80pro)]], a better method for UEFI devices
+* {{issue|106|pmaports}} Turning an existing x86_64 Alpine Linux installation into a postmarketOS one fails
