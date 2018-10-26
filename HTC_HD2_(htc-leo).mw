@@ -13,6 +13,7 @@
 | storage = 512 MB
 | memory = 448 MB
 | architecture = armhf
+| n-android = ✔
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
