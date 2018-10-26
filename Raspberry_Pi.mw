@@ -12,6 +12,7 @@
 | display = HDMI port
 | memory = 256/512/1024 MB
 | architecture = armhf / aarch64
+| n-android = ✔
 | status_usbnet = -
 | status_flashing = -
 | status_touch = 
