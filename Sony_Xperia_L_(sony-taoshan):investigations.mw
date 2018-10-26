@@ -126,3 +126,96 @@ Small pad on bottom between ground and BATT_MID is 1.8V: after connecting it to 
 (8888888888988889888888898988888988888888888898888888889888888888898899888888889888888888888888988888888889898889888889888888988889988889889888888888898898988888888888888889889888988888888988888888988B
 (8988989888988888888888888898888898888888889988888988898888888888888889989888888988888998888898889889898988988888888898888888889888898888888888888988888888888888888888888888888888988888888888888889888B
 </pre>
+
+
+
+== Trying to use the Lineage OS prebuilt kernel ==
+
+Reference : [[Using_prebuilt_kernels|Using prebuilt kernels]]
+
+Download the '''unpackbootimg''' utility :
+<pre>
+$ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/android-serialport-api/android_bootimg_tools.tar.gz
+$ tar xf android_bootimg_tools.tar.gz 
+</pre>
+
+Xperia L is running Lineage OS and is connected to the computer with an USB cable.
+
+Use '''adb''' to connect as root :
+<pre>
+$ sudo adb root
+* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+restarting adbd as root
+
+$ adb shell
+taoshan:/ # whoami
+root
+</pre>
+
+Find the boot partition (/dev/block/mmcblk0p24) :
+<pre>
+taoshan:/ # ls -l /dev/block/platform/*/by-name/* | grep -i  "\/boot"                                                                                                                                             
+lrwxrwxrwx 1 root root 21 2018-10-26 16:56 /dev/block/platform/msm_sdcc.1/by-name/boot -> /dev/block/mmcblk0p24
+</pre>
+
+Get the boot partition content : 
+<pre>
+taoshan:/ # cat /dev/block/mmcblk0p24 > /sdcard/boot_img_lineage_os.img
+taoshan:/ # chmod 666 /sdcard/boot_img_lineage_os.img
+taoshan:/ # exit
+</pre>
+
+Download and extract to LineageOS boot partition :
+<pre>
+$ adb pull /sdcard/boot_img_lineage_os.img .
+[100%] /sdcard/boot_img_lineage_os.img
+
+$ mkdir boot_img_lineage_os
+$ ./unpackbootimg -i boot_img_lineage_os.img -o boot_img_lineage_os
+
+dom@shangrao:~/postmarket/taoshan/temp$ ls boot_img_lineage_os | cat
+boot_img_lineage_os.img-base
+boot_img_lineage_os.img-cmdline
+boot_img_lineage_os.img-pagesize
+boot_img_lineage_os.img-ramdisk.gz
+boot_img_lineage_os.img-zImage
+</pre>
+
+Build LineageOS : 
+<pre>
+$ pmbootstrap install --no-fde
+</pre>
+
+Restart smartphone in fastboot mode : 
+* turn the device off
+* unplug the USB cable
+* while pressing the volume up button, plug the USB cable
+* check the led is blue
+
+Write LineageOS kernel and Postmarket ramdisk to the device : 
+<pre>
+$ sudo fastboot boot ./boot_img_lineage_os/boot_img_lineage_os.img-zImage ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/initramfs-sony-taoshan
+creating boot image...
+creating boot image - 7084032 bytes
+downloading 'boot.img'...
+OKAY [  0.220s]
+booting...
+OKAY [  0.032s]
+finished. total time: 0.253s
+</pre>
+
+Restart the smartphone : it starts LineageOS normally...
+
+Write the Postmarket rootfs : 
+<pre>
+$ sudo fastboot flash boot twrp-3.2.3-0-taoshan.img 
+target didn't report max-download-size
+sending 'boot' (11876 KB)...
+OKAY [  0.377s]
+writing 'boot'...
+OKAY [  0.862s]
+finished. total time: 1.238s
+</pre>
+
+After reboot, the Sony logo is displayed, the pink led flashes and then : nothing...
