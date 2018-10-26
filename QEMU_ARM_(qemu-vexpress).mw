@@ -3,6 +3,7 @@
 | name =  vexpress
 | codename = qemu-vexpress
 | architecture = armhf
+| n-android = ✔
 | status_usbnet = -
 | status_flashing = -
 | status_touch = -
