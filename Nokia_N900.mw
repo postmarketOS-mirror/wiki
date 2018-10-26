@@ -14,6 +14,7 @@
 | display = 800x480 TFT resistive
 | memory = 256 MB
 | architecture = armhf
+| n-android = ✔
 | status_usbnet = Y
 | status_flashing =
 | status_touch = Y
