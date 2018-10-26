@@ -13,6 +13,7 @@
 | display = 1280x720
 | memory = 4GB
 | architecture = aarch64
+| n-android = ✔
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
