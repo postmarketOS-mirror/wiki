@@ -168,7 +168,7 @@ These are applications which already exist for Linux and could be reused in post
 |BSD and LGPL
 |Lightweight, touch-friendly email client designed for Nokia Maemo devices. (Not updated since 2010. Their source link is broken, but the code can be found [https://gitorious.org/maemo-garage/modest.git/ here].)
 |-
-|Firefox Desktop (with [[Firefox on Plasma Mobile|modifications for Plasma Mobile]])
+|Firefox Desktop (with [[Firefox on Plasma Mobile|modifications for Mobile]])
 |MPL2
 |Standard Firefox web browser. The linked DIY modifications can improve touch-friendliness.
 |Alpine repo
