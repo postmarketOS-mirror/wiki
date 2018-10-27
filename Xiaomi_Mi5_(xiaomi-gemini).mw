@@ -13,7 +13,7 @@
 | display = 1080x1920
 | memory = 3GB or 4GB
 | architecture = aarch64
-| status_usbnet = N
+| status_usbnet = 
 | status_flashing = Y
 | status_touch =
 | status_screen = Y
@@ -21,7 +21,7 @@
 | status_xwayland =
 | status_fde =
 | status_mainline =
-| status_battery = N
+| status_battery = 
 | status_3d =
 | status_accel =
 | status_audio =
