@@ -33,6 +33,10 @@ fastboot boot \
 uncompressed_boot/boot.img-zImage \
 ~/.local/var/pmboostrap/chroot_rootfs-XXX-XXXX/boot/initramfs-lg-hammerhead</source>
 
+Note that the '''fastboot boot''' command loads kernel (and eventually the ramdisk) in memory and does not write anything on partitions. 
+
+Immediately after downloading kernel (and eventually the ram disk) in memory, it tries to boot it. If nothing appens, you device is frozen. You just have to remove battery to restart with you original kernel .
+
 == Maybe we can chainload the pmOS kernel? ==
 {{note|User forkbomb successfully booted a [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#mainline-linux-kernel bunch of Samsungs] [https://forkwhiletrue.me/posts/kexec-on-galaxy-s3/ with kexec(broken link)] [https://blog.forkwhiletrue.me/posts/kexec-on-galaxy-s3/ new link] into a mainline kernel!}}
 Linux kernels can load other kernels via the [https://en.wikipedia.org/wiki/Kexec kexec] syscall. The deal is, that signed bootloaders only allow signed kernels. But what if we repackaged the signed kernel with our own initramfs, that loads our own kernel via kexecboot from the boot subpartition? Not sure if this will work because of SELinux etc, but if it did, it would be a nice way to get around the bootloader's signed kernel enforcement! '''If you have an usecase for this, please open a ticket to discuss this further.'''
