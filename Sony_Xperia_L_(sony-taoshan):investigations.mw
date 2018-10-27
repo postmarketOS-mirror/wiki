@@ -193,7 +193,7 @@ Restart smartphone in fastboot mode :
 * while pressing the volume up button, plug the USB cable
 * check the led is blue
 
-Write LineageOS kernel and Postmarket ramdisk to the device : 
+With the '''fastboott boot''' command, load LineageOS kernel and Postmarket ramdisk in the device memory : 
 <pre>
 $ sudo fastboot boot ./boot_img_lineage_os/boot_img_lineage_os.img-zImage ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/initramfs-sony-taoshan
 creating boot image...
@@ -205,17 +205,7 @@ OKAY [  0.032s]
 finished. total time: 0.253s
 </pre>
 
-Restart the smartphone : it starts LineageOS normally...
+After writing, the devices tries to boot (message ''booting...''), but nothing happens : the screen remains black and the led remains blue. 
+A '''fastboot devices''' command shows no device connected : the device is frozzen. 
 
-Write the Postmarket rootfs : 
-<pre>
-$ sudo fastboot flash boot twrp-3.2.3-0-taoshan.img 
-target didn't report max-download-size
-sending 'boot' (11876 KB)...
-OKAY [  0.377s]
-writing 'boot'...
-OKAY [  0.862s]
-finished. total time: 1.238s
-</pre>
-
-After reboot, the Sony logo is displayed, the pink led flashes and then : nothing...
+After removing and replacing the battery, you can boot normally.
