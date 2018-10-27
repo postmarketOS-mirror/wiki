@@ -5,18 +5,16 @@
 | image = File:LuneOS Browser.png|LuneOS UI running on pmOS
 }}
 
-User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and open sourced mobile operating system updated with Wayland and QT5). A UI port is under development.[https://github.com/postmarketOS/pmbootstrap/issues/629]
+[[File:luna_qemu_pmos_dec13.png |thumb| LuneOS UI running in QEMU]]
 
+User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and open sourced mobile operating system updated with Wayland and QT5).
 
-== Current Status ==
+== Unmaintained ==
 
-The UI currently starts in QEMU and a couple of real devices, along with most of the core services.
+We were able to present an initial version in [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#luneos-ui December of 2017]. But after that, LuneOS was unmaintained and didn't build anymore ({{issue|49|pmaports}}). '''The packages have been removed from postmarketOS.''' If you are interested in making it work again and maintaining the packages, [https://gitlab.com/postmarketOS/pmbootstrap/tree/0.6.0/aports/luna here are the old build recipies] for reference.
 
-This does ''not'' mean porting work is done, there's still a ton of work to get something usable day-to-day. See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board] for more detailed status of the effort.
+'''All information below is outdated.'''
 
-Current work can be found in master.
-
-See [https://github.com/postmarketOS/pmbootstrap/issues/629 The github issue] related to this work as well.
 == Running (QEMU) ==
 {{note|Choosing luna in the UI selection in <code>pmbootstrap init</code> is not enough to make it start right now!}}
 Install:
@@ -35,7 +33,6 @@ Complete the steps, when you get to the black screen, click where the "next" but
 Once the app exits and you're presented with the home screen, run '''luna-send -n 1 'luna://com.palm.configurator/run' '{"types":["dbkinds","dbpermissions","activities"]}'''' in another terminal. Stop luna, reboot, and start luna again, and everything should be usable.
 
 == Major to-dos ==
-
 * Running this on ARM (Everything is packaged. Currently seems to crash on non-hardware accellerated devices in swrast somewhere.)
 * Trying to get this running with software rendering (Appears to work somewhat, no luck on armhf yet.) Zhuowei has a lot of research [https://github.com/postmarketOS/pmbootstrap/issues/629 here].
 * Getting the HAL working (nyx-lib). (Probably involved, but can support only a couple things at first)
@@ -43,8 +40,11 @@ Once the app exits and you're presented with the home screen, run '''luna-send -
 * See [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex's trello board]
 * Applying the LuneOS patches for <code>qt5-qtwebengine</code> again. magmastonealex [https://github.com/postmarketOS/pmbootstrap/tree/ac17316441ab522b9d7bbfcf53dc6f41d1420754/aports/main/qt5-qtwebengine made a version] that worked with QT 5.9, but these patches are incompatible with later QT versions (details: {{github|1459}})
 
-== Photos ==
 
-[[File:luna_qemu_pmos_dec13.png |thumb|left| LuneOS UI running in QEMU]]
+== See also ==
+* [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#luneos-ui 219 days of postmarketOS: LuneOS UI]
+* {{github|629}} initial issue about packaging LuneOS UI with lots of information and photos
+* {{issue|49|pmaports}} LuneOS is broken (issue migrated from {{github|1459}})
+* [https://trello.com/b/5tzrh9gw/luneos-porting magmastonealex' LuneOS UI trello board]
 
 [[Category:Interface]]
