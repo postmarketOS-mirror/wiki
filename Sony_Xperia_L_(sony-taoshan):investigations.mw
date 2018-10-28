@@ -211,6 +211,29 @@ A '''fastboot devices''' command shows no device connected : the device is frozz
 After removing and replacing the battery, you can boot normally.
 
 
+== boot addresses ==
+
+The official chipset of Xperia L is MSM8230 Snapdragon 400.
+
+In the Lineage Github repository of the taoshan device, the [https://github.com/LineageOS/android_device_sony_taoshan/blob/cm-14.1/PlatformConfig.mk PlatformConfig.mk] indicates that the platform is '''msm8960''' : 
+<pre>
+TARGET_BOARD_PLATFORM := msm8960
+</pre>
+
+and the [https://github.com/LineageOS/android_device_sony_taoshan/blob/cm-14.1/lineage.dependencies lineage.dependencies] file indicates that the kernel github repository is '''android_kernel_sony_msm8930''' :
+<pre>
+	"repository": "android_kernel_sony_msm8930",
+	"target_path": "kernel/sony/msm8930
+</pre>
+
+In the [https://github.com/LineageOS/android_kernel_sony_msm8930 LineageOS msm8930 repository], the [https://github.com/LineageOS/android_kernel_sony_msm8930/blob/cm-14.1/arch/arm/mach-msm/Makefile.boot Makefile.boot] file of the '''msm''' architecture indicates the same value (''
+0x80208000'') for the ''MSM8960'' and the ''MSM8930'' architectures : 
+<pre>
+zreladdr-$(CONFIG_ARCH_MSM8960)	:= 0x80208000
+zreladdr-$(CONFIG_ARCH_MSM8930)	:= 0x80208000
+</pre>
+
+
 == fastboot boot issue ==
 
 After serveral tests with the '''fastboot boot''' command and different kernels, I was surprised to see the Samsung logo even with a Postmarket kernel. So I suspected the device to always reboots with the LineageOS kernel written on disk and not with the kernel I loaded in memory...
@@ -231,6 +254,6 @@ OKAY [  0.411s]
 booting...
 OKAY [  0.032s]
 finished. total time: 0.443s
-</pre>>
+</pre>
 	
 Device restarted, but screen remained black and the red led was blinking every 5 seconds...
