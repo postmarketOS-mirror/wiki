@@ -249,7 +249,7 @@ Android Boot Image Info:
   tags:         0x80200100
 * cmdline = console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug
 * id = 0x38f1134f 0xc038d148 0xe9283af8 0x00e68f16 0x910e8cf0 0x00000000 0x00000000 0x00000000 
-<pre>
+</pre>
 
 == fastboot boot issue ==
 
