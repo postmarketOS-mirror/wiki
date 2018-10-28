@@ -205,7 +205,32 @@ OKAY [  0.032s]
 finished. total time: 0.253s
 </pre>
 
-After writing, the devices tries to boot (message ''booting...''), but nothing happens : the screen remains black and the led remains blue. 
+After writing, the device tries to boot (message ''booting...''), but nothing happens : the screen remains black and the led remains blue. 
 A '''fastboot devices''' command shows no device connected : the device is frozzen. 
 
 After removing and replacing the battery, you can boot normally.
+
+
+== fastboot boot issue ==
+
+After serveral tests with the '''fastboot boot''' command and different kernels, I was surprised to see the Samsung logo even with a Postmarket kernel. So I suspected the device to always reboots with the LineageOS kernel written on disk and not with the kernel I loaded in memory...
+
+To check this, I erased the /boot partition (with '''fastboot erase boot''') and I checked that the device could not start : effectively, screen stayed black and the red led was blinking every 5 seconds.
+
+My next step was to use '''fastboot boot''' command to boot with original Lineage kernel and ramdisk. My best result was to send :
+* --base 0x80200000 
+* --kernel-offset 0x00008000 
+* --ramdisk-offset 0x02000000
+
+<pre>
+$ sudo fastboot boot --base 0x80200000 --kernel-offset 0x00008000 --ramdisk-offset 0x02000000 -c "console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug" boot_img_lineage_os.img-zImage boot_img_lineage_os.img-ramdisk.gz
+creating boot image...
+creating boot image - 13273088 bytes
+downloading 'boot.img'...
+OKAY [  0.411s]
+booting...
+OKAY [  0.032s]
+finished. total time: 0.443s
+</pre>>
+	
+Device restarted, but screen remained black and the red led was blinking every 5 seconds...
