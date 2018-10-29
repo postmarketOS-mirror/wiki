@@ -231,7 +231,7 @@ If you are getting
 <syntaxhighlight lang="shell-session">
 /tmp/mainline/boot.img: updated is too big for the Boot Image (7323648 vs 5853184 bytes)
 </syntaxhighlight>
-error, and it can fit on boot partition, add '''-c "bootsize=<boot partition size>"''' to abooting command:
+error, and it can fit on boot partition, add '''-c "bootsize=<boot partition size>"''' to abootimg command:
 <syntaxhighlight lang="shell-session">
 # abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb -c "bootsize=12582912"
 </syntaxhighlight>
