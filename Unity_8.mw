@@ -41,5 +41,5 @@ mkdir -p $HOME/.config/ubuntu-system-settings
 touch $HOME/.config/ubuntu-system-settings/wizard-has-run
 
 # set a password!
-env LD_LIBRARY_PATH=/usr/lib/qt5/plugins/platforms MIR_SERVER_CURSOR=null QT_QPA_PLATFORM=mirserver unity8
+env LD_LIBRARY_PATH=/usr/lib/qt5/plugins/platforms MIR_SERVER_CURSOR=null QT_QPA_PLATFORM=mirserver G_MESSAGES_DEBUG=all unity8
 </source>
