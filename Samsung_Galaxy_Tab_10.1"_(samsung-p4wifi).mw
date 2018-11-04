@@ -49,13 +49,13 @@ Press and hold Power + Volume Down buttons
 
 == Installation ==
 
-# Init pmbootstrap<source lang="shell">$ ./pmbootstrap.py init</source> Choose 'samsung-p4wifi' as target device.
-# Start the build process<source lang="shell">$ ./pmbootstrap.py build linux-samsung-p4wifi
-$ ./pmbootstrap.py build device-samsung-p4wifi
-$ ./pmbootstrap.py install --no-fde</source>
+# Init pmbootstrap<source lang="shell">$ pmbootstrap init</source> Choose 'samsung-p4wifi' as target device.
+# Start the build process<source lang="shell">$ pmbootstrap build linux-samsung-p4wifi
+$ pmbootstrap build device-samsung-p4wifi
+$ pmbootstrap install --no-fde</source>
 # Enter flash (download) mode
-# Flash the kernel and system images<source lang="shell">$./pmbootstrap.py flasher flash_kernel
-$./pmbootstrap.py flasher flash_rootfs</source>
+# Flash the kernel and system images<source lang="shell">$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_rootfs</source>
 
 == Battery ==
 The battery in this device is the <code>max17042</code>. A tear down of the (nearly) identical Galaxy Tab 8.9 reveals that the charger is <code>max8903</code>.
