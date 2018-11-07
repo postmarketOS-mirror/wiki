@@ -1,0 +1,6 @@
+Checklist for creating a <code>pmbootstrap</code> release
+
+* set version in <code>pmb/config/__init__.py</code> to the new version
+* tag a release in gitlab (look at the previous commits to write a good description of what changed)
+* update the pypi release (see the script in {{issue|1679}})
+* update the pmbootstrap aport in pmaports (change the pkgrel, update the checksum, build)
