@@ -18,7 +18,7 @@ You may install this extension to get a virtual keyboard nevertheless (though it
 *https://github.com/xontab/chrome-virtual-keyboard
 
 === Scroll-bar ===
-Access "chrome://flags". To do that type it in the plasma-mobile search bar, and then copy and paste it in the chromium url bar.
+Access "chrome://flags". To do that type it in the plasma-mobile search bar (on home screen), and then copy and paste it in the chromium url bar.
 
 Enable the following flags:
 *Smooth Scrolling
