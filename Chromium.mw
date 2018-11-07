@@ -18,3 +18,11 @@ You may install this extension to get a virtual keyboard nevertheless (though it
 *https://github.com/xontab/chrome-virtual-keyboard
 
 === Scroll-bar ===
+Access "chrome://flags". To do that type it in the plasma-mobile search bar, and then copy and paste it in the chromium url bar.
+
+Enable the following flags:
+*Smooth Scrolling
+*Overlay Scrollbars
+*Scroll prediction
+
+This will allow to have a good scrolling experience, and hide scrollbar, so that it does not take screen-space.
