@@ -273,4 +273,57 @@ OKAY [  0.032s]
 finished. total time: 0.443s
 </pre>
 	
-Device restarted, but screen remained black and the red led was blinking every 5 seconds...
+Device restarted, but screen remained black and the red led was blinking every 5 seconds...*
+
+
+== Lineage OS boot.img recompression ==
+
+Something is very strange : unpackaging and repackaging the LineageOS boot.img file creates a new file which is smaller (6Mo) and can not be booted...
+
+LineageOS's boot.img extraction :
+<pre>
+$ unpackbootimg -i boot_img_lineage_os.img -o boot_img_lineage_os
+BOARD_KERNEL_CMDLINE console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug
+BOARD_KERNEL_BASE 80200000
+BOARD_PAGE_SIZE 2048
+</pre>
+
+New boot.img repackaging : 
+<pre>
+$ mkbootimg --base 0x80200000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel boot_img_lineage_os/boot_img_lineage_os.img-zImage --ramdisk boot_img_lineage_os/boot_img_lineage_os.img-ramdisk.gz -o boot_img_lineage_os_recompress.img
+</pre>
+
+Original and new boot.img files don't have the same size (6Mo) : 
+<pre>
+$ ls -lh boot_img_lineage_os_recompress.img boot_img_lineage_os.img
+-r--r--r-- 1 dom dom 19M oct.  26 16:13 boot_img_lineage_os.img
+-rw-r--r-- 1 dom dom 13M nov.   7 19:02 boot_img_lineage_os_recompress.img
+</pre>
+
+New boot.img file flashing : 
+<pre>
+$ sudo fastboot flash boot ./boot_img_lineage_os_recompress.img
+target didn't report max-download-size
+sending 'boot' (12962 KB)...
+OKAY [  0.411s]
+writing 'boot'...
+OKAY [  0.899s]
+finished. total time: 1.309s
+</pre>
+
+The device won't boot...
+
+LineageOS boot.img flashing : 
+<pre>
+$ sudo fastboot flash boot boot_img_lineage_os.img
+target didn't report max-download-size
+sending 'boot' (19456 KB)...
+OKAY [  0.614s]
+writing 'boot'...
+OKAY [  1.319s]
+finished. total time: 1.934s
+</pre>
+
+The device boots normally.
+
+Conclusion : is it a bug of the unpackbootimg utility  ?
