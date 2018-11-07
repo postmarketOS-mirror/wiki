@@ -4,6 +4,11 @@ This page explains how to make chromium usable in mobile UIs like plasma-mobile.
 Install chromium package from alpine. 
 
 === Configure startup (scale + useragent) ===
+Edit  '''/usr/share/applications/chromium.desktop''' and set the following line:
+
+''Exec= GDK_SCALE=3 chromium-browser %U --start-maximized  --user-agent="Mozilla/5.0 (Linux; Android 4.4.2; Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Mobile Safari/537.36"''
+
+You may adapt scale and useragent to your needs.
 
 === On-screen keyboard ===
 Currently on-screen keyboard does not work with plasma-mobile (see [https://gitlab.com/postmarketOS/pmaports/issues/108]).
