@@ -1,0 +1,10 @@
+This page explains how to make chromium usable in mobile UIs like plasma-mobile.
+[[File:Wikipedia.jpg|thumb|right|frame|none|alt=Alt text|Chromium running on plasma-mobile]]
+=== Instalation ===
+Install chromium package from alpine. 
+
+=== Configure startup (scale + useragent) ===
+
+=== On-screen keyboard ===
+
+=== Scroll-bar ===
