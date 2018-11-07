@@ -6,5 +6,10 @@ Install chromium package from alpine.
 === Configure startup (scale + useragent) ===
 
 === On-screen keyboard ===
+Currently on-screen keyboard does not work with plasma-mobile (see [https://gitlab.com/postmarketOS/pmaports/issues/108]).
+You may install this extension to get a virtual keyboard nevertheless (though it does not work with every website):
+
+*https://chrome.google.com/webstore/detail/virtual-keyboard/pflmllfnnabikmfkkaddkoolinlfninn
+*https://github.com/xontab/chrome-virtual-keyboard
 
 === Scroll-bar ===
