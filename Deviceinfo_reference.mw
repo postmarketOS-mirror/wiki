@@ -178,6 +178,10 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>heimdall_partition_system</code>
 | Only relevant for [[Deviceinfo_flash_methods|heimdall]] flash methods, the partition where the system image will be stored (see also: [[partition-layout]]).
 | default: <code>"SYSTEM"</code>
+|-
+| <code>boot_filesystem</code>
+| Sets the filesystem used for the /boot partition containing initramfs-extra
+| default: <code>"ext4"</code>, <code>"fat16"</code>
 |}
 
 == weston ==
