@@ -1,0 +1,25 @@
+[https://en.wikipedia.org/wiki/Hybris_(software) Libhybris] allows devices lacking FLOSS drivers to make full use of their hardware by using the proprietary drivers from Android. Mainlining and using free software drivers is of course the better approach, but it is not possible for all devices.
+
+== Using libhybris with your device ==
+
+''This is a stub copied from chat messages in #postmarketOS. Please extend if you are porting your device to libhybris.''
+
+* convert the halium system.img to a mountable image (basically what the [https://github.com/Halium/halium-scripts/blob/master/halium-install#L41-L52 halium install script] does)
+* install postmarketOS on the device without user interface and copy the new system.img to the device, to <code>/var/lib/lxc/android/system.img</code>
+* install the hybris related packages:
+
+<syntaxhighlight lang="shell-session">
+$ sudo apk add lxc-android xf86-video-hwcomposer libhybris libhybris-egl libhybris-gles libhybris-7.1-caf wayland-libs-client wayland-libs-server
+</syntaxhighlight>
+
+* start the service:
+<syntaxhighlight lang="shell-session">
+$ sudo rc-service lxc-android start
+</syntaxhighlight>
+
+== See also ==
+* {{github|1402}} Package libhybris
+* [[Motorola_Droid_4_(motorola-maserati)|Droid 4]]: the device for which NotKit originally made the libhybris support
+* [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]]: NotKit also made it work with libhybris
+* [https://postmarketos.org/blog/2018/06/09/one-year/#libhybris-and-optional-proprietary-components One year of postmarketOS: libhybris and optional proprietary components]
+* [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#libre-drivers-and-libhybris 219 days of postmarketOS: libre drivers and libhybris]
