@@ -320,3 +320,29 @@ finished. total time: 1.309s
 Device boots normally with this new image even if it's 6Mo smaller.
 
 A binary comparison of the two files shows that a chunck of 6 Mo of null bytes was added at the end of the LineageOS boot.img file.
+
+== Starting LineageOS with PostMarket kernel ==
+
+Booting LineageOS with a ''boot.img'' including a Postmarket's kernel works !
+
+Create a ''boot.img'' including LineageOS ramdisk and the PostMarket kernel :
+<pre>
+$ mkbootimg --base 0x80200000 --kernel_offset  0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --pagesize 2048 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/vmlinuz-sony-taoshan --ramdisk boot_img_lineage_os/boot_img_lineage_os.img-ramdisk.gz -o boot_img_lineage_os_kernel_postmarket.img
+</pre>
+
+Flash ''boot.img'' : 
+<pre>
+$ sudo fastboot flash boot boot_img_lineage_os_kernel_postmarket.img
+target didn't report max-download-size
+sending 'boot' (15430 KB)...
+OKAY [  0.488s]
+writing 'boot'...
+OKAY [  1.062s]
+finished. total time: 1.551s
+</pre>
+
+Restart device and check with ''uname'' that the kernel is PostMarket kernel : 
+<pre>
+taoshan:/ $ uname -v
+#1-postmarketOS SMP PREEMPT Fri Nov 9 20:16:31 UTC 2018
+</pre>
