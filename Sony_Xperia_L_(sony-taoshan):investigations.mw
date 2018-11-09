@@ -49,6 +49,12 @@ The second solution is to choose another compression mode. To do that, run <code
 
 With this two methods, the kernel compilation is successfull, but the phone does not boot...
 
+=== ARM_UNWIND support ===
+
+To avoid "'''ftrace.h:51: multiple definition of `return_address''''" errors, it's necessary to disable the stack unwinding support :
+
+To do that, run <code>pmbootstrap kconfig edit sony-taoshan</code>, go in the menu "'''Kernel hacking'''" and uncheck the "'''Enable stack unwinding support '''" option.
+
 == Unpacking boot.img and non-standard warning ==
 
 The Juisma's unmkbootimg utility prints a warning message indicating that the '''OFF_RAMDISK_ADDR''' is non-standard :
