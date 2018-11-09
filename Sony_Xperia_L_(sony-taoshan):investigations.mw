@@ -278,7 +278,7 @@ Device restarted, but screen remained black and the red led was blinking every 5
 
 == Lineage OS boot.img recompression ==
 
-Something is very strange : unpackaging and repackaging the LineageOS boot.img file creates a new file which is smaller (6Mo) and can not be booted...
+Unpackaging and repackaging the LineageOS boot.img file creates a new file which is smaller (6Mo). This image can be booted normally.
 
 LineageOS's boot.img extraction :
 <pre>
@@ -290,7 +290,7 @@ BOARD_PAGE_SIZE 2048
 
 New boot.img repackaging : 
 <pre>
-$ mkbootimg --base 0x80200000 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel boot_img_lineage_os/boot_img_lineage_os.img-zImage --ramdisk boot_img_lineage_os/boot_img_lineage_os.img-ramdisk.gz -o boot_img_lineage_os_recompress.img
+$ mkbootimg --base 0x80200000 --kernel_offset  0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --pagesize 2048 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel boot_img_lineage_os/boot_img_lineage_os.img-zImage --ramdisk boot_img_lineage_os/boot_img_lineage_os.img-ramdisk.gz -o boot_img_lineage_os_recompress.img
 </pre>
 
 Original and new boot.img files don't have the same size (6Mo) : 
@@ -311,19 +311,6 @@ OKAY [  0.899s]
 finished. total time: 1.309s
 </pre>
 
-The device won't boot...
+Device boots normally with this new image even if it's 6Mo smaller.
 
-LineageOS boot.img flashing : 
-<pre>
-$ sudo fastboot flash boot boot_img_lineage_os.img
-target didn't report max-download-size
-sending 'boot' (19456 KB)...
-OKAY [  0.614s]
-writing 'boot'...
-OKAY [  1.319s]
-finished. total time: 1.934s
-</pre>
-
-The device boots normally.
-
-Conclusion : is it a bug of the unpackbootimg utility  ?
+A binary comparison of the two files shows that a chunck of 6 Mo of null bytes was added at the end of the LineageOS boot.img file.
