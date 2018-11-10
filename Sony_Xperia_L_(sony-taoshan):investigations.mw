@@ -351,3 +351,33 @@ Restart device and check with ''uname'' that the kernel is PostMarket kernel :
 taoshan:/ $ uname -v
 #1-postmarketOS SMP PREEMPT Fri Nov 9 20:16:31 UTC 2018
 </pre>
+
+
+== Booting with Postmarket kernel and ramdisk ==
+
+Booting device with Postmarket kernel and ramdisk seems not to work : device does not react at all when pressing power on button (screen stays black, led is off, no vibration). But we will see later that it's possible to do a telnet connection.
+
+Create a boot.img file with Postmarket's Ramdisk and Kernel : 
+<pre>
+$ mkbootimg -base 0x80200000 --kernel_offset  0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --pagesize 2048 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/vmlinuz-sony-taoshan --ramdisk ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/initramfs-sony-taoshan -o boot_img_kernel_ramdisk_postmarket.img
+</pre>
+
+Flash this file :
+<pre>
+$ sudo fastboot flash boot boot_img_kernel_ramdisk_postmarket.img 
+target didn't report max-download-size
+sending 'boot' (9422 KB)...
+OKAY [  0.299s]
+writing 'boot'...
+OKAY [  0.652s]
+finished. total time: 0.951s
+</pre>
+
+Restart device :
+<pre>
+dom@shangrao:~/postmarket/taoshan/temp$ sudo fastboot reboot
+rebooting...
+finished. total time: 0.051s
+</pre>
+
+Nothing seems to happen when pressing the power on button (black screen, no vibration, led off).
