@@ -396,7 +396,7 @@ $ pmbootstrap initfs hook_add debug-shell
 [15:28:32] Done
 </pre>
 
-Create a boot.img file with Postmaket's kernel and ramdisk :
+Create a ''boot.img'' file with Postmarket's kernel and ramdisk :
 <pre>
 $ mkbootimg --base 0x80200000 --kernel_offset  0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --pagesize 2048 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/vmlinuz-sony-taoshan --ramdisk ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/initramfs-sony-taoshan    -o boot_img_kernel_ramdisk_postmarket.img
 </pre>
@@ -410,7 +410,7 @@ OKAY [  0.299s]
 writing 'boot'...
 OKAY [  0.652s]
 finished. total time: 0.951s
-<pre>
+</pre>
 
 Reboot device : 
 <pre>
@@ -422,8 +422,8 @@ finished. total time: 0.051s
 Nothing happens : screen is black, led is off, no vibrations...
 
 Check if a net device appears :
-- disconnect USB cable
-- diplay net devices list :
+* disconnect USB cable
+* display net device list :
 <pre>
 $ ip link
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
@@ -433,8 +433,8 @@ $ ip link
 3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
     link/ether d8:fc:93:41:b9:41 brd ff:ff:ff:ff:ff:ff
 </pre>
-- reconnect USB cable
-- display net devices list :
+* reconnect USB cable
+* redisplay net device list :
 <pre>
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -454,7 +454,7 @@ $ sudo ip address add dev enp0s20u4 172.16.42.2/24
 RTNETLINK answers: File exists
 </pre>
 
-Activate it :
+And activate it :
 <pre>
 $ sudo ip link set enp0s20u4 up
 </pre>
