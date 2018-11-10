@@ -381,3 +381,112 @@ finished. total time: 0.051s
 </pre>
 
 Nothing seems to happen when pressing the power on button (black screen, no vibration, led off).
+
+
+== Establishing a telnet connection with the debug-shell hook ==
+
+With the ''debug-shell'' extension activated, it will be possible to do a telnet connection to the device from the computer.
+
+Enable the ''debug-shell'' hook : 
+<pre>
+$ pmbootstrap initfs hook_add debug-shell
+[15:28:19] (rootfs_sony-taoshan) install postmarketos-mkinitfs-hook-debug-shell
+[15:28:27] (rootfs_sony-taoshan) mkinitfs sony-taoshan
+[15:28:32] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[15:28:32] Done
+</pre>
+
+Create a boot.img file with Postmaket's kernel and ramdisk :
+<pre>
+$ mkbootimg --base 0x80200000 --kernel_offset  0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --pagesize 2048 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/vmlinuz-sony-taoshan --ramdisk ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/initramfs-sony-taoshan    -o boot_img_kernel_ramdisk_postmarket.img
+</pre>
+
+And flash it : 
+<pre>
+$ sudo fastboot flash boot boot_img_kernel_ramdisk_postmarket.img 
+target didn't report max-download-size
+sending 'boot' (9422 KB)...
+OKAY [  0.299s]
+writing 'boot'...
+OKAY [  0.652s]
+finished. total time: 0.951s
+<pre>
+
+Reboot device : 
+<pre>
+$ sudo fastboot reboot
+rebooting...
+finished. total time: 0.051s
+</pre>
+
+Nothing happens : screen is black, led is off, no vibrations...
+
+Check if a net device appears :
+- disconnect USB cable
+- diplay net devices list :
+<pre>
+$ ip link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp2s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN mode DEFAULT group default qlen 1000
+    link/ether fc:aa:14:7d:67:0f brd ff:ff:ff:ff:ff:ff
+3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+    link/ether d8:fc:93:41:b9:41 brd ff:ff:ff:ff:ff:ff
+</pre>
+- reconnect USB cable
+- display net devices list :
+<pre>
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp2s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN mode DEFAULT group default qlen 1000
+    link/ether fc:aa:14:7d:67:0f brd ff:ff:ff:ff:ff:ff
+3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+    link/ether d8:fc:93:41:b9:41 brd ff:ff:ff:ff:ff:ff
+7: enp0s20u4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether c2:c1:d3:ef:a3:25 brd ff:ff:ff:ff:ff:ff
+</pre>
+
+A new device ''enp0s20u4'' appeared with the mac address ''c2:c1:d3:ef:a3:25''.
+
+Give it the IP address ''172.16.42.2'' :
+<pre>
+$ sudo ip address add dev enp0s20u4 172.16.42.2/24
+RTNETLINK answers: File exists
+</pre>
+
+Activate it :
+<pre>
+$ sudo ip link set enp0s20u4 up
+</pre>
+
+Check the local IP can be pinged :
+<pre>
+$ ping -c1 172.16.42.2
+PING 172.16.42.2 (172.16.42.2) 56(84) bytes of data.
+64 bytes from 172.16.42.2: icmp_seq=1 ttl=64 time=0.021 ms
+--- 172.16.42.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.021/0.021/0.021/0.000 ms
+</pre>
+
+Check that the phone responds at the address ''172.16.42.1'' : 
+<pre>
+$ ping -c1 172.16.42.1
+PING 172.16.42.1 (172.16.42.1) 56(84) bytes of data.
+64 bytes from 172.16.42.1: icmp_seq=1 ttl=64 time=0.286 ms
+--- 172.16.42.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.286/0.286/0.286/0.000 ms
+</pre>
+
+Launch a telnet connection :
+<pre>
+dom@shangrao:~/postmarket/taoshan/temp$ telnet 172.16.42.1
+Trying 172.16.42.1...
+Connected to 172.16.42.1.
+Escape character is '^]'.
+Type 'pmos_continue_boot' to continue booting:
+/ # 
+</pre>
+
+Device is up and running :-)
