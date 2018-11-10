@@ -32,7 +32,7 @@
 | status_sms = 
 | status_calls =
 | status = Kernel builds, after flashing it doesn't boot, doesn't vibrate/blink with maximum_attention hook
-| booting = no
+| booting = yes
 }}
 
 == Contributors ==
@@ -43,9 +43,10 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 * [[User:Halamix2|Halamix2]]
+* [[User:Powimod|Powimod]]
 
 == What works ==
-* Nothing
+* After pressing the power on button, nothing seems to happen (black screen, led off, no vibrations), but it's possible to do a telnet connection (with the debug-shell hook activated). 
 
 == What does not work ==
 * Everything
