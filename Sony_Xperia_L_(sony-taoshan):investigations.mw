@@ -488,3 +488,52 @@ Type 'pmos_continue_boot' to continue booting:
 </pre>
 
 Device is up and running :-)
+
+== Screen remains black with LineageOS kernel and Postmarket ramdisk ==
+
+Create a ''boot.img'' file with LineageOS kernel and Postmarket ramdisk :
+<pre>
+$ mkbootimg --base 0x80200000 --kernel_offset  0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --pagesize 2048 --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 buildvariant=userdebug' --kernel ./boot_img_lineage_os/boot_img_lineage_os.img-zImage --ramdisk ~/.local/var/pmbootstrap/chroot_rootfs_sony-taoshan/boot/initramfs-sony-taoshan    -o boot_img_kernel_taoshan_ramdisk_postmarket.img
+</pre>
+
+Flash this file and reboot :
+<pre>
+$ sudo fastboot flash boot boot_img_kernel_taoshan_ramdisk_postmarket.img
+$ sudo fastboot reboot
+</pre>
+
+Initialize USB net :
+<pre>
+$ sudo ip address add dev enp0s20u4 172.16.42.2/24
+$ sudo ip link set enp0s20u4 up
+</pre>
+
+Start a telnet connection :
+<pre>
+$ telnet 172.16.42.1
+Trying 172.16.42.1...
+Connected to 172.16.42.1.
+Escape character is '^]'.
+Type 'pmos_continue_boot' to continue booting:
+/ #
+</pre>
+
+Check kernel is not Postmarket's kernel :
+<pre>
+/ # uname -a
+Linux (none) 3.4.0-gdf6292b #1 SMP PREEMPT Sun Sep 9 08:11:30 UTC 2018 armv7l Linux
+</pre>
+
+Try do display an image :
+<pre>
+/ # . init_functions.sh 
+/ # show_splash /splash-loading.ppm.gz
+/ # 
+</pre>
+
+Screen stays black / off...
+
+With Postmarket ramdisk, device screen remains black (or off) (with Postmarket kernel or with LineageOS kernel).
+But with LineageOS ramdisk, kernel displays Samsung logo.
+
+Is there something special in LineageOS ramdisk to initialize screen ?
