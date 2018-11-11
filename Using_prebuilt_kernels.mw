@@ -35,7 +35,7 @@ uncompressed_boot/boot.img-zImage \
 
 Note that the '''fastboot boot''' command loads kernel (and eventually the ramdisk) in memory and does not write anything on partitions. 
 
-Immediately after downloading kernel (and eventually the ram disk) in memory, it tries to boot it. If nothing appens, you device is frozen. You just have to remove battery to restart with you original kernel .
+Immediately after downloading kernel (and eventually the ram disk) in memory, it tries to boot it. If nothing appens, your device is frozen. You just have to remove battery to restart with your original kernel .
 
 == Maybe we can chainload the pmOS kernel? ==
 {{note|User forkbomb successfully booted a [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#mainline-linux-kernel bunch of Samsungs] [https://forkwhiletrue.me/posts/kexec-on-galaxy-s3/ with kexec(broken link)] [https://blog.forkwhiletrue.me/posts/kexec-on-galaxy-s3/ new link] into a mainline kernel!}}
