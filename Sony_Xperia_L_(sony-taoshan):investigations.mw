@@ -537,3 +537,37 @@ With Postmarket ramdisk, device screen remains black (or off) (with Postmarket k
 But with LineageOS ramdisk, kernel displays Samsung logo.
 
 Is there something special in LineageOS ramdisk to initialize screen ?
+
+
+== Changing screen brightness ==
+
+Sending this command changes the screen brightness (even if it remains black) :
+<pre>
+# echo 255 > /sys/devices/platform/msm_ssbi.0/pm8038-core/pm8xxx-led/leds/wled/brightness
+</pre>
+
+
+After sending the ''show_splash'' function, screen seems to display something white very briefly and then turns off with no luminosity : 
+<pre>
+/ # . init_functions.sh 
+/ # show_splash /splash-loading.ppm.gz
+</pre> 
+
+Brightness falls back to zero : 
+<pre>
+# cat /sys/devices/platform/msm_ssbi.0/pm8038-core/pm8xxx-led/leds/wled/brightness
+0
+</pre>
+
+Following lines appears at the end of ''dmesg'' :
+<pre>
+[ 3628.406286] MIPI::mipi_dsi_panel_power: 
+[ 3628.406347] mipi_dsi_samsung_panel_power: MIPI : 1
+[ 3628.406439] mipi_dsi_samsung_panel_power(1): init=1
+[ 3628.482343] mipi_samsung_lcd_on: MIPI init cmd start
+[ 3628.704623] mipi_samsung_lcd_on: MIPI init cmd end
+[ 3628.719944] mdp4_calc_req_mdp_clk: src_h is zero!
+[ 3628.749885] MIPI::mipi_dsi_panel_power: 
+[ 3628.749946] mipi_dsi_samsung_panel_power: MIPI : 0
+[ 3628.750068] mipi_dsi_samsung_panel_power(0): init=1
+</pre>
