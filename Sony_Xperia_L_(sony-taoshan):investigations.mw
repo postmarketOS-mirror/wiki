@@ -677,6 +677,101 @@ But, once you send the ''echo'' command, splash screen appears :
 </pre>
 
 
-== Disabling MSM 3D support ==
+== Enabling msm-fb-refresher ==
 
-After disabling MSM 3D Graphics driver, screen updates without having to rewrite FB Mode.
+As explained in [https://wiki.postmarketos.org/wiki/Troubleshooting:display Troubleshooting], ''msm-fb-refresher'' may help.
+
+Add ''msm-fb-refresher'' in ''~/.local/var/pmbootstrap/cache_git/pmaports/device/device-sony-taoshan/APKBUILD'' :
+<pre>
+depends="postmarketos-base linux-sony-taoshan mkbootimg msm-fb-refresher mesa-dri-swrast"
+</pre>
+
+Rebuild all :
+<pre>
+$ pmbootstrap zap
+$ pmbootstrap checksum device-sony-taoshan
+$ pmbootstrap build device-sony-taoshan --force
+$ pmbootstrap install --no-fde
+</pre>
+
+Check ''msm-fb-refresher'' presence in ramdisk :
+<pre>
+$ pmbootstrap initfs ls | grep refresher
+[17:44:36] *** initramfs ***
+-rwxr-xr-x    1 root     root        5.2K Nov 12 17:44 msm-fb-refresher
+[17:44:36] *** initramfs-extra ***
+[17:44:37] See also: <https://wiki.postmarketos.org/wiki/Initramfs_development>
+[17:44:37] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[17:44:37] Done
+</pre>
+
+
+Flash and reboot :
+<pre>
+$ pmbootstrap flasher flash_rootfs
+$ pmbootstrap flasher flash_kernel
+$ sudo fastboot reboot
+</pre>
+
+Screen remains black but ping responds :
+<pre>
+$ sudo ip address add dev enp0s20u4 172.16.42.2/24
+$ sudo ip link set enp0s20u4 up
+$ ping 172.16.42.1
+PING 172.16.42.1 (172.16.42.1) 56(84) bytes of data.
+64 bytes from 172.16.42.1: icmp_seq=2 ttl=64 time=0.314 ms
+^C
+</pre>
+
+Telnet connection is not possible :
+<pre>
+$ telnet 172.16.42.1
+Trying 172.16.42.1...
+telnet: Unable to connect to remote host: Connection refused
+</pre>
+
+But ssh connection is possible :
+<pre>
+$ ssh 172.16.42.1
+The authenticity of host '172.16.42.1 (172.16.42.1)' can't be established.
+ECDSA key fingerprint is SHA256:BlhEQYA2LoQZR8/zWztgoVdQYmTUtHB7JHU5w+sH+eY.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.16.42.1' (ECDSA) to the list of known hosts.
+dom@172.16.42.1's password: 
+Welcome to postmarketOS!
+</pre>
+
+Due to the zap command, debug-shell hook has been lost. Reenabled it, flash and reboot :
+<pre>
+$ pmbootstrap initfs hook_add debug-shell
+$ pmbootstrap flasher flash_kernel
+$ sudo fastboot reboot
+</pre>
+
+Screen remains black while booting. Telnet connection is possible :
+<pre>$ telnet 172.16.42.1
+Trying 172.16.42.1...
+Connected to 172.16.42.1.
+Escape character is '^]'.
+
+Type 'pmos_continue_boot' to continue booting:
+</pre>
+
+msm-fb-refresher is running :
+<pre>
+/ # ps -ef | grep msm-fb-refreshe[r]
+  275 0         0:00 /usr/sbin/msm-fb-refresher --loop
+</pre>
+
+After increasing screen luminosity, a splash screen appears :
+<pre>
+/ # echo 255 > /sys/devices/platform/msm_ssbi.0/pm8038-core/pm8xxx-led/leds/wled/brightness
+</pre>
+
+Loading another splash screen is immediately displayed :
+<pre>
+/ # . init_functions.sh 
+/ # show_splash /splash-loading.ppm.gz
+</pre>
+
+Conclusion : ''msm-fb-refresher'' does it's job, but manually setting screen brightness in startup screen seems to be necessary.
