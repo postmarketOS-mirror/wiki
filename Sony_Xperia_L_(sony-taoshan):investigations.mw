@@ -634,3 +634,44 @@ Try to display a splash screen :
 </pre>
 
 Nothing happens and screen continues to display Sony logo.
+
+
+== Manually updating fb mode updates screen ==
+
+Reference : 
+* https://wiki.postmarketos.org/wiki/Troubleshooting#Newer_version_in_binary_package_repositories_than_in_aports_folder
+* https://github.com/postmarketOS/pmbootstrap/pull/66
+
+The following command updates screen :
+<pre>
+/ # cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode
+</pre>
+
+The content of '''modes''' file is :
+<pre>
+/ # cat /sys/class/graphics/fb0/modes
+U:480x854p-0
+</pre>
+
+So writing the string '''U:480x854p-0''' in the '''mode''' file works too :
+<pre>
+/ # echo "U:480x854p-0" > /sys/class/graphics/fb0/mode
+</pre>
+
+By example, to display the loading splash :
+<pre>
+/ # . init_functions.sh 
+/ # show_splash splash-loading.ppm.gz
+/ # echo "U:480x854p-0" > /sys/class/graphics/fb0/mode
+/ # 
+</pre>
+
+Calling only the ''show_splash'' function to display another splash screen does not work :
+<pre>
+/ # show_splash splash-mounterror.ppm.gz
+</pre>
+
+But, once you send the ''echo'' command, splash screen appears :
+<pre>
+/ # echo "U:480x854p-0" > /sys/class/graphics/fb0/mode
+</pre>
