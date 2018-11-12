@@ -1,4 +1,4 @@
-[https://en.wikipedia.org/wiki/Hybris_(software) Libhybris] allows devices lacking FLOSS drivers to make full use of their hardware by using the proprietary drivers from Android. Mainlining and using free software drivers is of course the better approach, but it is not possible for all devices.
+[https://en.wikipedia.org/wiki/Hybris_(software) Libhybris] allows devices lacking FLOSS drivers to make full use of their hardware by using the proprietary drivers from Android. Mainlining and using free software drivers is of course the better approach, but it is not possible for all devices. '''We will not list devices that need hybris as featured devices''' (see {{issue|83|postmarketos.org}}).
 
 == Using libhybris with your device ==
 
