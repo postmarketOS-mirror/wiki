@@ -675,3 +675,8 @@ But, once you send the ''echo'' command, splash screen appears :
 <pre>
 / # echo "U:480x854p-0" > /sys/class/graphics/fb0/mode
 </pre>
+
+
+== Disabling MSM 3D support ==
+
+After disabling MSM 3D Graphics driver, screen updates without having to rewrite FB Mode.
