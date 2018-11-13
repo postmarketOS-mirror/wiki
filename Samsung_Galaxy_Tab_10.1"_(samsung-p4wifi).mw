@@ -67,9 +67,13 @@ The downstream kernel provides an early implementation of a driver for the <code
 The <code>max8903</code> datasheet shows that there are separate GPIOs for USB and DC power connectors. This device has one connect GPIO for both USB and DC mode. The type of connector is determined by reading the <code>usb-sel</code> GPIOs. It's unclear which piece of hardware the usb-sel is coming from (max8903 / tegra soc / 30-pin connector ???).
 
 == Graphics ==
-The reverse engineer grate-driver provides 2D acceleration on X11. 3D acceleration is not implemented. This means that Xfce4 and Mate desktop will work. Hildon requires an OpenGL backend. Wayland UIs will only work with the framebuffer driver.
+The reverse engineer grate-driver provides 2D (EXA) acceleration on X11. There is minimal 3D implementation which is not complete enough to run the Wayland compositor.
 
-grate-drver packaging can be found at: [https://gitlab.com/ryang2678/pmaports/tree/feature/grate-driver https://gitlab.com/ryang2678/pmaports/tree/feature/grate-driver]
+Usability of desktop environments:
+* Xfce4 and Mate desktop will run on 2D acceleration.
+* Wayland desktops will only work with software rendering backends.
+* Hildon requires an OpenGL backend.
+** As of cogl 1.22.2 the clutter/cogl backend requires stencil buffers (<code>EGL_STENCIL_SIZE</code>). This not implemented in the grate-driver.
 
 === Video Decoding ===
 
