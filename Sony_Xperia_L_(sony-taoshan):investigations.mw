@@ -783,7 +783,7 @@ When exiting the debug-shell with '''pmos_continue_boot''', the boot process han
 
 To follow the boot process after launching the ''pmos_continue_boot'' command, I will launch a second telnetd daemon listening on another port and connect to it to follow the content of ''pmOS_init.log''.
 
-To start a daemon in background, we need to add ''telnetd'' in the initramfs :
+To start a daemon in background, we need to add ''nohup'' in the initramfs :
 <pre>
 $ pmbootstrap chroot --rootfs
 / # cat /etc/postmarketos-mkinitfs/files/10-nohup.files
