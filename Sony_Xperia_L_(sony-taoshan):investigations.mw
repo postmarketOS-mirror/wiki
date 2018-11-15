@@ -868,3 +868,47 @@ Segmentation fault
 </pre>
 
 After disabling this function, the boot process terminates, and sshd daemon is started.
+
+Source of the ''start_charging_mode'' function :
+<pre>
+start_charging_mode(){
+	# Check cmdline for charging mode
+	chargingmodes="
+		androidboot.mode=charger
+		lpm_boot=1
+		androidboot.huawei_type=oem_rtc
+		startup=0x00010004
+		lpcharge=1
+		androidboot.bootchg=true
+	"
+	# shellcheck disable=SC2086
+	grep -Eq "$(echo $chargingmodes | tr ' ' '|')" /proc/cmdline || return
+	setup_directfb_tslib
+	# Get the font from osk-sdl config
+	fontpath=$(awk '/^keyboard-font/{print $3}' /etc/osk.conf)
+	# Set up triggerhappy config
+	{
+		echo "KEY_POWER 1 pgrep -x charging-sdl || charging-sdl -pcf $fontpath"
+	} >/etc/triggerhappy.conf
+	# Start it once and then start triggerhappy
+	(
+		charging-sdl -pcf "$fontpath" \
+			|| show_splash /splash-charging-error.ppm.gz
+	) &
+	thd --deviceglob /dev/input/event* --triggers /etc/triggerhappy.conf
+}
+</pre>
+
+
+There are two issues with DirectFB :
+* The ''No supported modes found in /etc/fb.modes'' error : generate this file with the appropriate mode.
+* The final segmentation fault : try to generate a core dump and anlayze it.
+
+=== Error DirectFB/FBDev: No supported modes found ===
+
+The error ''DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported!'' is a known problem. See the ''Osk-sdl'' page:
+* [https://wiki.postmarketos.org/wiki/Osk-sdl#DirectFB.2FFBDev:_No_supported_modes_found_in_.2Fetc.2Ffb.modes_and_current_mode_not_supported.21 DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported]
+* [https://wiki.postmarketos.org/wiki/Osk-sdl#Create_fb.modes Create fb.modes]
+
+After creating the appropriate FB Mode in ''/etc/fb.modes'', it should be possible to reactivate the ''start_charging_mode'' in 
+''init_functions.sh''.
