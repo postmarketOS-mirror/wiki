@@ -13,10 +13,10 @@
 | display = 480x854
 | memory = 1 GiB
 | architecture = armhf
-| status_usbnet = 
-| status_flashing = 
+| status_usbnet = P
+| status_flashing = Y
 | status_touch = 
-| status_screen = 
+| status_screen = P
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
