@@ -6,12 +6,14 @@ $ python3 -m http.server
 </syntaxhighlight>
 
 2. Add your own repository on top of your <code>/etc/apk/repositories</code> file on the phone (remember to adjust the IP):
+
+<source lang="shell">
+# Add your host machine address
+http://172.16.42.2:8000
     
-    # Add your host machine address
-    http://172.16.42.2:8000
-    
-    https://nl.alpinelinux.org/alpine/edge/main
-    https://nl.alpinelinux.org/alpine/edge/community
-    https://nl.alpinelinux.org/alpine/edge/testing
+https://nl.alpinelinux.org/alpine/edge/main
+https://nl.alpinelinux.org/alpine/edge/community
+https://nl.alpinelinux.org/alpine/edge/testing
+</source>
 
 3. Upgrade the package you have built with <code>apk upgrade [package name]</code>
