@@ -1031,3 +1031,35 @@ The error ''DirectFB/FBDev: No supported modes found in /etc/fb.modes and curren
 
 After creating the appropriate FB Mode in ''/etc/fb.modes'', it should be possible to reactivate the ''start_charging_mode'' in 
 ''init_functions.sh''.
+
+With ''debug-shell'' enabled, connect via telnet, and enlight screen by writing in the ''brightness'' file :
+<pre>
+echo 255 > /sys/devices/platform/msm_ssbi.0/pm8038-core/pm8xxx-led/leds/wled/brightness
+</pre>
+
+Create the ''/etc/fb.modes'' file :
+<pre>
+cat > /etc/fb.modes << EOF
+mode "480x854-0"
+    # D: 0.003 MHz, H: 0.004 kHz, V: 0.005 Hz
+    geometry 854 1708 854 1708 16
+    timings 400000000 50 50 9 9 20 4
+    accel false
+    rgba 8/24,8/16,8/8,8/0
+endmode
+EOF
+</pre>
+
+Exit telnet :
+<pre>
+/ # pmos_continue_boot
+</pre>
+
+Screen becomes black. After few seconds, connect with ssh and enlight screen again :
+<pre>
+sony-taoshan:~$ sudo su -
+[sudo] password for dom: 
+sony-taoshan:~# echo 255 > /sys/devices/platform/msm_ssbi.0/pm8038-core/pm8xxx-led/leds/wled/brightness
+</pre>
+
+The Wayland screen should appears.
