@@ -46,7 +46,10 @@
 * [[User:Powimod|Powimod]]
 
 == What works ==
-* After pressing the power on button, nothing seems to happen (black screen, led off, no vibrations), but it's possible to do a telnet connection (with the debug-shell hook activated). 
+* After pressing the power on button, nothing seems to happen (black screen, led off, no vibrations), but it's possible to do a telnet connection (with the debug-shell hook activated).
+* With manual workarounds from the debug-shell, Wayland screen appears and seems to work fine.
+* SSH connections are possible.
+* The next step is to automate these workarounds and to publish configuration files.
 
 == What does not work ==
 * Everything
