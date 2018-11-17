@@ -1063,3 +1063,84 @@ sony-taoshan:~# echo 255 > /sys/devices/platform/msm_ssbi.0/pm8038-core/pm8xxx-l
 </pre>
 
 The Wayland screen should appears.
+
+== Adding FB workarounds in APKBUILD ==
+
+Go in the taoshan's device directory : ''~/.local/var/pmbootstrap/cache_git/pmaports/device/device-sony-taoshan''.
+
+Create the '''fb.modes''' file :
+<pre> 
+mode "480x854-0"
+    # D: 0.003 MHz, H: 0.004 kHz, V: 0.005 Hz
+    geometry 854 1708 854 1708 16
+    timings 400000000 50 50 9 9 20 4
+    accel false
+    rgba 8/24,8/16,8/8,8/0
+endmode
+</pre>
+
+Create the '''screen_enlightener''' script :
+<pre>
+#!/bin/sh
+brightness_file=$(find /sys/devices/platform/msm_ssbi.0/ -name brightness | grep -v rgb | head -n1)
+test -z "$brightness_file" && {
+	echo "Can't find screen brightness file !"
+	exit 1
+}
+echo "Screen brightness : $brightness_file"
+test -w "$brightness_file" || {
+	echo "Can't find write screen brightness file !"
+	exit 1
+}
+while true ; do
+	v=$(cat $brightness_file)
+	test $(cat $brightness_file) -ne 255 && \
+	        echo 255 > $brightness_file
+	sleep 1
+done 
+</pre>
+
+Update the APKBUILD by :
+* declaring these files in the '''source''' variable
+* adding an ''install'' directive in the ''package'' function :
+<pre>
+source="
+	deviceinfo
+	screen_enlightener
+	fb.modes
+"
+[...]
+package() {
+	devicepkg_package $startdir $pkgname
+	install -Dm744 "$srcdir"/fb.modes "$pkgdir"/etc/fb.modes
+	install -Dm444 "$srcdir"/screen_enlightener "$pkgdir"/screen_enlightener
+}
+</pre>
+
+Checksums (at the end of ''APKBUILD'') need to be updated after adding new files :
+<pre>
+$ pmbootstrap checksum device-sony-taoshan
+[13:02:46] (native) generate checksums for device-sony-taoshan
+[13:02:46] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[13:02:46] Done
+</pre>
+
+Rebuild all :
+<pre>
+$ pmbootstrap build device-sony-taoshan --force
+$ pmbootstrap install --no-fde
+</pre>
+
+Check files presence in chroot :
+<pre>
+$ pmbootstrap chroot -r
+[13:10:16] (rootfs_sony-taoshan) % sh -i
+/ # ls -l /etc/fb.modes ./screen_enlightener 
+-rwxr-xr-x    1 root     root           526 Nov 17 13:06 ./screen_enlightener
+-rwxr-xr-x    1 root     root           185 Nov 17 13:06 /etc/fb.modes
+/ # exit
+[13:10:28] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[13:10:28] Done
+</pre>
+
+Following steps will be to add directives to install these files in initfs and to start script at boot.
