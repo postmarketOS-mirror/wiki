@@ -50,6 +50,8 @@ The kernel builds.
 == What does not work ==
 It does not boot (it goes straight to recovery).
 
+According to [http://gpdroid.s3.amazonaws.com/revolution/BuildCM11forGPRev.pdf this document], the bootloader requires a signed ''boot.img'' so it might not be possible to use our own.
+
 == How to enter flash mode ==
 Press volume down and power button at the same time.
 
