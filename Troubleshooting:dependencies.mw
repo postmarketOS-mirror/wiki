@@ -120,3 +120,4 @@ $ rm -r ~/code/pmbootstrap/aports/temp
 
 = See also =
 * {{github|1408}} nokia-n900: pmbootstrap install fails for libcrypto.so.42
+* {{issue|1684}} Dependency conflict blocks generation of hammerhead image
