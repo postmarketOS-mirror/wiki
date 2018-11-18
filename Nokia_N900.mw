@@ -109,7 +109,7 @@ $ sudo ip link set wlan0 up
 $ sudo iw wlan0 set type managed
 </syntaxhighlight>
 
-Now you can use NetworkManager's console UI to connect to your network:
+Now you can use NetworkManager's console UI to connect to your network. Please note that <code>nmtui</code> does not work properly when started from <code>tmux</code>.
 
 <syntaxhighlight lang="shell-session">
 $ nmtui
