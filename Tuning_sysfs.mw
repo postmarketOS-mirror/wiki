@@ -4,6 +4,7 @@ After porting postmarketOS to your device, you might find that still some featur
 
 sysfs is a pseudo file system provided by the Linux kernel that exports information about various kernel subsystems, hardware devices, and associated device drivers from the kernel's device model to user space through virtual files. In addition to providing information about various devices and kernel subsystems, exported virtual files are also used for their configuring.
 
+==diff method==
 One approach is comparing the contents of these files when TWRP or LineageOS is running and the same for pmOS.
 
 The following script dumps the content of /sys/devices. Copy it as <code>dumpsys.sh</code>
@@ -52,12 +53,14 @@ Then get the differences ([https://gist.github.com/yuvadm/654f2c5e578d0e26cec3ea
 <pre class="shell">diff -u devices-pmos.dump devices-twrp.dump &gt; devices.diff</pre>
 You could also run it in even in the stock ROM but it is important that you run the same kernel version in postmarketOS then.
 
-'''Note:''' On some devices (like Xperia Z) this script will hang on <code>vsync_event</code> files. To continue the script to the next file we just kill the process that processes the <code>vsync_event</code> file:
+====Script hanging====
+On some devices (like Xperia Z) this script will hang on <code>vsync_event</code> files. To continue the script to the next file we just kill the process that processes the <code>vsync_event</code> file:
 
 <pre class="shell">ps w | grep vsync_event # To find process id of the cat command that was processing vsync_event
 kill -SIGTERM <pid> # Kill the process</pre>
 
-'''Note:''' On some devices (like Xperia Z1) this script can reboot the device when executed in TWRP. To fix this, you need to find out which file is causing the reboot and skip it. You can find the file by running the script without output redirection (it should be the last line printed before the reboot - see example below).
+====Script reboots system====
+On some devices (like Xperia Z1) this script can reboot the device when executed in TWRP. To fix this, you need to find out which file is causing the reboot and skip it. You can find the file by running the script without output redirection (it should be the last line printed before the reboot - see example below).
 <pre class="shell">$ adb shell "sh /dumpsys.sh"
 /sys/devices/0.qcom,msm-cpufreq/modalias
 platform:0.qcom,msm-cpufreq
@@ -90,6 +93,15 @@ If there are two or more entries to skip, combine them with a logical OR (||) li
     cat "$path"
 fi</pre>
 
+==Applying tuning==
+
+To make changes to the device, create "initfs-hook.sh" in the device folder, add "initfs-hook.sh" to the source list, and add the following under package()
+<pre class="shell">
+	install -Dm644 "$srcdir"/initfs-hook.sh \
+		"$pkgdir"/etc/postmarketos-mkinitfs/hooks/00-${pkgname}.sh
+</pre>
+
+The initfs-hook.sh runs commands before booting.  Look at the examples section to see how the file should be used.
 
 == Examples ==
 
