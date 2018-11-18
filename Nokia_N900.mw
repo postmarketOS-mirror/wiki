@@ -100,20 +100,37 @@ Generating u-boot bootmenu script...
 === Wifi ===
 
 The <code>linux-firmware-ti-connectivity</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/1414 #1414])
+You get asked during <code>pmbootstrap init</code> if you would like to install that proprietary firmware package.
 
 Once the device has been successfully initialized, enable it:
 
-<pre>$ sudo ip link set wlan0 up
-$ sudo iw wlan0 set type managed</pre>
-Configure wpa_supplicant (only necessary on encrypted networks):
+<syntaxhighlight lang="shell-session">
+$ sudo ip link set wlan0 up
+$ sudo iw wlan0 set type managed
+</syntaxhighlight>
 
-<pre>$ sudo su -
-# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wpa_supplicant.conf
-&lt;enter passphrase here and press Enter&gt;
-# exit</pre>
+Now you can use NetworkManager's console UI to connect to your network:
+
+<syntaxhighlight lang="shell-session">
+$ nmtui
+</syntaxhighlight>
+
+==== Using wpa_supplicant only ====
+
+If NetworkManager should not work for you, make sure that it is not running and run the following commands to connect to an encrypted network manually:
+
+<syntaxhighlight lang="shell-session">
+$ sudo su -
+# wpa_passphrase $YOUR_SSID > /etc/wpa_supplicant/wpa_supplicant.conf
+<enter passphrase here and press Enter>
+# exit
+</syntaxhighlight>
+
 Connect to network using wpa_supplicant:
 
-<pre>$ sudo rc-service wpa_supplicant restart </pre>
+<syntaxhighlight lang="shell-session">
+$ sudo rc-service wpa_supplicant restart
+</syntaxhighlight>
 
 === Sound ===
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
