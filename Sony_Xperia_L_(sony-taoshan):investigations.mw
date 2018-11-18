@@ -1084,38 +1084,57 @@ Create the '''screen_enlightener''' script :
 #!/bin/sh
 brightness_file=$(find /sys/devices/platform/msm_ssbi.0/ -name brightness | grep -v rgb | head -n1)
 test -z "$brightness_file" && {
-	echo "Can't find screen brightness file !"
-	exit 1
+        echo "Can't find screen brightness file !"
+        exit 1
 }
 echo "Screen brightness : $brightness_file"
 test -w "$brightness_file" || {
-	echo "Can't find write screen brightness file !"
-	exit 1
+        echo "Can't find write screen brightness file !"
+        exit 1
 }
 while true ; do
-	v=$(cat $brightness_file)
-	test $(cat $brightness_file) -ne 255 && \
-	        echo 255 > $brightness_file
-	sleep 1
-done 
+        test $(cat $brightness_file) -ne 255 && \
+                echo 255 > $brightness_file
+        sleep 1
+done  
 </pre>
 
-Update the APKBUILD by :
-* declaring these files in the '''source''' variable
-* adding an ''install'' directive in the ''package'' function :
+
+Create a hook script named '''initfs-hook.sh''' which will be called during boot process to start the ''screen_enlightener'' script in background :
+<pre> 
+#!/bin/sh
+echo "Start the screen enlightener script"
+/bin/sh /usr/sbin/screen_enlightener >/tmp/screen_enlightener.log 2>&1 </dev/null &
+</pre>
+
+Create a ''50-screen-enlightener.files'' file which will include the ''screen_enlightener'' script in ''initramfs'' :
+<pre>
+/usr/sbin/screen_enlightener
+</pre>
+
+Update the ''APKBUILD'' :
+* declare these files in the '''source''' variable
+* add an ''install'' directive in the ''package'' function :
+
 <pre>
 source="
 	deviceinfo
 	screen_enlightener
 	fb.modes
+	50-screen-enlightener.files
+	initfs-hook.sh
 "
 [...]
 package() {
 	devicepkg_package $startdir $pkgname
-	install -Dm744 "$srcdir"/fb.modes "$pkgdir"/etc/fb.modes
-	install -Dm444 "$srcdir"/screen_enlightener "$pkgdir"/screen_enlightener
+	install -Dm544 "$srcdir"/fb.modes "$pkgdir"/etc/fb.modes
+	install -Dm444 "$srcdir"/screen_enlightener "$pkgdir"/usr/sbin/screen_enlightener
+	install -Dm444 "$srcdir"/50-screen-enlightener.files "$pkgdir"/etc/postmarketos-mkinitfs/files/50-screen-enlightener.files
+	install -Dm644 "$srcdir"/initfs-hook.sh "$pkgdir"/etc/postmarketos-mkinitfs/hooks/00-${pkgname}.sh
 }
 </pre>
+
+It's not necessary to add an install directive for the ''fb.modes'' file : it's automatically in ''initramfs-extra''.
 
 Checksums (at the end of ''APKBUILD'') need to be updated after adding new files :
 <pre>
@@ -1135,12 +1154,18 @@ Check files presence in chroot :
 <pre>
 $ pmbootstrap chroot -r
 [13:10:16] (rootfs_sony-taoshan) % sh -i
-/ # ls -l /etc/fb.modes ./screen_enlightener 
--rwxr-xr-x    1 root     root           526 Nov 17 13:06 ./screen_enlightener
--rwxr-xr-x    1 root     root           185 Nov 17 13:06 /etc/fb.modes
+
+/ # ls -l /etc/fb.modes /usr/sbin/screen_enlightener /etc/postmarketos-mkinitfs/hooks/00-device-sony-taoshan.sh 
+-r-xr--r--    1 root     root           185 Nov 17 17:44 /etc/fb.modes
+-rw-r--r--    1 root     root           137 Nov 17 17:44 /etc/postmarketos-mkinitfs/hooks/00-device-sony-taoshan.sh
+-r--r--r--    1 root     root           492 Nov 17 17:44 /usr/sbin/screen_enlightener
+
+/ # cat /etc/postmarketos-mkinitfs/hooks/00-device-sony-taoshan.sh
+#!/bin/sh
+echo "Start the screen enlightener script"
+/bin/sh /usr/sbin/screen_enlightener >/tmp/screen_enlightener.log 2>&1 </dev/null &
+
 / # exit
 [13:10:28] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
 [13:10:28] Done
 </pre>
-
-Following steps will be to add directives to install these files in initfs and to start script at boot.
