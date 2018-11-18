@@ -1169,3 +1169,6 @@ echo "Start the screen enlightener script"
 [13:10:28] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
 [13:10:28] Done
 </pre>
+
+==Touch screen ==
+Touch screen is /dev/input/event2
