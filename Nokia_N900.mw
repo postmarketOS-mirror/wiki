@@ -221,15 +221,27 @@ To adjust brightness:
 
 === GUI ===
 
-==== XFCE4 ====
-[[XFCE4]] works well.
-
 ==== i3wm ====
-[[I3wm]] also works very well with the N900 due to the hardware keyboard, and MartijnBraam created some nice configs which have are included in the standard postmarketos-ui-i3wm installation.
-* [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ in action]
+'''[[I3wm]] is the recommended UI.''' It is lightweight and fast, and we have a custom N900 configuration that optimizes for its keyboard ([https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ photos]). The most important keybindings are described below, for details see [https://gitlab.com/postmarketOS/pmaports/blob/master/device/device-nokia-n900/i3wm/i3wm.conf i3wm.conf]. This file gets installed to <code>~/.i3/config</code> and of course you can customize it. If you have good additions, please make a merge request so everybody benefits from an improved default config.
+
+===== default mode =====
+* shift + space: switch to "command mode"
+
+===== command mode =====
+* t: open terminal
+* k: kill current program
+* w: workspace mode
+* r: restart i3wm (use after modifying the config)
+* q: go back to "default mode"
+
+===== workspace mode =====
+* a/s/d/f/g: switch to workspace 1/2/3/4/5
+* q: go back to "command mode"
+
+==== XFCE4 ====
+[[XFCE4]] does not have performance issues, but since this UI is not optimized for keyboard only usage or for touch screen usage, it is not as userfriendly as i3wm with the postmarketOS default config.
 
 ==== Hildon ====
-
 As of 15th May 2018, Hildon is unusably slow. This is due to the fact that Hildon requires acceleration which is not supported at the date of writing.
 
 ==== Others ====
