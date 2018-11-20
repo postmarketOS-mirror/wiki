@@ -20,7 +20,7 @@
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
-| status_mainline = 
+| status_mainline = P
 | status_battery =
 | status_3d = 
 | status_accel = 
@@ -47,6 +47,10 @@ Hold POWER + VOLDOWN, press Power to confirm Fastboot mode
 $ pmbootstrap flasher flash_kernel
 $ pmbootstrap flasher flash_rootfs
 </source>
+
+== Mainline attempt ==
+
+[[Google Nexus 9 (htc-flounder):mainline|Mainline]]
 
 == See also ==
 * {{github|1309}} Initial pull request
