@@ -85,7 +85,7 @@ When you made it boot successfully, please increase the <code>pkgrel</code> and 
 == heimdall-isorec ==
 If you have a device that only boots with [[Deviceinfo_flash_methods#heimdall-isorec|heimdall-isorec]], you will need to adjust your linux APKBUILD as follows:
 * add <code>busybox-static-armhf</code> to makedepends
-* copy the "init" file from <code>linux-samsung-i9100</code> and customize the partition
+* copy the "init" file from [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-samsung-i9100 <code>linux-samsung-i9100</code>] and customize the partition
 * add "init" to <code>source=</code> in the APKBUILD
 * adjust your <code>prepare()</code> like it's done in <code>linux-samsung-i9100</code> and adjust the paths in there
 
