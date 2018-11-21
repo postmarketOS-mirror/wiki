@@ -6,7 +6,7 @@ There are KDE packages, which need to be rebuilt after each QT upgrade:
 $ pmbootstrap pkgrel_bump kwayland kwin plasma-framework kdeclarative 
 </syntaxhighlight>
 
-See {{github|978}} for an idea to automatize this and for more information.
+See {{issue|130|pmaports}} for an idea to automatize this and for more information.
 
 == See also ==
 * [[Merge_Workflow#Merge_on_command_line|How to merge git commits on the command line]]
