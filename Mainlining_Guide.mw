@@ -75,6 +75,7 @@ $ git checkout -b "device-lg-mako"
 === envkernel.sh ===
 Usually when compiling a kernel, you would install [https://kernelnewbies.org/KernelBuild all dependencies] and a cross compiler in your host system. To make it easier, we have the <code>envkernel.sh</code> script (for fish shell: <code>envkernel.fish</code>). It sets up an Alpine Linux chroot with all the dependencies by using <code>pmbootstrap</code> internally, exports the environment variables to use the right cross compiler and creates an alias to <code>make</code>. This means, whenever you type <code>make</code> after sourcing that script, it will actually run <code>make</code> in the chroot. Please try the script out once to make sure everything is working as expected:
 <syntaxhighlight lang="shell-session">
+(enter the directory where you have cloned the linux kernel source)
 $ cd ~/code/linux
 $ source ~/code/pmbootstrap/helpers/envkernel.sh
 Initializing Alpine chroot (details: 'pmbootstrap log')
@@ -104,6 +105,8 @@ getconf: LFS_LIBS: unknown variable
 make[1]: Leaving directory '/mnt/linux/.output'
 make: Leaving directory '/mnt/linux'
 </syntaxhighlight>
+
+See also: [https://gitlab.com/postmarketOS/pmbootstrap/issues/1672#note_105668759 a quick Q&A about using envkernel.sh for the Nexus 5]
 
 === Got everything? ===
 Please double check with the following checklist that you meet '''all the requirements''' before proceeding further. If you need any help with the above, just ask [[Matrix_and_IRC|in the channel]] or [https://github.com/postmarketOS/pmbootstrap/issues on GitHub] as usually.
