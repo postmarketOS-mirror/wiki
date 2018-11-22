@@ -37,6 +37,9 @@
 
 == Contributors ==
 * [[user:Halamix2|Halamix2]]
+
+== Maintainer(s) ==
+* also [[user:Halamix2|Halamix2]]
 == What works ==
 * Boots
 * SSH through USB 
@@ -150,3 +153,101 @@ Device          Boot   Start     End Sectors  Size Id Type
 /dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS
 /dev/mmcblk0p24      7429804 7437995    8192    4M 58 unknown              MODEM_BKP
 </source>
+
+==Downstream kernel==
+===Basic info===
+<source lang="bash">
+samsung-s6500d:~$ neofetch
+user@samsung-s6500d 
+------------------- 
+OS: postmarketOS 1.0.3 armv7l 
+Kernel: 3.4.105-caf-kk_2.7-stable 
+Uptime: 2 mins 
+Packages: 245 (apk) 
+Shell: ash 
+WM: catwm 
+Terminal: /dev/pts/0 
+CPU: QCT MSM7x27a FFA (1) @ 1.008GHz 
+Memory: 45MiB / 385MiB
+
+samsung-s6500d:~$ sudo lshw
+samsung-s6500d              
+    description: Computer
+    width: 256 bits
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 385MiB
+     *-cpu
+          physical id: 1
+          bus info: cpu@0
+          size: 1008MHz
+          capacity: 1008MHz
+          capabilities: swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpv4 cpufreq
+  *-network:0 DISABLED
+       description: Ethernet interface
+       physical id: 1
+       logical name: rmnet6
+       serial: 52:b2:c7:40:d1:2d
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:1 DISABLED
+       description: Ethernet interface
+       physical id: 2
+       logical name: rmnet1
+       serial: de:a7:d7:27:66:c7
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:2
+       description: Ethernet interface
+       physical id: 3
+       logical name: usb0
+       serial: 6e:78:d2:86:86:26
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=g_ether driverversion=29-May-2008 firmware=msm72k_udc ip=172.16.42.1 link=yes multicast=yes
+  *-network:3 DISABLED
+       description: Ethernet interface
+       physical id: 4
+       logical name: rmnet5
+       serial: 32:a3:3f:56:62:1c
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:4 DISABLED
+       description: Ethernet interface
+       physical id: 5
+       logical name: rmnet0
+       serial: 06:d7:c2:e5:15:85
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:5 DISABLED
+       description: Ethernet interface
+       physical id: 6
+       logical name: rmnet4
+       serial: da:df:9e:86:b7:9f
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:6 DISABLED
+       description: Ethernet interface
+       physical id: 7
+       logical name: rmnet3
+       serial: 3e:25:2a:c7:0f:76
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:7 DISABLED
+       description: Ethernet interface
+       physical id: 8
+       logical name: rmnet7
+       serial: 86:bc:19:51:a1:dd
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+  *-network:8 DISABLED
+       description: Ethernet interface
+       physical id: 9
+       logical name: rmnet2
+       serial: 9a:d9:81:bb:8e:9e
+       capabilities: ethernet physical
+       configuration: broadcast=yes multicast=yes
+</source
