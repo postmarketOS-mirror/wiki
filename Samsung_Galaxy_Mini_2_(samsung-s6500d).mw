@@ -250,4 +250,4 @@ samsung-s6500d
        serial: 9a:d9:81:bb:8e:9e
        capabilities: ethernet physical
        configuration: broadcast=yes multicast=yes
-</source
+</source>
