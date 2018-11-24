@@ -1,0 +1,76 @@
+[[Category:Booting]]
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia M4 Aqua
+| codename = sony-tulip
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2015
+| originalsoftware = Android 5.0 further updated to 6.0
+| chipset = Qualcomm MSM8939 (Snapdragon 615) / some devices for unknown reason have MSM8936 (Snapdragon 610)
+| cpu = 8x Cortex-A53, 4x 1,5Ghz (big cluster) + 4x 1Ghz (LITTLE cluster) (clock speeds may vary slightly)
+| gpu = Adreno 405
+| storage = 8GB / 16 GB (depends on model)
+| display = 720 x 1280 LED Triluminos 294ppi 5"
+| memory = 2GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = N
+| status_wifi = N
+| status_xwayland = ""
+| status_fde = ""
+| status_mainline = ""
+| status_battery = ""
+| status_3d = ""
+| status_accel = ""
+| status_audio = ""
+| status_bluetooth = ""
+| status_camera = N
+| status_gps = ""
+| status_mobiledata = ""
+| status_sms = ""
+| status_calls = ""
+| booting = Y
+}}
+
+== Contributors ==
+* Konrad Dybcio (@konradybcio) - porting
+* Patrick Hope (@Pachops) - testing
+* Pavel Dubrova ([https://github.com/bartcubbins @Cubbins]) - cleaning up kernel, doing A LOT for this device kernel-wise
+
+== Maintainer(s) ==
+* Konrad Dybcio (@konradybcio)
+
+== How to enter flash mode ==
+With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
+You will need an unlocked bootloader. To unlock it follow the [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/how-to-unlock-bootloader/ official guide by Sony].
+
+
+== Additional notes ==
+- Camera will NOT work for now, it's broken kernel-side.
+
+- This device has not been made by Sony, it's been manufactured by FIH hence kernel needed (and still needs some) cleanup
+
+- There are a lot, and by that i mean a LOT of variants of this device, varying mainly by baseband and storage size
+
+- In [https://github.com/bartcubbins/kernel_kanuti Pavel's kernel_kanuti repo] you can find some work on caf's 4.9, 4.4, and 3.18 kernels, the higher the version the less things will work, but hey, there is hope
+
+- The device can probably be mainlined since 8936/8939 is a 8916-class soc
+
+- If camera ever gets fixed, it will need Sony's proprietary blobs to run
+
+== Installation ==
+Fastboot and TWRP zips work fine.
+
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
