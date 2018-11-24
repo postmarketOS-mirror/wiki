@@ -10,7 +10,7 @@
 | chipset = Qualcomm MSM8939 (Snapdragon 615) / some devices for unknown reason have MSM8936 (Snapdragon 610)
 | cpu = 8x Cortex-A53, 4x 1,5Ghz (big cluster) + 4x 1Ghz (LITTLE cluster) (clock speeds may vary slightly)
 | gpu = Adreno 405
-| storage = 8GB / 16 GB (depends on model)
+| storage = 8GB / 16 GB (refer to the model list)
 | display = 720 x 1280 LED Triluminos 294ppi 5"
 | memory = 2GB
 | architecture = aarch64
@@ -48,6 +48,19 @@
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
 You will need an unlocked bootloader. To unlock it follow the [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/how-to-unlock-bootloader/ official guide by Sony].
 
+
+== Model list ==
+-E2303 (European) - 8GB storage, LTE
+
+-E2306 - 16GB storage, LTE
+
+-E2312 - 8GB storage, 3G, Dual-SIM
+
+-E2333 - 16GB storage, LTE, Dual-SIM
+
+-E2353 - 8GB storage, LTE
+
+-E2363 - 16GB storage, LTE, Dual-SIM
 
 == Additional notes ==
 - Camera will NOT work for now, it's broken kernel-side.
