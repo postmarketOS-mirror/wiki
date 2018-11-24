@@ -18,8 +18,8 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = N
-| status_wifi = N
+| status_screen = -
+| status_wifi = -
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
@@ -28,7 +28,7 @@
 | status_accel = 
 | status_audio = 
 | status_bluetooth = 
-| status_camera = N
+| status_camera = -
 | status_gps = 
 | status_mobiledata = 
 | status_sms = 
