@@ -50,17 +50,17 @@ You will need an unlocked bootloader. To unlock it follow the [https://developer
 
 
 == Model list ==
--E2303 (European) - 8GB storage, LTE
+E2303 (European) - 8GB storage, LTE
 
--E2306 - 16GB storage, LTE
+E2306 - 16GB storage, LTE
 
--E2312 - 8GB storage, 3G, Dual-SIM
+E2312 - 8GB storage, 3G, Dual-SIM
 
--E2333 - 16GB storage, LTE, Dual-SIM
+E2333 - 16GB storage, LTE, Dual-SIM
 
--E2353 - 8GB storage, LTE
+E2353 - 8GB storage, LTE
 
--E2363 - 16GB storage, LTE, Dual-SIM
+E2363 - 16GB storage, LTE, Dual-SIM
 
 == Additional notes ==
 - Camera will NOT work for now, it's broken kernel-side.
