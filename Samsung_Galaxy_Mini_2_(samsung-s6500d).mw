@@ -83,7 +83,7 @@ It displays some sort of animation when pressing buttons in postmarket demos win
 Home button and volume buttons are ''/dev/input/event1'', where power button is recognised as ''/dev/input/event6''
 
 === Mainline ===
-Currently we have working 2.6 kernel, no DTS files for qcom-msm7227a.
+Currently we have working 3.4 kernel, no DTS files for qcom-msm7227a.
 
 Get data form all over the kernel source code (mainly ''arch/mach-msm/board-<board name>.c'' for starters and recreate it in .dts file(s).
 
