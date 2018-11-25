@@ -127,31 +127,31 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: dos
 Disk identifier: 0x00000000
 
-Device          Boot   Start     End Sectors  Size Id Type
+Device          Boot   Start     End Sectors  Size Id Type                 PIT name               read-writeable?
 /dev/mmcblk0p1  *          1      40      40   20K 4d QNX4.x               CFG_DATA
 /dev/mmcblk0p2            41     340     300  150K 45 unknown              QCSBL
-/dev/mmcblk0p3           341   41300   40960   20M  c W95 FAT32 (LBA)      FAT
+/dev/mmcblk0p3           341   41300   40960   20M  c W95 FAT32 (LBA)      FAT                    RW
 /dev/mmcblk0p4         41301 7634943 7593643  3.6G  5 Extended             ? / partition.bin
 /dev/mmcblk0p5         49152   51151    2000 1000K 46 unknown              OEMSBL
 /dev/mmcblk0p6         51152   53151    2000 1000K 47 unknown              APPSBL
-/dev/mmcblk0p7         53152   57151    4000    2M 5d unknown              SSD
-/dev/mmcblk0p8         57152   81727   24576   12M 48 unknown              APPS / boot partition
+/dev/mmcblk0p7         53152   57151    4000    2M 5d unknown              SSD                    RW
+/dev/mmcblk0p8         57152   81727   24576   12M 48 unknown              APPS / boot partition  RW
 /dev/mmcblk0p9         81728   87871    6144    3M 4a unknown              MODEM_ST1
 /dev/mmcblk0p10        87872   94015    6144    3M 4b unknown              MODEM_ST2
-/dev/mmcblk0p11        94016  110399   16384    8M 90 unknown              PERSIST
-/dev/mmcblk0p12       110400  134975   24576   12M 91 unknown              RECOVERY
-/dev/mmcblk0p13       134976  143167    8192    4M 92 unknown              PARAMETER
-/dev/mmcblk0p14       143168  151359    8192    4M 93 Amoeba               SECURE
-/dev/mmcblk0p15       151360  152383    1024  512K 95 unknown              PIT
-/dev/mmcblk0p16       152384 1176383 1024000  500M 82 Linux swap / Solaris SYSTEM
-/dev/mmcblk0p17      1176384 1483583  307200  150M 94 Amoeba BBT           CACHE
-/dev/mmcblk0p18      1483584 3396415 1912832  934M 83 Linux                USERDATA
+/dev/mmcblk0p11        94016  110399   16384    8M 90 unknown              PERSIST                RW
+/dev/mmcblk0p12       110400  134975   24576   12M 91 unknown              RECOVERY               RW
+/dev/mmcblk0p13       134976  143167    8192    4M 92 unknown              PARAMETER              RW
+/dev/mmcblk0p14       143168  151359    8192    4M 93 Amoeba               SECURE                 RW
+/dev/mmcblk0p15       151360  152383    1024  512K 95 unknown              PIT                    RW
+/dev/mmcblk0p16       152384 1176383 1024000  500M 82 Linux swap / Solaris SYSTEM                 RW
+/dev/mmcblk0p17      1176384 1483583  307200  150M 94 Amoeba BBT           CACHE                  RW
+/dev/mmcblk0p18      1483584 3396415 1912832  934M 83 Linux                USERDATA               RW
 /dev/mmcblk0p19      3396416 3420991   24576   12M 65 Novell Netware 386   EFS
-/dev/mmcblk0p20      3420992 3470143   49152   24M 9a unknown              IMG_BACKUP
-/dev/mmcblk0p21      3470144 3478335    8192    4M 63 GNU HURD or SysV     MISC
-/dev/mmcblk0p22      3478336 3580735  102400   50M 67 unknown              HIDDEN
-/dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS
-/dev/mmcblk0p24      7429804 7437995    8192    4M 58 unknown              MODEM_BKP
+/dev/mmcblk0p20      3420992 3470143   49152   24M 9a unknown              IMG_BACKUP             RW
+/dev/mmcblk0p21      3470144 3478335    8192    4M 63 GNU HURD or SysV     MISC                   RW
+/dev/mmcblk0p22      3478336 3580735  102400   50M 67 unknown              HIDDEN                 RW
+/dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS                    RW
+/dev/mmcblk0p24      7429804 7437995    8192    4M 58 unknown              MODEM_BKP              RW
 
 #.PIT file, only RW partitions
 --- Entry #2 ---
