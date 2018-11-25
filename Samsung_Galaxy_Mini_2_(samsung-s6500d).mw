@@ -152,6 +152,132 @@ Device          Boot   Start     End Sectors  Size Id Type
 /dev/mmcblk0p22      3478336 3580735  102400   50M 67 unknown              HIDDEN
 /dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS
 /dev/mmcblk0p24      7429804 7437995    8192    4M 58 unknown              MODEM_BKP
+
+#.PIT file, only RW partitions
+
+--- Entry #2 ---
+Binary Type: 1 (CP)
+Device Type: 2 (MMC)
+Identifier: 12
+Attributes: 1 (Read/Write)
+Partition Block Count: 40960
+Partition Name: FAT
+Flash Filename: fat.bin
+
+--- Entry #6 ---
+Identifier: 93
+Attributes: 1 (Read/Write)
+Partition Block Count: 4000
+Partition Name: SSD
+Flash Filename: 
+
+--- Entry #7 ---
+Identifier: 72
+Attributes: 1 (Read/Write)
+Partition Block Count: 24576
+Partition Name: APPS
+Flash Filename: boot.img
+
+--- Entry #10 ---
+Identifier: 144
+Attributes: 1 (Read/Write)
+Partition Block Count: 16384
+Partition Name: PERSIST
+Flash Filename: persist.img.ext4
+
+--- Entry #11 ---
+Identifier: 145
+Attributes: 1 (Read/Write)
+Partition Block Count: 24576
+Partition Name: RECOVERY
+Flash Filename: recovery.img
+
+--- Entry #12 ---
+Identifier: 146
+Attributes: 1 (Read/Write)
+Partition Block Count: 8192
+Partition Name: PARAMETER
+Flash Filename: 
+
+--- Entry #13 ---
+Identifier: 147
+Attributes: 1 (Read/Write)
+Partition Block Count: 8192
+Partition Name: SECURE
+Flash Filename: secure.img.ext4
+
+--- Entry #14 ---
+Identifier: 149
+Attributes: 1 (Read/Write)
+Partition Block Count: 1024
+Partition Name: PIT
+Flash Filename: pit.bin
+
+--- Entry #15 ---
+Identifier: 130
+Attributes: 1 (Read/Write)
+Partition Block Count: 1024000
+Partition Name: SYSTEM
+Flash Filename: system.img.ext4
+
+--- Entry #16 ---
+Identifier: 148
+Attributes: 1 (Read/Write)
+Partition Block Count: 307200
+Partition Name: CACHE
+Flash Filename: cache.img.ext4
+
+--- Entry #17 ---
+Identifier: 131
+Attributes: 1 (Read/Write)
+Partition Block Count: 1912832
+Partition Name: USERDATA
+Flash Filename: userdata.img.ext4
+
+--- Entry #19 ---
+Identifier: 154
+Attributes: 1 (Read/Write)
+Partition Block Count: 49152
+Partition Name: IMG_BACKUP
+Flash Filename: 
+
+--- Entry #20 ---
+Identifier: 99
+Attributes: 1 (Read/Write)
+Partition Block Count: 8192
+Partition Name: MISC
+Flash Filename: 
+
+--- Entry #21 ---
+Identifier: 103
+Attributes: 1 (Read/Write)
+Partition Block Count: 102400
+Partition Name: HIDDEN
+Flash Filename: hidden.img.ext4
+
+--- Entry #22 ---
+Identifier: 100
+Attributes: 1 (Read/Write)
+Partition Block Count: 3849068
+Partition Name: UMS
+Flash Filename: ums.img
+
+--- Entry #23 ---
+Identifier: 88
+Attributes: 1 (Read/Write)
+Partition Block Count: 8192
+Partition Name: MODEM_BKP
+Flash Filename: 
+
+--- Entry #24 ---
+Identifier: 160
+Attributes: 1 (Read/Write)
+Partition Block Count: 4096
+Partition Name: GROW
+Flash Filename: 
+
+
+
 </source>
 
 ==Downstream kernel==
