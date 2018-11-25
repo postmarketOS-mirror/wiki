@@ -106,6 +106,17 @@ and http://muru.com/linux/d4/
 
 See [https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/ this page], and [https://developer.sony.com/develop/open-devices/guides/access-uart-ports that one] (basically a new formatting for the same page, as of 2018-02-21, but that might [https://talk.sonymobile.com/t5/General-Discussion/UART-on-Sony-Xperia-X-F5121/m-p/1302566/highlight/true#M1341 might change soon])
 
+== Suzy-Q debug cable ==
+
+The Suzy-Q debug cable isn't strictly a serial debug cable, it accesses the Closed Case Debugging system, it can access multiple busses on the device. This system was originally developed to debug chromebooks but has been used in the newer Pixel phones. Details for the Closed Case Debugging system can be found at https://chromium.googlesource.com/chromiumos/platform/ec/+/master/docs/case_closed_debugging.md
+
+[[File:suzyq-debug-cable.png]]
+
+This cable should work with:
+
+* Google Pixel 2
+* Google Pixel 3
+
 == Alternatives to a serial cable ==
 There might not be a need for a serial cable if you think it is too complicated to make one for your device (although it is much more convenient when it works).
 From [https://github.com/crondog/arch-flo there], about the [[Google Nexus 7 2013 (asus-flo)]]:
