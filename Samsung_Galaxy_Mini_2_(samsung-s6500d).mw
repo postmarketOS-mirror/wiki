@@ -150,7 +150,7 @@ Device          Boot   Start     End Sectors  Size Id Type                 PIT n
 /dev/mmcblk0p20      3420992 3470143   49152   24M 9a unknown              IMG_BACKUP             RW
 /dev/mmcblk0p21      3470144 3478335    8192    4M 63 GNU HURD or SysV     MISC                   RW
 /dev/mmcblk0p22      3478336 3580735  102400   50M 67 unknown              HIDDEN                 RW
-/dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS                    RW
+/dev/mmcblk0p23      3580736 7429803 3849068  1.9G 64 Novell Netware 286   UMS(user files)        RW
 /dev/mmcblk0p24      7429804 7437995    8192    4M 58 unknown              MODEM_BKP              RW
 
 #.PIT file, only RW partitions
