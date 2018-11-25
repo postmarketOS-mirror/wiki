@@ -9,7 +9,16 @@
 * install the hybris related packages:
 
 <syntaxhighlight lang="shell-session">
-$ sudo apk add lxc-android xf86-video-hwcomposer libhybris libhybris-egl libhybris-gles libhybris-7.1-caf wayland-libs-client wayland-libs-server
+$ sudo apk add lxc-android \
+               xf86-video-hwcomposer \
+               xf86-video-hwcomposer-7.1-caf \
+               libhybris \
+               libhybris-egl \
+               libhybris-gles \
+               libhybris-libwayland-egl \
+               libhybris-7.1-caf \
+               wayland-libs-client \
+               wayland-libs-server
 </syntaxhighlight>
 
 * start the service:
