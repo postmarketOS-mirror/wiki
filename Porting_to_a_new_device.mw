@@ -15,6 +15,7 @@
 If your target device has an ARM processor, it needs to have an [https://en.wikipedia.org/wiki/Floating-point_unit FPU].
 
 Most phones fulfill this requirement: in the first > 80 ports we have had, only twice we had phones without an FPU ({{issue|1203}}, {{issue|1592}}). These are from 2010 and 2011, so it is [https://unix.stackexchange.com/a/185070 worth checking] if your device is from that time. Otherwise just go ahead.
+If your device have ARMv7 CPU it should have FPU, with ARMv6 CPUs it's a 50/50 chance.
 
 === Initialization ===
 Run the following commands in a Linux terminal to get started.
