@@ -99,16 +99,8 @@ Generating u-boot bootmenu script...
 '''Note''': This will set pmos as the default boot option. Maemo will still be accessible when booting the N900 with the keyboard slide out and selecting the relevant boot option in the u-boot boot menu.
 
 === Wifi ===
-
 The <code>linux-firmware-ti-connectivity</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/1414 #1414])
 You get asked during <code>pmbootstrap init</code> if you would like to install that proprietary firmware package.
-
-Once the device has been successfully initialized, enable it:
-
-<syntaxhighlight lang="shell-session">
-$ sudo ip link set wlan0 up
-$ sudo iw wlan0 set type managed
-</syntaxhighlight>
 
 Now you can use NetworkManager's console UI to connect to your network. Please note that <code>nmtui</code> does not work properly when started from <code>tmux</code>.
 
@@ -116,12 +108,13 @@ Now you can use NetworkManager's console UI to connect to your network. Please n
 $ nmtui
 </syntaxhighlight>
 
-==== Using wpa_supplicant only ====
-
+==== Without NetworkManager ====
 If NetworkManager should not work for you, make sure that it is not running and run the following commands to connect to an encrypted network manually:
 
 <syntaxhighlight lang="shell-session">
 $ sudo su -
+# ip link set wlan0 up
+# iw wlan0 set type managed
 # wpa_passphrase $YOUR_SSID > /etc/wpa_supplicant/wpa_supplicant.conf
 <enter passphrase here and press Enter>
 # exit
@@ -132,6 +125,10 @@ Connect to network using wpa_supplicant:
 <syntaxhighlight lang="shell-session">
 $ sudo rc-service wpa_supplicant restart
 </syntaxhighlight>
+
+==== Power saving / ping times ====
+
+See {{maemo-leste|172}}.
 
 === Sound ===
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
