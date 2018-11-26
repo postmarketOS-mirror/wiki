@@ -128,7 +128,7 @@ $ sudo rc-service wpa_supplicant restart
 
 ==== Power saving / ping times ====
 
-See {{maemo-leste|172}}.
+It should be possible to disable power saving for better ping times, see {{maemo-leste|172}}.
 
 === Sound ===
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
