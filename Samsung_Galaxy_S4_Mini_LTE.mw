@@ -37,7 +37,7 @@
 == Contributors ==
 * rrooij (initial port)
 * scintill (USB network, modem)
-* maccraft123 (Wiki page)
+* maccraft123 (Wiki page, testing)
 * Everyone else on IRC (feel free to put your name here!)
 
 == What works ==
@@ -56,6 +56,8 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
+* TTY Terminal
+* Xorg
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
