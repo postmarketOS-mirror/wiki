@@ -17,7 +17,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
@@ -37,6 +37,7 @@
 == Contributors ==
 * rrooij (initial port)
 * scintill (USB network, modem)
+* maccraft123 (Wiki page)
 * Everyone else on IRC (feel free to put your name here!)
 
 == What works ==
