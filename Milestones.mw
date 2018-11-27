@@ -156,3 +156,13 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * Get a daily driver configured with WiFi (including AP UI), email, IRC, Web, offline OpenStreetMap, DrRacket.
 * Find volunteer programmers for systems-level device support, UI, and apps.
 }}</onlyinclude>
+
+=== [https://github.com/konradybcio konradybcio] ===
+* [ ] Make it so mainline kernel boots reliably on Xperia M
+* [ ] Make a *usable* Xperia X port (with 4.9 kernel hwaccel could be a thing!)
+* [ ] Improve overall Xperia M support
+* [ ] Improve overall Xperia M4 support
+* [ ] Bump Xperia M4 to kernel 4.4 or at least 3.18
+* [ ] Make a port for a non-Android device (low priority, will require lots of work)
+* [ ] Perhaps once more devices get calling/sms support I could try making a notification sound / ringtone
+* [ ] Add more Sony devices, cause why not :D
