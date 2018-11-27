@@ -18,8 +18,8 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = -
-| status_wifi = -
+| status_screen = 
+| status_wifi = 
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
