@@ -21,7 +21,7 @@
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery =
+| status_battery = Y
 | status_3d = 
 | status_accel = Y
 | status_audio = 
@@ -45,6 +45,7 @@
 * Flashing postmarketos
 * Booting
 * Screen display
+* Multi-touch
 * Touch screen ({{github|1313}})
 * USB Networking ({{github|1260}})
 * Sending SMS via terminal ({{github|1314}})
