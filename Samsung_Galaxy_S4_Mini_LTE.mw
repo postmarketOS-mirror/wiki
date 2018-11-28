@@ -16,9 +16,9 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = Y
+| status_screen = P
 | status_wifi = Y
-| status_xwayland = 
+| status_xwayland = Y
 | status_fde = 
 | status_mainline = 
 | status_battery = Y
