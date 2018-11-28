@@ -166,3 +166,9 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * [ ] Make a port for a non-Android device (low priority, will require lots of work)
 * [ ] Perhaps once more devices get calling/sms support I could try making a notification sound / ringtone
 * [ ] Add more Sony devices, cause why not :D
+
+=== pinoaffe ===
+* [ ] Get uart access to xiaomi-gemini
+* [ ] Get mainline booting on xiaomi-gemini
+* [ ] Get either of my devices (xiaomi-gemini or xiaomi-santoni) working to the point where I can start dogfeeding
+* [ ] Develop native mobile programs for pmos to replace (some of) what I use android for
