@@ -139,7 +139,7 @@ Sometimes there is no other solution but to poke at random motherboard pins to f
 == Soldering a connector on your device ==
 This can be a bit involved, but is generally necessary if you want to use it:
 * This procedure is ''dangerous'' for your device, even more so if you are not very experienced
-** Prefer to ask help in a fablab or similar ''you'll practice another day on something easier''
+** Prefer to ask help in a hackerspace, makerspace, fablab or similar ''you'll practice another day on something easier''
 ** If you have to solder it yourself, it's probably a good idea to practice on an old motherboard before
 * Prefer soldering short cables to the PCB instead of full-length ones
 ** The smaller (diameter) the cables, the better, generally
@@ -147,7 +147,6 @@ This can be a bit involved, but is generally necessary if you want to use it:
 ** too small and it will be a hassle to work with
 ** The best is to have them a couple (4-8) centimeters long, to solder them, solder a connector on the other end, and scotch tape them to the pcb
 ** Please, don't forget to pick insulated wires
-
 
 == See also ==
 * [[Mainlining FAQ#Serial_cable]]
