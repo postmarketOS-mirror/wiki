@@ -41,10 +41,7 @@ This may also help, when your X11 is segfaulting (see {{github|779}}).
 See example patch: [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-huawei-y530/06_fix_mdss_fb_rgb_mode.patch 06_fix_mdss_fb_rgb_mode.patch]
 
 == My screen is red! ==
-Set <code>deviceinfo_weston_pixman_type</code> (usually to 2, see [[deviceinfo reference]]) to enable a workaround for Weston {{github|54}}.
-
-=== Kernel patch ===
-Alternatively, we have the following kernel patch. However, we don't recommend it anymore, since it seems to fix the colors in Weston, but causes the colors in kwin (Plasma Mobile) to be displayed wrong.
+Patch your kernel to report the right framebuffer information, for example with the following patch. If you have successfully patched your kernel that way, please edit this page and link to the merge request below (so we get a few more examples).
 
 <syntaxhighlight lang="diff">
 diff --git a/drivers/video/msm/mdss/mdss_fb.c b/drivers/video/msm/mdss/mdss_fb.c
