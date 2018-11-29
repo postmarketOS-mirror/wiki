@@ -184,20 +184,6 @@ These are used for flashing and booting the device, and most of them are fastboo
 | default: <code>"ext4"</code>, <code>"fat16"</code>
 |}
 
-== weston ==
-
-{{note|We used to duplicate options from the [https://manpages.debian.org/unstable/weston/weston.ini.5.en.html weston.ini], but we stopped that. [https://github.com/postmarketOS/pmbootstrap/pull/739] If you need to set weston specific options from your device (such as the output backend or the keymap), please add a weston.ini file to your aport [https://github.com/postmarketOS/pmbootstrap/blob/e7dfe9b9041f0c2ec94295df16afeeec1d9bafd8/aports/device/device-nokia-rx51/APKBUILD#L66-L70].}}
-
-{| class="wikitable sortable"
-! Variable
-! Description
-! Possibles values
-|-
-| <code>weston_pixman_type</code>
-| (optional) Use it as a workaround for [https://github.com/postmarketOS/pmbootstrap/issues/54 issue #54].
-| mostly <code>&quot;2&quot;</code> for ARGB, [https://github.com/postmarketOS/pmbootstrap/issues/141#issuecomment-314211363 all values]
-|}
-
 == splash ==
 
 {| class="wikitable sortable"
@@ -214,6 +200,11 @@ These are used for flashing and booting the device, and most of them are fastboo
 | 1280, 2560... other
 |}
 
+== Obsolete Options ==
+
+=== weston ===
+* <code>weston_pixman_type</code>: used to be a Weston specific workaround for the "red screen bug" ({{github|54}}): we patched Weston to accept a <code>--pixman-type</code> argument to override the framebuffer mode that the kernel driver reports. However, this patch was quickly incompatible with future changes in Weston, and it is not as good as [[Troubleshooting:display#My_screen_is_red.21|patching the kernel to report the right framebuffer mode]], so it was removed ({{issue|136|pmaports}}).
+* Various options from [https://manpages.debian.org/unstable/weston/weston.ini.5.en.html weston.ini] used to be duplicated, but this was removed in {{github|739}}. If you need to set weston specific options from your device (such as the output backend or the keymap), please add a weston.ini file to your pmaport ([https://github.com/postmarketOS/pmbootstrap/blob/e7dfe9b9041f0c2ec94295df16afeeec1d9bafd8/aports/device/device-nokia-rx51/APKBUILD#L66-L70 example]).
 
 == See also ==
 * [[Device specific package]]
