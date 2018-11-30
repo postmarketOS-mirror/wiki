@@ -57,8 +57,7 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* TTY Terminal
-* Xorg
+* TTY Terminal and Xorg(have to enable framebuffer console in kernel config)
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
