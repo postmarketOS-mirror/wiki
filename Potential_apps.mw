@@ -10,11 +10,6 @@ These are applications which already exist for Linux and could be reused in post
 |GPL2
 |Simple retro-themed touch UI written in vala
 |-
-|[https://github.com/mujx/nheko nheko (Matrix)]
-|GPL3
-|X11 and Wayland application (Native).  Touch-friendly version under development.
-|[https://pkgs.alpinelinux.org/packages?name=nheko Alpine repo]
-|-
 |[https://cgit.kde.org/marble.git KDE Marble (maps)] [https://marble.kde.org/]
 |LGPL
 |Touch-optimised mobile application. X11 and Wayland support.
