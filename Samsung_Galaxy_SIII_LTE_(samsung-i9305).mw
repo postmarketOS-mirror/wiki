@@ -34,27 +34,14 @@
 | booting = yes
 }}
 
+'''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII international GSM version without LTE).  (Neither of these SIII models should be confused with the North American SIII models, which require OS builds.)'''
+
 == Contributors ==
 * tyxieblub
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
-
-== What works ==
-
-* '''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII international GSM version without LTE).  (Neither of these SIII models should be confused with the North American SIII models, which require OS builds.)'''
-
-* Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
-* Touchscreen
-* Weston (only on SD card)
-* XWayland
-* Wifi
-* osk-sdl
-
-== What does not work ==
-
-* The rest
 
 == How to enter flash mode ==
 
@@ -63,46 +50,19 @@
 
 == Installation ==
 
-<source lang="shell">$ ./pmbootstrap.py init</source>
-
-Install to sdcard
-
-<source lang="shell">
-# Replace /dev/mmcblk with your actual sdcard device
-$ ./pmbootstrap.py install --sdcard=/dev/mmcblk
-</source>
-
-== Flashing ==
-
-- Set phone to ODIN mode
+Set phone to ODIN mode
 
   1. Turn off phone
   2. Connect USB cable
   3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
   4. Push VOLUME_UP to continue to ODIN mode screen
 
-- Build and flash the kernel
+At this point you can follow the [[Installation guide | general installation guide]]. 
+Installation to the system is not yet supported for the device, so make sure to install postmarketOS to the sdcard. Also be sure to disable FDE (<code>--no-fde</code>) as osk-sdl is not yet supported for this device, and enabling it would require you to telnet into the device to unlock it.
 
-  $ ./pmbootstrap.py flasher flash_kernel
+== Wifi ==
 
-- If flashing fails, try plugging the device into a USB 2.0 port.
-
-== Boot ==
-
-Once postmarketOS is installed on the sdcard and the kernel is flashed, you need telnet to unlock the root partition
-  
-  $ telnet 172.16.42.1
-  Trying 172.16.42.1...
-  Connected to 172.16.42.1.
-  Escape character is '^]'.
-
-  Enter passphrase for /dev/mapper/mmcblk1p2:
-
-Then you can SSH into the device.
-
-  $ ssh user@172.16.42.1
-
-== Wifi == 
+{{Todo|Make sure it works with NetworkManager and if it doesn't work out of the box replace the instructions here for NetworkManager specific ones}}
 
 To get the wifi working, you'll need to modify the wpa_supplicant confg
   
@@ -132,7 +92,3 @@ Reboot and you should be connected on boot.
 == Mainline Kernel ==
 There is currently no mainline kernel available but it should be possible to mainline this device. Have a look at [http://blog.forkwhiletrue.me/pages/midas-mainline/ Midas on Mainline] for work on mainlining very similar devices.
 Replicant is also interested in mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/1219#issuecomment-395876420].
-
-== Photos ==
-
-== Links ==
