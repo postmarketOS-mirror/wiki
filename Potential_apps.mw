@@ -123,11 +123,6 @@ These are applications which already exist for Linux and could be reused in post
 |Lightweight and touch-friendly web browser based on qt (source [http://code.qt.io/cgit/qt-apps/qtwebbrowser.git/]).
 |
 |-
-|[https://github.com/KDE/plasma-angelfish Angelfish]
-|GPL2
-|This is an experimental web browser designed to be used on small mobile devices, and to integrate well in Plasma workspaces.
-|
-|-
 |[https://github.com/ubports/webbrowser-app Ubports webbroswer-app]
 |GPL3
 |Webbrowser-app is a lightweight touch-friendly web browser tailored for Ubuntu, based on the Oxide web engine.
@@ -162,11 +157,6 @@ These are applications which already exist for Linux and could be reused in post
 |[http://modest.garage.maemo.org/ Modest Mail]
 |BSD and LGPL
 |Lightweight, touch-friendly email client designed for Nokia Maemo devices. (Not updated since 2010. Their source link is broken, but the code can be found [https://gitorious.org/maemo-garage/modest.git/ here].)
-|-
-|Firefox Desktop (with [[Firefox on Plasma Mobile|modifications for Mobile]])
-|MPL2
-|Standard Firefox web browser. The linked DIY modifications can improve touch-friendliness.
-|Alpine repo
 |-
 |[http://links.twibright.com/ links2]
 |GPL2
