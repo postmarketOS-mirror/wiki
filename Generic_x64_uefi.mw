@@ -6,6 +6,7 @@
 | imagecaption = CHANGE_ME
 | releaseyear = CHANGE_ME
 | architecture = x86_64
+| n-android = ✔
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
 | status_usbnet = Y
 | status_flashing = Y
