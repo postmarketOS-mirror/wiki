@@ -2,28 +2,49 @@
 
 == Using libhybris with your device ==
 
-''This is a stub copied from chat messages in #postmarketOS. Please extend if you are porting your device to libhybris.''
+=== Android system image ===
 
-* convert the halium system.img to a mountable image (basically what the [https://github.com/Halium/halium-scripts/blob/master/halium-install#L41-L52 halium install script] does)
-* install postmarketOS on the device without user interface and copy the new system.img to the device, to <code>/var/lib/lxc/android/system.img</code>
-* install the hybris related packages:
+First thing to do is convert the halium generated '''system.img''' to a mountable image (basically what the [https://github.com/Halium/halium-scripts/blob/master/halium-install#L41-L52 halium install script] does)
+and the new '''system.img''' to the device, to <code>/var/lib/lxc/android/system.img</code>
+
+=== Install the hybris related packages ===
 
 <syntaxhighlight lang="shell-session">
 $ sudo apk add lxc-android \
                xf86-video-hwcomposer \
-               xf86-video-hwcomposer-7.1-caf \
                libhybris \
                libhybris-egl \
                libhybris-gles \
                libhybris-libwayland-egl \
-               libhybris-7.1-caf \
                wayland-libs-client \
                wayland-libs-server
 </syntaxhighlight>
 
-* start the service:
+Depending if you need software which is built for Code Aurora Forum’s Android for MSM (generally nicknamed “CAF” for short):
+<syntaxhighlight lang="shell-session">
+$ sudo apk add libhybris-7.1-caf \
+               xf86-video-hwcomposer-7.1-caf               
+</syntaxhighlight>
+
+For all the other devices:
+<syntaxhighlight lang="shell-session">
+$ sudo apk add libhybris-7.1 \
+               xf86-video-hwcomposer-7.1               
+</syntaxhighlight>
+
+=== Start the android container ===
 <syntaxhighlight lang="shell-session">
 $ sudo rc-service lxc-android start
+</syntaxhighlight>
+
+=== Configure Xorg ===
+
+You need to create the <code>/etc/X11/xorg.conf.d/10-<device>.conf</code> with the following:
+<syntaxhighlight>
+Section "Device"
+  Identifier "Card0"
+  Driver "hwcomposer"
+EndSection
 </syntaxhighlight>
 
 == Test whether lxc-android works properly and kernel is correctly configured ==
