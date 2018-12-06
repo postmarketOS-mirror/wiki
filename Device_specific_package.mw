@@ -22,7 +22,7 @@ package() {
 }
 </syntaxhighlight>
 
-The variables <code>$startdir</code> and <code>$pkgname</code> are always available where they are used, and must be passed to these functions. <code>devicepkg_build</code> and <code>devicepkg_package</code> are simple shell scripts, and they get packaged from [https://gitlab.com/postmarketOS/pmbootstrap/tree/master/aports/main/devicepkg-dev here].
+The variables <code>$startdir</code> and <code>$pkgname</code> are always available where they are used, and must be passed to these functions. <code>devicepkg_build</code> and <code>devicepkg_package</code> are simple shell scripts, and they get packaged from [https://gitlab.com/postmarketOS/pmaports/tree/master/main/devicepkg-dev here].
 
 === devicepkg_build ===
 Optionally creates an udev rule for the device's touch screen, based on the data from the <code>deviceinfo</code>. We can extend this to do more when it makes sense.
@@ -33,7 +33,7 @@ Installs the <code>deviceinfo</code> file (to <code>/etc/deviceinfo</code>) and 
 == Use install_if to pull in packages ==
 If your device requires a specific X11 driver for example, it is possible to say: "Install this driver when this device package and Xorg are installed.".
 
-Here is one example from [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-qemu-amd64 <code>device-qemu-amd64</code>]:
+Here is one example from [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-qemu-amd64 <code>device-qemu-amd64</code>]:
 <syntaxhighlight lang="bash">
 subpackages="$pkgname-x11"
 
