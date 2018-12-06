@@ -191,6 +191,26 @@ General Setup -->
 
 Please enable it for postmarketOS, so busybox' syslogd can log to a ringbuffer in the kernel (fixes {{github|808}}).
 
+=== CONFIG_USE_VFB===
+
+'''About'''
+
+''Weston and Plasma Mobile might choose to draw on this virtual frame buffer, just like it happened for the samsung-jflte ({{issue|34|pmaports}}). Disabling the USE_VFB option fixed this, so let's make sure we don't have that option enabled for any kernel.''
+
+'''Location in menu'''
+
+<pre class="shell">
+Device Drivers -->
+  Graphics supports -->
+    MSM Framebuffer support -->
+      MSM Virtual Framebuffer support
+</pre>
+
+'''pmOS specific'''
+
+Please disable it, so we have one less source of failure.
+
+
 == Optional ==
 
 These kernel options are optional and for some devices required to fix some issues.
