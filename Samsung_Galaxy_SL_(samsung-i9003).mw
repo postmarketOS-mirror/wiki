@@ -52,6 +52,21 @@
 * ☐ Wifi
 * ☐ Audio playback
 
+== Wi-Fi ==
+This device has a wl1271 chip from TI. To use it, you need to install a non-free firmware '''linux-firmware-ti-connectivity'''
+
+<pre>apk add linux-firmware-ti-connectivity</pre>
+
+<pre>modprobe -r wl12xx_sdio && modprobe wl12xx_sdio
+
+ifconfig wlan0 up
+
+iw wlan0 set type managed
+
+wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+
+udhcpc -b -i wlan0</pre>
+
 == Display ==
 
 To adjust brightness: 
