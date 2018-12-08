@@ -58,11 +58,11 @@ The kernel boots, the rootfs flashes and mounts, and ssh works. However, the dev
 * The device uses 4096 byte sectors instead of 512 byte sectors, and requires a change in pmbootstrap to generate and flash images.
 * Screen doesn't work (no boot splash or Weston)
 * USB doesn't have correct idVendor/idProduct, since this kernel is more strict regarding the formatting. This breaks USB network when developing using VirtualBox USB passthrough.
-* See merge request {{MR|83}} for current status.
+* See merge request {{MR|83|pmaports}} for current status.
 
 == See also ==
 
-* {{MR|83}} Initial merge request
+* {{MR|83|pmaports}} Initial merge request
 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
