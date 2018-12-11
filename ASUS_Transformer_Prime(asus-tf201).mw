@@ -50,8 +50,7 @@ Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/
 * Kernel compiles
 * Flashable from within recovery (same as [[ASUS_Eee_Pad_Transformer_(asus-tf101)]])
 * Doesn't go beyond bootlogo
-* Having problems compiling with APANIC flag (to read last_kmesg - and figure out why) 
-* Current code:
+* Having problems compiling with APANIC flag (to read last_kmesg - and figure out why)
 
 == How to enter flash mode ==
 Longpress power (for reboot), then during reboot (feel the vibration) lower sound (to bootloader), and from bootloader higher sound to jump to recovery
