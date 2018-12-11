@@ -27,14 +27,16 @@ It is possible to boot postmarketOS from an sd card without overwriting the exis
 
 Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
 
-== What Device to chose? ==
-There are lots of device that can be usable with this OS, here is all supported device [https://wiki.postmarketos.org/wiki/Devices here] .
-If you don't want to face instillation issues, just go with well supported devices. Here are some suggested devices that supported well.
-* [https://wiki.postmarketos.org/wiki/Nokia_N900 Nokia N9] 
-* [https://wiki.postmarketos.org/wiki/Sony_Xperia_Z2_Tablet_(sony-castor-windy) Sony Xperia Z2 Tablet] 
-* [https://wiki.postmarketos.org/wiki/Google_Nexus_5X(lg-bullhead) Google Nexus 5X] 
-* [https://wiki.postmarketos.org/wiki/Google_Nexus_5_(lg-hammerhead) Google Nexus 5] 
-* [https://wiki.postmarketos.org/wiki/Nokia_N900 Nokia N9]
+== What device to chose? ==
+There are lots of devices that can boot this OS, [https://wiki.postmarketos.org/wiki/Devices here] is a list of all of them.
+
+The most supported ones are:
+* [https://wiki.postmarketos.org/wiki/Nokia_N900 Nokia N900]
+* [https://wiki.postmarketos.org/wiki/Google_Nexus_5_(lg-hammerhead) Google Nexus 5]
+* [https://wiki.postmarketos.org/wiki/Sony_Xperia_Z2_Tablet_(sony-castor-windy) Sony Xperia Z2 Tablet]
+* [https://wiki.postmarketos.org/wiki/Sony_Xperia_Z2_(sony-sirius) Sony Xperia Z2]
+* [https://wiki.postmarketos.org/wiki/Nokia_N9 Nokia N9]
+* [https://wiki.postmarketos.org/wiki/Teclast_X80_Pro_(teclast-x80pro) Teclast X80 Pro]
 
 == What user interface is supported? ==
 There are many user interface that is already running.
