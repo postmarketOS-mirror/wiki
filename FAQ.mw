@@ -47,8 +47,7 @@ Most popular toolkit is supported.
 * Gtk toolkit > 3.24.1
 
 == How to install pmOS? ==
-Installing pmOs is very easy. Here is a detail [https://wiki.postmarketos.org/wiki/Installation_guide guide]
-
+Please refer to our [https://wiki.postmarketos.org/wiki/Installation_guide installation guide].
 
 == Will the armhf packages will work on aarch64? ==
 Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
