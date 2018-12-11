@@ -8,12 +8,12 @@
 | releaseyear = 2011
 | originalsoftware = Android 3.2
 | chipset = Nvidia Tegra 3
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = CHANGE_ME <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, aarch64, x86, x86_64 -->
+| cpu = 1.3 GHz quad-core Nvidia Tegra 3 T30
+| gpu = GeForce ULP
+| storage = 32 GB
+| display = 1200x800 LED
+| memory = 1GB
+| architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -37,13 +37,23 @@
 }}
 
 == Contributors ==
-* CHANGE_ME (put your username here!)
+* rogier.oudshoorn
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
+== Based on ==
+Katkiss 7.1
+
+== Status ==
+* Kernel compiles
+* Flashable from within recovery (same as [[Asus_Eee_Pad_Transformer_Prime]])
+* Doesn't go beyond bootlogo
+* Having problems compiling with APANIC flag (to read last_kmesg - and figure out why) 
+
 == How to enter flash mode ==
+Longpress power (for reboot), then lower sound (to bootloader), and from bootloader higher sound to jump to recovery
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
