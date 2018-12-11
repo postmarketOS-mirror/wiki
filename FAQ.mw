@@ -27,27 +27,10 @@ It is possible to boot postmarketOS from an sd card without overwriting the exis
 
 Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
 
-== What device to chose? ==
-There are lots of devices that can boot this OS, [https://wiki.postmarketos.org/wiki/Devices here] is a list of all of them.
-
-The most supported ones are:
-* [https://wiki.postmarketos.org/wiki/Nokia_N900 Nokia N900]
-* [https://wiki.postmarketos.org/wiki/Google_Nexus_5_(lg-hammerhead) Google Nexus 5]
-* [https://wiki.postmarketos.org/wiki/Sony_Xperia_Z2_Tablet_(sony-castor-windy) Sony Xperia Z2 Tablet]
-* [https://wiki.postmarketos.org/wiki/Sony_Xperia_Z2_(sony-sirius) Sony Xperia Z2]
-* [https://wiki.postmarketos.org/wiki/Nokia_N9 Nokia N9]
-* [https://wiki.postmarketos.org/wiki/Teclast_X80_Pro_(teclast-x80pro) Teclast X80 Pro]
-
-== What user interface is supported? ==
-The list is available [https://wiki.postmarketos.org/wiki/Interfaces here].
-
 == What toolkit is supported? ==
 Most popular toolkit is supported.
 * Qt toolkit > 5.10
 * Gtk toolkit > 3.24.1
-
-== How to install pmOS? ==
-Please refer to our [https://wiki.postmarketos.org/wiki/Installation_guide installation guide].
 
 == Will the armhf packages will work on aarch64? ==
 Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
@@ -61,7 +44,6 @@ No. We'll need something like that. Supporting PackageKit could be one approach 
 == Is there a repository only for postmarketOS? ==
 Yes, we have our own repository. Here is the repo [http://postmarketos.brixit.nl/ link ]. The package build recipes (APKBUILDs) are in the 
 [ https://gitlab.com/postmarketOS/pmaports/ pmaports] repository.
-
 
 == What file system will be installed after flash? ==
 We're only using ext4 right now. People can add other file-systems in [https://gitlab.com/postmarketOS/pmbootstrap/ pmbootstrap] if they need them.
@@ -83,8 +65,6 @@ Not sure:
 * Networking.
 * Joystick.
 
-= Development =
-See also: [[Development guide]]
 == Why don't we use firmware files from Android's firmware partition? ==
 When we package it directly, we have the following advantages (see the discussion in {{github|637}}):
 * We know which version we have
