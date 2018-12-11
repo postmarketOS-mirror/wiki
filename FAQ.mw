@@ -33,7 +33,7 @@ Other dual boot solutions are not supported, but it should not be that hard to a
 This guide is for those who don't want a working daily usable device with call,sms support.
 To start using the os you need a device with PostmarketOS installed.
 
-=== What Device to chose? ===
+== What Device to chose? ==
 There are lots of device that can be usable with this OS, here is all supported device [https://wiki.postmarketos.org/wiki/Devices here] .
 If you don't want to face instillation issues, just go with well supported devices. Here are some suggested devices that supported well.
 * [https://wiki.postmarketos.org/wiki/Nokia_N900 Nokia N9] 
@@ -42,7 +42,7 @@ If you don't want to face instillation issues, just go with well supported devic
 * [https://wiki.postmarketos.org/wiki/Google_Nexus_5_(lg-hammerhead) Google Nexus 5] 
 * [https://wiki.postmarketos.org/wiki/Nokia_N900 Nokia N9]
 
-=== What user interface is supported? ===
+== What user interface is supported? ==
 There are many user interface that is already running.
  
  Touch based
@@ -55,43 +55,43 @@ There are many user interface that is already running.
 
 Recommended user interface is xfce and Plasma. As they are currently in development .
 
-=== What toolkit is supported? ===
+== What toolkit is supported? ==
 Most popular toolkit is supported.
 * Qt toolkit > 5.10
 * Gtk toolkit > 3.24.1
 
-=== How to install pmOS ===
+== How to install pmOS ==
 Installing pmOs is very easy. Here is a detail [https://wiki.postmarketos.org/wiki/Installation_guide guide]
 
 
-=== Will the armhf packages will work on aarch64? ===
+== Will the armhf packages will work on aarch64? ==
 Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
 
 
-=== Support for flatpack,snap and Appimage is coming? ===
+== Support for flatpack,snap and Appimage is coming? ==
 Nobody worked on this yet, and it's questionable how useful that would be. Even if we supported that, it would not be compatible with existing snaps/flatpacks etc, because the binaries in these are linked against the glibc (GNU libc), not against musl libc.
 
 
-=== Any gui front-end for package management? ===
+== Any gui front-end for package management? ==
 No. We'll need something like that. Supporting PackageKit could be one approach [https://gitlab.com/postmarketOS/pmaports/issues/12 pmaports#12].
 
-=== Is there a repository only for postmarketOS? ===
+== Is there a repository only for postmarketOS? ==
 Yes, we have our own repository. Here is the repo [http://postmarketos.brixit.nl/ link ]. The package build recipes (APKBUILDs) are in the 
 [ https://gitlab.com/postmarketOS/pmaports/ pmaports] repository.
 
 
-=== What file system will be installed after flash? ===
+== What file system will be installed after flash? ==
 We're only using ext4 right now. People can add other file-systems in [https://gitlab.com/postmarketOS/pmbootstrap/ pmbootstrap] if they need them.
 
-=== What is the to-dos and future of os? ===
+== What is the to-dos and future of os? ==
 Detailed TODOs can be found in the gitlab [ https://gitlab.com/groups/postmarketOS/-/issues issues.]
 Some of them have a "help wanted" label:[ https://gitlab.com/postmarketOS/pmbootstrap/issues?label_name%5B%5D=help+wanted here].
 The big picture is discussed in this thread currently: [ https://gitlab.com/postmarketOS/postmarketos.org/issues/83 postmarketos.org#83].
 
-=== Is postmarketOS is build (packages , kernel) in my system then make an image ? ===
+== Is postmarketOS is build (packages , kernel) in my system then make an image ? ===
 You build the rootfs image on your PC with binary packages from the postmarketOS binary repository. Missing packages get built locally. But usually the repo is up-to-date. Building packages locally is useful for development.
 
-=== which USB/Wireless peripherals works ? ===
+== which USB/Wireless peripherals works ? ==
 Works
 * USB mouse and keyboard.
 Not-works
