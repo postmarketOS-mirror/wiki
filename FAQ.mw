@@ -84,10 +84,10 @@ Detailed TODOs can be found in the gitlab [https://gitlab.com/groups/postmarketO
 Some of them have a "help wanted" label:[https://gitlab.com/postmarketOS/pmbootstrap/issues?label_name%5B%5D=help+wanted here].
 The big picture is discussed in this thread currently: [https://gitlab.com/postmarketOS/postmarketos.org/issues/83 postmarketos.org#83].
 
-== Is postmarketOS is build (packages , kernel) in my system then make an image ? ==
+== Is postmarketOS build (packages ,kernel) in my system then make an image? ==
 You build the rootfs image on your PC with binary packages from the postmarketOS binary repository. Missing packages get built locally. But usually the repo is up-to-date. Building packages locally is useful for development.
 
-== which USB/Wireless peripherals works ? ==
+== which USB/Wireless peripherals works? ==
 Works
 * USB mouse and keyboard.
 Not-works
