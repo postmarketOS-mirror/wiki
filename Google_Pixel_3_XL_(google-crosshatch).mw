@@ -15,13 +15,13 @@
 | memory = 4 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
-| status_usbnet = P
-| status_flashing = P
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = N
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = P
 | status_wifi = N
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_fde = N
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
@@ -56,8 +56,11 @@ To enter Fastboot mode, hold Volume Down while powering on the device. Let go of
 The kernel boots, the rootfs flashes and mounts, and ssh works. However, the device is not ready for merging yet, due to these issues:
 
 * The device uses 4096 byte sectors instead of 512 byte sectors, and requires a change in pmbootstrap to generate and flash images.
-* Screen doesn't work (no boot splash or Weston)
-* USB doesn't have correct idVendor/idProduct, since this kernel is more strict regarding the formatting. This breaks USB network when developing using VirtualBox USB passthrough.
+* Screen only works in Plasma Mobile; doesn't work with boot splash, FDE, or Weston
+* USB doesn't have correct idVendor/idProduct, since this kernel is more strict regarding the formatting.
+
+This breaks USB network when developing using VirtualBox USB passthrough: attaching the device to the VM works, and I can ssh into the device from the VM, but detaching doesn't work properly.
+
 * See merge request {{MR|83|pmaports}} for current status.
 
 == See also ==
