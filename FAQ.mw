@@ -66,7 +66,7 @@ Yes, we have our own repository. Here is the repo [http://postmarketos.brixit.nl
 == What file system will be installed after flash? ==
 We're only using ext4 right now. People can add other file-systems in [https://gitlab.com/postmarketOS/pmbootstrap/ pmbootstrap] if they need them.
 
-== What is the to-dos and future of os? ==
+== What are the TODOs and where is the OS heading? ==
 Detailed TODOs can be found in the gitlab [https://gitlab.com/groups/postmarketOS/-/issues issues].
 Some of them have a "help wanted" label:[https://gitlab.com/postmarketOS/pmbootstrap/issues?label_name%5B%5D=help+wanted here].
 The big picture is discussed in this thread currently: [https://gitlab.com/postmarketOS/postmarketos.org/issues/83 postmarketos.org#83].
