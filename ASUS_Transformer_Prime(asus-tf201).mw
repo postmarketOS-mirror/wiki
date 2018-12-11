@@ -44,7 +44,7 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == Based on ==
-Katkiss 7.1
+Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/rom-t3457417 XDA link]
 
 == Status ==
 * Kernel compiles
@@ -53,10 +53,10 @@ Katkiss 7.1
 * Having problems compiling with APANIC flag (to read last_kmesg - and figure out why) 
 
 == How to enter flash mode ==
-Longpress power (for reboot), then lower sound (to bootloader), and from bootloader higher sound to jump to recovery
+Longpress power (for reboot), then during reboot (feel the vibration) lower sound (to bootloader), and from bootloader higher sound to jump to recovery
 
 == Installation ==
-You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader)
+You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader). Please follow this [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 guide on XDA] if you're not.
 
 # <pre>./pmbootstrap.py install --no-fde</pre>
 # <pre>./pmbootstrap.py export</pre>
