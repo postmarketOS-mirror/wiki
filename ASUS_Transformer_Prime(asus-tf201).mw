@@ -52,6 +52,7 @@ Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/
 * Flashable from within recovery (same as [[ASUS_Eee_Pad_Transformer_(asus-tf101)]])
 * Doesn't go beyond bootlogo
 * Having problems compiling with APANIC flag (to read last_kmesg - and figure out why) 
+* Current code:
 
 == How to enter flash mode ==
 Longpress power (for reboot), then during reboot (feel the vibration) lower sound (to bootloader), and from bootloader higher sound to jump to recovery
@@ -77,6 +78,7 @@ Note: Other ways of flashing do not work. This is exactly how the katkiss androi
 * Katkiss android ROM [https://forum.xda-developers.com/transformer-tf700/development/rom-t3457417 XDA link]
 * How to get your tf201 to katkiss [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 XDA link]
 * More about the device [https://en.wikipedia.org/wiki/Asus_Eee_Pad_Transformer_Prime Wikipedia entry]
+* WIP feature branch [https://gitlab.com/rogier.oudshoorn/pmaports/commits/feature/asus-tf201 Gitlab]
 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
