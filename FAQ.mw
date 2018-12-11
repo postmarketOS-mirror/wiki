@@ -29,10 +29,6 @@ It is possible to boot postmarketOS from an sd card without overwriting the exis
 
 Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
 
-
-This guide is for those who don't want a working daily usable device with call,sms support.
-To start using the os you need a device with PostmarketOS installed.
-
 == What Device to chose? ==
 There are lots of device that can be usable with this OS, here is all supported device [https://wiki.postmarketos.org/wiki/Devices here] .
 If you don't want to face instillation issues, just go with well supported devices. Here are some suggested devices that supported well.
@@ -60,7 +56,7 @@ Most popular toolkit is supported.
 * Qt toolkit > 5.10
 * Gtk toolkit > 3.24.1
 
-== How to install pmOS ==
+== How to install pmOS? ==
 Installing pmOs is very easy. Here is a detail [https://wiki.postmarketos.org/wiki/Installation_guide guide]
 
 
@@ -88,7 +84,7 @@ Detailed TODOs can be found in the gitlab [https://gitlab.com/groups/postmarketO
 Some of them have a "help wanted" label:[https://gitlab.com/postmarketOS/pmbootstrap/issues?label_name%5B%5D=help+wanted here].
 The big picture is discussed in this thread currently: [https://gitlab.com/postmarketOS/postmarketos.org/issues/83 postmarketos.org#83].
 
-== Is postmarketOS is build (packages , kernel) in my system then make an image ? ===
+== Is postmarketOS is build (packages , kernel) in my system then make an image ? ==
 You build the rootfs image on your PC with binary packages from the postmarketOS binary repository. Missing packages get built locally. But usually the repo is up-to-date. Building packages locally is useful for development.
 
 == which USB/Wireless peripherals works ? ==
