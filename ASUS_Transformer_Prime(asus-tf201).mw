@@ -74,6 +74,10 @@ The following should be executed within adb shell:
 Note: Other ways of flashing do not work. This is exactly how the katkiss android ROM is flashed to the device.
 
 == See also ==
+* Katkiss android ROM [https://forum.xda-developers.com/transformer-tf700/development/rom-t3457417 XDA link]
+* How to get your tf201 to katkiss [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 XDA link]
+* More about the device [https://en.wikipedia.org/wiki/Asus_Eee_Pad_Transformer_Prime Wikipedia entry]
+
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
