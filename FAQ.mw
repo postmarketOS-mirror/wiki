@@ -1,9 +1,7 @@
-=== What Linux is postmarketOS based on? ===
+== What Linux is postmarketOS based on? ==
 it is based on Alpine Edge right now. We want to change it to a stable version in the future [https://gitlab.com/postmarketOS/pmaports/issues/5 pmaports#5].
 
-
 == Why is postmarketOS based on Alpine Linux? ==
-
 The biggest upside is, that Alpine is small. The base installation is about '''5 MB'''! Only because of that, our development/installation tool <code>pmbootstrap</code> is able to abstract everything in chroots and therefore keep the development environment the same, no matter which Linux distribution your host runs on.
 
 And if you messed up (or we have a bug), you can simply run <code>pmbootstrap zap</code> and the chroot will be set up again in seconds. Imagine how long it would take to do the same with Debian (which is a fine distributions for plenty of other use cases).
