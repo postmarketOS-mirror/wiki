@@ -52,7 +52,6 @@ Please refer to our [https://wiki.postmarketos.org/wiki/Installation_guide insta
 == Will the armhf packages will work on aarch64? ==
 Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
 
-
 == Support for flatpack,snap and Appimage is coming? ==
 Nobody worked on this yet, and it's questionable how useful that would be. Even if we supported that, it would not be compatible with existing snaps/flatpacks etc, because the binaries in these are linked against the glibc (GNU libc), not against musl libc.
 
