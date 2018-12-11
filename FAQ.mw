@@ -39,17 +39,7 @@ The most supported ones are:
 * [https://wiki.postmarketos.org/wiki/Teclast_X80_Pro_(teclast-x80pro) Teclast X80 Pro]
 
 == What user interface is supported? ==
-There are many user interface that is already running.
- 
- Touch based
-  * Plasma
-  * Matchbox
-  * Hildon
-
- Desktop environment
-  * xfce 
-
-Recommended user interface is xfce and Plasma. As they are currently in development .
+The list is available [https://wiki.postmarketos.org/wiki/Interfaces here].
 
 == What toolkit is supported? ==
 Most popular toolkit is supported.
