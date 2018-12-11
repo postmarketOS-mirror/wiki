@@ -74,7 +74,7 @@ The big picture is discussed in this thread currently: [https://gitlab.com/postm
 == Is postmarketOS build (packages ,kernel) in my system then make an image? ==
 You build the rootfs image on your PC with binary packages from the postmarketOS binary repository. Missing packages get built locally. But usually the repo is up-to-date. Building packages locally is useful for development.
 
-== which USB/Wireless peripherals work? ==
+== Which USB/Wireless peripherals work? ==
 Works:
 * USB mouse and keyboard.
 Doesn't work:
