@@ -48,7 +48,7 @@ Katkiss 7.1
 
 == Status ==
 * Kernel compiles
-* Flashable from within recovery (same as [[Asus_Eee_Pad_Transformer_Prime]])
+* Flashable from within recovery (same as [[ASUS_Eee_Pad_Transformer_(asus-tf101)]])
 * Doesn't go beyond bootlogo
 * Having problems compiling with APANIC flag (to read last_kmesg - and figure out why) 
 
@@ -56,7 +56,21 @@ Katkiss 7.1
 Longpress power (for reboot), then lower sound (to bootloader), and from bootloader higher sound to jump to recovery
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader)
+
+# <pre>./pmbootstrap.py install --no-fde</pre>
+# <pre>./pmbootstrap.py export</pre>
+# Reboot the device in recovery
+# <pre>adb push /tmp/postmarketOS-export/blob-asus-tf201 /cache</pre>
+# <pre>adb push /tmp/postmarketOS-export/asus-tf201.img /cache</pre>
+
+The following should be executed within adb shell:
+
+# <pre>adb shell</pre>
+# <pre>dd if=/cache/blob-asus-tf201 of=/dev/block/mmcblk0p4</pre>
+# <pre>dd if=/cache/asus-tf201.img of=/dev/block/mmcblk0p1</pre>
+
+Note: Other ways of flashing do not work. This is exactly how the katkiss android ROM is flashed to the device.
 
 == See also ==
 <!--
