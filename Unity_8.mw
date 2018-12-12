@@ -9,7 +9,7 @@
 The convergent desktop environment.
 
 == Status ==
-Still being packaged. All required individual packages are packaged but configuration is needed.
+Still being packaged. All required individual packages are packaged but configuration is needed. Here is the latest update [https://github.com/z3ntu/ubuntu-app-launch/commits/bionic page]
 
 == Installation ==
 Since it isn't yet finished, there is no UI meta package for it yet and it can not be selected in <code>pmbootstrap</code>. It can however be installed manually for now.
