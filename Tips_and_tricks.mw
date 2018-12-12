@@ -9,6 +9,12 @@ To disable this check, and to allow you to connect by running <code>ssh postmark
 
 {{note|'''Warning''': Ignoring host keys could leave you vulnerable to a [https://en.wikipedia.org/wiki/Man-in-the-middle_attack Man-in-the-middle attack]}}
 
+=== Some interesting ideas ===
+Here are some interesting ideas that you can do with your device with postmarketOS
+* Use it as a mini retro handheld gaming device. As there are many good retro emulator that ccan make your device one great gaming device.
+* Use it as a mini penetration testing device. As postmarketOS is a pure linux os, you can run [https://en.wikipedia.org/wiki/Wireshark Wireshark] and other penetration testing software with it.
+* You can run full Desktop Environment, with [https://en.wikipedia.org/wiki/Inkscape Inkscape], [https://en.wikipedia.org/wiki/GIMP GIMP] and full desktop browser(not mobile version) with extension in your device, .
+
 === Misc ===
 
 * The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
