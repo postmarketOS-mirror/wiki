@@ -1,0 +1,72 @@
+<div style="clear: both"></div>
+<!--========================================================================================-->
+= Getting Started =
+
+<!-------------------------------------------------------------------------------------------->
+<!--Overview-->
+<div style="float: left; width: 50%">
+
+=== Overview ===
+{|
+[[File:Manjaro.png|left|96px]]
+|
+* '''[[Manjaro|Manjaro Overview]]'''
+: ''Various articles to answer all your questions!''
+
+* '''[[Using Manjaro for Beginners|Using Manjaro]]'''
+: ''New to Manjaro? Start here for an overview! ''
+|}
+</div>
+
+<!-------------------------------------------------------------------------------------------->
+<!--On Line-->
+<div style="float: right; width: 50%">
+
+=== On-Line and Support ===
+{|
+[[File:on-line1.png|left|96px]]
+|
+* '''[[Manjaro On-line]]'''
+: ''Our blog, forum, Twitter, Reddit, and Facebook accounts.''
+
+* '''[[Manjaro IRC]]'''
+: ''Additional direct support for Manjaro users.''
+|}
+</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
+
+
+<!-------------------------------------------------------------------------------------------->
+<!--Get Manjaro-->
+<div style="float: left; width: 50%">
+
+=== Get Manjaro ===
+{|
+[[File:Download_square.png|left|96px]]
+|
+* '''[[Download Manjaro]]'''
+: ''Where to find the latest and greatest Manjaro releases.''
+
+* '''[[Check a Downloaded ISO Image For Errors]]'''
+: ''Check your Manjaro download for errors in Linux and Windows.''
+|}
+</div>
+
+<!-------------------------------------------------------------------------------------------->
+<!--Installation-->
+<div style="float: right; width: 50%">
+
+=== Installation ===
+{|
+* '''[[Burn an ISO File]]'''
+: ''Burn Manjaro to CD/DVD or USB stick in Linux and Windows.''
+
+* '''[[Installation Guides|Install Manjaro]]'''
+: ''Installation and partitioning guides for beginners and experienced users.''
+|}
+</div>
+
+
+<div style="clear: both"></div>
+
+
+<!--========================================================================================-->
