@@ -71,6 +71,3 @@ When we package it directly, we have the following advantages (see the discussio
 * We can update it easily (either with official new versions, or with hacks like nexmon)
 * We don't run into conflict with other OSes that may be installed on the device (e.g. when uninstalling pmOS and installing another ROM, or when doing NFS boot)
 * This also works for non-Android devices, which may not have such a firmware partition.
- 
-== Why do we use squash 'n' merge for pull requests? ==
-See: [[Merge Workflow]]
