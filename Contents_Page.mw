@@ -1,9 +1,27 @@
+__NOTOC__
+<!--Maybe it's time to replace the Weston screenshot here?-->
+[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://gitlab.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
+
+
+<!--========================================================================================-->
+
+{| style="float:right"
+|[[File:LuneOS Browser.png|200x200px]]
+|[[File:Samsung-s5-weston.jpg|200x200px]]
+|[[File:T3-weston.jpg|200x200px]]
+|[[File:PostmarketOS_on_SGP611.png|200x200px]]
+|[[File:I9505.jpg|200x200px]]
+|[[File:Sony_yuga_weston.jpg|200x200px]]
+|}
+
 <div style="clear: both"></div>
+<!--========================================================================================-->
+
 <!--========================================================================================-->
 = Getting Started =
 
 <!-------------------------------------------------------------------------------------------->
-<!--Overview-->
+<!--Introduction-->
 <div style="float: left; width: 50%">
 
 === Introduction ===
@@ -17,19 +35,16 @@
 </div>
 
 <!-------------------------------------------------------------------------------------------->
-<!--Communication channels-->
+<!--Alpine Linux-->
 <div style="float: right; width: 50%">
 
-=== Communication channels ===
+=== Alpine Linux ===
 {|
-* '''[https://wiki.postmarketos.org/wiki/Matrix_and_IRC Matrix_and_IRC]'''
-: ''Live chat makes development easier.''
+* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
+: ''APKBUILD file guide.''
 
-* '''[https://gitlab.com/postmarketOS/pmbootstrap/issues Issuetracker]'''
-: ''Besides bugs, lots feature ideas and questions''
-
-* '''[https://reddit.com/r/postmarketOS Reddit]'''
-: ''photos of devices running pmOS, blog posts, questions, official announcements''
+* '''[https://pkgs.alpinelinux.org/packages Alpine Packages]'''
+: ''Website like for Alpine Package search.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
@@ -43,6 +58,15 @@
 * '''[https://wiki.postmarketos.org/wiki/Boot_process Boot process]'''
 : ''Live chat makes development easier.''
 
+* '''[https://wiki.postmarketos.org/wiki/FAQ FAQ]'''
+: ''Some questions answer related to this project ''
+
+* '''[https://wiki.postmarketos.org/wiki/Screen_Calibration Screen Calibration]'''
+: ''Guide for Screen Calibration.''
+
+* '''[https://wiki.postmarketos.org/wiki/Serial_debugging Serial debugging]'''
+: ''Some phones have a serial port accessible from the outside''
+
 * '''[https://wiki.postmarketos.org/wiki/Deviceinfo_reference Deviceinfo reference]'''
 : ''Our work-in-progress device-specific file format.''
 
@@ -52,8 +76,7 @@
 * '''[https://wiki.postmarketos.org/wiki/Glossary Glossary]'''
 : ''List of technical term related to this project ''
 |}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
+</div>
 
 <!-------------------------------------------------------------------------------------------->
 <!--Development-->
@@ -63,6 +86,9 @@
 {|
 * '''[https://wiki.postmarketos.org/wiki/Porting_to_a_new_device Porting to a new device]'''
 : ''Porting to a new device and general installation guide.''
+
+* '''[https://wiki.postmarketos.org/wiki/Using_prebuilt_kernels Using prebuilt kernels]'''
+: ''start hacking on postmarketOS without having the kernel source code.''
 
 * '''[https://wiki.postmarketos.org/wiki/Troubleshooting Troubleshooting]'''
 : ''The page to read when something isn't working.''
@@ -88,7 +114,7 @@
 * '''[https://wiki.postmarketos.org/wiki/Upstreaming Upstreaming]'''
 : ''Contribute the patches and improvements  back to the original project.''
 |}
-</div>
+</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
 <!-------------------------------------------------------------------------------------------->
 <!--Devices & Installation-->
@@ -107,12 +133,6 @@
 
 * '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wishlist]'''
 : ''devices we would like to see pmOS running on.''
-
-* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
-: ''The phone interfaces we are working on.''
-
-* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
-: ''about running unfixable outdated firmware software.''
 |}
 </div>
 
@@ -128,19 +148,13 @@
 * '''[https://wiki.postmarketos.org/wiki/Tips_and_tricks Tips and tricks]'''
 : ''Different Flash methods for different devices.''
 
-* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
-: ''quite a few Android devices, plus the Flame and N900.''
-
-* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wishlist]'''
-: ''devices we would like to see pmOS running on.''
-
 * '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
 : ''The phone interfaces we are working on.''
 
 * '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
 : ''about running unfixable outdated firmware software.''
 |}
-</div>
+</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
 <!-------------------------------------------------------------------------------------------->
 <!--Software Management-->
@@ -160,8 +174,25 @@
 * '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
 : ''The phone interfaces we are working on.''
 
-* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
-: ''about running unfixable outdated firmware software.''
+* '''[postmarketos.brixit.nl PostmarketOS Repository]'''
+: ''Offical repository of PostmarketOS.''
+|}
+</div>
+
+<!-------------------------------------------------------------------------------------------->
+<!--Communication channels-->
+<div style="float: right; width: 50%">
+
+=== Communication channels ===
+{|
+* '''[https://wiki.postmarketos.org/wiki/Matrix_and_IRC Matrix_and_IRC]'''
+: ''Live chat makes development easier.''
+
+* '''[https://gitlab.com/postmarketOS/pmbootstrap/issues Issuetracker]'''
+: ''Besides bugs, lots feature ideas and questions''
+
+* '''[https://reddit.com/r/postmarketOS Reddit]'''
+: ''photos of devices running pmOS, blog posts, questions, official announcements''
 |}
 </div>
 
@@ -169,4 +200,31 @@
 <div style="clear: both"></div>
 
 
+<!--========================================================================================-->
+
+<!--========================================================================================-->
+
+= Wiki Editing =
+<div style="float: left; width: 50%">
+{|
+* [[https://wiki.postmarketos.org/wiki/Templates Templates]]
+: ''List of postmarketOS Wiki specific templates.''
+
+* [[https://www.mediawiki.org/wiki/Help:Formatting MediaWiki formatting]]
+: ''MediaWiki specific markup reference''
+
+* [[https://wiki.postmarketos.org/wiki/Special:ListFiles Gallery ]]
+: ''List of files uploaded to the Wiki.''
+
+|}
+</div>
+
+<div style="float: right; width: 50%">
+* [[https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting]]
+: ''display shell-session listings or source code.''
+
+* [[https://github.com/Git-Mediawiki/Git-Mediawiki Mass editing with git]]
+: ''Editing.''
+</div>
+<div style="clear: both"></div>
 <!--========================================================================================-->
