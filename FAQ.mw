@@ -27,10 +27,8 @@ It is possible to boot postmarketOS from an sd card without overwriting the exis
 
 Other dual boot solutions are not supported, but it should not be that hard to add them, if you know how these work. See {{github|421}} for ideas.
 
-== What toolkit is supported? ==
-Most popular toolkit is supported.
-* Qt toolkit > 5.10
-* Gtk toolkit > 3.24.1
+== Which GUI toolkits are supported? ==
+The ones that Alpine provides, use its [http://pkgs.alpinelinux.org/ package search] to find the toolkits and versions. The typically used ones, QT5 and GTK+3 are among them.
 
 == Will the armhf packages will work on aarch64? ==
 Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
