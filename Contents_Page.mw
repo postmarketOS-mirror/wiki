@@ -26,25 +26,31 @@ __NOTOC__
 
 === Introduction ===
 {|
-* '''[https://ollieparanoid.github.io/post/postmarketOS/ PostmarketOS Introduction]'''
-: ''the utopic vision and goals!''
+* '''[https://ollieparanoid.github.io/post/postmarketOS/ postmarketOS Introduction]'''
+: ''The utopic vision and goals!''
 
 * '''[https://wiki.postmarketos.org/wiki/Milestones Milestones]'''
-: ''where individuals want to take the project! ''
+: ''Where individuals want to take the project! ''
 |}
 </div>
 
 <!-------------------------------------------------------------------------------------------->
-<!--Alpine Linux-->
+<!--Devices & Installation-->
 <div style="float: right; width: 50%">
 
-=== Alpine Linux ===
+=== Devices & Installation ===
 {|
-* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
-: ''APKBUILD file guide.''
+* '''[https://wiki.postmarketos.org/wiki/Installation_guide Installation guide]'''
+: ''Installation guide for devices which are already working.''
 
-* '''[https://pkgs.alpinelinux.org/packages Alpine Packages]'''
-: ''Website like for Alpine Package search.''
+* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods Flash methods]'''
+: ''Different Flash methods for different devices.''
+
+* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
+: ''Quite a few Android devices, plus the Flame and N900.''
+
+* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wishlist]'''
+: ''Devices we would like to see pmOS running on.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
@@ -88,7 +94,7 @@ __NOTOC__
 : ''Porting to a new device and general installation guide.''
 
 * '''[https://wiki.postmarketos.org/wiki/Using_prebuilt_kernels Using prebuilt kernels]'''
-: ''start hacking on postmarketOS without having the kernel source code.''
+: ''Start hacking on postmarketOS without having the kernel source code.''
 
 * '''[https://wiki.postmarketos.org/wiki/Troubleshooting Troubleshooting]'''
 : ''The page to read when something isn't working.''
@@ -112,38 +118,32 @@ __NOTOC__
 : ''Taking care of the official postmarketOS repository.''
 
 * '''[https://wiki.postmarketos.org/wiki/Upstreaming Upstreaming]'''
-: ''Contribute the patches and improvements  back to the original project.''
+: ''Contribute the patches and improvements back to the original project.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
 <!-------------------------------------------------------------------------------------------->
-<!--Devices & Installation-->
-<div style="float: right; width: 50%">
 
-=== Devices & Installation ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Installation_guide Installation guide]'''
-: '' Installation guide for devices which are already working.''
-
-* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods Flash methods]'''
-: ''Different Flash methods for different devices.''
-
-* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
-: ''quite a few Android devices, plus the Flame and N900.''
-
-* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wishlist]'''
-: ''devices we would like to see pmOS running on.''
-|}
-</div>
 
 <!-------------------------------------------------------------------------------------------->
 <!--Extras-->
+<!--Alpine Linux-->
 <div style="float: right; width: 50%">
+
+=== Alpine Linux ===
+{|
+* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
+: ''APKBUILD file guide.''
+
+* '''[https://pkgs.alpinelinux.org/packages Alpine Packages]'''
+: ''Website like for Alpine Package search.''
+|}
+</div><div style="float: right; width: 50%">
 
 === Extras ===
 {|
 * '''[https://wiki.postmarketos.org/wiki/Related_Projects Related Projects]'''
-: '' Installation guide for devices which are already working.''
+: ''Installation guide for devices which are already working.''
 
 * '''[https://wiki.postmarketos.org/wiki/Tips_and_tricks Tips and tricks]'''
 : ''Different Flash methods for different devices.''
@@ -152,7 +152,7 @@ __NOTOC__
 : ''The phone interfaces we are working on.''
 
 * '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
-: ''about running unfixable outdated firmware software.''
+: ''About running unfixable outdated firmware software.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
@@ -169,13 +169,13 @@ __NOTOC__
 : ''To build a package with pmbootstrap.''
 
 * '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
-: ''quite a few Android devices, plus the Flame and N900.''
+: ''Quite a few Android devices, plus the Flame and N900.''
 
 * '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
 : ''The phone interfaces we are working on.''
 
-* '''[postmarketos.brixit.nl PostmarketOS Repository]'''
-: ''Offical repository of PostmarketOS.''
+* '''[postmarketos.brixit.nl postmarketOS Repository]'''
+: ''Official repository of postmarketOS.''
 |}
 </div>
 
@@ -192,7 +192,7 @@ __NOTOC__
 : ''Besides bugs, lots feature ideas and questions''
 
 * '''[https://reddit.com/r/postmarketOS Reddit]'''
-: ''photos of devices running pmOS, blog posts, questions, official announcements''
+: ''Photos of devices running pmOS, blog posts, questions, official announcements''
 |}
 </div>
 
@@ -221,7 +221,7 @@ __NOTOC__
 
 <div style="float: right; width: 50%">
 * [[https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting]]
-: ''display shell-session listings or source code.''
+: ''Display shell-session listings or source code.''
 
 * [[https://github.com/Git-Mediawiki/Git-Mediawiki Mass editing with git]]
 : ''Editing.''
