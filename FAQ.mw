@@ -30,9 +30,6 @@ Other dual boot solutions are not supported, but it should not be that hard to a
 == Which GUI toolkits are supported? ==
 The ones that Alpine provides, use its [http://pkgs.alpinelinux.org/ package search] to find the toolkits and versions. The typically used ones, QT5 and GTK+3 are among them.
 
-== Will the armhf packages will work on aarch64? ==
-Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
-
 == Is support for flatpack, snap and Appimage planned? ==
 Nobody worked on this yet, and it's questionable how useful that would be. Even if we supported that, it would not be compatible with existing snaps/flatpacks etc, because the binaries in these are linked against the glibc (GNU libc), not against musl libc.
 
