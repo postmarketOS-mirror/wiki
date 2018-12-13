@@ -45,8 +45,8 @@ No. We'll need something like that. Supporting PackageKit could be one approach 
 Yes, we have our own repository. Here is the repo [http://postmarketos.brixit.nl/ link ]. The package build recipes (APKBUILDs) are in the 
 [ https://gitlab.com/postmarketOS/pmaports/ pmaports] repository.
 
-== What file system will be installed after flash? ==
-We're only using ext4 right now. People can add other file-systems in [https://gitlab.com/postmarketOS/pmbootstrap/ pmbootstrap] if they need them.
+== What file system is used? ==
+We're using ext4 right now. People can add other file-systems in [https://gitlab.com/postmarketOS/pmbootstrap/ pmbootstrap] if they need them.
 
 == What are the TODOs and where is the OS heading? ==
 Detailed TODOs can be found in the gitlab [https://gitlab.com/groups/postmarketOS/-/issues issues].
