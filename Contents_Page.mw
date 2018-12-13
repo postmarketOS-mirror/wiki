@@ -8,54 +8,160 @@
 
 === Introduction ===
 {|
-* '''[[PostmarketOS Introduction]]'''
+* '''[https://ollieparanoid.github.io/post/postmarketOS/ PostmarketOS Introduction]'''
 : ''the utopic vision and goals!''
 
-* '''[[Milestones]]'''
+* '''[https://wiki.postmarketos.org/wiki/Milestones Milestones]'''
 : ''where individuals want to take the project! ''
 |}
 </div>
 
 <!-------------------------------------------------------------------------------------------->
-<!--On Line-->
+<!--Communication channels-->
 <div style="float: right; width: 50%">
 
-=== On-Line and Support ===
+=== Communication channels ===
 {|
-* '''[[PostmarketOS On-line]]'''
-: ''Our blog, forum, Twitter, Reddit, and Facebook accounts.''
+* '''[https://wiki.postmarketos.org/wiki/Matrix_and_IRC Matrix_and_IRC]'''
+: ''Live chat makes development easier.''
 
-* '''[[PostmarketOS IRC]]'''
-: ''Additional direct support for PostmarketOS users.''
+* '''[https://gitlab.com/postmarketOS/pmbootstrap/issues Issuetracker]'''
+: ''Besides bugs, lots feature ideas and questions''
+
+* '''[https://reddit.com/r/postmarketOS Reddit]'''
+: ''photos of devices running pmOS, blog posts, questions, official announcements''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
 
 <!-------------------------------------------------------------------------------------------->
-<!--Get PostmarketOS-->
+<!--Information-->
+<div style="float: right; width: 50%">
+
+=== Information ===
+{|
+* '''[https://wiki.postmarketos.org/wiki/Boot_process Boot process]'''
+: ''Live chat makes development easier.''
+
+* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_reference Deviceinfo reference]'''
+: ''Our work-in-progress device-specific file format.''
+
+* '''[https://wiki.postmarketos.org/wiki/External_resources External resources]'''
+: ''This list is a collection of presentations, talks and other resources''
+
+* '''[https://wiki.postmarketos.org/wiki/Glossary Glossary]'''
+: ''List of technical term related to this project ''
+|}
+</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
+
+
+<!-------------------------------------------------------------------------------------------->
+<!--Development-->
 <div style="float: left; width: 50%">
 
-=== Get PostmarketOS ===
+=== Development ===
 {|
-* '''[[Download PostmarketOS]]'''
-: ''Where to find the latest and greatest Manjaro releases.''
+* '''[https://wiki.postmarketos.org/wiki/Porting_to_a_new_device Porting to a new device]'''
+: ''Porting to a new device and general installation guide.''
 
-* '''[[Check a Downloaded ISO Image For Errors]]'''
-: ''Check your Manjaro download for errors in Linux and Windows.''
+* '''[https://wiki.postmarketos.org/wiki/Troubleshooting Troubleshooting]'''
+: ''The page to read when something isn't working.''
+
+* '''[https://wiki.postmarketos.org/wiki/The_Mainline_Kernel The Mainline Kernel]'''
+: ''Early work on getting device kernels into mainline Linux.''
+
+* '''[https://wiki.postmarketos.org/wiki/Pmbootstrap_development_guide pmbootstrap development guide]'''
+: ''Getting started with hacking on the code.''
+
+* '''[https://wiki.postmarketos.org/wiki/Patching Patching]'''
+: ''Using pmbootstrap build --src to create patches for packages .''
+
+* '''[https://wiki.postmarketos.org/wiki/Firmware Firmware]'''
+: ''This page provides links for deeper insight into the Firmware''
+
+* '''[https://wiki.postmarketos.org/wiki/Category:Low-level Low-level hacking]'''
+: ''Everything below the kernel, bootloaders, modem firmware etc..''
+
+* '''[https://wiki.postmarketos.org/wiki/Repository_maintenance Repository maintenanc]'''
+: ''Taking care of the official postmarketOS repository.''
+
+* '''[https://wiki.postmarketos.org/wiki/Upstreaming Upstreaming]'''
+: ''Contribute the patches and improvements  back to the original project.''
 |}
 </div>
 
 <!-------------------------------------------------------------------------------------------->
-<!--Installation-->
+<!--Devices & Installation-->
 <div style="float: right; width: 50%">
 
-=== Installation ===
+=== Devices & Installation ===
 {|
-* '''[[Burn an ISO File]]'''
-: ''Burn PostmarketOS to CD/DVD or USB stick in Linux and Windows.''
+* '''[https://wiki.postmarketos.org/wiki/Installation_guide Installation guide]'''
+: '' Installation guide for devices which are already working.''
 
-* '''[[Installation Guides|Install Manjaro]]'''
-: ''Installation and partitioning guides for beginners and experienced users.''
+* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods Flash methods]'''
+: ''Different Flash methods for different devices.''
+
+* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
+: ''quite a few Android devices, plus the Flame and N900.''
+
+* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wishlist]'''
+: ''devices we would like to see pmOS running on.''
+
+* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
+: ''The phone interfaces we are working on.''
+
+* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
+: ''about running unfixable outdated firmware software.''
+|}
+</div>
+
+<!-------------------------------------------------------------------------------------------->
+<!--Extras-->
+<div style="float: right; width: 50%">
+
+=== Extras ===
+{|
+* '''[https://wiki.postmarketos.org/wiki/Related_Projects Related Projects]'''
+: '' Installation guide for devices which are already working.''
+
+* '''[https://wiki.postmarketos.org/wiki/Tips_and_tricks Tips and tricks]'''
+: ''Different Flash methods for different devices.''
+
+* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
+: ''quite a few Android devices, plus the Flame and N900.''
+
+* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wishlist]'''
+: ''devices we would like to see pmOS running on.''
+
+* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
+: ''The phone interfaces we are working on.''
+
+* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
+: ''about running unfixable outdated firmware software.''
+|}
+</div>
+
+<!-------------------------------------------------------------------------------------------->
+<!--Software Management-->
+<div style="float: right; width: 50%">
+
+=== Software Management ===
+{|
+* '''[https://wiki.postmarketos.org/wiki/Creating_a_package Creating a package]'''
+: ''Creating a package and how to recycle package recipes from other distributions.''
+
+* '''[https://wiki.postmarketos.org/wiki/Build_internals Build internals]'''
+: ''To build a package with pmbootstrap.''
+
+* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
+: ''quite a few Android devices, plus the Flame and N900.''
+
+* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
+: ''The phone interfaces we are working on.''
+
+* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
+: ''about running unfixable outdated firmware software.''
 |}
 </div>
 
