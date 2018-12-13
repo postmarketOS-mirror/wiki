@@ -57,13 +57,11 @@ The big picture is discussed in this thread currently: [https://gitlab.com/postm
 You build the rootfs image on your PC with binary packages from the postmarketOS binary repository. Missing packages get built locally. But usually the repo is up-to-date. Building packages locally is useful for development.
 
 == Which USB/Wireless peripherals work? ==
-Works:
-* USB mouse and keyboard.
-Doesn't work:
-* USB monitor. As there are no drivers for connecting a monitor to phones that run on postmarketOS - AFAIK. They all depend on proprietary Android userspace drivers.
-Not sure:
-* Networking.
-* Joystick.
+Quite a few devices have working wifi, and USB network is available for most devices. See the [[Devices|devices feature matrix]] for details.
+
+USB mouse, keyboard, game pads etc. should work just as well as on other Linux distributions. Typically, you would need a [https://en.wikipedia.org/wiki/USB_On-The-Go OTG] cable to use them on a phone.
+
+Connecting phones to external monitors usually depends on proprietary Android userspace drivers, so it will not work on postmarketOS (or only with [[hybris]] and not with mainline kernels, unless somebody reverse engineers them and makes them work with mainline).
 
 == Why don't we use firmware files from Android's firmware partition? ==
 When we package it directly, we have the following advantages (see the discussion in {{github|637}}):
