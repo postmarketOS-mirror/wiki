@@ -39,7 +39,7 @@ Yes, but why not use all CPU instructions of aarch64 and have faster binaries?
 Nobody worked on this yet, and it's questionable how useful that would be. Even if we supported that, it would not be compatible with existing snaps/flatpacks etc, because the binaries in these are linked against the glibc (GNU libc), not against musl libc.
 
 == Any gui front-end for package management? ==
-No. We'll need something like that. Supporting PackageKit could be one approach [https://gitlab.com/postmarketOS/pmaports/issues/12 pmaports#12].
+No, but we'll need something like that. Supporting PackageKit could be one approach ({{issue|12|pmaports}}).
 
 == Is there a repository only for postmarketOS? ==
 Yes, we have our own repository. Here is the repo [http://postmarketos.brixit.nl/ link ]. The package build recipes (APKBUILDs) are in the 
