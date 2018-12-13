@@ -6,15 +6,13 @@
 <!--Overview-->
 <div style="float: left; width: 50%">
 
-=== Overview ===
+=== Introduction ===
 {|
-[[File:Manjaro.png|left|96px]]
-|
-* '''[[Manjaro|Manjaro Overview]]'''
-: ''Various articles to answer all your questions!''
+* '''[[PostmarketOS Introduction]]'''
+: ''the utopic vision and goals!''
 
-* '''[[Using Manjaro for Beginners|Using Manjaro]]'''
-: ''New to Manjaro? Start here for an overview! ''
+* '''[[Milestones]]'''
+: ''where individuals want to take the project! ''
 |}
 </div>
 
@@ -24,26 +22,22 @@
 
 === On-Line and Support ===
 {|
-[[File:on-line1.png|left|96px]]
-|
-* '''[[Manjaro On-line]]'''
+* '''[[PostmarketOS On-line]]'''
 : ''Our blog, forum, Twitter, Reddit, and Facebook accounts.''
 
-* '''[[Manjaro IRC]]'''
-: ''Additional direct support for Manjaro users.''
+* '''[[PostmarketOS IRC]]'''
+: ''Additional direct support for PostmarketOS users.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
 
 <!-------------------------------------------------------------------------------------------->
-<!--Get Manjaro-->
+<!--Get PostmarketOS-->
 <div style="float: left; width: 50%">
 
-=== Get Manjaro ===
+=== Get PostmarketOS ===
 {|
-[[File:Download_square.png|left|96px]]
-|
-* '''[[Download Manjaro]]'''
+* '''[[Download PostmarketOS]]'''
 : ''Where to find the latest and greatest Manjaro releases.''
 
 * '''[[Check a Downloaded ISO Image For Errors]]'''
@@ -58,7 +52,7 @@
 === Installation ===
 {|
 * '''[[Burn an ISO File]]'''
-: ''Burn Manjaro to CD/DVD or USB stick in Linux and Windows.''
+: ''Burn PostmarketOS to CD/DVD or USB stick in Linux and Windows.''
 
 * '''[[Installation Guides|Install Manjaro]]'''
 : ''Installation and partitioning guides for beginners and experienced users.''
