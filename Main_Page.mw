@@ -29,7 +29,7 @@ __NOTOC__
 * '''[https://ollieparanoid.github.io/post/postmarketOS/ postmarketOS Introduction]'''
 : ''The utopic vision and goals!''
 
-* '''[https://wiki.postmarketos.org/wiki/Milestones Project Milestones]'''
+* '''[[Milestones]]'''
 : ''Where individuals want to take the project! ''
 |}
 </div>
@@ -40,16 +40,16 @@ __NOTOC__
 
 === Devices & Installation ===
 {|
-* '''[https://wiki.postmarketos.org/wiki/Installation_guide Installation guide]'''
+* '''[[Installation guide]]'''
 : ''Installation guide for devices which are already working.''
 
-* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods Flash methods]'''
+* '''[[Deviceinfo flash methods]]'''
 : ''Different Flash methods for different devices.''
 
-* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
+* '''[[Devices]]'''
 : ''Quite a few Android devices, plus the Flame and N900.''
 
-* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wish-list]'''
+* '''[[Device Wishlist]]'''
 : ''Devices we would like to see pmOS running on.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
@@ -61,25 +61,25 @@ __NOTOC__
 
 === Information ===
 {|
-* '''[https://wiki.postmarketos.org/wiki/Boot_process Boot process]'''
+* '''[[Boot process]]'''
 : ''Live chat makes development easier.''
 
-* '''[https://wiki.postmarketos.org/wiki/FAQ FAQ]'''
+* '''[[FAQ]]'''
 : ''Some questions answer related to this project ''
 
-* '''[https://wiki.postmarketos.org/wiki/Screen_Calibration Screen Calibration]'''
+* '''[[Screen Calibration]]'''
 : ''Guide for Screen Calibration.''
 
-* '''[https://wiki.postmarketos.org/wiki/Serial_debugging Serial debugging]'''
+* '''[[Serial debugging]]'''
 : ''Some phones have a serial port accessible from the outside''
 
-* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_reference Device-info reference]'''
+* '''[[Device-info reference]]'''
 : ''Our work-in-progress device-specific file format.''
 
-* '''[https://wiki.postmarketos.org/wiki/External_resources External resources]'''
+* '''[[External resources]]'''
 : ''This list is a collection of presentations, talks and other resources''
 
-* '''[https://wiki.postmarketos.org/wiki/Glossary Glossary]'''
+* '''[[Glossary]]'''
 : ''List of technical term related to this project ''
 |}
 </div>
@@ -90,31 +90,31 @@ __NOTOC__
 
 === Development ===
 {|
-* '''[https://wiki.postmarketos.org/wiki/Porting_to_a_new_device Porting to a new device]'''
+* '''[[Porting to a new device]]'''
 : ''Porting to a new device and general installation guide.''
 
-* '''[https://wiki.postmarketos.org/wiki/Using_prebuilt_kernels Using prebuilt kernels]'''
+* '''[[Using prebuilt kernels]]'''
 : ''Start hacking on postmarketOS without having the kernel source code.''
 
-* '''[https://wiki.postmarketos.org/wiki/Troubleshooting Troubleshooting]'''
+* '''[[Troubleshooting]]'''
 : ''The page to read when something isn't working.''
 
-* '''[https://wiki.postmarketos.org/wiki/The_Mainline_Kernel The Mainline Kernel]'''
+* '''[[The Mainline Kernel]]'''
 : ''Early work on getting device kernels into mainline Linux.''
 
-* '''[https://wiki.postmarketos.org/wiki/Pmbootstrap_development_guide pmbootstrap development guide]'''
+* '''[[pmbootstrap development guide]]'''
 : ''Getting started with hacking on the code.''
 
-* '''[https://wiki.postmarketos.org/wiki/Patching Patching]'''
+* '''[[Patching]]'''
 : ''Using pmbootstrap build --src to create patches for packages .''
 
-* '''[https://wiki.postmarketos.org/wiki/Firmware Firmware]'''
+* '''[[Firmware]]'''
 : ''A deeper insight into the Firmware''
 
-* '''[https://wiki.postmarketos.org/wiki/Category:Low-level Low-level hacking]'''
+* '''[[Low-level hacking]]'''
 : ''Everything below the kernel, bootloaders, modem firmware etc..''
 
-* '''[https://wiki.postmarketos.org/wiki/Upstreaming Upstreaming]'''
+* '''[[Upstreaming]]'''
 : ''Contribute the patches and improvements back to the original project.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
@@ -128,13 +128,10 @@ __NOTOC__
 * '''[https://wiki.postmarketos.org/wiki/Creating_a_package Creating a package]'''
 : ''Creating a package and how to recycle package recipes from other distributions.''
 
-* '''[https://wiki.postmarketos.org/wiki/Build_internals Build internals]'''
+* '''[[Build internals]]'''
 : ''To build a package with pmbootstrap.''
 
-* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
-: ''Quite a few Android devices, plus the Flame and N900.''
-
-* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
+* '''[[Interfaces]]'''
 : ''The phone interfaces we are working on.''
 
 * '''[http://postmarketos.brixit.nl/ postmarketOS Repository]'''
@@ -148,17 +145,21 @@ __NOTOC__
 
 === Extras ===
 {|
-* '''[https://wiki.postmarketos.org/wiki/Related_Projects Related Projects]'''
+* '''[[Related Projects]]'''
 : ''Installation guide for devices which are already working.''
 
-* '''[https://wiki.postmarketos.org/wiki/Tips_and_tricks Tips and tricks]'''
+* '''[[Tips and tricks]]'''
 : ''Different Flash methods for different devices.''
 
-* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
+* '''[[Interfaces]]'''
 : ''The phone interfaces we are working on.''
 
-* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
+* '''[[Security warning]]'''
 : ''About running unfixable outdated firmware software.''
+
+* '''[[How to]]'''
+: ''Some solution and guides.''
+
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
@@ -168,10 +169,10 @@ __NOTOC__
 
 === Alpine Linux ===
 {|
-* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
+* '''[[APKBUILD_Reference]]'''
 : ''APKBUILD file guide.''
 
-* '''[https://pkgs.alpinelinux.org/packages Alpine Packages]'''
+* '''[[Packages]]'''
 : ''Website like for Alpine Package search.''
 |}
 </div>
@@ -182,7 +183,7 @@ __NOTOC__
 
 === Communication channels ===
 {|
-* '''[https://wiki.postmarketos.org/wiki/Matrix_and_IRC Matrix_and_IRC]'''
+* '''[[Matrix_and_IRC]]'''
 : ''Live chat makes development easier.''
 
 * '''[https://gitlab.com/postmarketOS/pmbootstrap/issues Issuetracker]'''
@@ -205,7 +206,7 @@ __NOTOC__
 = Wiki Editing =
 <div style="float: left; width: 50%">
 {|
-* [[https://wiki.postmarketos.org/wiki/Templates Templates]]
+* [[Templates]]
 : ''List of postmarketOS Wiki specific templates.''
 
 * [[https://www.mediawiki.org/wiki/Help:Formatting MediaWiki formatting]]
