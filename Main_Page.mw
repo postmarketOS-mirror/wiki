@@ -111,7 +111,7 @@ __NOTOC__
 * '''[[Firmware]]'''
 : ''A deeper insight into the Firmware''
 
-* '''[[Low-level hacking]]'''
+* '''[[Category:Low-level]]'''
 : ''Everything below the kernel, bootloaders, modem firmware etc..''
 
 * '''[[Upstreaming]]'''
@@ -153,9 +153,6 @@ __NOTOC__
 
 * '''[[Interfaces]]'''
 : ''The phone interfaces we are working on.''
-
-* '''[[Security warning]]'''
-: ''About running unfixable outdated firmware software.''
 
 * '''[[How to]]'''
 : ''Some solution and guides.''
