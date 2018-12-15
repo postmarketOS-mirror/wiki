@@ -63,7 +63,7 @@ corrupt. USB networking workds, telnet debugging hook lets log in at early stage
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-{{MR|106}} Initial merge request
+[https://gitlab.com/postmarketOS/pmaports/merge_requests/106 Initial merge request] 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
