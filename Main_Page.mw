@@ -73,7 +73,7 @@ __NOTOC__
 * '''[[Serial debugging]]'''
 : ''Some phones have a serial port accessible from the outside''
 
-* '''[[Device-info reference]]'''
+* '''[[Deviceinfo reference]]'''
 : ''Our work-in-progress device-specific file format.''
 
 * '''[[External resources]]'''
@@ -169,10 +169,10 @@ __NOTOC__
 
 === Alpine Linux ===
 {|
-* '''[[APKBUILD_Reference]]'''
+* '''[[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]]'''
 : ''APKBUILD file guide.''
 
-* '''[[Packages]]'''
+* '''[[https://pkgs.alpinelinux.org/packages Alpinelinux Packages]]'''
 : ''Website like for Alpine Package search.''
 |}
 </div>
