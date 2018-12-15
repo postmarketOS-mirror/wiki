@@ -39,14 +39,7 @@
 * BakaOsaka
 * MartijnBraam
 
-{{#cargo_query:
-tables=DeviceOwners
-|fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Notes
-|format=table
-|where=Device="{{PAGENAMEE}}"
-|limit=9999
-|more results text=
-}}
+{{Device owners}}
 
 == How to enter flash mode ==
 * Connect a USB cable
