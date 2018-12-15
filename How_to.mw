@@ -17,8 +17,11 @@ This page is releted to all the "How to " guides .
 * [[Screen Calibration]]
 : ''Tweaking a device's Screen Calibration''
 
-* [Tuning sysfs]]
+* [[Tuning sysfs]]
 : ''Provide packages with a local webserver.''
+
+* [[Troubleshooting:Xorg]]
+: ''Troubleshooting X11 server.''
 
 |}
 </div>
@@ -41,6 +44,9 @@ This page is releted to all the "How to " guides .
 
 * [[WiFi]]
 : ''To get wireless LAN working.''
+
+* [[Battery capacity monitoring]]
+: ''Battery state monitoring.''
 
 * [[Installing packages on a running phone]]
 : ''Provide packages with a local webserver.''
