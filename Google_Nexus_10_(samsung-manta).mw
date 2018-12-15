@@ -41,9 +41,9 @@
 
 {{#cargo_query:
 tables=DeviceOwners
-|fields=_pageName=User,Notes,Device
+|fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Notes
 |format=table
-|where=Device="{{PAGENAME}}"
+|where=Device="{{PAGENAMEE}}"
 |limit=9999
 |more results text=
 }}
