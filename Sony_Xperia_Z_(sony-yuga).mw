@@ -52,7 +52,7 @@
 === Notification LED information ===
 
 * Constant blue LED: fastboot mode
-* Slowly blinking red LED when plugged in: battery cannot hold any charge.
+* Slowly blinking red LED when plugged in: battery cannot hold any charge/battery charge is too low for booting
 * Blinking red LED when trying to boot: Cannot boot, maybe offsets are wrong?
 * Constant red LED on while plugged in: charging
 
