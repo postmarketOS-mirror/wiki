@@ -111,7 +111,7 @@ __NOTOC__
 * '''[[Firmware]]'''
 : ''A deeper insight into the Firmware''
 
-* '''[[Category:Low-level]]'''
+* '''[https://wiki.postmarketos.org/wiki/Category:Low-level Low-level]'''
 : ''Everything below the kernel, bootloaders, modem firmware etc..''
 
 * '''[[Upstreaming]]'''
@@ -166,10 +166,10 @@ __NOTOC__
 
 === Alpine Linux ===
 {|
-* '''[[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]]'''
+* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
 : ''APKBUILD file guide.''
 
-* '''[[https://pkgs.alpinelinux.org/packages Alpinelinux Packages]]'''
+* '''[https://pkgs.alpinelinux.org/packages Alpinelinux Packages]'''
 : ''Website like for Alpine Package search.''
 |}
 </div>
@@ -206,20 +206,20 @@ __NOTOC__
 * [[Templates]]
 : ''List of postmarketOS Wiki specific templates.''
 
-* [[https://www.mediawiki.org/wiki/Help:Formatting MediaWiki formatting]]
+* [https://www.mediawiki.org/wiki/Help:Formatting MediaWiki formatting]
 : ''MediaWiki specific markup reference''
 
-* [[https://wiki.postmarketos.org/wiki/Special:ListFiles Gallery ]]
+* [https://wiki.postmarketos.org/wiki/Special:ListFiles Gallery]
 : ''List of files uploaded to the Wiki.''
 
 |}
 </div>
 
 <div style="float: right; width: 50%">
-* [[https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting]]
+* [https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting]
 : ''Display shell-session listings or source code.''
 
-* [[https://github.com/Git-Mediawiki/Git-Mediawiki Mass editing with git]]
+* [https://github.com/Git-Mediawiki/Git-Mediawiki Mass editing with git]
 : ''Editing.''
 </div>
 </div>
