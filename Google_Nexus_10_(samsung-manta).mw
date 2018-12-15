@@ -43,7 +43,7 @@
 tables=DeviceOwners
 |fields=_pageName=User,Notes,Device
 |format=table
-|where=DeviceOwners.Device={{PAGENAME}}
+|where=Device="{{PAGENAME}}"
 |limit=9999
 |more results text=
 }}
