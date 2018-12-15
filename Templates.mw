@@ -19,6 +19,11 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:Todo|todo]]
 * [[Template:wikipedia|wikipedia]] ''link to an wikipedia article''
 
+Templates for device ownership list:
+* [[Template:My devices|My devices]] ''Show table of devices owned on your own page''
+* [[Template:Owns device|Owns device]] ''Adds a device to the ownership table''
+* [[Template:Device owners|Device owners]] ''Displays list of people owning the device to the device page''
+
 == See also ==
 * [[Special:UncategorizedTemplates]]
 * [[Template:Template]]
