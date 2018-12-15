@@ -41,10 +41,10 @@
 
 {{#cargo_query:
 tables=DeviceOwners
-|fields=_pageName=User,Notes
+|fields=_pageName=User,Notes,Device
 |format=table
+|where=DeviceOwners.Device={{PAGENAME}}
 |limit=9999
-|where=DeviceOwners.Device = "{{PAGE}}"
 |more results text=
 }}
 
