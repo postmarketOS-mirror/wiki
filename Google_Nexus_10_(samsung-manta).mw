@@ -44,7 +44,7 @@ tables=DeviceOwners
 |fields=_pageName=User,Notes
 |format=table
 |limit=9999
-|where=DeviceOwners.Device = "{{PAGENAME}}"
+|where=DeviceOwners.Device = "{{PAGE}}"
 |more results text=
 }}
 
