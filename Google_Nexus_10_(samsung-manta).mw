@@ -39,6 +39,15 @@
 * BakaOsaka
 * MartijnBraam
 
+{{#cargo_query:
+tables=DeviceOwners
+|fields=_pageName=User,Notes
+|format=table
+|limit=9999
+|where=DeviceOwners.Device = "{{PAGENAME}}"
+|more results text=
+}}
+
 == How to enter flash mode ==
 * Connect a USB cable
 * Power the device off
