@@ -1,31 +1,56 @@
-You can browse every article alphabetically or search for articles with your browser's search tool (default keyboard shortcut: <code>CTRL + F</code>).
-
+You can browse every article alphabetically or search for articles with your browser's search tool (default keyboard shortcut: <code>CTRL + F</code>). This page does not content links to any devices wiki.
 
 <!--========================================================================================-->
 <div style="float: left; width: 50%">
 {|
 * [[Handhelds]]
 
-* [[Create]]
-* [[Create]]
-* [[Create]]
-* [[Create]]
-* [[Creat]]
-* [[Crea]]
+* [[Matrix_and_IRC]]
 
-* [[Create a package]]
+* [[Related Projects]]
 
-* [[Pmbootstrap development guide]]
+* [[Tips and tricks]]
 
-* [[How to find device specific information]]
+* [[Interfaces]]
 
-* [[Porting to a new device]]
+* [[How to]]
+
+* [[Troubleshooting]]
+
+* [[The Mainline Kernel]]
+
+* [[pmbootstrap development guide]]
+
+* [[Patching]]
+
+* [[Firmware]]
+
+* [https://wiki.postmarketos.org/wiki/Category:Low-level Low-level]
+
+* [[Upstreaming]]
+
+* [[Boot process]]
+
+* [[FAQ]]
 
 * [[Screen Calibration]]
 
-* [[Tuning sysfs]]
+* [[Serial debugging]]
 
-* [[Troubleshooting:Xorg]]
+* [[Deviceinfo reference]]
+
+* [[External resources]]
+
+* [[Glossary]]
+
+* [https://ollieparanoid.github.io/post/postmarketOS/ postmarketOS Introduction]
+
+* [[Milestones]]
+
+* [[Installation guide]]
+
+* [[Deviceinfo flash methods]]
+
 
 |}
 </div>
@@ -46,6 +71,34 @@ You can browse every article alphabetically or search for articles with your bro
 * [[Battery capacity monitoring]]
 
 * [[Installing packages on a running phone]]
+
+* [[Devices]]
+
+* [[Device Wishlist]]
+
+* [[Create a package]]
+
+* [[Pmbootstrap development guide]]
+
+* [[How to find device specific information]]
+
+* [[Porting to a new device]]
+
+* [https://wiki.postmarketos.org/wiki/Creating_a_package Creating a package]
+
+* [[Build internals]]
+
+* [[Interfaces]]
+
+* [[Porting to a new device]]
+
+* [[Using prebuilt kernels]]
+
+* [[Screen Calibration]]
+
+* [[Tuning sysfs]]
+
+* [[Troubleshooting:Xorg]]
 
 </div>
 <div style="clear: both"></div>
