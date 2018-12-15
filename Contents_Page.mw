@@ -1,228 +1,52 @@
-__NOTOC__
-<!--Maybe it's time to replace the Weston screenshot here?-->
-[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://gitlab.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
+You can browse every article alphabetically or search for articles with your browser's search tool (default keyboard shortcut: <code>CTRL + F</code>).
 
 
 <!--========================================================================================-->
-
-{| style="float:right"
-|[[File:LuneOS Browser.png|200x200px]]
-|[[File:Samsung-s5-weston.jpg|200x200px]]
-|[[File:T3-weston.jpg|200x200px]]
-|[[File:PostmarketOS_on_SGP611.png|200x200px]]
-|[[File:I9505.jpg|200x200px]]
-|[[File:Sony_yuga_weston.jpg|200x200px]]
-|}
-
-<div style="clear: both"></div>
-<!--========================================================================================-->
-
-<!--========================================================================================-->
-= Getting Started =
-
-<!-------------------------------------------------------------------------------------------->
-<!--Introduction-->
-<div style="float: left; width: 50%">
-
-=== Introduction ===
-{|
-* '''[https://ollieparanoid.github.io/post/postmarketOS/ postmarketOS Introduction]'''
-: ''The utopic vision and goals!''
-
-* '''[https://wiki.postmarketos.org/wiki/Milestones Project Milestones]'''
-: ''Where individuals want to take the project! ''
-|}
-</div>
-
-<!-------------------------------------------------------------------------------------------->
-<!--Devices & Installation-->
-<div style="float: right; width: 50%">
-
-=== Devices & Installation ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Installation_guide Installation guide]'''
-: ''Installation guide for devices which are already working.''
-
-* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_flash_methods Flash methods]'''
-: ''Different Flash methods for different devices.''
-
-* '''[https://wiki.postmarketos.org/wiki/Devices Working Devices]'''
-: ''Quite a few Android devices, plus the Flame and N900.''
-
-* '''[https://wiki.postmarketos.org/wiki/Device_Wishlist Device Wish-list]'''
-: ''Devices we would like to see pmOS running on.''
-|}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
-
-<!-------------------------------------------------------------------------------------------->
-<!--Information-->
-<div style="float: right; width: 50%">
-
-=== Information ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Boot_process Boot process]'''
-: ''Live chat makes development easier.''
-
-* '''[https://wiki.postmarketos.org/wiki/FAQ FAQ]'''
-: ''Some questions answer related to this project ''
-
-* '''[https://wiki.postmarketos.org/wiki/Screen_Calibration Screen Calibration]'''
-: ''Guide for Screen Calibration.''
-
-* '''[https://wiki.postmarketos.org/wiki/Serial_debugging Serial debugging]'''
-: ''Some phones have a serial port accessible from the outside''
-
-* '''[https://wiki.postmarketos.org/wiki/Deviceinfo_reference Device-info reference]'''
-: ''Our work-in-progress device-specific file format.''
-
-* '''[https://wiki.postmarketos.org/wiki/External_resources External resources]'''
-: ''This list is a collection of presentations, talks and other resources''
-
-* '''[https://wiki.postmarketos.org/wiki/Glossary Glossary]'''
-: ''List of technical term related to this project ''
-|}
-</div>
-
-<!-------------------------------------------------------------------------------------------->
-<!--Development-->
-<div style="float: left; width: 50%">
-
-=== Development ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Porting_to_a_new_device Porting to a new device]'''
-: ''Porting to a new device and general installation guide.''
-
-* '''[https://wiki.postmarketos.org/wiki/Using_prebuilt_kernels Using prebuilt kernels]'''
-: ''Start hacking on postmarketOS without having the kernel source code.''
-
-* '''[https://wiki.postmarketos.org/wiki/Troubleshooting Troubleshooting]'''
-: ''The page to read when something isn't working.''
-
-* '''[https://wiki.postmarketos.org/wiki/The_Mainline_Kernel The Mainline Kernel]'''
-: ''Early work on getting device kernels into mainline Linux.''
-
-* '''[https://wiki.postmarketos.org/wiki/Pmbootstrap_development_guide pmbootstrap development guide]'''
-: ''Getting started with hacking on the code.''
-
-* '''[https://wiki.postmarketos.org/wiki/Patching Patching]'''
-: ''Using pmbootstrap build --src to create patches for packages .''
-
-* '''[https://wiki.postmarketos.org/wiki/Firmware Firmware]'''
-: ''A deeper insight into the Firmware''
-
-* '''[https://wiki.postmarketos.org/wiki/Category:Low-level Low-level hacking]'''
-: ''Everything below the kernel, bootloaders, modem firmware etc..''
-
-* '''[https://wiki.postmarketos.org/wiki/Upstreaming Upstreaming]'''
-: ''Contribute the patches and improvements back to the original project.''
-|}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
-<!-------------------------------------------------------------------------------------------->
-<!--Software Management-->
-<div style="float: right; width: 50%">
-
-=== Software Management ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Creating_a_package Creating a package]'''
-: ''Creating a package and how to recycle package recipes from other distributions.''
-
-* '''[https://wiki.postmarketos.org/wiki/Build_internals Build internals]'''
-: ''To build a package with pmbootstrap.''
-
-* '''[https://wiki.postmarketos.org/wiki/Devices Devices]'''
-: ''Quite a few Android devices, plus the Flame and N900.''
-
-* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
-: ''The phone interfaces we are working on.''
-
-* '''[http://postmarketos.brixit.nl/ postmarketOS Repository]'''
-: ''Official repository of postmarketOS.''
-|}
-</div>
-
-<!-------------------------------------------------------------------------------------------->
-<!--Extras-->
-<div style="float: right; width: 50%">
-
-=== Extras ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Related_Projects Related Projects]'''
-: ''Installation guide for devices which are already working.''
-
-* '''[https://wiki.postmarketos.org/wiki/Tips_and_tricks Tips and tricks]'''
-: ''Different Flash methods for different devices.''
-
-* '''[https://wiki.postmarketos.org/wiki/Interfaces Interfaces]'''
-: ''The phone interfaces we are working on.''
-
-* '''[https://ollieparanoid.github.io/post/security-warning/ Security warning]'''
-: ''About running unfixable outdated firmware software.''
-|}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
-<!-------------------------------------------------------------------------------------------->
-<!--Alpine Linux-->
-<div style="float: right; width: 50%">
-
-=== Alpine Linux ===
-{|
-* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
-: ''APKBUILD file guide.''
-
-* '''[https://pkgs.alpinelinux.org/packages Alpine Packages]'''
-: ''Website like for Alpine Package search.''
-|}
-</div>
-
-<!-------------------------------------------------------------------------------------------->
-<!--Communication channels-->
-<div style="float: right; width: 50%">
-
-=== Communication channels ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Matrix_and_IRC Matrix_and_IRC]'''
-: ''Live chat makes development easier.''
-
-* '''[https://gitlab.com/postmarketOS/pmbootstrap/issues Issuetracker]'''
-: ''Besides bugs, lots feature ideas and questions''
-
-* '''[https://reddit.com/r/postmarketOS Reddit]'''
-: ''Photos of devices running pmOS, blog posts, questions, official announcements''
-|}
-</div>
-
-
-<div style="clear: both"></div>
-
-
-<!--========================================================================================-->
-
-
-<!--========================================================================================-->
-
-= Wiki Editing =
 <div style="float: left; width: 50%">
 {|
-* [[https://wiki.postmarketos.org/wiki/Templates Templates]]
-: ''List of postmarketOS Wiki specific templates.''
+* [[Handhelds]]
 
-* [[https://www.mediawiki.org/wiki/Help:Formatting MediaWiki formatting]]
-: ''MediaWiki specific markup reference''
+* [[Create]]
+* [[Create]]
+* [[Create]]
+* [[Create]]
+* [[Creat]]
+* [[Crea]]
 
-* [[https://wiki.postmarketos.org/wiki/Special:ListFiles Gallery ]]
-: ''List of files uploaded to the Wiki.''
+* [[Create a package]]
+
+* [[Pmbootstrap development guide]]
+
+* [[How to find device specific information]]
+
+* [[Porting to a new device]]
+
+* [[Screen Calibration]]
+
+* [[Tuning sysfs]]
+
+* [[Troubleshooting:Xorg]]
 
 |}
 </div>
 
 <div style="float: right; width: 50%">
-* [[https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting]]
-: ''Display shell-session listings or source code.''
+* [[Initramfs development]]
 
-* [[https://github.com/Git-Mediawiki/Git-Mediawiki Mass editing with git]]
-: ''Editing.''
+* [[Inspecting the initramfs]]
+
+* [[Installation guide]]
+
+* [[The Mainline Kernel]]
+
+* [[Using prebuilt kernels]]
+
+* [[WiFi]]
+
+* [[Battery capacity monitoring]]
+
+* [[Installing packages on a running phone]]
+
 </div>
 <div style="clear: both"></div>
 <!--========================================================================================-->
