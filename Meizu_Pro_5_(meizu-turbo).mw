@@ -1,0 +1,72 @@
+[[Category:Not booting]]
+{{Infobox device
+| manufacturer = Meizu
+| name = Pro 5
+| codename = meizu-turbo
+| image = 
+| imagecaption = Meizu 5 Pro
+| releaseyear = 2015
+| originalsoftware = Android 5, Ubuntu Touch
+| chipset = Samsung Exynos 7420 Octa
+| cpu = Octa-core (4x2.1 GHz Cortex-A57 & 4x1.5 GHz Cortex-A53)
+| gpu = Mali-T760MP8
+| storage = 32GB/64GB
+| display = AMOLED, 16M colors
+| memory = 3GB/4GB
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = ""
+| status_screen = ""
+| status_wifi = ""
+| status_xwayland = ""
+| status_fde = ""
+| status_mainline = ""
+| status_battery = ""
+| status_3d = ""
+| status_accel = ""
+| status_audio = ""
+| status_bluetooth = ""
+| status_camera = ""
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| booting = <!-- The device is booting at all *IMPORTANT* -->
+}}
+
+== Contributors ==
+elelel
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== How to enter flash mode ==
+The device has to be with unlocked bootloader. Android phone version has bootloader locked by default.
+Locked bootloader may be unlocked with a Beta FlymeOS image for the international phone version.
+International firmware can be flashed to Chinese phone if one changes phone's id (possible with a 5.1.x
+Chinese firmware, root and a hex editor).
+
+
+Press volume down and power while turning on to get into fastboot mode.
+
+== Installation ==
+Current pmbootstrap utility assumes that boot partition is always named 'boot' on fastboot devices.
+This device's boot partition has 'bootimg' label. Because of that boot partition must be either
+flashed directly with fastboot utility, or pmbootstrap config source code has to be fixed.
+
+At the time of writing the device boots, but is unable to insert subpartitions from 'system' partition
+into kernel. kpartx -avs /dev/sda41 sees the partition table, but each subpartition inside appears to be
+corrupt. USB networking workds, telnet debugging hook lets log in at early stage before root is mounted.
+
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
