@@ -3,13 +3,12 @@
 tables=DeviceOwners
 |fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Device,Notes
 |format=outline
-|outline fields=User,Device
+|outline fields=User
 |limit=9999
 |order by=User,Device
 |more results text=
 |default=
 }}
-
 
 == second test ==
 
