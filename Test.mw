@@ -6,6 +6,5 @@ tables=DeviceOwners
 |limit=9999
 |order by=User,Device
 |more results text=
-|intro=Users owning this device:
 |default=
 }}
