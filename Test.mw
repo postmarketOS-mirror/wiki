@@ -1,0 +1,11 @@
+{{#cargo_query:
+tables=DeviceOwners
+|fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Device,Notes
+|format=outline
+|outline fields=User,Device
+|limit=9999
+|order by=User,Device
+|more results text=
+|intro=Users owning this device:
+|default=
+}}
