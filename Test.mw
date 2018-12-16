@@ -1,3 +1,4 @@
+== Devices list ==
 {{#cargo_query:
 tables=DeviceOwners
 |fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Device,Notes
