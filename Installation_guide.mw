@@ -124,3 +124,5 @@ $ pmbootstrap flasher flash_rootfs --help
 * [[Porting_to_a_new_device#Alternatives_to_regular_flashing|Alternatives to regular flashing]]
 * [[Existing Alpine installation]]
 * [[Porting to a new device]]
+
+[[Category:Guide]]
