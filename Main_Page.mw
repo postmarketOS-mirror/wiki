@@ -43,9 +43,6 @@ __NOTOC__
 * '''[[Installation guide]]'''
 : ''Installation guide for devices which are already working.''
 
-* '''[[Deviceinfo flash methods]]'''
-: ''Different Flash methods for different devices.''
-
 * '''[[Devices]]'''
 : ''Quite a few Android devices, plus the Flame and N900.''
 
@@ -114,11 +111,14 @@ __NOTOC__
 * '''[[Firmware]]'''
 : ''A deeper insight into the Firmware''
 
-* '''[https://wiki.postmarketos.org/wiki/Category:Low-level Low-level]'''
+* '''[[:Category:Low-level|Low-level]]'''
 : ''Everything below the kernel, bootloaders, modem firmware etc..''
 
 * '''[[Upstreaming]]'''
 : ''Contribute the patches and improvements back to the original project.''
+
+* '''[[Deviceinfo flash methods]]'''
+: ''Different Flash methods for different devices.''
 |}
 </div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
 
