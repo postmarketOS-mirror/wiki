@@ -60,3 +60,5 @@ Reload udev rules:
 udevadm control --reload
 # Re-apply those rules on all devices
 udevadm trigger</source>
+
+[[Category:Guide]]
