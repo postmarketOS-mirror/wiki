@@ -61,6 +61,8 @@ USB networking workds, telnet debugging hook lets log in at early stage before t
 All steps from init.sh until switch_root when entered manually in telnet debug shell seem to work without problem.
 The display is not working - blank black screen. If provoked to display an early splash (e.g. no rootfs), a black image is displayed
 with white lines on the left and top borders, as if it is a part of zoomed in image.
+Turning on OpenRC logging does not produce any log files in /var/log on sysroot partition, which suggests that either switch_root and call to /sbin/init fails,
+or OpenRC fails on very early stage.
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
