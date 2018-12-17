@@ -17,7 +17,7 @@
 | status_usbnet = Y
 | status_flashing = P
 | status_touch = ""
-| status_screen = ""
+| status_screen = N
 | status_wifi = ""
 | status_xwayland = ""
 | status_fde = ""
@@ -56,9 +56,12 @@ Current pmbootstrap utility assumes that boot partition is always named 'boot' o
 This device's boot partition has 'bootimg' label. Because of that boot partition must be either
 flashed directly with fastboot utility, or pmbootstrap config source code has to be fixed.
 
-At the time of writing the device boots, but is unable to insert subpartitions from 'system' partition
-into kernel. kpartx -avs /dev/sda41 sees the partition table, but each subpartition inside appears to be
-corrupt. USB networking workds, telnet debugging hook lets log in at early stage before root is mounted.
+== Status ==
+Currently when turned on, the device enters reboot loop.
+USB networking workds, telnet debugging hook lets log in at early stage before the reboot.
+All steps from init.sh until switch_root when entered manually in telnet debug shell seem to work without problem.
+The display is not working - blank black screen. If provoked to display an early splash (e.g. no rootfs), a black image is displayed
+with white lines on the left and top borders, as if it is a part of zoomed in image.
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
