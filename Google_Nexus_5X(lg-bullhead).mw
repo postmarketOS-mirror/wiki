@@ -2,7 +2,7 @@
 | name = Nexus 5X
 | manufacturer = LG
 | codename = lg-bullhead
-| image = File:Nexus_5X_(White).jpg
+| image = File:Lg-bullhead_mate.jpg
 | imagecaption = Nexus 5x
 | releaseyear = 2015
 | originalsoftware = Android 6.0 on Linux 3.10
@@ -98,3 +98,8 @@ https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
 
 Downstream DTS:
 https://github.com/franciscofranco/bullhead/blob/oreo-mr1/arch/arm/boot/dts/qcom/msm8992.dtsi
+
+{| style="float:left"
+|[[File:Lg-bullhead_mate.jpg|200x200px]]
+|[[File:Lg-bullhead_plasma.jpg|200x200px]]
+|}
