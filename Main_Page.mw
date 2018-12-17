@@ -169,11 +169,11 @@ __NOTOC__
 
 === Alpine Linux ===
 {|
-* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD_Reference]'''
-: ''APKBUILD file guide.''
+* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD Reference]'''
+: ''All about the package build recipe format (that is not unlike PKGBUILDs from Arch Linux).''
 
-* '''[https://pkgs.alpinelinux.org/packages Alpinelinux Packages]'''
-: ''Website like for Alpine Package search.''
+* '''[https://pkgs.alpinelinux.org/packages Alpine Linux Packages]'''
+: ''Search for packages and package contents.''
 |}
 </div>
 
