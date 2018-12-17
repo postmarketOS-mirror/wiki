@@ -151,3 +151,5 @@ This can be a bit involved, but is generally necessary if you want to use it:
 == See also ==
 * [[Mainlining FAQ#Serial_cable]]
 * [https://code.paulk.fr/article21/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-second-part exposing UART on the LG Optimus Black (P970)] (OMAP3)
+
+[[Category:Guide]]
