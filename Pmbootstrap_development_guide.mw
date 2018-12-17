@@ -41,3 +41,5 @@ pmb.chroot.root(args, ["mv", "/tmp/somefile", "/etc/somefile"])
 
 == See also ==
 * [[Testsuite]]
+
+[[Category:Guide]]
