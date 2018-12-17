@@ -1,7 +1,7 @@
 == Devices list ==
 {{#cargo_query:
 tables=DeviceOwners
-|fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Device,Notes
+|fields=CONCAT( '=== [[', _pageName, '|',_pageTitle,']] ===' )=User,Device,Notes
 |format=outline
 |outline fields=User
 |limit=9999
