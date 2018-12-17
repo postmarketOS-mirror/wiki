@@ -111,3 +111,5 @@ This way, user <code>drebrez</code> figured out two values needed for the frameb
 
 <pre class="shell">echo 16 &gt; /sys/devices/platform/mcde_fb/graphics/fb0/bits_per_pixel
 echo 960,1600 &gt; /sys/devices/platform/mcde_fb/graphics/fb0/virtual_size</pre>
+
+[[Category:Guide]]
