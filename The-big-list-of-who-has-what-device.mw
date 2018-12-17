@@ -8,6 +8,7 @@
 
     On device pages {{Device owners}} is available
 -->
+
 {{#cargo_query:
 tables=DeviceOwners
 |fields=CONCAT( '=== [[', _pageName, '|',_pageTitle,']] ===' )=User,Device,Notes
@@ -18,7 +19,3 @@ tables=DeviceOwners
 |more results text=
 |default=
 }}
-
-<!--antonok doesn't have account on wiki, so I don't really know what to do with this-->
-=== antonok ===
-* [[Google Nexus 7 2012 (asus-grouper)]]
