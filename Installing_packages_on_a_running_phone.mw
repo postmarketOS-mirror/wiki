@@ -17,3 +17,5 @@ https://nl.alpinelinux.org/alpine/edge/testing
 </source>
 
 3. Upgrade the package you have built with <code>apk upgrade [package name]</code>
+
+[[Category:Guide]]
