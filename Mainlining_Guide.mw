@@ -292,3 +292,5 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 ** downstream dts or teardown results like from ifixit
 ** decipher from downstream dmesg
 ** <code>grep compatible</code> in downstream DTS decompiled also works
+
+[[Category:Guide]]
