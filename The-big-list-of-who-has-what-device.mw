@@ -1,13 +1,12 @@
-<!--
-    Use {{Owns device|device_page|optional notes}} on your page to add it to the list
-    e.g {{Owns device|Google_Nexus_5_(lg-hammerhead)|broken screen}}
+=== Usage ===
+Use <nowiki>{{Owns device|device_page}}</nowiki> or <nowiki>{{Owns device|device_page|notes}}</nowiki> on your page to add it to the list,
+e.g <nowiki>{{Owns device|Google_Nexus_5_(lg-hammerhead)|broken screen}}</nowiki>
     
-    You may want to purge cache to see changes (near edit button: More->purge cache)
+You may want to purge cache to see changes (near edit button: More->purge cache)
 
-    On you userpage you can use {{My devices}} to include there the list of your devices
+On you userpage you can use <nowiki>{{My devices}}</nowiki> to include there the list of your devices
 
-    On device pages {{Device owners}} is available
--->
+On device pages <nowiki>{{Device owners}}</nowiki> is available
 
 {{#cargo_query:
 tables=DeviceOwners
