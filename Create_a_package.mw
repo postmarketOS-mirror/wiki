@@ -114,3 +114,5 @@ Arch Linux' <code>PKBUILD</code> format is similar to <code>APKBUILD</code> of A
 * There's no <code>optdepends</code>
 * <code>-doc</code> subpackages (see above)
 * <code>APKBUILD</code> has different options (!makeflags won't work, but it has !strip and !check)
+
+[[Category:Guide]]
