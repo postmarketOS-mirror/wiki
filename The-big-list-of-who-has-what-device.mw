@@ -1,182 +1,24 @@
 <!--
-    PROTIP: use `{{:The-big-list-of-who-has-what-device|user=<username>}}` on your wiki page to include autoupdated list of your devices
-    of course you need to add onlyinclude block on beginning and end of yours devices
+    Use {{Owns device|device_page|optional notes}} on your page to add it to the list
+    e.g {{Owns device|Google_Nexus_5_(lg-hammerhead)|broken screen}}
+    
+    You may want to purge cache to see changes (near edit button: More->purge cache)
+
+    On you userpage you can use {{My devices}} to include there the list of your devices
+
+    On device pages {{Device owners}} is available
 -->
-=== MartijnBraam ===
-<onlyinclude>{{#ifeq:{{{user|MartijnBraam}}}|MartijnBraam|
-* [[Google Nexus 5 (lg-hammerhead)]]
-* [[Nokia N900 (nokia-rx51)]]
-* [[HTC Desire (htc-bravo)]] (2 times)
-* [[Google Galaxy Nexus GSM (samsung-maguro)]] has broken USB port
-* [[HP Touchpad (hp-tenderloin)]]
-* Huawei Ascend G510 (huawei-g510)
-* [[Apple iPod Touch 1G (apple-ipt1g)]]
-* [[Jolla Phone (jolla-sbj)|Jolla Phone (jolla-sbj)]]
-* Onda v820wCH
-* Unbranded mediatek dual sim device (e1911_v77_zlh1_9p017_6628_v20 smallband MAUI.11AMD.W12.22.SP.V15.P2)
-* Motorola Droid 4
-}}</onlyinclude>
+{{#cargo_query:
+tables=DeviceOwners
+|fields=CONCAT( '=== [[', _pageName, '|',_pageTitle,']] ===' )=User,Device,Notes
+|format=outline
+|outline fields=User
+|limit=9999
+|order by=User,Device
+|more results text=
+|default=
+}}
 
-=== PureTryOut ===
-<onlyinclude>{{#ifeq:{{{user|PureTryOut}}}|PureTryOut|
-* [[Sony Xperia Z1 Compact (sony-amami)]] (3 times)
-* [[Google Nexus 5X(lg-bullhead) | Google Nexus 5X (lg-bullhead)]]
-* [[Jolla Phone (jolla-sbj)|Jolla Phone (jolla-sbj)]]
-* Samsung Galaxy Apollo
-* Sony Xperia Miro (broken touchscreen)
-}}</onlyinclude>
-
-=== ata2001 ===
-<onlyinclude>{{#ifeq:{{{user|ata2001}}}|ata2001|
-* [[Sony Xperia Z1 Compact (sony-amami)]]
-* [[Moto G 2015 (motorola-osprey)|Motorola Moto G 3rd gen. (motorola-osprey)]]
-* Motorola Defy+ (motorola-jordan_plus)
-* HTC Desire 510 (htc-a11)
-}}</onlyinclude>
-
-=== drebrez ===
-<onlyinclude>{{#ifeq:{{{user|Drebrez}}}|Drebrez|
-* [[Google Galaxy Nexus GSM (samsung-maguro)]]
-* [[HTC Desire (htc-bravo)]]
-* [[Huawei Ascend Y530 (huawei-y530)]]
-* [[LG G Watch (lg-dory)]]
-* [[LG Joy (lg-h220)]]
-* [[Nokia N900 (nokia-rx51)]]
-* [[Samsung Galaxy S Advance (samsung-i9070)]]
-* [[Samsung Galaxy S4 Mini LTE]]
-* [[Samsung Galaxy S5 (samsung-klte)]]
-* [[Wiko Lenny 3 (wiko-lenny3)]]
-* [[Wiko Sunset 2 (wiko-sunset2)]]
-* [[BlackBerry Bold Touch 9900 (blackberry-dakota)]]
-* [[NGM WeMove Action (ngn-wemove-action)]]
-}}</onlyinclude>
-
+<!--antonok doesn't have account on wiki, so I don't really know what to do with this-->
 === antonok ===
-<onlyinclude>{{#ifeq:{{{user|antonok}}}|antonok|
 * [[Google Nexus 7 2012 (asus-grouper)]]
-}}</onlyinclude>
-
-=== pave1 Pavel Machek ===
-* Nokia N770, N800, N810, [[Nokia N900 (nokia-rx51)|N900]], [[Nokia N9|N9]], [[Nokia N950|N950]] (if someone wants N770, N800, N810 and will be able to put them to good use, we may talk)
-* OpenMoko gta01
-
-=== z3ntu ===
-<onlyinclude>{{#ifeq:{{{user|z3ntu}}}|z3ntu|
-* [[Fairphone 2 (fairphone-fp2)]]
-* Fairphone 1
-* ZTE Racer II
-}}</onlyinclude>
-
-=== [[User:Halamix2|Halamix2]] ===
-<onlyinclude>{{#ifeq:{{{user|Halamix2}}}|Halamix2|
-* [[Samsung Galaxy Mini 2 (samsung-s6500d)]]
-* [[Selecline Smartphone 5" (auchan-s6s5in3g)]] - it may or may not be a correct name of this phone
-* [[Raspberry_Pi|Raspberry Pi Zero W]]
-* [[Sony Xperia L (sony-taoshan)]] - broken screen (always black), ssh works
-* Lenovo TAB 7 Essential (TB-7304F) - locked bootloader, MT8167D SoC
-}}</onlyinclude>
-
-=== Opendata26 ===
-<onlyinclude>{{#ifeq:{{{user|Opendata26}}}|Opendata26|
-* [[Sony Xperia Z2 Tablet (sony-castor-windy)]]
-* [[Sony Xperia Z2 (sony-sirius)]]
-* Nvidia shield android tv
-* iPod touch 2g (8gb new bootrom)
-}}</onlyinclude>
-
-=== ashirviskas ===
-<onlyinclude>{{#ifeq:{{{user|ashirviskas}}}|ashirviskas|
-* [[Nextbit Robin (nextbit-ether)]]
-* [[Google Nexus 5 (lg-hammerhead)]] without a functioning display
-* Samsung Galaxy S2+ (i9105)
-* LG P500 Optimus One
-}}</onlyinclude>
-
-=== ollieparanoid ===
-<onlyinclude>{{#ifeq:{{{user|Ollieparanoid}}}|Ollieparanoid|
-* [[Google Nexus 4 (lg-mako)]]
-* [[Google Nexus 5 (lg-hammerhead)]]
-* [[Nokia N900]] (see also: [[User:Ollieparanoid/Dogfooding:N900|dogfooding efforts]])
-* [[Samsung Galaxy SII (samsung-i9100)]]
-}}</onlyinclude>
-
-=== rrooij ===
-<onlyinclude>{{#ifeq:{{{user|rrooij}}}|rrooij|
-* [[ASUS Eee Pad Transformer (asus-tf101)]]
-* [[Samsung-i9505-(Samsung-Galaxy-S4-int)]]
-* [[Samsung Galaxy S4 Mini LTE]]
-* [[Samsung Galaxy S (samsung-i9000)]]
-* [[Motorola E Second Gen]]
-}}</onlyinclude>
-
-=== Rudloff ===
-<onlyinclude>{{#ifeq:{{{user|Rudloff}}}|Rudloff|
-* [[Fairphone 2 (fairphone-fp2)]]
-* [[Geeksphone Peak (gp-peak)]]
-* [[Geeksphone Revolution (gp-revolution)]]
-* [[ASUS Transformer Pad (asus-tf300t)]]
-* [[Samsung Galaxy SII (samsung-i9100)]]
-* [[InFocus New Tab F1 (infocus-flatfish)]]
-* [[Sony SmartWatch 3 (sony-tetra)]]
-}}</onlyinclude>
-
-=== [[User:MayeulC|MayeulC]] ===
-<onlyinclude>{{#ifeq:{{{user|MayeulC}}}|MayeulC|
-* [[Sony Xperia T3 (sony-seagull)]]
-* [[Samsung Galaxy Trend lite (s7390g)]]
-* [[Nokia N900 (nokia-rx51)]] (FR layout)
-* [[Sony Xperia SP (sony-huashan)]] (broken LCD)
-* [[LG Optimus Black (lg-p970)]] (I have to retrieve it)
-}}</onlyinclude>
-
-=== Mossroy ===
-<onlyinclude>{{#ifeq:{{{user|Mossroy}}}|Mossroy|
-* [[Geeksphone Peak (gp-peak)]] (unused : I can flash it as much as needed. Very weak battery)
-* [[InFocus New Tab F1 (infocus-flatfish)]] (often used : it can not be flashed easily)
-* [[Samsung Galaxy SIII LTE (samsung-i9305)]] (sometimes used : It can not be flashed easily. Seems to have a hardware issue with current consumption, even with a new battery)
-* [[Mozilla Flame (t2m-flame)]] (sometimes used : it can not be flashed easily. Broken touchscreen with an unactive zone, and some hardware USB issues)
-* [[ZTE Kis 3 (zte-kis3)]] (ZTE Open C, FR version. I have several devices. One of them has a broken and unusable screen, I can use it to test as much as needed)
-}}</onlyinclude>
-
-=== steamport ===
-<onlyinclude>{{#ifeq:{{{user|steamport}}}|steamport |
-* [[Amazon Kindle Fire HDX|Amazon Kindle Fire HDX (amazon-thor)]]
-* [[Nextbook Premium HD (nextbook-nx008hd8g)]]
-}}</onlyinclude>
-
-=== Moocow9m ===
-<onlyinclude>{{#ifeq:{{{user|Moocow9m}}}|Moocow9m |
-* [[Samsung Captivate Glide (samsung-i927)|Samsung Captivate Glide (samsung-i927)]]
-}}</onlyinclude>
-
-=== Ojbr ===
-<onlyinclude>{{#ifeq:{{{user|Ojbr}}}|Ojbr |
-* [[Google Pixel|Google Pixel (google-sailfish)]]
-* Motorola C (motorola-namath)
-}}</onlyinclude>
-
-=== [[User:Neilvandyke|neilvandyke]] ===
-<onlyinclude>{{#ifeq:{{{user|Neilvandyke}}}|Neilvandyke |
-* [[Google Nexus 5 (lg-hammerhead)]] (has both LG-D820 and LG-D821)
-* [[Google Nexus 7 2013 (asus-flo)]]
-* [[Samsung Galaxy SIII LTE (samsung-i9305)]] (has GT-i9300, which [[Devices]] conflates with GT-i9305)
-* [[Sony Xperia Z1 Compact (sony-amami)]]
-}}</onlyinclude>
-
-=== Lofenyy ===
-<onlyinclude>{{#ifeq:{{{user|Lofenyy}}}|Lofenyy |
-* [[Samsung Galaxy Ace II X (samsung-kylessopen)]]
-}}</onlyinclude>
-
-=== wfranken ===
-<onlyinclude>{{#ifeq:{{{user|wfranken}}}|wfranken|
-* [[Sony Xperia Z (sony-yuga)]]
-}}</onlyinclude>
-
-=== Oxr463 ===
-<onlyinclude>{{#ifeq:{{{user|Oxr463}}}|Oxr463 |
-* [[Amazon_Fire-Phone| Amazon Fire Phone]]
-* Asus T100TA
-* Motorola Droid RAZR (spyder)
-* [[Samsung_Galaxy SII (samsung-i9100)| Samsung Galaxy SII (samsung-i9100)]]
-}}</onlyinclude>
