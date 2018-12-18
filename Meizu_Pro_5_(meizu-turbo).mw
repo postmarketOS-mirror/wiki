@@ -68,10 +68,10 @@ The same result has been observed on a modified UBPorts kernel (currently in APK
 If one tries to mount the system manually it reboots after "Populating /dev with existing devices through uevents" message:
 
 
- # mount /dev/block/sda41p2 /sysroot
+ # mount /dev/mapper/sda41p2 /sysroot
  # mount -t proc proc /sysroot/proc
  # mount -t sysfs sys /sysroot/sys
- # chroot /system 
+ # chroot /sysroot
  # touch .....runlevel
  # /etc/init.d/devfs start
  # ls /dev
