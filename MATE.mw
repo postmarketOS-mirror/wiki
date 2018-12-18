@@ -41,6 +41,8 @@ Section "Device"
 EndSection
 </pre>
 
+Reboot ,Then open the display app and set the correct resolution.
+
 === Rotate the touchscreen ===
 In order to also rotate the touchscreen you need to change the udev rule: <code>/etc/udev/rules.d/90-device-samsung-i9070.rules</code>
 And add one of the following line:
