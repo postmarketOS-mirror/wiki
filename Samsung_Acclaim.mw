@@ -5,7 +5,7 @@
 | image = File:samsung-sch-r880.png
 | imagecaption = samsung-sch-r880
 | releaseyear = 2012
-| originalsoftware = Android 2.2 (Minimum 2.1) <!-- e.g. Android 2 -->
+| originalsoftware = Android 2.2 Linux 2.6.32.9 (Minimum 2.1) <!-- e.g. Android 2 -->
 | chipset = Samsung S3C6410 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
 | cpu = 800 MHz Samsung S3C6410 <!-- e.g. 1.0 GHz Scorpion -->
 | gpu = FIMG 3DSE <!-- e.g. Adreno 200 -->
@@ -46,6 +46,7 @@
 *Device can be rooted
 *Partition map discovered
 *boot.img pulled from BML4
+*Using a port of Linux 3.0.100 for the Galaxy Speca (same chipset)
 *Kernel fails to compile during linking
 
 == Errors ==
