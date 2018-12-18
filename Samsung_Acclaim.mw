@@ -52,10 +52,10 @@
 *Kernel compiles. See warning below.
 
 == Errors/Warnings ==
-<code>>>> linux-samsung-sch-r880*: Running postcheck for linux-samsung-sch-r880
->>> linux-samsung-sch-r880*: Preparing package linux-samsung-sch-r880...
->>> WARNING: linux-samsung-sch-r880*: No arch specific binaries found so arch should probably be set to "noarch"
->>> linux-samsung-sch-r880*: Tracing dependencies...
+<code> >>> linux-samsung-sch-r880*: Running postcheck for linux-samsung-sch-r880
+ >>> linux-samsung-sch-r880*: Preparing package linux-samsung-sch-r880...
+ >>> WARNING: linux-samsung-sch-r880*: No arch specific binaries found so arch should probably be set to "noarch"
+ >>> linux-samsung-sch-r880*: Tracing dependencies...
 </code>
 
 == BML Partition Map Definition ==
