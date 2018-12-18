@@ -6,7 +6,7 @@
 | imagecaption = samsung-sch-r880
 | releaseyear = 2012
 | originalsoftware = Android 2.2 Linux 2.6.32.9 (Minimum 2.1) <!-- e.g. Android 2 -->
-| chipset = Samsung S3C6410 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+| chipset = ARMv6 (ARM11) <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
 | cpu = 800 MHz Samsung S3C6410 <!-- e.g. 1.0 GHz Scorpion -->
 | gpu = FIMG 3DSE <!-- e.g. Adreno 200 -->
 | storage = 512(?)mb/216mb available to user <!-- e.g. 512 MB -->
@@ -64,7 +64,7 @@
 Discovered using Binwalk
 
 <code># cat /proc/partitions
-major minor  #blocks  name
+ major minor  #blocks  name
 
  179        0    7761920 mmcblk0 - SD Card
  179        1    7757824 mmcblk0p1 - SD Card partition 0
