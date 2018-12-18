@@ -75,27 +75,7 @@ If one tries to mount the system manually it reboots after "Populating /dev with
  # touch .....runlevel
  # /etc/init.d/devfs start
  # ls /dev
- adnc0               cluster1_freq_min   hwrng               ion-test            mapper              ram0                sda1                sdc                 tty12               tty31               tty50               ttyGS3              v4l- subdev6         video141
- adnc1               cluster1_num_max    i2c-0               january             media0              ram1                sda2                seiren              tty13               tty32               tty51               ttySAC1             v4l-subdev7         video142
- adnc2               cluster1_num_min    i2c-1               kmem                mem                 ram10               sda21               sg0                 tty14               tty33               tty52               ttySAC4             v4l-subdev8         video150
- adnc3               console             i2c-10              kmsg                memory_throughput   ram11               sda22               sg1                 tty15               tty34               tty53               uhid                v4l-subdev9         video152
- adnc4               cpu_dma_latency     i2c-11              log_events          mobicore            ram12               sda23               sg2                 tty16               tty35               tty54               uinput              vcs                 video50
- adnc5               device_throughput   i2c-12              log_main            mobicore-user       ram13               sda24               sg3                 tty17               tty36               tty55               umts_boot0          vcs1                video51
- alarm               display_throughput  i2c-13              log_radio           modem_br            ram14               sda25               sg4                 tty18               tty37               tty56               umts_dm0            vcsa                video6
- android_adb         dm-0                i2c-14              log_system          mtp_usb             ram15               sda26               sg5                 tty19               tty38               tty57               umts_ipc0           vcsa1               video7
- android_ssusbcon    dm-1                i2c-15              loop-control        muic_device         ram2                sda27               shm                 tty2                tty39               tty58               umts_ipc1           vga_arbiter         video8
- ashmem              erandom             i2c-2               loop0               multipdp            ram3                sda28               snd                 tty20               tty4                tty59               umts_loopback       video101            video9
- battery_device      fb0                 i2c-3               loop1               net                 ram4                sda29               spi_boot_link       tty21               tty40               tty6                umts_rfs0           video102            watchdog
- binder              fb1                 i2c-4               loop2               network_latency     ram5                sda3                stderr              tty22               tty41               tty60               umts_router         video110             watchdog0
- bus_throughput      fd                  i2c-5               loop3               network_throughput  ram6                sda30               stdin               tty23               tty42               tty61               urandom             video111             xt_qtaguid
- bus_throughput_max  fimg2d              i2c-6               loop4               null                ram7                sda31               stdout              tty24               tty43               tty62               usb_accessory       video112              zero
- cam_throughput      frandom             i2c-7               loop5               p61                 ram8                sda32               stmvl6180_ranging   tty25               tty44               tty63               v4l-subdev0         video120
- charger_device      full                i2c-8               loop6               panic_msg           ram9                sda33               tspdrv              tty26               tty45               tty7                v4l-subdev1         video121
- cluster0_freq_max   fuse                i2c-9               loop7               pn544               random              sda41               tty                 tty27               tty46               tty8                v4l-subdev10        video122
- cluster0_freq_min   gps                 iio:device0         m2m1shot_jpeg       port                rfkill              sda42               tty0                tty28               tty47               tty9                v4l-subdev2         video130
- cluster0_num_max    gpu_freq_max        iio:device1         m2m1shot_scaler0    ppp                 rtc0                sda43               tty1                tty29               tty48               ttyGS0              v4l-subdev3         video131
- cluster0_num_min    gpu_freq_min        input               m2m1shot_scaler1    psaux               s5p-smem            sda44               tty10               tty3                tty49               ttyGS1              v4l-subdev4         video132
- cluster1_freq_max   haptic_device       ion                 mali0               ptmx                sda                 sdb                 tty11               tty30               tty5                ttyGS2              v4l-subdev5         video140
+   ... (long and legit output) ...
  # openrc 
   * Mounting security filesystem ... [ ok ]
   * Mounting debug filesystem ... [ ok ]
@@ -106,6 +86,14 @@ If one tries to mount the system manually it reboots after "Populating /dev with
   * Generating a rule to create a /dev/root symlink ... [ ok ]
   * Populating /dev with existing devices through uevents ... [ ok ]
 '''
+
+Reboot is provoked by the following command called from "udev-trigger" OpenRC script:
+
+'''
+ udevadm trigger --type=devices --action=add
+'''
+
+Eudev seem to suffer from this problem: https://github.com/gentoo/eudev/pull/134/commits/f80fe0e68686060e861338cf7b3b32e0637b3e0b
 
 == Development notes ==
 === Kernels ===
