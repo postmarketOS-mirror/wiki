@@ -64,6 +64,18 @@ with white lines on the left and top borders, as if it is a part of zoomed in im
 Turning on OpenRC logging does not produce any log files in /var/log on sysroot partition, which suggests that either switch_root and call to /sbin/init fails,
 or OpenRC fails on very early stage.
 
+== Development notes ==
+=== Kernels ===
+There are several candidate kernels for the port:
+
+# Official kernel sources
+## [https://github.com/meizuosc/m576/tree/master Android branch]. This branch seem to contain the very first kernel used for the earliest FlymeOS 4.x ROM. It is reported to be uncomplete, in particular, it misses Meizu proprietary sources for power management.
+## [https://github.com/meizuosc/m576/tree/ubuntu Ubuntu branch]. This branch seem to contain kernel actually used in more recent official Android releases (3.10.100) at least till commit f866ad068f11fb5e68ff87901346483945972ae9. After that Ubuntu-specific patches as well as generic bugfixes come.
+## Android 7 kernel, not released. Kernels from previous two links were only used in very early official ROMs. Later kernel sources were not realeased. There is a Github [https://github.com/meizuosc/m576/issues/5 issue] requesting the release. Meizu is known to respond positively to such issues.
+# Unofficial sources
+## [https://github.com/ubports/kernel_turbo UBPorts kernel]. Based on Meizu Pro 5 branch. Contains Ubuntu Touch fixes and ports, mainly Android binder and anbox-specific patches.
+## [https://github.com/faust93/kernel_meizu_m576 faust93's kernel]. Kernel used in at least two unofficial Android roms. This kernel seems to be most up to date candidate, but contains a lot of patches from assorted sources and may be not very stable
+
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
