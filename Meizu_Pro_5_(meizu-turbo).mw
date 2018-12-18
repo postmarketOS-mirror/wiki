@@ -65,7 +65,7 @@ Turning on OpenRC logging does not produce any log files in /var/log on sysroot 
 or OpenRC fails on very early stage.
 The same result has been observed on a modified UBPorts kernel (currently in APKBUILD) and on faust98 kernel (see below), both compiled on GCC8 and GCC6.
 
-If one tries to mount the system manually it reboots after populating /dev message:
+If one tries to mount the system manually it reboots after "Populating /dev with existing devices through uevents" message:
 
 
  # mount /dev/block/sda41p2 /sysroot
