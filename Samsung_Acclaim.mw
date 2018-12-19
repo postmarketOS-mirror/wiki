@@ -56,11 +56,7 @@
 --NO FURTHER TESTING DONE AT THIS POINT
 
 == Errors/Warnings ==
-<code> >>> linux-samsung-sch-r880*: Running postcheck for linux-samsung-sch-r880
- >>> linux-samsung-sch-r880*: Preparing package linux-samsung-sch-r880...
- >>> WARNING: linux-samsung-sch-r880*: No arch specific binaries found so arch should probably be set to "noarch"
- >>> linux-samsung-sch-r880*: Tracing dependencies...
-</code>
+I bricked my initial board trying to flash the kernel using a flasher app (same one used for custom recovery). My backup board runs Android 2.1 and won't permanent root successfully.
 
 == BML Partition Map Definition ==
 Discovered using Binwalk
