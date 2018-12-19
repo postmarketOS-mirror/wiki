@@ -56,7 +56,7 @@
 --NO FURTHER TESTING DONE AT THIS POINT
 
 == Errors/Warnings ==
-I bricked my initial board trying to flash the kernel using a flasher app (same one used for custom recovery). My backup board runs Android 2.1 and won't permanent root successfully.
+I bricked my initial board trying to flash the kernel using a flasher app (same one used for custom recovery). It now freezes at the SAMSUNG logo when powered on and does nothing else. My backup board runs Android 2.1 and won't permanent root successfully.
 
 == BML Partition Map Definition ==
 Discovered using Binwalk
