@@ -44,11 +44,9 @@ Decompress FILE (or stdin)
         -d      Decompress
         -c      Write to stdout
         -f      Force</pre>
-In the BusyBox version shipped with Alpine Linux, only lower compression levels are enabled (to reduce the binary size). The kernel you're building is configured to compress with LZMA at the highest compression level. Pick one<br />
-of the following solutions:
+In the BusyBox version shipped with Alpine Linux, only lower compression levels are enabled (to reduce the binary size). The kernel you're building is configured to compress with LZMA at the highest compression level. Pick one of the following solutions:
 
-* Add <code>xz</code> to the <code>makedepends=</code> line. Then the &quot;real&quot; lzma binary will be used instead of the Busybox version. This is '''recommended''', because then your kernel will get built most similar to how it is built elsewhere, so you have the<br />
-lowest risk of introducing a reason for the kernel not to boot (because the kernel is too big in size or something like that)
+* Add <code>xz</code> to the <code>makedepends=</code> line. Then the &quot;real&quot; lzma binary will be used instead of the Busybox version. This is '''recommended''', because then your kernel will get built most similar to how it is built elsewhere, so you have the lowest risk of introducing a reason for the kernel not to boot (because the kernel is too big in size or something like that)
 * Reduce the compression ratio by adding [https://github.com/postmarketOS/pmbootstrap/blob/b4c9f93f0d7be1272f6a67de2128558ce58e1077/aports/linux-samsung-i9070/02_reduce_lzo_compression.patch this patch]. This will not introduce any dependency, but increase the kernel size.
 * Use another compression algorithm (run <code>pmbootstrap menuconfig linux-...</code> and change it there). Gzip should work, but will produce a big kernel, because pmbootstrap currently installs a workaround to always use the fastest compression method (<code>-1</code>), when the most compressing one (<code>-9</code>) is chosen. This will increase the kernel size the most.
 
