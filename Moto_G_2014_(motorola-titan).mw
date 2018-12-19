@@ -42,9 +42,9 @@
 * Screen is black after the password is entered. Workaround:
 
 <source lang="bash">sh /etc/postmarketos-mkinitfs/hooks/00-device-motorola-titan.sh`</source>
-* Cannot boot if kernel is XZ-compressed (it boots if you build it using [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting%3Akernel#building-the-kernel-with-androids-build-system Android's build system])
-* flash_kernel: [https://github.com/postmarketOS/pmbootstrap/issues/126 boot image is too big]
-* wifi: requires wcnss-service (see issue [https://github.com/postmarketOS/pmbootstrap/issues/373 #373] and the wiki page [https://github.com/postmarketOS/pmbootstrap/wiki/QMI-(Qualcomm-MSM-Interface) Qualcomm MSM Interface]).
+* Cannot boot if kernel is XZ-compressed (it boots if you build it using [https://wiki.postmarketos.org/wiki/Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system Android's build system])
+* flash_kernel: [https://gitlab.com/postmarketOS/pmbootstrap/issues/126 boot image is too big]
+* wifi: requires wcnss-service (see issue [https://gitlab.com/postmarketOS/pmbootstrap/issues/373 #373] and the wiki page [https://wiki.postmarketos.org/wiki/QMI Qualcomm MSM Interface]).
 
 <pre># From initramfs
 /tmp # show_splash splash1.ppm.gz 
