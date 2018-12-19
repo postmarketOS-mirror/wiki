@@ -1,0 +1,7 @@
+Available from sysmocom (commercial side of osmocom project): http://shop.sysmocom.de/products/fernvale-mt6260-reverse-engineering-development-kit-dvt2
+
+Mediatek 6260 based board designed through reverse engineering efforts detailed here: https://www.bunniestudios.com/blog/?p=4297
+
+MT6260 Datasheet available here: https://drive.google.com/file/d/14UcrFRB3rYW2bjttFZ7GA4zAi_HL-yjZ/view?usp=sharing
+
+[[User:Unrznbl]] is working on porting osmocom-bb (open source 2G baseband firmware) to fernvale and other MT626x based devices such as DZ-09_Watch and SIM800_Modules.
