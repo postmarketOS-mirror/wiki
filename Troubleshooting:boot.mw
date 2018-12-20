@@ -33,6 +33,7 @@ $ pmbootstrap flasher boot
 ** Immediately entering flash mode after the reboot
 ** Boot a custom recovery such as TWRP
 ** read <code>/proc/last_kmsg</code> or <code>/sys/fs/pstore/console-ramoops</code> to see if it booted at all, and what caused the reboot
+** more on that topic is [[Mainlining_FAQ#Writing_dmesg_to_RAM_and_reading_it_out_after_reboot|here]] and [http://docs.halium.org/en/latest/porting/debug-build/dmesg.html here]
 
 Depending on whether your kernel is booted or not, read on in the appropriate section below. If it turns out, that your kernel is booted, and you have a network interface and get an IP address, then you probably only need to [[Porting_to_a_new_device#Display|get your display working]].
 
