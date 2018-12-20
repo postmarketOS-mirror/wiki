@@ -79,6 +79,19 @@ Usability of desktop environments:
 
 Video Decoder Engine (VDE) was added to mainline kernel v4.16. The grate-driver includes hardware h264 decoding with libvdpau-tegra.
 
+The vdpau driver does '''not''' support h264 videos encoded with:
+* weighted prediction
+* CABAC
+
+Sample video that can be decoded with hardware acceleration:
+https://peach.blender.org/trailer-page/
+
+<source lang="shell">
+$ mpv --hwdec=vdpau trailer_720p.mov
+Using hardware decoding (vdpau).
+VO: [vdpau] 1280x720 vdpau[yuv420p]
+</source>
+
 == Audio ==
 
 Headphone and speaker output are working on the mainline wm8994 driver. Microphone inputs are not working.
