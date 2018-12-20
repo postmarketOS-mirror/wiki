@@ -4,9 +4,9 @@
 | codename = tassve
 | releaseyear = 2012
 | originalsoftware = Android 2.3.6
-| chipset = Qualcomm MSM7227 Snapdragon S1
+| chipset = Broadcom BCM21553
 | cpu = 832 MHz ARMv6
-| gpu = Adreno 200
+| gpu = Broadcom VideoCore IV
 | storage = 160MB
 | display = 240x320
 | memory = 384MB
