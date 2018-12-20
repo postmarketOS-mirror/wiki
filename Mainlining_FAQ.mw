@@ -40,6 +40,8 @@ $ dmesg | grep attached
 [    0.074293] ramoops: attached 0x100000@0x2e500000, ecc: 0/0
 </syntaxhighlight>
 
+See also: [http://docs.halium.org/en/latest/porting/debug-build/dmesg.html Halium docs on dmesg]
+
 == Serial cable ==
 === Can I do it without a serial cable? ===
 * in theory, yes by dumping dmesg to RAM (see above)
