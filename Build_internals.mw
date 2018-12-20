@@ -11,7 +11,7 @@ To rebuild the initramfs, run <code>mkinitfs</code> inside the chroot with the r
 <code>pmbootstrap</code> wraps around <code>abuild</code> (Alpine's official program to build [[Glossary#apk|apks]]), but it does a few things different than <code>abuild</code> (which internally often calls <code>apk</code>):
 
 * <code>pmbootstrap</code> can cross-compile out of the box, utilizing different chroots as needed (see below for details)
-* <code>pmbootstrap</code> does dependency parsing on its own (so it works across the <code>aports</code> folder ''and'' the binary repository, also with [https://ollieparanoid.github.io/post/50-days-of-postmarketOS/#timestamp-based-rebuilds timestamp based rebuilds] and can detect across chroots when a package is outdated and explicitly install them).
+* <code>pmbootstrap</code> does dependency parsing on its own (so it works across the <code>aports</code> folder ''and'' the binary repository and can detect across chroots when a package is outdated and explicitly install them).
 * <code>pmbootstrap</code> does ''not'' honor operators in dependencies, such as: <code>&lt;</code>, <code>&gt;</code>, <code>=</code>, <code>!</code>. These simply get ignored (<code>!</code> packages don't count as dependencies). This may lead to errors, if it does please report them. However, since we're calling <code>apk</code> to install the packages, it does the real dependency checking and so far it's working well enough.
 * <code>pmbootstrap</code> parses <code>APKINDEX</code> and <code>APKBUILD</code> files on its own.
 * <code>APKINDEX</code> parsing is considered to be pretty good (because the format is dead simple!)
