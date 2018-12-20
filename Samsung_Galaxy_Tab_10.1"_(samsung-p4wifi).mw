@@ -92,6 +92,59 @@ The wifi chip in this device is the Broadcom BCM4330 B1 revision. There is a B2 
 == Cellular Modem ==
 The xmm6260 modem was used in quite a few Samsung Android devices from the same era as this tablet. The Samsung Galaxy Tab 10.1 3G (p4) and Samsung Galaxy Tab 10.1 from T-Mobile (p4tmo) are otherwise identical to the WiFi only version of the tablet (p4wifi). The cellular modem is connected via an internal USB interface called USB HSIC. The mainline Tegra USB driver does not implement this functionality. Much of the work in enabling the cellular stack would involve adding USB HSIC support to the mainline USB driver.
 
+== Bluetooth ==
+
+The bcm4330 Bluetooth module is supported by the mainline kernel and Bluez 5 stack.
+
+Installation:
+<source lang="shell">
+$ apk add blueman
+$ rc-update add bluetooth default
+$ rc-service start bluetooth
+</source>
+
+Pairing:
+<source lang="shell">
+$ bluetoothctl
+$ power on
+$ scan on
+$ connect XX:XX:XX:XX:XX:XX
+$ scan off
+</source>
+
+=== Audio ===
+
+Install PulseAudio:
+<source lang="shell">$ apk add pulseaudio pulseaudio-bluez pulseaudio-utils</source>
+
+Start PulseAudio:
+<source lang="shell">$ pulseaudio --daemonize</source>
+
+Check that the Bluetooth audio profiles are working in bluetoothctl:
+<source lang="shell">
+$ show
+Controller XX:XX:XX:XX:XX:XX (public)
+        Name: BlueZ 5.49
+        Alias: BlueZ 5.49
+        Class: 0x000c0000
+        Powered: yes
+        Discoverable: no
+        Pairable: yes
+        UUID: Headset AG                (00001112-0000-1000-8000-00805f9b34fb)
+        UUID: Generic Attribute Profile (00001801-0000-1000-8000-00805f9b34fb)
+        UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)
+        UUID: Generic Access Profile    (00001800-0000-1000-8000-00805f9b34fb)
+        UUID: PnP Information           (00001200-0000-1000-8000-00805f9b34fb)
+        UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)
+        UUID: Audio Source              (0000110a-0000-1000-8000-00805f9b34fb)
+        UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)
+        UUID: Headset                   (00001108-0000-1000-8000-00805f9b34fb)
+        Modalias: usb:v1D6Bp0246d0531
+        Discovering: no
+</source>
+
+Play an audio file through a Bluetooth headset:
+<source lang="shell">$ paplay audio.wav</source>
 
 == Other Information ==
 ==== Hardware Information & Mainline Driver Status ====
