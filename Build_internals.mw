@@ -8,7 +8,7 @@ To rebuild the initramfs, run <code>mkinitfs</code> inside the chroot with the r
 
 === pmbootstrap vs. abuild ===
 
-<code>pmbootstrap</code> wraps around <code>abuild</code> (Alpine's official program to build [[Glossary#apk|apks]]), but it does a few things different than <code>abuild</code> (which internally often calls <code>apk</code>):
+<code>pmbootstrap</code> wraps around [https://git.alpinelinux.org/cgit/abuild/ <code>abuild</code>] (Alpine's official program to build [[Glossary#apk|apks]]), but it does a few things different than <code>abuild</code> (which internally often calls <code>apk</code>):
 
 * <code>pmbootstrap</code> can cross-compile out of the box, utilizing different chroots as needed (see below for details)
 * <code>pmbootstrap</code> does dependency parsing on its own (so it works across the <code>aports</code> folder ''and'' the binary repository and can detect across chroots when a package is outdated and explicitly install them).
