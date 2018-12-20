@@ -1,18 +1,10 @@
 __NOTOC__
-<!--Maybe it's time to replace the Weston screenshot here?-->
-[[File:Banner.jpg|frameless|400px|right]][http://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://gitlab.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
+[[File:Nexus5-02-home.jpg|thumb|right|postmarketOS running [[Plasma Mobile]] on top of [[The Mainline Kernel|mainline Linux]] on the [[Google_Nexus_5_(lg-hammerhead)|Google Nexus 5]].]]
+[https://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://gitlab.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
 
 
 <!--========================================================================================-->
 
-{| style="float:right"
-|[[File:LuneOS Browser.png|200x200px]]
-|[[File:Samsung-s5-weston.jpg|200x200px]]
-|[[File:T3-weston.jpg|200x200px]]
-|[[File:PostmarketOS_on_SGP611.png|200x200px]]
-|[[File:I9505.jpg|200x200px]]
-|[[File:Sony_yuga_weston.jpg|200x200px]]
-|}
 
 <div style="clear: both"></div>
 <!--========================================================================================-->
