@@ -33,3 +33,6 @@ Thanks to opendata and bshah for the following log. Let's make this more wiki fr
 **<code>pm8941_l24: regulator-l24</code>
 * Then look in your devices android DTSi and look for any regulator configs if you find any change the corresponding regulator in the dts 
 * This should be enough to boot with USB telnet
+
+== See also ==
+* {{issue|153|pmaports}} crosshatch: mainlining attempt: progress and questions
