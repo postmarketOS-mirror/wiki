@@ -29,6 +29,10 @@ $ pmbootstrap initfs hook_add maximum-attention
 $ pmbootstrap flasher boot
 (or however you boot the kernel/initramfs)
 </syntaxhighlight>
+* Try to read dmesg after rebooting:
+** Immediately entering flash mode after the reboot
+** Boot a custom recovery such as TWRP
+** read <code>/proc/last_kmsg</code> or <code>/sys/fs/pstore/console-ramoops</code> to see if it booted at all, and what caused the reboot
 
 Depending on whether your kernel is booted or not, read on in the appropriate section below. If it turns out, that your kernel is booted, and you have a network interface and get an IP address, then you probably only need to [[Porting_to_a_new_device#Display|get your display working]].
 
