@@ -96,14 +96,14 @@ The xmm6260 modem was used in quite a few Samsung Android devices from the same 
 
 The bcm4330 Bluetooth module is supported by the mainline kernel and Bluez 5 stack.
 
-Installation:
+Install bluetooth service:
 <source lang="shell">
 $ apk add blueman
 $ rc-update add bluetooth default
 $ rc-service start bluetooth
 </source>
 
-Pairing:
+Pair a Bluetooth device:
 <source lang="shell">
 $ bluetoothctl
 $ power on
@@ -113,6 +113,8 @@ $ scan off
 </source>
 
 === Audio ===
+
+The following instructions will play audio to a Bluetooth headset.
 
 Install PulseAudio:
 <source lang="shell">$ apk add pulseaudio pulseaudio-bluez pulseaudio-utils</source>
