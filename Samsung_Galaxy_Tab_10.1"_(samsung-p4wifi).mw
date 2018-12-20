@@ -111,7 +111,7 @@ The bcm4330 Bluetooth module is supported by the mainline kernel and Bluez 5 sta
 
 Install bluetooth service:
 <source lang="shell">
-$ apk add blueman
+$ apk add bluez
 $ rc-update add bluetooth default
 $ rc-service start bluetooth
 </source>
