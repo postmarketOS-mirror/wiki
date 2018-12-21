@@ -63,6 +63,10 @@ $ start_charging_mode
 ...
 </syntaxhighlight>
 
+=== Can ping to device, but SSH says "connection refused" ===
+
+It might be that fsck fails on a partition: try telnetting into initramfs and comment out the boot partition, then try booting (https://github.com/postmarketOS/pmbootstrap/issues/1511)
+
 === If that does not help ===
 * If you have powered off the device while it was not fully booted yet, it could be that you killed it while it was generating SSH keys. That means, it may have empty files instead of actual keys, so they will not get generated again, but also SSHD fails to start. When this could be the case with your issue, try to flash again and make sure that you do not turn off the device during the boot process this time.
 * If the initramfs script seems to be working fine, chances are that the error happens as OpenRC runs. See {{github|1582}} for steps to log OpenRC's output to <code>kmesg</code>
