@@ -33,6 +33,8 @@ fastboot boot \
 uncompressed_boot/boot.img-zImage \
 ~/.local/var/pmboostrap/chroot_rootfs-XXX-XXXX/boot/initramfs-lg-hammerhead</source>
 
+{{Note|For HTC devices you may need to specify the base address, see {{issue|145}}}}
+
 Note that the '''fastboot boot''' command loads kernel (and eventually the ramdisk) in memory and does not write anything on partitions. 
 
 Immediately after downloading kernel (and eventually the ram disk) in memory, it tries to boot it. If nothing appens, your device is frozen. You just have to remove battery to restart with your original kernel .
