@@ -275,11 +275,3 @@ To debug the issue, follow instructions at [[Inspecting the initramfs]] includin
 You might also be getting the error "ERROR: Failed to confirm end of file transfer sequence"
 
 It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try setting <code>deviceinfo_flash_sparse="true"</code> in the [[deviceinfo]].
-
-=== Can ping to device, but SSH says "connection refused" ===
-
-For some reason, the booting is not getting completed.
-
-Some things that might help:
- - It might be that fsck fails on a partition: try telnetting into initramfs and comment out the boot partition, then try booting (https://github.com/postmarketOS/pmbootstrap/issues/1511)
- - Try rebooting a couple of times to see if that helps
