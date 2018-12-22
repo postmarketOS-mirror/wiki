@@ -41,7 +41,7 @@ Make sure that your working directory is mounted correctly. This can happen when
 Add <code>rc_logger=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>. If you managed to get the system to boot far enough to have telnet access, add [[Inspecting-the-initramfs|the port 24 telnet listener]] and you can mount the root device to view said log.
 
 === SSH / udev / touch screen do not work ===
-* Make sure, that <code>DEVTMPFS</code> is enabled in your kernel config. Do not enable <code>DEVTMPFS_MOUNT</code>.
+* Make sure, that <code>DEVTMPFS</code> is enabled in your [https://wiki.postmarketos.org/wiki/Kernel_configuration kernel config]. Do not enable <code>DEVTMPFS_MOUNT</code>.
 
 === I can't access the framebuffer device ===
 * <code>cat /dev/random &gt; /dev/fb0</code> returns: <code>cat: write error: No such device</code>
