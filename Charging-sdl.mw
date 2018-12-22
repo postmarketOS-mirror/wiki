@@ -32,7 +32,9 @@ $ charging-sdl -pcf "$fontpath"
 
 ==== Charge mode not detected ====
 
-In order to detect if the device has been powered on in "charge mode", the initramfs script looks for specific options in the kernel cmdline (e.g.: androidboot.mode=charger) Kernel cmdline is the arguments Linux uses to boot. See [https://gitlab.com/postmarketOS/pmaports/blob/master/device/device-lg-bullhead/deviceinfo#L23 this example].
+In order to detect if the device has been powered on in "charge mode", the initramfs script looks for specific options in the kernel cmdline (e.g.: androidboot.mode=charger).
+
+Kernel cmdline is the arguments Linux uses to boot. See [https://gitlab.com/postmarketOS/pmaports/blob/master/device/device-lg-bullhead/deviceinfo#L23 this example].
 
 Compare your kernel cmdline when powered on normally to when you power on by connecting the usb cable only. 
 If you find a specific option to distinguish the two boot modes, please update the [https://gitlab.com/postmarketOS/pmaports/blob/master/main/postmarketos-mkinitfs/init_functions.sh#L307-332 initramfs script].
