@@ -99,11 +99,15 @@ https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
 Downstream DTS:
 https://github.com/franciscofranco/bullhead/blob/oreo-mr1/arch/arm/boot/dts/qcom/msm8992.dtsi
 
-<!--========================================================================================-->
 == Some Photos ==
 
 {| style="float:left"
 |[[File:Lg-bullhead_mate.jpg|200x200px]]
 |[[File:Lg-bullhead_plasma.jpg|200x200px]]
 |}
-<!--========================================================================================-->
+
+<div style="clear:left"></div>
+
+== See also ==
+* {{github|1222}} initial MR
+* {{issue|1703}} showing black screen after pmos logo in xfce DE
