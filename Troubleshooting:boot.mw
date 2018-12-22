@@ -65,7 +65,7 @@ $ start_charging_mode
 
 === Can ping to device, but SSH says "connection refused" ===
 
-It might be that fsck fails on a partition: try telnetting into initramfs and comment out the boot partition, then try booting (https://github.com/postmarketOS/pmbootstrap/issues/1511)
+It might be that fsck fails on a partition: try telnetting into initramfs, mount the root partition, and comment out the boot partition in <code>/etc/fstab</code>, then try booting ({{github|1511}}). If that is the cause of the error, it should also be fixed by re-flashing the postmarketOS rootfs (might be easier).
 
 === If that does not help ===
 * If you have powered off the device while it was not fully booted yet, it could be that you killed it while it was generating SSH keys. That means, it may have empty files instead of actual keys, so they will not get generated again, but also SSHD fails to start. When this could be the case with your issue, try to flash again and make sure that you do not turn off the device during the boot process this time.
