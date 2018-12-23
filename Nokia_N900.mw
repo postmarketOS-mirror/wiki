@@ -465,6 +465,7 @@ gps2 will not talk to gpsd, so it is only useful to verify that hardware is work
 * [https://web.archive.org/web/20131117073524/http://skeiron.org/tablets-dev/nokia_N900/ Images and Flashers for Maemo]
 * {{issue|1617}} issue about Wi-Fi Setup and Keyboard layout
 * [[User:Ollieparanoid/Dogfooding:N900|ollieparanoid's efforts to use the N900 as music player]]
+* [https://n900.quitesimple.org/rescueOS/rescueOS-1.3/ N900 RescueOS]
 
 == Helpful Links for Porting ==
 * [https://neo900.org/stuff/block-diagrams/n900/n900.html Device schematic]
