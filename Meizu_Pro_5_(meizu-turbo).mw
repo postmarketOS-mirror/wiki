@@ -56,44 +56,41 @@ This device's boot partition has 'bootimg' label. Because of that boot partition
 flashed directly with fastboot utility, or pmbootstrap config source code has to be fixed.
 
 == Status ==
-Currently when turned on, the device enters reboot loop.
-USB networking workds, telnet debugging hook lets log in at early stage before the reboot.
-All steps from init.sh until switch_root when entered manually in telnet debug shell seem to work without problem.
-The display is not working - blank black screen. If provoked to display an early splash (e.g. no rootfs), a black image is displayed
-with white lines on the left and top borders, as if it is a part of zoomed in image.
-Turning on OpenRC logging does not produce any log files in /var/log on sysroot partition, which suggests that either switch_root and call to /sbin/init fails,
-or OpenRC fails on very early stage.
-The same result has been observed on a modified UBPorts kernel (currently in APKBUILD) and on faust98 kernel (see below), both compiled on GCC8 and GCC6.
-
-If one tries to mount the system manually it reboots after "Populating /dev with existing devices through uevents" message:
-
-
- # mount /dev/mapper/sda41p2 /sysroot
- # mount -t proc proc /sysroot/proc
- # mount -t sysfs sys /sysroot/sys
- # chroot /sysroot
- # touch .....runlevel
- # /etc/init.d/devfs start
- # ls /dev
-   ... (long and legit output) ...
- # openrc 
-  * Mounting security filesystem ... [ ok ]
-  * Mounting debug filesystem ... [ ok ]
-  * Mounting config filesystem ... [ ok ]
-  * Mounting fuse control filesystem ... [ ok ]
-  * Mounting SELinux filesystem ... [ ok ]
-  * Starting udev ... [ ok ]
-  * Generating a rule to create a /dev/root symlink ... [ ok ]
-  * Populating /dev with existing devices through uevents ... [ ok ]
-'''
-
-Reboot is provoked by the following command called from "udev-trigger" OpenRC script:
+Currently when turned on, the device enters reboot loop. The reboot is triggered by the line:
 
 '''
  udevadm trigger --type=devices --action=add
 '''
+The device is accessible with telnet hook and via SSH (after additional procedure)
 
-Eudev seem to suffer from this problem: https://github.com/gentoo/eudev/pull/134/commits/f80fe0e68686060e861338cf7b3b32e0637b3e0b
+=== Procedure to get the device booting till the SSH ===
+
+Install PostmarketOS's telnet debug hook, log on with telnet, then  execute:
+
+ . init_functions.sh
+ mount_boot_partition
+ extract_initramfs_extra /boot/initramfs-*-extra
+ start_charging_mode
+ wait_root_partition
+ resize_root_partition
+ unlock_root_partition
+ resize_root_filesystem
+ mount_root_partition
+ mount -o remount,rw /dev/mapper/sda41p2 /sysroot
+
+ mount -t proc proc /sysroot/proc
+ mount -t sysfs sys /sysroot/sys
+ chroot /sysroot
+
+
+In chroot, comment out the offendig string, e.g. with sed replace.
+
+=== Getting the display to render frames ===
+Using MartinBraam's trick it is possible to make the display render frames like this:
+
+ while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done
+
+See https://github.com/postmarketOS/pmbootstrap/pull/66#issuecomment-306343779
 
 == Development notes ==
 === Kernels ===
