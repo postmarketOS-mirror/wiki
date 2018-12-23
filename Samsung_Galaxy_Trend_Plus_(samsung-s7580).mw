@@ -17,7 +17,7 @@
 | status_flashing = 
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
@@ -43,15 +43,17 @@
 * Screen
 * Touch
 * USB Network
-* Wifi works partially
+* Wifi
 
 == What does not work ==
 * Flashing to SYSTEM using heimdall
+* Setting up wifi using networkmanager
 * Everything else
+
 
 == How to enter flash mode ==
 * Power button + Home button + Volume down  
 
 == Installation ==
 * 1. Flash boot partition "pmbootstrap flasher flash_kernel"
-* 2. Install system image to sdcard (easy) OR flash to SYSTEM partition using dd in TWRP (hard)
+* 2. Install system image to sdcard
