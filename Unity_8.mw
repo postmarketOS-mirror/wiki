@@ -19,14 +19,20 @@ pmbootstrap config ui none # Assuming the pmbootstrap init step has already been
 pmbootstrap install --add unity8
 </source>
 
-Once the device has launched, Unity 8 can be started with the following:
+Once the device has launched, Unity 8 can be started with the following (as root):
 
 <source>
+# == You only have to run this once ==
 # "unity7-schemas"
 wget -O /usr/share/glib-2.0/schemas/com.canonical.Unity.gschema.xml https://pastebin.com/raw/y2hMw9qq
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
+mkdir -p $HOME/.config/ubuntu-system-settings
+touch $HOME/.config/ubuntu-system-settings/wizard-has-run
 
+# set a password (passwd)!
+
+# == You have to run this e.g. after rebooting
 if test -z "${XDG_RUNTIME_DIR}"; then
   export XDG_RUNTIME_DIR=/tmp/$(id -u)-runtime-dir
   if ! test -d "${XDG_RUNTIME_DIR}"; then
@@ -37,9 +43,5 @@ fi
 
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
 
-mkdir -p $HOME/.config/ubuntu-system-settings
-touch $HOME/.config/ubuntu-system-settings/wizard-has-run
-
-# set a password!
 env LD_LIBRARY_PATH=/usr/lib/qt5/plugins/platforms MIR_SERVER_CURSOR=null QT_QPA_PLATFORM=mirserver G_MESSAGES_DEBUG=all unity8
 </source>
