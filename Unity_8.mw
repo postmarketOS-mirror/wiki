@@ -23,7 +23,7 @@ Once the device has launched, Unity 8 can be started with the following:
 
 <source>
 # "unity7-schemas"
-wget -O /usr/share/glib-2.0/schemas/com.canonical.Unity.gschema.xml https://pastebin.com/raw/ixPuAuv9
+wget -O /usr/share/glib-2.0/schemas/com.canonical.Unity.gschema.xml https://pastebin.com/raw/y2hMw9qq
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 
