@@ -49,6 +49,7 @@ Your device should now be in so-called "fastboot" mode.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
+* [https://source.codeaurora.org/quic/la/kernel/lk/tree/?h=lk.lnx.1.0.r5-rel Latest lk version for msm8996]
 * [https://gitlab.com/pinoaffe/pmaports fork of the aports repo with APKBUILDs for xiaomi-gemini]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
