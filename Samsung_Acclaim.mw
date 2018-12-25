@@ -33,7 +33,7 @@
 | status_sms = 
 | status_calls = 
 | booting = no
-| status = kernel won't compile
+| status = kernel compiles. Cannot flash device.
 }}
 
 == Contributors ==
@@ -54,6 +54,7 @@
 *Cannot flash using Heimdall
 *Flashing via Odin may work but I was unsuccessful 
 --NO FURTHER TESTING DONE AT THIS POINT
+I have given up on this phone for now. Don't have the time to manage it.
 
 == Errors/Warnings ==
 I bricked my initial board trying to flash the kernel using a flasher app (same one used for custom recovery). It now freezes at the SAMSUNG logo when powered on and does nothing else. My backup board runs Android 2.1 and won't permanent root successfully.
