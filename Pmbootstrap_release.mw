@@ -3,7 +3,7 @@ Checklist for creating a <code>pmbootstrap</code> release:
 * set version in <code>pmb/config/__init__.py</code> to the new version
 * [https://gitlab.com/postmarketOS/pmbootstrap/tags/new tag a release in gitlab]
 ** fill out "release notes" (we can use markdown there), leave "message" empty
-** look at the previous commits and merged MRs to write a good description of what changed
+** look at the [https://gitlab.com/postmarketOS/pmbootstrap/commits/master previous commits] to write a good description of what changed
 * update the pypi release (see the script in {{issue|1679}})
 * update the pmbootstrap aport in pmaports (change the pkgrel, update the checksum, build)
 * if future changes in pmaports will require the new pmbootstrap version, increase it in pmaports.git's pmaports.cfg file
