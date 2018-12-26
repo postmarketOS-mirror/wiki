@@ -23,6 +23,11 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |
 
 |-
+| <code>codename</code>
+| Device codename (e.g. <code>lg-hammerhead</code>)
+|
+
+|-
 | <code>date</code>
 | Release date of the device
 |
