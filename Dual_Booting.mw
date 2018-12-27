@@ -10,3 +10,5 @@ PostmarketOS doesn't currently support dual booting trough recovery, yet there a
 === See also ===
 * [[FAQ#Is_dual_boot_supported | FAQ Entry]]
 * {{github|421}} for implementation ideas
+
+[[Category:Technical Reference]]
