@@ -275,3 +275,6 @@ To debug the issue, follow instructions at [[Inspecting the initramfs]] includin
 You might also be getting the error "ERROR: Failed to confirm end of file transfer sequence"
 
 It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try setting <code>deviceinfo_flash_sparse="true"</code> in the [[deviceinfo]].
+
+
+[[Category:Technical Reference]]
