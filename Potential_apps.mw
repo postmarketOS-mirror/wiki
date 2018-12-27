@@ -234,3 +234,5 @@ These are applications which already exist for Linux and could be reused in post
 * [http://www.ofono.org oFono] - Open Source Telephony Framework
 * [https://launchpad.net/ginn/ Ginn] - Allows non-multitouch-aware applications to support multitouch gestures making a lot more applications usable on a touchscreen. [https://www.youtube.com/watch?v=NKDLWrLaKKE]
 * [https://code.google.com/archive/p/microemu/ MicroEmulator] - Runs J2ME MIDP feature phone applications on Linux devices.  Can be used to run apps e.g. Opera Mini and Facebook, for the pmOS feature phone idea.
+
+[[Category:Apps]]
