@@ -14,7 +14,7 @@
 | memory = 768MB
 | architecture = armhf
 | status_usbnet = Y
-| status_flashing = 
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
@@ -48,7 +48,7 @@
 * Touch (<code>/dev/input/event2</code>)
 
 == What does not work ==
-* Flashing rootfs to internal storage
+* Flashing rootfs to internal storage. (Flash to sdcard instead) 
 * Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and dhcpcd)
 * Everything else
 
@@ -58,11 +58,14 @@
 
 == Installation ==
 * 1. Flash the kernel <code>pmbootstrap flasher flash_kernel</code>
-* 2. Install system image to sdcard <code>pmboostrap install --sdcard=/dev/mmcblkXpX</code>
+* 2. Install system image to sdcard <code>pmboostrap install --no-fde --sdcard /dev/mmcblkXXX</code>
 
 == Misc ==
-Audio and video works in chromium
+*Audio and video works in chromium.
+*I used a 150kΩ resistor in my USB debug cable. See https://wiki.postmarketos.org/wiki/Serial_debugging
 
 == Pictures ==
 
 == Links ==
+* [https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx Kernel source]
+* [https://github.com/Samsung-KYLEPROXX/android_device_samsung_kylepro Good hardware information page]
