@@ -109,6 +109,8 @@ The crond will execute check_battery_state.sh every 2 minutes and the
 predefined low battery actions will be performed.
 
 ==See also==
-
 * [https://git.busybox.net/busybox/tree/miscutils/crond.c Busybox crond source code]
 * [https://wiki.gentoo.org/wiki/Cron Gentoo cron wiki page]
+
+
+[[Category:Guide]]
