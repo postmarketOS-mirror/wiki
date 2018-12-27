@@ -16,7 +16,7 @@
 [https://postmarketos.org postmarketOS] is an experimental, touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It can be installed on smartphones and other devices.
 </div>
 
-<div style="margin-top: 40px; width: 350px">
+<div style="margin-top: 40px; width: 350px; padding-left: 15px">
 <!-- OVERVIEW -->
 {{mainpage-button|smartphone|Devices}}
 {{mainpage-button|gtk-about|:Category:Interface|User Interfaces}}
