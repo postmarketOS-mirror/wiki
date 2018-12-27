@@ -72,6 +72,7 @@ You have to configure <code>pmbootstrap</code> before generating the system imag
 <pre>$ ./pmbootstrap config ui weston</pre>
 
 == See also ==
-[[Interfaces | Work in progress new interface page]]
+* [[Interfaces | Work in progress new interface page]]
+* [[Potential apps]]
 
 [[Category:Interface]]
