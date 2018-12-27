@@ -1,218 +1,31 @@
-__NOTOC__
-[[File:Nexus5-02-home.jpg|thumb|right|postmarketOS running [[Plasma Mobile]] on top of [[The Mainline Kernel|mainline Linux]] on the [[Google_Nexus_5_(lg-hammerhead)|Google Nexus 5]].]]
-[https://postmarketos.org postmarketOS] is a touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It  can be installed on smartphones and other devices. It is in a very early, experimental state and not usable for most people yet. [https://gitlab.com/postmarketOS/pmbootstrap pmbootstrap] allows installation and development of pmOS.
+<div style="max-width: 1200px;">
 
-
-<!--========================================================================================-->
-
-
-<div style="clear: both"></div>
-<!--========================================================================================-->
-<div>
-<!--========================================================================================-->
-= Getting Started =
-
-<!-------------------------------------------------------------------------------------------->
-<!--Introduction-->
-<div style="float: left; width: 50%">
-
-=== Introduction ===
-{|
-* '''[https://postmarketos.org/blog/2017/05/26/intro/ postmarketOS Introduction]'''
-: ''The utopic vision and goals!''
-
-* '''[[Milestones]]'''
-: ''Where individuals want to take the project ''
-|}
+<div class="res-img" style="float: left; width: 70%;">
+[[File:Postmarketos-shirt-logo.png]]
 </div>
 
-<!-------------------------------------------------------------------------------------------->
-<!--Devices & Installation-->
-<div style="float: right; width: 50%">
-
-=== Devices & Installation ===
-{|
-* '''[[Installation guide]]'''
-: ''Installation guide for devices which are already working.''
-
-* '''[[Devices]]'''
-: ''Quite a few Android devices, plus the Flame and N900.''
-
-* '''[[Device Wishlist]]'''
-: ''Devices we would like to see pmOS running on.''
-|}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
-
-<!-------------------------------------------------------------------------------------------->
-<!--Information-->
-<div style="float: right; width: 50%">
-
-=== Information ===
-{|
-* '''[[Contents Page]]'''
-: ''This page contains a list of all Wiki pages.''
-
-* '''[[Boot process]]'''
-: ''How postmarketOS starts up. ''
-
-* '''[[FAQ]]'''
-: ''Frequently asked questions''
-
-* '''[[Screen Calibration]]'''
-: ''Guide for Screen Calibration.''
-
-* '''[[Serial debugging]]'''
-: ''Some phones have a serial port accessible from the outside''
-
-* '''[[Deviceinfo reference]]'''
-: ''Our work-in-progress device-specific file format.''
-
-* '''[[External resources]]'''
-: ''This list is a collection of presentations, talks and other resources''
-
-* '''[[Glossary]]'''
-: ''List of technical term related to this project ''
-|}
+<div style="float: left; width: 260px; background: white">
+<div style="border: 1px solid lightgray; background: #f8f8f8; padding: 0px 10px; width:260px;">
+[https://postmarketos.org postmarketOS] is an experimental, touch-optimized and pre-configured [https://alpinelinux.org Alpine Linux]. It can be installed on smartphones and other devices.
 </div>
 
-<!-------------------------------------------------------------------------------------------->
-<!--Development-->
-<div style="float: left; width: 50%">
-
-=== Development ===
-{|
-* '''[[Porting to a new device]]'''
-: ''Porting to a new device and general installation guide.''
-
-* '''[[Using prebuilt kernels]]'''
-: ''Start hacking on postmarketOS without having the kernel source code.''
-
-* '''[[Troubleshooting]]'''
-: ''The page to read when something isn't working.''
-
-* '''[[The Mainline Kernel]]'''
-: ''Early work on getting device kernels into mainline Linux.''
-
-* '''[[pmbootstrap development guide]]'''
-: ''Getting started with hacking on the code.''
-
-* '''[[Patching]]'''
-: ''Using pmbootstrap build --src to create patches for packages .''
-
-* '''[[Firmware]]'''
-: ''A deeper insight into the Firmware''
-
-* '''[[:Category:Low-level|Low-level]]'''
-: ''Everything below the kernel, bootloaders, modem firmware etc..''
-
-* '''[[Upstreaming]]'''
-: ''Contribute the patches and improvements back to the original project.''
-
-* '''[[Deviceinfo flash methods]]'''
-: ''Different Flash methods for different devices.''
-|}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
-<!-------------------------------------------------------------------------------------------->
-<!--Software Management-->
-<div style="float: right; width: 50%">
-
-=== Software Management ===
-{|
-* '''[https://wiki.postmarketos.org/wiki/Creating_a_package Creating a package]'''
-: ''Creating a package and how to recycle package recipes from other distributions.''
-
-* '''[[Build internals]]'''
-: ''To build a package with pmbootstrap.''
-
-* '''[[Interfaces]]'''
-: ''The phone interfaces we are working on.''
-
-* '''[http://postmarketos.brixit.nl/ postmarketOS Repository]'''
-: ''Official repository of postmarketOS.''
-|}
-</div>
-
-<!-------------------------------------------------------------------------------------------->
-<!--Extras-->
-<div style="float: right; width: 50%">
-
-=== Extras ===
-{|
-* '''[[Related Projects]]'''
-
-* '''[[Tips and tricks]]'''
-
-* '''[[Interfaces]]'''
-
-* '''[[:Category:Guide|Guides]]'''
-
-|}
-</div><div style="clear: both"></div> <!-- A sincere thanks Archwiki! :-) -->
-
-<!-------------------------------------------------------------------------------------------->
-<!--Alpine Linux-->
-<div style="float: right; width: 50%">
-
-=== Alpine Linux ===
-{|
-* '''[https://wiki.alpinelinux.org/wiki/APKBUILD_Reference APKBUILD Reference]'''
-: ''All about the package build recipe format (that is not unlike PKGBUILDs from Arch Linux).''
-
-* '''[https://pkgs.alpinelinux.org/packages Alpine Linux Packages]'''
-: ''Search for packages and package contents.''
-|}
-</div>
-
-<!-------------------------------------------------------------------------------------------->
-<!--Communication channels-->
-<div style="float: right; width: 50%">
-
-=== Communication channels ===
-{|
-* '''[[Matrix and IRC]]'''
-: ''Live chat makes development easier.''
-
-* '''[https://gitlab.com/groups/postmarketOS/-/issues Issue tracker]'''
-: ''Besides bugs, lots feature ideas and questions''
-
-* '''[https://reddit.com/r/postmarketOS Subreddit]'''
-: ''Photos of devices running pmOS, blog posts, questions, official announcements''
-|}
-</div>
+<div style="margin-top: 50px; width: 350px">
+<!-- OVERVIEW -->
+{{mainpage-button|smartphone|Devices}}
+{{mainpage-button|gtk-about|Interfaces|User Interfaces}}
+{{mainpage-button|camera-photo|Special:ListFiles|Gallery}}
+{{mainpage-button|emblem-shared|:Category:Community|Community}}
+{{mainpage-button|dialog-question|FAQ}}
 
 
-<div style="clear: both"></div>
+<!-- GUIDES -->
+{{mainpage-button|document-save|Installation_guide|Installation}}
+{{mainpage-button|application-menu|Porting_guide|Porting}}
+{{mainpage-button|system-run|Mainlining_Guide|Mainlining}}
+{{mainpage-button|applications-utilities|:Category:Guide|''More Guides''}}
 
 
-<!--========================================================================================-->
-
-
-<!--========================================================================================-->
-
-= Wiki Editing =
-<div style="float: left; width: 50%">
-{|
-* [[Templates]]
-: ''List of postmarketOS Wiki specific templates.''
-
-* [https://www.mediawiki.org/wiki/Help:Formatting MediaWiki formatting]
-: ''MediaWiki specific markup reference''
-
-* [https://wiki.postmarketos.org/wiki/Special:ListFiles Gallery]
-: ''List of files uploaded to the Wiki.''
-
-|}
-</div>
-
-<div style="float: right; width: 50%">
-* [https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage Syntax highlighting]
-: ''Display shell-session listings or source code.''
-
-* [https://github.com/Git-Mediawiki/Git-Mediawiki Mass editing with git]
-: ''Editing.''
+<!-- CONTRIBUTING -->
+{{mainpage-button|emote-love|Contributing}}
 </div>
 </div>
-<div style="clear: both"></div>
-<!--========================================================================================-->
