@@ -27,3 +27,5 @@ This will enable IPv4 forwarding on your host machine which basically lets it fu
 and your normal network on the host machine.
 
 You can now verify the internet connection on your phone by pinging something. If this does not work it means you need to compile the kernel with USB_ETH setting enabled in menuconfig.
+
+[[Category:Guide]]
