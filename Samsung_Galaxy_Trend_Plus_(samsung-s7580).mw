@@ -65,7 +65,7 @@
 *I used a 150kΩ resistor in my USB debug cable. See https://wiki.postmarketos.org/wiki/Serial_debugging
 
 == Pictures ==
-[[File:UART-kylepro.jpg] UART pin location on motherboard]
+[[File:UART-kylepro.jpg|200px| UART pin location on motherboard]]
 
 == Links ==
 * [https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx Kernel source]
