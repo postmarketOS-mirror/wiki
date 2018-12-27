@@ -25,3 +25,6 @@ $ pmbootstrap --mirror-pmOS="" install
 </syntaxhighlight>
 
 If everything worked out, please make one separate merge request to add the new architecture and mention there which device you have ported. After that merge request is through, make another one for the device.
+
+[[Category:Technical Reference]]
+[[Category:Guide]]
