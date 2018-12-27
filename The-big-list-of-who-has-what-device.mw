@@ -19,4 +19,16 @@ tables=DeviceOwners
 |default=
 }}
 
+== The-big-list-of-what-device-is-owned-by-whom ==
+== Testing, 123 ==
+{{#cargo_query:
+tables=DeviceOwners
+|fields=Device,CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User
+|format=table
+|merge similar cells=yes
+|order by=device
+|limit=9999
+|more results text=
+}}
+
 [[Category:Community]]
