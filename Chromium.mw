@@ -1,6 +1,6 @@
 This page explains how to make chromium usable in mobile UIs like plasma-mobile.
 [[File:Wikipedia.jpg|thumb|right|frame|none|alt=Alt text|Chromium running on plasma-mobile]]
-=== Instalation ===
+=== Installation ===
 Install chromium package from alpine. 
 
 === Configure startup (scale + useragent) ===
@@ -26,3 +26,5 @@ Enable the following flags:
 *Scroll prediction
 
 This will allow to have a good scrolling experience, and hide scrollbar, so that it does not take screen-space.
+
+[[Category:Guide]]
