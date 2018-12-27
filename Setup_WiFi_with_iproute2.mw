@@ -19,3 +19,5 @@ Connect to network using wpa_supplicant:
 If your network uses DHCP, start the DHCP client:
 
     $ sudo udhcpc -i wlan0
+
+[[Category:Guide]]
