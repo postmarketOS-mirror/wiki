@@ -61,3 +61,5 @@ You can also get these from https://github.com/efidroid/build/tree/master/tools
 * {{github|356}} first implementation
 * [https://github.com/s0be/dtimgextract dtimgextract]
 * {{issue|1206}} debugging session for "FAILED (remote: dtb not found)" (contains a [https://gitlab.com/postmarketOS/pmbootstrap/issues/1206#note_85244905 workaround])
+
+[[Category:Technical Reference]]
