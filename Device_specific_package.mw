@@ -117,3 +117,6 @@ kernel_mainline() {
 == See also ==
 * [[deviceinfo]]
 * [[vendor kernel specific package]]
+
+
+[[Category:Technical Reference]]
