@@ -170,3 +170,5 @@ opendata found a cool hack to let the bootloader initialize the display, which m
 == Kernel is stuck during boot without any output ==
 * enable debug output with the kernel command line
 * consider adding kprint statements to narrow down where it hangs
+
+[[Category:Technical Reference]]
