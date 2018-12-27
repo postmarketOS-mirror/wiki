@@ -19,7 +19,7 @@
 <div style="margin-top: 40px; width: 350px">
 <!-- OVERVIEW -->
 {{mainpage-button|smartphone|Devices}}
-{{mainpage-button|gtk-about|Interfaces|User Interfaces}}
+{{mainpage-button|gtk-about|:Category:Interface|User Interfaces}}
 {{mainpage-button|camera-photo|Special:ListFiles|Gallery}}
 {{mainpage-button|emblem-shared|:Category:Community|Community}}
 {{mainpage-button|dialog-question|FAQ}}
