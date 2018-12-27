@@ -16,8 +16,9 @@ Here are some interesting ideas that you can do with your device with postmarket
 * You can run full Desktop Environment, with [https://en.wikipedia.org/wiki/Inkscape Inkscape], [https://en.wikipedia.org/wiki/GIMP GIMP] and full desktop browser(not mobile version) with extension in your device, .
 
 === Misc ===
-
 * The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
 * Browse the Linux source with links to all references [http://elixir.free-electrons.com here]
 * Qualcomm and maybe some other Androids can simply reboot from postmarketOS (or any Linux distro) into your bootloader or recovery with <code>reboot -f bootloader</code> and <code>reboot -f recovery</code>
 * Battery capacity can be monitored to trigger low battery actions. See [[Battery capacity monitoring]] for more information.
+
+[[Category:Guide]]
