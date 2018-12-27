@@ -33,3 +33,5 @@ When [[Mainlining Guide | mainlining]] a board, it is often needed to write one'
 [http://www.informit.com/articles/article.aspx?p=1647051&seqNum=5 Device Tree Blob (Flat Device Tree)]
 
 [https://github.com/torvalds/linux/blob/master/Documentation/arm/Booting Linux documentation on the ARM boot process]
+
+[[Category:Technical Reference]]
