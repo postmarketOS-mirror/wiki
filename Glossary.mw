@@ -88,3 +88,5 @@ Qualcomm Modem Interface. The internal interface inside Qualcomm SoCs that conne
 === slpi ===
 
 Sensor Low Power Interface. The interface that connect sensors like the accelerometer to the application processor in Qualcomm Socs
+
+[[Category:Technical Reference]]
