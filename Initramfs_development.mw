@@ -47,4 +47,4 @@ This is probably caused by a syntax error. Use <code>shellcheck</code> to check 
 
 By default, all output from the initramfs get redirected to <code>/pmOS_init.log</code>. If you want the output through the debug cable you need to add <code>PMOS_NO_OUTPUT_REDIRECT</code> to your [[Troubleshooting:kernel#How_can_I_boot_the_kernel_with_some_specific_arguments.3F | kernel command line]].
 
-[[Category:Guide]]
+[[Category:Technical Reference]]
