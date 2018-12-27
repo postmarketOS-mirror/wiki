@@ -1,7 +1,8 @@
 {{note|Upstreaming new packages to Alpine should only be done when you are willing to maintain the package (update it when there's a new version from upstream, or a security hole gets discovered etc.).}}
-It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches.
+It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches. Not every patch is listed here, but it might be a good idea to keep track of them anyway.
 
 === Successful ===
+* <code>2018-12-20</code> Weston: [https://gitlab.freedesktop.org/wayland/weston/merge_requests/61 compositor-fbdev: add support for ABGR]
 * <code>2017-09-22</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
 * <code>2017-09-22</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3840 Fix directfb compile error relating to C90]
 * <code>2017-09-11</code> ofono: [https://git.kernel.org/pub/scm/network/ofono/ofono.git/commit/drivers?id=cbac15cdd9858e797f223bf9d16116f82e184d88 Fix initialization of isimodem driver]
