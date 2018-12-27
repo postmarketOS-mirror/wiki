@@ -16,6 +16,7 @@ To work on something specific, see the issues tagged with [https://gitlab.com/po
 ** Proper [[Templates|template]] usage
 ** Proper [https://www.mediawiki.org/wiki/Help:Formatting wiki formatting]
 ** Put code listings/shell-session outputs in [https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage syntax highlighting] blocks
+** Fix [[:Category:Pages_with_syntax_highlighting_errors|pages with syntax highlighting errors]]
 * Other fixes for existing pages:
 ** Check if the sentences make sense
 ** Fix typos and grammar
