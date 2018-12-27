@@ -43,3 +43,5 @@ heimdall flash --pit file.pit [--<partition name> <filename>] [--<partition iden
 </code>
 
 You should be able to flash several partitions at once
+
+[[Category:Guide]]
