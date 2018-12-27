@@ -42,3 +42,5 @@ If you find a specific option to distinguish the two boot modes, please update t
 ==== DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported! ====
 
 See [https://wiki.postmarketos.org/wiki/Osk-sdl#DirectFB.2FFBDev:_No_supported_modes_found_in_.2Fetc.2Ffb.modes_and_current_mode_not_supported.21 osk-sdl troubleshooting page]
+
+[[Category:Technical Reference]]
