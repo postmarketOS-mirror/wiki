@@ -10,3 +10,5 @@ deviceinfo_bootimg_qcdt="true"
 There exist lots of versions of this <code>dtbtool</code>. We have packaged the (Python) version from Skales now, which seems to be properly maintained and versioned. But it may have incompatibilities with some (older?) kernels, where the <code>dt.img</code> file was properly generated with code based on the original C version.
 
 If you would like to test if Skales' version produces the same output as the LineageOS version (which is what we had packaged before), download the files from [https://github.com/ollieparanoid/aports-extra/tree/master/dtbtool-lineage here] and place them in <code>aports/main/dtbtool-lineage</code>. Build it with <code>pmbootstrap build dtbtool-lineage</code> and depend on <code>dtbtool-lineage</code> instead of <code>dtbtool</code> in your kernel package, then change the <code>dtbTool</code> line in your kernel APKBUILD to <code>dtbTool-lineage</code>.
+
+[[Category:Technical Reference]]
