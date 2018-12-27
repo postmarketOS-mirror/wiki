@@ -66,3 +66,5 @@ Software:
 * [https://www.freedesktop.org/wiki/Software/libqmi/ libqmi]
 * [https://github.com/torvalds/linux/blob/master/drivers/net/usb/qmi_wwan.c qmi_wwan.c]
 * [https://portland.source.codeaurora.org/patches/quic/gobi/ Gobi reference code and patches]. Modem, GPS and network drivers
+
+[[Category:Technical Reference]]
