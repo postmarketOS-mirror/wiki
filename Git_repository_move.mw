@@ -20,3 +20,5 @@ If that does not work for whatever reason, you can also delete your <code>pmboot
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 </syntaxhighlight>
+
+[[Category:Technical Reference]]
