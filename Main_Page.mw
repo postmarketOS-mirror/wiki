@@ -20,6 +20,7 @@
 <!-- OVERVIEW -->
 {{mainpage-button|smartphone|Devices}}
 {{mainpage-button|gtk-about|:Category:Interface|User Interfaces}}
+{{mainpage-button|start-here|:Category:Apps|Apps}}
 {{mainpage-button|camera-photo|Special:ListFiles|Gallery}}
 {{mainpage-button|emblem-shared|:Category:Community|Community}}
 {{mainpage-button|dialog-question|FAQ}}
@@ -32,7 +33,10 @@
 {{mainpage-button|applications-utilities|:Category:Guide|''More Guides''}}
 
 
-<!-- CONTRIBUTING -->
+<!-- CONTRIBUTING / TECHNICAL STUFF -->
 {{mainpage-button|emote-love|Contributing}}
+{{mainpage-button|folder-documents|:Category:Technical Reference|Technical Reference}}
+{{mainpage-button|emblem-important|Troubleshooting}}
+
 </div>
 </div>
