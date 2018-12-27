@@ -49,3 +49,5 @@ For a <code>noarch</code> package, we could in theory compile it once and then c
 For example: device packages are always <code>noarch</code>, so in theory you could compile the device package for your <code>armhf</code> device in <code>x86_64</code>, and then symlink it to the <code>armhf</code> package folder. But it would still depend on the kernel, which is <code>armhf</code> only for that device (assuming it is not mainlined, like most devices are right now). So it would not make sense to install it in <code>x86_64</code> anyway, and if you would want to build it, you could only really do it in <code>armhf</code> anyway, because that's where the kernel is available.
 
 So to simplify it, it is handled like in Alpine now; noarch packages just get built for each arch independently.
+
+[[Category:Technical Reference]]
