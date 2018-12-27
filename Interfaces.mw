@@ -1,6 +1,8 @@
 As a proper Linux distribution, postmarketOS wants to provide the user multiple interfaces to choose from.
 We try to list each possible interface we can use, and if they require maintenance from our side or not.
 
+This index page could use some help, see {{issue|23|wiki}}.
+
 = Interfaces =
 
 There are several types of interfaces which we divide into categories based on their use-cases.
