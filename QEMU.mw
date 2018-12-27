@@ -29,3 +29,5 @@ QEMU on Debian does not include SDL-support by default. To use pmbootstrap on De
 * [[QEMU_aarch64_(qemu-aarch64)|QEMU for aarch64]]
 * [[Troubleshooting:QEMU]]
 * {{MR|1612}} Use Alpine's QEMU rather than host system QEMU
+
+[[Category:Technical Reference]]
