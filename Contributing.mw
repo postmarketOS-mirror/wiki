@@ -1,0 +1,60 @@
+Hello there, glad you are reading this page. We have a broad spectrum of topics to contribute, and some of them do not even require programming or scripting knowledge. With each contribution, you don't just get to help out your fellow postmarketOS friends, but there's always a chance to learn something new and sharpening your skills along the way. And of course fun, fame and epic stories to tell to your grand children about what a badass hacker you have been. Now pick what interests you most.
+
+=== GitLab issues ===
+First of all, consider [[:Category:Community#GitLab_issues|subscribing to the GitLab issues]]. The most important discussions happen there, on all levels. From broad visions and blog posts to implementation details and bug reports. Voice your opinions and help out others with your knowledge, so there are more people that can in turn help out yourself when you get stuck. If you are a developer, consider testing and reviewing incoming patches (merge requests). The more eyeballs on the code, the less bugs get introduced.
+
+To work on something specific, see the issues tagged with [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted].
+
+=== Documentation and Blogging ===
+==== Wiki documentation ====
+* Create new pages if you found a new postmarketOS topic worth documenting
+* Fix the [[Special:LonelyPages|orphaned pages]] and [[Special:WantedPages|links to non-existing pages]] (do ''not'' add more of those!)
+* Add and use wiki categories where it makes sense
+* Proper [[Templates|template]] usage
+* Proper [https://www.mediawiki.org/wiki/Help:Formatting wiki formatting]
+* Put code listings/shell-session outputs in [https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Usage syntax highlighting] blocks
+* Check if the sentences make sense
+* Fix typos and grammar
+* Add links to relevant GitLab issues and other pages
+
+==== Blog posts ====
+The current scheme of blog posts works like this: going through the [https://gitlab.com/groups/postmarketOS/-/merge_requests?scope=all&utf8=%E2%9C%93&state=closed recently closed merge requests] and photos posted in the [[Matrix and IRC|chatroom]], categorizing them into logical sections before writing one paragraph after another and adding images to round it up. Contributing to any step of that process would be greatly appreciated and saves us a lot of time that we could put in other areas of the project. Get in touch with us in the [https://gitlab.com/postmarketOS/postmarketos.org/issues/ postmarketOS.org issues].
+
+We are also open to a new format of blog posts, writing shorter ones about specific changes that happened in the project rather than having these epic-but-time-consuming long reads every few months.
+
+=== Hacking ===
+* Make sure you did not overlook the [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted] link above
+* [[Installation_guide|Install postmarketOS]] to a real device or boot it with [[Qemu]]
+* [[Porting_guide|Port]] and [[Mainlining_Guide|mainline]] devices you own
+* Start [[:Category:Dogfooding|Dogfooding]] and import postmarketOS for your real life use case
+* Improve the [https://gitlab.com/postmarketOS/pmaports/ packages] we already have
+* Work on [[osk-sdl]] and [[charging-sdl]]
+* [https://postmarketos.org/blog/2018/04/14/lowlevel/#lets-do-something get involved with lowlevel hacking]
+
+=== Help out others ===
+Get active in the [[:Category:Community|community]] and help everyone along the way, with motivation or practical tips on whatever they are doing.
+
+=== Tell your friends! ===
+* [https://github.com/postmarketOS/artwork/pull/9 Print yourself a postmarketOS fair trade t-shirt and wear it!]
+* Write blog posts on your own platforms
+* Share our web links
+* Make good photos/videos of devices running postmarketOS for the wiki and for /r/postmarketOS
+* Tell your favorite online or print magazine about postmarketOS
+
+=== Help upstream projects ===
+You probably know the whole "we are standing on shoulders of giants" speech. Depending on the components you are looking at in postmarketOS, the giants are not that big and bloaty, but of course they would happily accept help by contributors interested in their projects:
+* [https://wiki.alpinelinux.org/wiki/Alpine_Linux:Contribute Alpine Linux]
+* [https://plasma-mobile.org/findyourway/ Plasma Mobile]
+* [https://github.com/maemo-leste/bugtracker/issues/ Maemo Leste]
+
+== Administrative ==
+''This list is for admins only, most people don't need to bother with this stuff.''
+* [[Repository maintenance]]
+* [[pmbootstrap release|Create a new pmbootstrap release]]
+
+== See also ==
+* [https://postmarketos.org/blog/2018/06/09/one-year/#get-involved Get involved (one year post)]
+* [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#how-can-you-help How can you help? (219 days post)]
+* [https://postmarketos.org/blog/2018/04/14/lowlevel/#how How to help (lowlevel hacking post)]
+
+[[Category:Community]]
