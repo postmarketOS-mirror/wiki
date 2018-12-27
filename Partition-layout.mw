@@ -35,3 +35,5 @@ To flash to the <code>userdata</code> partition instead of the <code>system</cod
 There might be scenarios, in which the partition type of the <code>system</code> partition can not be changed through the flasher, because it only allows [https://en.wikipedia.org/wiki/YAFFS2 yaffs2] or simg with ext4 support (during research for the mozilla flame, we found that to be the case ([https://github.com/postmarketOS/pmbootstrap/issues/299 #299]) - however, it also has an SD slot, so we did not continue this way ([https://github.com/postmarketOS/pmbootstrap/issues/337 #337])).
 
 A proposal we have for that case, is to have one big ext4/yaffs partition, and include the whole system image file inside that. Then we would adjust the initramfs code to find the boot and root partitions inside that, and teach it how to resize the whole thing to the maximum partition size. We already did some experiments, and so far everything worked (talk to drebrez or ollieparanoid).
+
+[[Category:Technical Reference]]
