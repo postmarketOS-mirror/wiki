@@ -7,3 +7,5 @@ All testing related code is in the <code>test</code> folder in the <code>pmboots
 ** <code>pytest</code>
 ** <code>pytest-cov</code>
 ** <code>flake8</code>
+
+[[Category:Technical Reference]]
