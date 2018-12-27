@@ -17,3 +17,5 @@ If you want to use the postmarketOS initramfs, make sure that you adjust the [[P
 == See also ==
 * {{issue|106|pmaports}} Turning an existing x86_64 Alpine Linux installation into a postmarketOS one fails
 * {{issue|66|pmaports}} troubleshooting the first installation which was done this way
+
+[[Category:Guide]]
