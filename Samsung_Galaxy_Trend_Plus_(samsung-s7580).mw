@@ -49,7 +49,7 @@
 
 == What does not work ==
 * Flashing rootfs to internal storage. (Flash to sdcard instead) 
-* Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and dhcpcd)
+* Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and udhcpc. See https://wiki.postmarketos.org/wiki/WiFi)
 * Everything else
 
 == How to enter flash mode ==
