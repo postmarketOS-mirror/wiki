@@ -136,4 +136,4 @@ osk-sdl is using SDL2 and DirectFB for rendering to the framebuffer (which is wh
 * clone the <code>osk-sdl</code> source code
 * use <code>pmbootstrap build osk-sdl --src=path/to/checked-out-source</code> to build it from there
 
-[[Category:Technical Reference]]
+[[Category:Guide]]
