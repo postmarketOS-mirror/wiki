@@ -29,3 +29,5 @@ $ ffmpeg -y -i video.webm -vf palettegen palette.png
 $ ffmpeg -y -i video.webm -vf scale=320:240 video-small.webm
 $ ffmpeg -y -i video-small.webm -i palette.png -filter_complex paletteuse -r 10 video.gif
 </syntaxhighlight>
+
+[[Category:Guide]]
