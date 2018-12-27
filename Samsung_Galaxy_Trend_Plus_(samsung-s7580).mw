@@ -38,22 +38,31 @@
 * Deata
 
 == Maintainer(s) ==
+* Deata
 
 == What works ==
 * Screen
 * Touch
 * USB Network
 * Wifi
+* Touch (<code>/dev/input/event2</code>)
 
 == What does not work ==
-* Flashing to SYSTEM using heimdall
-* Setting up wifi using networkmanager
+* Flashing rootfs to internal storage
+* Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and dhcpcd)
 * Everything else
 
-
 == How to enter flash mode ==
-* Power button + Home button + Volume down  
+* Press volume down and the home key, then press the power button.
+* Maintain volume down and home pressed until a warning screen comes up
 
 == Installation ==
-* 1. Flash boot partition "pmbootstrap flasher flash_kernel"
-* 2. Install system image to sdcard
+* 1. Flash the kernel <code>pmbootstrap flasher flash_kernel</code>
+* 2. Install system image to sdcard <code>pmboostrap install --sdcard=/dev/mmcblkXpX</code>
+
+== Misc ==
+Audio and video works in chromium
+
+== Pictures ==
+
+== Links ==
