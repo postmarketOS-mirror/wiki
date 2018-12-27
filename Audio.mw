@@ -82,3 +82,5 @@ For other devices the configuration might need to be adapted. On the Samsung Gal
 == See also ==
 * {{github|1328}} Audio added to samsung-p4wifi with udev rules for redirecting audio to headphones when plugging them in
 * [https://arunraghavan.net/2016/01/audio-devices-and-configuration/  How to convert Android Audio configurations to alsa/pulseaudio]
+
+[[Category:Technical Reference]]
