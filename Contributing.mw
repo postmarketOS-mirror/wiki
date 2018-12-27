@@ -30,7 +30,7 @@ We are also open to a new format of blog posts, writing shorter ones about speci
 * Make sure you did not overlook the [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted] link above
 * [[Installation_guide|Install postmarketOS]] to a real device or boot it with [[Qemu]]
 * [[Porting_guide|Port]] and [[Mainlining_Guide|mainline]] devices you own
-* Start [[:Category:Dogfooding|Dogfooding]] and import postmarketOS for your real life use case
+* Start [[:Category:Dogfooding|dogfooding]] and improve postmarketOS for your real life use case
 * Improve the [https://gitlab.com/postmarketOS/pmaports/ packages] we already have (How about your favorite [[Interfaces|UI]]?)
 * Work on [[osk-sdl]] and [[charging-sdl]]
 * [https://postmarketos.org/blog/2018/04/14/lowlevel/#lets-do-something get involved with lowlevel hacking]
