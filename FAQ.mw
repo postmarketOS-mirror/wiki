@@ -1,3 +1,6 @@
+== Is there a list that explains all the technical abbreviations? ==
+Sure, take a look at the [[glossary]].
+
 == What Linux distribution is postmarketOS based on? ==
 It is based on Alpine Edge right now. We want to change it to a stable version in the future [https://gitlab.com/postmarketOS/pmaports/issues/5 pmaports#5].
 
