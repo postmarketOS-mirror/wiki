@@ -87,3 +87,6 @@ $ EGL_PLATFORM=hwcomposer test_hwcomposer
 * [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]]: NotKit also made it work with libhybris
 * [https://postmarketos.org/blog/2018/06/09/one-year/#libhybris-and-optional-proprietary-components One year of postmarketOS: libhybris and optional proprietary components]
 * [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#libre-drivers-and-libhybris 219 days of postmarketOS: libre drivers and libhybris]
+
+
+[[Category:Technical Reference]]
