@@ -63,7 +63,7 @@
 == Misc ==
 *Audio and video works in chromium.
 *I used a 150kΩ resistor in my USB debug cable. See https://wiki.postmarketos.org/wiki/Serial_debugging
-*Serial port is on /dev/ttyS2 in pmOS.
+*Serial port is on <code>/dev/ttyS2</code> in pmOS.
 
 == Pictures ==
 [[File:UART-kylepro.jpg|200px| UART pin location on motherboard]]
