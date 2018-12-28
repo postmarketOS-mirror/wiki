@@ -3,7 +3,7 @@ This page is about maintaining the official binary package repository of postmar
 == QT upgrade ==
 There are KDE packages, which need to be rebuilt after each QT upgrade:
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap pkgrel_bump kwayland kwin plasma-framework kdeclarative 
+$ pmbootstrap pkgrel_bump kwayland kwin plasma-framework kdeclarative frameworkintegration plasma-integration 
 </syntaxhighlight>
 
 See {{issue|130|pmaports}} for an idea to automatize this and for more information.
