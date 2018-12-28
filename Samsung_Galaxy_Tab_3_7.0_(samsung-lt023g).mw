@@ -39,7 +39,7 @@
 == Entering flash mode ==
 * Power down the device, then press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code> simultaneously.
 * Once the device vibrates, release <code>Power</code>, but keep <code>Volume Down</code> and <code>Home</code> held.
-* The device will ask you if you wish upload a custom OS. Press <code>Volume Up</code> to confirm.
+* The device will ask you if you wish to upload a custom OS. Press <code>Volume Up</code> to confirm.
 * Once the device displays &quot;Odin mode&quot; in the top-left of the screen, it is ready for flashing.
 
 == Entering recovery mode ==
