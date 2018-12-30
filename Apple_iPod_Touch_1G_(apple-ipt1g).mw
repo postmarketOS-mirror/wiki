@@ -50,4 +50,4 @@ This is also the slowest device yet since it uses a 412 Mhz ARMv6 single-core cp
 
 * [https://github.com/iDroid-Project/openiBoot openiboot] (Great info on wiki)
 * [https://github.com/planetbeing/iphonelinux iphonelinux] (Also this wiki has a lot of useful info)
-* [https://github.com/postmarketOS/pmbootstrap/tree/device/ipod1 pmos branch]
+* [https://gitlab.com/postmarketOS/pmbootstrap/tree/device/ipod1 pmos branch], old scheme, aports/main/openiboot would need to be copied to the new pmbootstrap (now pmbootstrap and pmaports repos are splitted), and in the future ported to gcc8 for maintainability (low priority)
