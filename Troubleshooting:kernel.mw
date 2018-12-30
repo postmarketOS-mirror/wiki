@@ -97,7 +97,7 @@ The defconfig used is available at <code>~/android/lineage/kernel/motorola/msm82
 ==== Error: selected processor does not support ARM mode `smc #0' ====
 Try this patch: https://github.com/imoseyon/leanKernel-galaxy-nexus/pull/6
 
-=== TLS (SSL/HTTPS) is broken! ===
+== TLS (SSL/HTTPS) is broken! ==
 If you see messages like these, when trying to access HTTPS pages, read on:
 <pre>
 Connecting to pastebin.com (104.20.209.21:443)
