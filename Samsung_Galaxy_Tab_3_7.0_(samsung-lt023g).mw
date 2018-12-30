@@ -17,7 +17,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = Y
 | status_mainline = 
@@ -67,6 +67,16 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 == How hpagseddy get camera working ==
 Right now it's not usable for daily use, just for testing camera quality and checking if camera is working or not. I used "motion" package from alpine linux to capture pictures. If you want to test it too, just use "apk add motion" command to install that package. Then simply type "motion" and it will start capturing pictures nearly every second. If it doesnt capture pictures or pictures are just black squares then your camera isnt working. For opening pictures, i used feh image viewer to view images but every gallery app works great.
 
+== How to get WiFi working ==
+Run <code>sudo ifconfig mlan0 up</code>, then configure <code>wpa_supplicant</code>:
+<pre>$ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+</pre>
+Then run:
+<pre>
+sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -imlan0
+sudo udhcpc -i mlan0
+</pre>
+Note: You need to turn rndis0 off using <code>sudo ifconfig rndis0 down</code> if you used USB Internet. Also remove usb_internet.start from <code>/etc/local.d</code>.
 == What does not work ==
 * Bluetooth
 * Cellular networking
