@@ -82,7 +82,6 @@ Note: You need to turn rndis0 off using <code>sudo ifconfig rndis0 down</code> i
 * Cellular networking
 * 3D Acceleration
 * Video decoding is like 2-3FPS
-* Installing rootfs to SYSTEM partition
 Everything else is untested as of writing this.
 
 == Links ==
