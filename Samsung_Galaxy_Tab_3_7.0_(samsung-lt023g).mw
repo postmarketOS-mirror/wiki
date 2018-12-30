@@ -73,10 +73,15 @@ Run <code>sudo ifconfig mlan0 up</code>, then configure <code>wpa_supplicant</co
 </pre>
 Then run:
 <pre>
-sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -imlan0
+sudo rc-service wpa_supplicant start
 sudo udhcpc -i mlan0
 </pre>
 Note: You need to turn rndis0 off using <code>sudo ifconfig rndis0 down</code> if you used USB Internet. Also remove usb_internet.start from <code>/etc/local.d</code>.
+If starting the service didn't work, start wpa_supplicant manually with: 
+<pre>
+sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -imlan0
+</pre>
+
 == What does not work ==
 * Bluetooth
 * Cellular networking
