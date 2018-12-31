@@ -8,6 +8,37 @@ $ pmbootstrap pkgrel_bump kwayland kwin plasma-framework kdeclarative
 
 See {{issue|130|pmaports}} for an idea to automatize this and for more information.
 
+== Fixing upstream incompatibilities with Alpine's repository ==
+
+The following script checks out the master branch of pmbootstrap and pmaports, automatically bumps the pkgrels that need to be bumped because of soname bumps, and regenerates all aports that are based on Alpine's aports.
+Finally it executes the upstream compatibility test case again, which should run through again with the changes it made.
+
+After the script ran, manually check the diff in the pmaports.git repository. Then make reasonable patches and commit messages from the changes.
+
+<syntaxhighlight lang="shell">
+#!/bin/sh -ex
+
+# make sure we don't get an outdated mirror
+mirror="http://dl-cdn.alpinelinux.org/alpine/"
+
+git -C ~/code/pmbootstrap checkout master
+git -C ~/code/pmbootstrap/aports checkout master
+
+pmbootstrap --mirror-alpine="$mirror" -y zap
+pmbootstrap --mirror-alpine="$mirror" \
+    chroot --add=git --user -- git -C /mnt/pmbootstrap-git/aports_upstream pull
+pmbootstrap --mirror-alpine="$mirror" pkgrel_bump --auto
+pmbootstrap --mirror-alpine="$mirror" aportgen \
+    binutils-armhf binutils-aarch64 binutils-armv7 \
+    busybox-static-armhf busybox-static-aarch64 busybox-static-armv7 \
+    gcc6-armhf gcc6-aarch64 gcc6-armv7 \
+    gcc-armhf gcc-aarch64 gcc-armv7 \
+    musl-armhf musl-aarch64 musl-armv7
+
+cd ~/code/pmbootstrap/aports
+pytest .gitlab-ci/testcases/test_upstream_compatibility.py
+</syntaxhighlight>
+
 == See also ==
 * [[Merge_Workflow#Merge_on_command_line|How to merge git commits on the command line]]
 * [https://github.com/postmarketOS/pmOS-repo-scripts pmOS-repo-scripts]
