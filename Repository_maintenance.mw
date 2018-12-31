@@ -1,7 +1,7 @@
 This page is about maintaining the official binary package repository of postmarketOS. It does not relate to the local package repository that <code>pmbootstrap</code> creates when compiling packages. So most people will not need this.
 
 == Qt upgrade ==
-There are KDE packages, which need to be rebuilt after each QT upgrade:
+There are KDE packages, which need to be rebuilt after each Qt upgrade:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap pkgrel_bump kwayland kwin plasma-framework kdeclarative
 </syntaxhighlight>
