@@ -85,8 +85,9 @@ sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -
 == What does not work ==
 * Bluetooth
 * Cellular networking
-* 3D Acceleration
+* 2D and 3D Acceleration
 * Video decoding is like 2-3FPS
+* Audio
 Everything else is untested as of writing this.
 
 == Links ==
