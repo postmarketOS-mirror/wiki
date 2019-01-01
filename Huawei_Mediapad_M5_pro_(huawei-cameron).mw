@@ -51,33 +51,30 @@ As Huawei changed the partition layout, there is no boot partition anymore. Inst
 # Get mkbootimg and unpackbootimg i.e. from [https://github.com/anestisb/android-unpackbootimg here].
 
 # You can extract the kernel-image and ramdisk from the created boot.img with unpackbootimg. 
-#:<nowiki>
+ <nowiki>
 # copy created boot image to current directory
 cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-cameron/boot/boot.img-huawei-cameron .
 # extract the created boot.img
 mkdir pmos-boot-huawei-cameron
-unpackbootimg -i boot.img-huawei-cameron -o pmos-boot-huawei-cameron/
-<nowiki>
+unpackbootimg -i boot.img-huawei-cameron -o pmos-boot-huawei-cameron/ <nowiki>
 
 Use the extracted files in the following steps.
 
 # Create ramdisk image:
-#:<nowiki> 
+ <nowiki> 
 # create new ramdisk image with empty kernel (empty.file size is 0)
-./android-unpackbootimg/mkbootimg.py --kernel empty.file --ramdisk pmos-boot-huawei-cameron/boot.img-huawei-cameron-ramdisk.gz --cmdline 'buildvariant=user' --os_version 8.0.0 --os_patch_level 2018-06-05 -o pmos-cameron.ramdisk.img
-<nowiki>
+./android-unpackbootimg/mkbootimg.py --kernel empty.file --ramdisk pmos-boot-huawei-cameron/boot.img-huawei-cameron-ramdisk.gz --cmdline 'buildvariant=user' --os_version 8.0.0 --os_patch_level 2018-06-05 -o pmos-cameron.ramdisk.img <nowiki>
 
 # Create kernel image:
-#:<code> 
+#:
+ <nowiki>
 # kernel (with empty.file size is 0):
-mkbootimg.py --kernel pmos-boot-huawei-cameron/boot.img-huawei-cameron-zImage --ramdisk empty.file --cmdline 'loglevel=4 initcall_debug=y page_tracker=on slub_min_objects=16 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x0 --kernel_offset 524288 --ramdisk_offset 130023424 --second_offset 15728640 --tags_offset 0x7a00000 --os_version 8.0.0 --os_patch_level 2018-12 -o pmos-cameron.kernel.img
-</code>
+mkbootimg.py --kernel pmos-boot-huawei-cameron/boot.img-huawei-cameron-zImage --ramdisk empty.file --cmdline 'loglevel=4 initcall_debug=y page_tracker=on slub_min_objects=16 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x0 --kernel_offset 524288 --ramdisk_offset 130023424 --second_offset 15728640 --tags_offset 0x7a00000 --os_version 8.0.0 --os_patch_level 2018-12 -o pmos-cameron.kernel.img <nowiki>
 
 # Flash ramdisk and kernel with fastboot:
-#:<nowiki>
+ <nowiki>
 fastboot flash kernel pmos-cameron.kernel.img
-fastboot flash ramdisk pmos-cameron.ramdisk.img
-<nowiki>
+fastboot flash ramdisk pmos-cameron.ramdisk.img <nowiki>
 
 == Additional Kernel Configuration ==
 === OASES ===
@@ -85,11 +82,10 @@ fastboot flash ramdisk pmos-cameron.ramdisk.img
 OASES stands for Open Adaptive Security Extensions. Its a Tradmark of Baidu and seems to have something todo with adaptive kernel live-patching. For now there were no disadvantages from disabling it.
 
 ==== Location in menu ====
-<nowiki>
+ <nowiki>
 -> Device Drivers
    -> Huawei Platform Drivers
-      -> Huawei platform drivers support (HUAWEI_PLATFORM [=y])
-<nowiki>
+      -> Huawei platform drivers support (HUAWEI_PLATFORM [=y]) <nowiki>
 In Order to compile the kernel OASES had to be disabled. 
 
 == Additional Info ==
