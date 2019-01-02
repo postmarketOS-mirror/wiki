@@ -3,14 +3,16 @@ It is important for us to contribute the patches and improvements we made to var
 
 === Successful ===
 * <code>2018-12-20</code> Weston: [https://gitlab.freedesktop.org/wayland/weston/merge_requests/61 compositor-fbdev: add support for ABGR]
-* <code>2017-09-22</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
+* <code>2018-12-31</code> Alpine: [https://github.com/alpinelinux/aports/pull/5951 enable virglrenderer in Qemu aport] (-> now we were able to remove our temp/qemu fork!)
+* <code>2018-07-04</code> Qemu: [https://lists.nongnu.org/archive/html/qemu-devel/2018-07/msg01279.html module: Use QEMU_MODULE_DIR as a search path]
+* <code>2017-09-22</code> Alpine: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
 * <code>2017-09-22</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3840 Fix directfb compile error relating to C90]
 * <code>2017-09-11</code> ofono: [https://git.kernel.org/pub/scm/network/ofono/ofono.git/commit/drivers?id=cbac15cdd9858e797f223bf9d16116f82e184d88 Fix initialization of isimodem driver]
 * <code>2017-08-28</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3783 Default libGL path for directFB on Linux differs from x11 path]
 * <code>2017-08-14</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3751 DirectFB linux_input disabled by default]
-* <code>2017-08-03</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/2057 add consolekit2]
+* <code>2017-08-03</code> Alpine: [https://github.com/alpinelinux/aports/pull/2057 add consolekit2]
 * <code>2017-07-21</code> abuild: [https://github.com/alpinelinux/abuild/pull/21 <code>-D</code> parameter for alternative description]
-* <code>2017-07-07</code> Alpine Linux: [https://github.com/alpinelinux/aports/pull/1092 busybox-extras with telnetd enabled]
+* <code>2017-07-07</code> Alpine: [https://github.com/alpinelinux/aports/pull/1092 busybox-extras with telnetd enabled]
 * <code>2017-05-23</code> weston: [https://patchwork.freedesktop.org/patch/150943/ instead of less than 1 Hz use default refresh rate]
 
 === Work in progress ===
