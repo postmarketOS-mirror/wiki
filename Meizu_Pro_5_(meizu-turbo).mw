@@ -15,8 +15,8 @@
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = P
-| status_touch = 
-| status_screen = N
+| status_touch = Y
+| status_screen = Y
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
@@ -63,7 +63,13 @@ Currently when turned on, the device enters reboot loop. The reboot is triggered
 '''
 The device is accessible with telnet hook and via SSH (after additional procedure)
 
-=== Procedure to get the device booting till the SSH ===
+In order to workaround this problem you can compile a custom eudev package with this patch:
+https://github.com/elelel/eudev/commit/f27656ae371c0da23346cdccbd3dc28cf38d2794
+...and install it on the system
+
+Current aport does not contain firmware blobs. Adding them might fix the eudev problem.
+
+=== Getting device to boot in spite of uedev ===
 
 Install PostmarketOS's telnet debug hook, log on with telnet, then  execute:
 
@@ -83,7 +89,14 @@ Install PostmarketOS's telnet debug hook, log on with telnet, then  execute:
  chroot /sysroot
 
 
-In chroot, comment out the offendig string, e.g. with sed replace.
+If you want just to boot to SSH, in chroot, comment out the offendig string, e.g. with sed replace or vi in /etc/init.d/udev-trigger.rc
+
+'''
+ udevadm trigger --type=devices --action=add
+'''
+
+If you want to make the device boot to UI as normal, you should install patched eudev package (see above) at this point and reboot.
+
 
 === Getting the display to render frames ===
 Using MartinBraam's trick it is possible to make the display render frames like this:
