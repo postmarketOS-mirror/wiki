@@ -20,8 +20,6 @@ It is important for us to contribute the patches and improvements we made to var
 * ofono: [https://lists.ofono.org/pipermail/ofono/2017-September/017557.html Disable auto symlink creation for nokia-gpio]
 * alpine: [https://lists.alpinelinux.org/alpine-aports/4908.html add directfb]
 * alpine: [https://lists.alpinelinux.org/alpine-aports/4907.html add tslib]
-* weston: [https://bugs.freedesktop.org/show_bug.cgi?id=101472 add parameter --pixman-type], see also: [https://github.com/postmarketOS/pmbootstrap/issues/141 #141]
-* weston: [https://patchwork.freedesktop.org/patch/167681/ add support for ABGR]
 * alpine: [https://bugs.alpinelinux.org/issues/7556 Weston can only be run by root user] (PR [https://github.com/postmarketOS/pmbootstrap/issues/199 #199])
 * kde: [https://bugs.kde.org/show_bug.cgi?id=383486 kwin_wayland fails to start with &quot;Running on a compositor with no screens is not supported&quot;]
 
