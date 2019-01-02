@@ -7,6 +7,8 @@ It is important for us to contribute the patches and improvements we made to var
 * <code>2018-07-04</code> Qemu: [https://lists.nongnu.org/archive/html/qemu-devel/2018-07/msg01279.html module: Use QEMU_MODULE_DIR as a search path]
 * <code>2017-09-22</code> Alpine: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
 * <code>2017-09-22</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3840 Fix directfb compile error relating to C90]
+* <code>2017-09-21</code> Alpine: [https://lists.alpinelinux.org/alpine-aports/4908.html add directfb]
+* <code>2017-09-21</code> Alpine: [https://lists.alpinelinux.org/alpine-aports/4907.html add tslib]
 * <code>2017-09-11</code> ofono: [https://git.kernel.org/pub/scm/network/ofono/ofono.git/commit/drivers?id=cbac15cdd9858e797f223bf9d16116f82e184d88 Fix initialization of isimodem driver]
 * <code>2017-08-28</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3783 Default libGL path for directFB on Linux differs from x11 path]
 * <code>2017-08-14</code> SDL2: [https://bugzilla.libsdl.org/show_bug.cgi?id=3751 DirectFB linux_input disabled by default]
@@ -18,8 +20,6 @@ It is important for us to contribute the patches and improvements we made to var
 === Work in progress ===
 
 * ofono: [https://lists.ofono.org/pipermail/ofono/2017-September/017557.html Disable auto symlink creation for nokia-gpio]
-* alpine: [https://lists.alpinelinux.org/alpine-aports/4908.html add directfb]
-* alpine: [https://lists.alpinelinux.org/alpine-aports/4907.html add tslib]
 
 === Not started, but should/could be done in the future ===
 * abuild: Add a compression flag to override the default of highest compression (right now we install a [https://github.com/postmarketOS/pmbootstrap/blob/34e2f8093c6cf6571815a82865309b02d31b5d0c/pmb/build/init.py#L61 wrapper] that converts <code>-9</code> to <code>-1</code> to improve performance)
