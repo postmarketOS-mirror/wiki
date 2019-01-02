@@ -17,10 +17,6 @@ It is important for us to contribute the patches and improvements we made to var
 * <code>2017-07-07</code> Alpine: [https://github.com/alpinelinux/aports/pull/1092 busybox-extras with telnetd enabled]
 * <code>2017-05-23</code> weston: [https://patchwork.freedesktop.org/patch/150943/ instead of less than 1 Hz use default refresh rate]
 
-=== Work in progress ===
-
-* ofono: [https://lists.ofono.org/pipermail/ofono/2017-September/017557.html Disable auto symlink creation for nokia-gpio]
-
 === Not started, but should/could be done in the future ===
 * abuild: Add a compression flag to override the default of highest compression (right now we install a [https://github.com/postmarketOS/pmbootstrap/blob/34e2f8093c6cf6571815a82865309b02d31b5d0c/pmb/build/init.py#L61 wrapper] that converts <code>-9</code> to <code>-1</code> to improve performance)
 
