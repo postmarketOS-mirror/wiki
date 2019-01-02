@@ -22,7 +22,6 @@ It is important for us to contribute the patches and improvements we made to var
 * alpine: [https://lists.alpinelinux.org/alpine-aports/4907.html add tslib]
 
 === Not started, but should/could be done in the future ===
-* apk-file: New package, command line usage for pkgs.alpinelinux.org {{github|1011}}
 * abuild: Add a compression flag to override the default of highest compression (right now we install a [https://github.com/postmarketOS/pmbootstrap/blob/34e2f8093c6cf6571815a82865309b02d31b5d0c/pmb/build/init.py#L61 wrapper] that converts <code>-9</code> to <code>-1</code> to improve performance)
 
 [[Category:Technical Reference]]
