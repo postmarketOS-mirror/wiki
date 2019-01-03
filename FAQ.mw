@@ -11,13 +11,6 @@ And if you messed up (or we have a bug), you can simply run <code>pmbootstrap za
 
 Another angle on the tininess of Alpine - many older devices don't have much space to spare, so hilariously tiny system images can be quite useful or even required.
 
-== What's the difference between the downstream kernels and old version of kernels? ==
-downstream kernel means, that a kernel has additional patches that are not in the mainline kernel. This leads to an outdated ("old version") of the Linux kernel quickly, as they tend not to get maintained after a short time. one exception are the Raspberry pi kernels for example, they are downstream kernels, but are maintained (at least right now). Alpine has them packaged as linux-rpi etc.
-
-== Why is mainlining hard? ==
-The source code of every ported device's downstream kernel is available. But mainlining is not a easy task. Drivers from the downstream kernel need to be rewritten to work with the upstream/mainline kernel. 
-The Linux kernel changes all the time, and drivers written for some old version are not compatible with the new kernel. And for downstream kernels, they are just written to be working, but for upstream they need to use the proper shared code and concepts that the kernel has to offer for them. For example, there might be a display driver that works for just one specific display. but as it gets mainlined, it must use some generic display driver, which means the thing needs to be entirely rewritten and having that generic approach is the only way to have the upstream kernel maintainable. Otherwise it would be a random collection of drivers that work completely different.
-
 == Will Android apps be supported? ==
 Currently, our best bet seems to be getting [[Anbox]] running on postmarketOS. It's highly recommended to use native Linux applications though, as there are some downsides to Android apps:
 * Freedom issues (most are proprietary, or only work together with a proprietary network, some even track you), see [https://f-droid.org/ F-Droid] for FLOSS programs, that respect your freedom.
