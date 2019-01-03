@@ -51,11 +51,12 @@
 == Installation ==
 1. Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source>
 ::* Choose <code>raspberry-pi3</code> for the Raspberry 3B and 3B+ (aarch64 installation)
+::* Choose <code>raspberry-pi0</code> for the Raspberry Zero (armhf installation)
 ::* Choose <code>raspberry-pi</code> for all other versions (armhf installation)
 2. Select the kernel for your Raspberry Pi version <source lang="shell-session">
 [10:47:03] Which kernel do you want to use with your device?
 [10:47:03] Available kernels (2):
-[10:47:03] * rpi: Kernel for the Raspberry Pi Zero & 1
+[10:47:03] * rpi: Kernel for the Raspberry Pi 1
 [10:47:03] * rpi2: Kernel for the Raspberry Pi 2 & 3
 </source>
 3. Optionally add <code>bluetooth-raspberry-pi</code> as extra package. It will install a service that starts the built-in bluetooth device at boot. <source lang="shell-session">
@@ -73,5 +74,6 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX
 * {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
 * [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
 * {{github|1501}} initial PR
+* {{MR|125|pmaports}} New device: Raspberry Pi Zero with Ethernet over USB enabled
 
 [[Category:Devices]]
