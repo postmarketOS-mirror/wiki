@@ -14,7 +14,7 @@ Another angle on the tininess of Alpine - many older devices don't have much spa
 == What's the difference between the downstream kernels and old version of kernels? ==
 downstream kernel means, that a kernel has additional patches that are not in the mainline kernel. This leads to an outdated ("old version") of the Linux kernel quickly, as they tend not to get maintained after a short time. one exception are the Raspberry pi kernels for example, they are downstream kernels, but are maintained (at least right now). Alpine has them packaged as linux-rpi etc.
 
-== why mainlining is hard? ==
+== Why mainlining is hard? ==
 Source code of every ported devices downstream kernel is abl-able. But mainlining is not a easy task. Drivers from the downstream kernel need to be rewritten to work with the upstream/mainline kernel. 
 The Linux kernel changes all the time, and drivers written for some old version are not compatible with the new kernel. and for downstream kernels, they are just written to be working. but for upstream they need to use the proper shared code and concepts that the kernel has to offer for them. 
 For example, there might be a display driver that works for just one specific display. but as it gets mainlined, it must use some generic display driver, which means the thing needs to be entirely rewritten
