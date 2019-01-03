@@ -1,0 +1,75 @@
+{{Infobox device
+| manufacturer = Raspberry Pi Foundation
+| name = Raspberry Pi Zero
+| codename = raspberry-pi0
+| image = File:Raspberry-Pi-Zero-1-1755x1080.jpg
+| releaseyear = 2017-2018
+| originalsoftware = Raspbian
+| chipset = Broadcom BCM2835
+| cpu = ARM1176JZF-S @ 1 GHz
+| gpu = Broadcom VideoCore IV
+| storage = MicroSDHC slot
+| display = HDMI port
+| memory = 512 MB
+| architecture = armhf
+| n-android = ✔
+| status_usbnet = Y
+| status_flashing = -
+| status_touch = -
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = Y
+| status_battery = -
+| status_3d = 
+| status_accel = -
+| status_audio = -
+| status_bluetooth = 
+| status_camera = -
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| booting = yes
+
+}}
+
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
+
+== Installation ==
+1. Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source>
+::* Choose <code>raspberry-pi0</code> for the Raspberry Zero (armhf installation)
+2. Optionally add <code>bluetooth-raspberry-pi</code> as extra package. It will install a service that starts the built-in bluetooth device at boot. <source lang="shell-session">
+[17:14:37] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+[17:14:37] Extra packages [none]: bluetooth-raspberry-pi
+</source>
+3. Start the build process and install the completed image to a sdcard <source lang="shell-session">
+$ ./pmbootstrap.py install --sdcard /dev/sdX
+(replace /dev/sdX with the device for your sdcard)</source>
+4. Place the sdcard into the Raspberry Pi and boot it
+
+5. Connect a microUSB cable to port with the label <code>USB</code>
+
+6. Let the RPI boot and then you should be able to connect using SSH
+<source lang="shell-session">
+$ ssh user@172.16.42.1
+</source>
+
+== Photos ==
+<gallery>
+File:RaspberryPiZeroDebugShell.jpg|thumb|left|debug-shell
+File:RaspberryPiZeroMate.jpg|thumb|MATE
+File:RaspberryPiZeroXFCE.jpg|thumb|XFCE4
+</gallery>
+
+== See also ==
+* The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux]
+* It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
+* {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
+* [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
+* {{github|1501}} initial PR
+* {{MR|125|pmaports}} New device: Raspberry Pi Zero with Ethernet over USB enabled
+
+[[Category:Devices]]
