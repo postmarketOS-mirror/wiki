@@ -31,7 +31,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| status = 
+| status = openiboot doesn't build under gcc6 or 8
 | booting = no
 | non_android = 🔼
 }}
