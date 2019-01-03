@@ -1,0 +1,63 @@
+{{Infobox device
+| manufacturer = Raspberry Pi Foundation
+| name = Raspberry Pi 1 & 2
+| codename = raspberry-pi
+| image = File:Raspberry-Pi-Model-B-1-1619x1080.jpg
+| releaseyear = 2013-201¨5
+| originalsoftware = Raspbian
+| chipset = Broadcom BCM2835<br/>Broadcom BCM2836
+| cpu = ARM1176JZF-S @ 700 MHz<br/>ARM Cortex-A7 @ 900 MHz
+| gpu = Broadcom VideoCore IV
+| storage = MicroSDHC slot
+| display = HDMI port
+| memory = 256/512/1024 MB
+| architecture = armhf
+| n-android = ✔
+| status_usbnet = -
+| status_flashing = -
+| status_touch = 
+| status_screen = Y
+| status_wifi = -
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = Y
+| status_battery = -
+| status_3d = 
+| status_accel = -
+| status_audio = 
+| status_bluetooth = 
+| status_camera = -
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| booting = yes
+
+}}
+
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
+
+== Installation ==
+1. Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source>
+::* Choose <code>raspberry-pi</code> for the Rasbberry 1 and 2 (armhf installation)
+2. Select the kernel for your Raspberry Pi version <source lang="shell-session">
+[10:47:03] Which kernel do you want to use with your device?
+[10:47:03] Available kernels (2):
+[10:47:03] * rpi: Kernel for the Raspberry Pi 1
+[10:47:03] * rpi2: Kernel for the Raspberry Pi 2
+</source>
+3. Start the build process and install the completed image to a sdcard <source lang="shell-session">
+$ ./pmbootstrap.py install --sdcard /dev/sdX
+(replace /dev/sdX with the device for your sdcard)</source>
+4. Place the sdcard into the Raspberry Pi and boot it
+
+== See also ==
+* The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux]
+* It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
+* {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
+* [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
+* {{github|1501}} initial PR
+* {{MR|125|pmaports}} New device: Raspberry Pi Zero with Ethernet over USB enabled
+
+[[Category:Devices]]
