@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Raspberry Pi Foundation
 | name = Raspberry Pi
-| codename = raspberry-pi, raspberry-pi3
+| codename = raspberry-pi0, raspberry-pi, raspberry-pi3
 | image = File:Raspberry-Pi-3-hero-1-1571x1080.jpg
 | releaseyear = 2013-2018
 | originalsoftware = Raspbian
