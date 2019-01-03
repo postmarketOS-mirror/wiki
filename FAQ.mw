@@ -20,7 +20,7 @@ The Linux kernel changes all the time, and drivers written for some old version 
 For example, there might be a display driver that works for just one specific display. but as it gets mainlined, it must use some generic display driver, which means the thing needs to be entirely rewritten
 and having that generic approach is the only way to have the upstream kernel maintainable. otherwise it would be a random collection of drivers that work completely different.
 
-== if the downstream kernels have the all the drivers in there so why some parts not works, like audio? ==
+== If the downstream kernels have the all the drivers in there so why some parts not works, like audio? ==
 Device tree. The device tree is exposed as a hierarchy of directories and files in /proc. If some files are not there that part will not work.
 
 == Will Android apps be supported? ==
