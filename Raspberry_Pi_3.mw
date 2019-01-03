@@ -15,7 +15,7 @@
 | n-android = ✔
 | status_usbnet = -
 | status_flashing = -
-| status_touch = 
+| status_touch = -
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = Y
