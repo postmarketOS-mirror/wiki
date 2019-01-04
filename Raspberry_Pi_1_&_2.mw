@@ -39,18 +39,25 @@
 * ''[[user:drebrez|drebrez]]''
 
 == Installation ==
-1. Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source>
-::* Choose <code>raspberry-pi</code> for the Rasbberry 1 and 2 (armhf installation)
-2. Select the kernel for your Raspberry Pi version <source lang="shell-session">
+1. Follow the steps on [[Installation_guide#Initialization]]
+
+2. Choose the <code>raspberry-pi</code> device
+
+3. Select the kernel for your Raspberry Pi version
+<source lang="shell-session">
 [10:47:03] Which kernel do you want to use with your device?
 [10:47:03] Available kernels (2):
 [10:47:03] * rpi: Kernel for the Raspberry Pi 1
 [10:47:03] * rpi2: Kernel for the Raspberry Pi 2
 </source>
-3. Start the build process and install the completed image to a sdcard <source lang="shell-session">
+
+4. Start the build process and install the completed image to a sdcard 
+<source lang="shell-session">
 $ ./pmbootstrap.py install --sdcard /dev/sdX
-(replace /dev/sdX with the device for your sdcard)</source>
-4. Place the sdcard into the Raspberry Pi and boot it
+(replace /dev/sdX with the device for your sdcard)
+</source>
+
+5. Place the sdcard into the Raspberry Pi and boot it
 
 == See also ==
 * The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux]
