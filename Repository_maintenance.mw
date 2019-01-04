@@ -37,6 +37,7 @@ pmbootstrap --mirror-alpine="$mirror" aportgen \
 
 cd ~/code/pmbootstrap/aports
 pytest .gitlab-ci/testcases/test_upstream_compatibility.py
+git diff --name-only
 </syntaxhighlight>
 
 == See also ==
