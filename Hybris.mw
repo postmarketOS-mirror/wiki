@@ -2,8 +2,8 @@
 
 == Using libhybris with your device ==
 
-=== libhybris status ===
-It is used for the [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]] (non-CAF) and [[Samsung_Galaxy_S4_Mini_LTE|Samsung s4 mini duos]] (CAF) devices.
+=== libhybris current usage ===
+It is used for the [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]] (non-CAF) and [[Samsung_Galaxy_S4_Mini_dual_sim|Samsung s4 mini duos]] (CAF) device ports.
 
 === Android system image ===
 
