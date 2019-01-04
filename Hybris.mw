@@ -7,6 +7,14 @@
 First thing to do is convert the halium generated '''system.img''' to a mountable image (basically what the [https://github.com/Halium/halium-scripts/blob/master/halium-install#L41-L52 halium install script] does)
 and the new '''system.img''' to the device, to <code>/var/lib/lxc/android/system.img</code>
 
+The way to do attain this, is:
+* Port halium (https://docs.halium.org , https://halium.org) to your device. This may take a while.
+* Get it running to a point where you have at least graphics operational
+* It works if you run the same kernel source for both, and apply all defconfig changes needed for the halium port to your postmarketos port
+* Boot your halium-running device into android recovery, and download the <code>/data/system.img</code> file from it. This is the systemimage you've built for halium, with the modifications that the installation script has done.
+* Flash postmarketOS to your device
+* Upload the system.img file to <code>/var/lib/lxc/android/system.img</code>
+
 === Install the hybris related packages ===
 
 <syntaxhighlight lang="shell-session">
