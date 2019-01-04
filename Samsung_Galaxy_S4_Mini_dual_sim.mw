@@ -38,15 +38,21 @@
 * rogier.oudshoorn (only kernel configuration; rest is taken from the [[Samsung_Galaxy_S4_Mini_LTE | LTE version of this device ]])
 
 == Maintainer(s) ==
+* rogier.oudshoorn 
 
 == Current main issues ==
 * Device doesn't automatically give itself mac address, ip, etc - you need to [[USB_Network | configure the network manually ]]
 * Device reboots immediately after flasher usage
 * Charging seems to work, but there's no indication of it actually happening
 
+== Current work ==
+* Using libhybris for at least 3d acceleration, sound and wifi.
+
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
 
 == Installation ==
+* pmbootstrap flasher works as normal
 
 == See also ==
+[[Hybris]] Description of how to run libhybris in postmarketOS
