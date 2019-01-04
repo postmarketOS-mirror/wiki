@@ -55,6 +55,18 @@ Section "Device"
 EndSection
 </syntaxhighlight>
 
+=== Run hardware composer test (to verify it all works) ===
+For a CAF device, use this command:
+<syntaxhighlight lang="shell-session">
+$ EGL_PLATFORM=hwcomposer test_hwcomposer_7_caf
+</syntaxhighlight>
+
+For a non-CAF device, use this command:
+<syntaxhighlight lang="shell-session">
+$ EGL_PLATFORM=hwcomposer test_hwcomposer
+</syntaxhighlight>
+
+
 == Test whether lxc-android works properly and kernel is correctly configured ==
 
 1) Ensure you installed the packages above, started the lxc-android service and checked that it's running
