@@ -24,7 +24,7 @@
 | status_battery = -
 | status_3d = Y
 | status_accel = -
-| status_audio = 
+| status_audio = Y
 | status_bluetooth = Y
 | status_camera = -
 | status_gps = -
@@ -49,6 +49,21 @@ $ ./pmbootstrap.py install --sdcard /dev/sdX
 (replace /dev/sdX with the device for your sdcard)
 </source>
 4. Place the sdcard into the Raspberry Pi and boot it
+
+== Features ==
+
+=== Audio ===
+
+The audio is configured to be sent to the HDMI port by default.
+
+If you want to use the onboard jack you have to run this command:
+<source lang="shell-session">
+$ amixer cset numid=3 1
+(test the output with)
+$ speaker-test -c 2
+(change output back to HDMI)
+$ amixer cset numid=3 2
+</source>
 
 == Photos ==
 <gallery>
