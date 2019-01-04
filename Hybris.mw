@@ -2,6 +2,9 @@
 
 == Using libhybris with your device ==
 
+=== libhybris status ===
+It is used for the [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]] (non-CAF) and [[Samsung_Galaxy_S4_Mini_LTE|Samsung s4 mini duos]] (CAF) devices.
+
 === Android system image ===
 
 First thing to do is convert the halium generated '''system.img''' to a mountable image (basically what the [https://github.com/Halium/halium-scripts/blob/master/halium-install#L41-L52 halium install script] does)
@@ -62,41 +65,6 @@ $ EGL_PLATFORM=hwcomposer test_hwcomposer_7_caf
 </syntaxhighlight>
 
 For a non-CAF device, use this command:
-<syntaxhighlight lang="shell-session">
-$ EGL_PLATFORM=hwcomposer test_hwcomposer
-</syntaxhighlight>
-
-
-== Test whether lxc-android works properly and kernel is correctly configured ==
-
-1) Ensure you installed the packages above, started the lxc-android service and checked that it's running
-
-2) Download the Halium reference rootfs from bshah’s personal server: http://bshah.in/halium/halium-rootfs-20170630-151006.tar.gz
-
-3) Extract to a temporary folder
-
-4) Bind some folders into the halium rootfs
-<syntaxhighlight lang="shell-session">
-$ mount --bind /dev /tmp/halium-rootfs/dev
-$ mount --bind /sys /tmp/halium-rootfs/sys
-$ mount --bind /proc /tmp/halium-rootfs/proc
-$ mount --bind /system /tmp/halium-rootfs/system
-$ ln -s /system/vendor /tmp/halium-rootfs/vendor
-</syntaxhighlight>
-
-5) Chroot into halium
-<syntaxhighlight lang="shell-session">
-$ chroot /tmp/halium-rootfs /bin/bash
-</syntaxhighlight>
-
-6) Update
-<syntaxhighlight lang="shell-session">
-$ echo "deb http://repo.halium.org/caf xenial main" >> /etc/apt/sources.list.d/halium-caf.list
-$ apt-get update
-$ apt-get dist-upgrade
-</syntaxhighlight>
-
-7) Test
 <syntaxhighlight lang="shell-session">
 $ EGL_PLATFORM=hwcomposer test_hwcomposer
 </syntaxhighlight>
