@@ -48,7 +48,7 @@
 == Current work ==
 * Using libhybris for at least 3d acceleration, sound and wifi.
 ** Wifi works using wpa_supplicant described here: https://github.com/postmarketOS/pmbootstrap/issues/373
-** hwcomposer_test_caf works
+** hwcomposer_test_caf works as described in [[Hybris|Hybris documentation]]
 ** plasma doesn't come up due to lack of qtwayland (??)
 ** nothing runs by itself; scripting needed
 ** udev rules copied from halium don't work due to user mismatches; this needs figuring out
