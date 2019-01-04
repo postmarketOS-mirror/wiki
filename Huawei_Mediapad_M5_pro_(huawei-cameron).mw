@@ -50,22 +50,37 @@ As Huawei changed the partition layout, there is no boot partition anymore. Inst
 
 # Get mkbootimg and unpackbootimg i.e. from [https://github.com/anestisb/android-unpackbootimg here].
 # You can extract the kernel-image and ramdisk from the created boot.img with unpackbootimg. 
-#:<code> <nowiki>#</nowiki> copy created boot image to current directory </code>
-#:<code>cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-cameron/boot/boot.img-huawei-cameron .</code>
-#:<code> <nowiki>#</nowiki> extract the created boot.img</code>
-#:<code>mkdir pmos-boot-huawei-cameron</code>
-#:<code>unpackbootimg -i boot.img-huawei-cameron -o pmos-boot-huawei-cameron/ </code>
+#:<syntaxhighlight lang="shell-session">
+$ # copy created boot image to current directory 
+$ cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-cameron/boot/boot.img-huawei-cameron .
+
+$ # extract the created boot.img
+$ mkdir pmos-boot-huawei-cameron
+$ unpackbootimg -i boot.img-huawei-cameron -o pmos-boot-huawei-cameron/ 
+
+$ # copy created boot image to current directory
+$ cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-cameron/boot/boot.img-huawei-cameron .
+
+$ # extract the created boot.img
+$ mkdir pmos-boot-huawei-cameron
+$ unpackbootimg -i boot.img-huawei-cameron -o pmos-boot-huawei-cameron/ 
+</syntaxhighlight>
 #: Use the extracted files in the following steps.
 # Create ramdisk image:
-#:<code> <nowiki>#</nowiki> create new ramdisk image with empty kernel (empty.file size is 0) </code>
-#:<code>./android-unpackbootimg/mkbootimg.py --kernel empty.file --ramdisk pmos-boot-huawei-cameron/boot.img-huawei-cameron-ramdisk.gz --cmdline 'buildvariant=user' --os_version 8.0.0 --os_patch_level 2018-06-05 -o pmos-cameron.ramdisk.img </code>
+#:<syntaxhighlight lang="shell-session">
+$ # create new ramdisk image with empty kernel (empty.file size is 0) 
+$ ./android-unpackbootimg/mkbootimg.py --kernel empty.file --ramdisk pmos-boot-huawei-cameron/boot.img-huawei-cameron-ramdisk.gz --cmdline 'buildvariant=user' --os_version 8.0.0 --os_patch_level 2018-06-05 -o pmos-cameron.ramdisk.img 
+</syntaxhighlight>
 # Create kernel image:
-#:<code> <nowiki>#</nowiki> kernel (with empty.file size is 0): </code>
-#:<code>kbootimg.py --kernel pmos-boot-huawei-cameron/boot.img-huawei-cameron-zImage --ramdisk empty.file --cmdline 'loglevel=4 initcall_debug=y page_tracker=on slub_min_objects=16 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x0 --kernel_offset 524288 --ramdisk_offset 130023424 --second_offset 15728640 --tags_offset 0x7a00000 --os_version 8.0.0 --os_patch_level 2018-12 -o pmos-cameron.kernel.img </code>
-
+#:<syntaxhighlight lang="shell-session">
+$ # kernel (with empty.file size is 0):
+$ mkbootimg.py --kernel pmos-boot-huawei-cameron/boot.img-huawei-cameron-zImage --ramdisk empty.file --cmdline 'loglevel=4 initcall_debug=y page_tracker=on slub_min_objects=16 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x0 --kernel_offset 524288 --ramdisk_offset 130023424 --second_offset 15728640 --tags_offset 0x7a00000 --os_version 8.0.0 --os_patch_level 2018-12 -o pmos-cameron.kernel.img
+</syntaxhighlight>
 # Flash ramdisk and kernel with fastboot:
-#:<code>fastboot flash kernel pmos-cameron.kernel.img </code>
-#:<code>fastboot flash ramdisk pmos-cameron.ramdisk.img </code>
+#:<syntaxhighlight lang="shell-session">
+$ fastboot flash kernel pmos-cameron.kernel.img 
+$ fastboot flash ramdisk pmos-cameron.ramdisk.img 
+</syntaxhighlight>
 
 == Additional Kernel Configuration ==
 === OASES ===
