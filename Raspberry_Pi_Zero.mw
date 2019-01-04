@@ -39,18 +39,20 @@
 * ''[[user:drebrez|drebrez]]''
 
 == Installation ==
-1. Init pmbootstrap <source lang="shell-session">$ ./pmbootstrap.py init</source>
-::* Choose <code>raspberry-pi0</code> for the Raspberry Zero (armhf installation)
-2. Optionally add <code>bluetooth-raspberry-pi</code> as extra package. It will install a service that starts the built-in bluetooth device at boot. <source lang="shell-session">
-[17:14:37] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
-[17:14:37] Extra packages [none]: bluetooth-raspberry-pi
-</source>
-3. Start the build process and install the completed image to a sdcard <source lang="shell-session">
+
+1. Follow the steps on [[Installation_guide#Initialization]]
+
+2. Choose the <code>raspberry-pi0</code> device
+
+3. Start the build process and install the completed image to a sdcard
+<source lang="shell-session">
 $ ./pmbootstrap.py install --sdcard /dev/sdX
-(replace /dev/sdX with the device for your sdcard)</source>
+(replace /dev/sdX with the device for your sdcard)
+</source>
+
 4. Place the sdcard into the Raspberry Pi and boot it
 
-5. Connect a microUSB cable to port with the label <code>USB</code>
+5. Connect a microUSB cable to the central microUSB port (with the <code>USB</code> label)
 
 6. Let the RPI boot and then you should be able to connect using SSH
 <source lang="shell-session">
