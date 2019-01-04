@@ -15,7 +15,7 @@ The way to do attain this, is:
 * Get it running to a point where you have at least graphics operational
 * It works if you run the same kernel source for both, and apply all defconfig changes needed for the halium port to your postmarketos port
 * Boot your halium-running device into android recovery, and download the <code>/data/system.img</code> file from it. This is the systemimage you've built for halium, with the modifications that the installation script has done.
-* Flash postmarketOS to your device
+* Flash postmarketOS to your device, where you've included the necessary changes for halium
 * Upload the system.img file to <code>/var/lib/lxc/android/system.img</code>
 
 === Install the hybris related packages ===
