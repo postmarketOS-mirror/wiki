@@ -49,7 +49,14 @@
 * Using libhybris for at least 3d acceleration, sound and wifi.
 ** Wifi works using wpa_supplicant described here: https://github.com/postmarketOS/pmbootstrap/issues/373
 ** hwcomposer_test_caf works as described in [[Hybris|Hybris documentation]]
-** plasma doesn't come up due to lack of qtwayland (??)
+** plasma doesn't come up due to lack of qtwayland (??) as hinted https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/
+<code>samsung-serranodsdd:~$ exec /usr/bin/plasmashell -p org.kde.plasma.phone
+Failed to create wl_display (No such file or directory)
+qt.qpa.plugin: Could not load the Qt platform plugin "wayland" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: wayland-org.kde.kwin.qpa, eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, xcb.
+</code>
 ** nothing runs by itself; scripting needed
 ** udev rules copied from halium don't work due to user mismatches; this needs figuring out
 
