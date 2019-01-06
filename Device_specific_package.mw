@@ -114,6 +114,35 @@ kernel_mainline() {
 * See <code>device-qemu-amd64</code> for another example.
 * Implementation details and discussion in {{github|1363}}
 
+== Initramfs hook ==
+Some devices need to run special commands at boot time, for example turning on the display or kicking a watchdog. It is possible to do this with a device specific initramfs hook.
+
+Create a new <code>initfs-hook.sh</code> file in your device package's dir and fill it with the command that needs to be executed, along with a comment describing what it does:
+<syntaxhighlight lang="shell">
+#!/bin/sh
+
+# set usb properties
+echo 4 > /sys/devices/platform/android_usb/usb_function_switch
+</syntaxhighlight>
+
+Then open the APKBUILD and add <code>initfs-hook.sh</code> to <code>source=</code>, and extend the <code>package()</code> function with:
+<syntaxhighlight lang="shell">
+	install -D -m644 "$srcdir"/initfs-hook.sh \
+		"$pkgdir"/etc/postmarketos-mkinitfs/hooks/00-${pkgname}.sh
+</syntaxhighlight>
+
+As usually, update the checksums, build the package with <code>--force</code> and test the hook on your device.
+
+For reference, you can look at the eisting initfs-hooks:
+<syntaxhighlight lang="shell-session">
+$ cd ~/code/pmbootstrap/aports/device
+$ find -name initfs-hook.sh
+./device-motorola-osprey/initfs-hook.sh
+./device-samsung-i9070/initfs-hook.sh
+./device-htc-m8/initfs-hook.sh
+./device-htc-a5ul/initfs-hook.sh
+...
+</syntaxhighlight>
 == See also ==
 * [[deviceinfo]]
 * [[vendor kernel specific package]]
