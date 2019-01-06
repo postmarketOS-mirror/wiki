@@ -38,6 +38,7 @@
 == Contributors ==
 
 * CmdrWgls
+* mberndt
 * (everyone on IRC)
 
 == What works ==
@@ -56,6 +57,8 @@ What's been done:
 * linux-htc-vision builds (using [https://github.com/milaq/android_kernel_htc_vision milaq's kernel])
 
 Cmdrwgls created pull request {{github|810}} with his work. It remained unfinished, so it '''was merged into the [https://github.com/postmarketOS/pmbootstrap/tree/device-htc-vision device-htc-vision] branch for now'''. If you also own this device, it makes sense to continue from there (rebase the branch to master first, then try to build the kernel etc. See the porting guide and ask for all the help you need).
+
+One year later, the current attempt by mberndt is in {{MR|132|pmaports}}.
 
 == Next steps ==
 
