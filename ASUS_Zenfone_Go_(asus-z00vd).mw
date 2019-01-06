@@ -1,3 +1,5 @@
+{{note|The device package is missing for this phone, only the kernel package is present! If you own this device, please follow the [[Porting_to_a_new_device|porting guide]] again (skip the part with the kernel package as you already have it) and then create a new merge request with the missing device package. See {{MR|21|pmaports}}.}}
+
 There are two variants of Zenfone Go, a Mediatek (Z00VD) and Snapdragon (ZB551KL, ZB452KL). This wiki page is for the MTK variant.
 {{Infobox device
 | manufacturer = ASUS
@@ -34,7 +36,6 @@ There are two variants of Zenfone Go, a Mediatek (Z00VD) and Snapdragon (ZB551KL
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | booting = Y
 }}
-
 == Contributors ==
 * Danct12
 
