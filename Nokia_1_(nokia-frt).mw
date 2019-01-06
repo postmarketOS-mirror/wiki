@@ -58,7 +58,36 @@
 There are official sources for 3.18, The CPU itself is aarch64 but the kernel is made for armv7 mode, compiling for armhf first, then going up.
 
 === boot.img ===
-Offsets unknown, no knowledge if there is or isn't dtb
+Yeah, I know I have way old unpacking binaries, but hey, its works
+<pre>
+Boot = boot.bin
+unmkbootimg version 1.2 - Mikael Q Kuisma <kuisma@ping.se>
+Kernel size 5685960
+Kernel address 0x40008000
+Ramdisk size 1015008
+Ramdisk address 0x44000000
+Secondary size 0
+Secondary address 0x40f00000
+Kernel tags address 0x4e000000
+Flash page size 2048
+Board name is ""
+Command line "bootopt=64S3,32N2,32N2 buildvariant=user"
+
+*** WARNING ****
+This image is built using NON-standard mkbootimg!
+OFF_KERNEL_ADDR is 0xF2008100
+OFF_RAMDISK_ADDR is 0xF6000100
+OFF_SECOND_ADDR is 0xF2F00100
+Please modify mkbootimg.c using the above values to build your image.
+****************
+
+Extracting kernel to file zImage ...
+Extracting root filesystem to file initramfs.cpio.gz ...
+All done.
+---------------
+To recompile this image, use:
+  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x4dffff00 --cmdline 'bootopt=64S3,32N2,32N2 buildvariant=user' -o new_boot.img
+</pre>
 
 == How to enter flash mode ==
 Press Volume down + power while plugging in USB.
