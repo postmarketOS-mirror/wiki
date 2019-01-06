@@ -98,4 +98,5 @@ The display brightness can be set by writing a value between 0 and 1024 to <code
 For now the backlight is completley dark when the system boots.
 
 == Links ==
-[https://github.com/JohnBergago/android_kernel_huawei_hi3660 Kernel Sources with adapted dtc tool to build in fakeroot of pmbootstrap]
+* [https://github.com/JohnBergago/android_kernel_huawei_hi3660 Kernel Sources with adapted dtc tool to build in fakeroot of pmbootstrap]
+* {{MR|133|pmaports}} initial MR
