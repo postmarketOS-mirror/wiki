@@ -21,6 +21,12 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
   pmbootstrap initfs # rebuild initramfs
   pmbootstrap flasher boot_kernel
 
+=== Initramfs #3 (you don't need to connect) ===
+* Turn on your device and open any file manager, for example, Total Commander
+* Go to <code>/dev/input</code> directory
+* For each device in there, try to remove it one by one.
+* When the touch screen stops working, it means that the device you just deleted is the touch screen.
+* To fix the touchs creen, reboot the device.
 
 === Flashing system + libinput list-devices ===
 Alternatively, run <code>pmbootstrap install --no-fde</code> and flash the system partition again. The initramfs will boot through without asking you for a password (because you disabled encryption). Then you can use the program <code>libinput list-devices</code> to get the list of devices - with probably more useful names.
