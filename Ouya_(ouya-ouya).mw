@@ -81,7 +81,7 @@ pmbootstrap export
 </source>
 {{note|DO NOT run flasher flash_kernel as it would overwrite bootmenu binary}}
 
-4. Copy postmarketOS boot.img to SD card and rename it to altboot.img
+4. Reboot Ouya to recovery mode and opy postmarketOS boot.img to internal SD card and rename it to altboot.img
 <source lang="shell">
 adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
 </source>
