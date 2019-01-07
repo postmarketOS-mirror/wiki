@@ -1,4 +1,3 @@
-[[Category:Not booting]]
 {{Infobox device
 | manufacturer = Asus
 | name =  Eee Pad Transformer Prime
@@ -34,7 +33,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| booting =
+| booting = no
 }}
 
 == Contributors ==
