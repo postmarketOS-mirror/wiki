@@ -64,9 +64,9 @@
 ===pmbootstrap===
 {{todo| Work in progress, may be wrong. Only attempt for development}}
 
-1. Flash  [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] using fastboot.
+1. Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] using fastboot.
 
-2. Turn your Ouya on and wait until you see the new Ouya BootMenu. Press the power button on your Ouya until you scroll to Recovery, and then wait until the bootmenu disappears.
+2. Press and hold the power button on your Ouya until you scroll to bootloader, and then wait until the bootmenu disappears.
 
 3. Run the following using pmbootstrap
 <pre class="shell">
