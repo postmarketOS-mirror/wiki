@@ -80,13 +80,9 @@ pmbootstrap export
 </pre>
 {{note|DO NOT run flasher flash_kernel as it would overwrite bootmenu binary}}
 
-4. Boot Ouya to recovery mode and using ADB, transfer the kernel file to your Ouya.
-<pre class="shell">
-# you need to push pmos boot.img to phone's /system/boot.img file
-</pre>
+4. Copy postmarketOS boot.img to SD card and rename it to altboot.img
 
-
-5. Reboot your Ouya, postmarketOS should start automatically.
+5. Reboot your Ouya, select alternative boot to run altboot.img from an SD card.
 
 == Photos ==
 
