@@ -62,7 +62,7 @@
 # Connect Ouya to PC
 # Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
 ===pmbootstrap===
-'''Work in progress. Only attempt for development.'''
+{{note| Work in progress, may be wrong. Only attempt for development}}
 
 1. Flash  [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] using fastboot.
 <pre class="shell">
@@ -71,13 +71,7 @@
 
 2. Turn your Ouya on and wait until you see the new Ouya BootMenu. Press the power button on your Ouya until you scroll to Recovery, and then wait until the bootmenu disappears.
 
-3. Using ADB, transfer the kernel file to your Ouya.
-<pre class="shell">
-./pmbootstrap.py export
-???
-</pre>
-
-4. Reboot your Ouya and start  Run the following using pmbootstrap
+3. Run the following using pmbootstrap
 <pre class="shell">
 pmbootstrap init
 
@@ -85,7 +79,15 @@ pmbootstrap install --no-fde
 
 pmbootstrap flasher flash_rootfs
 
+pmbootstrap export
 </pre>
+{{note|DO NOT run flasher flash_kernel as it would overwrite bootmenu binary}}
+
+4. Boot Ouya to recovery mode and using ADB, transfer the kernel file to your Ouya.
+<pre class="shell">
+# you need to push pmos boot.img to phone's /system/boot.img file
+</pre>
+
 
 5. Reboot your Ouya, postmarketOS should start automatically.
 
