@@ -76,6 +76,7 @@ pmbootstrap install --no-fde
 
 pmbootstrap flasher flash_rootfs
 
+#export boot image to /tmp/postmarketos/
 pmbootstrap export
 </pre>
 {{note|DO NOT run flasher flash_kernel as it would overwrite bootmenu binary}}
