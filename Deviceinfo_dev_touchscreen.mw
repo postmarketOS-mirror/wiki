@@ -21,7 +21,7 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
   pmbootstrap initfs # rebuild initramfs
   pmbootstrap flasher boot_kernel
 
-=== Initramfs #3 (you don't need to connect) ===
+=== Easy method (you don't need to connect) ===
 * Turn on your device and open any file manager, for example, Total Commander
 * Go to <code>/dev/input</code> directory
 * For each device in there, try to remove it one by one.
