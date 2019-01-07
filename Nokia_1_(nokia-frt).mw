@@ -2,13 +2,13 @@
 | manufacturer = Nokia
 | name = 1
 | codename = nokia-frt
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:nokia-frt.jpg
 | imagecaption = cute little phone
 | releaseyear = 2018
-| originalsoftware = Android 8.1 Go, kernel 3.18 <!-- e.g. Android 2 -->
+| originalsoftware = Android 8.1 Go, kernel 3.18.79
 | chipset = MediaTek MT6737M
 | cpu = Cortex-A53 4x1.1GHz
-| gpu = Mali-T720 <!-- e.g. Adreno 200 -->
+| gpu = Mali-T720
 | storage = 8GB
 | display = 480x854
 | memory = 1GiB
@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = figuring out boot offsets and kernel compilation
+| status = figuring out kernel compilation
 | booting = no
 }}
 
@@ -58,35 +58,13 @@
 There are official sources for 3.18, The CPU itself is aarch64 but the kernel is made for armv7 mode, compiling for armhf first, then going up.
 
 === boot.img ===
-Yeah, I know I have way old unpacking binaries, but hey, its works
+Boot.img offsets are in kernel's readme file:
 <pre>
-Boot = boot.bin
-unmkbootimg version 1.2 - Mikael Q Kuisma <kuisma@ping.se>
-Kernel size 5685960
-Kernel address 0x40008000
-Ramdisk size 1015008
-Ramdisk address 0x44000000
-Secondary size 0
-Secondary address 0x40f00000
-Kernel tags address 0x4e000000
-Flash page size 2048
-Board name is ""
-Command line "bootopt=64S3,32N2,32N2 buildvariant=user"
-
-*** WARNING ****
-This image is built using NON-standard mkbootimg!
-OFF_KERNEL_ADDR is 0xF2008100
-OFF_RAMDISK_ADDR is 0xF6000100
-OFF_SECOND_ADDR is 0xF2F00100
-Please modify mkbootimg.c using the above values to build your image.
-****************
-
-Extracting kernel to file zImage ...
-Extracting root filesystem to file initramfs.cpio.gz ...
-All done.
----------------
-To recompile this image, use:
-  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x4dffff00 --cmdline 'bootopt=64S3,32N2,32N2 buildvariant=user' -o new_boot.img
+  Step 2: Assembling the boot.img
+    (In the output directory)
+	$ mkbootimg --kernel arch/arm/boot/zImage-dtb --cmdline "bootopt=64S3,32N2,32N2 buildvariant=userdebug" \
+	  --base 0x40000000 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0xE000000 \
+	  --ramdisk ramdisk.img --output boot.img
 </pre>
 
 == How to enter flash mode ==
