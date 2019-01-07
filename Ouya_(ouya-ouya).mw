@@ -69,7 +69,7 @@
 2. Turn on Ouya, then press the power button until it scrolls to bootloader, and then wait until the bootmenu disappears.
 
 3. Run the following using pmbootstrap
-<pre class="shell">
+<source lang="shell">
 pmbootstrap init
 
 pmbootstrap install --no-fde
@@ -78,10 +78,13 @@ pmbootstrap flasher flash_rootfs
 
 #export boot image to /tmp/postmarketos/
 pmbootstrap export
-</pre>
+</source>
 {{note|DO NOT run flasher flash_kernel as it would overwrite bootmenu binary}}
 
 4. Copy postmarketOS boot.img to SD card and rename it to altboot.img
+<source lang="shell">
+adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
+</source>
 
 5. Reboot your Ouya, select alternative boot to run altboot.img from an SD card.
 
