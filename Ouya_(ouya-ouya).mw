@@ -88,7 +88,7 @@
 # adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
 </source>
 
-4. Reboot Ouya, then press the power button many times until it scrolls to '''Alternate Boot''', and then wait until postmarketOS appears.
+8. Reboot Ouya, then press the power button many times until it scrolls to '''Alternate Boot''', and then wait until postmarketOS appears.
 
 == Photos ==
 
