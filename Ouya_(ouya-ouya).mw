@@ -60,7 +60,9 @@
 == Installation ==
 === How to enter flash mode ===
 1. Connect Ouya to PC
+
 2. Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
+
 ===pmbootstrap===
 {{todo| Work in progress, may be wrong. Only attempt for development}}
 
