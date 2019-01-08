@@ -59,8 +59,8 @@
 
 == Installation ==
 === How to enter flash mode ===
-# Connect Ouya to PC
-# Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
+1. Connect Ouya to PC
+2. Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
 ===pmbootstrap===
 {{todo| Work in progress, may be wrong. Only attempt for development}}
 
@@ -76,7 +76,6 @@
 # pmbootstrap pmbootstrap flasher flash_rootfs
 </source>
 {{note|'''WARNING''': This will create two partitions under ''system'' partition instead of one which won't allow you to use '''Normal Boot''' option in Ouya BootMenu}}
-{{note|'''WARNING''': '''DO NOT''' run ''flasher flash_kernel'' as it would overwrite Ouya BootMenu binary. Flash kernel (and omit the rest of this article) if you don't want to use Ouya BootMenu anymore and boot postmarketOS directly.}}
 
 4. Reboot Ouya, then press the power button many times until it scrolls to '''Recovery''', and then wait until CWM appears.
 
