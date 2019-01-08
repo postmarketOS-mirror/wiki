@@ -68,7 +68,7 @@
 
 1. Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu].
 
-2. Turn on Ouya, then press the power button many times until it scrolls to '''Bootloader''', and then wait until the bootmenu disappears.
+2. Turn on Ouya, then press the power button many times until it scrolls to '''Bootloader''', and then wait until the boot menu disappears.
 
 3. Run the following using ''pmbootstrap'':
 <source>
