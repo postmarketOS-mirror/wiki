@@ -55,7 +55,7 @@ If you want to flash postmarketOS to your phone itself rather than an sdcard, it
 # A menu will be shown, press 4 and enter to get a shell. The device will ask for your devicelock code
 # Insert a sdcard into your phone with a partition on it big enough to fit the system (make sure it ''isn't'' FAT32 formatted, as it can only store files up to 4GB big which might be too small). The sdcard will show up as "/dev/mmcblk1"
 # Mount the sdcard partition to a directory. <pre>mkdir /tmp/phone-backup; mount /dev/mmcblk1p1 /tmp/phone-backup</pre>
-# dd your system to an image file on the sdcard. <pre>dd if=/dev/mmcblk0p28 of=/mnt/backup/jolla-fullBackup.img</pre>
+# dd your system to an image file on the sdcard. <pre>dd if=/dev/mmcblk0p28 of=/tmp/phone-backup/jolla-fullBackup.img</pre>
 # When the disk image is made, unmount the sdcard. <pre>umount /tmp/phone-backup</pre>
 
 '''Restore:'''
