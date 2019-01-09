@@ -11,7 +11,7 @@ Requirements:
 * Make sure all files get installed properly (look at the packaging of other [[devices]] with working wifi in the <code>device</code> folder of our [https://gitlab.com/postmarketOs/pmaports pmaports] repository)
 
 === Path to firmware ===
-Usually your Android kernel expects the firmware files to be in a folder like <code>/system/vendor/firmware</code> and you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://github.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch]. Sometimes there is no need to patch, but simply change a kernel option that defines this path.
+Usually your Android kernel expects the firmware files to be in a folder like <code>/system/vendor/firmware</code> and you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://gitlab.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch]. Sometimes there is no need to patch, but simply change a kernel option that defines this path.
 
 == Debugging ==
 * Find the wifi device name with <code>ip link</code> (<code>wlan0</code> on most phones)
