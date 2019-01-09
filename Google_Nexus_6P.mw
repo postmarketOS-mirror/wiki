@@ -51,11 +51,12 @@ $ cd pmbootstrap
 
 $ ./pmbootstrap.py init
 
-$ ./pmbootstrap.py flasher flash_rootfs --partition userdata
+$ ./pmbootstrap.py install --no-fde
 
-$ ./pmbootstrap.py flasher flash_kernel
 
 $ ./pmbootstrap.py flasher flash_rootfs
+
+$ ./pmbootstrap.py flasher flash_kernel
 
 == Kernel configs applied ==
 
