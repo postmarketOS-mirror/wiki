@@ -36,8 +36,16 @@
 == Contributors ==
 
 * zhuowei
+
+=== How to enter flash mode ===
+* Disconnect a USB cable
+* Make sure, the device is powered off
+* Hold power +  volume down
+* Continue holding until you se the bootloader menu
+
 ==pmbootstrap install==
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+
 
 $ cd pmbootstrap
 
