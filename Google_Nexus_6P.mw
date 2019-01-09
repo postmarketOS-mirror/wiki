@@ -43,11 +43,12 @@ $ cd pmbootstrap
 
 $ ./pmbootstrap.py init
 
-$ ./pmbootstrap.py install --no-fde
+$ ./pmbootstrap.py flasher flash_rootfs --partition userdata
 
 $ ./pmbootstrap.py flasher flash_kernel
 
 $ ./pmbootstrap.py flasher flash_rootfs
+
 == Kernel configs applied ==
 
 Configs changed from stock Lineage kernel:
