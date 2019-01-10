@@ -120,11 +120,11 @@ These are used for flashing and booting the device, and most of them are fastboo
 |-
 | <code>flash_offset_base</code>
 | Used for flashing
-| Default: <code>0x10000000</code>
+| default: <code>0x10000000</code>
 |-
 | <code>flash_pagesize</code>
 | Page size
-| Usually <code>2048</code>
+| usually <code>2048</code>
 |-
 | <code>flash_sparse</code>
 | Set this to true if your device expects a [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting#invalid-sparse-file-format-at-header-magi sparse system image] flashed
@@ -191,6 +191,15 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>rootfs_image_sector_size</code>
 | Some devices made after 2016 with UFS storage use 4096 byte sectors and therefore need this option to boot. Read {{MR|1725}} for details.
 | default: <code>512</code>
+|-
+| <code>sd_embed_firmware</code>
+| A comma-separated list of binary:offset (where binary is under /usr/share) ({{MR|1739}})
+| e.g. <code>firmware/librem5dev/u-boot.bin:33,firmware/librem5dev/m4.bin:2</code>
+|-
+| <code>sd_embed_firmware_step_size</code>
+| The number of bytes for each increment of the offset specified in the <code>sd_embed_firmware</code> 
+| default: <code>1024</code>
+|-
 |}
 
 == splash ==
