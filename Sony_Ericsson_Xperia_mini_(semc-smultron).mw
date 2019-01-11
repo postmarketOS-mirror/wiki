@@ -49,6 +49,13 @@
 * FDE
 
 == What does not work ==
+* Audio (is detected but no sound)
+* Programs using XRandr (segfaults, need to look into this one)
+* Wi-Fi (something's wrong with calibration file)
+* Flashing (system partition too small)
+
+== What is untested/probably won't work ==
+* Camera (blobs)
 * Everything else
 
 == How to unlock bootloader ==
