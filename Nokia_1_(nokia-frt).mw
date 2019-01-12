@@ -44,6 +44,18 @@
 
 {{Device owners}}
 
+{{#cargo_query:
+tables=DeviceOwners
+|fields=CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User,Notes
+|format=ul
+|columns=2
+|where=Device="{{PAGENAMEE}}"
+|limit=9999
+|more results text=
+|intro=Users owning this device:
+|default=
+}}
+
 == What works ==
 * Nothing
 
