@@ -68,7 +68,87 @@ Boot.img offsets are in kernel's readme file:
 </pre>
 
 == How to enter flash mode ==
-Press Volume down + power while plugging in USB.
+Plus in USB, then Press Volume Up + power. When Nokia logo appears release power. Scroll to bootloader.
+
+== Getvar all ==
+<pre>
+$ fastboot getvar all 
+(bootloader) 	max-download-size: 0x8000000
+(bootloader) 	partition-size:flashinfo: 1000000
+(bootloader) 	partition-type:flashinfo: raw data
+(bootloader) 	partition-size:userdata: 151780000
+(bootloader) 	partition-type:userdata: f2fs
+(bootloader) 	partition-size:cache: 9800000
+(bootloader) 	partition-type:cache: ext4
+(bootloader) 	partition-size:system: 57000000
+(bootloader) 	partition-type:system: ext4
+(bootloader) 	partition-size:vendor: 14000000
+(bootloader) 	partition-type:vendor: ext4
+(bootloader) 	partition-size:elabel: 140000
+(bootloader) 	partition-type:elabel: ext4
+(bootloader) 	partition-size:deviceinfo: 100000
+(bootloader) 	partition-type:deviceinfo: raw data
+(bootloader) 	partition-size:cda: 800000
+(bootloader) 	partition-type:cda: ext4
+(bootloader) 	partition-size:sutinfo: 20000
+(bootloader) 	partition-type:sutinfo: raw data
+(bootloader) 	partition-size:systeminfo: 20000
+(bootloader) 	partition-type:systeminfo: raw data
+(bootloader) 	partition-size:box: 800000
+(bootloader) 	partition-type:box: ext4
+(bootloader) 	partition-size:metadata: 2000000
+(bootloader) 	partition-type:metadata: raw data
+(bootloader) 	partition-size:odmdtbo: 200000
+(bootloader) 	partition-type:odmdtbo: raw data
+(bootloader) 	partition-size:nvdata: 2000000
+(bootloader) 	partition-type:nvdata: ext4
+(bootloader) 	partition-size:frp: 100000
+(bootloader) 	partition-type:frp: raw data
+(bootloader) 	partition-size:tee2: 200000
+(bootloader) 	partition-type:tee2: raw data
+(bootloader) 	partition-size:tee1: 200000
+(bootloader) 	partition-type:tee1: raw data
+(bootloader) 	partition-size:keystore: 800000
+(bootloader) 	partition-type:keystore: raw data
+(bootloader) 	partition-size:secro: 200000
+(bootloader) 	partition-type:secro: raw data
+(bootloader) 	partition-size:oemkeystore: 200000
+(bootloader) 	partition-type:oemkeystore: raw data
+(bootloader) 	partition-size:seccfg: 80000
+(bootloader) 	partition-type:seccfg: raw data
+(bootloader) 	partition-size:expdb: a00000
+(bootloader) 	partition-type:expdb: raw data
+(bootloader) 	partition-size:logo: 200000
+(bootloader) 	partition-type:logo: raw data
+(bootloader) 	partition-size:recovery: 1000000
+(bootloader) 	partition-type:recovery: raw data
+(bootloader) 	partition-size:boot: 1000000
+(bootloader) 	partition-type:boot: raw data
+(bootloader) 	partition-size:para: 80000
+(bootloader) 	partition-type:para: raw data
+(bootloader) 	partition-size:lk: 100000
+(bootloader) 	partition-type:lk: raw data
+(bootloader) 	partition-size:protect2: a00000
+(bootloader) 	partition-type:protect2: ext4
+(bootloader) 	partition-size:protect1: a00000
+(bootloader) 	partition-type:protect1: ext4
+(bootloader) 	partition-size:nvram: 500000
+(bootloader) 	partition-type:nvram: raw data
+(bootloader) 	partition-size:proinfo: 300000
+(bootloader) 	partition-type:proinfo: raw data
+(bootloader) 	partition-size:preloader: 40000
+(bootloader) 	partition-type:preloader: raw data
+(bootloader) 	off-mode-charge: 1
+(bootloader) 	warranty: no
+(bootloader) 	unlocked: yes
+(bootloader) 	secure: no
+(bootloader) 	kernel: lk
+(bootloader) 	product: FRT
+(bootloader) 	version-preloader: 0.1.00
+(bootloader) 	version: 0.5
+all: Done!!
+finished. total time: 0.006s
+</pre>
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
