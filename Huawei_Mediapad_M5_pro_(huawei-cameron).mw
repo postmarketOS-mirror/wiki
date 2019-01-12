@@ -94,8 +94,14 @@ OASES stands for Open Adaptive Security Extensions. Its a Tradmark of Baidu and 
 In Order to compile the kernel OASES had to be disabled. 
 
 == Additional Info ==
-The display brightness can be set by writing a value between 0 and 1024 to <code> /sys/class/leds/lcd_backlight0/brightness</code>. 
-For now the backlight is completley dark when the system boots.
+The display brightness can be set by writing a value between 0 and 9969 to <code> /sys/class/leds/lcd_backlight0/brightness</code>. 
+
+<syntaxhighlight lang="shell-session">
+$ sudo -i
+# echo 1024 > /sys/class/leds/lcd_backlight0/brightness 
+</syntaxhighlight>
+
+For now the backlight is completely dark when the system boots.
 
 == Links ==
 * [https://github.com/JohnBergago/android_kernel_huawei_hi3660 Kernel Sources with adapted dtc tool to build in fakeroot of pmbootstrap]
