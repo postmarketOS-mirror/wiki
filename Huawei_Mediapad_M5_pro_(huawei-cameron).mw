@@ -94,7 +94,7 @@ OASES stands for Open Adaptive Security Extensions. Its a Tradmark of Baidu and 
 In Order to compile the kernel OASES had to be disabled. 
 
 == Additional Info ==
-The display brightness can be set by writing a value between 0 and 9969 to <code> /sys/class/leds/lcd_backlight0/brightness</code>. 
+The display brightness can be set by writing a value between 0 and 9960 to <code> /sys/class/leds/lcd_backlight0/brightness</code>. 
 
 <syntaxhighlight lang="shell-session">
 $ sudo -i
