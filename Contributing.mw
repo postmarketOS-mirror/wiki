@@ -23,7 +23,7 @@ To work on something specific, see the issues tagged with [https://gitlab.com/po
 ** Add links to relevant GitLab issues and other pages
 
 ==== Blog posts ====
-The current scheme of blog posts works like this: going through the [https://gitlab.com/groups/postmarketOS/-/merge_requests?scope=all&utf8=%E2%9C%93&state=closed recently closed merge requests] and photos posted in the [[Matrix and IRC|chatroom]], categorizing them into logical sections before writing one paragraph after another and adding images to round it up. Contributing to any step of that process would be greatly appreciated and saves us a lot of time that we could put in other areas of the project. Get in touch with us in the [https://gitlab.com/postmarketOS/postmarketos.org/issues/ postmarketOS.org issues].
+The current scheme of blog posts works like this: going through the [https://gitlab.com/groups/postmarketOS/-/merge_requests?scope=all&utf8=%E2%9C%93&state=closed recently closed merge requests] and photos posted in the [[Matrix and IRC|chatroom]]/[[Special:ListFiles|wiki]], categorizing them into logical sections before writing one paragraph after another and adding images to round it up. Contributing to any step of that process would be greatly appreciated and saves us a lot of time that we could put in other areas of the project. Get in touch with us in the [https://gitlab.com/postmarketOS/postmarketos.org/issues/ postmarketOS.org issues].
 
 We are also open to a new format of blog posts, writing shorter ones about specific changes that happened in the project rather than having these epic-but-time-consuming long reads every few months.
 
