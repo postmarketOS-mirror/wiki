@@ -5,14 +5,14 @@
 | image = File:nokia-frt.jpg
 | imagecaption = cute little phone
 | releaseyear = 2018
-| originalsoftware = Android 8.1 Go, kernel 3.18.79
+| originalsoftware = Android 8.1 Go, kernel 3.18.79, armhf
 | chipset = MediaTek MT6737M
 | cpu = Cortex-A53 4x1.1GHz
 | gpu = Mali-T720 MP1
 | storage = 8GB
 | display = 480x854
 | memory = 1GiB
-| architecture = armv7, theoretically aarch64
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
