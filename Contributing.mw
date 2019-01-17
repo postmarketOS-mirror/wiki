@@ -3,7 +3,7 @@ Hello there, glad you are reading this page. We have a broad spectrum of topics 
 === GitLab issues ===
 First of all, consider [[:Category:Community#GitLab_issues|subscribing to the GitLab issues]]. The most important discussions happen there, on all levels. From broad visions and blog posts to implementation details and bug reports. Voice your opinions and help out others with your knowledge, so there are more people that can in turn help out yourself when you get stuck. If you are a developer, consider testing and reviewing incoming patches (merge requests). The more eyeballs on the code, the less bugs get introduced.
 
-To work on something specific, see the issues tagged with [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted].
+To work on something specific, see the issues tagged with '''[https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted]'''.
 
 === Documentation and Blogging ===
 ==== Wiki documentation ====
