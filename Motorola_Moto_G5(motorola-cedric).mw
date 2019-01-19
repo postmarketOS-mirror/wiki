@@ -49,5 +49,5 @@ I installed the rootfs on a SD card.
 $ pmbootstrap flasher boot
 </source>
 == See also ==
-[https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
-[https://www.androidfilehost.com/?w=files&flid=236353 TWRP (not needed if you use pmbootstrap flasher boot)]
+* [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
+* [https://www.androidfilehost.com/?w=files&flid=236353 TWRP (not needed if you use pmbootstrap flasher boot)]
