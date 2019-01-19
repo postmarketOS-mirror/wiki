@@ -44,7 +44,7 @@
 * Power + Volume Down buttons or use <code>adb reboot-bootloader</code>
 
 == Installation ==
-I installed the rootfs on a SD card.
+I installed the rootfs on a SD card. Flashing the kernel to the boot partition not tested, rootfs flashing too.
 <source>
 $ pmbootstrap flasher boot
 </source>
