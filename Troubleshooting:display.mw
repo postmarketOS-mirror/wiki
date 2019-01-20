@@ -60,6 +60,8 @@ index 53112ca6..69673017 100644
 
 Alternative patch: [https://cascardo.eti.br/patches/0001-fix-video-argb-setting.patch 0001-fix-video-argb-setting.patch] (requires <code>CONFIG_FB_MSM_DEFAULT_DEPTH_ARGB8888=y</code> in the kernel config).
 
+A workaround might be setting the default color depth to 16 bits per pixel (see [https://gitlab.com/postmarketOS/pmaports/merge_requests/132#note_133044017 this comment]).
+
 == Screen doesn't refresh ==
 
 Check if your screen refreshes when you do the following:
