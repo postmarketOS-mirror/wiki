@@ -1,0 +1,10 @@
+{{note|This page is WiP. Information may not be correct, or may not be universally applicable}}
+
+Qualcomm is a semiconductors company, and one of the biggest producers of smartphone and tablet SoCs.
+
+= Booting Procedure =
+
+= Useful Links = 
+* [https://lineageos.org/engineering/Qualcomm-Firmware/ Qualcomm's Chain of Trust - LineageOS]
+* [https://alephsecurity.com/2018/01/22/qualcomm-edl-1/ Exploiting Qualcomm EDL Programmers (1)]
+* [https://github.com/alephsecurity/firehorse Research & Exploitation framework for Qualcomm EDL Firehose programmers]
