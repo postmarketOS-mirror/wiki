@@ -13,6 +13,26 @@
 | storage = 64 GB
 | display = 2160x1080
 | memory = 4 GB
+
+| status_usbnet = Y
+| status_flashing = N
+| status_touch = Y
+| status_screen = Y
+| status_wifi = P
+| status_xwayland = 
+| status_fde = Y
+| status_mainline = N
+| status_battery = 
+| status_3d = P
+| status_accel = 
+| status_audio = 
+| status_bluetooth = P
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = Y
 }}
 
 == Contributors ==
