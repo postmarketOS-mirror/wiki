@@ -8,3 +8,5 @@ Qualcomm is a semiconductors company, and one of the biggest producers of smartp
 * [https://lineageos.org/engineering/Qualcomm-Firmware/ Qualcomm's Chain of Trust - LineageOS]
 * [https://alephsecurity.com/2018/01/22/qualcomm-edl-1/ Exploiting Qualcomm EDL Programmers (1)]
 * [https://github.com/alephsecurity/firehorse Research & Exploitation framework for Qualcomm EDL Firehose programmers]
+* [https://developer.qualcomm.com/download/db410c/little-kernel-boot-loader-overview.pdf Little Kernel Boot Loader Overview]
+* [http://newandroidbook.com/Articles/aboot.html Reverse Engineering Android's Aboot]
