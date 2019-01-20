@@ -6,6 +6,7 @@
 | imagecaption = cute little phone
 | releaseyear = 2018
 | originalsoftware = Android 8.1 Go, kernel 3.18.79, armhf
+| pmoskernel = 3.18.79
 | chipset = MediaTek MT6737M
 | cpu = Cortex-A53 4x1.1GHz
 | gpu = Mali-T720 MP1
@@ -13,6 +14,9 @@
 | display = 480x854
 | memory = 1GiB
 | architecture = aarch64
+<!--| whet_dhry  = 0-->
+<!-- -->
+| whet_dhry =
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
