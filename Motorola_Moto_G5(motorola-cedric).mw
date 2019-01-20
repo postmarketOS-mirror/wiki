@@ -13,7 +13,7 @@
 | display = 1080x1920 IPS 
 | memory = 3GB 
 | architecture = aarch64 
-| whet_drhy = 303.7
+| whet_dhry = 303.7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = P 
