@@ -61,5 +61,5 @@ The device package also includes an initramfs hook, which will try to mount the 
 <code>% truncate -s 2G postmarketOS.img</code>
 
 == See also ==
-* {{MR|155}} initial MR (with a good description of the current state, 2019-01)
+* {{MR|155|pmaports}} initial MR (with a good description of the current state, 2019-01)
 * [https://github.com/postmarketOS/pmbootstrap/commits/device-planet-geminipda Old Device branch]
