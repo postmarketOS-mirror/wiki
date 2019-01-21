@@ -27,6 +27,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Meizu MX4
 * Meizu PRO 5
 * Nokia 3
+* Nokia 5
 * Purism Librem 5
 * Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
 * Samsung GT-S5839i
@@ -38,6 +39,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * DooGee x5/x5Pro (MediaTek MT6735M) [SnowCat Kernel](https://github.com/SnowCat6/DOOGEE-kernel-3.18) (Also requires non-kernel code, firmware & drivers)[https://github.com/SnowCat6?utf8=%E2%9C%93&tab=repositories&q=x5pro&type=&language=]
 * ARK Benefit A3 (cheaper Elephone Trunk clone) — https://wiki.lineageos.org/devices/peach (currently unmaintained)
 * LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
+* LG Leon
 * ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
 * OpenPandora handheld games console, mainline DTS
