@@ -173,7 +173,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 
 |-
 | <code>fastboot_partition_kernel</code>
-| Only relevant for [[Deviceinfo_flash_methods|fastboot]] flash methods, the partition where the kernel or boot.img will be stored.
+| Only relevant for [[Deviceinfo_flash_methods|fastboot]] flash methods, the partition where the kernel or boot.img will be stored ({{MR|1741}}).
 | default: <code>"boot"</code>
 |-
 | <code>fastboot_partition_system</code>
