@@ -48,6 +48,23 @@ Reboot and press power down before screen is on
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
+== What works ==
+* Display with Wayland: Weston and Plasma (software rendering)
+* Touchscreen
+* USB networking
+* Reboot/poweroff using command
+
+== What works partially ==
+* Display with Xorg after issuing the command cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode" and starting manually
+* USB OTG/Host if plugged before booting
+
+== What does not work ==
+* WiFi (requires firmwares)
+* Bluetooth (kernel seems to initialize it)
+* Sound
+* Modem/baseband
+* USB OTG/Host after boot or removed
+
 == See also ==
 * {{MR|165}} Initial merge request
 * {{issue|173}} Feature for dual-boot
