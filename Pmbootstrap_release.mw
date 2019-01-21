@@ -1,6 +1,8 @@
 Checklist for creating a <code>pmbootstrap</code> release:
 
-* set version in <code>pmb/config/__init__.py</code> to the new version
+* <code>pmb/config/__init__.py</code>:
+** bump pmbootstrap version
+** update the apk version to the current one in Alpine Linux
 * [https://gitlab.com/postmarketOS/pmbootstrap/tags/new tag a release in gitlab]
 ** fill out "release notes" (we can use markdown there), leave "message" empty
 ** look at the [https://gitlab.com/postmarketOS/pmbootstrap/commits/master previous commits] to write a good description of what changed
