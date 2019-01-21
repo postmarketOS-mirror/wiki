@@ -54,11 +54,12 @@
 * Everything else not mentioned specifically
 
 == Installation ==
-The easiest way for now is to use Flash Tool from [http://support.planetcom.co.uk/index.php/Flashing_Guide official flashing guide], replacing  linux.img in firmware package with planet-geminipda.img and linux_boot.img with boot.img-planet-geminipda.
+The easiest way for now is to use the Flash Tool from [http://support.planetcom.co.uk/index.php/Flashing_Guide official flashing guide], replacing  linux.img in the firmware package with planet-geminipda.img and linux_boot.img with boot.img-planet-geminipda.
 
-Current device-planet-geminipda branch also includes initramfs hook which will try to mount userdata and linux partitions, looking for /postmarketOS.img file (exported as planet-geminipda.img). This can be used for non-intrusive installation. Image file needs to be expanded to wanted size in advance, for example:
+The device package also includes an initramfs hook, which will try to mount the userdata and linux partitions, looking for a /postmarketOS.img file (exported as planet-geminipda.img). This can be used for non-intrusive installation. That Image file needs to be expanded to the wanted size in advance, for example:
 
 <code>% truncate -s 2G postmarketOS.img</code>
 
 == See also ==
-* [https://github.com/postmarketOS/pmbootstrap/commits/device-planet-geminipda Device branch]
+* {{MR|155}} initial MR (with a good description of the current state, 2019-01)
+* [https://github.com/postmarketOS/pmbootstrap/commits/device-planet-geminipda Old Device branch]
