@@ -73,7 +73,7 @@ If it does, add <code>msm-fb-refresher</code> to the <code>depends=</code> of yo
 
 (If the above command does ''not'' refresh your screen, you could try the <code>msm-fb-refresher</code> anyway.)
 
-{{note|Make sure you zap the device rootfs after enableing the msm refresher, otherwise it will only get installed as a service and not enabled by the postmarketos-base install script (you'll only see a second of splash-screen otherwise and the refresher won't be restarted after exiting the initramfs}}
+{{note|Make sure you zap the device rootfs after enabling the msm refresher, otherwise it will only get installed as a service and not enabled by the postmarketos-base install script (you'll only see a second of splash-screen otherwise and the refresher won't be restarted after exiting the initramfs}}
 
 == Screen is blank outside of Weston ==
 Something like that should help, see [https://github.com/postmarketOS/pmbootstrap/issues/603#issuecomment-333327128 #603]:
