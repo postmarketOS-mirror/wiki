@@ -52,6 +52,7 @@
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/168 !168] Initial merge request
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
