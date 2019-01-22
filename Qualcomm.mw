@@ -1,8 +1,22 @@
 {{note|This page is WiP. Information may not be correct, or may not be universally applicable}}
 
-Qualcomm is a semiconductors company, and one of the biggest producers of smartphone and tablet SoCs.
+Qualcomm is a semiconductors company, and one of the biggest manufacturers of smartphone and tablet SoCs.
 
 = Booting Procedure =
+Qualcomm ARM SoCs make use of several bootloaders, each of which initializes and/or checks some things and then passes on execution to the next stage in the boot chain.
+The final stage is whatever operating system runs on the SoC.
+There are slight differences between the boot chains for different SoCs,
+here is a triplet of charts showing the boot chains of relatively recent Qualcomm SoCs.
+
+[[File:Qualcomm_bootchain_pre_msm8974.png||]]
+[[File:Qualcomm_bootchain_pre_msm8996.png||]]
+[[File:Qualcomm_bootchain_post_msm8994.png||]]
+
+As you can see, the main change introduced in msm8974 is the merging of SBL1, which used to consist of three bootloaders, into one,
+and the main change introduced in msm8996 is support for the ABL UEFI bootloader - however, in some cases, aboot is still used.
+These charts are not necessarily exact representations of the boot chain on a specific SoC in a specific application, since modifications can be made by manufacturers by either replacing / editing one of the later links in the chain, or by adding more bootloader stages.
+
+A more close examination of these bootloaders will follow.
 
 = Useful Links = 
 * [https://lineageos.org/engineering/Qualcomm-Firmware/ Qualcomm's Chain of Trust - LineageOS]
