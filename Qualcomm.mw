@@ -24,3 +24,4 @@ A more close examination of these bootloaders will follow.
 * [https://github.com/alephsecurity/firehorse Research & Exploitation framework for Qualcomm EDL Firehose programmers]
 * [https://developer.qualcomm.com/download/db410c/little-kernel-boot-loader-overview.pdf Little Kernel Boot Loader Overview]
 * [http://newandroidbook.com/Articles/aboot.html Reverse Engineering Android's Aboot]
+* [https://projects.osmocom.org/projects/quectel-modems/wiki/EC20 Qualcomm Linux Modems by Quectel & Co]
