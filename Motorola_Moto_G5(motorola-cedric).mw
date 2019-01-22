@@ -51,7 +51,7 @@ $ pmbootstrap flasher boot
 </source>
 
 == Notes ==
-* OTG might not work on mouses, USB sound cards and devices with heavy power requirements, for example USB HDD enclosures (might work with a powered USB hub or a Y USB cable)
+* OTG might not work on mouses, USB sound cards and devices with heavy power requirements, for example USB HDD enclosures (might work with a powered USB hub or a Y USB cable). Also you might need to restart Weston after unplugging and plugging back in a device.
 
 == See also ==
 * [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
