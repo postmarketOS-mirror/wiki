@@ -12,7 +12,7 @@
 | storage = 32 GB / 64 GB
 | display = 1080x1920 IPS LCD
 | memory = 4 GB
-| architecture = aarch64, x86, x86_64
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
@@ -67,4 +67,5 @@ Reboot and press power down before screen is on
 
 == See also ==
 * {{MR|165}} Initial merge request
-* {{issue|173}} Feature for dual-boot
+* {{issue|173}} WIP issues
+* {{issue|177}} Feature for dual-boot
