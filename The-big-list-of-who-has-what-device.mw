@@ -20,7 +20,6 @@ tables=DeviceOwners
 }}
 
 == The-big-list-of-what-device-is-owned-by-whom ==
-== Testing, 123 ==
 {{#cargo_query:
 tables=DeviceOwners
 |fields=Device,CONCAT( '[[', _pageName, '|',_pageTitle,']]' )=User
