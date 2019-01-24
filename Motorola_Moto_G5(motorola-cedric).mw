@@ -23,7 +23,7 @@
 | status_xwayland = Y 
 | status_fde = 
 | status_mainline =
-| status_battery = P
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = 
@@ -54,6 +54,7 @@ $ pmbootstrap flasher boot
 * OTG might not work on mouses, USB sound cards and devices with heavy power requirements, for example USB HDD enclosures (might work with a powered USB hub or a Y USB cable). Also you might need to restart Weston after unplugging and plugging back in a device.
 * Xorg works after running <code>cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode</code> as root and restarting Lightdm or starting the DE manually.
 * Hildon has messed up colors and is in portrait mode.
+* charging-sdl was tested manually through the debug shell.
 
 == See also ==
 * [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
