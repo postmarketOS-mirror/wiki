@@ -25,3 +25,4 @@ A more close examination of these bootloaders will follow.
 * [https://developer.qualcomm.com/download/db410c/little-kernel-boot-loader-overview.pdf Little Kernel Boot Loader Overview]
 * [http://newandroidbook.com/Articles/aboot.html Reverse Engineering Android's Aboot]
 * [https://projects.osmocom.org/projects/quectel-modems/wiki/EC20 Qualcomm Linux Modems by Quectel & Co]
+* [https://worthdoingbadly.com/qcomxbl/ Comparing Qualcomm's XBL UEFI bootloaders on Snapdragon 820, 835, and 845]
