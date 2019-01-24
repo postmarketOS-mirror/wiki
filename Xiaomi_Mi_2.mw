@@ -39,6 +39,7 @@
 * Lwrless
 
 == Maintainer(s) ==
+* [https://t.me/Lwrless Lwrless]
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
@@ -48,11 +49,17 @@
 
 [[File:Photo 2019-01-21 23-23-18.jpg|300px]]
 
+== Progress ==
+
+In [https://gitlab.com/postmarketOS/pmaports/merge_requests/168 !168] I used outdated cm11 kernel from [https://github.com/LineageOS/android_kernel_xiaomi_aries LineageOS], it boots fine but I wasn't able to get the display working.
+
+Then I switched to the kernel which is still maintained by [https://github.com/GuaiYiHu GuaiYiHu] from [https://github.com/MoKee/android_kernel_xiaomi_aries/ MoKee]. By following the steps on [[Troubleshooting:display]] and [[Tuning_sysfs]], the display was enabled.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-* [https://gitlab.com/postmarketOS/pmaports/merge_requests/168 !168] Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/171 !171] Initial merge request
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
