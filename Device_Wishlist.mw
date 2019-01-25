@@ -44,7 +44,6 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
 * OpenPandora handheld games console, mainline DTS
 * [http://projects.goldelico.com/p/gta04-main/ GTA04] - replacement board for OpenMoko Neo 1973/Freerunner (GTA01/02) with OMAP3 SoC, mainline DTS, supported by Replicant
-* Nintendo Switch
 * [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
 * Xiaomi Mi A1 (tissot) - very similar hardware to Xiaomi Redmi Note 4 (mido)
 * Xiaomi Pocophone F1
