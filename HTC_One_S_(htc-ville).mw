@@ -14,13 +14,13 @@
 | memory = 1 GB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
-| status_wifi = <!-- Wireless network works? -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = N
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_fde = Y
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| booting = <!-- The device is booting at all *IMPORTANT* -->
+| booting = Y
 }}
 
 == Contributors ==
