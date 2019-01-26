@@ -20,7 +20,7 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = Y
-| status_mainline = 
+| status_mainline =
 | status_battery =
 | status_3d = 
 | status_accel = 
@@ -52,8 +52,16 @@ Typical fastboot flashing procedure should be fine:
 $ pmbootstrap init
 $ pmbootstrap install --no-fde
 $ pmbootstrap flasher flash_rootfs
-$ pmbootstrap flasher boot # or flash_kernel
+$ pmbootstrap flasher flash_kernel
 </source>
+
+== WiFi and NetworkManager ==
+
+WiFi does not work with NetworkManager out of the box. Seems like it's due to old kernel used (see {{issue|50|pmaports}} for more details).
+
+There are two possible workarounds:
+* connect manually using [[WiFi#Start WIFI manually]]
+* downgrade dhcpcd package to version 6.11.5 ({{issue|50#note_123253196|pmaports}}) and change [https://wiki.archlinux.org/index.php/NetworkManager#DHCP_client NetworkManager DHCP client] in /etc/NetworkManager/conf.d/postmarketos.conf
 
 == See also ==
 
