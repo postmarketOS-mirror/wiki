@@ -48,6 +48,7 @@ Hold the Volume Down button, and then press the Power button
 == Installation ==
 * Unlock (s-off) the bootloader if it hasn't been unlocked before ([https://www.htcdev.com/bootloader/] unlock site)
 * Boot the device in HBOOT mode and select fastboot 
+* Flash pmOS using pmbootstrap flasher flash_rootfs
 * Flash kernel using pmbootstrap flasher flash_kernel
 
 == See also ==
