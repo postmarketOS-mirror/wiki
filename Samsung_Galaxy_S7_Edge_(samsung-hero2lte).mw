@@ -1,0 +1,86 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy S7 edge
+| codename = samsung-hero2lte
+| image = File:samsung-hero2lte.jpg
+| imagecaption = Samsung Galaxy S7 Edge
+| releaseyear = 2016
+| originalsoftware = Android 6.0 on Linux 3.18.14
+| chipset = Samsung Exynos 8890 Octa
+| cpu = Exynos M1 (4x @ 2.3GHz) and ARM Cortex-A53 (4x @ 1.6GHz) 
+| gpu = ARM Mali T880 MP12
+| storage = 32GB (upgradeable via microSD)
+| display = 1440x2560 AMOLED
+| memory = 4GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = P <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = Y <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = N <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| booting = <!-- The device is booting at all *IMPORTANT* -->
+}}
+
+== Contributors ==
+* WilliamO7
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+* WilliamO7
+
+== How to enter flash mode ==
+When the device is fully powered off, hold Power, Volume Down and Home for a few seconds.
+
+A (turquoise) download mode warning screen should appear, press Volume Up to confirm. 
+
+== Installation ==
+It is recommended to sideload an android recovery zip through twrp for the easiest process, since heimdall freaks out about the subpartitions in SYSTEM
+and won't move past ~7%.
+<code>
+pmbootstrap install --no-fde --android-recovery-zip
+
+pmbootstrap flasher --method=adb sideload
+</code>
+
+
+== What is tested and works ==
+* The kernel (with prebuilt dtb)
+* USB Networking (you might have to set its ip address beforehand though)
+* Booting into the main OS (past initramfs), and therefore SSH.
+
+== Quirks ==
+* Exynos (at least modern exynos) has a different dt.img format to Qualcomm devices, requiring a special dtbtool to go along with it. 
+There is one included in the kernel source we have, which should make the dtb automatically,
+but it always fails with the error <code>dtb.img: Failed to open ' '</code>.
+However, we should be able to extract this from e.g. [https://github.com/LineageOS/android_hardware_samsung/tree/lineage-16.0/dtbhtool LineageOS], package it and make 
+some modifications to pmbootstrap to handle these.
+* The display stays on the splashscreen, and does not change at all.
+I did get some interesting messages spammed in kmsg, referring to the DECON display controller on the S7: <code>decon_pan_display: decon0 state(0), UNBLANK missed</code>. Don't know much about this though, apart from the fact that it has some [https://www.anandtech.com/show/9330/exynos-7420-deep-dive/3 quite unique architecture]. Using msm-fb-refresher didn't help.
+* Camera drivers (Samsung FIMC-IS2) (and accompanying flash LED drivers, controlled by a Samsung PMIC) needed to be disabled in the kernel to prevent boot loops.
+
+== See also ==
+[https://github.com/ivanmeler/android_kernel_samsung_herolte herolte kernel fork]
+[https://wiki.lineageos.org/devices/hero2lte/ LineageOS device page]
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
