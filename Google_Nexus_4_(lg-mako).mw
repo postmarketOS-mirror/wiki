@@ -31,6 +31,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
+| status_otg = Y
 | booting = yes
 }}
 == Contributors ==
