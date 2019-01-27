@@ -76,6 +76,7 @@ I did get some interesting messages spammed in kmsg, referring to the DECON disp
 
 == See also ==
 [https://github.com/ivanmeler/android_kernel_samsung_herolte herolte kernel fork]
+
 [https://wiki.lineageos.org/devices/hero2lte/ LineageOS device page]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
