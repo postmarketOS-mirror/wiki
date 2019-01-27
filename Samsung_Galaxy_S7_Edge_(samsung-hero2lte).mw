@@ -67,7 +67,7 @@ pmbootstrap flasher --method=adb sideload
 == Quirks ==
 * Exynos (at least modern exynos) has a different dt.img format to Qualcomm devices, requiring a special dtbtool to go along with it. 
 There is one included in the kernel source we have, which should make the dtb automatically,
-but it always fails with the error <code>dtb.img: Failed to open ' '</code>.
+but it always fails with <code>error: failed to read dtb ''; Segmentation fault</code>.
 However, we should be able to extract this from e.g. [https://github.com/LineageOS/android_hardware_samsung/tree/lineage-16.0/dtbhtool LineageOS], package it and make 
 some modifications to pmbootstrap to handle these.
 * The display stays on the splashscreen, and does not change at all.
