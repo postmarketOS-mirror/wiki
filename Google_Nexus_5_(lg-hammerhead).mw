@@ -88,6 +88,10 @@ $ nmcli radio all on
 ==== Webbrowser ====
 In plasma-mobile, Angelfish webbrowser does not run. You may want to install, configure and use qtwebbrowser, [[Firefox]] and/or [[Chromium]].
 
+==== Fastboot unknown chunk type ====
+Flashing with fastboot seems to fail for some outdated firmware, it prints the message "FAILED (remote: Unknown chunk type)" when trying to flash the rootfs to userdata.
+This can be solved by updating to the [https://developers.google.com/android/images#hammerhead latest baseband firmware and bootloader].
+
 === Links ===
 * [https://www.youtube.com/watch?v=u9zw_ewkBJ0 Demonstration video of a Nexus 5 with postmarketOS and plasma]
 * [https://gitlab.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
