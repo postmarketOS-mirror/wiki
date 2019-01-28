@@ -26,3 +26,4 @@ A more close examination of these bootloaders will follow.
 * [http://newandroidbook.com/Articles/aboot.html Reverse Engineering Android's Aboot]
 * [https://projects.osmocom.org/projects/quectel-modems/wiki/EC20 Qualcomm Linux Modems by Quectel & Co]
 * [https://worthdoingbadly.com/qcomxbl/ Comparing Qualcomm's XBL UEFI bootloaders on Snapdragon 820, 835, and 845]
+* [https://github.com/tianocore/tianocore.github.io/wiki/EDK-Boot-Loader-(EBL)-WiKi EBL Wiki]
