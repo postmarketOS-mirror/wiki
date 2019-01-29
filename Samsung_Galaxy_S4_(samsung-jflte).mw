@@ -12,7 +12,7 @@
 | storage = Internal storage and external micro SD
 | display = 1080x1920 AMOLED
 | memory = 2G ram
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
