@@ -90,7 +90,7 @@ $ wpa_passphrase $YOUR_SSID | sudo tee /etc/wpa_supplicant/wlan0.conf
 </pre>
 Connect to network using wpa_supplicant:
 
-<pre>$ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
+<pre>$ sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
 If your network uses DHCP, start the DHCP client:
 
 <pre>$ sudo udhcpc -i wlan0</pre>
