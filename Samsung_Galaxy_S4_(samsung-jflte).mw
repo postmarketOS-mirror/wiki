@@ -84,10 +84,10 @@ Once the device has been successfully initialized, enable it:
 <pre>$ sudo ip link set wlan0 up</pre>
 Configure wpa_supplicant (only necessary on encrypted networks):
 
-<pre>$ sudo su -
-# wpa_passphrase $YOUR_SSID &gt; /etc/wpa_supplicant/wlan0.conf
+<pre>
+$ wpa_passphrase $YOUR_SSID | sudo tee /etc/wpa_supplicant/wlan0.conf
 &lt;enter passphrase here and press Enter&gt;
-# exit</pre>
+</pre>
 Connect to network using wpa_supplicant:
 
 <pre>$ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wlan0.conf </pre>
