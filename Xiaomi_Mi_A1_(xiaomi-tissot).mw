@@ -49,20 +49,20 @@ Reboot and press power down before screen is on
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == What works ==
+* Booting from system or userdata
 * Display with Wayland and Xorg: Weston, Plasma, XFCE4, Mate (software rendering)
 * Touchscreen
 * USB networking
 * Reboot/poweroff using command
+* WiFi - requires firmware and ifconfig up wlan0
+* USB OTG/Host
 
 == What works partially ==
-* USB OTG/Host if plugged before booting
 
 == What does not work ==
-* WiFi (requires firmwares)
 * Bluetooth (kernel seems to initialize it)
 * Sound
 * Modem/baseband
-* USB OTG/Host after boot or removed
 
 == See also ==
 * {{MR|165}} Initial merge request
