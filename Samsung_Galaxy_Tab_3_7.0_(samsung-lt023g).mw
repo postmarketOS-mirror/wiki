@@ -65,6 +65,14 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Front Camera(and probably back but didnt figure out how to switch cams)
 * WiFi
 
+== What does not work ==
+* Bluetooth
+* Cellular networking
+* 2D and 3D Acceleration
+* Video decoding is like 2-3FPS
+* Audio
+Everything else is untested as of writing this.
+
 == How hpagseddy get camera working ==
 Right now it's not usable for daily use, just for testing camera quality and checking if camera is working or not. I used "motion" package from alpine linux to capture pictures. If you want to test it too, just use "apk add motion" command to install that package. Then simply type "motion" and it will start capturing pictures nearly every second. If it doesnt capture pictures or pictures are just black squares then your camera isnt working. For opening pictures, i used feh image viewer to view images but every gallery app works great.
 
@@ -83,14 +91,6 @@ If starting the service didn't work, start wpa_supplicant manually with:
 <pre>
 sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -imlan0
 </pre>
-
-== What does not work ==
-* Bluetooth
-* Cellular networking
-* 2D and 3D Acceleration
-* Video decoding is like 2-3FPS
-* Audio
-Everything else is untested as of writing this.
 
 == About GPU ==
 This will be filled
