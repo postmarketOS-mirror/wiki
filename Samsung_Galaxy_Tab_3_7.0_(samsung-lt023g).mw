@@ -92,6 +92,9 @@ sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -
 * Audio
 Everything else is untested as of writing this.
 
+== About GPU ==
+This will be filled
+
 == Links ==
 * [https://github.com/kumajaya/android_kernel_samsung_lt02 Kernel source]
 * [https://forum.xda-developers.com/showthread.php?t=2503063 Unofficial TWRP]
