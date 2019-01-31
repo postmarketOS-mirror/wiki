@@ -12,7 +12,7 @@
 | storage = 32GB
 | display = 2560x1440 IPS LCD
 | memory = 3GB LPDDR3
-| architecture = aarch64
+| architecture = AArch64/ARM64
 | status_usbnet = Y
 | status_flashing =Y
 | status_touch = Y
@@ -20,9 +20,9 @@
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
-| status_mainline = N
+| status_mainline = 
 | status_battery = Y
-| status_3d = N
+| status_3d = 
 | status_accel = 
 | status_audio = 
 | status_bluetooth =
