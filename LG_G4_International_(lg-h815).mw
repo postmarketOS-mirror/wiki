@@ -20,9 +20,9 @@
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
-| status_mainline = 
-| status_battery =
-| status_3d = 
+| status_mainline = N
+| status_battery = Y
+| status_3d = N
 | status_accel = 
 | status_audio = 
 | status_bluetooth =
