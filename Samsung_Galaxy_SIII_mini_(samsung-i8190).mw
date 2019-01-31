@@ -50,6 +50,7 @@
 * weston
 * osk-sdl
 * WIFI
+* X11
 
 == What does not work ==
 * Camera
