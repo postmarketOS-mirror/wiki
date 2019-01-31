@@ -81,6 +81,9 @@ Finally check for a connection and enable dhcp
 sudo udhcpc -b -i wlan0</pre>
 If it worked then <pre>ip a</pre> Should show an ip address
 
+== About 3D ==
+3D acceleration is possible as seen in linux sunxi
+http://linux-sunxi.org/Mali
 
 == Installation ==
 View [https://wiki.postmarketos.org/wiki/Installation_guide Installation guide.]
