@@ -42,7 +42,9 @@
 * kamnxt
 
 == How to enter flash mode ==
-* <syntaxhighlight lang="bash">adb reboot bootloader</syntaxhighlight> to enter fastboot from TWRP or Android
+* <syntaxhighlight lang="bash">adb reboot bootloader</syntaxhighlight>
+
+To enter fastboot from TWRP or Android
 Press and hold both power and volume down buttons.
 After LG logo appears release volume down button for one second then hold it again.
 If you have flashed TWRP on it, just ignore warnings about deleting data.
