@@ -52,6 +52,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 
 == What works ==
 * Booting off a microSD card
+* Booting from system partition using Android recovery option
 * Display
 * Touchscreen
 * USB networking
