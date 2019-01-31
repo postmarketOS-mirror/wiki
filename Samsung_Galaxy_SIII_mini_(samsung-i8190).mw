@@ -83,6 +83,7 @@ If it worked then <pre>ip a</pre> Should show an ip address
 
 == About 3D ==
 3D acceleration is possible as seen in linux sunxi
+<br>
 http://linux-sunxi.org/Mali
 
 == Installation ==
