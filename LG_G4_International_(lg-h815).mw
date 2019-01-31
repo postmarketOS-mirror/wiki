@@ -76,7 +76,11 @@ fastboot reboot</syntaxhighlight>
 
 255 - Screen at 100% of brightness
 
-IDK why, but screen works only with Plasma mobile
+<syntaxhighlight>/sys/class/leds/lcd-backlight/thermald-status</syntaxhighlight>
+
+0 - Screen off
+
+1 - Screen on
 
 == Photos ==
 TODO
