@@ -76,3 +76,4 @@
 * [https://www.gsmarena.com/sony_ericsson_xperia_mini-3947.php Device specifications]
 * {{MR|1644}} initial merge request
 * [https://github.com/msm7x30/android_kernel_qcom_msm7x30 4.4 kernel for MSM7x30 devices]
+* [https://github.com/Blefish/android_kernel_qcom_msm7x30/commit/67d0b3292ce55484db715e15cbd4a87cf5b8e5f3 Device tree sources (very useful for mainline!)]
