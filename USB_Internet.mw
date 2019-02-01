@@ -5,8 +5,8 @@ You can enable internet through the USB cable when [[WiFi]] doesn't work yet on 
 
 <syntaxhighlight lang="shell-session">
 $ sudo route add default gw 172.16.42.2
-$ sudo echo nameserver 80.80.80.80 | sudo tee /etc/resolv.conf
-Substitute 80.80.80.80 for your own internal DNS server if you want.
+$ echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+Substitute 8.8.8.8 for your own internal DNS server if you want.
 </syntaxhighlight>
 To make the configuration persistent after reboot do:
 <syntaxhighlight lang="shell-session">
@@ -18,7 +18,7 @@ $ sudo rc-update add local
 ==== On the host machine: ====
 
 <syntaxhighlight lang="shell-session">
-$ echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null
+$ sudo sysctl net.ipv4.ip_forward=1
 $ sudo iptables -P FORWARD ACCEPT
 $ sudo iptables -A POSTROUTING -t nat -j MASQUERADE -s 172.16.42.0/24
 </syntaxhighlight>
