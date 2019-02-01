@@ -20,7 +20,7 @@
 | status_wifi = -
 | status_xwayland = 
 | status_fde = Y
-| status_mainline = 
+| status_mainline = P
 | status_battery = P
 | status_3d = 
 | status_accel = 
@@ -86,3 +86,4 @@ If using a large rootfs (like with plasma-mobile) fastboot with throw a "no spac
 == See also ==
 * {{MR|1611}} Initial merge request
 * [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1604#note_85239812 display hack] (needs to be reworked in the future to make it compatible with a display manager)
+* [https://gitlab.com/postmarketOS/pmaports/issues/184 Mainline kernel notes]
