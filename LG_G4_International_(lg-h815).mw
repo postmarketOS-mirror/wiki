@@ -18,12 +18,12 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = 
-| status_xwayland = 
+| status_xwayland = Y
 | status_fde = 
 | status_mainline = 
 | status_battery = Y
 | status_3d = 
-| status_accel = 
+| status_accel = N
 | status_audio = 
 | status_bluetooth =
 | status_camera =
