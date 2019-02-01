@@ -54,6 +54,9 @@
 * Wi-Fi (something's wrong with calibration file)
 * Flashing (system partition too small)
 
+== What is broken ==
+* Xorg (messed up colors)
+
 == What is untested/probably won't work ==
 * Camera (blobs)
 * Everything else
