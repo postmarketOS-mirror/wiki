@@ -38,7 +38,7 @@
 * rrooij (initial port)
 * scintill (USB network, modem)
 * maccraft123 (Wiki page, testing)
-* Everyone else on IRC (feel free to put your name here!)
+* Everyone else on IRC (feel free to put your name 
 
 == What works ==
 * Compiling the kernel
@@ -46,6 +46,9 @@
 * Booting
 * Screen display
 * Multi-touch
+* Plasma Mobile(slow)
+* Xfce
+* Weston
 * Touch screen ({{github|1313}})
 * USB Networking ({{github|1260}})
 * Sending SMS via terminal ({{github|1314}})
