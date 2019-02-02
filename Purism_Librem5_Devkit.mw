@@ -43,6 +43,8 @@
 
 == How to enter flash mode ==
 
+The devkit has a switch on the same side as the reboot button, wifi switch, camera switch, and modem switch. Move it to the "USB Mode" position and hit the reboot button next to it in order to put the device into 'flash' mode.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
