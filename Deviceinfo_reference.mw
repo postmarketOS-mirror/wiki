@@ -61,7 +61,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |-
 | <code>arch</code>
 | Device architecture, must be supported by Alpine Linux
-| <code>armhf</code>, <code>aarch64</code>
+| <code>armhf</code>, <code>armv7</code>, <code>aarch64</code>
 
 |-
 | <code>dev_touchscreen</code>
