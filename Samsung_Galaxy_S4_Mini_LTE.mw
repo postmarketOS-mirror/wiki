@@ -57,9 +57,8 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* TTY Terminal and Xorg
-* Screen is red(The RGBA8888 to ARGB8888 patch doesn't work)
-* Anything outside of Weston(working on it)
+* TTY Terminal
+* Screen is red(The RGBA8888 to ARGB8888 patch doesn't work have to set the RGB565 option)
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
