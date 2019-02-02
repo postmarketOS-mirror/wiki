@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name =  Captivate Glide
-| codename = sgh-i927
+| codename = samsung-sgh-i927
 | image = File:sgh-i927.jpg
 | imagecaption = Samsung Captivate Glide with its keyboard extended and back lights on
 | releaseyear = 2011
@@ -32,7 +32,7 @@
 | status_sms = no
 | status_calls = no
 | status = Fails to boot
-| booting = no
+| booting = yes
 }}
 
 == Contributors ==
@@ -41,22 +41,18 @@
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
+* ''[[user:benwaffle|benwaffle]]''
 * ''[[user:Moocow9m|Moocow9m]]''
 
 == What works ==
 * Kernel compilation
 * Flash via Heimdall
-
-== What does not work ==
-* Flashing via odin
-* Flashing via recovery zip.
 * Booting
 
 == How to enter flash mode ==
 Press and hold <code>Volume Up</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
 
 == How to enter recovery mode ==
-
 Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 
 == Installation ==
