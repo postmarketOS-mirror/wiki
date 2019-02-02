@@ -47,10 +47,5 @@
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME}} Initial merge request
-* {{issue|CHANGEME}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
+
+* [https://developer.puri.sm/Librem5/ Purism Librem5 devkit documentation]
