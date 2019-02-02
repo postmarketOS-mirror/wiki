@@ -53,4 +53,5 @@ as target device the entire microSD card (''/dev/mmcblk0'').
 
 == See also ==
 * {{MR|1590}} Initial pull request
-* {{MR|1614}} Touchscreen support pull request
+* {{MR|1614}} Touchscreen support merge request
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/178 !178] 16-bit depth fix for display merge request
