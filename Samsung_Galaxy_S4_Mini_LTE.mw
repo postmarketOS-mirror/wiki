@@ -57,7 +57,9 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* TTY Terminal and Xorg(have to enable framebuffer console in kernel config)
+* TTY Terminal and Xorg
+* Screen is red(known bug, preparing to open MR)
+* Anything outside of Weston(working on it)
 
 == How to enter flash mode ==
 * Hold home + volume down when booting the device
