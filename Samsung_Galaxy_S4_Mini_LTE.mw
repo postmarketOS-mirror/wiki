@@ -16,7 +16,7 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = Y
+| status_screen = P
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = 
@@ -24,7 +24,7 @@
 | status_battery = Y
 | status_3d = N
 | status_accel = 
-| status_audio = 
+| status_audio = N
 | status_bluetooth =
 | status_camera =
 | status_gps = 
@@ -60,8 +60,8 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* TTY Terminal
-* Screen is red(The RGBA8888 to RGB888 patch doesn't work have to set the RGB565 option)
+* Screen is red(Going to submit MR about it)
+* HW acceleration(Due to old kernel, where DRM is not working, we need libhybris)
 
 == How to enter flash mode ==
 * 1. Press VolumeDown, Home and Power buttons until Warning screen appears
