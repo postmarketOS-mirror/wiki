@@ -42,7 +42,7 @@
 
 == Current main issues ==
 * Device doesn't automatically give itself mac address, ip, etc - you need to [[USB_Network | configure the network manually ]]
-* Device reboots immediately after flasher usage
+* Device reboots immediately after flasher usage - not a postmarketOS issue, it is samsung's fault
 * Charging seems to work, but there's no indication of it actually happening
 
 == Current work ==
