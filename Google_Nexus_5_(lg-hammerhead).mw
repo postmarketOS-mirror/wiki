@@ -98,6 +98,7 @@ This can be solved by updating to the [https://developers.google.com/android/ima
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-lg-hammerhead Device package]
 * [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
 * [https://github.com/flto/linux/wiki/hammerhead-upstream flto's hammerhead-upstream status page]
+* [https://masneyb.github.io/nexus-5-upstream/ Brian Masney's Nexus 5 upstream status page]
 
 == Photos ==
 <gallery>
