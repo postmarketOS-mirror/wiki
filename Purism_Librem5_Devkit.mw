@@ -44,7 +44,36 @@
 The devkit has a switch on the same side as the reboot button, wifi switch, camera switch, and modem switch. Move it to the "USB Mode" position and hit the reboot button next to it in order to put the device into 'flash' mode.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+The process for flashing postmarketOS on Librem5 Devkit is not yet automated with pmbootstrap's flasher capabilities, therefore flashing must be performed manually.
+
+The Librem5 Devkit uses a utility called <code>uuu</code>. The [https://github.com/NXPmicro/mfgtools source code for this tool can be downloaded here]. 
+
+Unfortunately the u-boot image currently built with the <code>u-boot-librem5dev</code> does not work for placing the device into the appropriate mode for receiving the emmc image. At this time, you will need to download a u-boot image that will work, I recommend grabbing [https://arm01.puri.sm/job/u-boot_builds/job/devkit-recovery_uboot_build/ the latest from Purism here.] At this location, the file is named <code>u-boot-devkit-recovery.imx</code>
+
+Once this tool is built and the required u-boot image is downloaded, you can use it to install a postmarketOS image using the following <code>uuu</code> script:
+
+ <nowiki>
+uuu_version 1.0.1
+SDP: boot -f /REPLACE/WITH/PATH/TO/u-boot-devkit-recovery.imx
+SDPU: delay 1000
+SDPU: write -f /REPLACE/WITH/PATH/TO/u-boot-devkit-recovery.imx -offset 0x57c00
+SDPU: jump
+SDPU: delay 1000
+FB: ucmd setenv fastboot_dev mmc
+FB: ucmd setenv mmcdev 0
+FB: flash -raw2sparse all /home/YOU/.local/var/pmbootstrap-out/chroot_native/home/pmos/rootfs/purism-librem5dev.img
+FB: Done
+</nowiki>
+
+Save this script and use it by passing it directly to <code>uuu</code>:
+
+ <nowiki>
+$ uuu pmos.lst
+...
+</nowiki>
+
+Once the image has been flashed, place the device into emmc mode and hit the reboot button to start booting postmarketOS. The first boot can take a few minutes as it resizes the rootfs to fill all available space on the emmc disk.
 
 == See also ==
 
