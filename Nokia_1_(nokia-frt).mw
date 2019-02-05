@@ -35,8 +35,10 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-<!--| status = -->
-| booting = yes
+| status_otg =
+| status = USB networking doesn't work/compile
+| booting = no
+
 }}
 
 == Contributors ==
