@@ -46,7 +46,7 @@ Power off the device, hold down the power and the volume up key for 1-2 seconds.
 Follow the [https://github.com/postmarketOS/pmbootstrap#usage installation guide]. Make sure to add the <code>--no-fde</code> option to the install command, because initfs unlocking does not work yet.
 
 == Display ==
-XFCE4 works the best, you may have to run startx on ssh to get it to appear
+XFCE4 works the best, you may have to run startx over ssh to get it to appear
 
 == Photos ==
 [[File:Osprey-pmos.jpg]]
