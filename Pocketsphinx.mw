@@ -1,0 +1,18 @@
+Pocketsphinx is a voice recognition library made by Carnegie Mellon University. It can be used without an internet connection
+
+== Dependences ==
+It may be the case that not all of these are needed, but with them it will install
+
+Install these using "sudo apk add
+* python2
+* py2-pip
+* swig
+* pulseaudio
+* pulseaudio-libs
+* pulseaudio-dev
+* alsa-lib
+* alsa-utils
+* alsa-lib-dev
+
+Install these using "pip install --user"
+* pocketsphinx
