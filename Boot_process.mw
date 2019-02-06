@@ -11,9 +11,9 @@ Various devices have various ways of doing this (''It would be nice to document 
 * [[Deviceinfo_flash_methods#heimdall-isorec|heimdall-isorec]] devices expect to find the initramfs packed with the vmlinuz image, as they can't load it themselves. For these, postmarketOS has a small initramfs in the vmlinuz image that loads the usual minimalist initramfs from another partition.
 * [[Mediatek#Booting_procedure|Boot process on Mediatek devices]]
 == Inside the initramfs ==
-The task goes on to the Linux kernel, which initializes some of the peripherals, then executes the postmarketOS initramfs init script[https://github.com/postmarketOS/pmbootstrap/blob/2fb49d2a159eaeeb362247552d242f3765be3c90/aports/main/postmarketos-mkinitfs/init.sh.in].
+The task goes on to the Linux kernel, which initializes some of the peripherals, then executes the postmarketOS initramfs init script[https://gitlab.com/postmarketOS/pmaports/blob/2a4d30e52a755695a2e82ee5662e441cd11205ab/main/postmarketos-mkinitfs/init.sh.in].
 
-This script initializes [[USB Network]]ing, looks for a postmarketOS boot partition [https://github.com/postmarketOS/pmbootstrap/blob/2fb49d2a159eaeeb362247552d242f3765be3c90/aports/main/postmarketos-mkinitfs/init.sh.in#L16][https://github.com/postmarketOS/pmbootstrap/blob/2fb49d2a159eaeeb362247552d242f3765be3c90/aports/main/postmarketos-mkinitfs/init_functions.sh#L41].
+This script initializes [[USB Network]]ing, looks for a postmarketOS boot partition [https://gitlab.com/postmarketOS/pmaports/blob/2a4d30e52a755695a2e82ee5662e441cd11205ab/main/postmarketos-mkinitfs/init.sh.in#L17][https://gitlab.com/postmarketOS/pmaports/blob/2a4d30e52a755695a2e82ee5662e441cd11205ab/main/postmarketos-mkinitfs/init_functions.sh#L41].
 At that point, you can [[Inspecting the initramfs|Inspect the initramfs]] if you want to, and the various hook scripts are ran.
 
 The boot partition is mounted, and the second initramfs, ''initramfs-extra'', is loaded (a splash is displayed if not found). This initramfs contains other the remaining tools necessary for the boot process, but is kept separate in order to minimize the size of the boot image (that needs to fit on every device).
