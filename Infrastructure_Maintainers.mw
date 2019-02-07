@@ -1,0 +1,33 @@
+==== GitLab ====
+[https://gitlab.com/groups/postmarketOS/-/group_members Group members list]
+
+==== Binary repository building PC ====
+ollieparanoid is maintaining the binary repository PC by himself and triggering package builds manually after pmaports.git related commits land in master, but the plan is to migrate to a sr.ht based infrastructure ASAP [https://postmarketos.org/blog/2019/01/16/600-days-of-postmarketOS/#new-srht-based-binary-repository]. Then it should be possible for multiple people to maintain it (because multiple people can then edit the scripts hosted on pmOS infrastructure, that start jobs on sr.ht), and to have automatic package building triggers.
+
+==== Website ====
+* Hosting: MartijnBraam
+* Domain (postmarketos.org): [https://github.com/dhruvkar dhruvkar] and MartijnBraam
+
+The website automatically publishes what's in the [https://gitlab.com/postmarketOS/postmarketos.org postmarketos.org git repository], merge requests welcome.
+
+=== Social Media ===
+
+==== Reddit ====
+[https://www.reddit.com/r/postmarketOS/about/moderators/ Moderators list]
+
+==== Shared accounts ====
+{| class="wikitable"
+! 
+! Maintainer
+! Has access
+|-
+| Mastodon
+| MayeulC
+| MayeulC, ollieparanoid, yuvadm
+|-
+| Twitter
+| yuvadm
+| ollieparanoid, yuvadm
+|}
+
+[[Category:Community]]
