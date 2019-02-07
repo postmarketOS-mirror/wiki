@@ -105,6 +105,21 @@ $ sudo apk add mesa*.apk
 
 Note: The Mesa package in this branch disables all other GPU drivers to help reduce compile time, and may also be buggy since it's based off of the Mesa master branch, so it's not likely to be merged into mainline pmaports.
 
+== Todo ==
+
+* Add uuu as a supported 'flasher' in pmbootstrap
+** Include a uuu script for flashing rootfs. Note: It will likely need to be a template, with pmb injecting path to rootfs and u-boot.
+* Bring up cellular modem
+* Resolve issues with Wifi
+** Interface shows up in OS, and wpa_supplicant seems to connect(?), but no IP.
+* Resolve issues with Bluetooth
+** Bluetooth can be started by loading the rsi_91x module with <code>dev_oper_mode=14</code> but this disables Wifi station/client mode and enables Wifi AP mode. It doesn't seem to work with <code>dev_oper_mode=13</code>, which enables Wifi client mode. 
+* Current dts enables usb host but doesn't enable LCD display
+** Some of us are not lucky enough to have a working LCD display.. so the default uses a dts that enables usb host mode for attaching keyboard/mouse for interacting with an HDMI display connected to the devkit. Others are lucky enough to have a working LCD display. There is no known dts file that includes both LCD display enabling magic and usb host enabling magic. This would be ideal.
+* Test/enable camera
+* Test/enable ambient light sensor
+
+
 == See also ==
 
 * [https://developer.puri.sm/Librem5/ Purism Librem5 devkit documentation]
