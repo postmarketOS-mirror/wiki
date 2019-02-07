@@ -7,6 +7,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * [http://www.noodlepi.com/ Noodle Pi] (Open Hardware, "a full Linux PC in your pocket! With hi-res display, camera, battery, WiFi, Bluetooth, HDMI and USB.") - '''see [[Raspberry Pi]]'''
 * [https://plus.google.com/102276447148493441479/posts/amRvpE8piSw Sony Xperia Z3]
 * [https://developer.sonymobile.com/2016/02/17/work-on-the-mainline-kernel-for-open-xperia-devices/ Sony Xperia Z]
+* [https://github.com/PabloPL/linux Galaxy S S1(?) with panel (s6e63m0) and usb switch (fsa9480)]
 
 == Candidate Devices ==
 * Samsung Epic 4G (SPH-D700)
