@@ -2,6 +2,7 @@
 It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches. Not every patch is listed here, but it might be a good idea to keep track of them anyway.
 
 === Successful ===
+* <code>2019-02-06</code> Alpine: [https://gitlab.com/postmarketOS/pmaports/merge_requests/198 qt5-qtvirtualkeyboard, qt5-qtwayland, qt5-qtspeech]
 * <code>2018-12-20</code> Weston: [https://gitlab.freedesktop.org/wayland/weston/merge_requests/61 compositor-fbdev: add support for ABGR]
 * <code>2018-12-31</code> Alpine: [https://github.com/alpinelinux/aports/pull/5951 enable virglrenderer in Qemu aport] (-> now we were able to remove our temp/qemu fork!)
 * <code>2018-09-20</code> Alpine: [https://github.com/alpinelinux/aports/pull/5208 Add armv7 next to armhf in the arch line]
