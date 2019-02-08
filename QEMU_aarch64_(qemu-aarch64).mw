@@ -40,6 +40,8 @@ $ pmbootstrap qemu --image-size=2G --display=gtk --arch=aarch64
 
 Using the <code>--display=gtk</code> parameter is recommended. In the GTK interface, click on ''View / Show Tabs'' to display all available outputs as tabs next to each other. Check the <code>serial0</code> output for what it is actually doing as the boot will probably take a few minutes, unless you have a very fast PC.
 
+Enable 3D acceleration (virglrenderer) with the <code>gl=on</code> display option. <br>Example: <code>--display=gtk,gl=on</code> or <code>--display=sdl,gl=on</code>
+
 == What works ==
 * Serial output
 * SSH
