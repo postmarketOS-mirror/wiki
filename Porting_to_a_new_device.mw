@@ -129,7 +129,7 @@ While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kern
 
 ==== Source code ====
 {{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
-First of all, [[How-to-find-device-specific-information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6), then and adjust the <code># Source</code> section in the <code>aports/device/linux-wiki-example/APKBUILD</code> file. For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_device_motorola_ghost.git</code>, enter: <code>_repository="android_device_motorola_ghost"</code>.
+First of all, [[How-to-find-device-specific-information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6), then and adjust the <code># Source</code> section in the <code>aports/device/linux-wiki-example/APKBUILD</code> file. For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code>, enter: <code>_repository="android_kernel_motorola_ghost"</code>.
 
 <syntaxhighlight lang="bash">
 # Source
