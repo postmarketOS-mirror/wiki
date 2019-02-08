@@ -36,6 +36,7 @@
 }}
 
 == Contributors ==
+* cerg2010cerg2010
 * ''[[user:benwaffle|benwaffle]]''
 * ''[[user:Moocow9m|Moocow9m]]''
 
@@ -60,11 +61,6 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME}} Initial merge request
-* {{issue|CHANGEME}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
 * [https://github.com/Moocow9m/PostMarketOS-Samsung-I927 Github page containing current info]
+* {{MR|195|pmaports}} initial MR with mainline kernel
+* {{MR|193|pmaports}} initial MR with downstream kernel (was dropped in favor of mainline kernel)
