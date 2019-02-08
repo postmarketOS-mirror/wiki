@@ -14,7 +14,6 @@ Still being packaged. All required individual packages are packaged but configur
 == Installation ==
 {{note|The work on Unity 8 hasn't yet been merged to the master branch, but it's available in <code>feature/unity8</code>}}
 
-
 <source>
 pmbootstrap config ui unity8 # Assuming the pmbootstrap init step has already been done, otherwise just select "unity8" as user interface
 </source>
