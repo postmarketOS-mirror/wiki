@@ -17,14 +17,12 @@ In Android kernels it is possible to write the output of <code>dmesg</code> to m
 <blockquote>
 The Android ram_console does this. It should exist in many if not most Android kernels. The driver is registered the board/machine init. I am still using it even on kernel 4.16. On my device I can force reboot to a downstream recovery kernel and read last_kmsg from a kernel that booted nothing but the bare device tree and the ram_console driver.
 
-{{todo | Fix these broken links}}
-
 * Allocate the same memory block as your downstream or recovery kernel. Do this by specifying reserved-memory in device tree.
-https://github.com/Decatf/linux/blob/tegra-next-p4wifi_pmos/arch/arm/boot/dts/tegra20-samsung_p3.dts#L47-L50
+https://github.com/Decatf/linux/blob/4.17-p4wifi_pmos-ramconsole/arch/arm/boot/dts/tegra20-samsung_p3.dts#L47-L50
 * Initialize the ram_console driver with the appropriate memory address and size in the <code>machine_init</code> function for your device.
-https://github.com/Decatf/linux/blob/next-p4wifi_pmos/arch/arm/mach-tegra/board-p4wifi.c#L480-L481
+https://github.com/Decatf/linux/blob/4.17-p4wifi_pmos-ramconsole/arch/arm/mach-tegra/board-p4wifi.c#L480-L481
 * Make sure the driver is using the same ram console signature as your downstream kernel.
-https://github.com/Decatf/linux/blob/next-p4wifi_pmos/drivers/staging/android/ram_console.c#L41
+https://github.com/Decatf/linux/blob/4.17-p4wifi_pmos-ramconsole/drivers/staging/android/ram_console.c#L41
 </blockquote>
 
 On more recent devices Android has transitioned over to using the mainline kernels pstore ramoops functionality. If your device is recent enough that the recovery uses pstore then you only need to add a node for the ramoops driver to device tree.
