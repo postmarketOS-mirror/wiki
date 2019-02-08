@@ -17,6 +17,8 @@ In Android kernels it is possible to write the output of <code>dmesg</code> to m
 <blockquote>
 The Android ram_console does this. It should exist in many if not most Android kernels. The driver is registered the board/machine init. I am still using it even on kernel 4.16. On my device I can force reboot to a downstream recovery kernel and read last_kmsg from a kernel that booted nothing but the bare device tree and the ram_console driver.
 
+{{todo | Fix these broken links}}
+
 * Allocate the same memory block as your downstream or recovery kernel. Do this by specifying reserved-memory in device tree.
 https://github.com/Decatf/linux/blob/tegra-next-p4wifi_pmos/arch/arm/boot/dts/tegra20-samsung_p3.dts#L47-L50
 * Initialize the ram_console driver with the appropriate memory address and size in the <code>machine_init</code> function for your device.
