@@ -17,7 +17,7 @@
 | status_flashing = 
 | status_touch = Y
 | status_screen = Y (16 bit color)
-| status_wifi = 
+| status_wifi = N
 | status_xwayland = 
 | status_fde = 
 | status_mainline = N
