@@ -13,15 +13,15 @@
 | display = 480x800
 | memory = 512 MB
 | architecture = armhf
-| status_usbnet = 
+| status_usbnet = Y
 | status_flashing = 
-| status_touch = 
-| status_screen = 
+| status_touch = Y
+| status_screen = Y (16 bit color)
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
-| status_mainline = 
-| status_battery =
+| status_mainline = N
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = 
@@ -31,23 +31,28 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| status = Kernel compiles, not tested 
-| booting = no
+
+| booting = yes
 }}
 
 == Contributors ==
 
-* CmdrWgls
 * mberndt
+* CmdrWgls
 * (everyone on IRC)
 
 == What works ==
 
-* Nothing
+* Display (framebuffer), 16 bit color depth
+* Touchscreen
+* Keyboard
+* USB networking
+* vibrator
 
 == What doesn't work ==
 
-* Everything
+* 32 bit color depth ("red screen" issue)
+* Wifi ({{issue|1513}})
 
 == Progress ==
 
@@ -55,11 +60,16 @@ What's been done:
 
 * device-htc-vision builds
 * linux-htc-vision builds (using [https://github.com/milaq/android_kernel_htc_vision milaq's kernel])
+* device boots
 
-Cmdrwgls created pull request {{github|810}} with his work. It remained unfinished, so it '''was merged into the [https://github.com/postmarketOS/pmbootstrap/tree/device-htc-vision device-htc-vision] branch for now'''. If you also own this device, it makes sense to continue from there (rebase the branch to master first, then try to build the kernel etc. See the porting guide and ask for all the help you need).
+Cmdrwgls created pull request {{github|810}} with his work. This work was later finished by mberndt in {{MR|132|pmaports}}. Note that as of 2019-02-09 this branch isn't merged yet, though it works.
 
-One year later, the current attempt by mberndt is in {{MR|132|pmaports}}.
+== Installation Notes ==
+Obviously you need an unlocked bootloader; refer to [http://htcdev.com] for instructions about that. S-OFF is not needed.
+
+Installing the rootfs using fastboot doesn't work due to size limitations in the bootloader, therefore if you want to install postmarketOS to the internal memory, do an [[Android Recovery Zip Installation]]. postmarketOS is picky when it comes to the recovery. It works with CWM 6.0.5.0, see [https://milaq.net/downloads/android/vision/misc/]. It does ''not'' work with CWM 6.0.4.5 or TWRP 2.6.3.0.
 
 == Next steps ==
 
-* Test kernel on device.
+* test more hardware: audio, camera, radio, bluetooth…
+* probably more firmware blobs are needed to get some of these working
