@@ -131,6 +131,6 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |}
 
 == See also ==
-* [https://github.com/Moocow9m/PostMarketOS-Samsung-I927 Github page containing current info]
+* [https://github.com/Moocow9m/PostMarketOS-Samsung-I927 Github page containing an attempt]
 * {{MR|195|pmaports}} initial MR with mainline kernel
 * {{MR|193|pmaports}} initial MR with downstream kernel (was dropped in favor of mainline kernel)
