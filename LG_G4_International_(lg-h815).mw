@@ -47,7 +47,9 @@
 To enter fastboot from TWRP or Android.
 
 Press and hold both power and volume down buttons.
+
 After LG logo appears release volume down button for one second then hold it again.
+
 If you have flashed TWRP on it, just ignore warnings about deleting data.
 
 After booting to TWRP choose "Reboot", then "Bootloader" options to enter fastboot mode
