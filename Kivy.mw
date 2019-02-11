@@ -18,3 +18,7 @@ Use "pip install --user" for the following dependencies. All of these are mandat
 * cython===0.25.2
 There's a version requirement for cython, so make sure you install this version. Could be subject to change in the future
 * kivy
+
+You will need to install PyGame as well
+* download and compile from source for libjpg
+Their other dependencies are sdl and can be found as APK packages
