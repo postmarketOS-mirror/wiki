@@ -17,7 +17,7 @@
 | status_usbnet = Y
 | status_flashing = 
 | status_touch = Y
-| status_screen = Y
+| status_screen = N
 | status_wifi = 
 | status_xwayland =
 | status_fde = Y
@@ -49,13 +49,13 @@
 * FDE
 
 == What does not work ==
-* Audio (is detected but no sound)
-* Programs using XRandr (segfaults, need to look into this one)
+* Audio (is detected but no sound and too many mixers)
+* Programs using XRandr (segfaults, need to fix display)
 * Wi-Fi (something's wrong with calibration file)
 * Flashing (system partition too small)
 
 == What is broken ==
-* Xorg (messed up colors)
+* Display (Weston ARGB fix got deprecated so the screen is again red)
 
 == What is untested/probably won't work ==
 * Camera (blobs)
