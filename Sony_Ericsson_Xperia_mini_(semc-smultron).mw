@@ -55,7 +55,7 @@
 * Flashing (system partition too small)
 
 == What is broken ==
-* Display (Weston ARGB fix got deprecated so the screen is again red)
+* Display (Weston ARGB fix got deprecated so the screen is again red. The MDP_RGB_888 patch does nothing, but the ARGB fix patch + ARGB picked in config produces wrong colors. Hmm...)
 
 == What is untested/probably won't work ==
 * Camera (blobs)
