@@ -30,6 +30,17 @@ The other workaround is to add <code>unzip</code> to the makedepends, so it uses
 
 (This has been fixed in busybox in the meantime.)
 
+== Kernel compilation: thumb conditional instruction should be in IT block ==
+<pre>
+arch/arm/crypto/aesbs-core.S:449: Error: thumb conditional instruction should be in IT block -- `addeq r6,r6,#0x10'
+arch/arm/crypto/aesbs-core.S:904: Error: thumb conditional instruction should be in IT block -- `addeq r6,r6,#0x10'
+arch/arm/crypto/aesbs-core.S:2100: Error: thumb conditional instruction should be in IT block -- `subne r9,#0x10'
+</pre>
+
+You can fix it by disabling <code>CONFIG_CRYPTO_ARM_AES_BS</code>.
+
+This was first noticed in {{MR|144|pmaports}}.
+
 == Kernel compilation: BusyBox lzma compression fails ==
 In case you get the following output:
 
