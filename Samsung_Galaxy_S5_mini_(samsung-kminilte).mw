@@ -40,9 +40,9 @@ Recovery - press and hold VOL+, PWR and HOME
 
 === Preparing for install ===
 
-First, [https://eu.dl.twrp.me/kminilte/ download the TWRP recovery ROM]. You'll need both the <code>.img.tar</code> and the <code>.img</code> file. First, extract the tar file to obtain <code>recovery.img</code>. Then, put your phone in flash mode and flash using Heimdall:
+First, [https://dl.twrp.me/kminilte/ download the TWRP recovery ROM]. You'll need both the <code>.img.tar</code> and the <code>.img</code> file. First, extract the tar file to obtain <code>recovery.img</code>. Then, put your phone in flash mode and flash using Heimdall:
 
-<pre>$ heimdall flash --RECOVERY recovery.img --BOOT twrp-3.1.1-1-kminilte.img</pre>
+<pre>$ heimdall flash --RECOVERY recovery.img --BOOT twrp-3.2.3-1-kminilte.img</pre>
 Now you should be able to connect to the device using <code>adb</code>.
 
 Note: Be aware that the stock Android ROM reflashes stock recovery upon boot, wiping TWRP out if you let it start booting.
