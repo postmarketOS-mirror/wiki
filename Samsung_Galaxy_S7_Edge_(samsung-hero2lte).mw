@@ -74,13 +74,6 @@ I did get some interesting messages spammed in kmsg, referring to the DECON disp
 * Camera drivers (Samsung FIMC-IS2) (and accompanying flash LED drivers, controlled by a Samsung PMIC) needed to be disabled in the kernel to prevent boot loops.
 
 == See also ==
-[https://github.com/ivanmeler/android_kernel_samsung_herolte herolte kernel fork]
-
-[https://wiki.lineageos.org/devices/hero2lte/ LineageOS device page]
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME}} Initial merge request
-* {{issue|CHANGEME}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
+* {{MR|179|pmaports}} initial MR
+* [https://github.com/ivanmeler/android_kernel_samsung_herolte herolte kernel fork]
+* [https://wiki.lineageos.org/devices/hero2lte/ LineageOS device page]
