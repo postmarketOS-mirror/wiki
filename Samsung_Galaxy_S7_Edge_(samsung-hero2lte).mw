@@ -52,12 +52,11 @@ A (turquoise) download mode warning screen should appear, press Volume Up to con
 == Installation ==
 It is recommended to sideload an android recovery zip through twrp for the easiest process, since heimdall freaks out about the subpartitions in SYSTEM
 and won't move past ~7%.
-<code>
-pmbootstrap install --no-fde --android-recovery-zip
 
-pmbootstrap flasher --method=adb sideload
-</code>
-
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --no-fde --android-recovery-zip
+$ pmbootstrap flasher --method=adb sideload
+</syntaxhighlight>
 
 == What is tested and works ==
 * The kernel (with prebuilt dtb)
