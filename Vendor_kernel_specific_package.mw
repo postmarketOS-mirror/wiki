@@ -97,6 +97,7 @@ aports/device/device-samsung-i9100/deviceinfo:deviceinfo_flash_method="heimdall-
 </syntaxhighlight>
 
 == See also ==
+* [[Troubleshooting:kernel]]
 * [[device specific package]]
 * {{issue|103|pmaports}} Adjust to GCC8 upgrade in Alpine edge
 * {{MR|30|pmaports}} device/linux-*: use GCC-6 for all 3.x kernels
