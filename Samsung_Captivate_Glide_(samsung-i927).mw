@@ -17,12 +17,12 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = Y
+| status_wifi = P
 | status_xwayland =
-| status_fde =
-| status_mainline = Y
-| status_battery = Y
-| status_3d =
+| status_fde = Y
+| status_mainline = P
+| status_battery = P
+| status_3d = P
 | status_accel =
 | status_audio =
 | status_bluetooth =
@@ -59,6 +59,85 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== Hardware ==
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Info
+|-
+| P
+|Power
+|There's 3-4 power chips: max8907c, max8922, max17043 and unknown chip controlling camera power - on downstream kernel, it's driver called "m5mo_power", it works on I2C bus number 16 at address 0x3E. 17043 is supported by 17040 driver - the only difference is ALRT interrupt, which is sent on low battery.
+|-
+| Y
+|Display panel
+|Samsung S6E63M0. Supported by driver from PabloPL, which makes it's way to mainline. Panel supports flipping (horizontal/vertical/180 rotation) and changing polarity of H/VSYNC via internal GTCON register. Exact register mapping is not documented and datasheet is not available. Also, timings are changed to make it work with correct colors and without shift on Tegra
+|-
+| Y
+|Touchscreen
+|Atmel mXT224(e). Works fine without maxtouch.cfg.
+|-
+| Y
+|QWERTY keyboard
+|STMPE1801. Mainline kernel supports the chip, but not the keyboard controller, so we use a patched version. Built-in LED is supported via GPIO. Keymap is missing.
+|-
+| P
+|USB
+|Only gadget mode is supported for now. There's a GPIO for OTGID pin, but I can't test it. HSIC mode is missing, which makes our modem not working. Not sure if we can make it work in non-HSIC mode. fsa9480 is used for cable type detection - it's supported by mainline kernel, but no Device Tree bindings available. There's a driver for fsa9480 with DT support in PabloPL repo, but it's not used for now.
+|-
+| Y
+|SDHCI
+|Works, but card detection is weird. There's a separate GPIO for card detection, but in downstream kernel it also checks for GPIO on STMPE controller. For now, broken-cd property is used in Device Tree, making detection work in polling mode. WiFi chip and internal memory also run on SDHCI bus.
+|-
+| P
+|WiFi
+|Broadcom BCM4330. Something is happening with firmware: a long list of warnings is displayed on boot. The reason seems to be channel bandwidth - the code internally iterates over (supported) channels and checks for a bandwidth, and if it's not 40MHz, it outputs a warning. On 5GHz band, only 20MHz bandwidth is supported - device successfully scans for APs on 40MHz and 80MHz bandwidths, but doesn't associate - wpa_supplicant reports and error with bssid=00:00:... and status_code=16 (probably timeout code).
+|-
+| Y
+| GPIO keys
+|There is 4 keys on GPIO: Power, Volume up, Volume down and keyboard HALL sensor.
+|-
+| Y
+|Touchkey
+|MCS5080. Mainline driver available, but it's bugged, has no DT bindings and not full. A slightly patched version is used with key reading fixed and internal LED support.
+|-
+| Y
+|Vibra
+|ISA1200. Driver from p4wifi kernel is used, but there's also another driver from CAF(?).
+|-
+|
+|Bluetooth
+|Broadcom BCM4330. Not tested.
+|-
+|
+|Sound
+|WM8994. Chip is supported in mainline but Tegra bindings not available. For now, driver from p4wifi is used. This one also requires mapping configuration.
+|-
+|
+|MHL
+|SII9234. No extcon support in mainline driver. Enabling this chip causes screen resolution to be set to 1024x800 instead of 480x800, so it's disabled for now.
+|-
+|
+|Proximity sensor
+|CM3663. No driver in mainline kernel available.
+|-
+|
+|Back camera
+|Fujitsu M5MO. It is supported by mainline, but has no DT bindings. May have it's own PMIC
+|-
+|
+|Front camera
+|Samsung S5K6AAFX. It is supported by mainline, but has no DT bindings. Power controlled by m5mo_pmic in downstream.
+|-
+|
+|Modem
+|XMM6260. Operates on USB with HSIC mode, but also has GPIOs.
+|-
+| P
+|Other sensors
+|These are just not tested, but driver available and probing works: NCT1008 (temperature), MPU3050 (gyro), KXTF9 (accel), AK8975 (compass), SIRFstarIV (GPS, actual chip is unknown. This one is notable because it's supported by new kernel GPS framework).
+|}
 
 == Keycodes ==
 
