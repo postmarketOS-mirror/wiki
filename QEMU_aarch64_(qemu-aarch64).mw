@@ -46,9 +46,9 @@ Enable 3D acceleration (virglrenderer) with the <code>gl=on</code> display optio
 * Serial output
 * SSH
 * Graphical output via dri (as configured in device-qemu-aarch64 for weston)
+* Keyboard and mouse
 
 == What does not work ==
-* '''Keyboard and mouse'''
 * Writing to framebuffer seems to be broken (splash screen doesn't work)
 
 === See also ===
