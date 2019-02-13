@@ -61,7 +61,7 @@
 
 == What does not work ==
 * Screen is red(Going to submit MR about it)
-* HW acceleration(Due to old kernel, where DRM is not working, we need libhybris)
+* HW acceleration(we need libhybris or mainlining or freedreno)
 
 == How to enter flash mode ==
 * 1. Press VolumeDown, Home and Power buttons until Warning screen appears
