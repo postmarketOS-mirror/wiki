@@ -60,7 +60,7 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* Screen is red(Going to submit MR about it)
+* Screen is red by default, can be fixed by using RGB565 mode instead of RGBA8888
 * HW acceleration(we need libhybris or mainlining or freedreno)
 
 == How to enter flash mode ==
