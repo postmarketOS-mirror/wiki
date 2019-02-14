@@ -13,12 +13,12 @@
 | display = 1280x800 IPS
 | memory = 1 GB
 | architecture = armhf
-| status_usbnet = 
+| status_usbnet = Y
 | status_flashing =
-| status_touch = 
+| status_touch = Y
 | status_screen = Y
 | status_wifi = 
-| status_xwayland = 
+| status_xwayland = Y
 | status_fde = 
 | status_mainline = 
 | status_battery =
@@ -39,6 +39,7 @@
 * CmdrWgls
 * rrooij
 * LongnoseRob 
+* blacksoil
 * Everyone on IRC
 
 == Installation ==
