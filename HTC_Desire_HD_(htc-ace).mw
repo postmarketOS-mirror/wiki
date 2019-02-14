@@ -37,6 +37,17 @@
 
 * Victor9
 
+
+== What works ==
+
+* Display (framebuffer), 16 bit color depth
+* Touchscreen
+* Keyboard
+* USB networking
+* vibrator
+
+
+
 == Links ==
 
 * [https://github.com/VictorNine/pmbootstrap/tree/device-htc-ace Device branch]
