@@ -45,6 +45,10 @@
 * USB networking
 * vibrator
 
+== Audio ==
+
+Using ucm configuration files from [https://github.com/w-flo/rootfs-modifier/tree/master/replacements/targz/usr/share/alsa/ucm/msm-audio] it is possible to turn on the speaker, which then produces a very faint noise. However, trying to play sound using aplay or speaker-test does not work.
+
 == Links ==
 
 * [https://github.com/VictorNine/pmbootstrap/tree/device-htc-ace Device branch]
