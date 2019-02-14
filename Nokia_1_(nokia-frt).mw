@@ -50,12 +50,13 @@
 {{Device owners}}
 
 == What works ==
-* Nothing
+* Flashing
+* Booting
 
 == What does not work ==
-* Flashing
-* kernel
-* booting
+* Networking over USB
+* ssh
+* Everything else
 
 == Current progress ==
 
