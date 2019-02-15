@@ -17,7 +17,7 @@
 | status_flashing =Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = N
 | status_xwayland = Y
 | status_fde = 
 | status_mainline = 
@@ -40,6 +40,11 @@
 
 == Maintainer(s) ==
 * kamnxt
+
+== What is TODO ==
+* Possibly libhybris for calls, messaging and 3d acceleration
+* Identify and make use of UART(candidate is 3,5" jack)
+* Mainline it
 
 == How to enter flash mode ==
 * <syntaxhighlight lang="bash">adb reboot bootloader</syntaxhighlight>
