@@ -11,7 +11,7 @@ crond to perform the job.
 
 Create an executable script for action at various capacity level. The example script below will blink the notification light when the battery is at 25 percent and will blink the notification light again when the battery is at 15 percent and shutdown. The script below is for [[Xiaomi Redmi 1S (xiaomi-armani)]], so modification of sysfs path is needed for use on another devices.
 
-<pre>
+<syntaxhighlight lang="shell">
 #!/bin/sh
 # Replace BATTERY variable with the actual battery device
 # found under sysfs
@@ -58,7 +58,7 @@ if [ "$CAPACITY" -lt 15 ]; then
 fi
 
 fi
-</pre>
+</syntaxhighlight>
 
 Place the script above as check_battery_state.sh inside
 /etc/periodic/2min directory. Create the directory if needed.
