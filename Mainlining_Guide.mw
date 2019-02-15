@@ -106,7 +106,10 @@ make[1]: Leaving directory '/mnt/linux/.output'
 make: Leaving directory '/mnt/linux'
 </syntaxhighlight>
 
-See also: [https://gitlab.com/postmarketOS/pmbootstrap/issues/1672#note_105668759 a quick Q&A about using envkernel.sh for the Nexus 5] (if you have more questions, please open a new issue or ask in the chat).
+==== See also ====
+envkernel.sh has grown to be quite powerful, here are a few more resources:
+* {{MR|1747}} pmbootstrap build --envkernel
+* [https://gitlab.com/postmarketOS/pmbootstrap/issues/1672#note_105668759 a quick Q&A about using envkernel.sh for the Nexus 5] (if you have more questions, please open a new issue or ask in the chat).
 
 === Got everything? ===
 Please double check with the following checklist that you meet '''all the requirements''' before proceeding further. If you need any help with the above, just ask [[Matrix_and_IRC|in the channel]] or [https://github.com/postmarketOS/pmbootstrap/issues on GitHub] as usually.
