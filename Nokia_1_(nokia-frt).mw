@@ -5,7 +5,7 @@
 | image = File:nokia-frt.jpg
 | imagecaption = cute little phone
 | releaseyear = 2018
-| originalsoftware = Android 8.1 Go, kernel 3.18.79, armhf
+| originalsoftware = Android 8.1 Go, kernel 3.18.79, armv7
 | pmoskernel = 3.18.79
 | chipset = MediaTek MT6737M
 | cpu = Cortex-A53 4x1.1GHz
@@ -13,7 +13,8 @@
 | storage = 8GB
 | display = 480x854
 | memory = 1GiB
-| architecture = aarch64
+| architecture = armv7
+<!-- SoC is aarch64, kernel is armv7 at best -->
 <!-- -->
 | whet_dhry =
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
@@ -23,7 +24,7 @@
 | status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_fde = P
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
@@ -53,9 +54,11 @@
 * Flashing
 * Booting
 * ssh
+* osk-sdl
 
 == What does not work ==
 * Everything else
+* after entering pass in osk-sdl it's stuck on "loading..."
 
 == Current progress ==
 
