@@ -17,7 +17,7 @@
 <!-- -->
 | whet_dhry =
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = N
+| status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
@@ -36,7 +36,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status_otg =
-| status = USB networking doesn't work/compile
+| status =
 | booting = no
 
 }}
@@ -52,10 +52,9 @@
 == What works ==
 * Flashing
 * Booting
+* ssh
 
 == What does not work ==
-* Networking over USB
-* ssh
 * Everything else
 
 == Current progress ==
