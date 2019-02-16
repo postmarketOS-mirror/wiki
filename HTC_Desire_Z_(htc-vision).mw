@@ -62,7 +62,7 @@ What's been done:
 * linux-htc-vision builds (using [https://github.com/milaq/android_kernel_htc_vision milaq's kernel])
 * device boots
 
-Cmdrwgls created pull request {{github|810}} with his work. This work was later finished by mberndt in {{MR|132|pmaports}}. Note that as of 2019-02-09 this branch isn't merged yet, though it works.
+Cmdrwgls created pull request {{github|810}} with his work. This work was later finished by mberndt in {{MR|132|pmaports}}.
 
 == Installation Notes ==
 Obviously you need an unlocked bootloader; refer to [http://htcdev.com] for instructions about that. S-OFF is not needed.
