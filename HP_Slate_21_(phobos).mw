@@ -29,9 +29,9 @@
 | status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
-| status_mobiledata = N<!-- Connecting to the Internet via cellular network. -->
-| status_sms = N<!-- Sending and receiving short messages works as intended. -->
-| status_calls = N<!-- Talking to other people over the cellular network. -->
+| status_mobiledata = N/A<!-- Connecting to the Internet via cellular network. -->
+| status_sms = N/A<!-- Sending and receiving short messages works as intended. -->
+| status_calls = N/A<!-- Talking to other people over the cellular network. -->
 | booting = <!-- The device is booting at all *IMPORTANT* -->
 }}
 
