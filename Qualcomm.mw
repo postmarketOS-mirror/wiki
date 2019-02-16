@@ -29,3 +29,4 @@ A more close examination of these bootloaders will follow.
 * [https://github.com/tianocore/tianocore.github.io/wiki/EDK-Boot-Loader-(EBL)-WiKi EBL Wiki]
 * [https://googleprojectzero.blogspot.com/2019/02/examining-pointer-authentication-on.html Examining Pointer Authentication on the iPhone XS]
 * [http://bits-please.blogspot.com/2015/08/full-trustzone-exploit-for-msm8974.html Full Trustzone Exploit for MSM8974]
+* [https://www.qualcomm.com/media/documents/files/whitepaper-pointer-authentication-on-armv8-3.pdf Pointer authentication on armv8.3-a]
