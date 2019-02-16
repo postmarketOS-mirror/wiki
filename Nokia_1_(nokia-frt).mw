@@ -37,7 +37,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status_otg =
 | status =
-| booting = no
+| booting = yes
 
 }}
 
