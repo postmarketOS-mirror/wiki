@@ -15,18 +15,35 @@ Still being packaged. All required individual packages are packaged but configur
 {{note|The work on Unity 8 hasn't yet been merged to the master branch, but it's available in <code>feature/unity8</code>}}
 
 <source>
-pmbootstrap config ui unity8 # Assuming the pmbootstrap init step has already been done, otherwise just select "unity8" as user interface
+pmbootstrap install --add unity8
 </source>
 
 Once the device has launched, Unity 8 can be started with the following (as root):
 
 <source>
-# set a password (passwd)!
+# Run this (at least) once:
+apk add consolekit2
+mkdir -p $HOME/.config/ubuntu-system-settings
+touch $HOME/.config/ubuntu-system-settings/wizard-has-run
+# Don't forget to set a password (passwd)!
+</source>
 
-cp /etc/profile.d/start_unity8.sh .
-# patch out the "if [ $(tty)" and the corresponding "fi" out of ./start_unity8.sh
+<source>
+# Run this for starting Unity 8:
 
-sh ./start_unity8.sh
+export XDG_RUNTIME_DIR=/tmp/$(id -u)-runtime-dir
+if ! test -d "${XDG_RUNTIME_DIR}"; then
+    mkdir "${XDG_RUNTIME_DIR}"
+    chmod 0700 "${XDG_RUNTIME_DIR}"
+fi
+
+export LD_LIBRARY_PATH=/usr/lib/qt5/plugins/platforms
+export MIR_SERVER_CURSOR=null
+export QT_QPA_PLATFORM=mirserver
+export G_MESSAGES_DEBUG=all
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+ck-launch-session unity8
 </source>
 
 Auto-login would require lightdm to be set up or something 
