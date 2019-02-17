@@ -12,7 +12,7 @@ The convergent desktop environment.
 Still being packaged. All required individual packages are packaged but configuration is needed. Here is the latest update [https://github.com/z3ntu/ubuntu-app-launch/commits/bionic page]
 
 == Installation ==
-{{note|The work on Unity 8 hasn't yet been merged to the master branch, but it's available in <code>feature/unity8</code>}}
+{{note|The work on Unity 8 hasn't yet been finished yet - no support is provided}}
 
 <source>
 pmbootstrap install --add unity8
