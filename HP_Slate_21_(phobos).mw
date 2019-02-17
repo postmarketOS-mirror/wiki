@@ -31,7 +31,8 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| booting = N
+| status = Kernel compiles, not tested
+| booting = no
 }}
 
 == Contributors ==
