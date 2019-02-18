@@ -5,8 +5,8 @@ You can enable internet through the USB cable when [[WiFi]] doesn't work yet on 
 
 <syntaxhighlight lang="shell-session">
 $ sudo route add default gw 172.16.42.2
-$ echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
-Substitute 8.8.8.8 for your own internal DNS server if you want.
+$ echo nameserver 80.80.80.80 | sudo tee /etc/resolv.conf
+Substitute 80.80.80.80 for your own internal DNS server if you want.
 </syntaxhighlight>
 To make the configuration persistent after reboot do:
 <syntaxhighlight lang="shell-session">
