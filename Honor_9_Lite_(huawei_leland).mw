@@ -57,13 +57,6 @@ $ cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-leland/boot/boot.img-huawei-l
 $ # extract the created boot.img
 $ mkdir pmos-boot-huawei-leland
 $ unpackbootimg -i boot.img-huawei-leland -o pmos-boot-huawei-leland/ 
-
-$ # copy created boot image to current directory
-$ cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-leland/boot/boot.img-huawei-leland .
-
-$ # extract the created boot.img
-$ mkdir pmos-boot-huawei-leland
-$ unpackbootimg -i boot.img-huawei-leland -o pmos-boot-huawei-leland/ 
 </syntaxhighlight>
 #: Use the extracted files in the following steps.
 # Create ramdisk image:
@@ -74,7 +67,7 @@ $ ./android-unpackbootimg/mkbootimg.py --kernel empty.file --ramdisk pmos-boot-h
 # Create kernel image:
 #:<syntaxhighlight lang="shell-session">
 $ # kernel (with empty.file size is 0):
-$ mkbootimg.py --kernel pmos-boot-huawei-leland/boot.img-huawei-leland-zImage --ramdisk empty.file --cmdline 'loglevel=4 initcall_debug=y page_tracker=on slub_min_objects=16 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x0 --kernel_offset 524288 --ramdisk_offset 130023424 --second_offset 15728640 --tags_offset 0x7a00000 --os_version 8.0.0 --os_patch_level 2018-12 -o pmos-leland.kernel.img
+$ mkbootimg.py --kernel pmos-boot-huawei-leland/boot.img-huawei-leland-zImage --ramdisk empty.file --cmdline 'loglevel=4 coherent_pool=512K page_tracker=on slub_min_objects=12 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x00478000 --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --second_offset 0x00e88000 --tags_offset 0x07988000   --os_version 8.0.0 --os_patch_level 2018-12 --pagesize 2048 -o pmos-leland.kernel.img
 </syntaxhighlight>
 # Flash ramdisk and kernel with fastboot:
 #:<syntaxhighlight lang="shell-session">
