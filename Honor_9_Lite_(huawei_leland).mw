@@ -2,7 +2,7 @@
 | manufacturer = Huawei
 | name =  Honor 9 Lite
 | codename = huawei-leland
-| image = File:Huawei-Leland.jpg
+| image = File:Huawei-Leland-weston.jpg
 | imagecaption = Honor 9 Lite with framebuffer and usb net working
 | releaseyear = 2017
 | originalsoftware = Android 8 Oreo (EMUI 8.0) 
@@ -67,6 +67,7 @@ $ ./android-unpackbootimg/mkbootimg.py --kernel empty.file --ramdisk pmos-boot-h
 # Create kernel image:
 #:<syntaxhighlight lang="shell-session">
 $ # kernel (with empty.file size is 0):
+# make sure boot.img-huawei-leland-zImage is gzipped or do it manually before mkbootimg.py
 $ mkbootimg.py --kernel pmos-boot-huawei-leland/boot.img-huawei-leland-zImage --ramdisk empty.file --cmdline 'loglevel=4 coherent_pool=512K page_tracker=on slub_min_objects=12 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x00478000 --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --second_offset 0x00e88000 --tags_offset 0x07988000   --os_version 8.0.0 --os_patch_level 2018-12 --pagesize 2048 -o pmos-leland.kernel.img
 </syntaxhighlight>
 # Flash ramdisk and kernel with fastboot:
