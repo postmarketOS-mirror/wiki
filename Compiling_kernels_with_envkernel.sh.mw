@@ -1,0 +1,87 @@
+This page details how to compile a kernel manually using the <code>envkernel.sh</code> helper script.  
+
+Usually when compiling a kernel, you would install [https://kernelnewbies.org/KernelBuild all dependencies] and a cross compiler in your host system. To make it easier, we have the <code>envkernel.sh</code> script (for fish shell: <code>envkernel.fish</code>). It sets up an Alpine Linux chroot with all the dependencies by using <code>pmbootstrap</code> internally, exports the environment variables to use the right cross compiler and creates an alias to <code>make</code>. This means, whenever you type <code>make</code> after sourcing that script, it will actually run <code>make</code> in the chroot.  
+
+== Selecting a kernel ==
+
+This section details how to fetch the kernel source of an existing postmarketOS device. Existing kernel aports can be found in the <code>aports/device</code> directory.
+
+In the following example we will use the <code>oneplus-bacon</code> device. The kernel aport is in the [https://gitlab.com/postmarketOS/pmaports/blob/09ce31ca20b7d6b87a89cbb89a5aff7014e1d414/device/linux-oneplus-bacon/APKBUILD <code>aports/device/linux-oneplus-bacon</code>] directory. Within the APKBUILD is the <code>source</code> variable which lists the kernel source repository.  
+
+After determining the kernel you want to work with, download the source code.  
+<syntaxhighlight lang="shell-session">
+$ git clone https://github.com/LineageOS/android_kernel_oneplus_msm8974.git
+$ cd android_kernel_oneplus_msm8974
+</syntaxhighlight>
+
+== Preparing the source directory ==
+
+To compile the current version of the kernel, check out the git revision found in the APKBUILD.  
+
+<syntaxhighlight lang="shell-session">
+$ git checkout dd65620ba04a8c6ba0e30553c9c95388daefae02
+</syntaxhighlight>
+
+=== Applying patches ===
+Some kernel aports have patches applied on top of the remote source. You may want to apply these patches if they aren't in the revision you have checked out.  
+
+For example <code>oneplus-bacon</code> has a patch which isn't in the git revision in the prior example.  
+<syntaxhighlight lang="shell-session">
+$ git apply /code/pmboostrap/aports/device/linux-oneplus-bacon/02_gpu-msm-fix-gcc5-compile.patch
+</syntaxhighlight>
+
+Kernels which can only be compiled with older GCC versions may need the <code>compiler-gcc6.h</code>. If this header exists in the kernel aport then copy it to the kernel source directory.
+<syntaxhighlight lang="shell-session">
+$ cp /code/pmboostrap/aports/device/linux-oneplus-bacon/compiler-gcc6.h include/linux/
+</syntaxhighlight>
+
+== Compile the kernel ==
+
+The <code>envkernel.sh</code> script will set up a build environment based on the target device configured for <code>pmbootstrap</code>.  
+
+In this example we are using the <code>oneplus-bacon</code> device. So we should be sure to have run <code>pmbootstrap init</code> and select <code>oneplus-bacon</code> as the target device. Run the <code>envkernel.sh</code> script once in the kernel source directory to initialize the build environment. If the kernel can only be compiled with GCC6 then pass the <code>--gcc6</code> flag.  
+<syntaxhighlight lang="shell-session">
+$ source /code/pmbootstrap/envkernel.sh --gcc6
+</syntaxhighlight>
+
+Copy the defconfig from the kernel aport to the kernel source directory.  
+<syntaxhighlight lang="shell-session">
+$ cp /code/pmboostrap/aports/device/linux-oneplus-bacon/config-oneplus-bacon.armhf arch/arm/oneplus_bacon_defconfig
+</syntaxhighlight>
+
+Build the defconfig and kernel with the following commands.  
+<syntaxhighlight lang="shell-session">
+$ make oneplus_bacon_defconfig
+$ make
+</syntaxhighlight>
+
+== Run the kernel ==
+
+=== Post make scripts ===
+Some kernels require extra packaging steps such as <code>dtbtool</code>. The <code>envkernel.sh</code> build environment works within the pmbootstrap chroots. The <code>run-script</code> alias can be used to execute scripts within the source or build directory in the chroot.
+
+In this example we are using the <code>oneplus-bacon</code> which requires <code>dtbtool</code>. Create a script with the <code>dtbtool</code> command named <code>post-make.sh</code> in the kernel source directory.
+<syntaxhighlight lang="shell-session">
+#!/bin/sh
+dtbTool -s 2048 -p "${srcdir}/scripts/dtc/" -o \
+	"${builddir}/arch/arm/boot/dt.img" \
+	"${builddir}/arch/arm/boot"
+</syntaxhighlight>
+
+Run the script.  
+<syntaxhighlight lang="shell-session">
+$ run-script post-make.sh
+</syntaxhighlight>
+
+=== Packaging and flashing the kernel ===
+A kernel compiled under <code>envkernel.sh</code> can be packaged by pmbootstrap by using the <code>--envkernel</code> build option.
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap build --envkernel linux-oneplus-bacon
+</syntaxhighlight>
+
+After compiling and packaging the kernel, it can be flashed to device using the standard pmbootstrap flash commands.  
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap flasher flash_kernel
+</syntaxhighlight>
+
+[[Category:Guide]]
