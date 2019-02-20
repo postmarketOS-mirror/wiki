@@ -1,4 +1,4 @@
-This page details how to compile a kernel manually using the <code>envkernel.sh</code> helper script.  
+This page details how to compile a kernel manually using the <code>envkernel.sh</code> helper script. This workflow can used to quickly compile and test changes to the kernel source.  
 
 Usually when compiling a kernel, you would install [https://kernelnewbies.org/KernelBuild all dependencies] and a cross compiler in your host system. To make it easier, we have the <code>envkernel.sh</code> script (for fish shell: <code>envkernel.fish</code>). It sets up an Alpine Linux chroot with all the dependencies by using <code>pmbootstrap</code> internally, exports the environment variables to use the right cross compiler and creates an alias to <code>make</code>. This means, whenever you type <code>make</code> after sourcing that script, it will actually run <code>make</code> in the chroot.  
 
@@ -23,7 +23,7 @@ $ git checkout dd65620ba04a8c6ba0e30553c9c95388daefae02
 </syntaxhighlight>
 
 === Applying patches ===
-Some kernel aports have patches applied on top of the remote source. You may want to apply these patches if they aren't in the revision you have checked out.  
+Some kernel aports have patches applied on top of the remote source. You may want to apply these patches if they aren't in the source tree you have checked out.  
 
 For example <code>oneplus-bacon</code> has a patch which isn't in the git revision in the prior example.  
 <syntaxhighlight lang="shell-session">
