@@ -46,7 +46,7 @@ $ source /code/pmbootstrap/envkernel.sh --gcc6
 
 Copy the defconfig from the kernel aport to the kernel source directory.  
 <syntaxhighlight lang="shell-session">
-$ cp /code/pmboostrap/aports/device/linux-oneplus-bacon/config-oneplus-bacon.armhf arch/arm/oneplus_bacon_defconfig
+$ cp /code/pmboostrap/aports/device/linux-oneplus-bacon/config-oneplus-bacon.armhf arch/arm/configs/oneplus_bacon_defconfig
 </syntaxhighlight>
 
 Build the defconfig and kernel with the following commands.  
