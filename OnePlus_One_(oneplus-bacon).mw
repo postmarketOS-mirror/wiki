@@ -43,17 +43,18 @@ There is a bug whereby the screen is not automatically refreshed. To work around
 <pre># while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
 
 == Mainlining ==
-[[User:jrg|Julian Goldsmith]] is currently [https://github.com/julian-goldsmith/linux working on] mainlining the OnePlus One, based on flacks's [https://github.com/flacks/linux/blob/bacon/v4.15-rc6/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts initial DTS].  Right now, he's using a fork of [https://github.com/postmarketOS/linux-postmarketos/tree/qcom linux-postmarketos], and is trying to get hardware-accelerated graphics up and running.
+[[User:jrg|Julian Goldsmith]] is currently [https://gitlab.com/julian-goldsmith/linux-postmarketos/tree/qcom-old working on] mainlining the OnePlus One, based on flacks's [https://github.com/flacks/linux/blob/bacon/v4.15-rc6/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts initial DTS].  Right now, he's using a fork of [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom linux-postmarketos], and is trying to get hardware-accelerated graphics up and running.
 
 === Graphics ===
 The Adreno 330 GPU is supported by Freedreno.  The firmware is required, and is available in the adreno-firmware package.
 
-Julian Goldsmith currently has partially-working graphics support on mainline.  XFCE4 displays properly, but other environments haven't been tested yet.  There is an issue where the screen doesn't properly update, which requires a workaround to disable the tearcheck pin.
-
-Actual 3D applications, such as glxgears, run very poorly at the moment.  This may be due to the tearcheck workaround.
+Julian Goldsmith currently has partially-working graphics support on mainline.  The GPU is usable, but the display doesn't properly update.  The issue most likely involves clock or regulator settings somehow.
 
 === Cell usage ===
 oFono support shouldn't take too much to get up and running.  Adding the remoteproc node, using qmictl (possibly more utilities), and using a patched oFono should get basic support up and running.
+
+=== WiFi and Bluetooth ===
+WiFi and Bluetooth are working, but aren't fully tested.  They are most likely flakey.
 
 == Links ==
 
