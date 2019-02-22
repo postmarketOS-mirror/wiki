@@ -113,7 +113,7 @@ Install bluetooth service:
 <source lang="shell">
 $ apk add bluez
 $ rc-update add bluetooth default
-$ rc-service start bluetooth
+$ rc-service bluetooth start
 </source>
 
 Pair a Bluetooth device:
