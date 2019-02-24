@@ -75,6 +75,7 @@ $ mkbootimg.py --kernel pmos-boot-huawei-leland/boot.img-huawei-leland-zImage --
 $ fastboot flash kernel pmos-leland.kernel.img 
 $ fastboot flash ramdisk pmos-leland.ramdisk.img 
 </syntaxhighlight>
+# Flash rootfs to sdcard to boot it
 
 == Additional Kernel Configuration ==
 === OASES ===
