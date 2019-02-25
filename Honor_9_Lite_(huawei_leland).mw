@@ -16,7 +16,7 @@
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = N
-| status_touch = 
+| status_touch = Y
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = 
@@ -99,4 +99,5 @@ $ sudo -i
 == Links ==
 * [[Huawei_Mediapad_M5_pro_(huawei-cameron)|JohnBergago's Huawei_Mediapad_M5_pro_(huawei-cameron)]]
 * [https://github.com/penn5/android_kernel_honor_lld penn5 android kernel sources]
+* [https://github.com/Dil3mm4/labyrinth_kernel_prague Dil3mm4's labyrinth kernel for huawei p8 lite]
 * [https://gitlab.com/postmarketOS/pmaports/merge_requests/239 initial merge request]
