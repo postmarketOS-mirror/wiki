@@ -50,9 +50,32 @@ Keep Power+Volume down pressed for about 5 seconds on boot
 
 Kernel doesn't build using my current configuration. All I get is this, without any meaningful error message:
 
- <nowiki>  LD      arch/arm/mach-hi6620/iomux/built-in.o
+ <nowiki>arch/arm/mach-hi6620/iomux/hi6620_balong_lpddr2_udp_iomux_pins.h:34:26: note: in definition of macro 'IOMUX_IOMG'
+ static struct iomux_iomg _iomg = {\
+                          ^~~~~
+  LD      arch/arm/mach-hi6620/iomux/built-in.o
   LD      arch/arm/mach-hi6620/built-in.o
->>> ERROR: linux-huawei-sophia: build failed</nowiki>
+>>> ERROR: linux-huawei-sophia: build failed
+(016964) [22:15:38] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(016964) [22:15:38] NOTE: The failed command's output is above the ^^^ line in the log file: /home/r/.local/var/pmbootstrap/log.txt
+(016964) [22:15:38] ERROR: Command failed: (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' CROSS_COMPILE=armv7-alpine-linux-musleabihf- CC=armv7-alpine-linux-musleabihf-gcc HOME=/home/pmos abuild -D postmarketOS -d
+(016964) [22:15:38] See also: <https://postmarketos.org/troubleshooting>
+(016964) [22:15:38] Traceback (most recent call last):
+  File "/home/r/pmbootstrap/pmb/__init__.py", line 63, in main
+    getattr(frontend, args.action)(args)
+  File "/home/r/pmbootstrap/pmb/helpers/frontend.py", line 105, in build
+    args.strict, src=src):
+  File "/home/r/pmbootstrap/pmb/build/_package.py", line 445, in package
+    suffix, src)
+  File "/home/r/pmbootstrap/pmb/build/_package.py", line 381, in run_abuild
+    pmb.chroot.user(args, cmd, suffix, "/home/pmos/build", env=env)
+  File "/home/r/pmbootstrap/pmb/chroot/user.py", line 43, in user
+    output_return, check, {}, auto_init)
+  File "/home/r/pmbootstrap/pmb/chroot/root.py", line 91, in root
+    output_return, check, kill_as_root)
+  File "/home/r/pmbootstrap/pmb/helpers/run_core.py", line 301, in core
+    raise RuntimeError("Command failed: " + log_message)
+RuntimeError: Command failed: (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' CROSS_COMPILE=armv7-alpine-linux-musleabihf- CC=armv7-alpine-linux-musleabihf-gcc HOME=/home/pmos abuild -D postmarketOS -d</nowiki>
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
