@@ -22,7 +22,7 @@ Once the device has launched, Unity 8 can be started with the following (as root
 
 <source>
 # Run this (at least) once:
-apk add consolekit2
+apk add consolekit2 qt5-qtwayland
 mkdir -p $HOME/.config/ubuntu-system-settings
 touch $HOME/.config/ubuntu-system-settings/wizard-has-run
 # Don't forget to set a password (passwd)!
