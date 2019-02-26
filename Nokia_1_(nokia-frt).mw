@@ -23,7 +23,7 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y <!-- tested with libreoffice & xterm -->
 | status_fde = P
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = P <!-- charging-sdl shows up, I don't trust these percentages though; crashes after few seconds-->
