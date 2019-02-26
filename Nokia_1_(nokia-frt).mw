@@ -26,7 +26,7 @@
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = P
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_battery = P <!-- charging-sdl shows up, I don't trust these percentages though; crashes after few seconds-->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
@@ -36,7 +36,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status_otg =
+| status_otg = <--! theoretically possible?? -->
 | status =
 | booting = yes
 
