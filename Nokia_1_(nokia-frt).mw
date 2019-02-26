@@ -55,6 +55,7 @@
 * Booting
 * ssh
 * osk-sdl
+* touch
 
 == What does not work ==
 * Everything else
