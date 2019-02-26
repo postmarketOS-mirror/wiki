@@ -52,6 +52,9 @@
 * ☐ Wifi
 * ☐ Audio playback
 
+== Installation ==
+Use '''pmbootstrap install --no-fde --sdcard=/dev/sdX''' to perform an SD card install (install to MTD /system may not work). Also, use `pmbootstrap flasher flash_kernel` to flash the initfs using Heimdall (ensure your device is in Download mode '''VolDown + Home + Power''')
+
 == Wi-Fi ==
 This device has a wl1271 chip from TI. To use it, you need to install a non-free firmware '''linux-firmware-ti-connectivity'''
 
