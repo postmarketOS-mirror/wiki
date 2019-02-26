@@ -77,15 +77,13 @@ Boot.img offsets are in kernel's readme file:
 </pre>
 
 == How to enter flash mode ==
-=== first method ===
-Plug in USB, then Press Volume Up + power. When Nokia logo appears release power. "No command" should appear. Press Volume UP + power simultaneously and quickly release both buttons. You should be in recovery mode now.
+=== Directly to fastboot ===
+Plug in USB, press and hold power and press and hold volume down as fast as you can, then release power when you see Nokia logo.
+
+=== Through recovery ===
+Plug in USB, press and hold power and press and hold volume down as fast as you can, then release power when you see Nokia logo. "No command" should appear. Press and hold power and then press and hold Volume Up and release both buttons after screen changes.
 
 Scroll to bootloader using Vol up/down keys and press power to confirm.
-
-=== second method ===
-Plug in USB, Press Volume Down and power simultaneously, then release power when you see nokia logo.
-
-This may be harder (at least for the author of this manual)
 
 == Installation ==
 
