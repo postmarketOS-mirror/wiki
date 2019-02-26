@@ -54,12 +54,13 @@
 * Flashing
 * Booting
 * ssh
-* osk-sdl
+* osk-sdl/charging-sdl
 * touch
 
 == What does not work ==
 * Everything else
 * after entering pass in osk-sdl it's stuck on "loading..."
+* charging-sdl shows wrong percentage & crashes after few seconds on '''(!!!) *** UNIMPLEMENTED [fusion_get_fusionee_pid] *** [fusion.c:4147]'''
 
 == Current progress ==
 
