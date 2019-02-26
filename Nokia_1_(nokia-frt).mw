@@ -95,6 +95,7 @@ First unlock the phone by hashing the serial number with MD5
 // Have the phone booted in android and developer mode enabled
 $ adb get-serialno
 FRTBA80306545107
+
 // Hash the serial number
 $ echo -n FRTBA80306545107 | md5sum
 e2a0704c877da26c57a305c216bf7245  -
