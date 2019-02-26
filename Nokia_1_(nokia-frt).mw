@@ -88,7 +88,25 @@ Plug in USB, Press Volume Down and power simultaneously, then release power when
 This may be harder (at least for the author of this manual)
 
 == Installation ==
-Follow standard installation instruction
+
+First unlock the phone by hashing the serial number with MD5
+
+<source lang="shell-session">
+// Have the phone booted in android and developer mode enabled
+$ adb get-serialno
+FRTBA80306545107
+// Hash the serial number
+$ echo -n FRTBA80306545107 | md5sum
+e2a0704c877da26c57a305c216bf7245  -
+
+// Feed the key to fastboot
+$ sudo fastboot oem key e2a0704c877da26c57a305c216bf7245
+
+// Unlock the bootloader
+$ sudo fastboot oem unlock
+</source>
+
+Follow standard installation instructions after unlocking
 
 == See also ==
 <!--
