@@ -16,7 +16,7 @@
 | architecture = armv7
 <!-- SoC is aarch64, kernel is armv7 at best -->
 <!-- -->
-| whet_dhry =
+| whet_dhry = 458.1
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
