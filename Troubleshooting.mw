@@ -276,5 +276,8 @@ You might also be getting the error "ERROR: Failed to confirm end of file transf
 
 It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try setting <code>deviceinfo_flash_sparse="true"</code> in the [[deviceinfo]].
 
+=== FAILED (remote: Unknown chunk type) ===
+
+This is a bootloader limitation. Flash [https://github.com/postmarketOS/pmbootstrap/issues/456 with netcat] as a workaround, or use this wiki's search feature to come up with more related information. Feel free to organize this in a better way, but this should be a good starting point. See also {{issue|1735}}.
 
 [[Category:Technical Reference]]
