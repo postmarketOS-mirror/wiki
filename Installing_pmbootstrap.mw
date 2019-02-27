@@ -31,6 +31,9 @@ $ python3 "$PWD/pmbootstrap/setup.py" install
 </syntaxhighlight>
 
 == Installing manually ==
+
+This setup is useful for hacking on pmbootstrap code, because you are directly running the code from your git tree. No need to run setup.py after each change.
+
 ==== Download pmbootstrap ====
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
