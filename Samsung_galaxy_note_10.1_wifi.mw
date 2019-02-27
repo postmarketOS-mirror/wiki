@@ -49,10 +49,4 @@ Press Volume down on power up.
 Image must be sideloaded with TWRP recovery. Check [[Android Recovery Zip Installation]] for instructions on creating the image.
 
 == See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME}} Initial merge request
-* {{issue|CHANGEME}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
+* {{MR|233|pmaports}} Initial merge request
