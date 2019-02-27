@@ -46,8 +46,8 @@
 Press Volume down on power up.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-Image must be sideloaded with TWRP recovery. Check [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Installation here] for instructions on creating the image.
+Image must be sideloaded with TWRP recovery. Check [[Android Recovery Zip Installation]] for instructions on creating the image.
+
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
