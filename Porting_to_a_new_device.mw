@@ -7,7 +7,6 @@
 === Requirements ===
 ==== Host PC ====
 * We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
-* Python 3.4+ and git must be installed (look at your distribution's documentation on installing packages)
 * The host operating system needs to run Linux 3.17 or newer (first kernel with getrandom syscall)
 * A few gigabytes of free space
 
@@ -18,12 +17,10 @@ Most phones fulfill this requirement: in the first > 80 ports we have had, only 
 If your device have ARMv7 CPU it should have FPU, with ARMv6 CPUs it's a 50/50 chance.
 
 === Initialization ===
-Run the following commands in a Linux terminal to get started.
 
+[[installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. Then run the following:
 <syntaxhighlight lang="shell-session">
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
-$ cd pmbootstrap
-$ ./pmbootstrap.py init
+$ pmbootstrap init
 Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
 Work path [/home/user/.local/var/pmbootstrap]:
 </syntaxhighlight>
@@ -36,7 +33,7 @@ Available (60): asus-flo, asus-grouper, fairphone-fp2, ...
 Device [samsung-i9100]: wiki-example
 You are about to do a new device port for 'wiki-example'.
 Continue? (y/n) [y]:
-Device architecture (armhf/aarch64) [armhf]:
+Device architecture (armhf/armv7/aarch64/x86_64/x86) [armhf]: armv7
 Who produced the device (e.g. LG)?
 Manufacturer: Samsung
 What is the official name (e.g. Google Nexus 5)?
@@ -87,19 +84,6 @@ Run 'pmbootstrap zap' to delete all chroots once a day before working with pmboo
 It only takes a few seconds, and all packages are cached.
 Done!
 </pre>
-
-==== Shortcut ====
-{{note|You can skip this step and simply use <code>./pmbootstrap.py</code> whenever <code>pmbootstrap</code> is mentioned in the documentation.}}
-<code>./pmbootstrap.py</code> is the key program for postmarketOS development, so you might want to set up <code>pmbootstrap</code> as shortcut, that works from any folder. For optional <code>zsh</code> auto-completion, follow the steps in <code>helpers/pmbootstrap-autocompletion.zsh</code>.
-
-===== Current shell session =====
-<syntaxhighlight lang="shell-session">
-$ source helpers/envsetup.sh
-</syntaxhighlight>
-This also gives you a <code>pmbroot</code> alias to quickly change to the <code>pmbootstrap</code> folder.
-
-===== Persistent =====
-Read [[Installing_pmbootstrap#Create_a_link|installing pmbootstrap]] to learn how to make a persistent shortcut. This wiki page also explains how to set up tab completion for <code>bash</code> and <code>zsh</code>.
 
 ==== Logging ====
 Open a second terminal and run the following command to see detailed logging (such as compiler output). Whenever reporting, that something does not work, please attach the detailed log output from this window.
