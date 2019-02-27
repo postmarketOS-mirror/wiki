@@ -9,7 +9,6 @@ $ ls
 
 === Requirements ===
 * We assume that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
-* Python 3.4+ and git must be installed (look at your distribution's documentation on installing packages)
 * The host operating system needs to run Linux 3.17 or newer (first kernel with getrandom syscall)
 * A few gigabytes of free space
 
@@ -21,12 +20,10 @@ Fortunately, most Android-based devices are fairly foolproof; even if your flash
 '''TL;DR: do your research, don't have important data on your device.'''
 
 === Initialization ===
-Run the following commands in a Linux terminal to get started. See [[installing pmbootstrap]] for more detailed instructions with a shortcut and tab completion.
+[[installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. Then run the following in a Linux terminal:
 
 <syntaxhighlight lang="shell-session">
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
-$ cd pmbootstrap
-$ ./pmbootstrap.py init
+$ pmbootstrap init
 </syntaxhighlight>
 
 Type in the code name of your device as listed [[Devices|here]], and optionally a custom username.
