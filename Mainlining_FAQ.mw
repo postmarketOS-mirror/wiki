@@ -84,6 +84,7 @@ Consider updating your device's kernel to the latest Android stable version firs
 * (it's the init system log like Starting etc.....[ok])
 
 == How can I compile kernel sources from a local git repo? ==
+{{note|A more modern approach is [[compiling kernels with envkernel.sh]].}}
 * Clone the kernel with git (~5GB!)
 * Use the following command to build the mainline kernel package with the checked out sources
 <syntaxhighlight lang="shell-session">
