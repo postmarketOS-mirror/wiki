@@ -59,23 +59,20 @@
 
 == What does not work ==
 * Everything else
-* after entering pass in osk-sdl it's stuck on "loading..."
+* after entering pass in osk-sdl it's stuck on "loading...", see {{issue|194|pmaports}}
 * charging-sdl shows wrong percentage & crashes after few seconds on '''(!!!) *** UNIMPLEMENTED [fusion_get_fusionee_pid] *** [fusion.c:4147]'''
 
 == Current progress ==
 
-=== Kernel ===
-There are official sources for 3.18, The CPU itself is aarch64 but the kernel is made for armv7 mode, compiling for armhf first, then going up.
+=== Downstream kernel ===
+There are official sources for 3.18, The CPU itself is aarch64 but the kernel was made for arm(v7) mode.
 
-=== boot.img ===
-Boot.img offsets are in kernel's readme file:
-<pre>
-  Step 2: Assembling the boot.img
-    (In the output directory)
-	$ mkbootimg --kernel arch/arm/boot/zImage-dtb --cmdline "bootopt=64S3,32N2,32N2 buildvariant=userdebug" \
-	  --base 0x40000000 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0xE000000 \
-	  --ramdisk ramdisk.img --output boot.img
-</pre>
+CPU cores are hotplugged.
+
+=== Upstream kernel ===
+Doesn't exist yet, dts files for the phone are available in downstream kernel
+
+
 
 == How to enter flash mode ==
 === Directly to fastboot ===
