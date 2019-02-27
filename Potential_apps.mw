@@ -228,6 +228,7 @@ These are applications which already exist for Linux and could be reused in post
 * [https://openrepos.net/ Meego/Sailfish/Nemo applications] - Will require some reworking for pmOS
 * [http://www.tizenstore.com/main/getMain.as Tizen Store] - Unknown compatibility with pmOS
 * [http://preware.pivotce.com/ LuneOS apps] - Will require some reworking for pmOS
+* [https://mglapps.frama.io/ Mobile GNU/Linux Apps] - A similar list
 
 ===Other frameworks===
 * [https://anbox.io/ Anbox] - Under-construction Android compatibility layer
