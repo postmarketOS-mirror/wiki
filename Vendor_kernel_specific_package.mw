@@ -26,6 +26,9 @@ Newly generated vendorkernel packages use the <code>downstreamkernel_prepare</co
 == GCC version ==
 The kernel gets compiled with {{wikipedia|GCC}}. Alpine Linux has been shipping version GCC 6 for a long time, but changed the default GCC version to GCC 8 in September 2018. It was discovered that at least one vendor kernel does not boot when compiled with GCC 8 ({{issue|103|pmaports}}), so we ended up packaging GCC 6 side by side with GCC 8. All existing 3.x vendor kernels that were packaged have been adjusted to use GCC 6 at this point in time, just to make sure we don't introduce any breakage there. The default for new packages is using the current GCC version that is packaged in Alpine (at time of writing: GCC 8).
 
+=== Use GCC 4 ===
+Follow the GCC 6 instructions below, but replace 6 with 4 everywhere.
+
 === Use GCC 6 ===
 If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works then.
 
