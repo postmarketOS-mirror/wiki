@@ -72,6 +72,86 @@ CPU cores are hotplugged.
 === Upstream kernel ===
 Doesn't exist yet, dts files for the phone are available in downstream kernel
 
+=== /dev/input/event* ===
+evtest return 3 devices:  
+* /dev/input/event0:	ACCDET
+** Detect audio jack state and button presses on headphones
+<pre>Input device name: "ACCDET"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 114 (KEY_VOLUMEDOWN)
+    Event code 115 (KEY_VOLUMEUP)
+    Event code 122 (KEY_HANGUEL)
+    Event code 163 (KEY_NEXTSONG)
+    Event code 164 (KEY_PLAYPAUSE)
+    Event code 165 (KEY_PREVIOUSSONG)
+    Event code 166 (KEY_STOPCD)
+    Event code 231 (KEY_SEND)
+    Event code 582 (KEY_VOICECOMMAND)
+  Event type 5 (EV_SW)
+    Event code 2 (SW_HEADPHONE_INSERT) state 0
+    Event code 4 (SW_MICROPHONE_INSERT) state 0
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+    Event code 7 (SW_JACK_PHYSICAL_INSERT) state 0
+</pre>
+* /dev/input/event1:	mtk-kpd
+** detects KEY_VOLUMEDOWN, KEY_VOLUMEUP KEY_POWER keys state
+<pre>
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 114 (KEY_VOLUMEDOWN)
+    Event code 115 (KEY_VOLUMEUP)
+    Event code 116 (KEY_POWER)
+</pre>
+* /dev/input/event2:	mtk-tpd
+** touchscreen, detects up to 4 fingers
+<pre>
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 330 (BTN_TOUCH)
+  Event type 3 (EV_ABS)
+    Event code 0 (ABS_X)
+      Value      0
+      Min        0
+      Max      480
+      Resolution     480
+    Event code 1 (ABS_Y)
+      Value      0
+      Min        0
+      Max      854
+      Resolution     854
+    Event code 24 (ABS_PRESSURE)
+      Value      0
+      Min        0
+      Max      255
+    Event code 47 (ABS_MT_SLOT)
+      Value      0
+      Min        0
+      Max        4
+    Event code 48 (ABS_MT_TOUCH_MAJOR)
+      Value      0
+      Min        0
+      Max      100
+    Event code 49 (ABS_MT_TOUCH_MINOR)
+      Value      0
+      Min        0
+      Max      100
+    Event code 53 (ABS_MT_POSITION_X)
+      Value      0
+      Min        0
+      Max      480
+    Event code 54 (ABS_MT_POSITION_Y)
+      Value      0
+      Min        0
+      Max      854
+    Event code 57 (ABS_MT_TRACKING_ID)
+      Value      0
+      Min        0
+      Max       10
+</pre>
 
 
 == How to enter flash mode ==
