@@ -1,3 +1,14 @@
+== Requirements ==
+* <code>python</code> >=3.4
+* Depending on the installation method:
+** <code>pip3</code> (possibly shipped with Python)
+** <code>git</code>
+
+Alpine Linux users also need to install <code>coreutils</code> and <code>procps</code>:
+<syntaxhighlight lang="shell-session">
+$ apk add python3 coreutils procps
+</syntaxhighlight>
+
 == Installing automatically ==
 === Latest release with pip ===
 pmbootstrap is up on [https://pypi.org/project/pmbootstrap/ pypi] now, so it can be installed with:
@@ -17,7 +28,7 @@ $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 $ python3 "$PWD/pmbootstrap/setup.py" install
 </syntaxhighlight>
 
-== Installing Manually ==
+== Installing manually ==
 ==== Download pmbootstrap ====
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
