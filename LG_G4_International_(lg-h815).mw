@@ -69,6 +69,130 @@ fastboot reboot</syntaxhighlight>
 
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
 
+== Feature matrix ==
+
+{| class="wikitable"
+! 
+! Mainline kernel
+! Updated kernel
+! Libhybris
+! Android kernel
+|-
+| Booting
+| Broken
+| TODO
+| TODO
+| Working
+|-
+| USB Network
+| 
+| 
+| 
+| Working
+|-
+| Flashing
+| 
+| 
+| 
+| Working
+|-
+| Touchscreen
+| 
+| 
+| 
+| Working
+|-
+| Display
+| 
+| 
+| 
+| Partial
+|-
+| WiFi
+| 
+| 
+| 
+| 
+|-
+| XWayland
+| 
+| 
+| 
+| Working
+|-
+| FDE
+| 
+| 
+| 
+| 
+|-
+| Battery
+| 
+| 
+| 
+| Working
+|-
+| Hardware Acceleration
+| 
+| 
+| 
+| 
+|-
+| Accelerometer
+| 
+| 
+| 
+| 
+|-
+| Audio
+| 
+| 
+| 
+| 
+|-
+| Bluetooth
+| 
+| 
+| 
+| 
+|-
+| Camera
+| 
+| 
+| 
+| 
+|-
+| GPS
+| 
+| 
+| 
+| 
+|-
+| Mobile data
+| 
+| 
+| 
+| 
+|-
+| SMS
+| 
+| 
+| 
+| 
+|-
+| Calls
+| 
+| 
+| 
+| 
+|-
+| USB OTG
+| 
+| 
+| 
+| 
+|}
+
 == /sys tunables ==
 <syntaxhighlight>/sys/class/graphics/fb0/blank</syntaxhighlight>
 
