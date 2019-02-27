@@ -84,4 +84,10 @@ After compiling and packaging the kernel, it can be flashed to device using the 
 $ pmbootstrap flasher flash_kernel
 </syntaxhighlight>
 
+== See also ==
+* {{MR|1703}} optional gcc6 argument
+* {{MR|1747}} pmbootstrap build --envkernel
+* [https://gitlab.com/postmarketOS/pmbootstrap/issues/1672#note_105668759 a quick Q&A about using envkernel.sh for the Nexus 5] (if you have more questions, please open a new issue or ask in the chat).
+
+
 [[Category:Guide]]
