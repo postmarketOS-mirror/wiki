@@ -1,3 +1,5 @@
+{{note|Running postmarketOS or Void Linux? Grab pmbootstrap straight from your distribution's package manager (e.g. <code>apk add pmbootstrap</code>)!}}
+
 == Requirements ==
 * <code>python</code> >=3.4
 * Depending on the installation method:
