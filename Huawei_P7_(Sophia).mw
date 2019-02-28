@@ -84,4 +84,5 @@ make: *** [Makefile:1054: vmlinux.o] Error 1
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
+[https://github.com/Kostyan-nsk/hwp6s-kernel/ Lineage OS (unofficial) kernel]
 [https://gitlab.com/cunidev/postmarket-os-huawei-sophia Source code for current configuration]
