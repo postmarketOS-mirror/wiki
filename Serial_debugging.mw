@@ -117,6 +117,9 @@ This cable should work with:
 * Google Pixel 2
 * Google Pixel 3
 
+== Samsung Galaxy S7 and S5 ==
+See [https://forum.xda-developers.com/galaxy-s7/how-to/guide-samsung-galaxy-s7-uart-t3743895 this guide]. It worked almost exactly for the S5, only kernel MUIC driver was in another directory.
+
 == Alternatives to a serial cable ==
 There might not be a need for a serial cable if you think it is too complicated to make one for your device (although it is much more convenient when it works).
 From [https://github.com/crondog/arch-flo there], about the [[Google Nexus 7 2013 (asus-flo)]]:
