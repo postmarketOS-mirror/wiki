@@ -84,7 +84,7 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |-
 | P
 |USB
-|Only gadget mode is supported for now. There's a GPIO for OTGID pin, but I can't test it. HSIC mode is missing, which makes our modem not working. Not sure if we can make it work in non-HSIC mode. fsa9480 is used for cable type detection - it's supported by mainline kernel, but no Device Tree bindings available. There's a driver for fsa9480 with DT support in PabloPL repo, but it's not used for now.
+|Only gadget mode is supported for now. [https://gitlab.com/postmarketOS/pmaports/merge_requests/238#note_145728362 OTG does not work yet]. HSIC mode is missing, which makes our modem not working. Not sure if we can make it work in non-HSIC mode. fsa9480 is used for cable type detection - it's supported by mainline kernel, but no Device Tree bindings available. There's a driver for fsa9480 with DT support in PabloPL repo, but it's not used for now.
 |-
 | Y
 |SDHCI
