@@ -210,7 +210,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 |-
 | <code>partition_blacklist</code>
 | A comma-separated list of partitions that should not be flashed, because they brick the device. There are only very few devices where it is necessary (e.g. [[Ouya_(ouya-ouya)|Ouya]]). {{MR|1759}}
-| e.g. <code>boot</code>
+| e.g. <code>boot,recovery</code>
 |}
 
 == splash ==
