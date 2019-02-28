@@ -37,7 +37,7 @@ arch/arm/crypto/aesbs-core.S:904: Error: thumb conditional instruction should be
 arch/arm/crypto/aesbs-core.S:2100: Error: thumb conditional instruction should be in IT block -- `subne r9,#0x10'
 </pre>
 
-You can fix it by disabling <code>CONFIG_CRYPTO_ARM_AES_BS</code>.
+You can fix it by disabling <code>CONFIG_CRYPTO_AES_ARM_BS</code>.
 
 This was first noticed in {{MR|144|pmaports}}.
 
