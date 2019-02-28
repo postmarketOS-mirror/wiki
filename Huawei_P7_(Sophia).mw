@@ -33,7 +33,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | booting = no
-| status = Can't compile kernel.
+| status = Kernel builds (no DEVTMPFS), no boot
 }}
 
 == Contributors ==
