@@ -143,7 +143,7 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 
 {|class="wikitable" style="text-align:center;"
 |+Keyboard
-|rowspan="2"|139
+|rowspan="2"|
 |16
 |17
 |18
@@ -155,7 +155,7 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |24
 |25
 |14
-|rowspan="2"|127
+|rowspan="2"|
 |-
 |30
 |31
@@ -167,7 +167,7 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |37
 |38
 |103
-|28
+|96
 |-
 |rowspan="2"|102
 |42
@@ -179,19 +179,19 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |49
 |50
 |105
-|352
+|28
 |106
-|rowspan="2"|158
+|rowspan="2"|
 |-
-|464
-|29
-|15
+|100
+|125
+|126
 |51
 |colspan="3"|57
 |52
-|214
+|
 |108
-|53
+|
 |}
 
 {|class="wikitable"
