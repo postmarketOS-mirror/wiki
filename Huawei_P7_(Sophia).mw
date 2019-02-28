@@ -36,6 +36,8 @@
 | status = Kernel builds (no DEVTMPFS), no boot
 }}
 
+Probably the same build would work on Huawei P6S, testers are welcome!
+
 == Contributors ==
 [https://gitlab.com/cunidev cunidev (Raffaele T.)]
 
