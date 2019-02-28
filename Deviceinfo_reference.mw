@@ -229,7 +229,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 | 1280, 2560... other
 |}
 
-== Obsolete Options ==
+== Obsolete options ==
 
 === weston ===
 * <code>weston_pixman_type</code>: used to be a Weston specific workaround for the "red screen bug" ({{github|54}}): we patched Weston to accept a <code>--pixman-type</code> argument to override the framebuffer mode that the kernel driver reports. However, this patch was quickly incompatible with future changes in Weston, and it is not as good as [[Troubleshooting:display#My_screen_is_red.21|patching the kernel to report the right framebuffer mode]], so it was removed ({{issue|136|pmaports}}).
