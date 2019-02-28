@@ -208,6 +208,9 @@ These are used for flashing and booting the device, and most of them are fastboo
 | The number of bytes for each increment of the offset specified in the <code>sd_embed_firmware</code> 
 | default: <code>1024</code>
 |-
+| <code>partition_blacklist</code>
+| A comma-separated list of partitions that should not be flashed, because they brick the device. There are only very few devices where it is necessary (e.g. [[Ouya_(ouya-ouya)|Ouya]]). {{MR|1759}}
+| <code>boot</code>
 |}
 
 == splash ==
