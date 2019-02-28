@@ -48,8 +48,9 @@ Keep Power+Volume down pressed for about 5 seconds on boot
 
 == Installation ==
 
-Kernel builds but only with <nowiki>DEVTMPFS</nowiki> disabled at the moment. Does not boot anyway.
+Kernel builds but only with <nowiki>DEVTMPFS</nowiki> disabled at the moment. 
 
+Reboot loop caused by kernel panic as seen here: https://pastebin.com/MBvyP9Lc
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
