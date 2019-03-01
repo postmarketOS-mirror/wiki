@@ -49,6 +49,13 @@ $ cd devel-env
 $ ./clean.sh
 </syntaxhighlight>
 
+== Database ==
 
+=== Status values for the "commits" table ===
+* INDEXING not running yet
+* BUILDING currently building on sr.ht
+* FAILED build failed on sr.ht
+* SUPERSEDED a job for a newer version of the package has been submitted
+* DONE everything build successfully
 
 [[Category:Guide]]
