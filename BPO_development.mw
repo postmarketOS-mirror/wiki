@@ -38,6 +38,11 @@ $ firefox /tmp/out.html
 
 When it went right, a new job should appear on top of your personal [https://builds.sr.ht/ builds.sr.ht] start page.
 
+=== Submitting the same job again ===
+* Change the status of your entry in the commits-table back to INDEXING
+* Remove the entry that appeared in the queue table
+* Now you can run api-task-submit.sh again
+
 === Clearing the database ===
 <syntaxhighlight lang="shell-session">
 $ cd devel-env
