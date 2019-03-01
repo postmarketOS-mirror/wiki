@@ -346,12 +346,17 @@ For Android based devices, you can do a [[Android_Recovery_Zip_Installation|reco
 When all else fails, you might have success with installing via [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] or booting via [https://github.com/postmarketOS/pmbootstrap/pull/547 NFS].
 
 === USB Network ===
-{{note|As soon as USB networking works, it's time to upstream your work into the official pmbootstrap repository. Please [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/CONTRIBUTING.md#development follow the contributing guide] or send us a link to your git repository in the chat if you don't want to use GitLab.}}
 If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through [[USB Network|SSH over USB]] (or if that fails, via telnet). See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details.
 
 It is quite easy to give your phone [[USB Internet|Internet access via USB]], when your PC is connected to the Internet.
 
 In case it looks like your device did not even boot, have a look at [[Troubleshooting:boot]].
+
+=== Upstreaming ===
+
+As soon as USB networking is functional, or you have another indication that booting the device works successfully, it is time to upstream your work into the official [https://gitlab.com/postmarketOS/pmaports/ pmaports] repository. This way other people can benefit from your work, and build upon it.
+
+See the [[git workflow]] article for detailed instructions.
 
 === Display ===
 To make the display work in the first place, read [[Troubleshooting:display]] and [[Tuning sysfs]]. Then [[Screen_Calibration#Touch_screen|configure your touch screen]].
