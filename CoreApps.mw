@@ -1,0 +1,70 @@
+{{Infobox interface
+| name = CoreApps
+| image = File:coreapps1.jpg
+| imagecaption = CoreApps running on LG Nexus 5x (bullhead)
+| graphics = KWin on Wayland or Xorg
+| toolkit = Qt 5
+}}
+
+A set of apps with constant looks across all the apps and can run in lower system with out hardware acceleration and optimized for touchscreen.
+
+== Status ==
+Apps works smoothly on most devices with a working display, both with and without hardware acceleration.
+
+== Description ==
+There are some core features that makes them great to use on mobile devices. Some are listed here.
+* All the apps are light with lesser dependencies, uses less ram.
+* All the apps are touch-friendly and suitable Phablet and Tablet and we are working towards that.
+* Apps use the precious vertical screen real estate properly. So in small screens apps works great.
+
+
+We have 19 CoreApps and they all listed here with there descriptions.
+* CoreActions - A side bar for showing widgets
+* CorePins - A bookmarking app.
+* CoreArchiver - Archiver to create and extract archives.
+* CoreFm - A lightweight file-manager
+* CoreGarage - A settings manager.
+* CoreHunt - A file finder utility.
+* CoreImage - An image viewer.
+* CorePad - A document editor.
+* CorePaint - A paint app.
+* CorePDF - A PDF viewer.
+* CorePlayer - A player based on QtAV library. (Not ported because QtAV is not in repo)
+* CoreRenamer - A batch file re-namer.
+* CoreStats - A system resource viewer.
+* CoreStuff - An activity viewer.
+* CoreUniverse - Shows information about apps from the CoreApps family.
+* CoreTime - A time related task manager.
+* CoreTerminal - A terminal emulator. (Not ported because qtermwidget is not in repo)
+* CoreShot - A screen capture utility.
+* CoreInfo - A file information tool.
+
+Two apps are in development.
+* CoreBox - A touch-optimized panel
+* CoreKeyboard - A virtual keyboard.
+
+== Usages ==
+* This apps can be used with any Desktop Environment. But recommended with i3wm and matchbox.
+* More usable in horizontal screen rotation.
+
+== Idea ==
+* Make package with i3wm + CoreApps as a interface.
+
+== Issues ==
+* Icons are small in size.Enveronment veriable needs to added or use custom theme form [https://github.com/tsujan/Kvantum Kvantum] can fix that.
+* Some icons are showing discolor. Because of SVG is no rendering correctly.
+
+=== Links ===
+* [https://cubocore.gitlab.io/ CoreApps website]
+* [https://gitlab.com/cubocore Gitlab Project page]
+* [https://riot.im/app/#/room/#cubocore:matrix.org Riot.im IRC]
+
+
+== Photos ==
+<gallery>
+File:coreapps2.jpg|thumb|left|CorePad
+File:coreapps3.jpg|thumb|CoreFM
+File:coreapps4.jpg|thumb|CoreImage
+File:coreapps5.jpg|thumb|CoreShot
+File:coreapps6.jpg|thumb|CoreTime
+</gallery>
