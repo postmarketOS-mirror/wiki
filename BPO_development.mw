@@ -1,15 +1,38 @@
 Various resources on [https://gitlab.com/postmarketOS/build.postmarketos.org builds.postmarketos.org] (bpo) development, which will be our [https://postmarketos.org/blog/2019/01/16/600-days-of-postmarketOS/#new-srht-based-binary-repository future binary repository infrastructure]. This article is only relevant for people who wish to contribute to that effort, it has nothing to do with running postmarketOS or creating packages for it.
 
 == Local development environment ==
+These steps set up a local copy of bpo in docker, that runs against your username's namespace on the official builds.sr.ht instance.
+
 === Requirements ===
 * Register at [https://builds.sr.ht/ builds.sr.ht]
 * Install docker and docker-compose
 
-=== Setup ===
-Build the custom bpo docker container and run it, together with MariaDB and phpMyAdmin docker containers:
+=== Store package signing key in builds.sr.ht ===
+Run <code>pmbootstrap build_init</code> to generate a public and private key pair for signing packages. We will use the same private key on the bpo server.
+Open [https://builds.sr.ht/secrets secrets] and fill out the "add new secret" form on the left:
+
+* Name: "bpo test build key"
+* Secret: (put here the output of <code>sudo cat ~/.local/var/pmbootstrap/config_abuild/pmos-*.rsa</code>)
+* Secret Type: File
+* Path:  ~/.secrets/build@postmarketos.org.priv
+* Mode: 644
+
+Then click "Add submit". Note down the key it generated on the right (the string that looks like 46f739e5-4538-45dd-a79f-bf173b7a2ed9), you will need it in the next step.
+
+=== Clone and configure ===
 <syntaxhighlight lang="shell-session">
 $ git clone https://gitlab.com/postmarketOS/build.postmarketos.org.git
-$ cd build.postmarketos.org/devel-env
+$ cd build.postmarketos.org/
+$ cp .env.dist .env
+</syntaxhighlight>
+
+Open <code>.env</code> in a text editor and change the following:
+* SRHT_TOKEN: generate a personal access token [https://meta.sr.ht/oauth/register here]
+* SRHT_SECRET_ID: the secret for your build key, as generated above
+
+=== Run the development environment ===
+Build the custom bpo docker container and run it, together with MariaDB and phpMyAdmin docker containers:
+<syntaxhighlight lang="shell-session">
 $ cd devel-env
 $ ./run.sh
 </syntaxhighlight>
