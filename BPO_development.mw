@@ -27,7 +27,7 @@ $ cp .env.dist .env
 </syntaxhighlight>
 
 Open <code>.env</code> in a text editor and change the following:
-* SRHT_SECRET_ID: the secret for your build key, as generated above
+* SRHT_SECRET_ID: the secret ID for your build key, as generated above
 * SRHT_TOKEN: [https://meta.sr.ht/oauth/register generate a personal access token]
 
 === Run the development environment ===
