@@ -16,7 +16,7 @@ It's a good idea to make accessing this directory easy with a short command, so 
 Since we are dealing with a git repository, pmbootstrap leaves the directory alone after the initial clone. It will not automatically update it. The only thing it will do is tell you when your pmaports.git dir is so outdated that you absolutely have to update it, or otherwise it would be incompatible with your pmbootstrap version. But you can always manually update the pmaports.git directory, and it is recommended to do so before you start or continue with making changes to the repository.
 
 ==== Make sure that you are on master ====
-If you never ran any git commands in this directory before, you will still be on the master branch. Otherwise, run this command to check the branch name (there is also <code>git branch</code>, but we do have a lot of branches, so the one below is probably easier).
+If you never ran any git commands in this directory before, you will still be on the master branch. Otherwise, run this command to check the branch name (there is also <code>git branch</code>, but we do have a lot of branches, so the one below is probably easier). Switch back to master if necessary with <code>git checkout master</code>.
 
 <syntaxhighlight lang="shell-session">
 $ git rev-parse --abbrev-ref HEAD
