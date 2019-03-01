@@ -71,8 +71,10 @@ $ cd devel-env
 $ ./clean.sh
 </syntaxhighlight>
 
-== Database ==
+=== Changing the pmbootstrap branch ===
+Pass the branch as argument to <code>./install_pmbootstrap.sh</code> [https://gitlab.com/postmarketOS/build.postmarketos.org/blob/cc5c0ff701e49063cfb9c2e420ddff49c1b30c8f/src/Helper/SrHtApi.php#L82 here], e.g. <code>./install_pmbootstrap.sh mycoolbranch</code>.
 
+== Database ==
 === Status values for the "commits" table ===
 * INDEXING not running yet
 * BUILDING currently building on sr.ht
