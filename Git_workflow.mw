@@ -125,7 +125,7 @@ To push the current branch and set the remote as upstream, use
 So we will tell git the remote we would like to use.
 
 <syntaxhighlight lang="shell-session">
-$ git push --set-upstream USERNAME
+$ git push --set-upstream USERNAME mynewbranch
 Enter passphrase for key '/home/user/.ssh/id_rsa': 
 Counting objects: 59, done.
 Delta compression using up to 2 threads.
