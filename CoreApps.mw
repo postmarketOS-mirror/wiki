@@ -2,7 +2,6 @@
 | name = CoreApps
 | image = File:coreapps1.jpg
 | imagecaption = CoreApps running on LG Nexus 5x (bullhead)
-| graphics = KWin on Wayland or Xorg
 | toolkit = Qt 5
 }}
 
