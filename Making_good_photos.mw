@@ -14,6 +14,8 @@ Here are a few tips on how to make photos with devices running postmarketOS look
 * Finally focus your device and take a non-blurry photo (or multiple ones just to make sure).
 
 === Post processing ===
+The example photo on the right had the following post processing applied. Of course this is optional, especially if you already have a good photo without any post processing.
+
 * With GIMP:
 ** Cut out the device
 ** Cut out the screen and put it on an extra layer
