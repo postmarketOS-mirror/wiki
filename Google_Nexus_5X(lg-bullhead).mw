@@ -101,11 +101,12 @@ https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
 Downstream DTS:
 https://github.com/franciscofranco/bullhead/blob/oreo-mr1/arch/arm/boot/dts/qcom/msm8992.dtsi
 
-== Some Photos ==
+== Photos ==
 
 {| style="float:left"
 |[[File:Lg-bullhead_mate.jpg|200x200px]]
 |[[File:Lg-bullhead_plasma.jpg|200x200px]]
+|[[File:coreapps2.jpg|200x200px]]
 |}
 
 <div style="clear:left"></div>
