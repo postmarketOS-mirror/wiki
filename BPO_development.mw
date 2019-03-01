@@ -27,8 +27,8 @@ $ cp .env.dist .env
 </syntaxhighlight>
 
 Open <code>.env</code> in a text editor and change the following:
-* SRHT_TOKEN: generate a personal access token [https://meta.sr.ht/oauth/register here]
 * SRHT_SECRET_ID: the secret for your build key, as generated above
+* SRHT_TOKEN: [https://meta.sr.ht/oauth/register generate a personal access token]
 
 === Run the development environment ===
 Build the custom bpo docker container and run it, together with MariaDB and phpMyAdmin docker containers:
