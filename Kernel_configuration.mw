@@ -210,6 +210,23 @@ Device Drivers -->
 
 Please disable it, so we have one less source of failure.
 
+=== CONFIG_KINETO_GAN ===
+
+'''About'''
+
+''Related to a proprietary "T-Mobile's WiFi-Calling" feature. It should not affect normal calls, so it should be safe to disable it.''
+
+'''Location in menu'''
+
+<pre class="shell">
+Device Drivers -->
+  Network device support -->
+    Kineto GAN virtual network interface
+</pre>
+
+'''pmOS specific'''
+
+Causes <code>sudo</code>, <code>ip</code> and other commands to hang ({{issue|1513|pmaports}}). Please disable it.
 
 == Optional ==
 
