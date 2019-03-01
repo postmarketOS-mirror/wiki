@@ -1,0 +1,154 @@
+This guide explains how to update your local copy of [https://gitlab.com/postmarketOS/pmaports/ pmaports.git], and how to contribute back changes (e.g. after creating a new device port). It is suitable for people who have not used git before.
+
+== The basics ==
+=== pmaports dir ===
+During <code>pmbootstrap init</code>, the whole <code>pmaports.git</code> repository was cloned to your computer. If you have chosen the default work dir (see <code>pmbootstrap config work</code>), then it is located here:
+
+<pre>
+~/.local/var/pmbootstrap/cache_git/pmaports
+</pre>
+
+All commands below need to be executed in your pmaports dir.
+
+It's a good idea to make accessing this directory easy with a short command, so consider setting up a shell alias. For bash this can be done by adding <code>alias pma="cd ~/.local/var/pmbootstrap/cache_git/pmaports"</code> to <code>~/.bashrc</code>.
+
+=== Updating pmaports ===
+Since we are dealing with a git repository, pmbootstrap leaves the directory alone after the initial clone. It will not automatically update it. The only thing it will do is tell you when your pmaports.git dir is so outdated that you absolutely have to update it, or otherwise it would be incompatible with your pmbootstrap version. But you can always manually update the pmaports.git directory, and it is recommended to do so before you start or continue with making changes to the repository.
+
+==== Make sure that you are on master ====
+If you never ran any git commands in this directory before, you will still be on the master branch. Otherwise, run this command to check the branch name (there is also <code>git branch</code>, but we do have a lot of branches, so the one below is probably easier).
+
+<syntaxhighlight lang="shell-session">
+$ git rev-parse --abbrev-ref HEAD
+master
+</syntaxhighlight>
+
+(You may want to extend your shell to automatically display the branch name when you are inside a git directory, e.g. by using <code>grml-zsh-config</code> and ZSH.)
+
+==== Put your changes into a new branch ====
+Check if you made any changes to your pmaports dir. Changes could come from starting a new device port, for example.
+
+When you have made '''no changes, you can move on to the next step''' ("Running 'git pull'"):
+<syntaxhighlight lang="shell-session">
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+</syntaxhighlight>
+
+When you have made changes, <code>git status</code> will list the files that were changed:
+<syntaxhighlight lang="shell-session">
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   device/device-lg-mako/APKBUILD
+
+no changes added to commit (use "git add" and/or "git commit -a")
+</syntaxhighlight>
+
+Create a new branch, commit the changes and go back to the master branch:
+<syntaxhighlight lang="shell-session">
+$ git checkout -b mynewbranch
+M       device/device-lg-mako/APKBUILD
+Switched to a new branch 'mynewbranch'
+$ git add -A
+$ git commit -m "describe your change here"
+[mynewbranch c9c729a5] describe your change here
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+</syntaxhighlight>
+
+=== Running 'git pull' ===
+Let's fetch the changes from the official postmarketOS repository and apply them to the current branch. Git will even show a nice overview of the files that have been changed, and how many lines have changed.
+
+<syntaxhighlight lang="shell-session">
+$ git pull
+Updating e8a7926e..8909e932
+Fast-forward
+ coreapps/coregarage/APKBUILD         | 24 ++++++++++++++++++++++++
+...
+ 26 files changed, 307 insertions(+), 181 deletions(-)
+ create mode 100644 coreapps/coregarage/APKBUILD
+...
+</syntaxhighlight>
+
+If you did not have any local changes, then you are done here.
+
+=== Updating your branch(es) ===
+
+Put all new commits from master into your own branch, and then apply the changes you made on top of that:
+
+<syntaxhighlight lang="shell-session">
+$ git checkout mynewbranch
+Switched to branch 'mynewbranch'
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: description here
+</syntaxhighlight>
+
+If there are any conflicts, pay attention to the git output and run <code>git diff</code> to see where the conflicts are. Edit the files in a text editor, run <code>git add -A</code> and then continue the rebase.
+
+== Creating a merge request ==
+=== Preparation ===
+These steps only need to be done the first time.
+==== Forking the repository ====
+We are currently using GitLab for development. Login to the website, and [https://gitlab.com/postmarketOS/pmaports/forks/new click here to fork pmaports.git] to your own user's namespace.
+
+If you have just registered at GitLab, [https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html create a SSH key and store it in the settings].
+
+==== Add your fork as remote ====
+Run this, but replace USERNAME twice with your GitLab username.
+
+<syntaxhighlight lang="shell-session">
+$ git remote add USERNAME git@gitlab.com:USERNAME/pmaports.git
+</syntaxhighlight>
+
+=== Push changes to your fork ===
+The first time you try to push your changes (upload them), git won't know where you want to put them:
+
+<syntaxhighlight lang="shell-session">
+$ git push
+fatal: The current branch mynewbranch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin mynewbranch
+</syntaxhighlight>
+
+So we will tell git the remote we would like to use.
+
+<syntaxhighlight lang="shell-session">
+$ git push --set-upstream USERNAME
+Enter passphrase for key '/home/user/.ssh/id_rsa': 
+Counting objects: 59, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (59/59), 13.48 KiB | 1.68 MiB/s, done.
+Total 59 (delta 29), reused 0 (delta 0)
+remote: 
+remote: To create a merge request for mynewbranch, visit:
+remote:   https://gitlab.com/USERNAME/pmaports/merge_requests/new?merge_request%5Bsource_branch%5D=mynewbranch
+remote: 
+To gitlab.com:USERNAME/pmaports.git
+ * [new branch]        mynewbranch -> mynewbranch
+Branch 'mynewbranch' set up to track remote branch 'mynewbranch' from 'USERNAME'.
+</syntaxhighlight>
+
+When you want to push more changes, you can simply use <code>git push</code> for this branch.
+
+There is also <code>git push --force</code>, which can be used to override commits without creating new ones. You can use it after rebasing your branch on master (as explained above).
+
+<code>git rebase -i master</code> is a powerful command to edit previous commits. Simply follow the instructions in the editor that opens.
+
+=== Create the MR ===
+Simply click the link shown in the git output above, to create the new merge request. Pay attention to the text shown there, following it closely will make sure that your merge request gets merged to master as fast as possible.
+
+
+[[Category:Guide]]
