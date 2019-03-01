@@ -14,7 +14,7 @@ If you're looking for an option and you just can't find it, then it might not sh
 
 = Useful kernel configuration options =
 
-== Required ==
+== Required to be enabled/disabled ==
 
 Enable or disable the following options to get postmarketOS working. Use <code>pmbootstrap kconfig check</code> to check which options need to be modified.
 
