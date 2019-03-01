@@ -18,7 +18,7 @@ There are some core features that makes them great to use on mobile devices. Som
 * Apps use the precious vertical screen real estate properly. So in small screens apps works great.
 
 
-We have 19 CoreApps and they all listed here with there descriptions.
+There are 19 CoreApps and they all listed here with there descriptions.
 * CoreActions - A side bar for showing widgets
 * CorePins - A bookmarking app.
 * CoreArchiver - Archiver to create and extract archives.
@@ -42,6 +42,9 @@ We have 19 CoreApps and they all listed here with there descriptions.
 Two apps are in development.
 * CoreBox - A touch-optimized panel
 * CoreKeyboard - A virtual keyboard.
+
+== Installation ==
+All the apps except 4 are in the pmos repo. So just install them by 'sudo apk add corefm'.
 
 == Usages ==
 * This apps can be used with any Desktop Environment. But recommended with i3wm and matchbox.
