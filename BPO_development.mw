@@ -1,3 +1,49 @@
-Various resources on [https://gitlab.com/postmarketOS/build.postmarketos.org builds.postmarketos.org] (BPO) development, which will be our [https://postmarketos.org/blog/2019/01/16/600-days-of-postmarketOS/#new-srht-based-binary-repository future binary repository infrastructure]. This article is only relevant for people who wish to contribute to that effort, it has nothing to do with running postmarketOS or creating packages for it.
+Various resources on [https://gitlab.com/postmarketOS/build.postmarketos.org builds.postmarketos.org] (bpo) development, which will be our [https://postmarketos.org/blog/2019/01/16/600-days-of-postmarketOS/#new-srht-based-binary-repository future binary repository infrastructure]. This article is only relevant for people who wish to contribute to that effort, it has nothing to do with running postmarketOS or creating packages for it.
+
+== Local development environemnt ==
+=== Requirements ===
+* Register at [https://builds.sr.ht/ builds.sr.ht]
+* Install docker and docker-compose
+
+=== Setup ===
+Build the custom bpo docker container and run it, together with MariaDB and phpMyAdmin docker containers:
+<syntaxhighlight lang="shell-session">
+$ git clone https://gitlab.com/postmarketOS/build.postmarketos.org.git
+$ cd build.postmarketos.org/devel-env
+$ cd devel-env
+$ ./run.sh
+</syntaxhighlight>
+
+You can access bpo at http://localhost and phpMyAdmin at http://localhost:8080 (login with: <code>root</code>, <code>devsetup</code>).
+
+=== Submitting a job ===
+Open phpMyAdmin and open bpo / commit. Create a new entry:
+
+<syntaxhighlight lang="sql">
+INSERT INTO `commit` (`id`, `ref`, `branch`, `message`, `status`)
+VALUES ('1', 'e8a7926eb6004ba57ae8b9a7250ce563188dd808', 'master', 'hello world', 'INDEXING');
+</syntaxhighlight>
+
+Make sure that bpo is still running, and execute:
+<syntaxhighlight lang="shell-session">
+$ cd devel-env
+$ ./api-task-submit.sh > /tmp/out.html && head /tmp/out.html
+</syntaxhighlight>
+
+When something goes wrong, this will output a full html page. In that case, the error is in the <title> tag, and you can see the whole thing with a stack trace and links to browse the code by opening the HTML page.
+
+<syntaxhighlight lang="shell-session">
+$ firefox /tmp/out.html
+</syntaxhighlight>
+
+When it went right, a new job should appear on top of your personal [https://builds.sr.ht/ builds.sr.ht] start page.
+
+=== Clearing the database ===
+<syntaxhighlight lang="shell-session">
+$ cd devel-env
+$ ./clean.sh
+</syntaxhighlight>
+
+
 
 [[Category:Guide]]
