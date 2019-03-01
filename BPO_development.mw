@@ -1,6 +1,6 @@
 Various resources on [https://gitlab.com/postmarketOS/build.postmarketos.org builds.postmarketos.org] (bpo) development, which will be our [https://postmarketos.org/blog/2019/01/16/600-days-of-postmarketOS/#new-srht-based-binary-repository future binary repository infrastructure]. This article is only relevant for people who wish to contribute to that effort, it has nothing to do with running postmarketOS or creating packages for it.
 
-== Local development environemnt ==
+== Local development environment ==
 === Requirements ===
 * Register at [https://builds.sr.ht/ builds.sr.ht]
 * Install docker and docker-compose
