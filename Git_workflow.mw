@@ -66,7 +66,7 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 </syntaxhighlight>
 
-=== Running 'git pull' ===
+==== Running 'git pull' ====
 Let's fetch the changes from the official postmarketOS repository and apply them to the current branch. Git will even show a nice overview of the files that have been changed, and how many lines have changed.
 
 <syntaxhighlight lang="shell-session">
@@ -82,7 +82,7 @@ Fast-forward
 
 If you did not have any local changes, then you are done here.
 
-=== Updating your branch(es) ===
+==== Updating your branch(es) ====
 
 Put all new commits from master into your own branch, and then apply the changes you made on top of that:
 
