@@ -17,7 +17,7 @@ Open [https://builds.sr.ht/secrets secrets] and fill out the "add new secret" fo
 * Path:  ~/.secrets/build@postmarketos.org.priv
 * Mode: 644
 
-Then click "Add submit". Note down the key it generated on the right (the string that looks like 46f739e5-4538-45dd-a79f-bf173b7a2ed9), you will need it in the next step.
+Then click "Add secret". Note down the key it generated on the right (the string that looks like 46f739e5-4538-45dd-a79f-bf173b7a2ed9), you will need it in the next step.
 
 === Clone and configure ===
 <syntaxhighlight lang="shell-session">
