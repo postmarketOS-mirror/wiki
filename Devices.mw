@@ -43,7 +43,7 @@ tables=Devices
   | After connecting the device with USB to your PC, you can [[Inspecting_the_initramfs|connect to it via telnet (initramfs)]] or [[USB_Network|SSH (booted system)]].
 |-
   | Flashing
-  | It is possible to flash the device with `pmbootstrap flasher`.
+  | It is possible to flash the device with <code>pmbootstrap flasher</code>.
 |-
   | Touch
   | Touching the screen is recognized properly.
