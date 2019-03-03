@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = LG
 | name = G3 (Europe)
-| codename = lg-d885
+| codename = lg-d855
 | image = File:LG G3 weston demo.jpg
 | imagecaption = LG G3 running Weston demos
 | releaseyear = 2014
@@ -21,7 +21,7 @@
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery =
+| status_battery = P
 | status_3d = 
 | status_accel = 
 | status_audio = 
