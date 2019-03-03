@@ -6,7 +6,7 @@ Checklist for creating a <code>pmbootstrap</code> release:
 ** commit with the message "Prepare x.x.x release"
 * [https://gitlab.com/postmarketOS/pmbootstrap/tags/new tag a release in gitlab]
 ** fill out "release notes" (we can use markdown there), leave "message" empty
-** look at the [https://gitlab.com/postmarketOS/pmbootstrap/commits/master previous commits] to write a good description of what changed
+** look at the [https://gitlab.com/postmarketOS/pmbootstrap/commits/master previous commits] and copy paste the commit message titles, including the MR ID, like done in the [https://gitlab.com/postmarketOS/pmbootstrap/tags previous tags]). Sort by features, fixes and other.
 * update the pypi release (see the script in {{issue|1679}})
 * update the pmbootstrap aport in pmaports (change the pkgrel, update the checksum, build)
 * if future changes in pmaports will require the new pmbootstrap version, increase it in pmaports.git's pmaports.cfg file
