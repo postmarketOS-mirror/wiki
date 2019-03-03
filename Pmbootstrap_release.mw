@@ -10,3 +10,5 @@ Checklist for creating a <code>pmbootstrap</code> release:
 * update the pypi release (see the script in {{issue|1679}})
 * update the pmbootstrap aport in pmaports (change the pkgrel, update the checksum, build)
 * if future changes in pmaports will require the new pmbootstrap version, increase it in pmaports.git's pmaports.cfg file
+
+[[Category:Guide]]
