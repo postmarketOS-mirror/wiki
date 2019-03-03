@@ -71,7 +71,7 @@ This happens because the bootloader on the d855 variant of the LG G3 can not be 
 To do this, you need to first export your boot.img-lg-d855:
 
 <pre>mkdir -p /tmp/pmOS_export
-pmbootstrap flasher export /tmp/pmOS_export</pre>
+pmbootstrap export /tmp/pmOS_export</pre>
 Then we need a tool called [https://github.com/CyboLabs/Open_Bump Open_Bump], which can sign boot images for our device. (Requires Python 2. Also works for older LG devices?):
 
 <pre>git clone https://github.com/CyboLabs/Open_Bump
