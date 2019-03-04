@@ -65,7 +65,8 @@ Available platform plugins are: wayland-org.kde.kwin.qpa, eglfs, linuxfb, minima
 * Hold home + volume down when booting the device
 
 == Installation ==
-* pmbootstrap flasher works as normal
+* pmbootstrap flasher flash_kernel and
+* pmbootstrap flasher flash_rootfs is working flawlessly
 
 == See also ==
 * [[Hybris]] Description of how to run libhybris in postmarketOS
