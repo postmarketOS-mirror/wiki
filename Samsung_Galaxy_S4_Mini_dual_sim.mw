@@ -41,8 +41,9 @@
 * rogier.oudshoorn 
 
 == Current main issues ==
-* Device doesn't automatically give itself mac address, ip, etc - you need to [[USB_Network | configure the network manually ]]
-* Device reboots immediately after flasher usage - not a postmarketOS issue, it is samsung's fault
+* Device doesn't automatically give itself mac address, ip, etc - you need to [[USB_Network | configure the network manually ]] (have to set mac address of usb0 inside initfs hook)
+* Device reboots immediately after flasher usage - not a postmarketOS issue, it is samsung's fault, affects all samsungs' phones
+(would have to edit postmarketOS's flasher to use heimdall no reboot and heimdall resume features)
 * Charging seems to work, but there's no indication of it actually happening
 
 == Current work ==
