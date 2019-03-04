@@ -68,5 +68,108 @@ Available platform plugins are: wayland-org.kde.kwin.qpa, eglfs, linuxfb, minima
 * pmbootstrap flasher flash_kernel and
 * pmbootstrap flasher flash_rootfs is working flawlessly
 
+== Feature matrix ==
+{| class="wikitable"
+! Feature
+! Mainline kernel
+! Libhybris
+! Android's kernel
+|-
+| Booting
+| Broken
+| 
+| Working
+|-
+| USB Network
+| 
+| 
+| Working
+|-
+| Flashing
+| 
+| 
+| Working
+|-
+| Touchscreen
+| 
+| 
+| Working
+|-
+| Display
+| 
+| 
+| Working
+|-
+| WiFi
+| 
+| 
+| 
+|-
+| XWayland
+| 
+| 
+| Working
+|-
+| FDE
+| 
+| 
+| 
+|-
+| Battery
+| 
+| 
+| Working
+|-
+| Hardware Acceleration
+| 
+| 
+| 
+|-
+| Accelerometer
+| 
+| 
+| 
+|-
+| Audio
+| 
+| 
+| 
+|-
+| Bluetooth
+| 
+| 
+| 
+|-
+| Camera
+| 
+| 
+| 
+|-
+| GPS
+| 
+| 
+| 
+|-
+| Mobile data
+| 
+| 
+| 
+|-
+| SMS
+| 
+| 
+| 
+|-
+| Calls
+| 
+| 
+| 
+|-
+| USB OTG
+| 
+| 
+| 
+|}
+
 == See also ==
 * [[Hybris]] Description of how to run libhybris in postmarketOS
