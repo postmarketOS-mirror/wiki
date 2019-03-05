@@ -38,7 +38,8 @@ arch/arm/crypto/aesbs-core.S:2100: Error: thumb conditional instruction should b
 </pre>
 
 You can fix it by disabling <code>CONFIG_CRYPTO_AES_ARM_BS</code>.
-On some other devices, like Huawei P7, you will also need to disable all flags in the format <code>CONFIG_CRYPTO_(algorithm)_ARM</code> (ARM optimizations).
+
+On some other devices, like Huawei P7, you might also need to disable all CRYPTO flags containing ARM (<code>CONFIG_CRYPTO_(algorithm name)_ARM</code>) (ARM NEON optimizations).
 
 This was first noticed in {{MR|144|pmaports}}.
 
