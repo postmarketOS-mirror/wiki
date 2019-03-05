@@ -276,6 +276,9 @@ We can't promise anything, but you shouldn't need to do this more than 2 times o
 ===== Using GCC6 =====
 If you can't make your kernel compile or boot with the latest GCC from Alpine, and you are pretty sure that the issues are specific to the GCC version, you can also [[Vendor_kernel_specific_package#Use_GCC_6|use GCC6 instead]].
 
+===== Using GCC4 =====
+As GCC4 was recently introduced in Postmarket OS repos, you can follow the procedure for GCC6 above and replace all gcc6 occurrences with gcc4 and add <nowiki>gcc4 (armv7/armhf/...)-gcc4</nowiki> to your list of dependencies.
+
 === We are happy to help you! ===
 If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://github.com/postmarketOS/pmbootstrap/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
 
