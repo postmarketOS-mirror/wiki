@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name =  Galaxy Tab 3 8.0
-| codename = lt01wifi
+| codename = samsung-lt01wifi
 | image = File:samsung-lt01wifi.jpg
 | imagecaption = lt01wifi
 | releaseyear = 2013
@@ -29,6 +29,9 @@
 | status_bluetooth = N
 | status_camera = 
 | status_gps = 
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
 | booting = Y
 }}
 
