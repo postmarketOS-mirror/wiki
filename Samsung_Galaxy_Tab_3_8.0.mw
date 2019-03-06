@@ -33,6 +33,7 @@
 | status_sms = -
 | status_calls = -
 | booting = Y
+| status_otg = N
 }}
 
 == Contributors ==
