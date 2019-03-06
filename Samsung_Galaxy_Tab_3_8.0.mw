@@ -36,10 +36,10 @@
 | status_otg = N
 }}
 
-== Contributors ==
+=== Contributors ===
 knuxfanwin8
 
-== Maintainer(s) ==
+=== Maintainer(s) ===
 knuxfanwin8
 
 == How to enter flash mode ==
@@ -57,6 +57,17 @@ So far only flashable ZIP installation has been tested. ADB Sideload via TWRP di
 3. If mounted, unmount /system.
 
 4. Flash the ZIP as usual.
+
+== Links ==
+All repositories are cloned from gr8nole's configs.
+=== Device (common): ===
+https://github.com/knuxdroid/android_device_samsung_lt01-common
+=== Device (lt01wifi): ===
+https://github.com/knuxdroid/android_device_samsung_lt01wifi
+=== Kernel: ===
+https://github.com/knuxdroid/android_kernel_samsung_smdk4x12
+=== Proprietary: ===
+https://github.com/knuxdroid/proprietary_vendor_samsung
 
 == Notes/To Do ==
 Required workaround: Add xz to makedepend to avoid lzma errors.
