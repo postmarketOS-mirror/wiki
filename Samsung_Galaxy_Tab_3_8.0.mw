@@ -1,0 +1,60 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Tab 3 8.0
+| codename = lt01wifi
+| image = File:samsung-lt01wifi.jpg
+| imagecaption = lt01wifi
+| releaseyear = 2013
+| originalsoftware = Android 4.2.2 (Jelly Bean)
+| chipset = Exynos 4212 Dual
+| cpu = Dual-core 1.5 GHz Cortex-A9
+| gpu = Mali-400MP4
+| storage = 16GB
+| display = 800x1280
+| memory = 1.5GB
+| architecture = armhf
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = Y
+| status_screen = Y
+| status_wifi = N
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = P
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = N
+| status_camera = 
+| status_gps = 
+| booting = Y
+}}
+
+== Contributors ==
+knuxfanwin8
+
+== Maintainer(s) ==
+knuxfanwin8
+
+== How to enter flash mode ==
+Download mode: VolDown while powering on
+
+Recovery mode: VolUp while powering on
+
+== Installation ==
+So far only flashable ZIP installation has been tested. ADB Sideload via TWRP did not want to cooperate. 
+
+1. Install TWRP.
+
+2. Download zip file (todo: upload ZIP)
+
+3. If mounted, unmount /system.
+
+4. Flash the ZIP as usual.
+
+== Notes ==
+Only lt01wifi/T310 has been tested so far. I might make builds for T311 and T315 once I get T310 working.
+
+The device indicates when it's charging, but the actual batery percentage readings don't work.
