@@ -78,7 +78,7 @@ The device indicates when it's charging, but the actual batery percentage readin
 
 USB OTG doesn't work (at least with my keyboard).
 
-Hardware buttons don't work yet.
+<strike>Hardware buttons don't work yet.</strike> Hardware buttons do work, they just require triggerhappy. Back and menu buttons are in /dev/input/event1, home, volume and power buttons are in /dev/input/event0.
 
 WiFi doesn't work (in fact, WiFi doesn't seem to appear in `ip a` at all!)
 
