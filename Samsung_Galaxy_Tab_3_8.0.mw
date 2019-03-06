@@ -58,6 +58,8 @@ So far only flashable ZIP installation has been tested. ADB Sideload via TWRP di
 4. Flash the ZIP as usual.
 
 == Notes/To Do ==
+Required workaround: Add xz to makedepend to avoid lzma errors.
+
 Only lt01wifi/T310 has been tested so far. I might make builds for T311 and T315 once I get T310 working.
 
 The device indicates when it's charging, but the actual batery percentage readings don't work.
@@ -69,3 +71,5 @@ Hardware buttons don't work yet.
 WiFi doesn't work (in fact, WiFi doesn't seem to appear in `ip a` at all!)
 
 Bluetooth doesn't work.
+
+For more information about the build process, see https://mastodon.social/@knuxfanwin8/101699225884881827
