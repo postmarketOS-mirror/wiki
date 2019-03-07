@@ -102,6 +102,15 @@ The ALSA UCM config files were previously generated using the <code>xml2ucm</cod
 
 As of <code>pmaports!254</code> the ALSA UCM config files were created based the wm8994 datasheet and the downstream driver coding of the mixer.  
 
+
+The audio inputs are muted by default. Unmute and set the volume with <code>alsamixer</code> or set the mixer controls manually with <code>amixer</code>. The right channel (<code>IN1R</code>) is the headset microphone. The left channel (<code>IN1L</code>) is the built-in microphone.  
+
+Unmuting the headset microphone:
+<source lang="shell">
+$ amixer cset name='IN1R Switch' on
+$ amixer cset name='IN1R Volume' 11
+</source>
+
 == Wifi ==
 The wifi chip in this device is the Broadcom BCM4330 B1 revision. There is a B2 revision which is much more common. The only distinguishing factor is the firmware. Only the B1 firmware will work on this device. The most common BCM4330 firmware found from various sources (such as <code>linux-firmware</code>) is for the B2 revision.
 
