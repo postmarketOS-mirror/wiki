@@ -15,7 +15,7 @@
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = 
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = N
@@ -48,16 +48,7 @@ Download mode: VolDown while powering on
 Recovery mode: VolUp while powering on
 
 == Installation ==
-So far only flashable ZIP installation has been tested. ADB Sideload via TWRP did not want to cooperate. 
-
-1. Install TWRP.
-
-2. Download zip file (todo: upload ZIP)
-
-3. If mounted, unmount /system.
-
-4. Flash the ZIP as usual.
-
+Flash the system with pmbootstrap flasher flash_rootfs.
 == Links ==
 All repositories are cloned from gr8nole's configs.
 === Device (common): ===
