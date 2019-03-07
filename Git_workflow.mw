@@ -2,11 +2,11 @@ This guide explains how to update your local copy of [https://gitlab.com/postmar
 
 == The basics ==
 === pmaports dir ===
-During <code>pmbootstrap init</code>, the whole <code>pmaports.git</code> repository was cloned to your computer. If you have chosen the default work dir (see <code>pmbootstrap config work</code>), then it is located here:
-
-<pre>
+During <code>pmbootstrap init</code>, the whole <code>pmaports.git</code> repository was cloned to your computer. You can use <code>pmbootstrap config aports</code> to see the path, and if you chose the default work path, you will get:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap config aports
 ~/.local/var/pmbootstrap/cache_git/pmaports
-</pre>
+</syntaxhighlight>
 
 All commands below need to be executed in your pmaports dir.
 
