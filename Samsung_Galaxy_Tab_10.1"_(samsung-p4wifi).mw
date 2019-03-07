@@ -25,7 +25,7 @@
 | status_battery = Y
 | status_3d = 
 | status_accel = 
-| status_audio = P
+| status_audio = Y
 | status_bluetooth = Y
 | status_camera =
 | status_gps = 
@@ -95,10 +95,12 @@ VO: [vdpau] 1280x720 vdpau[yuv420p]
 
 == Audio ==
 
-Headphone and speaker output are working on the mainline wm8994 driver. Microphone inputs are not working.
+Audio output through headphone and speakers are working. Audio input through the built-in microphone and headset microphone are working.  
 
-The ALSA UCM config files were generated using the <code>xml2ucm</code> tool. The <code>mixer_paths.xml</code> and <code>p4wifi.config.xml</code> can be found in this [https://gist.github.com/Decatf/c37dda86a96f953f8b77eb9502d6681b github gist].
-<source lang="shell">$ stack exec -- xml2ucm -m mixer_paths.xml -c p4wifi-config.xml -o examples</source>
+The ALSA UCM config files were previously generated using the <code>xml2ucm</code> tool. The <code>mixer_paths.xml</code> and <code>p4wifi.config.xml</code> can be found in this [https://gist.github.com/Decatf/c37dda86a96f953f8b77eb9502d6681b github gist].
+<source lang="shell">$ stack exec -- xml2ucm -m mixer_paths.xml -c p4wifi-config.xml -o examples</source>  
+
+As of <code>pmaports!254</code> the ALSA UCM config files were created based the wm8994 datasheet and the downstream driver coding of the mixer.  
 
 == Wifi ==
 The wifi chip in this device is the Broadcom BCM4330 B1 revision. There is a B2 revision which is much more common. The only distinguishing factor is the firmware. Only the B1 firmware will work on this device. The most common BCM4330 firmware found from various sources (such as <code>linux-firmware</code>) is for the B2 revision.
