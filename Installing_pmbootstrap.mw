@@ -11,6 +11,9 @@ Alpine Linux users also need to install <code>coreutils</code> and <code>procps<
 $ apk add python3 coreutils procps
 </syntaxhighlight>
 
+== pmaports.git ==
+pmbootstrap will automatically clone the [https://gitlab.com/postmarketOS/pmaports/ pmaports.git] repository during <code>pmbootstrap init</code> to the work dir of your choice, and afterwards you can look up the full path with <code>pmbootstrap config aports</code>. See [[git workflow]] for more information.
+
 == Installing automatically ==
 === Latest release with pip ===
 pmbootstrap is up on [https://pypi.org/project/pmbootstrap/ pypi] now, so it can be installed with:
