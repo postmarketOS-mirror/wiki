@@ -164,7 +164,7 @@ Controller XX:XX:XX:XX:XX:XX (public)
 Play an audio file through a Bluetooth headset:
 <source lang="shell">$ paplay audio.wav</source>
 
-=== Accelerometer ===
+== Accelerometer ==
 
 The <code>kxt9f</code> accelerometer driver works pending device tree patches being merged into upstream. There requires a user space daemon such as <code>iio-sensor-proxy</code> to read the sensor data.  
 
