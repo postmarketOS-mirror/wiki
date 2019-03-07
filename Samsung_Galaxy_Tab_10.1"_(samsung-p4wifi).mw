@@ -168,6 +168,10 @@ Play an audio file through a Bluetooth headset:
 
 The <code>kxt9f</code> accelerometer driver works pending device tree patches being merged into upstream. There requires a user space daemon such as <code>iio-sensor-proxy</code> to read the sensor data.  
 
+== USB OTG ==
+
+USB OTG mode is not implemented in the mainline USB driver.
+
 
 == Other Information ==
 ==== Hardware Information & Mainline Driver Status ====
