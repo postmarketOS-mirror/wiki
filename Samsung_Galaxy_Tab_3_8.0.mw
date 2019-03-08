@@ -27,7 +27,7 @@
 | status_accel = 
 | status_audio = N
 | status_bluetooth = N
-| status_camera = 
+| status_camera = N
 | status_gps = 
 | status_mobiledata = -
 | status_sms = -
