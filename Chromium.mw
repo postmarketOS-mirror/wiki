@@ -6,7 +6,7 @@ Install chromium package from alpine.
 === Configure startup (scale + useragent) ===
 Edit  '''/usr/share/applications/chromium.desktop''' and set the following line:
 
-<source lang="C">Exec= GDK_SCALE=3 chromium-browser %U --start-maximized  --user-agent="Mozilla/5.0 (Linux; Android 4.4.2; Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Mobile Safari/537.36"</source>
+<source lang="C">Exec= chromium-browser %U --start-maximized  --user-agent="Mozilla/5.0 (Linux; Android 4.4.2; Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Mobile Safari/537.36"</source>
 
 You may adapt scale and useragent to your needs.
 
