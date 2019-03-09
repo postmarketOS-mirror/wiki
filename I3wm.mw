@@ -12,7 +12,7 @@ According to MartijnBraam, it's working quite well on the N900. It does not make
 == Installation ==
 Run <code>pmbootstrap init</code> and choose <code>i3wm</code> in the interface section.
 
-Currently this installs <code>lxdm</code> as display manager (a common display manager is planned, see {{github|656}}). When booting for the first time, you need to select i3 in the top left dropdown, where it allows you to choose the session.
+Currently this installs <code>lxdm</code> as display manager (a common display manager is planned, see [https://gitlab.com/postmarketOS/pmaports/issues/88 gitlab issue 88]). When booting for the first time, you need to select i3 in the top left dropdown, where it allows you to choose the session.
 
 == Ideas ==
 * How about a wallpaper for the N900 with i3wm, that is based on the postmarketOS wallpaper, but shows the keybindings on the desktop?
