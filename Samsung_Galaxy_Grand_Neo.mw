@@ -1,0 +1,54 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Samsung Galaxy Grand Neo
+| codename = samsung-baffinlite
+| image = File:samsung-baffinlite.jpg
+| imagecaption = Phone running weston.
+| releaseyear = 2014
+| originalsoftware = Android 4.2.2
+| chipset = Broadcom BCM23550
+| cpu = Quad-core 1.2 GHz Cortex-A7
+| gpu = Broadcom VideoCore IV
+| storage = 8/16GB
+| display = 480x800
+| memory = 1GB
+| architecture = armhf
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| booting = <!-- The device is booting at all *IMPORTANT* -->
+}}
+
+== Contributors ==
+* knuxfanwin8
+
+== Maintainer(s) ==
+* knuxfanwin8
+
+== How to enter flash mode ==
+Recovery: Power+VolUp
+Download/Odin: Power+VolDown
+
+== Installation ==
+
+
+== Notes ==
+Device not tested yet.
+
+== See also ==
