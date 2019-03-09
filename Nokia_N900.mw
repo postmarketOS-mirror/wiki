@@ -108,6 +108,13 @@ Now you can use NetworkManager's console UI to connect to your network. Please n
 $ nmtui
 </syntaxhighlight>
 
+==== WiFi settings do not work across reboots ====
+
+The MAC address of the N900 WiFi interface its being randomized at every boot, since the connection profile created with <code>nmtui</code> is bound to
+the MAC address, it won't work at the next boot.
+
+To solve this, after connecting you can use <code>nmtui</code> to edit the created profile, and remove the MAC address from the "Device" section
+
 ==== Without NetworkManager ====
 If NetworkManager should not work for you, make sure that it is not running and run the following commands to connect to an encrypted network manually:
 
