@@ -2,7 +2,7 @@ Some phones have a serial port accessible from the outside, this makes debugging
 
 == Nexus debug cable ==
 
-The nexus phones multiplexed the serial debug lines with the headphone audio lines. To switch it into serial mode you have to supply -3V to the mic port. The uart lines themselves are 1.8V. If you use a 3.3V usb-to-uart adapter the signal from the phone will probably work, for the TX side you have to add a resistor divider to lover the voltage for the phone. Here's the schematic for a nexus debug cable:
+The nexus phones multiplexed the serial debug lines with the headphone audio lines. To switch it into serial mode you have to supply -3V to the mic port. The UART lines themselves are 1.8V. If you use a 3.3V usb-to-uart adapter the signal from the phone will probably work, for the TX side you have to add a resistor divider to lower the voltage for the phone. Here's the schematic for a nexus debug cable:
 
 [[File:Nexus-debug-cable.png]]
 
@@ -20,6 +20,8 @@ It should work fine with:
 The Nexus 7 2012 (grouper) does not work with this setup and likely does not have any serial UART capabilities at all.
 
 Google open sourced their own [https://android.googlesource.com/device/google/debugcable/+/master debug cable design] in the AOSP repository.
+
+NT: You will have a better luck with FTDI based serial cable.
 
 == USB debug cable ==
 
@@ -110,7 +112,7 @@ See [https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-x
 
 The Suzy-Q debug cable isn't strictly a serial debug cable, it accesses the Closed Case Debugging system, it can access multiple busses on the device. This system was originally developed to debug chromebooks but has been used in the newer Pixel phones. Details for the Closed Case Debugging system can be found at https://chromium.googlesource.com/chromiumos/platform/ec/+/master/docs/case_closed_debugging.md
 
-[[File:suzyq-debug-cable.png]]
+[[File:suzyq-debug-cable.png|600x600px]]
 
 This cable should work with:
 
