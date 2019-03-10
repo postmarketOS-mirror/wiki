@@ -2,7 +2,7 @@
 | manufacturer = HTC
 | name = Desire HD
 | codename = htc-ace
-| image = File:HTC Desire HD.jpg
+| image = File:Pmos-ace.jpg
 | imagecaption = HTC Desire HD
 | releaseyear = 2011
 | originalsoftware = Android 2.2 on Linux 2.6.32
@@ -36,6 +36,7 @@
 == Contributors ==
 
 * Victor9
+* mpiatka
 
 
 == What works ==
@@ -44,6 +45,7 @@
 * Touchscreen
 * USB networking
 * vibrator
+* X11 (tested with xfce4)
 
 == Audio ==
 
