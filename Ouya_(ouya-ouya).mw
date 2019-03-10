@@ -37,6 +37,7 @@
 
 == Contributors ==
 * rendeko
+* ryang2678 (Decatf)
 * ollieparanoid
 
 == Maintainer(s) ==
@@ -90,9 +91,8 @@
 
 8. Reboot Ouya, then press the power button many times until it scrolls to '''Alternate Boot''', and then wait until postmarketOS appears.
 
-== Photos ==
-
 == Links ==
 * [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)]
 * [https://forum.xda-developers.com/showthread.php?t=2295645 CWM]
 * [https://www.s-config.com/cyanogen-mod-and-the-ouya/ CyanogenMod documentation blog]
+* {{MR|269|pmaports}} Add mainline based kernel for Ouya
