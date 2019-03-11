@@ -53,6 +53,20 @@
 ===Kernel===
 * Currently we avoid flashing directly to the device as  [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] We use a tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] that allows us to run the postmarketOS kernel through a kexec method. This implements an extra failsafe to prevent bricking and in theory allows dualbooting and kernel development.
 
+===eMMC===
+The eMMC storgate on mainline cannot run at 1.8V DDR mode even though it does on the downstream kernel. Attempting to run at this mode leads to data corruption. The device tree is configured to run the eMMC storage at 3.3V High Speed mode.
+
+Despite this, the eMMC storage benchmarks the same on mainline as on the downstream kernel.
+<source lang="shell">
+$ hdparm -t /dev/mmcblk1
+
+/dev/mmcblk1:
+Timing buffered disk reads:  127 MB in 3.02 seconds = 43021 kB/s
+</source>
+
+===Display Resolution===
+On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU is dependent on memory bandwidth. EMC scaling is not implemented in mainline. The Ouya bootloader sets the memory to 400 Mhz. Display resolutions work a bit better when the memory is set to 800Mhz but it is still glitchy.
+
 ===Other===
 * Splash screen doesn't appear
 * Hildon doesn't work?
