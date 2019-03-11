@@ -15,14 +15,13 @@ Still being packaged. All required individual packages are packaged but configur
 {{note|The work on Unity 8 hasn't yet been finished yet - no support is provided}}
 
 <source>
-pmbootstrap install --add unity8
+pmbootstrap install --add unity8,qt5-qtwayland,consolekit2
 </source>
 
 Once the device has launched, Unity 8 can be started with the following (as root):
 
 <source>
 # Run this (at least) once:
-apk add consolekit2 qt5-qtwayland
 mkdir -p $HOME/.config/ubuntu-system-settings
 touch $HOME/.config/ubuntu-system-settings/wizard-has-run
 # Don't forget to set a password (passwd)!
@@ -42,6 +41,7 @@ export MIR_SERVER_CURSOR=null
 export QT_QPA_PLATFORM=mirserver
 export G_MESSAGES_DEBUG=all
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export MIR_MESA_KMS_DISABLE_MODESET_PROBE=1 # probably only needed in QEMU
 
 ck-launch-session unity8
 </source>
