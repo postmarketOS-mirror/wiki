@@ -12,6 +12,7 @@
 | gpu = Mali 400
 | memory = 2 GB
 | architecture = aarch64
+| whet_dhry = 885.5
 | status_usbnet = 
 | status_flashing = -
 | status_touch =
