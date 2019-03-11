@@ -46,7 +46,7 @@
 == Development Notes ==
 
 ===Radio===
-* The Ouya uses a BCM4330 radio chip for wifi and bluetooth. Drivers for this chip is built into the linux mainline as of 3.3 and the kernel we use uses 3.1 with the driver support (presumably) backported. Otherwise, we can use the Android binaries (which would be non-free). 
+* The Ouya uses a BCM4330 radio chip for wifi and bluetooth. The downstream and mainline kernel use the same wifi firmware. The firmware shipped with the device is the only known firmware to work with the Ouya. The BCM4330 firmware in <code>linux-firmware</code> does not work.  
 
 * Two later releases (the completely white special edition and completely black 2nd generation) [https://www.s-config.com/cyanogen-mod-and-the-ouya/ allegedly use a BCM4334 chipset.] This needs to be implemented and tested at a future date.
 
