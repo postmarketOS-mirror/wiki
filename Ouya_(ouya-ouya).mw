@@ -65,7 +65,7 @@ Timing buffered disk reads:  127 MB in 3.02 seconds = 43021 kB/s
 </source>
 
 ===Display Resolution===
-On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU is dependent on memory bandwidth. EMC scaling is not implemented in mainline. The Ouya bootloader sets the memory to 400 Mhz. Display resolutions work a bit better when the memory is set to 800Mhz but it is still glitchy.
+On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU is dependent on memory bandwidth but EMC scaling is not implemented in mainline. The Ouya bootloader sets the memory to 400 Mhz. Higher display resolutions work a bit better when the memory is set to 800Mhz but it is still glitchy.
 
 ===Other===
 * Splash screen doesn't appear
