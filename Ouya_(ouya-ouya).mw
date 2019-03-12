@@ -13,6 +13,7 @@
 | display = 1x HDMI
 | memory = 1 GB
 | architecture = armv7
+| whet_dhry = 1450.2
 | status_usbnet = Y
 | status_flashing = P
 | status_touch = -
