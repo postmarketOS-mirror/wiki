@@ -30,3 +30,7 @@ Start weston with RDP backend:
 
 On host:
 * <code>xfreerdp /v:172.16.42.1 /sec:tls</code>
+
+== Guide ==
+
+Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
