@@ -7,7 +7,7 @@ Xfce4 is a GTK-based [[User-Interfaces|desktop environment]] aiming to be fast a
 
 == Status ==
 
-It works on most devices with a working display, and runs fine without hardware acceleration.
+It works on most devices with a working display, and runs fine without hardware acceleration. Uses packages from Alpine repo.
 
 == Installation ==
 * <code>pmbootstrap init</code>
@@ -15,32 +15,9 @@ It works on most devices with a working display, and runs fine without hardware 
 * <code>Extra packages: xf86-video-vesa mesa-egl</code>
 ** Add <code>matchbox-keyboard</code> to get an on-screen keyboard [https://postmarketos.org/static/img/2017-12/xfce4-i9505.jpg]
 
-== Calibrate the touchscreen ==
-If you rotate the screen, change/add a value in this file:
-<pre>
-sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
-</pre>
-<pre>
-ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
-# default			ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
-# Left - 90 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
-# 180 degree clockwise		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
-# Right - 270 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
-# reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
-</pre>
+== Guide ==
 
-== Display Power Management ==
-To control display from a terminal, first set DISPLAY environment variable:
-<source lang="shell">
-export DISPLAY=:0.0
-</source>
-
-The <B>xset</B> command can be used to turn display on and off, or set a display timeout value.
-<source lang="shell">
-xset dpms force off    # To turn off display
-xset dpms force on     # To turn the display back on
-xset q                 # Prints current display status info
-</source>
+Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
 
 ==Improving Touchscreen-Friendliness==
 
