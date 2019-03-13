@@ -15,6 +15,10 @@ Here are some interesting ideas that you can do with your device with postmarket
 * Use it as a mini penetration testing device. As postmarketOS is a pure linux os, you can run [https://en.wikipedia.org/wiki/Wireshark Wireshark] and other penetration testing software with it.
 * You can run full Desktop Environment, with [https://en.wikipedia.org/wiki/Inkscape Inkscape], [https://en.wikipedia.org/wiki/GIMP GIMP] and full desktop browser(not mobile version) with extension in your device, .
 
+=== VNC connection ===
+Using x11vnc, which is in the Alpine repos. You need a running X server (e.g. running XFCE), then you just run x11vnc on the device in a terminal/tty and connect to it. From there, you can manipulate the previously running X server.
+You might need to specify the X server if x11vnc does not detect it (e.g. by passing -display :0 to it or doing a export DISPLAY=:0 before running it, assuming the display is at :0)
+
 === Misc ===
 * The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
 * Browse the Linux source with links to all references [http://elixir.free-electrons.com here]
