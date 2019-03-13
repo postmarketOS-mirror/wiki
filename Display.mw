@@ -59,7 +59,6 @@ xset dpms force on     # To turn the display back on
 xset q                 # Prints current display status info
 </source>
 
-
 == Troubleshooting ==
 
 Check the logs with <code>logread -f | grep x11</code>
