@@ -37,6 +37,9 @@ If the file did not get installed for you, please double check if it is there an
 {{note|Plasma Mobile shell uses some Wayland protocols, so you can't run it on X11 in case you tried to do that.}}
 Please follow [https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/ these instructions] for debugging.
 
+== Guide ==
+Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
+
 == See also ==
 * [[Packaging-Plasma-Mobile|Packaging efforts]]
 
