@@ -28,7 +28,7 @@ Software rendering will be enabled automatically if no hardware acceleration is 
 === Log output ===
 You can read the log output with <code>logread -f</code>. Anything related to Plasma and KDE will have a <code>$username:plasma-mobile</code> prefix.
 
-==== Logging isn't verbose ====
+=== Logging isn't verbose ===
 One needs to enable debug logging for certain components in <code>~/.config/QtProject/qtlogging.ini</code>. Without that, you barely see any log output. We [https://github.com/postmarketOS/pmbootstrap/blob/917f03d5f9f015fa9fc0be8093d87b7f21d98d4a/aports/main/postmarketos-ui-plasma-mobile/APKBUILD#L27 ship such a qtlogging.ini file] in <code>postmarketos-ui-plasma-mobile</code> because Plasma Mobile is relatively new and we want to be able to debug it properly.
 
 If the file did not get installed for you, please double check if it is there and report in [https://gitlab.com/postmarketOS/pmbootstrap/issues/1038 1038].
