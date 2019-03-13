@@ -7,7 +7,7 @@ MATE is a [[User-Interfaces|desktop environment]] forked from the maintained cod
 
 == Status ==
 
-It works on most devices with a working display, works fine without hardware acceleration. Also it has Hi-Dpi support. So app s will look better and usable.
+It works on most devices with a working display, works fine without hardware acceleration. Also it has Hi-Dpi support. So apps will look better and usable. Use packages from Alpine repo.
 
 After the postmarketOS loading splashscreen you will get a black screen for 20-30 seconds before the desktop appears.
 This seems due to an issue with <code>marco</code> (MATE window manager):
