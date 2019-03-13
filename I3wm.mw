@@ -17,6 +17,9 @@ Currently this installs <code>lxdm</code> as display manager (a common display m
 == Ideas ==
 * How about a wallpaper for the N900 with i3wm, that is based on the postmarketOS wallpaper, but shows the keybindings on the desktop?
 
+== Guide ==
+Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
+
 == See also ==
 * [https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ Popular /r/unixporn post]
 * {{github|1225}} initial pull request
