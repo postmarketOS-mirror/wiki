@@ -3,6 +3,7 @@
 == Generic device information ==
 
 * [https://github.com/LineageOS/lineage_wiki/blob/master/_data/devices/ LineageOS devices database] (hardware specs: architecture, screen resolution, ... and key combinations for flash/recovery mode)
+* Use the "cat /proc/cpuinfo" in terminal to get some CPU information.
 
 == Fastboot (boot.img) flash offsets ==
 {{note|<code>pmbootstrap bootimg_analyze</code> automatizes this and directly gives you what you need to put in the <code>deviceinfo</code> file ([[Porting_to_a_new_device#Flash_method|more]]). The information below is only kept for reference, but do yourself a favor and use the automated version instead.}}
