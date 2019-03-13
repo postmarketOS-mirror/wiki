@@ -14,6 +14,7 @@ EndSection
 Reboot ,Then open the display app and set the correct resolution.
 
 === Rotate the touchscreen ===
+
 In order to also rotate the touchscreen you need to change the udev rule: <code>/etc/udev/rules.d/90-device-samsung-i9070.rules</code>
 And add one of the following line:
 <pre>
@@ -45,6 +46,7 @@ ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
 </pre>
 
 == Display Power Management ==
+
 To control display from a terminal, first set DISPLAY environment variable:
 <source lang="shell">
 export DISPLAY=:0.0
@@ -56,6 +58,11 @@ xset dpms force off    # To turn off display
 xset dpms force on     # To turn the display back on
 xset q                 # Prints current display status info
 </source>
+
+
+== Troubleshooting ==
+
+Check the logs with <code>logread -f | grep x11</code>
 
 
 [[Category:Guide]]
