@@ -16,6 +16,7 @@ mate-session[1377]: WARNING: Application 'marco.desktop' failed to register befo
 </pre>
 
 == Install MATE Desktop ==
+
 Run <code>pmbootstrap init</code> and choose <code>mate</code> in the interface section.
 The Alpine repository already contains all the packages for x86_64, armhf and aarch64 architectures.
 Nothing has to be done to enable it.
@@ -24,38 +25,8 @@ After installation, the shell will automatically launch upon boot. If it doesn't
 
 For the official MATE instructions, see [https://wiki.alpinelinux.org/wiki/MATE their website].
 
-== Troubleshooting ==
+== Guide ==
 
-Check the logs with <code>logread -f | grep x11</code>
-
-== Landscape mode ==
-
-=== Rotate the screen ===
-
-You can rotate adding the following configuration file: <code>/etc/X11/xorg.conf.d/00-fbdev-rotate.conf</code>
-<pre>
-Section "Device"
-  Identifier "LCD"
-  Driver "fbdev"
-  Option "Rotate" "CW"
-EndSection
-</pre>
-
-Reboot ,Then open the display app and set the correct resolution.
-
-=== Rotate the touchscreen ===
-In order to also rotate the touchscreen you need to change the udev rule: <code>/etc/udev/rules.d/90-device-samsung-i9070.rules</code>
-And add one of the following line:
-<pre>
-# Left - 90 degree clockwise
-ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
-# 180 degree clockwise
-ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
-# Right - 270 degree clockwise
-ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
-# reflect along y axis
-ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
-</pre>
-and reboot udev or the device.
+Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
 
 [[Category:Interface]]
