@@ -67,9 +67,13 @@ Hold the '''Volume Up''' button, and then press the '''Power''' button
 
 === Obtaining the OEM unlock key ===
 
-The Android version running on the device does not support unlocking OEM. A special key has to be retrieved from a [https://emui.huawei.com/en/unlock_detail form] on the manufacturers  website.
+As late July 2018, Huawei no longer offering bootloader unlock keys, however it's possible to unlock the bootloader with a fee from third party.
 
-All necessary data can be found in the phones system information. Only the IMEI number seems to be wrong. Dump the displayed number into the search help on this [https://imei24.com/imei_check/Huawei/ site] and take the correct returend one instead.  
+See this XDA article: https://www.xda-developers.com/huawei-honor-unlock-bootloader-fee
+
+
+'''WARNING: postmarketOS developers, including the person editing this page does not run these websites. We don't earn any profits from these services. There’s no guarantee that these services are safe to use, and you put your device at risk if you choose to use these services because Huawei will likely not offer support for you in case anything goes wrong (unless required by law.)'''
+
 
 Finally unlock the connected device via:
 <syntaxhighlight lang="highlight">
