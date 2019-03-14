@@ -82,7 +82,15 @@ $ pmbootstrap.py export
 
 Create ROM slot with minimal possible space for system, data, and cache partitions.
 
-First flash [http://droid.cs.fau.de/cm-11.0/unofficial/cm-11-20160815-UNOFFICIAL-maserati.zip CyanogenMod 11] to install files needed by SafeStrap for kexec. Then connect the phone via USB in SafeStrap and do the following (android-platform-tools need to be installed):
+First flash [http://droid.cs.fau.de/cm-11.0/unofficial/cm-11-20160815-UNOFFICIAL-maserati.zip CyanogenMod 11] to install files needed by SafeStrap for kexec.
+
+<source lang="bash">
+$ wget "http://droid.cs.fau.de/cm-11.0/unofficial/cm-11-20160815-UNOFFICIAL-maserati.zip"
+# Boot into safestrap recovery and go to Advanced -> ADB Sideload
+$ adb sideload cm-11-20160815-UNOFFICIAL-maserati.zip
+</source>
+
+Then connect the phone via USB in SafeStrap and do the following (android-platform-tools need to be installed):
 
 <source lang="bash">
 $ cd /tmp/postmarketOS-export
