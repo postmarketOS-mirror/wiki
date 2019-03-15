@@ -9,4 +9,8 @@ Only known to work on Nexus 5. Some changes would be needed for how big the scre
 
 A short description and demo is available here: https://gitlab.com/unrznbl/gesture/wikis/gesture---handwriting-for-linux-touchscreens
 
+=== Known Issues ===
+* power button may not always wake up screen
+* tty may freeze when screen is left on for a while
+
 [[Category:Interface]]
