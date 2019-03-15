@@ -1,0 +1,12 @@
+This is a command line based user interface developed first for the Geeksphone Keon and later for several other Android devices. It is really just a collection of simple bash scripts to try and replicate the common features on a phone such as calling, answering, texting, contacts, calendar, note taking, etc.
+
+For PostmarketOS shelli is combined with gesture recognition software to provide for a non-UI alternative which uses the touch screen and the linux framebuffer console.
+
+=== Status ===
+Initial packaging is in the works at https://gitlab.com/postmarketOS/pmaports/merge_requests/265.
+
+Only known to work on Nexus 5. Some changes would be needed for how big the screen is and which event device is the touchscreen.
+
+A short description and demo is available here: https://gitlab.com/unrznbl/gesture/wikis/gesture---handwriting-for-linux-touchscreens
+
+[[Category:Interface]]
