@@ -16,4 +16,8 @@ I am using `echo "mem" > /sys/power/state` to suspend-to-ram when the power butt
 
 * tty may freeze when screen is left on for a while. It seems about after 5 minutes this may occur. Press the power button twice to suspend/wake-up to workaround.
 
+Battery capacity reporting is broken. It seems that `/sys/class/power_supply/battery/capacity` is not reporting a percentage but a value that ranges from 0 to around 35,000. Maybe a kernel fix is needed?
+
+The brightness script needs some work. Possibly just giving regular users in the video group permissions on /etc/brightness and the screen backlight sysfs directory.
+
 [[Category:Interface]]
