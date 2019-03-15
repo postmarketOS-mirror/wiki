@@ -10,7 +10,10 @@ Only known to work on Nexus 5. Some changes would be needed for how big the scre
 A short description and demo is available here: https://gitlab.com/unrznbl/gesture/wikis/gesture---handwriting-for-linux-touchscreens
 
 === Known Issues ===
-* power button may not always wake up screen
-* tty may freeze when screen is left on for a while
+I am using `echo "mem" > /sys/power/state` to suspend-to-ram when the power button is pressed. There may be an issue with this strategy.
+
+* waking up sometimes takes a second or two so be patient. Sometimes the gesture recognition may not be responsive after wake-up. Press the power button again twice to suspend/wake-up and it usually works again.
+
+* tty may freeze when screen is left on for a while. It seems about after 5 minutes this may occur. Press the power button twice to suspend/wake-up to workaround.
 
 [[Category:Interface]]
