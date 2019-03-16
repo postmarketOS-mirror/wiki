@@ -1,0 +1,17 @@
+While Linux mobile shells are still in a very early stage, touch-optimized app launchers can significantly improve the overall user experience on touchscreen devices while using less memory than a full shell. Some of these close automatically each time an app is launched, so associating them with a particular hardware key on the mobile device might work.
+
+There are several simple Linux launchers available, but none are officially packaged yet:
+
+== GTK+ ==
+
+
+* [https://wiki.lxde.org/en/LXLauncher lxlauncher] (LXDE launcher, gtk2 only; [https://wiki.lxde.org/en/images/5/5c/LXlauncher.png screenshot])
+
+
+* [https://github.com/ikeydoherty/columbiad Columbiad] (very minimal Gtk3 fullscreen launcher; [https://www.youtube.com/watch?v=2toCoeoqoag video demo])
+
+== Qt ==
+* [https://github.com/alamminsalo/qml-launcher qml-launcher] (qml, closes when an app is launched; [https://user-images.githubusercontent.com/5585454/29671459-4659d418-88f2-11e7-8d0d-f03bc4f51023.png screenshot])
+
+== Others ==
+* [http://xlunch.org/ XLunch]: Graphical app launcher for X, using pure Xlib and Imlib2, therefore very light and needing only few dependencies (needs entries to be created manually; closes when an app is launched; [https://raw.githubusercontent.com/Tomas-M/xlunch/Screenshot/screenshot.png screenshot])
