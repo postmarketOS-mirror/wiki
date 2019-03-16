@@ -5,9 +5,7 @@ There are several simple Linux launchers available, but none are officially pack
 == GTK+ ==
 
 
-* [https://wiki.lxde.org/en/LXLauncher lxlauncher] (LXDE launcher, gtk2 only; [https://wiki.lxde.org/en/images/5/5c/LXlauncher.png screenshot])
-
-
+* [https://wiki.lxde.org/en/LXLauncher lxlauncher] (LXDE official launcher, gtk2; [https://wiki.lxde.org/en/images/5/5c/LXlauncher.png screenshot])
 * [https://github.com/ikeydoherty/columbiad Columbiad] (very minimal Gtk3 fullscreen launcher; [https://www.youtube.com/watch?v=2toCoeoqoag video demo])
 
 == Qt ==
