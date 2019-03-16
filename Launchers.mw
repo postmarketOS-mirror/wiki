@@ -6,7 +6,7 @@ There are several simple Linux launchers available, but none are officially pack
 
 
 * [https://wiki.lxde.org/en/LXLauncher lxlauncher] (LXDE official launcher, gtk2; [https://wiki.lxde.org/en/images/5/5c/LXlauncher.png screenshot])
-* [https://github.com/ikeydoherty/columbiad columbiad] (very minimal Gtk3 fullscreen launcher; [https://www.youtube.com/watch?v=2toCoeoqoag video demo])
+* [https://github.com/ikeydoherty/columbiad columbiad] (minimal gtk3 fullscreen launcher; [https://www.youtube.com/watch?v=2toCoeoqoag video demo])
 
 == Qt ==
 * [https://github.com/alamminsalo/qml-launcher qml-launcher] (qml, closes when an app is launched; [https://user-images.githubusercontent.com/5585454/29671459-4659d418-88f2-11e7-8d0d-f03bc4f51023.png screenshot])
