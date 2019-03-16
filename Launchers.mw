@@ -13,3 +13,6 @@ There are several simple Linux launchers available, but none are officially pack
 
 == Others ==
 * [http://xlunch.org/ XLunch]: Graphical app launcher for X, using pure Xlib and Imlib2, therefore very light and needing only few dependencies (needs entries to be created manually; closes when an app is launched; [https://raw.githubusercontent.com/Tomas-M/xlunch/Screenshot/screenshot.png screenshot])
+
+
+[[Category: Interface]]
