@@ -11,13 +11,13 @@ A set of apps with constant looks across all the apps and can run in lower syste
 Apps work smoothly on most devices with a working display, both with and without hardware acceleration.
 
 == Description ==
-There are some core features that makes them great to use on mobile devices. Some are listed here.
-* All the apps are light with lesser dependencies, uses less ram.
-* All the apps are touch-friendly and suitable Phablet and Tablet and we are working towards that.
-* Apps use the precious vertical screen real estate properly. So in small screens apps works great.
+There are some core features that make applications great to use on mobile devices. Some are listed here.
+* All the apps are light with lesser dependencies, use less RAM.
+* All the apps are touch-friendly and suitable for phablets and tablets and we are working towards that.
+* Apps use the precious vertical screen real estate properly. So, apps work great in small screens.
 
 
-There are 19 CoreApps and they all listed here with there descriptions.
+There are 19 CoreApps and they all listed here with their descriptions.
 * CoreActions - A side bar for showing widgets
 * CorePins - A bookmarking app.
 * CoreArchiver - Archiver to create and extract archives.
