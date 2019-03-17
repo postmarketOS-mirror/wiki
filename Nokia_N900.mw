@@ -8,7 +8,7 @@
 | originalsoftware = Maemo on Linux 2.6
 | pmoskernel = Mainline Linux
 | chipset = TI OMAP 3430
-| cpu = 600 MHz Cortex-A8
+| cpu = 1x 600 MHz Cortex-A8
 | gpu = PowerVR SGX530
 | storage = 32 GB
 | display = 800x480 TFT resistive
