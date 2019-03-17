@@ -5,7 +5,7 @@
 | toolkit = Qt 5
 }}
 
-A set of apps with constant looks across all the apps and can run in lower system with out hardware acceleration and optimized for touchscreen.
+A set of apps with constant looks across all the apps and can run in lower system without hardware acceleration and optimized for touchscreen.
 
 == Status ==
 Apps works smoothly on most devices with a working display, both with and without hardware acceleration.
