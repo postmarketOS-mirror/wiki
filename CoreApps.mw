@@ -43,7 +43,8 @@ Two apps are in development.
 * CoreKeyboard - A virtual keyboard.
 
 == Installation ==
-All the apps except 4 are in the pmos repo. So just install them by 'sudo apk add corefm'.
+All the apps except 4 are in the pmOS repo. So just install them by 
+<code>$ sudo apk add corefm</code>
 
 == Usages ==
 * This apps can be used with any Desktop Environment. But recommended with i3wm and matchbox.
