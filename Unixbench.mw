@@ -37,3 +37,15 @@ $ sudo NUMBER_OF_PROCESSORS=4 ubench whets dhry
 </source>
 
 [[Category:Guide]]
+
+== Benchmark results ==
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Chipset,CPU,Architecture,WhetDhry=Score
+|order by=Devices.WhetDhry DESC
+|format=table
+|limit=9999
+|where=Devices.Booting = 1 and WhetDhry > 1
+|more results text=
+}}
