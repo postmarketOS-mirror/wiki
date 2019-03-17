@@ -8,7 +8,7 @@
 | originalsoftware = Android 8.1 Go, kernel 3.18.79, armv7
 | pmoskernel = 3.18.79
 | chipset = MediaTek MT6737M
-| cpu = Cortex-A53 4x1.1GHz
+| cpu = 4x 1.1GHz Cortex-A53
 | gpu = Mali-T720 MP1
 | storage = 8GB
 | display = 480x854
