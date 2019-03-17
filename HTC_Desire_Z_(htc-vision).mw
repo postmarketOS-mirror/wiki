@@ -69,9 +69,6 @@ Obviously you need an unlocked bootloader; refer to [http://htcdev.com] for inst
 
 Installing the rootfs using fastboot doesn't work due to size limitations in the bootloader, therefore if you want to install postmarketOS to the internal memory, do an [[Android Recovery Zip Installation]]. postmarketOS is picky when it comes to the recovery. It works with CWM 6.0.5.0, see [https://milaq.net/downloads/android/vision/misc/]. It does ''not'' work with CWM 6.0.4.5 or TWRP 2.6.3.0.
 
-== Wifi ==
-The wifi will not work unless you disable wext in the wpa_supplicant configuration (this is fine since wext is deprecated anyway). To do this, edit <code>/etc/conf.d/wpa_supplicant</code> and change the value of <code>wpa_supplicant_args</code> from <code> -u -Dwext,nl80211</code> to <code> -u -Dnl80211</code>.
-
 == Next steps ==
 
 * test more hardware: audio, camera, radio, bluetooth…
