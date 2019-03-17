@@ -7,12 +7,12 @@
 | releaseyear = 2011
 | originalsoftware = Android 3.1 Honeycomb
 | chipset = Nvidia Tegra 2
-| cpu = 1Ghz ARM Cortex-A9
+| cpu = 2x 1.0 Ghz Cortex-A9
 | gpu = Tegra 2
 | storage = 16/32 GB
 | display = 1280×800
 | memory = 1GB
-| architecture = armhf
+| architecture = armv7
 | whet_dhry = 424.5
 | status_usbnet = Y
 | status_flashing = Y
