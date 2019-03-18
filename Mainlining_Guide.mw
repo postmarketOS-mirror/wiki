@@ -31,6 +31,13 @@ The mainlining process varies greatly for each device, which means we can't just
 
 Make sure that your SoC is in the list (if it isn't then we don't have an easy way for mainlining right now, sorry). Let's do some more preparation now, so everything is in place before you kindly ask your mentor to help you with the process.
 
+=== Cooperative firmware ===
+Some firmware, especially bootloader, trustzone etc., doesn't play nice with mainline kernel. That is because it may require ugly hacks in the kernel, courtesy of being disgustingly broken. Those ugly hacks will not be accepted into mainline, because the proper solution would be to fix the firmware, regardless of the fact that the freedom to do that was taken away from you thanks to signature verification.
+
+For example, a device shipping with 32bit kernel or even 64bit kernel with aforementioned ugly hacks, is likely to not support PSCI, the only mainline-approved way of CPU power management (including SMP) on aarch64. Considering this relies on trustzone cooperation, which is as far from being under your control as it possibly can, you're probably out of luck unless you a) implement said ugly hacks or b) manage to exploit your device and supply a proper trustzone
+
+Only if we campaign for the Freedom to run our own software on the devices we own, we will be able to replace the firmware with an open one, shall one emerge.
+
 == Preparation ==
 === Serial cable ===
 It is recommended to have a working [[Serial_debugging|serial cable]] for your device. In case you can not make one, it might be possible to [[Mainlining_FAQ#Writing_dmesg_to_RAM_and_reading_it_out_after_reboot|use a workaround]] for retrieving log messages but that isn't straight forward.
