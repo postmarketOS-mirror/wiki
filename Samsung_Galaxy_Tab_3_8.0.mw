@@ -50,15 +50,15 @@ Recovery mode: VolUp while powering on
 == Installation ==
 Flash the system with pmbootstrap flasher flash_rootfs.
 == Links ==
-All repositories are cloned from gr8nole's configs.
+
 === Device (common): ===
-https://github.com/knuxdroid/android_device_samsung_lt01-common
+https://github.com/gr8nole/android_device_samsung_lt01-common
 === Device (lt01wifi): ===
-https://github.com/knuxdroid/android_device_samsung_lt01wifi
+https://github.com/gr8nole/android_device_samsung_lt01wifi
 === Kernel: ===
-https://github.com/knuxdroid/android_kernel_samsung_smdk4x12
+https://github.com/gr8nole/android_kernel_samsung_smdk4x12
 === Proprietary: ===
-https://github.com/knuxdroid/proprietary_vendor_samsung
+https://github.com/gr8nole/proprietary_vendor_samsung
 
 == Notes/To Do ==
 Required workaround: Add xz to makedepend to avoid lzma errors.
