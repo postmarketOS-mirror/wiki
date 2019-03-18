@@ -68,7 +68,7 @@ Only lt01wifi/T310 has been tested so far. I might make builds for T311 and T315
 <b>XFCE ONLY:</b>The device indicates when it's charging, but the actual batery percentage readings don't work.
 
 USB OTG doesn't work (at least with my keyboard).
-Turned on OTG via kernel config and it still doesn't work (at least with the two keyboard I have).
+Turned on OTG via kernel config and it still doesn't work (at least with the two keyboards I have).
 
 <strike>Hardware buttons don't work yet.</strike> Hardware buttons do work, they just require triggerhappy. Back and menu buttons are in /dev/input/event1, home, volume and power buttons are in /dev/input/event0.
 
