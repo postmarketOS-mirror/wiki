@@ -22,7 +22,7 @@
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery = P
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = N
@@ -68,10 +68,11 @@ Only lt01wifi/T310 has been tested so far. I might make builds for T311 and T315
 <b>XFCE ONLY:</b>The device indicates when it's charging, but the actual batery percentage readings don't work.
 
 USB OTG doesn't work (at least with my keyboard).
+Turned on OTG via kernel config and it still doesn't work (at least with the two keyboard I have).
 
 <strike>Hardware buttons don't work yet.</strike> Hardware buttons do work, they just require triggerhappy. Back and menu buttons are in /dev/input/event1, home, volume and power buttons are in /dev/input/event0.
 
-WiFi doesn't work (in fact, WiFi doesn't seem to appear in `ip a` at all!)
+<strike>WiFi doesn't work (in fact, WiFi doesn't seem to appear in `ip a` at all!)</strike> WiFi should work using the i9070 method. Not much modifications are needed. Sadly, I can't figure out how to build the kernel module :/
 
 Bluetooth doesn't work.
 
