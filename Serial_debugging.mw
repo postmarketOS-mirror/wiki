@@ -25,7 +25,7 @@ NT: You will have a better luck with FTDI based serial cable.
 
 == USB debug cable ==
 
-The Nexus S, Galaxy Nexus and other many other devices have the serial port multiplexed with the micro/mini USB connector, initially implemented as part of [[Micro-USB_Interface_Controller|carkit standard]]. This is the schematic for those devices, For this cable too it's important to have a 3.3V usb-to-uart adapter.
+The Nexus S, Galaxy Nexus and other many other devices have the serial port multiplexed with the micro/mini USB connector, initially implemented as part of [[Micro-USB_Interface_Controller|carkit standard]]. This is the schematic for those devices, <s>For this cable too it's important to have a 3.3V usb-to-uart adapter.</s> It's not known whether the different ICs do level conversion, but if they don't, the voltage would be determined by the SoC's specs (e.g 1.8v for msm8916). For safety, don't transmit to the device with 3.3v UART. It seems you can receive just fine though (tested with raspberry pi zero). If you have a multimeter, it might be nice to make a list of 100% known device+voltage pairs. (I don't have one, so I have to play it safe)
 
 [[File:Nexus-usb-debug.png]]
 
