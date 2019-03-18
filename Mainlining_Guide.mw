@@ -7,6 +7,8 @@ This guide will walk you through mainlining your device. Starting by collecting 
 === postmarketOS port ===
 To make the instructions easier, this guide assumes that postmarketOS was already ported with a downstream kernel to your device, and that you can [[USB_Network|enter a shell after it booted via USB]] (SSH or telnet). Downstream kernels are the ones from the vendor, that ship with the device, and all derivatives from that (e.g. your typical Android / LineageOS ROM). You can check if it was ported already on the [[devices]] page, and start a [[Porting_guide|new port]] if necessary.
 
+! note: an existing port with downstream kernel is not a hard dependency, it may take less effort overall to skip that depending on the state of the codebase.
+
 === Mentor ===
 The mainlining process varies greatly for each device, which means we can't just write down straight forward instructions here. But luckily there are skilled people who have a bigger picture of a specific [https://en.wikipedia.org/wiki/System_on_a_chip SoC] and they know how to help you out efficiently. Head over to your device's wiki page (as linked in the [[devices|device overview]]) and look at the chipset the device has (infobox on the top right).
 
