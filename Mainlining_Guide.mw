@@ -164,6 +164,24 @@ $ git add -A
 $ git commit -m "Adjusted model and compatible"
 </syntaxhighlight>
 
+! caveat: 
+The right compatible values can be found in downstream dts. You may however find something unexpected.
+
+In the following example (sm-a300fu), msm8916-mtp is used, which will result in the wrong dts being selected unless you copy <code>qcom,board-id = <0xCE08FF01 1>;</code> as well. Unfortunately, this board-id is shared between several Samsung phones, but considering they only bundle the one dtb a particular model uses, we can be grateful there even is a board-id. A solution has not been decided upon yet. (18. 3. 2019)
+
+<syntaxhighlight lang="c">
+// SPDX-License-Identifier: GPL-2.0
+/dts-v1/;
+
+#include "msm8916-samsung-a300fu.dtsi"
+
+/ {
+	model = "Samsung Galaxy A3 sm-a300fu";
+	compatible = "qcom,msm8916-mtp", "qcom,msm8916", "qcom,mtp";
+	qcom,board-id = <0xCE08FF01 1>;
+};
+</syntaxhighlight>
+
 === Minimal booting version ===
 Your mentor will instruct you how to modify the file further, so you have a minimal configuration that allows you to boot into the mainline kernel if everything went right. Almost nothing will work at this point, except for initializing RAM and serial output. We will work our way to enabling one feature after another throughout the process.
 
