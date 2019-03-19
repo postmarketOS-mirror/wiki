@@ -1,7 +1,7 @@
 [[Category:Not booting]]
 {{Infobox device
 | manufacturer = Samsung
-| name =  Samsung Galaxy Grand Neo
+| name =  Galaxy Grand Neo
 | codename = samsung-baffinlite
 | image = File:samsung-baffinlite.jpg
 | imagecaption = Phone running weston.
@@ -51,6 +51,6 @@ Download/Odin: Power+VolDown
 
 
 == Notes ==
-Device not tested yet.
+<strike>Device not tested yet.</strike> Doesn't boot, says system partition doesn't exist. I'll reflash the stock rom and see if it works.
 
 == See also ==
