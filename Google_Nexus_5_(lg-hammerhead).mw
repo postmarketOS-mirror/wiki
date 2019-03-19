@@ -78,6 +78,30 @@ $ ./pmbootstrap.py flasher flash_kernel
 
 === Issues ===
 
+==== Bluetooth ====
+Bluetooth seems to be lacking some firmware.
+
+From dmesg:
+<source lang="shell-session">
+[    0.650667] bluetooth hci0: Direct firmware load for brcm/BCM4335C0.hcd failed with error -2
+</source>
+
+Using instructions at https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth
+<source lang="shell-session">
+apk add bluez
+rc-update add bluetooth
+</source>
+
+And running bluetoothctl indicates the controller is recognized I think:
+<source lang="shell-session">
+https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth
+[bluetooth]# power off
+Changing power off succeeded
+[bluetooth]# power on
+Changing power on succeeded
+[CHG] Controller 07:16:16:94:0E:5D Powered: yes
+</source>
+
 ==== WiFi workaround on boot ====
 The wifi adapter works in NetworkManager, but it boots in airplane mode and NetworkManager does not detect that. Therefore at boot you need to disable the wifi adapter first, and then re-enable it. This can easily be done in the graphic shell (Plasma Mobile has an airplane mode switch in the pull-down menu: check it and uncheck it) or through the shell:
 
