@@ -66,7 +66,7 @@ The Pixel (sailfish) and Pixel XL (marlin) share identical kernel architectures.
 
 * Kernel compilation
 * Flashing
-* Booting kernel (serial only)
+* Booting kernel (partial boot with serial logging - panics / halts)
 
 == What does not work ==
 
