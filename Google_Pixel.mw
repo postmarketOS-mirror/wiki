@@ -79,8 +79,6 @@ The Pixel (sailfish) and Pixel XL (marlin) share identical kernel architectures.
 * GPS
 * Modem
 
-N.B: The Pixel/Pixel XL are slightly different in format to a typical Android ecosystem. They are given two partition slots, dubbed slot A & B. Out-of-the-box Android installations also enable filesystem encryption by default. However, this is a non-issue for pmOS, since TWRP can reformat the partition layout to drop FDE for testing.
-
 == Development Notes ==
 
 === Partition Layout ===
