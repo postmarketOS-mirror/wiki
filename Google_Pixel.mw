@@ -74,7 +74,7 @@ The Pixel (sailfish) and Pixel XL (marlin) share identical kernel architectures.
 * Touch
 * Screen
 * WiFi
-* Bluetooth (might actually work!)
+* Bluetooth
 * Camera
 * GPS
 * Modem
