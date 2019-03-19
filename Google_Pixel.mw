@@ -141,7 +141,18 @@ Take precaution, and keep backups if this is your primary device.
 * At this point, TWRP will load
 * Take your backup, note this does not include the user data directory. You need to copy that over with MTP as well.
 
-=== Installation Steps ===
+== Installation ==
+
+=== Boot Only ===
+
+The device is capable of sideloading a boot.img over USB with fastboot. The standard command in pmOS works:
+
+<pre><nowiki>
+# pmbootstrap flasher boot
+</nowiki></pre>
+
+=== Flashing ===
+
 <pre><nowiki>
 # fastboot set_active a
 # fastboot reboot bootloader
