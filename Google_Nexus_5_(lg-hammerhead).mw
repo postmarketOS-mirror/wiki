@@ -92,7 +92,7 @@ apk add bluez
 rc-update add bluetooth
 </source>
 
-And running bluetoothctl indicates the controller is recognized I think:
+Running bluetoothctl seems to indicate that the controller is recognized:
 <source lang="shell-session">
 https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth
 [bluetooth]# power off
