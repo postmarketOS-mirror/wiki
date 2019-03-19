@@ -128,11 +128,6 @@ The standard OEM unlock command can then be be used:
 
 At this point, you should be ready to test pmOS deployments.
 
-== Installation ==
-
-More details to this section are coming soon.
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-
 === Backup with TWRP ===
 Take precaution, and keep backups if this is your primary device.
 
