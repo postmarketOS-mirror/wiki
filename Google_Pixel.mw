@@ -1,1 +1,195 @@
-#REDIRECT [[Google Pixel (google-sailfish)]]
+{{Infobox device
+| manufacturer = Google
+| name =  Pixel
+| codename = sailfish, marlin
+| releaseyear = 2016
+| originalsoftware = Android 7.1 (Nougat)
+| chipset = Qualcomm MSM8996 Snapdragon 821
+| cpu = Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)
+| gpu = Adreno 530
+| storage = 32/128GB
+| display = 5.0 inch AMOLED capacitive multi-touch screen, 1280x1920
+| memory = 4GB Dual Channel LPDDR4
+| image = File:Sailfish.jpg
+| imagecaption = Google Pixel (sailfish)
+| architecture = aarch64
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Kernel compiles, panics on boot
+| booting = no
+}}
+
+== Contributors ==
+* [https://gitlab.com/ojbr ojbr]
+* [https://gitlab.com/steamport steamport]
+
+=== Maintainers ===
+* [mailto:contact@octo.im ojbr]
+
+=== Task Tracker ===
+
+Contact ojbr if you would like to be added.
+
+[https://board.disroot.org/project/ojbr-postmarketos-google-pixel-mainlining/kanban Project Board]
+
+== Pixel / Pixel XL ==
+
+The Pixel (sailfish) and Pixel XL (marlin) share identical kernel architectures. This port should work for both devices.
+
+=== Device Owners ===
+
+==== Pixel ====
+
+* ojbr
+
+==== Pixel XL ====
+
+* ?
+
+== What works ==
+
+* Kernel compilation
+* Flashing
+* Booting kernel (serial only)
+
+== What does not work ==
+
+* SSH over USB
+* Touch
+* Screen
+* WiFi
+* Bluetooth (might actually work!)
+* Camera
+* GPS
+* Modem
+
+N.B: The Pixel/Pixel XL are slightly different in format to a typical Android ecosystem. They are given two partition slots, dubbed slot A & B. Out-of-the-box Android installations also enable filesystem encryption by default. However, this is a non-issue for pmOS, since TWRP can reformat the partition layout to drop FDE for testing.
+
+== Development Notes ==
+
+=== Partition Layout ===
+
+Out of the box, the Google Pixel uses an A/B partition layout. Both slots are known working. Should you need to change slots, this can be done with:
+<pre>
+<nowiki>#fastboot set_active a
+#fastboot reboot bootloader</nowiki>
+</pre>
+
+<pre>
+~#: fdisk -l /dev/block/sda
+
+
+bootlocker_a    bootlocker_b
+keymaster_a     keymaster_b
+tz_a            tz_b
+rpm_a           rpm_b
+pmic_a          pmic_b
+hyp_a           hyp_b
+cmnlib32_a      cmnlib32_b
+cmnlib64_a      cmnlib64_b
+aboot_a         aboot_b
+hosd_a          hosd_b
+devcfg_a        devcfg_b
+modem_a         modem_b
+msadp_a         msadp_b
+apdp_a          apdp_b
+vendor_a        vendor_b
+system_a        system_b
+userdata
+reserve0
+</pre>
+
+== Bootloader Unlocking ==
+
+The bootloader can be unlocked once the device has been unlocked by the cell carrier. An unlock code is usually obtained from your network provider directly, or from a third party.
+Be aware, a bootloader unlock will erase all userdata. Make sure to keep a backup of any important data.
+
+* Enter fastboot by shutting down the device, and hold volume down + power until you see the fastboot screen.
+* Depending on the phone's previous sleep state, you may be alerted that a RAM dump is in progress. Ignore these, keep holding the buttons until you end up in fastboot.
+
+The standard OEM unlock command can then be be used:
+<pre>
+<nowiki>#fastboot oem unlock</nowiki>
+</pre>
+
+At this point, you should be ready to test pmOS deployments.
+
+== Installation ==
+
+More details to this section are coming soon.
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+=== Backup with TWRP ===
+Take precaution, and keep backups if this is your primary device.
+
+* [https://twrp.me/google/googlepixel.html Download the latest TWRP (both img and zip)]
+* From the TWRP directory, run the fastboot command: <pre>#fastboot boot <nowiki><your-twrp.img></nowiki></pre>
+* At this point, TWRP will load
+* Take your backup, note this does not include the user data directory. You need to copy that over with MTP as well.
+
+=== Installation Steps ===
+<pre><nowiki>
+# fastboot set_active a
+# fastboot reboot bootloader
+# pmbootstrap flasher flash_rootfs
+# pmbootstrap flasher flash_kernel
+# fastboot reboot
+</nowiki></pre>
+
+== Debugging ==
+
+=== Kernel Logging via Serial ===
+
+It is possible to debug the Pixel/Pixel XL with a standard [[Serial debugging|Nexus Serial debug cable]]. This must be enabled in fastboot first:
+<pre>
+# fastboot oem uart enable
+</pre>
+
+The baud rate is 115200.
+
+== Troubleshooting ==
+
+==== Unable to mount rootfs ====
+
+When running from a vendor kernel, Android is configured to skip loading with an initramfs. For postmarketOS to boot, the offending change would have to be removed with a [https://gitlab.com/postmarketOS/pmaports/merge_requests/66/diffs?commit_id=b6a70454d1e999678fe8d770ed3d59bd28da8549 patch].
+
+Without the patch, the rootfs will fail to mount:
+<pre>
+[   14.025620] No filesystem could mount root, tried:  ext3 ext2 ext4 vfat msdos fuseblk
+[   14.033436] c2      1 Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(253,0)
+</pre>
+
+==== Firmware image not available ====
+
+Proprietary [https://developers.google.com/android/drivers#sailfish vendor drivers] are missing, and will need to be built into the resulting boot image.
+
+<pre>
+[TP]: [ERR]:fwu_start_reflash: Firmware image synaptics_bl71.img not available
+</pre>
+
+== See also ==
+* TBC
+
+<!--
+Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{github|CHANGEME}} Initial pull request
+* {{github|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
