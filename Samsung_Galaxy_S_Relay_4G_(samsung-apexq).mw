@@ -51,13 +51,21 @@
 
 == Installation ==
 
+You will need to do this twice during the flashing step.
+
 Set phone to ODIN mode
 
   1. Turn off phone
   2. Connect USB cable
   3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
   4. Push VOLUME_UP to continue to ODIN mode screen
-
+<pre>
+./pmbootstrap.py flasher flash_rootfs
+</pre>
+Phone will reboot. Follow above instructions again.
+<pre>
+./pmbootstrap.py flasher flash_kernel 
+</pre>
 == Port information ==
 *kernel android_kernel_samsung_d2
 *commit 87f5fcaf7afef878914c3fcca2c2fd395f285902
