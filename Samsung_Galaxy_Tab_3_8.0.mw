@@ -68,7 +68,7 @@ Only lt01wifi/T310 has been tested so far. I might make builds for T311 and T315
 <b>XFCE ONLY:</b>The device indicates when it's charging, but the actual batery percentage readings don't work.
 
 <strike>USB OTG doesn't work (at least with my keyboard).
-Turned on OTG via kernel config and it still doesn't work (at least with the two keyboards I have).</strike> USB OTG keyboards and mice work. I installed xf86-input-keyboard, xf86-input-mouse, xf86-input-evdev, and xf86-input-libinput and added a config file to xorg.conf.d that had all the keyboard settings (like in [https://wiki.gentoo.org/wiki/Xorg/Guide#Configuring_the_keyboard this tutorial])  
+Turned on OTG via kernel config and it still doesn't work (at least with the two keyboards I have).</strike> USB OTG keyboards and mice work. I installed xf86-input-keyboard, xf86-input-mouse, xf86-input-evdev, and xf86-input-libinput and added a config file to xorg.conf.d that had all the keyboard settings (like in [https://wiki.gentoo.org/wiki/Xorg/Guide#Configuring_the_keyboard this tutorial]). However, it is important to note that this method seemed to disable my touchscreen. Probably requires another conf file, though.
 
 <strike>Hardware buttons don't work yet.</strike> Hardware buttons do work, they just require triggerhappy. Back and menu buttons are in /dev/input/event1, home, volume and power buttons are in /dev/input/event0.
 
