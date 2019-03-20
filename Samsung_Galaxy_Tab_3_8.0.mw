@@ -77,3 +77,6 @@ Turned on OTG via kernel config and it still doesn't work (at least with the two
 Bluetooth doesn't work.
 
 For more information about the build process, see https://mastodon.social/@knuxfanwin8/101699225884881827
+
+== See also ==
+* {{MR|283|pmaports}} initial MR
