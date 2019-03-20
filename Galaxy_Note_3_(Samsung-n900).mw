@@ -1,20 +1,20 @@
 {{Infobox device
-| manufacturer = CHANGE_ME <!-- e.g. HTC -->
-| name =  CHANGE_ME <!-- e.g. Desire -->
-| codename = CHANGE_ME <!-- e.g. htc-bravo -->
+| manufacturer = Samsung <!-- e.g. HTC -->
+| name =  Galaxy Note 3 (SM-N900x) <!-- e.g. Desire -->
+| codename = hlte <!-- e.g. htc-bravo -->
 | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
-| releaseyear = CHANGE_ME
-| originalsoftware = CHANGE_ME <!-- e.g. Android 2 -->
-| chipset = CHANGE_ME <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = CHANGE_ME <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, aarch64, x86, x86_64 -->
+| imagecaption = Samsung Galaxy Note 3
+| releaseyear = 2013
+| originalsoftware = Android 4.3 <!-- e.g. Android 2 -->
+| chipset = Qualcomm Snapdragon 800 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+| cpu = Quad core 2.3GHz Krait 400 <!-- e.g. 1.0 GHz Scorpion -->
+| gpu = Adreno 330 <!-- e.g. Adreno 200 -->
+| storage = 32 GB <!-- e.g. 512 MB -->
+| display = 1080x1920 AMOLED <!-- e.g. 480x800 AMOLED -->
+| memory = 3 GB <!-- e.g. 576 MB -->
+| architecture = armhf <!-- One of these: armhf, aarch64, x86, x86_64 -->
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet Y = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = <!-- The display is working? -->
@@ -36,7 +36,7 @@
 }}
 
 == Contributors ==
-* CHANGE_ME (put your username here!)
+* CalcProgrammer1 (Adam Honse)
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
@@ -45,6 +45,7 @@
 == How to enter flash mode ==
 
 == Installation ==
+I flashed by exporting zip, copying with MTP, and flashing with TWRP.  Have not tried other flash methods.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
