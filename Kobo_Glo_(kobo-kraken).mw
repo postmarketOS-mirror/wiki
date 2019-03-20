@@ -30,6 +30,6 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| booting = N
+| booting = 0
 | non_android = Y
 }}
