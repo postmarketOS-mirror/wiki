@@ -9,58 +9,60 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * [https://developer.sonymobile.com/2016/02/17/work-on-the-mainline-kernel-for-open-xperia-devices/ Sony Xperia Z]
 * [https://github.com/PabloPL/linux Galaxy S S1(?) with panel (s6e63m0) and usb switch (fsa9480)]
 
-== Candidate Devices ==
-* Samsung Epic 4G (SPH-D700)
-* Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release]
-* Kindle Fire 1st Generation (FOSS Bootloader, pretty much a PandaBoard devkit with a screen)
-* Fairphone 1
-* [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
-* Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
-* Intex Aqua Fish and Other Sailfish running devices
-* Oneplus 6
+﻿== Candidate Devices ==
+
+Please keep this list sorted by alphabet for readability.
+* ARK Benefit A3 (cheaper Elephone Trunk clone) — https://wiki.lineageos.org/devices/peach (currently unmaintained)
 * Ubuntu phones
 * BQ Aquaris E4.5
 * BQ Aquaris E5
 * BQ Aquaris M10
 * BQ Aquaris X2 (Pro)
-* Huawei P9 Plus (VIE-L09 (Single SIM); VIE-L29 (Dual SIM))
-* Huawei P8 Lite (ALE-21)
-* Meizu MX4
-* Meizu PRO 5
-* Nokia 3
-* Nokia 5
-* Purism Librem 5
-* Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
-* Samsung GT-S5839i
-* Samsung S8500 Wave - runs originally on Bada 2.0, has a bootloader and an Android port, see XDA
-* Samsung Galaxy Tab Pro 10.1 TM-525/PicassoLTE
-* Possibly Nokia Lumia 520 and 525 and/or other unlocked Lumia devices
-* HTC HD2 (the phone which famously runs ''any'' operating system)
-* [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
 * DooGee x5/x5Pro (MediaTek MT6735M) [SnowCat Kernel](https://github.com/SnowCat6/DOOGEE-kernel-3.18) (Also requires non-kernel code, firmware & drivers)[https://github.com/SnowCat6?utf8=%E2%9C%93&tab=repositories&q=x5pro&type=&language=]
-* ARK Benefit A3 (cheaper Elephone Trunk clone) — https://wiki.lineageos.org/devices/peach (currently unmaintained)
-* LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
-* LG Leon
-* ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
-* Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
-* OpenPandora handheld games console, mainline DTS
+* Fairphone 1
 * [http://projects.goldelico.com/p/gta04-main/ GTA04] - replacement board for OpenMoko Neo 1973/Freerunner (GTA01/02) with OMAP3 SoC, mainline DTS, supported by Replicant
-* [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
-* [https://ac100.grandou.net Toshiba AC100] 
-* Xiaomi Mi A1 (tissot) - very similar hardware to Xiaomi Redmi Note 4 (mido)
-* Xiaomi Pocophone F1
-* Xiaomi Mi Pad 3 (cappu)
-* Motorola Droid RAZR (spyder)
+* HTC HD2 (the phone which famously runs ''any'' operating system)
+* Huawei P8 Lite (ALE-21)
+* Huawei P9 Plus (VIE-L09 (Single SIM); VIE-L29 (Dual SIM))
 * Huawei Y3 
 * Huawei Y5 II
+* [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
+* Intex Aqua Fish and Other Sailfish running devices
+* Kindle Fire 1st Generation (FOSS Bootloader, pretty much a PandaBoard devkit with a screen)
 * Lenovo K10a40
-* Lenovo  TAB 2 A10-70F
+* Lenovo TAB 2 A10-70F
+* LG Leon
+* LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
+* Meizu MX4
+* Meizu PRO 5
+* [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
+* Motorola Droid RAZR (spyder)
+* Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
+* Nokia 3
+* Nokia 5
+* Nokia Lumia 520, 525 and/or other unlocked Lumia devices
+* Nokia Lumia 635
+* Oneplus 6
+* OpenPandora handheld games console, mainline DTS
+* [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
+* Purism Librem 5
+* Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
+* Samsung Epic 4G (SPH-D700)
+* Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
+* Samsung Galaxy Tab Pro 10.1 TM-525/PicassoLTE
+* Samsung Gear S
+* Samsung GT-S5839i
+* Samsung S8500 Wave - runs originally on Bada 2.0, has a bootloader and an Android port, see XDA
+* Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release]
+* [https://ac100.grandou.net Toshiba AC100] 
+* Wiko U FEEL (P6609BCD)
 * Wooze I5
 * Xiaomi Mi 5 (Gemini) - very similarhardware to Xiaomi Mi 5 Pro
-* Nokia Lumia 635
+* Xiaomi Mi A1 (tissot) - very similar hardware to Xiaomi Redmi Note 4 (mido)
+* Xiaomi Mi Pad 3 (cappu)
+* Xiaomi Pocophone F1 (beryllium)
 * Xiaomi Redmi Note 5a (ugglite)
-* Wiko U FEEL (P6609BCD)
-* Samsung Gear S
+* ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
 
 == Low Priority Devices ==
 
