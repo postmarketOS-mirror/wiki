@@ -2,7 +2,7 @@
 | manufacturer = Samsung
 | name =  Galaxy S Relay 4G
 | codename = samsung-t699
-| image = File:tbd
+| image = 
 | imagecaption = Samsung Galaxy S Relay 4G
 | releaseyear = 2012
 | originalsoftware = Android 4.0.4 ICS
@@ -14,7 +14,7 @@
 | memory = 1 GB
 | architecture = armhf
 | status_usbnet = Y
-| status_flashing = 
+| status_flashing = Y
 | status_touch = 
 | status_screen = Y
 | status_wifi = 
