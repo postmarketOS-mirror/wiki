@@ -34,7 +34,7 @@
 | booting = 
 }}
 
-'''Status: Boots to splash screen, telnet available via usb initramfs debug'''
+'''Status: Booting. USB ssh shell working'''
 
 == Contributors ==
 * silver
@@ -63,12 +63,3 @@ Set phone to ODIN mode
 *commit 87f5fcaf7afef878914c3fcca2c2fd395f285902
 *defconfig LineageOS/android_kernel_samsung_d2/87f5fcaf7afef878914c3fcca2c2fd395f285902/arch/arm/configs/cyanogen_apexq_defconfig
 *boot.img from cm backup March 2017
-
-== Build tweaks ==
-Just needed xz in makedepends and the partition defined for the kernel set to "BOOT". Then flashing works.
-
-==hello world==
-
-<pre>
-Linux (none) 3.4.103-cyanogenmod #1-postmarketOS SMP PREEMPT Mon Mar 4 23:03:30 UTC 2019 armv7l Linux
-</pre>
