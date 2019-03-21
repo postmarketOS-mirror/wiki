@@ -19,7 +19,7 @@
 | status_touch = P
 | status_screen = Y
 | status_wifi = 
-| status_xwayland = 
+| status_xwayland = Y
 | status_fde = N
 | status_mainline = N
 | status_battery = 
@@ -51,5 +51,4 @@ Only tested recovery zip, unknown if fastboot works because my bootloader doesn'
 == See also ==
 Initial merge request:
 * {{MR|286|pmaports}} Initial merge request
-Issues not yet on issue tracker:
-* I wasn't able to add a hook that is in device/device-motorola-montana/initfs-hook.sh into rootfs.
+* {{ISSUE|216|pmaports}}I wasn't able to add a hook that is in device/device-motorola-montana/initfs-hook.sh into rootfs.
