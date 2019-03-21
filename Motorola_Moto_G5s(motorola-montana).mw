@@ -49,7 +49,7 @@ I installed the rootfs on a /system partition. Flashing the kernel to the boot p
 Only tested recovery zip, unknown if fastboot works because my bootloader doesn't allow flashing, but allows booting and is otherwise unlocked.
 
 == See also ==
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+Initial merge request:
 * {{MR|286|pmaports}} Initial merge request
 Issues not yet on issue tracker:
 * I wasn't able to add a hook that is in device/device-motorola-montana/initfs-hook.sh into rootfs.
