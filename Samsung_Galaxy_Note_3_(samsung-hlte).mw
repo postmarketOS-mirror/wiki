@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung <!-- e.g. HTC -->
 | name =  Galaxy Note 3 <!-- e.g. Desire -->
-| codename = hlte <!-- e.g. htc-bravo -->
+| codename = samsung-hlte <!-- e.g. htc-bravo -->
 | image = hlte.jpg
 | imagecaption = Samsung Galaxy Note 3
 | releaseyear = 2013
