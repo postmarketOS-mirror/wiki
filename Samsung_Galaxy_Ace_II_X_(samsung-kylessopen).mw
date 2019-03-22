@@ -78,4 +78,5 @@ Ensure that the USB cable is disconnected, then hold down volume down + Home for
 If you can't get SSH over USB to work, see [[USB_Network]].
 
 == Notes ==
-; The screen flickers, flashes and scrolls except for when Weston is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
+ * The screen flickers, flashes and scrolls except for when Weston is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
+ * The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
