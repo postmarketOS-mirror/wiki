@@ -12,13 +12,13 @@
 | display = 480x800 WVGA
 | memory = 768MB
 | architecture = armhf
-| status_usbnet = 
+| status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = Y
-| status_fde = 
+| status_fde = N
 | status_mainline = 
 | status_battery =
 | status_3d = 
@@ -36,7 +36,7 @@
 == Contributors ==
 * platypro
 * racer123
-* Lofenyy
+* Lofenyy (Please message me if you have any questions or contributions regarding this device at lofenyy (at) linuxmail (dot) org)
 
 == Maintainer(s) ==
 * racer123
@@ -76,3 +76,6 @@ Ensure that the USB cable is disconnected, then hold down volume down + Home for
 
 == Troubleshooting ==
 If you can't get SSH over USB to work, see [[USB_Network]].
+
+== Notes ==
+; The screen flickers, flashes and scrolls except for when Weston is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
