@@ -1,3 +1,5 @@
+This article explains how to modify the postmarketOS initramfs scripts, for which the source can be found in the [https://gitlab.com/postmarketOS/pmaports/tree/master/main/postmarketos-mkinitfs postmarketos-mkinitfs] pmaport. There's another page about adding a [[Device_specific_package#Initramfs_hook|device specific initramfs hook]].
+
 === We have two initramfs files ===
 
 After the installation, you will have '''two''' initramfs files in your device's <code>/boot</code> folder.
