@@ -27,6 +27,8 @@ The variables <code>$startdir</code> and <code>$pkgname</code> are always availa
 === devicepkg_build ===
 Optionally creates an udev rule for the device's touch screen, based on the data from the <code>deviceinfo</code>. We can extend this to do more when it makes sense.
 
+The source code is in [https://gitlab.com/postmarketOS/pmaports/blob/master/main/devicepkg-dev/devicepkg_build.sh devicepkg_build.sh] of the devicepkg-dev pmaport.
+
 === devicepkg_package ===
 Installs the <code>deviceinfo</code> file (to <code>/etc/deviceinfo</code>) and all other files, that may have been generated during <code>devicepkg_build</code>.
 
