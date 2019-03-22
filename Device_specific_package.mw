@@ -129,13 +129,12 @@ Create a new <code>initfs-hook.sh</code> file in your device package's dir and f
 echo 4 > /sys/devices/platform/android_usb/usb_function_switch
 </syntaxhighlight>
 
-Then open the APKBUILD and add <code>initfs-hook.sh</code> to <code>source=</code>, and extend the <code>package()</code> function with:
-<syntaxhighlight lang="shell">
-	install -D -m644 "$srcdir"/initfs-hook.sh \
-		"$pkgdir"/etc/postmarketos-mkinitfs/hooks/00-${pkgname}.sh
-</syntaxhighlight>
+Then open the APKBUILD and add <code>initfs-hook.sh</code> to <code>source=</code>.
 
 As usually, update the checksums, build the package with <code>--force</code> and test the hook on your device.
+
+=== Notes ===
+If you have a modern device-specific APKBUILD (i.e. because you have just generated it), it will use <code>devicepkg_package</code> in <code>package()</code>, which will detect the initfs hook and install it automatically ({{MR|191|pmaports}}). This is the preferred way to do things. Otherwise you would have to copy [https://gitlab.com/postmarketOS/pmaports/blob/0d966c7a6fe92486c5b9b8fe4525fef7f89c3a90/main/devicepkg-dev/devicepkg_package.sh#L30-31 this install command] to the end of your <code>package()</code> function.
 
 For reference, you can look at the existing initfs-hooks:
 <syntaxhighlight lang="shell-session">
