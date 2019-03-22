@@ -133,7 +133,7 @@ Then open the APKBUILD and add <code>initfs-hook.sh</code> to <code>source=</cod
 
 As usually, update the checksums, build the package with <code>--force</code> and test the hook on your device.
 
-For reference, you can look at the eisting initfs-hooks:
+For reference, you can look at the existing initfs-hooks:
 <syntaxhighlight lang="shell-session">
 $ cd ~/code/pmbootstrap/aports/device
 $ find -name initfs-hook.sh
@@ -143,6 +143,7 @@ $ find -name initfs-hook.sh
 ./device-htc-a5ul/initfs-hook.sh
 ...
 </syntaxhighlight>
+
 == See also ==
 * [[deviceinfo]]
 * [[vendor kernel specific package]]
