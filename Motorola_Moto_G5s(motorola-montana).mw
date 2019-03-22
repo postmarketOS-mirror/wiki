@@ -51,4 +51,3 @@ Only tested recovery zip, unknown if fastboot works because my bootloader doesn'
 == See also ==
 Initial merge request:
 * {{MR|286|pmaports}} Initial merge request
-* {{issue|216|pmaports}}I wasn't able to add a hook that is in device/device-motorola-montana/initfs-hook.sh into rootfs.
