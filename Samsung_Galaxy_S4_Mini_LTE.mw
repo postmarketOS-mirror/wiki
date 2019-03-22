@@ -62,6 +62,7 @@
 == What does not work ==
 * Screen is red by default, can be fixed by using RGB565 mode instead of RGBA8888
 * HW acceleration(we need libhybris or mainlining or freedreno)
+* USB network device has no MAC address set by default, can be fixed by changing it to 06:4b:2d:xx:xx:xx(replace xx with random hex number)
 
 == How to enter flash mode ==
 * 1. Press VolumeDown, Home and Power buttons until Warning screen appears
