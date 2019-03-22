@@ -34,25 +34,13 @@
 }}
 
 == Contributors ==
+* racer123 (Maintainer)
+* Lofenyy (Please email me if you have any questions regarding this device at lofenyy(at)linuxmail(dot)org)
 * platypro
-* racer123
-* Lofenyy (Please message me if you have any questions or contributions regarding this device at lofenyy (at) linuxmail (dot) org)
 
-== Maintainer(s) ==
-* racer123
-
-== What works ==
-* Kernel compiles
-* Heimdall can flash
-* Boots
-* SSH over USB
-
-'''Graphical interfaces'''
+== Graphical Interfaces ==
 * Weston (Wayland) (recommended)
 * Plasma Mobile (not recommended, too slow) (Wayland)
-
-== What does not work ==
-'''Graphical interfaces'''
 * Hildon (X11) (possibly recommended)
 * Matchbox (X11) (possibly recommended)
 * MATE (X11) (not recommended)
@@ -68,8 +56,8 @@ Before installing, ensure that your host computer and your copy of pmbootstrap i
 Select "samsung-kylessopen" as the target device and select a working recommended graphical interface. 
 
 ; 2. install
-<source>$ ./pmbootstrap.py install</source>
-Full disk encryption is the default, though it may not work. Try --no-fde if your device isn't working. 
+<source>$ ./pmbootstrap.py install --no-fde</source>
+See notes regarding full disk encryption. 
 
 ; 3. flash
 Ensure that the USB cable is disconnected, then hold down volume down + Home for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source>$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source>$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
@@ -78,5 +66,5 @@ Ensure that the USB cable is disconnected, then hold down volume down + Home for
 If you can't get SSH over USB to work, see [[USB_Network]].
 
 == Notes ==
- * The screen flickers, flashes and scrolls except for when Weston is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
- * The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
+* The screen flickers, flashes and scrolls except for when Weston is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
+* The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
