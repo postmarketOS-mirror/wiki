@@ -32,6 +32,8 @@ The source code is in [https://gitlab.com/postmarketOS/pmaports/blob/master/main
 === devicepkg_package ===
 Installs the <code>deviceinfo</code> file (to <code>/etc/deviceinfo</code>) and all other files, that may have been generated during <code>devicepkg_build</code>.
 
+The source code is in [https://gitlab.com/postmarketOS/pmaports/blob/master/main/devicepkg-dev/devicepkg_package.sh devicepkg_package.sh] of the devicepkg-dev pmaport.
+
 == Use install_if to pull in packages ==
 If your device requires a specific X11 driver for example, it is possible to say: "Install this driver when this device package and Xorg are installed.".
 
