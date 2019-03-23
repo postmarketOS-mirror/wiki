@@ -7,7 +7,7 @@ It is possible to boot these devices at the very least. To confirm that, either 
 
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,' ',IF(NonAndroid='✔', CONCAT(' ', NonAndroid), ''),']]' )=Device,Codename,Architecture,StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,IF(NonAndroid='✔', CONCAT(' ', NonAndroid), ''),']]' )=Device,Codename,Architecture,StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
