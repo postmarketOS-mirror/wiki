@@ -33,7 +33,6 @@
 | status_sms = 
 | status_calls = 
 }}
-{{Device owners}}
 
 == Contributors ==
 * mishaor
@@ -41,6 +40,9 @@
 
 == Maintainer(s) ==
 * mishaor
+
+== Users owning this device ==
+{{Device owners}}
 
 == What works ==
 * Boot
