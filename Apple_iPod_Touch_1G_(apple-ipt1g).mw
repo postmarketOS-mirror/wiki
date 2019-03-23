@@ -33,7 +33,6 @@
 | status_calls =
 | status = openiboot doesn't build under gcc6 or 8 (we do have gcc4 packaged now, anyone willing to try again?)
 | booting = no
-| non_android = 🔼
 }}
 == Contributors ==
 
