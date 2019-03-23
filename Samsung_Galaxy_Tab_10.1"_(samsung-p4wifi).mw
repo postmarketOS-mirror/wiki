@@ -111,6 +111,8 @@ $ amixer cset name='IN1R Switch' on
 $ amixer cset name='IN1R Volume' 11
 </source>
 
+Note: Plug in the headset mic at boot otherwise the sound driver will not load. Some wm8994 device register writes fail during driver probe unless mic bias GPIO is set to high.
+
 == Wifi ==
 The wifi chip in this device is the Broadcom BCM4330 B1 revision. There is a B2 revision which is much more common. The only distinguishing factor is the firmware. Only the B1 firmware will work on this device. The most common BCM4330 firmware found from various sources (such as <code>linux-firmware</code>) is for the B2 revision.
 
