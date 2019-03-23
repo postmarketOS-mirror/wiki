@@ -36,12 +36,39 @@
  | status = <!-- info displayed in the "not booting" table on the Devices page -->
  | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* --> }}
 
- == Contributors == * CHANGE_ME (put your username here!)
+== Contributors ==
+* CalcProgrammer1 (Adam Honse)
 
- == Maintainer(s) == <!-- Only if this device doesn't run on linux-postmarketos yet! --> <!-- This person needs to be willing to answer questions from users of this device -->
+Device files:
 
- == How to enter flash mode ==
+https://gitlab.com/CalcProgrammer1/pmaports
 
- == Installation == <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+== Maintainer(s) ==
 
- == See also == <!-- Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234): * {{MR|CHANGEME|pmaports}} Initial merge request * {{issue|CHANGEME|pmaports}} Some related issue You can also add normal web links: * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page] -->
+== How to enter flash mode ==
+
+Unlock the bootloader according to this guide: http://www.aftvnews.com/how-to-fully-unlock-the-amazon-fire-tv-bootloader/
+
+Then you can use fastboot to flash and boot images.  A USB A-to-A cable is needed to connect a PC for fastboot.  I made a dongle by soldering two USB A connectors I salvaged from scrap cables together, then used a USB extension cable with it.
+
+I have not tested the postmarketOS flash tool.
+
+== Installation ==
+
+Upload root filesystem to the partition of your choice using fastboot.  I chose the userdata partition since it doesn't replace the default Android installation and has the most space.
+
+Test the boot.img with fastboot, then if it works flash it to the boot partition.
+
+== See also ==
+
+== Notes ==
+
+* The FireTV has serial port pads on the bottom side of the PCB.  You can solder to them with a fine tipped soldering iron.  There is no external serial port available.
+
+* The FireTV only has one USB port.  It is a type A port, but it can be used as a client through an A-to-A adapter.  This allows Fastboot usage.
+
+* Wireless LAN is a USB device - Qualcomm Atheros 0CF3:9374 (ath6kl)
+
+* Ethernet is a PCI device - Atheros L2 Ethernet Driver - version 2.2.3, PCI 0000:01:00.0 (atl1c)
+
+* mmc0 is the EMMC - M8G1GC 7.28GB
