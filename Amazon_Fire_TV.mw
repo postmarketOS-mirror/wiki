@@ -73,6 +73,8 @@ Test the boot.img with fastboot, then if it works flash it to the boot partition
 
 * mmc0 is the EMMC - M8G1GC 7.28GB
 
+* Debug serial port is on GSBI4
+
 == Chips On Board ==
 
 * MP28257 - Step down regulator (the one on the Fire TV is an 8 pin SMD part) https://www.monolithicpower.com/pub/media/document/MP28257_r1.0.pdf
