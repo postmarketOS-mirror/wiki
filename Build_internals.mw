@@ -21,11 +21,11 @@ To rebuild the initramfs, run <code>mkinitfs</code> inside the chroot with the r
 
 === Cross-compile types ===
 
-There are two cross-compile types supported. [https://github.com/postmarketOS/pmbootstrap/blob/master/pmb/build/autodetect.py <code>pmb.build.autodetect.crosscompile()</code>] figures out, which one is the right one for each build.
+These are the cross-compile types supported. [https://gitlab.com/postmarketOS/pmbootstrap/blob/master/pmb/build/autodetect.py <code>pmb.build.autodetect.crosscompile()</code>] figures out, which one is the right one for each build.
 
-* <code>None</code>: The target architecture is the same as the &quot;native&quot; architecture (e.g. compiling <code>heimdall</code> for <code>x86_64</code> on an <code>x86_64</code> system).
-* <code>&quot;native&quot;</code>: the build system of the package understands cross-compiling, like all kernel packages. We can use the native chroot with the cross-compiler inside that chroot for maximum speed.
-* <code>&quot;distcc&quot;</code>: the build system of the package does ''not'' understand cross-compiling, so we run the whole compiling process inside a chroot with the target architecture (with qemu user mode emulation, this is slow). We avoid using qemu emulation for the compiler though, because we use the cross-compiler inside the native chroot through distcc (which was originally meant to share compiling efforts across the network, but it works for this case. [https://archlinuxarm.org/wiki/Distcc_Cross-Compiling Arch Linux ARM also does this] and has a detailed description of how to set this up manually.)
+* <code>None</code>: The target architecture is the same as the "native" architecture (e.g. compiling <code>heimdall</code> for <code>x86_64</code> on an <code>x86_64</code> system).
+* <code>"native"</code>: the build system of the package understands cross-compiling, like all kernel packages. We can use the native chroot with the cross-compiler inside that chroot for maximum speed.
+* <code>"distcc"</code>: the build system of the package does ''not'' understand cross-compiling, so we run the whole compiling process inside a chroot with the target architecture (with qemu user mode emulation, this is slow). We avoid using qemu emulation for the compiler though, because we use the cross-compiler inside the native chroot through distcc (which was originally meant to share compiling efforts across the network, but it works for this case. [https://archlinuxarm.org/wiki/Distcc_Cross-Compiling Arch Linux ARM also does this] and has a detailed description of how to set this up manually.)
 
 === Performance related issues ===
 * [https://github.com/postmarketOS/pmbootstrap/issues/659 Use "native" for (almost) all packages?]
