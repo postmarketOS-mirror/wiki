@@ -39,14 +39,26 @@
 * platypro
 
 == Graphical Interfaces ==
-* Weston (Wayland) (recommended)
-* Plasma Mobile (not recommended, too slow) (Wayland)
-* Hildon (X11) (possibly recommended)
-* Matchbox (X11) (possibly recommended)
-* MATE (X11) (not recommended)
-* XFCE4 (X11) (not recommended)
+=== Matchbox ===
+Matchbox is a free software (GPL v2+) window manager for the X Window System designed for embedded systems. It's latest stable release was in April of 2012, the same year this phone was known to be released in the UK. It's rather lightweight, displaying only one window at a time, and has its own software keyboard built in, making it the interface I recommend the most for this device. 
 
-Note that all of the working interfaces are using Wayland and the ones that don't work are using X11. This could indicate that there's an issue with Xorg on this device (see {{issue|1618}}).
+=== MATE ===
+MATE is a fork of Gnome2 fork in response to the negative reception of Gnome3. It's initial release was in 2011 (GPLv2, LGPLv2) and it's still in active development. It doesn't come with a software keyboard and it can be slow and buggy at times. It feels more appropriate as a desktop interface. 
+
+=== Xfce4 ===
+Xfce aims to be fast and lightweight, while still being visually appealing. It follows the Unix philosophy, with each component being its own project. It's latest stable release 2015, licensed under the GPL, LGPL and BSD licenses. It doesn't come with a software keyboard. I would recommend it about as much as I recommend MATE. 
+
+=== i3wm ===
+i3wm is a tiling window manager for the X Window System. It's rather small and lightweight. It's initial release was in 2009 and is still in active development. It's licensed under the BSD license. It's highly keyboard driven, but doesn't come with a software keyboard. I would recommend this interface for users who own a hardware keyboard. 
+
+=== Weston ===
+Weston is a demo Wayland compositor. While it runs nicely on this phone, it has very limited functionality. I personally wouldn't recommend it for everyday use. 
+
+=== Plasma Mobile ===
+Plasma Mobile is a GPLv2 licensed smartphone interface. It's sadly painfully slow on this phone and rather buggy. I wouldn't recommend it. 
+
+=== Hildon ===
+Hildon is an LGPL user interface for cell phones. It sadly doesn't work on this device at the moment. 
 
 == Installation ==
 Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
@@ -69,3 +81,4 @@ If you can't get SSH over USB to work, see [[USB_Network]].
 * The screen flickers, flashes and scrolls except for when Weston is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
 * The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
 * It's not known whether Xwayland works, because within the only usable working environment (Weston), firefox is needed to test Xwayland, and it doesn't seem to be installed by default, nor is it available during the installation process. Correct me if I'm wrong.
+* {{issue|1618}}
