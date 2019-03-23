@@ -33,7 +33,7 @@
  | status_mobiledata = N <!-- Connecting to the Internet via cellular network. -->
  | status_sms = N <!-- Sending and receiving short messages works as intended. -->
  | status_calls = N <!-- Talking to other people over the cellular network. -->
- | booting = N <!-- The device is booting at all, can be yes/no *IMPORTANT* --> }}
+ | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* --> }}
 
  == Contributors == * CHANGE_ME (put your username here!)
 
