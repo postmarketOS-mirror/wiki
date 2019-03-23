@@ -24,7 +24,6 @@
 | status_calls =
 | status = 
 | booting = no
-| non_android = 🔼
 }}
 
 With 4.6 kernel, [https://github.com/pali/linux-n900/commit/eb080ecdcfc5868d8e36d0f5f42d9cb7f13b4db9 Pali's patch to mmc] and right config with command line inside, qemu works for N900 emulation, including running Weston.
