@@ -72,3 +72,27 @@ Test the boot.img with fastboot, then if it works flash it to the boot partition
 * Ethernet is a PCI device - Atheros L2 Ethernet Driver - version 2.2.3, PCI 0000:01:00.0 (atl1c)
 
 * mmc0 is the EMMC - M8G1GC 7.28GB
+
+== Chips On Board ==
+
+* MP28257 - Step down regulator (the one on the Fire TV is an 8 pin SMD part) https://www.monolithicpower.com/pub/media/document/MP28257_r1.0.pdf
+
+* Qualcomm PMM8920 - Power management https://developer.qualcomm.com/download/sd600/pmm8920-power-management-module-device-specification.pdf
+
+* Burr Brown DIT4192I - Looks like some sort of I2S to S/PDIF chip for the optical output
+
+* PI6C557 - PCI Express and Ethernet clock generator - https://www.diodes.com/assets/Datasheets/PI6C557-03.pdf
+
+* Atheros AR8152 - PCI Express Fast Ethernet controller - https://www.dell.com/support/home/us/en/04/drivers/driversdetails?driverid=d1kk4
+
+* Samsung KLM8G1GEAC - 8 GB eMMC
+
+* SKhynix H9TKNNNBPDAR - 2 GB LPDDR2 RAM
+
+* Qualcomm QCA6234XH - Dual-band 802.11n WiFi and Bluetooth 4.0 - http://static6.arrow.com/aropdfconversion/27d08f16d6931e5586c814aa99f27670b381e85b/lm80-p0598-12_a_qca6234_datasheet.pdf
+
+* Analog Devices ADG3304 - 4 channel logic level translator - https://www.analog.com/media/en/technical-documentation/data-sheets/adg3304.pdf
+
+* Texas Instruments YF08E - 8 channel voltage translator - http://www.ti.com/lit/ds/symlink/txs0108e.pdf
+
+* Texas Instruments TPD12S016 - HDMI Companion Chip - http://www.ti.com/lit/ds/symlink/tpd12s016.pdf
