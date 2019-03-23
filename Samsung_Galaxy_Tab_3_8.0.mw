@@ -75,7 +75,9 @@ Turned on OTG via kernel config and it still doesn't work (at least with the two
 
 <strike>Hardware buttons don't work yet.</strike> Hardware buttons do work, they just require triggerhappy on xfce. Back and menu buttons are in /dev/input/event1, home, volume and power buttons are in /dev/input/event0.
 
-<strike>WiFi doesn't work (in fact, WiFi doesn't seem to appear in `ip a` at all!)</strike> WiFi should work using the i9070 method. Not much modifications are needed. Sadly, I can't figure out how to build the kernel module :/
+<strike>WiFi doesn't work (in fact, WiFi doesn't seem to appear in `ip a` at all!)</strike> WiFi should work using the [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_S_Advance_(samsung-i9070)#How_drebrez_made_wifi_work i9070 method]. Not much modifications are needed. Sadly, I can't figure out how to build the kernel module :/
+
+Audio should work using [https://wiki.postmarketos.org/wiki/Audio#WM1811 these instructions]. The tablet uses TAB3_WM1811 as the name.
 
 For more information about the build process, see https://mastodon.social/@knuxfanwin8/101699225884881827
 
