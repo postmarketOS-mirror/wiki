@@ -107,3 +107,7 @@ Taken from mach-msm/board-bueller.c on kernel-msm kernel tree.
 
 /* SPDIF buffer enable ping */
 #define SPDIF_BUFFER_ENABLE_GPIO 5
+
+== Regulators ==
+* GPIO external 5V regulator
+* GPIO external MPP regulator
