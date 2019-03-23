@@ -96,3 +96,14 @@ Test the boot.img with fastboot, then if it works flash it to the boot partition
 * Texas Instruments YF08E - 8 channel voltage translator - http://www.ti.com/lit/ds/symlink/txs0108e.pdf
 
 * Texas Instruments TPD12S016 - HDMI Companion Chip - http://www.ti.com/lit/ds/symlink/tpd12s016.pdf
+
+== GPIOs ==
+Taken from mach-msm/board-bueller.c on kernel-msm kernel tree.
+
+/* PCIe pmic gpios */
+#define PCIE_WAKE_N_PMIC_GPIO 12
+#define PCIE_PWR_EN_PMIC_GPIO 13
+#define PCIE_RST_N_PMIC_MPP 1
+
+/* SPDIF buffer enable ping */
+#define SPDIF_BUFFER_ENABLE_GPIO 5
