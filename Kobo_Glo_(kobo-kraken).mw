@@ -11,7 +11,7 @@
 | display = 768x1024 E Ink
 | memory = 256 MB
 | architecture = armhf
-| n-android = 
+| n-android =  ✔
 | status_usbnet = 
 | status_flashing =
 | status_touch = 
@@ -30,6 +30,5 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| booting = 0
-| non_android = Y
+| booting = no
 }}
