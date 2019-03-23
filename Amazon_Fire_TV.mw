@@ -61,6 +61,10 @@ Test the boot.img with fastboot, then if it works flash it to the boot partition
 
 == See also ==
 
+Mainlining in progress, code here: https://gitlab.com/CalcProgrammer1/linux-next
+
+The branch has both Amazon FireTV and Galaxy Note 3 changes.
+
 == Notes ==
 
 * The FireTV has serial port pads on the bottom side of the PCB.  You can solder to them with a fine tipped soldering iron.  There is no external serial port available.
