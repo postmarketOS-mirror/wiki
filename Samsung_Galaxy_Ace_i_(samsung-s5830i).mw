@@ -5,14 +5,16 @@
 | image = File:Samsung-S5830i.jpg
 | imagecaption = S5830i in recovery mode
 | releaseyear = 2011
-| originalsoftware = Android 2.3
+| originalsoftware = Android 2.2
+<!--| pmoskernel = 3.18.79-->
 | chipset = Broadcom BCM21553
-| cpu = 
+| cpu = ARM11 @ 832MHz
 | gpu = VideoCore IV
-| storage = 158 MB
+| storage = 8GB
 | display = 320 x 480
-| memory = 
+| memory = 362 MB
 | architecture = armhf
+<!--| whet_dhry = 910.4-->
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
@@ -31,6 +33,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
+| status_otg = -
 | status = Kernel compiles, haven't tried flashing yet
 | booting = no
 }}
@@ -47,6 +50,11 @@
 * Kernel compiles (https://github.com/takluyver/pmbootstrap/tree/samsung-s5830i )
 
 == What does not work ==
+
+== Additional info ==
+Information about this phone is sparse, there is one place with somewhat complete data about that device:
+
+http://specdevice.com/showspec.php?id=3b87-5692-0000-00000033c587
 
 == How to enter flash mode ==
 
