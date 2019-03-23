@@ -33,6 +33,12 @@
 | status_sms = 
 | status_calls =
 | booting = yes
+
+<!-- you can also use these lines:
+| pmoskernel = Version of the kernel that pmos is running
+| whet_dhry = see Unixbench page on wiki
+| status_otg = Is OTG available, not used in wiki
+-->
 }}
 
 == Contributors ==
