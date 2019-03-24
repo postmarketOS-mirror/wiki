@@ -50,6 +50,6 @@ Download/Odin: Power+VolDown
 
 
 == Notes ==
-<strike>Device not tested yet.</strike> Doesn't boot, says system partition doesn't exist. I'll reflash the stock rom and see if it works.
+<strike>Device not tested yet.Doesn't boot, says system partition doesn't exist. I'll reflash the stock rom and see if it works.</strike> system partition is read-only, or the fstab is broken.
 
 == See also ==
