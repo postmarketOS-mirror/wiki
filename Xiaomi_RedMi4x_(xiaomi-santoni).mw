@@ -13,67 +13,89 @@
 | display = 720x1280
 | memory = 2 GB / 3 GB / 4 GB
 | architecture = aarch64
-| status_usbnet = 
+| status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
-| status_xwayland = 
+| status_wifi = Y
+| status_xwayland = Y
 | status_fde = 
 | status_mainline = 
 | status_battery =
 | status_3d = 
 | status_accel = 
-| status_audio = 
+| status_audio = Y
 | status_bluetooth =
 | status_camera =
 | status_gps = 
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
+| status_otg = Y
 | booting = yes
 }}
 
 == Contributors ==
 * pinoaffe
+* Danct12
 
 == Maintainer(s) ==
-* pinoaffe
+* pinoaffe (old Xiaomi kernel)
+* Danct12 (upstreamed msm-3.18 kernel)
 
 == What works ==
+* Install to SD Card
 * Boots
-* Screen
+* Flashing (never tested, but should work as expected)
 * Touch
-* Flashing
-* Battery
-* USB host mode
-* HID buttons (KEY_POWER, KEY_VOLUMEDOWN and KEY_VOLUMEUP)
+* Wayland
+* XWayland
+* USB Ethernet/Internet
+* WiFi (WCNSS Prima, blobs are needed)
+* Vibrator
+* Audio (extra steps required)
+* USB OTG
+
 == What does not work ==
-* USB Networking
-** In /sys/devices/soc/78db000.usb/msm_hsusb/ there are two files (is_peripheral and is_otg) that might have to do with switching device-type, but they're both 0 and writing 1 to either results in I/O errors
-* USB device mode
-* Wireless LAN
-* Audio
-* Mainline
-* Camera
+* Camera (Detected as /dev/video32 and /dev/video33, but accessing them will result in a kernel lock)
 * GPS
 * Mobile Data
 * SMS
 * Calls
 * Accelerometers
 * Bluetooth
-* Accelerated 3D graphics
+* 3D Acceleration (will never happen due to downstream kernel)
 * Backlight stays on when the phone goes into "sleep" because of a lack of user interaction
 
-== How to enter flash mode ==
-Turn the phone off and press and hold both the power and volume button at the same time.
-Keep holding those buttons untill a picture of the Xiaomi bunny appears.
+== Extra steps to get things working ==
+=== Audio ===
+TO-DO
+
+=== Wi-Fi ===
+TO-DO, again.
+
+== Bootloader Unlocking ==
+Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
+
+The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and turned on)
+
+Unlocking bootloaders on Xiaomi devices will '''void''' your warranty, except for the Pocophone.
+
+== Key combinations for entering Recovery/Fastboot ==
+=== Recovery ===
+* Turn the device off (or restart also works)
+* Hold both volume buttons (+ and -) before the device vibrates (Power On Self Test)
+* Keep holding until you got to recovery.
+
+=== Fastboot ===
+* Same as recovery, but this time hold the volume down key instead of both keys.
 
 == Installation ==
-Installation over fastboot works, 
-android recovery zip installation is untested.
+Installation over fastboot works, Android recovery zip installation is untested.
 
 == See also ==
 * [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php gsmarena page]
 * [https://twrp.me/xiaomi/xiaomiredmi4x.html twrp page]
-* [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss recently released official kernel sources]
+* [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss Xiaomi Redmi 4X Official Kernel Source]
+* [https://github.com/Danct12/msm-3.18/tree/rel/msm-3.18-archlinux msm-3.18 upstreamed kernel for santoni]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/288 Pull request for msm-3.18 upstreamed kernel]
