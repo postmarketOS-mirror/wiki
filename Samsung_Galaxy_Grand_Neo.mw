@@ -15,7 +15,7 @@
 | memory = 1GB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status = Kernel builds, can't flash
+| status = Kernel builds, can't flash rootfs
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = 
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
@@ -52,6 +52,7 @@ Doesn't work yet, see notes.
 
 == Notes ==
 <strike>Device not tested yet.Doesn't boot, says system partition doesn't exist. I'll reflash the stock rom and see if it works.</strike> system partition is read-only<strike>, or the fstab is broken</strike>.
+Boot image flashes just fine.
 
 WiFi uses BCM4330. Getting it to work is just a matter of a few changed lines in the kernel config and installing the <code>firmware-aosp-broadcom-wlan</code> package.
 
