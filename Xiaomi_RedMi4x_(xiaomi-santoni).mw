@@ -46,7 +46,7 @@
 == What works ==
 * Install to SD Card
 * Boots
-* Flashing (never tested, but should work as expected)
+* Flashing
 * Touch
 * Wayland
 * XWayland
