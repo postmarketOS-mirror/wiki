@@ -67,7 +67,7 @@ The branch has both Amazon FireTV and Galaxy Note 3 changes.
 
 == Notes ==
 
-* The FireTV has serial port pads on the bottom side of the PCB.  You can solder to them with a fine tipped soldering iron.  There is no external serial port available.
+* The FireTV has serial port pads on the bottom side of the PCB.  You can solder to them with a fine tipped soldering iron.  There is no external serial port available.  I modified mine by adding a 3 pin header port and cutting a notch in the case to fit it.  See here: [[File:Amazon-bueller-mod-1.jpg]]
 
 * The FireTV only has one USB port.  It is a type A port, but it can be used as a client through an A-to-A adapter.  This allows Fastboot usage.
 
