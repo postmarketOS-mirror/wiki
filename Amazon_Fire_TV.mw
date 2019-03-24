@@ -120,4 +120,11 @@ Taken from mach-msm/board-bueller.c on kernel-msm kernel tree.
 
 GPIOs
 * APQ8064_EXT_3P3V_REG_EN_GPIO 77
-* 5V - PM8921_MPP_PM_TO_SYS(7)
+
+5V GPIO #define rabbit hole...
+* 5V - PM8921_MPP_PM_TO_SYS(7) --> #define PM8921_MPP_PM_TO_SYS(pm_mpp)     (pm_mpp - 1 + PM8921_MPP_BASE)
+* #define PM8921_MPP_BASE                  (PM8921_GPIO_BASE + PM8921_NR_GPIOS)
+* #define PM8921_GPIO_BASE         NR_GPIO_IRQS
+* #define NR_GPIO_IRQS 152 (this one is multiply defined)
+* #define PM8921_NR_GPIOS               44
+* (7 - 1 + (152 + 44) ) = 202...seems wrong
