@@ -117,3 +117,7 @@ Taken from mach-msm/board-bueller.c on kernel-msm kernel tree.
 == Regulators ==
 * GPIO external 5V regulator
 * GPIO external MPP regulator
+
+GPIOs
+* APQ8064_EXT_3P3V_REG_EN_GPIO 77
+* 5V - PM8921_MPP_PM_TO_SYS(7)
