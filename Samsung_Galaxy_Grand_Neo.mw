@@ -15,7 +15,7 @@
 | memory = 1GB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status = Kernel builds, not tested yet
+| status = Kernel builds, can't flash
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = 
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
