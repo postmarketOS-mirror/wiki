@@ -134,6 +134,15 @@ gpios 196-207 on pm8xxx-mpp (PM8921)
 
 gpios 208-211 on pm8xxx-mpp (PM8821)
 
+
+Busy GPIOs on android kernel (gives Resource Busy error when echo n > /sys/class/gpio/export):
+
+SoC GPIO: 5, 6, 8, 27, 28, 29, 30, 31, 32, 33, 35, 69, 70, 71, 72, 88, 89
+
+PM8921 GPIO: 164, 193
+
+PM8921 MPP: 196, 202, 203
+
 == Regulators ==
 * GPIO external 5V regulator
 * GPIO external MPP regulator
