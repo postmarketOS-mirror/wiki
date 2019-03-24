@@ -107,22 +107,31 @@ The branch has both Amazon FireTV and Galaxy Note 3 changes.
 Taken from mach-msm/board-bueller.c on kernel-msm kernel tree.
 
 /* PCIe pmic gpios */
+
 #define PCIE_WAKE_N_PMIC_GPIO 12
 #define PCIE_PWR_EN_PMIC_GPIO 13
 #define PCIE_RST_N_PMIC_MPP 1
 
 /* SPDIF buffer enable ping */
+
 #define SPDIF_BUFFER_ENABLE_GPIO 5
 
 /* According to Android kernel dmesg */
+
 gpio 202 - ext_5v (ext_5v_en)
+
 gpio 203 - ext_mpp8 (ext_mpp8_en)
+
 gpio 193 - vbus_otg (usb_otg_sw_en)
+
 gpio 8 - bt_wifi_en (gpio_8_vreg)
 
 gpios 0-151 on msmgpio (SoC)
+
 gpios 152-195 on pm-gpio (PM8921)
+
 gpios 196-207 on pm8xxx-mpp (PM8921)
+
 gpios 208-211 on pm8xxx-mpp (PM8821)
 
 == Regulators ==
