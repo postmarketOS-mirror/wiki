@@ -62,6 +62,9 @@ Alternative patch: [https://cascardo.eti.br/patches/0001-fix-video-argb-setting.
 
 A workaround might be setting the default color depth to 16 bits per pixel (see [https://gitlab.com/postmarketOS/pmaports/merge_requests/132#note_133044017 this comment]).
 
+=== See also ===
+* {{issue|211|pmaports}} framebuffer: red and blue are swapped on devices using MSM8974 (resolved)
+
 == Screen doesn't refresh ==
 
 Check if your screen refreshes when you do the following:
