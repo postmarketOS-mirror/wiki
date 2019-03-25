@@ -57,7 +57,7 @@
 * USB OTG
 
 == What does not work ==
-* Camera (Detected as /dev/video32 and /dev/video33, but accessing them will result in a kernel lock)
+* Camera (Broken in kernel, detected as /dev/video32-33)
 * GPS
 * Mobile Data
 * SMS
@@ -65,14 +65,77 @@
 * Accelerometers
 * Bluetooth
 * 3D Acceleration (will never happen due to downstream kernel)
+* Xorg (fbdev failed to initalize modes)
 * Backlight stays on when the phone goes into "sleep" because of a lack of user interaction
 
 == Extra steps to get things working ==
+
 === Audio ===
-TO-DO
+* Audio firmware needs to be copied from <code>/vendor/firmware/image/adsp*</code> to <code>/lib/firmware/postmarketos</code>. The audio driver can be enabled by accessing <code>/dev/subsys_adsp</code>.
+* UCM files for this device can be obtained here: https://github.com/Danct12/arch-linux-santoni/tree/master/msm8920-sku7-snd-card
+* The speaker can be enabled using this command:
+<source lang="shell"># /usr/bin/alsaucm -c msm8920-sku7-snd-card set _verb HiFi set _enadev Speaker</source>
 
 === Wi-Fi ===
-TO-DO, again.
+* <code>/vendor/firmware/image/wifi</code> folder and <code>/vendor/firmware/image/wcnss*</code> needs to be copied to <code>/lib/firmware/postmarketos</code>. The Wi-Fi driver can be enabled by accessing <code>/dev/subsys_wcnss</code>.
+* <code>wcnss-wlan</code> can be installed from postmarketOS repo to automatically enable the Prima WCNSS driver on boot up.
+
+== Mainline kernel? ==
+Not yet, as msm8940 chipset isn't in mainline.
+{| class="wikitable"
+|-
+! scope="col"| Parts
+! scope="col"| Components
+! scope="col"| In Torvalds tree?
+|-
+| scope="row"| Chipset
+| MSM8940 (msm8940.dts)
+| No
+|-
+| scope="row"| GPU
+| Adreno 505
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/msm/adreno/a5xx_gpu.c a5xx_gpu.c])
+|-
+| scope="row"| Touch Screen
+| FT5X06
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/input/touchscreen/edt-ft5x06.c edt-ft5x06.c])
+|-
+| scope="row"| Fingerprint Sensor
+| FPC1020
+| No
+|-
+| scope="row"| Accelerometer + Gyroscope
+| ICM20607
+| No
+|-
+| scope="row"| ALSPS
+| STK3X1X
+| No
+|-
+| scope="row"| Magnetometer
+| YAS537
+| No
+|-
+| scope="row"| Sound
+| AW87319
+| No
+|-
+| scope="row"| Notifications LED
+| AW2013
+| No
+|-
+| scope="row"| Front Camera
+| OV5675
+| No
+|-
+| scope="row"| Back Camera
+| S5K3L8
+| No
+|}
+
+== More information on this port ==
+* The upstream msm-3.18 kernel is a fork of https://github.com/bitrvmpd/msm-3.18
+* Most of this work was done for my project (Arch Linux on Redmi 4X), and the progress are backported to postmarketOS in order to help development.
 
 == Bootloader Unlocking ==
 Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
@@ -94,8 +157,8 @@ Unlocking bootloaders on Xiaomi devices will '''void''' your warranty, except fo
 Installation over fastboot works, Android recovery zip installation is untested.
 
 == See also ==
-* [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php gsmarena page]
-* [https://twrp.me/xiaomi/xiaomiredmi4x.html twrp page]
+* [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php GSMArena page]
+* [https://twrp.me/xiaomi/xiaomiredmi4x.html Official TWRP image for Redmi 4X (santoni)]
 * [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss Xiaomi Redmi 4X Official Kernel Source]
 * [https://github.com/Danct12/msm-3.18/tree/rel/msm-3.18-archlinux msm-3.18 upstreamed kernel for santoni]
-* [https://gitlab.com/postmarketOS/pmaports/merge_requests/288 Pull request for msm-3.18 upstreamed kernel]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/289 Pull request for msm-3.18 upstreamed kernel]
