@@ -75,6 +75,8 @@
 * UCM files for this device can be obtained here: https://github.com/Danct12/arch-linux-santoni/tree/master/msm8920-sku7-snd-card
 * The speaker can be enabled using this command:
 <source lang="shell"># /usr/bin/alsaucm -c msm8920-sku7-snd-card set _verb HiFi set _enadev Speaker</source>
+* alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use a sound server and control the volume on the server (I use PulseAudio)
+* PulseAudio is choppy/un-hearable with the default setting, this can be fixed by [turning off sched https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling].
 
 === Wi-Fi ===
 * <code>/vendor/firmware/image/wifi</code> folder and <code>/vendor/firmware/image/wcnss*</code> needs to be copied to <code>/lib/firmware/postmarketos</code>. The Wi-Fi driver can be enabled by accessing <code>/dev/subsys_wcnss</code>.
@@ -155,6 +157,11 @@ Unlocking bootloaders on Xiaomi devices will '''void''' your warranty, except fo
 
 == Installation ==
 Installation over fastboot works, Android recovery zip installation is untested.
+
+== Photos ==
+<gallery>
+File:Pmos_msm-318_santoni.png|thumb|left|Weston with msm-3.18 upstream kernel
+</gallery>
 
 == See also ==
 * [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php GSMArena page]
