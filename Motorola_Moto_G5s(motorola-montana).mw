@@ -49,5 +49,4 @@ I installed the rootfs on a /system partition. Flashing the kernel to the boot p
 Only tested recovery zip, unknown if fastboot works because my bootloader doesn't allow flashing, but allows booting and is otherwise unlocked.
 
 == See also ==
-Initial merge request:
 * {{MR|286|pmaports}} Initial merge request
