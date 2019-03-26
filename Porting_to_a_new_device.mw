@@ -3,6 +3,7 @@
 
 * Join [[Matrix and IRC|Matrix/IRC]] to get help when you're stuck
 * Search the [[devices]] page for your device to avoid duplicate work (read potentially existing device pages and check for links to existing branches).
+** Note that there's a [[Generic x64 uefi]] device, which you might be able to use if your target device has a x86_64 CPU.
 
 === Requirements ===
 ==== Host PC ====
