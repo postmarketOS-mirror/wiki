@@ -76,11 +76,16 @@
 * The speaker can be enabled using this command:
 <source lang="shell"># /usr/bin/alsaucm -c msm8920-sku7-snd-card set _verb HiFi set _enadev Speaker</source>
 * alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use a sound server and control the volume on the server (I use PulseAudio)
-* PulseAudio is choppy/un-hearable with the default setting, this can be fixed by [turning off sched https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling].
+* PulseAudio is choppy/un-hearable with the default setting, this can be fixed by [https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling turning off sched].
 
 === Wi-Fi ===
 * <code>/vendor/firmware/image/wifi</code> folder and <code>/vendor/firmware/image/wcnss*</code> needs to be copied to <code>/lib/firmware/postmarketos</code>. The Wi-Fi driver can be enabled by accessing <code>/dev/subsys_wcnss</code>.
 * <code>wcnss-wlan</code> can be installed from postmarketOS repo to automatically enable the Prima WCNSS driver on boot up.
+
+== Bugs? ==
+* Framebuffer programs, such as fbterm will have it's red and blue color palette swapped for some odd reason, it might be better to look into this, as you might use them later. This will also affect programs that make use of fbconfig.
+* Xorg has been tested on Arch Linux ARM, however Xorg does not work on postmarketOS port for some reason, due to fbdev driver failed to initialize mode.
+* Persistent storage (pstore) / RAM Console does not work.
 
 == Mainline kernel? ==
 Not yet, as msm8940 chipset isn't in mainline.
@@ -137,7 +142,7 @@ Not yet, as msm8940 chipset isn't in mainline.
 
 == More information on this port ==
 * The upstream msm-3.18 kernel is a fork of https://github.com/bitrvmpd/msm-3.18
-* Most of this work was done for my project (Arch Linux on Redmi 4X), and the progress are backported to postmarketOS in order to help development.
+* Most of this work was done for my project ([https://github.com/danct12/arch-linux-santoni Arch Linux on Redmi 4X]), and the progress are backported to postmarketOS in order to help development.
 
 == Bootloader Unlocking ==
 Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
