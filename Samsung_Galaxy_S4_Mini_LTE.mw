@@ -38,7 +38,13 @@
 * rrooij (initial port)
 * scintill (USB network, modem)
 * maccraft123 (Mainlining(in progress))
-* Everyone else on IRC (feel free to put your name
+* Everyone else on IRC (feel free to put your name)
+<nowiki>
+{{Device owners}}
+* rroij
+* scintill
+* maccraft123
+</nowiki>
 
 == What works ==
 * Compiling the kernel
