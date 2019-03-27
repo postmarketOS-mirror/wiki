@@ -24,9 +24,9 @@
 | status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = Y <!-- tested with libreoffice & xterm -->
-| status_fde = P
+| status_fde = N <!-- Partition unlocks, bootup hangs somewhere after that -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = P <!-- charging-sdl shows up, I don't trust these percentages though; crashes after few seconds-->
+| status_battery = N <!-- charging-sdl shows up, I don't trust these percentages though; crashes after few seconds-->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
@@ -36,7 +36,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status_otg = <--! theoretically possible?? -->
+| status_otg = <!-- theoretically possible?? -->
 | status =
 | booting = yes
 
@@ -68,7 +68,7 @@
 === Downstream kernel ===
 There are official sources for 3.18, The CPU itself is aarch64 but the kernel was made for arm(v7) mode.
 
-CPU cores are hotplugged.
+CPU cores are hotplugged, Unixbench score may be lowered since cores are enabled/disabled depending on load.
 
 === Upstream kernel ===
 Doesn't exist yet, dts files for the phone are available in downstream kernel
@@ -156,13 +156,12 @@ Supported events:
 
 
 == How to enter flash mode ==
-=== Directly to fastboot ===
 Plug in USB, press and hold power and press and hold volume down as fast as you can, then release power when you see Nokia logo.
 
-=== Through recovery ===
+== How to enter recovery mode ==
 Plug in USB, press and hold power and press and hold volume down as fast as you can, then release power when you see Nokia logo. "No command" should appear. Press and hold power and then press and hold Volume Up and release both buttons after screen changes.
 
-Scroll to bootloader using Vol up/down keys and press power to confirm.
+You can scroll to bootloader using Vol up/down keys and press power to confirm.
 
 == Installation ==
 
@@ -171,20 +170,20 @@ First unlock the phone by hashing the serial number with MD5
 <source lang="shell-session">
 // Have the phone booted in android and developer mode enabled
 $ adb get-serialno
-FRTBA80306545107
+FRTBA00000000000
 
 // Hash the serial number
-$ echo -n FRTBA80306545107 | md5sum
-e2a0704c877da26c57a305c216bf7245  -
+$ echo -n FRTBA00000000000 | md5sum
+6aa2e16b46ad1c7bc3d3210db6c06531  -
 
 // Feed the key to fastboot
-$ sudo fastboot oem key e2a0704c877da26c57a305c216bf7245
+$ sudo fastboot oem key 6aa2e16b46ad1c7bc3d3210db6c06531
 
 // Unlock the bootloader
 $ sudo fastboot oem unlock
 </source>
 
-Follow standard installation instructions after unlocking
+Follow standard [[Installation guide]] after unlocking
 
 == See also ==
 <!--
