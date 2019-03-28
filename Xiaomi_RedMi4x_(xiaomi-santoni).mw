@@ -41,7 +41,7 @@
 
 == Maintainer(s) ==
 * pinoaffe (old Xiaomi kernel)
-* Danct12 (upstreamed msm-3.18 kernel)
+* Danct12 (rebased msm-3.18 kernel from bitrvmpd)
 
 == What works ==
 * Install to SD Card
