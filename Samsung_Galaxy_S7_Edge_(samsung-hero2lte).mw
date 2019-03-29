@@ -69,9 +69,10 @@ $ pmbootstrap flasher --method=adb sideload
 * Camera drivers (Samsung FIMC-IS2) (and accompanying flash LED drivers, controlled by a Samsung PMIC) needed to be disabled in the kernel to prevent boot loops.
 
 == To get working ==
-* FDE with osk-sdl
+* FDE with osk-sdl - Tested and interface works, but crashes and bootloops attempting any decryption
 * Wi-Fi
 * (If possible) 3D acceleration using the binary Mali userspace drivers from ARM, under Halium
+* Panfrost?
 * Mainlining (should probably help the android community too)
 
 == See also ==
