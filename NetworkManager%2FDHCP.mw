@@ -1,0 +1,15 @@
+Here's a list of the DHCP Clients integrated in NetworkManager and the problems that have been discovered with them.
+
+Currently the default is internal, but will be changed with {{MR|278|pmaports}}
+
+== Internal ==
+
+Devices not able to connect to WiFi (with old vendor kernels) ({{issue|148|pmaports}} and {{issue|210|pmaports}})
+
+== dhcpcd ==
+
+Device is flooded with IPv6-related messages ({{issue|45|pmaports}} - NetworkManager issue: [https://gitlab.freedesktop.org/NetworkManager/NetworkManager/issues/5 NetworkManager#5])
+
+== dhclient ==
+
+-
