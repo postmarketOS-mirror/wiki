@@ -154,6 +154,150 @@ Supported events:
       Max       10
 </pre>
 
+=== UART ===
+UART is 1.8V:
+[[File:Nokia-frt-uart.jpg|thumbnail]]
+
+Output from the device
+<pre>
+F0: 102B 0000
+F3: 0000 0000
+V0: 0000 0000 [0001]
+00: 0000 0000
+BP: 0000 0041 [0000]
+G0: 0190 0000
+T0: 0000 0142 [000F]
+Jump to BL
+INIT: cpu 0, calling hook 0x50051bf9 (libuthread) at level 0x10000, flags 0x1
+INIT: cpu 0, calling hook 0x500522f8 (libuthreadarmmmu) at level 0x10000, flags 0x3
+INIT: cpu 0, calling hook 0x500463dd (tm_resume_cpu) at level 0x20000, flags 0xb
+welcome to lk/MP
+boot args 0x400000 0x43015f18 0x5c 0x0
+calling constructors
+initializing heap
+INIT: cpu 0, calling hook 0x5004f355 (vm_preheap) at level 0x3ffff, flags 0x1
+initializing kernel
+INIT: cpu 0, calling hook 0x5004f399 (vm) at level 0x50000, flags 0x1
+INIT: cpu 0, calling hook 0x50040321 (bootargs_init) at level 0x50001, flags 0x1
+tee_args->magic: 0x4b54444d
+tee_args->version: 0x1
+tee_args->NWEntry: 0x0
+tee_args->NWBootArgs: 0x0
+tee_args->NWBootArgsSize: 0x0
+tee_args->dRamBase: 0x40000000
+tee_args->dRamSize: 0x102aac
+tee_args->secDRamBase: 0x50040000
+tee_args->secDRamSize: 0x400000
+tee_args->sRamBase: 0x0
+tee_args->sRamSize: 0x0
+tee_args->secSRamBase: 0x0
+tee_args->secSRamSize: 0x0
+tee_args->gicd_base: 0x10221000
+tee_args->gicc_base: 0x10222000
+tee_args->gic_ver: 0x0
+tee_args->log_port: 0x11003000
+tee_args->log_baudrate: 0xe1000
+INIT: cpu 0, calling hook 0x50040579 (platform_after_vm) at level 0x50002, flags 0x1
+gicc 0x10222000, gicd 0x10221000
+INIT: cpu 0, calling hook 0x50042f4d (platform_after_vm_gcpu_init) at level 0x50003, flags 0x1
+Enable mmap for GCPU!
+crypto_hw_dev_key enc/dec w/ hwkey : PASSED
+INIT: cpu 0, calling hook 0x500431c1 (platform_after_vm_hacc_init) at level 0x50003, flags 0x1
+Enable mmap for HACC!
+INIT: cpu 0, calling hook 0x500432b5 (platform_after_vm_trng_init) at level 0x50003, flags 0x1
+Enable mmap for HWTRNG!
+INIT: cpu 0, calling hook 0x5004e1c5 (platform_after_vm_hkdf_unittest) at level 0x50004, flags 0x1
+HKDF-SHA256 Verification: PASS
+initializing mp
+initializing threads
+initializing timers
+creating bootstrap completion thread
+top of bootstrap2()
+creating bootstrap completion thread for cpu 1
+creating bootstrap completion thread for cpu 2
+creating bootstrap completion thread for cpu 3
+releasing 3 secondary cpus
+initializing platform
+INIT: cpu 0, calling hook 0x50046fc5 (libsm_cpu) at level 0x8fffe, flags 0x3
+INIT: cpu 0, calling hook 0x500472c9 (libsm) at level 0x8ffff, flags 0x1
+initializing target
+calling apps_init()
+INIT: cpu 0, calling hook 0x50048f85 (uctx) at level 0xafffe, flags 0x1
+als_slot_cnt 1 ret 1
+INIT: cpu 0, calling hook 0x5004cebd (tipc_init) at level 0xafffe, flags 0x1
+INIT: cpu 0, calling hook 0x50047ba5 (libtrusty) at level 0xaffff, flags 0x1
+initializing trusty (Built: 08:23:48 Dec 17 2018)
+trusty_app: start 0x50059000 size 0x0013854c end 0x5019154c
+trusty_app 0 uuid: 0x766072e8 0x414e 0x48fc 0x9f8f 0xfb9a6f144124
+trusty_app 1 uuid: 0xfee67f9f 0xe1b1 0x4e3d 0x8455 0x47f601afef
+trusty_app 2 uuid: 0xab742471 0xd6e6 0x4806 0x85f6 0x555b024f4da
+trusty_app 3 uuid: 0x38ba0cdc 0xdf0e 0x11e4 0x9869 0x233fb6ae4795
+trusty_app 4 uuid: 0x5f902ace 0x5e5c 0x4cd8 0xae54 0x87b88c22ddaf
+trusty_app 5 uuid: 0xcea8706d 0x6cb4 0x49f3 0xb994 0x29e0e478bd29
+trusty_app 6 uuid: 0x7445ca05 0x35d5 0x4698 0xbb9a 0xd84f9a5fcf
+trusty_app 0: code: start 0x00008000 end 0x00011ef4
+trusty_app 0: data: start 0x00012000 end 0x00013000
+trusty_app 0: bss:                end 0x000123a0
+trusty_app 0: brk:  start 0x00013000 end 0x00017000
+trusty_app 0: entry 0x0000cf2c
+trusty_app 1: code: start 0x00008000 end 0x0000d198
+trusty_app 1: data: start 0x0000e000 end 0x00010000
+trusty_app 1: bss:                end 0x0000f454
+trusty_app 1: brk:  start 0x00010000 end 0x00014000
+trusty_app 1: entry 0x00008b84
+trusty_app 2: code: start 0x00008000 end 0x0000db10
+trusty_app 2: data: start 0x0000e000 end 0x0000f000
+trusty_app 2: bss:                end 0x0000eba8
+trusty_app 2: brk:  start 0x0000f000 en
+d 0x00010000
+tp 2: entry 0x000092ec
+trusty_app 3: code: start 0x00008000 end 0x0002cb44
+trusty_app 3: data: start 0x0002d000 end 0x0002e000
+trusty_app 3: bss:                end 0x0002d418
+trusty_app 3: brk:  start 0x0002e000 end 0x00030000
+trusty_app 3: entry 0x0000a4f8
+trusty_app 4: code: start 0x00008000 end 0x0008e0f8
+trusty_app 4: data: start 0x0008f000 end 0x00091000
+trusty_app 4: bss:                end 0x000909fc
+trusty_app 4: brk:  start 0x00091000 end 0x000a9000
+trusty_app 4: entry 0x00019efc
+trusty_app 5: code: start 0x00008000 end 0x00040818
+trusty_app 5: data: start 0x00041000 end 0x00043000
+trusty_app 5: bss:                end 0x000428d4
+trusty_app 5: brk:  start 0x00043000 end 0x0006d000
+trusty_app 5: entry 0x00026248
+trusty_app 6: code: start 0x00008000 end 0x00032fb0
+trusty_app 6: data: start 0x00033000 end 0x00034000
+trusty_app 6: bss:                end 0x00033508
+trusty_app 6: brk:  start 0x00034000 end 0x0004c000
+trusty_app 6: entry 0x0001d600
+INIT: cpu 0, calling hook 0x50046bb5 (memlog) at level 0xb0000, flags 0x1
+INIT: cpu 0, calling hook 0x5004bab9 (trusty_smcall) at level 0xb0000, flags 0x1
+Initializing Trusted OS SMC handler
+INIT: cpu 0, calling hook 0x5004d055 (kmgetboot_service) at level 0xb0000, flags 0x1
+init_kmgetboot_ipc:569: com.mediatek.kmgetboot created
+INIT: cpu 0, calling hook 0x5004d469 (mtcrypto_service) at level 0xb0000, flags 0x1
+INIT: cpu 0, calling hook 0x5004e485 (mtktimer_service) at level 0xb0000, flags 0x1
+init_mtktimer_ipc:251: com.mediatek.mtktimer created
+INIT: cpu 0, calling hook 0x5004e705 (trusty_mt_smcall) at level 0xb0000, flags 0x1
+Initializing MTK SMC handler
+INIT: cpu 0, calling hook 0x50047bc9 (libtrusty_apps) at level 0xb0001, flags 0x1
+ipc-unittest-main: 1506: Welcome to IPC unittest!!!
+ipc-unittest-main: 1518: waiting forever
+ipc-unittest-srv: 329: Init unittest services!!!
+hwcrypto_unittest: 358: WELCOME TO HWRNG UNITTEST!
+hwcrypto_unittest: 269: run_hwrng_show_data_test:
+Dumping first hwrng request:
+0xac 0xb1 0x04 0x48 0xae 0x7c 0xa6 0x95 0xad 0xd7 0x8e 0x91 0xfc 0xc0 0x60 0x03 
+0x50 0x8e 0x31 0xf3 0x55 0xfd 0x30 0x93 0x12 0x3a 0xa6 0x28 0xd9 0x03 0xdf 0x50 
+hwcrypto_unittest: 277: run_hwrng_show_data_test: PASSED
+hwcrypto_unittest: 286: run_hwrng_var_rng_req_test:
+hwcrypto_unittest: 299: run_hwrng_var_rng_req_test: PASSED
+hwcrypto_unittest: 312: run_hwrng_stats_test:
+INIT: cpu 0, calling hook 0x50040501 (disable_uart_after_bootup) at level 0xffffffff, flags 0x1
+Disable UART after Trusty bootup!
+</pre>
+
 
 == How to enter flash mode ==
 Plug in USB, press and hold power and press and hold volume down as fast as you can, then release power when you see Nokia logo.
