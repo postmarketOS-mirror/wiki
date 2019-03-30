@@ -63,3 +63,9 @@ WiFi and Bluetooth are working, but aren't fully tested.  They are most likely f
 === Entering fastboot mode ===
 
 From a power off state, hold the '''volume up''' and '''power''' buttons until the device vibrates. The display should then light up and say "Fastboot Mode".
+
+==== Fastboot unknown chunk type ====
+
+Flashing with fastboot seems to fail on oneplus-bacon, it prints the message "FAILED (remote: Unknown chunk type)" when trying to flash the rootfs to userdata.
+
+Currently we have no solution to this problem, so it is advised to flash using recovery zip.
