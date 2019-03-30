@@ -39,10 +39,6 @@
 * flacks
 * Nimayer
 
-== Display refresh ==
-There is a bug whereby the screen is not automatically refreshed. To work around this, run the following command as root on the device:
-<pre># while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done</pre>
-
 == Mainlining ==
 [[User:jrg|Julian Goldsmith]] is currently [https://gitlab.com/julian-goldsmith/linux-postmarketos/tree/qcom-old working on] mainlining the OnePlus One, based on flacks's [https://github.com/flacks/linux/blob/bacon/v4.15-rc6/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts initial DTS].  Right now, he's using a fork of [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom linux-postmarketos], and is trying to get hardware-accelerated graphics up and running.
 
