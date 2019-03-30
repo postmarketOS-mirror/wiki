@@ -6,7 +6,7 @@
 | releaseyear = 2013-2018
 | originalsoftware = Raspbian
 | chipset = Broadcom BCM2837
-| cpu = ARM Cortex-A53 @ 1.4 GHz
+| cpu = 4x 1.4 Ghz Cortex-A53
 | gpu = Broadcom VideoCore IV
 | storage = MicroSDHC slot
 | display = HDMI port
