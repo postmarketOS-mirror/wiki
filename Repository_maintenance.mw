@@ -33,7 +33,8 @@ pmbootstrap --mirror-alpine="$mirror" aportgen \
     busybox-static-armhf busybox-static-aarch64 busybox-static-armv7 \
     gcc6-armhf gcc6-aarch64 gcc6-armv7 \
     gcc-armhf gcc-aarch64 gcc-armv7 \
-    musl-armhf musl-aarch64 musl-armv7
+    musl-armhf musl-aarch64 musl-armv7 \
+    grub-efi-x86
 
 cd ~/code/pmbootstrap/aports
 pytest .gitlab-ci/testcases/test_upstream_compatibility.py
