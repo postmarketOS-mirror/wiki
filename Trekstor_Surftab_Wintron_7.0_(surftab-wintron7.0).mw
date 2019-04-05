@@ -13,10 +13,10 @@
 | memory = 1 GB
 | architecture = x86_64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = 
+| status_usbnet = N
 | status_flashing = N
 | status_touch = Y
-| status_screen = P
+| status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = N
