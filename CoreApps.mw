@@ -54,7 +54,7 @@ All the apps except 4 are in the pmOS repo. So just install them by
 * Make package with i3wm + CoreApps as a interface.
 
 == Issues ==
-* Icons are small in size.Enveronment veriable needs to added or use custom theme form [https://github.com/tsujan/Kvantum Kvantum] can fix that.
+* Icons are small in size. Environment variables needs to added or use custom theme form [https://github.com/tsujan/Kvantum Kvantum] can fix that.
 * Some icons are showing discolor. Because of SVG is no rendering correctly.
 
 === Links ===
