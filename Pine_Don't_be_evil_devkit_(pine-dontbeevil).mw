@@ -43,7 +43,7 @@
 
 There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corner toward VOL- is GND and the next pin is TX.
 
-[[File:Pine-dontbeevil-uart.jpg|thumb]]
+[[File:Pine-dontbeevil-uart.jpg|frameless]]
 
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
