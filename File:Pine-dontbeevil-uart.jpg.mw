@@ -1,0 +1,4 @@
+== Summary ==
+UART connection on the devkit, black is GND, white is TX (from devkit perspective) and brown is RX
+== Licensing ==
+{{cc-by-sa-4.0}}
