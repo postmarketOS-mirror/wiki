@@ -1,0 +1,47 @@
+{{Infobox device
+| manufacturer = Pine
+| name = Don't be evil (devkit)
+| codename = pine-dontbeevil
+| image = File:
+| imagecaption = The devkit for the PinePhone
+| releaseyear = 2019
+| originalsoftware = Linux 5.0.0
+| pmoskernel = 
+| chipset = Allwinner A64
+| cpu = 4x 1152 MHz Cortex-A53
+| gpu = Mali 400
+| memory = 2 GB
+| architecture = aarch64
+| n-android =  ✔
+| whet_dhry = 
+| status_usbnet = 
+| status_flashing = 
+| status_touch =
+| status_screen =
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = Y
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = In progress
+| booting = no
+}}
+
+=== Contributors ===
+* ''[[user:MartijnBraam|MartijnBraam]]''
+
+== Serial console ==
+
+== Headphone jack ==
+
+== See also ==
+* {{MR|308|pmaports}} Initial merge request
