@@ -149,8 +149,6 @@ Like other Xiaomi devices, the user will have to acquire the bootloader unlock k
 
 The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and turned on)
 
-Unlocking bootloaders on Xiaomi devices will '''void''' your warranty, except for the Pocophone.
-
 == Key combinations for entering Recovery/Fastboot ==
 === Recovery ===
 * Turn the device off (or restart also works)
