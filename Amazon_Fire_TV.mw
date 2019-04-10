@@ -49,9 +49,7 @@ https://gitlab.com/CalcProgrammer1/pmaports
 
 Unlock the bootloader according to this guide: http://www.aftvnews.com/how-to-fully-unlock-the-amazon-fire-tv-bootloader/
 
-Then you can use fastboot to flash and boot images.  A USB A-to-A cable is needed to connect a PC for fastboot.  I made a dongle by soldering two USB A connectors I salvaged from scrap cables together, then used a USB extension cable with it.
-
-I have not tested the postmarketOS flash tool.
+Then you can use fastboot (or the pmbootstrap flasher) to flash and boot images.  A USB A-to-A cable is needed to connect a PC for fastboot.  I made a dongle by soldering two USB A connectors I salvaged from scrap cables together, then used a USB extension cable with it.
 
 == Installation ==
 
