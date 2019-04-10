@@ -45,5 +45,49 @@ There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corn
 
 [[File:Pine-dontbeevil-uart.jpg|frameless]]
 
+== Components ==
+
+{| class="wikitable"
+! Component
+! Model
+! Mainline
+|-
+| Touchscreen
+| FocalTech FT6336GU
+| Nope
+|-
+| Rear camera
+| OmniVision OV5460
+| Nope
+|-
+| Front camera
+| GalaxyCore GC2035
+| Nope
+|-
+| LCD
+| JD9365D
+| pine64/linux
+|-
+| Wifi/Bluetooth
+| RTL8723BS
+| CONFIG_RTL8723BS
+|-
+| Modem
+| Quectel EC25-E
+| USB_NET_QMI_WWAN
+|-
+| Magnetometer
+| ST LIS3MDL
+| yes
+|-
+| Ambient light / Proximity
+| SensorTek STK3335
+| ?
+|-
+| Sixaxis
+| InvenSense MPU-6050
+| yes
+|}
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
