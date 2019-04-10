@@ -106,56 +106,90 @@ The branch has both Amazon FireTV and Galaxy Note 3 changes.
 * Texas Instruments TPD12S016 - HDMI Companion Chip - http://www.ti.com/lit/ds/symlink/tpd12s016.pdf
 
 == GPIOs ==
-Taken from mach-msm/board-bueller.c on kernel-msm kernel tree.
 
-/* PCIe pmic gpios */
+<source>
+GPIOs 0-151, platform/msmgpio, msmgpio:
+ gpio-5   (spdif_buffer_enable ) out hi
+ gpio-6   (HSIC_WAKEUP_GPIO    ) in  lo
+ gpio-8   (gpio_8_vreg         ) out hi
+ gpio-27  (MI2S_WS             ) in  hi
+ gpio-28  (MI2S_SCLK           ) in  lo
+ gpio-29  (dit4192_spi-buf_int,) in  hi
+ gpio-30  (dit4192_spi-ubit_pin) out lo
+ gpio-31  (dit4192_spi-bls_pin ) in  lo
+ gpio-32  (MI2S_DOUT0          ) in  hi
+ gpio-33  (MI2S_MCLK           ) in  lo
+ gpio-35  (dit4192_spi-reset_pi) out hi
+ gpio-69  (HDMI_CEC_VAR        ) in  hi
+ gpio-70  (HDMI_DDC_CLK        ) in  hi
+ gpio-71  (HDMI_DDC_DATA       ) in  hi
+ gpio-72  (HDMI_HPD            ) in  hi
+ gpio-88  (HSIC_STROBE_GPIO    ) in  hi
+ gpio-89  (HSIC_DATA_GPIO      ) in  lo
 
-#define PCIE_WAKE_N_PMIC_GPIO 12
-#define PCIE_PWR_EN_PMIC_GPIO 13
-#define PCIE_RST_N_PMIC_MPP 1
+GPIOs 152-195, platform/pm8xxx-gpio, pm-gpio:
+gpio-152 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-153 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-154 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-155 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-156 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-157 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-158 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-159 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-160 (--          ) out        lo 0x05 0x18 0x2a 0x34 0x40 0x50
+gpio-161 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-162 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-163 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-164 (pwr_en      ) out        hi 0x01 0x19 0x2a 0x35 0x46 0x58
+gpio-165 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-166 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-167 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-168 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-169 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-170 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-171 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-172 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-173 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-174 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-175 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-176 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-177 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-178 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-179 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-180 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-181 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-182 (--          ) in         hi 0x05 0x10 0x20 0x30 0x40 0x58
+gpio-183 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-184 (--          ) out        lo 0x05 0x18 0x2a 0x34 0x40 0x58
+gpio-185 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-186 (--          ) in         lo 0x05 0x10 0x24 0x30 0x40 0x50
+gpio-187 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-188 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-189 (--          ) in         lo 0x05 0x10 0x24 0x30 0x40 0x50
+gpio-190 (--          ) in         hi 0x05 0x10 0x2a 0x30 0x40 0x58
+gpio-191 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-192 (--          ) out        lo 0x05 0x18 0x2a 0x34 0x44 0x58
+gpio-193 (usb_otg_sw_e) out        hi 0x05 0x19 0x2a 0x34 0x40 0x58
+gpio-194 (--          ) in         lo 0x05 0x10 0x2a 0x35 0x46 0x58
+gpio-195 (--          ) out        hi 0x05 0x19 0x2a 0x34 0x40 0x58
 
-/* SPDIF buffer enable ping */
+GPIOs 196-207, platform/pm8xxx-mpp.0, pm8xxx-mpp:
+gpio-196 (rst_n       ) d_out      hi 0x2d
+gpio-197 (--          ) d_out      lo 0x3c
+gpio-198 (--          ) d_out      lo 0x3c
+gpio-199 (--          ) d_out      lo 0x3c
+gpio-200 (--          ) a_out      lo 0x85
+gpio-201 (--          ) sink       lo 0xa0
+gpio-202 (ext_5v_en   ) d_out      lo 0x3c
+gpio-203 (ext_mpp8_en ) d_out      hi 0x3d
+gpio-204 (--          ) sink       lo 0xa0
+gpio-205 (--          ) d_out      lo 0x3c
+gpio-206 (--          ) sink       lo 0xa0
+gpio-207 (--          ) sink       lo 0xa0
 
-#define SPDIF_BUFFER_ENABLE_GPIO 5
-
-/* According to Android kernel dmesg */
-
-gpio 202 - ext_5v (ext_5v_en)
-
-gpio 203 - ext_mpp8 (ext_mpp8_en)
-
-gpio 193 - vbus_otg (usb_otg_sw_en)
-
-gpio 8 - bt_wifi_en (gpio_8_vreg)
-
-gpios 0-151 on msmgpio (SoC)
-
-gpios 152-195 on pm-gpio (PM8921)
-
-gpios 196-207 on pm8xxx-mpp (PM8921)
-
-gpios 208-211 on pm8xxx-mpp (PM8821)
-
-
-Busy GPIOs on android kernel (gives Resource Busy error when echo n > /sys/class/gpio/export):
-
-SoC GPIO: 5, 6, 8, 27, 28, 29, 30, 31, 32, 33, 35, 69, 70, 71, 72, 88, 89
-
-PM8921 GPIO: 164, 193
-
-PM8921 MPP: 196, 202, 203
-
-== Regulators ==
-* GPIO external 5V regulator
-* GPIO external MPP regulator
-
-GPIOs
-* APQ8064_EXT_3P3V_REG_EN_GPIO 77
-
-5V GPIO #define rabbit hole...
-* 5V - PM8921_MPP_PM_TO_SYS(7) --> #define PM8921_MPP_PM_TO_SYS(pm_mpp)     (pm_mpp - 1 + PM8921_MPP_BASE)
-* #define PM8921_MPP_BASE                  (PM8921_GPIO_BASE + PM8921_NR_GPIOS)
-* #define PM8921_GPIO_BASE         NR_GPIO_IRQS
-* #define NR_GPIO_IRQS 152 (this one is multiply defined)
-* #define PM8921_NR_GPIOS               44
-* (7 - 1 + (152 + 44) ) = 202...seems wrong
+GPIOs 208-211, platform/pm8xxx-mpp.1, pm8xxx-mpp:
+gpio-208 (--          ) sink       lo 0xa0
+gpio-209 (--          ) sink       lo 0xa0
+gpio-210 (--          ) sink       lo 0xa0
+gpio-211 (--          ) sink       lo 0xa0
+</source>
