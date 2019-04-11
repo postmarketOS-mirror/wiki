@@ -54,7 +54,7 @@ There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corn
 |-
 | Touchscreen
 | FocalTech FT6336GU
-| Nope, Available at https://android.googlesource.com/kernel/msm.git/+/aac1b45b3193454d71f02f73ac46d7f45ed0e6e4/drivers/input/touchscreen/ft8716
+| edt_ft5x06
 |-
 | Rear camera
 | OmniVision OV5460
