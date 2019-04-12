@@ -78,7 +78,6 @@ Replicant is also interested in mainlining this device and replacing the bootloa
 * {{github|1219}} Initial pull request
 * [https://forum.xda-developers.com/showthread.php?t=2070139 GNU/Linux@N80XX] XDA thread on porting GNU/Linux to the very similar Note 10.1.
 * [https://code.google.com/archive/p/opensgn/source/default/source opensgn] The Google Code repo of this port, includes audio configuration and some configuration regarding sleep
-* [https://techshali.com/top-apps-samsung-note-8/ Galaxy Note 8 apps]
 
 <!--
 Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
