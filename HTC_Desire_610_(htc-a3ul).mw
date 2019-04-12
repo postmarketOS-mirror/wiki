@@ -68,7 +68,7 @@ One needs to install via android recovery zips, please enter into TWRP for flash
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-One needs to copy the dtb from TWRP. The procedure is identical to the [[HTC Desire 816 (htc-a5ul)]]. pmbootstrap install must be ran with --android-recovery-zip, as flashing does not work via fastboot. 
+One needs to copy the dtb from TWRP. The procedure is identical to the [[HTC Desire 816 single SIM (htc-a5ul)]]. pmbootstrap install must be ran with --android-recovery-zip, as flashing does not work via fastboot. 
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
