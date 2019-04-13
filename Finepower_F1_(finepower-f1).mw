@@ -39,8 +39,42 @@
 == Maintainer(s) ==
 
 == How to enter flash mode ==
+Hold Power key and Vol- just after that. Release buttons when logo appears. Navigate to "Reboot to bootloader" option with volume keys and press Power to choose. The phone will reboot in fastboot mode.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+=== Partitions layout ===
+<source lang="bash">
+major minor  #blocks  name 
+ 
+ 253        0     409600 zram0 
+ 179        0    3817472 mmcblk0 
+ 179        1       5120 mmcblk0p1 
+ 179        2       1024 mmcblk0p2 
+ 179        3      15360 mmcblk0p3 
+ 179        4       2048 mmcblk0p4 
+ 179        5       1024 mmcblk0p5 
+ 179        6       1024 mmcblk0p6 
+ 179        7       1024 mmcblk0p7 
+ 179        8       1024 mmcblk0p8 
+ 179        9       1024 mmcblk0p9 
+ 179       10       1024 mmcblk0p10 
+ 179       11       1024 mmcblk0p11 
+ 179       12       1024 mmcblk0p12 
+ 179       13       1024 mmcblk0p13 
+ 179       14       1024 mmcblk0p14 
+ 179       15       1024 mmcblk0p15 
+ 179       16      17408 mmcblk0p16 
+ 179       17    1228800 mmcblk0p17 
+ 179       18     153600 mmcblk0p18 
+ 179       19      15360 mmcblk0p19 
+ 179       20       1024 mmcblk0p20 
+ 179       21       2048 mmcblk0p21 
+ 179       22       6144 mmcblk0p22 
+ 179       23    2357231 mmcblk0p23 
+ 179       96        512 mmcblk0rpmb 
+ 179       64       4096 mmcblk0boot1 
+ 179       32       4096 mmcblk0boot0
+</source>
 
 == See also ==
+[https://github.com/myst33d/spreadtrum-kernel-common Generic kernel for Spreadtrum SC8830 platform]
