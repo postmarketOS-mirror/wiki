@@ -69,16 +69,16 @@ Vol up + Power (загрузка Recovery)
 
 Connect usb cable and enter:
 
-<source>sudo adb start-server</source>
+<pre>sudo adb start-server</pre>
 
 When Recovery is fully loaded
 
-<source>adb reboot bootloader</source>
+<pre>adb reboot bootloader</pre>
 
 When the fastboot logo appears on the phone
 
-<source>pmbootstrap flasher flash_rootfs
-pmbootstrap flasher flash_kernel</source>
+<pre>pmbootstrap flasher flash_rootfs
+pmbootstrap flasher flash_kernel</pre>
 
 == Photos ==
 
