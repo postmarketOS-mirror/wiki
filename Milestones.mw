@@ -149,6 +149,8 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 * ☐ Get Freedreno working on the OnePlus One: Freedreno works, but the display doesn't work properly.
 * ☑ Get WiFi working on the OnePlus One: Seems to work, but not well-tested.  Bluetooth works as well.
 * ☐ Get oFono working on the OnePlus One
+* ☐ Port the OnePlus 3
+* ☐ Mainline the OnePlus 3
 
 === [[User:Neilvandyke|neilvandyke]] ===
 <onlyinclude>{{#ifeq:{{{user|Neilvandyke}}}|Neilvandyke |
