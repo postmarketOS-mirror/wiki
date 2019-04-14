@@ -78,6 +78,12 @@ $ ./pmbootstrap.py flasher flash_kernel
 
 === Issues ===
 
+==== Plasma mobile ====
+Navigation bar is broken. See [https://gitlab.com/postmarketOS/pmaports/issues/222 this bug].
+
+==== X.org is broken ====
+So, no graphical program can be started. See [https://gitlab.com/postmarketOS/pmaports/issues/221 this bug].
+
 ==== Bluetooth ====
 Bluetooth seems to be lacking some firmware.
 
