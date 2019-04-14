@@ -10,7 +10,7 @@
 | cpu = 4 cores ARM Cortex-A7 <!-- e.g. 1.0 GHz Scorpion -->
 | gpu = mali-400MP2 <!-- e.g. Adreno 200 -->
 | storage = 4GB
-| display = TFT/480х800 480x800 AMOLED -->
+| display = TFT/480х800
 | memory = 512MB <!-- e.g. 576 MB -->
 | architecture = armv7 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
@@ -65,7 +65,7 @@ Is OTG available, not used in wiki
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-Vol up + Power (загрузка Recovery)
+Vol up + Power (loading Recovery)
 
 Connect usb cable and enter:
 
