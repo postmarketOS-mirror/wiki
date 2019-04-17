@@ -83,7 +83,7 @@ There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corn
 |-
 | Ambient light / Proximity
 | SensorTek STK3335
-| maybe with the STK3310 module
+| works with stk3310
 |-
 | Sixaxis
 | InvenSense MPU-6050
