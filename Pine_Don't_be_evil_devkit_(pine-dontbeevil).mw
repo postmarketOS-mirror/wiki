@@ -59,7 +59,7 @@ There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corn
 |-
 | Rear camera
 | OmniVision OV5640
-| Nope
+| Yes, ov5640
 |-
 | Front camera
 | GalaxyCore GC2035
