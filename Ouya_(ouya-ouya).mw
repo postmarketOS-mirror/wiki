@@ -96,11 +96,11 @@ On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU 
 2. Turn on Ouya, then press the power button many times until it scrolls to '''Bootloader''', and then wait until the boot menu disappears.
 
 3. Run the following using ''pmbootstrap'':
-<source>
-# pmbootstrap init
-# pmbootstrap install --no-fde
-# pmbootstrap export
-# pmbootstrap pmbootstrap flasher flash_rootfs
+<source lang="shell">
+$ pmbootstrap init
+$ pmbootstrap install --no-fde
+$ pmbootstrap export
+$ pmbootstrap flasher flash_rootfs
 </source>
 {{note|'''WARNING''': This will create two partitions under ''system'' partition instead of one which won't allow you to use '''Normal Boot''' option in Ouya BootMenu}}
 
@@ -109,8 +109,8 @@ On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU 
 6. Using CWM menu options, mount ''/data'' partition.
 
 7. Copy postmarketOS ''boot.img'' to ''/sdcard'' as ''altboot.img'':
-<source>
-# adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
+<source lang="shell">
+$ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
 </source>
 
 8. Reboot Ouya, then press the power button many times until it scrolls to '''Alternate Boot''', and then wait until postmarketOS appears.
@@ -134,7 +134,7 @@ $ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
 
 ==== Updating the kernel ====
 
-When the <code>apk</code> package manager updates the kernel package (e.g. <code>linux-ouya-ouya</code> or <code>linux-ouya-ouya-mainline</code>) then the <code>boot.img</code> will be regenerated with the new kernel. The following commands will install the updated <code>boot.img</code>:
+When the <code>apk</code> package manager updates the kernel package (e.g. <code>linux-ouya-ouya</code> or <code>linux-ouya-ouya-mainline</code>) then the <code>boot.img</code> will be regenerated with the new kernel. Run the following commands on device to install the updated <code>boot.img</code>:
 <source lang="shell">
 $ mkdir /system
 $ mount /dev/mmcblk1p3 /system
