@@ -127,7 +127,7 @@ Specify the partition to flash rootfs to with the <code>--partition</code> argum
 $ pmbootstrap flasher flash_rootfs --partition userdata
 </source>
 
-Copy postmarketOS <code>boot.img</code> to <code>/system</code> as <code>boot.img</code>:
+Copy postmarketOS <code>boot.img</code> to <code>/system</code>:
 <source lang="shell">
 $ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /system/boot.img
 </source>
