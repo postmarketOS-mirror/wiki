@@ -115,6 +115,32 @@ On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU 
 
 8. Reboot Ouya, then press the power button many times until it scrolls to '''Alternate Boot''', and then wait until postmarketOS appears.
 
+=== Using data partition as rootfs ===
+
+{{note|'''WARNING''': Flashing to the userdata partition will overwrite all data on the device. Backup all data to another device before proceeding.}}
+
+It is much more usable to flash rootfs to the data partition which is around 5.7GB in size.
+
+==== Flashing to the data partition ====
+Specify the partition to flash rootfs to with the <code>--partition</code> argument:
+<source lang="shell">
+$ pmbootstrap flasher flash_rootfs --partition userdata
+</source>
+
+Copy postmarketOS <code>boot.img</code> to <code>/system</code> as <code>boot.img</code>:
+<source lang="shell">
+$ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
+</source>
+
+==== Updating the kernel ====
+
+When the <code>apk</code> package manager updates the kernel package (e.g. <code>linux-ouya-ouya</code> or <code>linux-ouya-ouya-mainline</code>) then the <code>boot.img</code> will be regenerated with the new kernel. The following commands will install the updated <code>boot.img</code>:
+<source lang="shell">
+$ mkdir /system
+$ mount /dev/mmcblk1p3 /system
+$ cp /boot/boot.img-ouya-ouya /system/boot.img
+</source>
+
 == Links ==
 * [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)]
 * [https://forum.xda-developers.com/showthread.php?t=2295645 CWM]
