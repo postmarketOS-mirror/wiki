@@ -129,7 +129,7 @@ $ pmbootstrap flasher flash_rootfs --partition userdata
 
 Copy postmarketOS <code>boot.img</code> to <code>/system</code> as <code>boot.img</code>:
 <source lang="shell">
-$ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
+$ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /system/boot.img
 </source>
 
 ==== Updating the kernel ====
