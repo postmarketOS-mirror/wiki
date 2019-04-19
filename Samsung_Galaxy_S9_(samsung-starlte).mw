@@ -1,0 +1,65 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S9
+| codename = samsung-starlte
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg <!-- TODO -->
+| imagecaption = Samsung Galaxy S9
+| releaseyear = 2018
+| originalsoftware = Android 9.0
+| chipset = Exynos M3 & Cortex-A55
+| cpu = Samsung Exynos 9810
+| gpu = ARM Mali-G72 MP18
+| storage = 64 GB
+| display = 2960x1440 Quad HD+ Super AMOLED
+| memory = 4 GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = P
+| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| status = kernel compiles, doesn't boot
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+}}
+
+== Contributors ==
+* nm111
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Press and hold <code>Volume Down</code> + <code>Bixby</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== Notes ==
+The kernel panics in config_usb_cfg_link when booting.
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{issue|CHANGEME|pmaports}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
