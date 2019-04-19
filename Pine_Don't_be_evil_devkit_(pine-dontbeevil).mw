@@ -132,6 +132,8 @@ dontbeevil:~# cat /sys/bus/iio/devices/iio\:device0/in_accel_z_raw
 dontbeevil:~# echo "Verified gravity still exists"
 </source>
 
+The <code>stk3310</code> module doesn't load automatically, after running <code>modprobe stk3310</code> the third device in `/sys/bus/iio` should show up.
+
 === RGB Led ===
 
 All the required gpio-led stuff is added to the device tree but the gpio-led module doesn't do anything. No led devices, No errors, No log messages.
