@@ -98,5 +98,7 @@ The touchscreen is controlled by the <code>edt_ft5x06</code> module on i2c-0. Th
 
 The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod/modprobe the module after the i2c-0 bus works so it gets probed again.
 
+It also seems that the touchscreen is flipped vertically so that probably needs some calibration data in the dts.
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
