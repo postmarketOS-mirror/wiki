@@ -122,7 +122,15 @@ Haven't looked at yet
 
 === Sensors ===
 
-All sensors work and are accessible as Industrial I/O (iio) devices in linux. To query the data you can cat the files in `/sys/class/iio/` to make the kernel module query the sensors
+All sensors work and are accessible as Industrial I/O (iio) devices in linux. To query the data you can cat the files in `/sys/bus/iio/` to make the kernel module query the sensors
+
+<source lang="shell-session">
+dontbeevil:~# cat /sys/bus/iio/devices/iio\:device0/name
+mpu6050
+dontbeevil:~# cat /sys/bus/iio/devices/iio\:device0/in_accel_z_raw
+-17594
+dontbeevil:~# echo "Verified gravity still exists"
+</source>
 
 === RGB Led ===
 
