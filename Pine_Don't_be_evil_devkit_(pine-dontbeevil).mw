@@ -120,5 +120,9 @@ Haven't looked at yet
 
 All sensors work and are accessible as Industrial I/O (iio) devices in linux. To query the data you can cat the files in `/sys/class/iio/` to make the kernel module query the sensors
 
+=== RGB Led ===
+
+All the required gpio-led stuff is added to the device tree but the gpio-led module doesn't do anything. No led devices, No errors, No log messages.
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
