@@ -100,5 +100,25 @@ The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod
 
 It also seems that the touchscreen is flipped vertically so that probably needs some calibration data in the dts.
 
+=== Cameras ===
+
+The camera's both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
+
+The device tree stuff for the camera has been added but I haven't managed to get any frames from the camera yet. I'm not sure if this an issue with the OV5640 driver or with the allwinner csi kernel module.
+
+It's also not clear how the camera switching would work on the software side, maybe Linux just deals with it if the device tree nodes for the second camera get added.
+
+=== WiFi/Bluetooth ===
+
+The kernel module for the RTL8723BS wifi/bluetooth module has been added but the interface for the wifi chip doesn't show up. There is some 802.11 stuff loaded in the kernel. Needs further debugging.
+
+=== Modem ===
+
+Haven't looked at yet
+
+=== Sensors ===
+
+All sensors work and are accessible as Industrial I/O (iio) devices in linux. To query the data you can cat the files in `/sys/class/iio/` to make the kernel module query the sensors
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
