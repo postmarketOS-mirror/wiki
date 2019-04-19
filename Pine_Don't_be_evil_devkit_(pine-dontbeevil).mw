@@ -108,9 +108,29 @@ The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod
 
 The camera's both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
 
-The device tree stuff for the camera has been added but I haven't managed to get any frames from the camera yet. I'm not sure if this an issue with the OV5640 driver or with the allwinner csi kernel module.
+The device tree nodes for the camera and the csi bus have been added but so far it hasn't been possible to get images from the camera. It's not clear if this an issue with the OV5640 driver or with the allwinner csi kernel module.
 
 It's also not clear how the camera switching would work on the software side, maybe Linux just deals with it if the device tree nodes for the second camera get added.
+
+<source lang="shell-session">
+dontbeevil:~# ffmpeg -f v4l2 -i /dev/video0
+ffmpeg version 4.1.3 Copyright (c) 2000-2019 the FFmpeg developers
+  built with gcc 8.3.0 (Alpine 8.3.0)
+  configuration: --prefix=/usr --enable-avresample --enable-avfilter --enable-gnutls --enable-gpl --enable-libass --enable-libmp3lame --enable-libvorbis --enable-libvpx --enable-libxvid --enable-libx264 --enable-libx265 --enable-libtheora --enable-libv4l2 --enable-postproc --enable-pic --enable-pthreads --enable-shared --enable-libxcb --disable-stripping --disable-static --disable-librtmp --enable-vaapi --enable-vdpau --enable-libopus --disable-debug
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+[video4linux2,v4l2 @ 0xffff8042d140] ioctl(VIDIOC_G_PARM): Not a tty
+[video4linux2,v4l2 @ 0xffff8042d140] Time per frame unknown
+[video4linux2,v4l2 @ 0xffff8042d140] ioctl(VIDIOC_STREAMON): Invalid argument
+/dev/video0: Invalid argument
+</source>
 
 === WiFi/Bluetooth ===
 
