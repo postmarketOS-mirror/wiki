@@ -92,5 +92,11 @@ The baudrate in u-boot and in Linux is 115200n8
 | yes
 |}
 
+=== Touchscreen ===
+
+The touchscreen is controlled by the <code>edt_ft5x06</code> module on i2c-0. The current issue is that it takes a long while before the i2c-0 bus works after booting. For some reason it takes ~110 seconds before communication is possible. This causes an issue because the module tries to probe the touchscreen before the bus works. 
+
+The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod/modprobe the module after the i2c-0 bus works so it gets probed again.
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
