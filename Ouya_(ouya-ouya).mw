@@ -46,7 +46,7 @@
 
 
 == Safe Boot ==
-We avoid flashing directly to the device as [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya due to the locked bootloader.] We use a tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] that allows us to run the postmarketOS kernel through a kexec method. This implements an extra failsafe to prevent bricking and in theory allows dualbooting and kernel development.
+We avoid flashing the <code>boot</code> partition because [https://www.reddit.com/r/ouya/comments/5i02u4/ouya_dead_apx_mode/dcvlyts/ a corrupted kernel would irreversibly brick the Ouya.] We use a tool called [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu] [https://github.com/milaq/ouya_bootmenu (source)] that allows us to chain load the postmarketOS kernel using kexec.
 
 == Audio ==
 * Audio on the downstream kernel is untested.
