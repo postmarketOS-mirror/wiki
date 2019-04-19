@@ -46,6 +46,8 @@ There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corn
 
 [[File:Pine-dontbeevil-uart.jpg|frameless]]
 
+The baudrate in u-boot and in Linux is 115200n8
+
 == Components ==
 
 {| class="wikitable"
