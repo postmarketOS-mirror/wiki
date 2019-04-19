@@ -9,7 +9,7 @@ Many Linux distributions use [https://en.wikipedia.org/wiki/Dynamic_Kernel_Modul
 === How we had it in postmarketOS ===
 For a short time, we also had the out-of-tree kernel module for wireguard working in postmarketOS. Eventually, this became too much maintenance effort and it was dropped. But for the record, here is how it was done:
 
-* a [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/main/wireguard-postmarketos-stable wireguard-postmarketos-stable] package (which worked with linux-postmarketos-stable)
+* a [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/main/wireguard-postmarketos-stable wireguard-postmarketos-stable] package (which worked only with linux-postmarketos-stable)
 * a [https://github.com/postmarketOS/pmbootstrap/pull/1234 kernel-scripts] package, which provides the "kernel scripts" for the right architecture, which are necessary to build the out-of-tree module (note that the <code>[ "$type" != "application/x-sharedlib" ]</code> bit from the patch had to be updated a few times afterwards, but the PR description explains in detail why the package is needed, that's why there's a link to the original PR.)
 
 If somebody is committed to maintaining this, they could look into reviving it. Since we have so many kernels in postmarketOS, and since it would lower the maintenance burden for out-of-tree modules, maybe consider working together with Alpine to ship DKMS.
