@@ -98,7 +98,11 @@ The touchscreen is controlled by the <code>edt_ft5x06</code> module on i2c-0. Th
 
 The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod/modprobe the module after the i2c-0 bus works so it gets probed again.
 
-It also seems that the touchscreen is flipped vertically so that probably needs some calibration data in the dts.
+<source lang="dmesg">
+[   17.942111] edt_ft5x06 0-0038: touchscreen probe failed
+...after rmmod edt_ft5x06; modprobe edt_ft5x06...
+[ 3989.326377] input: generic ft5x06 (12) as /devices/platform/soc/1c2ac00.i2c/i2c-0/0-0038/input/input2
+</source>
 
 === Cameras ===
 
