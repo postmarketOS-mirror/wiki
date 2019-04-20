@@ -104,6 +104,8 @@ The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod
 [ 3989.326377] input: generic ft5x06 (12) as /devices/platform/soc/1c2ac00.i2c/i2c-0/0-0038/input/input2
 </source>
 
+The communication to the touchscreen controller is only possible when power is supplied the the 4G modem using the hardware switch (the light should be off) since the power rail for the 4G modem is used as pull-up for the i2c bus that connects the touchscreen controller to the sopine.
+
 === Cameras ===
 
 The camera's both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
