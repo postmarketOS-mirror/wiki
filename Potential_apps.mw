@@ -123,12 +123,12 @@ These are applications which already exist for Linux and could be reused in post
 |Lightweight and touch-friendly web browser based on qt (source [http://code.qt.io/cgit/qt-apps/qtwebbrowser.git/]).
 |
 |-
-|[https://github.com/ubports/webbrowser-app Ubports webbroswer-app]
+|[https://github.com/ubports/morph-browser Ubports Morph browser]
 |GPL3
-|Webbrowser-app is a lightweight touch-friendly web browser tailored for Ubuntu, based on the Oxide web engine.
+|Morph browser (previously known as webbrowser-app) is a lightweight touch-friendly web browser tailored for Ubuntu, based on the Oxide web engine.
 |
 |-
-|[https://github.com/ubports/webbrowser-app Gnome web (epiphany)]
+|[https://github.com/GNOME/epiphany Gnome web (epiphany)]
 |GPL3
 |The web browser for the GNOME desktop. Purism is working on making it phone-friendly for their Librem 5 phone.
 |
