@@ -1,0 +1,29 @@
+{| class="wikitable"
+! GPU
+! Used in
+! Driver
+|-
+| Adreno
+| Qualcomm
+| freedreno
+|-
+| Vivante
+| NXP i.mx, Rockchip, Marvell, HiSilicon
+| etnaviv
+|-
+| Mali
+| Allwinner, Mediatek
+| lima
+|-
+| Mali T
+| Allwinner
+| panfrost
+|-
+| PowerVR
+| TI
+| :(
+|-
+| VideoCore
+| Broadcom
+| vc4
+|}
