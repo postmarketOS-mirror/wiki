@@ -64,7 +64,7 @@ knuxfanwin8
 Hold Volume+Up during boot.
 
 == Installation ==
-
+The kernel is not compiling. [https://pastebin.com/ZLwiQAYa Build logs]
 
 == See also ==
 [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Kernel]
