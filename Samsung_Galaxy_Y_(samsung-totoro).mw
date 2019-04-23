@@ -70,5 +70,5 @@ Builds with official kernel, but does not flash.
 Note: pmOS does not fit on the system partition. You have to use an SD card.
 
 == See also ==
-[https://github.com/Dreamboxuser/samsung-kernel-totoro/ Official kernel]
-[https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel, does not compile] ([https://pastebin.com/ZLwiQAYa Broken kernel build logs])
+* [https://github.com/Dreamboxuser/samsung-kernel-totoro/ Official kernel]
+* [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel, does not compile] ([https://pastebin.com/ZLwiQAYa Broken kernel build logs])
