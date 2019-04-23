@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = kernel does not compile (gcc4) <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = kernel compiles, does not flash <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
@@ -61,10 +61,14 @@ knuxfanwin8
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-Hold Volume+Up during boot.
+Power+Vol+Up - recovery
+Power+Vol+Down - odin/download
 
 == Installation ==
-The kernel is not compiling. [https://pastebin.com/ZLwiQAYa Build logs]
+Builds with official kernel, but does not flash. 
+
+Note: pmOS does not fit on the system partition. You have to use an SD card.
 
 == See also ==
-[https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Kernel]
+[https://github.com/Dreamboxuser/samsung-kernel-totoro/ Official kernel]
+[https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel, does not compile] ([https://pastebin.com/ZLwiQAYa Broken kernel build logs])
