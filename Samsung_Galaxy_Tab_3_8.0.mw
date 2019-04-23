@@ -42,6 +42,9 @@ knuxfanwin8
 === Maintainer(s) ===
 knuxfanwin8
 
+== Users owning this device ==
+{{Device owners}}
+
 == How to enter flash mode ==
 Download mode: VolDown while powering on
 
@@ -51,34 +54,19 @@ Recovery mode: VolUp while powering on
 Flash the system with pmbootstrap flasher flash_rootfs.
 == Links ==
 
-=== Device (common): ===
-https://github.com/gr8nole/android_device_samsung_lt01-common
-=== Device (lt01wifi): ===
-https://github.com/gr8nole/android_device_samsung_lt01wifi
-=== Kernel: ===
-https://github.com/gr8nole/android_kernel_samsung_smdk4x12
-=== Proprietary: ===
-https://github.com/gr8nole/proprietary_vendor_samsung
 
 == WiFi (NOT WORKING) ==
 The Galaxy Tab 3 8.0 has the same chipset as the Galaxy SIII, and the wifi module (bcm4334) is the same. However, it still doesn't work. See post below for more information:
-<code>i've been trying to get this working all day but couldn't find a solution.
-
+<syntaxhighlight lang="markdown">i've been trying to get this working all day but couldn't find a solution.
 https://pastebin.com/tBjLCHeF
-
 basically, I'm trying to use the i9305 firmware with my galaxy tab which shares the same chipset. I keep getting this error every time I start wpasupplicant via sudo /etc/init.d/wpa_supplicant start. What I've tried so far:
-
-replacing the nvram with my nvram
-
-replacing the firmware with my firmware
-
-changing the driver from wext to wl80211 like in the initrc
-
-setting CONFIG_WLAIBSS=y in the kernel config
-
-rebooting
-
-reflashing the rootfs and kernel</code>
+- replacing the nvram with my nvram
+- replacing the firmware with my firmware
+- changing the driver from wext to wl80211 like in the initrc
+- setting CONFIG_WLAIBSS=y in the kernel config
+- rebooting
+- reflashing the rootfs and kernel
+</syntaxhighlight>
 
 == USB OTG ==
 USB OTG should work out of the box. To use keyboards and mice, do <code>sudo apk add xf86-input-keyboard xf86-input-mouse</code>
@@ -98,3 +86,7 @@ For more information about the build process, see https://mastodon.social/@knuxf
 
 == See also ==
 * {{MR|283|pmaports}} initial MR
+* [https://github.com/gr8nole/android_device_samsung_lt01-common Device (common)]
+* [https://github.com/gr8nole/android_device_samsung_lt01wifi Device (lt01wifi)]
+* [https://github.com/gr8nole/android_kernel_samsung_smdk4x12 Kernel]
+* [https://github.com/gr8nole/proprietary_vendor_samsung Vendor files]
