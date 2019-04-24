@@ -12,25 +12,26 @@
 | display = 1080x1920 IPS
 | storage = 16/64 GB
 | memory = 3 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = P
-| status_xwayland = 
-| status_fde = 
-| status_mainline = P 
-| status_battery = P
-| status_3d = P
-| status_accel = 
-| status_audio = 
-| status_bluetooth = P
-| status_camera =
-| status_gps = 
-| status_mobiledata = 
-| status_sms = 
-| status_calls = 
+| status_wifi = Y
+| status_xwayland = N
+| status_fde = N
+| status_mainline = Y 
+| status_battery = Y
+| status_3d = Y
+| status_accel = N
+| status_audio = N
+| status_bluetooth = Y
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N
+| status_sms = N
+| status_calls = N
+| status_otg = N
 | booting = yes
 }}
 
@@ -38,34 +39,47 @@
 
 * flacks
 * Nimayer
+* [[User:jrg|Julian Goldsmith]]
 
-== Mainlining ==
-[[User:jrg|Julian Goldsmith]] is currently [https://gitlab.com/julian-goldsmith/linux-postmarketos/tree/qcom-old working on] mainlining the OnePlus One, based on flacks's [https://github.com/flacks/linux/blob/bacon/v4.15-rc6/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts initial DTS].  Right now, he's using a fork of [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom linux-postmarketos], and is trying to get hardware-accelerated graphics up and running.
+== Installation ==
 
-=== Graphics ===
-The Adreno 330 GPU is supported by Freedreno.  The firmware is required, and is available in the firmware-adreno package.
+After [[Installing_pmbootstrap|installing pmbootstrap]], build the image:
+<source lang="shell-session">
+$ pmbootstrap init
+$ pmbootstrap install --no-fde
+</source>
 
-Julian Goldsmith currently has partially-working graphics support on mainline.  The GPU is usable, but the display doesn't properly update.  The issue most likely involves clock or regulator settings somehow.
-
-=== Cell usage ===
-oFono support shouldn't take too much to get up and running.  Adding the remoteproc node, using qmictl (possibly more utilities), and using a patched oFono should get basic support up and running.
-
-=== WiFi and Bluetooth ===
-WiFi and Bluetooth are working, but aren't fully tested.  They are most likely flakey.
-
-== Links ==
-
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-bacon Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-bacon Kernel package]
-
-== Additional info ==
+Then to flash it, put your device in fastboot mode, and plug it into your USB port. Currently, you will need to break apart the subpartitions before flashing:
+<source lang="shell-session">
+$ pmbootstrap export
+$ losetup /dev/loop0 <path to rootfs image>
+$ dd if=/dev/loop0p1 of=cache.img
+$ dd if=/dev/loop0p2 of=userdata.img
+$ fastboot flash boot <path to boot image>
+$ fastboot flash cache cache.img
+$ fastboot erase system
+$ fastboot flash userdata userdata.img
+</source>
 
 === Entering fastboot mode ===
 
 From a power off state, hold the '''volume up''' and '''power''' buttons until the device vibrates. The display should then light up and say "Fastboot Mode".
 
-==== Fastboot unknown chunk type ====
+=== WiFi and Bluetooth ===
+WiFi and Bluetooth are working, but aren't well-tested.  The firmware isn't packaged yet, so you will need to get it from the partitions on your device.  For Bluetooth, you will need to install '''bluez''' and enable the '''bluetooth''' service.
 
-Flashing with fastboot seems to fail on oneplus-bacon, it prints the message "FAILED (remote: Unknown chunk type)" when trying to flash the rootfs to userdata.
+=== Cell usage ===
+oFono support shouldn't take too much to get up and running.  Adding the remoteproc node, using qmictl (possibly more utilities), and using a patched oFono should get basic support up and running.
 
-Currently we have no solution to this problem, so it is advised to flash using recovery zip.
+== Troubleshooting ==
+
+=== Fastboot unknown chunk type ===
+
+Nimayer received the message "FAILED (remote: Unknown chunk type)" when trying to flash the rootfs to userdata.
+
+It may be possible to fix the issue by flashing a new [https://www.oneplus.com/support/softwareupgrade/details?code=1 OxygenOS image].  If that doesn't work, try flashing postmarketOS [[Android_Recovery_Zip_Installation|using a recovery zip]].
+
+== Links ==
+
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-bacon Device package]
+* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-bacon Vendor kernel package]
