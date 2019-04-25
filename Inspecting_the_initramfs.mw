@@ -6,7 +6,7 @@ It is possible to enable a telnet daemon that gives you a shell this way:
 
 <source lang="shell-session">
 $ pmbootstrap initfs hook_add debug-shell
-$ pmbootstrap flasher boot # or however you flash/boot the kernel
+$ pmbootstrap flasher flash_kernel # or however you flash/boot the kernel
 (wait until the device booted up and you are connected to it)
 $ telnet 172.16.42.1
 Trying 172.16.42.1...
