@@ -13,6 +13,9 @@ The easiest way is using <code>pmbootstrap init</code> to generate a new device,
 * Set <code>deviceinfo_bootimg_qcdt="true"</code> in the [[deviceinfo]]
 * Adjust your <code>linux-</code> APKBUILD to generate the <code>/boot/dt.img</code> (look at other QCDT devices to see how it's done, grep for qcdt in aports)
 
+== Fixing "No valid dtbs found" ==
+If you get the "No valid dtbs found" error message, you might need to patch the kernel sources to set <code>qcom,msm-id</code> properly, see this patch for example: <code>device/linux-zte-p731a20/qcom,msm-id_fix.patch</code>
+
 == Debugging ==
 * Hook up the [[serial UART]] and see what kind of debug output the bootloader provides
 * Repack the boot image with a working <code>dt.img</code> from another distribution (stock, Lineage, recovery, etc.)
