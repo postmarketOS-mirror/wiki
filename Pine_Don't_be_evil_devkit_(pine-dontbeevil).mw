@@ -191,5 +191,14 @@ USB gets loaded but doesn't work yet:
 [    0.588307] ohci-platform 1c1a400.usb: irq 18, io mem 0x01c1a400
 </source>
 
+<source lang="shell-session">
+pine-dontbeevil:~# lsusb
+Bus 005 Device 001: ID 1d6b:0002
+Bus 003 Device 001: ID 1d6b:0002
+Bus 001 Device 001: ID 1d6b:0002
+Bus 004 Device 001: ID 1d6b:0001
+Bus 002 Device 001: ID 1d6b:0001
+</source>
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
