@@ -124,7 +124,25 @@ dontbeevil:~# ffmpeg -f v4l2 -i /dev/video0
 
 === WiFi/Bluetooth ===
 
-The kernel module for the RTL8723BS wifi/bluetooth module has been added but the interface for the wifi chip doesn't show up. There is some 802.11 stuff loaded in the kernel. Needs further debugging.
+The wifi interface shows up and is able to scan for networks, it doesn't want to actually connect
+
+<source lang="dmesg">
+[ 1962.148414] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
+[ 1962.148468] RTL8723BS: set ssid [BrixIT] fw_state = 0x00000088
+[ 1962.159624] RTL8723BS: start auth
+[ 1962.161053] RTL8723BS: auth success, start assoc
+[ 1972.568295] RTL8723BS: set bssid:00:00:00:00:00:00
+[ 1985.233165] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
+[ 1985.233228] RTL8723BS: set ssid [BrixIT] fw_state = 0x00000088
+[ 1985.304510] RTL8723BS: start auth
+[ 1985.306184] RTL8723BS: auth success, start assoc
+[ 1995.657207] RTL8723BS: set bssid:00:00:00:00:00:00
+[ 2006.185941] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
+[ 2006.185994] RTL8723BS: set ssid [BrixIT] fw_state = 0x00000088
+[ 2006.193313] RTL8723BS: start auth
+[ 2006.194839] RTL8723BS: auth success, start assoc
+[ 2010.497801] RTL8723BS: set bssid:00:00:00:00:00:00
+</source>
 
 === Modem ===
 
