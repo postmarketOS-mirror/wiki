@@ -122,6 +122,18 @@ dontbeevil:~# ffmpeg -f v4l2 -i /dev/video0
 /dev/video0: Invalid argument
 </source>
 
+The issue is probably that the camera isn't recognized by the driver
+
+<source lang="dmesg">
+[   20.697863] ov5640 2-003c: Linked as a consumer to regulator.8
+[   20.697930] ov5640 2-003c: Linked as a consumer to regulator.17
+[   20.697984] ov5640 2-003c: Linked as a consumer to regulator.13
+[   20.726501] ov5640 2-003c: ov5640_check_chip_id: wrong chip identifier, expected 0x5640, got 0x0
+[   20.726703] ov5640 2-003c: Dropping the link to regulator.8
+[   20.726772] ov5640 2-003c: Dropping the link to regulator.17
+[   20.726818] ov5640 2-003c: Dropping the link to regulator.13
+</source>
+
 === WiFi/Bluetooth ===
 
 The wifi interface shows up and is able to scan for networks, it doesn't want to actually connect
