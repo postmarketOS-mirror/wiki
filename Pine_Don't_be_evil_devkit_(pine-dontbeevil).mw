@@ -110,29 +110,16 @@ The communication to the touchscreen controller is only possible when power is s
 
 The camera's both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
 
-The device tree nodes for the camera and the csi bus have been added but so far it hasn't been possible to get images from the camera. It's not clear if this an issue with the OV5640 driver or with the allwinner csi kernel module.
-
 It's also not clear how the camera switching would work on the software side, maybe Linux just deals with it if the device tree nodes for the second camera get added.
 
+The camera hardware pipeline is controlled with <code>/dev/media0</code> and <code>media-ctl</code>, the result is on <code>/dev/video0</code>
+
 <source lang="shell-session">
-dontbeevil:~# ffmpeg -f v4l2 -i /dev/video0
-[video4linux2,v4l2 @ 0xffff8042d140] ioctl(VIDIOC_G_PARM): Not a tty
-[video4linux2,v4l2 @ 0xffff8042d140] Time per frame unknown
-[video4linux2,v4l2 @ 0xffff8042d140] ioctl(VIDIOC_STREAMON): Invalid argument
-/dev/video0: Invalid argument
+pine-dontbeevil:~# media-ctl --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
+pine-dontbeevil:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 selfie.jpg
 </source>
 
-The issue is probably that the camera isn't recognized by the driver
-
-<source lang="dmesg">
-[   20.697863] ov5640 2-003c: Linked as a consumer to regulator.8
-[   20.697930] ov5640 2-003c: Linked as a consumer to regulator.17
-[   20.697984] ov5640 2-003c: Linked as a consumer to regulator.13
-[   20.726501] ov5640 2-003c: ov5640_check_chip_id: wrong chip identifier, expected 0x5640, got 0x0
-[   20.726703] ov5640 2-003c: Dropping the link to regulator.8
-[   20.726772] ov5640 2-003c: Dropping the link to regulator.17
-[   20.726818] ov5640 2-003c: Dropping the link to regulator.13
-</source>
+[[File:PinePhone-rearcam-dev.png|frameless]]
 
 === WiFi/Bluetooth ===
 
