@@ -143,6 +143,8 @@ The wifi interface shows up and is able to scan for networks, it doesn't want to
 [ 2010.497801] RTL8723BS: set bssid:00:00:00:00:00:00
 </source>
 
+The bluetooth part of the RTL8723BS isn't supported in mainline yet. Theres a repository with some support at https://github.com/lwfinger/rtl8723bs_bt
+
 === Modem ===
 
 Haven't looked at yet
