@@ -13,6 +13,7 @@ To make the configuration persistent after reboot do:
 $ echo 'route add default gw 172.16.42.2' | sudo tee /etc/local.d/usb_internet.start
 $ sudo chmod +x /etc/local.d/usb_internet.start
 $ sudo rc-update add local
+$ #disable it if you plug the USB cable out and want to use WiFi, because it can interfere with routing (packets would try to use the USB networking, even though it's disconnected)
 </syntaxhighlight>
 
 ==== On the host machine: ====
