@@ -73,7 +73,7 @@ The baudrate in u-boot and in Linux is 115200n8
 |-
 | Wifi/Bluetooth
 | RTL8723BS
-| CONFIG_RTL8723BS
+| CONFIG_RTL8723BS for wifi, no bluetooth support
 |-
 | Modem
 | Quectel EC25-E
