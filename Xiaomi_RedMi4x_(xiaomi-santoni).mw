@@ -19,9 +19,9 @@
 | status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y
-| status_fde = 
+| status_fde = P
 | status_mainline = 
-| status_battery =
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = Y
@@ -56,6 +56,7 @@
 * Audio
 * Xorg
 * USB OTG
+* osk-sdl (Charging)
 
 == What does not work ==
 * Camera (Broken in kernel, detected as /dev/video32-33)
@@ -67,6 +68,7 @@
 * Bluetooth
 * 3D Acceleration (will never happen due to downstream kernel)
 * Backlight stays on when the phone goes into "sleep" because of a lack of user interaction
+* Full Disk Encryption (does unlock, but failed to look up the partition after booting)
 
 == Extra steps to get things working ==
 
@@ -162,3 +164,4 @@ File:Pmos_msm-318_santoni.png|thumb|left|Weston with msm-3.18 upstream kernel
 * [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss Xiaomi Redmi 4X Official Kernel Source]
 * [https://github.com/Danct12/msm-3.18/tree/rel/msm-3.18-archlinux msm-3.18 upstreamed kernel for santoni]
 * [https://gitlab.com/postmarketOS/pmaports/merge_requests/289 Pull request for msm-3.18 upstreamed kernel]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/335 Pull request !335 for osk-sdl]
