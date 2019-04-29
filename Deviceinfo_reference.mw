@@ -87,6 +87,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>no_framebuffer</code>
 | Do not wait up to 10 seconds until a framebuffer device shows up and do not try to configure it ({{MR|44|pmaports}}).
 | <code>true</code>, <code>false</code>
+|-
+| <code>initfs_compression</code>
+| Command used to compress initramfs image
+| default: <code>'gzip -1'</code>
 |}
 
 == flash ==
