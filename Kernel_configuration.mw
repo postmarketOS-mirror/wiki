@@ -228,6 +228,23 @@ Device Drivers -->
 
 Causes <code>sudo</code>, <code>ip</code> and other commands to hang ({{issue|1513|pmaports}}). Please disable it.
 
+=== CONFIG_BLK_DEV_INITRD ===
+
+'''About'''
+
+''Initial RAM filesystem and RAM disk (initramfs/initrd) support''
+
+'''Location in menu'''
+
+<pre class="shell">
+General setup -->
+  Initial RAM filesystem and RAM disk (initramfs/initrd) support
+</pre>
+
+'''pmOS specific'''
+
+Required. See {{issue|237|pmaports}} for notes about changing the initramfs compression.
+
 == Optional ==
 
 These kernel options are optional and for some devices required to fix some issues.
