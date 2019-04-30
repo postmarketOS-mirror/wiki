@@ -89,7 +89,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>true</code>, <code>false</code>
 |-
 | <code>initfs_compression</code>
-| Command used to compress initramfs image
+| Command used to compress initramfs image (see {{MR|334|pmaports}}, {{issue|237|pmaports}})
 | default: <code>'gzip -1'</code>
 |}
 
