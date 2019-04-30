@@ -245,6 +245,23 @@ General setup -->
 
 Required. See {{issue|237|pmaports}} for notes about changing the initramfs compression.
 
+=== CONFIG_FHANDLE ===
+
+'''About'''
+
+''open by fhandle syscalls''
+
+'''Location in menu'''
+
+<pre class="shell">
+General setup -->
+  open by fhandle syscalls
+</pre>
+
+'''pmOS specific'''
+
+Required, postmarketOS uses udev.
+
 == Optional ==
 
 These kernel options are optional and for some devices required to fix some issues.
