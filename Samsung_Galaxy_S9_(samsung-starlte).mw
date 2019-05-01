@@ -53,7 +53,8 @@ Press and hold <code>Volume Down</code> + <code>Bixby</code> + <code>Power</code
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == Notes ==
-The kernel panics in config_usb_cfg_link when booting.
+- The kernel panics in config_usb_cfg_link when booting.
+- It panics right after initializing the wlan, so it might be related to this.
 
 == See also ==
 <!--
