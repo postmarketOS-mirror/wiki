@@ -1,5 +1,5 @@
 {{note|If you only need to slightly adjust the way <code>pmbootstrap</code> runs a flasher, you can grab the exact command it uses from the <code>pmbootstrap log</code> and modify it when running manually.}}
-Sometimes you just need to flash ready system image externally.
+Sometimes you just need to flash ready system image externally. Export the images that pmbootstrap generated with <code>pmbootstrap export</code> and read on, how to call the flashing application from your host OS.
 
 == Fastboot ==
 See <code>fastboot --help</code>, and expand this section if you find out something that would have helped you.
