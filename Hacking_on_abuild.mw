@@ -1,0 +1,28 @@
+[https://git.alpinelinux.org/abuild/ abuild] is Alpine's package building program. This article describes a workflow, that allows you to build patches for it, and quickly test them with pmbootstrap.
+
+1. Copy Alpine's abuild aport to pmaports.git:
+<syntaxhighlight lang="shell-session">
+$ git clone https://git.alpinelinux.org/aports/
+$ cp aports/main/abuild "$(pmbootstrap config aports)/temp/abuild" -R
+</syntaxhighlight>
+
+2. Clone the abuild source code:
+<syntaxhighlight lang="shell-session">
+$ git clone https://git.alpinelinux.org/abuild/
+</syntaxhighlight>
+
+3. Create a shell script that builds abuild from your checked out source, installs it, and runs a specific test.
+<syntaxhighlight lang="shell">
+#!/bin/sh -ex
+cd ~/code/abuild
+pmbootstrap -q build --src=. --strict abuild
+pmbootstrap -q -y zap
+pmbootstrap -q build_init
+
+# Run a specific test
+pmbootstrap -q chroot -- su pmos -c 'cd /home/pmos && newapkbuild test'
+</syntaxhighlight>
+
+Now you can run that script, verify that it reproduces whatever behavior you would like to change. Modify the source code, until abuild does what you want. Then upstream the patch to Alpine.
+
+[[Category:Guide]]
