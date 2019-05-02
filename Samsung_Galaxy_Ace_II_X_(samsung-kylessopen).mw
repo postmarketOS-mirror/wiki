@@ -33,10 +33,19 @@
 | booting = yes
 }}
 
-== Contributors ==
-* Lofenyy
-* racer123
-* platypro
+== Installation ==
+Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
+
+; 1. init
+<source lang="bash">$ ./pmbootstrap.py init</source>
+Select "samsung-kylessopen" as the target device and select a working recommended graphical interface. 
+
+; 2. install
+<source lang="bash">$ ./pmbootstrap.py install --no-fde</source>
+See notes regarding full disk encryption. 
+
+; 3. flash
+Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
 
 == Graphical Interfaces ==
 === Matchbox ===
@@ -59,20 +68,6 @@ Plasma Mobile is a GPLv2 licensed smartphone interface. It's sadly painfully slo
 
 === Hildon ===
 Hildon is an LGPL user interface for cell phones. It sadly doesn't work on this device at the moment. 
-
-== Installation ==
-Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
-
-; 1. init
-<source lang="bash">$ ./pmbootstrap.py init</source>
-Select "samsung-kylessopen" as the target device and select a working recommended graphical interface. 
-
-; 2. install
-<source lang="bash">$ ./pmbootstrap.py install --no-fde</source>
-See notes regarding full disk encryption. 
-
-; 3. flash
-Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
 
 == In Progress ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
@@ -103,6 +98,11 @@ The device charges successfully, but charging-sdl doesn't launch, with "error st
 
 === Hildon ===
 Hildon currently doesn't work on this device. I recommend Matchbox as an alternative. 
+
+== Contributors ==
+* Lofenyy
+* racer123
+* platypro
 
 == Notes ==
 * The screen flickers, flashes and scrolls except for when a desktop environment is running. This makes it difficult to tell if full disk encryption is even working properly. For now, it's unusable.
