@@ -69,6 +69,9 @@ Plasma Mobile is a GPLv2 licensed smartphone interface. It's sadly painfully slo
 === Hildon ===
 Hildon is an LGPL user interface for cell phones. It sadly doesn't work on this device at the moment. 
 
+== Apps ==
+Check out: https://pkgs.alpinelinux.org/packages?branch=edge&arch=armhf
+
 == In Progress ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
 
