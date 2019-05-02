@@ -56,7 +56,7 @@ Press and hold <code>Volume Down</code> + <code>Bixby</code> + <code>Power</code
 * The kernel panics in config_usb_cfg_link when booting.
 * <del>It panics right after initializing the wlan, so it might be related to this.</del>
 * Deleting wlan drivers still results in panic.
-* This issue also seem to exist in the star2lte, a log file is [https://pastebin.com/ztfFvzmf here].
+* I found a log file [https://pastebin.com/ztfFvzmf here] for a star2lte, so this could be related?.
 
 == See also ==
 <!--
