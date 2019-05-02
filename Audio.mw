@@ -24,6 +24,8 @@ or
 
 In userspace the [https://android.googlesource.com/platform/frameworks/base/+/kitkat-release/services/java/com/android/server/WiredAccessoryManager.java WiredAccessoryManager] monitors the <code>/sys/class/switch/h2w</code> for uevents when the headphone is (un)plugged.
 
+Udev rules can be used to detect if headphones are plugged in, example for this is from [https://gitlab.com/postmarketOS/pmaports/blob/195114e48e0997d060036feef4965cd0e3c07ccc/device/device-xiaomi-santoni/90-device-xiaomi-santoni-audio.rules xiaomi-santoni]
+
 == Converting Android configurations using xml2ucm ==
 {{note|This section is incomplete. It requires a reference to more complete documentation of the device config XML format.}}
 
