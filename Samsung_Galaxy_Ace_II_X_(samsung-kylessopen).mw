@@ -19,7 +19,7 @@
 | status_wifi = 
 | status_xwayland = 
 | status_fde = N
-| status_mainline = 
+| status_mainline = N
 | status_battery = N
 | status_3d = 
 | status_accel = 
