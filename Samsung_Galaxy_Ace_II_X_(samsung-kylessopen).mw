@@ -90,6 +90,9 @@ All of these kernels claim to be for this device however, it's not known which o
 * https://github.com/codename13/android_kernel_ba2x_2.0
 * https://github.com/kerneltoast/sultan-kernel-pyramid
 
+=== Matchbox uncertain future ===
+Matchbox hsn't ben maintained since 2012 and there aren't any known forks being worked on. 
+
 === Internet connection ===
 It's not known whether or not the internet works on this device at the moment. Having a working internet connection would make package management far easier. 
 
