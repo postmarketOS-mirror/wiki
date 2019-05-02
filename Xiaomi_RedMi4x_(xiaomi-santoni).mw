@@ -59,7 +59,7 @@
 * charging-sdl
 
 == What does not work ==
-* Camera (Broken in kernel, detected as /dev/video32-33)
+* Camera
 * GPS
 * Mobile Data
 * SMS
@@ -67,7 +67,7 @@
 * Accelerometers
 * Bluetooth
 * 3D Acceleration (will never happen due to downstream kernel)
-* Backlight stays on when the phone goes into "sleep" because of a lack of user interaction
+* Display Power Management on Wayland
 * Full Disk Encryption (does unlock, but failed to look up the partition after booting)
 
 == Extra steps to get things working ==
