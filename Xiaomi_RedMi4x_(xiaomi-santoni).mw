@@ -26,7 +26,7 @@
 | status_accel = 
 | status_audio = Y
 | status_bluetooth =
-| status_camera =
+| status_camera = N
 | status_gps = 
 | status_mobiledata = 
 | status_sms = 
@@ -73,7 +73,7 @@
 == Extra steps to get things working ==
 
 === Audio ===
-* alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use a sound server and control the volume (I use PulseAudio)
+* alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use PulseAudio.
 * PulseAudio is choppy/un-hearable with the default setting, this can be fixed by [https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling turning off sched].
 
 == Bugs? ==
