@@ -74,13 +74,21 @@ See notes regarding full disk encryption.
 ; 3. flash
 Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
 
-== Troubleshooting ==
-If you can't get SSH over USB to work, see [[USB_Network]].
+== In Progress ==
+Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
+
+=== Mainlining === 
+Mainlining is an important task for this device, because kernels and drivers that supposedly work for this device are scattered across various git repositories, usually forks of other projects, often heavily patched and abandoned. Relying on kernels that can have their repos deleted at any moment, that are often heavily fractured anyways probably isn't a good idea.
+
+=== Scrolling graphics before DE ===
+Before a desktop environment starts, the screen tends to flicker and scroll. It's not a big issue, but it makes it very difficult to tell if full disk encryption works. 
+
+=== Error starting charging-sdl ===
+The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
+
+=== Hildon ===
+Hildon currently doesn't work on this device. 
 
 == Notes ==
-* The screen flickers, flashes and scrolls except for when a desktop environment is running. This makes it difficult to tell if FDE is even working properly. For now, it's unusable.
-* The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
+* The screen flickers, flashes and scrolls except for when a desktop environment is running. This makes it difficult to tell if full disk encryption is even working properly. For now, it's unusable.
 * {{issue|1618}}
-
-== Mainlining ==
-Mainlining is an important task for this device, because kernels and drivers that supposedly work for this device are scattered across various git repositories, usually forks of other projects, often heavily patched and abandoned. Relying on kernels that can have their repos deleted at any moment, that are often heavily fractured anyways probably isn't a good idea.
