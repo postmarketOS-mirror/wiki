@@ -90,8 +90,14 @@ All of these kernels claim to be for this device however, it's not known which o
 * https://github.com/codename13/android_kernel_ba2x_2.0
 * https://github.com/kerneltoast/sultan-kernel-pyramid
 
+=== Internet connection ===
+It's not known whether or not the internet works on this device at the moment. Having a working internet connection would make package management far easier. 
+
 === Matchbox Battery Indication ===
 There doesn't seem to be an easy way to tell how charged the battery is on Matchbox at the current moment. 
+
+=== Machbox Easy Shutdown ===
+There isn't an easy way to power down the phone without removing the battery in most graphical interfaces including Matchbox. 
 
 === Scrolling graphics before DE ===
 Before a desktop environment starts, the screen tends to flicker and scroll. It's not a big issue, but it makes it very difficult to tell if full disk encryption works. 
