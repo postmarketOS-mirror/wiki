@@ -92,6 +92,9 @@ All of these kernels claim to be for this device however, it's not known which o
 * https://github.com/codename13/android_kernel_ba2x_2.0
 * https://github.com/kerneltoast/sultan-kernel-pyramid
 
+=== Matchbox Battery Indication ===
+There doesn't seem to be an easy way to tell how charged the battery is on Matchbox at the current moment. 
+
 === Scrolling graphics before DE ===
 Before a desktop environment starts, the screen tends to flicker and scroll. It's not a big issue, but it makes it very difficult to tell if full disk encryption works. 
 
@@ -99,7 +102,7 @@ Before a desktop environment starts, the screen tends to flicker and scroll. It'
 The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out troubleshooting page.
 
 === Hildon ===
-Hildon currently doesn't work on this device. 
+Hildon currently doesn't work on this device. I recommend Matchbox as an alternative. 
 
 == Notes ==
 * The screen flickers, flashes and scrolls except for when a desktop environment is running. This makes it difficult to tell if full disk encryption is even working properly. For now, it's unusable.
