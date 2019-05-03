@@ -109,7 +109,7 @@ There isn't an easy way to power down the phone without removing the battery in 
 Before a desktop environment starts, the screen tends to flicker and scroll. It's not a big issue, but it makes it very difficult to tell if full disk encryption works. 
 
 === Error starting charging-sdl ===
-The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out {{wiki|https://wiki.postmarketos.org/wiki/Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl}}.
+The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]].
 
 == Contributors ==
 * Lofenyy
