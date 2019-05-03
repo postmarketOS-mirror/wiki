@@ -99,11 +99,15 @@ This is almost certainly a watchdog issue, since the device reboots every 10 min
 === Internet connection ===
 It's not known whether or not the internet works on this device at the moment. Having a working internet connection would make package management far easier. 
 
-=== Matchbox Battery Indication ===
-There doesn't seem to be an easy way to tell how charged the battery is on Matchbox at the current moment. 
+=== Matchbox toolbar widgets ===
+==== Battery ====
+The battery widget currently doesn't work.  
 
-=== Machbox Easy Shutdown ===
-There isn't an easy way to power down the phone without removing the battery in most graphical interfaces including Matchbox. 
+==== Shutdown button ====
+The shutdown button isn't there. 
+
+==== Keyboard ====
+The keyboard lacks a pipe button. This is by design but it'd be a handy addition. 
 
 === FDE doesn't work ===
 FDE doesn't work at all for no known reason. 
