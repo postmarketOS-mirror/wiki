@@ -33,6 +33,7 @@
 | status_calls = 
 | status_otg = Y
 | pmoskernel = 3.18.138
+| whet_dhry = 1526.7
 | booting = yes
 }}
 
@@ -74,13 +75,9 @@
 * Display Power Management on Wayland
 * Full Disk Encryption (does unlock, but failed to look up the partition after booting)
 
-== Extra steps to get things working ==
-
-=== Audio ===
-* alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use PulseAudio.
-
 == Bugs? ==
 * Framebuffer programs, such as fbterm will have it's red and blue color palette swapped for some odd reason, it might be better to look into this, as you might use them later. This will also affect programs that make use of fbconfig.
+* alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use PulseAudio.
 
 == Mainline kernel? ==
 Not yet, as msm8937 isn't in mainline. msm8940 is similar to msm8937.
