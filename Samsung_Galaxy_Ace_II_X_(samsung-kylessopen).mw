@@ -82,9 +82,8 @@ Mainlining is an important task for this device, because kernels and drivers tha
 All of these kernels claim to be for this device however, it's not known which of these kernels actually work and how well they work. FrankenKernel is the only exception as it is the kernel that gets flashed when installing this device. 
 
 * https://github.com/pavlepiramida/FrankenKernel
-* https://github.com/pavlepiramida/android_kernel_samsung_kylessopen
 * https://github.com/codename13/kernel_samsung_kylessopen
-* https://github.com/codename13/android_kernel_samsung_kylessopen
+* https://github.com/codename13/android_kernel_samsung_kylessopen (pavlepiramida has an exact copy)
 * https://github.com/codename13/kylessopen-3.4-port
 * https://github.com/codename13/android_kernel_samsung_kylessopen-CAF
 * https://github.com/codename13/android_kernel_ba2x_2.0
