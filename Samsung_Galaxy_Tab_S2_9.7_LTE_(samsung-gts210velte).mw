@@ -172,4 +172,4 @@ installed system directly on device:
 * ssh -p 22 user@172.16.42.1
 
 == Developer Notes ==
-device is nearly identical to SM-T813, just LTE feature additionally.
+device is nearly identical to [[Samsung Galaxy Tab S2 9.7 Wifi (samsung-gts210vewifi)]] aka. SM-T813, just has LTE modem additionally.
