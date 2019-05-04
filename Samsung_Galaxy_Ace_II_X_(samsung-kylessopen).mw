@@ -83,7 +83,7 @@ All of these kernels claim to be for this device however, it's not known which o
 
 * https://github.com/pavlepiramida/FrankenKernel
 * https://github.com/codename13/kernel_samsung_kylessopen
-* https://github.com/codename13/android_kernel_samsung_kylessopen (pavlepiramida has an exact copy)
+* https://github.com/codename13/android_kernel_samsung_kylessopen (pavlepiramida has an exact fork)
 * https://github.com/codename13/kylessopen-3.4-port
 * https://github.com/codename13/android_kernel_samsung_kylessopen-CAF
 * https://github.com/codename13/android_kernel_ba2x_2.0
