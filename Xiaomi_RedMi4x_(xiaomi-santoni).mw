@@ -3,9 +3,9 @@
 | name =  Redmi 4x
 | codename = xiaomi-santoni
 | image = File:xiaomi-santoni.jpg
-| imagecaption = xiaomi-santoni running pmos
+| imagecaption = xiaomi-santoni running pmOS demos
 | releaseyear = 2017
-| originalsoftware = Android
+| originalsoftware = Android 6.0 (upgradable to 7.1)
 | chipset = Qualcomm MSM8940 Snapdragon 435
 | cpu = Octa-core 1.4 GHz Cortex-A53
 | gpu = Adreno 505
@@ -32,16 +32,20 @@
 | status_sms = 
 | status_calls = 
 | status_otg = Y
+| pmoskernel = 3.18.138
 | booting = yes
 }}
 
 == Contributors ==
 * pinoaffe
+* asriel-danctnix
 * Danct12
 
 == Maintainer(s) ==
-* pinoaffe (old Xiaomi kernel)
-* Danct12 (rebased msm-3.18 kernel from bitrvmpd)
+* Danct12
+
+== Users owning this device ==
+{{Device owners}}
 
 == What works ==
 * Install to SD Card
@@ -74,13 +78,12 @@
 
 === Audio ===
 * alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use PulseAudio.
-* PulseAudio is choppy/un-hearable with the default setting, this can be fixed by [https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling turning off sched].
 
 == Bugs? ==
 * Framebuffer programs, such as fbterm will have it's red and blue color palette swapped for some odd reason, it might be better to look into this, as you might use them later. This will also affect programs that make use of fbconfig.
 
 == Mainline kernel? ==
-Not yet, as msm8940 chipset isn't in mainline.
+Not yet, as msm8937 isn't in mainline. msm8940 is similar to msm8937.
 {| class="wikitable"
 |-
 ! scope="col"| Parts
@@ -88,7 +91,7 @@ Not yet, as msm8940 chipset isn't in mainline.
 ! scope="col"| In Torvalds tree?
 |-
 | scope="row"| Chipset
-| MSM8940 (msm8940.dts)
+| MSM8940
 | No
 |-
 | scope="row"| GPU
@@ -139,12 +142,12 @@ Not yet, as msm8940 chipset isn't in mainline.
 == Bootloader Unlocking ==
 Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
 
-The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and turned on)
+The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and powered on)
 
 == Key combinations for entering Recovery/Fastboot ==
 === Recovery ===
 * Turn the device off (or restart also works)
-* Hold both volume buttons (+ and -) before the device vibrates (Power On Self Test)
+* Hold both volume buttons (+ and -) and power button
 * Keep holding until you got to recovery.
 
 === Fastboot ===
@@ -163,6 +166,6 @@ File:Santoni-chargingsdl.png|thumb|left|charging-sdl on Xiaomi Redmi 4X
 * [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php GSMArena page]
 * [https://twrp.me/xiaomi/xiaomiredmi4x.html Official TWRP image for Redmi 4X (santoni)]
 * [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss Xiaomi Redmi 4X Official Kernel Source]
-* [https://github.com/Danct12/msm-3.18/tree/rel/msm-3.18-archlinux msm-3.18 upstreamed kernel for santoni]
+* [https://github.com/Danct12/msm-3.18/tree/rel/msm-3.18-gnulinux msm-3.18 upstreamed kernel for santoni]
 * [https://gitlab.com/postmarketOS/pmaports/merge_requests/289 Pull request for msm-3.18 upstreamed kernel]
 * [https://gitlab.com/postmarketOS/pmaports/merge_requests/335 Pull request !335 for osk-sdl]
