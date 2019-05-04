@@ -245,23 +245,6 @@ General setup -->
 
 Required. See {{issue|237|pmaports}} for notes about changing the initramfs compression.
 
-=== CONFIG_FHANDLE ===
-
-'''About'''
-
-''open by fhandle syscalls''
-
-'''Location in menu'''
-
-<pre class="shell">
-General setup -->
-  open by fhandle syscalls
-</pre>
-
-'''pmOS specific'''
-
-Required, postmarketOS uses udev.
-
 == Optional ==
 
 These kernel options are optional and for some devices required to fix some issues.
@@ -394,6 +377,23 @@ General Setup -->
 '''pmOS specific'''
 
 No
+
+=== CONFIG_FHANDLE ===
+
+'''About'''
+
+''open by fhandle syscalls''
+
+'''Location in menu'''
+
+<pre class="shell">
+General setup -->
+  open by fhandle syscalls
+</pre>
+
+'''pmOS specific'''
+
+If USB OTG isn't working for you, try enable this config.
 
 === CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE ===
 '''About'''
