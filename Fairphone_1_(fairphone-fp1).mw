@@ -12,10 +12,10 @@
 | storage = 16 GB
 | display = 960x540 IPS
 | memory = 1 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = P
+| status_touch = Y
 | status_screen = Y
 | status_wifi = N
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
