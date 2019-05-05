@@ -123,7 +123,7 @@ pine-dontbeevil:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 
 
 === WiFi/Bluetooth ===
 
-The wifi interface shows up and is able to scan for networks, it doesn't want to actually connect
+The wifi interface shows up and is able to scan for networks, it doesn't want to actually connect most of the times, if it doesn't work then reboot and try again.
 
 <source lang="dmesg">
 [ 1962.148414] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
