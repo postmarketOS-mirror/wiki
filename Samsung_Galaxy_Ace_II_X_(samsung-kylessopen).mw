@@ -88,7 +88,7 @@ It's not known whether or not the internet works on this device at the moment. H
 See [[WiFi]] and [[USB_Internet]].
 
 === FDE doesn't work ===
-FDE doesn't work at the current moment. See [[Osk-sdl]].
+FDE doesn't work at the current moment. See [[Osk-sdl]]. (framebuffer issues)
 
 === Error starting charging-sdl ===
 The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]].
