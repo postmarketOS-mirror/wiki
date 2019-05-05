@@ -90,7 +90,7 @@ The internet works fine using [[USB_Internet]] however, thee are no interfaces s
 FDE doesn't work at the current moment. See [[Osk-sdl]]. (framebuffer issues)
 
 === Error starting charging-sdl ===
-The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]].
+The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]]. (Same issue as FDE).
 
 === Scrolling graphics before DE ===
 Before a desktop environment starts, the screen tends to flicker and scroll. It's a purely cosmetic issue. 
