@@ -90,7 +90,7 @@ It's not known whether or not the internet works on this device at the moment. H
 FDE doesn't work at all for no known reason. 
 
 === Error starting charging-sdl ===
-The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]].
+The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]].
 
 === Scrolling graphics before DE ===
 Before a desktop environment starts, the screen tends to flicker and scroll. It's a purely cosmetic issue. 
