@@ -37,6 +37,8 @@
 == Contributors ==
 
 == Maintainer(s) ==
+== Users owning this device ==
+{{Device owners}}
 
 == How to enter flash mode ==
 Hold Power key and Vol- just after that. Release buttons when logo appears. Navigate to "Reboot to bootloader" option with volume keys and press Power to choose. The phone will reboot in fastboot mode.
