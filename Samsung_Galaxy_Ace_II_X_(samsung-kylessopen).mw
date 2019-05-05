@@ -87,7 +87,7 @@ This is almost certainly a watchdog issue, since the device reboots every 10 min
 It's not known whether or not the internet works on this device at the moment. Having a working internet connection would make package management far easier. 
 
 === FDE doesn't work ===
-FDE doesn't work at all for no known reason. 
+FDE doesn't work at the current moment. See [[Osk-sdl]].
 
 === Error starting charging-sdl ===
 The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]].
