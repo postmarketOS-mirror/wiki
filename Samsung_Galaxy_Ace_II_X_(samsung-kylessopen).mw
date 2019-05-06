@@ -23,7 +23,7 @@
 | status_battery = N
 | status_3d = 
 | status_accel = 
-| status_audio = 
+| status_audio = N
 | status_bluetooth =
 | status_camera =
 | status_gps = 
@@ -85,6 +85,9 @@ This is almost certainly a watchdog issue, since the device reboots every 10 min
 
 === Internet connection ===
 The internet works fine using [[USB_Internet]] however, thee are no interfaces shown that allow [[WiFi]]. This is likely a firmware/driver issue.
+
+=== Audio ===
+The msm-audio card is detected however, turning up the volume on any channel except the master results in a crash. 
 
 === FDE doesn't work ===
 FDE doesn't work at the current moment. See [[Osk-sdl]]. (framebuffer issues)
