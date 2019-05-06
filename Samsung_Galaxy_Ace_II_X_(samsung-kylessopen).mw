@@ -93,7 +93,7 @@ The msm-audio card is detected however, turning up the volume on any channel exc
 FDE doesn't work at the current moment. See [[Osk-sdl]]. (framebuffer issues)
 
 === Error starting charging-sdl ===
-The device charges successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]]. (Same issue as FDE).
+The device boots into charging mode successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]] and [[Charging-sdl]]. (Same issue as FDE).
 
 === Bluetooth ===
 bluetoothctl doesn't do anything when run. 
