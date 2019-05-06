@@ -128,6 +128,48 @@ This can be solved by updating to the [https://developers.google.com/android/ima
 ==== Remote Data Too Large ====
 Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message that includes "Failed (remote: data too large)".  This might be solved by updating by reflashing [https://developers.google.com/android/images#hammerhead the latest version of the stock Android image for the device].
 
+=== Partition layout ===
+<pre class="shell">
+fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/mmcblk1
+Disk /dev/mmcblk1: 14.7 GiB, 15758000128 bytes, 30777344 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+
+Device             Start      End  Sectors  Size Name
+/dev/mmcblk1p1      1024   132095   131072   64M modem
+/dev/mmcblk1p2    132096   134143     2048    1M sbl1
+/dev/mmcblk1p3    134144   135167     1024  512K rpm
+/dev/mmcblk1p4    135168   136191     1024  512K tz
+/dev/mmcblk1p5    136192   137215     1024  512K sdi
+/dev/mmcblk1p6    137216   138239     1024  512K aboot
+/dev/mmcblk1p7    138240   142335     4096    2M pad
+/dev/mmcblk1p8    142336   144383     2048    1M sbl1b
+/dev/mmcblk1p9    144384   145407     1024  512K tzb
+/dev/mmcblk1p10   145408   146431     1024  512K rpmb
+/dev/mmcblk1p11   146432   147455     1024  512K abootb
+/dev/mmcblk1p12   147456   153599     6144    3M modemst1
+/dev/mmcblk1p13   153600   159743     6144    3M modemst2
+/dev/mmcblk1p14   159744   160767     1024  512K metadata
+/dev/mmcblk1p15   160768   193535    32768   16M misc
+/dev/mmcblk1p16   193536   226303    32768   16M persist
+/dev/mmcblk1p17   226304   232447     6144    3M imgdata
+/dev/mmcblk1p18   232448   277503    45056   22M laf
+/dev/mmcblk1p19   277504   322559    45056   22M boot
+/dev/mmcblk1p20   322560   367615    45056   22M recovery
+/dev/mmcblk1p21   367616   373759     6144    3M fsg
+/dev/mmcblk1p22   373760   374783     1024  512K fsc
+/dev/mmcblk1p23   374784   375807     1024  512K ssd
+/dev/mmcblk1p24   375808   376831     1024  512K DDR
+/dev/mmcblk1p25   376832  2473983  2097152    1G system
+/dev/mmcblk1p26  2473984  2535423    61440   30M crypto
+/dev/mmcblk1p27  2535424  3969023  1433600  700M cache
+/dev/mmcblk1p28  3969024 30777299 26808276 12.8G userdata
+/dev/mmcblk1p29 30777300 30777310       11  5.5K grow
+</pre>
+
 === Links ===
 * [https://gitlab.com/unrznbl/gesture/wikis/gesture---handwriting-for-linux-touchscreens shelli-ui: framebuffer console + gesture recognition video demo]
 * [https://www.youtube.com/watch?v=u9zw_ewkBJ0 Demonstration video of a Nexus 5 with postmarketOS and plasma]
