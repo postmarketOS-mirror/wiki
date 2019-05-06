@@ -130,7 +130,8 @@ Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message
 
 === Partition layout ===
 <pre class="shell">
-fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/mmcblk1
+hammerhead:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/mmcblk1
+
 Disk /dev/mmcblk1: 14.7 GiB, 15758000128 bytes, 30777344 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
