@@ -73,7 +73,7 @@ Plasma Mobile is a GPLv2 licensed smartphone interface. It's sadly painfully slo
 Check out: https://pkgs.alpinelinux.org/packages?branch=edge&arch=armhf
 
 == Kernels ==
-{{MR|345|pmaports}}
+{{MR|345|pmaports}}{{issue|146|pmaports}}
 === Mainline ===
 Builds and flashes just fine but doesn't boot past the Samsung splash screen. This is the kernel we want running on this device.
 * Version: Latest
@@ -109,7 +109,7 @@ These ones get further into compiling than the previous list, but fail soon afte
 
 ==== codename13.android_kernel_samsung_kylessopen-CAF ====
 * Version: 3.0.31
-This one appears to have issues regarding patches. 
+This one appears to have issues regarding patches.
 
 == In Progress ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
