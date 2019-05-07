@@ -127,6 +127,9 @@ The internet works fine using [[USB_Internet]] however, thee are no interfaces s
 === Audio ===
 The msm-audio card is detected however, turning up the volume on any channel except the master results in a crash. See [[Audio]] and {{issue|249|pmaports}}.
 
+=== Device sometimes freezes while booting ===
+Nothing is known about this issue yet. 
+
 === FBDirect ===
 FBDirect is a program that [[osk-sdl]] and [[charging-sdl]] rely on to work. 
 
