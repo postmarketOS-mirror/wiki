@@ -42,7 +42,7 @@ Select "samsung-kylessopen" as the target device and select a working recommende
 
 ; 2. install
 <source lang="bash">$ ./pmbootstrap.py install --no-fde</source>
-See the in progress regarding full disk encryption. 
+See the 'in progress' section regarding full disk encryption. 
 
 ; 3. flash
 Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
