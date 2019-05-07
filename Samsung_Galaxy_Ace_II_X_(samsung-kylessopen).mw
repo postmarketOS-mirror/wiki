@@ -131,7 +131,7 @@ The msm-audio card is detected however, turning up the volume on any channel exc
 Nothing is known about this issue yet. 
 
 === FBDirect ===
-FBDirect is a program that [[osk-sdl]] and [[charging-sdl]] rely on to work. 
+FBDirect is a program that [[osk-sdl]] and [[charging-sdl]] rely on to work. See {{issue|250|pmaports}}
 
 === FDE doesn't work ===
 FDE doesn't work at the current moment. See FBDirect issue.
