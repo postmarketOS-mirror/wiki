@@ -73,7 +73,6 @@ Plasma Mobile is a GPLv2 licensed smartphone interface. It's sadly painfully slo
 Check out: https://pkgs.alpinelinux.org/packages?branch=edge&arch=armhf
 
 == Kernels ==
-{{MR|345|pmaports}}{{issue|146|pmaports}}
 === Mainline ===
 Builds and flashes just fine but doesn't boot past the Samsung splash screen. This is the kernel we want running on this device.
 * Version: Latest
@@ -117,7 +116,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 === Mainlining === 
 Mainlining is an important task for this device, because kernels and drivers that supposedly work for this device are scattered across various git repositories, usually forks of other projects, often heavily patched and abandoned. Relying on kernels that can have their repos deleted at any moment, that are often heavily fractured anyways probably isn't a good idea.
 
-All of these kernels claim to be for this device however, it's not known which of these kernels actually work and how well they work. FrankenKernel is the only exception as it is the kernel that gets flashed when installing this device. https://gitlab.com/samsung-kylessopen-kernels
+All of these kernels claim to be for this device however, it's not known which of these kernels actually work and how well they work. FrankenKernel is the only exception as it is the kernel that gets flashed when installing this device. {{MR|345|pmaports}}{{issue|146|pmaports}}
 
 === Device regularly reboots itself ===
 This is almost certainly a watchdog issue, since the device reboots every 10 minutes. I'm currently working on disabling the watchdog. {{issue|242|pmaports}}
