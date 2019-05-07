@@ -140,7 +140,7 @@ FDE doesn't work at the current moment. See FBDirect issue.
 The device boots into charging mode successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]], [[Charging-sdl]] and FBDirect issue.
 
 === Bluetooth ===
-bluetoothctl doesn't do anything when run. 
+bluetoothctl doesn't do anything when run. I suspect this is due to the firmware not being installed. See {{issue|248|pmaports}}.
 
 === Scrolling graphics before DE ===
 Before a desktop environment starts, the screen tends to flicker and scroll. It's a purely cosmetic issue.
