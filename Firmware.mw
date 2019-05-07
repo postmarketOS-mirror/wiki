@@ -1,4 +1,4 @@
-There are closed source components (like firmware and bootloaders) in every phone, and [https://ollieparanoid.github.io/post/security-warning/ they are dangerous]. It seems next to impossible to replace them with open source components, and it won't be feasible any time soon for postmarketOS. Yet, this is an interesting topic, so this page provides links for deeper insight into the topic.
+There are closed source components (like firmware and bootloaders) in every phone, and [https://ollieparanoid.github.io/post/security-warning/ they are dangerous]. It seems next to impossible to replace them with open source components, and it won't be feasible any time soon for postmarketOS. Yet, this is an interesting topic, so this page provides links for deeper insight into the topic. For packaging instructions, see [[Device_specific_package#Proprietary_firmware_or_userland_blobs]]
 
 == What can we do? ==
 * '''Binary patch security holes in firmware''' (e.g. with [https://github.com/seemoo-lab/nexmon nexmon]). This seems to be the best approach we have since there won't be open firmware for all these components any time soon.
