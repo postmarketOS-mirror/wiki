@@ -52,7 +52,7 @@ Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}}
 Matchbox is a free software (GPL v2+) window manager for the X Window System designed for embedded systems. It's latest stable release was in April of 2012, the same year this phone was known to be released in the UK. It's rather lightweight, displaying only one window at a time, and has its own software keyboard built in, making it the interface I recommend the most for this device. 
 
 === Hildon ===
-Hildon is an LGPL user interface for cell phones. It's optimized for single touch displays. Due to the lack of a software keyboard, I wouldn't recommend it for this device. 
+Hildon is an LGPL user interface for cell phones. It's optimized for single touch displays. Due to the lack of a working software keyboard (see {{issue|234|pmaports}}), I wouldn't recommend it for this device.
 
 === MATE ===
 MATE is a fork of Gnome2 fork in response to the negative reception of Gnome3. It's initial release was in 2011 (GPLv2, LGPLv2) and it's still in active development. It doesn't come with a software keyboard and it can be slow and buggy at times. It feels more appropriate as a desktop interface. 
