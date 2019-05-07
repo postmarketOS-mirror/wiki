@@ -125,7 +125,7 @@ This is almost certainly a watchdog issue, since the device reboots every 10 min
 The internet works fine using [[USB_Internet]] however, thee are no interfaces shown that allow [[WiFi]]. This seems to be caused by the lack of the linux-firmware-ath6k firmware but even when loading it, it doesn't work. A kernel patch is likely necessary. See {{issue|248|pmaports}}.
 
 === Audio ===
-The msm-audio card is detected however, turning up the volume on any channel except the master results in a crash. 
+The msm-audio card is detected however, turning up the volume on any channel except the master results in a crash. See {{issue|249|pmaports}}.
 
 === FBDirect ===
 FBDirect is a program that [[osk-sdl]] and [[charging-sdl]] rely on to work. 
