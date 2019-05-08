@@ -1,0 +1,18 @@
+Since we can't use the mainline kernel for all devices, we need access to the downstream kernel source code. From time to time, such repositories disappear from the web, so it is a good idea to back them up. We want to be able to easily confirm that the backed up kernel has the same source code as the original one, so please follow these steps.
+
+== Backup ==
+Create a backup of the desired kernel to a public source code hosting service, such as gitlab.com or github.com. If the original git repository was on the same platform, this is oftentimes as easy as clicking the "fork" button on the original repository.
+
+== Adjust linux package ==
+* Make it point to your backup instead of the original URL
+* Change <code># Source</code> to <code># Source: backup of https://insert-original-url-here</code>
+* Make sure that you do '''not''' change the commit hash! (Under the assumption, that there is no hash collusion, this guarantees that your backup has the same source as the original one.)
+
+== Additional patches ==
+If you need to add additional patches on top of the kernel (e.g. to fix the build), [[Patching|create patch files]] and place them inside the aport directory. This way we can transparently see what has been changed.
+
+== See also ==
+* {{issue|98|postmarketos.org}} Create backups of downstream kernel git repositories
+* {{MR|345|pmaports}} Discussion about how to handle it with samsung-kylessopen
+
+[[Category:Guide]]
