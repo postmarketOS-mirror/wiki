@@ -79,6 +79,32 @@ major minor  #blocks  name
  179       32       4096 mmcblk0boot0
 </source>
 
+<source lang="bash">
+boot -> /dev/block/mmcblk0p16
+cache -> /dev/block/mmcblk0p18
+fbootlogo -> /dev/block/mmcblk0p15
+logo -> /dev/block/mmcblk0p14
+misc -> /dev/block/mmcblk0p20
+miscdata -> /dev/block/mmcblk0p2
+persist -> /dev/block/mmcblk0p21
+prodnv -> /dev/block/mmcblk0p1
+recovery -> /dev/block/mmcblk0p19
+sysinfo -> /dev/block/mmcblk0p22
+system -> /dev/block/mmcblk0p17
+userdata -> /dev/block/mmcblk0p23
+wcnfixnv1 -> /dev/block/mmcblk0p10
+wcnfixnv2 -> /dev/block/mmcblk0p11
+wcnmodem -> /dev/block/mmcblk0p9
+wcnruntimenv1 -> /dev/block/mmcblk0p12
+wcnruntimenv2 -> /dev/block/mmcblk0p13
+wdsp -> /dev/block/mmcblk0p4
+wfixnv1 -> /dev/block/mmcblk0p5
+wfixnv2 -> /dev/block/mmcblk0p6
+wmodem -> /dev/block/mmcblk0p3
+wruntimenv1 -> /dev/block/mmcblk0p7
+wruntimenv2 -> /dev/block/mmcblk0p8
+</source>
+
 == See also ==
 * {{issue|239|pmaports}} - Describing porting process here
 * [https://github.com/myst33d/spreadtrum-kernel-common Generic kernel for Spreadtrum SC8830 platform]
