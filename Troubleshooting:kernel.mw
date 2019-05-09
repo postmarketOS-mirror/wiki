@@ -66,7 +66,7 @@ In the BusyBox version shipped with Alpine Linux, only lower compression levels 
 == Android Kernel compilation fails on warnings (not on errors) (-Werror) ==
 Don't even bother fixing all those warnings, there are too many of them and we don't want the outdated Android kernels in the long run anyway! When you generate your kernel APKBUILD with <code>pmbootstrap init</code>, then you should have code in the <code>prepare()</code> that automatically removes the <code>-Werror</code> parameter in all Makefiles.
 
-==== Building the kernel with Android's build system ====
+== Building the kernel with Android's build system ==
 It might be useful for debugging to build Android's kernel with Android's build system.
 
 You can follow the LineageOS building guide for your device (see [https://wiki.lineageos.org/devices/titan/build this] for titan device as example).
