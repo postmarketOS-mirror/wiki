@@ -45,6 +45,9 @@
 Hold Power key and Vol- just after that. Release buttons when logo appears. Navigate to "Reboot to bootloader" option with volume keys and press Power to choose. The phone will reboot in fastboot mode.
 
 == Installation ==
+Fastboot on this phone doesn't support booting kernel from SD card, so it's required to flash kernel with <source>$ pmbootstrap flasher flash_kernel</source>
+If you have SD card that is rather fast, consider to not flash rootfs on the phone, because it's memory is probably slower (15 Mb/s on read, 9 Mb/s on write).
+
 === Partitions layout ===
 <source lang="bash">
 major minor  #blocks  name 
