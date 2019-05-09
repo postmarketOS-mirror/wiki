@@ -84,6 +84,7 @@ It might be that fsck fails on a partition: try telnetting into initramfs, mount
 ** If that works, maybe you can debug the issue from that point somehow
 ** Or even load the postmarketOS kernel with kexec
 ** There's a also a guide for [[Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system|building the kernel with Android's build system]]
+* If you get <code>bad boot image header</code> error trying to boot from SD card, it may be that fastboot mode on the device doesn't allow <code>fastboot boot</code> usage. Run <code>fastboot boot boot.img</code> where boot.img can be a recovery image or working boot image from stock or custom firmware. If you get the same error, you should flash kernel on device with <code>pmbootstrap flasher flash_kernel</code>.
 * Alpine Linux' <code>armhf</code> architecture requires armv6 with FPU {{github|1203}}
 
 == See also ==
