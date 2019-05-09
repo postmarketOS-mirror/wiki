@@ -1,3 +1,4 @@
+{{note|This device doesn't boot due to initramfs cannot mount partitions.}}
 {{Infobox device
 | manufacturer = CHUWI
 | name =  Hi10 Plus
@@ -15,7 +16,7 @@
 | architecture = x86_64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = y
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_flashing = y
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = y
 | status_wifi = <!-- Wireless network works? -->
@@ -33,7 +34,7 @@
 | status_sms = -
 | status_calls = -
 | status = Boots to initramfs, but cannot load pmOS partitons.
-| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = no
 | pmoskernel = 5.1-rc7
 | status_otg = 
 }}
@@ -60,7 +61,7 @@
 
 
 == Installation ==
-TODO
+Can be flashed from pmbootstrap.
 
 == See also ==
 * {{MR|347|pmaports}} Initial merge request
