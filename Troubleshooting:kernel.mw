@@ -107,7 +107,7 @@ You can check the <code>$OUT</code> environment variable and cd into it. In the 
 
 The defconfig used is available at <code>~/android/lineage/kernel/motorola/msm8226/arch/arm/configs/titan_defconfig</code>
 
-==== Error: selected processor does not support ARM mode `smc #0' ====
+== Error: selected processor does not support ARM mode `smc #0' ==
 Try this patch: https://github.com/imoseyon/leanKernel-galaxy-nexus/pull/6
 
 == TLS (SSL/HTTPS) is broken! ==
