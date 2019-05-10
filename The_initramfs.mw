@@ -1,0 +1,23 @@
+Boot process:
+
+* Enable <code>set -x</code> if the verbose-initfs hook exists
+* Load deviceinfo data
+* Create busybox symlinks
+* Mount <code>/dev</code>, <code>/proc</code> and <code>/sys</code>
+* Redirect stdout to a logfile if <code>PMOS_NO_OUTPUT_REDIRECT</code> isn't present in the kernel cmdline
+* Modprobe modules listed in deviceinfo
+* Enable mdev (busybox replacement for udev)
+* Make kernel detect subpartitions
+* Wait for /dev/fb0 to appear (if not disabled in deviceinfo) and set the framebuffer mode
+* Execute hooks
+* Show loading splash
+* Start networking
+* Find and mount the partition with the <code>pmOS_boot</code> label (or show "Boot partition not found" splash)
+* Unpack initramfs-extra from the boot partition (or show "Initramfs-extra not fond" splash)
+* Start charging mode if one of the known charging kernel parameters was found in the cmdline (show battery icon for charging and waits for powerbutton press)
+* Search for a partition with the label <code>pmOS_root</code> or  <code>crypto_LUKS</code>
+* Try to resize the partition containing the root filesystem to the maximum size
+* Start osk-sdl if the rootfs is a luks partition
+* Resize the root filesystem to match the partition it is in
+* Mount the root filesystem
+* Kill all processes running in the initramfs and pivot root to the real rootfs
