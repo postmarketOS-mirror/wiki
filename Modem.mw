@@ -5,6 +5,7 @@ Some devices already have modem support. Check the devices table!
 * {{github|598}} Let's get the cellular modem working! (presenting various stacks, general discussion)
 * {{github|1054}} Get qualcomm modems working (at the end of the thread scintill wrote a few wrappers and made SMS on a QC modem work with a downstream kernel without userspace blobs!)
 * {{github|1314}} i9195/Qualcomm modem support (scintill's work integrated)
+* {{issue|251|pmaports}} xiaomi-santoni: gets modem to work on the device
 
 == See also ==
 * Maemo Leste {{github|27|bugtracker|maemo-leste}} Call/Phone support
