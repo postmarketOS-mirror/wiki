@@ -1,0 +1,4 @@
+== Summary ==
+Will attempt to port PostmarketOS to the Coby Kyros MID7012 Android 2.3 Gingerbread resistive touch tablet. Using a Ubuntu 16.04 VM in VirtualBox 6.0 to compile using Windows 10 as the host. I will see how it goes and report back.
+== Licensing ==
+{{self|cc-by-4.0}}
