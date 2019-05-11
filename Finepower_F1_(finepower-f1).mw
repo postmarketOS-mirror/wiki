@@ -52,14 +52,14 @@ or
 
 == Installation ==
 === Flashing kernel ===
-*IMPORTANT NOTE:* backup your boot partition before flashing kernel. If you have root, you can do it with adb. Connect phone to computer, enable USB debugging in Developer mode. Then
+{{note|'''Backup your boot partition before flashing kernel.''' If you have root, you can do it with adb. Connect phone to computer, enable USB debugging in Developer mode. Then
 <source>$ adb shell
 $ su
 # dd if=/dev/block/mmcblk0p16 of=/sdcard/boot.img</source>
 I did these 2 commands as well (don't know if these are needed)
 <source># dd if=/dev/block/mmcblk0boot0 of=/sdcard/boot0.img
 # dd if=/dev/block/mmcblk0boot1 of=/sdcard/boot1.img</source>
-If the phone isn't rooted, use ResearchDownload tool for backup.
+If the phone isn't rooted, use ResearchDownload tool for backup.}}
 
 Fastboot on this phone doesn't support booting kernel from SD card, so it's required to flash kernel with <code>$ pmbootstrap flasher flash_kernel</code>
 If you have SD card that is rather fast, consider to not flash rootfs on the phone, because it's memory is probably slower (15 Mb/s on read, 9 Mb/s on write).
