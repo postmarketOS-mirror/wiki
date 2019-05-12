@@ -119,6 +119,14 @@ ACTION=="add", SUBSYSTEM=="net", KERNEL=="eth0", RUN+="/sbin/ip link set dev %k 
 == Display Resolution ==
 On the mainline kernel, display resolutions above 1280x720 are glitchy. The GPU is dependent on memory bandwidth but EMC scaling is not implemented in mainline. The Ouya bootloader sets the memory to 400 Mhz. Higher display resolutions work a bit better when the memory is set to 800Mhz but it is still glitchy.
 
+== HDMI CEC ==
+
+The Ouya is missing HDMI CEC support at the hardware design level.  
+
+References:  
+* [http://ouyaforum.com/showthread.php?9682-What-remote-controls-do-you-want-supported  What remote controls do you want supported? ]  
+* [https://forum.kodi.tv/showthread.php?tid=186121 https://forum.kodi.tv/showthread.php?tid=186121]
+
 == Other Notes ==
 * Splash screen doesn't appear
 * Hildon doesn't work?
