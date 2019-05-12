@@ -3,6 +3,6 @@
 
 '''[https://anbox.io Anbox]''' runs Android apps on Linux by running a (trimmed down?) version of Android next to Linux in a container.
 
-See issue {{github|1286}} for current progress.
+See issue {{issue|17|pmaports}} for current progress.
 
 [[Category:Technical Reference]]
