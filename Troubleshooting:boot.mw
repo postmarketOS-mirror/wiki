@@ -75,6 +75,7 @@ It might be that fsck fails on a partition: try telnetting into initramfs, mount
 * Check the output of the bootloader with a [[serial debugging|serial cable]] if you have one.
 ** Making such a cable takes some time, and it isn't even known how to do it for all devices. So if you don't have such a cable, try other methods.
 * Double-check that you have used the right [[Porting_to_a_new_device#Defconfig|defconfig]]
+* Try building the kernel with an [[Vendor_kernel_specific_package#GCC_version|older GCC version]] (possibly try to figure out first, which GCC version would have been used to build the kernel for Android)
 * Android bootimg issues:
 ** Make sure that <code>pmbootstrap bootimg_analyze</code> outputs the same values, that you have put in your [[deviceinfo]]
 ** Analyze a bootimg file, for which you have verified that it boots on your device (with TWRP or Android).
