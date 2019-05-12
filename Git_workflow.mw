@@ -147,10 +147,12 @@ When you want to push more changes, you can simply use <code>git push</code> for
 
 There is also <code>git push --force</code>, which can be used to override commits without creating new ones. You can use it after rebasing your branch on master (as explained above).
 
-<code>git rebase -i master</code> is a powerful command to edit previous commits. Simply follow the instructions in the editor that opens.
+<code>git rebase -i master</code> is a powerful command to edit previous commits, the <code>-i</code> option stands for interactive. See [https://git-rebase.io/ git-rebase.io] for an in depth tutorial on interactive rebasing.
 
 === Create the MR ===
 Simply click the link shown in the git output above, to create the new merge request. Pay attention to the text shown there, following it closely will make sure that your merge request gets merged to master as fast as possible.
 
+== See also ==
+* https://git-rebase.io/ in depth interactive git rebase tutorial (explains fixing previous commits, squashing commits, splitting one commit into several, reordering commits, etc.)
 
 [[Category:Guide]]
