@@ -34,14 +34,77 @@
 | status_calls = -
 | booting = yes
 | pmoskernel = 5.1
-| status_otg = 
+| status_otg = Y
 }}
 
 == Contributors ==
-* Danct12
+* ''[[user:Danct12|Danct12]]''
+* lambdadroid
 
 == Users owning this device ==
 {{Device owners}}
+
+== Mainline Kernel Status ==
+{| class="wikitable"
+|-
+ ! Component !! Model !! Mainline kernel !! Status
+|-
+| Display || Not sure || Yes || Working
+|-
+| Touch Screen || Silead GSL1680 || Yes || Firmware needed, untested.
+|-
+| Internal Storage || DF4064 || locally || Yes
+|-
+| TF Card Slot || ?? || locally || Sometimes, unstable.
+|-
+| Wi-Fi || RTL8723BS || Yes || Partially
+|-
+| Bluetooth || RTL8723BS || Yes || Firmware loads, untested.
+|-
+| Sixaxis || Bosch BMC150 || Yes || No, invalid chip reported.
+|-
+| Light Sensor || Capella CM3218 || No || Patch is in mailing list, untested.
+|-
+| USB Type-C/MicroUSB || Designware Core USB3.0 || Yes || Yes
+|-
+| Back/Front Camera || Not sure || No || No
+|-
+| Battery/Charging || X-Powers AXP288 || Yes || Yes
+|-
+|}
+
+=== Touch Screen ===
+This tablet uses GSL1680 from Silead, firmware needs to be loaded, however I haven't got it to work yet. But gslx680-ts-acpi driver works.
+
+'''TO-DO: Find a way to package gslx680-ts-acpi.'''
+
+=== Wi-Fi ===
+Same problem as pine-dontbeevil, Wi-Fi scans just fine, however sometimes it doesn't connect.
+https://wiki.postmarketos.org/wiki/Pine_Don%27t_be_evil_devkit_(pine-dontbeevil)#WiFi.2FBluetooth
+
+=== Bluetooth ===
+Bluetooth firmware for RTL8723BS seems to load, however I haven't tested it.
+
+=== Sixaxis/Accelerometer ===
+Bosch BMC150 is in torvalds mainline, but on load, it'll report Invalid chip.
+
+=== Light Sensor ===
+Capella CM3218 is the light sensor on this tablet, there is a patch made by the company itself in mailing list, but doesn't made it's way to mainline.
+
+=== Camera ===
+According to danielotero, OV2680 is used in the tablet, but this has not investigated yet. There's currently no patch adding support for this.
+
+=== GPU ===
+Uses Intel i915, working out of the box.
+
+=== TF Card Slot ===
+Via sdhci_acpi, but it only works sometimes, most of the time it doesn't work.
+
+=== Battery/Charging ===
+The power circuit is X-Powers AXP288, this is in torvalds mainline and working just fine.
+
+=== USB Ports (Type-C/Micro) ===
+Uses Designware Core USB 3.0 Controller, in torvalds mainline and working fine. 
 
 == How to enter flash mode ==
 
