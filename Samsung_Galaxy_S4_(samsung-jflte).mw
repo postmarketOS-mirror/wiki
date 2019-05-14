@@ -58,7 +58,7 @@ Watch out, some versions have bootloaders that can't be unlocked.
 * Touch screen
 * Wayland
 * X11
-* Keyboard and mouse with USB OTG adapter
+* Keyboard and mouse with USB OTG adapter (Hotplug not working)
 * Initramfs password entry for full disk encryption
 
 == What does not work ==
@@ -66,6 +66,7 @@ Watch out, some versions have bootloaders that can't be unlocked.
 * Touch screen requires a reboot to work in some rare cases
 * 3D acceleration
 * Wayland default on screen keyboard
+* USB Hotplug
 
 == How to enter flash mode ==
 
