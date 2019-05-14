@@ -21,7 +21,7 @@
 | status_wifi = P
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_mainline = Y
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
@@ -33,7 +33,7 @@
 | status_sms = -
 | status_calls = -
 | booting = yes
-| pmoskernel = 5.1-rc7
+| pmoskernel = 5.1
 | status_otg = 
 }}
 
