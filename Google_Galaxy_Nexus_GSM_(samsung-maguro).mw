@@ -20,7 +20,7 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = Y
-| status_mainline = 
+| status_mainline = P
 | status_battery = Y
 | status_3d = 
 | status_accel = 
@@ -64,7 +64,7 @@
 |-
 | Gyroscope|| TDK MPU-3050 || Yes || Working
 |-
-| Display || Samsung S6E8AA0 AMOLED || Yes || Missing support for OMAP-DSS
+| Display || Samsung S6E8AA0 AMOLED || Yes || Missing support for OMAP-DSS<br/> Currently working with simple-framebuffer
 |-
 | Touch Screen || MELFAS MMS144 || No || 
 |-
