@@ -7,9 +7,9 @@
 | releaseyear = 2017
 | originalsoftware = Android 7 
 | chipset = Qualcomm Snapdragon 430 
-| cpu = 8x 2.0 GHz Cortex-A53 
+| cpu = 8x 1.5 GHz Cortex-A53 
 | gpu = Adreno 505
-| storage = 16 GB 
+| storage = 16 GB or 32 GB 
 | display = 1080x1920 IPS 
 | memory = 2 or 3GB 
 | architecture = aarch64 
@@ -21,8 +21,8 @@
 | status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y 
-| status_fde = 
-| status_mainline =
+| status_fde = N
+| status_mainline = N
 | status_battery = Y
 | status_3d = 
 | status_accel = 
@@ -34,7 +34,7 @@
 | status_sms = 
 | status_calls = 
 | status_otg = Y
-| booting = Y 
+| booting = P 
 }}
 
 == Contributors ==
@@ -46,7 +46,7 @@
 * Power + Volume Down buttons or use <code>adb reboot-bootloader</code>
 
 == Installation ==
-I installed the rootfs on a SD card. Flashing the kernel to the boot partition not tested, rootfs flashing too.
+I installed the rootfs on a SD card. Cant flash kernel to boot(it is too big).
 <source>
 $ pmbootstrap flasher boot
 </source>
