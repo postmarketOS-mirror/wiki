@@ -33,24 +33,63 @@
 | status_calls = 
 | booting = yes
 }}
-= Contributors =
+== Contributors ==
 
 * lawl
 * Pneumaticat
 * ''[[user:drebrez|drebrez]]''
 
-= Links =
+== Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-maguro Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-maguro Kernel package]
+* [https://github.com/drebrez/linux/commits/samsung-maguro drebrez's mainline kernel fork]
 
-= Additional info =
+== Mainline Kernel Status ==
+{| class="wikitable"
+|-
+ ! Component !! Model !! Mainline kernel !! Status
+|-
+| RGB LED || Panasonic AN30259A || Yes || Working
+|-
+| MicroUSB || - || Yes || Working
+|-
+| eMMC || Samsung VYL00M || Yes || Working
+|-
+| Battery/Charging/Fuelgauge || MAX17040 || Yes || Working
+|-
+| Volume/Power keys || GPIO || Yes || Working
+|-
+| Accelerometer || Bosch BMA250 || Yes || Working
+|-
+| Gyroscope|| TDK MPU-3050 || Yes || Working
+|-
+| Display || Samsung S6E8AA0 AMOLED || Yes || Missing support for OMAP-DSS
+|-
+| Touch Screen || MELFAS MMS144 || No || 
+|-
+| USB Switch || FSA9480 || Yes || Missing dts bindings
+|-
+| Audio || TWL6040 || Yes || Untested
+|-
+| Magnetometer || YAS530 || No || 
+|-
+| Proximity sensor|| Sharp GP2A || Yes || Missing dts bindings
+|-
+| GPU || PowerVR SGX540 || No || 
+|-
+| Wi-Fi || ??? || ??? || ???
+|-
+| Bluetooth || ??? || ??? || ???
+|-
+|}
+== Additional info ==
 
-== Entering &quot;Fastboot mode&quot; ==
+=== Entering &quot;Fastboot mode&quot; ===
 
 Hold the '''Volume Up''' and '''Volume Down''' buttons, and then press the '''Power''' button
 
-== Connect to WiFi ==
+=== Connect to WiFi ===
 
 * bring the interface up
 
@@ -76,7 +115,7 @@ Hold the '''Volume Up''' and '''Volume Down''' buttons, and then press the '''Po
 
 <code>sudo udhcpc -b -i wlan0</code>
 
-== Partition layout ==
+=== Partition layout ===
 
 <pre> # fdisk /dev/block/mmcblk0
 Found valid GPT with protective MBR; using GPT
@@ -105,7 +144,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
   13          122752          122879       65536   0700  metadata</pre>
 (From this, you can see that if your postmarketOS install image is larger than 654 MB, you'll have to install it to the <code>userdata</code> partition instead. Or you could repartition.)
 
-= Photos =
+== Photos ==
 <gallery>
 File:Lawl Galaxy Nexus Weston.jpg|thumb|left|Weston and a working touch-screen
 File:Google_Galaxy_Nexus_GSM_running_Xfce4.jpeg|thumb|left|Xfce4
