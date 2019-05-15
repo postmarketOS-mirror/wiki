@@ -1,10 +1,25 @@
 {{note|This page is in WIP state. Feel free to add more information.}}
 
+== Flashing method ==
+Like Symbian smartphones, Asha phones can be flashed with Phoenix, JAF or Nokia Care Suite. Different models may have different support of flashing programs.
+
+== Device table ==
+This table contains only Asha and X phones with at least 64 MB of RAM. Nokia X devices with Symbian are not included.
 {|class="wikitable"
 !Model
 !RAM
 !Internal memory
 !Input method
+|-
+|X3-02 (RM-775)
+|128 MB
+|256 MB
+|Numeric keyboard, touchscreen
+|-
+|503
+|128 MB
+|256 MB
+|Touchscreen
 |-
 |311
 |128 MB
@@ -26,10 +41,15 @@
 |140 MB
 |Numeric keyboard, touchscreen
 |-
-|503
-|?
-|256 MB
-|Touchscreen
+|X3-02 (RM-639)
+|64 MB
+|128 MB
+|Numeric keyboard, touchscreen
+|-
+|X2-01
+|64 MB
+|128 MB
+|QWERTY keyboard
 |-
 |502
 |64 MB
