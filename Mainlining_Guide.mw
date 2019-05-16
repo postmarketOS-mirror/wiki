@@ -14,19 +14,16 @@ The mainlining process varies greatly for each device, which means we can't just
 
 {| class="wikitable"
 ! SoC
-! Mentors from [[Matrix_and_IRC|#postmarketOS]]
-! Mentors elsewhere
+! Where to ask for help/mentors
 |-
 | Qualcomm (msm...)
-| opendata26, bshah
-| ##linux-msm on Freenode
+| [[Matrix_and_IRC|#postmarketOS-mainline]], ##linux-msm on Freenode
 |-
 | OMAP3
-| pavel
+| [[Matrix_and_IRC|#postmarketOS-mainline]], ask [https://gitlab.com/pavelm @pavelm]
 |-
 | Exynos
-| forkbomb
-| #replicant on Freenode (Putti, forkbomb)
+| [[Matrix_and_IRC|#postmarketOS-mainline]], #replicant on Freenode (ask forkbomb, Putti)
 |}
 
 Make sure that your SoC is in the list (if it isn't then we don't have an easy way for mainlining right now, sorry). Let's do some more preparation now, so everything is in place before you kindly ask your mentor to help you with the process.
