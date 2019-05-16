@@ -44,17 +44,15 @@
 
 == Maintainer(s) ==
 * Hacker420
+* Cvbnm90i
 == How to enter flash mode ==
-* Power + Volume Down buttons or use TWRP reboot bootloager, or <code>adb reboot-bootloader</code>
+* Power + Volume Down buttons or use TWRP reboot bootloader, or <code>adb reboot-bootloader</code>
 
 == Installation ==
 I installed the rootfs on a SD card. Cant flash kernel to boot(it is too big). i booted it directly with fasboot<code>fastboot boot /path/to/boot.img</code>
-<source>
-$ pmbootstrap flasher boot
-</source>
+
 
 == Notes ==
-* OTG might not work on mouses, USB sound cards and devices with heavy power requirements, for example USB HDD enclosures (might work with a powered USB hub or a Y USB cable). Also you might need to restart Weston after unplugging and plugging back in a device.
 * Hildon has messed up colors and is in portrait mode.
 * charging-sdl was tested manually through the debug shell.
 * I suggest nmtui to connect to WiFi (remember to choose networks under wlan0)
