@@ -60,3 +60,4 @@ I installed the rootfs on a SD card. Cant flash kernel to boot(it is too big). i
 == See also ==
 * [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
 * [https://www.androidfilehost.com/?w=files&flid=236353 TWRP (not needed if you use pmbootstrap flasher boot)]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/msm/adreno/a5xx_gpu.c?h=v4.16-rc7 (adreno 5xx is mainlined)]
