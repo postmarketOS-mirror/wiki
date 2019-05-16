@@ -34,6 +34,7 @@
 | status_sms = 
 | status_calls = 
 | status_otg = Y
+| status_fingerprint = 
 | booting = P 
 }}
 
