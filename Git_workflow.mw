@@ -12,7 +12,7 @@ All commands below need to be executed in your pmaports dir.
 
 It's a good idea to make accessing this directory easy with a short command, so consider setting up a shell alias. For bash this can be done by adding <code>alias pma="cd ~/.local/var/pmbootstrap/cache_git/pmaports"</code> to <code>~/.bashrc</code>.
 
-=== Updating pmaports ===
+=== Updating pmaports (rebasing on master) ===
 Since we are dealing with a git repository, pmbootstrap leaves the directory alone after the initial clone. It will not automatically update it. The only thing it will do is tell you when your pmaports.git dir is so outdated that you absolutely have to update it, or otherwise it would be incompatible with your pmbootstrap version. But you can always manually update the pmaports.git directory, and it is recommended to do so before you start or continue with making changes to the repository.
 
 ==== Make sure that you are on master ====
