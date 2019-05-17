@@ -54,7 +54,7 @@ I installed the rootfs on a SD card. Cant flash kernel to boot(it is too big). i
 
 == Notes ==
 * Hildon has messed up colors and is in portrait mode.
-* charging-sdl was tested manually through the debug shell.
+* charging-sdl was tested manually through the debug shell and in plasma-mobile.
 * I suggest nmtui to connect to WiFi
 
 == See also ==
