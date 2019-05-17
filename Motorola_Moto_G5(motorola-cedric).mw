@@ -55,7 +55,7 @@ I installed the rootfs on a SD card. Cant flash kernel to boot(it is too big). i
 == Notes ==
 * Hildon has messed up colors and is in portrait mode.
 * charging-sdl was tested manually through the debug shell.
-* I suggest nmtui to connect to WiFi (remember to choose networks under wlan0)
+* I suggest nmtui to connect to WiFi
 
 == See also ==
 * [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
