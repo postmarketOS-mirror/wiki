@@ -92,11 +92,11 @@
 |-
 | N
 |Sixaxis
-|Bosch BMC150, the driver is in mainline, however upon loads, the driver errors due to invalid chip detected by the driver.
+|Bosch BMA250, the driver is in mainline, however upon loads, the driver loaded bmc150 instead and errors due to invalid chip detected by the driver.
 |-
 |
 |Camera
-|OV2680 and ???. There are currently no driver, and it's very likely that it's using AtomISP (lambdadroid).
+|OV2680 and OV8858. There are currently no driver, and it's very likely that it's using AtomISP which has been removed from Torvalds tree (lambdadroid).
 |-
 | Y
 |GPU
@@ -104,7 +104,7 @@
 |-
 |
 |GPS
-|To be determined
+|Broadcom BCM47521. No driver is currently available in Torvalds tree.
 |}
 
 == How to enter flash mode ==
