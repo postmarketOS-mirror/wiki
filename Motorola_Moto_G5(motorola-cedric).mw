@@ -46,11 +46,13 @@
 * Hacker420
 * Cvbnm90i
 == How to enter flash mode ==
-* Power + Volume Down buttons or use TWRP reboot bootloader, or <code>adb reboot-bootloader</code>
+* Power + Volume Down buttons or use TWRP reboot bootloader, or <code>pmbootstrap flasher boot</code>
 
 == Installation ==
-I installed the rootfs on a SD card. Cant flash kernel to boot(it is too big). i booted it directly with fasboot<code>fastboot boot /path/to/boot.img</code>
-
+* Enter fastboot mode.
+* Execute  <code> pmbootstrap flasher flash_rootfs </code>
+* Execute  <code> pmbootstrap flasher boot </code>
+* Enjoy
 
 == Notes ==
 * Hildon has messed up colors and is in portrait mode.
