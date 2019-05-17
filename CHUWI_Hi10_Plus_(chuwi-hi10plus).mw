@@ -45,64 +45,67 @@
 {{Device owners}}
 
 == Mainline Kernel Status ==
-{| class="wikitable"
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Info
 |-
- ! Component !! Model !! Mainline kernel !! Status
+| Y
+|Power Management
+|Uses X-Powers AXP288 Controller, mainline driver exists.
 |-
-| Display || Not sure || Yes || Working
+| Y
+|Touch Screen
+|Silead GSL1680. The Silead driver is in mainline, however doesn't work on this tablet so [https://github.com/onitake/gslx680-acpi onitake's implementation] is used instead.
 |-
-| Touch Screen || Silead GSL1680 || Yes || Firmware needed, untested.
+|
+|Keyboard Dock
+|I don't have a keyboard dock, so this has not tested yet, however the dock should work fine as it worked on the Hi10 Pro.
 |-
-| eMMC || Sandisk DF4064 || locally || Yes
+| Y
+|USB Gadget/OTG
+|Synopsys DesignWare Core SuperSpeed USB 3.0 Controller. Mainline kernel exists and works fine.
 |-
-| TF Card Slot || ?? || locally || Sometimes, unreliable.
+| N
+|SDHCI
+|Unreliable, sometimes it does work, but most of the time are just errors.
 |-
-| Wi-Fi || RTL8723BS || Yes || Partially
+| P
+|Wi-Fi
+|Realtek RTL8723BS, driver is in staging, but buggy. Same problem as [[Pine Don't be evil devkit (pine-dontbeevil)|pine-dontbeevil]]
 |-
-| Bluetooth || RTL8723BS || Yes || Firmware loads, untested.
+| Y
+|GPIO keys
+|Volume up/down and Power button works fine.
 |-
-| Sixaxis || Bosch BMC150 || Yes || No, invalid chip reported.
+| Y
+|Bluetooth
+|Realtek RTL8723BS, mainline support existed in 4.19.
 |-
-| Light Sensor || Capella CM3218 || No || Patch is in mailing list, untested.
+| Y
+|Sound
+|bytcr-rt5651, mainline support existed in 4.16.
 |-
-| USB Type-C/MicroUSB || Designware Core USB3.0 || Yes || Yes
+|
+|Light Sensor
+|Capella CM3218, there's currently no mainline driver available yet. [https://lwn.net/Articles/557810 There was a patch by the company but never made it to mainline].
 |-
-| Back/Front Camera || Not sure || No || No
+| N
+|Sixaxis
+|Bosch BMC150, the driver is in mainline, however upon loads, the driver errors due to invalid chip detected by the driver.
 |-
-| Battery/Charging || X-Powers AXP288 || Yes || Yes
+|
+|Camera
+|OV2680 and ???. There are currently no driver, and it's very likely that it's using AtomISP (lambdadroid).
 |-
+| Y
+|GPU
+|Intel Integrated Graphics, works as expected.
+|-
+|
+|GPS
+|To be determined
 |}
-
-=== Touch Screen ===
-This tablet uses GSL1680 from Silead, firmware needs to be loaded, however I haven't got it to work yet. But gslx680-ts-acpi driver works.
-
-=== Wi-Fi ===
-Same problem as pine-dontbeevil, Wi-Fi scans just fine, however sometimes it doesn't connect.
-https://wiki.postmarketos.org/wiki/Pine_Don%27t_be_evil_devkit_(pine-dontbeevil)#WiFi.2FBluetooth
-
-=== Bluetooth ===
-Bluetooth firmware for RTL8723BS loads and working fine.
-
-=== Sixaxis/Accelerometer ===
-Bosch BMC150 is in torvalds mainline, but on load, it'll report Invalid chip.
-
-=== Light Sensor ===
-Capella CM3218 is the light sensor on this tablet, [https://lwn.net/Articles/557810 there is a patch made by the company itself in mailing list], but doesn't made it's way to mainline.
-
-=== Camera ===
-According to danielotero, OV2680 is used in the tablet, but this has not investigated yet. There's currently no patch adding support for this.
-
-=== GPU ===
-Uses Intel i915, working out of the box.
-
-=== TF Card Slot ===
-Via sdhci_acpi, but it only works sometimes, most of the time it doesn't work.
-
-=== Battery/Charging ===
-The power circuit is X-Powers AXP288, this is in torvalds mainline and working just fine.
-
-=== USB Ports (Type-C/Micro) ===
-Uses [https://www.kernel.org/doc/html/v4.18/driver-api/usb/dwc3.html Designware Core USB 3.0 Controller], in torvalds mainline and working fine. 
 
 == How to enter flash mode ==
 
