@@ -64,7 +64,8 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 
 == Installation ==
-Install the image to an sd card and flash the boot.img to the device.
+Install the image to an sd card and flash the boot.img to the device
+or install the image to an sd card and fastboot boot boot.img.
 
 == See also ==
 * {{MR|357|pmaports}} Initial merge request
