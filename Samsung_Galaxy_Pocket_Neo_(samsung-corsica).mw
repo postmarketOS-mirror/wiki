@@ -14,7 +14,7 @@
 | memory = 512 MB
 | architecture = armv7
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_flashing = Y
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = <!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
@@ -31,9 +31,9 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = kernel compiles, booting not tested.
+| status = kernel compiles, doesn't boot (gcc6)
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-
+| status_otg = -
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
@@ -42,7 +42,7 @@ Version of the kernel that pmos is running
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
-| status_otg = -
+
 -->
 }}
 
