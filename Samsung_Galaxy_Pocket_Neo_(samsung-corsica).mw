@@ -60,24 +60,24 @@ Is OTG available, not used in wiki
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 === Partitions layout ===
 <source lang="bash">
-lrwxrwxrwx root     root              2019-05-17 20:32 CSC -> /dev/block/mmcblk0p8
-lrwxrwxrwx root     root              2019-05-17 20:32 DTS -> /dev/block/mmcblk0p14
-lrwxrwxrwx root     root              2019-05-17 20:32 DTSBK -> /dev/block/mmcblk0p13
-lrwxrwxrwx root     root              2019-05-17 20:32 FOTA_SIG -> /dev/block/mmcblk0p16
-lrwxrwxrwx root     root              2019-05-17 20:32 HIDDEN -> /dev/block/mmcblk0p10
-lrwxrwxrwx root     root              2019-05-17 20:32 KERNEL -> /dev/block/mmcblk0p5
-lrwxrwxrwx root     root              2019-05-17 20:32 PARAM -> /dev/block/mmcblk0p4
-lrwxrwxrwx root     root              2019-05-17 20:32 RECOVERY -> /dev/block/mmcblk0p6
-lrwxrwxrwx root     root              2019-05-17 20:32 RF_CAL_FILE -> /dev/block/mmcblk0p17
-lrwxrwxrwx root     root              2019-05-17 20:32 SBL1 -> /dev/block/mmcblk0p1
-lrwxrwxrwx root     root              2019-05-17 20:32 SBL2 -> /dev/block/mmcblk0p2
-lrwxrwxrwx root     root              2019-05-17 20:32 cal -> /dev/block/mmcblk0p18
-lrwxrwxrwx root     root              2019-05-17 20:32 efs -> /dev/block/mmcblk0p3
-lrwxrwxrwx root     root              2019-05-17 20:32 modem -> /dev/block/mmcblk0p7
-lrwxrwxrwx root     root              2019-05-17 20:32 reserved -> /dev/block/mmcblk0p11
-lrwxrwxrwx root     root              2019-05-17 20:32 sysparm_dep -> /dev/block/mmcblk0p15
-lrwxrwxrwx root     root              2019-05-17 20:32 system -> /dev/block/mmcblk0p9
-lrwxrwxrwx root     root              2019-05-17 20:32 userdata -> /dev/block/mmcblk0p12
+lrwxrwxrwx root     root              CSC -> /dev/block/mmcblk0p8
+lrwxrwxrwx root     root              DTS -> /dev/block/mmcblk0p14
+lrwxrwxrwx root     root              DTSBK -> /dev/block/mmcblk0p13
+lrwxrwxrwx root     root              FOTA_SIG -> /dev/block/mmcblk0p16
+lrwxrwxrwx root     root              HIDDEN -> /dev/block/mmcblk0p10
+lrwxrwxrwx root     root              KERNEL -> /dev/block/mmcblk0p5
+lrwxrwxrwx root     root              PARAM -> /dev/block/mmcblk0p4
+lrwxrwxrwx root     root              RECOVERY -> /dev/block/mmcblk0p6
+lrwxrwxrwx root     root             RF_CAL_FILE -> /dev/block/mmcblk0p17
+lrwxrwxrwx root     root              SBL1 -> /dev/block/mmcblk0p1
+lrwxrwxrwx root     root              SBL2 -> /dev/block/mmcblk0p2
+lrwxrwxrwx root     root              cal -> /dev/block/mmcblk0p18
+lrwxrwxrwx root     root              efs -> /dev/block/mmcblk0p3
+lrwxrwxrwx root     root              modem -> /dev/block/mmcblk0p7
+lrwxrwxrwx root     root              reserved -> /dev/block/mmcblk0p11
+lrwxrwxrwx root     root              sysparm_dep -> /dev/block/mmcblk0p15
+lrwxrwxrwx root     root              system -> /dev/block/mmcblk0p9
+lrwxrwxrwx root     root              userdata -> /dev/block/mmcblk0p12
 </source>
 
 == See also ==
