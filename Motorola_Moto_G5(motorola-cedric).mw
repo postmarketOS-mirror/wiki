@@ -44,7 +44,8 @@
 
 == Maintainer(s) ==
 * Hacker420
-* Cvbnm90i
+* Luka Panio
+
 == How to enter flash mode ==
 * Power + Volume Down buttons or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
 
