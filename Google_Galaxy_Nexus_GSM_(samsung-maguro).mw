@@ -48,7 +48,7 @@
 == Mainline Kernel Status ==
 {| class="wikitable"
 |-
- ! Component !! Model !! Mainline kernel !! Status
+ ! Component !! Model !! Mainline kernel driver !! Status
 |-
 | RGB LED || Panasonic AN30259A || Yes || Working
 |-
