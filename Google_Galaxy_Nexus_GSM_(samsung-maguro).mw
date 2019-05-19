@@ -62,7 +62,7 @@
 |-
 | Accelerometer || Bosch BMA250 || Yes || Working
 |-
-| Gyroscope|| TDK MPU-3050 || Yes || Working
+| Gyroscope|| InvenSense MPU3050 || Yes || Working
 |-
 | Display || Samsung S6E8AA0 AMOLED || Yes || Missing support for OMAP-DSS<br/> Currently working with simple-framebuffer
 |-
@@ -72,17 +72,24 @@
 |-
 | Audio || TWL6040 || Yes || Untested
 |-
-| Magnetometer || YAS530 || No || 
+| Magnetometer || Yamaha YAS530 || No || 
 |-
-| Proximity sensor|| Sharp GP2A || Yes || Missing dts bindings
+| Proximity sensor || Sharp GP2A || Yes || Missing dts bindings
+|-
+| Barometer || Bosch BMP180 || Yes || Untested
 |-
 | GPU || PowerVR SGX540 || No || 
 |-
-| Wi-Fi || ??? || ??? || ???
+| Wi-Fi/Bluetooth || BCM4330 || ??? || ???
 |-
-| Bluetooth || ??? || ??? || ???
+| GPS || SiRFStarIV GSD4t || ??? || ???
+|-
+| HDMI/MHL || sii9234 || Yes || Untested
+|-
+| NFC || pn544 || Yes || Untested
 |-
 |}
+
 == Additional info ==
 
 === Entering &quot;Fastboot mode&quot; ===
