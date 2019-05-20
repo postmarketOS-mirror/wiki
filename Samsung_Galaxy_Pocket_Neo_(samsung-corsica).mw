@@ -55,6 +55,7 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 == How to enter flash mode ==
+Hold Volume Down, Home and Power buttons. When phone vibrates and shows a warning, release buttons and press Volume Up to proceed. The phone will be moved to Odin mode.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
