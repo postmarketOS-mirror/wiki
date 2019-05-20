@@ -1,7 +1,7 @@
 Please join our chat, so we can help you with using postmarketOS in real time. The chat is bridged between Matrix and IRC. We also provide an offtopic channel, which can be used to discuss your favorite pizza API and other non-related topics with the postmarketOS community.
 
 == Matrix ==
-In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser to enter the channel.
+In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser (using the [https://riot.im Riot] client) to enter the channel.
 
 * [https://matrix.to/#/#postmarketos:disroot.org #postmarketos:disroot.org] (main channel)
 * [https://matrix.to/#/#postmarketos-lowlevel:disroot.org #postmarketos-lowlevel:disroot.org] (bootloader hacking, assembly etc.)
@@ -9,9 +9,9 @@ In case you have no experience in using IRC, this is the easier method. You can 
 * [https://matrix.to/#/#postmarketos-offtopic:disroot.org #postmarketos-offtopic:disroot.org] (other topics)
 * [https://matrix.to/#/#postmarketos-mainline:disroot.org #postmarketos-mainline:disroot.org] (mainline kernel development)
 
-After you register at any matrix site and join the channel, the offline history will be saved automatically. So, your questions can be answered even when you are offline!
+After you register at any Matrix homeserver and join the channel, the offline history will be saved automatically. So, your questions can be answered even when you are offline!
 
-'''Note''': Our rooms are public & everyone can access the history even if you are not a registered matrix/riot user.
+'''Note''': Our rooms are public & everyone can access the history even if you are not a registered Matrix user.
 
 == IRC ==
 
