@@ -43,7 +43,7 @@ There was a spam wave coming in recently on Freenode, so now you might need to r
 * Confirm the registration e-mail
 * Login by sending this to NickServ: <code>identify [<nickname>] <password></code>
 
-You can probably configure your chat client to identify you automatically. Instructions for automatic login with matrix are [https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically here].
+You can probably configure your chat client to identify you automatically. Instructions for automatic login with Matrix are [https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically here].
 
 == Other discussion platforms ==
 
