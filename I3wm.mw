@@ -16,6 +16,7 @@ Currently this installs <code>lxdm</code> as display manager (a common display m
 
 == Ideas ==
 * How about a wallpaper for the N900 with i3wm, that is based on the postmarketOS wallpaper, but shows the keybindings on the desktop?
+* Someone [https://github.com/postmarketOS/pmbootstrap/pull/1343 started working] on porting [https://github.com/ssmolkin1/i3touchmenu/ this setup], which would enable touch-only devices to use it.
 
 == Guide ==
 Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
