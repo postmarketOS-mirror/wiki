@@ -52,7 +52,7 @@
 |-
 | Y
 |Power Management
-|Uses X-Powers AXP288 Controller, mainline driver exists.
+|Uses [http://download.icxbk.com/201707/cfe88ee7ef01eed7a4586ce340165da0.pdf X-Powers AXP288 Controller], mainline driver exists.
 |-
 | Y
 |Touch Screen
@@ -60,7 +60,7 @@
 |-
 |
 |Keyboard Dock
-|I don't have a keyboard dock, so this has not tested yet, however the dock should work fine as it worked on the Hi10 Pro.
+|Untested, however the dock should work fine as it worked on the Hi10 Pro.
 |-
 | Y
 |USB Gadget/OTG
@@ -84,7 +84,7 @@
 |-
 | Y
 |Sound
-|bytcr-rt5651, mainline support existed in 4.16.
+|bytcr-rt5651, mainline support existed in 4.16. Can also be replaced by [https://www.sofproject.org Sound Open Firmware], however it is very buggy and doesn't seem to work properly.
 |-
 |
 |Light Sensor
@@ -92,11 +92,11 @@
 |-
 | N
 |Sixaxis
-|Bosch BMA250, the driver is in mainline, however upon loads, the driver loaded bmc150 instead and errors due to invalid chip detected by the driver.
+|[http://www1.futureelectronics.com/doc/BOSCH/BMA250-0273141121.pdf Bosch BMA250], the driver is in mainline, however upon loads, the driver loaded and errored due to invalid chip detected by the driver.
 |-
 |
 |Camera
-|OV2680 and OV8858. There are currently no driver, and it's very likely that it's using AtomISP which has been removed from Torvalds tree (lambdadroid).
+|OV2680 and OV8858. There used to be drivers for both of these cameras in staging (AtomISP), however it has been removed from torvalds tree due to inefficiency and not working great (lambdadroid).
 |-
 | Y
 |GPU
