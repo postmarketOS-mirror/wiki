@@ -15,7 +15,7 @@ After you register at any Matrix homeserver and join the channel, the offline hi
 
 == IRC ==
 
-The following three channels are bridged to freenode, so that everyone can talk together (mind the <code>##</code> for offtopic!):
+The following channels are bridged to Freenode, so that everyone can talk together (mind the <code>##</code> for offtopic!):
   #postmarketos
   ##postmarketos-offtopic
   #postmarketos-lowlevel
@@ -26,14 +26,14 @@ Due to recent spam, you will likely '''not be able to talk''' (or maybe even to 
 
 === Help and guidelines for new IRC and Matrix users  ===
 
-As with every IRC channel, we encourage you to stay around for a while after you ask a question, and listen to the various discussions.
+As with every Matrix room and IRC channel, we encourage you to stay around for a while after you ask a question, and listen to the various discussions.
 Some people usually read everything that happens there, so it is likely that someone will answer you ''if they have the answer''.
 
 Due to this, please make extensive use of the off-topic channel to lower the noise in the others, and make the lives of those who read the entire ''backlog'' easier. Also note that everyone doesn't read every channel; if you want to draw someone's attention, type their name to ''ping'' them (doing this too often is considered rude, though). To prevent flooding the channel, please also use a service like https://bpaste.net/ instead of pasting your logs directly.
 
 Remember that when you close your IRC client to go sleep, you miss out on half the planet. Please consider using Matrix for offline history and better rich-media support.
 
-Special note for Matrix user: you can set the notifications setting to "Mentions only" so that you will only disturbed when someone writes your name.
+Special note for Matrix users: you can set the notifications setting to "Mentions only" so that you will only disturbed when someone writes your name.
 
 == I'm getting kicked out of the channels! Or nobody hears me when I speak! ==
 There was a spam wave coming in recently on Freenode, so now you might need to register with Freenode to let them know that you are not a spam bot.
