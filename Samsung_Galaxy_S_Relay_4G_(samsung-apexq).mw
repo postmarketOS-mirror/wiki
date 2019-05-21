@@ -15,7 +15,7 @@
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = 
+| status_touch = Y
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = 
@@ -34,7 +34,7 @@
 | booting = yes
 }}
 
-'''Status: Booting. USB ssh shell working'''
+'''Status: Boots. Weston demo works with touch and keyboard.'''
 
 == Contributors ==
 * silver
@@ -65,4 +65,4 @@ Phone will reboot. Follow above instructions again.
 *kernel android_kernel_samsung_d2
 *commit 87f5fcaf7afef878914c3fcca2c2fd395f285902
 *defconfig LineageOS/android_kernel_samsung_d2/87f5fcaf7afef878914c3fcca2c2fd395f285902/arch/arm/configs/cyanogen_apexq_defconfig
-*boot.img from cm backup March 2017
+*deviceinfo populated with boot.img from cm backup March 2017
