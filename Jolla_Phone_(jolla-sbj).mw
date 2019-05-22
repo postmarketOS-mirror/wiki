@@ -13,7 +13,7 @@
 | storage = 16 GB
 | display = 540x960 IPS
 | memory = 1 GB
-| architecture = armhf
+| architecture = armv7
 | n-android = ✔
 | status_usbnet = P
 | status_flashing = P
