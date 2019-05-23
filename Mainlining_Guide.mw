@@ -317,4 +317,7 @@ Before booting the first time, run <code>dmesg -w</code> on your PC. If everythi
 ** decipher from downstream dmesg
 ** <code>grep compatible</code> in downstream DTS decompiled also works
 
+= See also =
+* {{issue|177|pmaports}} Google Galaxy Nexus (samsung-maguro): Mainlining progress (initial tricks with RAM and some sleep calls before the reboots in the code to figure out where it was failing will also be useful for other devices)
+
 [[Category:Guide]]
