@@ -13,7 +13,7 @@ User interface from LuneOS, a continuation of webOS (Palm/HP's discontinued and 
 
 We were able to present an initial version in [https://postmarketos.org/blog/2017/12/31/219-days-of-postmarketOS/#luneos-ui December of 2017]. But after that, LuneOS was unmaintained and didn't build anymore ({{issue|49|pmaports}}). '''The packages have been removed from postmarketOS.''' If you are interested in making it work again and maintaining the packages, [https://gitlab.com/postmarketOS/pmbootstrap/tree/0.6.0/aports/luna here are the old build recipies] for reference.
 
-'''All information below is outdated.'''
+'''All information above is outdated.'''
 
 ''It's sad that we can't maintain this right now and had to remove it. But nevertheless, some of the efforts lived on, because ncopa from Alpine Linux could use some of the musl related qt5-qtwebengine patches that magmastonealex created to make LuneOS UI work on postmarketOS. And who knows, we could be able to support this UI again in the future if someone steps up to maintain it.''
 
