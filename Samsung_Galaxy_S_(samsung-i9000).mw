@@ -61,7 +61,7 @@ Flashing to device memory should be possible using [https://github.com/postmarke
 - Build image (on your computer) and prepare the installation as usual
 
   $ pmbootstrap init
-  $ pmbootstrap build device-samsung-i9000 --arch=armhf
+  $ pmbootstrap build device-samsung-i9000
   $ pmbootstrap install --no-fde
 
 -- Set phone to ODIN mode
@@ -97,7 +97,7 @@ Flashing to device memory should be possible using [https://github.com/postmarke
 
 -- Switch to pmboostrap chroot (on the computer in other terminal)
 
-  $ ./pmbootstrap.py chroot --suffix native
+  $ pmbootstrap chroot --suffix native
 
 -- Install pv (in the chroot)
 
