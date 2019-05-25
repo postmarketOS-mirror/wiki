@@ -22,8 +22,8 @@ The way to do attain this, is:
 
 <syntaxhighlight lang="shell-session">
 $ sudo apk add lxc-android \
-               xf86-video-hwcomposer \
                libhybris \
+               libhybris-7.1 \
                libhybris-egl \
                libhybris-gles \
                libhybris-libwayland-egl \
@@ -31,16 +31,14 @@ $ sudo apk add lxc-android \
                wayland-libs-server
 </syntaxhighlight>
 
-Depending if you need software which is built for Code Aurora Forum’s Android for MSM (generally nicknamed “CAF” for short):
+For X11 support, install the following, depending if you need software which is built for Code Aurora Forum’s Android for MSM (generally nicknamed “CAF” for short):
 <syntaxhighlight lang="shell-session">
-$ sudo apk add libhybris-7.1-caf \
-               xf86-video-hwcomposer-7.1-caf               
+$ sudo apk add xf86-video-hwcomposer xf86-video-hwcomposer-7.1-caf               
 </syntaxhighlight>
 
 For all the other devices:
 <syntaxhighlight lang="shell-session">
-$ sudo apk add libhybris-7.1 \
-               xf86-video-hwcomposer-7.1               
+$ sudo apk add xf86-video-hwcomposer xf86-video-hwcomposer-7.1               
 </syntaxhighlight>
 
 === Start the android container ===
