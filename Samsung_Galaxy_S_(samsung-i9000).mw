@@ -42,24 +42,6 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
-== What works ==
-
-* ☑ Kernel compilation
-* ☑ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
-* ☐ Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
-* ☑ Flash Rootfs (<code>netcat</code>)
-* ☑ Initramfs boot
-* ☑ USB Network
-* ☑ Framebuffer graphics (Splash screens)
-* ☑ SSH Connectivity
-* ☑ Weston on framebuffer
-* ☑ Touchscreen
-* ☐ Xwayland
-* ☐ Wifi (partial)
-* ☐ Audio playback
-
-== What does not work ==
-
 == How to enter flash mode ==
 * Connect a USB cable
 * Make sure, the device is powered off
