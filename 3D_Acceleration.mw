@@ -2,30 +2,37 @@
 ! GPU
 ! Used in
 ! Driver
+! Issues
 |-
 | Adreno
 | Qualcomm
-| freedreno
+| [https://github.com/freedreno/freedreno/wiki freedreno]
+|
 |-
 | Vivante
 | NXP i.mx, Rockchip, Marvell, HiSilicon
 | etnaviv
+|
 |-
 | Mali
 | Allwinner, Mediatek
 | lima
+|
 |-
 | Mali T
 | Allwinner
 | panfrost
+|
 |-
 | PowerVR
 | TI, AllWinner
 | :(
+| [https://gitlab.com/postmarketOS/pmaports/issues/262 #262]
 |-
 | VideoCore
 | Broadcom
-| vc4
+| [https://github.com/anholt/mesa/wiki/VC4 vc4]
+|
 |}
 
 Using proprietary Android drivers is possible with [[Hybris]].
