@@ -40,9 +40,17 @@
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
-PureTryOut
+PureTryOut, Hacker420
 
 == Unlock bootloader ==
 To do anything useful on this device, it's bootloader needs to be unlocked. This sadly requires creating an account on HTCDev.
 
 Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All Other Supported Models" on the right side and press "Begin Unlock Bootloader".
+
+== Port status ==
+Kernel can be compiled with GCC6, doesn't seem to be bootable.
+
+== Links ==
+[https://github.com/Hacker1245/k2-3.4.10-gae62ace Original HTC kernel source]
+
+[https://gitlab.com/Hacker1245/pmaports/tree/device/htc-k2ul WIP branch on my port]
