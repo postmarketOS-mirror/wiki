@@ -92,3 +92,4 @@ Note: The Mesa package in this branch disables all other GPU drivers to help red
 == See also ==
 
 * [https://developer.puri.sm/Librem5/ Purism Librem5 devkit documentation]
+* {{MR|250|pmaports}} MR that should enable modem support (untested, and now the ofono version is outdated; but maybe this is useful for future reference)
