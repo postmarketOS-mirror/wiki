@@ -16,12 +16,12 @@
 |-
 | Mali
 | Allwinner, Mediatek
-| lima
+| [https://gitlab.freedesktop.org/lima lima]
 |
 |-
 | Mali T
 | Allwinner
-| panfrost
+| [https://gitlab.freedesktop.org/panfrost panfrost]
 |
 |-
 | PowerVR
