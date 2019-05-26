@@ -48,7 +48,7 @@ To do anything useful on this device, it's bootloader needs to be unlocked. This
 Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All Other Supported Models" on the right side and press "Begin Unlock Bootloader".
 
 == Port status ==
-Kernel can be compiled with GCC6, doesn't seem to be bootable.
+Kernel can be compiled with GCC6, doesn't seem to be bootable. (Note: I have the LTE version of this phone)
 
 == Links ==
 [https://github.com/Hacker1245/k2-3.4.10-gae62ace Original HTC kernel source]
