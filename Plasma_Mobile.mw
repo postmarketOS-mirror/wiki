@@ -1,3 +1,5 @@
+{{warning|Plasma Mobile doesn't work on armhf due to an [https://gitlab.com/postmarketOS/pmaports/issues/75 issue with <code>qt5-qtdeclarative</code>]. If your device is actually armv7 but still runs on armhf, please change it.}}
+
 {{Infobox interface
 | name = Plasma Mobile
 | image = File:Plasma-mobile-hammerhead.jpg
