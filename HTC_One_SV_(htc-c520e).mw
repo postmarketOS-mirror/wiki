@@ -13,10 +13,10 @@
 | display = 480x800
 | memory = 1 GB LPDDR3
 | architecture = armhf
-| status_usbnet = 
-| status_flashing = 
+| status_usbnet = N
+| status_flashing = P
 | status_touch = 
-| status_screen = 
+| status_screen = N
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
@@ -36,6 +36,7 @@
 
 == Contributors ==
 * PureTryOut
+* Hacker420
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
@@ -48,9 +49,9 @@ To do anything useful on this device, it's bootloader needs to be unlocked. This
 Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All Other Supported Models" on the right side and press "Begin Unlock Bootloader".
 
 == Port status ==
-Kernel can be compiled with GCC6, doesn't seem to be bootable.
+Kernel can be compiled with GCC6, boots with CONFIG_VT disabled (because of that the framebuffer and SSH doesn't work, kernel panics if you enable it), USB networking is disabled because of build issues.
 
 == Links ==
-[https://github.com/Hacker1245/k2-3.4.10-gae62ace Original HTC kernel source]
+[https://github.com/Hacker1245/k2ul-jb-3.4.10-cl157896-2 Working HTC kernel source]
 
 [https://gitlab.com/Hacker1245/pmaports/tree/device/htc-k2ul WIP branch on my port]
