@@ -12,7 +12,7 @@
 | storage = 8 GB
 | display = 480x800
 | memory = 1 GB LPDDR3
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = N
 | status_flashing = P
 | status_touch = 
