@@ -53,7 +53,8 @@
 `osk-sdl` doesn't work:
 
 
-<code>sony-honami:/home/r# osk-sdl -d a -n a -c /etc/osk.conf -v
+<pre>
+sony-honami:/home/r# osk-sdl -d a -n a -c /etc/osk.conf -v
 commandline read: osk-sdl
 commandline read: -d
 commandline read: a
@@ -94,7 +95,8 @@ commandline read: -v
 (!) DirectFB/Core: Could not initialize 'layer_core' core!
     --> A general initialization error occured
 INFO: /home/buildozer/aports/main/sdl2/src/SDL2-2.0.9/src/video/directfb/SDL_DirectFB_video.c (239):A general initialization error occured
-Segmentation fault</code>
+Segmentation fault
+</pre>
 
 == How to enter flash mode ==
 Press VOL UP while plugging the USB cable (fastboot mode)
