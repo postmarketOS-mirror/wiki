@@ -50,6 +50,52 @@
 * Wifi
 
 == What does not work ==
+`osk-sdl` doesn't work:
+
+
+<nowiki>sony-honami:/home/r# osk-sdl -d a -n a -c /etc/osk.conf -v
+commandline read: osk-sdl
+commandline read: -d
+commandline read: a
+commandline read: -n
+commandline read: a
+commandline read: -c
+commandline read: /etc/osk.conf
+commandline read: -v
+(*) Direct/Thread: Started 'SigHandler' (1742) [CRITICAL - OTHER/0] <134492>...
+
+   ~~~~~~~~~~~~~~~~~~~~~~~~~| DirectFB 1.7.7 |~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (c) 2012-2015  DirectFB integrated media GmbH
+        (c) 2001-2015  The world wide DirectFB Open Source Community
+        (c) 2000-2004  Convergence (integrated media) GmbH
+      ----------------------------------------------------------------
+
+(*) DirectFB/Core: Single Application Core. (2018-10-03 11:56) 
+(*) Direct/Memcpy: Using libc memcpy()
+(*) Direct/Thread: Started 'Fusion Dispatch' (1743) [MESSAGING - OTHER/0] <134492>...
+(*) Direct/Thread: Started 'VT Switcher' (1746) [CRITICAL - OTHER/0] <134492>...
+(*) Direct/Thread: Started 'VT Flusher' (1747) [DEFAULT - OTHER/0] <134492>...
+(*) DirectFB/FBDev: Found 'mdssfb_80000' (ID 0) with frame buffer at 0x00020000, 16320k (MMIO 0x00000000, 0k)
+(*) Direct/Modules: suppress module 'linux_input'
+(*) Direct/Thread: Started 'Keyboard Input' (1748) [INPUT - OTHER/0] <134492>...
+(*) DirectFB/Input: Keyboard 0.9 (directfb.org)
+(*) Direct/Thread: Started 'tslib Input' (1749) [INPUT - OTHER/0] <134492>...
+(*) DirectFB/Input: tslib touchscreen 0 0.1 (tslib)
+(*) Direct/Thread: Started 'PS/2 Input' (1750) [INPUT - OTHER/0] <134492>...
+(*) DirectFB/Input: IMPS/2 Mouse (1) 1.0 (directfb.org)
+(*) Direct/Thread: Started 'PS/2 Input' (1751) [INPUT - OTHER/0] <134492>...
+(*) DirectFB/Input: IMPS/2 Mouse (2) 1.0 (directfb.org)
+(*) DirectFB/Input: Hot-plug detection enabled with Input Hub Driver 
+(*) DirectFB/Graphics: Generic Software Rasterizer 0.7 (directfb.org)
+(!) DirectFB/FBDev: No supported modes found in /etc/fb.modes and current mode not supported!
+(!) DirectFB/FBDev: Current mode's pixelformat: rgba 8/0, 8/8, 8/16, 8/24 (32bit)
+(!) DirectFB/Core/layers: Failed to initialize layer 0!
+    --> A general initialization error occured
+(!) DirectFB/Core: Could not initialize 'layer_core' core!
+    --> A general initialization error occured
+INFO: /home/buildozer/aports/main/sdl2/src/SDL2-2.0.9/src/video/directfb/SDL_DirectFB_video.c (239):A general initialization error occured
+Segmentation fault</nowiki>
+
 
 == How to enter flash mode ==
 Press VOL UP while plugging the USB cable (fastboot mode)
