@@ -29,6 +29,10 @@
 | :(
 | [https://gitlab.com/postmarketOS/pmaports/issues/262 #262]
 |-
+| Tegra 2/3
+| Nvidia
+| [https://github.com/grate-driver grate]
+|-
 | VideoCore
 | Broadcom
 | [https://github.com/anholt/mesa/wiki/VC4 vc4]
