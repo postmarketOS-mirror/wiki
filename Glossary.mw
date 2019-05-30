@@ -40,9 +40,9 @@ The binary device tree ([[dtb]]), this is a file containing a description of the
 
 [https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure Direct Rendering Infrastructure], the modern Linux kernel API for drawing to the screen.
 
-=== drm/kvm ===
+=== drm/kms ===
 
-This is a slightly more complicated API than fbdev (and it replaces all fbdev functionality), it still provides a framebuffer but also has options to integrate hardware acceleration for 2D and 3D. All opensource fbdev drivers should be portable to a drm driver.
+Direct Rendering Manager/Kernel Mode Setting is a slightly more complicated API than fbdev (and it replaces all fbdev functionality), it still provides a framebuffer but also has options to integrate hardware acceleration for 2D and 3D. All opensource fbdev drivers should be portable to a drm driver.
 
 === FDE ===
 
