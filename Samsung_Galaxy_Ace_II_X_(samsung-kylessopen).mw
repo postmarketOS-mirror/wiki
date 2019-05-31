@@ -38,7 +38,16 @@ Before installing, ensure that your host computer and your copy of pmbootstrap i
 
 ; 1. init
 <source lang="bash">$ ./pmbootstrap.py init</source>
-Select "samsung-kylessopen" as the target device and select a working recommended graphical interface. 
+Select "samsung-kylessopen" as the target device and select a working recommended graphical interface.
+
+;[[Interfaces|Graphical Interfaces]]:
+* [[Matchbox]] - Recommended
+* [[Hildon]]
+* [[MATE]]
+* [[XFCE4]]
+* [[i3wm]]
+* [[Weston]]
+* [[Plasma Mobile]] - Not recommended
 
 ; 2. install
 <source lang="bash">$ ./pmbootstrap.py install --no-fde</source>
@@ -46,31 +55,6 @@ See the 'in progress' section regarding full disk encryption.
 
 ; 3. flash
 Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
-
-== Graphical Interfaces ==
-=== Matchbox ===
-Matchbox is a free software (GPL v2+) window manager for the X Window System designed for embedded systems. It's latest stable release was in April of 2012, the same year this phone was known to be released in the UK. It's rather lightweight, displaying only one window at a time, and has its own software keyboard built in, making it the interface most recommended for this device. 
-
-=== Hildon ===
-Hildon is an LGPL user interface for cell phones. It's optimized for single touch displays. Due to the lack of a working software keyboard (see {{issue|234|pmaports}}), It isn't recommend for this device.
-
-=== MATE ===
-MATE is a fork of Gnome2 fork in response to the negative reception of Gnome3. It's initial release was in 2011 (GPLv2, LGPLv2) and it's still in active development. It doesn't come with a software keyboard and it can be slow and buggy at times. It feels more appropriate as a desktop interface. 
-
-=== Xfce4 ===
-Xfce aims to be fast and lightweight, while still being visually appealing. It follows the Unix philosophy, with each component being its own project. As of May 2019, it's latest stable release was in 2015. It's licensed under the GPL, LGPL and BSD licenses. It doesn't come with a software keyboard. The user experience is similar on this device to running MATE.
-
-=== i3wm ===
-i3wm is a tiling window manager for the X Window System. It's rather small and lightweight. It's initial release was in 2009 and is still in active development. It's licensed under the BSD license. It's highly keyboard driven, but doesn't come with a software keyboard. It's recommended for users who own a hardware keyboard. 
-
-=== Weston ===
-Weston is a demo Wayland compositor. While it runs nicely on this phone, it has very limited functionality. It isn't recommended for everyday use. 
-
-=== Plasma Mobile ===
-Plasma Mobile is a GPLv2 licensed smartphone interface. It's sadly painfully slow on this phone and rather buggy. It's not recommended. 
-
-== Apps ==
-Check out: https://pkgs.alpinelinux.org/packages?branch=edge&arch=armhf
 
 == Kernels ==
 === Mainline ===
