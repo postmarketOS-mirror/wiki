@@ -47,6 +47,12 @@ Using proprietary Android drivers is possible with [[Hybris]].
 
 == Mali ==
 
+There are two projects for open source Mali drivers.
+
+The lima driver is for the Mali Utgard GPUs, specifically the Mali 400 (2008) and the Mali 450 (2012)
+
+The panfrost drivers is for the Mali Midgard (T6*, T7*, T8*) and Bifrost GPUs (G*)
+
 == PowerVR ==
 
 == Tegra ==
