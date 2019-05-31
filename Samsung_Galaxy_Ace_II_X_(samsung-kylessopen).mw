@@ -36,11 +36,11 @@
 == Installation ==
 Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
 
-; 1. init
+=== init ===
 <source lang="bash">$ ./pmbootstrap.py init</source>
 Select "samsung-kylessopen" as the target device and select a working recommended graphical interface.
 
-;[[Interfaces|Graphical Interfaces]]:
+==== [[Interfaces|Graphical Interfaces]] ====
 * [[Matchbox]] - Recommended
 * [[Hildon]]
 * [[MATE]]
@@ -49,50 +49,12 @@ Select "samsung-kylessopen" as the target device and select a working recommende
 * [[Weston]]
 * [[Plasma Mobile]] - Not recommended
 
-; 2. install
+=== install ===
 <source lang="bash">$ ./pmbootstrap.py install --no-fde</source>
 See the 'in progress' section regarding full disk encryption. 
 
-; 3. flash
+=== flash ===
 Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ ./pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ ./pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
-
-== Kernels ==
-=== Mainline ===
-Builds and flashes just fine but doesn't boot past the Samsung splash screen. This is the kernel we want running on this device.
-* Version: Latest
-=== kylessopen-3.4.0-port ===
-This kernel currently doesn't compile, but it's the newest kernel that supposedly works for this device. Getting this kernel working should make mainlining easier, and if it proves to be better than FrankenKernel, it'd become the new default kernel. "make:*** [Makefile:949: drivers] Error 2".
-* Version: 3.4.0
-
-=== FrankenKernel ===
-This is the only known kernel capable of booting past the Samsung splash screen and besides the mainline kernel, it's the only one that compiles at all. This is the kernel that gets installed on this phone by default. 
-* Version: 3.0.101
-
-=== klinkone.android_kernel_ba2x_2.0-1 ===
-This version fails to build with "make: *** [Makefile:873: .tmp_vmlinux1] Error 1".
-* Version: 3.0.79
-
-=== Other kernels ===
-All of these kernels fail to build but have similar messages when failing. 
-
-==== LD	fs/built-in.o ====
-* 3.0.60 abrake.android_kernel_samsung_kylessopen
-* 3.0.60 codename13.kernel_samsung_kylessopen
-* 3.0.60 Majonez.android_kernel_ba2x_2.0-1
-* 3.0.31 codename13.android_kernel_ba2x_2.0
-* 3.0.31 jonypx09.kernel_ba2x_2.0
-* 3.0.8  daver18qc.android_kernel_samsung_kylessopen
-
-==== LD	arch/arm/mach-msm/built-in.o ====
-These ones get further into compiling than the previous list, but fail soon after.
-* 3.0.60 codename13.android_kernel_samsung_kylessopen
-* 3.0.60 jonypx09.android_kernel_ba2x_2.0
-* 3.0.31 jonypx09.new_kernel_kylessopen
-* 3.0.8  jonypx09.android_kernel_samsung_kylessopen
-
-==== codename13.android_kernel_samsung_kylessopen-CAF ====
-* Version: 3.0.31
-This one appears to have issues regarding patches.
 
 == In Progress ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
@@ -129,10 +91,4 @@ bluetoothctl doesn't do anything when run. It's suspected to be due to the firmw
 === Scrolling graphics before DE ===
 Before a desktop environment starts, the screen tends to flicker and scroll. It's a purely cosmetic issue. It's cause is likely related to the framebuffer and may be similar in nature to the FBDirect issue.
 
-== Contributors ==
-* Lofenyy
-* racer123
-* platypro
-
-== Notes ==
-* {{issue|1618}}
+== Hardware ==
