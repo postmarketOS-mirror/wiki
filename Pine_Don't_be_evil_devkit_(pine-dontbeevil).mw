@@ -48,6 +48,8 @@ There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corn
 
 The baudrate in u-boot and in Linux is 115200n8
 
+On a functional devkit with a pmos SD card inserted you should get the standard u-boot console messages on the serial port as soon as you power the devkit on, and after that the linux kernel messages.
+
 == Components ==
 
 {| class="wikitable"
