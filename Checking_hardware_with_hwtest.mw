@@ -1,0 +1,105 @@
+This is a utility for checking hardware functionality on devices.
+
+Currently <code>hwtest</code> can check the following:
+
+* framebuffer access
+* drm/kms
+* camera image capture (uses ffmpeg and v4l-utils)
+* input devices (uses evtest)
+* Accelerometer/magnetometer/gyroscope
+* Temperature sensors
+* Light/Proximity sensors
+
+<source lang="shell-session">
+$ sudo apk add hwtest
+$ sudo hwtest
+Category         Model                Path                                      Status     Value                     
+framebuffer      DRM emulated         /sys/class/graphics/fb0                   working    Not running               
+drm              -                    /sys/class/drm/card1-DSI-1                working    720x1440                  
+camera           ov5640               /sys/class/video4linux/v4l-subdev0        working    320x240,640x480,1280x720  
+magnetometer     lis3mdl              /sys/bus/iio/devices/iio:device2          working    -0.06, 0.35, 0.93 gauss   
+accelerometer    mpu6050              /sys/bus/iio/devices/iio:device1          working    1.46, 0.17, -10.53 g      
+gyroscope        mpu6050              /sys/bus/iio/devices/iio:device1          working    -0.05, -0.03, 0.04 rad/s  
+temperature      mpu6050              /sys/bus/iio/devices/iio:device1          working    37 deg C                  
+temperature      axp813-adc           /sys/bus/iio/devices/iio:device0          working    28500 deg C               
+proximity        stk3310              /sys/bus/iio/devices/iio:device3          working    300.8                     
+illuminance      stk3310              /sys/bus/iio/devices/iio:device3          working    397 lux                   
+input            generic ft5x06 (12)  /dev/input/event2                         working                              
+input            1c21800.lradc        /dev/input/event1                         working                              
+input            axp20x-pek           /dev/input/event0                         working                              
+</source>
+
+== Export and verify ==
+
+Hwtest includes the <code>--export</code> and <code>--verify</code> option. The export option generates a file with the test results, this file can later be used with the verify option to create a diff of working hardware.
+
+This is mainly useful for testing if a kernel still works after rebasing on a newer upstream linux version.
+
+<source lang="shell-session">
+Running hwtest with the camera module unloaded so it fails.
+$ sudo hwtest --export pinephone.ini
+Category         Model                Path                                Status     Value                            
+framebuffer      DRM emulated         /sys/class/graphics/fb0             working    Not running                      
+drm              -                    /sys/class/drm/card1-DSI-1          working    720x1440                         
+camera           ov5640               /sys/class/video4linux/v4l-subdev0  broken                                      
+magnetometer     lis3mdl              /sys/bus/iio/devices/iio:device2    working    0.01, -0.01, 1.19 gauss          
+accelerometer    mpu6050              /sys/bus/iio/devices/iio:device1    working    0.3, 0.12, -10.52 g              
+gyroscope        mpu6050              /sys/bus/iio/devices/iio:device1    working    -0.04, -0.03, 0.04 rad/s         
+temperature      mpu6050              /sys/bus/iio/devices/iio:device1    working    32 deg C                         
+temperature      axp813-adc           /sys/bus/iio/devices/iio:device0    working    22600 deg C                      
+input            generic ft5x06 (12)  /dev/input/event1                   working                                     
+input            axp20x-pek           /dev/input/event0                   working                    
+</source>
+
+The generated ini file:
+
+<source lang="ini">
+[hwtest]
+export-version = 1
+
+[framebuffer]
+; /sys/class/graphics/fb0
+drm emulated = True
+
+[drm]
+; /sys/class/drm/card1-dsi-1
+- = True
+
+[camera]
+; /sys/class/video4linux/v4l-subdev0
+ov5640 = False
+
+[magnetometer]
+; /sys/bus/iio/devices/iio:device2
+lis3mdl = True
+
+[accelerometer]
+; /sys/bus/iio/devices/iio:device1
+mpu6050 = True
+
+[gyroscope]
+; /sys/bus/iio/devices/iio:device1
+mpu6050 = True
+
+[temperature]
+; /sys/bus/iio/devices/iio:device1
+mpu6050 = True
+; /sys/bus/iio/devices/iio:device0
+axp813-adc = True
+
+[input]
+; /dev/input/event1
+generic ft5x06 (12) = True
+; /dev/input/event0
+axp20x-pek = True
+</source>
+
+After fixing the camera and running hwtest with the verify option:
+
+<source lang="shell-session">
+$ sudo hwtest --verify pinephone.ini 
+Fixed hardware: 
+ * ov5640 [/sys/class/video4linux/v4l-subdev0] 320x240,640x480,1280x720
+</source>
+
+[[Category:Guide]]
