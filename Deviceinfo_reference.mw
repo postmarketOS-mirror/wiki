@@ -14,18 +14,18 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>0</code>
 |-
 | <code>name</code>
-| Device model (e.g. <code>Google Nexus 5</code>)
-|
+| Device model
+| e.g. <code>Google Nexus 5</code>
 
 |-
 | <code>manufacturer</code>
-| Device manufacturer (e.g. <code>LG</code>)
-|
+| Device manufacturer
+| e.g. <code>LG</code>
 
 |-
 | <code>codename</code>
-| Device codename (e.g. <code>lg-hammerhead</code>)
-|
+| Device codename
+| e.g. <code>lg-hammerhead</code>
 
 |-
 | <code>date</code>
@@ -65,7 +65,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |-
 | <code>arch</code>
 | Device architecture, must be supported by Alpine Linux
-| <code>armhf</code>, <code>armv7</code>, <code>aarch64</code>
+| <code>armhf</code>, <code>armv7</code>, <code>aarch64</code>, <code>x86</code>, <code>x86_64</code>
 
 |-
 | <code>dev_touchscreen</code>
