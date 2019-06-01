@@ -51,5 +51,7 @@ Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All 
 == Port status ==
 Kernel can be compiled with GCC4, boots, USB networking works.
 Matchbox works partially (only the bottom menu bar works).
+Device seems to have a watchdog.
+
 == Links ==
 [https://github.com/Hacker1245/k2ul-jb-3.4.10-cl157896-2 Working HTC kernel source]
