@@ -55,15 +55,15 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 {| class="wikitable"
 ! Component
 ! Model
-! Mainline
+! Driver
 |-
 | Touchscreen
 | FocalTech FT6336GU
-| edt_ft5x06
+| TOUCHSCREEN_EDT_FT5X06
 |-
 | Rear camera
 | OmniVision OV5640
-| Yes, ov5640
+| VIDEO_OV5640
 |-
 | Front camera
 | GalaxyCore GC2035
@@ -71,11 +71,11 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 |-
 | LCD
 | JD9365D
-| pine64/linux
+| DRM_PANEL_PINEPHONE_JD9365DA
 |-
-| Wifi/Bluetooth
+| WiFi/Bluetooth
 | RTL8723BS
-| CONFIG_RTL8723BS for wifi, no bluetooth support
+| RTL8723BS for WiFi, no bluetooth support
 |-
 | Modem
 | Quectel EC25-E
@@ -83,15 +83,27 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 |-
 | Magnetometer
 | ST LIS3MDL
-| yes
+| IIO_ST_MAGN_3AXIS
 |-
 | Ambient light / Proximity
 | SensorTek STK3335
-| works with stk3310
+| STK3310
 |-
 | Sixaxis
 | InvenSense MPU-6050
-| yes
+| INV_MPU6050_I2C
+|-
+| Vibration motor
+| Generic GPIO controllable motor
+| INPUT_GPIO_VIBRA
+|-
+| Notification LED
+| Generic GPIO controllable RGB LED
+| LEDS_GPIO
+|-
+| Volume keys
+| Buttons connected to the KEYADC/LRADC
+| KEYBOARD_SUN4I_LRADC
 |}
 
 === Touchscreen ===
