@@ -6,7 +6,7 @@
 | imagecaption = Samsung Galaxy S5
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2 (KitKat)
-| chipset = Qualcomm MSM8974AC Snapdragon 801
+| chipset = Qualcomm MSM8974PRO-AC Snapdragon 801
 | cpu = Quad-core 2.5 GHz Krait 400
 | gpu = Adreno 330
 | storage = 16/32 GB
@@ -17,7 +17,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = 
 | status_mainline = P
@@ -56,7 +56,6 @@
 
 == What does not work ==
 
-* Wifi
 * Audio playback
 * Everything else
 
@@ -113,42 +112,45 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 
 {| class="wikitable"
 |-
- ! Component !! Codename !! Mainline kernel !! Since when
+ ! Component !! Codename !! Mainline kernel !! Since when !! Downstream kernel
 |-
-| Debug serial || /dev/ttyMSM0 || Working || v4.17-rc1
+| Debug serial || /dev/ttyMSM0 || Working || v4.17-rc1 || yes, /dev/ttyHSL0
 |-
-| Volume &amp; home buttons || gpio-keys || Working|| locally
+| Volume &amp; home buttons || gpio-keys || Working || locally || yes
 |-
-| Regulator nodes || pma8084 || Working|| locally
+| Regulator nodes || pma8084 || Working || locally || yes
 |-
-| Internal storage || sdhci1 || Working|| locally
+| Internal storage || sdhci1 || Working || locally || yes
 |-
-| SD card storage || sdhci2 || Not working || 
+| SD card storage || sdhci2 || Not working || || yes
 |-
-| USB Networking ||  || Not working || 
+| USB Networking ||  || Not working || || yes
 |-
-| Display ||  || Not working || 
+| Display ||  || Not working || || yes
 |-
-| Touchscreen  ||  || Not working || 
+| Touchscreen  ||  || Not working || || yes
 |-
-| Vibration motor ||  || Not working || 
+| Vibration motor ||  || Not working || || yes
 |-
-| Notification LED ||  || Not working || 
+| Notification LED ||  || Not working || || yes
 |-
-| WiFi ||  || Not working || 
+| WiFi ||  || Not working || || yes
 |-
-| Bluetooth ||  || Not working || 
+| Bluetooth ||  || Not working || || unknown
 |-
-| GPU ||  || Not working || 
+| GPU ||  || Not working || || with libhybris
 |-
-| Modem ||  || Not working || 
+| Audio ||  || Not working || || no
+|-
+| Modem ||  || Not working || || no
 |}
 
 Mainline kernel patches:
 * https://patchwork.kernel.org/patch/10150807/
 
 Development branch:
-* https://github.com/drebrez/linux/tree/samsung-klte
+* https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom , commits by ''drebrez''
+* https://github.com/drebrez/linux/tree/samsung-klte (old)
 
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
