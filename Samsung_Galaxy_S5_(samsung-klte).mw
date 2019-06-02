@@ -145,6 +145,11 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 | Modem ||  || Not working || || no
 |}
 
+postmarketOS packages:
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-samsung-klte Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-samsung-klte Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-samsung-klte Firmware package]
+
 Mainline kernel patches:
 * https://patchwork.kernel.org/patch/10150807/
 
