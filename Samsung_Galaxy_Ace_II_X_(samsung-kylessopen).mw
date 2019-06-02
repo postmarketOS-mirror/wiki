@@ -39,7 +39,7 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 Before installing, ensure that your host computer and your copy of pmbootstrap is fully up to date and that your system has been rebooted since it was last updated. 
 
 === init ===
-<source lang="bash">$ pmbootstrap.py init</source>
+<source lang="bash">$ pmbootstrap init</source>
 Select "samsung-kylessopen" as the target device and select a working recommended graphical interface.
 
 ==== [[Interfaces|Graphical Interfaces]] ====
@@ -52,11 +52,11 @@ Select "samsung-kylessopen" as the target device and select a working recommende
 * [[Plasma Mobile]] - Not recommended
 
 === install ===
-<source lang="bash">$ pmbootstrap.py install --no-fde</source>
+<source lang="bash">$ pmbootstrap install --no-fde</source>
 See the 'in progress' section regarding full disk encryption. 
 
 === flash ===
-Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ pmbootstrap.py flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ pmbootstrap.py flasher flash_kernel</source> to flash the kernel.
+Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ pmbootstrap flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ pmbootstrap flasher flash_kernel</source> to flash the kernel.
 
 == In Progress ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
