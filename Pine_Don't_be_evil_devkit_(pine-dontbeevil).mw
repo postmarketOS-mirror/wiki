@@ -98,15 +98,15 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 | INV_MPU6050_I2C
 |-
 | Vibration motor
-| Generic GPIO controllable motor
+| ?
 | INPUT_GPIO_VIBRA
 |-
 | Notification LED
-| Generic GPIO controllable RGB LED
+| ?
 | LEDS_GPIO
 |-
 | Volume buttons
-| Buttons connected to the KEYADC/LRADC
+| Buttons connected to the KEYADC
 | KEYBOARD_SUN4I_LRADC
 |-
 | Power button
