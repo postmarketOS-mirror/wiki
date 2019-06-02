@@ -13,6 +13,7 @@
 | display = 480x800
 | memory = 1 GB LPDDR3
 | architecture = armv7
+| whet_dhry = 470.5
 | status_usbnet = Y
 | status_flashing = P
 | status_touch = Y
