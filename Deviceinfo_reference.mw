@@ -46,7 +46,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | e.g. <code>allwinner/sun50i-a64-pine64-lts</code> or <code>qcom-msm8974-lge-nexus5-hammerhead</code>
 |-
 | <code>append_dtb</code>
-| Set to <code>true</code> if the <code>dtb</code> should be appended to the Linux kernel image, if set to false the <code>dtb</code> will be copied to the <code>/boot</code> partition instead.
+| Set to <code>true</code> if the <code>dtb</code> should be appended to the Linux kernel image, if set to false the <code>dtb</code> will be copied to the <code>/boot</code> partition instead. ({{MR|387|pmaports}})
 | <code>true</code>, <code>false</code>
 
 |-
