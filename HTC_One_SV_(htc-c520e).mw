@@ -51,7 +51,6 @@ Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All 
 == Port status ==
 Kernel can be compiled with GCC4, boots, USB networking works.
 Matchbox works partially (only the bottom menu bar works).
-Device seems to have a watchdog (or it crashes).
 
 == Enter fastboot ==
 * Power + Volume Down buttons (that boots the device into HBOOT, use the volume buttons and power to select Fastboot) or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
