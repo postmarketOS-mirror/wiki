@@ -50,9 +50,10 @@
 * USB Network
 * Framebuffer graphics (Splash screens)
 * SSH Connectivity
-* Weston on framebuffer
 * Touchscreen
 * Xwayland
+* Weston on framebuffer
+* Plasma Mobile on framebuffer
 
 == What does not work ==
 
@@ -66,6 +67,38 @@ Press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code>
 == How to enter recovery mode ==
 
 Press and hold <code>Volume Up</code> + <code>Home</code> + <code>Power</code> simultaneously.
+
+== Installation ==
+First, [[Installing_pmbootstrap|install pmbootstrap]].
+
+Setup device to be used:
+<source lang="shell-session">
+$ pmbootstrap init
+...
+Device [samsung-i9100]: samsung-klte   <- enter this
+Kernel [downstream]: downstream        <- you probably want downstream for now
+User interface [weston]:               <- choose any UI by your preference
+...
+</source>
+
+Build the rootfs image:
+<source lang="shell-session">
+$ pmbootstrap install --no-fde
+</source>
+
+Then in order to flash it put your device in download mode, and plug it in USB. Then do:
+
+<source lang="shell-session">
+$ pmbootstrap flasher flash_rootfs
+
+ Hold "Volume down" + "Home" buttons at the end of the process,
+ so that when phone reboots put it in flashing mode again 
+
+$ pmbootstrap flasher flash_kernel
+
+ This time, don't hold any button, let it reboot to Linux!
+</source>
+
 
 == Additional info ==
 
