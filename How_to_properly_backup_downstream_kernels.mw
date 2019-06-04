@@ -3,6 +3,8 @@ Since we can't use the mainline kernel for all devices, we need access to the do
 == Backup ==
 Create a backup of the desired kernel to a public source code hosting service, such as gitlab.com or github.com. If the original git repository was on the same platform, this is oftentimes as easy as clicking the "fork" button on the original repository.
 
+If there is no git repository available (e.g. if the kernel sources can only be downloaded as zip archive from htcdev.com), then kindly ask in [[Matrix_and_IRC|#postmarketOS]] if somebody can download the sources and mirror them to [[pmsourcedump]] for you. If you don't get an answer in the chat, you can also ask in a [https://gitlab.com/postmarketOS/pmaports/issues new issue].
+
 == Adjust linux package ==
 * Make it point to your backup instead of the original URL
 * Change <code># Source</code> to <code># Source: backup of https://insert-original-url-here</code>
