@@ -4,6 +4,6 @@ Various mirrors for open source code where the upstream link isn't useful for us
 https://github.com/pmsourcedump
 </blockquote>
 
-Please note that these sources are the unpatched original ones. You can find our patches in the [https://github.com/postmarketOS/pmbootstrap/tree/master/aports aports folder].
+Please note that these sources are the unpatched original ones. You can find our patches in [https://gitlab.com/postmarketOS/pmaports/ pmaports.git].
 
 [[Category:Technical Reference]]
