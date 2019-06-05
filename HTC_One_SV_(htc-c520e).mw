@@ -2,7 +2,7 @@
 | manufacturer = HTC
 | name =  One SV
 | codename = htc-k2ul
-| image = 
+| image = File:20190605_194057.jpg
 | imagecaption = HTC One SV
 | releaseyear = 2012
 | originalsoftware = Android 4.0.4
@@ -51,8 +51,9 @@ Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All 
 
 == Port status ==
 Kernel can be compiled with GCC4, boots, USB networking works.
-Matchbox works partially (only the bottom menu bar works).
+Matchbox and MATE work.
 Firmware package is not available for now, I'm gonna remove that when I make it.
+Device sometimes doesn't start the X server.
 
 == Enter fastboot ==
 * Power + Volume Down buttons (that boots the device into HBOOT, use the volume buttons and power to select Fastboot) or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
