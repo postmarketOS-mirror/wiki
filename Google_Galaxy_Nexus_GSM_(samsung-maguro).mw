@@ -82,7 +82,7 @@
 |-
 | Wi-Fi || BCM4330 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c#n966 Yes] || ??? ||
 |-
-| Bluetooth || BCM4330 || ??? || ??? ||
+| Bluetooth || BCM4330 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/bluetooth/hci_bcm.c#n1413 Yes?] || ??? ||
 |-
 | GPS || SiRFStarIV GSD4t || ??? || ???
 |-
