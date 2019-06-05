@@ -66,17 +66,17 @@
 |-
 | Display || Samsung S6E8AA0 AMOLED || Yes || Missing support for OMAP-DSS<br/> Currently working with simple-framebuffer
 |-
+| Barometer || Bosch BMP180 || Yes || Working
+|-
+| Audio || TWL6040 || Yes || earphone working<br/>loudspeaker not working<br/>mic not working
+|-
 | Touch Screen || MELFAS MMS144 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/mms114.c?h=v5.2-rc3 Yes] || 
 |-
 | USB Switch || FSA9480 || Yes || Missing dts bindings
 |-
-| Audio || TWL6040 || Yes || Untested
-|-
 | Magnetometer || Yamaha YAS530 || No || 
 |-
 | Proximity sensor || Sharp GP2A || Yes || Missing dts bindings
-|-
-| Barometer || Bosch BMP180 || Yes || Untested
 |-
 | GPU || PowerVR SGX540 || No || 
 |-
