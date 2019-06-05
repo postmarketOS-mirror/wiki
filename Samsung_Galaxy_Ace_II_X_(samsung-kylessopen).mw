@@ -94,3 +94,14 @@ bluetoothctl doesn't do anything when run. It's suspected to be due to the firmw
 Before a desktop environment starts, the screen tends to flicker and scroll. It's a purely cosmetic issue. It's cause is likely related to the framebuffer and may be similar in nature to the FBDirect issue.
 
 == Hardware ==
+{|class="wikitable feature-colors"
+! Hardware
+! Drivers
+! Info
+|-
+| Touchscreen
+| 
+| 
+|}
+
+More coming.
