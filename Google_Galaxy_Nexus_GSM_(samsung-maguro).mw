@@ -80,7 +80,9 @@
 |-
 | GPU || PowerVR SGX540 || No || 
 |-
-| Wi-Fi/Bluetooth || BCM4330 || ??? || ???
+| Wi-Fi || BCM4330 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c#n966 Yes] || ??? ||
+|-
+| Bluetooth || BCM4330 || ??? || ??? ||
 |-
 | GPS || SiRFStarIV GSD4t || ??? || ???
 |-
