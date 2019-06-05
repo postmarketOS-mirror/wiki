@@ -66,7 +66,7 @@
 |-
 | Display || Samsung S6E8AA0 AMOLED || Yes || Missing support for OMAP-DSS<br/> Currently working with simple-framebuffer
 |-
-| Touch Screen || MELFAS MMS144 || No || 
+| Touch Screen || MELFAS MMS144 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/mms114.c?h=v5.2-rc3 Yes] || 
 |-
 | USB Switch || FSA9480 || Yes || Missing dts bindings
 |-
