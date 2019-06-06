@@ -113,117 +113,146 @@ Here is a list of tasks that are currently being worked on for this device, from
 {|class="wikitable feature-colors"
 ! Hardware
 ! Drivers
+! Firmware
 ! Info
 |-
 | Battery
 | 
+| 
 | Model No: EB425161LU, 3.8v, Li-ion 5.70Wh, 1500mAh
 |-
 | Touch Screen
+| 
 | 
 | Capacitive
 |-
 | Front Speaker
 | 
 | 
+| 
 |-
 | Display
+| 
 | 
 | 
 |-
 | 3 buttons (home)
 | 
 | 
+| 
 |-
 | Microphone
+| 
 | 
 | 
 |-
 | MicroUSB Port
 | 
 | 
+| 
 |-
 | JTag Port
+| 
 | 
 | 
 |-
 | 3 buttons (vol+pow)
 | 
 | 
+| 
 |-
 | SIM Card Reader
+| 
 | 
 | 
 |-
 | Back Speaker
 | 
 | 
+| 
 |-
 | AUX Port
+| 
 | 
 | 
 |-
 | Back Camera
 | 
 | 
+| 
 |-
 | Flashlight
+| 
 | 
 | 
 |-
 | Front Camera
 | 
 | 
+| 
 |-
 | MicroSD Card Reader
+| 
 | 
 | 
 |-
 | Atheros chip
 | 
+| 
 | Likely WiFi but no confirmation in sight. 
 |-
 | White mystery chunk
+| 
 | 
 | DMSP1115ASM-40, A3425B2, Contains rear speaker & AUX
 |-
 | CSR7828
 | 
+| 
 | Looks like a Qualcomm chip according to DDG, could be Bluetooth
 |-
 | eMMC
 | 
+| 
 | Samsung KMJJS000WA-B409, 4GB ROM, 768MB RAM  
 |-
+| 
 | 
 | 
 | Qualcomm RTR6285A
 |-
 | 
 | 
+| 
 | Qualcomm PM8029
 |-
 | SoC
+| 
 | 
 | Qualcomm Snapdragon S1 MSM7227A
 |-
 | CPU
 | 
+| 
 | (integrated into SoC) single-core ARM Cortex-A5 1GHz
 |-
 | GPU
+| 
 | 
 | (integrated into SoC) singe-core Qualcomm Adreno 200 245MHz WVGA 
 |-
 | Modem
 | 
+| 
 | (integrated into SoC) UMTS/MBMS/GSM, Multimedia Broadcast Multicast Service baseband support
 |-
 | DSP
 | 
+| 
 | (integrated into SoC) 350MHz Qualcomm Hexagon QDSP5 DSP
 |-
 | GPS
+| 
 | 
 | (integrated into SoC) gpsOne Gen 7 GPS module
 |-
