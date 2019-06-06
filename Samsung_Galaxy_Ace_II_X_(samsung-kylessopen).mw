@@ -58,40 +58,51 @@ See the 'in progress' section regarding full disk encryption.
 === flash ===
 Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ pmbootstrap flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ pmbootstrap flasher flash_kernel</source> to flash the kernel.
 
-== In Progress ==
+== Issues ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
 
-=== Mainlining === 
-[[The_Mainline_Kernel|Mainlining is an important task for this device]], because kernels and drivers that supposedly work for this device are scattered across various git repositories, usually forks of other projects, often heavily patched and abandoned. Relying on kernels that can have their repos deleted at any moment, that are often heavily fractured anyways probably isn't a good idea.
-
-All of these kernels claim to be for this device however, it's not known which of these kernels actually work and how well they work. FrankenKernel is the only exception as it is the kernel that gets flashed when installing this device. See [[Troubleshooting:boot]].
-
-=== Device regularly reboots itself ===
-This is almost certainly a watchdog issue, since the device reboots every 10 minutes. I'm currently working on disabling the watchdog. {{issue|242|pmaports}}
-
-=== Internet connection ===
-The internet works fine using [[USB_Internet]] however, thee are no interfaces shown that allow [[WiFi]]. This seems to be caused by the lack of the linux-firmware-ath6k firmware but even when loading it, it doesn't work. A kernel patch is likely necessary. See {{issue|248|pmaports}}.
-
-=== Audio ===
-The msm-audio card is detected however, turning up the volume on any channel except the master results in a crash. See [[Audio]] and {{issue|249|pmaports}}.
-
-=== Device sometimes freezes while booting ===
-Nothing is known about this issue yet. 
-
-=== FBDirect ===
-FBDirect is a program that [[osk-sdl]] and [[charging-sdl]] rely on to work. See {{issue|250|pmaports}}
-
-=== FDE doesn't work ===
-FDE doesn't work at the current moment. See FBDirect issue.
-
-=== Error starting charging-sdl ===
-The device boots into charging mode successfully, but charging-sdl doesn't launch, with "error starting charging-sdl". Check out [[Troubleshooting#CHARGING_MODE:_error_starting_charging-sdl|the troubleshooting page]], [[Charging-sdl]] and FBDirect issue.
-
-=== Bluetooth ===
-bluetoothctl doesn't do anything when run. It's suspected to be due to the firmware not being installed. See {{issue|248|pmaports}}.
-
-=== Scrolling graphics before DE ===
-Before a desktop environment starts, the screen tends to flicker and scroll. It's a purely cosmetic issue. It's cause is likely related to the framebuffer and may be similar in nature to the FBDirect issue.
+{|class="wikitable feature-colors"
+! Issue
+! MR
+! Wiki
+! Description
+|-
+| {{issue|242|pmaports}}
+| 
+| 
+| Device reboots every 10 minutes.
+|-
+| {{issue|248|pmaports}}
+| 
+| 
+| No Wlan internet connection.
+|-
+| {{issue|249|pmaports}}
+| 
+| 
+| Audio doesn't work.
+|-
+| 
+| 
+| 
+| Device sometimes freezes while booting.
+|-
+| {{issue|250|pmaports}}
+| 
+| 
+| osk-sdl and charging-sdl don't work.
+|-
+| {{issue|248|pmaports}}
+| 
+| 
+| Bluetooth doesn't work.
+|-
+| 
+| 
+| 
+| Distorted graphics before a window manager starts.
+|-
+|}
 
 == Hardware ==
 {|class="wikitable feature-colors"
