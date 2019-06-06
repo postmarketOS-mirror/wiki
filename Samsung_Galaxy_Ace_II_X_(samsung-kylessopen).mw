@@ -112,6 +112,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 == Hardware ==
 {|class="wikitable feature-colors"
 ! Hardware
+! Working
 ! Drivers
 ! Firmware
 ! Info
@@ -119,9 +120,11 @@ Here is a list of tasks that are currently being worked on for this device, from
 | Battery
 | 
 | 
+| 
 | Model No: EB425161LU, 3.8v, Li-ion 5.70Wh, 1500mAh
 |-
 | Touch Screen
+| 
 | 
 | 
 | Capacitive
@@ -130,8 +133,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | Display
+| 
 | 
 | 
 | 
@@ -140,8 +145,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | Microphone
+| 
 | 
 | 
 | 
@@ -150,8 +157,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | JTag Port
+| 
 | 
 | 
 | 
@@ -160,8 +169,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | SIM Card Reader
+| 
 | 
 | 
 | 
@@ -170,8 +181,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | AUX Port
+| 
 | 
 | 
 | 
@@ -180,8 +193,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | Flashlight
+| 
 | 
 | 
 | 
@@ -190,8 +205,10 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 |-
 | MicroSD Card Reader
+| 
 | 
 | 
 | 
@@ -199,9 +216,11 @@ Here is a list of tasks that are currently being worked on for this device, from
 | Atheros chip
 | 
 | 
+| 
 | Likely WiFi but no confirmation in sight. 
 |-
 | White mystery chunk
+| 
 | 
 | 
 | DMSP1115ASM-40, A3425B2, Contains rear speaker & AUX
@@ -209,13 +228,16 @@ Here is a list of tasks that are currently being worked on for this device, from
 | CSR7828
 | 
 | 
+| 
 | Looks like a Qualcomm chip according to DDG, could be Bluetooth
 |-
 | eMMC
 | 
 | 
+| 
 | Samsung KMJJS000WA-B409, 4GB ROM, 768MB RAM  
 |-
+| 
 | 
 | 
 | 
@@ -224,9 +246,11 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 | 
+| 
 | Qualcomm PM8029
 |-
 | SoC
+| 
 | 
 | 
 | Qualcomm Snapdragon S1 MSM7227A
@@ -234,9 +258,11 @@ Here is a list of tasks that are currently being worked on for this device, from
 | CPU
 | 
 | 
+| 
 | (integrated into SoC) single-core ARM Cortex-A5 1GHz
 |-
 | GPU
+| 
 | 
 | 
 | (integrated into SoC) singe-core Qualcomm Adreno 200 245MHz WVGA 
@@ -244,14 +270,17 @@ Here is a list of tasks that are currently being worked on for this device, from
 | Modem
 | 
 | 
+| 
 | (integrated into SoC) UMTS/MBMS/GSM, Multimedia Broadcast Multicast Service baseband support
 |-
 | DSP
 | 
 | 
+| 
 | (integrated into SoC) 350MHz Qualcomm Hexagon QDSP5 DSP
 |-
 | GPS
+| 
 | 
 | 
 | (integrated into SoC) gpsOne Gen 7 GPS module
