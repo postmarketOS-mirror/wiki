@@ -53,7 +53,7 @@ Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All 
 Kernel can be compiled with GCC4, boots, USB networking works.
 Matchbox and MATE work.
 Firmware package is not available for now, I'm gonna remove that when I make it.
-Device sometimes doesn't start the X server.
+Device sometimes doesn't start the X server and might be unstable in some cases.
 
 == Enter fastboot ==
 * Power + Volume Down buttons (that boots the device into HBOOT, use the volume buttons and power to select Fastboot) or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
