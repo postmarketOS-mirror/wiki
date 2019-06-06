@@ -217,7 +217,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 | Modem
 | 
-| (integrated into SoC) UMTS or MBMS or GSM, Multimedia Broadcast Multicast Service (MBMS) baseband support
+| (integrated into SoC) UMTS/MBMS/GSM, Multimedia Broadcast Multicast Service baseband support
 |-
 | DSP
 | 
@@ -229,4 +229,4 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 |}
 
-Bluetooth is likely an external chip: "Bluetooth 4.0 (external WCN2243); 802.11b/g/n (external AR6003/5, WCN1314); gpsOne Gen 7; USB 2.0"
+Bluetooth is likely an external chip: "Bluetooth 4.0 (external WCN2243); 802.11b/g/n (external AR6003/5, WCN1314)"
