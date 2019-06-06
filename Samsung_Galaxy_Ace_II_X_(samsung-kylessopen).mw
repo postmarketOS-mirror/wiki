@@ -203,4 +203,24 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | Qualcomm PM8029
 |-
+| SoC
+| 
+| Qualcomm MSM7227A, integrated Qualcomm Hexagon
+|-
+| CPU
+| 
+| (integrated into SoC) single-core ARM Cortex-A5
+|-
+| GPU
+| 
+| (integrated into SoC) Qualcomm Adreno 200
+|-
+| Modem
+| 
+| (integrated into SoC)
+|-
+| DSP
+| 
+| (integrated into SoC) 350MHz Qualcomm Hexagon QDSP5 DSP
+|-
 |}
