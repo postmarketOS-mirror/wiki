@@ -110,9 +110,63 @@ Here is a list of tasks that are currently being worked on for this device, from
 ! Drivers
 ! Info
 |-
-| Touchscreen
+| Battery
+| 
+| 
+|-
+| Touch Screen
+| 
+| 
+|-
+| Front Speaker
+| 
+| 
+|-
+| Display
+| 
+| 
+|-
+| 3 buttons (home)
+| 
+| 
+|-
+| Microphone
+| 
+| 
+|-
+| MicroUSB Port
+| 
+| 
+|-
+| JTag Port
+| 
+| 
+|-
+| 3 buttons (vol+pow)
+| 
+| 
+|-
+| SIM Card reader
+| 
+| 
+|-
+| Back Speaker
+| 
+| 
+|-
+| AUX Port
+| 
+| 
+|-
+| Back Camera
+| 
+| 
+|-
+| Flashlight
+| 
+| 
+|-
+| Front Camera
 | 
 | 
 |}
-
-More coming.
