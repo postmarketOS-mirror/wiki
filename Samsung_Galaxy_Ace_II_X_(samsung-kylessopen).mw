@@ -230,3 +230,4 @@ Here is a list of tasks that are currently being worked on for this device, from
 |}
 
 Bluetooth is likely an external chip: "Bluetooth 4.0 (external WCN2243); 802.11b/g/n (external AR6003/5, WCN1314)"
+WiFi is likely as well, but camera support seems to be integrated.
