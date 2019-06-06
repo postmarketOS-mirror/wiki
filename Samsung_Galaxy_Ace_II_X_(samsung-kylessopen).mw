@@ -67,7 +67,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 ! Wiki
 ! Description
 |-
-| 
+| {{issue|278|pmaports}}
 | 
 | 
 | Device isn't mainlined.
@@ -87,7 +87,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | Audio doesn't work.
 |-
-| 
+| {{issue|279|pmaports}}
 | 
 | 
 | Device sometimes freezes while booting.
@@ -97,12 +97,12 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | osk-sdl and charging-sdl don't work.
 |-
-| {{issue|248|pmaports}}
+| {{issue|281|pmaports}}
 | 
 | 
 | Bluetooth doesn't work.
 |-
-| 
+| {{issue|280|pmaports}}
 | 
 | 
 | Distorted graphics before a window manager starts.
