@@ -205,22 +205,28 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 | SoC
 | 
-| Qualcomm MSM7227A, integrated Qualcomm Hexagon
+| Qualcomm Snapdragon S1 MSM7227A
 |-
 | CPU
 | 
-| (integrated into SoC) single-core ARM Cortex-A5
+| (integrated into SoC) single-core ARM Cortex-A5 1GHz
 |-
 | GPU
 | 
-| (integrated into SoC) Qualcomm Adreno 200
+| (integrated into SoC) singe-core Qualcomm Adreno 200 245MHz WVGA 
 |-
 | Modem
 | 
-| (integrated into SoC)
+| (integrated into SoC) UMTS or MBMS or GSM, Multimedia Broadcast Multicast Service (MBMS) baseband support
 |-
 | DSP
 | 
 | (integrated into SoC) 350MHz Qualcomm Hexagon QDSP5 DSP
 |-
+| GPS
+| 
+| (integrated into SoC) gpsOne Gen 7 GPS module
+|-
 |}
+
+Bluetooth is likely an external chip: "Bluetooth 4.0 (external WCN2243); 802.11b/g/n (external AR6003/5, WCN1314); gpsOne Gen 7; USB 2.0"
