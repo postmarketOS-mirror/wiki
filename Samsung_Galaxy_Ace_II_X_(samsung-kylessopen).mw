@@ -117,11 +117,11 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 | Battery
 | 
-| 
+| Model No: EB425161LU, 3.8v, Li-ion 5.70Wh, 1500mAh
 |-
 | Touch Screen
 | 
-| 
+| Capacitive
 |-
 | Front Speaker
 | 
@@ -151,7 +151,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | 
 |-
-| SIM Card reader
+| SIM Card Reader
 | 
 | 
 |-
@@ -174,4 +174,13 @@ Here is a list of tasks that are currently being worked on for this device, from
 | Front Camera
 | 
 | 
+|-
+| MicroSD Card Reader
+| 
+| 
+|-
+| Atheros chip
+| 
+| Likely WiFi but no confirmation in sight. 
+|-
 |}
