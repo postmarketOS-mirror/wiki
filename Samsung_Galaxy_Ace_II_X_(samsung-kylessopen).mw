@@ -183,4 +183,16 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | Likely WiFi but no confirmation in sight. 
 |-
+| White mystery chunk
+| 
+| DMSP1115ASM-40, A3425B2, Contains rear speaker & AUX
+|-
+| CSR7828
+| 
+| Looks like a Qualcomm chip according to DDG, could be Bluetooth
+|-
+| eMMC
+| 
+| Samsung KMJJS000WA-B409, 4GB ROM, 768MB RAM  
+|-
 |}
