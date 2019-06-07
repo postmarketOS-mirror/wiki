@@ -93,22 +93,6 @@ Open a second terminal and run the following command to see detailed logging (su
 $ pmbootstrap log
 </syntaxhighlight>
 
-=== Device specific package ===
-Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>). In case you have ''not'' cloned <code>pmbootstrap</code> from git, the aports folder will be in <code>cache_git/pmaports</code> inside your work folder (default: <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>).
-
-<syntaxhighlight lang="shell-session">
-$ nano aports/device/device-wiki-example/deviceinfo
-</syntaxhighlight>
-
-Now adjust:
-
-* <code>deviceinfo_screen_width</code>
-* <code>deviceinfo_screen_height</code>
-
-In case you were asked for <code>boot.img</code> analyzing, and skipped that section during [[#Flash_method|init]]: You can run <code>pmbootstrap bootimg_analyze path/to/boot.img</code> to get the right values for the <code>deviceinfo_flash_offset_</code> lines now. Filling out manually also works, but that is error-prone and therefore not recommended.
-
-See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
-
 === Kernel package ===
 While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kernel mainline kernel] for all devices in the long run, this certainly can not be done in one step when porting to a new device. What we do in the meantime is shipping a Linux kernel fork, that is known to work with this device (e.g. from Android). The steps below are the straight forward changes you need to compile your kernel. For details see the [[vendor kernel specific package]] article.
 
@@ -279,6 +263,22 @@ If you can't make your kernel compile or boot with the latest GCC from Alpine, a
 
 ===== Using GCC4 =====
 As GCC4 was recently introduced in Postmarket OS repos, you can follow the procedure for GCC6 above and replace all gcc6 occurrences with gcc4 and add <nowiki>gcc4 (armv7/armhf/...)-gcc4</nowiki> to your list of dependencies.
+
+=== Device specific package ===
+Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>). In case you have ''not'' cloned <code>pmbootstrap</code> from git, the aports folder will be in <code>cache_git/pmaports</code> inside your work folder (default: <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>).
+
+<syntaxhighlight lang="shell-session">
+$ nano aports/device/device-wiki-example/deviceinfo
+</syntaxhighlight>
+
+Now adjust:
+
+* <code>deviceinfo_screen_width</code>
+* <code>deviceinfo_screen_height</code>
+
+In case you were asked for <code>boot.img</code> analyzing, and skipped that section during [[#Flash_method|init]]: You can run <code>pmbootstrap bootimg_analyze path/to/boot.img</code> to get the right values for the <code>deviceinfo_flash_offset_</code> lines now. Filling out manually also works, but that is error-prone and therefore not recommended.
+
+See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
 
 === We are happy to help you! ===
 If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://github.com/postmarketOS/pmbootstrap/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
