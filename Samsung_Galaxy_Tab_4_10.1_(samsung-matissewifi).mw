@@ -54,7 +54,7 @@
 $ pmbootstrap init
 $ pmbootstrap install --no-fde
 $ pmbootstrap flash root_fs
-$ pmbootstrap flasher flash_kernel # Does not work yet!
+$ pmbootstrap flasher flash_kernel
 </source>
 
 == See also ==
