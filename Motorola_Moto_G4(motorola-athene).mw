@@ -49,6 +49,20 @@ $ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher boot
 </source>
 
+== Firmware issues ==
+
+Log from dmesg:
+
+<source>
+  68.992082] subsys-pil-tz 1de0000.qcom,venus: venus: Failed to locate venus.mdt
+[   68.992096] msm_vidc:  err: Failed to download firmware
+[   68.992976] msm_vidc:  err: Failed to load video firmware
+[   68.993000] msm_vidc:  err: msm_comm_init_core - firmware loading failed
+[   68.993007] msm_vidc:  err: Failed to move from state: 1 to 2
+[   68.993012] msm_vidc:  err: Failed to move video instance to init state
+[   68.993080] msm_vidc:  err: Failed to create video instance, core: 0, type = 0
+</source>
+
 == See also ==
 * {{github|1412}} initial PR
 * {{github|1401}} initial port issue
