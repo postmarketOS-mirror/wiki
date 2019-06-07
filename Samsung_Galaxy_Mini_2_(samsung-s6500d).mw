@@ -117,6 +117,8 @@
 |- -->
 | FM Radio || unknown || N || unknown || - || - || Android sees this as radio-tavarua under /sys/class/video4linux/radio0
 |-
+| Vibrations || unknown || N || unknown || - || - ||
+|-
 | Buttons || unknown || N || unknown || - || - || contains home and volume buttons, 7x27a_kp, event1
 |-
 | Audio buttons || unknown || N || unknown || - || - || contains power button as well, event6
