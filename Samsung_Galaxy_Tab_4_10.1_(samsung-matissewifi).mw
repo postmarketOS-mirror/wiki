@@ -62,6 +62,7 @@ $ pmbootstrap flasher flash_kernel
 * [https://github.com/GalaxyTab4/android_kernel_samsung_matissewifi Kernel source]
 * [https://eu.dl.twrp.me/matisse/ TWRP]
 * [https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_4_10.1 Specs on Wikipedia]
+* [http://www.deviceinfohw.ru/devices/item.php?item=24514 Specs on deviceinfohw.ru]
 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
