@@ -98,7 +98,7 @@ While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kern
 
 ==== Source code ====
 {{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
-First of all, [[How-to-find-device-specific-information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6, may compile with gcc4, not yet tested), then and adjust the <code># Source</code> section in the <code>aports/device/linux-wiki-example/APKBUILD</code> file. For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code>, enter: <code>_repository="android_kernel_motorola_ghost"</code>.
+First of all, [[How-to-find-device-specific-information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6, may compile with gcc4, not yet tested), then and adjust the <code># Source</code> section in the <code>aports/device/linux-wiki-example/APKBUILD</code> file. In case you have ''not'' cloned <code>pmbootstrap</code> from git, the aports folder will be in <code>cache_git/pmaports</code> inside your work folder (default: <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>). For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code>, enter: <code>_repository="android_kernel_motorola_ghost"</code>.
 
 <syntaxhighlight lang="bash">
 # Source
@@ -265,7 +265,7 @@ If you can't make your kernel compile or boot with the latest GCC from Alpine, a
 As GCC4 was recently introduced in Postmarket OS repos, you can follow the procedure for GCC6 above and replace all gcc6 occurrences with gcc4 and add <nowiki>gcc4 (armv7/armhf/...)-gcc4</nowiki> to your list of dependencies.
 
 === Device specific package ===
-Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>). In case you have ''not'' cloned <code>pmbootstrap</code> from git, the aports folder will be in <code>cache_git/pmaports</code> inside your work folder (default: <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>).
+Open the <code>deviceinfo</code> file in an editor (replace <code>wiki-example</code>).
 
 <syntaxhighlight lang="shell-session">
 $ nano aports/device/device-wiki-example/deviceinfo
