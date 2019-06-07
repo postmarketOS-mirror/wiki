@@ -52,7 +52,7 @@ $ pmbootstrap flasher boot
 == Problems ==
 
 * Firmware issues
-* kernel partition can't be flashed because of the boot partition is not big enough
+* kernel partition can't be flashed because the boot partition is not big enough
 
 == Firmware issues ==
 
