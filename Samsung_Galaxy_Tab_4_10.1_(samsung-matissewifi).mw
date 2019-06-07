@@ -10,7 +10,7 @@
 | cpu = 4 cores up to 1.2 GHz Cortex-A7 (32bit)
 | gpu = Qualcomm Adreno 306 GPU
 | storage = 16/32 GB flash memory, microSDXC slot (up to 64 GB)
-| display = 1280×800 px, 10.1" in (26 cm) diagonal, WXGA TFT display
+| display = 1280×800 px, 10.1" in (26 cm) diagonal, WXGA TFT display (LCM: smd_ltl101al06, touchscreen: atmel_mxt_1188s)
 | memory = 1.5 GB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
