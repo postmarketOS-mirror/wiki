@@ -170,7 +170,7 @@ Available keymaps:
 
 To obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one]:
 
-* On the N900, install <code>kbd-bkeymaps</code>, either by using <code>pmbootstrap install --add kbd-bkeysmaps</code> on the host system or by running <code>apk add kbd-bkeysmaps</code> on the device itself.
+* On the N900, install <code>kbd-bkeymaps</code>, either by using <code>pmbootstrap install --add kbd-bkeymaps</code> on the host system or by running <code>apk add kbd-bkeymaps</code> on the device itself.
 
 * The keymap must be in binary format, bmap. This can be accomplished using the <code>loadkeys</code> tool:
 
