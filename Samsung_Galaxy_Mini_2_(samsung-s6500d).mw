@@ -71,6 +71,93 @@
 * SMS
 * Voice
 
+== Devices ==
+{|class="wikitable feature-colors"
+|-
+! Component
+! Hardware
+! Downstream
+! Downstream driver/firmware
+! Upstream
+! Upstream driver/firmware
+! Notes
+
+|-
+| Touchscreen || unknown || P || unknown || - || - || it doesn't seem very responsive in some situations; contains menu and back touch keys, event0
+|-
+| Display || msmfb30_30001 || Y || unknown || - || - || works, /sys/class/graphics/fb0/name is weird, oh well, Qualcomm
+|-
+| Wi-Fi || AR6003? || N || unknown || - || - || 
+|-
+| Bluetooth || unknown || N || unknown || - || - || 
+|-
+| Battery || bq27425 || N || unknown || - || - || <!--wrong percentage, always shows 50, not sure if charging even works-->
+|-
+| 3D || Adreno200 || N || unknown || - || - || should be able to use freedreno
+|-
+| Camera || sr300pc20? || N || unknown || - || - || 
+|-
+| Audio || unknown || N || unknown || - || - || AFAIK none of the Qualcomm-based devices have working audio yet :(
+|-
+| Magnetometer || bma222(e)? || N || unknown || - || - || event2
+|-
+| Accelerometer || bma222(e) || N || unknown || - || - || event4
+|-
+| Orientation || bma222(e) || N || unknown || - || - || event3
+|-
+| Proximity || Sharp gp2a? || N || unknown || - || - || event5
+|-
+| Temperature || unknown || N || unknown || - || - || there should be one, right??
+|-
+<!-- Illuminance || unknown || N || unknown || - || - || does this even exist here?
+|- -->
+| FM Radio || unknown || N || unknown || - || - || Android sees this as radio-tavarua under /sys/class/video4linux/radio0
+|-
+| Buttons || unknown || N || unknown || - || - || contains home and volume buttons, 7x27a_kp, event1
+|-
+| Audio buttons || unknown || N || unknown || - || - || contains power button as well, event6
+|-
+| GPS || unknown || N || unknown || - || - || 
+|-
+| Mobile data || unknown || N || unknown || - || - || 
+|-
+| SMS || unknown || N || unknown || - || - || 
+|-
+| Calls || unknown || N || unknown || - || - || 
+|-
+| OTG || FSA9280 || N || unknown || - || - || not supported by phone, theoretically supported by SoC, maybe possible wih external power source; That chip is responsible for switching USB functionality with UART etc.
+|-
+| FDE || - || P || - || - || - || osk-sdl works, partition is unlocked and then phone is stuck, no screen, no ssh, no telnet
+|-
+| Mainline || - || - || - || N || - || No existing dtb for device and SoC
+|-
+| XWayland || - || N || - || - || - || not tested yet, can be tested with xeyes, I hope this is enough
+|-
+<!--
+| thing || unknown || N || unknown || - || - || 
+|-
+-->
+|}
+=== Chips ===
+<pre>
+cat /sys/bus/i2c/devices/*/name
+sr300pc20 #camera? CMOS image sensor
+sx1508q
+sc628a
+marimba
+marimba
+sx1509q
+sec_touch
+FSA9280 # USB multiplexer
+bma222 #accel
+bma222e #accel
+hscd_i2c
+gp2a
+pn544 #NFC controller, s6500 uses this, s6500d doesn't, don't know why it's there
+bq27425 #battery gauge
+</pre>
+
+
 == To do ==
 {{note|informations below may be chaotic and change often}}
 
@@ -161,7 +248,7 @@ Device          Boot   Start     End Sectors  Size Id Type                 PIT n
 </source>
 
 ==Downstream kernel==
-===Basic info===
+<!--===Basic info===
 <source lang="bash">
 samsung-s6500d:~$ neofetch
 user@samsung-s6500d 
@@ -256,4 +343,4 @@ samsung-s6500d
        serial: 9a:d9:81:bb:8e:9e
        capabilities: ethernet physical
        configuration: broadcast=yes multicast=yes
-</source>
+</source>-->
