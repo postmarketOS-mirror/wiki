@@ -14,7 +14,7 @@ Weston is the reference implementation of a [https://wayland.freedesktop.org/ Wa
 
 This will package weston libraries as well as demos for your device, see <code>weston*</code> commands.
 
-Weston is started at shell autologin init time by <code>/etc/profile.d/start_weston.sh</code> script
+Weston will be launched automatically on boot by LightDM.
 
 === [https://en.wikipedia.org/wiki/Remote_Desktop_Protocol RDP] (Remote Desktop Protocol) ===
 Prerequisite:
