@@ -49,6 +49,11 @@ $ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher boot
 </source>
 
+== Problems ==
+
+* Firmware issues
+* kernel partition can't be flashed because of the boot partition is not big enough
+
 == Firmware issues ==
 
 Log from dmesg:
