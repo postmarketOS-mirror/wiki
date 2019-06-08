@@ -59,7 +59,7 @@ Device sometimes doesn't start the X server and might be unstable in some cases.
 
 == Installing ==
 * Boot to fastboot
-* Install rootfs to the SD card or the internal storage (S-OFF needed)
+* Install rootfs to the SD card or the internal storage with <code>pmbootstrap flasher flash_rootfs</code> (S-OFF needed)
 * Run <code>pmbootstrap flasher flash_kernel</code>
 * Reboot
 Installing to the userdata partition didn't work, tested flashing Matchbox and MATE, MATE was too big.
