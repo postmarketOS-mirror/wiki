@@ -35,7 +35,7 @@
 | status_calls = 
 | status_otg = -
 | status = Tested,Wifi and ssh are working
-| booting = yes
+| booting = no
 }}
 
 == Contributors ==
