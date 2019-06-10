@@ -309,8 +309,8 @@ The current battery capacity can be found under <code>/sys/class/power_supply/bq
 
 [http://www.ti.com/lit/ds/symlink/bq24150.pdf Datasheet for the bq24150 charging chip]
 
-==== Battery protection ====
-Currently, when battery gets below suitable operating voltage, the device dies. This is bad for the battery and the file system. [https://gist.github.com/NikkSaan/800c17d87dddfaa9edf5274130717d73 Here] is a script that monitors the battery, and powers the device off before the battery reaches critical state. For suggested usage, read the program comments.
+==== Battery Protection ====
+Currently, when battery gets below suitable operating voltage, the device dies. This is bad for the battery and the file system. [https://gist.github.com/NikkSaan/800c17d87dddfaa9edf5274130717d73 Here] is a script that monitors the battery, and powers the device off before the battery reaches critical state. For suggested usage, read the program's comments.
 
 === Clock ===
 ==== Setting the hardware clock ====
