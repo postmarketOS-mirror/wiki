@@ -90,3 +90,4 @@ If you have some time to spend on getting your video driver working right, consi
 
 = See also =
 * {{issue|211|pmaports}}: framebuffer: red and blue are swapped on devices using MSM8974
+* {{issue|297|pmaports}}: Alternative patch to fix refresh rate for kernel 3.4.113 android_kernel_oppo_msm8974 and similar
