@@ -42,6 +42,7 @@
 * Flashing (only tested with sdcard)
 * Display
 # Touchscreen
+# XWayland (tested on Westone)
 
 == What does not work ==
 * Everything else
