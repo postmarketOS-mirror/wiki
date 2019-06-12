@@ -189,6 +189,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 | Modem ||  || Not working || || no
 |}
 
+== Links ==
 postmarketOS packages:
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-samsung-klte Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-samsung-klte Kernel package]
@@ -201,9 +202,9 @@ Development branch:
 * https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom , commits by ''drebrez''
 * https://github.com/drebrez/linux/tree/samsung-klte (old)
 
-== Links ==
+Extra:
 * [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
-* [https://github.com/postmarketOS/pmbootstrap/tree/device/samsung-klte Development branch]
+* [https://www.ifixit.com/Teardown/Samsung+Galaxy+S5+Teardown/24016 Samsung Galaxy S5 Teardown]
 
 == Photos ==
 <gallery>
