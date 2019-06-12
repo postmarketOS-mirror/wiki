@@ -102,6 +102,17 @@ $ pmbootstrap flasher flash_kernel
 
 == Additional info ==
 
+=== Useful helper scripts ===
+Default installation includes a couple of useful scripts to be used from a terminal: <code>battery-status</code> and <code>set-brightness</code>. <code>battery-status</code> allows you to check for battery charge level, and <code>set-brightness</code> allows to view/set lcd backlight brightness in range 0-255.
+<pre>
+samsung-klte:~$ battery-status 
+25
+samsung-klte:~$ set-brightness 
+255
+samsung-klte:~$ sudo set-brightness 20
+20
+</pre>
+
 === Partition layout ===
 
 <pre class="shell">~ # fdisk -l /dev/block/mmcblk0
