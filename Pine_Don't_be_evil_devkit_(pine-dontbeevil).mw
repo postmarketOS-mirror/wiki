@@ -198,35 +198,7 @@ All the required gpio-led stuff is added to the device tree but the gpio-led mod
 The A64 SoC audio should work on mainline with the <code>CONFIG_SUN50I_CODEC_ANALOG</code> option enabled. Sound output should work after unmuting <code>AIF1 Slot 0 digital</code>
 
 === USB ===
-
-USB gets loaded but doesn't work yet:
-
-<source lang="klog">
-[    0.186880] usbcore: registered new device driver usb
-[    0.535763] sun4i-usb-phy 1c19400.phy: failed to get clock usb0_phy
-[    0.572453] ehci-platform 1c1a000.usb: EHCI Host Controller
-[    0.572477] ehci-platform 1c1a000.usb: new USB bus registered, assigned bus number 1
-[    0.573646] ehci-platform 1c1a000.usb: irq 17, io mem 0x01c1a000
-[    0.586033] ehci-platform 1c1a000.usb: USB 2.0 started, EHCI 1.00
-[    0.587976] ohci-platform 1c1a400.usb: Generic Platform OHCI controller
-[    0.587997] ohci-platform 1c1a400.usb: new USB bus registered, assigned bus number 2
-[    0.588307] ohci-platform 1c1a400.usb: irq 18, io mem 0x01c1a400
-</source>
-
-<source lang="shell-session">
-pine-dontbeevil:~# lsusb
-Bus 005 Device 001: ID 1d6b:0002
-Bus 003 Device 001: ID 1d6b:0002
-Bus 001 Device 001: ID 1d6b:0002
-Bus 004 Device 001: ID 1d6b:0001
-Bus 002 Device 001: ID 1d6b:0001
-pine-dontbeevil:~# lsusb -t
-/:  Bus 05.Port 1: Dev 1, Class=root_hub, Driver=musb-hdrc/1p, 480M
-/:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=ohci-platform/1p, 12M
-/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=ehci-platform/1p, 480M
-/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=ohci-platform/1p, 12M
-/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci-platform/1p, 480M
-</source>
+Doesn't work for MartijnBraam, reported to work for other people.
 
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
