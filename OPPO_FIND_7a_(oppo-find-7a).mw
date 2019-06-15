@@ -18,7 +18,7 @@
 | status_flashing = 
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
