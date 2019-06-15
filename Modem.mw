@@ -7,6 +7,9 @@ Some devices already have modem support. Check the devices table!
 * {{github|1314}} i9195/Qualcomm modem support (scintill's work integrated)
 * {{issue|251|pmaports}} xiaomi-santoni: gets modem to work on the device
 
+== Relevant pages ==
+* [[QMI]]
+
 == See also ==
 * Maemo Leste {{github|27|bugtracker|maemo-leste}} Call/Phone support
 
