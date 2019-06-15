@@ -195,7 +195,12 @@ All the required gpio-led stuff is added to the device tree but the gpio-led mod
 
 === Audio ===
 
+==== Speakers ====
 The A64 SoC audio should work on mainline with the <code>CONFIG_SUN50I_CODEC_ANALOG</code> option enabled. Sound output should work after unmuting <code>AIF1 Slot 0 digital</code>
+
+==== Mic ====
+
+Doesn't work yet.
 
 === USB ===
 Doesn't work for MartijnBraam, reported to work for other people.
