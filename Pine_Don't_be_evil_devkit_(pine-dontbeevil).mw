@@ -191,7 +191,7 @@ The <code>stk3310</code> module doesn't load automatically, after running <code>
 
 === RGB Led ===
 
-All the required gpio-led stuff is added to the device tree but the gpio-led module doesn't do anything. No led devices, No errors, No log messages.
+The RGB led works with the led driver in linux, due to hardware bugs there can be only one led active at the same time and the blue led doesn't work because some pins are reversed.
 
 === Audio ===
 
