@@ -35,6 +35,25 @@ ffmpeg -i "$1" -vf drawtext="fontfile=$font: \
         boxborderw=5: x=(w-text_w)/2: y=h-text_h-15" -codec:a copy "$2"
 </syntaxhighlight>
 
+==== Merge multiple videos ====
+<syntaxhighlight lang="shell">
+#!/bin/sh -e
+
+if [ "$#" -lt 1 ]; then
+        echo "usage: $(basename $0) video1 video2 video3 ..."
+        exit 1
+fi
+
+set -x
+{
+        for i in $@; do
+                echo "file $i"
+        done
+} > inputlist
+
+ffmpeg -f concat -i inputlist -c copy merged.webm
+</syntaxhighlight>
+
 ==== Embed into a post ====
 <syntaxhighlight lang="html">
 <video controls width="300" height="533" class="border" autoplay="autoplay" loop mute>
