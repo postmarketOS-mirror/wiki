@@ -24,12 +24,7 @@ The example photo on the right had the following post processing applied. Of cou
 ** possibly use "Filters / Artistic / Cartoon" on the device to improve the contrast some more (device layer only)
 * Use <code>exiftool -all= -overwrite_original file.jpg</code> to remove all metadata
 
-=== Creating a gif from a video ===
-Useful for new blog posts. See also: [https://superuser.com/a/141343 Cut up a video with ffmpeg]
-<syntaxhighlight lang="shell-session">
-$ ffmpeg -y -i video.webm -vf palettegen palette.png
-$ ffmpeg -y -i video.webm -vf scale=320:240 video-small.webm
-$ ffmpeg -y -i video-small.webm -i palette.png -filter_complex paletteuse -r 10 video.gif
-</syntaxhighlight>
+=== See also ===
+* [[Preparing videos for blog posts]]
 
 [[Category:Guide]]
