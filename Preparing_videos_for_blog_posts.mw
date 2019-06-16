@@ -29,8 +29,8 @@ $ ffmpeg -y -i video-short.webm -vf scale=300:533 video-thumb.webm
 
 Make sure to embed the link to the full video somewhere in the text related to the video:
 
-<syntaxhighlight lang="markdown">
+<pre>
 Some text talking about the video ([full video](/static/video/2019-00/video.webm)).
-</syntaxhighlight>
+</pre>
 
 [[Category:Guide]]
