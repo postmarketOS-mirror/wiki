@@ -65,7 +65,7 @@ ffmpeg -f concat -i inputlist -c copy merged.webm
 Make sure to embed the link to the full video somewhere in the text related to the video:
 
 <pre>
-Some text talking about the video ([full video](/static/video/2019-00/video.webm)).
+Some text talking about the video ([video](/static/video/2019-00/video.webm)).
 </pre>
 
 [[Category:Guide]]
