@@ -1,4 +1,4 @@
-Here's a short cheat sheet of how to get videos ready for blog posts. We convert them to the widely supported {{wikipedia|webm}} ({{wikipedia|mp4}} will for example not work on Fedora out of the box), and create short and smaller video thumbnails. These thumbnails will be embedded into the blog post directly as little animated pictures, just like gifs, but much more space efficient.
+Here's a short cheat sheet of how to get videos ready for blog posts. We convert them to the widely supported {{wikipedia|webm}} ({{wikipedia|mp4}} will for example not work on Fedora out of the box), and create short and smaller video thumbnails. These thumbnails will be embedded into the blog post directly as little animated pictures, just like gifs, but much more size efficient.
 
 ==== Converting to webm ====
 <syntaxhighlight lang="shell-session">
