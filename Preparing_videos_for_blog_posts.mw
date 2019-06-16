@@ -9,7 +9,7 @@ $ ffmpeg -i video.mp4 video.webm
 Start at 10 seconds and cut after the next 5 seconds:
 
 <syntaxhighlight lang="shell-session">
-$ ffmpeg -ss 00:10:00 -i video.webm -c copy -t 00:05:00 video-short.webm
+$ ffmpeg -ss 00:10:00 -i video.webm -c copy -t 00:00:05 video-short.webm
 </syntaxhighlight>
 
 ==== Scaling down ====
