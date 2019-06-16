@@ -1,0 +1,36 @@
+Here's a short cheat sheet of how to get videos ready for blog posts. We convert them to the open format {{wikipedia|webm}} ({{wikipedia|mp4}} is proprietary and will for example not work on Fedora out of the box), and create short and smaller video thumbnails. These thumbnails will be embedded into the blog post directly as little animated pictures, just like gifs, but much more space efficient.
+
+==== Converting to webm ====
+<syntaxhighlight lang="shell-session">
+$ ffmpeg -i video.mp4 video.webm
+</syntaxhighlight>
+
+==== Shortening ====
+Start at 10 seconds and cut after the next 5 seconds:
+
+<syntaxhighlight lang="shell-session">
+$ ffmpeg -ss 00:10:00 -i video.webm -c copy -t 00:00:05 video-short.webm
+</syntaxhighlight>
+
+==== Scaling down ====
+Resize to 300x533 px:
+
+<syntaxhighlight lang="shell-session">
+$ ffmpeg -y -i video-short.webm -vf scale=300:533 video-thumb.webm
+</syntaxhighlight>
+
+==== Embedding into a post ====
+<syntaxhighlight lang="html">
+<video controls width="300" height="533" class="border" autoplay="autoplay" loop mute>
+<source src="/static/video/2019-00/video-thumb.webm" />
+<a href="/static/video/2019-00/video.webm">Description of the video here</a>
+</video>
+</syntaxhighlight>
+
+Make sure to embed the link to the full video somewhere in the text related to the video:
+
+<syntaxhighlight lang="markdown">
+Some text talking about the video ([full video](/static/video/2019-00/video.webm)).
+</syntaxhighlight>
+
+[[Category:Guide]]
