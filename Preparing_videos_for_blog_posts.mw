@@ -35,7 +35,7 @@ ffmpeg -i "$1" -vf drawtext="fontfile=$font: \
         boxborderw=5: x=(w-text_w)/2: y=h-text_h-15" -codec:a copy "$2"
 </syntaxhighlight>
 
-==== Embedding into a post ====
+==== Embed into a post ====
 <syntaxhighlight lang="html">
 <video controls width="300" height="533" class="border" autoplay="autoplay" loop mute>
 <source src="/static/video/2019-00/video-thumb.webm" />
