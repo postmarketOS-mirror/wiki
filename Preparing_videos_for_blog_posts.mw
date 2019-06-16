@@ -1,22 +1,38 @@
 Here's a short cheat sheet of how to get videos ready for blog posts. We convert them to the widely supported {{wikipedia|webm}} ({{wikipedia|mp4}} will for example not work on Fedora out of the box), and create short and smaller video thumbnails. These thumbnails will be embedded into the blog post directly as little animated pictures, just like gifs, but much more size efficient.
 
-==== Converting to webm ====
+==== Convert to webm ====
 <syntaxhighlight lang="shell-session">
 $ ffmpeg -i video.mp4 video.webm
 </syntaxhighlight>
 
-==== Shortening ====
+==== Shorten ====
 Start at 10 seconds and cut after the next 5 seconds:
 
 <syntaxhighlight lang="shell-session">
 $ ffmpeg -ss 00:10:00 -i video.webm -c copy -t 00:00:05 video-short.webm
 </syntaxhighlight>
 
-==== Scaling down ====
+==== Scale down ====
 Resize to 300x533 px:
 
 <syntaxhighlight lang="shell-session">
 $ ffmpeg -y -i video-short.webm -vf scale=300:533 video-thumb.webm
+</syntaxhighlight>
+
+==== Add bottom text ====
+<syntaxhighlight lang="shell">
+#!/bin/sh -e
+
+if [ "$#" -ne 3 ]; then
+        echo "usage: $(basename $0) input output text"
+        exit 1
+fi
+
+set -x
+font="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+ffmpeg -i "$1" -vf drawtext="fontfile=$font: \
+        text=\'$3\': fontcolor=white: fontsize=24: box=1: boxcolor=black@0.5: \
+        boxborderw=5: x=(w-text_w)/2: y=h-text_h-15" -codec:a copy "$2"
 </syntaxhighlight>
 
 ==== Embedding into a post ====
