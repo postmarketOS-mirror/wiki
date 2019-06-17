@@ -62,18 +62,16 @@ When prompted on device, use Volume-Up/Down buttons to highlight choice, then Po
 
 First build the image:
 <source lang="shell-session">
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap
-$ cd pmbootstrap/
-$ ./pmbootstrap.py init
-$ ./pmbootstrap.py install --no-fde
+$ pmbootstrap init
+$ pmbootstrap install --no-fde
 </source>
 
 Then in order to flash it put your device in fastboot mode, and plug it in USB. Then do:
 
 <source lang="shell-session">
-$ ./pmbootstrap.py flasher flash_rootfs --partition userdata
-$  sudo fastboot format system
-$ ./pmbootstrap.py flasher flash_kernel
+$ pmbootstrap flasher flash_rootfs --partition userdata
+$ sudo fastboot format system
+$ pmbootstrap flasher flash_kernel
 </source>
 
 === Issues ===
