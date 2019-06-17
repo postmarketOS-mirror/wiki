@@ -1,0 +1,63 @@
+== Incompatible Qt versions ==
+
+When Qt upgrades, sometimes not every package is properly built against the right versions, causing the <code>Cannot mix incompatible Qt library (version 0x50c04) with this library (version 0x50c03)</code> error.
+This message doesn't however say ''which'' library is using the wrong version and it can be hard to figure out.
+
+To remedy this, Alexandr Akulich (Kaffeine) has created a script which finds the incompatible library so it can be rebuild.
+
+<source>
+#!/bin/sh
+
+# This script is useful for investigation of errors like this:
+# Cannot mix incompatible Qt library (version 0x50601) with this library (version 0x50800)
+
+# Copyright (C) 2019 Alexandr Akulich
+# Feel free to use however you want.
+
+printUsage()
+{
+    echo "Usage: $0 <Qt version> <path>"
+    echo ""
+    echo "Examples:"
+    echo "    $0 5.11.2 /usr/lib/x86_64-linux-gnu"
+    echo "    $0 5.9.6 /opt/Qt/custom/lib/libQt5Core.so"
+}
+
+extractVersion()
+{
+    FULL_VERSION=$1
+    
+    VERSION_MAJOR=`echo $FULL_VERSION|cut -d '.' -f 1`
+    VERSION_MINOR=`echo $FULL_VERSION|cut -d '.' -f 2`
+    VERSION_PATCH=`echo $FULL_VERSION|cut -d '.' -f 3`
+    VERSION_HEX=`printf "00%02x%02x%02x" $VERSION_MAJOR $VERSION_MINOR $VERSION_PATCH`
+    
+    echo "$VERSION_HEX"
+}
+
+checkFile()
+{
+    FILE=$1
+    SUBJECT=$2
+    hexdump -v -e '"%02x"' $FILE |grep $SUBJECT -q
+}
+
+QT_VERSION=$1
+FILE_OR_DIRECTORY=$2
+
+#echo "Checking path \"$FILE_OR_DIRECTORY\" for Qt version \"$QT_VERSION\""
+
+if [ $# -ne 2 ]; then
+    printUsage
+    exit 0
+fi
+
+QT_VERSION_INT=$(extractVersion $QT_VERSION)
+
+for FILE_ARG in $(find -L "$FILE_OR_DIRECTORY" -type f ); do
+    if checkFile $FILE_ARG $QT_VERSION_INT; then
+        echo "$FILE_ARG contains a reference to $QT_VERSION"
+    fi
+done
+
+</source>
