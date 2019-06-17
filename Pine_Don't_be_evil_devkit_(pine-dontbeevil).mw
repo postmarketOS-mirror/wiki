@@ -65,20 +65,24 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 | OmniVision OV5640
 | VIDEO_OV5640
 |-
+| Camera flash
+| SGMICRO SGM3140
+| Nope
+|-
 | Front camera
-| GalaxyCore GC2035
+| GalaxyCore GC2145
 | Nope
 |-
 | LCD
-| JD9365D
+| fitipower JD9365D
 | DRM_PANEL_PINEPHONE_JD9365DA
 |-
 | WiFi
-| RTL8723BS
+| Realtek RTL8723BS
 | RTL8723BS
 |-
 | Bluetooth
-| RTL8723BS
+| Realtek RTL8723BS
 | BT_HCIUART_RTL
 |-
 | Modem
@@ -102,7 +106,7 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 | INPUT_GPIO_VIBRA
 |-
 | Notification LED
-| ?
+| LED0603RGB
 | LEDS_GPIO
 |-
 | Volume buttons
@@ -110,11 +114,11 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 | KEYBOARD_SUN4I_LRADC
 |-
 | Power button
-| 
+| X-Powers AXP803
 | INPUT_AXP20X_PEK
 |-
 | Battery fuel gauge
-| 
+| X-Powers AXP803
 | BATTERY_AXP20X
 |}
 
