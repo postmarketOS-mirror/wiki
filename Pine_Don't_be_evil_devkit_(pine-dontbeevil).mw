@@ -67,7 +67,7 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 |-
 | Camera flash
 | SGMICRO SGM3140
-| Nope
+| LEDS_SGM3140
 |-
 | Front camera
 | GalaxyCore GC2145
@@ -151,9 +151,30 @@ pine-dontbeevil:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 
 
 [[File:PinePhone-rearcam-dev.png|frameless]]
 
-=== WiFi/Bluetooth ===
+=== Camera Flash ===
 
-The wifi interface shows up and is able to scan for networks, it doesn't want to actually connect most of the times, if it doesn't work then reboot and try again.
+The camera flash consist out of a SG Micro SGM3140 "500mA Buck/Boost Charge Pump LED Driver" and a EHP-C04 LED.
+
+The driver supports Flash and Torch mode, the first being brighter but only for about 300ms, when it switches to Torch mode. Torch mode is lower brightness but can be turned on continuously.
+
+<source lang="shell-session">
+# Turn on Flash, wait 0.3s, turn off
+echo 1 > /sys/class/leds/sgm3140-flash/flash_strobe
+sleep 0.3
+echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
+</source>
+
+<source lang="shell-session">
+# Turn on Torch
+echo 1 > /sys/class/leds/sgm3140-flash/brightness
+# Turn off Torch
+echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
+</source>
+
+
+=== WiFi ===
+
+WiFi generally works but the driver is quite sporadic when it wants to work. Rebooting/rmmod and modprobe'ing the driver/rfkill block - unblock helps.
 
 <source lang="dmesg">
 [ 1962.148414] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
@@ -173,11 +194,13 @@ The wifi interface shows up and is able to scan for networks, it doesn't want to
 [ 2010.497801] RTL8723BS: set bssid:00:00:00:00:00:00
 </source>
 
-The bluetooth part of the RTL8723BS isn't supported in mainline yet. Theres a repository with some support at https://github.com/lwfinger/rtl8723bs_bt
+=== Bluetooth ===
+
+There is a patch series on lkml. A v2 for this series is in progress.
 
 === Modem ===
 
-Haven't looked at yet
+Receiving text messages works. Calls should work too but weren't tested yet.
 
 === Sensors ===
 
@@ -191,16 +214,21 @@ dontbeevil:~# cat /sys/bus/iio/devices/iio\:device0/in_accel_z_raw
 dontbeevil:~# echo "Verified gravity still exists"
 </source>
 
-The <code>stk3310</code> module doesn't load automatically, after running <code>modprobe stk3310</code> the third device in `/sys/bus/iio` should show up.
-
 === RGB Led ===
 
-The RGB led works with the led driver in linux, due to hardware bugs there can be only one led active at the same time and the blue led doesn't work because some pins are reversed.
+The RGB led works with the led driver, but due to hardware bugs there can be only one led active at the same time and the blue led doesn't work because some pins are reversed.
+<source lang="shell-session">
+# Activate LED
+echo 1 > /sys/class/leds/$COLOR/brightness
+# Deactivate LED
+echo 0 > /sys/class/leds/$COLOR/brightness
+</source>
 
 === Audio ===
 
 ==== Speakers ====
-The A64 SoC audio should work on mainline with the <code>CONFIG_SUN50I_CODEC_ANALOG</code> option enabled. Sound output should work after unmuting <code>AIF1 Slot 0 digital</code>
+
+Sound output should work after unmuting <code>AIF1 Slot 0 digital</code>
 
 ==== Mic ====
 
