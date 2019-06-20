@@ -62,7 +62,7 @@ Flashing to device memory should be possible using [https://github.com/postmarke
 
   $ pmbootstrap init
   $ pmbootstrap build device-samsung-i9000
-  $ pmbootstrap install --no-fde
+  $ pmbootstrap install --no-fde --sdcard=/dev/mmcblk
 
 -- Set phone to ODIN mode
 
