@@ -214,3 +214,4 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 * {{MR|195|pmaports}} initial MR with mainline kernel
 * {{MR|193|pmaports}} initial MR with downstream kernel (was dropped in favor of mainline kernel)
 * {{MR|238|pmaports}} various improvements (bluetooth, audio, xorg config, armv7, etc)
+* [https://gitlab.com/postmarketOS/postmarketos.org/merge_requests/78#note_184299610 Photos running Mate on 5.1.12 kernel, also lying next to the N900]
