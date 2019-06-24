@@ -83,7 +83,7 @@ For other devices the configuration might need to be adapted. On the Samsung Gal
 
 == Mainline ==
 
-=== Troubleshooting audio input
+=== Troubleshooting audio input ===
 
 A nice way to troubleshoot audio input is to run arecord in a terminal to get realtime audio levels of the default alsa input:
 
