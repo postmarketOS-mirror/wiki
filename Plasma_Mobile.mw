@@ -4,7 +4,7 @@
 | name = Plasma Mobile
 | image = File:Plasma-mobile-hammerhead.jpg
 | imagecaption = Plasma Mobile running on LG Nexus 5 (hammerhead)
-| graphics = KWin on Wayland or Xorg
+| graphics = KWin on Wayland
 | toolkit = Qt 5
 }}
 
