@@ -9,7 +9,7 @@
 | chipset = Marvell PXA986
 | cpu = Dual-core 1.2 GHz Cortex-A9
 | gpu = Vivante GC1000
-| storage = 8GB
+| storage = 16GB
 | display = 1024×600 TFT
 | memory = 1GB
 | architecture = armhf
