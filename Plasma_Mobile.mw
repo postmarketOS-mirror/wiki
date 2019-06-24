@@ -14,6 +14,9 @@ A mobile variant of the KDE Plasma [[User-Interfaces|user interface]], optimized
 {{note|Plasma Mobile is known to have problem with Android's framebuffer drivers (e.g. {{issue|1647}}). Works best with mainlined devices.}}
 It works on most devices with a working display, both with hardware acceleration and software rendering. There is however an issue making it unable to run on armhf devices without hardware acceleration.
 
+
+Do note that this interface is unbearably slow without hardware acceleration and isn't recommended at all without it.
+
 == Installation ==
 Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. If you already have postmarketOS installed, you can install Plasma Mobile by running <code># apk add postmarketos-ui-plasma-mobile</code>. Make sure you uninstall any other UI before you do this.
 
