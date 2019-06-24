@@ -23,7 +23,7 @@
 | status_mainline = 
 | status_battery =
 | status_3d = 
-| status_accel = 
+| status_accel = Y
 | status_audio = 
 | status_bluetooth =
 | status_camera = Y
