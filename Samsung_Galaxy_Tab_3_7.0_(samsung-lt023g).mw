@@ -100,3 +100,4 @@ The GPU is Vivante GC1000 which has open source drivers but we can't get it work
 * [https://github.com/kumajaya/android_kernel_samsung_lt02 Kernel source]
 * [https://forum.xda-developers.com/showthread.php?t=2503063 Unofficial TWRP]
 * {{github|1484}} Add support for the Samsung Galaxy Tab 3 7.0 (lt023g)
+* [https://github.com/etnaviv Vivante Open source drivers]
