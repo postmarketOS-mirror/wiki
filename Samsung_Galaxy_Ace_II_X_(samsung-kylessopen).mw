@@ -69,7 +69,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 | {{issue|278|pmaports}}
 | 
-| 
+| [[The_Mainline_Kernel]]
 | Device isn't mainlined.
 |-
 | {{issue|242|pmaports}}
@@ -79,12 +79,12 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 | {{issue|248|pmaports}}
 | 
-| 
+| [[WiFi]]
 | No Wlan internet connection.
 |-
 | {{issue|249|pmaports}}
 | 
-| 
+| [[Audio]]
 | Audio doesn't work.
 |-
 | {{issue|279|pmaports}}
@@ -94,12 +94,12 @@ Here is a list of tasks that are currently being worked on for this device, from
 |-
 | {{issue|250|pmaports}}
 | 
-| 
+| Framebuffer[https://en.wikipedia.org/wiki/Framebuffer]
 | osk-sdl and charging-sdl don't work.
 |-
 | {{issue|281|pmaports}}
 | 
-| 
+| Bluetooth[https://en.wikipedia.org/wiki/Bluetooth]
 | Bluetooth doesn't work.
 |-
 | {{issue|280|pmaports}}
