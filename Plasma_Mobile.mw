@@ -17,7 +17,7 @@ It works on most devices with a working display, both with hardware acceleration
 == Installation ==
 Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section.
 
-After installation, the shell will automatically launch upon boot. If it doesn't, have a look at <code>/etc/profile.d/start_plasma.sh</code> and <code>/usr/bin/plasma-phone</code>.
+After installation, the shell will automatically launch upon boot using LightDM. If it doesn't, have a look at <code>$ logread | grep plasma-mobile</code> and <code>/usr/bin/plasma-phone</code>.
 
 For the official KDE instructions on running Plasma Mobile, see [https://community.kde.org/Plasma/Mobile/RunningApps their website].
 
