@@ -81,6 +81,42 @@ In <code>opensgn/data/n8000/etc/rc.local</code> there are the commands to use th
 
 For other devices the configuration might need to be adapted. On the Samsung Galaxy Note 8.0 for example, the audio device is named "Kona_WM1811". Replacing all occurrences in file names and file contents of <code>Midas</code> by <code>Kona</code> worked.
 
+== Mainline ==
+
+=== Troubleshooting audio input
+
+A nice way to troubleshoot audio input is to run arecord in a terminal to get realtime audio levels of the default alsa input:
+
+<source lang="shell">
+$ arecord -vv --format=dat /dev/null
+Recording WAVE '/dev/null' : Signed 16 bit Little Endian, Rate 48000 Hz, Stereo
+ALSA <-> PulseAudio PCM I/O Plugin
+Its setup is:
+  stream       : CAPTURE
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 24000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : GETTIMEOFDAY
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 24000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 6755399441055744000
+#+                                                 | 00%
+
+</source>
+
 == See also ==
 * {{github|1328}} Audio added to samsung-p4wifi with udev rules for redirecting audio to headphones when plugging them in
 * [https://arunraghavan.net/2016/01/audio-devices-and-configuration/  How to convert Android Audio configurations to alsa/pulseaudio]
