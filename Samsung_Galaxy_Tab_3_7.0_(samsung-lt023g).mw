@@ -94,7 +94,7 @@ sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -
 </pre>
 
 == About GPU ==
-This will be filled
+The GPU is Vivante GC1000 which has open source drivers but we can't get it work yet. The reverse engineered driver is called etnaviv and the compiling process is a little bit complex. If anyone figures it out dont forget to tag @hpagseddy at postmarketos matrix server.
 
 == Links ==
 * [https://github.com/kumajaya/android_kernel_samsung_lt02 Kernel source]
