@@ -2,7 +2,6 @@
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
-$ pmbootstrap config device qemu-amd64
 $ pmbootstrap install --no-fde
 $ pmbootstrap qemu --image-size=2G
 </syntaxhighlight>
