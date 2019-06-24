@@ -15,7 +15,7 @@ A mobile variant of the KDE Plasma [[User-Interfaces|user interface]], optimized
 It works on most devices with a working display, both with hardware acceleration and software rendering. There is however an issue making it unable to run on armhf devices without hardware acceleration.
 
 == Installation ==
-Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section.
+Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. If you already have postmarketOS installed, you can install Plasma Mobile by running <code># apk add postmarketos-ui-plasma-mobile</code>. Make sure you uninstall any other UI before you do this.
 
 After installation, the shell will automatically launch upon boot using LightDM. If it doesn't, have a look at <code>$ logread | grep plasma-mobile</code> and <code>/usr/bin/plasma-phone</code>.
 
