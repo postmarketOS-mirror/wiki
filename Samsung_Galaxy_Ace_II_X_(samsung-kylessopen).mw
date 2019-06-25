@@ -118,25 +118,25 @@ Here is a list of tasks that are currently being worked on for this device, from
 ! Info
 |-
 | Battery
-| 
+| Y
 | 
 | 
 | Model No: EB425161LU, 3.8v, Li-ion 5.70Wh, 1500mAh
 |-
 | Touch Screen
-| 
+| Y
 | 
 | 
 | Capacitive
 |-
 | Front Speaker
-| 
+| N
 | 
 | 
 | 
 |-
 | Display
-| 
+| Y
 | 
 | 
 | 
@@ -148,18 +148,18 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 |-
 | Microphone
-| 
+| N
 | 
 | 
 | 
 |-
 | MicroUSB Port
-| 
+| Y
 | 
 | 
 | 
 |-
-| JTag Port
+| JTag Port[https://en.wikipedia.org/wiki/JTAG]
 | 
 | 
 | 
@@ -178,13 +178,13 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 |-
 | Back Speaker
-| 
+| N
 | 
 | 
 | 
 |-
 | AUX Port
-| 
+| N
 | 
 | 
 | 
@@ -220,7 +220,7 @@ Here is a list of tasks that are currently being worked on for this device, from
 | Likely WiFi but no confirmation in sight. 600SG-CF18 \n PPCRII_OOIC \n 1217 TM
 |-
 | White mystery chunk
-| 
+| N
 | 
 | 
 | DMSP1115ASM-40, A3425B2, Contains rear speaker & AUX
@@ -231,8 +231,8 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | Looks like a Qualcomm chip according to DDG, could be Bluetooth
 |-
-| eMMC
-| 
+| eMMC[https://en.wikipedia.org/wiki/MultiMediaCard]
+| Y
 | 
 | 
 | Samsung KMJJS000WA-B409, 4GB rw, 768MB RAM  
@@ -249,23 +249,23 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | Qualcomm PM8029
 |-
-| SoC
+| SoC[https://en.wikipedia.org/wiki/System_on_a_chip]
 | 
 | 
 | 
-| Qualcomm Snapdragon S1 MSM7227A
+| Qualcomm Snapdragon[https://en.wikipedia.org/wiki/Qualcomm_Snapdragon] S1 MSM7227A
 |-
 | CPU
+| Y
 | 
 | 
-| 
-| (integrated into SoC) single-core ARM Cortex-A5 1GHz
+| (integrated into SoC) single-core ARM Cortex-A5[https://en.wikipedia.org/wiki/ARM_Cortex-A5] 1GHz
 |-
 | GPU
+| Y
 | 
 | 
-| 
-| (integrated into SoC) singe-core Qualcomm Adreno 200 245MHz WVGA 
+| (integrated into SoC) singe-core Qualcomm Adreno[https://en.wikipedia.org/wiki/Adreno] 200 245MHz WVGA 
 |-
 | Modem
 | 
@@ -273,19 +273,21 @@ Here is a list of tasks that are currently being worked on for this device, from
 | 
 | (integrated into SoC) UMTS/MBMS/GSM, Multimedia Broadcast Multicast Service baseband support
 |-
-| DSP
+| DSP[https://en.wikipedia.org/wiki/Digital_signal_processor]
 | 
 | 
 | 
-| (integrated into SoC) 350MHz Qualcomm Hexagon QDSP5 DSP
+| (integrated into SoC) 350MHz Qualcomm Hexagon QDSP5[https://en.wikipedia.org/wiki/Qualcomm_Hexagon] DSP
 |-
 | GPS
 | 
 | 
 | 
-| (integrated into SoC) gpsOne Gen 7 GPS module
+| (integrated into SoC) gpsOne[https://en.wikipedia.org/wiki/GpsOne] Gen 7 GPS module
 |-
 |}
 
 Bluetooth is likely an external chip: "Bluetooth 4.0 (external WCN2243); 802.11b/g/n (external AR6003/5, WCN1314)"
-WiFi is likely as well, but camera support seems to be integrated.
+WiFi is likely as well, but camera support is integrated. 
+
+According to some websites this device may also have an FM radio, an accelerometer, a proximity sensor and a compass. I haven't found or discovered those peripherals myself but I know the device has a vibrator which most websites fail to mention. It's not on the list because I haven't physically found it yet.
