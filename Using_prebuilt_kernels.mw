@@ -47,7 +47,7 @@ Linux kernels can load other kernels via the [https://en.wikipedia.org/wiki/Kexe
 
 More research showed, that the <code>kexec</code> syscall is usually disabled in such kernels. However, it could be possible to do <code>kexec</code> without it being enabled in the kernel (such as it has been done in the PS4 hack, where a kexec gets done on the PS4's BSD kernel, which does obviously not support this feature, to load a Linux kernel). This is ''a lot'' of work, but it would be an impressive hack!
 
-kexec is also used by [https://forum.xda-developers.com/showthread.php?t=2011403 MultiROM] in order to allow users to choose which ROM to boot up. For MultiROM support in pmbootstrap, see [https://github.com/postmarketOS/pmbootstrap/issues/421 issue #421].
+kexec is also used by [https://forum.xda-developers.com/showthread.php?t=2011403 MultiROM] in order to allow users to choose which ROM to boot up. For MultiROM support in pmbootstrap, see [https://gitlab.com/postmarketOS/pmbootstrap/issues/421 issue #421].
 
 == Useful links ==
 
