@@ -13,8 +13,4 @@
 
 <code>linux-{vendor}-{device code name/model number}</code>
 
-=== firmware-* packages ===
-
-<code>firmware-{vendor}-{device code name/model number}</code>
-
 [[Category:Technical Reference]]
