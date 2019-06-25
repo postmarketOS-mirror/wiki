@@ -1,4 +1,4 @@
-Some vendors do not release the kernel source code, which is very bad for freedom and goes against the Linux kernel license (see [https://wiki.postmarketos.org/wiki/Troubleshooting#My_device_runs_the_Linux_kernel_.28e.g._Android.29.2C_but_the_vendor_does_not_provide_the_source My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source] in the Troubleshooting page.
+Some vendors do not release the kernel source code, which is very bad for freedom and goes against the Linux kernel license (see [https://wiki.postmarketos.org/wiki/Troubleshooting#My_device_runs_the_Linux_kernel_.28e.g._Android.29.2C_but_the_vendor_does_not_provide_the_source My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source] in the Troubleshooting page).
 
 But you can still extract the kernel image from a device that is running Android and use it to run postmarketOS. Of course this is ''totally discouraged'' because we want to make sure that we know the code our devices are running but you might find it useful in order to start hacking on postmarketOS without having the kernel source code.
 
