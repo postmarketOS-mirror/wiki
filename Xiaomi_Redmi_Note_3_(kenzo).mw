@@ -84,10 +84,7 @@ And connect to your prefered wifi network using the terminal UI.
 
 == See also ==
 * {{MR|461|pmaports}} Initial merge request
-<!--
-If you manage to get your device packages merged, uncomment links below.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-xiaomi-kenzo Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-xiaomi-kenzo Kernel package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-xiaomi-kenzo Firmware package]
 * [https://gitlab.com/IdanHoro/vendor_xiaomi_kenzo/tree/master Proprietary vendor blobs]
--->
