@@ -31,7 +31,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| status = Kernel compiles, graphic output does not work 
+| status = Kernel compiles, but it doesn't boot 
 | booting = no
 }}
 
@@ -53,7 +53,7 @@ None
 == What does not work ==
 
 * After trying to boot, the device is stuck at the Honor branding/fastboot screen
-** When using fastboot mode, fastboot isn't able to connect to the device after it booted, so something must be happening. It may be that graphics are not working.
+** When using fastboot mode, fastboot isn't able to connect to the device after it booted. This might possibly indicate that something is happening and graphics are not working, but it probably means that it doesn't boot at all.
 
 * ???
 
