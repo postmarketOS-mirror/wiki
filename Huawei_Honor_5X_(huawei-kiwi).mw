@@ -59,7 +59,15 @@ None
 
 == How to enter flash mode ==
 
-Hold volume down plus power at the same time. If your device is unlocked already, it will show "device unlocked" at the bottom. To unlock the bootloader (which also deletes all data on your device!), please refer to [https://wiki.lineageos.org/devices/kiwi/install#unlocking-the-bootloader this section on the LineageOS installation guide].
+Hold volume down plus power at the same time.
+
+===Unlocking the bootloader===
+
+If you forgot whether your device is unlocked already, check whether it displays "device unlocked" at the bottom in flash mode.
+
+'''Huawei stopped distributing unlock codes.''' Tutorials telling you to go to some Huawei website, log in with a Huawei ID and sign the unlocking agreement to get a code will no longer work.
+
+Some services claim to be able to unlock this device, but they charge money for it (e. g. DC-Unlocker charges 4€). Be careful and try to do research before giving any of these services your money.
 
 == Installation ==
 
