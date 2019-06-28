@@ -167,6 +167,9 @@ These are applications which already exist for Linux and could be reused in post
 |GPL2
 |Touchscreen file manager for Plasma Mobile
 |-
+|[https://github.com/Philip-Scott/Spice-up Spice-up]
+|GPL3
+|Simple presentation program made for Elementary OS. Already very touchscreen friendly.
 |}
 
 === Apps that only work with proprietary services ===
