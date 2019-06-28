@@ -1,0 +1,43 @@
+{{Infobox device
+| manufacturer = Kobo
+| name =  Clara HD
+| codename = kobo-clarahd
+| image = 
+| imagecaption = 
+| releaseyear = 2018
+| originalsoftware = Kobo Firmware
+| chipset = 
+| cpu = 1x 1 GHz A9 Freescale i.MX6 SoloLite
+| gpu = Vivante GC320 2D
+| storage = Internal 8GB SD slot
+| display = 1448x1072 6 inch e-paper
+| memory = 512MB
+| architecture = armv7
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Haven't received device yet
+| booting = no
+}}
+
+== Contributors ==
+* MartijnBraam
+
+== See also ==
+* u-boot and kernel source: https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx6sll-clara
+* blog with interesting info: http://yingtongli.me/blog/tag/clara-hd/
