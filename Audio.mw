@@ -60,6 +60,8 @@ You should check dmesg and /var/log/firmwareload.log to make sure there aren't f
 
 If it goes fine, you should see a bunch of playback devices by typing <code>aplay -l</code>
 
+You also want to install <code>adsp-audio</code> from pmOS repo to load the subsystem on automatically on bootup.
+
 === Convert XML audio to UCM ===
 {{note|This section is incomplete. It requires a reference to more complete documentation of the device config XML format.}}
 
