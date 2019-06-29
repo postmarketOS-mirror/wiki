@@ -15,7 +15,7 @@
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = N
+| status_flashing = P
 | status_touch = Y
 | status_screen = Y
 | status_wifi = 
@@ -60,12 +60,22 @@ Is OTG available, not used in wiki
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
+== Board ==
+Wiko U Feel is based on Tinno p6601 board (like BLU R1 HD, Lanix Ilium L910, QMobile Noir A6, Evertek EverSolo, Smart Art P6601).
+
 == How to enter flash mode ==
-Fastboot is broken. It gives Unknown Chunk type, but it is possible to install pmOS with TWRP. Refer to [[Android_Recovery_Zip_Installation]] for installing. There is also a proprietary program called SP Flash Tool, used to flash mediatek phones, but it is untested.
+Fastboot is broken. It gives Unknown Chunk type, but it is possible to install pmOS with TWRP. Refer to [[Android_Recovery_Zip_Installation]] for installing. 
+
+Flashing with proprietary program SP Flash Tool also work fine. Tested with flashed emmc boot partition and system partition stored on external sdcard.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
+
+== Links ==
+* [https://www.gsmarena.com/wiko_ufeel-9030.php Full phone specifications]
+* [http://www.wikogeek.com/index.php?telephone=U+FEEL Official Kernel source]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
