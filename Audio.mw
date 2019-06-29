@@ -93,7 +93,7 @@ Example:
 
 === libhybris ===
 {{note|Might not work on some devices, which in this case providing logs to the maintainer is required, and debugging is also needed too.}}
-Alexey Min (minlexx) is currently packaging [pulseaudio-modules-droid https://gitlab.com/postmarketOS/pmaports/merge_requests/448] to the repository.
+Alexey Min (minlexx) is currently packaging [https://gitlab.com/postmarketOS/pmaports/merge_requests/448 pulseaudio-modules-droid] to the repository.
 
 Build and install pulseaudio-modules-droid package first, then add this to <code>/etc/pulse/default.pa</code> before the line that loads module-alsa-sink:
 <pre>
