@@ -26,7 +26,41 @@ In userspace the [https://android.googlesource.com/platform/frameworks/base/+/ki
 
 Udev rules can be used to detect if headphones are plugged in, example for this is from [https://gitlab.com/postmarketOS/pmaports/blob/195114e48e0997d060036feef4965cd0e3c07ccc/device/device-xiaomi-santoni/90-device-xiaomi-santoni-audio.rules xiaomi-santoni]
 
-== Converting Android configurations using xml2ucm ==
+== Getting Audio to work on non-Android userspace ==
+
+=== Bring up Android DSP subsystem ===
+{{note|This is most likely for downstream kernels, if you're using a mainline kernel, this is pointless.}}
+{{note|This was only tested on Qualcomm MSM8937, this might also work on other chipset too, but this is untested.}}
+ADSP needs to be powered on before audio could work on downstream kernels. To do that, you'll have to supply firmware files that is available on your internal MMC.
+
+On a shell prompt inside postmarketOS, type <code>fdisk -l /dev/mmcblk0</code> (replace mmcblk0 with the correct device name for internal MMC). At this point you should get a familiar partition layout of a Android device.
+
+Now, the only thing that is important is the partition with <code>modem</code> label on it, which on my device it's mmcblk0p1. Mount the partition as read-only to /mnt using:
+
+<pre>
+# mount -o ro /dev/mmcblk0p1 /mnt
+</pre>
+
+Inside /mnt, there is a folder named <code>image</code> which has a bunch of firmware files for different parts of the device, like wcnss (for wlan), DRM contents and so on, the only thing that needs to be extracted is all the files that named <code>adsp.*</code>:
+
+<pre>
+// Create /lib/firmware/postmarketos if it doesn't exist
+# mkdir -p /lib/firmware/postmarketos
+
+// Copy all adsp.* to the postmarketOS firmware directory
+# cp -v /mnt/image/adsp.* /lib/firmware/postmarketos
+</pre>
+
+After that, you should be able to bring up the ADSP subsystem by running:
+<pre>
+# echo 1 > /dev/subsys_adsp
+</pre>
+
+You should check dmesg and /var/log/firmwareload.log to make sure there aren't firmwares failing to load.
+
+If it goes fine, you should see a bunch of playback devices by typing <code>aplay -l</code>
+
+=== Convert XML audio to UCM ===
 {{note|This section is incomplete. It requires a reference to more complete documentation of the device config XML format.}}
 
 The audio routes in Linux userspace can be defined in ALSA UCM configuration files. There is a tool called [https://github.com/ford-prefect/xml2ucm xml2ucm] which will convert the Android <code>mixer_paths.xml</code> and a device config XML to UCM files. The <code>xml2ucm</code> tool introduces the device config XML which provides necessary routing information that was hardcoded in the audio HAL on Android.
@@ -54,6 +88,23 @@ sysdefault:CARD=wm8994aif1
 Once the <code>mixer_path.xml</code> and device config XML are converted to UCM format then an audio route can be set by using <code>alsaucm</code>.
 Example:
 <source lang="shell>$ alsaucm -c wm8994aif1 set _verb HiFi set _enadev Headphones</source>
+
+=== libhybris ===
+{{note|Might not work on some devices, which in this case providing logs to the maintainer is required, and debugging is also needed too.}}
+Alexey Min (minlexx) is currently packaging [pulseaudio-modules-droid https://gitlab.com/postmarketOS/pmaports/merge_requests/448] to the repository.
+
+Build and install pulseaudio-modules-droid package first, then add this to <code>/etc/pulse/default.pa</code> before the line that loads module-alsa-sink:
+<pre>
+load-module module-droid-card
+load-module module-droid-sink
+load-module module-droid-source
+</pre>
+
+Start pulseaudio in verbose mode to make sure you can get to see if the module loads successfully. If it does then you should be able to play sound files using <code>paplay</code> from pulseaudio-utils package.
+
+If you hear sounds coming from it, it works perfectly fine, if not, check dmesg, pulseaudio log and logcat.
+
+You might also want to install alsa-plugins-pulse for ALSA backend on PulseAudio.
 
 == alsactl method ==
 Cascardo reported having success with the following method on Debian, this should work for postmarketOS as well:
