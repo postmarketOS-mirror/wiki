@@ -93,7 +93,7 @@ Example:
 
 === libhybris ===
 {{note|Might not work on some devices, which in this case providing logs to the maintainer is required, and debugging is also needed too.}}
-Alexey Min (minlexx) is currently packaging [https://gitlab.com/postmarketOS/pmaports/merge_requests/448 pulseaudio-modules-droid] to the repository.
+[[User:Alexeymin|Alexey Min]] is currently packaging [https://gitlab.com/postmarketOS/pmaports/merge_requests/448 pulseaudio-modules-droid] to the repository.
 
 Build and install pulseaudio-modules-droid package first, then add this to <code>/etc/pulse/default.pa</code> before the line that loads module-alsa-sink:
 <pre>
@@ -102,9 +102,9 @@ load-module module-droid-sink
 load-module module-droid-source
 </pre>
 
-Start pulseaudio in verbose mode to make sure you can get to see if the module loads successfully. If it does then you should be able to play sound files using <code>paplay</code> from pulseaudio-utils package.
+Start pulseaudio in verbose mode (<code>/usr/bin/pulseaudio --log-target=stderr --log-level=debug -v</code>) to make sure you can get to see if the module loads successfully. If it does then you should be able to play sound files using <code>paplay</code> from pulseaudio-utils package.
 
-If you hear sounds coming from it, it works perfectly fine, if not, check dmesg, pulseaudio log and logcat.
+If you hear sounds coming from it, it works perfectly fine. If not, check dmesg, pulseaudio log and logcat.
 
 You might also want to install alsa-plugins-pulse for ALSA backend on PulseAudio.
 
