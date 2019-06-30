@@ -112,8 +112,9 @@ This should always be set since pmbootstrap creates an ext4 rootfs.
 '''Location in menu'''
 
 <pre class="shell">
-File systems -->
-  The Extended 4 (ext4) filesystem
+Device Drivers -->
+  Generic Driver Options -->
+    Support for uevent helper
 </pre>
 
 '''pmOS specific'''
