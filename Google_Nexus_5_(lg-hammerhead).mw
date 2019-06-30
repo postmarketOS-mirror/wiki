@@ -1,3 +1,8 @@
+<!-- NOTE at the top. For some reason, the {{note}} template does not work with links inside? -->
+<div role="note" class="note" style="padding: 5px 15px; color: #705000; border: 1px solid #fde29b; background-color: #fdf1d1; margin-top: 5px; margin-bottom: 15px;">
+After upgrades in mesa, ofono, kernel we have had several regressions and not all of them are fixed. It would be great if you could help out.<br>
+'''In any case, take a look at the [https://gitlab.com/postmarketOS/pmaports/issues?scope=all&utf8=%E2%9C%93&state=opened&search=hammerhead open hammerhead issues] before starting an installation!'''
+</div>
 {{Infobox device
 | name = Nexus 5
 | manufacturer = LG
