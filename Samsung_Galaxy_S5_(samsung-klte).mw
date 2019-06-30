@@ -156,7 +156,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 
 {| class="wikitable"
 |-
- ! Component !! Codename !! Mainline kernel !! Since when !! Downstream kernel
+ ! Component !! Codename !! Mainline kernel !! Since when !! Downstream 3.4 kernel
 |-
 | Debug serial || /dev/ttyMSM0 || Working || v4.17-rc1 || yes, /dev/ttyHSL0
 |-
@@ -168,7 +168,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | SD card storage || sdhci2 || Not working || || yes
 |-
-| USB Networking ||  || Not working || || yes
+| USB Networking ||  || Working || || yes
 |-
 | Display ||  || Not working || || yes
 |-
@@ -184,9 +184,11 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | GPU ||  || Not working || || with libhybris
 |-
-| Audio ||  || Not working || || no
+| Audio ||  || Not working || || with libhybris
 |-
 | Modem ||  || Not working || || no
+|-
+| Sensors ||  || Not working || || yes
 |}
 
 == Links ==
