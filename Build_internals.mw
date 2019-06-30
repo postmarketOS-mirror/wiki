@@ -51,4 +51,9 @@ For example: device packages are always <code>noarch</code>, so in theory you co
 
 So to simplify it, it is handled like in Alpine now; noarch packages just get built for each arch independently.
 
+=== pmbootstrap specific APKBUILD options ===
+For various reasons, we have added support for the following pmbootstrap specific values in APKBUILD [https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#options options].
+* <code>!pmb:kconfigcheck</code>: for linux-* packages only. When set, the given linux package does not fail "pmbootstrap kconfig check" ({{MR|1753}}).
+* <code>pmb:strict</code>: always build the package in strict mode, even if --strict is not passed to "pmbootstrap build" ({{MR|1771}}).
+
 [[Category:Technical Reference]]
