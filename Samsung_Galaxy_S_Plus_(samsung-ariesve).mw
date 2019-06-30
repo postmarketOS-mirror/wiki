@@ -66,6 +66,10 @@ Flashing using `heimdall` didn't work.
 I flashed the device using TWRP as explained [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Installation here]
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
+== What does not work ==
+This phone suffers from similar issues to [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_Mini_2_(samsung-s6500d) Samsung_Galaxy_Mini_2] like the touchscreen not working
+and reboots every 2 minutes
+
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
