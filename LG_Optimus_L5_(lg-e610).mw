@@ -67,6 +67,17 @@ From off state, press and hold Volume UP + Power + Home, then release Power and 
 
 The phone will stay on the LG logo and show a black log screen once you connect the USB cable.
 
+== Internal memory Installation ==
+Both commands
+  $ pmbootstrap flasher flash_rootfs
+  $ pmbootstrap flasher flash_rootfs --partition userdata
+Fail with:
+  [12:50:20] (native) flash rootfs image
+  target didn't report max-download-size
+  Sending 'userdata' (464896 KB)...
+  FAILED (remote: data too large)
+
+SD card installation is recommended
 
 == SD card Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
