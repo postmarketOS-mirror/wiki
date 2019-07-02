@@ -68,7 +68,7 @@ From off state, press and hold Volume UP + Power + Home, then release Power and 
 The phone will stay on the LG logo and show a black log screen once you connect the USB cable.
 
 == Internal memory Installation ==
-Both commands
+Flashing via fastboot does not work, both commands
   $ pmbootstrap flasher flash_rootfs
   $ pmbootstrap flasher flash_rootfs --partition userdata
 Fail with:
@@ -77,7 +77,7 @@ Fail with:
   Sending 'userdata' (464896 KB)...
   FAILED (remote: data too large)
 
-SD card installation is recommended
+You can flash by [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Installation recovery zip] or SD card.
 
 == SD card Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
