@@ -29,7 +29,7 @@ We are also open to a new format of blog posts, writing shorter ones about speci
 
 === Hacking ===
 * Make sure you did not overlook the [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted] link above
-* [[Installation_guide|Install postmarketOS]] to a real device or boot it with [[Qemu]]
+* [[Installation_guide|Install postmarketOS]] to a real device or boot it with [[QEMU]]
 * [[Porting_guide|Port]] and [[Mainlining_Guide|mainline]] devices you own
 * Start [[:Category:Dogfooding|dogfooding]] and improve postmarketOS for your real life use case
 * Improve the [https://gitlab.com/postmarketOS/pmaports/ packages] we already have (How about your favorite [[Interfaces|UI]]?)
