@@ -56,8 +56,9 @@
 * Flashing (system partition too small)
 
 == What is broken ==
-* Boot (for completely unknown reasons it refuses to boot)
+* Boot (boot isn't broken if you prefer to use your phone w/o a UI ;)
 * Display (Weston ARGB fix got deprecated so the screen is again red. The MDP_RGB_888 patch does nothing, but the ARGB fix patch + ARGB picked in config produces wrong colors. Hmm...)
+* ARMv7 (I didn't bother maintaining the device)
 
 == What is untested/probably won't work ==
 * Camera (blobs)
