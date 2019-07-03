@@ -5,9 +5,9 @@ It is important for us to contribute the patches and improvements we made to var
 * <code>2019-03-06</code> abuild: [https://github.com/alpinelinux/abuild/pull/49 abuild-tar.static: fix undefined reference errors]
 * <code>2019-02-06</code> Alpine: [https://gitlab.com/postmarketOS/pmaports/merge_requests/198 qt5-qtvirtualkeyboard, qt5-qtwayland, qt5-qtspeech]
 * <code>2018-12-20</code> Weston: [https://gitlab.freedesktop.org/wayland/weston/merge_requests/61 compositor-fbdev: add support for ABGR]
-* <code>2018-12-31</code> Alpine: [https://github.com/alpinelinux/aports/pull/5951 enable virglrenderer in Qemu aport] (-> now we were able to remove our temp/qemu fork!)
+* <code>2018-12-31</code> Alpine: [https://github.com/alpinelinux/aports/pull/5951 enable virglrenderer in QEMU aport] (-> now we were able to remove our temp/qemu fork!)
 * <code>2018-09-20</code> Alpine: [https://github.com/alpinelinux/aports/pull/5208 Add armv7 next to armhf in the arch line]
-* <code>2018-07-04</code> Qemu: [https://lists.nongnu.org/archive/html/qemu-devel/2018-07/msg01279.html module: Use QEMU_MODULE_DIR as a search path]
+* <code>2018-07-04</code> QEMU: [https://lists.nongnu.org/archive/html/qemu-devel/2018-07/msg01279.html module: Use QEMU_MODULE_DIR as a search path]
 * <code>2018-03-31</code> abuild: [https://github.com/alpinelinux/abuild/pull/34 properly check arguments and improve usage()]
 * <code>2018-01-06</code> Alpine: [https://lists.alpinelinux.org/alpine-devel/6005.html split linux-firmware into subpackages]
 * <code>2017-09-22</code> Alpine: [https://github.com/alpinelinux/aports/pull/2348 clutter: add libxi-dev makedepend]
