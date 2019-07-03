@@ -1,6 +1,6 @@
 {{Infobox device
-| manufacturer =Qemu
-| name =  vexpress
+| manufacturer = QEMU
+| name = vexpress
 | codename = qemu-vexpress
 | architecture = armhf
 | n-android = ✔
@@ -25,7 +25,7 @@
 | booting = yes
 }}
 
-{{note|CPU emulation is slow! Consider using [[Qemu-amd64-(QEMU-for-x86_64)|qemu-amd64]] instead if <code>x86_64</code> is your native architecture.}}
+{{note|CPU emulation is slow! Consider using [[QEMU_amd64_(qemu-amd64)|qemu-amd64]] instead if <code>x86_64</code> is your native architecture.}}
 
 === Contributors ===
 * MartijnBraam
@@ -48,7 +48,7 @@ Using the <code>--display=gtk</code> parameter is recommended. The default displ
 
 === What does not work ===
 * '''Keyboard and mouse'''
-* Qemu 2.0.0 is too old (but it's known to be working with 2.6.50)[https://github.com/postmarketOS/pmbootstrap/pull/1029#issuecomment-353819587]
+* QEMU 2.0.0 is too old (but it's known to be working with 2.6.50)[https://github.com/postmarketOS/pmbootstrap/pull/1029#issuecomment-353819587]
 
 === Notes ===
 * It boots only if you specify a separate <code>-dtb</code> flag, it doesn't use the dtb attached to the kernel (but pmbootstrap calls it right).
@@ -63,4 +63,4 @@ Using the <code>--display=gtk</code> parameter is recommended. The default displ
 [[File:Qemu weston.png|500 px]]
 
 === See also ===
-* [[common Qemu notes]]
+* [[QEMU]]
