@@ -89,6 +89,10 @@ On a functional devkit with a pmos SD card inserted you should get the standard 
 | Quectel EC25-E
 | USB_NET_QMI_WWAN
 |-
+| GNSS/GPS
+| Quectel EC25-E
+| CONFIG_USB_SERIAL_OPTION
+|-
 | Magnetometer
 | ST LIS3MDL
 | IIO_ST_MAGN_3AXIS
