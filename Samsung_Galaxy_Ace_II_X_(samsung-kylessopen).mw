@@ -52,7 +52,7 @@ Select "samsung-kylessopen" as the target device and select a working recommende
 * [https://en.wikipedia.org/wiki/Plasma_Mobile#Plasma_Mobile][[Plasma Mobile]] - Not recommended
 
 === install ===
-<source lang="bash">$ pmbootstrap install --no-fde</source>
+<source lang="bash">$ pmbootstrap install</source>
 Full disk encryption currently doesn't work on this device, so it should be turned off for now. 
 
 === flash ===
