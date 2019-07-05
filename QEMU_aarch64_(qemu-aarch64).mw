@@ -34,7 +34,7 @@
 === Usage ===
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init  # Choose device "qemu-aarch64"
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap qemu --image-size=2G --display=gtk --arch=aarch64
 </syntaxhighlight>
 
