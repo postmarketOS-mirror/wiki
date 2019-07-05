@@ -58,7 +58,7 @@ Set phone to ODIN mode
   4. Push VOLUME_UP to continue to ODIN mode screen
 
 At this point you can follow the [[Installation guide | general installation guide]]. 
-Installation to the system is not yet supported for the device, so make sure to install postmarketOS to the sdcard. Also be sure to disable FDE (<code>--no-fde</code>) as osk-sdl is not yet supported for this device, and enabling it would require you to telnet into the device to unlock it.
+Installation to the system is not yet supported for the device, so make sure to install postmarketOS to the sdcard. Also be sure to not enable FDE as osk-sdl is not yet supported for this device, and enabling it would require you to telnet into the device to unlock it.
 
 == Wifi ==
 
