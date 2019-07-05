@@ -76,7 +76,7 @@ To repeat: '''DO NOT TRY TO INSTALL pmOS TO THE STOCK SLOT! IT COULD BRICK YOUR 
 
 <source lang="bash">
 $ pmbootstrap.py init
-$ pmbootstrap.py install --no-fde
+$ pmbootstrap.py install
 $ pmbootstrap.py export
 </source>
 
