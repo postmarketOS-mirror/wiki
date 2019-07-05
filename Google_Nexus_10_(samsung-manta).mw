@@ -53,7 +53,7 @@
 When installing, I found it easiest to sideload a ZIP via ClockworkMod Recovery.
 # Build a suitable postmarketOS recovery image:<source lang="shell">
 $ ./pmbootstrap.py init # samsung-manta
-$ ./pmbootstrap.py install --no-fde
+$ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_kernel
 $ ./pmbootstrap.py flasher flash_rootfs</source>
 The device will take roughly 60 seconds to boot to the Weston environment.
