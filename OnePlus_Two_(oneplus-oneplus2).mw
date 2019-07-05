@@ -67,7 +67,7 @@ From a power off state, hold the '''volume up''' and '''power''' buttons until t
 
 I ran into networking issues with default installation procedure ( install-> flash_rootfs -> flash_kernel)
 Get it working by installing recovery with TWRP:
- <pre>pmbootstrap install --no-fde --android-recovery-zip</pre> 
+ <pre>pmbootstrap install --android-recovery-zip</pre> 
 
 next copy zip file to device and install it using twrp 
 
