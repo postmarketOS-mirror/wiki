@@ -52,7 +52,7 @@
 
 <source lang="bash">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher flash_kernel
 </source>
