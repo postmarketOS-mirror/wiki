@@ -28,7 +28,7 @@ adb pull /sdcard/boot.img .</source>
 {{note|Generating an initramfs when your device is not ported yet: Pick a similar device in <code>pmbootstrap init</code> and [[Installation_guide#pmbootstrap_install|run install]].}}
 You can use <code>unpackbootimg</code> (usage is described in [[How_to_find_device_specific_information#Fastboot_.28boot.img.29_flash_offsets|here]]) to extract the kernel from your recently extracted boot.img or from a LineageOS release and run it together with postmarketOS initramfs.
 
-If you extracted the kernel from you Stock ROM, it might not have encryption support enabled and in this case you would not be able to boot from an encrypted partition which is how postmarketOS works by default. To disable encryption in postmarketOS use <code>pmbootstrap install --no-fde</code>. You might need other modules as well for pmOS to work properly.
+If you extracted the kernel from you Stock ROM, it might not have encryption support enabled and in this case you would not be able to boot from an encrypted partition. You might need other modules as well for pmOS to work properly.
 
 <source lang="bash"># fastboot boot <kernel> [ <ramdisk> ]
 fastboot boot \
