@@ -54,7 +54,7 @@ It is recommended to sideload an android recovery zip through TWRP for the easie
 You can use <code>pmbootstrap flasher flash_kernel</code> and then use netcat or similar to flash SYSTEM, but this is a longer and more redundant method.
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap install --no-fde --android-recovery-zip
+$ pmbootstrap install --android-recovery-zip
 $ pmbootstrap flasher --method=adb sideload
 </syntaxhighlight>
 
