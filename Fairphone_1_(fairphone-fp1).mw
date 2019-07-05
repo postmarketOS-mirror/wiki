@@ -41,7 +41,7 @@
 * Luca Weiss (z3ntu)
 
 == Installation (Android Recovery Zip) ==
-* <code>pmbootstrap install --android-recovery-zip --recovery-install-partition data --no-fde</code>
+* <code>pmbootstrap install --android-recovery-zip --recovery-install-partition data</code>
 * Flash the resulting zip using the latest CWM build from chrmhoffmann
 
 == Installation (only boot partition) ==
