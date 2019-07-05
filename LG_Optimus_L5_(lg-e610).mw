@@ -86,7 +86,7 @@ You can flash by [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Instal
 
   $ pmbootstrap init
   $ pmbootstrap build device-lg-e610
-  $ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0
+  $ pmbootstrap install --sdcard=/dev/mmcblk0
 
 - Put the phone in Fastboot mode and connect it to your computer
 
