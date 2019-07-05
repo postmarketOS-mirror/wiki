@@ -193,7 +193,7 @@ boot_img_lineage_os.img-zImage
 
 Build LineageOS : 
 <pre>
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </pre>
 
 Restart smartphone in fastboot mode : 
@@ -691,7 +691,7 @@ Rebuild all :
 $ pmbootstrap zap
 $ pmbootstrap checksum device-sony-taoshan
 $ pmbootstrap build device-sony-taoshan --force
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </pre>
 
 Check ''msm-fb-refresher'' presence in ramdisk :
@@ -921,7 +921,7 @@ $ pmbootstrap initfs hook_del debug-shell
 Rebuild rootfs and flash it :
 <pre>
 $ pmbootstrap build --force device-sony-taoshan
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher flash_kernel
 </pre>
@@ -1147,7 +1147,7 @@ $ pmbootstrap checksum device-sony-taoshan
 Rebuild all :
 <pre>
 $ pmbootstrap build device-sony-taoshan --force
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </pre>
 
 Check files presence in chroot :
