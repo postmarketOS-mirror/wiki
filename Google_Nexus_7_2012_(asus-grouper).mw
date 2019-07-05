@@ -48,7 +48,7 @@
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 $ cd pmbootstrap
 $ ./pmbootstrap.py init
-$ ./pmbootstrap.py install --no-fde
+$ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_kernel
 $ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
