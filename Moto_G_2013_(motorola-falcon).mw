@@ -50,7 +50,7 @@ Once you're in fastboot by holding down vol down and power, flashing it is as fo
 
 <source lang="bash">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher boot 
 </source>
