@@ -7,17 +7,17 @@ Most Android devices have a "recovery" partition, on which a second kernel and i
 * Install [https://twrp.me TWRP] (or another recovery system) on your phone
 
 == Create the recovery zip image ==
-Similar to a [[Installation_guide|regular installation]], but add <code>--android-recovery-zip</code> this time. If your device supports full disk encryption (see the FDE column in [[Devices]]), you can remove the <code>--no-fde</code> argument.
+Similar to a [[Installation_guide|regular installation]], but add <code>--android-recovery-zip</code> this time. If your device supports full disk encryption (see the FDE column in [[Devices]]), you can add the <code>--fde</code> argument.
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde --android-recovery-zip
+$ pmbootstrap install --android-recovery-zip
 </syntaxhighlight>
 
 By default, this will install to the <code>system</code> partition of your Android device. If you want to install to a different partition (e.g. because your <code>system</code> partition is too small), use the <code>--recovery-install-partition</code> parameter:
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap install --no-fde --android-recovery-zip --recovery-install-partition data
+$ pmbootstrap install --android-recovery-zip --recovery-install-partition data
 </syntaxhighlight>
 
 == Sideload ==
