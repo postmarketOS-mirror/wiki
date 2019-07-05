@@ -300,16 +300,14 @@ $ pmbootstrap build device-wiki-example
 To install to the system partition of an image file, run the following:
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </syntaxhighlight>
 
 If you want to install to a SD card, insert it '''into your PC''' and run the following. Replace mmcblk0 with the actual device name (<code>lsblk</code> is handy to find out the correct device name). You don't need to format or partition it beforehand, <code>pmbootstrap</code> will take care of that.
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0
+$ pmbootstrap install --sdcard=/dev/mmcblk0
 </syntaxhighlight>
-
-The <code>--no-fde</code> disables '''f'''ull '''d'''isk '''e'''ncryption. You can enable it once you have graphical output and touchscreen or physical keyboard working, so you can actually type in the password. Additional porting steps to get that working are described [[Osk-sdl#Porting_to_New_Devices|here]].
 
 === Flashing ===
 Before you can run any flash command, you must put your device in the flashing/bootloader mode. It is usually done holding Volume Down &amp; Power simultaneously when the device is switched off but it may vary depending on the device. For more information see the specific page for your device in the [https://wiki.lineageos.org/devices LineageOS Wiki].
@@ -384,7 +382,7 @@ If something did not work as expected, you can always <code>pmbootstrap zap</cod
 A simple way to recompile your kernel (e.g. because you want to change your kernel config) and flash it to your device is running the following commands:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap build --force linux-wiki-example
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap flasher flash_kernel
 </syntaxhighlight>
 
