@@ -1,7 +1,7 @@
 === General partition layout (installation image) ===
 {{note|The postmarketOS initramfs detects the partitions by their partition label.}}
 <pre class="shell">/dev/installp1 # label: pmOS_boot (contains kernel, initramfs, initramfs-extra)
-/dev/installp2 # label: pmOS_root (encrypted, unless --no-fde is specified)</pre>
+/dev/installp2 # label: pmOS_root (can be encrypted, when --fde is specified)</pre>
 
 === SD card ===
 
