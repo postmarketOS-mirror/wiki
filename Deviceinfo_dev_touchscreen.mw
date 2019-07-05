@@ -16,8 +16,8 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
 * Try out one after another:
 ** Change <code>deviceinfo_dev_touchscreen</code> in your <code>deviceinfo</code>
 ** Rebuild the deviceinfo package, initramfs and flash:
-  pmbootstrap checksum device-nokia-rx51
-  pmbootstrap build --force device-nokia-rx51
+  pmbootstrap checksum device-wiki-example
+  pmbootstrap build --force device-wiki-example
   pmbootstrap initfs # rebuild initramfs
   pmbootstrap flasher boot_kernel
 
@@ -29,6 +29,6 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
 * To fix the touch screen, reboot the device.
 
 === Flashing system + libinput list-devices ===
-Alternatively, run <code>pmbootstrap install --no-fde</code> and flash the system partition again. The initramfs will boot through without asking you for a password (because you disabled encryption). Then you can use the program <code>libinput list-devices</code> to get the list of devices - with probably more useful names.
+Alternatively, run <code>pmbootstrap install</code> and flash the system partition again. Then you can use the program <code>libinput list-devices</code> to get the list of devices - with probably more useful names.
 
 When you have the right device name, put it into your <code>deviceinfo</code> (as outlined above), then re-flash the encrypted system image. It should work now.
