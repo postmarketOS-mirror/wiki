@@ -58,7 +58,7 @@
 
 == Installation ==
 * 1. Flash the kernel <code>pmbootstrap flasher flash_kernel</code>
-* 2. Install system image to sdcard <code>pmboostrap install --no-fde --sdcard /dev/mmcblkXXX</code>
+* 2. Install system image to sdcard <code>pmboostrap install --sdcard /dev/mmcblkXXX</code>
 
 == Misc ==
 *Audio and video works in chromium.
