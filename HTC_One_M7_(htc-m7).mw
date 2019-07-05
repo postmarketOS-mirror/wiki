@@ -60,7 +60,7 @@ In TWRP, select Advanced and then Sideload.
 == Installation ==
 Direct flashing doesn't seem to work (might have something to do with requiring S-OFF?) but you can create a zip and sideload it with:
 <source lang="shell-session">
-$ pmbootstrap install --no-fde --android-recovery-zip
+$ pmbootstrap install --android-recovery-zip
 $ pmbootstrap flasher --method=adb sideload
 </source>
 
