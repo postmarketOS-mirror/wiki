@@ -12,7 +12,7 @@ The osk-sdl-dev room on Matrix can also be used to ask questions: #osk-sdl-dev:d
 
 It's necessary to configure and/or create a few files when porting osk-sdl to a new device. Some of the files mentioned below are not necessary on all devices. Any files created out of necessity in the below steps should be included in your device package. See the <code>nokia-rx51</code> device package for an example of how some of these files have been included/installed.
 
-It's highly recommended that you run osk-sdl from '''within''' pmOS, which means installing pmOS with the <code>--no-fde</code> parameter. Running osk-sdl from within pmOS during the porting process will allow you to run any additional tools required for generating some of the configuration files below, as well as collect additional diagnostic info if you run into any issues.
+It's highly recommended that you run osk-sdl from '''within''' pmOS, which means installing pmOS without the <code>--fde</code> parameter. Running osk-sdl from within pmOS during the porting process will allow you to run any additional tools required for generating some of the configuration files below, as well as collect additional diagnostic info if you run into any issues.
 
 === Running osk-sdl within pmOS ===
 
@@ -23,10 +23,10 @@ $ git clone https://github.com/postmarketOS/pmbootstrap.git
 $ ./pmbootstrap init
 <select device options>
 <select 'none' for UI so that osk-sdl can be run from within pmos without conflicting with weston>
-$ ./pmbootstrap install --no-fde --add osk-sdl
+$ ./pmbootstrap install --add osk-sdl
 </syntaxhighlight>
 
-Using <code>--no-fde</code> will allow pmOS to boot straight into rootfs without requiring unlocking of the partition. This seems counter-intuitive for porting a keyboard made for initramfs, but this will allow you to manually run osk-sdl with various environment options set and/or osk.conf options for debug.
+Not using <code>--fde</code> will allow pmOS to boot straight into rootfs without requiring unlocking of the partition. This seems counter-intuitive for porting a keyboard made for initramfs, but this will allow you to manually run osk-sdl with various environment options set and/or osk.conf options for debug.
 
 To run osk-sdl from pmOS (not in initramfs):
 
