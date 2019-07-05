@@ -77,7 +77,7 @@ to use Heimdall for flashing.
 
 # [[Installing_pmbootstrap | Install pmbootstrap]]
 # <pre>pmbootstrap init</pre>
-# <pre>pmbootstrap install --no-fde</pre>
+# <pre>pmbootstrap install</pre>
 # Put your S4 in Download Mode (Volume Down + Power) and connect it with USB
 # <pre>pmbootstrap flasher flash_kernel</pre>
 # After the kernel is flashed, the device will reboot. Hold the volume down button while it boots up to re-enter Download Mode
