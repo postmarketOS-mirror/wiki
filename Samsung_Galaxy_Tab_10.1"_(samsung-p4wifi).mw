@@ -53,7 +53,7 @@ Press and hold Power + Volume Down buttons
 # Init pmbootstrap<source lang="shell">$ pmbootstrap init</source> Choose 'samsung-p4wifi' as target device.
 # Start the build process<source lang="shell">$ pmbootstrap build linux-samsung-p4wifi
 $ pmbootstrap build device-samsung-p4wifi
-$ pmbootstrap install --no-fde</source>
+$ pmbootstrap install</source>
 # Enter flash (download) mode
 # Flash the kernel and system images<source lang="shell">$ pmbootstrap flasher flash_kernel
 $ pmbootstrap flasher flash_rootfs</source>
