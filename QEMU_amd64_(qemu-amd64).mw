@@ -34,7 +34,7 @@ This device is used for testing purposes. It is possible to run postmarketOS in 
 === Usage ===
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init  # Choose device "qemu-amd64"
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap qemu --image-size=2G
 </syntaxhighlight>
 
