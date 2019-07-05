@@ -149,7 +149,7 @@ References:
 3. Run the following using ''pmbootstrap'':
 <source lang="shell">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 $ pmbootstrap export
 $ pmbootstrap flasher flash_rootfs
 </source>
