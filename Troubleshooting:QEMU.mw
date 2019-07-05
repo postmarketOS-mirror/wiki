@@ -3,7 +3,7 @@ This page is about debugging problems with <code>pmbootstrap qemu</code>.
 == "Booting the kernel." displayed forever or segfault ==
 Most likely you have full disk encryption enabled, this is broken with QEMU right now ({{issue|75|osk-sdl}}) unless you also use <code>--spice</code>.
 To work around this bug, please do one of these:
-* Install without FDE: <code>pmbootstrap install --no-fde</code>
+* Install without FDE: <code>pmbootstrap install</code>
 * or install a spice client and use it: <code>pmbootstrap qemu --spice</code>
 Help with fixing that issue is highly appreciated.
 
