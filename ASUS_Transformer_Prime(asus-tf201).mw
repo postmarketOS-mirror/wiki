@@ -57,7 +57,7 @@ Longpress power (for reboot), then during reboot (feel the vibration) lower soun
 == Installation ==
 You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader). Please follow this [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 guide on XDA] if you're not.
 
-# <pre>./pmbootstrap.py install --no-fde</pre>
+# <pre>./pmbootstrap.py install</pre>
 # <pre>./pmbootstrap.py export</pre>
 # Reboot the device in recovery
 # <pre>adb push /tmp/postmarketOS-export/blob-asus-tf201 /cache</pre>
