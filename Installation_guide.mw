@@ -79,8 +79,6 @@ The install action essentially does the following:
 * Copy that to an encrypted system image file
 * Ask you for the user and encryption passwords
 
-It is possible to disable the full disk encryption (FDE) with the <code>--no-fde</code> parameter (if, for example, the FDE interface [[osk-sdl]] has not been ported to your device yet).
-
 Furthermore you can change the output type (system image) to something else with the following parameters.
 * <code>--sdcard</code>: Format and copy everything to an SD card
 * <code>--android-recovery-zip</code>: Create a zip file, that can be used with TWRP, CWM or other Android recovery systems ([[Android_Recovery_Zip_Installation|detailed instructions]])
@@ -88,10 +86,13 @@ Furthermore you can change the output type (system image) to something else with
 Example commands (only using one at a time makes sense):
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap install
-$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk
+$ pmbootstrap install --sdcard=/dev/mmcblk
 $ pmbootstrap install --android-recovery-zip
+$ pmbootstrap install --fde
 $ pmbootstrap install --help
 </syntaxhighlight>
+
+It is possible to enable full disk encryption (FDE) with the <code>--fde</code> parameter, but it is experimental, and might not work at this point. (if, for example, the FDE interface [[osk-sdl]] has not been ported to your device yet).
 
 ==== pmbootstrap flash ====
 This command wraps various flash programs (e.g. fastboot and heimdall) with a common syntax, and automatically fills out the paths to the generated files. Usually you need to flash the system image (unless you did the SD card or recovery zip installation):
