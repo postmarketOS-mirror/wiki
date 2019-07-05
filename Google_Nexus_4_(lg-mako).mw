@@ -43,7 +43,7 @@
 {{note|FDE (full disk encryption) seems to be broken for lg-mako currently, see {{issue|209|pmaports}}}}
 <pre>
 pmbootstrap init
-pmbootstrap install --no-fde
+pmbootstrap install
 (enter fastboot, see below)
 pmbootstrap flasher flash_rootfs
 pmbootstrap flasher boot
