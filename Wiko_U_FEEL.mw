@@ -66,6 +66,9 @@ Wiko U Feel is based on Tinno p6601 board (like BLU R1 HD, Lanix Ilium L910, QMo
 == Audio ==
 Sound card is detected in alsamixer, but dosen't work
 
+== Device Tree ==
+I couldn't find the official dtsi source code, so i decompiled the dtb blob from the stock rom with dtc command line tool. Unfortunately with this method we don't have the comments.
+
 == How to enter flash mode ==
 Fastboot is broken. It gives Unknown Chunk type, but it is possible to install pmOS with TWRP. Refer to [[Android_Recovery_Zip_Installation]] for installing. 
 
