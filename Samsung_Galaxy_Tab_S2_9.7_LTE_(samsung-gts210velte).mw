@@ -163,7 +163,7 @@ lrwxrwxrwx    1 root         root                21 Feb 19  2016 userdata -> /de
 == Installation ==
 
 installed system directly on device:
-* pmbootstrap install --no-fde 
+* pmbootstrap install
 * pmbootstrap flasher flash_rootfs
 * pmbootstrap flasher flash_kernel     # after this command finishes, device reboots and pmOS starts :-)
 * had to follow [[USB_Network#Assigning_an_IP_address]] as IP to host computer was not automatically assigned:
