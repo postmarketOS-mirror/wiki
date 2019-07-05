@@ -46,7 +46,7 @@ Direct Rendering Manager/Kernel Mode Setting is a slightly more complicated API 
 
 === FDE ===
 
-Full Disk Encryption, by default the rootfs created by pmbootstrap is fully encrypted with [https://en.wikipedia.org/wiki/LUKS luks], preventing the phone data from being retrieved without the password if the device is turned off. This can optionally be disabled with <code>--no-fde</code> for debugging purposes.
+Full Disk Encryption, the rootfs created by pmbootstrap is fully encrypted with [https://en.wikipedia.org/wiki/LUKS luks], preventing the phone data from being retrieved without the password if the device is turned off. This can be enabled with <code>--fde</code> .
 
 === fdt ===
 Flat device tree. This is just another name for [[Glossary#dtb|dtb]][https://elinux.org/Device_Tree_Reference#FDT_format]. <code>unpackbootimg</code> generates files ending in <code>.fdt</code>.
