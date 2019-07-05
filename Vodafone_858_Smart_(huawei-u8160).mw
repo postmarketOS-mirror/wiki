@@ -54,7 +54,7 @@
 * While holding Volume up, press and hold Power button until recovery options appear.
 
 == Installation ==
-* Install system partition to SD card <code>pmbootstrap install --no-fde --sdcard=/dev/sd?</code>
+* Install system partition to SD card <code>pmbootstrap install --sdcard=/dev/sd?</code>
 * Boot kernel using <code>pmbootstrap flasher boot</code>
 
 == Issues ==
