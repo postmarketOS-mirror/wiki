@@ -68,7 +68,7 @@ When prompted on device, use Volume-Up/Down buttons to highlight choice, then Po
 First build the image:
 <source lang="shell-session">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </source>
 
 Then in order to flash it put your device in fastboot mode, and plug it in USB. Then do:
