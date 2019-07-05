@@ -86,8 +86,7 @@ Anything that aren't filled in aren't tested.
 * '''Recovery:''' Same method as entering fastboot, just select Recovery instead of Fastboot.
 
 == Installation ==
-Disable FDE (Full Disk Encryption):
-<code>pmbootstrap install --no-fde</code>
+<code>pmbootstrap install</code>
 
 * '''Fastboot''': Works, you'll need to flash the kernel due to booting is not supported
 * '''Recovery''': Install through recovery is untested.
