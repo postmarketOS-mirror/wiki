@@ -46,7 +46,7 @@
 After [[Installing_pmbootstrap|installing pmbootstrap]], build the image:
 <source lang="shell-session">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </source>
 
 Then to flash it, put your device in fastboot mode, and plug it into your USB port. Currently, you will need to break apart the subpartitions before flashing:
