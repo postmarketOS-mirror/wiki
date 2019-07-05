@@ -56,7 +56,7 @@
 ::<code># select wingtech-wt88047</code>
 2. Build and install to SD card
 ::<code># replace /dev/sdX with actual sdcard device</code>
-::<code>$ pmbootstrap install --no-fde --sdcard=/dev/sdX</code>
+::<code>$ pmbootstrap install --sdcard=/dev/sdX</code>
 3. Boot
 ::<code># with device in fastboot mode</code>
 ::<code>$ pmbootstrap flasher boot</code>
