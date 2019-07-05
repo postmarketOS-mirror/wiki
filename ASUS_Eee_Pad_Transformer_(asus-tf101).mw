@@ -47,7 +47,7 @@
 
 You have to flash a recovery like TWRP before doing this.
 
-# <pre>./pmbootstrap.py install --no-fde</pre>
+# <pre>./pmbootstrap.py install</pre>
 # <pre>./pmbootstrap.py export</pre>
 # Reboot the device in recovery
 # <pre>adb push /tmp/postmarketOS-export/blob-asus-tf101 /cache</pre>
