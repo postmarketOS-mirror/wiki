@@ -20,7 +20,7 @@
 | status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y
-| status_fde = Y
+| status_fde = P
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = Y
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
@@ -65,7 +65,7 @@ Hold down {{button|Volume Down}} and {{button|Power}} buttons simultaneously for
 First build the image:
 <source lang="shell-session">
 $ pmbootstrap init
-$ pmbootstrap install --no-fde
+$ pmbootstrap install
 </source>
 
 Then in order to flash it put your device in fastboot mode, and plug it in USB. Then do:
