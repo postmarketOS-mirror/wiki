@@ -42,7 +42,7 @@ At the moment flashing is not working, so it is necessary to install to sdcard a
 Installing to sdcard works with the command
 <source lang="shell">
 # Replace /dev/sdX with the device for your sdcard
-$ pmbootstrap install --no-fde --sdcard /dev/sdX</source>
+$ pmbootstrap install --sdcard /dev/sdX</source>
 
 Now place the sdcard into the phone. Assuming that the bootloader is unlocked, it is possible to get to fastboot by following steps
 # Disconnect and reconnect the battery.
