@@ -52,7 +52,7 @@ Hold the '''Volume Down''' button, and then press the '''Power''' button. Choose
 
 == Installation ==
 {{note|Flashing the partitions does not work yet, so you will need an SD card.}}
-* Install everything using an SD card <code>pmbootstrap install --no-fde --sdcard=/dev/sd?</code>
+* Install everything using an SD card <code>pmbootstrap install --sdcard=/dev/sd?</code>
 * Insert the SD-Card on the device
 * Enter flash mode
 * Boot kernel using <code>pmbootstrap flasher boot</code>
