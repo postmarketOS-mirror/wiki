@@ -180,7 +180,7 @@ lrwxrwxrwx 1 root root  21 2016-01-11 20:43 userdata -> /dev/block/mmcblk0p39
 
 installed system on sdcard:
 * put (empty/overwritable) SD-card into host cardreader
-* pmbootstrap install --no-fde --sdcard=/dev/...
+* pmbootstrap install --sdcard=/dev/...
 * put SD-Card, now containing pmOS into tablet
 * pmbootstrap flasher flash_kernel     # after this command finishes, device reboots and pmOS starts :-)
 * had to follow [[USB_Network#Assigning_an_IP_address]] as IP to host computer was not automatically assigned:
