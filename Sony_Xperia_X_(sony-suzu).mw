@@ -17,26 +17,26 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_screen = Y
-| status_wifi = ?
-| status_xwayland = ?
-| status_fde = ?
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
 | status_mainline = P
-| status_battery = ?
+| status_battery = 
 | status_3d = N
 | status_accel = 
-| status_audio = ?
-| status_bluetooth = ?
+| status_audio = 
+| status_bluetooth = 
 | status_camera = N
-| status_gps = ?
-| status_mobiledata = ?
-| status_sms = ?
-| status_calls = ?
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
 | status = 
 | booting = yes
 
 | pmoskernel = 4.9.182
-| whet_dhry = ?
-| status_otg = ?
+| whet_dhry = 
+| status_otg = 
 }}
 
 == Contributors ==
