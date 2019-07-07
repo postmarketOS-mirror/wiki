@@ -55,7 +55,7 @@
 
 == Additional notes ==
 
-- This device has *some* out-of-tree mainline kernel support (https://github.com/bartcubbins/loire_5.0/commits/master some by @bartcubbins) ([https://github.com/kholk/kernel-upstream/commits/5.0-rc and some by @kholk])
+- This device has *some* out-of-tree mainline kernel support ([https://github.com/bartcubbins/loire_5.0/commits/master some by @bartcubbins]) ([https://github.com/kholk/kernel-upstream/commits/5.0-rc and some by @kholk])
 
 - [https://github.com/sonyxperiadev/kernel/blob/aosp/LE.UM.2.3.2.r1.4/arch/arm64/boot/dts/qcom/dsi-panel-somc-suzu.dtsi#L20 There are many different display panels used by suzu]
 
