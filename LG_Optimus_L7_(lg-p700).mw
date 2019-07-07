@@ -13,7 +13,6 @@
 | display = 480 x 800, IPS LCD
 | memory = 512 MB
 | architecture = armv7
-<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
@@ -34,17 +33,6 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes
-
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
-see Unixbench page on wiki
-| whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = -
--->
 }}
 
 == Contributors ==
@@ -69,15 +57,4 @@ The phone will stay on the LG logo.
 Only tested flashing by [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Installation recovery zip], works either from a zip file in the internal storage or [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Installation#Sideload sideload].
 
 == See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
+* [https://wiki.postmarketos.org/wiki/LG_Optimus_L5_(lg-e610) LG Optimus L5 (Similar device)]
