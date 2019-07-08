@@ -1,10 +1,10 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Tab 4 7.0 wi-fi (sm-t230)
-| codename =samsung-degaswifi
+| name =  Tab 4 7.0 Wi-Fi (SM-T230)
+| codename = samsung-degaswifi
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2
-| chipset = Marvell Pxa 1088
+| chipset = Marvell PXA 1088
 | cpu = Quad-core 1.2 GHz
 | gpu = Vivante
 | storage =  Vivante GC1000
