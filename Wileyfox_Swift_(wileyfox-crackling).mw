@@ -76,6 +76,8 @@ Is OTG available, not used in wiki
 * [https://wiki.lineageos.org/devices/crackling Device on LineageOS wiki]
 * [https://github.com/LineageOS/android_device_wileyfox_crackling LineageOS Device on GitHub]
 
+* {{MR|485|pmaports}} Initial merge request
+
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
