@@ -95,18 +95,26 @@ Example:
 {{note|Might not work on some devices, which in this case providing logs to the maintainer is required, and debugging is also needed too.}}
 [[User:Alexeymin|Alexey Min]] is currently packaging [https://gitlab.com/postmarketOS/pmaports/merge_requests/448 pulseaudio-modules-droid] to the repository.
 
-Build and install pulseaudio-modules-droid package first, then add this to <code>/etc/pulse/default.pa</code> before the line that loads module-alsa-sink:
+Build and install pulseaudio-modules-droid package first, then add this to <code>/etc/pulse/default.pa</code>:
 <pre>
 load-module module-droid-card
-load-module module-droid-sink
-load-module module-droid-source
+</pre>
+Loading droid-card module is enough, others will be loaded automatically. Also it would not hurt to comment out <code>module-udev-detect</code>, <code>module-detect</code> lines to lower the amount of error messages in pulseauduio log (they don't work anyway), like that:
+<pre>
+### Automatically load driver modules depending on the hardware available
+#.ifexists module-udev-detect.so
+# load-module module-udev-detect
+#.else
+### Use the static hardware detection module (for systems that lack udev support)
+# load-module module-detect
+#.endif
 </pre>
 
 Start pulseaudio in verbose mode (<code>/usr/bin/pulseaudio --log-target=stderr --log-level=debug -v</code>) to make sure you can get to see if the module loads successfully. If it does then you should be able to play sound files using <code>paplay</code> from pulseaudio-utils package.
 
 If you hear sounds coming from it, it works perfectly fine. If not, check dmesg, pulseaudio log and logcat.
 
-You might also want to install alsa-plugins-pulse for ALSA backend on PulseAudio.
+You might also want to install <code>alsa-plugins-pulse</code> for ALSA backend on PulseAudio.
 
 == alsactl method ==
 Cascardo reported having success with the following method on Debian, this should work for postmarketOS as well:
