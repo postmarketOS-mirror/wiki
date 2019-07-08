@@ -34,7 +34,6 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-
 | status_otg = -
 
 <!-- you can also use these lines if you need to:
@@ -48,6 +47,9 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
+
+== Problems ==
+* Battery charge level reported incorrectly (at zero most of the time)
 
 == Contributors ==
 * ''[[user:TravMurav|TravMurav]]''
