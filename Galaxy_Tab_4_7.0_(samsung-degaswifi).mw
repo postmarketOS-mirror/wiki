@@ -6,8 +6,8 @@
 | originalsoftware = Android 4.4.2
 | chipset = Marvell PXA 1088
 | cpu = Quad-core 1.2 GHz
-| gpu = Vivante
-| storage =  Vivante GC1000
+| gpu = Vivante GC1000
+| storage =  8GB
 | display = 800x1280 TFT
 | memory = 1.5GB
 | architecture = armv7
