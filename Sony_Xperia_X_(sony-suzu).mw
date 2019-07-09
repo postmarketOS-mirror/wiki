@@ -55,17 +55,16 @@
 
 == Additional notes ==
 
-- This device has *some* out-of-tree mainline kernel support ([https://github.com/bartcubbins/loire_5.0/commits/master some by @bartcubbins]) ([https://github.com/kholk/kernel-upstream/commits/5.0-rc and some by @kholk])
+* This device has *some* out-of-tree mainline kernel support ([https://github.com/bartcubbins/loire_5.0/commits/master some by @bartcubbins]) ([https://github.com/kholk/kernel-upstream/commits/5.0-rc and some by @kholk])
 
-- [https://github.com/sonyxperiadev/kernel/blob/aosp/LE.UM.2.3.2.r1.4/arch/arm64/boot/dts/qcom/dsi-panel-somc-suzu.dtsi#L20 There are many different display panels used by suzu]
+* [https://github.com/sonyxperiadev/kernel/blob/aosp/LE.UM.2.3.2.r1.4/arch/arm64/boot/dts/qcom/dsi-panel-somc-suzu.dtsi#L20 There are many different display panels used by suzu]
 
-- Xperia X has been supported by Sony Open Devices Project on CAF kernels 3.10, 3.18, 4.4 and now still is on 4.9 with a chance to board the 4.14 hype train
+* Xperia X has been supported by Sony Open Devices Project on CAF kernels 3.10, 3.18, 4.4 and now still is on 4.9 with a chance to board the 4.14 hype train
 
-- [https://github.com/Halium/projectmanagement/issues/98 There's a good chance one could get graphics, modem etc. working with libhybris on kernel 4.4.] There's also a mer-hybris port by Jolla for the official "Sailfish X" SFOS release.
+* [https://github.com/Halium/projectmanagement/issues/98 There's a good chance one could get graphics, modem etc. working with libhybris on kernel 4.4.] There's also a mer-hybris port by Jolla for the official "Sailfish X" SFOS release.
 
-- Second codename (loire_suzu) comes from Sony's platform naming scheme, where Loire is a family of MSM8956/APQ8956-based devices along with Xperia X Compact (kugo), Xperia Touch [the projector tablet.. thingy] (blanc) and an unannounced, probably prototype device (oak)
+* Second codename (loire_suzu) comes from Sony's platform naming scheme, where Loire is a family of MSM8956/APQ8956-based devices along with Xperia X Compact (kugo), Xperia Touch [the projector tablet.. thingy] (blanc) and an unannounced, probably prototype device (oak)
  
-
 == How to enter flash mode ==
 
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
