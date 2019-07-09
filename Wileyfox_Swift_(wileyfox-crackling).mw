@@ -48,7 +48,7 @@ Is OTG available, not used in wiki
 -->
 }}
 
-Fairly popular device. Initialy shipped with CyanogenOS.  
+Fairly popular device based on reference Qualcomm design. Initialy shipped with CyanogenOS.  
 There is also another device called GeneralMobile 4g (Android One device) that is very similar with this one.
 
 == Problems ==
@@ -69,14 +69,14 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-'''Download:''' With the device powered off, hold <code>Volume Up</code> and connect the USB cable
+'''Download:''' With the device powered off, hold <code>Volume Up</code> and connect the USB cable.
 
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-Just follow the [[Installation guide]]
+Just follow the [[Installation guide]].
 
-[[Weston]] and [[XFCE4]] works. [[Plasma Mobile]] unuseable because of software rendering
+[[Weston]] and [[XFCE4]] works. [[Plasma Mobile]] unuseable because of software rendering.
 
 == See also ==
 * [https://wiki.lineageos.org/devices/crackling Device on LineageOS wiki]
