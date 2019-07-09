@@ -122,6 +122,8 @@ The Suzy-Q debug cable isn't strictly a serial debug cable, it accesses the Clos
 
 [[File:suzyq-debug-cable.png|600x600px]]
 
+The official SuzyQable from Google has an 2 port USB hub into the cable itself, one port connects to the normal usb lines in the USB-C connector and the other port connects to the CC1/RFU1 pair like the diagram above, this way you can use both interfaces at the same time. The debug mode with the cable also only works on one of the two orientations in the USB-C socket. The official cable has a "DBG" mark on the C connector that should be facing up when plugged into the device. The other way around it will act as a normal USB cable.
+
 This cable should work with:
 
 * Google Pixel 2
