@@ -71,6 +71,9 @@ Is OTG available, not used in wiki
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+Just follow the [[Installation guide]]
+
+[[Weston]] and [[XFCE4]] works. [[Plasma Mobile]] unuseable because of software rendering
 
 == See also ==
 * [https://wiki.lineageos.org/devices/crackling Device on LineageOS wiki]
