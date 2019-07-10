@@ -20,11 +20,11 @@
 | status_wifi = Y
 | status_xwayland = 
 | status_fde = 
-| status_mainline = 
+| status_mainline = P
 | status_battery =
 | status_3d = 
 | status_accel = 
-| status_audio = 
+| status_audio = P
 | status_bluetooth =
 | status_camera =
 | status_gps = 
@@ -48,7 +48,7 @@
 * Touch (<code>/dev/input/event2</code>)
 
 == What does not work ==
-* Flashing rootfs to internal storage. (Flash to sdcard instead) 
+* Flashing rootfs to internal storage. (Flash to sdcard instead using the <code>--sdcard</code> option) 
 * Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and udhcpc. See https://wiki.postmarketos.org/wiki/WiFi)
 * Everything else
 
@@ -61,9 +61,14 @@
 * 2. Install system image to sdcard <code>pmboostrap install --sdcard /dev/mmcblkXXX</code>
 
 == Misc ==
-*Audio and video works in chromium.
+*Audio and video works in chromium browser.
 *I used a 150kΩ resistor in my USB debug cable. See https://wiki.postmarketos.org/wiki/Serial_debugging
 *Serial port is on <code>/dev/ttyS2</code> in pmOS.
+
+== Mainline ==
+This device has support in mainline. Device is able to boot the mainline kernel all the way to the initramfs.
+
+The internal clocks are currently broken on mainline meaning that the periperal devices don't work currently. Anyone with expertise in this area could perhaps help out.(?)
 
 == Pictures ==
 [[File:UART-kylepro.jpg|200px| UART pin location on motherboard]]
@@ -71,3 +76,4 @@
 == Links ==
 * [https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx Kernel source]
 * [https://github.com/Samsung-KYLEPROXX/android_device_samsung_kylepro Good hardware information page]
+* [https://gitlab.com/deata/kylepro-mainlining Mainline kernel fork]
