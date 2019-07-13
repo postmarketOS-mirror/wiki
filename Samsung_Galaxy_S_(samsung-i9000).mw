@@ -131,17 +131,17 @@ To set wifi connection to start automatically on boot, please refer here [[wifi]
 
 == Links ==
 
-Supported in mainline linux kernel since 4.18
+Supported in mainline Linux kernel since 4.18
 * [https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/s5pv210-galaxys.dts s5pv210-galaxys.dts]
 
-u-boot bootloader (by xc-racer99. It can boot old and mainline kernels from sdcard/mmc, supports mass storage mode and fastboot
-* [https://github.com/xc-racer99/u-boot-galaxys4g/ u-boot-galaxys4g]
+u-boot bootloader (by xc-racer99). It can boot old and mainline kernels from sdcard/mmc, supports mass storage mode and fastboot
+* [https://github.com/xc-racer99/u-boot-aries/ u-boot-aries]
 
-device package
+Device package
 
 * [https://github.com/Nicknack/pmOs_device_samsung_i9000 package]
 
-device tree
+Device tree
 
 * [https://github.com/LineageOS/android_device_samsung_galaxysmtd LineageOS device tree]
 
@@ -163,4 +163,4 @@ Firmware files
 
 Replicant
 
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxySI9000 specification]
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxySI9000 specifications]
