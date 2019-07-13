@@ -36,6 +36,14 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | 
 | Still uses GTK2
 |-
+| style="text-align: center;" | Y
+| Phosh
+|
+| [https://source.puri.sm/Librem5/phosh link]
+| Librem 5/PureOS
+| 
+| aarch64, x86 and x86_64 only for now
+|-
 | style="text-align: center;" | P
 | [[LuneOS UI|Luna]]
 |
@@ -43,14 +51,6 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | WebOS
 | 
 | No Meta UI package yet
-|-
-| style="text-align: center;" | P
-| Phosh
-|
-| [https://source.puri.sm/Librem5/phosh link]
-| Librem 5/PureOS
-| 
-| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/phosh WIP branch]
 |-
 | style="text-align: center;" | P
 | [[Unity 8]]
