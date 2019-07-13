@@ -5,11 +5,11 @@
 | image = File:Samsung-i9003-galaxy-s-sl-1.jpg
 | imagecaption = Samsung Galaxy S
 | releaseyear = 2010
-| originalsoftware = Android 2.3.6 (Gingerbread)
+| originalsoftware = Android 2.1 - 2.3.6 on Linux 2.6.29 - 2.6.35
 | chipset = Exynos 3110
 | cpu = 1.0 GHz Cortex-A8
 | gpu = PowerVR SGX 540
-| storage = 2-16 GB
+| storage = 8/16 GB
 | display = 480x800
 | memory = 512 MB
 | architecture = armhf
