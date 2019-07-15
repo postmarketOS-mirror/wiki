@@ -85,6 +85,12 @@ It should work with:
   | 619K ohm || No
 |}
 
+== Mediatek USB debug cable ==
+
+Some Mediatek devices expose an 3.3V uart interface at the usb port when a special Mediatek debug cable is attached to the device while booting
+
+[[File:]]
+
 == Mozilla Flame ==
 
 The Flame has open UART pads that are accessible underneath the outer and inner covers.
