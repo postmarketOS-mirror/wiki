@@ -1,0 +1,93 @@
+Not all webbrowsers are usable on a phone without hardware keyboard, here's an overview of browsers that are packaged in Alpine Linux and thus can be used with postmarketOS
+
+{| class="wikitable"
+! browser
+! armv7
+! aarch64
+! x86_64
+! engine
+! library
+! notes
+|-
+| [[firefox]]
+| not packaged
+| not packaged
+| ?
+| gecko
+| 
+| Alpine Linux hasn't packaged non-x86_64 versions yet.
+|-
+| [[chromium]]
+| works
+| ?
+| ?
+| blink
+| 
+| 
+|-
+| midori
+| works
+| ?
+| works
+| webkit
+| webkit2gtk
+| 
+|-
+| qutebrowser
+| dependency error
+| ?
+| ?
+| blink
+| qtwebengine
+| keyboard controlled browser
+|-
+| falkon
+| runs, but takes forever
+| ?
+| ?
+| blink
+| qtwebengine
+| 
+|-
+| epiphany
+| works
+| ?
+| ?
+| webkit
+| webkit2gtk
+| 
+|-
+| luakit
+| works
+| ?
+| ?
+| webkit
+| webkit2gtk
+| keyboard controlled browser
+|-
+| surf
+| works
+| ?
+| ?
+| webkit
+| webkit2gtk
+| keyboard controlled browser
+|-
+| dillo
+| works
+| ?
+| ?
+| dillo
+| 
+| not HTML5, no SSL support
+|-
+| netsurf
+| works
+| ?
+| ?
+| netsurf
+| 
+| not HTML5
+|}
+
+the ARMv7 column has been updated on 2019-07-15 with the Nokia N900 as test device. Falkon might work on devices with more memory.
