@@ -89,7 +89,7 @@ It should work with:
 
 Some Mediatek devices expose an 3.3V uart interface at the usb port when a special Mediatek debug cable is attached to the device while booting
 
-[[File:]]
+The schematic for this debug cable is the same as the Nexus USB debug cable above, except that the ID pin shouldn't be connected.
 
 == Mozilla Flame ==
 
