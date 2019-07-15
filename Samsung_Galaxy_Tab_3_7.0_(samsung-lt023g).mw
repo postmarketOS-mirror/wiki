@@ -92,6 +92,7 @@ If starting the service didn't work, start wpa_supplicant manually with:
 <pre>
 sudo wpa_supplicant -u -Dnl80211 -B -c /etc/wpa_supplicant/wpa_supplicant.conf -imlan0
 </pre>
+You might need to kill the existing process if the wpa_supplicant service fails to start (find it for example with htop).
 
 == About GPU ==
 The GPU is Vivante GC1000 which has open source drivers but we can't get it work yet. The reverse engineered driver is called etnaviv and the compiling process is a little bit complex. If anyone figures it out dont forget to tag @hpagseddy at postmarketos matrix server.
