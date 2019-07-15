@@ -63,6 +63,11 @@ Luka Panio (cvbnm90i)
 Power+Home+Vol up - Recovery
 Power+Home+Vol down - Odin mode
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+first do:
+pmbootstrap init
+then
+pmbootstrap install
+pmbootstrap install sdcard=/dev/sd*
+pmbootstrap flasher flash_kernel
 
 == See also ==
