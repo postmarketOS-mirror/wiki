@@ -87,6 +87,24 @@ Navigation bar is broken. See [https://gitlab.com/postmarketOS/pmaports/issues/2
 ==== X.org is broken ====
 So, no graphical program can be started. See [https://gitlab.com/postmarketOS/pmaports/issues/221 this bug].
 
+==== USB networking is broken ====
+USB networking currently doesn't work on the new 5.x kernel, it's possible to start usb-networking through the serial port by executing these commands as root:
+
+<source lang="shell-session">
+# ifconfig usb0 "172.16.42.1"
+# cat <<EOT >> /etc/udhcpd.conf
+start 172.16.42.2
+end 172.16.42.2
+auto_time 0
+decline_time 0
+conflict_time 0
+lease_file /var/udhcpd.leases
+interface usb0
+option subnet 255.255.255.0
+EOT
+# udhcpd
+</source>
+
 ==== Bluetooth ====
 Bluetooth seems to be lacking some firmware.
 
@@ -121,7 +139,6 @@ $ sudo nmcli radio all on
 
 ==== Webbrowser ====
 In plasma-mobile, Angelfish webbrowser does not run. You may want to install, configure and use qtwebbrowser, [[Firefox]] and/or [[Chromium]].
-
 
 === Troubleshooting ===
 ==== Fastboot unknown chunk type ====
