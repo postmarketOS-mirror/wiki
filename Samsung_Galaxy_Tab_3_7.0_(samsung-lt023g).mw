@@ -12,7 +12,7 @@
 | storage = 16GB
 | display = 1024×600 TFT
 | memory = 1GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
