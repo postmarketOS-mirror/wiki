@@ -80,6 +80,10 @@ I don't know if there is a way to clear this counter, but I don't think is impor
  $ pmbootstrap flasher flash_kernel
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+== Issues ==
+* The touchscreen works in `ts_test` but does not work in Weston or i3wm
+* The Sym key does not work and gives no output in `xev`
+So there is currently no way of typing symbols (like /, +, -...)
 
 == See also ==
 * {{MR|496|pmaports}} Initial merge request
