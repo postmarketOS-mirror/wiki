@@ -362,9 +362,9 @@ In order to use the ofono test scripts, you must install py-dbus, that is curren
 Here's an example using the test scripts to enable the modem and send a SMS:
 <pre>
 # cd ofono/test
-# python2 enable-modem
-# python2 online-modem
-# python2 send-sms 5033784582 "I like pizza." 0 
+# python3 enable-modem
+# python3 online-modem
+# python3 send-sms 5033784582 "I like pizza." 0 
 </pre>
 
 === USB Gadget ===
