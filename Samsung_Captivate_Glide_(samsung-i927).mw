@@ -17,13 +17,13 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = P
+| status_wifi = Y
 | status_xwayland =
 | status_fde = Y
 | status_mainline = P
-| status_battery = P
+| status_battery = Y
 | status_3d = P
-| status_accel =
+| status_accel = Y
 | status_audio = Y
 | status_bluetooth = Y
 | status_camera = N
@@ -31,6 +31,7 @@
 | status_mobiledata = N
 | status_sms = N
 | status_calls = N
+| status_otg = Y
 | status = boots
 | booting = yes
 }}
