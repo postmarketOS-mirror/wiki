@@ -67,9 +67,9 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 ! Hardware
 ! Info
 |-
-| P
+| Y
 |Power
-|There's 3-4 power chips: max8907c, max8922, max17043 and unknown chip controlling camera power - on downstream kernel, it's driver called "m5mo_power", it works on I2C bus number 16 at address 0x3E. 17043 is supported by 17040 driver - the only difference is ALRT interrupt, which is sent on low battery.
+|There's 4 power chips: max8907c, max8922, max17043 and max8893 controlling camera power - on downstream kernel, it's driver called "m5mo_power". max17043 is supported by max17040 driver - the only difference is ALRT interrupt, which is sent on low battery.
 |-
 | Y
 |Display panel
@@ -85,7 +85,7 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |-
 | P
 |USB
-|Only gadget mode is supported for now. [https://gitlab.com/postmarketOS/pmaports/merge_requests/238#note_145728362 OTG does not work yet]. HSIC mode is missing, which makes our modem not working. Not sure if we can make it work in non-HSIC mode. fsa9480 is used for cable type detection - it's supported by mainline kernel, but no Device Tree bindings available. There's a driver for fsa9480 with DT support in PabloPL repo, but it's not used for now.
+|Gadget and OTG modes are supported. HSIC mode is missing, which makes our modem not working. Not sure if we can make it work in non-HSIC mode. fsa9480 is used for cable type detection - it's supported by mainline kernel, but no Device Tree bindings available. Currently the fsa9480 driver from PabloPL repo is used.
 |-
 | Y
 |SDHCI
@@ -93,51 +93,55 @@ Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 |-
 | P
 |WiFi
-|Broadcom BCM4330. Something is happening with firmware: a long list of warnings is displayed on boot. The reason seems to be channel bandwidth - the code internally iterates over (supported) channels and checks for a bandwidth, and if it's not 40MHz, it outputs a warning. On 5GHz band, only 20MHz bandwidth is supported - device successfully scans for APs on 40MHz and 80MHz bandwidths, but doesn't associate - wpa_supplicant reports and error with bssid=00:00:... and status_code=16 (probably timeout code).
+|Broadcom BCM4330. Something is happening with firmware: a long list of warnings is displayed on boot. The reason seems to be channel bandwidth - the code internally iterates over (supported) channels and checks for a bandwidth, and if it's not 40MHz, it outputs a warning. Custom firmware is used for this chip because official one doesn't work properly on 5GHz bandwidth with mainline drivers.
 |-
 | Y
 | GPIO keys
 |There is 4 keys on GPIO: Power, Volume up, Volume down and keyboard HALL sensor.
 |-
-| Y
+| P
 |Touchkey
-|MCS5080. Mainline driver available, but it's bugged, has no DT bindings and not full. A slightly patched version is used with key reading fixed and internal LED support.
+|MCS5080. Mainline driver available, but it's bugged, has no DT bindings and not full. A slightly patched version is used with key reading fixed and internal LED support. Doesn't work right now because the driver gets probed before the regulator driver, so chip receives no power and initialization fails.
 |-
 | Y
 |Vibra
 |ISA1200. Driver from p4wifi kernel is used, but there's also another driver from CAF(?).
 |-
-|
+| Y
 |Bluetooth
-|Broadcom BCM4330. Not tested.
+|Broadcom BCM4330. Works fine without firwmare.
 |-
-|
+| Y
 |Sound
-|WM8994. Chip is supported in mainline but Tegra bindings not available. For now, driver from p4wifi is used. This one also requires mapping configuration.
+|Wolfson WM8994. Uses custom board-level driver. It's fully-routed with DAPM paths configured so we get no suspend-resume issues.
 |-
-|
+| P
 |MHL
-|SII9234. No extcon support in mainline driver. Enabling this chip causes screen resolution to be set to 1024x800 instead of 480x800, so it's disabled for now.
+|SII9234. No extcon support in mainline driver. Not tested, but driver seems to be working. Disabled in Xorg config to avoid resolution issues. If you want to test it, you need to enable and configure it in /etc/X11/xorg.conf.d/40-samsung-i927.conf
 |-
-|
+| N
 |Proximity sensor
 |CM3663. No driver in mainline kernel available.
 |-
-|
+| N
 |Back camera
 |Fujitsu M5MO. It is supported by mainline, but has no DT bindings. May have it's own PMIC
 |-
-|
+| N
 |Front camera
 |Samsung S5K6AAFX. It is supported by mainline, but has no DT bindings. Power controlled by m5mo_pmic in downstream.
 |-
-|
+| N
 |Modem
 |XMM6260. Operates on USB with HSIC mode, but also has GPIOs.
 |-
 | P
+|GPS
+|SIRFstarIV GSD4t. gpsd driver can communicate with the chip, but mainline driver doesn't. gpsd is not tested fully because I don't know any software that can work with it :)
+|-
+| P
 |Other sensors
-|These are just not tested, but driver available and probing works: NCT1008 (temperature), MPU3050 (gyro), KXTF9 (accel), AK8975 (compass), SIRFstarIV (GPS, actual chip is unknown. This one is notable because it's supported by new kernel GPS framework).
+|These are just not tested, but driver available and probing works: NCT1008 (temperature), MPU3050 (gyro), KXTF9 (accel), AK8975 (compass).
 |}
 
 == Keycodes ==
