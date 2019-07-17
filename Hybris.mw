@@ -1,9 +1,27 @@
 [https://en.wikipedia.org/wiki/Hybris_(software) Libhybris] allows devices lacking FLOSS drivers to make full use of their hardware by using the proprietary drivers from Android. Mainlining and using free software drivers is of course the better approach, but it is not possible for all devices. '''We will not list devices that need hybris as featured devices''' (see {{issue|83|postmarketos.org}}).
 
+== What is libhybris? ==
+
+'''libhybris''' is a compatibility layer, allowing libraries compiled with bionic libc (used in Android) to be loaded by applications built with different libc (originally glibc, musl in postmarketOS case).
+
+== How it works? ==
+'''libhybris''' includes modified Android linker (partially reimplementing it, for several Android versions) and provides <code>android_dlsym</code> function which can be used by host libc applications to load bionic libraries. Bionic libc gets loaded into process space alongside host libc, but with many functions hooked or replaced with host libc ones to avoid various memory structs incompatibilities between two libcs.
+
+However, for this to work, there are few Android-side libraries to be patched. This is necessary to avoid thread-local storage (TLS) slots conflicts, as Android has reserved private slots for system libraries such as '''libEGL''' which do not require allocation through pthread API and accessed directly through CPU register containting thread pointer, which causes host libc data to be ovewritten.
+
+[https://halium.org Halium] and [https://github.com/mer-hybris/ mer-hybris] already include patches to workaround that, but if you use different Android tree, the following needs to be applied: bionic patch mentioned in https://github.com/libhybris/libhybris/pull/395
+
+== Running Android services in LXC container or chroot ==
+This is not strictly required to use '''libhybris''' itself, but is generally needed, because Android drivers expect Android <code>init</code> to be running, which provides <code>property_service</code>, does HW-specific initialization via <code>init.$soc.rc</code> script and starts vendor-specific services.
+
+Halium solves that by providing minimal modified Android base which can run inside LXC container and system-side scripts to do that (provided by lxc-android package). If your device supports LineageOS 14.1, it might be easiest to port Halium and use resulting <code>system.img</code> with lxc-android.
+
+Otherwise it is also possible to run Android init in chroot with graphical services such as <code>zygote</code> disabled. [https://github.com/mer-hybris/ mer-hybris] tree (built for SailfishOS ports) is an example of that and contains modifications needed for '''libhybris''' to work.
+
 == Using libhybris with your device ==
 
 === libhybris current usage ===
-It is used for the [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]] (non-CAF) and [[Samsung_Galaxy_S4_Mini_dual_sim|Samsung s4 mini duos]] (CAF) device ports.
+It is used for the [[Planet_Computers_Gemini_PDA_(planet-geminipda)|Gemini PDA]] (non-CAF) and [[Samsung_Galaxy_S4_Mini_dual_sim|Samsung S4 Mini Duos]] (CAF), [[Samsung_Galaxy_S5_(samsung-klte)|Samsung Galaxy S5]] (CAF), [[Xiaomi_RedMi4x_(xiaomi-santoni)|Xiaomi Redmi 4X]] (CAF) device ports.
 
 === Android system image ===
 
@@ -11,7 +29,7 @@ First thing to do is convert the halium generated '''system.img''' to a mountabl
 and the new '''system.img''' to the device, to <code>/var/lib/lxc/android/system.img</code>
 
 The way to do attain this, is:
-* Port halium 7.1 (https://docs.halium.org , https://halium.org) to your device. This may take considerable effort. Note that we only have hybris 7.1 packaged at the moment.
+* Port halium 7.1 (https://docs.halium.org) to your device. This may take considerable effort. Note that we only have hybris 7.1 packaged at the moment.
 * Get it running to a point where you have at least graphics operational
 * It works if you run the same kernel source for both, and apply all defconfig changes needed for the halium port to your postmarketos port
 * Boot your halium-running device into android recovery, and download the <code>/data/system.img</code> file from it. This is the systemimage you've built for halium, with the modifications that the installation script has done.
@@ -66,6 +84,30 @@ For a non-CAF device, use this command:
 <syntaxhighlight lang="shell-session">
 $ EGL_PLATFORM=hwcomposer test_hwcomposer
 </syntaxhighlight>
+
+== Utilizing libhybris in different subsystems ==
+=== Graphics ===
+Android HAL requires device vendors to provide HWComposer API implementation. That API can be utilized via '''libhybris''' by Wayland compositors or Xorg to output graphical buffers on screen (as opposed to writing to fbdev directly).
+
+The following projects support it:
+* kwin - Plasma De https://github.com/KDE/kwin/tree/master/plugins/platforms/hwcomposer (this one is packaging WIP)
+* qt5-qpa-hwcomposer-plugin - ''Qt Platform Abstraction'' plugin utilized by SailfishOS, Nemo Mobile and LuneOS - https://github.com/mer-hybris/qt5-qpa-hwcomposer-plugin
+* mir-android-platform - Graphics platform for the Mir display server - https://github.com/ubports/mir-android-platform
+* xf86-video-hwcomposer - Xorg DDX driver to render through HWComposer API - https://github.com/gemian/xf86-video-hwcomposer (this one is packaged)
+
+=== Sound ===
+PulseAudio Droid modules allow PulseAudio to use Android HAL via '''libhybris'''. While it is possible to use ALSA directly, this approach has benefits of reusing Android mixer configs, which gets very tricky on embedded devices such as phones: https://github.com/mer-hybris/pulseaudio-modules-droid. postmarketOS has this packaged as [https://gitlab.com/postmarketOS/pmaports/tree/master/hybris/pulseaudio-modules-droid pulseaudio-modules-droid]. See also [[Audio#libhybris|Audio (libhybris)]].
+
+=== Cellular ===
+There are two different implementations of RIL plugin for ofono whichs allows it to communicate with Android's RIL daemon for cellular network connectivity (both data and calls).
+
+* ril driver - developed and maintaned by SailfishOS, available as part of their ofono fork - https://git.merproject.org/mer-core/ofono
+* rilmodem driver - was developed by Ubuntu Touch and partly merged to upstream ofono, but is not updated anymore - https://github.com/rilmodem/ofono
+
+=== Camera and media decoding ===
+GStreamer plugin is maintained by SailfishOS - https://github.com/sailfishos/gst-droid. It requires https://github.com/sailfishos/droidmedia to be compiled against device Android tree and minimedia daemon running.
+
+The alternative approach utilized by Ubuntu Touch is to use libcamera_compat_layer and libmedia_compat_layer. They comprised of libraries that need to be compiled against Android (compat folder of libhybris) and libhybris wrappers. Does not work with Android 7 and newer yet.
 
 == See also ==
 * {{github|1402}} Package libhybris
