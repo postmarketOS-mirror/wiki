@@ -59,7 +59,18 @@ Press and hold <code>Volume Up</code> + <code>Power</code> simultaneously. Then 
 Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+Using SD card for installation is highly recommended because internal eMMC memory has a limited lifetime. Commands below assume SD card installation, however, in theory, it is possible to boot from USB drive connected via OTG cable.
+
+Insert SD card in your PC and run this from Linux terminal:
+<syntaxhighlight lang="shell" line='line'>
+$ cd /tmp
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+$ cd pmbootstrap
+$ ./pmbootstrap.py init
+$ ./pmbootstrap.py install --sdcard /dev/mmcblkN # change path to your SD card
+$ ./pmbootstrap.py flasher flash_kernel
+</syntaxhighlight>
+Keep in mind that pmbootstrap requires root permissions.
 
 == Hardware ==
 {|class="wikitable feature-colors"
