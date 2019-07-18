@@ -67,6 +67,37 @@ $ ./pmbootstrap.py flasher flash_kernel
 </syntaxhighlight>
 Keep in mind that pmbootstrap requires root permissions.
 
+== Sound configuration ==
+Device package includes ALSA UCM profiles for WM8994 chip. Every input and output is disabled by default, so in order to hear something you need to do some configuration.
+
+For example, if you want to enable Speaker output, you'll need to run this from terminal:
+
+<code>$ alsaucm -c wm8994aif1 set _verb HiFi set _enadev Speaker</code>
+
+Supported outputs are: <code>Speaker</code>, <code>Headphones</code> and <code>Earpiece</code>.
+
+If you want to disable it, run:
+
+<code>$ alsaucm -c wm8994aif1 set _verb HiFi set _enadev Speaker set _disdev Speaker</code>
+
+(Note that alsaucm program doesn't track currently enabled devices. Well, it actually does, but only in interactive mode)
+
+To enable mic, run:
+
+<code>$ alsaucm -c wm8994aif1 set _verb Voice set _enadev Headset</code>
+
+And you can disable it like the outputs above.
+
+If you don't want to configure all this on every reboot, then run this as root:
+
+<code># service alsa save</code>
+
+The configuration will be loaded automatically on boot. If you want to load it manually, then use this command:
+
+<code># service alsa restore</code>
+
+If you want to adjust the volume or do some additional configuration (set up an internal equalizer, for example), use <code>alsamixer</code> program.
+
 == Hardware ==
 {|class="wikitable feature-colors"
 ! Status
