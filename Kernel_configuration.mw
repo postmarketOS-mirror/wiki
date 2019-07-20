@@ -436,9 +436,26 @@ General Setup -->
 
 Set this if your device needs an appended device tree. If you are unsure, use <code>extract-dtb</code> on an existing kernel image. Not to be confused with <code>CONFIG_ARM_APPENDED_DTB</code>!
 
-= Automatically merging kernel configuration =
-Use this script, which is present in the kernel source:
-<code>./scripts/kconfig/merge_config.sh</code>
+=== CONFIG_FW_LOADER_USER_HELPER ===
+'''About'''
+
+''Enable the firmware sysfs fallback mechanism found in drivers/base/firmware_loader/Kconfig''
+
+'''Location in menu'''
+
+<pre class="shell>
+Device Drivers -->
+  Generic Driver Options -->
+    Firmware loader -->
+      Firmware loading facility (FW_LOADER [=y]) -->
+        Enable the firmware sysfs fallback mechanism
+</pre>
+
+'''pmOS specific'''
+
+Prior to kernel version 3.7, the kernel had no capability of finding firmware itself so it had to call out to userspace to find the firmware for it. This changed with kernel 3.7 where the kernel gained "direct loading support" and where the userspace helper was only called as a fallback. In kernel 3.9 this functionality was put behind the kconfig option FW_LOADER_USER_HELPER which is what this patch checks to be enabled.
+
+Without this option, the udev rule present in postmarketos-base won't be notified that firmware needs to be loaded and as such can't call firmwareload.sh which loads firmware from /lib/firmware/postmarketos.
 
 = See also =
 
