@@ -4,7 +4,7 @@ PostmarketOS doesn't currently support dual booting through recovery, yet there 
 
 * On the [[Nokia N900]], u-boot provides a mechanism to select the OS. See [[Nokia N900#Installation]]
 * On fastboot devices that have an SD card, it is possible to install PostmarketOS on the SD card, and boot through <syntaxhighlight lang="bash" inline>pmbootstrap flasher boot</syntaxhighlight>. This has the advantage of not modifying anything on the phone itself, but a USB cable and a host device (like a computer) are needed to boot the device with this procedure.
-* On (?some?) fastboot devices, the recovery partition holds nothing but a second fastboot boot image. With the postmarketOS boot image flashed to the recovery partition and the root image flashed to either an internal partition or an sdcard, you should be able to dualboot (this works on xiaomi-santoni)
+* On (?some?) fastboot devices, the recovery partition holds nothing but a second fastboot boot image. With the postmarketOS boot image flashed to the recovery partition and the root image flashed to either an internal partition or an sdcard, you should be able to dualboot (this works on xiaomi-santoni and samsung-degaswifi)
 * [https://efidroid.org efidroid] might be used together with postmarketos, but has not been tested
 
 === See also ===
