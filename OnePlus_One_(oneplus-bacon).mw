@@ -79,6 +79,10 @@ Nimayer received the message "FAILED (remote: Unknown chunk type)" when trying t
 
 It may be possible to fix the issue by flashing a new [https://www.oneplus.com/support/softwareupgrade/details?code=1 OxygenOS image].  If that doesn't work, try flashing postmarketOS [[Android_Recovery_Zip_Installation|using a recovery zip]].
 
+
+== Users owning this device ==
+{{Device owners}}
+
 == Links ==
 
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-bacon Device package]
