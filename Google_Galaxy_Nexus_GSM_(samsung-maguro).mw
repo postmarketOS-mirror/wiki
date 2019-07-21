@@ -155,6 +155,9 @@ Number  Start (sector)    End (sector)  Size       Code  Name
   13          122752          122879       65536   0700  metadata</pre>
 (From this, you can see that if your postmarketOS install image is larger than 654 MB, you'll have to install it to the <code>userdata</code> partition instead. Or you could repartition.)
 
+== Users owning this device ==
+{{Device owners}}
+
 == Photos ==
 <gallery>
 File:Lawl Galaxy Nexus Weston.jpg|thumb|left|Weston and a working touch-screen
