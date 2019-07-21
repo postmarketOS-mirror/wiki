@@ -14,7 +14,7 @@
 | memory = 3GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet = Y
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = <!-- The display is working? -->
@@ -33,7 +33,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
