@@ -476,6 +476,7 @@ The N900 contains a Si4713 FM transmitter, it's controlled by video4linux. To st
 <source lang="shell-session">
 $ v4l2-ctl -d /dev/radio0 --set-ctrl=mute=0 --set-freq=95.21
 Now there should be silence on 95.21Mhz instead of noise when tuning in with a radio
+$ aplay -vv some-very-good-music.wav
 </source>
 
 == Resources ==
