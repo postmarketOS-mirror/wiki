@@ -56,6 +56,14 @@ Boot to bootloader: hold volume down + power button until the screen turns on
 
 Launch recovery: first boot to the bootloader, press the volume down button twice and press the power button to select
 
+== Installation ==
+
+# Setup pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source> Choose 'lg-bullhead' as target device And Xfce as ui(as it runs well).
+# Create boot image <source lang="shell">$ ./pmbootstrap.py -t 30000 install --no-fde</source> 
+# Now connect the mobile to pc in fastboot mode. Below command format the partitions <source lang="shell">$ fastboot format system</source>
+# Now flash the image <source lang="shell">$ ./pmbootstrap.py flasher flash_rootfs --partition userdata</source> 
+# Now the kernel <source lang="shell">$ ./pmbootstrap.py flasher flash_kernel</source> Installation is done. Reboot the phone.
+
 == Mainlining ==
 
 The linux mainline kernel has very basic support for this phone since November 2016 (one cpu and uart). In January 2017 support for the onboard SDHCI was added and since March 2018 pstore-ramoops. Both should be included in 4.19.
