@@ -1,7 +1,12 @@
-The Atheros AR9271 is a widely-available wifi chipset which has both drivers and firmware released under free software licences. Given that the majority of wifi chipsets used in mobile phones (particularly Samsung models) are not free software, it is a viable alternative to use as an external adapter, plugged into the USB port. As such, we should ensure that it is working correctly under pmOS for the devices and kernels supported here.
+The Atheros AR9271 is a widely-available 802.11n WiFi chipset which has both drivers and firmware released under free software licences. Given that the majority of wifi chipsets used in mobile phones (particularly Samsung models) are not free software, it is a viable alternative to use as an external adapter, plugged into the USB port. As such, we should ensure that it is working correctly under pmOS for the devices and kernels supported here.
+
+Note that many USB adapters which use the AR9271 have additional revisions which do not. If you can, be sure to find the FCC ID of the device in question to determine the exact chipset used.
 
 ==Devices using this chipset==
 https://tiny.cc/idlauy
 
+==Other Resources==
+- [https://wikidevi.com/wiki/AR9271 AR9271 on WikiDevi]
+- [https://github.com/qca/open-ath9k-htc-firmware GitHub repository for the `ath9k_htc` firmware]
 
 [[Category:Hardware]]
