@@ -469,6 +469,15 @@ make gps2
 
 gps2 will not talk to gpsd, so it is only useful to verify that hardware is working.
 
+=== FM Transmitter ===
+
+The N900 contains a Si4713 FM transmitter, it's controlled by video4linux. To start transmitting:
+
+<source lang="shell-session">
+$ v4l2-ctl -d /dev/radio0 --set-ctrl=mute=0 --set-freq=95.21
+Now there should be silence on 95.21Mhz instead of noise when tuning in with a radio
+</source>
+
 == Resources ==
 * [https://gitlab.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-n900 Device package]
 * [https://kernel.org Kernel source]
