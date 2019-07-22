@@ -48,6 +48,9 @@ After upgrades in mesa, ofono, kernel we have had several regressions and not al
 * bshah
 * opendata
 
+=== Users owning this device ===
+{{Device owners}}
+
 === Fastboot Mode ===
 
 First make sure to enable USB debugging in Android ([https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android-5-lollipop.htm])
