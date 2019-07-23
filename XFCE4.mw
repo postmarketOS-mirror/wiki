@@ -32,6 +32,7 @@ The best way to use the Xfce will be in Horizontally. So do this step to get bet
 * Rotate the display and touch to horizontal using [https://wiki.postmarketos.org/wiki/Display Display] guide.
 * In panel setting, change the mode to <code>Deskbar</code>, add <code>wisker-menu</code> and remove other plugins.
 * In <code>FileManager</code> settings, shortcut pane icon size to 48 px and enable <code>Single Click</code> in Behavior section.
+* Use [https://wiki.postmarketos.org/wiki/CoreApps CoreApps] as they work best in Horizontal screens.
 
 
 
