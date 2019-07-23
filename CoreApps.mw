@@ -47,14 +47,14 @@ All the apps except 4 are in the pmOS repo. So just install them by
 <code>$ sudo apk add corefm</code>
 
 == Usages ==
-* This apps can be used with any Desktop Environment. But recommended with i3wm and matchbox.
+* This apps can be used with any Desktop Environment. But recommended with i3wm, matchbox, xfce.
 * More usable in horizontal screen rotation.
 
 == Idea ==
 * Make package with i3wm + CoreApps as a interface.
 
 == Issues ==
-* Icons are small in size. Environment variables needs to added or use custom theme form [https://github.com/tsujan/Kvantum Kvantum] can fix that.
+* Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to fix apps icons and text are small.
 * Some icons are showing discolor. Because of SVG is no rendering correctly.
 
 === Links ===
@@ -65,9 +65,9 @@ All the apps except 4 are in the pmOS repo. So just install them by
 
 == Photos ==
 <gallery>
-File:coreapps2.jpg|thumb|left|CorePad
+File:Corestuff.jpg|thumb|left|CoreStuff
 File:coreapps3.jpg|thumb|CoreFM
 File:coreapps4.jpg|thumb|CoreImage
 File:coreapps5.jpg|thumb|CoreShot
-File:coreapps6.jpg|thumb|CoreTime
+File:Corekeyboard.jpg|thumb|Corekeyboard
 </gallery>
