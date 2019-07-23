@@ -56,6 +56,7 @@ pmbootstrap flasher export
 fastboot flash userdata /tmp/postmarketOS-export/device-name.img
 
 === Links ===
-
-* [https://github.com/JamesHealdUK/pmbootstrap/tree/device-lg-g-watch-r My repo with the device-lg-g-watch-r branch] (until merged with the postmarketOS repo)
-* [https://vid.me/CbJ5c A video of the silky smooth 60hz fix I just applied]
+* {{github|489}} initial PR
+* [https://github.com/JamesHealdUK/pmbootstrap/tree/device-lg-g-watch-r JamesHealdUK's repo with the device-lg-g-watch-r branch] (should have all been merged to master by now, see the PR above)
+* [https://vid.me/CbJ5c A video of the silky smooth 60hz fix]
+* [https://github.com/pmsourcedump/kernel_lge_bass-lenok/ kernel source backup]
