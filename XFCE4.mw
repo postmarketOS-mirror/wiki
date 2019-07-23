@@ -1,25 +1,44 @@
 {{Infobox interface
-| image = File:I9100-xfce.jpeg
-| imagecaption = [[Samsung_Galaxy_SII_(samsung-i9100)|Samsung Galaxy SII]] running XFCE
+| image = File:Xfce4N5X.jpg
+| imagecaption = [[Google Nexus 5X(lg-bullhead)|Nexus 5x]] running Xfce4
 }}
 
 Xfce4 is a GTK-based [[User-Interfaces|desktop environment]] aiming to be fast and lightweight.<br>
 
 == Status ==
 
-It works on most devices with a working display, and runs fine without hardware acceleration. Uses packages from Alpine repo.
+It works on most devices with a working display, and runs fine without hardware acceleration. Uses latest xfce version packages from Alpine repo.
 
 == Installation ==
 * <code>pmbootstrap init</code>
 * <code>User interface: xfce4</code>
 * <code>Extra packages: xf86-video-vesa mesa-egl</code>
-** Add <code>matchbox-keyboard</code> to get an on-screen keyboard [https://postmarketos.org/static/img/2017-12/xfce4-i9505.jpg]
+** Add <code>matchbox-keyboard</code>[https://postmarketos.org/static/img/2017-12/xfce4-i9505.jpg] or <code>corekeyboard</code> [https://wiki.postmarketos.org/images/8/83/Corekeyboard.jpg] to get an on-screen keyboard 
 
-== Guide ==
+== Fixes ==
 
-Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
+# Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
+# Add <code>gvfs</code> and <code>thunar-volman</code> for mounting drives and drive management.
+# Change the hidpi settings to 2x in <code>Display</code> setting.
+# Install <code>lxdm</code> to get restart options in power manager.
+# Disable <code>Compositor</code> from <code>Window Manager Tweaks</code> in settings to get faster experience.
 
-==Improving Touchscreen-Friendliness==
+
+== Better usability ==
+
+[[File:Corekeyboard.jpg|thumb|200px|Example configuration with CoreKeyboard running on [[Google Nexus 5X(lg-bullhead)|Nexus 5x]] ]]
+
+The best way to use the Xfce will be in Horizontally. So do this step to get better usability from Xfce.
+* Rotate the display and touch to horizontal using [https://wiki.postmarketos.org/wiki/Display Display] guide.
+* In panel setting, change the mode to <code>Deskbar</code>, add <code>wisker-menu</code> and remove other plugins.
+* In <code>FileManager</code> settings, shortcut pane icon size to 48 px and enable <code>Single Click</code> in Behavior section.
+
+
+
+
+
+
+== Improving Touchscreen-Friendliness ==
 
 [[File:Scrot4.png|thumb|200px|Example configuration with matchbox-keyboard running on [[Samsung_Galaxy_SII_(samsung-i9100)|Galaxy SII]]]]
 
