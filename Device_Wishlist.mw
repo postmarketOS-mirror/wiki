@@ -59,6 +59,7 @@ Please keep this list sorted by alphabet for readability.
 * Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release]
 * [https://ac100.grandou.net Toshiba AC100] ([https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/arch/arm/boot/dts/tegra20-paz00.dts mainline DTS], [https://github.com/grate-driver grate driver]) 
 * Wooze I5
+* Xiaomi Mi A2 (6X on China)
 * Xiaomi Mi Pad 3 (cappu)
 * Xiaomi Pocophone F1 (beryllium)
 * Xiaomi Redmi Note 5a (ugglite)
