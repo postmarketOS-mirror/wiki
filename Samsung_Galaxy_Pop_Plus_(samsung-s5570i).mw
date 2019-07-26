@@ -1,0 +1,58 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Mini
+| codename = tassve
+| releaseyear = 2012
+| originalsoftware = Android 2.3.6
+| chipset = Broadcom BCM21553
+| cpu = 832 MHz ARMv6
+| gpu = Broadcom VideoCore IV
+| storage = 160MB
+| display = 240x320
+| memory = 384MB
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = Kernel compiles, flashing doesn't work
+| booting = no
+}}
+
+== Contributors ==
+* kRkk
+
+== What works ==
+* Kernel Compilation
+
+== What does not work ==
+* Flashing
+
+== How to enter flash mode ==
+Press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
+
+== See also ==
+* [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Kernel source]
+* [https://gitlab.com/krkk/pmbootstrap/tree/device-samsung-tassve/aports/device/device-samsung-tassve Device package]
+* [https://www.gsmarena.com/samsung_galaxy_pop_plus_s5570i-4544.php Specs on GSMArena]
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME}} Initial merge request
+* {{issue|CHANGEME}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
