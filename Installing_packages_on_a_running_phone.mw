@@ -18,4 +18,6 @@ https://nl.alpinelinux.org/alpine/edge/testing
 
 3. Upgrade the package you have built with <code>apk upgrade [package name]</code>
 
+If you get <code>UNTRUSTED signature</code> then try this <code>apk upgrade --allow-untrusted</code>.
+
 [[Category:Guide]]
