@@ -45,8 +45,9 @@
 {{Device owners}}
 
 == Serial console ==
+The PineTab has a serial port in the headphone connector, it's activated by a switch behind the SD card cover. If the switch is pointed toward the SD card the headphone connector is in audio mode, if it's pointed the other way it's in UART mode.
 
-
+The uart is 115200n8
 
 == Components ==
 
