@@ -56,60 +56,32 @@
 ! Driver
 |-
 | Touchscreen
-| FocalTech FT6336GU
-| TOUCHSCREEN_EDT_FT5X06
+| Goodix GT9271
+| TOUCHSCREEN_GOODIX
 |-
 | Rear camera
 | OmniVision OV5640
 | VIDEO_OV5640
-|-
-| Camera flash
-| SGMICRO SGM3140
-| LEDS_SGM3140
 |-
 | Front camera
 | GalaxyCore GC2145
 | Nope
 |-
 | LCD
-| fitipower JD9365D
-| DRM_PANEL_PINEPHONE_JD9365DA
+| Feixin K101 IM2BA02
+| DRM_PANEL_FEIXIN_K101_IM2BA02
 |-
 | WiFi
-| Realtek RTL8723BS
-| RTL8723BS
+| Realtek RTL8723CS
+| RTL8723CS
 |-
 | Bluetooth
-| Realtek RTL8723BS
+| Realtek RTL8723CS
 | BT_HCIUART_RTL
 |-
-| Modem
-| Quectel EC25-E
-| USB_NET_QMI_WWAN
-|-
-| GNSS/GPS
-| Quectel EC25-E
-| CONFIG_USB_SERIAL_OPTION
-|-
-| Magnetometer
-| ST LIS3MDL
-| IIO_ST_MAGN_3AXIS
-|-
-| Ambient light / Proximity
-| SensorTek STK3335
-| STK3310
-|-
-| Sixaxis
-| InvenSense MPU-6050
-| INV_MPU6050_I2C
-|-
-| Vibration motor
-| ?
-| INPUT_GPIO_VIBRA
-|-
-| Notification LED
-| LED0603RGB
-| LEDS_GPIO
+| Accelerometer
+| Bosch BMA223
+| BMP250_I2C
 |-
 | Volume buttons
 | Buttons connected to the KEYADC
