@@ -1,0 +1,122 @@
+{{Infobox device
+| manufacturer = Pine
+| name = PineTab
+| codename = pine-pinetab
+| image = File:Pine-pinetab.jpg
+| imagecaption = The PineTab running Sway
+| releaseyear = 2019
+| originalsoftware = Linux 5.3.x
+| pmoskernel = 
+| chipset = Allwinner A64
+| cpu = 4x 1152 MHz Cortex-A53
+| gpu = Mali 400
+| memory = 2 GB
+| architecture = aarch64
+| n-android =  ✔
+| whet_dhry = 
+| status_usbnet = Y
+| status_flashing = -
+| status_touch = Y
+| status_screen = Y
+| status_wifi = N
+| status_xwayland = N
+| status_fde = N
+| status_mainline = Y
+| status_battery = Y
+| status_3d = P
+| status_accel = Y
+| status_audio = Y
+| status_bluetooth = N
+| status_camera = 
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| status_otg = 
+| status = Boots
+| booting = yes
+}}
+
+=== Contributors ===
+* ''[[user:MartijnBraam|MartijnBraam]]''
+* ''[[user:Z3ntu|z3ntu]]''
+
+== Serial console ==
+
+
+
+== Components ==
+
+{| class="wikitable"
+! Component
+! Model
+! Driver
+|-
+| Touchscreen
+| FocalTech FT6336GU
+| TOUCHSCREEN_EDT_FT5X06
+|-
+| Rear camera
+| OmniVision OV5640
+| VIDEO_OV5640
+|-
+| Camera flash
+| SGMICRO SGM3140
+| LEDS_SGM3140
+|-
+| Front camera
+| GalaxyCore GC2145
+| Nope
+|-
+| LCD
+| fitipower JD9365D
+| DRM_PANEL_PINEPHONE_JD9365DA
+|-
+| WiFi
+| Realtek RTL8723BS
+| RTL8723BS
+|-
+| Bluetooth
+| Realtek RTL8723BS
+| BT_HCIUART_RTL
+|-
+| Modem
+| Quectel EC25-E
+| USB_NET_QMI_WWAN
+|-
+| GNSS/GPS
+| Quectel EC25-E
+| CONFIG_USB_SERIAL_OPTION
+|-
+| Magnetometer
+| ST LIS3MDL
+| IIO_ST_MAGN_3AXIS
+|-
+| Ambient light / Proximity
+| SensorTek STK3335
+| STK3310
+|-
+| Sixaxis
+| InvenSense MPU-6050
+| INV_MPU6050_I2C
+|-
+| Vibration motor
+| ?
+| INPUT_GPIO_VIBRA
+|-
+| Notification LED
+| LED0603RGB
+| LEDS_GPIO
+|-
+| Volume buttons
+| Buttons connected to the KEYADC
+| KEYBOARD_SUN4I_LRADC
+|-
+| Power button
+| X-Powers AXP803
+| INPUT_AXP20X_PEK
+|-
+| Battery fuel gauge
+| X-Powers AXP803
+| BATTERY_AXP20X
+|}
