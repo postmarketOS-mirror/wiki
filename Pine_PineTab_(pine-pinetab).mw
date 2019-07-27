@@ -49,6 +49,14 @@ The PineTab has a serial port in the headphone connector, it's activated by a sw
 
 The uart is 115200n8
 
+The pinout for the serial connector on the tablet side is:
+
+* Tip: RX
+* Ring: TX
+* Sleeve: GND
+
+The serial connection is 3.3V
+
 == Components ==
 
 {| class="wikitable"
