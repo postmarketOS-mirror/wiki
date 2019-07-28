@@ -67,7 +67,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |-
 | surf
 | works
-| ?
+| not in xwayland
 | ?
 | webkit
 | webkit2gtk
