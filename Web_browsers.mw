@@ -27,7 +27,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |-
 | midori
 | works
-| ?
+| works
 | works
 | webkit
 | webkit2gtk
@@ -35,7 +35,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |-
 | qutebrowser
 | dependency error
-| ?
+| dependency error
 | ?
 | blink
 | qtwebengine
@@ -51,7 +51,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |-
 | epiphany
 | works
-| ?
+| works
 | ?
 | webkit
 | webkit2gtk
@@ -59,7 +59,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |-
 | luakit
 | works
-| ?
+| crashes
 | ?
 | webkit
 | webkit2gtk
