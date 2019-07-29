@@ -41,11 +41,12 @@
 == Contributors ==
 * takluyver
 * teddynight
-
-== Maintainer(s) ==
+<!-- == Maintainer(s) == -->
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
+== Users owning this device ==
+{{Device owners}}
 == What works ==
 
 * Kernel compiles (https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common )
@@ -63,7 +64,7 @@ Information about this phone is sparse, there is one place with somewhat complet
 
 http://specdevice.com/showspec.php?id=3b87-5692-0000-00000033c587
 
-== How to enter flash mode ==
+== Entering flash/recovery mode ==
 
 Power + Volume up + Volume down
 
@@ -71,7 +72,7 @@ Power + Volume up + Volume down
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 First,enter the flash mode and flash the kernel into the phone.
-Then,install rootfs to the sdcard.(As there is no enough space on the phone.)
+Then, install rootfs to the sdcard. (As there is no enough space on the phone.)
 
 == See also ==
 <!--
@@ -82,7 +83,8 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 
+* XDA-Forum: https://forum.xda-developers.com/galaxy-ace/s5830i-general
 * [https://github.com/androidarmv6/ Kernel and firmware]
 * [https://www.gsmarena.com/samsung_galaxy_ace_s5830i-4664.php Specs on GSMArena]
-* [https://www.raspberrypi.org/blog/a-birthday-present-from-broadcom/ A birthday present from Broadcom] - the Raspberry Pi foundation got an open source release of the VideoCore IV firmware, also used in this phone.
+* [https://www.raspberrypi.org/blog/a-birthday-present-from-broadcom/ A birthday present from Broadcom] - the Raspberry Pi foundation got an open-source release of the VideoCore IV firmware, also used in this phone.
 * [https://www.broadcom.com/blog/android-for-all-broadcom-gives-developers-keys-to-the-videocore Android for All] - the same announcement on the Broadcom blog.
