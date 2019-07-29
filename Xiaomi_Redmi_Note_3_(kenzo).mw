@@ -88,7 +88,7 @@ Wayland:
 * weston: TODO
 * plasma-mobile: Works but very slow.
 * phosh: Boots into black screen.
-* sway: TODO
+* sway: Not works
 
 X11:
 TODO
