@@ -82,6 +82,17 @@ $ sudo nmtui
 </source>
 And connect to your prefered wifi network using the terminal UI.
 
+== UI options ==
+
+Wayland:
+* weston: TODO
+* plasma-mobile: Works but very slow.
+* phosh: Boots into black screen.
+* sway: TODO
+
+X11:
+TODO
+
 == See also ==
 * {{MR|461|pmaports}} Initial merge request
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-xiaomi-kenzo Device package]
