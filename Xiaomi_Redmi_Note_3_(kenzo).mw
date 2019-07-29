@@ -43,9 +43,8 @@ Version of the kernel that pmos is running
 | pmoskernel = 3.10.105
 see Unixbench page on wiki
 | whet_dhry = 2417.9
-Is OTG available, not used in wiki
-| status_otg = P
 -->
+| status_otg = P
 }}
 
 == Contributors ==
