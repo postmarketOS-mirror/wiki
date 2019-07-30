@@ -61,4 +61,5 @@ To make wifi work, we need some binary blobs (download and wcnd, both located at
 * recompile them from leaked sources
 
 == See also ==
-[https://github.com/IKGapirov/android_kernel_samsung_j1mini3g/tree/cm-14.1 Kernel source]
+* {{MR|533|pmaports}} initial MR
+* [https://github.com/IKGapirov/android_kernel_samsung_j1mini3g/tree/cm-14.1 Kernel source]
