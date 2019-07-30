@@ -1,0 +1,64 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy J1 mini
+| codename = samsung-j1mini3g
+| image =
+| imagecaption =
+| releaseyear = 2016
+| originalsoftware = Android 5.1.1
+| chipset = Spreadtrum SC8830
+| cpu = 4x ARM Cortex-A7 
+| gpu = Mali-400 MP
+| storage = 4 GB
+| display = 480x800 TFT
+| memory = 768 MB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = Y
+| status_screen = Y
+| status_wifi =
+| status_xwayland = P
+| status_fde =
+| status_mainline = N
+| status_battery =
+| status_3d =
+| status_accel = Y
+| status_audio =
+| status_bluetooth =
+| status_camera =
+| status_gps =
+| status_mobiledata =
+| status_sms =
+| status_calls =
+| status =
+| booting = y
+| pmoskernel = 3.10.106
+| status_otg = -
+}}
+
+== Contributors ==
+* dolphinchips
+
+== Maintainer(s) ==
+* dolphinchips
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Hold <code>Power</code> + <code>Home</code> + <code>Vol Down</code> buttons to enter flash mode. Hold <code>Power</code> + <code>Home</code> + <code>Vol Up</code> buttons to enter recovery mode.
+
+== Installation ==
+Currently <code>pmbootstrap flasher flash_rootfs</code> fails at 17%, but <code>pmbootstrap flasher flash_kernel</code> works, so there are two ways:
+* install on sdcard (untested)
+* install via android recovery zip
+
+== Wifi ==
+To make wifi work, we need some binary blobs (download and wcnd, both located at /system/bin/ in stock rom), so we can:
+* use libhybris
+* see how Samsung Z1 handles it in Tizen (uses some Spreadtrum chip)
+* recompile them from leaked sources
+
+== See also ==
+[https://github.com/IKGapirov/android_kernel_samsung_j1mini3g/tree/cm-14.1 Kernel source]
