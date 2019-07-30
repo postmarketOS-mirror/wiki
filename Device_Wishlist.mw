@@ -56,6 +56,7 @@ Please keep this list sorted by alphabet for readability.
 * Samsung Gear S
 * Samsung GT-S5839i
 * Samsung S8500 Wave - runs originally on Bada 2.0, has a bootloader and an Android port, see XDA
+*Samsung Galaxy Grand 2 
 * Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release]
 * [https://ac100.grandou.net Toshiba AC100] ([https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/arch/arm/boot/dts/tegra20-paz00.dts mainline DTS], [https://github.com/grate-driver grate driver]) 
 * Wooze I5
