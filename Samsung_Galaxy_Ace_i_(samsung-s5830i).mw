@@ -41,12 +41,24 @@
 == Contributors ==
 * takluyver
 * teddynight
-<!-- == Maintainer(s) == -->
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
 
 == Users owning this device ==
 {{Device owners}}
+== Entering Recovery Mode ==
+
+Press Power + Volume up + Home to start the phone into recovery mode.
+
+You can choose the items with Volume up and down and enter with home button
+
+== Entering flash Mode==
+
+Press Power + Volume up + Volume down to start the phone into flash mode
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+First,enter the flash mode and flash the kernel into the phone.
+Then, install rootfs to the sdcard. (As there is no enough space on the phone.)
+
 == What works ==
 
 * Kernel compiles (https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common )
@@ -64,21 +76,7 @@ Information about this phone is sparse, there is one place with somewhat complet
 
 http://specdevice.com/showspec.php?id=3b87-5692-0000-00000033c587
 
-== Entering flash Mode==
-
-Press Power + Volume up + Volume down to start the phone into flash mode
-
-== Entering Recovery Mode ==
-
-Press Power + Volume up + Home to start the phone into recovery mode.
-
-You can choose the items with Volume up and down and enter with home button
-
-== Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-First,enter the flash mode and flash the kernel into the phone.
-Then, install rootfs to the sdcard. (As there is no enough space on the phone.)
-
+* XDA-Forum: https://forum.xda-developers.com/galaxy-ace/s5830i-general
 == See also ==
 <!--
 Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
@@ -88,7 +86,6 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 
-* XDA-Forum: https://forum.xda-developers.com/galaxy-ace/s5830i-general
 * [https://github.com/androidarmv6/ Kernel and firmware]
 * [https://www.gsmarena.com/samsung_galaxy_ace_s5830i-4664.php Specs on GSMArena]
 * [https://www.raspberrypi.org/blog/a-birthday-present-from-broadcom/ A birthday present from Broadcom] - the Raspberry Pi foundation got an open-source release of the VideoCore IV firmware, also used in this phone.
