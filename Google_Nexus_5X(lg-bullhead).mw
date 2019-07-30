@@ -64,9 +64,13 @@ Launch recovery: first boot to the bootloader, press the volume down button twic
 # Now flash the image <source lang="shell">$ ./pmbootstrap.py flasher flash_rootfs --partition userdata</source> 
 # Now the kernel <source lang="shell">$ ./pmbootstrap.py flasher flash_kernel</source> Installation is done. Reboot the phone.
 
+== Firmware ==
+Here is the official Google page to download GPS, Audio, Camera, Gestures, Graphics, DRM, Video, Sensors firware blob.
+[https://developers.google.com/android/drivers /developers.google]
+
 == Mainlining ==
 
-The linux mainline kernel has very basic support for this phone since November 2016 (one cpu and uart). In January 2017 support for the onboard SDHCI was added and since March 2018 pstore-ramoops. Both should be included in 4.19.
+The Linux mainline kernel has very basic support for this phone since November 2016 (one cpu and uart). In January 2017 support for the onboard SDHCI was added and since March 2018 pstore-ramoops. Both should be included in 4.19.
 
 To boot it using pmbootstrap follow the mainlining guide but note that it has a 64 Bit kernel also compared to downstream "device-lg-bullhead" you need to change the debug tty to /dev/ttyMSM0 in the deviceinfo file.
 
