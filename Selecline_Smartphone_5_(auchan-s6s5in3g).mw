@@ -53,7 +53,7 @@ Official name is Selecline Smartphone 5' but I omit the " symbol which creates m
 * Nothing
 
 == What does not work ==
-* Everythng
+* Everything, no kernel sources available
 
 == How to enter flash mode ==
 Probably unlocked bootloader by default, needs proper images
