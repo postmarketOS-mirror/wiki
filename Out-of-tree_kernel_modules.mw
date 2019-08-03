@@ -14,5 +14,7 @@ For a short time, we also had the out-of-tree kernel module for wireguard workin
 
 If somebody is committed to maintaining this, they could look into reviving it. Since we have so many kernels in postmarketOS, and since it would lower the maintenance burden for out-of-tree modules, maybe consider working together with Alpine to ship DKMS.
 
+=== Related ===
+* {{MR|538}} Proposal for wireguard support without DKMS or the fragile out-of-tree build method from before
 
 [[Category:Technical Reference]]
