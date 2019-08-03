@@ -66,6 +66,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Front Camera(and probably back but didn't figure out how to switch cameras)
 * WiFi
 * Sensors
+* Bluetooth(only shows available devices. Still looking for a way to connect to a device)
 
 == What does not work ==
 * Cellular networking
