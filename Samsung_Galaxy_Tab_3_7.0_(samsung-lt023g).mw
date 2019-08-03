@@ -75,7 +75,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 Everything else is untested as of writing this.
 
 == How hpagseddy get camera working ==
-Right now it's not usable for daily use, just for testing camera quality and checking if camera is working or not. I used "motion" package from alpine linux to capture pictures. If you want to test it too, just use "apk add motion" command to install that package. Then simply type "motion" and it will start capturing pictures nearly every second. If it doesnt capture pictures or pictures are just black squares then your camera isnt working. For opening pictures, i used feh image viewer to view images but every gallery app works great.
+Right now it's not usable for daily use, just for testing camera quality and checking if camera is working or not. I used "motion" package from alpine linux to capture pictures. If you want to test it too, just use "apk add motion" command to install that package. Then simply type "motion" and it will start capturing pictures nearly every second. If it doesn't capture pictures or pictures are just black squares then your camera isn't working. For opening pictures, i used feh image viewer to view images but every gallery app works great.
 
 == How to get WiFi working ==
 Install <code>linux-firmware-mrvl</code> to get the necessary firmware files, reboot the device after install.
