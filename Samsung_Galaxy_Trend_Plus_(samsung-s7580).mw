@@ -72,7 +72,8 @@ The internal clocks are currently broken on mainline meaning that the periperal 
 
 == Pictures ==
 [[File:UART-kylepro.jpg|200px| UART pin location on motherboard]]
-
+== Videos ==
+https://youtu.be/2h9T3Rb06LY
 == Links ==
 * [https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx Kernel source]
 * [https://github.com/Samsung-KYLEPROXX/android_device_samsung_kylepro Good hardware information page]
