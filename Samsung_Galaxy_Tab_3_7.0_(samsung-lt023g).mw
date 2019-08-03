@@ -68,7 +68,6 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Sensors
 
 == What does not work ==
-* Bluetooth
 * Cellular networking
 * 2D and 3D Acceleration
 * Audio
