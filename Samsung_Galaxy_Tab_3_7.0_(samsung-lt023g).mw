@@ -21,11 +21,11 @@
 | status_xwayland = Y
 | status_fde = Y
 | status_mainline = 
-| status_battery =
+| status_battery = Y
 | status_3d = 
 | status_accel = Y
 | status_audio = 
-| status_bluetooth =
+| status_bluetooth = P
 | status_camera = Y
 | status_gps = 
 | status_mobiledata = 
