@@ -1,3 +1,5 @@
 This page used to describe the merge workflow on GitHub and reasoning for always using "squash and merge". Nowadays we are on GitLab and have a tool to assist us with the merge workflow. From the user's perspective, you only need to know that commits are squashed into one commit if they don't have a clean history.
 
 For people responsible of merging patches, see [https://gitlab.com/postmarketOS/mrhlpr mrhlpr] for our merge workflow.
+
+Related: [[Git workflow]]
