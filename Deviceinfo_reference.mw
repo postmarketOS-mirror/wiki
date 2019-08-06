@@ -235,6 +235,10 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>screen_height</code>
 | The height of the display
 | 1280, 2560... other
+|-
+| <code>framebuffer_landscape</code>
+| Rotate framebuffer output by 270° ({{MR|530|pmaports}}, {{MR|546|pmaports}})
+| <code>true</code>, <code>false</code> (default)
 |}
 
 == Obsolete options ==
