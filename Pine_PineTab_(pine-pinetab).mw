@@ -32,7 +32,7 @@
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
-| status_otg = 
+| status_otg = Y
 | status = Boots
 | booting = yes
 }}
