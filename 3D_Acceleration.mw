@@ -32,6 +32,12 @@
 | Tegra 2/3/4
 | Nvidia
 | [https://github.com/grate-driver grate]
+|
+|-
+| Tegra K1
+| Nvidia
+| [https://cgit.freedesktop.org/mesa/mesa/commit/?id=1755f608f5201e0a23f00cc3ea1b01edd07eb6ef nouveau]
+|
 |-
 | VideoCore
 | Broadcom
