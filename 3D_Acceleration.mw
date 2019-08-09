@@ -65,4 +65,6 @@ The panfrost drivers is for the Mali Midgard (T6*, T7*, T8*) and Bifrost GPUs (G
 
 The opensource reverse-engineered driver for Tegra GPUs is Grate (anagram of "tegra"). It seems to work with Tegra 2, 3 and 4 GPUs
 
+The newer Tegra K1 and X1 use an 3D core that can be used with Nouveau instead with a seperate tegra display driver to handle the I/O
+
 == VideoCore ==
