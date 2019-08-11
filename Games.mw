@@ -1,0 +1,6 @@
+This is a list of packaged games
+
+== Runs on software rendering ==
+
+; chocolate-doom : Open source implementation of the first doom engine, needs a nonfree doom.wad or can use the opensource freedoom.wad
+; openttd : Open source implementation of Transport Tycoon Deluxe, needs internet connection to download game data
