@@ -2,5 +2,10 @@ This is a list of packaged games
 
 == Runs on software rendering ==
 
-; chocolate-doom : Open source implementation of the first doom engine, needs a nonfree doom.wad or can use the opensource freedoom.wad
-; openttd : Open source implementation of Transport Tycoon Deluxe, needs internet connection to download game data
+; chocolate-doom [armv7,aarch64] : Open source implementation of the first doom engine, needs a nonfree doom.wad or can use the opensource freedoom.wad
+; openttd [armv7,aarch64] : Open source implementation of Transport Tycoon Deluxe, needs internet connection to download game data
+; openrct2 [armv7,aarch64] : Open source implementation of Rollercoaster Tycoon 2, needs nonfree gamedata to work
+
+== Needs 3D acceleration ==
+
+; xonotic [x86_64] : First person shooter, used to be called Nexuiz
