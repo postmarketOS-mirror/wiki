@@ -103,7 +103,7 @@ prepare() {
 </syntaxhighlight>
 
 == Porting packages from Arch Linux ==
-Arch Linux' <code>PKBUILD</code> format is similar to <code>APKBUILD</code> of Alpine. If you don't know how to package a new program, check out how Arch does it.
+Arch Linux' <code>PKGBUILD</code> format is similar to <code>APKBUILD</code> of Alpine. If you don't know how to package a new program, check out how Arch does it.
 === Find the package ===
 
 [https://www.archlinux.org/packages/ Search here], click the package name, click on &quot;Source Files&quot; on the top right. A git repo with the <code>PKGBUILD</code> and all other files (such as patches) appears.
