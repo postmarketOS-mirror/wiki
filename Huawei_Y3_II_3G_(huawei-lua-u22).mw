@@ -56,7 +56,7 @@ see Unixbench page on wiki
 Run <source>$ sudo adb reboot bootloader</source> on your host machine to get in fastboot mode
 
 == How to unlock the bootloader ==
-{{note|Many thanks to [https://4pda.ru/forum/index.php?showuser=1758984 Levanech] and [https://4pda.ru/forum/index.php?showuser=6878411 Sasha1409] from 4PDA for this unlock method}}
+{{note|Many thanks to Levanech and Sasha1409 from 4PDA for this unlock method}}
 You will need these tools to unlock the bootloader:
 * SP Flash Tool v5.1532 (It's recommended to use [https://yadi.sk/d/72Mt2YSqmH4jV/%D0%B4%D0%BB%D1%8F%20%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81/v5.15 Linux version] of it)
 * Download Agent (DA_LUNA_KEY.bin) [https://yadi.sk/d/LWi93xTa3YHu7w Check this link for other required files]
