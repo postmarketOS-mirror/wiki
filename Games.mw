@@ -9,3 +9,9 @@ This is a list of packaged games
 == Needs 3D acceleration ==
 
 ; xonotic [x86_64] : First person shooter, used to be called Nexuiz
+
+== Untested, but packaged software ==
+
+* mame
+* quakespasm
+* snes9x
