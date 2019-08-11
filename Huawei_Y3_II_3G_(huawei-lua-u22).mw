@@ -1,0 +1,95 @@
+{{note|This port is made for 3G version of 2016 phone. Don't flash this port on 4G version or newer iterations of Y3 II}}
+{{Infobox device
+| manufacturer = Huawei
+| name = Y3 II 3G
+| codename = huawei-lua-u22
+| image = File:huawei-lua-u22.jpg
+| imagecaption = Huawei Y3 II 3G
+| releaseyear = 2016
+| originalsoftware = Android 5.1 (Linux 3.10.72)
+| chipset = MediaTek MT6582 (M?)
+| cpu = 4xARM Cortex-A7 1300 MHz
+| gpu = Mali-400 MP2
+| storage = 8GB
+| display = 480x854
+| memory = 1GB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| status = Boots, not merged yet.
+| booting = no
+| pmoskernel = 3.10.72
+| status_otg = -
+<!-- you can also use these lines if you need to:
+see Unixbench page on wiki
+| whet_dhry = 0.0
+-->
+}}
+
+== Contributors ==
+* [[User:HenriDellal|HenriDellal]]
+
+== Maintainers ==
+[[User:HenriDellal|HenriDellal]]
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Run <source>$ sudo adb reboot bootloader</source> on your host machine to get in fastboot mode
+
+== How to unlock the bootloader ==
+{{note|Many thanks to [https://4pda.ru/forum/index.php?showuser=1758984 Levanech] and [https://4pda.ru/forum/index.php?showuser=6878411 Sasha1409] from 4PDA for this unlock method}}
+You will need these tools to unlock the bootloader:
+* SP Flash Tool v5.1532 (It's recommended to use [https://yadi.sk/d/72Mt2YSqmH4jV/%D0%B4%D0%BB%D1%8F%20%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81/v5.15 Linux version] of it)
+* Download Agent (DA_LUNA_KEY.bin) [https://yadi.sk/d/LWi93xTa3YHu7w Check this link for other required files]
+* Scatter file
+* ROM Backup Splitter
+* Files from unlocked phone
+Unpack SP Flash Tool and run it. Then choose required download agent and scatter file on Download tab. Go to "Read back tab" and add new task. Click on the task to edit it. Choose location to save and name your file as ROM_0. Then fill 0xB1180000 value in Length field and proceed. If you want, you may backup userdata partition. Create another task for it with start at 0xC0180000 and length 0x111200000. When the tasks are ready, click "Read back" button, turn off the phone and connect it to USB 2.0 port. Backup process should start.
+
+When the backup is ready, split it on partitions with ROM Backup Splitter. Choose scatter file, ROM_0 file and directory where the result files have to be stored, then choose Actions > Split ROM.
+
+Unpack unlock_files.zip, start SP Flash Tool and choose scatter from unpacked archive. Click Download and connect your phone. Flashing process should start.
+
+When flashing is done, turn on the phone, go to Developer Options and turn on USB debugging and OEM unlock. After that, move your phone in fastboot mode with <source>$ sudo adb reboot bootloader</source>. Run <source>$ sudo fastboot oem unlock 38B8DD62253F983C</source>. Confirm bootloader unlock by pressing Volume+. After that, turn off the phone, open SP Flash Tool and flash nvram.bin and pro_info from your backup. After flashing turn on the phone and check IMEI. They must match the ones printed under the battery.
+
+== Installation ==
+To install postmarketOS on this phone, you have to:
+* Check if your phone has unlocked bootloader. If it doesn't, follow instructions above to unlock it.
+* Run <source>$ pmbootstrap init</source> and follow instructions.
+* Run <source>$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0</source>, where /dev/mmcblk0 must be replaced with proper SD card device (run lsblk to find it).
+* Put SD card in the phone and enter flash mode (fastboot).
+* In fastboot, run <source>$ pmbootstrap flasher flash_kernel --partition recovery</source> to flash kernel instead of recovery. Fastboot implementation on this device doesn't allow flashing any partitions besides system and recovery.
+It's possible to boot postmarketOS now. Turn off the phone, then hold Power and Volume+ buttons, release Power. When Huawei logo appears, you may release Volume+.
+
+== See also ==
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{issue|CHANGEME|pmaports}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
+-->
