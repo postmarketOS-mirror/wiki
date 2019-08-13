@@ -90,7 +90,7 @@ Set it to start on boot
 Reboot and you should be connected on boot.
 
 == Mainline Kernel ==
-The mainline kernel now support has some support for the Samsung Galaxy SIII LTE (i9305):
+The mainline kernel now has some support for the Samsung Galaxy SIII LTE (i9305):
 
 Upstream dts: [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm/boot/dts/exynos4412-i9305.dts exynos4412-i9305.dts]
 
@@ -98,4 +98,9 @@ Upstream status: [http://blog.forkwhiletrue.me/pages/midas-mainline/ Midas on Ma
 
 Note that [https://github.com/fourkbomb/linux/commit/2a6027178ae40c1d3baa965fe21b19cbf09493ce a patch is required] to make it work with the stock samsung bootloader.
 
-Replicant is also interested in mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/1219#issuecomment-395876420].
+forkbomb from LineageOS got mainline u-boot running on this device:
+[https://blog.forkwhiletrue.me/posts/an-almost-fully-libre-galaxy-s3/]
+
+Replicant has this device booting with mainline Linux and almost mainline U-Boot with only the need for a few patches on top and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/1219#issuecomment-395876420]
+
+The Qualcomm Gobi MDM9615 Modem seems to have mainline kernel support as well: [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS3I9305#Hardware-table]
