@@ -95,4 +95,11 @@ If everything checks out OK, your N7100 should reboot and you should see the Sam
 
 == Mainline Kernel ==
 There is currently no mainline kernel available but it should be possible to mainline this device. Have a look at [http://blog.forkwhiletrue.me/pages/midas-mainline/ Midas on Mainline] for work on mainlining very similar devices.
-Replicant is also interested in mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/293#issuecomment-395889596].
+
+Work to create a DTS for this device can be found here: [https://github.com/fourkbomb/linux/blob/8ce0752f2cc22b8f8fa980c21be802ea387f9a86/arch/arm/boot/dts/exynos4412-n7100.dts]
+
+The n710x upstream DTS is here: [https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/exynos4412-n710x.dts]
+
+Replicant is interested in further mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/293#issuecomment-395889596].
+
+This device's Qualcomm Gobi MDM9615 Modem seems to have some mainline kernel support: https://redmine.replicant.us/projects/replicant/wiki/GalaxyS3I9305#Hardware-table
