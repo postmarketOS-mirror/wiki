@@ -14,25 +14,25 @@
 | display = 480x854
 | memory = 1GB
 | architecture = armv7
-<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = P
 | status_screen = Y
 | status_wifi = N
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
-| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
-| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_xwayland = N
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = N
 | status_audio = N
-| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_bluetooth = N
 | status_camera = N
-| status_gps = <!-- The Global Positioning System sensor works.  -->
-| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
-| status_sms = <!-- Sending and receiving short messages works as intended. -->
-| status_calls = <!-- Talking to other people over the cellular network. -->
+| status_gps = N
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
 | status = Boots, not merged yet.
 | booting = no
 | pmoskernel = 3.10.72
@@ -50,7 +50,7 @@
 {{Device owners}}
 
 == How to enter flash mode ==
-Run <source>$ sudo adb reboot bootloader</source> on your host machine to get in fastboot mode
+Run <code>$ sudo adb reboot bootloader</code> on your host machine to get in fastboot mode
 
 == How to unlock the bootloader ==
 {{note|Many thanks to Levanech and Sasha1409 from 4PDA for this unlock method}}
@@ -66,16 +66,32 @@ When the backup is ready, split it on partitions with ROM Backup Splitter. Choos
 
 Unpack unlock_files.zip, start SP Flash Tool and choose scatter from unpacked archive. Click Download and connect your phone. Flashing process should start.
 
-When flashing is done, turn on the phone, go to Developer Options and turn on USB debugging and OEM unlock. After that, move your phone in fastboot mode with <source>$ sudo adb reboot bootloader</source>. Run <source>$ sudo fastboot oem unlock 38B8DD62253F983C</source>. Confirm bootloader unlock by pressing Volume+. After that, turn off the phone, open SP Flash Tool and flash nvram.bin and pro_info from your backup. After flashing turn on the phone and check IMEI. They must match the ones printed under the battery.
+When flashing is done, turn on the phone, go to Developer Options and turn on USB debugging and OEM unlock. After that, move your phone in fastboot mode with <code>$ sudo adb reboot bootloader</code>. Run <code>$ sudo fastboot oem unlock 38B8DD62253F983C</code>. Confirm bootloader unlock by pressing Volume+. After that, turn off the phone, open SP Flash Tool and flash nvram.bin and pro_info from your backup. After flashing turn on the phone and check IMEI. They must match the ones printed under the battery.
 
 == Installation ==
 To install postmarketOS on this phone, you have to:
 * Check if your phone has unlocked bootloader. If it doesn't, follow instructions above to unlock it.
-* Run <source>$ pmbootstrap init</source> and follow instructions.
-* Run <source>$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0</source>, where /dev/mmcblk0 must be replaced with proper SD card device (run lsblk to find it).
+* Run <code>$ pmbootstrap init</code> and follow instructions.
+* Run <code>$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0</code>, where /dev/mmcblk0 must be replaced with proper SD card device (run lsblk to find it).
 * Put SD card in the phone and enter flash mode (fastboot).
-* In fastboot, run <source>$ pmbootstrap flasher flash_kernel --partition recovery</source> to flash kernel instead of recovery. Fastboot implementation on this device doesn't allow flashing any partitions besides system and recovery.
+* In fastboot, run <code>$ pmbootstrap flasher flash_kernel --partition recovery</code> to flash kernel instead of recovery. Fastboot implementation on this device doesn't allow flashing any partitions besides system and recovery.
 It's possible to boot postmarketOS now. Turn off the phone, then hold Power and Volume+ buttons, release Power. When Huawei logo appears, you may release Volume+.
+
+== Features ==
+=== Touchscreen ===
+Touchscreen works and detects 2 simultaneous touches, but the events are not transmitted to DE/WM for unknown reason. If you know how to fix it, please tag HenriDellal at postmarketOS matrix channel.
+
+=== Wi-Fi ===
+Wi-Fi is presented by 3 interfaces: ccmni0, ccmni1, ccmni2. Currently unavailable.
+
+=== LED ===
+It's possible to change brightness of display backlight and notification LEDs by echoing values like
+<pre># echo 255 > /sys/class/leds/lcd-backlight/brightness
+# echo 255 > /sys/class/leds/red/brightness
+# echo 255 > /sys/class/leds/blue/brightness
+# echo 255 > /sys/class/leds/green/brightness</pre>
+The flashlight can be enabled with
+<pre># echo 255 > /sys/class/leds/lcd-backlight/brightness</pre>
 
 == See also ==
 <!--
