@@ -91,7 +91,7 @@ It's possible to change brightness of display backlight and notification LEDs by
 # echo 255 > /sys/class/leds/blue/brightness
 # echo 255 > /sys/class/leds/green/brightness</pre>
 The flashlight can be enabled with
-<pre># echo 255 > /sys/class/leds/lcd-backlight/brightness</pre>
+<pre># echo 255 > /sys/class/leds/flashlight/brightness</pre>
 
 == See also ==
 <!--
