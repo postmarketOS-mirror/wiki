@@ -63,7 +63,7 @@ Press '''Power + Volume Up''' to enter download/odin mode.
 
 == Installation ==
 This has to be done in two parts:
-* First create an android recovery image of PMOS and flash it using TWRP.
+* First create an [[Android Recovery Zip Installation|Android recovery image]] of PMOS and flash it using TWRP.
 * Then use the usual heimdall flasher method to install the kernel and initramfs (flash_kernel).
 Doing both with one method results in errors in both situations.
 
