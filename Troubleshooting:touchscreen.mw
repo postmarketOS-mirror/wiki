@@ -1,0 +1,20 @@
+= Generic debugging steps =
+
+== Test with evtest ==
+
+You can test if the touchscreen emits any events with <code>evtest</code>.
+
+== Test with libinput debug-events ==
+
+You can check if libinput understands the events your touchscreen driver emits with <code>libinput debug-events</code>.
+
+For example it's possible that libinput doesn't get any events or that it doesn't get TOUCH_DOWN/TOUCH_UP events. You can see the raw events libinput receives with <code>libinput record</code>.
+
+= Mediatek devices =
+
+Some touchscreen drivers on Mediatek devices have issues because they don't follow the standards. You can compare the driver source of your driver (especially the functions <code>tpd_up</code> and <code>tpd_down</code>) with [https://github.com/z3ntu/android_kernel_fairphone_FP1/blob/postmarketOS/mediatek/custom/common/kernel/touchpanel/ft5316/ft5316_driver.c#L320-L350 the Fairphone 1 touchscreen driver] and see if adjusting your touchscreen driver to mostly match that behavior helps.
+
+= See also =
+
+* [https://gitlab.com/postmarketOS/pmaports/issues/337 Touchscreen issues on the Huawei Y3 II 3G]
+* [https://gitlab.freedesktop.org/libinput/libinput/issues/67 libinput issue with details of the issue on the Fairphone 1]
