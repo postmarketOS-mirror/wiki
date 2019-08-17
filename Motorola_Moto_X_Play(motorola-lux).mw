@@ -15,7 +15,7 @@
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = Y
+| status_flashing = P
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = <!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
