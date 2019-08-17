@@ -34,7 +34,7 @@
 | status_sms = 
 | status_calls = 
 | status = Boots, not merged yet.
-| booting = no
+| booting = yes
 | pmoskernel = 3.10.72
 | status_otg = -
 | whet_dhry = 474.7
