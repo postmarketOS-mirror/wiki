@@ -54,7 +54,17 @@
 Power off the device, hold down the power and the volume up key for 1-2 seconds.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+Following the guide for porting PostmarketOS with very few changes needed. Most changes are based on those made to other Motorola devices such as the Athene. A merge request into the master code will be made soon. In the mean time the following changes were made:
+
+In linux-motorola-lux/APKBUILD
+* Additional makedepends: xz dtbtool
+* _repository: android_kernel_motorola_msm8916
+* _commit: d86037d30519f2e1f26af75bdcf11a74d08dfed4
+* In build(): dtbTool -s 2048 -p "scripts/dtc/" -o "arch/arm/boot/dt.img" "arch/arm/boot/"
+* in package(): install -Dm644 "$builddir/arch/arm/boot/dt.img" "$pkgdir/boot/dt.img"
+
+In device-motorola-lux/APKBUILD
+* Additional depends: msm-fb-refresher
 
 == See also ==
 * [https://wiki.lineageos.org/devices/lux LineageOS wiki page]
