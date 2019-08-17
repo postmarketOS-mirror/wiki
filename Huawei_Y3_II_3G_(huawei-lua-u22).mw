@@ -17,7 +17,7 @@
 
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = P
+| status_touch = Y
 | status_screen = Y
 | status_wifi = N
 | status_xwayland = N
@@ -42,6 +42,7 @@
 
 == Contributors ==
 * [[User:HenriDellal|HenriDellal]]
+* [[User:z3ntu|z3ntu]]
 
 == Maintainers ==
 [[User:HenriDellal|HenriDellal]]
@@ -78,8 +79,6 @@ To install postmarketOS on this phone, you have to:
 It's possible to boot postmarketOS now. Turn off the phone, then hold Power and Volume+ buttons, release Power. When Huawei logo appears, you may release Volume+.
 
 == Features ==
-=== Touchscreen ===
-Touchscreen works and detects 2 simultaneous touches, but the events are not transmitted to DE/WM for unknown reason. If you know how to fix it, please tag HenriDellal at postmarketOS matrix channel.
 
 === Wi-Fi ===
 Wi-Fi is presented by 3 interfaces: ccmni0, ccmni1, ccmni2. Currently unavailable.
@@ -94,6 +93,7 @@ The flashlight can be enabled with
 <pre># echo 255 > /sys/class/leds/flashlight/brightness</pre>
 
 == See also ==
+[https://github.com/HenriDellal/kernel-huawei-y3ii Kernel source]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
@@ -103,6 +103,6 @@ You can also add normal web links:
 -->
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-huawei-lua-u22 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-huawei-lua-u22 Kernel package]
 -->
