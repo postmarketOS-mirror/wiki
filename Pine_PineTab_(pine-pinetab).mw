@@ -122,7 +122,7 @@ The touchscreen on the PineTab is controlled by <code>goodix</code> module on i2
 === Cameras ===
 Both front and back camera shares the same csi-0 bus. Currently only the back camera (OV5640) has mainline support.
 
-It's not clear what would it reacts to both front and back camera. ''[citation needed]''
+It's not clear what would it reacts to both front and back camera. More information needed on this.
 
 Since Cerdus is at <code>/dev/video0</code>, the CSI is at <code>/dev/video1</code> and can be controlled with <code>/dev/media1</code> using <code>media-ctl</code>
 
@@ -131,10 +131,58 @@ pine-pinetab:~# media-ctl --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
 pine-pinetab:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video1 -vframes 1 selfie.jpg
 </source>
 
-picture needed
+[[File:OV5640-Pinetab.jpg|frameless]]
 
 === Wi-Fi ===
 Wi-Fi works using the [https://github.com/Icenowy/rtl8723cs RTL8723CS driver from Icenowy], loads and connect to a Wi-Fi perfectly fine. However power saving capabilities aren't working, so the PineTab battery will drain more quicker.
 
+<source lang="shell-session">
+wlan0: connected to Dreemurrs Embedded Labs
+        "wlan0"
+        wifi (rtl8723cs), 02:BA:9D:BF:5B:CF, hw, mtu 1500
+        ip4 default
+        inet4 192.168.1.44/24
+        route4 0.0.0.0/0
+        route4 192.168.1.0/24
+        route4 192.168.1.0/24
+        inet6 fe80::93e1:764c:ae44:7a62/64
+        route6 fe80::/64
+        route6 ff00::/8
+</source>
+
 === Bluetooth ===
 Bluetooth also works on this device after installing <code>firmware-rtl8723bt</code>, there is a patch series on LKML.
+
+=== Accelerometer ===
+
+The accelerometer driver is for BMA250 on mainline, and works just fine. The accelerometer value could be get here:
+
+<source lang="shell-session">
+pine-pinetab:~$ cat /sys/bus/iio/devices/iio\:device1/name 
+BMA222E
+pine-pinetab:~$ cat /sys/bus/iio/devices/iio\:device1/in_accel_x_raw 
+-1
+pine-pinetab:~$ cat /sys/bus/iio/devices/iio\:device1/in_accel_y_raw 
+28
+pine-pinetab:~$ cat /sys/bus/iio/devices/iio\:device1/in_accel_z_raw 
+-12
+</source>
+
+=== Audio ===
+==== Speakers ====
+Sound output should work after unmuting <code>AIF1 Slot 0 digital</code> and <code>DAC</code>. However Danct12's unit had it's speakers broken so this hasn't tested on him, but confirmed working on others.
+
+The Speaker output is named "Line Out"
+
+==== Headphone Jack ====
+Thankfully our device still has the headphone jack, so you could still listen to "The Beatles", right?
+
+Well, sure. Headphones should work after unmuting <code>Headphone</code> and <code>AIF1 Slot 0 digital</code>.
+
+==== Microphone ====
+Doesn't seem to work for Danct12, but the microphone can be found in the picture below:
+
+[[File:PineTab-Microphone.png|frameless]]
+
+== See also ==
+* {{MR|528|pmaports}} Initial merge request
