@@ -42,9 +42,12 @@ $ sudo firewall-cmd --zone=external --list-all
 $ sudo firewall-cmd --zone=internal --list-all
 </syntaxhighlight>
 
-Use the <code>--permanent</code> and <code>--reload</code> options for a persistent configuration.
+Use the <code>--permanent</code> and <code>--reload</code> options for a persistent configuration.<ref>https://www.server-world.info/en/note?os=CentOS_7&p=firewalld&f=2</ref>
 
 
 You can now verify the internet connection on your phone by pinging something. If this does not work it means you need to compile the kernel with USB_ETH setting enabled in menuconfig.
+
+== Notes ==
+<References />
 
 [[Category:Guide]]
