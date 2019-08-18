@@ -20,7 +20,7 @@
 | status_wifi = 
 | status_xwayland = Y
 | status_fde = 
-| status_mainline = 
+| status_mainline = P
 | status_battery = Y
 | status_3d = 
 | status_accel =
@@ -35,7 +35,6 @@
 | booting = yes
 | whet_dhry = 1273.5
 }}
-
 
 == Contributors ==
 
