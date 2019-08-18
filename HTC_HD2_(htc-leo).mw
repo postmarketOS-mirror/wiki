@@ -51,6 +51,7 @@
 
 == Next steps ==
 * Find a way to test the kernel on the device (black cLK?)
+* Ubuntu on HD2, a good starting point?: https://forum.xda-developers.com/showthread.php?t=889433
 
 == Bootloaders ==
 Because of the age of the HD2, there are serval 3rd party bootloaders available, most commonly used:
