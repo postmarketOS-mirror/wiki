@@ -136,20 +136,6 @@ pine-pinetab:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video1 -vframes 1 sel
 === Wi-Fi ===
 Wi-Fi works using the [https://github.com/Icenowy/rtl8723cs RTL8723CS driver from Icenowy], loads and connect to a Wi-Fi perfectly fine. However power saving capabilities aren't working, so the PineTab battery will drain more quicker.
 
-<source lang="shell-session">
-wlan0: connected to Dreemurrs Embedded Labs
-        "wlan0"
-        wifi (rtl8723cs), 02:BA:9D:BF:5B:CF, hw, mtu 1500
-        ip4 default
-        inet4 192.168.1.44/24
-        route4 0.0.0.0/0
-        route4 192.168.1.0/24
-        route4 192.168.1.0/24
-        inet6 fe80::93e1:764c:ae44:7a62/64
-        route6 fe80::/64
-        route6 ff00::/8
-</source>
-
 === Bluetooth ===
 Bluetooth also works on this device after installing <code>firmware-rtl8723bt</code>, there is a patch series on LKML.
 
