@@ -18,6 +18,8 @@ $ #disable it if you plug the USB cable out and want to use WiFi, because it can
 
 ==== On the host machine: ====
 
+===== Ubuntu =====
+
 <syntaxhighlight lang="shell-session">
 $ sudo sysctl net.ipv4.ip_forward=1
 $ sudo iptables -P FORWARD ACCEPT
@@ -26,6 +28,22 @@ $ sudo iptables -A POSTROUTING -t nat -j MASQUERADE -s 172.16.42.0/24
 
 This will enable IPv4 forwarding on your host machine which basically lets it function as a router. The postrouting command will make the kernel on the host translate the packets between the phone network
 and your normal network on the host machine.
+
+===== RHEL/CentOS/Fedora =====
+
+<syntaxhighlight lang="shell-session">
+$ sudo sysctl net.ipv4.ip_forward=1
+$ sudo firewall-cmd --get-active-zone 
+$ sudo nmcli connection modify ethX_other connection.zone external
+$ sudo nmcli connection modify ethX_to_phone connection.zone internal
+$ sudo firewall-cmd --get-active-zone 
+$ sudo firewall-cmd --zone=external --add-masquerade
+$ sudo firewall-cmd --zone=external --list-all
+$ sudo firewall-cmd --zone=internal --list-all
+</syntaxhighlight>
+
+Use the <code>--permanent</code> and <code>--reload</code> options for a persistent configuration.
+
 
 You can now verify the internet connection on your phone by pinging something. If this does not work it means you need to compile the kernel with USB_ETH setting enabled in menuconfig.
 
