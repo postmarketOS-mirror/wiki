@@ -18,7 +18,11 @@ $ echo 0 0 > /sys/class/graphics/fb0/pan
 
 We found out that removing the 3D driver support makes the MSM framebuffer work. See [https://github.com/postmarketOS/pmbootstrap/pull/66 #66].
 
-<pre>CONFIG_MSM_KGSL=n</pre>
+<pre>CONFIG_MSM_KGSL=n
+
+-> Device Drivers                                                                                                                                           │  
+    -> Graphics support
+        -> MSM 3D Graphics driver</pre>
 
 On devices using the mdss_fb driver, adding <code>mdss-fb-init-hack</code> to the dependencies of the device package ([https://github.com/postmarketOS/pmbootstrap/blob/405b702e322088e2e4ee74b3738fce19e53782cc/aports/device/device-sony-amami/APKBUILD#L8 example]) might help.
 
