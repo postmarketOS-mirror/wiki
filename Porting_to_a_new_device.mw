@@ -126,7 +126,7 @@ $ mv lineageos_mako_defconfig aports/device/linux-wiki-example/config-wiki-examp
 </syntaxhighlight>
 
 ==== Download sources and update checksums ====
-Use the checksum action again. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window.
+Use the checksum command. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window.
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap checksum linux-wiki-example
@@ -212,6 +212,8 @@ If you still can't find it, try it with a text editor. The log is stored in <cod
 ^C
 $ pmbootstrap log -c
 </syntaxhighlight>
+
+Another trick to find the error message real quick, is to open <code>log.txt</code> with <code>less</code> and use the follow mode (press <code>F</code> while in <code>less</code> or open less with the <code>+F</code> option: <code>less +F log.txt</code>). This causes <code>less</code> to behave like <code>tail -f</code>. When an error occurs, you can exit the follow mode by pressing <code>CTRL-C</code> and use <code>?</code> to reverse search the output (for example: <code>?error</code>). Press <code>F</code> to re-enable follow mode.
 
 ==== Get a patch ====
 ===== From postmarketOS aports =====
