@@ -18,7 +18,7 @@ $ #disable it if you plug the USB cable out and want to use WiFi, because it can
 
 ==== On the host machine: ====
 
-===== Ubuntu =====
+===== Ubuntu/ Arch =====
 
 <syntaxhighlight lang="shell-session">
 $ sudo sysctl net.ipv4.ip_forward=1
