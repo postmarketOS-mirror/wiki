@@ -73,7 +73,7 @@ When flashing is done, turn on the phone, go to Developer Options and turn on US
 To install postmarketOS on this phone, you have to:
 * Check if your phone has unlocked bootloader. If it doesn't, follow instructions above to unlock it.
 * Run <code>$ pmbootstrap init</code> and follow instructions.
-* Run <code>$ pmbootstrap install --no-fde --sdcard=/dev/mmcblk0</code>, where /dev/mmcblk0 must be replaced with proper SD card device (run lsblk to find it).
+* Run <code>$ pmbootstrap install --sdcard /dev/mmcblk0</code>, where /dev/mmcblk0 must be replaced with proper SD card device (run lsblk to find it).
 * Put SD card in the phone and enter flash mode (fastboot).
 * In fastboot, run <code>$ pmbootstrap flasher flash_kernel --partition recovery</code> to flash kernel instead of recovery. Fastboot implementation on this device doesn't allow flashing any partitions besides system and recovery.
 It's possible to boot postmarketOS now. Turn off the phone, then hold Power and Volume+ buttons, release Power. When Huawei logo appears, you may release Volume+.
@@ -93,16 +93,8 @@ The flashlight can be enabled with
 <pre># echo 255 > /sys/class/leds/flashlight/brightness</pre>
 
 == See also ==
-[https://github.com/HenriDellal/kernel-huawei-y3ii Kernel source]
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* [https://github.com/HenriDellal/kernel-huawei-y3ii Kernel source]
+* {{MR|559|pmaports}} Initial merge request
+* {{issue|337|pmaports}} Touchscreen issues fix for this device (and probably other Mediatek phones)
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-huawei-lua-u22 Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-huawei-lua-u22 Kernel package]
--->
