@@ -98,3 +98,4 @@ The flashlight can be enabled with
 * {{issue|337|pmaports}} Touchscreen issues fix for this device (and probably other Mediatek phones)
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-huawei-lua-u22 Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-huawei-lua-u22 Kernel package]
+[[File:huawei-lua-u22-mate-2.png|200px|thumb|left|Running MATE, htop and matchbox-keyboard]]
