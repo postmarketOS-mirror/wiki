@@ -164,8 +164,10 @@ Available keymaps:
 
 * <code>us/rx51_us</code>
 [[File:N900 keymap us.jpg|800px]]
-* <code>ch/rx51_ch-de</code>
+* <code>ch/rx51_ch</code>
 [[File:N900 keymap ch-de.jpg|800px]]
+* <code>ch/rx51_it</code>
+<<image missing>>
 
 
 To obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one]:
