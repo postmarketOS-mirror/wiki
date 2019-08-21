@@ -1,0 +1,18 @@
+You can add various tags in the commit message to modify the continuous integration behaviour for your merge requests.
+
+= Common tags =
+
+; <code>[ci:skip-ci]</code>
+:Do not run the CI for the merge request
+
+
+= pmaports tags =
+; <code>[ci:skip-build]</code>
+: Allow skipping the package build step by specifying "<code>[ci:skip-build]</code>" in the commit message. In contrary to the usual "skip ci" method, this will still run all the other CI checks.
+: Introduced in [https://gitlab.com/postmarketOS/pmaports/merge_requests/210 merge request 210]
+; <code>[ci:ignore-count]</code>
+: Allow skipping the "too many packages changed" check by specifying "ci:ignore-count" in the commit message.
+: Introduced in [https://gitlab.com/postmarketOS/pmaports/merge_requests/210 merge request 210]
+; <code>[ci:skip-vercheck]</code>
+: Skip version check
+: Introduced in [https://gitlab.com/postmarketOS/pmaports/merge_requests/382 merge request 382]
