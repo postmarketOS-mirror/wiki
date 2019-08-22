@@ -156,9 +156,7 @@ done</pre>
 
 === Keyboard layout ===
 
-==== Console ====
-
-The keyboard layout for the virtual console is asked during <code>pmbootstrap init</code> after you select the <code>nokia-n900</code> device.
+The keyboard layout is asked during <code>pmbootstrap init</code> after you select the <code>nokia-n900</code> device.
 
 Available keymaps:
 
@@ -169,6 +167,7 @@ Available keymaps:
 * <code>ch/rx51_it</code>
 <<image missing>>
 
+==== Console ====
 
 To obtain your desired language keymap file for the RX-51, [https://raw.githubusercontent.com/archlinuxarm-n900/n900-keymaps/master/rx51_us.map such as this one]:
 
