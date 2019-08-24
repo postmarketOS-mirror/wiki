@@ -1,0 +1,59 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy A5 (2015)
+| codename = a5ulte
+| image = File:a5ulte_pmos.jpg
+| imagecaption = Samsung Galaxy A5
+| releaseyear = 2015
+| originalsoftware = Android 4.4.4
+| chipset = Qualcomm MSM8916
+| cpu = ARM Cortex A53@1.2GHz
+| gpu = Adreno 306
+| storage = 16GB
+| display = 5 inch 16:9, 720 x 1280 AMOLED
+| memory = 2GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = Y
+| status_battery =
+| status_3d = Y
+| status_accel = 
+| status_audio =
+| status_bluetooth =
+| status_camera = 
+| status_gps =
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = 
+| booting = yes
+
+<!-- you can also use these lines if you need to:
+if the device haven't originally ran Android OS, e.g. Nokia N900
+| n-android =  ✔
+Version of the kernel that pmos is running
+| pmoskernel = 5.3.0
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = -
+-->
+}}
+
+== Contributors ==
+* minecrell
+* Mis012
+* maccraft123(only wiki page, all credit to minecrell and Mis012)
+
+== Users owning this device ==
+{{Device owners}}
+
+== Installation ==
+Ask on Matrix channel
