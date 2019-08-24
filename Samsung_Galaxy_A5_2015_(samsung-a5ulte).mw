@@ -1,12 +1,12 @@
 {{Infobox device
 | manufacturer = Samsung
 | name =  Galaxy A5 (2015)
-| codename = a5ulte
+| codename = samsung-a5ulte
 | image = File:a5ulte_pmos.png
 | imagecaption = Samsung Galaxy A5
 | releaseyear = 2015
 | originalsoftware = Android 4.4.4
-| chipset = Qualcomm MSM8916
+| chipset = Qualcomm Snapragon 410, MSM8916
 | cpu = ARM Cortex A53@1.2GHz
 | gpu = Adreno 306
 | storage = 16GB
@@ -46,6 +46,11 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
+
+The device isn't in main pmaports tree, but in gitlab.com/lambdadroid/pmaports.git
+There is work being done on completion for merging it upstream(24th of August 2019)
+Minecrell was talking about 29-30th of August
+
 
 == Contributors ==
 * minecrell
