@@ -70,6 +70,8 @@ Is OTG available, not used in wiki
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+At this moment, installation of rootFs fails. When specifying the partition for rootFs (SYSTEM) heimdall fails the flash at 8%. This is usually fixed by configuring "sparse images" in APKBUILD, altough this doesn't seem to be doing anything.
+When flashing rootFs to RECOVERY partition flash fails at 94%.
 
 == See also ==
 <!--
