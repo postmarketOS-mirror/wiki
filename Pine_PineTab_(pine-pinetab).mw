@@ -111,13 +111,7 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 
 === Touchscreen ===
 
-The touchscreen on the PineTab is controlled by <code>goodix</code> module on i2c-0. Currently on some units, the touchscreen does not work due to the driver requires both "irq" and "reset" GPIOs to send the reset. Otherwise the touchscreen will be at 0x14 instead of 0x5d, [https://gitlab.com/pine64-org/linux/merge_requests/9 this pull request should fix it].
-
-<source lang="dmesg">
-[    0.681480] Goodix-TS 0-005d: i2c test failed attempt 1: -6
-[    0.706717] Goodix-TS 0-005d: i2c test failed attempt 2: -6
-[    0.734617] Goodix-TS 0-005d: I2C communication failure: -6
-</source>
+The touchscreen on the PineTab is controlled by <code>goodix</code> module on i2c-0, at address 0x5d.
 
 === Cameras ===
 Both front and back camera shares the same csi-0 bus. Currently only the back camera (OV5640) has mainline support.
