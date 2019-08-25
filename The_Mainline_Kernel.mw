@@ -51,6 +51,7 @@ A good example of a device using a mainline kernel is the <code>device-nokia-rx5
 * [https://matrix.to/#/!clcCCNrLZYwdfNqkkR:disroot.org/$152104340146547HXnql:matrix.org opendata26 walking alibabzo through mainlining aries]
 * [https://www.youtube.com/watch?v=LPG4EkXK9Us ARM64 SoC Linux Support Check-List (what needs to be done to get an arm64 soc to work on mainline)]
 * [https://github.com/efidroid/projectmanagement/wiki/%5BReference%5D-Chipsets probably a list of which qualcomm socs are similar]
+* [https://redmine.replicant.us/projects/replicant/wiki/Upstream Replicant upstream kernel and upstream bootloader wiki]
 * {{issue|191|pmaports}} Getting started tips from zhuowei
 
 [[Category:Technical Reference]]
