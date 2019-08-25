@@ -62,9 +62,11 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-1. Turn the device completely off.
-2. From a turned off device, press Power, volume down and home buttons at the same time. The blue interface of "download mode" will appear, press volume up to enter the mode.
-3. connect the device to a PC via USB.
+* Turn the device completely off.
+
+* From a turned off device, press Power, volume down and home buttons at the same time. The blue interface of "download mode" will appear, press volume up to enter the mode.
+
+* connect the device to a PC via USB.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
