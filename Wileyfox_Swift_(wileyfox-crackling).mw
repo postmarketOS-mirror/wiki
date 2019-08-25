@@ -56,6 +56,19 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 * Mainline kernel doesn't have charger drivers
 * No MAC addresses on boot at the moment
 
+You can get WiFi working by adding <code>/etc/local.d/wcnss.start</code>
+with this content (put your MAC in)
+<pre>
+#!/bin/sh
+
+ifconfig wlan0 hw ether AA:BB:CC:DD:EE:FF
+
+nmcli radio all off
+nmcli radio all on
+</pre>
+and making ir executeable with <code>sudo chmod +x /etc/local.d/wcnss.start</code>
+
+
 == Contributors ==
 * ''[[user:TravMurav|TravMurav]]''
 
