@@ -18,15 +18,15 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = <!-- Wireless network works? -->
+| status_wifi = P
 | status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_mainline = P
+| status_battery = P
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
-| status_accel = <!-- The sensor that measures proper acceleration works -->
-| status_audio = <!-- Using the device's speakers/headphone jack works -->
-| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_accel = Y
+| status_audio = P
+| status_bluetooth = P
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
@@ -34,7 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-| status_otg = -
+| status_otg = P
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
@@ -52,7 +52,9 @@ Fairly popular device based on reference Qualcomm design. Initialy shipped with 
 There is also another device called GeneralMobile 4g (Android One device) that is very similar with this one.
 
 == Problems ==
-* Battery charge level reported incorrectly (at zero most of the time)
+* Microphones are unuseable at the moment
+* Mainline kernel doesn't have charger drivers
+* No MAC addresses on boot at the moment
 
 == Contributors ==
 * ''[[user:TravMurav|TravMurav]]''
@@ -76,8 +78,6 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 Just follow the [[Installation guide]].
 
-[[Weston]] and [[XFCE4]] works. [[Plasma Mobile]] unuseable because of software rendering.
-
 == See also ==
 * [https://wiki.lineageos.org/devices/crackling Device on LineageOS wiki]
 * [https://github.com/LineageOS/android_device_wileyfox_crackling LineageOS Device on GitHub]
@@ -86,6 +86,8 @@ Just follow the [[Installation guide]].
 
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-wileyfox-crackling Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-wileyfox-crackling Kernel package]
+* [https://github.com/msm8916-mainline/linux WIP kernel for msm8916 devices]
+
 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
@@ -93,4 +95,5 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+
 -->
