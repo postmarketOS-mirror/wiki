@@ -40,8 +40,41 @@
 * scintill
 
 == Progress ==
-Boots a bit
+Can boot into a mainline linux kernel, but the bootloader isn't persistent so it can only boot tethered.
+
+== Booting ==
+
+# Install syringe package in chroot
+# Enter DFU mode (hold power and home with USB connected to computer)
+# loadibec openiboot-ipad1g.bin
+
+expect script for automating booting with <code>oibc</code>:
+
+<source lang="expect">
+#!/usr/bin/expect
+spawn oibc
+
+send "!/path/to/vmlinuz\r"
+sleep 0.1
+send "\r"
+expect "Received file"
+send "kernel \"console=tty0 PMOS_NO_OUTPUT_REDIRECT\"\r"
+expect "Done: kernel"
+
+send "!/path/to/initramfs\r"
+sleep 0.1
+send "\r"
+expect "Received file"
+send "initrd\r"
+expect "Done: initrd"
+send "wait_boot 15000\r"
+expect "Done: boot"
+</source>
+
+* Set <code>console=ttySAC0</code> for UART console instead of framebuffer
+* <code>earlycon=s3c2410,0x82500000</code> and <code>keep_bootcon</code> may be useful too.
 
 == Links ==
 
 * [https://github.com/iDroid-Project/openiBoot openiboot] (Great info on wiki)
+* [https://github.com/scintill/iDroid-kernel] (older iDroid kernel with ipad support)
