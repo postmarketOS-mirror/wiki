@@ -45,8 +45,12 @@ Can boot into a mainline linux kernel, but the bootloader isn't persistent so it
 == Booting ==
 
 # Install syringe package in chroot
-# Enter DFU mode (hold power and home with USB connected to computer)
-# loadibec openiboot-ipad1g.bin
+# Enter DFU mode (hold  {{button|power}} and  {{button|home}} with USB connected to computer)
+# load openiboot
+
+<source lang="shell-session">
+$ loadibec openiboot-ipad1g.bin
+</source>
 
 expect script for automating booting with <code>oibc</code>:
 
