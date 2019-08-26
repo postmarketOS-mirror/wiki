@@ -4,57 +4,49 @@
 | codename = samsung-a5ulte
 | image = File:a5ulte_pmos.png
 | imagecaption = Samsung Galaxy A5
-| releaseyear = 2015
+| releaseyear = 2014
 | originalsoftware = Android 4.4.4
-| chipset = Qualcomm Snapragon 410, MSM8916
-| cpu = ARM Cortex A53@1.2GHz
+| chipset = Qualcomm Snapdragon 410, MSM8916
+| cpu = 4x ARM Cortex A53 @ 1.2 GHz
 | gpu = Adreno 306
-| storage = 16GB
+| storage = 16 GB
 | display = 5 inch 16:9, 720 x 1280 AMOLED
-| memory = 2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
-| status_xwayland = 
-| status_fde = 
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde =
 | status_mainline = Y
 | status_battery =
 | status_3d = Y
-| status_accel = 
-| status_audio =
-| status_bluetooth =
-| status_camera = 
+| status_accel = Y
+| status_audio = P
+| status_bluetooth = Y
+| status_camera =
 | status_gps =
-| status_mobiledata = 
-| status_sms = 
-| status_calls = 
+| status_mobiledata =
+| status_sms =
+| status_calls =
 | status = 
 | booting = yes
-| pmoskernel = 5.3.0
+| pmoskernel = Mainline
 
 <!--
 | whet_dhry = 0.0
 -->
 }}
 
-The device isn't in main pmaports tree, but in gitlab.com/lambdadroid/pmaports.git
-There is work being done on completion for merging it upstream(24th of August 2019)
-Minecrell was talking about 29-30th of August
-
-
 == Contributors ==
-* minecrell
-* Mis012
-* maccraft123(only wiki page, all credit to minecrell and Mis012)
+* ''[[user:Minecrell|minecrell]]''
+* ''[[user:maccraft123|maccraft123]]'' (only wiki page)
 
 == Users owning this device ==
 {{Device owners}}
-* minecrell
-* maccraft123
 
 == Installation ==
 Ask on Matrix channel
