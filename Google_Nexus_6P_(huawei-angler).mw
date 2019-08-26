@@ -1,0 +1,102 @@
+{{Infobox device
+| manufacturer = Google (Huawei)
+| name = Nexus 6P
+| codename = huawei-angler
+| image = File:Huawei Nexus 6P.png
+| imagecaption = Huawei Nexus 6P
+| releaseyear = 2015
+| originalsoftware = Android 6.0.0 on Linux 3.10 (upgradeable to Android 8.0.0 on Linux 3.10)
+| chipset = Qualcomm MSM8994 Snapdragon 810
+| cpu = Octa-core (4x1.55 GHz Cortex-A53 & 4x2.0 GHz Cortex-A57)
+| gpu = Adreno 430
+| storage = 32/64/128 GB
+| display = 1440x2560 AMOLED
+| memory = 3 GB RAM
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+== Contributors ==
+
+* zhuowei
+
+=== How to enter flash mode ===
+* Connect a USB cable
+* Make sure, the device is powered off
+* Hold power +  volume down
+* Continue holding until you se the bootloader menu
+
+==pmbootstrap install==
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+
+
+$ cd pmbootstrap
+
+$ ./pmbootstrap.py init
+
+$ ./pmbootstrap.py install
+
+
+$ ./pmbootstrap.py flasher flash_rootfs
+
+$ ./pmbootstrap.py flasher flash_kernel
+
+== Kernel configs applied ==
+
+Configs changed from stock Lineage kernel:
+* [[Kernel_configuration#CONFIG_DEVTMPFS | CONFIG_DEVTMPFS]]=y
+* [[Kernel_configuration#CONFIG_VT | CONFIG_VT]]=y
+* CONFIG_FRAMEBUFFER_CONSOLE=y
+* Various NFS client configs: CONFIG_NFS_V4_1=y
+* CONFIG_BCMDHD_FW_PATH, CONFIG_BCMDHD_NVRAM_PATH
+
+== How to enter flash mode ==
+
+The Nexus 6P, like all Google Nexus devices, uses Fastboot as the flashing protocol.
+
+To enter Fastboot mode, hold Volume Down while powering on the device. Let go of Volume Down when a picture of a green Android mascot shows up on the screen.
+
+== Research ==
+
+=== Mainline ===
+
+There is a [https://www.youtube.com/watch?v=77tuFtM4gjA project] to port the mainline kernel to Nexus 6P: as a result there's now some support for Nexus 6P in mainline. However, currently there's only support for serial output and input, no screen or USB. Thus, this port doesn't use a mainline kernel. (The mainlining team's members can be found at ##linux-msm on Freenode.)
+
+=== Modem ===
+
+Android boots the modem by mounting the modem partition to /firmware, then opening /dev/subsys_modem. Doing the same on postmarketOS (after linking all the firmware in /firmware/images to /lib/firmware/postmarketos) causes any `dmesg` call to freeze (?!), and the device would kernel panic with a [https://gist.github.com/zhuowei/c7a92393e25136c8977a46361bf826d7 "modem crashed" error] in a few seconds.
+
+=== Audio ===
+
+The audio requires the blobs from Android's /vendor/adsp.* to be present in /lib/firmware/postmarketos. Then, opening /dev/subsys_adsp will boot the sound card. Currently ALSA recognizes the sound card but fails with an error when playing audio: the Android audio configuration files would need to be converted to Linux format by [https://github.com/ford-prefect/xml2ucm xml2ucm]. See https://arunraghavan.net/2016/01/audio-devices-and-configuration/ for an explanation of the difference between Android and Linux audio, and see https://github.com/kholk/sony-alsa-ucm/tree/master/kitakami for a different SD810 device's ALSA config.
+
+=== Bluetooth ===
+
+It seems Bluetooth is connected via H4 UART at /dev/ttyHS0. [https://wiki.tizen.org/Porting_Guide/Connectivity#Configuration Tizen] uses the hciattach_bcm43xx tool from BlueZ to load firmware to the Bluetooth dongle, but I can't find this utility in Alpine's bluez or bluez-deprecated package. btattach -B /dev/ttyHS0 doesn't seem to work.
+
+== Links ==
+
+[https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-huawei-angler Device Package]
+
+[https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512: initial PR]
+
+[https://github.com/postmarketOS/pmbootstrap/pull/555 pmbootstrap Pull Request #555: Wi-Fi and graphics]
+
+[https://github.com/LineageOS/android_kernel_huawei_angler/tree/04d1557af1259b211609fa41adbe852b5f9cf2da The LineageOS 14.1 kernel used]
