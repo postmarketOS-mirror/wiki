@@ -1,0 +1,89 @@
+{{Infobox device
+| manufacturer = Nokia
+| name =  Lumia 720
+| codename = nokia-rm885
+| image = File:rm885.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2013
+| originalsoftware = Windows Phone
+| chipset = Qualcomm MSM8227
+| cpu = Dual-core 1Ghz
+| gpu = Adreno 305
+| storage = 8 GB
+| display = 480 x 800 IPS
+| memory = 512 MB
+| architecture = armhf
+| n-android = ✔
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = P
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* magnusgulin
+
+== Basic info ==
+
+* [https://www.gsmarena.com/nokia_lumia_720-5321.php More specs]
+* [https://forum.xda-developers.com/nokia-lumia-520/development/unofficial-cyanogenmod-13-0-lumia-52x-t3525280 Unofficial Lineageos]
+* [https://forum.xda-developers.com/nokia-lumia-520/development/bootloader-littlekernel-bootloader-t3480347 Littlekernel Bootloader with fastboot support]
+* [https://github.com/Android4Lumia/android_kernel_nokia_msm8x27 Kernel source]
+
+== Additional info ==
+* Possible emmc corruption when flashing? From Android4Lumia page: <q>My phone has Samsung eMMC, can I still use this? You can, but be aware, that those eMMCs are more probable to die unexpectedly than Hynix or Toshiba ones.</q>. Files are randomly corrupted on my device as well.
+* <s>Booting from SD card failed as the files there also seems to become corrupted.</s> 2GB Kingston seems to work without problems
+* X crashes: <code>[   118.028] (EE) Segmentation fault at address 0x4</code>
+
+== Unlocking / installing bootloader ==
+Bootloader is unlocked with a proprietary windows application, [https://www.wpinternals.net/ WP Internals]. Windows Device Recovery Tool (thor2.exe) is also needed.
+[https://www.youtube.com/watch?v=_OW88UTTDug Here] is a video describing how to backup the phone, install littlekernel bootloader, and finally installing twrp recovery and lineageos.
+The device can be flashed with normal fastboot application after this point.
+
+== Key combinations with original bootloader ==
+
+TBD
+
+== Key combinations with littlekernel bootloader ==
+* Recovery: volume up (phone needs to be repartitioned, and recovery must be flashed)
+* Fastboot: volume down
+* Mass Storage mode / QHSUSB_DLOAD: both volume buttons
+
+== Installation ==
+Setup chroot. Select nokia-rm885 as device.
+<pre class="shell">./pmbootstrap.py init</pre>
+
+Build rootfs
+<pre class="shell">./pmbootstrap.py build device-nokia-rm885</pre>
+
+Build kernel
+<pre class="shell">./pmbootstrap.py build linux-nokia-rm885</pre>
+
+Flash rootfs (Note, this will install rootfs to system partition. You can optionally try to install to userdata partition with --partition userdata argument. In that case you should probably erase system partition with "sudo fastboot erase system")
+<pre class="shell">./pmbootstrap.py flasher flash_rootfs</pre>
+
+Flash kernel
+<pre class="shell">./pmbootstrap.py flasher flash_kernel</pre>
+
+Run kernel (or you can just restart phone manually)
+<pre class="shell">./pmbootstrap.py flasher boot</pre>
+
+
+== Tips & tricks ==
+* Depending on current mode the phone will not restart if the cable is plugged in. Unplug the usb cable and hold volume down + power for 30s. After that, release volume down and then power.
+* Installing from recovery with sideload creates some kind of bootloop with blinking backlight.
