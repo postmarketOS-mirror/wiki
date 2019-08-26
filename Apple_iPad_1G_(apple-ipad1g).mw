@@ -6,7 +6,8 @@
 | imagecaption = TTY on iPad
 | releaseyear = 2010
 | originalsoftware = iPhone OS 3.2
-| cpu = Apple/Samsung A4 (1Ghz)
+| chipset = Apple/Samsung A4
+| cpu = 1x 1 GHz Cortex A8
 | gpu = PowerVR SGX535
 | storage = 16/32/64GB
 | display = 1024x768
