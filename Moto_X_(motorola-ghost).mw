@@ -1,0 +1,56 @@
+{{Infobox device
+| manufacturer = Motorola
+| name = Moto X
+| codename = motorola-ghost
+| image = File:ghost.png
+| imagecaption = Moto X
+| releaseyear = 2013
+| originalsoftware = Android on Linux 3.4
+| chipset = Qualcomm MSM8960dt Snapdragon S4
+| cpu = Dual-core Krait 200 1.7 GHz
+| gpu = Adreno 320
+| storage = 16/32 GB
+| display = 1280x720 (316 PPI) AMOLED
+| memory = 2 GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* Xinayder
+
+== Entering &quot;Fastboot mode&quot; ==
+Hold <code>Volume Down</code> + <code>Power</code>, let go of <code>Power</code> once the device display does something (e.g. turns from battery icon to black screen).
+
+== Installation ==
+<pre>
+pmbootstrap install
+pmbootstrap flasher flash_kernel
+pmbootstrap flasher flash_rootfs
+</pre>
+
+The device must be in bootloader mode. While flashing, it's normal to see "variable not supported!" messages.
+
+== Additional info ==
+The device freezes on the first boot after flashing. Rebooting it fixes the issue.
+
+== See also ==
+* {{MR|1646}} initial merge requests
