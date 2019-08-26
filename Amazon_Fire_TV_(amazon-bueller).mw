@@ -1,0 +1,334 @@
+{{Infobox device
+ | manufacturer = Amazon <!-- e.g. HTC -->
+ | name = Fire TV <!-- e.g. Desire -->
+ | codename = amazon-bueller <!-- e.g. htc-bravo -->
+ | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+ | imagecaption = Amazon Fire TV
+ | releaseyear = 2014
+ | originalsoftware = Fire OS 5 <!-- e.g. Android 2 -->
+ | chipset = Qualcomm APQ8064 Snapdragon 600 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+ | cpu = 4x 1.7GHz Krait 300 <!-- e.g. 1.0 GHz Scorpion -->
+ | gpu = Adreno 320 <!-- e.g. Adreno 200 -->
+ | storage = 8 GB <!-- e.g. 512 MB -->
+ | display = HDMI <!-- e.g. 480x800 AMOLED -->
+ | memory = 2 GB <!-- e.g. 576 MB -->
+ | architecture = armhf <!-- One of these: armhf, aarch64, x86, x86_64 -->
+
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+ | status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
+ | status_flashing = N <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+ | status_touch = N <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+ | status_screen = Y <!-- The display is working? -->
+ | status_wifi = N <!-- Wireless network works? -->
+ | status_xwayland = N <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+ | status_fde = N <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+ | status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+ | status_battery = N <!-- Charging the battery with charging-sdl is possible -->
+ | status_3d = N <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+ | status_accel = N <!-- The sensor that measures proper acceleration works -->
+ | status_audio = N <!-- Using the device's speakers/headphone jack works -->
+ | status_bluetooth = N <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+ | status_camera = N <!-- Taking photos and videos works. -->
+ | status_gps = N <!-- The Global Positioning System sensor works. -->
+ | status_mobiledata = N <!-- Connecting to the Internet via cellular network. -->
+ | status_sms = N <!-- Sending and receiving short messages works as intended. -->
+ | status_calls = N <!-- Talking to other people over the cellular network. -->
+ | status = <!-- info displayed in the "not booting" table on the Devices page -->
+ | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* --> }}
+
+== Contributors ==
+* CalcProgrammer1 (Adam Honse)
+
+Device files:
+
+https://gitlab.com/CalcProgrammer1/pmaports
+
+== Maintainer(s) ==
+
+== How to enter flash mode ==
+
+Unlock the bootloader according to this guide: http://www.aftvnews.com/how-to-fully-unlock-the-amazon-fire-tv-bootloader/
+
+Then you can use fastboot (or the pmbootstrap flasher) to flash and boot images.  A USB A-to-A cable is needed to connect a PC for fastboot.  I made a dongle by soldering two USB A connectors I salvaged from scrap cables together, then used a USB extension cable with it.
+
+== Installation ==
+
+Upload root filesystem to the partition of your choice using fastboot.  I chose the userdata partition since it doesn't replace the default Android installation and has the most space.
+
+Test the boot.img with fastboot, then if it works flash it to the boot partition.
+
+== See also ==
+
+Mainlining in progress, code here: https://gitlab.com/CalcProgrammer1/linux-next
+
+The branch has both Amazon FireTV and Galaxy Note 3 changes.
+
+== Notes ==
+
+* The FireTV has serial port pads on the bottom side of the PCB.  You can solder to them with a fine tipped soldering iron.  There is no external serial port available.  I modified mine by adding a 3 pin header port and cutting a notch in the case to fit it.  See here: [https://wiki.postmarketos.org/wiki/File:Amazon-bueller-mod-1.jpg]
+
+* The FireTV only has one USB port.  It is a type A port, but it can be used as a client through an A-to-A adapter.  This allows Fastboot usage.
+
+* Wireless LAN is a USB device - Qualcomm Atheros 0CF3:9374 (ath6kl)
+
+* Ethernet is a PCI device - Atheros L2 Ethernet Driver - version 2.2.3, PCI 0000:01:00.0 (atl1c)
+
+* mmc0 is the EMMC - M8G1GC 7.28GB
+
+* Debug serial port is on GSBI4
+
+* TPD12S016 output enables seem to be tied high, so no GPIO stuff needed for it
+
+== Chips On Board ==
+
+* MP28257 - Step down regulator (the one on the Fire TV is an 8 pin SMD part) https://www.monolithicpower.com/pub/media/document/MP28257_r1.0.pdf
+
+* Qualcomm PMM8920 - Power management https://developer.qualcomm.com/download/sd600/pmm8920-power-management-module-device-specification.pdf
+
+* Burr Brown DIT4192I - Looks like some sort of I2S to S/PDIF chip for the optical output
+
+* PI6C557 - PCI Express and Ethernet clock generator - https://www.diodes.com/assets/Datasheets/PI6C557-03.pdf
+
+* Atheros AR8152 - PCI Express Fast Ethernet controller - https://www.dell.com/support/home/us/en/04/drivers/driversdetails?driverid=d1kk4
+
+* Samsung KLM8G1GEAC - 8 GB eMMC
+
+* SKhynix H9TKNNNBPDAR - 2 GB LPDDR2 RAM
+
+* Qualcomm QCA6234XH - Dual-band 802.11n WiFi and Bluetooth 4.0 - http://static6.arrow.com/aropdfconversion/27d08f16d6931e5586c814aa99f27670b381e85b/lm80-p0598-12_a_qca6234_datasheet.pdf
+
+* Analog Devices ADG3304 - 4 channel logic level translator - https://www.analog.com/media/en/technical-documentation/data-sheets/adg3304.pdf
+
+* Texas Instruments YF08E - 8 channel voltage translator - http://www.ti.com/lit/ds/symlink/txs0108e.pdf
+
+* Texas Instruments TPD12S016 - HDMI Companion Chip - http://www.ti.com/lit/ds/symlink/tpd12s016.pdf
+
+== GPIOs ==
+
+<source>
+GPIOs 0-151, platform/msmgpio, msmgpio:
+ gpio-5   (spdif_buffer_enable ) out hi
+ gpio-6   (HSIC_WAKEUP_GPIO    ) in  lo
+ gpio-8   (gpio_8_vreg         ) out hi
+ gpio-27  (MI2S_WS             ) in  hi
+ gpio-28  (MI2S_SCLK           ) in  lo
+ gpio-29  (dit4192_spi-buf_int,) in  hi
+ gpio-30  (dit4192_spi-ubit_pin) out lo
+ gpio-31  (dit4192_spi-bls_pin ) in  lo
+ gpio-32  (MI2S_DOUT0          ) in  hi
+ gpio-33  (MI2S_MCLK           ) in  lo
+ gpio-35  (dit4192_spi-reset_pi) out hi
+ gpio-69  (HDMI_CEC_VAR        ) in  hi
+ gpio-70  (HDMI_DDC_CLK        ) in  hi
+ gpio-71  (HDMI_DDC_DATA       ) in  hi
+ gpio-72  (HDMI_HPD            ) in  hi
+ gpio-88  (HSIC_STROBE_GPIO    ) in  hi
+ gpio-89  (HSIC_DATA_GPIO      ) in  lo
+
+GPIOs 152-195, platform/pm8xxx-gpio, pm-gpio:
+gpio-152 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-153 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-154 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-155 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-156 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-157 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-158 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-159 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-160 (--          ) out        lo 0x05 0x18 0x2a 0x34 0x40 0x50
+gpio-161 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-162 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-163 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-164 (pwr_en      ) out        hi 0x01 0x19 0x2a 0x35 0x46 0x58
+gpio-165 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-166 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-167 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-168 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-169 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-170 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-171 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-172 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-173 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-174 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-175 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-176 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-177 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-178 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-179 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-180 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-181 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-182 (--          ) in         hi 0x05 0x10 0x20 0x30 0x40 0x58
+gpio-183 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-184 (--          ) out        lo 0x05 0x18 0x2a 0x34 0x40 0x58
+gpio-185 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-186 (--          ) in         lo 0x05 0x10 0x24 0x30 0x40 0x50
+gpio-187 (--          ) out        lo 0x01 0x18 0x2a 0x35 0x46 0x58
+gpio-188 (--          ) in         lo 0x01 0x10 0x2a 0x35 0x46 0x58
+gpio-189 (--          ) in         lo 0x05 0x10 0x24 0x30 0x40 0x50
+gpio-190 (--          ) in         hi 0x05 0x10 0x2a 0x30 0x40 0x58
+gpio-191 (--          ) out        lo 0x01 0x18 0x2a 0x34 0x44 0x58
+gpio-192 (--          ) out        lo 0x05 0x18 0x2a 0x34 0x44 0x58
+gpio-193 (usb_otg_sw_e) out        hi 0x05 0x19 0x2a 0x34 0x40 0x58
+gpio-194 (--          ) in         lo 0x05 0x10 0x2a 0x35 0x46 0x58
+gpio-195 (--          ) out        hi 0x05 0x19 0x2a 0x34 0x40 0x58
+
+GPIOs 196-207, platform/pm8xxx-mpp.0, pm8xxx-mpp:
+gpio-196 (rst_n       ) d_out      hi 0x2d
+gpio-197 (--          ) d_out      lo 0x3c
+gpio-198 (--          ) d_out      lo 0x3c
+gpio-199 (--          ) d_out      lo 0x3c
+gpio-200 (--          ) a_out      lo 0x85
+gpio-201 (--          ) sink       lo 0xa0
+gpio-202 (ext_5v_en   ) d_out      lo 0x3c
+gpio-203 (ext_mpp8_en ) d_out      hi 0x3d
+gpio-204 (--          ) sink       lo 0xa0
+gpio-205 (--          ) d_out      lo 0x3c
+gpio-206 (--          ) sink       lo 0xa0
+gpio-207 (--          ) sink       lo 0xa0
+
+GPIOs 208-211, platform/pm8xxx-mpp.1, pm8xxx-mpp:
+gpio-208 (--          ) sink       lo 0xa0
+gpio-209 (--          ) sink       lo 0xa0
+gpio-210 (--          ) sink       lo 0xa0
+gpio-211 (--          ) sink       lo 0xa0
+</source>
+
+== Regulator Map ==
+
+<source>
+ext_3p3v -> msm_pcie.pcie_ext_3p3v
+ext_3p3v -> hdmi_msm.0.hdmi_mux_vdd
+ext_3p3v -> mipi_dsi.1.dsi1_vccs_3p3v
+ext_3p3v -> lvds.0.lvds_vccs_3p3v
+ext_3p3v -> msm_otg.mhl_usb_hs_switch
+ext_3p3v -> spi0.2.vdd_io
+ext_3p3v -> (null).ext_3p3v
+fs_vcap -> msm_vcap.0.vdd
+fs_ved -> msm_vidc.0.vdd
+fs_gfx3d -> kgsl-3d0.0.vdd
+fs_vpe -> msm_vpe.0.vdd
+fs_vfe -> msm_vfe.0.vdd
+fs_ijpeg -> msm_gemini.0.vdd
+fs_rot -> msm_rotator.0.vdd
+fs_mdp -> mdp.0.vdd
+bt_wifi_en -> ath6kl_hsic.wlan_en
+bt_wifi_en -> bluesleep.bt_en
+vbus_otg -> msm_otg.vbus_otg
+8821_s1 -> acpuclk-8064.krait3
+8821_s1 -> (null).8821_s1
+8821_s0 -> acpuclk-8064.krait2
+8821_s0 -> (null).8821_s0
+8921_s6 -> acpuclk-8064.krait1
+8921_s6 -> (null).8921_s6
+8921_s5 -> acpuclk-8064.krait0
+8921_s5 -> (null).8921_s5
+8921_hdmi_mvs -> hdmi_msm.0.hdmi_mvs
+8921_hdmi_mvs -> (null).8921_hdmi_mvs
+8921_l26 -> pil_qdsp6v4.0.core_vdd
+8921_l26 -> (null).8921_l26
+ext_mpp8 -> msm_ehci_host.1.vbus
+ext_mpp8 -> (null).ext_mpp8
+ext_5v -> msm_ehci_host.0.vbus
+ext_5v -> (null).ext_5v
+8921_ncp -> (null).8921_ncp
+8921_lvs2 -> wcnss_wlan.0.iris_vdddig
+8921_lvs2 -> (null).8921_lvs2
+8921_lvs7 -> hdmi_msm.0.hdmi_vdda
+8921_lvs7 -> mdp.0.dsi_pll_vddio
+8921_lvs7 -> mipi_dsi.1.dsi1_vddio
+8921_lvs7 -> lvds.0.lvds_vdda
+8921_lvs7 -> pil_riva.pll_vdd
+8921_lvs7 -> (null).8921_lvs7
+8921_lvs6 -> msm_pcie.vdd_pcie_vph
+8921_lvs6 -> (null).8921_lvs6
+8921_lvs5 -> 4-0020.cam_vio
+8921_lvs5 -> 4-0034.cam_vio
+8921_lvs5 -> 4-006c.cam_vio
+8921_lvs5 -> 4-0048.cam_vio
+8921_lvs5 -> 4-0010.cam_vio
+8921_lvs5 -> 4-001a.cam_vio
+8921_lvs5 -> (null).8921_lvs5
+8921_lvs4 -> (null).8921_lvs4
+8921_lvs3 -> (null).8921_lvs3
+8921_lvs1 -> wcnss_wlan.0.iris_vddio
+8921_lvs1 -> (null).8921_lvs1
+8921_l29 -> (null).8921_l29
+8921_l28 -> pil_qdsp6v4.1.core_vdd
+8921_l28 -> (null).8921_l28
+8921_l27 -> pil_qdsp6v4.2.core_vdd
+8921_l27 -> (null).8921_l27
+8921_l25 -> tabla2x-slim.CDC_VDDA_A_1P2V
+8921_l25 -> tabla2x-slim.VDDD_CDC_D
+8921_l25 -> tabla-slim.CDC_VDDA_A_1P2V
+8921_l25 -> tabla-slim.VDDD_CDC_D
+8921_l25 -> (null).8921_l25
+8921_l24 -> wcnss_wlan.0.riva_vddmx
+8921_l24 -> (null).8921_l24
+8921_l23 -> msm_ehci_host.1.HSUSB_1p8
+8921_l23 -> msm_ehci_host.0.HSUSB_1p8
+8921_l23 -> pil_qdsp6v4.2.pll_vdd
+8921_l23 -> pil_qdsp6v4.1.pll_vdd
+8921_l23 -> (null).8921_l23
+8921_l22 -> (null).8921_l22
+8921_l21 -> (null).8921_l21
+8921_l18 -> (null).8921_l18
+8921_l17 -> (null).8921_l17
+8921_l16 -> 4-0020.cam_vaf
+8921_l16 -> 4-0034.cam_vaf
+8921_l16 -> 4-006c.cam_vaf
+8921_l16 -> 4-0048.cam_vaf
+8921_l16 -> 4-0010.cam_vaf
+8921_l16 -> 4-001a.cam_vaf
+8921_l16 -> (null).8921_l16
+8921_l15 -> (null).8921_l15
+8921_l14 -> pm8921-charger.vreg_xoadc
+8921_l14 -> (null).8921_l14
+8921_l13 -> (null).8921_l13
+8921_l12 -> (null).8921_l12
+8921_l12 -> 4-0020.cam_vdig
+8921_l12 -> 4-0034.cam_vdig
+8921_l12 -> 4-006c.cam_vdig
+8921_l12 -> 4-0048.cam_vdig
+8921_l12 -> 4-0010.cam_vdig
+8921_l12 -> 4-001a.cam_vdig
+8921_l11 -> mipi_dsi.1.dsi1_avdd
+8921_l11 -> (null).8921_l11
+8921_l10 -> bt_power.bha_vddpa
+8921_l10 -> wcnss_wlan.0.iris_vddpa
+8921_l10 -> (null).8921_l10
+8921_l9 -> 3-0024.vdd
+8921_l9 -> (null).8921_l9
+8921_l8 -> 4-0020.cam_vana
+8921_l8 -> 4-0034.cam_vana
+8921_l8 -> 4-006c.cam_vana
+8921_l8 -> 4-0048.cam_vana
+8921_l8 -> 4-0010.cam_vana
+8921_l8 -> 4-001a.cam_vana
+8921_l8 -> (null).8921_l8
+8921_l7 -> msm_sdcc.3.sdc_vdd_io
+8921_l7 -> (null).8921_l7
+8921_l6 -> msm_sdcc.3.sdc_vdd
+8921_l6 -> (null).8921_l6
+8921_l5 -> msm_sdcc.1.sdc_vdd
+8921_l5 -> (null).8921_l5
+8921_l4 -> bt_power.bha_vddxo
+8921_l4 -> wcnss_wlan.0.iris_vddxo
+8921_l4 -> msm_otg.HSUSB_1p8
+8921_l4 -> (null).8921_l4
+8921_l3 -> msm_ehci_host.1.HSUSB_3p3
+8921_l3 -> msm_ehci_host.0.HSUSB_3p3
+8921_l3 -> msm_otg.HSUSB_3p3
+8921_l3 -> (null).8921_l3
+8921_l2 -> mdp.0.dsi_pll_vdda
+8921_l2 -> tabla2x-slim.HRD_CDC_VDDA_A_1P2V
+8921_l2 -> tabla2x-slim.HRD_VDDD_CDC_D
+8921_l2 -> mipi_dsi.1.dsi1_pll_vdda
+8921_l2 -> lvds.0.lvds_pll_vdda
+8921_l2 -> msm_csid.2.mipi_csi_vdd
+8921_l2 -> msm_csid.1.mipi_csi_vdd
+8921_l2 -> msm_csid.0.mipi_csi_vdd
+8921_l2 -> (null).8921_l2
+8921_l1 -> (null).8921_l1
+8921_s8 -> (null).8921_s8
+8921_s7 -> (null).8921_s7
+8921_s4 -> hdmi
+</source>
