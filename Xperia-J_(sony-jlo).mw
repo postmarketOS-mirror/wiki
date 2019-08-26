@@ -1,0 +1,67 @@
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia J
+| codename = jlo
+| image =
+| imagecaption = Sony Xperia J
+| releaseyear = 2012
+| originalsoftware = Android 4.0.1 ICS
+| chipset = Qualcomm MSM7227A Snapdragon S1
+| cpu = 1x ARM Cortex A5 @ 1GHz
+| gpu = Adreno 200 @ 307 MHz
+| storage = 4GB (expandable with up to 32GB MicroSD)
+| display = 480x854
+| memory = 512MB
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| status = 
+| booting = no
+}}
+
+== Contributors ==
+* WilliamO7
+
+== Maintainer(s) ==
+* WilliamO7
+
+== What works ==
+* Nothing.
+
+== What does not work ==
+* Everything!
+
+== To test/do ==
+* Figure out the bootimg format and make the phone boot.
+* Get everything else working.
+
+== How to enter flash mode ==
+When the device is powered off, press '''Volume Up''' while plugging in a microUSB cable to enter fastboot.
+Nothing will be displayed on the screen when this occurs.
+
+== Installation ==
+Can be flashed normally, but it will not boot atm, see below.
+
+== Booting ==
+* The Sony Xperia J along with some other 2012/13 Xperia phones (such as its previously attempted sister device [[Sony_Xperia_E_Dual_(sony-nanhu)|Xperia E]] use a ''notoriously'' difficult (to use and generate properly) ELF format for boot images, which we can't generate bootable versions of right now.
+* Rudimentary support for these formats have been [https://github.com/WilliamO7/pmbootstrap/tree/device-sony-jlo added] and [https://github.com/postmarketOS/pmbootstrap/pull/1074 requested] for inclusion into upstream.
+* One thing of note is that the FreeXperia project (now defunct) got a working CM/LOS10 build on this phone (used at the time of testing) and has quite an interesting init script to allow for using LEDs and recovery - the ROM can be downloaded from [http://uploaded.net/file/esw1wzun/from/59w3fb here] if you want to research further (sorry for restrictive host.) 
+
+== Links ==
+* [https://www.gsmarena.com/sony_xperia_j-4930.php GSMArena]
