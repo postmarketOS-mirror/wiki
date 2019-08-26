@@ -40,7 +40,7 @@
 * opendata
 
 == Progress ==
-{{note|We have GCC 4 package now!}}
+{{note|We have GCC 4 package now! See also https://gitlab.com/scintill/pmaports/tree/device/ipad1, with standard gcc build of openiboot.}}
 
 The iPod can boot Linux with the openiboot firmware which has to be build first. The openiboot firmware is not made for GCC6 and requires a few patches, it's also written for the arm-elf toolchain but it can be built with the arm-eabi toolchain for now which seems to work.
 
