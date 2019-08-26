@@ -1,0 +1,103 @@
+{{Infobox device
+| manufacturer = Huawei
+| name =  Honor 9 Lite
+| codename = huawei-leland
+| image = File:Huawei-Leland-weston.jpg
+| imagecaption = Honor 9 Lite with framebuffer and usb net working
+| releaseyear = 2017
+| originalsoftware = Android 8 Oreo (EMUI 8.0) 
+| chipset = Kirin 650 Series Chipset
+| cpu = HiSilicon Kirin 659 (Cortex-A53)
+| gpu = ARM Mali-T830 MP2
+| storage = 64 GB, 4 GB RAM or 32 GB, 3/4 GB RAM; microSD, up to 256 GB (uses SIM 2 slot)
+| display = PS LCD capacitive touchscreen, 16M colors; 5.65 inches; 1080 x 2160 pixels; 18:9 ratio (~428 ppi density)
+| memory = 4096
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y
+| status_flashing = N
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| booting = Y<!-- The device is booting at all *IMPORTANT* -->
+}}
+
+== Contributors ==
+* [[User:Aa13q|aa13q]]
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+== How to enter flash mode ==
+With power off, press power und volume-down at the same time, with the usb-cable plugged in. 
+
+== How to flash ==
+As Huawei changed the partition layout, there is no boot partition anymore. Instead there is a ramdisk and a seperate kernel partition. In order to create the correct images the following steps need to be done:
+
+# Get mkbootimg and unpackbootimg i.e. from [https://github.com/anestisb/android-unpackbootimg here].
+# You can extract the kernel-image and ramdisk from the created boot.img with unpackbootimg. 
+#:<syntaxhighlight lang="shell-session">
+$ # copy created boot image to current directory 
+$ cp ~/.local/var/pmbootstrap/chroot_rootfs_huawei-leland/boot/boot.img-huawei-leland .
+
+$ # extract the created boot.img
+$ mkdir pmos-boot-huawei-leland
+$ unpackbootimg -i boot.img-huawei-leland -o pmos-boot-huawei-leland/ 
+</syntaxhighlight>
+#: Use the extracted files in the following steps.
+# Create ramdisk image:
+#:<syntaxhighlight lang="shell-session">
+$ # create new ramdisk image with empty kernel (/dev/null) 
+$ ./android-unpackbootimg/mkbootimg.py --kernel /dev/null --ramdisk pmos-boot-huawei-leland/boot.img-huawei-leland-ramdisk.gz --cmdline 'buildvariant=user' --os_version 8.0.0 --os_patch_level 2018-06-05 -o pmos-leland.ramdisk.img 
+</syntaxhighlight>
+# Create kernel image:
+#:<syntaxhighlight lang="shell-session">
+$ # kernel (with empty ramdisk via /dev/null):
+$ # make sure boot.img-huawei-leland-zImage is gzipped or do it manually before mkbootimg.py
+$ mkbootimg.py --kernel pmos-boot-huawei-leland/boot.img-huawei-leland-zImage.gz --ramdisk /dev/null --cmdline 'loglevel=4 coherent_pool=512K page_tracker=on slub_min_objects=12 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user' --base 0x00478000 --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --second_offset 0x00e88000 --tags_offset 0x07988000   --os_version 8.0.0 --os_patch_level 2018-12 --pagesize 2048 -o pmos-leland.kernel.img
+</syntaxhighlight>
+# Flash ramdisk and kernel with fastboot:
+#:<syntaxhighlight lang="shell-session">
+$ fastboot flash kernel pmos-leland.kernel.img 
+$ fastboot flash ramdisk pmos-leland.ramdisk.img 
+</syntaxhighlight>
+# Flash rootfs to sdcard to boot it
+
+== Additional Kernel Configuration ==
+=== OASES ===
+==== About ====
+OASES stands for Open Adaptive Security Extensions. Its a Tradmark of Baidu and seems to have something todo with adaptive kernel live-patching. For now there were no disadvantages from disabling it.
+
+==== Location in menu ====
+ <nowiki>-> Device Drivers
+   -> Huawei Platform Drivers
+      -> Huawei platform drivers support (HUAWEI_PLATFORM [=y]) </nowiki>
+In Order to compile the kernel OASES had to be disabled. 
+
+== Additional Info ==
+The display brightness can be set by writing a value between 0 and 9960 to <code> /sys/class/leds/lcd_backlight0/brightness</code>. 
+
+<syntaxhighlight lang="shell-session">
+$ sudo -i
+# echo 1024 > /sys/class/leds/lcd_backlight0/brightness 
+</syntaxhighlight>
+
+== Links ==
+* [[Huawei_Mediapad_M5_pro_(huawei-cameron)|JohnBergago's Huawei_Mediapad_M5_pro_(huawei-cameron)]]
+* [https://github.com/penn5/android_kernel_honor_lld penn5 android kernel sources]
+* [https://github.com/Dil3mm4/labyrinth_kernel_prague Dil3mm4's labyrinth kernel for huawei p8 lite]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/239 initial merge request]
