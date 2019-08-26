@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name = Galaxy A3 (2015)
-| codename = sm-a3ulte
+| codename = samsung-a3ulte
 | image = File:sm-a300fu.png
 | imagecaption = Samsung Galaxy A3 (2015) running Plasma Mobile on mainline with hardware accelerated graphics 
 | releaseyear = 2014
@@ -32,14 +32,15 @@
 | status_mobiledata = N
 | status_sms = N
 | status_calls = N
+| status_otg =
 | status = booting
 | booting = yes
-
+| pmoskernel = Mainline
 }}
 
 == Contributors ==
-* Mis012
-* Minecrell
+* ''[[user:Mis012|Mis012]]''
+* ''[[user:Minecrell|Minecrell]]''
 
 == Users owning this device ==
 {{Device owners}}
