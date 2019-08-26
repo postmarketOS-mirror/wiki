@@ -1,0 +1,52 @@
+{{Infobox device
+| manufacturer = Motorola
+| name =  moto g5s
+| codename = motorola-montana
+<!--| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg -->
+<!-- | imagecaption = CHANGE_ME -->
+| releaseyear = 2017
+| originalsoftware = Android 8.1.1 <!-- e.g. Android 2 -->
+| chipset = Qualcomm msm8937 Snapdragon 430 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+| cpu = 1.4Ghz Cortex-a53
+| gpu = Adreno 505
+| storage = 32 GB
+| display = 1080x1920 ips
+| memory = 3GB
+| architecture = armhf / WIP: aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = Y
+| status_fde = N
+| status_mainline = N
+| status_battery = 
+| status_3d = N
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = Y
+}}
+
+== Contributors ==
+* kubast2
+
+== Maintainer(s) ==
+kubast2
+
+== How to enter flash mode ==
+Power + Volume Down buttons or use adb reboot-bootloader or Power + Volume Up buttons
+
+== Installation ==
+I installed the rootfs on a /system partition. Flashing the kernel to the boot partition tested, rootfs flashing.
+Only tested recovery zip, unknown if fastboot works because my bootloader doesn't allow flashing, but allows booting and is otherwise unlocked.
+
+== See also ==
+* {{MR|286|pmaports}} Initial merge request
