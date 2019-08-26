@@ -49,4 +49,5 @@
 {{Device owners}}
 
 == Installation ==
-Ask on Matrix channel
+# Install [https://github.com/msm8916-mainline/lk2nd#readme lk2nd] (alternative bootloader that provides a standard fastboot interface)
+# Follow the [[Installation guide]]
