@@ -1,0 +1,76 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy S4 Mini LTE
+| codename = samsung-i9195 (serrano)
+| image = File:S4mini.jpg
+| imagecaption = S4 Mini running PostmarketOS and Xfce4
+| releaseyear = 2013
+| originalsoftware = Android 4.4.2
+| chipset = Qualcomm MSM8930 Snapdragon 400
+| cpu = 1.7 GHz dual-core Krait 300
+| gpu = Adreno 305
+| storage = Internal, with external SD slot
+| display = 960x540
+| memory = 1.5GB
+| architecture = armhf
+| status_usbnet = P
+| status_flashing = Y
+| status_touch = Y
+| status_screen = P
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = N
+| status_battery = Y
+| status_3d = N
+| status_accel = N
+| status_audio = N
+| status_bluetooth = N
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N
+| status_sms = Y
+| status_calls = N
+| booting = yes
+}}
+
+== Contributors ==
+* rrooij (initial port)
+* scintill (USB network, modem)
+* maccraft123 (broken his s4mini)
+* Everyone else on IRC (feel free to put your name)
+
+== What works ==
+* Compiling the kernel
+* Flashing postmarketos
+* Booting
+* Screen display
+* Multi-touch
+* Plasma Mobile(slideshow mode)
+* Xfce
+* Weston
+* Touch screen ({{github|1313}})
+* USB Networking ({{github|1260}})
+* Sending SMS via terminal ({{github|1314}})
+* Accelerometer (<code>echo 1 > /sys/class/input/input2/enable</code>)
+* Proximity sensor (<code>echo 1 > /sys/class/input/input4/enable</code>)
+* Light sensor (<code>echo 1 > /sys/class/input/input5/enable</code>)
+* Power button (<code>/dev/input/event0</code>)
+* Volume/Home buttons (<code>/dev/input/event8</code>)
+* Menu/Back touch buttons (<code>/dev/input/event9</code>)
+
+== What does not work ==
+* Screen is red by default, can be fixed by using RGB565 mode instead of RGBA8888
+* HW acceleration(we need libhybris or mainlining or freedreno)
+* USB network device has no MAC address set by default, can be fixed by changing it to 06:4b:2d:xx:xx:xx(replace xx with random hex number)
+
+== How to enter flash mode ==
+* 1. Press VolumeDown, Home and Power buttons until Warning screen appears
+* 2. Connect phone to computer
+* 3. Press VolumeUp button
+* 4. Flash with pmbootstrap flasher
+
+== Links ==
+* {{github|1099}} initial pull request
+* Kernel used: https://github.com/LineageOS/android_kernel_samsung_msm8930-common
+* {{issue|1612}} Unable to install on S4 Mini (samsung-i9195)
