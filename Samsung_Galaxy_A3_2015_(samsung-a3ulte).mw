@@ -45,16 +45,11 @@
 == Users owning this device ==
 {{Device owners}}
 
-== How to enter flash mode ==
-
-# deploy lk2nd boot.img
-# use lk2nd
-
-(lk2nd Documentation is WIP)
-
 == Installation ==
+# Install [https://github.com/msm8916-mainline/lk2nd#readme lk2nd] (alternative bootloader that provides a standard fastboot interface)
+# Follow the [[Installation guide]]
 
-Documentation is WIP
+{{note|'''Note:''' Enter lk2nd fastboot mode by pressing only Volume Down + Power ('''not''' the Home button). Pressing the Home button additionally will bring you to the Samsung Download mode.}}
 
 == See also ==
 * [https://github.com/msm8916-mainline/linux/ near-mainline linux fork with device-specific patches]
