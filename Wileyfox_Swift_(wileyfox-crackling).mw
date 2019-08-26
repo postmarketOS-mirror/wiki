@@ -63,6 +63,7 @@ nmcli radio all on
 </pre>
 and making ir executeable with <code>sudo chmod +x /etc/local.d/wcnss.start</code>
 
+Also you can install [https://github.com/msm8916-mainline/lk2nd lk2nd] that will set MAC for WiFI and BT for you. Then you don't need <code>ifconfig</code> line in wcnss script.
 
 == Contributors ==
 * ''[[user:TravMurav|TravMurav]]''
