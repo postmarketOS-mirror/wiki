@@ -51,3 +51,5 @@
 == Installation ==
 # Install [https://github.com/msm8916-mainline/lk2nd#readme lk2nd] (alternative bootloader that provides a standard fastboot interface)
 # Follow the [[Installation guide]]
+
+{{note|'''Note:''' Enter lk2nd fastboot mode by pressing only Volume Down + Power ('''not''' the Home button). Pressing the Home button additionally will bring you to the Samsung Download mode.}}
