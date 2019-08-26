@@ -1,6 +1,6 @@
 {{Infobox device
-| manufacturer = Asus
-| name =  MeMo Pad 7
+| manufacturer = ASUS
+| name =  MeMO Pad 7
 | codename = asus-me176c, asus-me176cx
 | image = File:asus-me176cx.jpg
 | imagecaption = asus-me176cx running postmarketOS
@@ -21,10 +21,10 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = 
-| status_mainline = P
+| status_mainline = Y
 | status_battery = Y
 | status_3d = Y
-| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_accel = Y
 | status_audio = Y
 | status_bluetooth = Y
 | status_camera = N
@@ -32,16 +32,21 @@
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
+| status_otg = Y
 | booting = Y
+| pmoskernel = 4.19 (LTS)
 }}
 
 == Contributors ==
-Mis012
-
-lambdadroid (https://github.com/me176c-dev/)
+* ''[[user:Minecrell|minecrell]]''
+* ''[[user:Mis012|Mis012]]''
 
 == Maintainer(s) ==
-Mis012 (possibly will ask lambdadroid anyway)
+* ''[[user:Minecrell|minecrell]]''
+* ''[[user:Mis012|Mis012]]''
+
+== Users owning this device ==
+{{Device owners}}
 
 == Installation ==
 
