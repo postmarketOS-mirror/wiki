@@ -54,29 +54,17 @@
 Power off the device, hold down the power and the volume up key for 1-2 seconds.
 
 == Installation ==
-Following the guide for porting PostmarketOS with very few changes needed. Most changes are based on those made to other Motorola devices such as the Athene. A merge request into the master code will be made soon. In the mean time the following changes were made:
-
-In linux-motorola-lux/APKBUILD
-* Additional makedepends: xz dtbtool
-* _repository: android_kernel_motorola_msm8916
-* _commit: d86037d30519f2e1f26af75bdcf11a74d08dfed4
-* In build(): dtbTool -s 2048 -p "scripts/dtc/" -o "arch/arm/boot/dt.img" "arch/arm/boot/"
-* in package(): install -Dm644 "$builddir/arch/arm/boot/dt.img" "$pkgdir/boot/dt.img"
-
-In device-motorola-lux/APKBUILD
-* Additional depends: msm-fb-refresher
+Configuration specific to the motorola-lux is now integrated in pmaports so to install just follow the normal installation guide
 
 == See also ==
 * [https://wiki.lineageos.org/devices/lux LineageOS wiki page]
+* {{MR|562|pmaports}} Initial merge request
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
+
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-lux Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-motorola-lux Kernel package]
