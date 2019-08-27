@@ -1,29 +1,29 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  moto g5s
+| name =  Moto G5s
 | codename = motorola-montana
 <!--| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg -->
 <!-- | imagecaption = CHANGE_ME -->
 | releaseyear = 2017
 | originalsoftware = Android 8.1.1 <!-- e.g. Android 2 -->
-| chipset = Qualcomm msm8937 Snapdragon 430 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = 1.4Ghz Cortex-a53
+| chipset = Qualcomm MSM8937 Snapdragon 430 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+| cpu = 1.4Ghz Cortex-A53
 | gpu = Adreno 505
 | storage = 32 GB
-| display = 1080x1920 ips
-| memory = 3GB
-| architecture = armhf / WIP: aarch64
+| display = 1080x1920 IPS
+| memory = 3 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = Y
+| status_touch = 
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = Y
-| status_fde = N
-| status_mainline = N
+| status_fde = 
+| status_mainline = 
 | status_battery = 
-| status_3d = N
+| status_3d = 
 | status_accel = 
 | status_audio = 
 | status_bluetooth = 
@@ -37,16 +37,24 @@
 
 == Contributors ==
 * kubast2
+* DolphinChips
 
 == Maintainer(s) ==
-kubast2
+DolphinChips
 
 == How to enter flash mode ==
-Power + Volume Down buttons or use adb reboot-bootloader or Power + Volume Up buttons
+Power + Volume Down buttons or use `adb reboot-bootloader`
 
 == Installation ==
-I installed the rootfs on a /system partition. Flashing the kernel to the boot partition tested, rootfs flashing.
-Only tested recovery zip, unknown if fastboot works because my bootloader doesn't allow flashing, but allows booting and is otherwise unlocked.
-
+<!-- I installed the rootfs on a /system partition. Flashing the kernel to the boot partition tested, rootfs flashing.
+Only tested recovery zip, unknown if fastboot works because my bootloader doesn't allow flashing, but allows booting and is otherwise unlocked. -->
+=== Installation on sdcard ===
+<source lang="shell-session">
+$ pmbootstrap init # Select motorola-montana device
+$ pmbootstrap install --sdcard=/dev/YOURSDCARD # Replace YOURSDCARD with sdcard's blockdevice (example: mmcblk0, don't forget to plug your sdcard in your PC before entering this command!)
+$ pmbootstrap flasher boot # To boot kernel without flashing it
+</source>
+=== Installation on internal memory ===
+This is untested, but kubast2 had success with Android Recovery Zip.
 == See also ==
 * {{MR|286|pmaports}} Initial merge request
