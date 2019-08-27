@@ -53,3 +53,22 @@
 # Follow the [[Installation guide]]
 
 {{note|'''Note:''' Enter lk2nd fastboot mode by pressing only Volume Down + Power ('''not''' the Home button). Pressing the Home button additionally will bring you to the Samsung Download mode.}}
+
+== Audio ==
+<!-- TODO: Share this between all MSM8916 devices -->
+Everything is muted by default and must be enabled through alsaucm. Unfortunately, the tool is not very user-friendly.
+
+ $ alsaucm -i -c msm8916-samsung-a2015
+ set _verb HiFi
+ set _enadev <device>
+
+where <code><device></code> is one of <code>Earpiece</code>, <code>Headphones</code>, <code>PrimaryMic</code>, <code>HeadsetMic</code> or <code>SecondaryMic</code>. (Speaker not supported yet...)
+alsaucm does not track which devices are already enabled, therefore it is possible to produce combinations that won't work properly (e.g. <code>Headphones</code>+<code>Earpiece</code>). To switch between devices, the old device first needs to be re-enabled and then disabled:
+
+ $ alsaucm -i -c msm8916-samsung-a2015
+ set _verb HiFi
+ set _enadev OLD
+ set _disdev OLD
+ set _enadev NEW
+
+{{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
