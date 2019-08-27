@@ -67,6 +67,25 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 == Installation ==
 Just follow the [[Installation guide]].
 
+== Audio ==
+<!-- TODO: Share this between all MSM8916 devices -->
+Everything is muted by default and must be enabled through alsaucm. Unfortunately, the tool is not very user-friendly.
+
+ $ alsaucm -i -c msm8916
+ set _verb HiFi
+ set _enadev <device>
+
+where <code><device></code> is one of <code>Speaker</code>, <code>Earpiece</code>, <code>Headphones</code>, <code>PrimaryMic</code>, <code>HeadsetMic</code> or <code>SecondaryMic</code>.
+alsaucm does not track which devices are already enabled, therefore it is possible to produce combinations that won't work properly (e.g. <code>Headphones</code>+<code>Earpiece</code>). To switch between devices, the old device first needs to be re-enabled and then disabled:
+
+ $ alsaucm -i -c msm8916
+ set _verb HiFi
+ set _enadev OLD
+ set _disdev OLD
+ set _enadev NEW
+
+{{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
+
 == Problems ==
 * Mainline kernel doesn't have charger drivers
 
@@ -78,7 +97,7 @@ Just follow the [[Installation guide]].
 
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-wileyfox-crackling Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-wileyfox-crackling Kernel package]
-* [https://github.com/msm8916-mainline/linux WIP kernel for msm8916 devices]
+* [https://github.com/msm8916-mainline/linux Mainline kernel for msm8916 devices]
 
 
 <!--
