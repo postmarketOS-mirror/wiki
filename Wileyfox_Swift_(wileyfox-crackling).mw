@@ -18,7 +18,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = P
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = Y
@@ -26,7 +26,7 @@
 | status_3d = Y
 | status_accel = Y
 | status_audio = P
-| status_bluetooth = P
+| status_bluetooth = Y
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
