@@ -6,7 +6,7 @@
 | imagecaption = CHANGE_ME
 | releaseyear = 2016
 | originalsoftware = Android 6 -> 7 -> 8 on Linux 3.10
-| chipset = Qualcomm Snapdragon 650 (MSM8956)
+| chipset = Qualcomm MSM8956 Snapdragon 650
 | cpu = Hexa-core, 2x Cortex-A72 1.8GHz (big cluster), 4x Cortex-A53 1.2GHz (LITTLE cluster)
 | gpu = Adreno 510
 | storage = 32GB / 64 GB
