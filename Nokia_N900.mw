@@ -5,7 +5,7 @@
 | image = File:Nokia-rx51-cmus.jpg
 | imagecaption = Nokia N900 running cmus
 | releaseyear = 2009
-| originalsoftware = Maemo on Linux 2.6
+| originalsoftware = Maemo Fremantle on Linux 2.6
 | pmoskernel = Mainline Linux
 | chipset = TI OMAP 3430
 | cpu = 1x 600 MHz Cortex-A8
@@ -32,7 +32,7 @@
 | status_camera =
 | status_gps = P
 | status_mobiledata = Y
-| status_sms = P
+| status_sms = Y
 | status_calls =
 | booting = yes
 }}
@@ -50,7 +50,7 @@
 == Additional info ==
 Back camera is close to supported in 4.14-rc1.
 
-Voice calls work, but needs https://gitlab.com/libcmtspeechdata/libcmtspeechdata and has poor quality
+Voice calls work, but need https://gitlab.com/libcmtspeechdata/libcmtspeechdata and has poor quality
 
 There's bluetooth support at bluetooth-next, but that works on N950, not on N900. [https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git/commit/?id=7bb318680e868cd049922f6761170b42ff89687d Bluetooth] . There's a driver ported to 4.13 at bt-v4.13 tree, git.kernel.org, linux-n900 .
 
