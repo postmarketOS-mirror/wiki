@@ -95,9 +95,6 @@ alsaucm does not track which devices are already enabled, therefore it is possib
 
 {{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
 
-== Problems ==
-* Mainline kernel doesn't have charger drivers
-
 == See also ==
 * [https://wiki.lineageos.org/devices/crackling Device on LineageOS wiki]
 * [https://github.com/LineageOS/android_device_wileyfox_crackling LineageOS Device on GitHub]
