@@ -60,12 +60,23 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 {{Device owners}}
 
 == How to enter flash mode ==
-# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] (alternative bootloader that handles certain mainline quirks like setting up the WiFi/BT MAC addresses)
-# '''Fastboot:''' Power on the device. After it vibrates/the display shows up, hold <code>Volume Down</code>.
+* '''Recovery:''' Power on the device with both <code>Power</code> and <code>Volume Down</code> buttons.
+* '''Stock fastboot:''' Power on the device with both <code>Power</code> and <code>Volume Up</code> buttons. You only need this to install lk2nd.
+* '''lk2nd Fastboot:''' Power on the device. After it vibrates/the display shows up, hold <code>Volume Down</code>.
 {{note|'''Note:''' Pressing the keys too early will cause the stock bootloader to handle the key combination. You will end up in the wrong Fastboot interface.}}
 
+
 == Installation ==
-Just follow the [[Installation guide]].
+# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] (alternative bootloader that handles certain mainline quirks like setting up the WiFi/BT MAC addresses)
+# Just follow the [[Installation guide]].
+
+
+== Charging ==
+Mainline kernel doesn't have proper charger driver yet. This means that only way to charge the device is to boot downstream kernel. Easiest way to do so is to boot to recovery (At least TWRP known to charge the device properly)
+Kernel that this device uses at the moment have simple driver that shows estimated capacity. (with error of roughly 10%) 
+{{note|'''Note:''' Since driver can't measure capacity precisely, shown percentage will directly depend on current that your device consumes (e.g. it will show less if you will increase brightness.)}}
+
+
 
 == Audio ==
 <!-- TODO: Share this between all MSM8916 devices -->
