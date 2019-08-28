@@ -7,7 +7,7 @@
 | imagecaption = CHANGE_ME
 | releaseyear = 2015
 | originalsoftware = Android 5.0 further updated to 6.0
-| chipset = Qualcomm MSM8939 (Snapdragon 615) / some devices for unknown reason have MSM8936 (Snapdragon 610)
+| chipset = Qualcomm MSM8936 Snapdragon 610<br/>Qualcomm MSM8939 Snapdragon 615
 | cpu = 8x Cortex-A53, 4x 1,5Ghz (big cluster) + 4x 1Ghz (LITTLE cluster) (clock speeds may vary slightly)
 | gpu = Adreno 405
 | storage = 8GB / 16 GB (refer to the model list)
