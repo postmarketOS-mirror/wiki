@@ -1,4 +1,4 @@
-{Infobox device
+{{Infobox device
 | manufacturer = Lenovo
 | name =  A6010
 | codename = Lenovo-A6010
@@ -12,7 +12,7 @@
 | storage = 8GB
 | display = 720x1280
 | memory = 1GB
-| architecture = armv7
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
