@@ -13,7 +13,7 @@
 | storage = 32 GB
 | display = 800x480 TFT resistive
 | memory = 256 MB
-| architecture = armhf
+| architecture = armv7
 | n-android = ✔
 | whet_dhry = 58.4
 | status_usbnet = Y
