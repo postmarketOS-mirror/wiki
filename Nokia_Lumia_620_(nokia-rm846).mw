@@ -2,8 +2,8 @@
 | manufacturer = Nokia
 | name =  Lumia 620
 | codename = nokia-rm846
-| image = 
-| imagecaption = 
+| image = File:nokia-lumia-620-off.jpg
+| imagecaption = The Nokia Lumia 620 powered off.
 | releaseyear = 2013
 | originalsoftware = Windows Phone 8
 | chipset = Qualcomm MSM8227
@@ -45,3 +45,13 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
+
+
+== Contributors ==
+* [[User:Maxnet|Maxnet]]
+
+== Maintainer(s) ==
+*[[User:Maxnet|Maxnet]]
+
+== Users owning this device ==
+{{Device owners}}
