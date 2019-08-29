@@ -69,7 +69,17 @@ You will need  some tools for development:
 Postmarketos is not ready to use as a daily driver yet. So use a phone you do not need for the development. If you have some data on it, back it up now.
 
 === Clean Firmware Install ===
-Use the Windows Device Recovery Tool to install clean Firmware. This is to avoid errors.
+Use the Windows Device Recovery Tool to install clean Firmware. This is to avoid errors and to gain the FFU-image.
+
+=== Check you Storage ===
+Open WPInternals with your phone connected to your Windows PC. Note your Product Code down, for later. Reboot it into flash mode, to get more information. There it says, from which manufacturer your storage is. If it is from Samsung, it can cause a brick of your phone. If not, you are good to go.
+
+=== Unlock the bootloader ===
+Now use WPInternals to unlock your bootloader. You will need an FFU-image for that. If you used the Windows Device Recovery Tool before, you can find the FFU-image in C:\ProgramData\Microsoft\Packages\Products . For the Nokia Lumia 620, there should be a directory called RM-846.
+
+Afterward, you need the Emergency Loaders. You can download them [https://www.lumiafirmware.com/ here]. (You will need your Product Code)
+
+Now unlock the bootloader.
 
 == See also ==
 * [https://www.gsmarena.com/nokia_lumia_620-5147.php More Specs on GSM-Arena]
