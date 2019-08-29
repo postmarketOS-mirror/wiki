@@ -41,8 +41,7 @@
 == Basic info ==
 
 * [https://www.gsmarena.com/nokia_lumia_720-5321.php More specs]
-* [https://forum.xda-developers.com/nokia-lumia-520/development/unofficial-cyanogenmod-13-0-lumia-52x-t3525280 Unofficial Lineageos]
-* [https://forum.xda-developers.com/nokia-lumia-520/development/bootloader-littlekernel-bootloader-t3480347 Littlekernel Bootloader with fastboot support]
+* [https://github.com/Android4Lumia/bootloader_msm8227 LittleKernel Bootloader]
 * [https://github.com/Android4Lumia/android_kernel_nokia_msm8x27 Kernel source]
 
 == Additional info ==
