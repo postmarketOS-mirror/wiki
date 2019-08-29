@@ -46,6 +46,8 @@ Does the device have a sdcard or other external storage medium? (y/n) [n]:
 ==== Flash method ====
 It depends on the flashing protocol, that comes with the device. For most Android devices, this is <code>fastboot</code>, some Samsung models need <code>heimdall</code> (which is compatible to "Odin") and some Nokia based phones work with <code>0xffff</code>. If you don't know which one it is, try to enter the bootloader on your device and check whether it says "Fastboot mode" or "Odin mode". Most of the time, that can be done by pressing the <code>Volume Down</code> key when it is just booting. In case you can't figure that one out, try to search the internet - there might even be videos on YouTube on how to do that if you're lucky.
 
+For more information see the Wiki page about [[Deviceinfo flash methods]].
+
 <pre>
 Which flash method does the device support?
 Flash method (fastboot/heimdall/0xffff) [fastboot]:
