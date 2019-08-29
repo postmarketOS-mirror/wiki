@@ -3,11 +3,11 @@ Please join our chat, so we can help you with using postmarketOS in real time. T
 == Matrix ==
 In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser (using the [https://riot.im Riot] client) to enter the channel.
 
-* [https://matrix.to/#/#postmarketos:matrix.org #postmarketos:matrix.org] (main channel)
-* [https://matrix.to/#/#postmarketos-lowlevel:matrix.org #postmarketos-lowlevel:matrix.org] (bootloader hacking, assembly etc.)
-* [https://matrix.to/#/#osk-sdl-dev:matrix.org #osk-sdl-dev:matrix.org] ([[osk-sdl]] support and development)
-* [https://matrix.to/#/#postmarketos-offtopic:matrix.org #postmarketos-offtopic:matrix.org] (other topics)
-* [https://matrix.to/#/#postmarketos-mainline:matrix.org #postmarketos-mainline:matrix.org] (mainline kernel development)
+* [https://matrix.to/#/#main:postmarketos.org #main:postmarketos.org] (main channel)
+* [https://matrix.to/#/#lowlevel:postmarketos.org #lowlevel:postmarketos.org] (bootloader hacking, assembly etc.)
+* [https://matrix.to/#/#osk-sdl-dev:postmarketos.org #osk-sdl-dev:postmarketos.org] ([[osk-sdl]] support and development)
+* [https://matrix.to/#/#offtopic:postmarketos.org #offtopic:postmarketos.org] (other topics)
+* [https://matrix.to/#/#mainline:postmarketos.org #mainline:postmarketos.org] (mainline kernel development)
 
 After you register at any Matrix homeserver and join the channel, the offline history will be saved automatically. So, your questions can be answered even when you are offline!
 
