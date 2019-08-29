@@ -56,6 +56,21 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
+== Development ==
+
+=== Tools ===
+You will need  some tools for development:
+* [https://www.wpinternals.net/ wpinternals]: This is an open-source tool from an XDA-User. It runs natively on Windows.
+* [https://support.microsoft.com/de-de/help/12379/windows-10-mobile-device-recovery-tool-faq Windows Phone Recovery Tool]: This is a proprietary tool from Microsoft. It also runs natively on Windows.
+* A tool for flashing images to an SDCard e.g. [https://www.balena.io/etcher/ BalenaEtcher]
+* [https://developer.android.com/studio/ ADB & Fastboot] (You do not need the whole Android Studio but the Command Line Tools at the bottom of the page)
+
+=== Backup Data ===
+Postmarketos is not ready to use as a daily driver yet. So use a phone you do not need for the development. If you have some data on it, back it up now.
+
+=== Clean Firmware Install ===
+Use the Windows Device Recovery Tool to install clean Firmware. This is to avoid errors.
+
 == See also ==
 * [https://www.gsmarena.com/nokia_lumia_620-5147.php More Specs on GSM-Arena]
 * [https://android4lumia.github.io/ Website of the Android4Lumia Project]
