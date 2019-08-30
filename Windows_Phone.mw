@@ -1,0 +1,17 @@
+This page collects some useful resources for working with Windows Phones.
+
+== Tools ==
+=== WindowsPhoneInternals[https://www.wpinternals.net/] ===
+WPInternals by an XDA-User allows you to perform tasks like unlocking bootloaders, enabling root access and flash or backup firmware.
+
+=== Windows Device Recovery Tool[https://support.microsoft.com/de-de/help/12379/windows-10-mobile-device-recovery-tool-faq] ===
+The Windows Device Recovery Tool by Microsoft let you recover firmware of Windows devices.
+
+== Projects ==
+=== Android4Lumia[https://android4lumia.github.io/] ===
+Android4Lumia is a project which aims to built android based custom roms for Lumia phones.
+
+
+== File Collections ==
+=== LumiaFirmware.com[https://www.lumiafirmware.com/] ===
+On LumiaFirmware.com you can find firmware for Lumia Phones.
