@@ -79,7 +79,14 @@ Now use WPInternals to unlock your bootloader. You will need an FFU-image for th
 
 Afterward, you need the Emergency Loaders. You can download them [https://www.lumiafirmware.com/ here]. (You will need your Product Code)
 
+Then you need the Engineering SBL3 files, which can be found [https://forum.xda-developers.com/windows-10-mobile/guide-unlock-lumia-x2x-enable-mass-t3369360/post66617797#post66617797 here]
 Now unlock the bootloader.
+
+=== Connect your phone in mass storage mode ===
+Use WindowsPhoneInternals to switch to the mass storage mode.
+
+=== Troubleshooting ===
+If your devices stay black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
 
 == See also ==
 * [https://www.gsmarena.com/nokia_lumia_620-5147.php More Specs on GSM-Arena]
