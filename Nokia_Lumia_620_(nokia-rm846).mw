@@ -86,7 +86,7 @@ Now unlock the bootloader.
 Use WindowsPhoneInternals to switch to the mass storage mode. It could be that you have to give the device a drive letter.
 
 === Backup your phone ===
-Use the WindiskImager to Backup your phone (the MainOS Partition). Therefore select the Device, select a folder for your Backup and give it a name.
+Use the WindiskImager to Backup your phone (the MainOS Partition). Therefore select the Device, select a folder for your Backup and give it a name. Afterward, switch to Normal Mode again by holding down the volume down and power key together for 10 Seconds.
 === Troubleshooting ===
 If your devices stay black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
 
