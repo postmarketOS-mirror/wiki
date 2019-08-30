@@ -80,3 +80,6 @@ Plasma mobile currently works on A5 2015, but you have to set custom scaling fac
 <code>kscreen-doctor output.1.scale.2</code> should work
 
 Plasma works smoothly, but there are some graphical glitches like choppy text
+
+== Phosh ==
+# Does not work
