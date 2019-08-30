@@ -83,3 +83,6 @@ Plasma works smoothly, but there are some graphical glitches like choppy text
 
 == Phosh ==
 Does not work
+
+== Hildon ==
+Kinda works, it has to be rotated 90 degrees, and crashes when touched
