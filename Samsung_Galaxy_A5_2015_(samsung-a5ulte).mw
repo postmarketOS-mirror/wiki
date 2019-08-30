@@ -73,3 +73,8 @@ alsaucm does not track which devices are already enabled, therefore it is possib
  set _enadev NEW
 
 {{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
+
+== Plasma Mobile ==
+Plasma mobile currently works on A5 2015, but you have to set custom scaling factor to 2.
+
+<code>kscreen-doctor output.1.scale.2</code> should work
