@@ -121,7 +121,7 @@ It's not clear what would it reacts to both front and back camera. More informat
 Since Cerdus is at <code>/dev/video0</code>, the CSI is at <code>/dev/video1</code> and can be controlled with <code>/dev/media1</code> using <code>media-ctl</code>
 
 <source lang="shell-session">
-pine-pinetab:~# media-ctl --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]' -D /dev/media1
+pine-pinetab:~# media-ctl --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]' -d /dev/media1
 pine-pinetab:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video1 -vframes 1 selfie.jpg
 </source>
 
