@@ -62,7 +62,7 @@ Is OTG available, not used in wiki
 You will need  some tools for development:
 * [https://www.wpinternals.net/ wpinternals]: This is an open-source tool from an XDA-User. It runs natively on Windows.
 * [https://support.microsoft.com/de-de/help/12379/windows-10-mobile-device-recovery-tool-faq Windows Phone Recovery Tool]: This is a proprietary tool from Microsoft. It also runs natively on Windows.
-* A tool for flashing images to an SDCard e.g. [https://www.balena.io/etcher/ BalenaEtcher]
+* Win32 DiskImager [https://sourceforge.net/projects/win32diskimager/]
 * [https://developer.android.com/studio/ ADB & Fastboot] (You do not need the whole Android Studio but the Command Line Tools at the bottom of the page)
 
 === Backup Data ===
@@ -72,19 +72,21 @@ Postmarketos is not ready to use as a daily driver yet. So use a phone you do no
 Use the Windows Device Recovery Tool to install clean Firmware. This is to avoid errors and to gain the FFU-image.
 
 === Check you Storage ===
-Open WPInternals with your phone connected to your Windows PC. Note your Product Code down, for later. Reboot it into flash mode, to get more information. There it says, from which manufacturer your storage is. If it is from Samsung, it can cause a brick of your phone. If not, you are good to go.
+Open WPInternals with your phone connected to your Windows PC. Reboot it into flash mode, to get more information. There it says, from which manufacturer your storage is. If it is from Samsung, it can cause a brick of your phone. If not, you are good to go.
 
 === Unlock the bootloader ===
-Now use WPInternals to unlock your bootloader. You will need an FFU-image for that. If you used the Windows Device Recovery Tool before, you can find the FFU-image in C:\ProgramData\Microsoft\Packages\Products . For the Nokia Lumia 620, there should be a directory called RM-846.
+Now use WPInternals to unlock your bootloader. You will need an FFU-image for that. Use the Download page of WPInternals to download it.
 
-Afterward, you need the Emergency Loaders. You can download them [https://www.lumiafirmware.com/ here]. (You will need your Product Code)
+Afterward, you need the Emergency Loaders. You can also download the needed files with the Download page.
 
-Then you need the Engineering SBL3 files, which can be found [https://forum.xda-developers.com/windows-10-mobile/guide-unlock-lumia-x2x-enable-mass-t3369360/post66617797#post66617797 here]
+Then you need the Engineering SBL3 files, which can be found [https://forum.xda-developers.com/showpost.php?p=64493134&postcount=462 here]
 Now unlock the bootloader.
 
 === Connect your phone in mass storage mode ===
-Use WindowsPhoneInternals to switch to the mass storage mode.
+Use WindowsPhoneInternals to switch to the mass storage mode. It could be that you have to give the device a drive letter.
 
+=== Backup your phone ===
+Use the WindiskImager to Backup your phone (the MainOS Partition). Therefore select the Device, select a folder for your Backup and give it a name.
 === Troubleshooting ===
 If your devices stay black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
 
