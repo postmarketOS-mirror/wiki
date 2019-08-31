@@ -94,6 +94,14 @@ Use the WindiskImager to Backup your phone (the MainOS Partition). Therefore sel
 === Flash the LittleKernel Bootloader ===
 To boot to Android you need to flash the LittleKernel of Android4Lumia. Therefore use the iflash tool.
 
+=== Install the CustomROM ===
+At the end of the process the device boots into the TWRP-recovery. Wipe all partitions to avoid errors. Afterward install the LineagesOS with ADB-Sideload. In TWRP got to Home > Advanced > sideload. Then use:
+<syntaxhighlight lang="shell-session">
+$ adb sideload <LineageOS.zip>
+</syntaxhighlight>
+
+Replace <LineageOS.zip with a path to the downloaded LineageOS-file.
+
 === Troubleshooting ===
 If your device stays black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
 
