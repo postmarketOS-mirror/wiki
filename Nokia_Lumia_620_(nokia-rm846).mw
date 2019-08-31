@@ -56,14 +56,17 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
-== Development ==
+== Installation of Android ==
+
+For now, it is necessary to first install Android on the device to use fastboot as flash tool.
 
 === Tools ===
-You will need  some tools for development:
+You will need  some tools for Installation:
 * [https://www.wpinternals.net/ wpinternals]: This is an open-source tool from an XDA-User. It runs natively on Windows.
 * [https://support.microsoft.com/de-de/help/12379/windows-10-mobile-device-recovery-tool-faq Windows Phone Recovery Tool]: This is a proprietary tool from Microsoft. It also runs natively on Windows.
 * Win32 DiskImager [https://sourceforge.net/projects/win32diskimager/]
 * [https://developer.android.com/studio/ ADB & Fastboot] (You do not need the whole Android Studio but the Command Line Tools at the bottom of the page)
+* [https://onedrive.live.com/?authkey=%21AMnjztSxewIGoSg&id=1674813A0C4DC029%21770390&cid=1674813A0C4DC029 Some files including the rom and iflash]
 
 === Backup Data ===
 Postmarketos is not ready to use as a daily driver yet. So use a phone you do not need for the development. If you have some data on it, back it up now.
@@ -86,9 +89,13 @@ Now unlock the bootloader.
 Use WindowsPhoneInternals to switch to the mass storage mode. It could be that you have to give the device a drive letter.
 
 === Backup your phone ===
-Use the WindiskImager to Backup your phone (the MainOS Partition). Therefore select the Device, select a folder for your Backup and give it a name. Afterward, switch to Normal Mode again by holding down the volume down and power key together for 10 Seconds.
+Use the WindiskImager to Backup your phone (the MainOS Partition). Therefore select the Device, select a folder for your Backup and give it a name. Afterward, switch to Normal Mode again by holding down the volume down and power key together for 10 seconds.
+
+=== Flash the LittleKernel Bootloader ===
+To boot to Android you need to flash the LittleKernel of Android4Lumia. Therefore use the iflash tool.
+
 === Troubleshooting ===
-If your devices stay black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
+If your device stays black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
 
 == See also ==
 * [https://www.gsmarena.com/nokia_lumia_620-5147.php More Specs on GSM-Arena]
