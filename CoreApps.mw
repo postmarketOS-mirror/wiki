@@ -18,7 +18,7 @@ There are some core features that make applications great to use on mobile devic
 
 
 There are 19 CoreApps and they all listed here with their descriptions.
-* CoreActions - A side bar for showing widgets
+* CoreAction - A side bar for showing widgets
 * CorePins - A bookmarking app.
 * CoreArchiver - Archiver to create and extract archives.
 * CoreFm - A lightweight file-manager
