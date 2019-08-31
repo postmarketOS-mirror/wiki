@@ -178,8 +178,13 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>generate_legacy_uboot_initfs</code>
 | For the [https://github.com/postmarketOS/pmbootstrap/wiki/nokia-rx51-%28Nokia-N900%29 N900], we use a legacy version of the [https://en.wikipedia.org/wiki/Das_U-Boot uboot] bootloader right now. When setting this variable to true, the initramfs will generate an uboot legacy compatible initramfs file. Modern versions of uboot can load regular initramfs files.
 | <code>true, false</code>
-
 |-
+
+| <code>legacy_uboot_load_address</code>
+| Set a custom load address for the legacy uboot initfs (see {{MR|578|pmaports}}, only makes sense in combination with <code>generate_legacy_uboot_initfs</code>).
+| default: <code>80008000</code>
+|-
+
 | <code>fastboot_partition_kernel</code>
 | Only relevant for [[Deviceinfo_flash_methods|fastboot]] flash methods, the partition where the kernel or boot.img will be stored ({{MR|1741}}).
 | default: <code>"boot"</code>
