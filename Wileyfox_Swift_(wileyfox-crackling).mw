@@ -25,7 +25,7 @@
 | status_battery = P
 | status_3d = Y
 | status_accel = Y
-| status_audio = P
+| status_audio = Y
 | status_bluetooth = Y
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
