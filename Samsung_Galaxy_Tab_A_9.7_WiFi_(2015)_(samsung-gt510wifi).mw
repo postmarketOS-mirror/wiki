@@ -13,7 +13,7 @@
 | storage = 16GB
 | display = 1024x768 (XGA) PLS
 | memory = 1.5GB
-| architecture = AARCH64
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
