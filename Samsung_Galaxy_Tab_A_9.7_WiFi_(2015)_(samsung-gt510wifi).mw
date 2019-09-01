@@ -84,7 +84,7 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 * [https://gitlab.com/jja2000/pmaports/tree/msm8916-mainline-t550/device/device-samsung-gt510wifi Device package (in my fork, pre-merge)]
-* [https://gitlab.com/jja2000/pmaports/tree/msm8916-mainline-t550/firmware/firmware-samsung-gt510wifi Kernel package (in my fork, pre-merge)]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/main/linux-postmarketos-qcom-msm8916 Kernel package]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
