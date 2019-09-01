@@ -62,14 +62,9 @@ Installation to the system is not yet supported for the device, so make sure to 
 
 == Wifi ==
 
-{{Todo|Make sure it works with NetworkManager and if it doesn't work out of the box replace the instructions here for NetworkManager specific ones}}
+To get the wifi working, you'll need to modify the wpa_supplicant configuration. If this is not done, wpa_supplicant starts with -ip2p0 which is not supported on our device.
 
-To get the wifi working, you'll need to modify the wpa_supplicant confg
-  
-  # If this is not done, wpa_supplicant launches itself with -ip2p0
   $ echo 'wpa_supplicant_args="-iwlan0 -Dwext"' | sudo tee /etc/conf.d/wpa_supplicant
-  $ sudo wpa_passphrase $YOUR_SSID > /etc/wpa_supplicant/wpa_supplicant.conf
-  $ /etc/init.d/wpa_supplicant restart
  
 Write the following file to <source>/etc/network/interfaces</source>
 
@@ -78,16 +73,34 @@ Write the following file to <source>/etc/network/interfaces</source>
   auto wlan0 
   iface wlan0 inet dhcp
 
-Restart the network to verify it's working
+To connect using NetworkManger you will need to change the default DHCP client from the NetworkManager internal DHCP client to dhclient by creating <source>/etc/NetworkManager/conf.d/dhcp-client.conf</source> and adding
+  
+  [main]
+  dhcp=dhclient
 
-  $ /etc/init.d/networking restart
+Start the networkmanger service and restart networking service
 
-Set it to start on boot
+  $ sudo rc-service networkmanger start
+  $ sudo rc-service networking restart
+
+Search for available WiFi networks and connect to network
+
+  $ sudo nmcli device wifi list ifname wlan0
+  $ sudo nmcli device wifi connect "$SSID" password "$PASSWORD" ifname wlan0
+
+Set services to start
 
   $ sudo rc-update add wpa_supplicant boot
   $ sudo rc-update add networking default
+  $ sudo rc-update add networkmanager default
 
 Reboot and you should be connected on boot.
+
+You may also connect directly using wpa_supplicant forgoing NetworkManager. Please note this method will not automatically reconnect to WiFi if you loose connection
+
+ $ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+ $ sudo rc-service wpa_supplicant restart
+
 
 == Mainline Kernel ==
 The mainline kernel now has some support for the Samsung Galaxy SIII LTE (i9305):
