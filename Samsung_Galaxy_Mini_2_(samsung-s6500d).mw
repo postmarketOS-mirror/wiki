@@ -168,11 +168,11 @@ bq27425 #battery gauge
 {{note|informations below may be chaotic and change often}}
 
 === SMSM_RESET ===
-Most annoying problem sunce everything on the phone has to be done within 2 minutes.
+Most annoying problem since everything on the phone has to be done within 2 minutes.
 After about 2mins 22secs phone reboots with dmesg showing ''SMSM: Modem SMSM state changed to SMSM_RESET''
 This message is hardcoded into ''arch/arm/mach-msm/smd.c''
 
-Probably caused my modem, check all MODEM and MSM*_MODEM_* related options in menuconfig (there is one called reset, one reboot and one just modem) or find binary blobs if possible.
+Probably caused by modem, check all MODEM and MSM*_MODEM_* related options in menuconfig (there is one called reset, one reboot and one just modem) or find binary blobs if possible.
 
 === Touch screen ===
 The screen as well as two touch buttons (menu and back) are combined together as ''/dev/input/event1''.
