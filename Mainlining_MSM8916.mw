@@ -1,0 +1,40 @@
+[https://www.qualcomm.com/products/snapdragon-processors-410 MSM8916]/[https://www.qualcomm.com/products/apq8016e APQ8016] (or Snapdragon 410) is Qualcomm SoC released in 2014. Support in mainline was originally added for the [https://www.96boards.org/product/dragonboard410c/ Dragonboard 410c], but most of it also works well on other MSM8916-based devices.
+
+== Status ==
+The following features provided by the MSM8916 SoC are supported in mainline and should work on most MSM8916-based devices after the device tree has been set up:
+* UART
+* USB
+* Internal/External Storage (eMMC/SD card)
+* WiFi/Bluetooth
+* GPU, Display ('''Note:''' There are many different display panels and each needs a custom panel driver...)
+* Sound ('''Note:''' Some devices use a custom speaker amplifier instead of the one provided by PM8916...)
+* Buttons
+
+Certain components (e.g. touchscreen, sensors, ...) are device-specific. With a bit of luck, some will be already supported by mainline, others won't.
+
+== Overview ==
+The first MSM8916 devices using mainline were added in {{MR|582|pmaports}}. The following components are involved when running mainline on MSM8916 devices.
+
+=== [https://github.com/msm8916-mainline/linux msm8916-mainline/linux] ===
+The close-to-mainline [https://www.kernel.org/ Linux] kernel fork with patches that have not been accepted/submitted upstream yet. Patches in the <code>master</code> branch are generally in good shape unless marked otherwise. Submit a PR to add new patches there.
+
+=== [https://github.com/msm8916-mainline/lk2nd msm8916-mainline/lk2nd] ===
+The reference bootloader provided by Qualcomm for MSM8916 is open-source and based on [https://github.com/littlekernel/lk Little Kernel (LK)]. Most devices will use this bootloader in a more or less modified form. On Samsung devices for example, the standard Fastboot interface was replaced by their proprietary download mode.
+
+[https://github.com/msm8916-mainline/lk2nd lk2nd] is a fork of the reference bootloader with the goal to provide an unified boot interface on all MSM8916 devices. It provides a standard Fastboot interface (even on Samsung devices!). It also used for a number of mainline quirks (e.g. to set a WiFi/BT MAC address in the device tree; without lk2nd, WiFi/BT does not work out of the box). Eventually, more quirks may be added in the future. It is therefore recommended for all mainline MSM8916 devices. Porting it is generally much easier than porting mainline.
+
+=== soc-qcom-msm8916 ===
+The shared device package in postmarketOS. It contains shared dependencies and configuration files.
+
+== Getting Started ==
+=== Requirements ===
+* MSM8916-based device
+* UART if possible (with a bit of luck you may get USB working without UART)
+
+{{todo|<insert guide to start mainlining MSM8916 here>}}
+
+== Reference ==
+{{note|'''Note:''' The following is not intended to be a guide.}}
+{{todo|<insert helpful information for WiFi, BT, Display, Sound, ... here>}}
+
+[[Category:Technical Reference]]
