@@ -2,7 +2,7 @@ Some vendors do not release the kernel source code, which is very bad for freedo
 
 But you can still extract the kernel image from a device that is running Android and use it to run postmarketOS. Of course this is ''totally discouraged'' because we want to make sure that we know the code our devices are running but you might find it useful in order to start hacking on postmarketOS without having the kernel source code.
 
-{{note|Do please note that a port like this won't be merged without a '''''very''''' good reason}}
+{{note|Do please note that a port like this won't be merged.}}
 
 == Extracting boot.img from an Android device ==
 {{note|In this example the boot partition is named <code>msm_sdcc.1</code> but it might have a different name for your device.}}
