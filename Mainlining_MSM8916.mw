@@ -23,6 +23,8 @@ The reference bootloader provided by Qualcomm for MSM8916 is open-source and bas
 
 [https://github.com/msm8916-mainline/lk2nd lk2nd] is a fork of the reference bootloader with the goal to provide an unified boot interface on all MSM8916 devices. It provides a standard Fastboot interface (even on Samsung devices!). It also used for a number of mainline quirks (e.g. to set a WiFi/BT MAC address in the device tree; without lk2nd, WiFi/BT does not work out of the box). Eventually, more quirks may be added in the future. It is therefore recommended for all mainline MSM8916 devices. Porting it is generally much easier than porting mainline.
 
+{{note|'''Note:''' lk2nd does not replace your stock bootloader. It is packed into a standard Android boot image and loaded by the stock bootloader from the boot partition. The real boot partition used by lk2nd is then placed with 1 MB offset into the boot partition.}}
+
 === soc-qcom-msm8916 ===
 The shared device package in postmarketOS. It contains shared dependencies and configuration files.
 
