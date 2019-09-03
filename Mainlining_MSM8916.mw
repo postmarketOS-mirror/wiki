@@ -32,6 +32,7 @@ The shared device package in postmarketOS. It contains shared dependencies and c
 === Requirements ===
 * MSM8916-based device
 * UART if possible (with a bit of luck you may get USB working without UART)
+* (Downstream) Linux kernel source for your device (explaining ways to mainline without kernel source is out of scope for this article)
 * Basic knowledge about Linux, Git, C, Device Trees, ...
 * Willingness to learn about "mainlining" and to figure out things on your own
 
@@ -42,7 +43,36 @@ The best way to make yourself familiar with the process is to attempt to figure 
 
 If you have any questions, ask in [[Matrix_and_IRC|the mainline channel on Matrix or IRC]]. Make sure to mention "msm8916" if your question is specific to this article.
 
+=== Preparations ===
+First, let's take a short look at the downstream kernel. The device trees on downstream are usually in <code>arch/arm/boot/dts/qcom/msm8916-*.dts(i)</code> (in Samsung kernels: <code>arch/arm/boot/dts/samsung/msm8916/msm8916-*.dts(i)</code>). You need to find the <code>.dts</code> file that describes the device tree for your device. One way to check this is to look at `/proc/device-tree/model` on downstream, and search for the same string in that directory.
+
+Now, let's check how it looks on mainline. Clone [https://github.com/msm8916-mainline/linux msm8916-mainline/linux] and take a look at <code>arch/arm64/boot/dts/qcom/</code>. This is the directory where you will add your device tree later.
+
 === Porting lk2nd ===
+{{note|'''Note:''' lk2nd is not strictly required to boot mainline. However, certain features (e.g. WiFi and BT) only work with some additional mainline quirks included in lk2nd. In the future, there may be more features that depend on extra code that needs to be run in the bootloader. Therefore, lk2nd is recommended for all devices, even if your stock bootloader already provides a standard Fastboot interface.}}
+
+[https://github.com/msm8916-mainline/lk2nd msm8916-mainline/lk2nd] does not require any device-specific code. Normally, it should just run out of the box on your device. However, most stock bootloaders require a valid device tree to be present in the Android boot image. To avoid problems, a dummy device tree with the "qcom,board-id" from the downstream kernel needs to be added to lk2nd.
+
+Before you make any changes, try [https://github.com/msm8916-mainline/lk2nd#building building it]. Then, add a new file for your device to <code>dts/</code> that looks like:
+
+ // SPDX-License-Identifier: GPL-2.0-only
+ 
+ /dts-v1/;
+ 
+ /include/ "msm8916.dtsi"
+ 
+ / {
+ 	// This is used by the bootloader to find the correct DTB
+ 	qcom,msm-id = <206 0>; // qcom,msm-id = <247 0>; for APQ8016
+ 	qcom,board-id = /* Check your downstream device tree */;
+ 
+ 	model = "Example Device"; // TODO
+ 	compatible = "vendor,example", "qcom,msm8916", "lk2nd,device";
+ };
+
+Make sure to add the new file to <code>dts/rules.mk</code>, and re-compile lk2nd.
+
+With a bit of luck, flashing the boot image on your device should make it boot into a Fastboot screen, and the device should show up via USB. If either of that is not the case, we need to investigate further. Sometimes, some kind of [[Micro-USB_Interface_Controller]] that sits between USB and the SoC needs to be configured for USB to work. Setting that up would require device-specific code. If you need help, ask in [Matrix_and_IRC|the mainline channel on Matrix or IRC]].
 
 === Initial Device Tree ===
 
