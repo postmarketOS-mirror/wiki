@@ -32,8 +32,21 @@ The shared device package in postmarketOS. It contains shared dependencies and c
 === Requirements ===
 * MSM8916-based device
 * UART if possible (with a bit of luck you may get USB working without UART)
+* Basic knowledge about Linux, Git, C, Device Trees, ...
+* Willingness to learn about "mainlining" and to figure out things on your own
 
-{{todo|<insert guide to start mainlining MSM8916 here>}}
+=== Before You Start ===
+Mainlining is not easy. MSM8916 is a platform where a lot components can be easily enabled by only setting up a device tree, which can be largely copied from other devices with minor changes. However, at some point you will reach the point where you would like to enable a particular component that is device-specific (e.g. the touchscreen, sensors, ...). In this case you will be largely on your own, and need to figure out how to enable it yourself. (Do you just need to add something to the device tree or even write a new kernel driver?) That requires some familiarity with the way the Linux kernel is working for MSM8916.
+
+The best way to make yourself familiar with the process is to attempt to figure out some simple things on your own. Therefore, this guide will only describe everything until (eventually) USB network is working. For everything else, this article provides only some information that might be helpful to figure it out yourself.
+
+If you have any questions, ask in [[Matrix_and_IRC|the mainline channel on Matrix or IRC]]. Make sure to mention "msm8916" if your question is specific to this article.
+
+=== Porting lk2nd ===
+
+=== Initial Device Tree ===
+
+=== USB Network ===
 
 == Reference ==
 {{note|'''Note:''' The following is not intended to be a guide.}}
