@@ -46,7 +46,7 @@ You will need to adjust the <code>init</code> script of your kernel's built in i
 In case you can't get it working with Heimdall, you could use the proprietary Odin program for Windows (e.g. in a VM) and flash from there. To do that, run the following commands to export all generated files from <code>pmbootstrap</code> and create an Odin-compatible tar file:
 
 <pre class="shell">pmbootstrap install
-pmbootstrap flasher export --odin</pre>
+pmbootstrap export --odin</pre>
 It would be great if you could record your flashing session with a USB sniffer and send it to the Heimdall developers (as ticket) or even implement support for your device in Heimdall yourself (C++ knowledge required). Please expand this wiki page on how to actually sniff the USB traffic, if you do that.
 
 === Recovery mode (adb) ===
