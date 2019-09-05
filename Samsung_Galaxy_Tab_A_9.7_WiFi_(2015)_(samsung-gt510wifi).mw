@@ -19,7 +19,7 @@
 | status_flashing = Y
 | status_touch = N
 | status_screen = N
-| status_wifi = N
+| status_wifi = Y
 | status_xwayland = N
 | status_fde = 
 | status_mainline = Y
@@ -27,7 +27,7 @@
 | status_3d = N
 | status_accel = N
 | status_audio = N
-| status_bluetooth = N
+| status_bluetooth = Y
 | status_camera = N
 | status_gps = N
 | status_mobiledata = -
