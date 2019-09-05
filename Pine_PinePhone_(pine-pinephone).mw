@@ -65,8 +65,8 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 ! Driver
 |-
 | Touchscreen
-| FocalTech FT6336GU
-| TOUCHSCREEN_EDT_FT5X06
+| <del>FocalTech FT6336GU</del>
+| <del>TOUCHSCREEN_EDT_FT5X06</del>
 |-
 | Rear camera
 | OmniVision OV5640
@@ -81,15 +81,15 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 | Nope
 |-
 | LCD
-| fitipower JD9365D
-| DRM_PANEL_PINEPHONE_JD9365DA
+| <del>fitipower JD9365D</del>
+| <del>DRM_PANEL_PINEPHONE_JD9365DA</del>
 |-
 | WiFi
-| Realtek RTL8723BS
-| RTL8723BS
+| Realtek RTL8723CS
+| RTL8723CS
 |-
 | Bluetooth
-| Realtek RTL8723BS
+| Realtek RTL8723CS
 | BT_HCIUART_RTL
 |-
 | Modem
@@ -97,7 +97,7 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 | USB_NET_QMI_WWAN
 |-
 | GNSS/GPS
-| Quectel EC25-E
+| Quectel EC25-G
 | CONFIG_USB_SERIAL_OPTION
 |-
 | Magnetometer
@@ -133,19 +133,6 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 | BATTERY_AXP20X
 |}
 
-=== Touchscreen ===
-
-The touchscreen is controlled by the <code>edt_ft5x06</code> module on i2c-0. The current issue is that it takes a long while before the i2c-0 bus works after booting. For some reason it takes ~110 seconds before communication is possible. This causes an issue because the module tries to probe the touchscreen before the bus works. 
-
-The current workaround is to build <code>edt_ft5x06</code> as a module and rmmod/modprobe the module after the i2c-0 bus works so it gets probed again.
-
-<source lang="dmesg">
-[   17.942111] edt_ft5x06 0-0038: touchscreen probe failed
-...after rmmod edt_ft5x06; modprobe edt_ft5x06...
-[ 3989.326377] input: generic ft5x06 (12) as /devices/platform/soc/1c2ac00.i2c/i2c-0/0-0038/input/input2
-</source>
-
-The communication to the touchscreen controller is only possible when power is supplied the the 4G modem using the hardware switch (the light should be off) since the power rail for the 4G modem is used as pull-up for the i2c bus that connects the touchscreen controller to the sopine.
 
 === Cameras ===
 
