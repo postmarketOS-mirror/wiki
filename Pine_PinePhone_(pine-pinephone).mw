@@ -43,14 +43,19 @@
 * ''[[user:bshah|bshah]]''
 
 == Serial console ==
+The PinePhone has a serial port in the headphone connector, it's activated by the 6th contact on the dipswitch. If the switch is off then the headphone connector is in audio mode, if it's on then it's in UART mode.
 
-There is a 3.3V uart on the 2x5pin connector near the modem. The pin in the corner toward VOL- is GND and the next pin is TX.
+The uart is 115200n8
 
-[[File:Pine-dontbeevil-uart.jpg|frameless]]
+The pinout for the serial connector on the tablet side is:
 
-The baudrate in u-boot and in Linux is 115200n8
+* Tip: RX
+* Ring: TX
+* Sleeve: GND
 
-On a functional devkit with a pmos SD card inserted you should get the standard u-boot console messages on the serial port as soon as you power the devkit on, and after that the linux kernel messages.
+The serial connection is 3.3V
+
+You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 
 == Components ==
 
