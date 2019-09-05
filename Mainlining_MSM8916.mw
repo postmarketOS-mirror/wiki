@@ -74,7 +74,7 @@ Before you make any changes, try [https://github.com/msm8916-mainline/lk2nd#buil
 
 Make sure to add the new file to <code>dts/rules.mk</code>, and re-compile lk2nd.
 
-With a bit of luck, flashing the boot image on your device should make it boot into a Fastboot screen, and the device should show up via USB. If either of that is not the case, we need to investigate further. Sometimes, some kind of [[Micro-USB_Interface_Controller]] that sits between USB and the SoC needs to be configured for USB to work. Setting that up would require device-specific code. If you need help, ask in [Matrix_and_IRC|the mainline channel on Matrix or IRC]].
+With a bit of luck, flashing the boot image on your device should make it boot into a Fastboot screen, and the device should show up via USB. If either of that is not the case, we need to investigate further. Sometimes, some kind of [[Micro-USB_Interface_Controller]] that sits between USB and the SoC needs to be configured for USB to work. Setting that up would require device-specific code. If you need help, ask in [[Matrix_and_IRC|the mainline channel on Matrix or IRC]].
 
 === Initial Device Tree ===
 
