@@ -4,13 +4,13 @@
 | codename = xiaomi-beryllium
 | imagecaption = CHANGE_ME
 | releaseyear = 2018
-| originalsoftware = Android Pie
+| originalsoftware = MIUI 9.6 (based on Android 8.1)
 | chipset = Qualcomm SDM845 Snapdragon 845
 | cpu = Qualcomm Snapdragon 845
 | gpu = Adreno 630
-| storage = 64GB / 128GB
+| storage = 64GB / 128GB / 256GB
 | display = 1080x2246 LCD
-| memory = 3GB
+| memory = 6GB / 8GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
