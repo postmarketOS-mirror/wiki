@@ -50,7 +50,7 @@ First, let's take a short look at the downstream kernel. The device trees on dow
 
 Now, let's check how it looks on mainline. Clone [https://github.com/msm8916-mainline/linux msm8916-mainline/linux] and take a look at <code>arch/arm64/boot/dts/qcom/</code>. This is the directory where you will add your device tree later.
 
-=== Porting lk2nd ===
+=== lk2nd ===
 {{note|'''Note:''' lk2nd is not strictly required to boot mainline. However, certain features (e.g. WiFi and BT) only work with some additional mainline quirks included in lk2nd. In the future, there may be more features that depend on extra code that needs to be run in the bootloader. Therefore, lk2nd is recommended for all devices, even if your stock bootloader already provides a standard Fastboot interface.}}
 
 [https://github.com/msm8916-mainline/lk2nd msm8916-mainline/lk2nd] does not require any device-specific code. Normally, it should just run out of the box on your device. However, most stock bootloaders require a valid device tree to be present in the Android boot image. To avoid problems, a dummy device tree with the <code>qcom,board-id</code> from the downstream kernel needs to be added to lk2nd.
