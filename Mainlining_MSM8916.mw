@@ -77,7 +77,7 @@ Make sure to add the new file to <code>dts/rules.mk</code>, and re-compile lk2nd
 With a bit of luck, flashing the boot image on your device should make it boot into a Fastboot screen, and the device should show up via USB. If either of that is not the case, we need to investigate further. Sometimes, there is some kind of [[Micro-USB_Interface_Controller]] that sits between USB and the SoC, which may require manual setup to work correctly. Setting that up would require device-specific code. If you need help, ask in [[Matrix_and_IRC|the mainline channel on Matrix or IRC]].
 
 === Device Package ===
-Before you can build the mainline kernel for your device, you need to setup the postmarketOS device packages. Avoid creating the device/kernel package directly through pmbootstrap. There is no need to analyze a boot image. (The boot image offsets are not actually used on MSM8916; all MSM8916 devices should use Fastboot through lk2nd...) You can start with the following examples:
+Before you can build the mainline kernel for your device, you need to setup the postmarketOS device packages. Avoid creating the device/kernel package directly through pmbootstrap. There is no need to analyze a boot image. (The boot image offsets are not actually used on MSM8916; plus, all MSM8916 devices should use Fastboot through lk2nd...) You can start with the following examples:
 
 <code>device/device-<vendor>-<codename>/APKBUILD</code>:
 
