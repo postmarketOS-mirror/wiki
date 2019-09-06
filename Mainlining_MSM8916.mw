@@ -53,7 +53,7 @@ Now, let's check how it looks on mainline. Clone [https://github.com/msm8916-mai
 === Porting lk2nd ===
 {{note|'''Note:''' lk2nd is not strictly required to boot mainline. However, certain features (e.g. WiFi and BT) only work with some additional mainline quirks included in lk2nd. In the future, there may be more features that depend on extra code that needs to be run in the bootloader. Therefore, lk2nd is recommended for all devices, even if your stock bootloader already provides a standard Fastboot interface.}}
 
-[https://github.com/msm8916-mainline/lk2nd msm8916-mainline/lk2nd] does not require any device-specific code. Normally, it should just run out of the box on your device. However, most stock bootloaders require a valid device tree to be present in the Android boot image. To avoid problems, a dummy device tree with the "qcom,board-id" from the downstream kernel needs to be added to lk2nd.
+[https://github.com/msm8916-mainline/lk2nd msm8916-mainline/lk2nd] does not require any device-specific code. Normally, it should just run out of the box on your device. However, most stock bootloaders require a valid device tree to be present in the Android boot image. To avoid problems, a dummy device tree with the <code>qcom,board-id</code> from the downstream kernel needs to be added to lk2nd.
 
 Before you make any changes, try [https://github.com/msm8916-mainline/lk2nd#building building it]. Then, add a new file for your device to <code>dts/</code> that looks like:
 
