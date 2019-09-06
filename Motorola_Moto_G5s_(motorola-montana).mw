@@ -45,8 +45,8 @@ DolphinChips
 {{Device owners}}
 == Issues ==
 * Phone gets stuck somewhere when shutting down
-* X11 doesn't work (probably requires kernel patching)
-* Firmware is not packaged (source of the most problems)
+* X11 doesn't work (requires kernel patching)
+* Firmware is not packaged (source of the most problems, except for touchscreen)
 
 == How to enter flash mode ==
 <code>Power</code> + <code>Volume Down</code> buttons or use <code>adb reboot bootloader</code>
@@ -60,6 +60,12 @@ $ pmbootstrap flasher boot # To boot kernel without flashing it
 </source>
 === Installation on internal memory ===
 This is untested, but kubast2 had success with Android Recovery Zip.
+
+== Troubleshooting ==
+=== Boot partiiton is not found! ===
+This is very strange error which can be fixed by booting in Android with sdcard inserted.
+
 == See also ==
 * {{MR|286|pmaports}} Initial merge request
 * {{MR|581|pmaports}} Change arch to aarch64
+* {{issue|352|pmaports}} Issue about broken touchscreen
