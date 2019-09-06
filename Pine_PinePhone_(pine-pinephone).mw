@@ -43,7 +43,7 @@
 * ''[[user:bshah|bshah]]''
 
 == Serial console ==
-The PinePhone has a serial port in the headphone connector, it's activated by the 6th contact on the dipswitch. If the switch is off then the headphone connector is in audio mode, if it's on then it's in UART mode.
+The PinePhone has a serial port in the headphone connector, it's activated by the 6th contact on the dipswitch. If the switch is on then the headphone connector is in audio mode, if it's off then it's in UART mode.
 
 The uart is 115200n8
 
