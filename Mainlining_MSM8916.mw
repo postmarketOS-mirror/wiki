@@ -151,7 +151,25 @@ To load a generic kernel image, the device must be able to find the correct devi
 * '''QCDT:''' Uncomment <code>deviceinfo_bootimg_qcdt="true"</code> {{todo|Explain how to figure out which <code>compatible</code> string to use in this case.}}
 * '''Appended device tree:''' Uncomment <code>deviceinfo_append_dtb="true"</code>
 
-Follow the [[Porting_to_a_new_device#Device_specific_package|postmarketOS porting guide]] until the device package builds successfully. From now on you will use [[Compiling_kernels_with_envkernel.sh|envkernel.sh]] to compile the kernel.
+Follow the [[Porting_to_a_new_device#Device_specific_package|postmarketOS porting guide]] until the device package builds successfully.
+
+=== Build Kernel ===
+
+Go back to your [https://github.com/msm8916-mainline/linux msm8916-mainline/linux] clone. Try to build it with [[Compiling_kernels_with_envkernel.sh|envkernel.sh]]:
+
+ $ cd path/to/msm8916-mainline/linux
+ $ source path/to/pmbootstrap/helpers/envkernel.sh
+ 
+ # Initialize kernel configuration
+ $ make msm8916_defconfig pmos.config
+ 
+ # Compile kernel; replace <cores> with the number of cores you'd like to use for compilation
+ $ make -j<cores>
+ 
+ # Create postmarketOS package with your built kernel
+ $ pmbootstrap build --envkernel linux-postmarketos-qcom-msm8916
+
+This is how you can build and test local changes for the kernel from now on. Now we will continue setting up an initial device tree for your device.
 
 === Initial Device Tree ===
 
