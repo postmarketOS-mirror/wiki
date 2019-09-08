@@ -58,6 +58,8 @@ Is OTG available, not used in wiki
 
 == Button Shortcuts ==
 * Hold <code>Power</code> + <code>Volume down</code> to force the phone to reboot
+* Hold <code>Volume down</code> and connect it to the PC to boot it into fastboot mode
+* Hold <code>Volume Up</code> and connect it to the PC to boot into the recovery system
 
 == Installation of Android ==
 
