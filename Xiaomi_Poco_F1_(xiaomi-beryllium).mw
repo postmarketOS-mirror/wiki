@@ -15,8 +15,8 @@
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = N
-| status_screen = N
+| status_touch = P
+| status_screen = P
 | status_wifi = N
 | status_xwayland = 
 | status_fde = 
