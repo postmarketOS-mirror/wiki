@@ -56,6 +56,9 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
+== Button Shortcuts ==
+* Hold <code>Power</code> + <code>Volume down</code> to force the phone to reboot
+
 == Installation of Android ==
 
 For now, it is necessary to first install Android on the device to use fastboot as flash tool.
