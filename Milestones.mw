@@ -154,7 +154,7 @@ In general, get postmarketOS to a ready for daily usage state, in my case gettin
 
 === [[User:Neilvandyke|neilvandyke]] ===
 <onlyinclude>{{#ifeq:{{{user|Neilvandyke}}}|Neilvandyke |
-* Build out a developer-friendly PostmarketOS UI option, emphasizing the Racket programming language platform.[http://www.neilvandyke.org/postmarketos/]
+* Build out a developer-friendly PostmarketOS UI option, emphasizing Scheme/Racket or Rust.[http://www.neilvandyke.org/postmarketos/]
 * Get a daily driver configured with WiFi (including AP UI), email, IRC, Web, offline OpenStreetMap, DrRacket.
 * Find volunteer programmers for systems-level device support, UI, and apps.
 }}</onlyinclude>
