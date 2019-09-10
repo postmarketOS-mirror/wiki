@@ -18,13 +18,13 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = N
-| status_screen = N
+| status_screen = Y
 | status_wifi = Y
-| status_xwayland = N
+| status_xwayland = 
 | status_fde = 
 | status_mainline = Y
 | status_battery = N
-| status_3d = N
+| status_3d = 
 | status_accel = N
 | status_audio = N
 | status_bluetooth = Y
