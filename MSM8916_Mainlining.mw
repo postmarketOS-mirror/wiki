@@ -172,6 +172,50 @@ Go back to your [https://github.com/msm8916-mainline/linux msm8916-mainline/linu
 This is how you can build and test local changes for the kernel from now on. Now we will continue setting up an initial device tree for your device.
 
 === Initial Device Tree ===
+The available hardware components of a device are described in the device tree (see e.g. [https://elinux.org/images/f/f9/Petazzoni-device-tree-dummies_0.pdf this introduction]). Components provided by the SoC (MSM8916) are described in the common include <code>msm8916.dtsi</code>. You need to create a device tree with the device-specific configuration, plus additional components used in your device (e.g. touchscreen).
+
+The device tree for your device should be placed in a new file at <code>arch/arm64/boot/dts/qcom/msm8916-<vendor>-<codename>.dts</code>. A very simple device tree that only enables UART output could look like this:
+
+ <nowiki>
+// SPDX-License-Identifier: GPL-2.0-only
+
+/dts-v1/;
+
+#include "msm8916.dtsi"
+#include "pm8916.dtsi"
+
+/ {
+	model = "Device Name";
+	compatible = "vendor,device", "qcom,msm8916";
+
+	aliases {
+		serial0 = &blsp1_uart2;
+	};
+
+	chosen {
+		stdout-path = "serial0";
+	};
+
+	soc {
+		serial@78b0000 {
+			status = "okay";
+			pinctrl-names = "default", "sleep";
+			pinctrl-0 = <&blsp1_uart2_default>;
+			pinctrl-1 = <&blsp1_uart2_sleep>;
+		};
+	};
+};</nowiki>
+
+MSM8916 has 122 [https://en.wikipedia.org/wiki/General-purpose_input/output GPIO] pins that can be configured with different functions. GPIO 4 and 5 can be configured to provide UART ("blsp1_uart2"). In the Linux kernel, the [https://elinux.org/images/b/b6/Pin_Control_Subsystem_Overview.pdf Pin Control Subsystem] (pinctrl) handles configuring the pins with a specific function.
+
+Therefore, the above device tree does the following:
+* <code>aliases</code> and <code>chosen</code>: Set up BLSP UART2 as default console output
+* <code>serial@78b0000</code>: This node is defined in <code>msm8916.dtsi</code> but disabled by default (<code>status = "disabled"</code>)
+** <code>status = "okay"</code> Enable it
+** pinctrl: configure GPIO 4 and 5 for UART (<code>blsp1_uart2_default</code> and <code>blsp1_uart2_sleep</code> are default pin configurations that are defined in the common <code>msm8916-pins.dtsi</code>
+
+This device tree should be already enough to boot with working serial console if you are able to access UART. But wait, don't forget to add an entry to <code>arch/arm64/boot/dts/qcom/Makefile</code>!
+If you don't have UART you will need to skip testing this step and hope that USB works out of the box in the next step.
 
 === USB Network ===
 
