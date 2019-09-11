@@ -208,25 +208,7 @@ echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
 
 === WiFi ===
 
-WiFi generally works but the driver is quite sporadic when it wants to work. Rebooting/rmmod and modprobe'ing the driver/rfkill block - unblock helps.
-
-<source lang="dmesg">
-[ 1962.148414] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
-[ 1962.148468] RTL8723BS: set ssid [BrixIT] fw_state = 0x00000088
-[ 1962.159624] RTL8723BS: start auth
-[ 1962.161053] RTL8723BS: auth success, start assoc
-[ 1972.568295] RTL8723BS: set bssid:00:00:00:00:00:00
-[ 1985.233165] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
-[ 1985.233228] RTL8723BS: set ssid [BrixIT] fw_state = 0x00000088
-[ 1985.304510] RTL8723BS: start auth
-[ 1985.306184] RTL8723BS: auth success, start assoc
-[ 1995.657207] RTL8723BS: set bssid:00:00:00:00:00:00
-[ 2006.185941] RTL8723BS: set bssid:e4:8d:8c:49:44:e2
-[ 2006.185994] RTL8723BS: set ssid [BrixIT] fw_state = 0x00000088
-[ 2006.193313] RTL8723BS: start auth
-[ 2006.194839] RTL8723BS: auth success, start assoc
-[ 2010.497801] RTL8723BS: set bssid:00:00:00:00:00:00
-</source>
+?
 
 === Bluetooth ===
 
