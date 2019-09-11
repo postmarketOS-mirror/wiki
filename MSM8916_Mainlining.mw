@@ -66,11 +66,14 @@ Before you make any changes, try [https://github.com/msm8916-mainline/lk2nd#buil
  / {
  	// This is used by the bootloader to find the correct DTB
  	qcom,msm-id = <206 0>; // qcom,msm-id = <247 0>; for APQ8016
- 	qcom,board-id = /* Check your downstream device tree */;
+ 	qcom,board-id = /* FIXME: Check your downstream device tree */;
  
- 	model = "Example Device"; // TODO
- 	compatible = "vendor,example", "qcom,msm8916", "lk2nd,device";
+ 	model = "Device Name"; // FIXME
+ 	compatible = "<vendor>,<codename>", "qcom,msm8916", "lk2nd,device"; // FIXME
  };
+
+
+Note the <code>FIXME</code> lines in the example above. This is where you still need to make changes for your device. For example, replace the <code>model</code> with a display name for your device, and the placeholders in the <code>compatible</code> string.
 
 Make sure to add the new file to <code>dts/rules.mk</code>, and re-compile lk2nd.
 
@@ -185,8 +188,8 @@ The device tree for your device should be placed in a new file at <code>arch/arm
 #include "pm8916.dtsi"
 
 / {
-	model = "Device Name";
-	compatible = "vendor,device", "qcom,msm8916";
+	model = "Device Name"; // FIXME
+	compatible = "<vendor>,<codename>", "qcom,msm8916"; // FIXME
 
 	aliases {
 		serial0 = &blsp1_uart2;
@@ -214,10 +217,245 @@ Therefore, the above device tree does the following:
 ** <code>status = "okay"</code> Enable it
 ** pinctrl: configure GPIO 4 and 5 for UART (<code>blsp1_uart2_default</code> and <code>blsp1_uart2_sleep</code> are default pin configurations that are defined in the common <code>msm8916-pins.dtsi</code>
 
-This device tree should be already enough to boot with working serial console if you are able to access UART. But wait, don't forget to add an entry to <code>arch/arm64/boot/dts/qcom/Makefile</code>!
+Before you build, don't forget to add an entry to <code>arch/arm64/boot/dts/qcom/Makefile</code>.
+This device tree should be already enough to boot with working serial console if you are able to access UART.
 If you don't have UART you will need to skip testing this step and hope that USB works out of the box in the next step.
 
-=== USB Network ===
+=== Storage & USB ===
+Let's look at a more complex device tree now. The goal is to enable internal/external storage ([https://en.wikipedia.org/wiki/MultiMediaCard#eMMC eMMC]) and to make USB gadget mode working so you can attach your device to a PC and get a debugging console. This is where things start to get slightly different between devices.
+
+Update your device tree with something like the following:
+
+ <nowiki>
+// SPDX-License-Identifier: GPL-2.0-only
+
+/dts-v1/;
+
+#include "msm8916.dtsi"
+#include "pm8916.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	model = "Device Name"; // FIXME
+	compatible = "<vendor>,<codename>", "qcom,msm8916"; // FIXME
+
+	aliases {
+		serial0 = &blsp1_uart2;
+	};
+
+	chosen {
+		stdout-path = "serial0";
+	};
+
+	soc {
+		sdhci@7824000 {
+			status = "okay";
+
+			vmmc-supply = <&pm8916_l8>;
+			vqmmc-supply = <&pm8916_l5>;
+
+			pinctrl-names = "default", "sleep";
+			pinctrl-0 = <&sdc1_clk_on &sdc1_cmd_on &sdc1_data_on>;
+			pinctrl-1 = <&sdc1_clk_off &sdc1_cmd_off &sdc1_data_off>;
+		};
+
+		sdhci@7864000 {
+			status = "okay";
+
+			vmmc-supply = <&pm8916_l11>;
+			vqmmc-supply = <&pm8916_l12>;
+
+			pinctrl-names = "default", "sleep";
+
+			pinctrl-0 = <&sdc2_clk_on &sdc2_cmd_on &sdc2_data_on>; // add &sdc2_cd_on if you use cd-gpios below
+			pinctrl-1 = <&sdc2_clk_off &sdc2_cmd_off &sdc2_data_off>; // add &sdc2_cd_off if you use cd-gpios below
+
+			// FIXME: Either or - compare with downstream
+			//non-removable;
+			//cd-gpios = <&msmgpio 38 GPIO_ACTIVE_LOW>;
+		};
+
+		serial@78b0000 {
+			status = "okay";
+			pinctrl-names = "default", "sleep";
+			pinctrl-0 = <&blsp1_uart2_default>;
+			pinctrl-1 = <&blsp1_uart2_sleep>;
+		};
+
+		usb@78d9000 {
+			status = "okay";
+			dr_mode = "peripheral";
+
+			hnp-disable;
+			srp-disable;
+			adp-disable;
+
+			ulpi {
+				phy {
+					v1p8-supply = <&pm8916_l7>;
+					v3p3-supply = <&pm8916_l13>;
+				};
+			};
+		};
+
+		/*
+		 * Attempting to enable these devices causes a "synchronous
+		 * external abort". Suspected cause is that the debug power
+		 * domain is not enabled by default on this device.
+		 * Disable these devices for now to avoid the crash.
+		 *
+		 * See: https://lore.kernel.org/linux-arm-msm/20190618202623.GA53651@gerhold.net/
+		 */
+		tpiu@820000 { status = "disabled"; };
+		funnel@821000 { status = "disabled"; };
+		replicator@824000 { status = "disabled"; };
+		etf@825000 { status = "disabled"; };
+		etr@826000 { status = "disabled"; };
+		funnel@841000 { status = "disabled"; };
+		debug@850000 { status = "disabled"; };
+		debug@852000 { status = "disabled"; };
+		debug@854000 { status = "disabled"; };
+		debug@856000 { status = "disabled"; };
+		etm@85c000 { status = "disabled"; };
+		etm@85d000 { status = "disabled"; };
+		etm@85e000 { status = "disabled"; };
+		etm@85f000 { status = "disabled"; };
+	};
+};
+
+// TODO (wiki): Explain setup of dummy extcon device to make USB work
+
+// FIXME: Verify all regulators with downstream
+&smd_rpm_regulators {
+	vdd_l1_l2_l3-supply = <&pm8916_s3>;
+	vdd_l4_l5_l6-supply = <&pm8916_s4>;
+	vdd_l7-supply = <&pm8916_s4>;
+
+	s1 {
+		regulator-min-microvolt = <500000>;
+		regulator-max-microvolt = <1300000>;
+	};
+
+	s3 {
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1300000>;
+	};
+
+	s4 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <2100000>;
+	};
+
+	l1 {
+		regulator-min-microvolt = <1225000>;
+		regulator-max-microvolt = <1225000>;
+	};
+
+	l2 {
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
+	};
+
+	l3 {
+		regulator-min-microvolt = <500000>;
+		regulator-max-microvolt = <1287500>;
+	};
+
+	l4 {
+		regulator-min-microvolt = <2050000>;
+		regulator-max-microvolt = <2050000>;
+	};
+
+	l5 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+	};
+
+	l6 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+	};
+
+	l7 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+	};
+
+	l8 {
+		regulator-min-microvolt = <2850000>;
+		regulator-max-microvolt = <2900000>;
+	};
+
+	l9 {
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+	};
+
+	l10 {
+		regulator-min-microvolt = <2700000>;
+		regulator-max-microvolt = <2800000>;
+	};
+
+	l11 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <2950000>;
+		regulator-allow-set-load;
+		regulator-system-load = <200000>;
+	};
+
+	l12 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <2950000>;
+	};
+
+	l13 {
+		regulator-min-microvolt = <3075000>;
+		regulator-max-microvolt = <3075000>;
+	};
+
+	l14 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <3300000>;
+	};
+
+	l15 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <3300000>;
+	};
+
+	l16 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <3300000>;
+	};
+
+	l17 {
+		regulator-min-microvolt = <2850000>;
+		regulator-max-microvolt = <2850000>;
+	};
+
+	l18 {
+		regulator-min-microvolt = <2700000>;
+		regulator-max-microvolt = <2700000>;
+	};
+};</nowiki>
+
+Whoa! That's quite a lot of new stuff. Let's look at the new lines in detail:
+
+* <code>sdhci@7824000</code>: This enables the internal storage. There should not be any change needed here, it should work as-is.
+* <code>sdhci@7864000</code>: This is the external storage. There is a <code>FIXME</code> in there because there is an implementation detail that differs between devices. Some devices have their SD card slot behind the battery. In that case, they may have avoided implementing the chip detect ("cd") GPIO that is used to detect if a SD card is inserted (or removed). In any case, check if downstream defines <code>cd-gpios</code>, usually on the <code>&sdhc_2</code> node. If yes, add it together with the other comment, otherwise put <code>non-removable</code>.
+* <code>usb@78d9000</code>: This enables the USB code and forces it to USB gadget ("peripheral") mode. (If you want, you can attempt to get OTG/Host mode working later...)
+* <code>tpiu@820000</code>, <code>funnel@821000</code>, ...: This is a workaround to avoid a boot error on production MSM8916 devices. Check the link in the comment if you are curious.
+* <code>&smd_rpm_regulators</code>: This block defines constraints for the regulators provided by PM8916 (the [https://en.wikipedia.org/wiki/Power_management_integrated_circuit PMIC] used by MSM8916). Most importantly, you define the voltage range that can be set by drivers for the regulators. Unless your device manufacturer felt very special, all MSM8916 devices should use these regulator voltages. Nevertheless it is important to check for differences in downstream.  Here are some tips and tricks:
+** Downstream regulators look a bit different, but they are usually defined in <code>msm8916-regulators.dtsi</code>. Note that some device trees may override the regulator voltages in a device-specific <code>.dts(i)</code>.
+** "Corner" regulators are a special type of regulators downstream that are used for some kind of voting mechanism. The idea is that different components in the SoC vote for the voltage level they currently require, and the Resource Power  Manager (RPM) picks the appropriate voltage based on the votes. Mainline does not have corner regulators, so just ignore them for now.
+** s2 is special (used to control the voltage for the CPU cores) and is not touched by mainline at the moment. Just ignore it.
+** Also ignore the <code>-ao</code> and <code>-so</code> regulators (usually just on l7)
+
+{{note|'''Warning:''' Make sure to check the regulators carefully and ask for feedback before testing the changes in the next step.}}
+
+With a bit of luck, the device should show up on USB after booting with these changes. The internal/external storage should also be working. If not, ask in the chat for additional help.
+
+{{todo|USB does not actually work out of the box with the instructions above (note the TODO comment in the device tree example). Please ask for help in the chat for now.}}
 
 == Reference ==
 {{note|'''Note:''' The following is not intended to be a guide.}}
