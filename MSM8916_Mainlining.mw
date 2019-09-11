@@ -457,8 +457,20 @@ With a bit of luck, the device should show up on USB after booting with these ch
 
 {{todo|USB does not actually work out of the box with the instructions above (note the TODO comment in the device tree example). Please ask for help in the chat for now.}}
 
-== Reference ==
-{{note|'''Note:''' The following is not intended to be a guide.}}
+=== Finishing up ===
+If the features enabled during the guide are working, then it is a good time to do some cleanup and propose your changes "upstream" on [https://github.com/msm8916-mainline/linux msm8916-mainline/linux]. This repository is intended as a temporary place for patches that are already in good quality, but either pending or not quite finished to submit them on the Linux mainline mailing lists.
+
+To maintain the quality, all patches are required to:
+* Compile without warnings
+* Have no criticial (<code>ERROR:</code>) checkpatch failures (also see [https://www.kernel.org/doc/html/latest/process/submitting-patches.html#style-check-your-changes Style-check your changes in the mainline "Submitting patches" guide])
+** Sometimes it makes sense to ignore notes and warnings from checkpatch if the code is more readable without fixing them.
+* Have a properly formatted one-line summary in the commit message (there is no need to write a detailed commit message, yet)
+** Look at similar commits in the commit history for examples.
+
+The first two will be automatically checked for you when you open a PR - the CI build will fail otherwise - so you don't have to check it locally. Eventually, you should expect a few additional review comments to improve your code. This will help you to speed up submission of the patches upstream later! ;)
+
+When this is done, then you can continue working on whatever you would like to work on! Below are a few tips and tricks for common features. However, it is hard to write a definitive guide as they differ between devices, so you will need to do some investigation on your own.
+
 {{todo|<insert helpful information for WiFi, BT, Display, Sound, ... here>}}
 
 [[Category:Technical Reference]]
