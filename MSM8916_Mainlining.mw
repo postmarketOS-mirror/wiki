@@ -453,7 +453,9 @@ Whoa! That's quite a lot of new stuff. Let's look at the new lines in detail:
 
 {{note|'''Warning:''' Make sure to check the regulators carefully and ask for feedback before testing the changes in the next step.}}
 
-With a bit of luck, the device should show up on USB after booting with these changes. The internal/external storage should also be working. If not, ask in the chat for additional help.
+For testing, consider [[Inspecting_the_initramfs|enabling the <code>debug-shell</code>]] hook so you can avoid flashing the rootfs as a first step. (Note that you need to remove it explicitly using <code>hook_del</code> when you want to try flashing the rootfs later...) With a bit of luck, the device should show up on telnet via USB after booting with these changes.
+
+If USB is working, try flashing the rootfs to check if the internal storage is working. Your device should then boot into the full postmarketOS installation and provide SSH over the USB network interface.
 
 {{todo|USB does not actually work out of the box with the instructions above (note the TODO comment in the device tree example). Please ask for help in the chat for now.}}
 
