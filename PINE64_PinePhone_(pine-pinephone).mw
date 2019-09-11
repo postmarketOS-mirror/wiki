@@ -101,8 +101,8 @@ There's a 6 contact dipswitch on the back of the phone underneath the back cover
 ! Driver
 |-
 | Touchscreen
-| <del>FocalTech FT6336GU</del>
-| <del>TOUCHSCREEN_EDT_FT5X06</del>
+| Goodix
+| TOUCHSCREEN_GOODIX
 |-
 | Rear camera
 | OmniVision OV5640
@@ -117,8 +117,8 @@ There's a 6 contact dipswitch on the back of the phone underneath the back cover
 | Nope
 |-
 | LCD
-| <del>fitipower JD9365D</del>
-| <del>DRM_PANEL_PINEPHONE_JD9365DA</del>
+| Xingbangda XBD599
+| CONFIG_DRM_PANEL_XINGBANGDA_XBD599
 |-
 | WiFi
 | Realtek RTL8723CS
