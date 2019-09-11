@@ -36,7 +36,7 @@ The shared device package in postmarketOS. It contains shared dependencies and c
 * Basic knowledge about Linux, Git, C, Device Trees, ...
 * Willingness to learn about "mainlining" and to figure out things on your own
 
-=== Before You Start ===
+=== Before you start ===
 {{note|'''Warning:''' Mainlining (or any unintended "modding") may brick your device permanently if you make a mistake. There is a good chance that nothing happens if you are a bit careful, but do not continue with a device that you need every day. You have been warned!}}
 
 Mainlining is not easy. MSM8916 is a platform where a lot components can be easily enabled by only setting up a device tree, which can be largely copied from other devices with minor changes. However, at some point you will reach the point where you would like to enable a particular component that is device-specific (e.g. the touchscreen, sensors, ...). In this case you will be largely on your own, and need to figure out how to enable it yourself. (Do you just need to add something to the device tree or even write a new kernel driver?) That requires some familiarity with the way the Linux kernel is working for MSM8916.
