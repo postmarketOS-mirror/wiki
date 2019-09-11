@@ -59,6 +59,40 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 
 [[File:PinePhone-main-board.jpg|frameless]]
 
+== Hardware switches ==
+
+There's a 6 contact dipswitch on the back of the phone underneath the back cover. The 6 switches are for enableing/disableing hardware components. The switch has tiny numbers 1-6 beneath the contacts, moving the contact up sets that contact on. 
+
+{| class="wikitable"
+! #
+! Off
+! On
+|-
+| 1
+| Modem disabled
+| Modem enabled
+|-
+| 2
+| Wifi/BT disabled
+| Wifi/BT enabled
+|-
+| 3
+| Microphone disabled
+| Microphone enabled
+|-
+| 4
+| Rear camera disabled
+| Rear camera enabled
+|-
+| 5
+| Front camera disabled
+| Front camera enabled
+|-
+| 6
+| Headphone UART mode
+| Headphone audio mode
+|}
+
 == Components ==
 
 {| class="wikitable"
