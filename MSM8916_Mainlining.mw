@@ -484,7 +484,7 @@ and compare it with what you can find on downstream (e.g. device tree, kernel co
 Additional tips and tricks:
 * When making changes to kernel code compiled as modules, you need to update the kernel modules on the rootfs (they are not part of the boot image that is loaded via Fastboot). There are different options to do this:
 ** Re-flash rootfs
-** Upgrade <code>linux-postmarketos-qcom-msm8916</code> on your device: see [[Installing_packages_on_a_running_phone]]
+** Upgrade <code>linux-postmarketos-qcom-msm8916</code> on your device: see [[Installing packages on a running phone]]
 ** Other hacky solutions like copying kernel modules manually via SSH
 
 === WiFi/Bluetooth (WCNSS) ===
