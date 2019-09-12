@@ -487,7 +487,7 @@ Additional tips and tricks:
 ** Upgrade <code>linux-postmarketos-qcom-msm8916</code> on your device: see [[Installing packages on a running phone]]
 ** Other hacky solutions like copying kernel modules manually via SSH
 
-=== WiFi/Bluetooth (WCNSS) ===
+=== WiFi/Bluetooth ===
 WiFi/Bluetooth are usually provided by the Qualcomm Wireless Connectivity Subsystem (WCNSS), which is partially built into the SoC but paired with an external RF module ("iris").<ref>[https://lwn.net/Articles/681614/ <nowiki>[PATCH v2 0/9] Qualcomm WCNSS remoteproc</nowiki>] (patch on Linux mainline mailing list)</ref> Therefore, enabling it is usually as simple as enabling the <code>wcnss</code> node in the device tree:<ref>[https://git.kernel.org/pub/scm/linux/kernel/git/qcom/linux.git/commit/?id=70db763bad9ec9e3edcc50809b58057d6a05322f arm64: dts: msm8916-samsung-a2015: Enable WCNSS for WiFi and BT] (mainline kernel patch)</ref>
 
  wcnss@a21b000 {
@@ -507,6 +507,9 @@ If you do not have WCN3620, you need to override the <code>compatible</code> pro
  };
 
 Note the use of <code>qcom,wcn3680</code> instead of <code>qcom,wcn3660</code> for WCN3660B. WCN3660B is actually more similar to WCN3680 since it requires different regulator voltages compared to WCN3660. <code>qcom,wcn3680</code> enables the correct configuration.<ref name="wcn3660b"/>
+
+* WiFi and Bluetooth share the same antenna, and they tend to conflict with each other when they are used at the same time ("WiFi/BT coexistence"). In case of problems, try disabling one of them.
+* Dual-band support on WCN3660B seems to be broken at the moment: only 2.4 GHz networks show up in the WiFi network list.
 
 === Display/GPU ===
 {{todo|}}
