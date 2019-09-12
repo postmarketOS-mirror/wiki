@@ -508,6 +508,22 @@ If you do not have WCN3620, you need to override the <code>compatible</code> pro
 
 Note the use of <code>qcom,wcn3680</code> instead of <code>qcom,wcn3660</code> for WCN3660B. WCN3660B is actually more similar to WCN3680 since it requires different regulator voltages compared to WCN3660. <code>qcom,wcn3680</code> enables the correct configuration.<ref name="wcn3660b"/>
 
-{{todo|<insert helpful information for Display, Sound, ... here>}}
+=== Display/GPU ===
+{{todo|}}
+
+=== Touchscreen ===
+{{todo|}}
+
+=== Audio ===
+{{todo|}}
+
+=== Buttons ===
+{{todo|}}
+
+=== Sensors ===
+{{todo|}}
+
+=== Battery/Charging ===
+{{todo|}}
 
 [[Category:Technical Reference]]
