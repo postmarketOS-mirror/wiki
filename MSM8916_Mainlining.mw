@@ -473,6 +473,13 @@ The first two will be automatically checked for you when you open a PR - the CI 
 
 When this is done, then you can continue working on whatever you would like to work on! Below are a few tips and tricks for common features. However, it is hard to write a definitive guide as they differ between devices, so you will need to do some investigation on your own.
 
+== Reference ==
+Some general tips and tricks:
+* When making changes to kernel code compiled as modules, you need to update the kernel modules on the rootfs (they are not part of the boot image that is loaded via Fastboot). There are different options to do this:
+** Re-flash rootfs
+** Upgrade <code>linux-postmarketos-qcom-msm8916</code> on your device: see [[Installing_packages_on_a_running_phone]]
+** Other hacky solutions like copying kernel modules manually via SSH
+
 {{todo|<insert helpful information for WiFi, BT, Display, Sound, ... here>}}
 
 [[Category:Technical Reference]]
