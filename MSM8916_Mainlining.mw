@@ -542,7 +542,9 @@ The Power and Volume Down buttons are usually connected to the PMIC (PM8916). (T
 Volume Up and other additional keys (e.g. Home on Samsung devices) are usually connected to a GPIO pin on the SoC. Therefore, setting them up is trivial using [https://www.kernel.org/doc/Documentation/devicetree/bindings/input/gpio-keys.txt gpio-keys].
 
 === Sensors ===
-{{todo|}}
+Like the touchscreen, sensors are usually connected to a [https://en.wikipedia.org/wiki/I%C2%B2C I²C bus], e.g. <code>blsp_i2c2</code> and usually supplied by L17. This is where similarities end. There can be all sorts of sensors connected to the I²C bus and manufacturers like to use many different ones. Look through the supported sensors in mainline to see if a driver exists already, or can be modified eventually to support another version of a similar chip. Otherwise, you may need to write a simple driver yourself.
+
+Some devices have a [https://en.wikipedia.org/wiki/Hall_effect_sensor Hall effect sensor] that is used to detect if the screen is covered by some kind of flip cover. It is usually a simple GPIO like the [[#Buttons|buttons]], and can be set up easily using [https://www.kernel.org/doc/Documentation/devicetree/bindings/input/gpio-keys.txt gpio-keys].
 
 === Battery/Charging ===
 {{todo|}}
