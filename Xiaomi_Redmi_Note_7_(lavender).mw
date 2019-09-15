@@ -45,8 +45,7 @@
 * ''[[user:alexeymin|Alexey Min]]''
 
 == Users owning this device ==
-Kept this block as code, to prevent device auto-listing 
-<syntaxhighlight>{{Device owners}}</syntaxhighlight>
+{{Device owners}}
 
 == How to enter flash mode ==
 === Bootloader Unlocking ===
