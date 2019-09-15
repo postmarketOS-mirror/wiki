@@ -212,6 +212,57 @@ This device is using '''Android Verified Boot''' ( https://android.googlesource.
 === DTBO partition ===
 This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . We need to find a way to flash generated <code>dt.img</code> to <code>dtbo</code> partition during installation process. (add <code>pmbootstrap flasher flash_dtbo</code>?)
 
+Update: looks like '''dtbo''' partition is not used during boot by LineageOS's kernel, because it is using appended DTB (<code>CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE=y</code>)
+
+=== Bootloader cmdline ===
+Stock bootloader is doing nasty things with kernel command line: it passes a lot of arguments that make booting custom OS (like postmarketOS) impossible
+
+Full list of stock command line parameters:
+<pre>
+ramoops_memreserve=4M
+rcupdate.rcu_expedited=1
+console=ttyMSM0,115200,n8
+androidboot.console=ttyMSM0
+earlycon=msm_serial_dm,0xc170000
+androidboot.hardware=qcom
+user_debug=31
+msm_rtb.filter=0x37
+ehci-hcd.park=3
+lpm_levels.sleep_disabled=1
+sched_enable_hmp=1
+sched_enable_power_aware=1
+service_locator.enable=1
+swiotlb=1
+firmware_class.path=/vendor/firmware_mnt/image
+loop.max_part=7
+androidboot.selinux=permissive
+buildvariant=eng
+androidboot.verifiedbootstate=orange
+androidboot.keymaster=1
+root=PARTUUID=2a7f6d6d-1c23-febe-7efb-9ccfa1432ace
+androidboot.bootdevice=c0c4000.sdhci
+androidboot.serialno=ac1dde4e
+androidboot.cpuid=0x39148c8c
+androidboot.dp=0x0
+androidboot.baseband=sdm
+mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_nt36672a_tianma_fhdplus_video:config0:1:none:cfg:single_dsi
+skip_initramfs
+rootwait
+ro
+init=/init
+androidboot.dtbo_idx=0
+androidboot.fpsensor=fpc
+androidboot.secureboot=1
+androidboot.hwc=Global
+androidboot.hwversion=1.29.0
+androidboot.hwlevel=MP
+androidboot.hwdevice=lavender
+</pre>
+
+<code>ramoops_memreserve=4M</code> comes from defconfig, some from boot.img, others come from bootloader directly.
+
+Options like <code>root=</code>, <code>skip_initramfs</code> make kernel look for a specific partition to mount at /, skipping initramfs, which is incompatible with default booting methods of postmarketOS. That's why some tricky patches are needed, similar to ones used in Google Pixel port: [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-ignore-dm-parameter.patch 1], [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-initramfs-disable-do_skip_initramfs.patch 2].
+
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
