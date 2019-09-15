@@ -1,6 +1,3 @@
-Kept this block as code, to prevent device auto-listing
-
-<syntaxhighlight lang="ini">
 {{Infobox device
 | manufacturer = Xiaomi
 | name = Redmi Note 7
@@ -34,13 +31,12 @@ Kept this block as code, to prevent device auto-listing
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| status = "Work not started yet"
+| status = "Early WIP"
 | booting = yes
 | pmoskernel = 4.4.153
-| whet_dhry = 0.0
-| status_otg = -
+| whet_dhry = -
+| status_otg = 
 }}
-</syntaxhighlight>
 
 == Contributors ==
 * ''[[user:alexeymin|Alexey Min]]''
@@ -216,11 +212,7 @@ This device is using '''Android Verified Boot''' ( https://android.googlesource.
 === DTBO partition ===
 This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . We need to find a way to flash generated <code>dt.img</code> to <code>dtbo</code> partition during installation process. (add <code>pmbootstrap flasher flash_dtbo</code>?)
 
-=== skip_initramfs kernel cmdline parameter ===
-https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
-
 == See also ==
-Nothing yet
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
@@ -228,6 +220,8 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+* [https://gitlab.com/minlexx/pmaports/commits/minlexx/xiaomi-lavender Current development branch]
+* info on skip_initramfs kernel cmdline parameter: https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
