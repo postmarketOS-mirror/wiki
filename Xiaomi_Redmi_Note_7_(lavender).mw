@@ -1,0 +1,235 @@
+Kept this block as code, to prevent device auto-listing
+
+<syntaxhighlight lang="ini">
+{{Infobox device
+| manufacturer = Xiaomi
+| name = Redmi Note 7
+| codename = xiaomi-lavender
+| image = File:xiaomi-lavender.jpg
+| imagecaption = Redmi Note 7
+| releaseyear = 2019
+| originalsoftware = Android 9, MIUI 10
+| chipset = Qualcomm SDM660 Snapdragon 660 (14 nm)
+| cpu = 8-core (4x2.2 GHz Kryo 260 & 4x1.8 GHz Kryo 260)
+| gpu = Adreno 512
+| storage = 32 (64) Gb
+| display = 1080 x 2340
+| memory = 3 (4) Gb
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = "Work not started yet"
+| booting = yes
+| pmoskernel = 4.4.153
+| whet_dhry = 0.0
+| status_otg = -
+}}
+</syntaxhighlight>
+
+== Contributors ==
+* ''[[user:alexeymin|Alexey Min]]''
+
+== Maintainer(s) ==
+* ''[[user:alexeymin|Alexey Min]]''
+
+== Users owning this device ==
+Kept this block as code, to prevent device auto-listing 
+<syntaxhighlight>{{Device owners}}</syntaxhighlight>
+
+== How to enter flash mode ==
+=== Bootloader Unlocking ===
+Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
+
+The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and powered on, and linked with Mi Account)
+
+=== Recovery mode ===
+* Turn the device off (or restart also works)
+* Hold both volume buttons (+ and -) and power button
+* Keep holding until you got to recovery.
+
+=== Flashing (Download, Fastboot) mode ===
+* Same as recovery, but this time hold the volume down key instead of both keys.
+
+== Installation ==
+Should be as usual for fastboot devices
+
+== Additional info ==
+=== Partition list ===
+{| class="wikitable"
+|-
+! Device !! Label !! Size in blocks
+|-
+| mmcblk0p1 || switch || 8
+|-
+| mmcblk0p2 || dpo || 8
+|-
+| mmcblk0p3 || fsc || 8
+|-
+| mmcblk0p4 || limits || 32
+|-
+| mmcblk0p5 || ssd || 32
+|-
+| mmcblk0p6 || sec || 20
+|-
+| mmcblk0p7 || vbmeta || 64
+|-
+| mmcblk0p8 || vbmetabak || 64
+|-
+| mmcblk0p9 || storsec || 128
+|-
+| mmcblk0p10 || storsecbak || 128
+|-
+| mmcblk0p11 || apdp || 256
+|-
+| mmcblk0p12 || msadp || 256
+|-
+| mmcblk0p13 || keystore || 512
+|-
+| mmcblk0p14 || frp || 512
+|-
+| mmcblk0p15 || rpm || 512
+|-
+| mmcblk0p16 || rpmbak || 512
+|-
+| mmcblk0p17 || hyp || 512
+|-
+| mmcblk0p18 || hypbak || 512
+|-
+| mmcblk0p19 || pmic || 512
+|-
+| mmcblk0p20 || pmicbak || 512
+|-
+| mmcblk0p21 || cmnlib || 1024
+|-
+| mmcblk0p22 || cmnlibbak || 1024
+|-
+| mmcblk0p23 || cmnlib64 || 1024
+|-
+| mmcblk0p24 || cmnlib64bak || 1024
+|-
+| mmcblk0p25 || abl || 1024
+|-
+| mmcblk0p26 || ablbak || 1024
+|-
+| mmcblk0p27 || dip || 1024
+|-
+| mmcblk0p28 || ddr || 1024
+|-
+| mmcblk0p29 || toolsfv || 1024
+|-
+| mmcblk0p30 || devcfgbak || 1024
+|-
+| mmcblk0p31 || devcfg || 1024
+|-
+| mmcblk0p32 || tz || 4096
+|-
+| mmcblk0p33 || tzbak || 4096
+|-
+| mmcblk0p34 || mdtpsecapp || 4096
+|-
+| mmcblk0p35 || mdtpsecappbak || 4096
+|-
+| mmcblk0p36 || keymaster || 1024
+|-
+| mmcblk0p37 || keymasterbak || 1024
+|-
+| mmcblk0p38 || bluetooth || 1024
+|-
+| mmcblk0p39 || lsti || 2048
+|-
+| mmcblk0p40 || xbl || 3584
+|-
+| mmcblk0p41 || xblbak || 3584
+|-
+| mmcblk0p42 || misc || 4096
+|-
+| mmcblk0p43 || devinfo || 8192
+|-
+| mmcblk0p44 || logfs || 8192
+|-
+| mmcblk0p45 || fsg || 8192
+|-
+| mmcblk0p46 || modemst1 || 8192
+|-
+| mmcblk0p47 || modemst2 || 8192
+|-
+| mmcblk0p48 || dsp || 16384
+|-
+| mmcblk0p49 || bk1 || 24576
+|-
+| mmcblk0p50 || mdtp || 32768
+|-
+| mmcblk0p51 || bk2 || 16384
+|-
+| mmcblk0p52 || dtbo || 8192
+|-
+| mmcblk0p53 || dtbobak || 8192
+|-
+| mmcblk0p54 || splash || 65536
+|-
+| mmcblk0p55 || persist || 32768
+|-
+| mmcblk0p56 || persistbak || 32768
+|-
+| mmcblk0p57 || logdump || 65536
+|-
+| mmcblk0p58 || modem || 196608
+|-
+| mmcblk0p59 || rawdump || 131072
+|-
+| mmcblk0p60 || boot || 65536
+|-
+| mmcblk0p61 || recovery || 65536
+|-
+| mmcblk0p62 || cache || 262144
+|-
+| mmcblk0p63 || system || 3670016
+|-
+| mmcblk0p64 || vendor || 2097152
+|-
+| mmcblk0p65 || cust || 851968
+|-
+| mmcblk0p66 || userdata || 22802415
+|-
+| mmcblk0rpmb ||  || 4096
+|}
+
+=== Android Verified Boot (vbmeta) ===
+This device is using '''Android Verified Boot''' ( https://android.googlesource.com/platform/external/avb/+/refs/tags/android-vts-8.0_r11/README.md ) so you may need to flash <code>vbmeta</code> partition with <code>vbmeta.img</code> from LineageOS zip or downloaded separately (from https://androidfilehost.com/?fid=1395089523397954291 for example); or we need to find a way to generate it with <code>avbtool</code> and flash it during installation somehow. (add <code>pmbootstrap flasher flash_vbmeta</code>?)
+
+=== DTBO partition ===
+This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . We need to find a way to flash generated <code>dt.img</code> to <code>dtbo</code> partition during installation process. (add <code>pmbootstrap flasher flash_dtbo</code>?)
+
+=== skip_initramfs kernel cmdline parameter ===
+https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
+
+== See also ==
+Nothing yet
+<!--
+Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{issue|CHANGEME|pmaports}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
+-->
