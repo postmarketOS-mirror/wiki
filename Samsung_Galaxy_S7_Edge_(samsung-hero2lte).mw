@@ -18,9 +18,9 @@
 | status_flashing = P <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = Y <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = Y <!-- The display is working? -->
-| status_wifi = <!-- Wireless network works? -->
+| status_wifi = Y <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_fde = N <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = Y <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
@@ -59,23 +59,25 @@ $ pmbootstrap flasher --method=adb sideload
 </syntaxhighlight>
 
 == What is tested and works ==
-* The kernel with in-tree built exynos DTBH based image
+* The kernel
 * USB Networking (you might have to set its MAC address beforehand though)
-* SSH
-* All display environments with software rendering (yes, even plasma mobile works, albeit slowly and with rubbish dpi scaling)
+* SSH and telnet in the initramfs
+* Wi-fi
+* Almost all display environments with software rendering (yes, even plasma mobile works, albeit slowly and with rubbish dpi scaling)
+  * As an aside, wayland based environments currently crash after a few minutes due to an unknown issue.
 
 == Quirks ==
-* Exynos (at least modern exynos) has a different dt.img format to Qualcomm devices, requiring a special dtbtool to go along with it. There is one included in the kernel source we have, which should make the dtb automatically. In future, for other exynos devices (S8 and up come to mind) we should package this as a common tool and treat it in a way similar to qcdt.
+* Exynos (at least modern exynos) has a different dt.img format to Qualcomm devices, requiring a special dtbtool to go along with it. It has been packaged as exynos-dtbtool
 * Camera drivers (Samsung FIMC-IS2) (and accompanying flash LED drivers, controlled by a Samsung PMIC) needed to be disabled in the kernel to prevent boot loops.
 
 == To get working ==
 * FDE with osk-sdl - Tested and interface works, but crashes and bootloops attempting any decryption
-* Wi-Fi
-* (If possible) 3D acceleration using the binary Mali userspace drivers from ARM, under Halium
-* Panfrost?
+* Proper working of charging-sdl - it comes up, but works awkwardly and doesn't go away without a hard reset
+* Halium support
 * Mainlining (should probably help the android community too)
 
 == See also ==
 * {{MR|179|pmaports}} initial MR
+* {{MR|631|pmaports}} second MR (new kernel + wifi)
 * [https://github.com/ivanmeler/android_kernel_samsung_herolte herolte kernel fork]
 * [https://wiki.lineageos.org/devices/hero2lte/ LineageOS device page]
