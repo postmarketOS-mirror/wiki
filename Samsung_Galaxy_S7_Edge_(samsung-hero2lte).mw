@@ -73,7 +73,6 @@ $ pmbootstrap flasher --method=adb sideload
 
 == To get working ==
 * FDE with osk-sdl - Tested and interface works, but crashes and bootloops attempting any decryption
-* Proper working of charging-sdl - it comes up, but works awkwardly and doesn't go away without a hard reset
 * Halium support
 * Mainlining (should probably help the android community too)
 
