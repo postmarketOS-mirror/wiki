@@ -68,7 +68,7 @@ $ pmbootstrap flasher --method=adb sideload
   * As an aside, wayland based environments currently crash after a few minutes due to an unknown issue.
 
 == Quirks ==
-* Exynos (at least modern exynos) has a different dt.img format to Qualcomm devices, requiring a special dtbtool to go along with it. It has been packaged as exynos-dtbtool
+* Exynos (at least modern exynos) has a different dt.img format to Qualcomm devices, requiring a special dtbtool to go along with it. It has been packaged as exynos-dtbtool ({{MR|527|pmaports}}) and is being used to generate the device tree blob.
 * Camera drivers (Samsung FIMC-IS2) (and accompanying flash LED drivers, controlled by a Samsung PMIC) needed to be disabled in the kernel to prevent boot loops.
 
 == To get working ==
