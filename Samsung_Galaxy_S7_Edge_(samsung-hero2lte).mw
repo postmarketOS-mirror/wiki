@@ -61,7 +61,8 @@ $ pmbootstrap flasher --method=adb sideload
 == What is tested and works ==
 * The kernel
 * USB Networking (you might have to set its MAC address beforehand though)
-* SSH and telnet in the initramfs
+* SSH 
+* Telnet in the initramfs
 * Wi-fi
 * Almost all display environments with software rendering (yes, even plasma mobile works, albeit slowly and with rubbish dpi scaling)
   * As an aside, wayland based environments currently crash after a few minutes due to an unknown issue.
