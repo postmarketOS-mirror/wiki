@@ -75,3 +75,5 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
+https://github.com/inyan600/postmarket-hisense-m470bsa
+https://github.com/inyan600/android_kernel_hisense_m470bsa
