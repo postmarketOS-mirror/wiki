@@ -1,12 +1,30 @@
+Please keep the list sorted alphabetically.
+
 {| class="wikitable"
 |+ Renamed
 ! Old Name
 ! New Name
 ! Merge Request
 |-
+| pine-a64lts
+| pine64-a64lts
+| {{MR|623|pmaports}}
+|-
+| pine-dontbeevil
+| pine64-dontbeevil
+| {{MR|623|pmaports}}
+|-
+| pine-pinephone
+| pine64-pinephone
+| {{MR|623|pmaports}}
+|-
+| pine-pinetab
+| pine64-pinetab
+| {{MR|623|pmaports}}
+|-
 | samsung-i9505
 | samsung-jflte
-| {{MR|1668}}
+| {{MR|1668|pmbootstrap}}
 |}
 
 {| class="wikitable"
