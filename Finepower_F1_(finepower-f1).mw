@@ -137,5 +137,4 @@ wruntimenv2 -> /dev/block/mmcblk0p8
 
 == See also ==
 * {{issue|239|pmaports}} - Describing porting process here
-* [https://github.com/myst33d/spreadtrum-kernel-common Generic kernel for Spreadtrum SC8830 platform]
-* [https://github.com/Naimur9800/Sc7731-Sc8830-Kernel_Source Another kernel]
+* [https://github.com/jedld/kernel_7730 Generic kernel for Spreadtrum]
