@@ -13,10 +13,10 @@
 | display = 320x480
 | memory = 512 MB
 | architecture = armv7
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = P <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_touch = N <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = P <!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -31,9 +31,10 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = kernel compiles, doesn't boot (all gcc versions)
+| status = boots, kernel config needs to be adjusted
 | status_otg = -
 | booting = 0
+| pmos_kernel = 3.10.65
 }}
 
 == Contributors ==
