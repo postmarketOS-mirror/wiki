@@ -37,5 +37,5 @@ extracted boot.img, first bytes of the vendor's initramfs (working):
 00000030: ffff</pre>
 === Links ===
 
-* [https://github.com/postmarketOS/pmbootstrap/issues/73 #73] lists lots of issues with the device, and additional information, such as fastboot's partitions output
-* [http://ruggedphoneco.com/smartphones/8-alps-a9-smartphone.html This might be the same phone?]
+* {{issue|73}} lists lots of issues with the device, and additional information, such as fastboot's partitions output
+* [http://specdevice.com/showspec.php?id=27b5-72c0-d54b-c7580033c587 This might be the same phone?]
