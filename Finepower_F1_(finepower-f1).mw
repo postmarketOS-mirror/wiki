@@ -13,10 +13,10 @@
 | display = 320x480
 | memory = 512 MB
 | architecture = armv7
-| status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = P <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = N <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = P <!-- The display is working? -->
+| status_usbnet = N
+| status_flashing = P
+| status_touch = Y
+| status_screen = P
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -31,7 +31,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = boots, kernel config needs to be adjusted
+| status = boots, framebuffer needs to be fixed
 | status_otg = -
 | booting = 0
 | pmos_kernel = 3.10.65
@@ -55,7 +55,8 @@
 - Telnet connection to initramfs with debug-shell hook
 
 == Current issues ==
-This phone doesn't have kernel sources available, so the port uses slightly edited board config now, which doesn't fit the phone's hardware. The screen is white after boot and it doesn't change over time. It's not possible to use SSH to connect to the phone.
+- Framebuffer is mirrored in both orientations.
+- It's not possible to use SSH to connect to the phone.
 
 == How to enter flash mode ==
 Hold Power key and Vol- just after that. Release buttons when logo appears. Navigate to "Reboot to bootloader" option with volume keys and press Power to choose. The phone will reboot in fastboot mode.
