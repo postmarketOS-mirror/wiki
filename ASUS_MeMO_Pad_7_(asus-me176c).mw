@@ -72,7 +72,7 @@ you can add mmc_block.perdev_minors=XX to options if you have added any partitio
 
 4. umount esp.img and flash it according to the xda guide
 
-5. while in droidboot, use <syntaxhighlight>fastboot flash data asus-me176cx.img</syntaxhighlight> to flash rootfs to the device
+5. while in droidboot, use <syntaxhighlight>fastboot flash data asus-me176c.img</syntaxhighlight> to flash rootfs to the device
 
 6. reboot - now you should be booted into postmarketOS
 
