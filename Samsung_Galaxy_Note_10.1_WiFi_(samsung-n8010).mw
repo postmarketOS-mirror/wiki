@@ -50,3 +50,4 @@ Image must be sideloaded with TWRP recovery. Check [[Android Recovery Zip Instal
 
 == See also ==
 * {{MR|233|pmaports}} Initial merge request
+* [https://redmine.replicant.us/issues/1946] Replicant wants to support this device as well
