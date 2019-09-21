@@ -102,4 +102,4 @@ The n710x upstream DTS is here: [https://github.com/torvalds/linux/blob/master/a
 
 Replicant is interested in further mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/293#issuecomment-395889596].
 
-This device's Qualcomm Gobi MDM9615 Modem seems to have some mainline kernel support: https://redmine.replicant.us/projects/replicant/wiki/GalaxyS3I9305#Hardware-table
+This device's Qualcomm Gobi MDM9615 Modem seems to have some mainline kernel support: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/clk/qcom/gcc-mdm9615.c?h=v5.2.7
