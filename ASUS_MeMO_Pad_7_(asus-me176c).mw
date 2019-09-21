@@ -56,13 +56,13 @@
 
 2. obtain the rootfs image, the kernel and the initramfs by following [Installation_guide], but instead of running `$ pmbootstrap flasher`, run `$ pmbootstrap export`.
 
-3.0 before flashing the bootloader, mount the esp.img partition image and copy /tmp/postmarketOS-export/initramfs-asus-me176cx and /tmp/postmarketOS-export/vmlinuz-asus-me176cx to the root (alongside e.g. EFI folder)
+3.0 before flashing the bootloader, mount the esp.img partition image and copy /tmp/postmarketOS-export/initramfs-asus-me176c and /tmp/postmarketOS-export/vmlinuz-asus-me176c to the root (alongside e.g. EFI folder)
 
 3.1 create [esp.img]/loader/entries/postmarketOS.conf and change it's contents like so:
 <syntaxhighlight lang="config">
 title    postmarketOS
-linux    /vmlinuz-asus-me176cx
-initrd   /initramfs-asus-me176cx 
+linux    /vmlinuz-asus-me176c
+initrd   /initramfs-asus-me176c 
 options  console=tty0
 </syntaxhighlight>
 
