@@ -119,3 +119,7 @@ Replicant has this device booting with mainline Linux and almost mainline U-Boot
 The Qualcomm Gobi MDM9615 Modem seems to have mainline kernel support as well: [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS3I9305#Hardware-table]
 
 Replicant and LineageOS successfully got the Lima driver for Mesa working on Mali when using mainline linux: [http://www.belg.in/replicant_9.webm video] [https://github.com/CustomROMs/android_local_manifests_i9300/issues/1#issuecomment-532308101 success announcement]
+
+Replicant currently supports this device [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS3I9300 in 6.0] and is doing a lot of research in order to get it running with [https://redmine.replicant.us/projects/replicant/wiki/Upstream a mainline kernel with a mainline bootloader] for Replicant 9. [https://redmine.replicant.us/projects/replicant/wiki/Exynos4Bootrom More bootloader research is here.]
+
+[https://github.com/xboot/xboot/tree/b71fe8174882277897649bfe2177bf3ca300af69/src/arch/arm32/mach-exynos4412 xboot] might be a completely free bootloader option. Looks to have zero proprietary blobs.
