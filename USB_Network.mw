@@ -121,6 +121,36 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 
 Related: {{github|1462}} linux-postmarketos-qcom: Remove composite usb gadget for networking
 
+==== SSH issues ====
+
+If SSH doesn't work for one reason or another, you can try enabling telnetd on your installation. For that, add the debug-shell initfs hook and connect to it. Then run the following commands to mount your root partition (writable):
+<pre>
+source /etc/deviceinfo
+source init_functions.sh
+mount_root_partition
+mount -o rw,remount /sysroot
+</pre>
+
+Put the following content into <code>/sysroot/etc/init.d/telnetd</code>
+<pre>
+#!/sbin/openrc-run
+
+name="busybox $SVCNAME"
+command="/usr/sbin/$SVCNAME"
+command_args="-F $INETD_OPTS"
+
+depend() {
+        need net localmount
+        after firewall
+}
+</pre>
+Afterwards enable the service so telnet gets launched by openrc:
+<pre>
+chroot /sysroot rc-update add telnetd default
+</pre>
+
+Then telnetd should be started once the device boots and you should be able to connect to it.
+
 === Note about HTC devices ===
 * HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
 * The [[HTC_Desire_(htc-bravo)|HTC desire]] does work, and it required [https://github.com/postmarketOS/pmbootstrap/blob/bd4ebb3473764108daa92b308511be7e0a1b6948/aports/device/device-htc-bravo/initfs-hook.sh#L8 this line in the initfs-hook] to get USB network
