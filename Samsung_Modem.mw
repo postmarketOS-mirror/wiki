@@ -3,11 +3,13 @@
 Samsung modems use three abstraction layers:
 
 # Kernel interface (specific to each modem)
+## This can be further divided into the power control of the modem, the kernel<->userspace interaction, and the kernel<->modem interaction
 # Samsung IPC modem protocol (specific to Samsung devices)
-# Radio Interface Layer (universal)
+# Radio Interface Layer
+## On Android, this is via RIL, it could go via oFono on pmOS
 
 The IPC protocol, <code>libsamsung-ipc</code>, has been [https://redmine.replicant.us/projects/replicant/wiki/Libsamsung-ipc reimplemented as free software by Replicant].
 
-There [https://lists.ofono.org/pipermail/ofono/2012-September/013777.html have been patches to add libsamsung-ipc support] to ofono, a potential RIL for postmarketOS, but it doesn't seem like they were merged due to licensing issues which have now been resolved.  The patches have been forward-ported to the new libsamsung-ipc interfaces at https://github.com/xc-racer99/ofono
+There [https://lists.ofono.org/pipermail/ofono/2012-September/013777.html have been patches to add libsamsung-ipc support] to ofono, a potential RIL for postmarketOS, but it doesn't seem like they were merged due to licensing issues which have now been resolved.  libsamsung-ipc has since been almost entirely re-written, but the patches have been forward-ported at https://github.com/xc-racer99/ofono and https://github.com/xc-racer99/libsamsung-ipc
 
 [[Category:Technical Reference]]
