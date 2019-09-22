@@ -15,17 +15,17 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |-
 | <code>name</code>
 | Device model
-| e.g. <code>Google Nexus 5</code>
+| e.g. <code>Nokia N900</code>
 
 |-
 | <code>manufacturer</code>
 | Device manufacturer
-| e.g. <code>LG</code>
+| e.g. <code>N900</code>
 
 |-
 | <code>codename</code>
 | Device codename
-| e.g. <code>lg-hammerhead</code>
+| e.g. <code>nokia-n900</code>
 
 |-
 | <code>date</code>
