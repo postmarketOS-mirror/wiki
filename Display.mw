@@ -12,7 +12,9 @@ Section "Device"
 EndSection
 </pre>
 
-Reboot ,Then open the display app and set the correct resolution.
+Valid values for "Rotate" are "CW" (clockwise, 90 degrees), "UD" (upside down, 180 degrees) and "CCW" (counter clockwise, 270 degrees), see fbdev(4) man page.
+
+Reboot, then open the display app and set the correct resolution.
 
 === Rotate the touchscreen ===
 
