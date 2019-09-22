@@ -92,9 +92,6 @@ tables=Devices
 |-
   | Calls
   | Talking to other people over the cellular network.
-|-
-  | Fingerprint
-  | Unlocking with fingerprint sensor.
 |}
 
 == Not booting ==
