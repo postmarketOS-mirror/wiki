@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Hisense
 | name =  Sero 7 Pro
-| codename = m470bsa
+| codename = hisense-m470bsa
 | image = File:M470bsa.jpg
 | imagecaption = Sero 7 Pro running PostmarketOS
 | releaseyear = 2012
@@ -76,5 +76,5 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
-https://github.com/inyan600/postmarket-hisense-m470bsa
-https://github.com/inyan600/android_kernel_hisense_m470bsa
+[https://github.com/inyan600/postmarket-hisense-m470bsa Repository with device and kernel package]
+[https://github.com/inyan600/android_kernel_hisense_m470bsa Kernel source]
