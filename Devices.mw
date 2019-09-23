@@ -29,9 +29,6 @@ tables=Devices
 |-
   | -
   | Not applicable -- device does not have feature
-|-
-  | style="text-align: center" | ✔
-  | non-Android based device
 |}
 
 === Status Columns ===
