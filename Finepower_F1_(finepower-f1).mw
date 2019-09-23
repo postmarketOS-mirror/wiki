@@ -1,8 +1,8 @@
 {{Infobox device
 | manufacturer = FinePower
-| name =  F1
+| name = F1
 | codename = finepower-f1
-| image = File:finepower-f1.jpg
+| image = File:finepower-f1.png
 | imagecaption = FinePower F1
 | releaseyear = 2018
 | originalsoftware = Android 6.0
@@ -33,7 +33,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = boots, framebuffer needs to be fixed
 | status_otg = -
-| booting = 0
+| booting = yes
 | pmos_kernel = 3.10.65
 | unixbench = 874.6
 }}
@@ -53,7 +53,20 @@
 
 == Current issues ==
 - Framebuffer has red and blue channels swapped.
-- 
+- X11 environments don't start.
+- Keyboard is not detected: only power button works. Probably needs a driver.
+
+== Hardware ==
+LCD panel controller: Sintronix ST7796S (MIPI)
+Back camera: GalaxyCore GC2385 (mipiraw)
+Front camera: GalaxyCore GC030
+Wi-Fi, Bluetooth, GPS: sc2351
+Keyboard LED: sc2723
+Touch panel: FocalTech *
+
+=== How to control brightness ===
+<code>echo 255 > /sys/class/backlight/sprd_backlight/brightness</code>
+<code>echo 255 > /sys/class/leds/keyboard-backlight/brightness</code>
 
 == How to enter flash mode ==
 Hold Power key and Vol- just after that. Release buttons when logo appears. Navigate to "Reboot to bootloader" option with volume keys and press Power to choose. The phone will reboot in fastboot mode.
