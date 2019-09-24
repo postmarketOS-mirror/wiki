@@ -1,0 +1,27 @@
+Even if kernel sources are not provided by the vendor, it's still possible to package kernel and make the phone boot.
+
+== Find generic kernel for the device ==
+To find a needed kernel, you have to:
+# Find out the information about the SoC/board used in the device. One SoC may have multiple boards. For example, Spreadtrum SC7731C has 2 boards: sc7731cea and sc7731ceb.
+# Try to search for kernels on the internet. Use different queries to find as much kernels as possible. Kernel is considered matching if it 
+has files for your board, such as device tree source (located at arch/device_arch(e.g. arm, arm64)/boot/dts).
+
+== Patch vendor dts in kernel ==
+[[Device_Tree_(dtb)#Where_can_I_find_a_dts_for_my_device.3F|Get dts from stock boot.img]], replace the board dts with it and make a patch.
+
+== Adapt kernel config ==
+This step is needed to make a proper kernel config which works for the device. You have to find detailed information about the hardware. Possible ways to do it are:
+# [[Device_Tree_(dtb)#Where_can_I_find_a_dts_for_my_device.3F|Get dts from stock boot.img]]
+# Follow instructions from [[tuning sysfs]] page to get contents of sysfs. It is recommended to do it on a rooted phone in Android, since dump made from recovery will probably have less details about hardware.
+# Find photos of device's internals on the web. If there are none, disassemble the device yourself or ask someone to do it.
+After one of these steps write down all information you've found and use it to adjust kernel config. Run <code>pmbootstrap kconfig edit device-codename</code> and use built-in search (press / key) to find options related to found hardware.
+
+== There is no driver for X in the kernel. What to do? ==
+# Check if driver is available in other generic kernels you have found for the device. If driver is available, check step 6 and further.
+# Try to find this driver in other kernels that don't match your device. It will be helpful to understand how it works, though you'll most likely have to rewrite(port) it.
+# Find datasheet to have more information for porting the driver.
+# Find a dummy driver for the driver's group(e.g. lcd_dummy.c for LCD panel drivers) in your kernel. Read it as well as other drivers for devices similar to yours.
+# Use drivers and datasheet to make a new driver.
+# Patch the kernel with driver, Makefile and Kconfig files related to your drivers group to add support. Give a proper name to driver option in Kconfig.
+# Add a line to linux-device-codename's config to make the driver option appear in menuconfig. Example: <code># CONFIG_FB_LCD_ST7796S_MIPI is not set</code>
+# Run <code>pmbootstrap kconfig edit device-codename</code> and enable the option. Tap / on the keyboard to search for it.
