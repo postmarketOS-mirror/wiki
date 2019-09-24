@@ -64,6 +64,8 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 == Installation ==
 Should be as usual for fastboot devices
 
+Flash a working LineageOS ROM first - it will contain all needed partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure it is strictly needed)
+
 == Additional info ==
 === Partition list ===
 {| class="wikitable"
