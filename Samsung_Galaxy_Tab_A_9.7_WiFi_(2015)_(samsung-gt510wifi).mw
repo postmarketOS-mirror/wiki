@@ -75,6 +75,58 @@ Boot up the device after installation
 # Install [https://github.com/msm8916-mainline/lk2nd#readme lk2nd] (alternative bootloader that provides a standard fastboot interface) when a new release includes this device's device tree.
 # Follow the [[Installation guide]]
 
+== Mainline Kernel Status ==
+{| class="wikitable"
+|-
+ ! Component !! Model !! Mainline kernel driver !! Status
+|-
+| RGB LED || ? || ? || ?
+|-
+| MicroUSB || - || Yes || Working
+|-
+| eMMC || ? || Yes || Working
+|-
+| Battery/Charging/Fuelgauge || MAX77849 || ? || ?
+|-
+| Volume/Power keys || GPIO || Yes || Possibly missing dts bindings
+|-
+| Capacitive keys || Coreriver Touchkey TC360 || [https://android.googlesource.com/kernel/bcm/+/android-wear-5.0.2_r0.5/drivers/input/touchscreen/coreriver_touchkey/tc360-touchkey.c No, but Downstream] ||
+|-
+| Accelerometer || STMicroelectronics K2HH || ? || ?
+|-
+| Colour Sensor || Capella Micro CM3323 || Yes || Possibly missing dts bindings
+|-
+| Gyroscope|| ? || ? || ?
+|-
+| Display || Samsung S6D7AA0 LTL101AT01 || No || Working in kernel fork
+|-
+| Barometer || ? || ? || ?
+|-
+| Audio || ? || ? || ?
+|-
+| Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Untested] || Probably missing dts bindings
+|-
+| USB Switch || FSA9480 || Yes || Probably missing dts bindings
+|-
+| Magnetometer || ? || ? || 
+|-
+| Proximity sensor || Semtech SX9500 || Yes || Probably missing dts bindings
+|-
+| GPU || Adreno 306 || Yes || 
+|-
+| Wi-Fi || WNCS3660B || Yes || Using the WCN3680 compatible
+|-
+| Bluetooth || WCN3660B || Yes || Using the WCN3680 compatible
+|-
+| GPS || ? || ? || ?
+|-
+| HDMI/MHL || ? || ? || ?
+|-
+| NFC || ? || ? || ?
+|-
+|}
+Running some diagnostics programs on Android will likely point out some more info about sensors and any other specifications. At some point I (jja2000) will switch around to Android for a bit to fill in the table. If anyone reading this finds some driver for any of the missing parts let me know on Matrix or if possible edit the table itself.
+
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
