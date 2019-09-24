@@ -88,7 +88,7 @@ See: [[Troubleshooting:boot]]
 
 # Ask kindly via e-mail.
 # If they don't provide the source, team up with [http://gpl-violations.org/faq/violation-faq/ gpl-violations.org]. You have the legal right to get the source, because the Linux kernel is under the GPLv2!
-# Consider [[building generic kernel]] for your device.
+# Consider [[building generic kernels|building generic kernel]] for your device.
 # Another option is [[using prebuilt kernels]]
 
 === I have ported postmarketOS to my device and the screen doesn't get updated ===
