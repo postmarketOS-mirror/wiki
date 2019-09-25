@@ -135,9 +135,10 @@ Put the following content into <code>/sysroot/etc/init.d/telnetd</code>
 <pre>
 #!/sbin/openrc-run
 
-name="busybox $SVCNAME"
-command="/usr/sbin/$SVCNAME"
-command_args="-F $INETD_OPTS"
+command="/usr/sbin/telnetd"
+command_args="-F"
+pidfile="/run/${RC_SVCNAME}.pid"
+command_background="yes"
 
 depend() {
         need net localmount
