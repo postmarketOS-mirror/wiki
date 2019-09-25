@@ -114,7 +114,7 @@ Boot up the device after installation
 |-
 | GPU || Adreno 306 || Yes || 
 |-
-| Wi-Fi || WNCS3660B || Yes || Using the WCN3680 compatible
+| Wi-Fi || WNC3660B || Yes || Using the WCN3680 compatible
 |-
 | Bluetooth || WCN3660B || Yes || Using the WCN3680 compatible
 |-
