@@ -52,39 +52,39 @@
 {{Device owners}}
 
 == Current issues ==
-- Framebuffer has red and blue channels swapped.
-- X11 environments don't start.
-- Keyboard is not detected: only power button works. Probably needs a driver.
+* Framebuffer has red and blue channels swapped.
+* X11 environments don't start.
+* Keyboard is not detected: only the power button works. Probably needs a driver.
 
 == Hardware ==
-LCD panel controller: Sintronix ST7796S (MIPI)
-Back camera: GalaxyCore GC2385 (mipiraw)
-Front camera: GalaxyCore GC030
-Wi-Fi, Bluetooth, GPS: sc2351
-Keyboard LED: sc2723
-Touch panel: FocalTech *
+* LCD panel controller: Sintronix ST7796S (MIPI)
+* Back camera: GalaxyCore GC2385 (mipiraw)
+* Front camera: GalaxyCore GC030
+* Wi-Fi, Bluetooth, GPS: sc2351
+* Keyboard LED: sc2723
+* Touch panel: FocalTech *
 
 === How to control brightness ===
 <code>echo 255 > /sys/class/backlight/sprd_backlight/brightness</code>
 <code>echo 255 > /sys/class/leds/keyboard-backlight/brightness</code>
 
 == How to enter flash mode ==
-Hold Power key and Vol- just after that. Release buttons when logo appears. Navigate to "Reboot to bootloader" option with volume keys and press Power to choose. The phone will reboot in fastboot mode.
-Another option is to connect phone to computer and run
+Press and hold the Power key, then, immediately press and hold VolumeDown. Release both buttons when the logo appears. Using the volume buttons, navigate to the "Reboot to bootloader" option, pressing Power to select it. The phone will reboot in fastboot mode.
+Another option is to connect the phone to a computer and run
 <source>$ adb reboot bootloader</source>
 or
 <source>$ sudo fastboot reboot bootloader</source>
 
 == Installation ==
 === Flashing kernel ===
-{{note|'''Backup your boot partition before flashing the kernel.''' If you have root, you can do this with adb. Connect the phone to your computer, and enable USB debugging in Developer settings. Then
+{{note|'''Backup your boot partition before flashing the kernel.''' If you have root, you can do this with adb. Connect the phone to your computer, and enable USB debugging in Developer settings. Then run
 <source>$ adb shell
 $ su
 # dd if=/dev/block/mmcblk0p16 of=/sdcard/boot.img</source>
-If your phone isn't rooted, use ResearchDownload tool to create a backup.}}
+If your phone isn't rooted, use the ResearchDownload tool to create a backup.}}
 
-Fastboot on this phone doesn't support booting the kernel from an SD card, so it's required to flash kernel with <code>$ pmbootstrap flasher flash_kernel</code>
-If you have an SD card that is rather fast, consider flashing rootfs onto it instead of the phone, which probably has slower memory (15 Mb/s on read, 9 Mb/s on write).
+Fastboot on this phone doesn't support booting the kernel from an SD card, so it's required to flash the kernel to internal storage with <code>$ pmbootstrap flasher flash_kernel</code>
+If you have an SD card that is rather fast, consider flashing rootfs onto it instead of the phone's internal storage, which is quite slow (15 Mb/s on read, 9 Mb/s on write).
 
 === Partitions layout ===
 <source lang="bash">
