@@ -84,13 +84,7 @@ Flashing with proprietary program SP Flash Tool also work fine. Tested with flas
 * [https://www.gsmarena.com/wiko_ufeel-9030.php Full phone specifications]
 * [http://www.wikogeek.com/index.php?telephone=U+FEEL Official Kernel source]
 * [https://drive.google.com/file/d/13PncvB_jy6oPZvHO4FWl-bkcSCqlTSF6/view TWRP Image]
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|573|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
