@@ -106,7 +106,7 @@ Boot up the device after installation
 |-
 | Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Untested] || Probably missing dts bindings
 |-
-| USB Switch || FSA9480 || Yes || Probably missing dts bindings
+| USB Switch || ? || ? ||
 |-
 | Magnetometer || ? || ? || 
 |-
