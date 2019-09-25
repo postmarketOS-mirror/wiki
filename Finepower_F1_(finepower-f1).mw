@@ -77,14 +77,14 @@ or
 
 == Installation ==
 === Flashing kernel ===
-{{note|'''Backup your boot partition before flashing kernel.''' If you have root, you can do it with adb. Connect phone to computer, enable USB debugging in Developer mode. Then
+{{note|'''Backup your boot partition before flashing the kernel.''' If you have root, you can do this with adb. Connect the phone to your computer, and enable USB debugging in Developer settings. Then
 <source>$ adb shell
 $ su
 # dd if=/dev/block/mmcblk0p16 of=/sdcard/boot.img</source>
-If the phone isn't rooted, use ResearchDownload tool for backup.}}
+If your phone isn't rooted, use ResearchDownload tool to create a backup.}}
 
-Fastboot on this phone doesn't support booting kernel from SD card, so it's required to flash kernel with <code>$ pmbootstrap flasher flash_kernel</code>
-If you have SD card that is rather fast, consider to not flash rootfs on the phone, because its memory is probably slower (15 Mb/s on read, 9 Mb/s on write).
+Fastboot on this phone doesn't support booting the kernel from an SD card, so it's required to flash kernel with <code>$ pmbootstrap flasher flash_kernel</code>
+If you have an SD card that is rather fast, consider flashing rootfs onto it instead of the phone, which probably has slower memory (15 Mb/s on read, 9 Mb/s on write).
 
 === Partitions layout ===
 <source lang="bash">
