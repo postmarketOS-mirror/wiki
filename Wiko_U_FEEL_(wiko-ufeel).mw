@@ -86,7 +86,7 @@ Flashing with proprietary program SP Flash Tool also work fine. Tested with flas
 * [https://drive.google.com/file/d/13PncvB_jy6oPZvHO4FWl-bkcSCqlTSF6/view TWRP Image]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{MR|573|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
