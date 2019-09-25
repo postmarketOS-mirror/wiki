@@ -12,7 +12,7 @@
 | storage = 16GB eMMC
 | display = 720x1280 LCD
 | memory = 3072 MiB
-| architecture = armhf
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = P
