@@ -147,5 +147,6 @@ wruntimenv2 -> /dev/block/mmcblk0p8
 </source>
 
 == See also ==
-* {{issue|239|pmaports}} - Describing porting process here
+* {{issue|239|pmaports}} porting process
+* {{MR|645|pmaports}} initial merge request
 * [https://github.com/jedld/kernel_7730 Generic kernel for Spreadtrum]
