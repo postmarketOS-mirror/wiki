@@ -20,7 +20,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 |-
 | <code>manufacturer</code>
 | Device manufacturer
-| e.g. <code>N900</code>
+| e.g. <code>Nokia</code>
 
 |-
 | <code>codename</code>
