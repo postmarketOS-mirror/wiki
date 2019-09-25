@@ -44,13 +44,13 @@
 
 == How to enter flash mode ==
 
-Hold vol-down while booting the device. The splash screen doesn't indicate, that the phone is in fastboot mode, but you can test it by running <code>fastboot devices</code> on a PC that's connected via USB to the phone.
+Hold vol-down while booting the device. The splash screen doesn't indicate that the phone is in fastboot mode, but you can test it by running <code>fastboot devices</code> on a PC that's connected via USB.
 
 == Installation ==
 
-Note, that you have to have a recent bootloader installed, you can download a zip to flash from the recovery [https://github.com/WeAreFairphone/modem_zip_generator/releases at this link].
+Note that you have to have a recent bootloader installed. You can download a zip to flash from the recovery [https://github.com/WeAreFairphone/modem_zip_generator/releases at this link].
 
-Installation procedure is the same as with most other devices and isn't special for this phone.
+Installation procedure is the same as with most other devices.
 
 == WiFi ==
 
