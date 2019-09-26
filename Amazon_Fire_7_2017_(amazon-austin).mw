@@ -1,0 +1,58 @@
+{{Infobox device
+| manufacturer = Amazon
+| name =  Fire 7 (2017)
+| codename = amazon-austin
+| releaseyear = 2017
+| originalsoftware = Fire OS 5 (based on Android Lollipop)
+| chipset = MediaTek MT8127 (32-bit quad-core)
+| cpu = ARM Cortex-A7 (1.3 GHz)
+| gpu = ARM Mali-450 MP4
+| storage = 8GB, expandable up to 256GB with microSD card 
+| display = 1024 x 600 IPS
+| memory = 1GB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = 
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde =  
+| status_mainline =  
+| status_battery = 
+| status_3d =  <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel =  
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps =  
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = no
+
+<!-- you can also use these lines if you need to:
+if the device haven't originally ran Android OS, e.g. Nokia N900
+| n-android =  ✔
+Version of the kernel that pmos is running
+| pmoskernel = 3.x.x
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = 
+-->
+}}
+
+== Contributors ==
+
+== Users owning this device ==
+{{Device owners}}
+
+== Unlock the bootloader ==
+The bootloader can now be unlocked through a new hardware method:
+https://forum.xda-developers.com/amazon-fire/development/unlock-fire-t3899860
+
+Porting postmarketOS should be relatively simple after forking the austin-ford port.
+
+== Links ==
