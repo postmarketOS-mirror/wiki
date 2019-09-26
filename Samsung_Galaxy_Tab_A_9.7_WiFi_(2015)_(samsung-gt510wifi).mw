@@ -126,9 +126,9 @@ Boot up the device after installation
 |-
 | NFC || ? || ? || ?
 |-
-| Front camera || Siliconfile Technologies Inc. SR200PC20 || [https://forum.xda-developers.com/showpost.php?p=28482154&postcount=242 Not sure, but there's a datasheet]
+| Front camera || Siliconfile Technologies Inc. SR200PC20 || [https://forum.xda-developers.com/showpost.php?p=28482154&postcount=242 Not sure, but there's a datasheet] ||
 |-
-| Main camera || Siliconfile Technologies Inc. SR544 || ?
+| Main camera || Siliconfile Technologies Inc. SR544 || ? ||
 |}
 Running some diagnostics programs on Android will likely point out some more info about sensors and any other specifications. At some point I (jja2000) will switch around to Android for a bit to fill in the table. If anyone reading this finds some driver for any of the missing parts let me know on Matrix or if possible edit the table itself.
 
