@@ -84,7 +84,7 @@ Boot up the device after installation
 |-
 | MicroUSB || - || Yes || Working
 |-
-| eMMC || ? || Yes || Working
+| eMMC || (Android lists) Toshiba 400073 || Yes || Working
 |-
 | Battery/Charging/Fuelgauge || MAX77849 || ? || ?
 |-
