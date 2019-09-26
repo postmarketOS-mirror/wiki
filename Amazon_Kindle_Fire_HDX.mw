@@ -62,6 +62,7 @@ This will automatically do it: https://forum.xda-developers.com/kindle-fire-hdx/
 However, there is a manual tutorial here: https://forum.xda-developers.com/kindle-fire-hdx/general/thor-unlocking-bootloader-firmware-t3463982
 
 == Installation ==
+{{note|Fastboot may not be working anymore, because the "vendor id" flag can't be used anymore ({{issue|1830}}). If you own the device, please test this and report back in the issue or remove this warning if you find that it works. We could bring the flag back in theory, if absolutely necessary (though flashing via TWRP seems to be working in any case).}}
 '''(TWRP)'''
 A recovery image can be flashed via TWRP normally
 
