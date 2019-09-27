@@ -62,9 +62,15 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+The Essential Phone uses Fastboot as the flashing protocol.
+
+To enter Fastboot mode, hold Volume Down while powering on the device. Let go of Volume Down when "Fastboot mode" displays on the screen. 
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== Status ==
+Currently a work in progress. Fails to compile kernel while throwing a gcc related error.
 
 == See also ==
 <!--
