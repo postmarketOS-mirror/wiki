@@ -90,7 +90,9 @@ Wayland:
 * sway: Not works
 
 X11:
-TODO
+* xfce4: Works, but no virtual keyboard. Get 'onboard' package while installing.
+* matchbox: Does not work.
+* hildon: Does not work.
 
 == See also ==
 * {{MR|461|pmaports}} Initial merge request
