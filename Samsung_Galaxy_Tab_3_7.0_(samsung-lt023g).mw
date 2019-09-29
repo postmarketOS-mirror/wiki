@@ -72,6 +72,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Cellular networking
 * 2D and 3D Acceleration
 * Audio
+* Flashing with flash_rootfs
 Everything else is untested as of writing this.
 
 == How hpagseddy get camera working ==
