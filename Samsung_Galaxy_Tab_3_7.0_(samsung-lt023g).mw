@@ -14,7 +14,7 @@
 | memory = 1GB
 | architecture = armv7
 | status_usbnet = Y
-| status_flashing = Y
+| status_flashing = P
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
@@ -52,7 +52,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 
 == What works ==
 * Booting off a microSD card
-* Booting from system partition using Android recovery option
+* Booting from system partition using Android recovery ZIP option
 * Display
 * Touchscreen
 * USB networking
