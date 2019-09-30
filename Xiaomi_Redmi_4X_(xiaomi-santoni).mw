@@ -1,0 +1,183 @@
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  Redmi 4x
+| codename = xiaomi-santoni
+| image = File:xiaomi-santoni.jpg
+| imagecaption = xiaomi-santoni running pmOS demos
+| releaseyear = 2017
+| originalsoftware = Android 6.0 (can be upgradable to 7.1)
+| chipset = Qualcomm MSM8940 Snapdragon 435
+| cpu = Octa-core 1.4 GHz Cortex-A53
+| gpu = Adreno 505
+| storage = 16 GB / 32 GB / 64GB
+| display = 720x1280
+| memory = 2 GB / 3 GB / 4 GB
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = P
+| status_mainline = 
+| status_battery = Y
+| status_3d = 
+| status_accel = 
+| status_audio = Y
+| status_bluetooth = P
+| status_camera = N
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status_otg = Y
+| pmoskernel = 3.18.140
+| whet_dhry = 1526.7
+| booting = yes
+}}
+
+== Contributors ==
+* pinoaffe
+* asriel-danctnix
+* Danct12
+
+== Maintainer(s) ==
+* Danct12
+
+== Users owning this device ==
+{{Device owners}}
+
+== What works ==
+* Install to SD Card
+* Boots
+* Flashing
+* Touch
+* Wayland
+* XWayland
+* USB Ethernet/Internet
+* WiFi
+* Vibrator
+* Audio
+* Xorg
+* USB OTG
+* charging-sdl
+
+== What does not work ==
+* Camera
+* GPS
+* Mobile Data
+* SMS
+* Calls
+* Accelerometers
+* Bluetooth (partially)
+* 3D Acceleration (will never happen due to downstream kernel)
+* Display Power Management on Wayland
+* Full Disk Encryption (does unlock, but failed to look up the partition after booting)
+
+== Bugs? ==
+* Framebuffer programs, such as fbterm will have it's red and blue color palette swapped for some odd reason, it might be better to look into this, as you might use them later. This will also affect programs that make use of fbconfig.
+* alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use PulseAudio.
+
+== Mainline kernel? ==
+Not yet, as MSM8937 isn't in mainline. MSM8940 is similar to MSM8937.
+{| class="wikitable"
+|-
+! scope="col"| Parts
+! scope="col"| Components
+! scope="col"| In Torvalds tree?
+|-
+| scope="row"| Chipset
+| MSM8940
+| No
+|-
+| scope="row"| GPU
+| Adreno 505
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/msm/adreno/a5xx_gpu.c a5xx_gpu.c])
+|-
+| scope="row"| Touch Screen
+| FT5X06
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/input/touchscreen/edt-ft5x06.c edt-ft5x06.c])
+|-
+| scope="row"| Fingerprint Sensor
+| FPC1020
+| No
+|-
+| scope="row"| Accelerometer + Gyroscope
+| ICM20607
+| No
+|-
+| scope="row"| ALSPS
+| STK3X1X
+| No
+|-
+| scope="row"| Magnetometer
+| YAS537
+| No
+|-
+| scope="row"| Sound
+| AW87319
+| No
+|-
+| scope="row"| Notifications LED
+| AW2013
+| No
+|-
+| scope="row"| Front Camera
+| OV5675
+| No
+|-
+| scope="row"| Back Camera
+| S5K3L8
+| No
+|}
+
+== More information on this port ==
+* The upstream msm-3.18 kernel is a fork of https://github.com/bitrvmpd/msm-3.18
+* Most of this work was done for my project ([https://github.com/danct12/arch-linux-santoni Arch Linux on Redmi 4X]), and the progress are backported to postmarketOS in order to help development.
+
+== Bootloader Unlocking ==
+Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
+
+The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and powered on)
+
+== Key combinations for entering Recovery/Fastboot ==
+=== Recovery ===
+* Turn the device off (or restart also works)
+* Hold both volume buttons (+ and -) and power button
+* Keep holding until you got to recovery.
+
+=== Fastboot ===
+* Same as recovery, but this time hold the volume down key instead of both keys.
+
+== Installation ==
+Installation over fastboot works, Android recovery zip installation is untested.
+
+== Bluetooth ==
+Bluetooth on this phone is using the WCNSS chip, which provides two SMD channels to the BT core, one for command and one for event packets. Support for  Bluetooth HCI SMD can be added using [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-xiaomi-santoni/bt-hci-smd.patch this patch].
+
+With that patch applied, the Bluetooth interface can be bring up by set /sys/module/hci_smd/parameters/hcismd_set to 1. Then install bluez, start the service and use bluetoothctl to control it.
+
+As right now, it seems to connect, but disconnect very quickly, it doesn't ask for pair code when connecting, so this needs to be investigated.
+
+== libhybris ==
+Hybris implementation for this device has been added in [https://gitlab.com/postmarketOS/pmaports/merge_requests/420 !420]. test_hwcomposer_7_caf passes, and even hwcomposer driver for X11 works!
+
+However, the user needs to build/download pre-built system.img that is used for Halium. Which we'll update this section later when we got them uploaded.
+
+As for the HWcomposer implementation for X11, it's not that fast and there are artifacts on the screen, and [https://user-images.githubusercontent.com/13084776/49331880-06657c00-f5b5-11e8-915a-a33be2b15bc7.jpg kwin on this device gives repeating texture].
+
+== Photos ==
+<gallery>
+File:Pmos_msm-318_santoni.png|thumb|left|Weston with msm-3.18 upstream kernel
+File:Santoni-chargingsdl.png|thumb|left|charging-sdl on Xiaomi Redmi 4X
+File:Youtube-santoni.jpg|thumb|left|YouTube on Redmi 4X
+</gallery>
+
+== See also ==
+* [https://www.gsmarena.com/xiaomi_redmi_4_(4x)-8608.php GSMArena page]
+* [https://twrp.me/xiaomi/xiaomiredmi4x.html Official TWRP image for Redmi 4X (santoni)]
+* [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/santoni-n-oss Xiaomi Redmi 4X Official Kernel Source]
+* [https://github.com/Danct12/msm-3.18/tree/rel/msm-3.18-gnulinux msm-3.18 upstreamed kernel for santoni]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/289 Pull request for msm-3.18 upstreamed kernel]
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/335 Pull request !335 for osk-sdl]
