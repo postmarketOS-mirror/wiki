@@ -64,16 +64,14 @@ The MediaDeb project has made systemd unit files running more or less the comman
 * wifi.service: runs <code>echo 1 > /dev/wmtWifi</code>
 
 == Debugging ==
-* Find the wifi device name with <code>ip link</code> (<code>wlan0</code> on most phones)
-* Try to start the wlan interface with <code>ip link set wlan0 up</code>.
 
-When that worked, you're done with this section. Otherwise look in the following places for errors (such as missing firmware files):
+First check, if the network interface is available by running <code>ip link</code> (<code>wlan0</code> on most phones).
+
+If the network interface is not listed and you've followed the section for your WiFi chip above, it's most likely an error of missing or misplaced firmware files:
 * <code>dmesg</code>
 * <code>tail /var/log/firmwareload.log</code>
 
-If there is nothing helpful in these files, continue reading. The original OS may run a userspace application, that enables the wifi driver by doing essentially <code>echo 1 > /dev/wcnss_wlan</code> and <code>echo sta > /sys/module/wlan/parameters/fwpath</code> or execute similar commands. This was the case for <code>wcnss-wlan</code> (see <code>aports/main/wcnss-wlan</code> for how we packaged it).
-
-Try to [[Tuning sysfs|compare your sysfs]] and <code>dmesg</code> output with the one of a known working ROM after you have connected to a wireless network. Look for differences in <code>/sys/module/wlan/</code>.
+In case you need any more help, just ask in our [[Matrix_and_IRC|Matrix/IRC channel]]!
 
 == Connecting to APs ==
 {{note|In {{github|388}} we enabled NetworkManager. You might need to set your wlan interface to unmanaged in NetworkManager to configure it manually.}}
