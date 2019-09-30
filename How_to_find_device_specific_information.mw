@@ -100,10 +100,29 @@ In the case where you have located the kernel source for your device but there i
 
 == Firmware files ==
 
-Find the LineageOS repository for your device by using the repository filter function [https://github.com/LineageOS/ here] and typing in your device's code name. You need the repository starting with <code>android_device_</code>. Inside that repository, there should be a <code>proprietary_components.txt</code>, <code>proprietary-files.txt</code> or <code>device-proprietary-files.txt</code>
-, which has among lots of files, that we do not need, the paths to the firmware files - starting with <code>/vendor/firmware</code>. Combined with some additional research, you should be able to find the files needed for the hardware, that you want to get running (e.g. wifi). Now you have the names of the firmware files. First look if they are provided by [https://pkgs.alpinelinux.org/contents?file=&path=&name=linux-firmware&branch=&repo=&arch= <code>linux-firmware</code>], and if not, find them elsewhere and package them yourself (as in [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_S_Advance_(samsung-i9070) samsung-i9070]).
+If your device has an official LineageOS port, you can find the proprietary files, which often also include the firmware, at [http://github.com/TheMuppets TheMuppets]. Do note, that if you're using the "Find file" (shortcut: T), that it might not find all files as those repositories are generally quite big and not completely indexed by GitHub.
 
-See also: [https://github.com/postmarketOS/pmbootstrap/wiki/Wifi Wifi]
+In the case that your device has an unofficial LineageOS port, you can often find a repository in the same naming scheme (proprietary_vendor_MANUFACTURER) at the same location as the kernel source and device tree.
+
+=== Find ===
+
+If you can't find the firmware for your device in an existing repo, you will have to grab them from your device or an OTA image.
+
+In some cases it's a partition that's mounted at <code>/firmware</code> (e.g. labelled <code>modem</code>), in other cases <code>/firmware</code> will have multiple partitions mounted into subdirectories (e.g. labelled <code>radio</code>, <code>adsp</code> & <code>wcnss</code>). Consult the fstab of your installation for different mount points.
+
+In other cases, the firmware will just be in the normal filesystem, e.g. at <code>/vendor/firmware/</code>, <code>/etc/firmware</code> or other locations. You can use the <code>find</code> command to search for e.g. <code>*.mbn</code>
+
+There's also the possibility of extracting the firmware from a file called <code>NON-HLOS.bin</code> which is sometimes delivered with OTA updates. These images are FAT32 images which can be mounted with <code>sudo mount -o ro NON-HLOS.bin mountpoint</code>.
+
+=== Extract ===
+
+The firmware of interest for us is <code>adsp.*</code>, <code>mba.*</code>, <code>modem.*</code> and <code>wcnss.*</code>. Note that not all of those firmware files exist on all devices.
+
+The next step is to import those files into a git repository and pushing it to a publicly accessible location.
+
+=== Package ===
+
+The procedure on how to package firmware and how to add a nonfree-firmware subpackage to the device package is [[Device_specific_package#Proprietary_firmware_or_userland_blobs|documented here]].
 
 == Device tree source (dts) ==
 
