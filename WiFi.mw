@@ -14,9 +14,9 @@ Devices with Qualcomm WiFi chips are usually very easy to get working.
 
 You need to find the firmware files for your device, the main file is called <code>wcnss.mdt</code> and there should also be more files which are called <code>wcnss.b00</code>, <code>wcnss.b01</code>, etc. Copy them all onto your device info <code>/lib/firmware/postmarketos</code>.
 
-Then you can run as root <code>echo 1 > /dev/wcnss_wlan</code> and <code>echo sta > /sys/module/wlan/parameters/fwpath</code>. Check the output of <code>ip link</code> and a <code>wlan0</code> interface should have appeared! Now you can use NetworkManager (TODO LINK) to connect to a WiFi!
+Then you can run as root <code>echo 1 > /dev/wcnss_wlan</code> and <code>echo sta > /sys/module/wlan/parameters/fwpath</code>. Check the output of <code>ip link</code> and a <code>wlan0</code> interface should have appeared! Now you can use NetworkManager to [[#Connecting_to_APs|connect to a WiFi]]!
 
-If that didn't work, please check the Debugging (TODO LINK) section how to find out what went wrong.
+If that didn't work, please check the [[#Debugging|debugging]] section how to find out what went wrong.
 
 For packaging, see [[Device_specific_package#Proprietary_firmware_or_userland_blobs|that page]] and add the <code>wcnss-wlan</code> package (which runs the two commands above at boot automatically) as a dependency to the WiFi subpackage.
 
