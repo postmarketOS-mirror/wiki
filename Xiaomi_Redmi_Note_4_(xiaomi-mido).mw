@@ -1,0 +1,58 @@
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  Redmi Note 4
+| codename = xiaomi-mido
+| image = File:mido.jpg
+| imagecaption = Xiaomi Redmi Note 4
+| releaseyear = 2017
+| originalsoftware = MIUI 9
+| chipset = Qualcomm MSM8953 Snapdragon 625
+| cpu = Octa-core Snapdragon 625 2 GHz
+| gpu = Adreno 506
+| storage = 16 GB / 32 GB / 64 GB
+| display = 1080x1920
+| memory = 2 GB / 3 GB / 4 GB
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* Nikolay0054
+
+== Maintainer(s) ==
+
+== What works ==
+* Screen
+* Touchscreen
+* Wifi
+* USB Net
+
+== What does not work ==
+* Bluetooth(maybe)
+* Sound
+
+== How to enter flash mode ==
+Press Power and Volume Down(fastboot mode)
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== See also ==
