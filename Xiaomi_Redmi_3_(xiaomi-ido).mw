@@ -1,0 +1,48 @@
+{{Infobox device
+| manufacturer = Xiaomi
+| name =  RedMi 3
+| codename = xiaomi-ido
+| releaseyear = 2016
+| originalsoftware = Android
+| chipset = Qualcomm MSM8939v2 Snapdragon 616
+| cpu = Octa-core (4x1.5 GHz Cortex-A53 & 4x1.2 GHz Cortex-A53)
+| gpu = Adreno 405
+| storage = 16 GB / 32 GB
+| display = IPS LCD capacitive touchscreen, 16M colors (720x1280)
+| memory = 2 GB / 3 GB
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = P
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = Y
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* lawl
+
+== What works ==
+
+* Boots
+* USB Networking
+* osk-sdl works to unlock root partition
+* battery
+* weston starts and display works, but touch screen doesn't work yet
+
+== What does not work ==
+* Touch screen doesn't work in libinput (used by weston etc.)
+* everything else is untested
