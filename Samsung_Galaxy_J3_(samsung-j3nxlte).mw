@@ -3,7 +3,7 @@
 | name =  Galaxy J3
 | codename = samsung-j3nxlte
 | image = File:samsung-j3nxlte.jpg
-| imagecaption = CHANGE_ME
+| imagecaption = Galaxy J3 with postmarketOS and weston
 | releaseyear = 2016
 | originalsoftware = Android 5.1.1 (Lollipop)
 | chipset = Spreadtrum SC9830
@@ -48,7 +48,7 @@ Is OTG available, not used in wiki
 }}
 
 == Contributors ==
-* ''[[user:Ster|Ster]]'' Please contact me on Matrix
+* ''[[user:Ster|Ster]]'' Please contact me on Matrix if you are at any step of the process, either by mentioning my username <code>@sterrss:matrix.org</code> or simply message me directly, I'd love to hear any success, failures, difficulties. I'm not necessarily going to be able to help you, since I've still got lots to learn but it'd be nice to chat.
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
