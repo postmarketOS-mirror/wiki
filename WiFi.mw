@@ -2,16 +2,66 @@
 To get wireless LAN working, most WiFi chips need a proprietary firmware blob. While it would be more secure to replace that with open source software in the long term, it isn't feasible right now, so we try to get it working with that closed source firmware.<br />
 A great place to start looking for information about many available WiFi chips is [https://wireless.wiki.kernel.org/en/users/drivers this kernel.org page]. It often provides driver sources and the required firmware blobs as well. For a start if you want Internet working try the [[USB Internet]] guide.
 
-== Android-specific ==
 {{note|Instead of mounting Android's firmware partition, we package the files ourselves (see the [[FAQ#Why_don.27t_we_use_firmware_files_from_Android.27s_firmware_partition.3F|FAQ]]).}}
 
-Requirements:
-* [[How_to_find_device_specific_information#Firmware_files|WiFi firmware files]]
-* Some firmwares need additional config files with calibration data, these can usually be found in the LineageOS or Google repositories.
-* Make sure all files get installed properly (look at the packaging of other [[devices]] with working wifi in the <code>device</code> folder of our [https://gitlab.com/postmarketOs/pmaports pmaports] repository)
+Useful links:
+* [[How_to_find_device_specific_information#Firmware_files|How to find WiFi firmware files]]
+* [[Device_specific_package#Proprietary_firmware_or_userland_blobs|How to package WiFi firmware]]
 
-=== Path to firmware ===
-Usually your Android kernel expects the firmware files to be in a folder like <code>/system/vendor/firmware</code> and you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://gitlab.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch]. Sometimes there is no need to patch, but simply change a kernel option that defines this path.
+== Qualcomm WiFi ==
+
+Devices with Qualcomm WiFi chips are usually very easy to get working. 
+
+You need to find the firmware files for your device, the main file is called <code>wcnss.mdt</code> and there should also be more files which are called <code>wcnss.b00</code>, <code>wcnss.b01</code>, etc. Copy them all onto your device info <code>/lib/firmware/postmarketos</code>.
+
+Then you can run as root <code>echo 1 > /dev/wcnss_wlan</code> and <code>echo sta > /sys/module/wlan/parameters/fwpath</code>. Check the output of <code>ip link</code> and a <code>wlan0</code> interface should have appeared! Now you can use NetworkManager (TODO LINK) to connect to a WiFi!
+
+If that didn't work, please check the Debugging (TODO LINK) section how to find out what went wrong.
+
+For packaging, see [[Device_specific_package#Proprietary_firmware_or_userland_blobs|that page]] and add the <code>wcnss-wlan</code> package (which runs the two commands above at boot automatically) as a dependency to the WiFi subpackage.
+
+Test your packaging by flashing a new rootfs which includes your changes and see if WiFi works without any manual configuration.
+
+== Broadcom WiFi ==
+
+{{todo|This section needs expansion.}}
+
+Devices with Broadcom WiFi chips usually have the path to the firmware hardcoded in the kernel, mostly to <code>/system/vendor/firmware</code>. 
+
+In most cases you should be able to set <code>CONFIG_BCMDHD_FW_PATH</code> and <code>CONFIG_BCMDHD_NVRAM_PATH</code> in the kernel config. In other cases, you need to patch the kernel and change the path to <code>/lib/firmware/postmarketos</code> (see [https://gitlab.com/postmarketOS/pmbootstrap/blob/2fe8eb0fdfa37381d521844b6137c03593279002/aports/linux-samsung-i9070/04_change_dhd_firmware_dir.patch this patch].
+
+You can use the command <code>git grep "lib/firmware/postmarketos" device/linux-*</code> in pmaports to find how it's done for other devices.
+
+== Mediatek WiFi ==
+
+{{todo|No device with a Mediatek SoC actually has WiFi working yet. Further debugging is needed to get it working.}}
+
+Devices with Mediatek WiFi chips are much more complicated to get working. On MT6589 devices, there is a tool called <code>6620_launcher</code> which (probably) loads the firmware from the filesystem into the kernel. This tool is a binary included in the Android installation and linked against the bionic libc. There is a [https://github.com/MediaDeb/android_hardware_mediatek/blob/master/combo_tool/src/stp_uart_launcher.c source code version of the tool available] which can be compiled on a normal Linux system. On the [[Fairphone_1_(fairphone-fp1)|Fairphone 1]], the order for initialization should be the following (based on the init.rc files from Android):
+<pre>
+# Install the files mt6628_ant_m1.cfg mt6628_patch_e1_hdr.bin mt6628_patch_e2_0_hdr.bin mt6628_patch_e2_1_hdr.bin WIFI_RAM_CODE_MT6628 WMT.cfg into /system/etc/firmware/ (path could be patched in the kernel sources)
+insmod mtk_hif_sdio.ko
+insmod mtk_stp_wmt.ko
+insmod mtk_stp_uart.ko
+insmod mtk_stp_gps.ko
+insmod mtk_stp_bt.ko
+insmod mtk_wmt_wifi.ko
+
+mknod /dev/stpwmt c 190 0
+mknod /dev/stpgps c 191 0
+mknod /dev/stpbt  c 192 0
+mknod /dev/wmtWifi c 153 0
+
+insmod wlan_mt6628.ko
+
+6620_launcher -p /system/etc/firmware/
+
+echo 1 > /dev/wmtWifi
+</pre>
+
+The MediaDeb project has made systemd unit files running more or less the commands above on two of their supported devices:
+* wifi_loader.service: runs <code>mt6620_loader.sh</code> (which does <code>mknod</code>) & runs <code>wifi_loader</code> bin
+* mt6620_launcher.service: runs 6620_launcher (<code>/usr/sbin/6620_launcher -b 4000000 -p /lib/firmware/ -d /dev/ttyMT2</code>)
+* wifi.service: runs <code>echo 1 > /dev/wmtWifi</code>
 
 == Debugging ==
 * Find the wifi device name with <code>ip link</code> (<code>wlan0</code> on most phones)
