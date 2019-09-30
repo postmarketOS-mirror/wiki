@@ -2,7 +2,7 @@
 | manufacturer = Samsung
 | name =  Galaxy J3
 | codename = samsung-j3nxlte
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:samsung-j3nxlte.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2016
 | originalsoftware = Android 5.1.1 (Lollipop)
@@ -48,7 +48,7 @@ Is OTG available, not used in wiki
 }}
 
 == Contributors ==
-* ''[[user:Ster|Ster]]''
+* ''[[user:Ster|Ster]]'' Please contact me on Matrix
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
@@ -101,6 +101,14 @@ Select "Advanced" then "ADB Sideload". Connect your phone to your PC. Swipe to s
 <code>pmbootstrap flasher --method=adb sideload</code>
 
 on your PC and watch as the postmarketOS ascii appears. Select reboot, and your display and touchscreen should work out of the box.
+
+== Personal recommendation ==
+
+I recommend disconnecting the cable when you turn the device off. My device freezes on the charging splash screen if I don't take it out.
+This requires me to remove the battery to fix. In fact, I try to avoid having the battery inserted at the same time as the charging cable,
+excluding when the device is running postmarketOS.
+
+I don't know if you'll have this problem.
 
 == See also ==
 * {{MR|653|pmaports}} Initial merge request
