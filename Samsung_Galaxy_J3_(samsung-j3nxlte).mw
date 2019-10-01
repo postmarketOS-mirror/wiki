@@ -70,7 +70,7 @@ linked below such as the XDA developers thread. If yours is J320F it will probab
 
 == How to enter flash mode ==
 
-This is not used for flashing postmarketOS, but is used for flashing recovery partition with TWRP. See {{issue|1384|pmbootstrap}} for details on why I do not recommend flashing postmarketOS with Heimdall.
+This is not used for flashing postmarketOS, but is used for flashing recovery partition with TWRP. See {{issue|1834|pmbootstrap}} for details on why I do not recommend flashing postmarketOS with Heimdall.
 
 Hold down home button, power button and volume down button for a number of seconds. Then once a
 prompt appears on screen, press volume up. You are now in download mode (it will say so on the screen).
@@ -115,7 +115,7 @@ I don't know if you'll have this problem.
 * [https://forum.xda-developers.com/galaxy-j3-2016/development/rom-lineageos-14-1-samsung-galaxy-j3-t3667015 Unofficial LineageOS port on XDA Developers]
 * [https://github.com/djeman/android_kernel_samsung_sharkls Kernel source code]
 * [https://www.gsmarena.com/samsung_galaxy_j3_(2016)-7760.php Full device specs]
-* {{issue|1384|pmbootstrap}} is the reason I put flashing as partial.
+* {{issue|1834|pmbootstrap}} is the reason I put flashing as partial.
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 
