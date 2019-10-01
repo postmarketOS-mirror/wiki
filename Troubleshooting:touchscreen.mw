@@ -10,7 +10,7 @@ You can check if libinput understands the events your touchscreen driver emits w
 
 For example it's possible that libinput doesn't get any events or that it doesn't get TOUCH_DOWN/TOUCH_UP events. You can see the raw events libinput receives with <code>libinput record</code>.
 
-If your device is receiving events, and you see <code>kernel bug: device has min == max on ABS_MT_PRESSURE</code> when running <code>libinput debug-events</code>, then you will need to patch out a line in the kernel driver of the form <code>input_set_abs_params(input_dev, ABS_MT_PRESSURE, 0, 0, 0, 0);</code>. Figure out which driver is being used, perhaps by running <code>find /sys -name "input*"</code> or <code>find /sys -name "event*"</code>, use <code>grep</code> to find the line which contains <code>ABS_MT_PRESSURE</code> and
+If your device is receiving events, and you see <code>kernel bug: device has min == max on ABS_MT_PRESSURE</code> when running <code>libinput debug-events</code>, then you will need to patch out a line in the kernel driver of the form <code>input_set_abs_params(input_dev, ABS_MT_PRESSURE, 0, 0, 0, 0);</code>. Figure out which driver is being used, perhaps by running <code>find /sys -name "input*"</code> or <code>find /sys -name "event*"</code>, use <code>grep</code> to find the line which contains <code>ABS_MT_PRESSURE</code> and comment it out. Then rebuild the kernel and try again.
 
 = Mediatek devices =
 
