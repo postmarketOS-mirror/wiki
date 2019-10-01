@@ -1,3 +1,5 @@
+Samsung Galaxy J3 (2016) (also called Samsung Galaxy J3 6) is an Android smartphone developed by Samsung Electronics and was released January 15, 2016.
+
 {{Infobox device
 | manufacturer = Samsung
 | name =  Galaxy J3
@@ -13,7 +15,6 @@
 | display = 720 x 1280 AMOLED
 | memory = 1.5 GB
 | architecture = armv7
-<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = P
 | status_touch = Y
@@ -34,7 +35,6 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
@@ -46,8 +46,6 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
-Samsung Galaxy J3 (2016) (also called Samsung Galaxy J3 6) is an Android smartphone developed by Samsung Electronics and was released January 15, 2016.
-
 == Contributors ==
 * ''[[user:Ster|Ster]]'' Please contact me on Matrix if you are at any step of the process, either by mentioning my username <code>@sterrss:matrix.org</code> or simply message me directly, I'd love to hear any success, failures, difficulties. I'm not necessarily going to be able to help you, since I've still got lots to learn but it'd be nice to chat.
 
