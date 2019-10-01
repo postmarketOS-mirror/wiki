@@ -11,6 +11,8 @@ If the screen looks laggy, it might be a known issue with refresh rate. It can b
 
 == Touch screen ==
 
+See also [[Troubleshooting:touchscreen|touchscreen troubleshooting]].
+
 === libinput ===
 This library is used by almost everything accessing your touch screen (e.g. Weston, X11, kwin). Just follow [[Osk-sdl#Set_touchscreen_device|these instructions]] to set your <code>deviceinfo_dev_touchscreen</code> variable in the [[deviceinfo]] file.
 
