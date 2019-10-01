@@ -41,6 +41,9 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
+== Users owning this device ==
+{{Device owners}}
+
 == What works ==
 * Compiling the kernel and booting ([https://gitlab.com/postmarketOS/pmaports/merge_requests/314 !314])
 * Wifi with the proprietary firmware ([https://gitlab.com/postmarketOS/pmaports/merge_requests/309 !309])
