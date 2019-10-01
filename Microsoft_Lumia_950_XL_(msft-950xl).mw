@@ -1,0 +1,98 @@
+{{Infobox device
+| manufacturer = Microsoft
+| name =  Lumia 950 XL
+| codename = msft-950xl
+| image = File:Lumia 950 XL boots Debian with Bluetooth status.jpg
+| imagecaption = Lumia 950 XL booting GNOME with Bluetooth status shown
+| releaseyear = 2015
+| originalsoftware = Windows 10 Mobile
+| chipset = Qualcomm Snapdragon 810 (MSM8994)
+| cpu = Cortex-A53 (4), Cortex-A57 (4)
+| gpu = Adreno 430
+| storage = 32GB eMMC and SD card slot
+| display = 1440x2560 AMOLED
+| memory = 3GB
+| architecture = aarch64
+| status_usbnet = N
+| status_flashing = N
+| status_touch = Y
+| status_screen = Y
+| status_wifi = P
+| status_xwayland = N
+| status_fde = N
+| status_mainline = Y
+| status_battery = N
+| status_3d = N
+| status_accel = N
+| status_audio = N
+| status_bluetooth = Y
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N
+| status_sms = N
+| status_calls = N
+| status = kernel compiles and boots. Bringing-up other components
+| booting = yes
+| n-android =  ✔
+| pmoskernel = 4.18
+}}
+
+== Contributors ==
+* [[User:SunshineBiscuit|SunshineBiscuit]]
+
+== Maintainer(s) ==
+* [[User:SunshineBiscuit|SunshineBiscuit]]
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Windows Phone flash mode can be entered using WPInternals, thor2 or Windows Device Recovery Tool.
+
+Most WoA images have USB mass storage mode available with Power + VolDown key sequence on boot. Alternatively, enter USB mass storage mode via WPInternals.
+
+Because Lumia 950 XL uses standardized UEFI firmware, it is not necessary to flash the device once it is unlocked. Simply install boot-shim and the UEFI firmware similar to the way installing Windows 10 ARM on Lumia 950 XL, partition ('''Do not delete any partitions before and including EFIESP''') and copy files to the device and it will boot.
+
+'''Warning: Do not touch anything inside DPP partition or it will cause permanent damage to the device'''
+
+== Progress ==
+A slightly patched kernel is available at https://dev.azure.com/imbushuo-personal/_git/Kernel.
+
+Although Lumia 950 XL supports ACPI, the arm64 ACPI support for Qualcomm platforms is limited to Windows-only. Hence a device tree is necessary for successful bring-up. The current device tree is available at https://dev.azure.com/imbushuo-personal/_git/Device%20Tree?version=GBml-4.18-950xl.
+
+The progress is generic for all Linux distros including Debian and pmOS.
+
+* Processor bring-up using PSCI
+* I2C, GPIO, UART and a few more simple low-speed I/O
+* GCC clocks (RPM clocks do not work yet)
+* Synaptics Touchscreen via I2C
+* FrameBuffer via UEFI GOP @ 1080x1920
+* Bluetooth via UART. Need rampatch and TLV firmware blobs similar to other QCA6174 chipsets.
+* PCIe Root Port, the QCA6174 Wi-Fi NIC is visible, ath10k driver starts but currently stalls the system. Need rampatch and TLV firmware blobs similar to other QCA6174 chipsets.
+
+== Booting ==
+* Unlock the device using WPInternals
+* Install boot-shim and UEFI firmware
+* Partition the device, create a new ESP partition for aarch64 (keep the ARM32 one) and a partition for the root filesystem
+* Unpack root filesystem, install GRUB ARM64, kernel and device tree into the new ESP partition
+
+A reference boot entry:
+<pre>
+linux /vmlinuz-4.18.6-lumia-950xl-uefi nomodeset acpi=off video=efifb boot_delay=200 root=UUID=<Root Partition UUID>
+initrd /initrd.img-4.18.6-lumia-950xl-uefi
+devicetree /msm8994-microsoft-lumia-950xl.dtb
+</pre>
+
+== See also ==
+<!--
+Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{issue|CHANGEME|pmaports}} Some related issue
+You can also add normal web links:
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+-->
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
+-->
