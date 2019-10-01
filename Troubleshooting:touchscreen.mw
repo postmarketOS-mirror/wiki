@@ -20,7 +20,7 @@ Some touchscreen drivers on Mediatek devices have issues because they don't foll
 event3 - sec_touchscreen: kernel bug: device has min == max on ABS_MT_PRESSURE from libinput debug-events
 </pre>
 
-This message, which can be found in <codelibinput debug-events></code> indicates that the touchscreen driver in the kernel is misbehaving and that libinput won't accept the input.
+This message, which can be found in <code>libinput debug-events</code> indicates that the touchscreen driver in the kernel is misbehaving and that libinput won't accept the input.
 
 In this case, solving the issue means patching the touchscreen driver, which will require you to modify your kernel code. While the device is running, figure out which driver is being used, perhaps by running <code>find /sys -name "input*"</code> or <code>find /sys -name "event*"</code>, use <code>grep</code> in your kernel source to find the line [https://github.com/djeman/android_kernel_samsung_sharkls/blob/e3381e42b00e1ff977815b365cea53f18afff7a8/drivers/input/touchscreen/ist30xxc/ist30xxc.c#L1449 line that contains <code>input_set_abs_params(input_dev, ABS_MT_PRESSURE, 0, 0);</code>], and comment it out. Rebuild the kernel and try again. See our [https://wiki.postmarketos.org/wiki/Patching patching] guide for more information about how to make these changes correctly.
 
