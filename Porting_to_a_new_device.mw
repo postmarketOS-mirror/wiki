@@ -367,9 +367,13 @@ As soon as USB networking is functional, or you have another indication that boo
 See the [[git workflow]] article for detailed instructions.
 
 === Display ===
-To make the display work in the first place, read [[Troubleshooting:display]] and [[Tuning sysfs]]. Then [[Screen_Calibration#Touch_screen|configure your touch screen]].
+To make the display work in the first place, read [[Troubleshooting:display]] and [[Tuning sysfs]].
 
 After you have it working, please take some [[Making_good_photos|nice photos]] and add them to your device's wiki page. If you have a Reddit account, consider posting them in [https://www.reddit.com/r/postmarketOS/ /r/postmarketOS] as well.
+
+=== Touchscreen===
+
+To get it working, visit [[Screen_Calibration#Touch_screen|the screen calibration page]].
 
 === Changing your installation ===
 ==== Install packages over SSH ====
