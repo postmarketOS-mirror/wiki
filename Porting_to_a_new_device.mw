@@ -373,7 +373,7 @@ After you have it working, please take some [[Making_good_photos|nice photos]] a
 
 === Touchscreen===
 
-To get it working, visit [[Screen_Calibration#Touch_screen|the screen calibration page]].
+To get it working, visit [[Screen_Calibration#Touch_screen|the screen calibration page]]. If you're having trouble, visit [[Troubleshooting:touchscreen|touchscreen troubleshooting]].
 
 === Changing your installation ===
 ==== Install packages over SSH ====
