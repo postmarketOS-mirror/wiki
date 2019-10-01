@@ -16,6 +16,16 @@ If your device is receiving events, and you see <code>kernel bug: device has min
 
 Some touchscreen drivers on Mediatek devices have issues because they don't follow the standards. You can compare the driver source of your driver (especially the functions <code>tpd_up</code> and <code>tpd_down</code>) with [https://github.com/z3ntu/android_kernel_fairphone_FP1/blob/postmarketOS/mediatek/custom/common/kernel/touchpanel/ft5316/ft5316_driver.c#L320-L350 the Fairphone 1 touchscreen driver] and see if adjusting your touchscreen driver to mostly match that behavior helps.
 
+= sec_touchscreen: kernel bug =
+
+<pre>
+event3 - sec_touchscreen: kernel bug: device has min == max on ABS_MT_PRESSURE from libinput debug-events
+</pre>
+
+This message indicates that the touchscreen driver in the kernel is misbehaving and that libinput won't accept the input.
+
+In this case, solving the issue means patching the touchscreen driver and removing/commenting the [https://github.com/djeman/android_kernel_samsung_sharkls/blob/e3381e42b00e1ff977815b365cea53f18afff7a8/drivers/input/touchscreen/ist30xxc/ist30xxc.c#L1449 line that contains <code>input_set_abs_params(input_dev, ABS_MT_PRESSURE, 0, 0);</code>].
+
 = See also =
 
 * [https://gitlab.com/postmarketOS/pmaports/issues/337 Touchscreen issues on the Huawei Y3 II 3G]
