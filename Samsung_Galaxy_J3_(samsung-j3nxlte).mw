@@ -105,6 +105,13 @@ excluding when the device is running postmarketOS.
 
 I don't know if you'll have this problem.
 
+== Next Steps ==
+
+I want to try to get Wifi, 3D acceleration and audio working, initially by any possible means. To do this I will begin by attempting to port Halium to the
+device, with the intention of getting [https://wiki.postmarketos.org/wiki/Hybris Hybris] working. See the "See Also" section below, where I will add any links that I find useful or interesting for this. Please get in touch with me on Matrix if you can help me.
+
+In the long run, I would want to move away from Hybris and eventually mainline, but at present this seems very unlikely, as I don't have the necessary skills nor time.
+
 == See also ==
 * {{MR|653|pmaports}} Initial merge request
 * [https://forum.xda-developers.com/galaxy-j3-2016/development/rom-lineageos-14-1-samsung-galaxy-j3-t3667015 Unofficial LineageOS port on XDA Developers]
