@@ -32,7 +32,8 @@
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
-| booting = yes
+| status = Boots, no MR/port in pmaports
+| booting = no
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
