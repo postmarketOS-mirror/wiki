@@ -152,6 +152,22 @@ chroot /sysroot rc-update add telnetd default
 
 Then telnetd should be started once the device boots and you should be able to connect to it.
 
+Alternatively you can try to use <code>dropbear</code> SSH server instead of default <code>openssh</code>. For this you can avoid messing with debug-shell hook and modifying system on running phone, you can twek rootfs before flashing it in this sequence:
+
+ 1. pmbootstrap init
+ 2. pmbootstrap install
+ 3. pmbootstrap chroot -r    # go inside you phone's future rootfs
+ 4. # make modifications to rootfs
+    # in this case, to workaround an SSH issue:
+    apk add dropbear
+    rc-update del sshd default
+    rc-update add dropbear default
+ 5. exit
+ 6. pmbootstrap install      # again, to recreate image
+    # flash images as usual
+ 7. pmbootstrap flasher flash_kernel
+ 8. pmbootstrap flasher flash_rootfs
+
 === Note about HTC devices ===
 * HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
 * The [[HTC_Desire_(htc-bravo)|HTC desire]] does work, and it required [https://github.com/postmarketOS/pmbootstrap/blob/bd4ebb3473764108daa92b308511be7e0a1b6948/aports/device/device-htc-bravo/initfs-hook.sh#L8 this line in the initfs-hook] to get USB network
