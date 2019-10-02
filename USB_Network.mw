@@ -152,7 +152,7 @@ chroot /sysroot rc-update add telnetd default
 
 Then telnetd should be started once the device boots and you should be able to connect to it.
 
-Alternatively you can try to use <code>dropbear</code> SSH server instead of default <code>openssh</code>. For this you can avoid messing with debug-shell hook and modifying system on running phone, you can twek rootfs before flashing it in this sequence:
+Alternatively you can try to use <code>dropbear</code> SSH server instead of default <code>openssh</code>. For this you can avoid messing with debug-shell hook and modifying system on running phone, you can tweak rootfs before flashing it in this sequence:
 
  1. pmbootstrap init
  2. pmbootstrap install
