@@ -53,9 +53,9 @@
 
 == WiFi ==
 If your pings are high, disable bluetooth:
-```
-$ sudo rfkill block bluetooth
-```
+
+ $ sudo rfkill block bluetooth
+
 == Audio ==
 <!-- TODO: Share this between all MSM8916 devices -->
 Everything is muted by default and must be enabled through alsaucm. Unfortunately, the tool is not very user-friendly.
