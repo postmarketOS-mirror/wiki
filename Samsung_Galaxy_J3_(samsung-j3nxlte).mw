@@ -111,6 +111,7 @@ I don't know if you'll have this problem.
 * [https://github.com/djeman/android_kernel_samsung_sharkls Kernel source code]
 * [https://www.gsmarena.com/samsung_galaxy_j3_(2016)-7760.php Full device specs]
 * {{issue|1834|pmbootstrap}} is the reason I put flashing as partial.
+* [http://www.mardy.it/it/blog/2019/07/notes-on-porting-the-samsung-j3-to-halium-%2B-ubports.html Someone's attempt to port Halium to samsung-j3xlte]
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 
