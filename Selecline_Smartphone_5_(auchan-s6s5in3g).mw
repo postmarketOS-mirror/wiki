@@ -18,7 +18,7 @@ Official name is Selecline Smartphone 5" but I omit the " symbol which creates m
 | storage = 8GiB
 | display = 854x480
 | memory = 512MiB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
