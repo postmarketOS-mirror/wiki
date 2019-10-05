@@ -35,10 +35,7 @@
 | status = 
 | booting = yes
 | pmoskernel = Mainline
-
-<!--
-| whet_dhry = 0.0
--->
+| whet_dhry = 912.7
 }}
 
 == Contributors ==
