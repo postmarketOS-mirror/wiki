@@ -91,3 +91,8 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |}
 
 the ARMv7 column has been updated on 2019-07-15 with the Nokia N900 as test device. Falkon might work on devices with more memory.
+
+
+== Firefox ==
+
+Add the <code>MOZ_USE_XINPUT2=1</code> environment variable to make firefox handle touchscreen events properly.
