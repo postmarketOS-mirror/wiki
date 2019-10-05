@@ -63,7 +63,6 @@ The Vivante GPU in the devkit is not fully currently supported upstream in Mesa.
 ** Interface shows up in OS, and wpa_supplicant seems to connect(?), but no IP.
 * Resolve issues with Bluetooth
 ** Bluetooth can be started by loading the rsi_91x module with <code>dev_oper_mode=14</code> but this disables Wifi station/client mode and enables Wifi AP mode. It doesn't seem to work with <code>dev_oper_mode=13</code>, which enables Wifi client mode. 
-* Current dts enables usb host but doesn't enable LCD display
 * Test/enable camera
 * Test/enable ambient light sensor
 
