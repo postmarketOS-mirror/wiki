@@ -94,7 +94,7 @@ You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 |-
 | Accelerometer
 | Bosch BMA223
-| BMP250_I2C
+| BMC150_ACCEL_I2C 
 |-
 | Volume buttons
 | Buttons connected to the KEYADC
