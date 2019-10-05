@@ -54,30 +54,7 @@ Once the image has been flashed, place the device into emmc mode and hit the reb
 
 === Graphics ===
 
-The Vivante GPU in the devkit is not fully currently supported upstream in Mesa. In order to achieve preliminary 3D acceleration on this device, you can use the [https://gitlab.com/craftyguy/pmaports/commits/librem5_playground 'librem5_playground' branch in craftyguy's repo]. This builds a Purism branch of Mesa with not-yet-upstream patches.
-
-The <code>device-librem5-devkit</code> package does not include this newer Mesa as a dependency.
-
-If you select a GUI during <code>pmbootstrap init</code> and have this pmaports branch checked out under the aports directory, then the main Mesa packages (excluding mesa-dri-*) will automatically built into the rootfs image. The following mesa-dri-* packages will need to be copied to device manually and installed. To copy the Mesa packages built by this branch (ignoring mesa-dev and swrast/osmesa) to the device:
-
- <nowiki>
-$ scp /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-19.0.0-r999.apk \
-    /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-dri-etnaviv-19.0.0-r999.apk \
-    /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-dri-imx-19.0.0-r999.apk \
-    /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-egl-19.0.0-r999.apk \
-    /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-gl-19.0.0-r999.apk \
-    /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-glapi-19.0.0-r999.apk \
-    /home/YOU/.local/var/pmbootstrap-out/packages/aarch64/mesa-gles-19.0.0-r999.apk \
-    user@<IP OF DEVKIT>:~/
-</nowiki>
-
-These can be easily installed/upgraded by running the following when logged into the device:
-
- <nowiki>
-$ sudo apk add mesa*.apk
-</nowiki>
-
-Note: The Mesa package in this branch disables all other GPU drivers to help reduce compile time, and may also be buggy since it's based off of the Mesa master branch, so it's not likely to be merged into mainline pmaports.
+The Vivante GPU in the devkit is not fully currently supported upstream in Mesa. In order to achieve preliminary 3D acceleration on this device, the <code>mesa-purism-gc7000</code> package is used. This is automatically installed by pmbootstrap.
 
 == Todo ==
 
