@@ -15,7 +15,7 @@
 | architecture = x86_64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = N
+| status_flashing =
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
@@ -27,8 +27,8 @@
 | status_accel = Y
 | status_audio = Y
 | status_bluetooth = Y
-| status_camera = N
-| status_gps = N
+| status_camera =
+| status_gps =
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
