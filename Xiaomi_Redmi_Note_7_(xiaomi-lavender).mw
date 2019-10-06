@@ -62,9 +62,12 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 * Same as recovery, but this time hold the volume down key instead of both keys.
 
 == Installation ==
-Should be as usual for fastboot devices
 
-Flash a working LineageOS ROM first - it will contain all needed partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure it is strictly needed)
+Flash a working LineageOS ROM first - it will contain all needed partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure if it's strictly needed). For example this [[https://forum.xda-developers.com/redmi-note-7/development/rom-lineageos-16-0-t3923203 LineageOS 16.0 ROM]]. The situation is a bit hard, because there is no official LineageOS release for this device yet, not even a official TWRP.
+
+This is still a work-in-progress. If you want to test that kernel boots, checkout my development branch in pmaports (link below in links section), zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device; then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 device-xiaomi-lavender linux-xiaomi-lavender postmarketos-mkinitfs postmarketos-mkinitfs-hook-debug-shell</code>) then proceed as usual (<code>pmbootstrap install ; pmbootstrap initfs hook-add debug-shell ; pmbootstrap flasher flash_kernel</code>).
+
+There is no point in flashing rootfs yet.
 
 == Additional info ==
 === Partition list ===
