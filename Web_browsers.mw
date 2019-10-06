@@ -11,11 +11,11 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |-
 | [[firefox]]
 | not packaged
-| not packaged
+| works
 | ?
 | gecko
 | 
-| Alpine Linux hasn't packaged non-x86_64 versions yet.
+| Alpine Linux has packaged only x86_64 and aarch64 versions.
 |-
 | [[chromium]]
 | works
@@ -91,7 +91,6 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 |}
 
 the ARMv7 column has been updated on 2019-07-15 with the Nokia N900 as test device. Falkon might work on devices with more memory.
-
 
 == Firefox ==
 
