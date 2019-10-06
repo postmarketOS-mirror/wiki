@@ -39,14 +39,15 @@
 * DolphinChips
 
 == Maintainer(s) ==
-DolphinChips
+* DolphinChips
 
 == Users owning this device ==
 {{Device owners}}
 == Issues ==
 * Phone gets stuck somewhere when shutting down
 * X11 doesn't work (requires kernel patching)
-* Firmware is not packaged (source of the most problems, except for touchscreen)
+* Firmware is not packaged (source of the most problems)
+* Touchscreen doesn't work (initfs hook gets executed too early)
 
 == How to enter flash mode ==
 <code>Power</code> + <code>Volume Down</code> buttons or use <code>adb reboot bootloader</code>
