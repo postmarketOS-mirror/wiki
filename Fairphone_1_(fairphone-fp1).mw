@@ -17,10 +17,10 @@
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = Y
 | status_screen = Y
-| status_wifi =
+| status_wifi = N
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline =
+| status_mainline = N
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
