@@ -27,6 +27,9 @@ tables=Devices
   | P
   | Partially implemented
 |-
+  | 
+  | Not implemented or working as of now
+|-
   | -
   | Not applicable -- device does not have feature
 |}
