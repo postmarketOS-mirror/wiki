@@ -24,7 +24,7 @@ On existing systems, it can be installed by installing the <code>postmarketos-ui
 
 == Starting Plasma Mobile ==
 
-If <code>postmarketos-ui-plasma-mobile</code> is installed, Plasma Mobile will be automatically launched via the [https://github.com/canonical/lightdm LightDM] display manager. If it doesn't launch, have a look at <code>$ logread | grep plasma-mobile</code> and <code>/usr/bin/plasma-phone</code>.
+If <code>postmarketos-ui-plasma-mobile</code> is installed, Plasma Mobile will be automatically launched via the [https://github.com/canonical/lightdm LightDM] display manager.
 
 It can also be launched manually by running the following script:
 <pre>
