@@ -18,9 +18,43 @@ It works on most devices with a working display, both with hardware acceleration
 Do note that this interface is unbearably slow without hardware acceleration and is not recommended for devices without it.
 
 == Installation ==
-Run <code>pmbootstrap init</code> and choose <code>plasma-mobile</code> in the interface section. If you already have postmarketOS installed, you can install Plasma Mobile by running <code># apk add postmarketos-ui-plasma-mobile</code>. Make sure you uninstall any other UI before you do this.
+Using <code>pmbootstrap</code>, Plasma Mobile can be installed by selecting it as the UI in <code>pmbootstrap init</code>.
 
-After installation, the shell will automatically launch upon boot using LightDM. If it doesn't, have a look at <code>$ logread | grep plasma-mobile</code> and <code>/usr/bin/plasma-phone</code>.
+On existing systems, it can be installed by installing the <code>postmarketos-ui-plasma-mobile</code> meta package or <code>plasma-phone-components</code> if postmarketOS specific customization is not wanted.
+
+== Starting Plasma Mobile ==
+
+If <code>postmarketos-ui-plasma-mobile</code> is installed, Plasma Mobile will be automatically launched via the [https://github.com/canonical/lightdm LightDM] display manager. If it doesn't launch, have a look at <code>$ logread | grep plasma-mobile</code> and <code>/usr/bin/plasma-phone</code>.
+
+It can also be launched manually by running the following script:
+<pre>
+#!/bin/sh
+
+export QML2_IMPORT_PATH=/usr/lib/qt/qml:/usr/lib/qt5/qml
+export QT_QPA_PLATFORMTHEME=KDE
+export QT_QUICK_CONTROLS_STYLE=Plasma
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export XDG_CURRENT_DESKTOP=KDE
+export KDE_SESSION_VERSION=5
+export PLASMA_PLATFORM=phone:handset
+export QT_VIRTUALKEYBOARD_STYLE=Plasma
+export QT_QUICK_CONTROLS_MOBILE=true
+export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
+sleep 2
+
+if [ -d "/dev/dri" ]; then
+	kwin_wayland --drm --xwayland plasma-phone 2>&1 | logger -t "$(whoami):plasma-mobile"
+else
+	# NOTE: using GALLIUM_DRIVER=llvmpipe might give you better performance (or not work at all.)
+	# If it does give you a performance gain, please open an issue to discuss how to implement this properly.
+	export GALLIUM_DRIVER=softpipe
+	export KWIN_COMPOSE=Q
+	export LIBGL_ALWAYS_SOFTWARE=1
+
+	echo "startplasmamobile: using software rendering with: ${GALLIUM_DRIVER}" | logger -t "$(whoami):plasma-mobile"
+	kwin_wayland --framebuffer --xwayland plasma-phone 2>&1 | logger -t "$(whoami):plasma-mobile"
+fi
+</pre>
 
 For the official KDE instructions on running Plasma Mobile, see [https://community.kde.org/Plasma/Mobile/RunningApps their website].
 
