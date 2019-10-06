@@ -1,0 +1,13 @@
+Phosh is a mobile desktop interface based on the [https://en.wikipedia.org/wiki/GNOME GNOME] stack. It was originally created for [https://puri.sm/ Purism]'s [https://puri.sm/products/librem-5/ Librem 5], but can be used on any device.
+
+== Installation ==
+
+Using <code>pmbootstrap</code>, Phosh can be installed by selecting it as the UI in <code>pmbootstrap init</code>.
+
+On existing systems, it can be installed by installing the <code>postmarketos-ui-phosh</code> meta package or <code>phosh</code> if postmarketOS specific customization is not wanted.
+
+== Starting Phosh ==
+
+If <code>postmarketos-ui-phosh</code> is installed, Phosh will be automatically launched via the [https://github.com/canonical/lightdm LightDM] display manager.
+
+It can also be launched manually by running <code>dbus-run-session /usr/bin/phosh</code>.
