@@ -161,7 +161,6 @@ finished. total time: 22.036s
 It happens when your device expects a sparse system image. The workaround is as follows:
 
 * Set <code>deviceinfo_flash_sparse=true</code> in deviceinfo
-* Add <code>libsparse</code> to <code>depends=</code>.
 
 For more information, see issue [https://github.com/postmarketOS/pmbootstrap/issues/299 #299]
 
