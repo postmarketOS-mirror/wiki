@@ -56,7 +56,7 @@ else
 fi
 </pre>
 
-For the official KDE instructions on running Plasma Mobile, see [https://community.kde.org/Plasma/Mobile/RunningApps their website].
+For the official KDE instructions on running Plasma Mobile, see [https://docs.plasma-mobile.org/RunningApps.html their website].
 
 == Troubleshooting ==
 === Software rendering ===
