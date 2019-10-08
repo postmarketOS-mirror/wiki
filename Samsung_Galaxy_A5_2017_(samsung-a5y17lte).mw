@@ -15,7 +15,7 @@
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_flashing = N
 | status_touch = P
 | status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
