@@ -119,3 +119,6 @@ wget: error getting response: Connection reset by peer
 </pre>
 
 You are probably running an older kernel (pre 3.17), which does not yet have the "getrandom" syscall. This is required by modern openssl/libressl versions (Alpine was on libressl for a long time, then switched back to openssl). Check your kernel version, and if that is the case, and [[the Mainline Kernel|mainlining]] is not feasible for you, consider backporting the getrandom syscall like done in {{MR|69|pmaports}}. This issue was discussed in {{issue|107|pmaports}}.
+
+== External resources ==
+*[http://docs.halium.org/en/latest/porting/common-kernel-build-errors.html Halium Docs]
