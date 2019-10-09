@@ -207,7 +207,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 |-
 | <code>boot_filesystem</code>
 | Sets the filesystem used for the /boot partition containing initramfs-extra
-| default: <code>"ext4"</code>, <code>"fat16"</code>
+| default: <code>"ext4"</code>, <code>"fat16"</code>, <code>"fat32"</code>
 |-
 | <code>rootfs_image_sector_size</code>
 | Some devices made after 2016 with UFS storage use 4096 byte sectors and therefore need this option to boot. Read {{MR|1725}} for details.
