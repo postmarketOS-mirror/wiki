@@ -67,6 +67,14 @@ With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED wil
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
+== Notes ==
+Kernel currently does not boot up. The simplest method to see dmesg messages:
+* boot a postmarketOS image (pmbootstrap flasher boot)
+* disconnect the USB cable as soon as the boot process starts (e.g. when Sony logo appears)
+* keep holding [VOLUME -] to start the recovery
+* in recovery, start terminal and run 'cat /sys/fs/pstore/console-ramoops'
+(based on [https://wiki.postmarketos.org/wiki/Troubleshooting:boot boot process troubleshooting wiki])
+
 == See also ==
 * [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/device-sony-lilac Device package (WIP)]
 * [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/linux-sony-lilac Kernel package (WIP)]
