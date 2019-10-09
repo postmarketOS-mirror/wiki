@@ -10,7 +10,7 @@
 | cpu = Qualcomm Snapdragon S1 1GHz Cortex A5
 | gpu = Adreno 200
 | storage = 4GB
-| display = 320x480
+| display = 320x480 TFT
 | memory = 768MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| status = 
+| status = Only boot using kernel compiled using arm toolchain.
 | booting = yes
 }}
 
@@ -70,3 +70,4 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
 * [https://github.com/Nothing-Dev/android_kernel_samsung_royss CyanogenMod 11 kernel source]
+* {{MR|670|pmaports}} Initial merge request
