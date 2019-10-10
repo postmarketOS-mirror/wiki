@@ -32,22 +32,21 @@
 if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
 Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
+| pmoskernel = 4.4.189
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
 | status_otg = 
 -->
 }}
-
 This device is for generic devices that use the Rockchip RK3126 as its chipset.
 
 == Contributors ==
 * rendeko
 
 == Devices ==
-The following devices use this chip:
-* Proscan PLT9650G
+=== Proscan PLT9650G ===
+* Lacks vibration motor and LEDs, so maximum-attention hook can't be used.
 
 == What works ==
 * Kernel compiles but doesn't seem to finish booting
@@ -57,3 +56,6 @@ The following devices use this chip:
 
 == Users owning this device ==
 {{Device owners}}
+
+== Notes ==
+* RK3126 (from 2014) is separate from RK3126c (from 2017). This device only covers RK3126.
