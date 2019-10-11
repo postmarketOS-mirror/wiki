@@ -97,14 +97,6 @@ If you want just to boot to SSH, in chroot, comment out the offendig string, e.g
 
 If you want to make the device boot to UI as normal, you should install patched eudev package (see above) at this point and reboot.
 
-
-=== Getting the display to render frames ===
-Using MartinBraam's trick it is possible to make the display render frames like this:
-
- while [ ! ]; do cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode; done
-
-See https://github.com/postmarketOS/pmbootstrap/pull/66#issuecomment-306343779
-
 == Development notes ==
 === Kernels ===
 There are several candidate kernels for the port:
