@@ -37,44 +37,6 @@
 == Contributors ==
 * Konrad Dybcio (@konradybcio)
 
-== What works ==
-- Boot
-
-- USB Network (ssh and tethering)
-
-- Display (with a workaround script)
-
-- Touchscreen
-
-- XFCE4
-
-- Weston
-
-- MATE
-
-- osk-sdl
-
-== What does not work ==
-- Plasma
-
-- Wifi
-
-- Modem
-
-- GPS
-
-- Audio
-
-- Camera
-
-- 3D
-
-- Sensors
-
-- Notification LED
-
-- charging-sdl // technically it shows up and shows (probably) accurate percentage yet the display won't go off after charger disconnect
-
 == How to enter flash mode ==
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
 
