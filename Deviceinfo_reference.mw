@@ -51,7 +51,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 
 |-
 | <code>modules_initfs</code>
-| Kernel modules to include in the initramfs image. Note: modules to be loaded ''after'' the initramfs can be specified like in a <code>modules-load.conf</code> ([https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9070 example]).
+| Kernel modules to include in the initramfs image. Modules ext4 and usb_f_rndis should not be included in this list, they are always added to the initramfs image if they were built as module ({{MR|673|pmaports}}). Note: modules to be loaded ''after'' the initramfs can be specified like in a <code>modules-load.conf</code> ([https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9070 example]).
 |
 
 |-
