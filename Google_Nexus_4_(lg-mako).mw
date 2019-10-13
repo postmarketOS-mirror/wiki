@@ -1,3 +1,4 @@
+{{note|Currently the device is booting into a black screen, see {{issue|209|pmaports}}. Help with resolving this is welcome. Please remove this note when the issue has been fixed.}}
 {{Infobox device
 | manufacturer = Google (LG)
 | name = Nexus 4
@@ -34,6 +35,7 @@
 | status_otg = Y
 | booting = yes
 }}
+
 == Contributors ==
 
 * ollieparanoid
