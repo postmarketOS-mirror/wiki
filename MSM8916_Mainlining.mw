@@ -532,7 +532,15 @@ nonfree_firmware() {
 
 While you are at it, this is a good chance to package the <code>venus.*</code> firmware as well. It is used for hardware accelerated video codecs and should work out of the box without further changes.
 === Display/GPU ===
-{{todo|}}
+{{note|'''Note:''' Due to weird dependencies issues in the DRM MSM driver, you need to make [[#WiFi/Bluetooth|WiFi/Bluetooth]] work to have the DRM MSM driver finish loading successfully. (WCNSS takes a while to load, so it will trigger attempting to probe DRM MSM again after it fails to load on its own due to dependencies issues between the DRM driver and the panel driver...)}}
+
+The display tends to be one of the most difficult things to get working. This is because manufacturers have many different options how to implement the display in the hardware. Generally, all devices will have a display panel connected to the SoC via [https://en.wikipedia.org/wiki/Display_Serial_Interface MIPI Display Serial Interface (DSI)]. The panel can vary even for one device model; it is common to support multiple panels to be more flexible when assembling the device. As if this wasn't enough, panels are usually paired with additional controllers (e.g. for the backlight) or regulators (to provide special power supplies). Those may, or may not need to be controlled from the kernel.
+
+The easy part is usually the panel itself. To make it work we usually only need to send some special DSI commands to initialize it. [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting DSI Panel Driver Porting] on the Freedreno wiki has an introduction how to port panels. For MSM8916 mainlining, we have created [https://github.com/msm8916-mainline/linux-mdss-dsi-panel-driver-generator linux-mdss-dsi-panel-driver-generator] which attempts to automatically parse the downstream device tree and generates panel drivers for all the supported panels.
+
+{{note|'''Note:''' The generated panel driver should usually work without larger changes (follow the README). As usual, it is recommended to ask in the chat for further advice before running it.}}
+
+{{todo|Device Tree and Backlight/Brightness}}
 
 === Touchscreen ===
 {{todo|}}
