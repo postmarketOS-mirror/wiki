@@ -546,8 +546,14 @@ You also need to make changes to the device tree. <code>arm64: dts: msm8916-long
 
 {{note|'''Note:''' <code>qcom,dsi-phy-regulator-ldo-mode</code> is needed if, '''and only if''' you have <code>qcom,regulator-ldo-mode</code> in downstream. Otherwise, remove it.}}
 
-==== Backlight/Brightness ====
-{{todo|}}
+Some devices have an extra backlight IC that needs to be controlled separately in the kernel. The easy case is where it is simply enabled using a GPIO: in this case it can be simply treated like a fixed regulator. But some backlight ICs have an [https://en.wikipedia.org/wiki/I%C2%B2C I²C interface] and then need an extra driver in the kernel.
+
+==== Brightness ====
+There are different approaches used to dim the brightness of the screen. The approach used in downstream is usually defined by the <code>qcom,mdss-dsi-bl-pmic-control-type</code> property in the panel node of the downstream device tree:
+
+* '''Pulse-width modulation (PWM)''' (<code>bl_ctrl_pwm</code>): In this case there is an external PWM generator that generates a PWM signal for the display. PM8916 (the PMIC of MSM8916) contains one PWM generator that can be configured for the display. <code>arm64: dts: msm8916-longcheer-l8150: Add PWM backlight support</code> is an example how to set it up.
+* '''MIPI DCS commands''' (<code>bl_ctrl_dcs</code>): In this case the panel controller handles the brightness automatically. The generated panel driver should implement brightness without further changes.
+* '''Custom''': Some devices (e.g. Samsung AMOLED panels) have <code>bl_ctrl_dcs</code> or something else listed, but actually use an entirely custom way to control display brightness. This needs to be implemented manually in the panel driver (or using an extra backlight driver).
 
 === Touchscreen ===
 {{todo|}}
