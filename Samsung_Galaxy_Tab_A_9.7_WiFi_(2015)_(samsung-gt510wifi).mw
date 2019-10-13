@@ -6,7 +6,7 @@
 | imagecaption = Samsung Galaxy Tab A 9.7 WiFi (2015)
 | releaseyear = 2015
 | originalsoftware = Android 7.1.1 with Linux Kernel version 3.10.49
-| pmoskernel = 5.3-rc6
+| pmoskernel = 5.4-rc2
 | chipset = Qualcomm Snapdragon SD410 (APQ8016)
 | cpu = Quad-core 1.2 GHz Cortex-A53
 | gpu = Qualcomm Adreno 306
@@ -96,21 +96,15 @@ Boot up the device after installation
 |-
 | Light Sensor || Capella Micro CM3323 || Yes || Possibly missing dts bindings
 |-
-| Gyroscope|| ? || ? || ?
-|-
 | Display || Samsung S6D7AA0 LTL101AT01 || No || Working in kernel fork
 |-
 | Backlight IC || Texas Instruments lp8556 (or lp8558) || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/video/backlight/lp855x_bl.c Yes] || Not yet implemented
-|-
-| Barometer || Not listed on android || ? || ?
 |-
 | Audio || ? || ? || ?
 |-
 | Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Untested] || Probably missing dts bindings
 |-
 | USB Switch || ? || ? ||
-|-
-| Magnetometer || Not listed on android || ? || 
 |-
 | Proximity sensor || Semtech SX9500 || Yes || Probably missing dts bindings, used to check where the tablet is held
 |-
@@ -121,8 +115,6 @@ Boot up the device after installation
 | Bluetooth || WCN3660B || Yes || Using the WCN3680 compatible
 |-
 | GPS || ? || ? || ?
-|-
-| HDMI/MHL || ? || ? || ?
 |-
 | NFC || ? || ? || ?
 |-
