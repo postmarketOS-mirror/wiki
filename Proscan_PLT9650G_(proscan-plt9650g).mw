@@ -1,11 +1,11 @@
 {{Infobox device
-| manufacturer = Rockchip
-| name =  RK3126
-| codename = rockchip-rk3126
-| releaseyear = 2014
-| chipset = Quad-core ARM Cortex-A7
-| gpu = Mali-400 MP2
-| memory = 997 MB
+| manufacturer = Proscan
+| name =  PLT9650G
+| codename = proscan-plt9650g
+| releaseyear = 2015
+| chipset = Rockchip RK3126, Cortex-A7  1.2GHz
+| gpu = Mali-400 MP
+| memory = 1GB DDRII, 8GB NAND Flash
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = 
@@ -39,14 +39,11 @@ Is OTG available, not used in wiki
 | status_otg = 
 -->
 }}
-This device is for generic devices that use the Rockchip RK3126 as its chipset.
+
+A generic cheap tablet running a Rockchip RK3126.
 
 == Contributors ==
 * rendeko
-
-== Devices ==
-=== Proscan PLT9650G ===
-* Lacks vibration motor and LEDs, so maximum-attention hook can't be used.
 
 == What works ==
 * Kernel compiles but doesn't seem to finish booting
@@ -54,8 +51,11 @@ This device is for generic devices that use the Rockchip RK3126 as its chipset.
 == What doesn't work ==
 * Everything
 
+== Notes ==
+* Lacks vibration motor and LEDs, so maximum-attention hook can't be used.
+
 == Users owning this device ==
 {{Device owners}}
 
 == Notes ==
-* RK3126 (from 2014) is separate from RK3126c (from 2017). This device only covers RK3126.
+* The chipset is a RK3126 (from 2014) which is separate from RK3126c (from 2017).
