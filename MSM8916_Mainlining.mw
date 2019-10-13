@@ -511,6 +511,26 @@ Note the use of <code>qcom,wcn3680</code> instead of <code>qcom,wcn3660</code> f
 * WiFi and Bluetooth share the same antenna, and they tend to conflict with each other when they are used at the same time ("WiFi/BT coexistence"). In case of problems, try disabling one of them.
 * Dual-band support on WCN3660B seems to be broken at the moment: only 2.4 GHz networks show up in the WiFi network list.
 
+==== Firmware ====
+Unfortunately, WCNSS requires firmware to run. This firmware is signed, so it must be packaged separately for each device. The following files are needed:
+
+* <code>wcnss.mdt</code> plus all related segments (<code>wcnss.b00</code>, ...), i.e. <code>wcnss.*</code> (usually installed on a separate firmware (<code>NON-HLOS</code>) partition)
+* <code>WCNSS_qcom_wlan_nv.bin</code> (usually installed on the system partition, e.g. <code>/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin</code>
+
+On postmarketOS it should be packaged in a separate firmware package. Look at <code>firmware/firmware-wileyfox-crackling</code> as an example.
+
+Then add a new <code>nonfree-firmware</code> subpackage to your device package:
+
+ <nowiki>
+subpackages="$pkgname-nonfree-firmware:nonfree_firmware"
+
+nonfree_firmware() {
+	pkgdesc="GPU/WiFi/BT/Video firmware"
+	depends="linux-firmware-qcom firmware-vendor-device-venus firmware-vendor-device-wcnss"
+	mkdir "$subpkgdir"
+}</nowiki>
+
+While you are at it, this is a good chance to package the <code>venus.*</code> firmware as well. It is used for hardware accelerated video codecs and should work out of the box without further changes.
 === Display/GPU ===
 {{todo|}}
 
