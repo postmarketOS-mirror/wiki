@@ -1,0 +1,61 @@
+{{Infobox device
+| manufacturer = Rockchip
+| name =  RK3126
+| codename = rockchip-rk3126
+| releaseyear = 2014
+| chipset = Quad-core ARM Cortex-A7
+| gpu = Mali-400 MP2
+| memory = 997 MB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = 
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde =  
+| status_mainline =  
+| status_battery = 
+| status_3d =  <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel =  
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps =  
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = kernel compiles, doesn't boot
+| booting = no
+<!-- you can also use these lines if you need to:
+if the device haven't originally ran Android OS, e.g. Nokia N900
+| n-android =  ✔
+Version of the kernel that pmos is running
+| pmoskernel = 4.4.189
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = 
+-->
+}}
+This device is for generic devices that use the Rockchip RK3126 as its chipset.
+
+== Contributors ==
+* rendeko
+
+== Devices ==
+=== Proscan PLT9650G ===
+* Lacks vibration motor and LEDs, so maximum-attention hook can't be used.
+
+== What works ==
+* Kernel compiles but doesn't seem to finish booting
+
+== What doesn't work ==
+* Everything
+
+== Users owning this device ==
+{{Device owners}}
+
+== Notes ==
+* RK3126 (from 2014) is separate from RK3126c (from 2017). This device only covers RK3126.
