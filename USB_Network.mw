@@ -1,7 +1,7 @@
 USB connectivity is generally one of the first things you want up and running on your phone when porting to a new device.
 postmarketOS uses [[USB Network]]ing for every communication between the device and computer.
 
-=== Connecting ===
+= Connecting =
 Power on your device and connect it to your USB port. You should get the IP <code>172.16.42.2</code> assigned to your PC, check it with <code>ip a</code> or <code>ifconfig</code>.
 
 <source lang="shell-session">
@@ -14,7 +14,7 @@ $ ip a
        valid_lft forever preferred_lft forever
 </source>
 
-=== SSH ===
+== SSH ==
 {{note|There is a dedicated article for [[Inspecting_the_initramfs|inspecting the initramfs]] via telnet.}}
 
 When you are past the initramfs, you should be able to connect via <code>ssh</code> and the username and password you set during the install phase:
@@ -36,15 +36,15 @@ localhost:~$
 
 Use <code>sudo</code> to run commands as <code>root</code>, it is configured.
 
-=== Troubleshooting ===
+= Troubleshooting =
 
-==== Try IPv4 only ====
+== Try IPv4 only ==
 Especially while mainlining, getting an IP oftentimes only works with the following command:
 <source lang="shell-session">
 $ dhcpcd interface --nohook ipv6
 </source>
 
-==== Making sure the USB is detected ====
+== Making sure the USB is detected ==
 In case you don't get an IP address directly, make sure that your PC recognizes the phone after it booted into postmarketOS at all. It should show the following in <code>dmesg</code>.
 
 <source lang="shell-session">
@@ -82,7 +82,7 @@ If that's the case and you can't connect, your computer probably just doesn't ha
 
 If however, nothing shows up (even when [[Inspecting the initramfs]]), the most likely reason is a wrong [[Kernel_configuration]]. This is highly device-specific, but some hints can be found in [[#Kernel configuration parameters]]
 
-==== No IP assigned or MAC address is 00:00:00:00:00:00 ====
+== No IP assigned or MAC address is 00:00:00:00:00:00 ==
 If USB gets detected, then you probably don't have a network manager that automatically requests IP addresses from new ethernet interfaces, so you'll have to set the interface up manually.
 
 If there's no MAC address assigned(00:00:00:00:00:00), you need to assign one.
@@ -108,7 +108,7 @@ If after assigning an IP address and <code>ip a</code> shows your device status 
 
 P.S. If your device is Samsung with old kernel and <code>CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE</code>, something like [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-samsung-klte/0007-usb_gadget-set-random-rndis-host-MAC-address-to-prev.patch this patch] can help with preventing zero MAC.
 
-==== Kernel configuration parameters ====
+== Kernel configuration parameters ==
 If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig check</code> that the required parameters are all set.
 The postmarketOS initramfs is able to configure two different USB systems in the kernel in order to let your PC talk to your phone via networking. One of them has to be enabled (exclusively?):
 * [[Kernel_configuration#CONFIG_USB_ETH|CONFIG_USB_ETH]]
@@ -121,7 +121,7 @@ You can use <code>grep</code> on your kernel config to check which of these opti
 
 Related: {{github|1462}} linux-postmarketos-qcom: Remove composite usb gadget for networking
 
-==== SSH issues ====
+== SSH issues ==
 
 If SSH doesn't work for one reason or another, you can try enabling telnetd on your installation. For that, add the debug-shell initfs hook and connect to it. Then run the following commands to mount your root partition (writable):
 <pre>
@@ -168,13 +168,13 @@ Alternatively you can try to use <code>dropbear</code> SSH server instead of def
  7. pmbootstrap flasher flash_kernel
  8. pmbootstrap flasher flash_rootfs
 
-=== Note about HTC devices ===
+== Note about HTC devices ==
 * HTC devices seem to be tricky in general, we have a [[Troubleshooting:boot#See_also|few open issues]] with HTC devices that seem to be not booting
 * The [[HTC_Desire_(htc-bravo)|HTC desire]] does work, and it required [https://github.com/postmarketOS/pmbootstrap/blob/bd4ebb3473764108daa92b308511be7e0a1b6948/aports/device/device-htc-bravo/initfs-hook.sh#L8 this line in the initfs-hook] to get USB network
 * It was hard to discover: drebrez used the [[tuning sysfs]] instructions, but he had to write it as a initfs hook and save it in the <code>cache</code> partition of the device, then reboot in TWRP to get that file.
 * Without a working display, no USB network and no serial output, you can use the LEDs for debugging and the other partitions to store files.
 
-=== See also ===
+= See also =
 * [[USB Internet]]: Let your phone access the Internet by sharing your PC's Internet connection via USB.
 * [[Osk-sdl#Troubleshooting]]
 * [[Troubleshooting:boot]]
