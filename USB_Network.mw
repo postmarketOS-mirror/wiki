@@ -48,7 +48,7 @@ Host pmos
     StrictHostKeyChecking=no
 </pre>
 
-Afterwards you can connect to your device by running <code>ssh pmos</code>.
+Afterwards you can connect to your device by running <code>ssh <username>@pmos</code>. Replace <code><username></code> with the proper username on your device.
 
 = Troubleshooting =
 
