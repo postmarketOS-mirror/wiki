@@ -36,6 +36,20 @@ localhost:~$
 
 Use <code>sudo</code> to run commands as <code>root</code>, it is configured.
 
+=== Prevent host key verification clashes when connecting to different devices ===
+
+If you have multiple devices you want to SSH into, you will get issues with host key verification as your system will realize it's talking to different devices on the same IP address. To prevent this, disable host key verification entirely for the IP address used by postmarketOS devices when connected by USB.
+
+Add the following to <code>~/.ssh/config</code>:
+<pre>
+Host pmos
+    HostName 172.16.42.1
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking=no
+</pre>
+
+Afterwards you can connect to your device by running <code>ssh pmos</code>.
+
 = Troubleshooting =
 
 == Try IPv4 only ==
