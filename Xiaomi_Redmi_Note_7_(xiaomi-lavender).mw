@@ -73,141 +73,141 @@ There is no point in flashing rootfs yet.
 === Partition list ===
 {| class="wikitable"
 |-
-! Device !! Label !! Size in blocks
+! Device !! Label !! Size in blocks !! Size in bytes !! Stock FS
 |-
-| mmcblk0p1 || switch || 8
+| mmcblk0p1 || switch || 8 || 8192 ||
 |-
-| mmcblk0p2 || dpo || 8
+| mmcblk0p2 || dpo || 8 || 8192 ||
 |-
-| mmcblk0p3 || fsc || 8
+| mmcblk0p3 || fsc || 8 || 8192 ||
 |-
-| mmcblk0p4 || limits || 32
+| mmcblk0p4 || limits || 32 || 32768 ||
 |-
-| mmcblk0p5 || ssd || 32
+| mmcblk0p5 || ssd || 32 || 32768 ||
 |-
-| mmcblk0p6 || sec || 20
+| mmcblk0p6 || sec || 20 || 20480 ||
 |-
-| mmcblk0p7 || vbmeta || 64
+| mmcblk0p7 || vbmeta || 64 || 65536 ||
 |-
-| mmcblk0p8 || vbmetabak || 64
+| mmcblk0p8 || vbmetabak || 64 || 65536 ||
 |-
-| mmcblk0p9 || storsec || 128
+| mmcblk0p9 || storsec || 128 || 128K ||
 |-
-| mmcblk0p10 || storsecbak || 128
+| mmcblk0p10 || storsecbak || 128 || 128K ||
 |-
-| mmcblk0p11 || apdp || 256
+| mmcblk0p11 || apdp || 256 || 256K ||
 |-
-| mmcblk0p12 || msadp || 256
+| mmcblk0p12 || msadp || 256 || 256K ||
 |-
-| mmcblk0p13 || keystore || 512
+| mmcblk0p13 || keystore || 512 || 512K ||
 |-
-| mmcblk0p14 || frp || 512
+| mmcblk0p14 || frp || 512 || 512K ||
 |-
-| mmcblk0p15 || rpm || 512
+| mmcblk0p15 || rpm || 512 || 512K ||
 |-
-| mmcblk0p16 || rpmbak || 512
+| mmcblk0p16 || rpmbak || 512 || 512K ||
 |-
-| mmcblk0p17 || hyp || 512
+| mmcblk0p17 || hyp || 512 || 512K ||
 |-
-| mmcblk0p18 || hypbak || 512
+| mmcblk0p18 || hypbak || 512 || 512K ||
 |-
-| mmcblk0p19 || pmic || 512
+| mmcblk0p19 || pmic || 512 || 512K ||
 |-
-| mmcblk0p20 || pmicbak || 512
+| mmcblk0p20 || pmicbak || 512 || 512K ||
 |-
-| mmcblk0p21 || cmnlib || 1024
+| mmcblk0p21 || cmnlib || 1024 || 1024K ||
 |-
-| mmcblk0p22 || cmnlibbak || 1024
+| mmcblk0p22 || cmnlibbak || 1024 || 1024K ||
 |-
-| mmcblk0p23 || cmnlib64 || 1024
+| mmcblk0p23 || cmnlib64 || 1024 || 1024K ||
 |-
-| mmcblk0p24 || cmnlib64bak || 1024
+| mmcblk0p24 || cmnlib64bak || 1024 || 1024K ||
 |-
-| mmcblk0p25 || abl || 1024
+| mmcblk0p25 || abl || 1024 || 1024K ||
 |-
-| mmcblk0p26 || ablbak || 1024
+| mmcblk0p26 || ablbak || 1024 || 1024K ||
 |-
-| mmcblk0p27 || dip || 1024
+| mmcblk0p27 || dip || 1024 || 1024K ||
 |-
-| mmcblk0p28 || ddr || 1024
+| mmcblk0p28 || ddr || 1024 || 1024K ||
 |-
-| mmcblk0p29 || toolsfv || 1024
+| mmcblk0p29 || toolsfv || 1024 || 1024K ||
 |-
-| mmcblk0p30 || devcfgbak || 1024
+| mmcblk0p30 || devcfgbak || 1024 || 1024K ||
 |-
-| mmcblk0p31 || devcfg || 1024
+| mmcblk0p31 || devcfg || 1024 || 1024K ||
 |-
-| mmcblk0p32 || tz || 4096
+| mmcblk0p32 || tz || 4096 || 4096K ||
 |-
-| mmcblk0p33 || tzbak || 4096
+| mmcblk0p33 || tzbak || 4096 || 4096K ||
 |-
-| mmcblk0p34 || mdtpsecapp || 4096
+| mmcblk0p34 || mdtpsecapp || 4096 || 4096K ||
 |-
-| mmcblk0p35 || mdtpsecappbak || 4096
+| mmcblk0p35 || mdtpsecappbak || 4096 || 4096K ||
 |-
-| mmcblk0p36 || keymaster || 1024
+| mmcblk0p36 || keymaster || 1024 || 1024K ||
 |-
-| mmcblk0p37 || keymasterbak || 1024
+| mmcblk0p37 || keymasterbak || 1024 || 1024K ||
 |-
-| mmcblk0p38 || bluetooth || 1024
+| mmcblk0p38 || bluetooth || 1024 || 1024K || vfat
 |-
-| mmcblk0p39 || lsti || 2048
+| mmcblk0p39 || lsti || 2048 || 2048K ||
 |-
-| mmcblk0p40 || xbl || 3584
+| mmcblk0p40 || xbl || 3584 || 3584K ||
 |-
-| mmcblk0p41 || xblbak || 3584
+| mmcblk0p41 || xblbak || 3584 || 3584K ||
 |-
-| mmcblk0p42 || misc || 4096
+| mmcblk0p42 || misc || 4096 || 4096K ||
 |-
-| mmcblk0p43 || devinfo || 8192
+| mmcblk0p43 || devinfo || 8192 || 8192K ||
 |-
-| mmcblk0p44 || logfs || 8192
+| mmcblk0p44 || logfs || 8192 || 8192K ||
 |-
-| mmcblk0p45 || fsg || 8192
+| mmcblk0p45 || fsg || 8192 || 8192K ||
 |-
-| mmcblk0p46 || modemst1 || 8192
+| mmcblk0p46 || modemst1 || 8192 || 8192K ||
 |-
-| mmcblk0p47 || modemst2 || 8192
+| mmcblk0p47 || modemst2 || 8192 || 8192K ||
 |-
-| mmcblk0p48 || dsp || 16384
+| mmcblk0p48 || dsp || 16384 || 16.0M || vfat
 |-
-| mmcblk0p49 || bk1 || 24576
+| mmcblk0p49 || bk1 || 24576 || 24.0M ||
 |-
-| mmcblk0p50 || mdtp || 32768
+| mmcblk0p50 || mdtp || 32768 || 32.0M ||
 |-
-| mmcblk0p51 || bk2 || 16384
+| mmcblk0p51 || bk2 || 16384 || 16.0M ||
 |-
-| mmcblk0p52 || dtbo || 8192
+| mmcblk0p52 || dtbo || 8192 || 8192K ||
 |-
-| mmcblk0p53 || dtbobak || 8192
+| mmcblk0p53 || dtbobak || 8192 || 8192K ||
 |-
-| mmcblk0p54 || splash || 65536
+| mmcblk0p54 || splash || 65536 || 64.0M ||
 |-
-| mmcblk0p55 || persist || 32768
+| mmcblk0p55 || persist || 32768 || 32.0M || ext4
 |-
-| mmcblk0p56 || persistbak || 32768
+| mmcblk0p56 || persistbak || 32768 || 32.0M || ext4
 |-
-| mmcblk0p57 || logdump || 65536
+| mmcblk0p57 || logdump || 65536 || 64.0M ||
 |-
-| mmcblk0p58 || modem || 196608
+| mmcblk0p58 || modem || 196608 || 192M || vfat
 |-
-| mmcblk0p59 || rawdump || 131072
+| mmcblk0p59 || rawdump || 131072 || 128M ||
 |-
-| mmcblk0p60 || boot || 65536
+| mmcblk0p60 || boot || 65536 || 64.0M ||
 |-
-| mmcblk0p61 || recovery || 65536
+| mmcblk0p61 || recovery || 65536 || 64.0M ||
 |-
-| mmcblk0p62 || cache || 262144
+| mmcblk0p62 || cache || 262144 || 256M || ext4
 |-
-| mmcblk0p63 || system || 3670016
+| mmcblk0p63 || system || 3670016 || 3584M || ext4
 |-
-| mmcblk0p64 || vendor || 2097152
+| mmcblk0p64 || vendor || 2097152 || 2048M || ext4
 |-
-| mmcblk0p65 || cust || 851968
+| mmcblk0p65 || cust || 851968 || 832M || ext4
 |-
-| mmcblk0p66 || userdata || 22802415
+| mmcblk0p66 || userdata || 22802415 || 21.7G || encrypted (dm-0)
 |-
-| mmcblk0rpmb ||  || 4096
+| mmcblk0rpmb ||  || 4096 ||
 |}
 
 === Android Verified Boot (vbmeta) ===
