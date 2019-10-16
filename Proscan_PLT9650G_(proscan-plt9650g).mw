@@ -59,3 +59,7 @@ A generic cheap tablet running a Rockchip RK3126.
 
 == Notes ==
 * The chipset is a RK3126 (from 2014) which is separate from RK3126c (from 2017).
+
+== See also ==
+* [https://gitlab.com/rendeko/pmaports/tree/device-rockchip-rk3126/device/device-rockchip-rk3126 Device package]
+* [https://gitlab.com/rendeko/pmaports/tree/device-rockchip-rk3126/device/linux-rockchip-rk3126 Kernel package]
