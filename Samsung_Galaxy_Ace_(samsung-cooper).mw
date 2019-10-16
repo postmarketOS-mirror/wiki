@@ -61,6 +61,9 @@ Is OTG available, not used in wiki
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
+== Notes ==
+* This device covers the S5830, S5830D, S5830B, S5830L and S5830T, which are revisions of the same device. The [[Samsung Galaxy Ace i (samsung-s5830i)|S5830i]] is a different device and has its own port. S5830C and S5830M are unknown.
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
