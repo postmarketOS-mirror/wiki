@@ -57,10 +57,11 @@ See [[Installation_guide|Installation guide]].
 * Booting
 * USB Networking
 * Flashing
-* Touchscreen (X11)
+* Touchscreen
+* SD Card installation
 
 == What does not work ==
-* Touchscreen on wayland, kwin, i3wm (see issues below)
+* <s>Touchscreen on wayland, kwin, i3wm (see issues below)</s>
 
 == Not tested ==
 * WiFi (need kernel modules)
@@ -70,7 +71,7 @@ See [[Installation_guide|Installation guide]].
 == Issues ==
 * Audio output only on earpiece
 * Screen goes blank after starting X11 (<code>msm-fb-refresher</code> fix this)
-* Touchscreen on wayland not works, but it works in <code>ts_test</code>
+* <s>Touchscreen on wayland not works, but it works in <code>ts_test</code></s> reinstalling make it works \o/.
 
 == See also ==
 <!--
