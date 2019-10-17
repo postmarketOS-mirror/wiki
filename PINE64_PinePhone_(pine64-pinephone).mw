@@ -93,6 +93,20 @@ There's a 6 contact dipswitch on the back of the phone underneath the back cover
 | Headphone audio mode
 |}
 
+== Expansion port ==
+
+There is a 2x3 grid of pogo pins on the back of the pinephone for connecting a back cover with extra hardware like an extended battery case or a keyboard case. The pinout for this connector:
+
+{| class="wikitable"
+| Interrupt
+| I2C
+| I2C
+|-
+| 3v3
+| vbat
+| gnd
+|}
+
 == Components ==
 
 {| class="wikitable"
