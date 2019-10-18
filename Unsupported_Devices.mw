@@ -5,7 +5,7 @@ This page is for listing devices that, to our current knowledge, '''cannot''' ru
 Projects to run another OS on the device can be linked if they exist.
 
 == Common Issues==
-* Device uses ARMv6 without FPU [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
+* Device uses ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
 * Device uses unsupported architecture (ie. 32-bit powerpc, armv5te)
 * Device has less than 128MB of storage with no option of expansion
 
@@ -15,10 +15,10 @@ Projects to run another OS on the device can be linked if they exist.
 ! Notes
 |-
   | HTC Wildfire
-  | ARMv6 without FPU [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
+  | Qualcomm MSM7225 - ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
 |-
   | Huawei U8160 (Vodafone 858 Smart)
-  | ARMv6 without FPU [https://github.com/postmarketOS/pmbootstrap/issues/1592 #1592]
+  | Qualcomm MSM7225 - ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1592 #1592]
 |-
   | Nintendo Wii
   | 32-bit PPC not supported by Alpine. See: [https://wiibrew.org/wiki/Wii-Linux Wii-Linux]
