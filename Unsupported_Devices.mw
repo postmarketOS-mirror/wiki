@@ -26,3 +26,7 @@ Projects to run another OS on the device can be linked if they exist.
   | Zipit Z2
   | armv5te not supported by Alpine
 |}
+
+== Notes ==
+* The architecture `armhf` in pmOS is ARMv6 but has a strict requirement on an FPU (i.e., requires VFP). [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
+* Theoretically we could bootstrap a new architecture onto Alpine Linux (run the bootstrap script from Alpine's aports folder, then compile all packages from scratch) but its not feasible at the moment. [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
