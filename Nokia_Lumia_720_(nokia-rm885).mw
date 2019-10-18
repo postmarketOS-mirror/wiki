@@ -50,7 +50,7 @@
 * X crashes: <code>[   118.028] (EE) Segmentation fault at address 0x4</code>
 
 == Unlocking / installing bootloader ==
-Bootloader is unlocked with a proprietary windows application, [https://www.wpinternals.net/ WP Internals]. Windows Device Recovery Tool (thor2.exe) is also needed.
+Bootloader is unlocked with a open source windows application, [https://www.wpinternals.net/ WP Internals]. Windows Device Recovery Tool (thor2.exe) is also needed.
 [https://www.youtube.com/watch?v=_OW88UTTDug Here] is a video describing how to backup the phone, install littlekernel bootloader, and finally installing twrp recovery and lineageos.
 The device can be flashed with normal fastboot application after this point.
 
