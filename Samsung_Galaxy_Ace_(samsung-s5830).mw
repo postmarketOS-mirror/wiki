@@ -12,7 +12,7 @@
 | storage = 158MB 278MB RAM
 | display = 320x480
 | memory = 158MB 278MB RAM
-| architecture = armhf
+| architecture = ARMv6
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
