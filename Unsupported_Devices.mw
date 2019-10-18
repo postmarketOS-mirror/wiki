@@ -5,7 +5,7 @@ This page is for listing devices that, to our current knowledge, '''cannot''' ru
 Projects to run another OS on the device can be linked if they exist.
 
 == Common Issues==
-* Device uses ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
+* Device uses ARMv6 without FPU/VFP, and so it cannot run under the armhf architecture [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
 * Device uses unsupported architecture (ie. 32-bit powerpc, armv5te)
 * Device has less than 128MB of storage with no option of expansion
 
@@ -28,5 +28,5 @@ Projects to run another OS on the device can be linked if they exist.
 |}
 
 == Notes ==
-* The architecture `armhf` in pmOS is ARMv6 but has a strict requirement on an FPU (i.e., requires VFP). [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
+* The architecture "armhf" in pmOS is ARMv6 but has a strict requirement on an FPU (i.e., requires VFP). [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
 * Theoretically we could bootstrap a new architecture onto Alpine Linux (run the bootstrap script from Alpine's aports folder, then compile all packages from scratch) but its not feasible at the moment. [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
