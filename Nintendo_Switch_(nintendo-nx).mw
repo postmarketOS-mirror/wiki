@@ -103,3 +103,4 @@ This device exposes two serial ports, one in each JoyCon slot: Fail0verflow's Li
 * [https://github.com/zhuowei/pmbootstrap/tree/nintendo-nx Work in progress branch]
 * [https://github.com/fail0verflow/shofel2 Fail0verflow's guide to booting their Linux port on Switch]
 * [https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/ another tutorial for booting Linux]
+* [https://lakka-switch.github.io/documentation/ Lakka (distro) running on Nintendo Switch]
