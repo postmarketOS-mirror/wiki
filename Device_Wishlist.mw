@@ -2,14 +2,21 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 
 == Mainline Linux Candidate Devices ==
 
+* Galaxy Note II [https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/exynos4412-n710x.dts Mainline DTS available]
 * [http://elektranox.org/droid4/ Motorola Droid 4]
+* Nexus 5X [https://invidio.us/watch?v=77tuFtM4gjA Basic support available]
+* Nexus 6P [https://invidio.us/watch?v=77tuFtM4gjA Basic support available]
 * Nokia N9, N950
 * [http://www.noodlepi.com/ Noodle Pi] (Open Hardware, "a full Linux PC in your pocket! With hi-res display, camera, battery, WiFi, Bluetooth, HDMI and USB.") - '''see [[Raspberry Pi]]'''
+* OPPO FIND 7a Shares components with the OnePlus One which has Mainline support.
+* Sony Xperia X - Consider the [https://wiki.postmarketos.org/wiki/Sony_Xperia_X_(sony-suzu)#Additional_notes following]
 * [https://plus.google.com/102276447148493441479/posts/amRvpE8piSw Sony Xperia Z3]
 * [https://developer.sonymobile.com/2016/02/17/work-on-the-mainline-kernel-for-open-xperia-devices/ Sony Xperia Z]
-* [https://github.com/PabloPL/linux Galaxy S S1(?) with panel (s6e63m0) and usb switch (fsa9480)]
-* Nexus 5X
+* Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
+* [https://github.com/PabloPL/linux Samsung Galaxy S S1(?) with panel (s6e63m0) and usb switch (fsa9480)]
+* Samsung Galaxy SIII LTE [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_SIII_LTE_(samsung-i9305)#Mainline_Kernel Consider the following]
 * [https://ac100.grandou.net Toshiba AC100] ([https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/arch/arm/boot/dts/tegra20-paz00.dts mainline DTS], [https://github.com/grate-driver grate driver])
+* Xiaomi Pocophone F1 (beryllium) [https://github.com/Venji10/linux-beryllium WIP mainline support]
 
 == Candidate Devices ==
 
@@ -45,8 +52,7 @@ Please keep this list sorted by alphabet for readability.
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
 * Nokia 3
 * Nokia 5
-* Nokia Lumia 520, 525 and/or other unlocked Lumia devices
-* Nokia Lumia 635
+* Nokia Lumia 520, 525, 635 and/or other unlocked Lumia devices
 * Oneplus 6
 * OpenPandora handheld games console, mainline DTS
 * [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
@@ -54,18 +60,15 @@ Please keep this list sorted by alphabet for readability.
 * Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
 * Samsung Epic 4G (SPH-D700)
 * Samsung Galaxy Core Plus (SM-G350)
-* Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
 *Samsung Galaxy Tab A 8.0 Wi-Fi (SM-T350)
 * Samsung Galaxy Tab Pro 10.1 TM-525/PicassoLTE
 * Samsung Gear S
 * Samsung GT-S5839i
 * Samsung S8500 Wave - runs originally on Bada 2.0, has a bootloader and an Android port, see XDA
 * Samsung Galaxy Grand 2 
-* Sony Xperia X (Jolla is running there, might get some momentum; [https://jolla.com/wp-content/uploads/2017/02/Sony_Jolla_press_release_MWC2017_FINAL.pdf?x12599 press release] 
 * Wooze I5
 * Xiaomi Mi A2 (6X on China)
 * Xiaomi Mi Pad 3 (cappu)
-* Xiaomi Pocophone F1 (beryllium)
 * Xiaomi Redmi 5 (rosy)
 * Xiaomi Redmi Note 5a (ugglite)
 * ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
