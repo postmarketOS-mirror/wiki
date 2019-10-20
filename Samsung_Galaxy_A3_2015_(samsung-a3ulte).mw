@@ -53,8 +53,11 @@
 
 == WiFi ==
 If your pings are high,
+
 Speed unsteady,
+
 WiFi connection breakin',
+
 PostmarketOS spaghetti, run this command:
 
  $ sudo rfkill block bluetooth
