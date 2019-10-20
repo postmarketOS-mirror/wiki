@@ -22,7 +22,7 @@
 | status_xwayland = Y
 | status_fde =
 | status_mainline = Y
-| status_battery = P
+| status_battery = Y
 | status_3d = Y
 | status_accel = Y
 | status_audio = P
@@ -72,7 +72,7 @@ alsaucm does not track which devices are already enabled, therefore it is possib
 {{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
 
 == Plasma Mobile ==
-Plasma mobile currently works on A5 2015, but you have to set custom scaling factor to 2.
+Plasma mobile currently works on A5 2015, but you should set custom scaling factor to 2.
 
 <code>kscreen-doctor output.1.scale.2</code> should work
 
