@@ -12,4 +12,37 @@ This chipset is used similarly in the following devices:
 
 An external page for [[https://dflund.se/~triad/krad/ux500/ Ux500 mainline work]].
 
+== U-Boot ==
+There is a port of (mainline) U-Boot for U8500 currently maintained at: https://github.com/Minecrell/u-boot/tree/golden
+
+It contains a board called <code>stemmy</code>, which is intended for all Samsung devices using U8500 (see above). It provides a simple Android fastboot interface as replacement for Samsung's proprietary flashing procedure. As a device tree compatible bootloader, it can be also used to boot mainline without any hacks in the Linux kernel.
+
+{{note|'''Note:''' In this case, U-Boot does not replace the Samsung bootloader. Instead, it is packaged into an Android boot image (if necessary), and flashed to the Android boot partition like a regular Linux kernel.}}
+
+=== Building ===
+'''Requirements:''' ARM cross compiler (e.g. <code>arm-non-eabi-gcc</code>)
+
+ export CROSS_COMPILE=arm-none-eabi-
+ make stemmy_defconfig
+ make
+
+If your device uses Android boot images, package it into an Android boot image:
+ mkbootimg --kernel u-boot.bin --base=0x00000000 --kernel_offset=0x00100000 --ramdisk_offset=0x02000000 --tags_offset=0x00000100 --output=u-boot.img
+
+=== Installation ===
+Install it normally to the boot partition:
+
+ heimdall flash --Kernel u-boot.img
+
+=== Usage ===
+U-Boot will try to boot an Android boot image from the <code>boot</code> partition by default. Pressing one of the volume keys during boot allows to change that behavior:
+* <code>Volume Down</code>: Enter Fastboot mode
+* <code>Volume Up</code>: Boot into recovery (<code>recovery</code> partition)
+
+{{note|'''Note:''' Since the <code>boot</code> partition is already used for U-Boot itself, U-Boot reads the Android boot image with 1 MB offset from the <code>boot</code> partition. This offset is applied automatically when using <code>fastboot flash boot boot.img</code>.}}
+
+In Fastboot mode, kernels can be directly booted from RAM using <code>fastboot boot ...</code>. Alternatively, partitions can be flashed using <code>fastboot flash <partition> ...</code>.
+
+U-Boot itself can be also flashed from U-Boot using <code>fastboot flash u-boot u-boot.img</code> (in this case, it will not apply the offset for the <code>boot</code> partition).
+
 [[Category:Chipsets]]
