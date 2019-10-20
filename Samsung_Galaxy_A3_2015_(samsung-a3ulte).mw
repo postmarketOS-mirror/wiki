@@ -52,7 +52,10 @@
 {{note|'''Note:''' Enter lk2nd fastboot mode by pressing only Volume Down + Power ('''not''' the Home button). Pressing the Home button additionally will bring you to the Samsung Download mode.}}
 
 == WiFi ==
-If your pings are high, disable bluetooth:
+If your pings are high,
+Speed unsteady,
+WiFi connection breakin',
+PostmarketOS spaghetti, run this command:
 
  $ sudo rfkill block bluetooth
 
