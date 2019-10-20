@@ -1,4 +1,9 @@
-This chipset has a [[https://en.wikipedia.org/wiki/NovaThor wikipedia page]].
+== References ==
+
+* This chipset has a [[https://en.wikipedia.org/wiki/NovaThor wikipedia page]]
+* For the Sony devices, there is a [[https://github.com/LOSXSTE github with a bunch of kernels]]
+
+== Supported devices ==
 
 This chipset is used similarly in the following devices:
 
@@ -7,8 +12,12 @@ This chipset is used similarly in the following devices:
 * [[Samsung Xcover 2 (samsung-s7710)]]
 * [[Samsung Galaxy Ace 2 (samsung-i8160)]]
 * [[Samsung Galaxy Beam (samsung-i8530)]]
+* [[Sony Xperia U]]
+* [[Sony Xperia P]]
+* [[Sony Xperia Go]]
+* [[Sony Xperia Sola]]
 
-==Kernel hacking==
+== Kernel hacking ==
 
 An external page for [[https://dflund.se/~triad/krad/ux500/ Ux500 mainline work]].
 
