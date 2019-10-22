@@ -21,10 +21,9 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 == Candidate Devices ==
 
 Please keep this list sorted by alphabet for readability.
-* Acer Iconia B1-A71
 * Acer Iconia B1-730HD
+* Acer Iconia B1-A71
 * ARK Benefit A3 (cheaper Elephone Trunk clone)
-* Elephone Trunk - it has similar hardware as Wileyfox Swift (already supported)
 * [https://www.asus.com/ca-en/Phone/ZenFone_2_ZE551ML/specifications/ ASUS Zenfone 2 (Z00AD, ZE551ML)]
 * Ubuntu phones
 * BQ Aquaris E4.5
@@ -32,6 +31,7 @@ Please keep this list sorted by alphabet for readability.
 * BQ Aquaris M10
 * BQ Aquaris X2 (Pro)
 * DooGee x5/x5Pro (MediaTek MT6735M) [SnowCat Kernel](https://github.com/SnowCat6/DOOGEE-kernel-3.18) (Also requires non-kernel code, firmware & drivers)[https://github.com/SnowCat6?utf8=%E2%9C%93&tab=repositories&q=x5pro&type=&language=]
+* Elephone Trunk - it has similar hardware as Wileyfox Swift (already supported)
 * [http://projects.goldelico.com/p/gta04-main/ GTA04] - replacement board for OpenMoko Neo 1973/Freerunner (GTA01/02) with OMAP3 SoC, mainline DTS, supported by Replicant
 * HTC HD2 (the phone which famously runs ''any'' operating system)
 * Huawei P8 Lite (ALE-21)
