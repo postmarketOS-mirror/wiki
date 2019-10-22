@@ -56,25 +56,32 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
-== How to enter flash mode ==
+== What works ==
+* kernel booting! (maximum-attention hook)
+
+== What doesn't work ==
+* Everything else
+
+== Modes ==
+* Download/ODIN: Hold PWR + HOME + VOL DOWN during boot, then press VOL UP when asked.
+* Recovery: Hold PWR+HOME during boot.
+* RAMDUMP: Hold PWR+HOME+VOLUP during boot.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+WORK IN PROGRESS, DO NOT ATTEMPT
+
+There are likely better ways to do this, but this is all I could get working.
+
+# Install rootfs to an sd card using `pmbootstrap install --sdcard=/dev/mmcblk0`
+# On a Windows PC, Download Odin Multi Downloader v4.38
+# Run pmbootstrap export --odin
+# Grab boot.img-samsung-s5830 from /tmp/postmarketOS-export and use 7zip to compress it into a .tar archive
+# In Odin, load Cooper_v1.0.ops and select your boot.tar as the BOOT image. Then press start.
 
 == Notes ==
 * This device covers the S5830, S5830D, S5830B, S5830L and S5830T, which are revisions of the same device. The [[Samsung Galaxy Ace i (samsung-s5830i)|S5830i]] is a different device and has its own port. S5830C and S5830M are unknown.
 
 == See also ==
-<!--
-Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+[https://forum.xda-developers.com/showthread.php?t=2664340 TWRP]
+
 [https://github.com/MardonHH/android_kernel_samsung_msm/ Kernel Fork used]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
