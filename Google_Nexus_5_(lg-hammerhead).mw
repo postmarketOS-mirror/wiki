@@ -87,9 +87,6 @@ $ pmbootstrap flasher flash_kernel
 ==== Plasma mobile ====
 Navigation bar is broken. See [https://gitlab.com/postmarketOS/pmaports/issues/222 this bug].
 
-==== X.org is broken ====
-So, no graphical program can be started. See [https://gitlab.com/postmarketOS/pmaports/issues/221 this bug].
-
 ==== USB networking is broken ====
 USB networking currently doesn't work on the new 5.x kernel, it's possible to start usb-networking through the serial port by executing these commands as root:
 
