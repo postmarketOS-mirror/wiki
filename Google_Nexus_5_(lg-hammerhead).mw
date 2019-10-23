@@ -84,24 +84,6 @@ $ pmbootstrap flasher flash_kernel
 
 === Issues ===
 
-==== USB networking is broken ====
-USB networking [https://gitlab.com/postmarketOS/pmaports/issues/312 currently] doesn't work on the new 5.x kernel, it's possible to start usb-networking through the serial port by executing these commands as root:
-
-<source lang="shell-session">
-# ifconfig usb0 "172.16.42.1"
-# cat <<EOT >> /etc/udhcpd.conf
-start 172.16.42.2
-end 172.16.42.2
-auto_time 0
-decline_time 0
-conflict_time 0
-lease_file /var/udhcpd.leases
-interface usb0
-option subnet 255.255.255.0
-EOT
-# udhcpd
-</source>
-
 ==== Bluetooth ====
 Bluetooth seems to be lacking some firmware.
 
