@@ -43,7 +43,9 @@
 Press Power Button and Volume Down at the same time to enter fastboot mode
 
 To unlock bootloader go to android and to settings. in developer option unlock oem commands.
-Then In fastboot mode type fastboot oem unlock
+Then In fastboot mode type: 
+
+<pre>fastboot oem unlock</pre>
 
 == Installation ==
 
