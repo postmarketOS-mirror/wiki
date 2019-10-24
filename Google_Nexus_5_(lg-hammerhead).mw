@@ -108,8 +108,10 @@ Changing power on succeeded
 [CHG] Controller 07:16:16:94:0E:5D Powered: yes
 </source>
 
-==== WiFi workaround on boot ====
-The wifi adapter works in NetworkManager, but it boots in airplane mode and NetworkManager does not detect that. Therefore at boot you need to disable the wifi adapter first, and then re-enable it. This can easily be done in the graphic shell (Plasma Mobile has an airplane mode switch in the pull-down menu: check it and uncheck it) or through the shell:
+==== WiFi====
+On boot the wifi adapter starts in airplane mode and NetworkManager does not detect that. A manual workaround is to disable and re-enable the wifi adapter. 
+
+This can easily be done in the graphic shell (Plasma Mobile has an airplane mode switch in the pull-down menu: check it and uncheck it) or through the shell:
 
 <source lang="shell-session">
 $ sudo nmcli radio all off
