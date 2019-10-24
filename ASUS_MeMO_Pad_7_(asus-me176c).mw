@@ -49,58 +49,38 @@
 {{Device owners}}
 
 == Installation ==
-
-0. !!! make sure you have UEFI firmware, which was supplied as part of official lollipop 5.0 update !!!
-
-1. obtain a bootloader that doesn't suck (i.e. this one: https://forum.xda-developers.com/memo-pad-7/orig-development/bootloader-me176c-boot-asus-memo-pad-7-t3780225), but don't install it yet
-
-2. obtain the rootfs image, the kernel and the initramfs by following [Installation_guide], but instead of running `$ pmbootstrap flasher`, run `$ pmbootstrap export`.
-
-3.0 before flashing the bootloader, mount the esp.img partition image and copy /tmp/postmarketOS-export/initramfs-asus-me176c and /tmp/postmarketOS-export/vmlinuz-asus-me176c to the root (alongside e.g. EFI folder)
-
-3.1 create [esp.img]/loader/entries/postmarketOS.conf and change it's contents like so:
-<syntaxhighlight lang="config">
+# Make sure that you are running Android 5.0 (Lollipop) - older versions did not have UEFI firmware.
+# Install [https://github.com/me176c-dev/me176c-boot#readme me176c-boot].
+# Set up the <code>APD</code> partition as additional ESP (EFI System Partition), see [https://github.com/me176c-dev/me176c-boot#limitations me176c-boot - Setting up an additional ESP partition].
+# Follow the [[Installation guide]], but use <code>pmbootstrap install --split</code> to generate separate root and boot partition images.
+# Navigate to the generated partition images (use <code>pmbootstrap export</code>).
+# The boot partition must be on internal storage. Use <code>fastboot flash APD asus-me176c-boot.img</code> to write it to the <code>APD</code> partition.
+# Create a boot entry for postmarketOS. Create a file <code>pmos.conf</code>:
+ <nowiki>
 title    postmarketOS
+volume   80868086-8086-8086-8086-000000000007
 linux    /vmlinuz-asus-me176c
-initrd   /initramfs-asus-me176c 
-options  console=tty0
-</syntaxhighlight>
+initrd   /intel-ucode.img
+initrd   /acpi-me176c.img
+initrd   /initramfs-asus-me176c</nowiki>
+# Install the new boot entry: Boot into TWRP recovery, mount the ESP partition, and push the new configuration using ADB: <code>adb push pmos.conf /esp/loader/entries/</code>
+# To boot into postmarketOS, select <code>postmarketOS</code> in the boot menu. You can make it the default by editing <code>/esp/loader/loader.conf</code>.
 
-you can add mmc_block.perdev_minors=XX to options if you have added any partitions beyond the original 16
+Now you can choose if you would like to install the root partition (<code>asus-me176c-root.img</code>) on internal storage or a SD card.
 
-3.2 open [esp.img]/loader/loader.conf, and change "default  android" to "default  postmarketOS"
+=== Internal Storage ===
+* System partition: <code>fastboot flash system asus-me176c-root.img</code>
+* Userdata partition: <code>fastboot flash userdata asus-me176c-root.img</code>
+* Alternatively, you can consider shrinking the data partition and create a new partition for postmarketOS.
 
-4. umount esp.img and flash it according to the xda guide
+=== SD card ===
+Write the root partition image to a partition on your SD card:
 
-5. while in droidboot, use <syntaxhighlight>fastboot flash data asus-me176c.img</syntaxhighlight> to flash rootfs to the device
-
-6. reboot - now you should be booted into postmarketOS
-
-note that charging will be done by whatever android ROM you had previously. I haven't tested if the ROM tries to do anything with data partition at this stage. If you want to be sure, change the partlabel so android can't find it. You can also dualboot (see below)
-
-I will probably look into charging-sdl in the future
-
-== DualBoot ==
-
-1. remove rootfs from data partition
-
-2. put rootfs to system partition
-
-3. boot into postmarketOS
-
-4. using your favorite linux tools, shrink the data partition and add a new partition with any partlabel you like (e.g postmarketOS)
-
-5. remove rootfs from system partition
-
-6. put rootfs on the new partition
-
-7. put android back on system partition
-
-8. you can now boot into android by holding volume down on bootup and selecting it from the menu
+# Find the '''correct''' block device (usually <code>/dev/mmcblkXpY</code> but sometimes <code>/dev/sdXY</code>)
+# Write the image to the partition ('''Warning:''' Existing data will be erased): <code>dd if=asus-me176c-root.img of=/dev/mmcblkXpY bs=4M</code>
 
 == See also ==
-lambdadroid's mainline based kernel tree - https://github.com/me176c-dev/me176c-kernel/tree/arch-4.19
-
-GPS - https://github.com/me176c-dev/android_device_asus_K013/issues/48
-
-Camera - https://github.com/me176c-dev/android_device_asus_K013/issues/47
+* [https://github.com/me176c-dev/linux-me176c Linux on ASUS MeMO Pad 7 (ME176C(X))]
+* [https://wiki.archlinux.org/index.php/ASUS_MeMO_Pad_7_(ME176C(X)) Arch Linux on ASUS MeMO Pad 7 (ME176C(X))]
+* [https://forum.xda-developers.com/memo-pad-7/orig-development/rom-unofficial-lineageos-16-0-asus-memo-t3929600/ LineageOS 16.0 (Android) ROM] (uses the same kernel)
+* Unsupported features: [https://github.com/me176c-dev/me176c/issues/3 GPS], [https://github.com/me176c-dev/me176c/issues/2 Camera]
