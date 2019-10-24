@@ -27,11 +27,11 @@ After upgrades in mesa, ofono, kernel we have had several regressions and not al
 | status_xwayland = Y
 | status_fde = 
 | status_mainline = Y
-| status_battery =
+| status_battery = 
 | status_3d = Y
 | status_accel = 
 | status_audio = N
-| status_bluetooth =
+| status_bluetooth = P
 | status_camera =
 | status_gps = 
 | status_mobiledata = P
@@ -113,7 +113,8 @@ Changing power on succeeded
 [CHG] Controller 07:16:16:94:0E:5D Powered: yes
 </source>
 
-==== Modem ====
+
+==== Cellular modem ====
 Despite previously working, modem is [https://gitlab.com/postmarketOS/pmaports/issues/238 currently] not detected.
 
 ==== WiFi====
