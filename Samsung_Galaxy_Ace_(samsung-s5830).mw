@@ -2,7 +2,7 @@
 | manufacturer = Samsung
 | name =  Galaxy Ace
 | codename = samsung-s5830
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:samsung-s5830.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2011 Oct
 | originalsoftware = Android 2.2.1
@@ -77,6 +77,12 @@ There are likely better ways to do this, but this is all I could get working.
 
 == Notes ==
 * This device covers the S5830, S5830D, S5830B, S5830L and S5830T, which are revisions of the same device. The [[Samsung Galaxy Ace i (samsung-s5830i)|S5830i]] is a different device and has its own port. S5830C and S5830M are unknown.
+
+== Gallery ==
+<gallery>
+File:samsung-s5830.jpg|thumb|left|Splash screen
+</gallery>
+
 
 == See also ==
 [https://forum.xda-developers.com/showthread.php?t=2664340 TWRP]
