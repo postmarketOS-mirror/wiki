@@ -12,12 +12,12 @@
 | storage = 158MB 278MB RAM
 | display = 320x480
 | memory = 158MB 278MB RAM
-| architecture = ARMv6
+| architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_flashing = N <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_screen = Y <!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -33,7 +33,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
@@ -47,20 +47,17 @@ Is OTG available, not used in wiki
 -->
 }}
 
-== Contributors ==
-* rendeko
-
-== Maintainer(s) ==
-* rendeko
-
 == Users owning this device ==
 {{Device owners}}
 
 == What works ==
 * kernel booting! (maximum-attention hook)
+* splash screen
 
 == What doesn't work ==
-* Everything else
+* usb networking, debug-shell/initramfs hook usb connection
+* Everything else (untested)
+* Flashing (maybe works for people not using VirtualBox for pmbootstrap?)
 
 == Modes ==
 * Download/ODIN: Hold PWR + HOME + VOL DOWN during boot, then press VOL UP when asked.
@@ -68,14 +65,14 @@ Is OTG available, not used in wiki
 * RAMDUMP: Hold PWR+HOME+VOLUP during boot.
 
 == Installation ==
-WORK IN PROGRESS, DO NOT ATTEMPT
+WORK IN PROGRESS, ATTEMPT AT OWN RISK
 
 There are likely better ways to do this, but this is all I could get working.
 
 # Install rootfs to an sd card using `pmbootstrap install --sdcard=/dev/mmcblk0`
 # On a Windows PC, Download Odin Multi Downloader v4.38
 # Run pmbootstrap export --odin
-# Grab boot.img-samsung-s5830 from /tmp/postmarketOS-export and use 7zip to compress it into a .tar archive
+# Grab boot.img-samsung-s5830 from /tmp/postmarketOS-export. Rename it to boot.img, then use 7zip to compress it into a .tar archive
 # In Odin, load Cooper_v1.0.ops and select your boot.tar as the BOOT image. Then press start.
 
 == Notes ==
