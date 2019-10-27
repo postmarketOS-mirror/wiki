@@ -204,8 +204,8 @@ Mainline kernel patches:
 * https://patchwork.kernel.org/patch/10150807/
 
 Development branch:
-* https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom , commits by ''drebrez''
-* https://github.com/drebrez/linux/tree/samsung-klte (old)
+* https://gitlab.com/postmarketOS/linux-postmarketos/tree/old-4.17.0-rc3/qcom , old 4.17 kernel, commits by ''drebrez''
+* https://github.com/drebrez/linux/tree/samsung-klte (old repo)
 
 Extra:
 * [https://www.gsmarena.com/samsung_galaxy_s5-6033.php Full phone specifications]
