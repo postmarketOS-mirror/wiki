@@ -2,6 +2,7 @@
 It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches. Not every patch is listed here, but it might be a good idea to keep track of them anyway.
 
 === Successful ===
+* <code>2019-xx-xx</code> Alpine: PureTryOut upstreamed the whole KDE desktop, with all its dependencies, into Alpine and maintains it there
 * <code>2019-08-05</code> abuild: [https://github.com/alpinelinux/abuild/pull/101 rename makedepends_host virtual package]
 * <code>2019-03-06</code> abuild: [https://github.com/alpinelinux/abuild/pull/49 abuild-tar.static: fix undefined reference errors]
 * <code>2019-02-06</code> Alpine: [https://gitlab.com/postmarketOS/pmaports/merge_requests/198 qt5-qtvirtualkeyboard, qt5-qtwayland, qt5-qtspeech]
