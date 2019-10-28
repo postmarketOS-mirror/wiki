@@ -1,4 +1,4 @@
-{{note|Upstreaming new packages to Alpine should only be done when you are willing to maintain the package (update it when there's a new version from upstream, or a security hole gets discovered etc.).}}
+{{note|This list is incomplete! Think of it as an example of what we have upstreamed.}}
 It is important for us to contribute the patches and improvements we made to various software back to the original project. So everyone can benefit from the improvements and we don't need to maintain and carry around patches. Not every patch is listed here, but it might be a good idea to keep track of them anyway.
 
 === Successful ===
