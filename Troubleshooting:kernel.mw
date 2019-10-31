@@ -6,7 +6,7 @@ Patching a kernel is as simple as putting a <code>.patch</code> file in your <co
 == undefined reference to kgsl_iommu_sync_lock ==
 <pre>drivers/built-in.o:(.data.rel+0x68c): undefined reference to kgsl_iommu_sync_lock'
 drivers/built-in.o:(.data.rel+0x690): undefined reference to kgsl_iommu_sync_unlock'</pre>
-You need to apply the [https://github.com/postmarketOS/pmbootstrap/blob/master/aports/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch gpu-msm-fix-gcc5-compile.patch] patch.
+You need to apply the [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-lg-mako/02_gpu-msm-fix-gcc5-compile.patch gpu-msm-fix-gcc5-compile.patch] patch.
 
 == How can I boot the kernel with some specific arguments? ==
 You can configure <code>CONFIG_CMDLINE</code> so that the arguments are permanent or change it in boot time using fastboot or pmbootstrap, for example:
