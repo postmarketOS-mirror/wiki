@@ -110,6 +110,9 @@ The defconfig used is available at <code>~/android/lineage/kernel/motorola/msm82
 == Error: selected processor does not support ARM mode `smc #0' ==
 Try this patch: https://github.com/imoseyon/leanKernel-galaxy-nexus/pull/6
 
+== X11 does not work on Qualcomm devices ==
+Try apply this patch https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-xiaomi-santoni/fix-xorg-mdss-update-fb-info.patch
+
 == TLS (SSL/HTTPS) is broken! ==
 If you see messages like these, when trying to access HTTPS pages, read on:
 <pre>
