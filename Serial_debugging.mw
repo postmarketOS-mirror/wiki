@@ -130,6 +130,14 @@ The Suzy-Q debug cable isn't strictly a serial debug cable, it accesses the Clos
 
 The official SuzyQable from Google has an 2 port USB hub into the cable itself, one port connects to the normal usb lines in the USB-C connector and the other port connects to the CC1/RFU1 pair like the diagram above, this way you can use both interfaces at the same time. The debug mode with the cable also only works on one of the two orientations in the USB-C socket. The official cable has a "DBG" mark on the C connector that should be facing up when plugged into the device. The other way around it will act as a normal USB cable.
 
+That cable can be used with ChromeOS based devices for serial access.
+
+== Android Debug Cable ==
+
+While reported online that a "Suzy-Q" cable can be used for Android-based Pixel devices, the cable available from Sparkfun, the SuzyQable, is not the right cable for debugging Pixel phones. They are using a different incompatible scheme<sup>[How?]</sup>. On Pixel 2 devices they will not work at all, and on Pixel 3, it is reported they show the console of the Titan M chip only.
+
+Serial access for the Pixel 2 and 3 (unverified with 3a and 4) can instead be achieved using the following [https://github.com/Peter-Easton/android-debug-cable-howto Android Debug Cable]. Note that using a pass-through breakout board is not mandatory, but is helpful to keep the serial console active while using ADB.
+
 This cable should work with:
 
 * Google Pixel 2
