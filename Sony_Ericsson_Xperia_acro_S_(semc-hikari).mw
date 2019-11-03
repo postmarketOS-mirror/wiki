@@ -43,15 +43,22 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == What works ==
-Nothing so far.
+
+This device uses a non-standard ELF format boot.img file that is not supported by postmarketOS (yet):
+ % file boot.img
+ boot.img: ELF 32-bit LSB executable, ARM, version 1 (ARM), statically linked, corrupted section header size
+
+intgr has a working hacked postmarketOS toolchain for building compatible boot.img files.
 
 == What does not work ==
 
 Booting.
 
-Unfortunately this device uses a non-standard ELF format boot.img file that is not supported by postmarketOS (yet):
- % file boot.img
- boot.img: ELF 32-bit LSB executable, ARM, version 1 (ARM), statically linked, corrupted section header size
+After trying out tens of different combinations of kernel sources from the web, I couldn't find any that get as far as initramfs.
+
+The best sources found [https://paste.ubuntu.com/p/JPtybJNYv2/ crash pretty late in the initialization process] with error:
+
+ BUG: Bad page state in process swapper/0  pfn:5dcba
 
 == How to enter flash mode ==
 Power off the device. Hold Volume Up as you plug the USB cable into the device.
