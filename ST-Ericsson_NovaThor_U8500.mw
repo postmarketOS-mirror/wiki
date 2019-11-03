@@ -22,7 +22,7 @@ This chipset is used similarly in the following devices:
 An external page for [[https://dflund.se/~triad/krad/ux500/ Ux500 mainline work]].
 
 == U-Boot ==
-There is a port of (mainline) U-Boot for U8500 currently maintained at: https://github.com/Minecrell/u-boot/tree/golden
+There is a port of (mainline) U-Boot for U8500 currently maintained at: https://github.com/novathor-mainline/u-boot
 
 It contains a board called <code>stemmy</code>, which is intended for all Samsung devices using U8500 (see above). It provides a simple Android fastboot interface as replacement for Samsung's proprietary flashing procedure. As a device tree compatible bootloader, it can be also used to boot mainline without any hacks in the Linux kernel.
 
