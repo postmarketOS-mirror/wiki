@@ -120,7 +120,7 @@ and http://muru.com/linux/d4/
 
 == Sony Xperia ==
 
-See [https://developer.sonymobile.com/open-devices/how-to-access-uart-ports-on-xperia-devices/ this page], and [https://developer.sony.com/develop/open-devices/guides/access-uart-ports that one] (basically a new formatting for the same page, as of 2018-02-21, but that might [https://talk.sonymobile.com/t5/General-Discussion/UART-on-Sony-Xperia-X-F5121/m-p/1302566/highlight/true#M1341 might change soon])
+See [https://developer.sony.com/develop/open-devices/guides/access-uart-ports this page].
 
 == Suzy-Q debug cable ==
 
