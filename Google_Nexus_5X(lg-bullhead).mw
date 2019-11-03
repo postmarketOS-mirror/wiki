@@ -49,6 +49,13 @@ Then go to {{button|Settings|System|Developer Options}} and enable OEM unlocking
 Reboot to the bootloader and run "<kbd>fastboot oem unlock</kbd>"
 Now select {{button|Yes}} on the phone screen with the volume button and use the power button to accept.
 
+== No RPMB ==
+
+If your device says "SECURE BOOT: ENABLED (NO RPMB)" in the fastboot screen that means that the mainboard in your Nexus 5X is missing an image required by secureboot to function properly.
+If this is missing then oem-unlocking won't work on the device. It will re-lock every reboot. 
+
+No fix is available yet for this
+
 == Special key combos ==
 
 Boot to bootloader: hold volume down + power button until the screen turns on
