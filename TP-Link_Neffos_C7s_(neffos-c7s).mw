@@ -46,6 +46,46 @@
 == Users owning this device ==
 {{Device owners}}
 
+== Partitions ==
+This phone uses A partition scheme.
+<source lang="bash">
+boot -> /dev/block/mmcblk0p27 
+cache -> /dev/block/mmcblk0p31 
+dtb -> /dev/block/mmcblk0p28 
+dtbo -> /dev/block/mmcblk0p29 
+fbootlogo -> /dev/block/mmcblk0p13 
+gpsbd -> /dev/block/mmcblk0p19 
+gpsgl -> /dev/block/mmcblk0p18 
+l_deltanv -> /dev/block/mmcblk0p23 
+l_fixnv1 -> /dev/block/mmcblk0p14 
+l_fixnv2 -> /dev/block/mmcblk0p15 
+l_gdsp -> /dev/block/mmcblk0p24 
+l_ldsp -> /dev/block/mmcblk0p25 
+l_modem -> /dev/block/mmcblk0p22 
+l_runtimenv1 -> /dev/block/mmcblk0p16 
+l_runtimenv2 -> /dev/block/mmcblk0p17 
+logo -> /dev/block/mmcblk0p12 
+misc -> /dev/block/mmcblk0p4 
+miscdata -> /dev/block/mmcblk0p2 
+persist -> /dev/block/mmcblk0p21 
+pm_sys -> /dev/block/mmcblk0p26 
+prodnv -> /dev/block/mmcblk0p1 
+product -> /dev/block/mmcblk0p33 
+recovery -> /dev/block/mmcblk0p3 
+sml -> /dev/block/mmcblk0p7 
+sml_bak -> /dev/block/mmcblk0p8 
+system -> /dev/block/mmcblk0p30 
+trustos -> /dev/block/mmcblk0p5 
+trustos_bak -> /dev/block/mmcblk0p6 
+uboot -> /dev/block/mmcblk0p9 
+uboot_bak -> /dev/block/mmcblk0p10 
+uboot_log -> /dev/block/mmcblk0p11 
+userdata -> /dev/block/mmcblk0p36 
+vbmeta -> /dev/block/mmcblk0p34 
+vbmeta_bak -> /dev/block/mmcblk0p35 
+vendor -> /dev/block/mmcblk0p32 
+wcnmodem -> /dev/block/mmcblk0p20
+</source>
+
 == Additional information ==
 As other phones with Android 9 and higher, this phone uses Android Verified Boot. vbmeta.img needs to be patched/created to boot pmOS kernel.
-This phone uses A partition scheme.
