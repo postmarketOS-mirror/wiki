@@ -54,11 +54,19 @@ intgr has a working hacked postmarketOS toolchain for building compatible boot.i
 
 Booting.
 
+==== Downstream kernels ====
 After trying out tens of different combinations of kernel sources from the web, I couldn't find any that get as far as initramfs.
 
-The best sources found [https://paste.ubuntu.com/p/JPtybJNYv2/ crash pretty late in the initialization process] with error:
+The best sources found manage to initialize the display backlight and then [https://paste.ubuntu.com/p/JPtybJNYv2/ crash pretty late in the initialization process] with error:
 
  BUG: Bad page state in process swapper/0  pfn:5dcba
+
+WIP can be seen here: https://gitlab.com/intgr/pmaports/compare/master...device-sony-hikari
+
+==== Mainline kernel ====
+No peripherals supported yet, but `/dev/last_kmsg` can be extracted with a binary kernel (e.g. TWRP). Sadly the boot process appears to hang after executing `/init`: https://paste.ubuntu.com/p/zdJ9TbyJxX/
+
+WIP can be seen here: https://gitlab.com/intgr/linux-postmarketos/compare/master...device-sony-hikari
 
 == How to enter flash mode ==
 Power off the device. Hold Volume Up as you plug the USB cable into the device.
