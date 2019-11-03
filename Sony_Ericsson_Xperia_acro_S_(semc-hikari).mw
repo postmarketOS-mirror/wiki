@@ -63,6 +63,8 @@ The best sources found [https://paste.ubuntu.com/p/JPtybJNYv2/ crash pretty late
 == How to enter flash mode ==
 Power off the device. Hold Volume Up as you plug the USB cable into the device.
 
+Alternatively, perform a hard reset by holding Power and Volume Up buttons. When the device vibrates, release the Power button *first*, and it will boot into fastboot loader.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
