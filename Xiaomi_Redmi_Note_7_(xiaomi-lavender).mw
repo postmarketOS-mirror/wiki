@@ -265,7 +265,10 @@ androidboot.hwdevice=lavender
 
 <code>ramoops_memreserve=4M</code> comes from defconfig, some from boot.img, others come from bootloader directly.
 
-Options like <code>root=</code>, <code>skip_initramfs</code> make kernel look for a specific partition to mount at /, skipping initramfs, which is incompatible with default booting methods of postmarketOS. That's why some tricky patches are needed, similar to ones used in Google Pixel port: [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-ignore-dm-parameter.patch 1], [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-initramfs-disable-do_skip_initramfs.patch 2].
+==== Harmful cmdline params from bootloader notice ====
+Options like <code>root=</code>, <code>skip_initramfs</code> make kernel look for a specific partition to mount at /, skipping initramfs, which is incompatible with default booting methods of postmarketOS. That's why some tricky patches are needed, similar to ones used by Zhuowei in Google Pixel port: [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-ignore-dm-parameter.patch 1], [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-initramfs-disable-do_skip_initramfs.patch 2].
+
+Another hack to fix bootloader cmdline params by opendata: [https://gitlab.com/opendata26/linux/commit/40095e9a8b1eb32ad7ccd705c8990792e692ba1d init: ignore bootloader cmdline params for mounts]
 
 == See also ==
 <!--
