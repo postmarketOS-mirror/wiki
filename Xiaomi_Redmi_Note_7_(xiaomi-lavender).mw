@@ -55,19 +55,20 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 
 === Recovery mode ===
 * Turn the device off (or restart also works)
-* Hold both volume buttons (+ and -) and power button
-* Keep holding until you got to recovery.
+* Hold volume+ button and power button
+* Once you feel vibration and phone turns on, release power button
+* Keep holding volume+ until you get to recovery.
 
 === Flashing (Download, Fastboot) mode ===
-* Same as recovery, but this time hold the volume down key instead of both keys.
+* Same as recovery, but this time hold the volume- and power keys.
 
 == Installation ==
 
-Flash a working LineageOS ROM first - it will contain all needed partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure if it's strictly needed). For example this [[https://forum.xda-developers.com/redmi-note-7/development/rom-lineageos-16-0-t3923203 LineageOS 16.0 ROM]]. The situation is a bit hard, because there is no official LineageOS release for this device yet, not even a official TWRP.
+=== Flash a working custom Android ROM first ===
+Flash a working custom Android ROM first - it will likely contain all needed custom partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure if it's strictly needed). For example this [[https://forum.xda-developers.com/redmi-note-7/development/rom-lineageos-16-0-t3923203 LineageOS 16.0 ROM]]. The situation is a bit hard, because there is no official LineageOS release for this device yet, not even a official TWRP.
 
-This is still a work-in-progress. If you want to test that kernel boots, checkout my development branch in pmaports (link below in links section), zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device; then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 device-xiaomi-lavender linux-xiaomi-lavender postmarketos-mkinitfs postmarketos-mkinitfs-hook-debug-shell</code>) then proceed as usual (<code>pmbootstrap install ; pmbootstrap initfs hook-add debug-shell ; pmbootstrap flasher flash_kernel</code>).
-
-There is no point in flashing rootfs yet.
+=== WIP ===
+This is still a work-in-progress. If you want to test that kernel boots, backup <code>boot</code> and <code>system</code> partitions first. Then checkout my development branch in pmaports (link below in links section), zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device; then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender postmarketos-mkinitfs </code>) then proceed as usual (reboot device to fastboot mode, <code>pmbootstrap install ; pmbootstrap flasher flash_kernel ; pmbootstrap flasher flash_rootfs</code>).
 
 == Additional info ==
 === Partition list ===
@@ -224,6 +225,7 @@ Stock bootloader is doing nasty things with kernel command line: it passes a lot
 Full list of stock command line parameters:
 <pre>
 ramoops_memreserve=4M
+
 rcupdate.rcu_expedited=1
 console=ttyMSM0,115200,n8
 androidboot.console=ttyMSM0
@@ -241,6 +243,7 @@ firmware_class.path=/vendor/firmware_mnt/image
 loop.max_part=7
 androidboot.selinux=permissive
 buildvariant=eng
+
 androidboot.verifiedbootstate=orange
 androidboot.keymaster=1
 root=PARTUUID=2a7f6d6d-1c23-febe-7efb-9ccfa1432ace
@@ -263,14 +266,16 @@ androidboot.hwlevel=MP
 androidboot.hwdevice=lavender
 </pre>
 
-<code>ramoops_memreserve=4M</code> comes from defconfig, some from boot.img, others come from bootloader directly.
+<code>ramoops_memreserve=4M</code> comes from defconfig, next from boot.img, others (starting with first <code>androidboot.</code> and below) come from bootloader directly.
 
-==== Harmful cmdline params from bootloader notice ====
+==== Harmful kernel command line params from bootloader ====
 Options like <code>root=</code>, <code>skip_initramfs</code> make kernel look for a specific partition to mount at /, skipping initramfs, which is incompatible with default booting methods of postmarketOS. That's why some tricky patches are needed, similar to ones used by Zhuowei in Google Pixel port: [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-ignore-dm-parameter.patch 1], [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-google-crosshatch/init-initramfs-disable-do_skip_initramfs.patch 2].
 
-Another hack to fix bootloader cmdline params by opendata: [https://gitlab.com/opendata26/linux/commit/40095e9a8b1eb32ad7ccd705c8990792e692ba1d init: ignore bootloader cmdline params for mounts]
+Another hack to fix bootloader cmdline params by opendata26: [https://gitlab.com/opendata26/linux/commit/40095e9a8b1eb32ad7ccd705c8990792e692ba1d init: ignore bootloader cmdline params for mounts]
 
-== See also ==
+Some info on <code>skip_initramfs</code> kernel cmdline parameter: https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
+
+== Links ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
@@ -279,7 +284,6 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 * [https://gitlab.com/minlexx/pmaports/commits/minlexx/xiaomi-lavender Current development branch]
-* info on skip_initramfs kernel cmdline parameter: https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
