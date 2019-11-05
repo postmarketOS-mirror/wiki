@@ -265,6 +265,25 @@ General setup -->
 
 Required. See {{issue|237|pmaports}} for notes about changing the initramfs compression.
 
+=== CONFIG_CGROUPS ===
+
+'''About'''
+
+''This option adds support for grouping sets of processes together, for use with process control subsystems such as Cpusets, CFS, memory controls or device isolation.''
+
+[https://cateee.net/lkddb/web-lkddb/CGROUPS.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell">
+General setup -->
+  Control Group support
+</pre>
+
+'''pmOS specific'''
+
+Required for elogind, and therefore necessary to be able to run most desktop environments.
+
 == Optional ==
 
 These kernel options are optional and for some devices required to fix some issues.
