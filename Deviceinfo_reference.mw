@@ -252,6 +252,32 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>true</code>, <code>false</code> (default)
 |}
 
+== usb ==
+
+Change how the target device shows up when connected with USB to a host PC. {{MR|706|pmaports}} added support for these variables in the mkinitfs script, when using the configfs network method.
+
+{| class="wikitable sortable"
+! Variable
+! Description
+! Default
+|-
+| <code>usb_idVendor</code>
+| Vendor ID
+| <code>0x18D1</code> ("Google Inc.")
+|-
+| <code>usb_idProduct</code>
+| Product ID
+| <code>0xD001</code> ("Nexus 4 (fastboot)")
+|-
+| <code>usb_serialnumber</code>
+| Device's serial number string
+| <code>postmarketOS</code>
+|-
+| <code>usb_rndis_function</code>
+| Name of the rndis function, which may be different in some downstream kernels. The function is always located in <code>/config/usb_gadget/g1/functions/</code>
+| <code>rndis.usb0</code>
+|}
+
 == Obsolete options ==
 
 === weston ===
