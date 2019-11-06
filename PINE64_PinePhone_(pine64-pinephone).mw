@@ -103,9 +103,11 @@ There is a 2x3 grid of pogo pins on the back of the pinephone for connecting a b
 | I2C
 |-
 | 3v3
-| vbat
+| usb 5v
 | gnd
 |}
+
+the USB5v line is meant to charge the phone and the 3v3 is to power peripherals to the phone. The I2C and interrupt lines have pull-ups on the phone side.
 
 == Components ==
 
