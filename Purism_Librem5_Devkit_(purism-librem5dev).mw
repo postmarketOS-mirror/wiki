@@ -67,6 +67,10 @@ The Vivante GPU in the devkit is not fully currently supported upstream in Mesa.
 * Test/enable camera
 * Test/enable ambient light sensor
 
+== Ofono ==
+
+As of 11/2019, ofono seems to "just work" when it is installed using "apk add ofono". Reasonable-looking signal information is reported, and calls seem to do something. I could not figure out how to route in-call audio, and it is possible that separate daemon is needed for that. https://source.puri.sm/Librem5/wys/blob/master/src/wys-audio.c
+
 == See also ==
 
 * [https://developer.puri.sm/Librem5/ Purism Librem5 devkit documentation]
