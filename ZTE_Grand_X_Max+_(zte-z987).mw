@@ -36,7 +36,7 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900-->
+if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.4.0
@@ -44,8 +44,18 @@ see Unixbench page on wiki
 | whet_dhry = -
 Is OTG available, not used in wiki
 | status_otg = y
-
+-->
 }}
+
+== Build Status ==
+Kernel is yet to build. 
+
+== Known Build Issues ==
+<ul>
+<li>Missing some symbols during linking</li>
+<li>Many section mismatches</li>
+<li>Need to manually change the kernel.tar.gz directory structure</li>
+</ul>
 
 == Contributors ==
 Geo52rey
