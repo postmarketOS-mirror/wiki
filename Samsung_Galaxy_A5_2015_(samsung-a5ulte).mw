@@ -17,7 +17,7 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = Y
+| status_screen = P
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde =
@@ -27,7 +27,7 @@
 | status_accel = Y
 | status_audio = P
 | status_bluetooth = Y
-| status_camera =
+| status_camera = N
 | status_gps =
 | status_mobiledata =
 | status_sms =
@@ -70,6 +70,10 @@ alsaucm does not track which devices are already enabled, therefore it is possib
  set _enadev NEW
 
 {{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
+
+== Screen ==
+
+Screen works partially. While displaying the UI works fine, adjusting the brightness doesn't work.
 
 == Plasma Mobile ==
 Plasma mobile currently works on A5 2015, but you should set custom scaling factor to 2.
