@@ -129,7 +129,7 @@ Hop on [[Matrix_and_IRC|Matrix or IRC]] and ask the mentor if they have time to 
 The following steps are meant to be taken together with the mentor.
 
 == Device Tree Source ==
-The [[DTS]] file describes how the peripherals of the device are connected to the SoC. [[Device_Tree_(dtb)#Writing_a_device_tree | Here]] is a short description of the process you are guided trough here.
+The [[DTS]] file describes how the peripherals of the device are connected to the SoC. [[Device_Tree_(dtb)#Writing_a_device_tree | Here]] is a short description of the process you are guided through here.
 
 === Start with an existing file ===
 Your mentor probably knows which file you should use to start your work on. This may either be a file in the existing Linux source tree, or a file your mentor uploaded somewhere.
