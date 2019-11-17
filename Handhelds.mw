@@ -13,6 +13,8 @@ The main raison d'être for Matchbox is that:
 
 === Status ===
 
+{{note|The postmarketOS port for matchbox has been removed, as it was unmaintained. See {{issue|372|pmaports}}.}}
+
 Its main components are as follows:
 {| class="wikitable"
 |-
