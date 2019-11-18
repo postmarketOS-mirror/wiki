@@ -219,6 +219,8 @@ This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Devi
 
 Update: looks like '''dtbo''' partition is not used during boot by LineageOS's kernel, because it is using appended DTB (<code>CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE=y</code>)
 
+Update2: device tree from dtbo partition can still be used by bootloader?
+
 === Bootloader cmdline ===
 Stock bootloader is doing nasty things with kernel command line: it passes a lot of arguments that make booting custom OS (like postmarketOS) impossible
 
