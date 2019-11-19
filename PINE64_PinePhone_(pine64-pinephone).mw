@@ -262,12 +262,6 @@ echo 0 > /sys/class/leds/$COLOR/brightness
 
 Sound output should work after unmuting <code>AIF1 Slot 0 digital</code>
 
-==== Mic ====
-
-Doesn't work yet.
-
-=== USB ===
-Doesn't work for MartijnBraam, reported to work for other people.
 
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
