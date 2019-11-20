@@ -17,7 +17,7 @@ After upgrades in mesa, ofono, kernel we have had several regressions and not al
 | display = 1080x1920 IPS
 | storage = 16/32 GB
 | memory = 2 GB
-| architecture = armhf
+| architecture = armv7
 | whet_dhry = 840.9
 | status_usbnet = Y
 | status_flashing = Y
