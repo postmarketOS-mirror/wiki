@@ -63,11 +63,12 @@ Every UI option which is bigger than 650 MB cannot be flashed by fastboot (<code
 
 ==== Kernel ====
 
-* The port is using the LineageOS kernel found [https://github.com/LineageOS/android_kernel_asus_grouper here]
-* The kernel cannot be compiled on versions of gcc newer than 4.9 without the appropriate patch
+* [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux. Many of them are probably currently mainlined.
+* LineageOS kernel can be found [https://github.com/LineageOS/android_kernel_asus_grouper here] (currently used and compiled with gcc 6.1, with few patches a top).
+* A newer kernel, can be found here: https://github.com/Unlegacy-Android
+* Up-to-date [https://github.com/grate-driver/linux kernel], where tegra development ongoing.
 * UART debugging through the headphone jack doesn't seem to work - apparently the 2012 version of the Nexus 7 does not have this feature.
-* [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux.
-* A newer kernel, that should work, can be found here (thanks to Jasper in IRC): https://github.com/Unlegacy-Android
+
 * The default images for android provided by google have the bootloader broken, meaning it can't be flashed. It does not seem to affect the install process of PostmarketOS, but is something to take into account.
 
 ==== Graphics ====
