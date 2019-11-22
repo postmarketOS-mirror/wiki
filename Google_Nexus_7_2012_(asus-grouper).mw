@@ -54,12 +54,10 @@ $ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
 === UI options ===
-* Weston: Boots, but also occasionally reboots on its own.
-* Hildon: Boots into a black screen. Poking some <code>/sys/</code> variables might make the screen flash or turn on, but it remains unusable
-* XFCE4: Boots into a black screen.
-* Mate: Can't flash. This is due to the <code>.img</code> file being bigger than the system partition size.
-* Luna: Can't flash. Same as Mate.
-* KDE (Plasma-Mobile): Can't flash. Same as Mate. Which in turn wrecks your device partitions. This has happened even with <code>flasher flash_rootfs --partition userdata</code>
+* Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?)
+* Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, won't boot into lightdm, until we'll switch to newer kernel with [https://github.com/grate-driver/linux Tegra-DRM] drivers. SSH is working.
+
+Every UI option which is bigger than 650 MB cannot be flashed by fastboot (<code>pmbootstrap flasher flash_rootfs</code>) into SYSTEM (650M size) neigher USERDATA (enough space, but upload fails from unknown reason). In that case, it's best to manually upload image over adb into storage and then <code>dd</code> into userdata partition or use SD card.
 
 === Development Notes ===
 
