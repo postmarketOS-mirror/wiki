@@ -33,9 +33,13 @@
 | status_calls = -
 | booting = yes
 }}
-=== Contributors ===
+== Contributors ==
 * antonok
 * pangelo
+
+=== Users owning this device ===
+{{Device owners}}
+
 
 === How to enter flash mode ===
 * Connect a USB cable
@@ -57,7 +61,7 @@ $ ./pmbootstrap.py flasher flash_rootfs
 * Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?)
 * Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, won't boot into lightdm, until we'll switch to newer kernel with [https://github.com/grate-driver/linux Tegra-DRM] drivers. SSH is working.
 
-Every UI option which is bigger than 650 MB cannot be flashed by fastboot (<code>pmbootstrap flasher flash_rootfs</code>) into SYSTEM (650M size) neigher USERDATA (enough space, but upload fails from unknown reason). In that case, it's best to manually upload image over adb into storage and then <code>dd</code> into userdata partition or use SD card.
+Every UI option which is '''bigger than 650 MB''' cannot be flashed by fastboot (<code>pmbootstrap flasher flash_rootfs</code>) into SYSTEM (650M size) neigher USERDATA (enough space, but upload fails from unknown reason). In that case, it's best to manually upload image over adb into storage and then <code>dd</code> into userdata partition or use SD card.
 
 === Development Notes ===
 
@@ -87,10 +91,6 @@ Every UI option which is bigger than 650 MB cannot be flashed by fastboot (<code
 * It is possible to manually get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, running <code>/etc/init.d/networking restart</code>, gave an error about being unable to get a MAC address. After restarting the device to find that wifi Just Worked™, it was possible to successfully scan for wireless networks and establish a connection to secured wireless APs.
 * There's a proper firmware subpackage now, wifi device should work out-of-the box. 
 
-==== USB networking ====
-
-* <s>I was able to get networking over USB with an RTL8150 ethernet USB adapter by enabling the RTL8150 kernel config and following the [https://wiki.alpinelinux.org/wiki/Configure_Networking network setup guide on the Alpine Linux wiki].</s> '''Update:''' Nothing special required anymore. Just boot up and use the [https://wiki.postmarketos.org/wiki/USB_Network#Assigning_an_IP_address DHCP networking process for USB networks]
-
 === Pending Issues ===
 
 * {{issue|201|pmaports}}: device seems to reboot spontaneously under heavy load (could be a hardware problem though, needs more testing).
@@ -106,3 +106,5 @@ These are other pending issues that are related to this device:
 === Fun Fact ===
 
 ''<code>grouper</code> was the first tablet to run pmOS!''
+
+''<code>tilapia</code> jas exactly same HW as <code>grouper</code>''
