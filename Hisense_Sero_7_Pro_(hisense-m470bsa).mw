@@ -18,17 +18,20 @@
 | status_flashing = P
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery = 
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = 
 | status_bluetooth = 
 | status_camera = 
 | status_gps = 
+| status_mobiledata = N/A
+| status_sms = N/A
+| status_calls = N/A
 | status = Able to boot and run applications in Xorg
 | booting = yes
 
@@ -40,7 +43,7 @@ Version of the kernel that pmos is running
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
-| status_otg = -
+| status_otg = Y
 -->
 }}
 
