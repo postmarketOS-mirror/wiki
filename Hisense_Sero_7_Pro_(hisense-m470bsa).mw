@@ -29,9 +29,9 @@
 | status_bluetooth = 
 | status_camera = 
 | status_gps = 
-| status_mobiledata = N/A
-| status_sms = N/A
-| status_calls = N/A
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
 | status = Able to boot and run applications in Xorg
 | booting = yes
 
@@ -69,9 +69,7 @@ Not implemented yet
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|721|pmaports}}
-* {{issue|721|pmaports}} Some related issue
-[https://gitlab.com/postmarketOS/pmaports/merge_requests/721]
+* {{MR|721|pmaports}} Merge Request for Sero 7 Pro
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
