@@ -69,7 +69,7 @@ Not implemented yet
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-{{MR|721|pmaports}} https://gitlab.com/postmarketOS/pmaports/merge_requests/721
+* {{MR|721|pmaports}} https://gitlab.com/postmarketOS/pmaports/merge_requests/721
 * {{issue|721|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
