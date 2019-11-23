@@ -69,8 +69,8 @@ Not implemented yet
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
+{{MR|721|pmaports}} Initial merge request
+* {{issue|721|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
@@ -79,5 +79,3 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
-* [https://github.com/inyan600/postmarket-hisense-m470bsa Repository with device and kernel package]
-* [https://github.com/inyan600/android_kernel_hisense_m470bsa Kernel source]
