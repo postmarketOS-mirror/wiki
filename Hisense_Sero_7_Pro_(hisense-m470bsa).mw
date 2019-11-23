@@ -67,8 +67,8 @@ Press and hold power + volume down
 Refer to [https://wiki.postmarketos.org/wiki/Installation_guide Installation Guide for postmarketOS]
 
 == Known issues ==
-Flash fails on both system and user partition due to there not being enough space, use a micro sd card if you have this issue.
-Audio not working right now, hoping to fix soon.
+* Flash fails on both system and user partition due to there not being enough space, use a micro sd card if you have this issue.
+* Audio not working right now, hoping to fix soon.
 
 == See also ==
 * {{MR|721|pmaports}}: Merge Request for Sero 7 Pro
