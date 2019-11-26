@@ -97,5 +97,6 @@ File:RaspberryPiZeroWeston.jpeg|thumb|Weston
 * [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
 * {{github|1501}} initial PR
 * {{MR|125|pmaports}} New device: Raspberry Pi Zero with Ethernet over USB enabled
+* [https://github.com/ropg/hyper-pi Hyper-pi] - Project to make a handheld device w/ a RPi Zero and a HyperPixel 4" capacitive touch screen
 
 [[Category:Devices]]
