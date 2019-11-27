@@ -160,8 +160,9 @@ Thankfully our device still has the headphone jack, so you could still listen to
 Well, sure. Headphones should work after unmuting <code>Headphone</code> and <code>AIF1 Slot 0 digital</code>.
 
 ==== Microphone ====
-Doesn't seem to work for Danct12, but the microphone can be found in the picture below:
+Microphone can be enabled by toggle capture and unmute "AIF1 Data Digital Audio", "Mic1", "Mic2".
 
+The microphone can be found here:
 [[File:PineTab-Microphone.png|frameless]]
 
 == See also ==
