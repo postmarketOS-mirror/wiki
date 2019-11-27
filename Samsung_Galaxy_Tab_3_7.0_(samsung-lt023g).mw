@@ -63,7 +63,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Battery indicator
 * Wayland
 * X11
-* Front Camera(and probably back but didn't figure out how to switch cameras)
+* Front and back Camera(/dev/video0 - front camera, /dev/video1 - back camera)
 * WiFi
 * Sensors
 * Bluetooth(only shows available devices. Still looking for a way to connect to a device)
