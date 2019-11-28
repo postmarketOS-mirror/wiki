@@ -47,7 +47,7 @@
 * Hold power + volume down
 * <code>fastboot</code> should work when the green android appears on the screen
 
-=== Installation process ===
+=== Installation process (legacy kernel) ===
 <syntaxhighlight lang="shell" line='line'>
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 $ cd pmbootstrap
