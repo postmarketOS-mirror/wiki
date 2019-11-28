@@ -112,8 +112,6 @@ adb push replace_with_exported_img_rootfs_file_ /
 * Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?)
 * Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
 
-Every UI option which is '''bigger than 650 MB''' cannot be flashed by fastboot (<code>pmbootstrap flasher flash_rootfs</code>) into SYSTEM (650M size) neigher USERDATA (enough space, but upload fails from unknown reason). In that case, it's best to manually upload image over adb into storage and then <code>dd</code> into userdata partition or use SD card.
-
 === Development Notes ===
 
 ==== Kernel ====
