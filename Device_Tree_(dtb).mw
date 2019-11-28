@@ -34,4 +34,6 @@ When [[Mainlining Guide | mainlining]] a board, it is often needed to write one'
 
 [https://github.com/torvalds/linux/blob/master/Documentation/arm/Booting Linux documentation on the ARM boot process]
 
+[https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/Documentation/manual.txt DTC (device tree compiler) manual]
+
 [[Category:Technical Reference]]
