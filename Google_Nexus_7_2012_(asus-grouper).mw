@@ -91,10 +91,21 @@ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 
 pmbootstrap flasher list_devices
 pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
-# now should be device start running, have to be flashed every boot, since when it's booted or flashed with boot.img, it never work (not figured why 2019-11-28)
+# must be booted this way every boot, when it's booted or flashed with boot.img, it never work (not figured why 2019-11-28)
 </syntaxhighlight>
 
+Flashing rootfs under 650MB:
+<syntaxhighlight lang="shell" line='line'>
+pmbootstrap flasher flash_rootfs
+</syntaxhighlight>
 
+Flashing rootfs over 650MB to USERDATA:
+<syntaxhighlight lang="shell" line='line'>
+# start TWRP
+adb push replace_with_exported_img_rootfs_file_ /
+(computer) $ adb shell
+(twrp) $ dd if=/replace_with_exported_img_rootfs_file_ of=/dev/block/mmcblk0p10 # mmcblk0p10 may be different for your Nexus version!
+</syntaxhighlight>
 
 
 === UI options ===
