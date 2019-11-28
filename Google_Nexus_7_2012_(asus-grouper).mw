@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Google (ASUS)
 | name = Nexus 7 (2012)
-| codename = asus-grouper
+| codename = asus-grouper & asus-tilapia
 | image = File:Nexus 7 2012 weston.jpg
 | imagecaption = Galaxy Nexus 7
 | releaseyear = 2012
@@ -18,9 +18,9 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
-| status_xwayland = 
+| status_xwayland = P
 | status_fde = 
-| status_mainline = 
+| status_mainline = P
 | status_battery =
 | status_3d = 
 | status_accel = 
@@ -57,9 +57,49 @@ $ ./pmbootstrap.py flasher flash_kernel
 $ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
+=== Installation process (development setup, cutting edge) ===
+This includes latest mainline kernel (no wifi and touchscreen support, 2019-11-28):
+<syntaxhighlight lang="shell" line='line'>
+mkdir ~/code
+cd ~/code
+git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+cd pmbootstrap
+alias pmbootstrap=~/code/pmbootstrap/pmbootstrap.py
+pmbootstrap init
+# pmbootstrap initfs hook_add debug-shell # not required, only for debugging
+pmbootstrap export
+pmbootstrap chroot -- apk add abootimg android-tools mkbootimg dtbtool findutils
+export DEVICE="$(pmbootstrap config device)"
+export WORK="$(pmbootstrap config work)"
+export TEMP="$WORK/chroot_native/tmp/mainline/"
+mkdir -p "$TEMP"
+
+cd ~/code
+git clone https://github.com/grate-driver/linux.git
+cd linux
+source ~/code/pmbootstrap/helpers/envkernel.sh
+
+sudo curl -o .output/.config http://dpaste.com/1TYHKRZ.txt # download prepared config file
+pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
+sudo cp ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./output/ # initfs is later compiled into kernel
+
+make -j5
+
+cd ~/code/linux/.output/arch/arm/boot
+cat zImage dts/tegra30-grouper-bach.dtb > ~/code/linux/.zImage-dtb
+cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
+
+pmbootstrap flasher list_devices
+pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
+# now should be device start running, have to be flashed every boot, since when it's booted or flashed with boot.img, it never work (not figured why 2019-11-28)
+</syntaxhighlight>
+
+
+
+
 === UI options ===
 * Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?)
-* Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, won't boot into lightdm, until we'll switch to newer kernel with [https://github.com/grate-driver/linux Tegra-DRM] drivers. SSH is working.
+* Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
 
 Every UI option which is '''bigger than 650 MB''' cannot be flashed by fastboot (<code>pmbootstrap flasher flash_rootfs</code>) into SYSTEM (650M size) neigher USERDATA (enough space, but upload fails from unknown reason). In that case, it's best to manually upload image over adb into storage and then <code>dd</code> into userdata partition or use SD card.
 
@@ -68,8 +108,7 @@ Every UI option which is '''bigger than 650 MB''' cannot be flashed by fastboot 
 ==== Kernel ====
 
 * [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux. Many of them are probably currently mainlined.
-* LineageOS kernel can be found [https://github.com/LineageOS/android_kernel_asus_grouper here] (currently used and compiled with gcc 6.1, with few patches a top).
-* A newer kernel, can be found here: https://github.com/Unlegacy-Android
+* LineageOS kernel can be found [https://github.com/LineageOS/android_kernel_asus_grouper here] (currently used and compiled with gcc 6.1, with few patches a top), a newer kernel, can be found here: https://github.com/Unlegacy-Android
 * Up-to-date [https://github.com/grate-driver/linux kernel], where tegra development ongoing.
 * UART debugging through the headphone jack doesn't seem to work - apparently the 2012 version of the Nexus 7 does not have this feature.
 
@@ -79,7 +118,6 @@ Every UI option which is '''bigger than 650 MB''' cannot be flashed by fastboot 
 
 * CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.
 * <s>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</s> '''Update:''' Seems to be correctly set now
-* xwayland does not work.
 * weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.
 * The touchscreen input device is named <code>elan-touchscreen</code>.
 
