@@ -14,14 +14,14 @@
 | memory = 768MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = P
 | status_screen = <!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_mainline = N
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
@@ -32,20 +32,22 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = haven't managed to compile downstream with "Mediatek propertary extensions" (sic)
+| status = Downstream compiles with "Mediatek propertary extensions" (sic) but doesn't boot fully yet.
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| pmoskernel = 3.10.72
+| status_otg = 
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = -
 -->
 }}
+
+Current status: the device boot but doesn't show anything on screen. It seems to go past initramfs but don't give ssh access although it creates a network interface and it is possible to ping it.
+
+TODO: make this an issue.
 
 == Contributors ==
 * afontain
@@ -59,16 +61,19 @@ me, @afontain:gnugen.ch on matrix. Not that there is anything to maintain yet, t
 == How to enter flash mode ==
 First, boot phone into recovery mode.
 To do that, power on while pressing both the up button and the power button.
-When the logo apears, release the power button.
+When the logo appears, release the power button.
 
 Once in the recovery mode, navigate to "reboot to bootloader" using the volume keys. <br/>
 In my case, I had to validate pressing the power button twice, then the power up button.
 
-== Kernel sources ==
-TODO
-
 == Installation ==
-There is nothing to install so far
+
+The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://github.com/postmarketOS/pmbootstrap/issues/456 require a workaround]
+
+== Mainlining ==
+=== downstream kernel sources, for reference ===
+https://www.wikogeek.com/index.php?telephone=LENNY2&region=EUROPE&version=%25
+
 
 == See also ==
 <!--
