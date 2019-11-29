@@ -65,7 +65,8 @@ Is OTG available, not used in wiki
 Wiko U Feel is based on Tinno p6601 board (like BLU R1 HD, Lanix Ilium L910, QMobile Noir A6, Evertek EverSolo, Smart Art P6601).
 
 == WiFi ==
-,
+As described in the WiFi troubleshooting guide, you need a firmware loader, named 6620_launcher, but it panics the kernel.
+
 == Audio ==
 Sound card is detected in alsamixer, but dosen't work
 
