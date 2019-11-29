@@ -64,6 +64,8 @@ Is OTG available, not used in wiki
 == Board ==
 Wiko U Feel is based on Tinno p6601 board (like BLU R1 HD, Lanix Ilium L910, QMobile Noir A6, Evertek EverSolo, Smart Art P6601).
 
+== WiFi ==
+,
 == Audio ==
 Sound card is detected in alsamixer, but dosen't work
 
