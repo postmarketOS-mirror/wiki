@@ -35,25 +35,25 @@
 | status = Downstream compiles with "Mediatek propertary extensions" (sic)
 | booting = yes
 | pmoskernel = 3.10.72
-| status_otg = 
-
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-see Unixbench page on wiki
-| whet_dhry = 0.0
--->
+| status_otg = N
+| whet_dhry = 477.6
 }}
 
-Current status: the device boot but doesn't show anything on screen. It seems to go past initramfs but don't give ssh access although it creates a network interface and it is possible to ping it.
+== Status == 
+;screen
+: has a working framebuffer, so it's possible to display stuff. No DRM as with a lot of older kernels, that means no phosh or sway, I guess.
+;audio
+: ''BADLY BROKEN'', <code>alsamixer</code> or <code>mpv</code> seem to make the kernel crash. The phone reboots afterwards
+: maybe something non-alsa could work better?
+
 
 TODO: make this an issue.
 
 == Contributors ==
-* afontain
+* [[User:Afontain|afontain]]
 
-== Maintainer(s) ==
-me, @afontain:gnugen.ch on matrix. Not that there is anything to maintain yet, though.
+== Maintainer ==
+[[User:Afontain|afontain]]
 
 == Users owning this device ==
 {{Device owners}}
