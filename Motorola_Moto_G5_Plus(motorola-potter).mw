@@ -44,7 +44,7 @@
 * Power + Volume Down buttons
 
 == Installation ==
-<source>
+<source lang="shell-session">
 $ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher boot
 </source>
