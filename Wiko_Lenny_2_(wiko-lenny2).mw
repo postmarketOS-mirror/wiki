@@ -40,14 +40,28 @@
 }}
 
 == Status == 
+
 ;screen
 : has a working framebuffer, so it's possible to display stuff. No DRM as with a lot of older kernels, that means no phosh or sway, I guess.
+
 ;audio
 : ''BADLY BROKEN'', <code>alsamixer</code> or <code>mpv</code> seem to make the kernel crash. The phone reboots afterwards
 : maybe something non-alsa could work better?
 
+;wifi
+: the network interface don't appear in <code>ifconfig</code>.
 
-TODO: make this an issue.
+;battery reading
+: broken,
+:* <code>acpi</code> tell the battery is fully empty.
+:* <code>upower --dump</code> generates a segfault: <br/> <code>(upower:1682): UPower-WARNING **: 11:58:54.107: Cannot connect to upowerd: Error calling StartServiceByName for org.freedesktop.UPower: Process org.freedesktop.UPower received signal 11</code>
+
+;desktop environment
+* Mate seem to be the one who works best. Mostly because I doesn't die from the segfaults.
+* Plasma Mobile only show a mouse cursor, loads of segfaults too.
+* Sway and Phosh require [https://en.wikipedia.org/wiki/Direct_Rendering_Manager DRM] support, so that's a no-go.
+* XFCE4 fails to start, for some reason.
+* i3 could be a possible alternative. Untested since the lack of external keyboard would make it useless.
 
 == Contributors ==
 * [[User:Afontain|afontain]]
@@ -68,7 +82,7 @@ In my case, I had to validate pressing the power button twice, then the power up
 
 == Installation ==
 
-The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://github.com/postmarketOS/pmbootstrap/issues/456 require a workaround]
+The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://github.com/postmarketOS/pmbootstrap/issues/456 require a workaround]. I recommand flashing the rootfs to the <code>userdata</code> partition, as it is larger than <code>system</code>.
 
 == Mainlining ==
 === downstream kernel sources, for reference ===
@@ -88,3 +102,4 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
+* [https://gitlab.com/postmarketOS/pmaports/merge_requests/773 pmaports!773], the merge request
