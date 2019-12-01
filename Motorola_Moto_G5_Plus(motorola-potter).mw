@@ -54,18 +54,18 @@ $ pmbootstrap flasher boot
 == Notes ==
 
 * The flashlight can be switched on with:
-<source>
+<source lang="shell-session">
 $ echo 1 > /sys/class/leds/led\:switch/brightness
 </source>
 and it can be switched off with:
-<source>
+<source lang="shell-session">
 $ echo 0 > /sys/class/leds/led\:switch/brightness
 </source>
 
 * The charging LED can be switched on similarly, simply substitute `led\:switch` with `charging`. The charging LED will only blink as of now.
 
 * You can change the screen brightness with:
-<source>
+<source lang="shell-session">
 $ echo $brightness > /sys/class/leds/led\:switch/brightness
 </source>
 
