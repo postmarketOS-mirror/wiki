@@ -2,8 +2,8 @@
 | manufacturer = Wiko
 | name =  Lenny 2
 | codename = wiko-lenny2
-| image = File:Wiko-Lenny2-Bootloader-Splash.jpg
-| imagecaption = The most advanced booting stage reached so far.
+| image = File:Wiko-Lenny2-Alacritty-HTop.jpg
+| imagecaption = It Works!
 | releaseyear = Sept. 2015
 | originalsoftware = Android 5.1
 | chipset = Mediatek mt6580
@@ -57,11 +57,17 @@
 :* <code>upower --dump</code> generates a segfault: <br/> <code>(upower:1682): UPower-WARNING **: 11:58:54.107: Cannot connect to upowerd: Error calling StartServiceByName for org.freedesktop.UPower: Process org.freedesktop.UPower received signal 11</code>
 
 ;desktop environment
-* Mate seem to be the one who works best. Mostly because I doesn't die from the segfaults.
-* Plasma Mobile only show a mouse cursor, loads of segfaults too.
+* Mate seem to be the one who works best. Mostly because I doesn't die from the segfaults. It is missing the bottom banel though.
+* Plasma Mobile only show a mouse cursor on a black background, with loads of segfaults.
 * Sway and Phosh require [https://en.wikipedia.org/wiki/Direct_Rendering_Manager DRM] support, so that's a no-go.
 * XFCE4 fails to start, for some reason.
 * i3 could be a possible alternative. Untested since the lack of external keyboard would make it useless.
+
+;games
+* chocolate doom works on software rendering
+
+[[File:Mate_and_Chocolate_Doom_with_Freedoom_on_Wiko_Lenny_2.png|240px|Mate and Chocolate Doom]]
+[[File:Lenny2_webbrowsing.png|240px|Mate, Midori and the Matchbox virtual keyboard]]
 
 == Contributors ==
 * [[User:Afontain|afontain]]
