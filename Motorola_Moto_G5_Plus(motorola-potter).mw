@@ -51,6 +51,17 @@ $ pmbootstrap flasher boot
 
 == Photos ==
 
+== Notes ==
+
+* The flashlight can be switched on with:
+<source>
+$ echo 1 > /sys/class/leds/led\:switch/brightness
+</source>
+and it can be switched off with:
+<source>
+$ echo 0 > /sys/class/leds/led\:switch/brightness
+</source>
+
 == Links ==
 * GSM Arena specifications page: https://www.gsmarena.com/motorola_moto_g5_plus-8453.php
 * TWRP Recovery: https://twrp.me/motorola/motorolamotog5plus.html
