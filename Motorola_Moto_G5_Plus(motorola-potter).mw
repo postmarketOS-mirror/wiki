@@ -62,6 +62,13 @@ and it can be switched off with:
 $ echo 0 > /sys/class/leds/led\:switch/brightness
 </source>
 
+* The charging LED can be switched on similarly, simply substitute `led\:switch` with `charging`. The charging LED will only blink as of now.
+
+* You can change the screen brightness with:
+<source>
+$ echo $brightness > /sys/class/leds/led\:switch/brightness
+</source>
+
 == Links ==
 * GSM Arena specifications page: https://www.gsmarena.com/motorola_moto_g5_plus-8453.php
 * TWRP Recovery: https://twrp.me/motorola/motorolamotog5plus.html
