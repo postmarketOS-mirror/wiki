@@ -81,7 +81,7 @@ source ~/code/pmbootstrap/helpers/envkernel.sh
 
 sudo curl -o .output/.config http://dpaste.com/1TYHKRZ.txt # download prepared config file
 pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
-sudo cp ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./output/ # initfs is later compiled into kernel
+sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./output/ # initfs is later compiled into kernel
 
 make -j5
 
@@ -106,7 +106,6 @@ adb push replace_with_exported_img_rootfs_file_ /
 (computer) $ adb shell
 (twrp) $ dd if=/replace_with_exported_img_rootfs_file_ of=/dev/block/mmcblk0p10 # mmcblk0p10 may be different for your Nexus version!
 </syntaxhighlight>
-
 
 === UI options ===
 * Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?)
