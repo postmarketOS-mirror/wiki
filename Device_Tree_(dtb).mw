@@ -30,10 +30,11 @@ When [[Mainlining Guide | mainlining]] a board, it is often needed to write one'
 
 == Links ==
 
-[http://www.informit.com/articles/article.aspx?p=1647051&seqNum=5 Device Tree Blob (Flat Device Tree)]
-
-[https://github.com/torvalds/linux/blob/master/Documentation/arm/Booting Linux documentation on the ARM boot process]
-
-[https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/Documentation/manual.txt DTC (device tree compiler) manual]
+* [http://www.informit.com/articles/article.aspx?p=1647051&seqNum=5 Device Tree Blob (Flat Device Tree)]
+* [https://github.com/torvalds/linux/blob/master/Documentation/arm/Booting Linux documentation on the ARM boot process]
+* [https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/Documentation/manual.txt DTC (device tree compiler) manual]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/usage-model.txt Linux kernel docs Documentation/devicetree/usage-model.txt]
+* YouTube: [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree for Dummies! - Thomas Petazzoni, Free Electrons]
+* YouTube: [https://www.youtube.com/watch?v=PgQezmlst0w Device Tree: Past, Present, and Future]
 
 [[Category:Technical Reference]]
