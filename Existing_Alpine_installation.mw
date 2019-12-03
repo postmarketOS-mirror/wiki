@@ -10,7 +10,7 @@ To turn Alpine into postmarketOS:
 
 <pre>apk add -u postmarketos-base device-nokia-rx51</pre>
 
-* Install the packages for the device and UI you want to have, for example:
+* Install the packages for the UI you want, for example:
  
 <pre>apk add -u postmarketos-ui-hildon</pre>
  
