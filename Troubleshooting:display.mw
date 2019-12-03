@@ -1,5 +1,10 @@
 = Generic debugging steps =
 
+== Look at ~/.xsession-errors and ~/.xsession-errors.old ==
+When lightDM starts your session, it redirects its output in that file. Including if that's a Wayland session!
+
+If both files are empty, you can expect your graphical interface to have started without error. If they aren't created, lightDM may not have been started successfully.
+
 == Changing the panning ==
 Some devices might have a framebuffer virtual size thats twice as big as the panel resolution, this is a common double buffering method. The application renders to one side of the display while the panning is set to
 the other side. You can try changing the panning with the `panning` file in the sysfs directory.
