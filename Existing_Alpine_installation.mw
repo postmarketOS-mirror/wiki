@@ -1,10 +1,10 @@
 To turn Alpine into postmarketOS:
 
 * Install Alpine Linux
-* Add [https://raw.githubusercontent.com/postmarketOS/pmbootstrap/master/keys/pmos-5a03a13a.rsa.pub this key] to <code>/etc/apk/keys</code>
+* Add [https://gitlab.com/postmarketOS/pmbootstrap/raw/master/pmb/data/keys/build.postmarketos.org.rsa.pub this key] to <code>/etc/apk/keys</code>
 * Add this mirror to the top of <code>/etc/apk/repositories</code>:
  
-<pre>http://postmarketos.brixit.nl</pre>
+<pre>http://postmarketos.brixit.nl/postmarketos/master</pre>
  
 * Install the packages for the device and UI you want to have, for example:
  
