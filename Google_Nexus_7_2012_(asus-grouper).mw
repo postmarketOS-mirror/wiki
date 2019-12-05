@@ -137,6 +137,10 @@ adb push replace_with_exported_img_rootfs_file_ /
 | Battery
 |Driver works.
 |-
+| W
+| Charger
+|there is driver for the charger in upstream kernel, but it doesn't have support for device-tree
+|-
 | ?
 |Bluetooth
 |Not tested yet.
@@ -144,6 +148,10 @@ adb push replace_with_exported_img_rootfs_file_ /
 | Y
 |Sound
 |sound also works, but require ALSA UCM configuration (for now you'll need to enable DACs and etc using alsamixer)
+|-
+| Y
+|Temperature sensor
+|temperature sensor works
 |-
 | Y
 |Proximity sensor
