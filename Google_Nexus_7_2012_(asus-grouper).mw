@@ -117,14 +117,6 @@ adb push replace_with_exported_img_rootfs_file_ /
 |Touchscreen
 |Original driver CONFIG_TOUCHSCREEN_ELAN_TF_3K (Android dependency). Tested with ektf2127, which loads, but it's unable to get data (there is difference between EKTF2 and EKTF3). Driver needs to be ported, example can be taken from ektf2127 (which supports DTS).
 |-
-| N
-|Touchscreen
-|Atmel mXT224(e). Works fine without maxtouch.cfg.
-|-
-| Y
-|QWERTY keyboard
-|STMPE1801. Mainline kernel supports the chip, but not the keyboard controller, so we use a patched version. Built-in LED is supported via GPIO. Keymap is missing.
-|-
 | Y
 |USB
 |Works.
@@ -133,9 +125,9 @@ adb push replace_with_exported_img_rootfs_file_ /
 |SDHCI
 |Works.
 |-
-| P
+| Y
 |WiFi
-|Not tested yet, but should work when driver is loaded (module).
+|Wi-fi works.
 |-
 | Y
 | GPIO keys
@@ -151,9 +143,9 @@ adb push replace_with_exported_img_rootfs_file_ /
 |-
 | Y
 |Sound
-|Driver is loaded, probably needs tuning to play sound.
+|sound also works, but require ALSA UCM configuration (for now you'll need to enable DACs and etc using alsamixer)
 |-
-| ?
+| Y
 |Proximity sensor
 |
 |-
