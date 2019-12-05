@@ -137,7 +137,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 | Battery
 |Driver works.
 |-
-| W
+| P
 | Charger
 |there is driver for the charger in upstream kernel, but it doesn't have support for device-tree
 |-
