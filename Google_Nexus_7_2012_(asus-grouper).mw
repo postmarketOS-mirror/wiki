@@ -3,7 +3,7 @@
 | name = Nexus 7 (2012)
 | codename = asus-grouper & asus-tilapia
 | image = File:Nexus 7 2012 weston.jpg
-| imagecaption = Galaxy Nexus 7
+| imagecaption = Google Nexus 7
 | releaseyear = 2012
 | originalsoftware = Android 4.1.2 on Linux 3.0
 | chipset = Nvidia Tegra 3
@@ -108,7 +108,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 </syntaxhighlight>
 
 === UI options ===
-* Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?)
+* Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?) EDIT: AS OF 5/12/2019 IT IS NOT WORKING ON LEGACY KERNEL.
 * Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
 
 === Development Notes ===
