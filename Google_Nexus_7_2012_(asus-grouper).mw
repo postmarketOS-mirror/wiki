@@ -107,6 +107,70 @@ adb push replace_with_exported_img_rootfs_file_ /
 (twrp) $ dd if=/replace_with_exported_img_rootfs_file_ of=/dev/block/mmcblk0p10 # mmcblk0p10 may be different for your Nexus version!
 </syntaxhighlight>
 
+== Hardware ==
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Info
+|-
+| N
+|Touchscreen
+|Original driver CONFIG_TOUCHSCREEN_ELAN_TF_3K (Android dependency). Tested with ektf2127, which loads, but it's unable to get data (there is difference between EKTF2 and EKTF3). Driver needs to be ported, example can be taken from ektf2127 (which supports DTS).
+|-
+| N
+|Touchscreen
+|Atmel mXT224(e). Works fine without maxtouch.cfg.
+|-
+| Y
+|QWERTY keyboard
+|STMPE1801. Mainline kernel supports the chip, but not the keyboard controller, so we use a patched version. Built-in LED is supported via GPIO. Keymap is missing.
+|-
+| Y
+|USB
+|Works.
+|-
+| Y
+|SDHCI
+|Works.
+|-
+| P
+|WiFi
+|Not tested yet, but should work when driver is loaded (module).
+|-
+| Y
+| GPIO keys
+|There is 3 keys on GPIO: Power, Volume up, Volume down.
+|-
+| ?
+|Vibra
+|Not tested yet.
+|-
+| ?
+|Bluetooth
+|Not tested yet.
+|-
+| Y
+|Sound
+|Driver is loaded, probably needs tuning to play sound.
+|-
+| ?
+|Proximity sensor
+|
+|-
+| N
+|Back camera
+|
+|-
+| N
+|Front camera
+|
+|-
+| N
+|Modem
+|present only on tilapia, no work started yet.
+|-
+|}
+
 === UI options ===
 * Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?) EDIT: AS OF 5/12/2019 IT IS NOT WORKING ON LEGACY KERNEL.
 * Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
