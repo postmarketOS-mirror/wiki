@@ -134,10 +134,6 @@ adb push replace_with_exported_img_rootfs_file_ /
 |There is 3 keys on GPIO: Power, Volume up, Volume down.
 |-
 | ?
-|Vibra
-|Not tested yet.
-|-
-| ?
 |Bluetooth
 |Not tested yet.
 |-
@@ -147,10 +143,6 @@ adb push replace_with_exported_img_rootfs_file_ /
 |-
 | Y
 |Proximity sensor
-|
-|-
-| N
-|Back camera
 |
 |-
 | N
