@@ -133,6 +133,10 @@ adb push replace_with_exported_img_rootfs_file_ /
 | GPIO keys
 |There is 3 keys on GPIO: Power, Volume up, Volume down.
 |-
+| Y
+| Battery
+|Driver works.
+|-
 | ?
 |Bluetooth
 |Not tested yet.
