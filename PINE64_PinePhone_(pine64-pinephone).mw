@@ -248,7 +248,6 @@ dontbeevil:~# echo "Verified gravity still exists"
 
 === RGB Led ===
 
-The RGB led works with the led driver, but due to hardware bugs there can be only one led active at the same time and the blue led doesn't work because some pins are reversed.
 <source lang="shell-session">
 # Activate LED
 echo 1 > /sys/class/leds/$COLOR/brightness
