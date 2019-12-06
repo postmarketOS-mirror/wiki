@@ -57,8 +57,9 @@
 :* <code>upower --dump</code> generates a segfault: <br/> <code>(upower:1682): UPower-WARNING **: 11:58:54.107: Cannot connect to upowerd: Error calling StartServiceByName for org.freedesktop.UPower: Process org.freedesktop.UPower received signal 11</code>
 
 ;desktop environment
-* Mate seem to be the one who works best. Mostly because I doesn't die from the segfaults. It is missing the bottom banel though.
-* Plasma Mobile only show a mouse cursor on a black background, with loads of segfaults.
+* Mate seems to be the one who works best. Mostly because I doesn't die from the segfaults. It is missing the bottom banel though.
+* Weston works, but for some reason, it sometimes fails to start: <code>sudo rc-service lightdm restart</code>.
+* Plasma Mobile only shows a mouse cursor on a black background, with loads of segfaults.
 * Sway and Phosh require [https://en.wikipedia.org/wiki/Direct_Rendering_Manager DRM] support, so that's a no-go.
 * XFCE4 fails to start, for some reason.
 * i3 could be a possible alternative. Untested since the lack of external keyboard would make it useless.
