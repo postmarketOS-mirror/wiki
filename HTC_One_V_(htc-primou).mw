@@ -1,0 +1,89 @@
+{{Infobox device
+| manufacturer = HTC
+| name = One V
+| codename = htc-primou
+| image = File:htc-primou.jpg
+| imagecaption = HTC One V running htop in weston-terminal
+| releaseyear = 2012
+| originalsoftware = Android 4.0.3
+| chipset = Qualcomm MSM8255 Snapdragon S2
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 205
+| storage = 4 GB
+| display = 480x800
+| memory = 512 MB
+| architecture = armv7
+| status_usbnet = 
+| status_flashing = 
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = 
+| booting = yes
+| pmoskernel = 3.0.101
+| whet_dhry = 186.6
+| status_otg = -
+
+}}
+
+== Contributors ==
+* [[User:HenriDellal|HenriDellal]]
+
+== Maintainer(s) ==
+* [[User:HenriDellal|HenriDellal]]
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Hold Volume Down and Power, then choose Fastboot with Power button.
+
+== Installation ==
+* Unlock bootloader on htcdev.com, if you didn't yet.
+* Install rootfs on sdcard, since the phone has small partitions.
+	<code>pmbootstrap install --sdcard /dev/your_card</code>
+* Move your phone into flash mode
+* Flashing kernel to boot partition is not tested. It's possible to use pmbootstrap flasher boot to boot kernel.
+
+== Features ==
+USB networking and ssh: Doesn't work for me. The phone doesn't show up on list of connected devices. It may be either downstream kernel or hardware issue, since the only way to get the phone detected is to move it in fastboot mode.
+
+Wi-Fi: Shows up as wlan0 interface. It's known to work on other HTC devices without much effort, but I didn't figure out how to enable it yet.
+
+Battery: Charging works when the phone is enabled, current state is detected properly. Charging-sdl most likely to not work, because this phone uses recovery for charging when plugged and turned off.
+
+Audio: msm-audio device gets detected, but it's not possible to unmute device volume channel for unknown reason. Probably needs configuration files for ALSA.
+
+Camera: tested with motion, doesn't work.
+
+== Hardware ==
+
+* Battery charger: tps65200
+* USB: ci13xxx (ci-hdrc-usb2)
+* Touchscreen: Synaptics 3200
+* Light sensor: Capella CM3629
+* Audio subsystem: Texas Instruments TPA2051D3
+* Camera: Samsung s5k4e5yx
+* LED flash: tps61310
+* Button LEDs: pm8058 (mainline)
+* Wi-Fi: Broadcom BCM4329
+* Accelerometer: BMA250_no_ecmps
+
+== See also ==
+<!--
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-htc-primou Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-htc-primou Kernel package]
+-->
