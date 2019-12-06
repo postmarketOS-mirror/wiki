@@ -12,7 +12,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | [[firefox]]
 | not packaged
 | works
-| ?
+| works (firefox-esr)
 | gecko
 | 
 | Alpine Linux has packaged only x86_64 and aarch64 versions.
@@ -20,7 +20,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | [[chromium]]
 | works
 | works with sandbox disabled
-| ?
+| works
 | blink
 | 
 | 
@@ -36,7 +36,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | qutebrowser
 | dependency error
 | dependency error
-| ?
+| works
 | blink
 | qtwebengine
 | keyboard controlled browser
@@ -44,7 +44,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | falkon
 | runs, but takes forever
 | crashes
-| ?
+| works
 | blink
 | qtwebengine
 | 
@@ -52,7 +52,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | epiphany
 | works
 | works
-| ?
+| pages not loading
 | webkit
 | webkit2gtk
 | 
@@ -60,7 +60,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | luakit
 | works
 | crashes
-| ?
+| pages not loading
 | webkit
 | webkit2gtk
 | keyboard controlled browser
@@ -68,7 +68,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | surf
 | works
 | not in xwayland
-| ?
+| works
 | webkit
 | webkit2gtk
 | keyboard controlled browser
@@ -76,7 +76,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | dillo
 | works
 | ?
-| ?
+| works
 | dillo
 | 
 | not HTML5, no SSL support
@@ -84,7 +84,7 @@ Not all webbrowsers are usable on a phone without hardware keyboard, here's an o
 | netsurf
 | works
 | ?
-| ?
+| works
 | netsurf
 | 
 | not HTML5
