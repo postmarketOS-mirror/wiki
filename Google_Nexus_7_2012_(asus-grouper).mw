@@ -104,7 +104,8 @@ Flashing rootfs over 650MB to USERDATA:
 # start TWRP
 adb push replace_with_exported_img_rootfs_file_ /
 (computer) $ adb shell
-(twrp) $ dd if=/replace_with_exported_img_rootfs_file_ of=/dev/block/mmcblk0p10 # mmcblk0p10 may be different for your Nexus version!
+(twrp) $ cat /proc/mounts #look for the data partition. should be something like /dev/block/mmcblk0p10
+(twrp) $ dd if=/replace_with_exported_img_rootfs_file_ of=/dev/block/mmcblk0p10 # mmcblk0p10 may be different for your Nexus version! 
 </syntaxhighlight>
 
 == Hardware ==
