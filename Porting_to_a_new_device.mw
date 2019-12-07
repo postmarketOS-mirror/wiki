@@ -287,7 +287,7 @@ In case you were asked for <code>boot.img</code> analyzing, and skipped that sec
 See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
 
 === We are happy to help you! ===
-If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://github.com/postmarketOS/pmbootstrap/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
+If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://gitlab.com/postmarketOS/pmaports/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
 
 === Documentation ===
 This is a wiki, so '''please adjust everything that isn't detailed enough or would have helped you with porting.'''
@@ -351,7 +351,7 @@ $ pmbootstrap export --odin
 
 For Android based devices, you can do a [[Android_Recovery_Zip_Installation|recovery zip installation]].
 
-When all else fails, you might have success with installing via [https://github.com/postmarketOS/pmbootstrap/issues/456 netcat] or booting via [https://github.com/postmarketOS/pmbootstrap/pull/547 NFS].
+When all else fails, you might have success with installing via [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 netcat] or booting via [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/547 NFS].
 
 === USB Network ===
 If you are lucky, your screen may give some clues that you are booted into pmOS. If not, do not get discouraged, the graphics on your device may not yet be setup correctly. The next steps are to see if you can connect to the device through [[USB Network|SSH over USB]] (or if that fails, via telnet). See the [[Boot process]] and [[Inspecting the initramfs]] pages for more details.
