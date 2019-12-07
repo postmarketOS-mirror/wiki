@@ -168,8 +168,8 @@ adb push replace_with_exported_img_rootfs_file_ /
 |}
 
 === UI options ===
-* Weston: Boots, but also occasionally reboots on its own. (old data, maybe it works now?) EDIT: AS OF 5/12/2019 IT IS NOT WORKING ON LEGACY KERNEL.
-* Phoc: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
+* Weston: Boots on legacy kernel. Touchscreen is working. It is currently unknown if the reboot issue still exists, however it is unlikely since phosh doesnt have this issue
+* Phos: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
 
 === Development Notes ===
 
