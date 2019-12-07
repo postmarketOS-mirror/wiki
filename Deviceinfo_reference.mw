@@ -95,6 +95,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | <code>initfs_compression</code>
 | Command used to compress initramfs image (see {{MR|334|pmaports}}, {{issue|237|pmaports}})
 | default: <code>'gzip -1'</code>
+|-
+| <code>getty</code>
+| Configure a getty on boot. Creates an entry in <code>/etc/inittab</code>
+| <code><port>;<baudrate></code><br />e.g. <code>ttyS0;115200</code><br />default: not set
 |}
 
 == flash ==
