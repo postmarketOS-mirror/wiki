@@ -169,7 +169,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 
 === UI options ===
 * Weston: Boots on legacy kernel. Touchscreen is working. It is currently unknown if the reboot issue still exists, however it is unlikely since phosh doesnt have this issue
-* Phos: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
+* Phosh: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
 
 === Development Notes ===
 
@@ -196,6 +196,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 * "Desktop" Linux firmware are outdated. Check [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware/bcm4330/ here] for latest one.
 * It is possible to manually get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, running <code>/etc/init.d/networking restart</code>, gave an error about being unable to get a MAC address. After restarting the device to find that wifi Just Worked™, it was possible to successfully scan for wireless networks and establish a connection to secured wireless APs.
 * There's a proper firmware subpackage now, wifi device should work out-of-the box. 
+* To connect follow the instructions on [[WiFi#Using_NetworkManager|this page.]]
 
 === Pending Issues ===
 
