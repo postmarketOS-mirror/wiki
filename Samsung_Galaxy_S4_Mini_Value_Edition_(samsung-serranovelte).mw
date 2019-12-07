@@ -1,0 +1,72 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy S4 Mini Value Edition
+| codename = samsung-serranovelte
+| image = File:serranovelte_pmos.png
+| imagecaption = Samsung Galaxy S4 Mini Value Edition
+| releaseyear = 2015
+| originalsoftware = Android 4.4.4
+| chipset = Qualcomm MSM8916 Snapdragon 410
+| cpu = 4x ARM Cortex A53 @ 1.2 GHz
+| gpu = Adreno 306
+| storage = 8 GB
+| display = 4.3 inch 16:9, 540 x 960 AMOLED
+| memory = 1.5 GB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde =
+| status_mainline = Y
+| status_battery = Y
+| status_3d = Y
+| status_accel = Y
+| status_audio = Y
+| status_bluetooth = Y
+| status_camera =
+| status_gps =
+| status_mobiledata =
+| status_sms =
+| status_calls =
+| status = 
+| booting = yes
+| pmoskernel = Mainline
+| whet_dhry = 886.7
+}}
+
+== Contributors ==
+* ''[[user:Minecrell|minecrell]]''
+
+== Users owning this device ==
+{{Device owners}}
+
+== Installation ==
+{{note|'''Note:''' Even though MSM8916 is capable of aarch64, the firmware of this device was never updated with aarch64 support. Therefore, this device can only boot mainline on armv7 at the moment.}}
+
+# Install [https://github.com/msm8916-mainline/lk2nd#readme lk2nd] (alternative bootloader that provides a standard fastboot interface)
+# Follow the [[Installation guide]]
+
+{{note|'''Note:''' Enter lk2nd fastboot mode by pressing only Volume Down + Power ('''not''' the Home button). Pressing the Home button additionally will bring you to the Samsung Download mode.}}
+
+== Audio ==
+<!-- TODO: Share this between all MSM8916 devices -->
+Everything is muted by default and must be enabled through alsaucm. Unfortunately, the tool is not very user-friendly.
+
+ $ alsaucm -i -c msm8916
+ set _verb HiFi
+ set _enadev <device>
+
+where <code><device></code> is one of <code>Speaker</code>, <code>Earpiece</code>, <code>Headphones</code>, <code>PrimaryMic</code>, <code>HeadsetMic</code> or <code>SecondaryMic</code>.
+alsaucm does not track which devices are already enabled, therefore it is possible to produce combinations that won't work properly (e.g. <code>Headphones</code>+<code>Earpiece</code>). To switch between devices, the old device first needs to be re-enabled and then disabled:
+
+ $ alsaucm -i -c msm8916
+ set _verb HiFi
+ set _enadev OLD
+ set _disdev OLD
+ set _enadev NEW
+
+{{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
