@@ -19,6 +19,12 @@ The pmOS boot partition is a '''sub'''partition of the system partition (''SD ca
 
 When you change too much, it will simply not work and you most likely will have no idea why it does not work. Go back to the last working version and do smaller changes at a time.
 
+=== Regenerating the two initramfs from the phone ===
+
+You can regenerate both initramfs, even if the first is in a <code>boot.img</code> by running as root
+
+  mkinitfs -o /boot/initramfs-''your-device''
+
 === Tips and tricks ===
 
 * Familiarize with [[inspecting the initramfs]]
