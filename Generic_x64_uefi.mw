@@ -35,7 +35,7 @@ This device allows postmarketOS to run on normal x86_64 hardware if the device u
 * MartijnBraam
 
 == Installation ==
-Do a normal sd card installation and point it to the storage medium you need for the device (harddisk, usb thumbdrive or sd card)
+The manufacturer is currently named ''tablet'' in pmbootstrap. To install, do a normal sd card installation and point it to the storage medium you need for the device (harddisk, usb thumbdrive or sd card).
 
 == See also ==
 * {{MR|68|pmaports}} initial merge request
