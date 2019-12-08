@@ -169,7 +169,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 |}
 
 === UI options ===
-* Weston: Boots on legacy kernel. Touchscreen is working. It is currently unknown if the reboot issue still exists, however it is unlikely since phosh doesnt have this issue
+* Weston: Boots on legacy kernel. Touchscreen is working on legacy kernel. The reboot issue exists on legacy kernel. Maybe it is an issue with the kernel we are using?
 * Phosh: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
 
 === Development Notes ===
