@@ -116,9 +116,9 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 ! Hardware
 ! Info
 |-
-| N
+| Y
 |Touchscreen
-|Original driver CONFIG_TOUCHSCREEN_ELAN_TF_3K (Android dependency). Tested with ektf2127, which loads, but it's unable to get data (there is difference between EKTF2 and EKTF3). Driver needs to be ported, example can be taken from ektf2127 (which supports DTS).
+|works for me
 |-
 | Y
 |USB
