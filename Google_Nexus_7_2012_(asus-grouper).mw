@@ -58,7 +58,7 @@ $ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
 === Installation process (development setup, cutting edge) ===
-This includes latest mainline kernel (wifi has to be loaded as module later and should work with firmware, no touchscreen support yet, 2019-12-01):
+This includes latest mainline kernel (no touchscreen support yet, 2019-12-09):
 <syntaxhighlight lang="shell" line='line'>
 mkdir ~/code
 cd ~/code
