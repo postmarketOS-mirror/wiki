@@ -109,6 +109,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 </syntaxhighlight>
 
 == Hardware ==
+There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
 {|class="wikitable feature-colors"
 ! Status
 ! Hardware
