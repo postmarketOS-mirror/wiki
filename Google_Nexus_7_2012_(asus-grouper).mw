@@ -80,9 +80,9 @@ git clone https://github.com/grate-driver/linux.git
 cd linux
 source ~/code/pmbootstrap/helpers/envkernel.sh
 
-sudo curl -o .output/.config http://dpaste.com/1YBCBMN.txt # download prepared config file
+sudo curl -o .output/.config http://dpaste.com/32W4T0C.txt # download prepared config file
 pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
-sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./output/ # initfs is later compiled into kernel
+sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./.output/ # initfs is later compiled into kernel
 
 make -j5
 
