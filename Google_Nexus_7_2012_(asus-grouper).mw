@@ -151,7 +151,15 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Y
 |Sound
 |sound also works, but require ALSA UCM configuration (for now you'll need to enable DACs and etc using alsamixer)
-alsamixer -c 0 "Stereo DAC MIXL DAC L1" - needs to be enabled
+alsamixer -c 0 # and enable something like:
+"Speaker R"
+"Speaker L"
+"DAC MIXR INF1"
+"DAC MIXL INF1"
+"SPOL MIX DAC R1"
+"SPOL MIX DAC L1"
+"Stereo DAC MIXR DAC R1"
+"Stereo DAC MIXL DAC L1" (bu
 |-
 | Y
 |Temperature sensor
