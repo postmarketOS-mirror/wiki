@@ -59,7 +59,7 @@ $ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
 === Installation process (development setup, cutting edge) ===
-This includes latest mainline kernel (no touchscreen support yet, 2019-12-09):
+This includes latest mainline kernel:
 <syntaxhighlight lang="shell" line='line'>
 mkdir ~/code
 cd ~/code
