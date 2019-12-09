@@ -173,7 +173,7 @@ alsamixer -c 0 "Stereo DAC MIXL DAC L1" - needs to be enabled
 
 === UI options ===
 * Weston: Boots on legacy kernel. Touchscreen is working on legacy kernel. The reboot issue exists on legacy kernel. Maybe it is an issue with the kernel we are using?
-* Phosh: Purism Librem 5 compositor and GNOME based environment. Flashed, work only with new kernel [https://github.com/grate-driver/linux Tegra-DRM]. SSH is working.
+* Phosh: Purism Librem 5 compositor and GNOME based environment. Works only with mainline kernel.
 
 === Development Notes ===
 
