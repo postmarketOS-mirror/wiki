@@ -179,12 +179,12 @@ alsamixer -c 0 "Stereo DAC MIXL DAC L1" - needs to be enabled
 
 ==== Kernel ====
 
-* [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux. Many of them are probably currently mainlined.
-* LineageOS kernel can be found [https://github.com/LineageOS/android_kernel_asus_grouper here] (currently used and compiled with gcc 6.1, with few patches a top), a newer kernel, can be found here: https://github.com/Unlegacy-Android
 * Up-to-date [https://github.com/grate-driver/linux kernel], where tegra development ongoing.
+* Android kernels: LineageOS kernel can be found [https://github.com/LineageOS/android_kernel_asus_grouper here] Unlegacy here: https://github.com/Unlegacy-Android
+* [https://wiki.ubuntu.com/Nexus7/Kernel This page] includes a list of changes to the Android kernel that are not present in mainline Linux. Many of them are probably currently mainlined. (last updated 2012-12-04)
 * UART debugging through the headphone jack doesn't seem to work - apparently the 2012 version of the Nexus 7 does not have this feature.
 
-* The default images for android provided by google have the bootloader broken, meaning it can't be flashed. It does not seem to affect the install process of PostmarketOS, but is something to take into account. If you need a working bootloader image version 4.23 can be found [[https://drive.google.com/file/d/1eVEQJtrByuAYRmS924-BAMGQcRXuBj7C/view?usp=sharing| here]]
+* The default images for android provided by google have the bootloader broken, meaning it can't be flashed. It does not seem to affect the install process of PostMarketOS, but is something to take into account. If you need a working bootloader image version 4.23 can be found [[https://drive.google.com/file/d/1eVEQJtrByuAYRmS924-BAMGQcRXuBj7C/view?usp=sharing| here]]
 
 ==== Graphics ====
 
