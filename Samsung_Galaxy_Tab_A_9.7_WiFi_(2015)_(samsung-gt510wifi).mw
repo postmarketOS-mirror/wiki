@@ -88,7 +88,7 @@ Boot up the device after installation
 |-
 | Battery/Charging/Fuelgauge || MAX77849 || ? || ?
 |-
-| Volume/Power keys || GPIO || Yes || Possibly missing dts bindings
+| Volume/Power keys || GPIO || Yes || Not implemented in DT yet
 |-
 | Capacitive keys || Coreriver Touchkey TC360 || [https://android.googlesource.com/kernel/bcm/+/android-wear-5.0.2_r0.5/drivers/input/touchscreen/coreriver_touchkey/tc360-touchkey.c No, but Downstream] ||
 |-
@@ -98,11 +98,11 @@ Boot up the device after installation
 |-
 | Display || Samsung S6D7AA0 LTL101AT01 || No || Working in kernel fork
 |-
-| Backlight IC || Texas Instruments lp8556 (or lp8558) || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/video/backlight/lp855x_bl.c Yes] || Not yet implemented
+| Backlight IC || Texas Instruments lp8556 (or lp8558) || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/video/backlight/lp855x_bl.c lp855x does not work] ||
 |-
 | Audio || ? || ? || ?
 |-
-| Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Untested] || Probably missing dts bindings
+| Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Yes] || Working in kernel fork
 |-
 | USB Switch || ? || ? ||
 |-
