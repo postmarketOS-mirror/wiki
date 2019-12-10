@@ -71,11 +71,13 @@ This requires disassembling the device. [https://forum.xda-developers.com/wear-o
 # Use a guitar pack to gently pray the wireless charging coil from the back of the device. Do not remove it, allow it to hang to the side.
 # Remove the clear and kapton over the SIM card, as well as the black adhesive slightly above it. This will unveil the TP points.
 # Using a spare USB 2.0/3.0 cable, remove the non-type A port and strip the wires, revealing Red/White/Green/Black wires.
-# Using male to male breadboard connectors, connect the now stripped wires onto the following points.
+# Using male to male breadboard connectors, connect the now stripped wires onto the following points. Do not attempt to solder directly to the watch as you highly risk removing the solder pads.
 <source>
+Note that the XDA thread has a wrong configuration of data wires. The below configuration is what rendeko was able to use to unlock bootloader.
+
 Red-TP1
-Green-TP2
-White-TP3
+White-TP2
+Green-TP3
 Black-TP4
 </source>
 # Power on the device. Go to Settings > System > About and tap Build Number 5 times to enable Developer Options
