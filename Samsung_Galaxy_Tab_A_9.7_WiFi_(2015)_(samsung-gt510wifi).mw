@@ -88,7 +88,7 @@ Boot up the device after installation
 |-
 | Battery/Charging/Fuelgauge || MAX77849 || ? || ?
 |-
-| Volume/Power keys || GPIO || Yes || Not implemented in DT yet
+| Volume/Power/Home keys || GPIO || Yes || Working in kernel fork
 |-
 | Capacitive keys || Coreriver Touchkey TC360 || [https://android.googlesource.com/kernel/bcm/+/android-wear-5.0.2_r0.5/drivers/input/touchscreen/coreriver_touchkey/tc360-touchkey.c No, but Downstream] ||
 |-
@@ -106,7 +106,7 @@ Boot up the device after installation
 |-
 | USB Switch || ? || ? ||
 |-
-| Proximity sensor || Semtech SX9500 || Yes || Not implemented, used to check where the tablet is held
+| Proximity sensor || Semtech SX9500 || Yes || Not implemented in DT, used to check where the tablet is held
 |-
 | GPU || Adreno 306 || Yes || Working in kernel fork
 |-
