@@ -8,7 +8,7 @@ This index page could use some help, see {{issue|23|wiki}}.
 
 === Weston ===
 
-'''[[Weston]]''' is the default, minimal, interface based on XWayland. It allows developers to do &quot;simple&quot; things like running firefox and opening a terminal, plus testing the touchscreen and other peripherals.
+'''[[Weston]]''' is the default, minimal, interface based on XWayland. It allows developers to do &quot;simple&quot; things like running firefox and opening a terminal, plus testing the touchscreen and other peripherals. Alone, it isn't really usable for touchscreen-only devices.
 
 * [http://i.imgur.com/5XtSNzp.jpg Running Youtube in Weston]
 
@@ -17,6 +17,7 @@ Project page: https://github.com/wayland-project/weston
 === Plasma Mobile ===
 
 '''[[Plasma Mobile]]''' is a mobile variant of the KDE Plasma user interface, optimized for touchscreen.
+It only has decent performance on a kernel that features [[DRM]], and is disabled by default on devices that don't have it.
 
 Work in Progress.
 
@@ -32,11 +33,18 @@ Hildon is based on GTK2 and there is a work in progress port to GTK3.
 
 For more information, see PR [https://github.com/postmarketOS/pmbootstrap/pull/461 #461].
 
-===MATE===
-'''[[MATE]]''' is a full GTK-based desktop environment forked from the code base of GNOME 2.
+=== Phosh ===
+'''[[Phosh]]''', the '''pho'''ne '''sh'''ell, is a graphical interface for mobile phones created by Purism for the Librem5. It is one of the most polished mobile interface interface and works best with GNOME 3 applications. Phosh, like Sway, require [[DRM]] and simply won't work if it is not supported by the kernel.
 
-===Xfce4===
+=== MATE ===
+'''[[MATE]]''' is a full GTK-based desktop environment forked from the code base of GNOME 2.
+It works well even on devices that only have a framebuffer for display, which makes it a good choice for devices that do not have [[DRM]] support.
+
+=== Xfce4 ===
 '''[[XFCE4|Xfce4]]''' is another full GTK-based desktop environment, aiming to be fast and lightweight.
+It also works well on framebuffer-only devices.
+
+----
 
 === Others ===
 
@@ -55,7 +63,9 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more i
 
 *''[https://wiki.alpinelinux.org/wiki/Category:Desktop Other graphical interfaces supported by Alpine]'' should work to some extent on pmOS.  These include [[GNOME 3]].
 
-== How to choose a different UI ==
+== How to choose an UI ==
+
+=== With pmbootstrap ===
 
 You have to configure <code>pmbootstrap</code> before generating the system image either by <code>pmbootstrap init</code> or <code>pmbootstrap config</code>:
 
@@ -72,6 +82,13 @@ You have to configure <code>pmbootstrap</code> before generating the system imag
 [09:22:56] * weston: (Wayland) Reference compositor (demo, not a phone interface)
 [09:22:56] * xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)</pre>
 <pre>$ ./pmbootstrap config ui weston</pre>
+
+=== Once installed ===
+
+Once you have postmarketOS on your phone or tablet, you can still change user interface without reflashing so long you have an internet connection: you need to remove your current UI and install another one. Example:
+
+ # apk del postmarketos-ui-mate
+ # apk add postmarketos-ui-plasma-mobile
 
 == See also ==
 * [[Interfaces | Work in progress new interface page]]
