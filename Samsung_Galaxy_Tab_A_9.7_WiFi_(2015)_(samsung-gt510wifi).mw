@@ -82,9 +82,9 @@ Boot up the device after installation
 |-
 | RGB LED || ? || ? || ?
 |-
-| MicroUSB || - || Yes || Working
+| MicroUSB || - || Yes || Working in kernel fork
 |-
-| eMMC || (Android lists) Toshiba 400073 || Yes || Working
+| eMMC || (Android lists) Toshiba 400073 || Yes || Working in kernel fork
 |-
 | Battery/Charging/Fuelgauge || MAX77849 || ? || ?
 |-
@@ -94,7 +94,7 @@ Boot up the device after installation
 |-
 | Accelerometer || STMicroelectronics K2HH || ? || ?
 |-
-| Light Sensor || Capella Micro CM3323 || Yes || Possibly missing dts bindings
+| Light Sensor || Capella Micro CM3323 || Yes || Possibly missing DT bindings
 |-
 | Display || Samsung S6D7AA0 LTL101AT01 || No || Working in kernel fork
 |-
@@ -106,13 +106,13 @@ Boot up the device after installation
 |-
 | USB Switch || ? || ? ||
 |-
-| Proximity sensor || Semtech SX9500 || Yes || Probably missing dts bindings, used to check where the tablet is held
+| Proximity sensor || Semtech SX9500 || Yes || Not implemented, used to check where the tablet is held
 |-
-| GPU || Adreno 306 || Yes || 
+| GPU || Adreno 306 || Yes || Working in kernel fork
 |-
-| Wi-Fi || WNC3660B || Yes || Using the WCN3680 compatible
+| Wi-Fi || WNC3660B || Yes || Working in kernel fork, Using the WCN3680 compatible
 |-
-| Bluetooth || WCN3660B || Yes || Using the WCN3680 compatible
+| Bluetooth || WCN3660B || Yes || Working in kernel fork, Using the WCN3680 compatible
 |-
 | GPS || ? || ? || ?
 |-
