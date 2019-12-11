@@ -81,8 +81,8 @@
 
 == How to enter flash mode ==
 First, boot phone into recovery mode.
-To do that, power on while pressing both the up button and the power button.
-When the logo appears, release the power button.
+To do that, press the volume up button while powering on the phone.
+When the logo appears, you can release any button held.
 
 Once in the recovery mode, navigate to "reboot to bootloader" using the volume keys. <br/>
 In my case, I had to validate pressing the power button twice, then the power up button.
