@@ -44,6 +44,12 @@ It works well even on devices that only have a framebuffer for display, which ma
 '''[[XFCE4|Xfce4]]''' is another full GTK-based desktop environment, aiming to be fast and lightweight.
 It also works well on framebuffer-only devices.
 
+=== Sway ===
+'''[[Sway]]''' is a [https://en.m.wikipedia.org/wiki/Tiling_window_manager tiling] Wayland compositor that is intended to work with a keyboard, even if it features some touch controls. It is based on wlroots, and will need [[DRM]] to start.
+
+=== i3 ===
+'''i3''' is a [https://en.m.wikipedia.org/wiki/Tiling_window_manager tiling window manager], and Sway's ancestor. It can only be recommended on devices featuring a keyboard.  Being older, it does not require DRM, which makes it able to run on older devices.
+
 ----
 
 === Others ===
