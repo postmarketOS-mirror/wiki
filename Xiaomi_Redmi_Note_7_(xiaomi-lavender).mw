@@ -277,6 +277,40 @@ Another hack to fix bootloader cmdline params by opendata26: [https://gitlab.com
 
 Some info on <code>skip_initramfs</code> kernel cmdline parameter: https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
 
+=== Lineage OS ROMs/TWRP pstore-ramoops module parameters ===
+
+ /sys/fs/pstore # ls -la /sys/module/ramoops/parameters/
+ total 0
+ drwxr-xr-x    2 0        0                0 Jul 20 13:02 .
+ drwxr-xr-x    3 0        0                0 Jul 20 13:02 ..
+ -r--------    1 0        0             4096 Jul 20 13:02 console_size
+ -rw-------    1 0        0             4096 Jul 20 13:02 dump_oops
+ -rw-------    1 0        0             4096 Jul 20 13:02 ecc
+ -r--------    1 0        0             4096 Jul 20 13:02 ftrace_size
+ -r--------    1 0        0             4096 Jul 20 13:02 mem_address
+ -r--------    1 0        0             4096 Jul 20 13:02 mem_size
+ -rw-------    1 0        0             4096 Jul 20 13:02 mem_type
+ -r--------    1 0        0             4096 Jul 20 13:02 pmsg_size
+ -r--------    1 0        0             4096 Jul 20 13:02 record_size
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/mem_address 
+ 2684354560
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/mem_size 
+ 4194304
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/mem_type 
+ 0
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/ecc 
+ 0
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/dump_oops 
+ 1
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/console_size 
+ 2097152
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/ftrace_size 
+ 0
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/pmsg_size 
+ 2097152
+ /sys/fs/pstore # cat /sys/module/ramoops/parameters/record_size 
+ 0
+
 == Links ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
