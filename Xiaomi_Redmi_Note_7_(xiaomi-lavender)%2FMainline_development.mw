@@ -33,3 +33,6 @@
  2097152
  /sys/fs/pstore # cat /sys/module/ramoops/parameters/record_size 
  0
+
+=== Force-reboot patch ===
+[https://gist.github.com/zhuowei/f3ede9e293e43ee40bb303bfe216e175 Zhuowei's reboot patch] works, but with different address of course: instead of <code>0xC264000</code> you should grep DTS files for <code>"qcom,pshold"</code> and take reg address from there (or grep for <code>"restart@"</code> and take address after @): [https://github.com/minlexx/android_kernel_xiaomi_lavender/blob/lineage-16.0/arch/arm/boot/dts/qcom/sdm660_f7a.dtsi#L493 sdm660_f7a.dtsi L493], so <code>0x10ac000</code>. Read [https://github.com/minlexx/android_kernel_xiaomi_lavender/blob/lineage-16.0/drivers/power/reset/msm-poweroff.c msm-poweroff driver code] for more info.
