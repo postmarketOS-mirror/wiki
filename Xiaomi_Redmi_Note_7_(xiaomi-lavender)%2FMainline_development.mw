@@ -1,3 +1,5 @@
+< [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)]]
+
 === Lineage OS ROMs/TWRP pstore-ramoops module parameters ===
 
  /sys/fs/pstore # ls -la /sys/module/ramoops/parameters/
