@@ -42,6 +42,7 @@
 {{Device owners}}
 
 
+== Flashing ==
 === How to enter flash mode ===
 * Connect a USB cable
 * Power the device off
@@ -95,12 +96,12 @@ pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
 # must be booted this way every boot, when it's booted or flashed with boot.img, it never work (not figured why 2019-11-28)
 </syntaxhighlight>
 
-Flashing rootfs under 650MB:
+==== Flashing rootfs under 650MB ====
 <syntaxhighlight lang="shell" line='line'>
 pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-Flashing rootfs over 650MB to USERDATA:
+==== Flashing rootfs over 650MB to USERDATA ====
 <syntaxhighlight lang="shell" line='line'>
 # start TWRP
 adb push replace_with_exported_img_rootfs_file_ /
@@ -109,7 +110,7 @@ adb push replace_with_exported_img_rootfs_file_ /
 (twrp) $ dd if=/replace_with_exported_img_rootfs_file_ of=/dev/block/mmcblk0p10 # mmcblk0p10 may be different for your Nexus version! 
 </syntaxhighlight>
 
-== Hardware ==
+== Hardware status (mainline) ==
 There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
 {|class="wikitable feature-colors"
 ! Status
@@ -179,11 +180,11 @@ alsamixer -c 0 # and enable something like:
 |-
 |}
 
-=== UI options ===
+== UI options ==
 * Weston: Boots on legacy kernel. Touchscreen is working on legacy kernel. The reboot issue exists on legacy kernel. Maybe it is an issue with the kernel we are using?
-* Phosh: Purism Librem 5 compositor and GNOME based environment. Works only with mainline kernel.
+* Phosh (mainline only): Purism Librem 5 compositor and GNOME based environment, needs performance optimization, but works.
 
-=== Development Notes ===
+== Development Notes ==
 
 ==== Kernel ====
 
@@ -216,7 +217,7 @@ alsamixer -c 0 # and enable something like:
 * {{issue|1422|pmbootstrap}}: The <code>system</code> partition is too small to hold rootfs images over 650Mb (e.g. Plasma Mobile is about 1.1Gb). Flashing to <code>userdata</code> partition fails.
 * {{issue|1844|pmbootstrap}}: grouper: move to grate (upstream close) kernel
 
-==== See also ====
+=== See also ===
 
 These are other pending issues that are related to this device:
 
