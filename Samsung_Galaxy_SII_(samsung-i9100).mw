@@ -71,7 +71,7 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 * use the netcat method (see below)
 * use the recovery zip installer (you need to install a recovery like TWRP on your device, then run <code>pmbootstrap install --android-recovery-zip</code> and <code>pmbootstrap flasher --method=adb sideload</code>.)
 
-===== Step by step guide for Flashing via netcat [https://github.com/postmarketOS/pmbootstrap/issues/456 (#456)] =====
+===== Step by step guide for Flashing via netcat [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 (#456)] =====
 
 - Build image (on your computer)
 
@@ -97,7 +97,7 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 
   $ ./pmbootstrap.py install
 
-- Flash to phone memory - This will replace (break) your current phone system! This uses the alternative flash method because it currently doesn't seem to work with heimdall - https://github.com/Benjamin-Dobell/Heimdall/issues/418
+- Flash to phone memory - This will replace (break) your current phone system! This uses the alternative flash method because it currently doesn't seem to work with heimdall - https://gitlab.com/BenjaminDobell/Heimdall/issues/418
 
 -- Set phone to ODIN mode
 
