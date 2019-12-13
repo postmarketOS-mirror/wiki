@@ -1,0 +1,8 @@
+{{#cargo_query:
+tables=Socs
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Manufacturer,Name
+|order by=Socs.Manufacturer, Socs.Name
+|format=table
+|limit=9999
+|more results text=
+}}
