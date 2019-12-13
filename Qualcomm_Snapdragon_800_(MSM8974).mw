@@ -2,4 +2,5 @@
 | name = MSM8974
 | manufacturer = Qualcomm
 | arch = ARMv7
+| process = 28
 }}
