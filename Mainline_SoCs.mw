@@ -1,3 +1,4 @@
+[[Category:Socs]]
 {{#cargo_query:
 tables=Socs
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Manufacturer,Name,Arch,CONCAT( Process,'nm' )=Process,AudioCodec
