@@ -65,7 +65,7 @@ LogicalErzor
 Start powered off. From there, hold the volume down button, home button, and power button. Once the phone buzzes, release the power button.
 
 == Installation ==
-* Unlock the bootloader if it hasn't been unlocked before. (My memory is hazy, but I think I did it a sketchy way. I downloaded KingoRoot and rooted my device. I then installed ClockWorkMod from [https://forum.xda-developers.com/i437 here] although TWRP works fine as well. Then get a ROM to overwrite the original. Compiled a recent one [https://forum.xda-developers.com/i437/help/revive-samsung-galaxy-s3-i437-t3844764 here])
+* Unlock the bootloader if it hasn't been unlocked before. (My memory is hazy, but I think I did it a sketchy way. I downloaded KingoRoot and rooted my device. I then installed ClockWorkMod from [https://forum.xda-developers.com/i437 here] although I think TWRP by jt works fine as well. Then get a ROM to overwrite the original. Compiled a recent one [https://forum.xda-developers.com/i437/help/revive-samsung-galaxy-s3-i437-t3844764 here])
 * Enter Flash Mode
 * Flash pmOS using pmbootstrap flasher flash_rootfs
 * Flash kernel using pmbootstrap flasher flash_kernel
