@@ -94,6 +94,7 @@ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 pmbootstrap flasher list_devices
 pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
 # must be booted this way every boot, when it's booted or flashed with boot.img, it never work (not figured why 2019-11-28)
+# with small changes to DTS file (alloc-ranges = <0xa0000000 0x10000000>;) can be boot.img created, but initrd still has to be inside kernel, when placed inside boot.img, won't work. (2019-12-14)
 </syntaxhighlight>
 
 ==== Flashing rootfs under 650MB ====
