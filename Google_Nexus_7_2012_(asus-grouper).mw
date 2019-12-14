@@ -56,7 +56,6 @@ $ cd pmbootstrap
 $ ./pmbootstrap.py init
 $ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_kernel
-$ ./pmbootstrap.py flasher flash_rootfs
 </syntaxhighlight>
 
 === Installation process (development setup, cutting edge) ===
