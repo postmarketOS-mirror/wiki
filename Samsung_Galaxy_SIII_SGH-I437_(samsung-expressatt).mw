@@ -70,6 +70,11 @@ Start powered off. From there, hold the volume down button, home button, and pow
 * Flash pmOS using pmbootstrap flasher flash_rootfs
 * Flash kernel using pmbootstrap flasher flash_kernel
 
+== Current Problems ==
+* Red Tint
+* Power button boot loops
+* Screen on 24/7
+
 == See also ==
 * {{MR|808|pmaports}} Initial merge request
 * {{issue|340|pmaports}} Some related issue
