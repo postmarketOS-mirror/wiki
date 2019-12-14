@@ -70,7 +70,7 @@ Start powered off. From there, hold the volume down button, home button, and pow
 * Flash pmOS using pmbootstrap flasher flash_rootfs
 * Flash kernel using pmbootstrap flasher flash_kernel
 
-== Current Problems ==
+== Current Known Problems ==
 * Red Tint
 * Power button boot loops
 * Screen on 24/7
