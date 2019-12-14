@@ -146,9 +146,9 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Charger
 |there is driver for the charger in upstream kernel, but it doesn't have support for device-tree
 |-
-| P
+| Y
 |Bluetooth
-|Drivers available, not tested yet.
+|Works, audio not tested yet.
 |-
 | Y
 |Sound
