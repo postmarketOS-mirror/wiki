@@ -1,0 +1,25 @@
+{{Infobox soc
+| name = MSM8916
+| manufacturer = Qualcomm
+| arch = AArch64
+| process = 28
+| clock = v4.1-rc1 (ioommu, gpu, sound: v4.4-rc1)
+| pinctrl = v4.0-rc1
+| serial = v4.1-rc1
+| gpu = Adreno A306 (v4.2-rc1 / v4.14-rc1)
+| sdhci = v4.3-rc1
+| usb_device = v4.3-rc1
+| usb_host = v4.3-rc1
+| usb_otg = v4.3-rc1
+| sound = v4.2-rc1
+| audio_codec = v4.10-rc1
+| pmic = pm8916 (v4.5-rc1)
+| cpuidle = PSCI* (v4.8-rc1)
+| display_conroller-mipi = v4.9-rc1
+| wifi = wcnss (v4.11-rc1)
+| bluetooth = wcnss (v4.11-rc1)
+| iommu = v4.14-rc1
+| video_accel = venus (v4.14-rc1)
+| cpufreq = v4.17-rc1
+| cam_controller = v5.0-rc1*
+}}
