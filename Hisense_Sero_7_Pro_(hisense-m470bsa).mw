@@ -6,7 +6,7 @@
 | imagecaption = Sero 7 Pro running PostmarketOS
 | releaseyear = 2012
 | originalsoftware = Android 4.2.1
-| chipset = Nvidia Tegra 3
+| chipset = Nvidia Tegra 3 T30
 | cpu = Quad-core 1.5 GHz Cortex-A9
 | gpu = ULP GeForce
 | storage = 8GB
@@ -54,7 +54,7 @@ Is OTG available, not used in wiki
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
-NoriTech
+* NoriTech
 
 == Users owning this device ==
 {{Device owners}}
@@ -69,10 +69,32 @@ Press and hold power + volume up
 == Installation ==
 Refer to [https://wiki.postmarketos.org/wiki/Installation_guide Installation Guide for postmarketOS]
 
-== Known issues ==
-* Flash fails on both system and user partition due to there not being enough space, use a micro sd card if you have this issue.
+== More Info ==
+Unknown whether this device has serial capabilities (although it probably does). 
+
+=== Partition layout ===
+<pre class="shell"># mount point	fstype		device
+
+/recovery       emmc            /dev/block/platform/sdhci-tegra.3/by-name/SOS
+/boot           emmc            /dev/block/platform/sdhci-tegra.3/by-name/LNX
+/system         ext4            /dev/block/platform/sdhci-tegra.3/by-name/APP
+/cache          ext4            /dev/block/platform/sdhci-tegra.3/by-name/CAC
+/misc           emmc            /dev/block/platform/sdhci-tegra.3/by-name/MSC
+/staging        emmc            /dev/block/platform/sdhci-tegra.3/by-name/USP
+/modem          ext4            /dev/block/platform/sdhci-tegra.3/by-name/MDM
+/metadata       emmc            /dev/block/platform/sdhci-tegra.3/by-name/MDA
+/data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/UDA    length=-32768
+/sdcard         datamedia       /dev/null
+/external_sd    vfat            /dev/block/platform/sdhci-tegra.0/by-num/p1</pre>
+
+=== Known issues ===
+* Flash fails on both system and user partition due to there not being enough space, use a micro sd card or try making a smaller system image if you have this issue.
 * Audio not working right now, hoping to fix soon.
 * No Hardware Acceleration!
+* Framebuffer locked to portrait mode (could probably be fixed by rotating it in the xorg config)
 
 == See also ==
-* {{MR|721|pmaports}}: Merge Request for Sero 7 Pro
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-hisense-m470bsa Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-hisense-m470bsa Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-hisense-m470bsa Firmware package]
+* [https://forum.xda-developers.com/sero-7-pro XDA Developers]
