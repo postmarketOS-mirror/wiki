@@ -12,7 +12,7 @@
 | storage = 16 GB
 | display = 720x1280 AMOLED 
 | memory = 2 GB
-| architecture = [https://www.notebookcheck.net/Qualcomm-Snapdragon-MSM8960-SoC.86868.0.html armv7]
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
