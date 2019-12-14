@@ -72,6 +72,7 @@ You will need  some tools for Installation:
 * Win32 DiskImager [https://sourceforge.net/projects/win32diskimager/]
 * [https://developer.android.com/studio/ ADB & Fastboot] (You do not need the whole Android Studio but the Command Line Tools at the bottom of the page)
 * [https://onedrive.live.com/?authkey=%21AMnjztSxewIGoSg&id=1674813A0C4DC029%21770390&cid=1674813A0C4DC029 Some files including the rom and iflash]
+--updated link https://onedrive.live.com/?authkey=%21AFaBmdc2M2LK718&id=8BC1D54354ABF6DC%2114195&cid=8BC1D54354ABF6DC
 
 === Backup Data ===
 Postmarketos is not ready to use as a daily driver yet. So use a phone you do not need for the development. If you have some data on it, back it up now.
