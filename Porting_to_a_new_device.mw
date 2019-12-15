@@ -1,32 +1,33 @@
 === Preparation ===
-{{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, writing SMS, using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
+{{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, sending text messages, or using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
 
-* Join [[Matrix and IRC|Matrix/IRC]] to get help when you're stuck
-* Search the [[devices]] page for your device to avoid duplicate work (read potentially existing device pages and check for links to existing branches).
-** Note that there's a [[Generic x64 uefi]] device, which you might be able to use if your target device has a x86_64 CPU.
+* Search the [[Devices]] page for your device to avoid duplicate work. Also search the wiki for your device, and check for links to existing branches. If your target device has an x86-64 CPU, you may be able to use the [[generic x64 UEFI device]] port.
+* Join [[Matrix and IRC|Matrix/IRC]] to get help when you're stuck.
 
 === Requirements ===
-==== Host PC ====
-* We assume, that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
-* The host operating system needs to run Linux 3.17 or newer (first kernel with getrandom syscall)
+<span id="Host_PC"></span><!-- Preserver anchor for old inbound links -->
+==== Development environment ====
+To set up a development environment, you will need a GNU/Linux system capable of making builds and running pmbootstrap, our development and installation tool. If you don't have a Linux-based OS installed, you may want to [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
+
+Your GNU/Linux system must have:
 * A few gigabytes of free space
+* Linux kernel 3.17 or newer (since earlier Linux kernels do not support the <code>getrandom</code> syscall).
 
 ==== Target Device ====
-If your target device has an ARM processor, it needs to have an [https://en.wikipedia.org/wiki/Floating-point_unit FPU].
+If your target device has an ARM processor, it must have a [https://en.wikipedia.org/wiki/Floating-point_unit floating-point unit] (FPU). If the device has at least an ARMv7 CPU, it should have an FPU; however, only some ARMv6 CPUs have one.
 
-Most phones fulfill this requirement: in the first > 80 ports we have had, only twice we had phones without an FPU ({{issue|1203}}, {{issue|1592}}). These are from 2010 and 2011, so it is [https://unix.stackexchange.com/a/185070 worth checking] if your device is from that time. Otherwise just go ahead.
-If your device have ARMv7 CPU it should have FPU, with ARMv6 CPUs it's a 50/50 chance.
+Most smartphones have an FPU. Of the first 80+ ports that we started, only two phones lacked an FPU: the [[HTC Wildfire (htc-buzz)|HTC Wildfire]] from 2010 ({{issue|1203}}) and the [[Vodafone 858 Smart (huawei-u8160)|Vodafone 858 Smart]] from 2011 ({{issue|1592}})). Both phones use the MSM7225, an ARMv6 SoC. If your phone was made before 2012, [https://unix.stackexchange.com/a/185070 make sure it has an FPU].
 
 === Initialization ===
+[[Installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. Then run the following:
 
-[[installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. Then run the following:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
 Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
 Work path [/home/user/.local/var/pmbootstrap]:
 </syntaxhighlight>
 
-Type in the code name of your device to start a new port, and fill out everything else you get asked for. Check out [[how to find device specific information]] if necessary.
+Type in the code name of your device to start a new port, and answer each prompt. For help, see [[how to find device-specific information]].
 
 <pre>
 Target device (either an existing one, or a new one for porting).
@@ -290,9 +291,9 @@ See [[deviceinfo reference]] for a listing of all available variables and their 
 If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://gitlab.com/postmarketOS/pmaports/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
 
 === Documentation ===
-This is a wiki, so '''please adjust everything that isn't detailed enough or would have helped you with porting.'''
+This is a wiki, so please adjust everything that isn't detailed enough or would have helped you with porting.
 
-More importantly, if you are at this point, it is a good idea to start writing your porting '''progress to the [[Devices]] page''', even if you didn't get very far and the kernel does not compile (it will help others to continue from your work). Simply register in the wiki (you don't even need an e-mail address) and [[Help:Device Page|follow this tutorial]].
+If you have made some progress with a new port, please [[Help:Device_Page|create a Device page]] to document your findings. Even if you didn't get very far and the kernel does not compile, this will help others to continue your work. To create a device page, you will need to [https://wiki.postmarketos.org/index.php?title=Special:CreateAccount&returnto=Porting+to+a+new+device register an account] on this wiki. (You do not need to provide an e-mail address.)
 
 === Installation ===
 {{note|If you get a "no space left on device" error, please report in {{issue|928}}.}}
