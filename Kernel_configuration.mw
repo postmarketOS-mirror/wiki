@@ -1,7 +1,17 @@
 = Changing the kernel configuration =
 You can change the kernel configuration with pmbootstrap, for the linux-sony-yuga package for example we run:
 
+You can change the kernel configuration with pmbootstrap. On some devices the naming convention is simply linux-<vendor>-<device>, for the linux-sony-yuga package for example we run:
+
 <pre class="shell">pmbootstrap kconfig edit sony-yuga</pre>
+
+Some devices do not follow this naming convention, in which case you can check what package provided the kernel by running:
+
+<pre class="shell">apk info --who-owns /boot/vmlinuz-*</pre>
+
+On the pinephone by pine64 you would run:
+
+<pre class="shell">pmbootstrap kconfig edit linux-postmarketos-allwinner-5.4.0_git20191204-r1</pre>
 
 This gives you a menu where you can select and deselect all kernel configuration options. Press the <code>/</code> key to get a search dialog. After finding something, type the number of the search result to quickly jump to it.
 
