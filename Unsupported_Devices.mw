@@ -14,14 +14,14 @@ Projects to run another OS on the device can be linked if they exist.
 ! Device
 ! Notes
 |-
-  | HTC Wildfire
+  | [[HTC Wildfire (htc-buzz)|HTC Wildfire]]
   | Qualcomm MSM7225 - ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
 |-
-  | Huawei U8160 (Vodafone 858 Smart)
+  | [[Vodafone 858 Smart (huawei-u8160)|Huawei U8160 (Vodafone 858 Smart)]]
   | Qualcomm MSM7225 - ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1592 #1592]
 |-
   | Nintendo Wii
-  | 32-bit PPC not supported by Alpine. See: [https://wiibrew.org/wiki/Wii-Linux Wii-Linux]
+  | 32-bit PPC not supported by Alpine. See [https://wiibrew.org/wiki/Wii-Linux Wii-Linux]
 |-
   | Zipit Z2
   | armv5te not supported by Alpine
