@@ -170,6 +170,10 @@ alsamixer -c 0 # and enable something like:
 |Proximity sensor
 |
 |-
+| Y
+|Light sensor (al3010)
+|
+|-
 | N
 |Front camera
 |
