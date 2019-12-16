@@ -1,5 +1,4 @@
 = Changing the kernel configuration =
-You can change the kernel configuration with pmbootstrap, for the linux-sony-yuga package for example we run:
 
 You can change the kernel configuration with pmbootstrap. On some devices the naming convention is simply linux-<vendor>-<device>, for the linux-sony-yuga package for example we run:
 
