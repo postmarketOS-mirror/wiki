@@ -2,7 +2,7 @@
 | manufacturer = Google (ASUS)
 | name = Nexus 7 (2012)
 | codename = asus-grouper & asus-tilapia
-| image = File:Nexus 7 2012 weston.jpg
+| image = File:Nexus7_grouper_gnome_maps.jpeg
 | imagecaption = Google Nexus 7
 | releaseyear = 2012
 | originalsoftware = Android 4.1.2 on Linux 3.0
@@ -171,8 +171,8 @@ alsamixer -c 0 # and enable something like:
 |
 |-
 | Y
-|Light sensor (al3010)
-|
+|Light sensor
+|Driver al3010
 |-
 | N
 |Front camera
