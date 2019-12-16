@@ -131,7 +131,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |WiFi
-|Wi-fi works.
+|Wi-fi works. Needs firmware: bluetooth: brcm/brcmfmac4330-sdio.bin brcm/brcmfmac4330-sdio.ttxt
 |-
 | Y
 | GPIO keys
@@ -147,7 +147,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |Bluetooth
-|Works, audio not tested yet.
+|Works, audio not tested yet. Needs firmware: brcm/BCM4330B1.hcd
 |-
 | Y
 |Sound
