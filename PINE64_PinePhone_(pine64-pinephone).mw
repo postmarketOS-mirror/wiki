@@ -16,7 +16,7 @@
 | whet_dhry = 
 | status_usbnet = 
 | status_flashing = -
-| status_touch = P
+| status_touch = Y
 | status_screen = Y
 | status_wifi = P
 | status_xwayland = Y
