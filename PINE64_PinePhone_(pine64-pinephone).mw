@@ -14,7 +14,7 @@
 | architecture = aarch64
 | n-android =  ✔
 | whet_dhry = 
-| status_usbnet = 
+| status_usbnet = Y
 | status_flashing = -
 | status_touch = Y
 | status_screen = Y
@@ -26,12 +26,12 @@
 | status_3d = Y
 | status_accel = Y
 | status_audio = Y
-| status_bluetooth = N
-| status_camera = Y
+| status_bluetooth = P
+| status_camera = P
 | status_gps = Y
 | status_mobiledata = Y
-| status_sms = N
-| status_calls = N
+| status_sms = P
+| status_calls = P
 | status_otg = N
 | status = Boots
 | booting = yes
