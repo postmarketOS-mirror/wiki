@@ -51,13 +51,13 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | 
 |
 |-
-| style="text-align: center;" | P
+| style="text-align: center;" | 
 | [[LuneOS UI|Luna]]
 |
 | [https://github.com/webOS-ports link]
 | WebOS
 | 
-| No Meta UI package yet
+| Has been packaged previously, but got removed due to the amount of out-of-tree patches to Qt libraries which weren't compatible with newer versions
 |-
 | style="text-align: center;" | P
 | [[Unity 8]]
