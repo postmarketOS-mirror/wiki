@@ -230,7 +230,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | [https://gitlab.gnome.org/GNOME link]
 | GNOME
 |
-| Alpine has it packaged for x86_64 only, and there is no UI meta package for it yet
+| Everything is packaged in Alpine Linux and can be installed by installing <code>gnome</code>, it just lacks a meta package in pmOS
 |-
 | style="text-align: center;" | P
 | Plasma Desktop
@@ -238,7 +238,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | [https://github.com/kde link]
 | KDE
 |
-| Most of it is packaged already because of Plasma Mobile, except for a few packages
+| Everything is packaged in Alpine Linux and can be installed by installing <code>plasma</code>, it just lacks a meta package in pmOS
 |-
 | style="text-align: center;" | 
 | Budgie
