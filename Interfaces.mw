@@ -119,13 +119,13 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 ! Unmaintained
 ! Notes
 |-
-| style="text-align: center;" | Y
+| style="text-align: center;" | 
 | Matchbox
 | [https://www.yoctoproject.org/software-item/matchbox/ link]
 | [https://git.yoctoproject.org/ link]
 | The Yocto Project
-| 
-| 
+| Yes
+| Has been packaged before, [https://gitlab.com/postmarketOS/pmaports/merge_requests/729 but removed] due to the fact that both upstream and downstream had no maintainers
 |-
 | style="text-align: center;" | 
 | Open Palmtop Integrated Environment
