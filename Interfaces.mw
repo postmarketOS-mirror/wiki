@@ -25,13 +25,13 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | 
 | 
 |-
-| style="text-align: center;" | Y
+| style="text-align: center;" | P
 | [[Hildon]]
 | [https://maemo-leste.github.io/ link]
 | [https://github.com/maemo-leste link]
 | Maemo Leste
 | 
-| Still uses GTK2
+| Runs, but lacks a lot of packages still. [https://gitlab.com/postmarketOS/pmaports/merge_requests/810 There is a work in progress MR]. Still uses GTK2
 |-
 | style="text-align: center;" | Y
 | [[Phosh]]
@@ -63,7 +63,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | [https://github.com/ubports link]
 | UBPorts
 | 
-| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/unity8 WIP branch]
+| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/unity8_arches WIP branch]
 |-
 | style="text-align: center;" | 
 | Glacier
