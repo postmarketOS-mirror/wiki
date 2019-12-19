@@ -6,6 +6,8 @@ There are several types of interfaces which we divide into categories based on t
 
 Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Desktop other graphical interfaces supported by Alpine] should work to some extent on postmarketOS.
 
+<code>Y</code> means that the UI is fully packaged and supported. <code>P</code> means that the UI is partially packaged and requires some work still.
+
 == Smartphones ==
 
 {| class="wikitable"
