@@ -140,7 +140,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |WiFi
-|Wi-fi works. Needs firmware: bluetooth: brcm/brcmfmac4330-sdio.bin brcm/brcmfmac4330-sdio.ttxt
+|Wi-fi works. Needs manually added firmware: bluetooth: brcm/brcmfmac4330-sdio.bin brcm/brcmfmac4330-sdio.ttxt
 |-
 | Y
 | GPIO keys
@@ -186,6 +186,10 @@ alsamixer -c 0 # and enable something like:
 | N
 |Front camera
 |
+|-
+| N
+|3D support
+| [https://github.com/grate-driver/mesa/commits/master|mesa-3d] needs rebase against upstream mesa and fixing?
 |-
 | N
 |Modem
