@@ -187,9 +187,9 @@ alsamixer -c 0 # and enable something like:
 |Front camera
 |
 |-
-| N
+| P
 |3D support
-| [https://github.com/grate-driver/mesa/commits/master mesa-3d repository] needs rebase against upstream mesa and fixing?
+| [https://github.com/grate-driver/mesa/commits/19.2 mesa-3d repository (branch 19.2)] at least glxgears should work, but need a lot of work, hobby mesa-3d developer needed
 |-
 | N
 |Modem
