@@ -91,17 +91,34 @@ cat zImage dts/tegra30-grouper-bach.dtb > ~/code/linux/.zImage-dtb
 cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 
 pmbootstrap flasher list_devices
+</syntaxhighlight>
+===== a. Boot only =====
+We're still not able bundle classic boot.img, so we need generate boot.img without ramdisk (which is already included inside kernel).
+<syntaxhighlight lang="shell" line='line'>
 pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
-# must be booted this way every boot, when it's booted or flashed with boot.img, it never work (not figured why 2019-11-28)
-# with small changes to DTS file (alloc-ranges = <0xa0000000 0x10000000>;) can be boot.img created, but initrd still has to be inside kernel, when placed inside boot.img, won't work. (2019-12-14)
+</syntaxhighlight>
+===== b. Flash kernel: =====
+<syntaxhighlight lang="shell" line='line'>
+pmbootstrap chroot -- mkbootimg-osm0sis \
+ --kernel "/tmp/mainline/zImage-ztb" \
+ --base "0x10000000" \
+ --kernel_offset "0x00008000" \
+ --ramdisk_offset "0x01000000" \
+ --tags_offset "0x00000100" \
+ --pagesize "2048" \
+ -o "/tmp/mainline/boot.img"
+pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img # test if image will boot
+pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img # flash only tested image
 </syntaxhighlight>
 
-==== Flashing rootfs under 650MB ====
+
+=== Flashing rootfs ===
+==== rootfs under 650MB ====
 <syntaxhighlight lang="shell" line='line'>
 pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-==== Flashing rootfs over 650MB to USERDATA ====
+==== rootfs over 650MB to USERDATA ====
 <syntaxhighlight lang="shell" line='line'>
 # start TWRP
 adb push replace_with_exported_img_rootfs_file_ /
