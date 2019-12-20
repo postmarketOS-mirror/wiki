@@ -194,12 +194,12 @@ the USB5v line is meant to charge the phone and the 3v3 is to power peripherals 
 
 The camera's both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
 
-It's also not clear how the camera switching would work on the software side, maybe Linux just deals with it if the device tree nodes for the second camera get added.
+It's also not clear how the camera switching would work on the software side, the current issue is that the sunxi csi driver doesn't support multiple camera endpoints.
 
-The camera hardware pipeline is controlled with <code>/dev/media0</code> and <code>media-ctl</code>, the result is on <code>/dev/video0</code>
+The camera hardware pipeline is controlled with <code>/dev/media1</code> and <code>media-ctl</code>, the result is on <code>/dev/video1</code>
 
 <source lang="shell-session">
-pine-dontbeevil:~# media-ctl --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
+pine-dontbeevil:~# media-ctl -d /dev/video1 --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
 pine-dontbeevil:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 selfie.jpg
 </source>
 
