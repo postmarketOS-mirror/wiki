@@ -189,7 +189,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | N
 |3D support
-| [https://github.com/grate-driver/mesa/commits/master|mesa-3d] needs rebase against upstream mesa and fixing?
+| [https://github.com/grate-driver/mesa/commits/master mesa-3d repository] needs rebase against upstream mesa and fixing?
 |-
 | N
 |Modem
