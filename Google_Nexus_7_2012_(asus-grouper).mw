@@ -99,14 +99,7 @@ pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
 ===== b. Flash kernel: =====
 We're still not able bundle classic boot.img, so we need generate boot.img without ramdisk (which is already included inside kernel).
 <syntaxhighlight lang="shell" line='line'>
-pmbootstrap chroot -- mkbootimg-osm0sis \
- --kernel "/tmp/mainline/zImage-ztb" \
- --base "0x10000000" \
- --kernel_offset "0x00008000" \
- --ramdisk_offset "0x01000000" \
- --tags_offset "0x00000100" \
- --pagesize "2048" \
- -o "/tmp/mainline/boot.img"
+pmbootstrap chroot -- mkbootimg-osm0sis --kernel "/tmp/mainline/zImage-dtb" --base "0x10000000" --kernel_offset "0x00008000" --ramdisk_offset "0x01000000" --tags_offset "0x00000100" --pagesize "2048" -o "/tmp/mainline/boot.img"
 pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img # test if image will boot
 pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img # flash only tested image
 </syntaxhighlight>
