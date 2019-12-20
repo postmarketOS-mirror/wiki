@@ -93,11 +93,11 @@ cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 pmbootstrap flasher list_devices
 </syntaxhighlight>
 ===== a. Boot only =====
-We're still not able bundle classic boot.img, so we need generate boot.img without ramdisk (which is already included inside kernel).
 <syntaxhighlight lang="shell" line='line'>
 pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
 </syntaxhighlight>
 ===== b. Flash kernel: =====
+We're still not able bundle classic boot.img, so we need generate boot.img without ramdisk (which is already included inside kernel).
 <syntaxhighlight lang="shell" line='line'>
 pmbootstrap chroot -- mkbootimg-osm0sis \
  --kernel "/tmp/mainline/zImage-ztb" \
@@ -110,7 +110,6 @@ pmbootstrap chroot -- mkbootimg-osm0sis \
 pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img # test if image will boot
 pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img # flash only tested image
 </syntaxhighlight>
-
 
 === Flashing rootfs ===
 ==== rootfs under 650MB ====
