@@ -49,7 +49,6 @@ see Unixbench page on wiki
 
 == Contributors ==
 * IdanHoro
-* Compilerx64
 
 == Users owning this device ==
 {{Device owners}}
@@ -85,10 +84,10 @@ And connect to your prefered wifi network using the terminal UI.
 == UI options ==
 
 Wayland:
-* weston: Works
-* plasma-mobile: Works but very slow.
-* phosh: Boots into black screen.
-* sway: Not works
+* weston: Works.
+* plasma-mobile: Works, but very slow.
+* phosh: Boots into a black screen.
+* sway: Does not work.
 
 X11:
 * xfce4: Works, but no virtual keyboard. Get 'onboard' package while installing.
