@@ -80,7 +80,7 @@ git clone https://github.com/grate-driver/linux.git
 cd linux
 source ~/code/pmbootstrap/helpers/envkernel.sh
 
-sudo curl -o .output/.config https://paste.sr.ht/blob/6d352517ba9ee3c9907571e075b192ab099b804e # download prepared config file, when expires ping okias on Matrix
+sudo curl -o .output/.config https://raw.githubusercontent.com/okias/nexus7-grouper-kernel-config/master/.config
 pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
 sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./.output/ # initfs is later compiled into kernel
 
