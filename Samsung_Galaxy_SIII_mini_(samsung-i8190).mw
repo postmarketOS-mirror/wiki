@@ -12,7 +12,7 @@
 | storage = 8GB
 | display = 480x800 AMOLED
 | memory = 1GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
