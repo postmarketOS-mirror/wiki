@@ -26,7 +26,7 @@
 | status_accel = Y
 | status_audio =
 | status_bluetooth = P
-| status_camera =
+| status_camera = N
 | status_gps = 
 | status_mobiledata = 
 | status_sms = 
@@ -47,20 +47,6 @@
 
 == Users owning this device ==
 {{Device owners}}
-
-== What works ==
-* Display
-* Touchscreen 
-* USB network
-* FDE
-* weston
-* osk-sdl
-* WIFI
-* X11
-
-== What does not work ==
-* Camera
-* Most likely everything else
 
 == How to enter flash mode ==
 Hold volume down + home + power together, then press volume up to bypass warning.
