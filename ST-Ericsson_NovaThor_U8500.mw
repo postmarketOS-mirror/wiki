@@ -54,4 +54,14 @@ In Fastboot mode, kernels can be directly booted from RAM using <code>fastboot b
 
 U-Boot itself can be also flashed from U-Boot using <code>fastboot flash u-boot u-boot.img</code> (in this case, it will not apply the offset for the <code>boot</code> partition).
 
+=== Assembling a custom boot.img ===
+
+When used with PostmarketOS the <code>boot.img</code> that you flash into the phone should come out of the [[Installing pmbootstrap|pmbootstrap]] utility, but if you for some reason want to assemble the <code>boot.img</code> using some prefabricated kernel, ramdisk and device tree, the process is like this this:
+
+   mkbootimg 
+
+Or using <code>abootimg</code>
+
+   abootimg --create boot.img -k zImage -r initrd -s foo.dtb -c "pagesize=0x800" -c "kerneladdr=0x8000" -c "ramdiskaddr=0x02000000" -c "secondaddr=0x00f00000" -c "tagsaddr=0x100"
+
 [[Category:Chipsets]]
