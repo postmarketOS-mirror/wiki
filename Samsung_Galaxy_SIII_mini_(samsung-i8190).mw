@@ -54,25 +54,6 @@ Hold volume down + home + power together, then press volume up to bypass warning
 == How to enter recovery mode ==
 Hold volume up + home + power together.
 
-== How to connect to wifi ==
-First enable to therface with
-<pre>sudo ip link set wlan0 up</pre>
-Then add this to /etc/network/interfaces
-<pre>auto lo
-iface lo inet loopback
-auto wlan0
-iface wlan0 inet dhcp</pre>
-Then run <pre>echo 'wpa_supplicant_args="-i wlan0 -D wext"' | sudo tee /etc/conf.d/wpa_supplicant</pre>
-Then add the ssid and passphrase for the network
-<pre>wpa_passphrase <SSID> | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf</pre>
-Then restart the services
-<pre>sudo /etc/init.d/networking restart
-sudo /etc/init.d/wpa_supplicant restart</pre>
-Finally check for a connection and enable dhcp
-<pre>iw wlan0 link
-sudo udhcpc -b -i wlan0</pre>
-If it worked then <pre>ip a</pre> Should show an ip address
-
 == About 3D ==
 3D acceleration is possible as seen in linux sunxi
 <br>
