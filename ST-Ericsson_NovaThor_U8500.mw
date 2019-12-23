@@ -58,10 +58,12 @@ U-Boot itself can be also flashed from U-Boot using <code>fastboot flash u-boot 
 
 When used with PostmarketOS the <code>boot.img</code> that you flash into the phone should come out of the [[Installing pmbootstrap|pmbootstrap]] utility, but if you for some reason want to assemble the <code>boot.img</code> using some prefabricated kernel, ramdisk and device tree, the process is like this this:
 
-   mkbootimg 
+   --kernel zImage --ramdisk initrd --second foo.dtb --base=0x00000000 --kernel_offset=0x00008000 --ramdisk_offset=0x02000000 --tags_offset=0x00000100 --output=boot.img
 
 Or using <code>abootimg</code>
 
    abootimg --create boot.img -k zImage -r initrd -s foo.dtb -c "pagesize=0x800" -c "kerneladdr=0x8000" -c "ramdiskaddr=0x02000000" -c "secondaddr=0x00f00000" -c "tagsaddr=0x100"
+
+Notice how this puts the device tree binary <code>dtb.foo</code> into the "second bootloader firmware".
 
 [[Category:Chipsets]]
