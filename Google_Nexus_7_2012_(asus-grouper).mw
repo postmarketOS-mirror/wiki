@@ -189,7 +189,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | P
 |3D support
-| [https://github.com/grate-driver/mesa/commits/19.2 mesa-3d repository (branch 19.2)] at least glxgears should work, but need a lot of work, hobby mesa-3d developer needed
+| [https://github.com/grate-driver/mesa/commits/19.3 mesa-3d repository (branch 19.3)] at least glxgears should work, but need a lot of work, hobby mesa-3d developer needed
 |-
 | N
 |Modem
