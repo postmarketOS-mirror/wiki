@@ -20,7 +20,7 @@
 | status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_fde = Y
 | status_mainline = Y
 | status_battery = P
 | status_3d = Y
@@ -34,7 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-| status_otg = -
+| status_otg = P
 | pmoskernel = Mainline
 
 <!-- you can also use these lines if you need to:
@@ -94,6 +94,9 @@ alsaucm does not track which devices are already enabled, therefore it is possib
  set _enadev NEW
 
 {{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
+
+== USB Host (OTG) ==
+This device doesn't support OTG so it can't provide power or even detect normal OTG adapters but it is still possible to use USB in host mode. This requires custom adapter that will provide power to your USB device. In order to detect such adapter we abuse the fact that USB ID pin in microUSB is used to force EDL mode but since it is pulled down we can't detect normal OTG adapters with it. (USB_ID on those adapters is connected to ground when we can only detect 5v on this pin) So your custom adapter not only should provide external power but also should provide logical-high signal to USB_ID. This can make such adapter dangerous for other devices so you should avoid plugging it anywhere else. You can put a resistor between 5v and USB ID to make it a bit safer. Please note that device will boot into EDL mode if you leave such adapter in while powering on the device. EDL have no visible indication and you will need to pull battery out in order to reboot.
 
 == See also ==
 * [https://wiki.lineageos.org/devices/crackling Device on LineageOS wiki]
