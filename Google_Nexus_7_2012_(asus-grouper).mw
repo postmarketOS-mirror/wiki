@@ -220,8 +220,6 @@ alsamixer -c 0 # and enable something like:
 
 ==== Wifi ====
 
-* The wifi chip is the Broadcom 4330.
-* This device was once officially supported on Ubuntu, so it has a firmware package in the [https://packages.ubuntu.com/trusty/linux-firmware-nexus7 Ubuntu repositories]
 * "Desktop" Linux firmware are outdated. Check [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware/bcm4330/ here] for latest one.
 * It is possible to manually get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, running <code>/etc/init.d/networking restart</code>, gave an error about being unable to get a MAC address. After restarting the device to find that wifi Just Worked™, it was possible to successfully scan for wireless networks and establish a connection to secured wireless APs.
 * There's a proper firmware subpackage now, wifi device should work out-of-the box. 
