@@ -48,14 +48,12 @@
 == Users owning this device ==
 {{Device owners}}
 
-== How to enter flash mode ==
-Hold volume down + home + power together, then press volume up to bypass warning.
-
-== How to enter recovery mode ==
-Hold volume up + home + power together.
-
 == Installation ==
-Follow the [[Installation guide]].
+The mainline kernel can only be booted through U-Boot, not directly with the Samsung bootloader. U-Boot is installed as intermediate bootloader on the boot partition, so it does not replace the Samsung bootloader entirely. pmbootstrap can only support one bootloader configuration at the moment, which is why U-Boot is also recommended when installing the downstream kernel.
+
+Boot into Download Mode using <code>Power</code> + <code>Volume Down</code> + <code>Home</code> and follow the instructions at [[ST-Ericsson_NovaThor_U8500#U-Boot]] to install U-Boot.
+
+Finally, just follow the [[Installation guide]].
 
 == Experience ==
 '''Downstream:''' The best user interface to install is XFCE4. Other ones do lag, or just don't respond. Especially KDE Plasma.
