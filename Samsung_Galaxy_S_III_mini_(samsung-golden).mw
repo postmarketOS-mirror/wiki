@@ -55,7 +55,7 @@ Hold volume down + home + power together, then press volume up to bypass warning
 Hold volume up + home + power together.
 
 == Installation ==
-View [https://wiki.postmarketos.org/wiki/Installation_guide Installation guide.]
+Follow the [[Installation guide]].
 
 == Experience ==
 '''Downstream:''' The best user interface to install is XFCE4. Other ones do lag, or just don't respond. Especially KDE Plasma.
