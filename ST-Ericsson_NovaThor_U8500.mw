@@ -28,17 +28,11 @@ It contains a board called <code>stemmy</code>, which is intended for all Samsun
 
 {{note|'''Note:''' In this case, U-Boot does not replace the Samsung bootloader. Instead, it is packaged into an Android boot image (if necessary), and flashed to the Android boot partition like a regular Linux kernel.}}
 
-=== Building ===
-'''Requirements:''' ARM cross compiler (e.g. <code>arm-non-eabi-gcc</code>)
-
- export CROSS_COMPILE=arm-none-eabi-
- make stemmy_defconfig
- make
-
-If your device uses Android boot images, package it into an Android boot image:
- mkbootimg --kernel u-boot.bin --base=0x00000000 --kernel_offset=0x00100000 --ramdisk_offset=0x02000000 --tags_offset=0x00000100 --output=u-boot.img
-
 === Installation ===
+Pre-built images are available from: https://github.com/novathor-mainline/u-boot/releases. Alternatively, you can build it from source. See [[#Building]] below.
+
+Choose the Android boot image (<code>u-boot.img</code>) or the raw binary (<code>u-boot.bin</code>), depending on your device. Most newer devices (e.g. <code>samsung-golden</code>) use the Android boot image format, but some older (e.g. <code>samsung-janice</code>) use the raw binary.
+
 Install it normally to the boot partition:
 
  heimdall flash --Kernel u-boot.img
@@ -53,6 +47,17 @@ U-Boot will try to boot an Android boot image from the <code>boot</code> partiti
 In Fastboot mode, kernels can be directly booted from RAM using <code>fastboot boot ...</code>. Alternatively, partitions can be flashed using <code>fastboot flash <partition> ...</code>.
 
 U-Boot itself can be also flashed from U-Boot using <code>fastboot flash u-boot u-boot.img</code> (in this case, it will not apply the offset for the <code>boot</code> partition).
+
+=== Building ===
+'''Requirements:''' ARM cross compiler (e.g. <code>arm-non-eabi-gcc</code>)
+
+ export CROSS_COMPILE=arm-none-eabi-
+ make stemmy_defconfig
+ make
+
+If your device uses Android boot images, package it into an Android boot image:
+ mkbootimg --kernel u-boot.bin --base=0x00000000 --kernel_offset=0x00100000 --ramdisk_offset=0x02000000 --tags_offset=0x00000100 --output=u-boot.img
+
 
 === Assembling a custom boot.img ===
 
