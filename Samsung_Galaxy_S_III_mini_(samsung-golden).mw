@@ -58,9 +58,9 @@ Hold volume up + home + power together.
 View [https://wiki.postmarketos.org/wiki/Installation_guide Installation guide.]
 
 == Experience ==
-The best user interface to install is XFCE4.
-Other ones do lag, or just don't respond.
-Especially KDE Plasma.
+'''Downstream:''' The best user interface to install is XFCE4. Other ones do lag, or just don't respond. Especially KDE Plasma.
+
+'''Mainline:''' Plasma Mobile and Phosh should work okay.
 
 == See Also ==
 * Initial PR: {{github|1428}}
