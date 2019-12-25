@@ -60,7 +60,7 @@ When used with PostmarketOS the <code>boot.img</code> that you flash into the ph
 
    --kernel zImage --ramdisk initrd --second foo.dtb --base=0x00000000 --kernel_offset=0x00008000 --ramdisk_offset=0x02000000 --second_offset=0x00f00000 --tags_offset=0x00000100 --output=boot.img
 
-Or using <code>abootimg</code>
+Or using <code>abootimg</code>:
 
    abootimg --create boot.img -k zImage -r initrd -s foo.dtb -c "pagesize=0x800" -c "kerneladdr=0x8000" -c "ramdiskaddr=0x02000000" -c "secondaddr=0x00f00000" -c "tagsaddr=0x100"
 
