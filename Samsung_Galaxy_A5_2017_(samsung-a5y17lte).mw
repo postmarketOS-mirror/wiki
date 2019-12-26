@@ -67,7 +67,13 @@ When the device is fully powered off, hold Power, Volume Down and Home for a few
 A (turquoise) download mode warning screen should appear, press Volume Up to confirm.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+It is recommended to sideload an android recovery zip through TWRP for the easiest process, since heimdall freaks out about the subpartitions in SYSTEM and won't move past ~7%.
+You can use <code>pmbootstrap flasher flash_kernel</code> and then use netcat or similar to flash SYSTEM, but this is a longer and more redundant method.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --android-recovery-zip
+$ pmbootstrap flasher --method=adb sideload
+</syntaxhighlight>
 
 == See also ==
 <!--
