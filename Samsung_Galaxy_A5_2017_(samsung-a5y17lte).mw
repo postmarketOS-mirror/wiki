@@ -18,8 +18,8 @@
 | status_flashing = N
 | status_touch = P
 | status_screen = Y
-| status_wifi = <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_wifi = Y
+| status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard = Y
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
