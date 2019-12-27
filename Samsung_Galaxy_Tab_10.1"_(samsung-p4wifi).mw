@@ -304,6 +304,12 @@ Notes:
   | No driver -- driver has not been forward ported
 |}
 
+===== latest mainline driver ? =====
+
+latest kernel (based on grate-linux) with rebase patches to test (do not posses the HW) https://github.com/okias/linux/pull/new/p4wifi . Config file: https://raw.githubusercontent.com/Decatf/linux/040d3332474fceceaf4e4402417f0ead732f45bc/arch/arm/configs/tegra_postmarketos_defconfig
+
+If it'll work for you, please let me know on Matrix (okias) or here.
+
 == See also ==
 * {{github|1279}} Initial pull request
 * [https://github.com/Decatf/linux/ decatf mainline Linux kernel]
