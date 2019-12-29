@@ -1,58 +1,81 @@
-This page is about systematically debugging new postmarketOS device ports, where the kernel successfully compiles, but booting it appears not to be working at all. As always, please extend with everything you find out.
+This page describes ways to debug new postmarketOS device ports in which the kernel compiles, but shows no output on the screen, fails to respond to telnet/SSH requests, or doesn't boot at all.
 
-== Preparation ==
-* Make sure you have created a [[Help:Device_Page|wiki page for your device]]
-* Document everything you have tried out there, so when the next person with the same device comes along, it is possible to start from the work you have already done.
+As always, please edit this page to make corrections and add useful tips.
 
-== General tips ==
-* When everything fails: '''Try different kernel sources for your device'''
-** Ideally you would use the kernel sources, that have been used to build a known working (Android) ROM or recovery image (e.g. TWRP) for your device
-*** Make sure that you are really able to boot that known working kernel with Android/TWRP etc.
-** For Android devices, if the usual LineageOS kernel does not work, try to find another one through GitHub search and on XDA
-* [https://wiki.postmarketos.org/wiki/Matrix_and_IRC Ask in IRC/Matrix]
-* [https://github.com/postmarketOS/pmbootstrap/issues Open an issue] (and link to it from your device's wiki page)
-* Make a [[serial cable]] and look at the output of the bootloader
-* If there is a similar device, that already has a postmarketOS port, take a look at its aport to see if it does anything special.
-* Extract the TWRP boot.img, and the initramfs inside it (with <code>unpackbootimg</code> and [https://superuser.com/a/813899 cpio])
-** Look through all the <code>rc</code> files, there might be some useful comment or some line like <code>write /sys/class/xxx/yyy/enable 1</code>
+== Determine whether boot failed ==
+If the device automatically reboots, then the kernel is not loading. However, even if your device only displays the OEM logo or a black screen, the kernel may have actually loaded.
 
-== Does the kernel boot? ==
-Even if it looks like your device does nothing (e.g. still displaying the OEM logo or displaying a black screen), it can be that the kernel is actually booted. So unless you know for sure that it does not boot at all (because it directly reboots), try the following to get clarity:
-* Check if you have a new network interface (run <code>ip a</code> or <code>ifconfig</code>)
-** If you have the network interface, but no IP, try [[USB_Network#Troubleshooting|manually running a DHCP client]]
-* Check the output of <code>lsusb</code> (before plugging the device in, then while it is in the bootloader mode, and finally after you have booted pmOS)
-* Check what <code>dmesg</code> says after booting
-** [[USB_Network#Troubleshooting|Example output for successfully booted device]]
-* Run with an initramfs hook, that signalizes a successful boot with LEDs and the vibrator:
+To discover whether the kernel loaded, connect the device via USB, then run <tt>dmesg</tt> or <tt>lsusb</tt>. If the device is listed there, then it booted successfully. (See [[USB_Network#Making_sure_the_USB_is_detected|here]] for sample output.)
+
+An alternate method is to set an initramfs hook that turns on an LED or the vibration motor when the device boots successfully. One way to do this is by booting the device using pmbootstrap:
+
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap initfs hook_add maximum-attention
 $ pmbootstrap flasher boot
-(or however you boot the kernel/initramfs)
 </syntaxhighlight>
-* Try to read dmesg after rebooting:
-** Immediately entering flash mode after the reboot
-** Boot a custom recovery such as TWRP
-** read <code>/proc/last_kmsg</code> or <code>/sys/fs/pstore/console-ramoops</code> to see if it booted at all, and what caused the reboot
-** more on that topic is [[Mainlining_FAQ#Writing_dmesg_to_RAM_and_reading_it_out_after_reboot|here]] and [http://docs.halium.org/en/latest/porting/debug-build/dmesg.html here]
 
-Depending on whether your kernel is booted or not, read on in the appropriate section below. If it turns out, that your kernel is booted, and you have a network interface and get an IP address, then you probably only need to [[Porting_to_a_new_device#Display|get your display working]].
+You can also check for the init log, <tt>pmOS_init.log</tt>, in the root directory on the device. 
 
-== Kernel boots without network interface ==
-* [[USB_Network#Kernel_configuration_parameters|Check your kernel configuration]].
-* Some downstream kernels require writing a value to sysfs before the network comes up. Example from <code>device-htc-bravo</code>:
+If it turns out that your kernel loaded ''and'' your device has an IP address, then you probably only need to [[Porting to a new device#Display|get your display working]].
+
+=== If boot fails ===
+If the tests above indicate that boot failed, read <code>/proc/last_kmsg</code> or <code>/sys/fs/pstore/console-ramoops</code> on the device to try to find the point of failure. If your device has TWRP installed, you can access them from the command line either by opening a terminal in TWRP, or by using TWRP's ADB interface. For more details, see [[Mainlining_FAQ#Writing_dmesg_to_RAM_and_reading_it_out_after_reboot|here]] and [http://docs.halium.org/en/latest/porting/debug-build/dmesg.html here].
+
+==== If booting from a microSD card ====
+If the initramfs cannot find the [[Partition-layout|boot partition]], it will display an error splash screen and wait forever. If the display driver does not work yet, the device will appear to hang with a blank screen, and the SSH server will not come up.
+
+If you get a "<code>bad boot image header</code>" error when booting from a microSD card, the device's fastboot mode might not allow <code>fastboot boot</code> usage. Run <code>fastboot boot ''boot.img''</code>, where <code>''boot.img''</code> is a recovery image or a working boot image from a known-good ROM. If you get the same error, flash the kernel to the device with <code>pmbootstrap flasher flash_kernel</code>.
+
+==== Check your device configuration ====
+You may need to revise your device's configuration files and recompile the kernel.
+
+* Make sure that you are using the correct [[Porting to a new device#Defconfig|defconfig]].
+* If your kernel's APKBUILD file uses <code>arch=armhf</code>, be aware that Alpine Linux' <tt>armhf</tt> architecture requires ARMv6 with a floating point unit (FPU). (See issue {{github|1203}}.)
+* The bootimg file in different ROMs may have different [[deviceinfo]] values. Run <code>pmbootstrap bootimg_analyze ''filename''</code> on a bootimg file for your device, and compare the output with the contents of your deviceinfo file. In Android ROMs, this file is called <code>boot.img</code>. Recovery ROMs are themselves bootimg files. If you want to analyze the bootimg of your pmOS ROM, you can extract it with the <code>unpackbootimg</code> command.
+* If TWRP has been ported to your device, extract the TWRP image file with <code>unpackbootimg</code>, and the initramfs inside it with [https://superuser.com/a/813899 cpio]. Check the <tt>rc</tt> files in initramfs for useful comments or settings (such as <code>write /sys/class/xxx/yyy/enable 1</code>).
+* If a similar device already has a postmarketOS port, take a look at its aport to see if it does anything special.
+* If you have a [[QCDT#Does_my_device_need_a_QCDT_boot.img_file.3F|QCDT device]], [[QCDT#Debugging]] may be helpful. Use <code>extract-dtb</code> to extract the [[dtb]] files appended to the kernel. Compare yours with the dtb files from a known working ROM or recovery OS (such as TWRP).
+
+If the configuration already appears to be correct, try building the kernel with an [[Vendor kernel specific package#GCC_version|older version of GCC]]. If possible, determine which version of GCC would have been used to build the kernel for Android.
+
+==== Try a prebuilt kernel ====
+If your kernel isn't working and you are desperate to boot postmarketOS on your device, you can try loading initramfs with a [[Using prebuilt kernels|prebuilt kernel]]. Hypothetically, this may help you to debug the issue. Also, after booting with a prebuilt kernel you can also try loading the postmarketOS kernel with <tt>kexec</tt>. See also the guide for [[Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system|building the kernel with Android's build system]].
+
+==== Try a different codebase ====
+If all else fails, it may help to try a different branch or fork. If your device runs Android but the LineageOS kernel does not work, try another branch, or even another AOSP distribution. You can find other compatible ROMs on GitLab, GitHub, the [https://forum.xda-developers.com/ XDA Forums], and various websites.
+
+== Network troubleshooting ==
+To check for a network interface, Run <code>ip a</code> or <code>ifconfig</code>. If the pmOS device's network interface is up but it has no IP address, try [[USB_Network#Troubleshooting|manually running a DHCP client]]. If that fails, [[USB Network#Kernel configuration parameters|check your kernel configuration]].
+
+Some downstream kernels require writing a value to <tt>sysfs</tt> before the network comes up. Example from <code>device-htc-bravo</code>:
 <syntaxhighlight lang="shell">
 echo 4 > /sys/devices/platform/android_usb/usb_function_switch
 </syntaxhighlight>
-* It is possible to dump the sysfs from an initramfs hook to a partition on the device, and read it out and comparing with another system (such as TWRP).
-* See the [[Troubleshooting:boot:initfshooks|initramfs hooks examples]].
 
-== postmarketOS is stuck somewhere in the boot process ==
-* Do you have the system partition flashed to your device (or put it on an SD card and inserted it)?
-** If the initramfs can not find the [[Partition-layout|boot partition]], it will display an error splash screen and wait forever.
-** That means, if your screen does not work yet, it will just appear to be stuck and the SSH server will not come up.
+By setting an initramfs hook, you can dump the sysfs to a partition on the device, in order to compare it with another system (such as TWRP). See the [[Troubleshooting:boot:initfshooks|initramfs hooks examples]].
 
-=== Run the initramfs script line by line ===
-Install the [[Inspecting_the_initramfs|debug shell]] initramfs hook to get a telnet shell directly from the initramfs. As soon as you are in the initramfs shell, open [https://gitlab.com/postmarketOS/pmaports/blob/master/main/postmarketos-mkinitfs/init.sh.in init.sh.in] in your browser, and execute it line by line to figure out where it fails. The functions you are calling (<code>mount_boot_partition</code> etc.) are defined [https://gitlab.com/postmarketOS/pmaports/blob/master/main/postmarketos-mkinitfs/init_functions.sh init_functions.sh].
+=== Can ping device, but SSH says "connection refused" ===
+
+pmOS generates SSH keys during first boot. If the device loses power before it fully boots, you are left with empty files instead of keys. If that happens, reflash the device and make sure that the initramfs script completes before you power-off or reboot.
+
+If the initramfs script completes and you can ping the device, but SSH still doesn't work, log OpenRC's output to <code>kmesg</code> (see issue {{github|1582}}).
+
+One possible cause is a failed fsck. Try this:
+
+# Telnet into initramfs
+# Mount the root partition
+# Comment out the boot partition in <code>/etc/fstab</code>
+# Try to boot ({{github|1511}}).
+
+If boot succeeds, try reflashing the postmarketOS rootfs to correct the error.
+
+== General debugging ==
+<code>/proc/last_kmsg</code> and <code>/sys/fs/pstore/console-ramoops</code> are useful sources of debugging data.
+
+On boot, postmarketOS generates an init log, <code>pmOS_init.log</code>, in the root directory on the device. The init system is OpenRC. See issue {{github|1582}} for steps to log OpenRC's output to <code>kmesg</code>.
+
+It's also possible to step through the initramfs script line by line. Install the [[Inspecting the initramfs|debug shell]] initramfs hook to get a telnet shell directly from the initramfs. As soon as you are in the initramfs shell, open [https://gitlab.com/postmarketOS/pmaports/blob/master/main/postmarketos-mkinitfs/init.sh.in init.sh.in] in your browser, and execute it one line at a time to figure out where it fails.
+
 <syntaxhighlight lang="shell-session">
 $ . /init_functions.sh
 $ . /etc/deviceinfo
@@ -60,37 +83,27 @@ $ . /etc/deviceinfo
 $ mount_boot_partition
 $ extract_initramfs_extra /boot/initramfs-*-extra
 $ start_charging_mode
-...
+…
 </syntaxhighlight>
 
-=== Can ping to device, but SSH says "connection refused" ===
+The functions are all defined in [https://gitlab.com/postmarketOS/pmaports/blob/master/main/postmarketos-mkinitfs/init_functions.sh init_functions.sh].
 
-It might be that fsck fails on a partition: try telnetting into initramfs, mount the root partition, and comment out the boot partition in <code>/etc/fstab</code>, then try booting ({{github|1511}}). If that is the cause of the error, it should also be fixed by re-flashing the postmarketOS rootfs (might be easier).
+=== Serial debugging ===
+A [[Serial debugging|serial cable]] makes it much easier to follow the output of the bootloader and to get the output of <tt>dmesg</tt>. Unfortunately, there is no standard way to access the UART on mobile devices. An off-the-shelf USB-to-TTL adapter is unlikely to work, so you would probably have to build an interface yourself. Making a serial adapter takes some time, and it isn't even known how to do it for all devices.
 
-=== If that does not help ===
-* If you have powered off the device while it was not fully booted yet, it could be that you killed it while it was generating SSH keys. That means, it may have empty files instead of actual keys, so they will not get generated again, but also SSHD fails to start. When this could be the case with your issue, try to flash again and make sure that you do not turn off the device during the boot process this time.
-* If the initramfs script seems to be working fine, chances are that the error happens as OpenRC runs. See {{github|1582}} for steps to log OpenRC's output to <code>kmesg</code>
+If you have a functioning serial interface, you can log OpenRC's output to the serial port by setting <tt>RC_LOGGING</tt> to <tt>true</tt> in <code>/etc/rc.conf</code>.
 
-== Kernel doesn't even boot ==
-* Check the output of the bootloader with a [[serial debugging|serial cable]] if you have one.
-** Making such a cable takes some time, and it isn't even known how to do it for all devices. So if you don't have such a cable, try other methods.
-* Double-check that you have used the right [[Porting_to_a_new_device#Defconfig|defconfig]]
-* Try building the kernel with an [[Vendor_kernel_specific_package#GCC_version|older GCC version]] (possibly try to figure out first, which GCC version would have been used to build the kernel for Android)
-* Android bootimg issues:
-** Make sure that <code>pmbootstrap bootimg_analyze</code> outputs the same values, that you have put in your [[deviceinfo]]
-** Analyze a bootimg file, for which you have verified that it boots on your device (with TWRP or Android).
-** If you [[QCDT#Does_my_device_need_a_QCDT_boot.img_file.3F|have a QCDT device]], check out [[QCDT#Debugging|QCDT debugging]]
-** use <code>extract-dtb</code> and <code>unpackbootimg</code> (both packaged in postmarketOS) to compare the [[dtb]] files appended to the kernel and boot.img file (compare the postmarketOS version against the one from a known working ROM or recovery OS such as TWRP)
-* A less systematic approach is booting the postmarketOS initramfs with a [[Using_prebuilt_kernels|prebuilt kernel]]. This is listed for the sake of completeness, but building another kernel from source (like in the [[Porting_to_a_new_device|porting guide]]) is probably more fruitful and over a much cleaner approach.
-** If that works, maybe you can debug the issue from that point somehow
-** Or even load the postmarketOS kernel with kexec
-** There's a also a guide for [[Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system|building the kernel with Android's build system]]
-* If you get <code>bad boot image header</code> error trying to boot from SD card, it may be that fastboot mode on the device doesn't allow <code>fastboot boot</code> usage. Run <code>fastboot boot boot.img</code> where boot.img can be a recovery image or working boot image from stock or custom firmware. If you get the same error, you should flash kernel on device with <code>pmbootstrap flasher flash_kernel</code>.
-* Alpine Linux' <code>armhf</code> architecture requires armv6 with FPU {{github|1203}}
+== Document your progress ==
+If you haven't already done so, please [[Help:Device_Page|create a wiki page for your device]]. On this page, document everything you tried so that others can build on the work you have already done.
 
 == See also ==
 * [[Boot process]]
-* {{github|1206}} HTC One M8 not booting
-* {{github|1203}} HTC Wildfire not booting
-* {{github|99}} HTC Droid DNA (dlx) not booting
-* [https://developer.qualcomm.com/qfile/28821/lm80-p0436-1_little_kernel_boot_loader_overview.pdf Qualcomm LK Boot Loader Overview]
+* [[Mainlining FAQ]]
+* [[Matrix and IRC]] (to get help via live chat)
+* [[Vendor kernel specific package]]
+
+== Further reading ==
+* [https://developer.qualcomm.com/qfile/28821/lm80-p0436-1_little_kernel_boot_loader_overview.pdf Qualcomm Little Kernel Boot Loader Overview] (PDF)
+* Issue {{github|99}} HTC Droid DNA (dlx) not booting
+* Issue {{github|1206}} HTC One M8 not booting
+* Issue {{github|1203}} HTC Wildfire not booting
