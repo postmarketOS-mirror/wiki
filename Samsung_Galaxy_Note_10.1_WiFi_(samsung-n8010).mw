@@ -52,6 +52,10 @@ Image must be sideloaded with TWRP recovery. Check [[Android Recovery Zip Instal
 It has been reported that this device now runs with the mainline kernel: https://github.com/CustomROMs/android_local_manifests_i9300/issues/1#issuecomment-568949705
 The report says "I'm able to boot into buildroot with a 5.4 kernel, display, touch, wifi and some other stuff already working. I can run kmscube but I think it's not using the lima driver but software rendering as it's really slow."
 
+XDA forum post about the mainline kernel work being done on this device: https://forum.xda-developers.com/galaxy-note-10-1/general/mainline-n8000-progress-t3964980
+
+Git Repositories for the work being done by Viciouss to mainline this device and get Android running on it: https://github.com/Viciouss?tab=repositories
+
 == See also ==
 * {{MR|233|pmaports}} Initial merge request
 * [https://redmine.replicant.us/issues/1946] Replicant wants to support this device as well
