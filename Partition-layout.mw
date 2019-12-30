@@ -26,7 +26,7 @@ systemp2 # pmOS (un)encrypted root filesystem</pre>
 The initramfs (in the <code>boot.img</code> file!) will automatically find and mount the pmOS boot and root partition, load the <code>initramfs-extra</code> (which contains additional files, it was split to save space) and take care of booting through until [https://github.com/postmarketOS/pmbootstrap/wiki/Glossary#openrc OpenRC] takes over.
 
 ==== Flashing to "userdata" ====
-The <code>userdata</code> partition is not used yet (proposal to do that is in [https://github.com/postmarketOS/pmbootstrap/issues/60 #60]). But as we are pretty flexible, you can also flash pmOS to the <code>userdata</code> partition, if it has more space and you can't fit it on the <code>system</code> partition. The initramfs will detect it anyway. Just make sure, that you don't have it flashed to ''both'' partitions!
+The <code>userdata</code> partition is not used yet (proposal to do that is in {{issue|60}}). But as we are pretty flexible, you can also flash pmOS to the <code>userdata</code> partition, if it has more space and you can't fit it on the <code>system</code> partition. The initramfs will detect it anyway. Just make sure, that you don't have it flashed to ''both'' partitions!
 
 To flash to the <code>userdata</code> partition instead of the <code>system</code> partition, use <code>pmbootstrap flasher flash_rootfs --partition=USERDATA</code>.
 
@@ -36,7 +36,7 @@ If you had flashed postmarketOS to the system partition before, make sure to for
 
 {{note|See also: Allow booting from an image file (/data/postmarketOS.img) instead of flashing to a partition ({{github|953}})}}
 
-There might be scenarios, in which the partition type of the <code>system</code> partition can not be changed through the flasher, because it only allows [https://en.wikipedia.org/wiki/YAFFS2 yaffs2] or simg with ext4 support (during research for the mozilla flame, we found that to be the case ([https://github.com/postmarketOS/pmbootstrap/issues/299 #299]) - however, it also has an SD slot, so we did not continue this way ([https://github.com/postmarketOS/pmbootstrap/issues/337 #337])).
+There might be scenarios, in which the partition type of the <code>system</code> partition can not be changed through the flasher, because it only allows [https://en.wikipedia.org/wiki/YAFFS2 yaffs2] or simg with ext4 support (during research for the mozilla flame, we found that to be the case ({{issue|299}}) - however, it also has an SD slot, so we did not continue this way ({{issue|337}})).
 
 A proposal we have for that case, is to have one big ext4/yaffs partition, and include the whole system image file inside that. Then we would adjust the initramfs code to find the boot and root partitions inside that, and teach it how to resize the whole thing to the maximum partition size. We already did some experiments, and so far everything worked (talk to drebrez or ollieparanoid).
 
