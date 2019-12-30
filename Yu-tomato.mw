@@ -66,7 +66,7 @@ Stock fastboot: Power on the device with both Power and Volume Up buttons
 * {{MR|844|pmaports}} Initial merge request
 <!--* {{issue|CHANGEME|pmaports}} Some related issue-->
 
--->
+
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
