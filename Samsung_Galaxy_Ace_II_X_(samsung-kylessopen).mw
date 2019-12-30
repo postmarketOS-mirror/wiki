@@ -35,15 +35,17 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 | booting = yes
 }}
 
+== Users owning this device ==
+{{Device owners}}
+
 == Installation ==
 Before installing, ensure that your host computer and your copy of [[Installing_pmbootstrap|pmbootstrap]] is fully up to date and that your system has been rebooted since it was last updated. 
 
 === init ===
 <source lang="bash">$ pmbootstrap init</source>
-Select "samsung-kylessopen" as the target device and select a working recommended graphical interface.
+Select "samsung-kylessopen" as the target device and select a graphical interface. This device was running with matchbox once, but as matchbox isn't available in pmbootstrap anymore, the others are not tested yet.
 
 ==== [[Interfaces|Graphical Interfaces]] ====
-* [https://en.wikipedia.org/wiki/Matchbox_(window_manager)][[Matchbox]] - Recommended
 * [https://en.wikipedia.org/wiki/Hildon][[Hildon]]
 * [https://en.wikipedia.org/wiki/MATE_(software)][[MATE]]
 * [https://en.wikipedia.org/wiki/Xfce][[XFCE4]]
