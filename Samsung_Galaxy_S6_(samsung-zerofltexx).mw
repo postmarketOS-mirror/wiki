@@ -2,8 +2,8 @@
 | pmoskernel = 3.10.101
 | manufacturer = Samsung <!-- e.g. HTC -->
 | name =  Galaxy S6 <!-- e.g. Desire -->
-| codename = zerofltexx <!-- e.g. htc-bravo -->
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| codename = samsung-zerofltexx <!-- e.g. htc-bravo -->
+| image = File:samsung-zerofltexx.jpg
 | imagecaption = Samsung Galaxy S6
 | releaseyear = 2015
 | originalsoftware = Android 5.0 <!-- e.g. Android 2 -->
@@ -34,7 +34,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = N <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
