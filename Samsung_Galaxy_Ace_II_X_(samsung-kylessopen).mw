@@ -43,15 +43,35 @@ Before installing, ensure that your host computer and your copy of [[Installing_
 
 === init ===
 <source lang="bash">$ pmbootstrap init</source>
-Select "samsung-kylessopen" as the target device and select a graphical interface. This device was running with matchbox once, but as matchbox isn't available in pmbootstrap anymore, the others are not tested yet.
+Select "samsung-kylessopen" as the target device and select a graphical interface. If there is no information they were not tested yet.
 
 ==== [[Interfaces|Graphical Interfaces]] ====
-* [https://en.wikipedia.org/wiki/Hildon][[Hildon]]
-* [https://en.wikipedia.org/wiki/MATE_(software)][[MATE]]
-* [https://en.wikipedia.org/wiki/Xfce][[XFCE4]]
-* [https://en.wikipedia.org/wiki/I3_(window_manager)][[i3wm]]
-* [https://en.wikipedia.org/wiki/Weston_(software)#Weston][[Weston]]
-* [https://en.wikipedia.org/wiki/Plasma_Mobile#Plasma_Mobile][[Plasma Mobile]] - Not recommended
+
+{|class="wikitable feature-colors"
+! Interface
+! Status
+|-
+|[https://en.wikipedia.org/wiki/Hildon][[Hildon]]
+|
+|-
+|[https://en.wikipedia.org/wiki/MATE_(software)][[MATE]]
+|
+|-
+|[https://en.wikipedia.org/wiki/Xfce][[XFCE4]]
+|
+|-
+|[https://en.wikipedia.org/wiki/I3_(window_manager)][[i3wm]]
+|
+|-
+|[https://en.wikipedia.org/wiki/Weston_(software)#Weston][[Weston]]
+|works so far
+|-
+|[https://en.wikipedia.org/wiki/Plasma_Mobile#Plasma_Mobile][[Plasma Mobile]]
+| Not recommended
+|-
+|Matchbox
+|Matchbox was removed from postmarketOS
+|}
 
 === install ===
 <source lang="bash">$ pmbootstrap install</source>
