@@ -63,8 +63,6 @@ Stock fastboot: Power on the device with both Power and Volume Up buttons
 # Just follow the [[Installation guide]]. for sdcard method
 
 == See also ==
-<!--
-Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|844|pmaports}} Initial merge request
 <!--* {{issue|CHANGEME|pmaports}} Some related issue-->
 
