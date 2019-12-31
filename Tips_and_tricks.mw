@@ -19,6 +19,20 @@ Here are some interesting ideas that you can do with your device with postmarket
 Using x11vnc, which is in the Alpine repos. You need a running X server (e.g. running XFCE), then you just run x11vnc on the device in a terminal/tty and connect to it. From there, you can manipulate the previously running X server.
 You might need to specify the X server if x11vnc does not detect it (e.g. by passing -display :0 to it or doing a export DISPLAY=:0 before running it, assuming the display is at :0)
 
+=== Update the architecture of your device ===
+
+Some devices have the armhf-architecture but the device supports armv7. Some Interfaces can not be built for armhf, so it could be useful to update the architecture:
+* Update the architecture in the following files:
+<source>
+device/device-samsung-foo/APKBUILD
+device/device-samsung-foo/deviceinfo
+device/linux-samsung-foo/APKBUILD
+</source>
+
+* Update the name of the config-wiki-example.armhf in device/linux-wiki-example
+
+* Create new Checksums, build the kernel and boot.
+
 === Misc ===
 * The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
 * Browse the Linux source with links to all references [http://elixir.free-electrons.com here]
