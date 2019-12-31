@@ -71,7 +71,7 @@ Looks like, we need to package the [https://github.com/LineageOS/android_device_
 
 '''power_graphic's mainlining progress is [https://gitlab.com/power_graphic/linux-postmarketos/tree/device-lg-mako here].''' Read on for generic instructions of what would need to be done.
 
-Currently we only have a downstream vendor kernel packaged, not the mainline kernel. The <code>lg-mako</code> has the same [https://en.wikipedia.org/wiki/System_on_a_chip SoC] as the <code>asus-flo</code>, and on the latter it is possible to run [https://plus.google.com/111524780435806926688/posts/fkQ1BMjNNcn Android on a kernel close to mainline].
+Currently we only have a downstream vendor kernel packaged, not the mainline kernel. The <code>lg-mako</code> has the same [https://en.wikipedia.org/wiki/System_on_a_chip SoC] as the <code>asus-flo</code>, and on the latter it is possible to run [http://web.archive.org/web/20181008184943/https://plus.google.com/111524780435806926688/posts/fkQ1BMjNNcn Android on a kernel close to mainline].
 
 This means, that most peripherals of the <code>mako</code> should work with mainline as well, once they are enabled in the DTS file. In fact, @vetzki reported in {{github|1079}} that the <code>mako</code> boots when using exactly the same DTS as the one from <code>flo</code> (this is not recommended, as misconfiguring your device like that may damage it). SSH appears to be working for a short time before getting kicked out, the display does not work.
 
