@@ -68,7 +68,13 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 Flash a working custom Android ROM first - it will likely contain all needed custom partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure if it's strictly needed). For example this [[https://forum.xda-developers.com/redmi-note-7/development/rom-lineageos-16-0-t3923203 LineageOS 16.0 ROM]]. The situation is a bit hard, because there is no official LineageOS release for this device yet, not even a official TWRP.
 
 === WIP ===
-This is still a work-in-progress. If you want to test that kernel boots, backup <code>boot</code> and <code>system</code> partitions first. Then checkout my development branch in pmaports (link below in links section), zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device; then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender postmarketos-mkinitfs </code>) then proceed as usual (reboot device to fastboot mode, <code>pmbootstrap install ; pmbootstrap flasher flash_kernel ; pmbootstrap flasher flash_rootfs</code>).
+This is still a work-in-progress. If you want to test something, or help in the development, do:
+* make sure you have TWRP installed
+* backup <code>boot</code> and <code>system</code> partitions first from TWRP
+* checkout my development branch in pmaports (link below in links section)
+* zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device
+* then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender postmarketos-mkinitfs </code>)
+* proceed with installation as usual (reboot device to fastboot mode, <code>pmbootstrap install ; pmbootstrap flasher flash_kernel ; pmbootstrap flasher flash_rootfs</code>).
 
 == Additional info ==
 === Partition list ===
