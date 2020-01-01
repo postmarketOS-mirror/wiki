@@ -127,8 +127,12 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 ! Info
 |-
 | Y
+|Booting
+|... but initfs must be packed directly inside kernel (not into boot.img as usual), otherwise kernel won't boot. With downstream kernel it works.
+|-
+| Y
 |Touchscreen
-|works for me
+|Works.
 |-
 | Y
 |USB
@@ -140,7 +144,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |WiFi
-|Wi-fi works. Needs manually added firmware: bluetooth: brcm/brcmfmac4330-sdio.bin brcm/brcmfmac4330-sdio.ttxt
+|Wi-Fi works when firmware provided in correct location. /lib/firmware/postmarketos/brcm/brcmfmac4330-sdio.bin and brcmfmac4330-sdio.asus,tilapia.txt [https://gitlab.com/postmarketOS/pmaports/merge_requests/822 contained in WIP merge request]
 |-
 | Y
 | GPIO keys
@@ -181,7 +185,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | Y
 |Light sensor
-|Driver al3010
+|Driver al3010. Brightness regulation [https://floss.social/@okias/103371284828595026 works], install iio-sensor-proxy .
 |-
 | N
 |Front camera
@@ -189,11 +193,11 @@ alsamixer -c 0 # and enable something like:
 |-
 | P
 |3D support
-| [https://github.com/grate-driver/mesa/commits/19.3 mesa-3d repository (branch 19.3)] at least glxgears work, *real* 3d support need much more work.
+| [https://github.com/grate-driver/mesa/commits/19.3 mesa-3d repository (branch 19.3)] at least partly OpenGL 1.4 at this moment, for accelerated environment is needed at least GL 2.1 or GLES2)
 |-
 | N
 |Modem
-|present only on tilapia, no work started yet.
+|Present only on tilapia, no-one plan to work on it for now. 
 |-
 |}
 
