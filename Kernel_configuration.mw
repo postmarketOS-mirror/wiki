@@ -485,6 +485,29 @@ Prior to kernel version 3.7, the kernel had no capability of finding firmware it
 
 Without this option, the udev rule present in postmarketos-base won't be notified that firmware needs to be loaded and as such can't call firmwareload.sh which loads firmware from /lib/firmware/postmarketos.
 
+== Optional (iwd support - Wi-Fi for mainline kernels) ==
+=== CONFIG_KEY_DH_OPERATIONS & CONFIG_CRYPTO_DH & CONFIG_CRYPTO_DES & CONFIG_CRYPTO_USER_API_SKCIPHER===
+
+'''About'''
+
+''These options enables ability to use iwd daemon (wpa_supplicant replacement)''
+
+'''Location in menu'''
+
+<pre class="shell>
+Security Options --->
+	[*] Enable access key retention support
+		[*] Diffie-Hellman operations on retained keys
+
+Cryptographic API  --->
+	[*] Diffie-Hellman algorithm
+	[*] DES and Triple DES EDE cipher algorithms
+	[*] User-space interface for symmetric key cipher algorithms</pre>
+
+'''pmOS specific'''
+Enable only on recent mainline kernels. After enabling these options, you can use iwd daemon (better performance) instead of wpa_supplicant.
+
+
 = See also =
 
 * [https://cateee.net/lkddb/web-lkddb/ Linux Kernel Driver Database]
