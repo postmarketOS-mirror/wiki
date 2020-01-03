@@ -60,6 +60,9 @@ Set phone to ODIN mode
 At this point you can follow the [[Installation guide | general installation guide]]. 
 Installation to the system is not yet supported for the device, so make sure to install postmarketOS to the sdcard. Also be sure to not enable FDE as osk-sdl is not yet supported for this device, and enabling it would require you to telnet into the device to unlock it.
 
+
+==Installing with downstream kernel==
+
 == Wifi ==
 
 To get the wifi working, you'll need to modify the wpa_supplicant configuration. If this is not done, wpa_supplicant starts with -ip2p0 which is not supported on our device.
