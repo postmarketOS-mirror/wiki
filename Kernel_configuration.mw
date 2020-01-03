@@ -503,9 +503,24 @@ Cryptographic API  --->
 	[*] DES and Triple DES EDE cipher algorithms
 	[*] User-space interface for symmetric key cipher algorithms</pre>
 
+and these
+<pre class="shell>
+	CONFIG_CRYPTO_USER_API_HASH
+	CONFIG_CRYPTO_ECB
+	CONFIG_CRYPTO_MD4
+	CONFIG_CRYPTO_MD5
+	CONFIG_CRYPTO_CBC
+	CONFIG_CRYPTO_SHA1
+	CONFIG_CRYPTO_SHA256
+	CONFIG_CRYPTO_SHA512
+	CONFIG_CRYPTO_AES
+	CONFIG_CRYPTO_DES
+	CONFIG_CRYPTO_CMAC
+	CONFIG_CRYPTO_HMAC
+	CONFIG_CRYPTO_ARC4
+</pre>
 '''pmOS specific'''
 Enable only on recent mainline kernels. After enabling these options, you can use iwd daemon (better performance) instead of wpa_supplicant.
-
 
 = See also =
 
