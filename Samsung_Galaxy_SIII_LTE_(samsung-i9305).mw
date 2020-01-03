@@ -63,6 +63,52 @@ Installation to the system is not yet supported for the device, so make sure to 
 
 ==Installing with downstream kernel==
 
+*FIRST PMBOOTSTRAP INSTALL
+<code>
+mkdir ~/code<br>
+cd ~/code<br>
+git clone https://gitlab.com/postmarketOS/pmbootstrap.git<br>
+</code>
+*CONFIG PMBOOTSTRAP
+<code>
+alias pmbootstrap=~/code/pmbootstrap/pmbootstrap.py<br>
+pmbootstrap init<br>
+</code>
+#work path default
+#samsung
+#i9305
+#n
+#wathever
+#weston
+#n
+#none
+#y
+#samsung-i9305
+#y
+*FOR DEBUGGING (NOT REQUIRED)
+<code>
+pmbootstrap initfs hook_add debug-shell<br>
+</code>
+Check log with 'tail -f ~/.local/var/pmbootstrap/log.txt'<br>
+*CREATE RECOVERY ZIP (for flashing with TWRP)
+<code>
+pmbootstrap install --no-fde --android-recovery-zip<br>
+</code>
+*COPY ON SDCARD
+<code>
+cp ~/.local/var/pmbootstrap/chroot_buildroot_armhf/var/lib/postmarketos-android-recovery-installer/pmos-samsung-i9305.zip /media/computer/sdcard/<br>
+</code>
+#Insert sdcard in phone
+#Reboot on recovery with up+home+power
+#Install from zip
+#Reboot
+*IF BOOT STANDBY (DEBUG)
+#Connect with USB cable
+<code>
+telnet 172.16.42.1<br>
+pmos_continue_boot<br>
+</code>
+
 == Wifi ==
 
 To get the wifi working, you'll need to modify the wpa_supplicant configuration. If this is not done, wpa_supplicant starts with -ip2p0 which is not supported on our device.
