@@ -147,7 +147,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |WiFi
-|Wi-Fi works when firmware provided in correct location. /lib/firmware/postmarketos/brcm/brcmfmac4330-sdio.bin and brcmfmac4330-sdio.asus,tilapia.txt [https://gitlab.com/postmarketOS/pmaports/merge_requests/822 contained in WIP merge request]
+|Wi-Fi works with IWD daemon (apk add iwd; rc-config del wpa_supplicant; rc-config add iwd; and [https://wiki.archlinux.org/index.php/NetworkManager#Using_iwd_as_the_Wi-Fi_backend HOWTO]). 
 |-
 | Y
 | GPIO keys
