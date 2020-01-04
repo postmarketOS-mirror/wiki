@@ -59,7 +59,8 @@ $ ./pmbootstrap.py flasher flash_kernel
 </syntaxhighlight>
 
 === Installation process (development setup, cutting edge) ===
-This includes latest mainline kernel:
+[https://gitlab.com/postmarketOS/pmaports/merge_requests/822 Merge Request] to make this work out-of-box.
+If not merged yet, this includes way to the latest mainline kernel:
 <syntaxhighlight lang="shell" line='line'>
 mkdir ~/code
 cd ~/code
