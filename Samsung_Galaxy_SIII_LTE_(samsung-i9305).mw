@@ -173,3 +173,68 @@ Replicant and LineageOS successfully got the Lima driver for Mesa working on Mal
 Replicant currently supports this device [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS3I9300 in 6.0] and is doing a lot of research in order to get it running with [https://redmine.replicant.us/projects/replicant/wiki/Upstream a mainline kernel with a mainline bootloader] for Replicant 9. [https://redmine.replicant.us/projects/replicant/wiki/Exynos4Bootrom More bootloader research is here.]
 
 [https://github.com/xboot/xboot/tree/b71fe8174882277897649bfe2177bf3ca300af69/src/arch/arm32/mach-exynos4412 xboot] might be a completely free bootloader option. Looks to have zero proprietary blobs.
+
+
+===Install with mainline kernel (WIP, not functionnal yet ===
+
+*Export image files in ~/.local/var/pmbootstrap/chroot_rootfs_samsung-i9305/boot/
+<code>
+pmbootstrap export
+
+#5,3M -rw-r--r--  1 root root 5,3M déc.  22 20:31 boot.img-samsung-i9305 (initramfs + vmlinuz)
+#1,3M -rw-r--r--  1 root root 1,3M déc.  22 20:31 initramfs-samsung-i9305
+#6,1M -rw-r--r--  1 root root 6,1M déc.  22 20:31 initramfs-samsung-i9305-extra
+#4,1M -rw-r--r--  1 root root 4,1M nov.   5 17:30 vmlinuz-samsung-i9305
+</code>
+
+*Get linux-next
+<code>
+cd ~/code
+</code>
+*Case 1 : first checkout
+<code>
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git linux<br>
+cd linux/<br>
+git fetch origin<br>
+git reset --hard origin/master<br>
+</code>
+*Case 2 : update
+<code>
+cd linux/<br>
+git checkout master<br>
+git pull
+</code>
+
+*Prepare compile with i9305 defconfig in ~/code/linux/arch/arm/configs
+<code>
+source ~/code/pmbootstrap/helpers/envkernel.sh<br>
+make exynos_defconfig
+</code>
+
+*DTS : Note that ~/code/linux/arch/arm/boot/dts/exynos4412-i9305.dts already exists and should work
+*Makefile in ~/code/linux/arch/arm/boot/dts/ already contains this DTS
+
+
+*Kernel compilation
+<code>
+make -j5
+</code>
+
+*Prepare shell
+<code>
+pmbootstrap chroot -- apk add abootimg android-tools mkbootimg dtbtool findutils<br>
+export DEVICE="$(pmbootstrap config device)"<br>
+export WORK="$(pmbootstrap config work)"<br>
+export TEMP="$WORK/chroot_native/tmp/mainline/"<br>
+mkdir -p "$TEMP"
+</code>
+
+*Patch boot image
+<code>
+cd ~/code/linux/.output/arch/arm/boot<br>
+cat zImage dts/exynos4412-i9305.dtb > "$TEMP"/zImage-dtb<br>
+cp "/tmp/postmarketOS-export/boot.img-$DEVICE" "$TEMP/boot.img"<br>
+pmbootstrap chroot<br>
+abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb -c bootsize=8955904<br>
+exit
+</code>
