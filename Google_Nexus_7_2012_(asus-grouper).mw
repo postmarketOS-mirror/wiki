@@ -58,9 +58,11 @@ $ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_kernel
 </syntaxhighlight>
 
-=== Installation process (development setup, cutting edge) ===
-[https://gitlab.com/postmarketOS/pmaports/merge_requests/822 Merge Request] to make this work out-of-box.
-If not merged yet, this includes way to the latest mainline kernel:
+=== Special installation process (development setup, cutting edge, kernel over approx. 4M) ===
+[https://gitlab.com/postmarketOS/pmaports/merge_requests/822 Merge Request] to make basic kernel work out-of-box.
+
+If you need bigger kernel, (or previous MR not merged yet), this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
+
 <syntaxhighlight lang="shell" line='line'>
 mkdir ~/code
 cd ~/code
