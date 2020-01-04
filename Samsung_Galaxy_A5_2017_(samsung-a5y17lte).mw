@@ -34,6 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| status_otg = Y
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
@@ -42,8 +43,6 @@ Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = -
 -->
 }}
 
