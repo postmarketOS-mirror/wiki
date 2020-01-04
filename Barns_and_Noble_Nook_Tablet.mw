@@ -68,6 +68,9 @@ Boot Cyanoboot off a micro SD card.
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 To-do
 
+== Status ==
+Device won't load the kernel and will just endlessly bootloop, possibly needs Cyanoboot but could also be a nonfunctional kernel.
+
 == See also ==
 * [https://github.com/devfusediboot/postmarketos-unmerged/tree/master/barnsnoble-acclaim Files for this port (since it does not boot I will not make a PR)]
 <!--
