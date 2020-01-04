@@ -87,6 +87,9 @@ Device is equipped with usb type-c receptacle. No UART cable schematic available
 * Enter UART mode by attaching resistors is possible only in non type-c mode. (file s2mu004-muic.c ,lines 2835,2797)
 * UART mode detection most likely is implemented in muic firmware.
 
+=== Wlan ===
+
+wifi module gets initialized after 180 seconds. This is due to missing firmware files, and 60 secs timeout.
 
 
 == See also ==
