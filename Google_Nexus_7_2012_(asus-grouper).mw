@@ -220,9 +220,9 @@ alsamixer -c 0 # and enable something like:
 
 ==== Graphics ====
 
-* CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.
-* <s>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</s> '''Update:''' Seems to be correctly set now
-* weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.
+* (legacy) CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.
+* (legacy) <s>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</s> '''Update:''' Seems to be correctly set now
+* (legacy) weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.
 * The touchscreen input device is named <code>elan-touchscreen</code>.
 
 ==== Wifi ====
