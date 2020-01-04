@@ -64,17 +64,15 @@ Installation to the system is not yet supported for the device, so make sure to 
 
 ==Installing with downstream kernel==
 
-*FIRST PMBOOTSTRAP INSTALL
-<code>
-mkdir ~/code<br>
-cd ~/code<br>
-git clone https://gitlab.com/postmarketOS/pmbootstrap.git<br>
-</code>
-*CONFIG PMBOOTSTRAP
-<code>
-alias pmbootstrap=~/code/pmbootstrap/pmbootstrap.py<br>
-pmbootstrap init<br>
-</code>
+<syntaxhighlight lang="shell" line='line'>
+#FIRST PMBOOTSTRAP INSTALL
+mkdir ~/code
+cd ~/code
+git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+
+#CONFIG PMBOOTSTRAP
+alias pmbootstrap=~/code/pmbootstrap/pmbootstrap.py
+pmbootstrap init
 #work path default
 #samsung
 #i9305
@@ -86,29 +84,26 @@ pmbootstrap init<br>
 #y
 #samsung-i9305
 #y
-*FOR DEBUGGING (NOT REQUIRED)
-<code>
-pmbootstrap initfs hook_add debug-shell<br>
-</code>
-Check log with 'tail -f ~/.local/var/pmbootstrap/log.txt'<br>
-*CREATE RECOVERY ZIP (for flashing with TWRP)
-<code>
-pmbootstrap install --no-fde --android-recovery-zip<br>
-</code>
-*COPY ON SDCARD
-<code>
-cp ~/.local/var/pmbootstrap/chroot_buildroot_armhf/var/lib/postmarketos-android-recovery-installer/pmos-samsung-i9305.zip /media/computer/sdcard/<br>
-</code>
+
+#FOR DEBUGGING (NOT REQUIRED)
+pmbootstrap initfs hook_add debug-shell
+#Check log with 'tail -f ~/.local/var/pmbootstrap/log.txt'
+
+#CREATE RECOVERY ZIP (for flashing with TWRP)
+pmbootstrap install --no-fde --android-recovery-zip
+
+#COPY ON SDCARD
+cp ~/.local/var/pmbootstrap/chroot_buildroot_armhf/var/lib/postmarketos-android-recovery-installer/pmos-samsung-i9305.zip /media/computer/sdcard/
 #Insert sdcard in phone
 #Reboot on recovery with up+home+power
 #Install from zip
 #Reboot
-*IF BOOT STANDBY (DEBUG)
+
+#IF BOOT STANDBY (DEBUG)
 #Connect with USB cable
-<code>
-telnet 172.16.42.1<br>
-pmos_continue_boot<br>
-</code>
+telnet 172.16.42.1
+pmos_continue_boot
+</syntaxhighlight>
 
 == Wifi ==
 
