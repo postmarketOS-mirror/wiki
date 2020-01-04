@@ -175,7 +175,7 @@ Replicant currently supports this device [https://redmine.replicant.us/projects/
 [https://github.com/xboot/xboot/tree/b71fe8174882277897649bfe2177bf3ca300af69/src/arch/arm32/mach-exynos4412 xboot] might be a completely free bootloader option. Looks to have zero proprietary blobs.
 
 
-===Install with mainline kernel (WIP, not functionnal yet ===
+===Install with mainline kernel (WIP, not functionnal yet) ===
 
 *Export image files in ~/.local/var/pmbootstrap/chroot_rootfs_samsung-i9305/boot/
 <code>
