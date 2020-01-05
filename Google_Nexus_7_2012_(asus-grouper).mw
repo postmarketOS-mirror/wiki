@@ -12,7 +12,7 @@
 | storage = 8/16/32 GB
 | display = 800x1280 IPS
 | memory = 1 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
