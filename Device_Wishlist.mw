@@ -34,6 +34,7 @@ Please keep this list sorted by alphabet for readability.
 * Elephone Trunk - it has similar hardware as Wileyfox Swift (already supported)
 * [http://projects.goldelico.com/p/gta04-main/ GTA04] - replacement board for OpenMoko Neo 1973/Freerunner (GTA01/02) with OMAP3 SoC, mainline DTS, supported by Replicant
 * HTC HD2 (the phone which famously runs ''any'' operating system)
+* Huawei Ascend Y300
 * Huawei P8 Lite (ALE-21)
 * Huawei P9 Plus (VIE-L09 (Single SIM); VIE-L29 (Dual SIM))
 * Huawei Y3 
