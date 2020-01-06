@@ -62,8 +62,6 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-
-== Installation ==
 Vol up + Power (loading Recovery)
 
 Connect usb cable and enter:
@@ -76,8 +74,11 @@ When Recovery is fully loaded
 
 When the fastboot logo appears on the phone
 
-<pre>pmbootstrap flasher flash_rootfs
-pmbootstrap flasher flash_kernel</pre>
+== Installation ==
+pmbootstrap creates a damaged boot.img, so you need to manually build boot.img
+<pre>mtkimg repack newboot.img -n -k vmlinuz-fly-iq4404 -r initramfs-fly-iq4404</pre>
+
+<pre>fastboot flash boot newboot.img</pre>
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
