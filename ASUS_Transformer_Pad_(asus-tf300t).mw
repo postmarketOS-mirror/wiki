@@ -47,14 +47,14 @@ There is a rebased version of jonty-comp's branch on [https://github.com/postmar
 
 == What works ==
 
-* Mainline kernel should work, if anyone has device, feel free to contact me on Matrix and we can try (nickname okias)
+* Mainline kernel should work, if anyone has device, feel free to contact me on Matrix and we can try (nickname okias). Kernel [https://github.com/grate-driver/linux/ source]
 * Compiling CM13 kernel ([https://github.com/LineageOS/android_kernel_asus_tf300t GitHub])
 * Compiling 4.14-rc3 with tf300t specific patches
 * Flashing via Android recovery zip (Boot image included)
 * System boots
 * Most sensors/cameras/devices seem to be detected (e.g. accelerometer values can be read from <code>/sys</code> etc)
 
-== What does not work ==
+== What does not work (downstream kernel) ==
 
 * Flashing via fastboot (device appears to write successfully but then locks up and does not apply the uploaded image)
 * Framebuffer (stuck on ASUS bootloader graphic)
