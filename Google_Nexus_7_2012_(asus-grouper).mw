@@ -33,14 +33,15 @@
 | status_calls = -
 | booting = yes
 }}
+== Maintainer(s) ==
+* okias
+
 == Contributors ==
 * antonok
 * pangelo
-* okias
 
 === Users owning this device ===
 {{Device owners}}
-
 
 == Flashing ==
 === How to enter flash mode ===
