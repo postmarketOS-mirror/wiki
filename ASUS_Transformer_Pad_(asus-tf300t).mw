@@ -47,6 +47,7 @@ There is a rebased version of jonty-comp's branch on [https://github.com/postmar
 
 == What works ==
 
+* Mainline kernel should work, if anyone has device, feel free to contact me on Matrix and we can try (nickname okias)
 * Compiling CM13 kernel ([https://github.com/LineageOS/android_kernel_asus_tf300t GitHub])
 * Compiling 4.14-rc3 with tf300t specific patches
 * Flashing via Android recovery zip (Boot image included)
