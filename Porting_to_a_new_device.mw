@@ -144,6 +144,8 @@ $ pmbootstrap checksum linux-wiki-example
 {{note|If <code>pmbootstrap</code> throws an error here, you need to [[#Remove failed patches|remove the example patch]]!}}
 The magic command, which lets you change the kernel configuration is <code>pmbootstrap kconfig edit wiki-example</code>. Don't try to manually change the defconfig file, because only by running menuconfig, the dependencies will get resolved properly. <code>menuconfig</code> always runs on the kernel with all patches applied, so we'll run it once to see if we need to remove patch files first.
 
+If there are no errors, you can exit menuconfig with ESC-ESC and move on to making kconfig check happy.
+
 ===== Remove failed patches =====
 You will find some example patches already in the generated kernel package. When a patch does not apply correctly, you will get something like the following in the log window (scroll up, the error is above the <code>^^^</code> line).
 
