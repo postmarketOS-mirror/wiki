@@ -234,6 +234,7 @@ These are applications which already exist for Linux and could be reused in post
 * [https://mglapps.frama.io/ Mobile GNU/Linux Apps] - A similar list
 
 ===Other frameworks===
+* [https://github.com/ptitSeb/box86 box86] - Allows applications compiled for x86 Linux to be executed on ARM devices
 * [https://anbox.io/ Anbox] - Under-construction Android compatibility layer
 * [http://www.ofono.org oFono] - Open Source Telephony Framework
 * [https://launchpad.net/ginn/ Ginn] - Allows non-multitouch-aware applications to support multitouch gestures making a lot more applications usable on a touchscreen. [https://www.youtube.com/watch?v=NKDLWrLaKKE]
