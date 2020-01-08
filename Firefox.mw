@@ -1,7 +1,9 @@
 This page explains how to make firefox usable in mobile UIs like plasma-mobile.
 [[File:Nexus5-Firefox.jpg|thumb|right|frame|none|alt=Alt text|Firefox running on plasma-mobile]]
-== Firefox 52 ==
-Install firefox-esr package from alpine. It is currently firefox 52.9.0-r1
+== Firefox ==
+Install firefox package from alpine.
+
+Firefox is available from armv7 architecture. armhf is unsupported at this moment.
 
 === Specific firefox config ===
 
