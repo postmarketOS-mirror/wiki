@@ -85,4 +85,5 @@ finished. total time: 116.623s</source>
 
 The update doesn't get updated yet with this code but at least the bootloader doesn't freeze anymore after the flashing command.
 == See also ==
-* [https://github.com/jonty-comp/pmbootstrap/tree/device-asus-tf300t jonty-comp's kernel] [https://github.com/postmarketOS/pmbootstrap/tree/device-asus-tf300t jonty-comp's postmarketos/device-asus-tf300t]
+* [https://rere.qmqm.pl/git/?p=linux;a=shortlog;h=refs/heads/tf300t Michał Mirosław latest kernel]
+* [https://github.com/jonty-comp/pmbootstrap/tree/device-asus-tf300t jonty-comp's pld kernel] [https://github.com/postmarketOS/pmbootstrap/tree/device-asus-tf300t jonty-comp's old pmbootstrap]
