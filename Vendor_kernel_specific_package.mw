@@ -32,7 +32,7 @@ Follow the GCC 6 instructions below, but replace 6 with 4 everywhere.
 === Use GCC 6 ===
 If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works then.
 
-'''Replace these lines:'''
+To do that, open <code>aports/device/linux-[your-device]/APKBUILD</code> and '''replace these lines:'''
 <syntaxhighlight lang="bash">
 # Compiler: latest GCC from Alpine
 HOSTCC="${CC:-gcc}"
@@ -50,7 +50,7 @@ if [ "${CC:0:5}" != "gcc6-" ]; then
 fi
 </syntaxhighlight>
 
-Then add <code>gcc6</code> to the kernel's <code>makedepends</code> line.
+'''Then add''' <code>gcc6</code> to the kernel's <code>makedepends</code> line.
 
 <span style="font-size:80%; font-style: italic">
 Technical detail: the <code>if...</code> guard around setting the variables is necessary, because the <code>CC</code> and <code>CROSS_COMPILE</code> variables extend themselves. <code>abuild</code> will parse the <code>APKBUILD</code> a second time while running the <code>package()</code> step (inside fakeroot). So without the <code>if</code> statement, we will end up with <code>CC="gcc6-gcc6-gcc"</code> instead of <code>CC="gcc6-gcc"</code> which gets problematic if you are calling <code>make</code> to install kernel modules in the package section (as done in <code>linux-asus-tf101</code> for example). Interestingly, only <code>CC</code> and <code>CROSS_COMPILE</code> gets passed through, hence we can't simply check the <code>HOSTCC</code> variable.
