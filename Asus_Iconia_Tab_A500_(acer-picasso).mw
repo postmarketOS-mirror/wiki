@@ -65,6 +65,7 @@ None yet.
 
 == Installation ==
 Similiar to asus-grouper. Ask okias on postmarketOS channel, if you own device.
+Linux itself is tested and works, but non pmOS work started.
 
 == See also ==
 - [https://github.com/grate-driver/linux/ grate kernel]
