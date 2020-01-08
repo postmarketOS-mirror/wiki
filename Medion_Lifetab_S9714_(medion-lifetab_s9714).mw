@@ -34,7 +34,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
@@ -49,7 +49,7 @@ Is OTG available, not used in wiki
 }}
 
 == Contributors ==
-* bonsaiblue
+* [[User:Bonsaiblue|Bonsaiblue]]
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
@@ -64,16 +64,26 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 
-To start fastboot mode: <code>adb reboot bootloader</code>
-(This should also work when in recovery.)
+To start fastboot mode:
+# boot into recovery by holding volume-down while starting the device, then
+# <code>adb reboot bootloader</code>
 
-To unlock bootloader (CAUTION: this will erase userdata! Backup before doing this!): <code>fastboot oem unlock</code>
+To unlock bootloader in fastboot mode (CAUTION: this will erase userdata! Backup before doing this!): <code>fastboot oem unlock</code>
 
 == Installation ==
 
-The device isn't booting yet, so install instructions aren't clear.
+My procedure was:
+# Backup all important user data
+# Unlock bootloader (see above)
+# Install [https://forums.lenovo.com/t5/Lenovo-Android-based-Tablets-and/A2109-Updated-ClockworkMod-Recovery-for-Jelly-Bean/td-p/949575 CWM recovery] by going into fastboot mode and then running <code>fastboot flash recovery A2109_CWMrecovery-6.0.1.9d.img</code>
+# Backup Android installation on SD card
+# [[Installation_guide|Follow installation guide]]
 
 == Notes ==
+
+<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+
+== See also ==
 
 [https://forums.lenovo.com/t5/Lenovo-Android-based-Tablets-and/A2109-Updated-ClockworkMod-Recovery-for-Jelly-Bean/td-p/949575 CWM recovery is available here]
 
@@ -81,21 +91,9 @@ The device isn't booting yet, so install instructions aren't clear.
 
 [https://docs.google.com/open?id=0B1jde5rC0oQGWmJsYi1tLWViUWc Direct link for CWM for Ice Cream Sandwich / Android 4.0]
 
-To flash CWM, boot into fastboot mode (and unlock your bootloader, see above), then:
-<code>fastboot flash recovery A2109_CWMrecovery-6.0.1.9d.img</code>
-
-[https://gitlab.com/red-black-bonsai/pmaports/tree/medion-lifetab_s9714 postmarket device files, WIP, not booting yet]
+[https://gitlab.com/red-black-bonsai/pmaports/tree/medion-lifetab_s9714 Postmarket device files in GitLab]
 
 [https://github.com/red-black-bonsai/android_kernel_medion_lifetab_s9714 Vendor Android kernel sources in a GitHub repository]
-
-
-<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
-
-== See also ==
-
-[https://gitlab.com/red-black-bonsai/pmaports/tree/medion-lifetab_s9714 postmarket device files, WIP]
-
-[https://github.com/red-black-bonsai/android_kernel_medion_lifetab_s9714 Vendor kernel sources in a GitHub repository]
 
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
