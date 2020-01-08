@@ -1,0 +1,76 @@
+{{Infobox device
+ | manufacturer = Nobby
+ | name = 230
+ | codename = nobby-230
+ | image = File:nobby-230.jpg
+ | imagecaption = Nobby 230
+ | releaseyear = 2019
+ | originalsoftware = Mocor 5 OS (based on Android 4.4.2)
+ | chipset = Spreadtrum SC7715GA
+ | cpu = 1 x ARM Cortex-A7 @ 1.0 Ghz
+ | gpu = Mali-400MP1
+ | storage = 512 MB
+ | display = 240x320
+ | memory = 256 MB
+ | architecture = armv7
+ | status_usbnet = Y
+ | status_flashing = P
+ | status_touch = -
+ | status_screen = P
+ | status_wifi = 
+ | status_xwayland = 
+ | status_fde = 
+ | status_mainline = 
+ | status_battery = P
+ | status_3d = 
+ | status_accel = -
+ | status_audio = P
+ | status_bluetooth = 
+ | status_camera = 
+ | status_gps = 
+ | status_mobiledata = 
+ | status_sms = 
+ | status_calls = 
+ | status = Boots, needs display controller driver
+ | booting = no
+ | pmoskernel = 3.10.17
+ | whet_dhry = 183.5
+ | status_otg = -
+}}
+
+== Contributors ==
+
+* [[User:HenriDellal|HenriDellal]]
+ 
+== Maintainer(s) ==
+
+* [[User:HenriDellal|HenriDellal]]
+
+== Users owning this device ==
+
+{{Device owners}}
+
+== How to enter flash mode ==
+Hold Accept and Power buttons to enter fastboot.
+
+== Issues ==
+* UbiFS partitions are not detected, so only sdcard installation will work
+* Display output is corrupted
+
+== Installation ==
+
+Install pmOS on microSD with
+<code>pmbootstrap install --sdcard /dev/mmcblkX</code>
+where /dev/mmcblkX is path to card that can be found with lsblk.
+Insert card in device, enter fastboot as written above and run
+<source>pmbootstrap flasher flash_kernel
+fastboot reboot</source>
+
+<code>fastboot boot</code> doesn't work as intended.
+
+== See also ==
+* [https://github.com/Qiangong2/android_kernel_scx15_sp7715ga_FS001 Kernel sources]
+<!--
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-nobby-230 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-nobby-230 Kernel package]
+-->
