@@ -32,7 +32,7 @@
  | status_sms = 
  | status_calls = 
  | status = Boots, needs display controller driver
- | booting = no
+ | booting = yes
  | pmoskernel = 3.10.17
  | whet_dhry = 183.5
  | status_otg = -
