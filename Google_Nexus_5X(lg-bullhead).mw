@@ -61,6 +61,69 @@ No fix is available yet for this
 Boot to bootloader: hold volume down + power button until the screen turns on
 
 Launch recovery: first boot to the bootloader, press the volume down button twice and press the power button to select
+== Mainline Kernel Status ==
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Info
+|-
+| Y
+|Power Management
+|Uses [http://download.icxbk.com/201707/cfe88ee7ef01eed7a4586ce340165da0.pdf X-Powers AXP288 Controller], mainline driver exists.
+|-
+| Y
+|Touch Screen
+|Silead GSL1680. The Silead driver is in mainline, however doesn't work on this tablet so [https://github.com/onitake/gslx680-acpi onitake's implementation] is used instead.
+|-
+|
+|Keyboard Dock
+|Untested, however the dock should work fine as it worked on the Hi10 Pro.
+|-
+| Y
+|USB Gadget/OTG
+|Synopsys DesignWare Core SuperSpeed USB 3.0 Controller. Mainline kernel exists and works fine.
+|-
+| N
+|SDHCI
+|Unreliable, sometimes it does work, but most of the time are just errors.
+|-
+| P
+|Wi-Fi
+|Realtek RTL8723BS, driver is in staging, but buggy. Same problem as [[Pine Don't be evil devkit (pine-dontbeevil)|pine-dontbeevil]]
+|-
+| Y
+|GPIO keys
+|Volume up/down and Power button works fine.
+|-
+| Y
+|Bluetooth
+|Realtek RTL8723BS, mainline support existed in 4.19.
+|-
+| Y
+|Sound
+|bytcr-rt5651, mainline support existed in 4.16. Can also be replaced by [https://www.sofproject.org Sound Open Firmware], however it is very buggy and doesn't seem to work properly.
+|-
+|
+|Light Sensor
+|Capella CM3218, there's currently no mainline driver available yet. [https://lwn.net/Articles/557810 There was a patch by the company but never made it to mainline].
+|-
+| N
+|Sixaxis
+|[http://www1.futureelectronics.com/doc/BOSCH/BMA250-0273141121.pdf Bosch BMA250], the driver is in mainline, however upon loads, the driver loaded and errored due to invalid chip detected by the driver.
+|-
+|
+|Camera
+|OV2680 and OV8858. There used to be drivers for both of these cameras in staging (AtomISP), however it has been removed from torvalds tree due to inefficiency and not working great (lambdadroid).
+|-
+| Y
+|GPU
+|Intel Integrated Graphics, works as expected.
+|-
+|
+|GPS
+|Broadcom BCM47521. No driver is currently available in Torvalds tree.
+|}
+
 
 == Installation ==
 
