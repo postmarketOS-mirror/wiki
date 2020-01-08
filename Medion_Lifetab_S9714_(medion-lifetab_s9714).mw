@@ -77,7 +77,7 @@ My procedure was:
 # Unlock bootloader (see above)
 # Install [https://forums.lenovo.com/t5/Lenovo-Android-based-Tablets-and/A2109-Updated-ClockworkMod-Recovery-for-Jelly-Bean/td-p/949575 CWM recovery] by going into fastboot mode and then running <code>fastboot flash recovery A2109_CWMrecovery-6.0.1.9d.img</code>
 # Backup Android installation on SD card
-# [[Installation_guide|Follow installation guide]]
+# [[Installation_guide|Follow installation guide]] (note that flashing rootfs can take a few minutes without feedback, just wait)
 
 == Notes ==
 
