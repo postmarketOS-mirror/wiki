@@ -4,7 +4,7 @@
 | codename = acer-picasso
 | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
 | imagecaption = CHANGE_ME
-| releaseyear = 2011
+| releaseyear = 2012
 | originalsoftware = Android 3.0, upgrade to 4.0
 | chipset = Tegra 2 T20
 | cpu = Dual-core 1.0 GHz Cortex-A9
@@ -15,13 +15,13 @@
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = Y
-| status_touch = Y
-| status_screen = Y
+| status_flashing =
+| status_touch =
+| status_screen =
 | status_wifi = <!-- Wireless network works? -->
-| status_xwayland = Y
+| status_xwayland =
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = Y
+| status_mainline =
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
@@ -33,7 +33,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
@@ -64,8 +64,7 @@ None yet.
 == How to enter flash mode ==
 
 == Installation ==
-Similiar to asus-grouper. Ask okias on postmarketOS channel, if you own device.
-Linux itself is tested and works, but non pmOS work started.
+Similiar to Acer A500. Ask hacker420 on postmarketOS channel, if you own device.
 
 == See also ==
 - [https://github.com/grate-driver/linux/ grate kernel]
