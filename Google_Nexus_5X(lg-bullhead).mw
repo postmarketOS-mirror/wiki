@@ -77,7 +77,7 @@ Launch recovery: first boot to the bootloader, press the volume down button twic
 |-
 | 
 | DSI Panel
-| Out-of-tree driver made by me (UnDevDeCatOS)
+| Out-of-tree driver made by UnDevDeCatOS using lmdbg.
 |-
 |
 |USB Gadget/OTG
