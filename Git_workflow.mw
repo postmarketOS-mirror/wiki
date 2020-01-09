@@ -66,7 +66,8 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 </syntaxhighlight>
 
-Note that there are [https://chris.beams.io/posts/git-commit/ best practices for commit messages], and for commits that actually make it into the master branches of pmaports.git, we try to stick to them. Type <code>git commit</code> instead of <code>git commit -m "describe your change here"</code> and your editor will show up, where you can type in a pretty commit message. You can change the default editor by changing the <code>EDITOR</code> environment variable.
+Note that there are [https://chris.beams.io/posts/git-commit/ best practices for commit messages], and for commits that actually make it into the master branches of pmaports.git, we try to stick to them. For example: '''when porting a new device put the codename of your device at the start of the commit message''': <code>fairphone-fp2: new device</code> (if the codename is <code>fairphone-fp2</code>).
+Type <code>git commit</code> instead of <code>git commit -m "describe your change here"</code> and your editor will show up, where you can type in a pretty commit message. You can change the default editor by changing the <code>EDITOR</code> environment variable.
 
 ==== Running 'git pull' ====
 Let's fetch the changes from the official postmarketOS repository and apply them to the current branch. Git will even show a nice overview of the files that have been changed, and how many lines have changed.
