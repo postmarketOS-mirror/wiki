@@ -82,9 +82,10 @@ Device is equipped with usb type-c receptacle. No UART cable schematic available
 * The receptacle is managed by s2mu004 kernel module. Module is capable to manage non type-c receptacles (see CONFIG_MUIC_S2MU004_NON_USB_C_TYPE option)
 * Receptacle has non standard pinout: B12 (considering, A row facing top, B row facing bottom side of the phone) pin is not connected to the ground.
 * Device can detect water in usb receptacle, by measuring resistance between B12 pin. 
+* Device can detect plug attach, with ALL pins unconnected, including GND and VBUS pins. How?
 * Attaching 619K resistor to B12 pin results in ADC_JIG_UART_ON value in ADC register, during water detection sequence.
-* Enter UART mode by attaching resistors is possible only in non type-c mode. (file s2mu004-muic.c ,lines 2835,2797)
-* UART mode detection most likely is implemented in muic firmware.
+* Enter UART mode by attaching resistors should be possible in NON type-c mode. (file s2mu004-muic.c ,lines 2835,2797)
+* UART mode detection most likely is implemented in muic firmware, if exists, or chip logic.
 
 Open questions:
 * How device can detect plug attach, when ALL plug pins are unconnected.
