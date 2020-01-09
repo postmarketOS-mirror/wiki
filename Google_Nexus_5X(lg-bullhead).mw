@@ -69,61 +69,60 @@ Launch recovery: first boot to the bootloader, press the volume down button twic
 |-
 | Y
 |Power Management
-|Uses [http://download.icxbk.com/201707/cfe88ee7ef01eed7a4586ce340165da0.pdf X-Powers AXP288 Controller], mainline driver exists.
+|Uses Qualcomm's PM8994 controller, works since 4.11
 |-
-| Y
+| 
 |Touch Screen
-|Silead GSL1680. The Silead driver is in mainline, however doesn't work on this tablet so [https://github.com/onitake/gslx680-acpi onitake's implementation] is used instead.
+| Nope
 |-
-|
-|Keyboard Dock
-|Untested, however the dock should work fine as it worked on the Hi10 Pro.
-|-
-| Y
+| 
 |USB Gadget/OTG
-|Synopsys DesignWare Core SuperSpeed USB 3.0 Controller. Mainline kernel exists and works fine.
+| Nope
 |-
-| N
+| Y
 |SDHCI
-|Unreliable, sometimes it does work, but most of the time are just errors.
+|The sd card is supported since 4.17.
 |-
-| P
+| 
 |Wi-Fi
-|Realtek RTL8723BS, driver is in staging, but buggy. Same problem as [[Pine Don't be evil devkit (pine-dontbeevil)|pine-dontbeevil]]
+|Uses Qualcomm QCA6174. Untested
 |-
-| Y
+| 
 |GPIO keys
-|Volume up/down and Power button works fine.
+|Untested
 |-
-| Y
+| 
 |Bluetooth
-|Realtek RTL8723BS, mainline support existed in 4.19.
+|Unknown chip, probably inside the SoC.
 |-
-| Y
+| 
 |Sound
-|bytcr-rt5651, mainline support existed in 4.16. Can also be replaced by [https://www.sofproject.org Sound Open Firmware], however it is very buggy and doesn't seem to work properly.
+|Untested, uses the Qualcomm WCD9330 codec.
 |-
-|
+| 
 |Light Sensor
-|Capella CM3218, there's currently no mainline driver available yet. [https://lwn.net/Articles/557810 There was a patch by the company but never made it to mainline].
+| Rohm RPR0521. Supported in mainine, no dt bindings.
 |-
-| N
+| 
 |Sixaxis
-|[http://www1.futureelectronics.com/doc/BOSCH/BMA250-0273141121.pdf Bosch BMA250], the driver is in mainline, however upon loads, the driver loaded and errored due to invalid chip detected by the driver.
+| Bosch BMI160. Supported in mainline, but no dt bindings.
 |-
 |
 |Camera
-|OV2680 and OV8858. There used to be drivers for both of these cameras in staging (AtomISP), however it has been removed from torvalds tree due to inefficiency and not working great (lambdadroid).
+|Sony IMX377. No driver available.
 |-
-| Y
+| 
 |GPU
-|Intel Integrated Graphics, works as expected.
+|Qualcomm Ardeno 418, untested
 |-
 |
-|GPS
-|Broadcom BCM47521. No driver is currently available in Torvalds tree.
+|Modem
+|Qualcomm WTR3925. Untested, no dt bindings.
+|-
+| 
+| Fast Charge controller
+|Qualcomm SMB1358. No driver
 |}
-
 
 == Installation ==
 
