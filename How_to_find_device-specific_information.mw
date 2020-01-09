@@ -57,7 +57,7 @@ Translate the variables as follows into your deviceinfo:
 == Device Architecture ==
 
 * You can find the architecture while the device is running another kernel (e.g. original Android or TWRP). Run <code>adb shell</code> to gain access to the console on the device, and type <code>uname -m</code>.
-* pmOS supports the <code>armhf</code> and <code>aarch64</code> architectures. If the output is <code>armv7l</code>, for example, you should use <code>armv7</code> as your device architecture.
+* pmOS supports the <code>armhf</code>, <code>armv7</code>, and <code>aarch64</code> architectures. If the output is <code>armv7l</code>, for example, you should use <code>armv7</code> as your device architecture.
 
 == Device code name ==
 
