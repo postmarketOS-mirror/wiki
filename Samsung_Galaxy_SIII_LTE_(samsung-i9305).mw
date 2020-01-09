@@ -118,14 +118,9 @@ Write the following file to <source>/etc/network/interfaces</source>
   auto wlan0 
   iface wlan0 inet dhcp
 
-To connect using NetworkManger you will need to change the default DHCP client from the NetworkManager internal DHCP client to dhclient (you will need to specify the additional package at install with pmbootstrap or apk add dhclient if you have a connection) by creating <source>/etc/NetworkManager/conf.d/dhcp-client.conf</source> and adding
-  
-  [main]
-  dhcp=dhclient
-
 Start the networkmanger service and restart networking service
 
-  $ sudo rc-service networkmanger start
+  $ sudo rc-service networkmanager start
   $ sudo rc-service networking restart
 
 Search for available WiFi networks and connect to network
