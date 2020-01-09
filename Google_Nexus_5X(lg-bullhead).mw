@@ -91,9 +91,9 @@ Launch recovery: first boot to the bootloader, press the volume down button twic
 |Wi-Fi
 |Uses Qualcomm QCA6174. Untested
 |-
-| 
+|Y
 |GPIO keys
-|Untested
+|PinCTRL works.
 |-
 | 
 |Bluetooth
