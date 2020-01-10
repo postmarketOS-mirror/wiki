@@ -153,6 +153,13 @@ There is also <code>git push --force</code>, which can be used to override commi
 === Create the MR ===
 Simply click the link shown in the git output above, to create the new merge request. Pay attention to the text shown there, following it closely will make sure that your merge request gets merged to master as fast as possible.
 
+=== Check and fix CI / linting issues ===
+
+Your submitted code will be built automatically by the continuous integration system to check for errors, style issues, etc.
+Check the results of the automatic build by going to https://gitlab.com/USERNAME/pmaports/pipelines (replace USERNAME with your username) and clicking on the (chronologically) last item. After the build has finished, you get a list of passed (green check-marks) and/or failed (red X) checks. Click on the failed checks and follow the recommendations in the output shown to fix your code.
+
+
+
 == See also ==
 * https://git-rebase.io/ in depth interactive git rebase tutorial (explains fixing previous commits, squashing commits, splitting one commit into several, reordering commits, etc.)
 
