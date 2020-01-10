@@ -65,7 +65,7 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 
 To start fastboot mode:
-# boot into recovery by holding volume-down while starting the device, then
+# boot into recovery by holding volume-down and power button at the same time, then
 # <code>adb reboot bootloader</code>
 
 To unlock bootloader in fastboot mode (CAUTION: this will erase userdata! Backup before doing this!): <code>fastboot oem unlock</code>
