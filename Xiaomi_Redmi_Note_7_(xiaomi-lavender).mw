@@ -284,12 +284,10 @@ Another hack to fix bootloader cmdline params by opendata26: [https://gitlab.com
 Some info on <code>skip_initramfs</code> kernel cmdline parameter: https://forum.xda-developers.com/apps/magisk/pixel-2-pixel-2-xl-support-t3697427/post74361728#post74361728
 
 === Way to get boot log ===
-This is the first device known to ship with the <code>oem getlog</code> fastboot command.
+This device known to ship with the <code>oem getlog</code> fastboot command.
 
 This is not a trivial command to use, but it is extremely useful as it allows side-stepping the need to boot in a known working system to use the ramoops
-console.
-
-The output of the command is a jumble, but is still usable for figuring out early boot issues. It is much better than having to rely on a booted system to
+console. The output of the command is a jumble, but is still usable for figuring out early boot issues. It is much better than having to rely on a booted system to
 get the information, but still not as good as having a dedicated serial access.
 
 Example usage follows.
@@ -319,7 +317,16 @@ As the output of the command is on stderr, here's how to output to a file.
  $ fastboot oem getlog > log.txt 2>&1
 
 
-It is unknown if there are ways to make the output better.
+It is unknown if there are ways to make the output better. (Apply some kind error correction algorithm?)
+
+EDIT: seems to not work for me, whatever you do, the output is:
+
+ $ fastboot oem getlog
+                                                   (bootloader) [Macle]Maybe no last kmsg
+ OKAY [  0.000s]
+ Finished. Total time: 0.000s
+
+Probably needs a crash? But I can read pstore-console (dmesg) logs from booted TWRP recovery fine..
 
 == Links ==
 <!--
