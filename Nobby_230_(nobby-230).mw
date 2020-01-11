@@ -57,6 +57,24 @@ Hold Accept and Power buttons to enter fastboot.
 * UbiFS partitions are not detected, so only sdcard installation will work
 * Display output is corrupted
 
+=== Display ===
+==== Display issues ====
+* Wrong scaling
+* Double screen with wrong colors
+* Bottom part of screen is empty (main issue)
+
+==== Possible reasons ====
+* Unknown revision of ILI9340
+* Bug in sprdfb driver
+* Vendor used another display controller and made a fake ili9340 driver to make it boot since the bootloader is picky about panel id and function names (the least possible version, may happen if the vendor didn't have bootloader sources)
+
+==== Attempts to fix ====
+* Write a ili9340 driver with init sequence from mainline kernel
+* Use init sequences from different revisions of ili9341 driver
+* Change clocks constants in sprdfb sources
+* Try kernels with different sprdfb implementation (see Kernels section)
+* Ignore some cmdline parameters (the kernel doesn't boot then)
+
 == Installation ==
 
 Install pmOS on microSD with
@@ -68,9 +86,15 @@ fastboot reboot</source>
 
 <code>fastboot boot</code> doesn't work as intended.
 
+== Kernels ==
+This section may be interesting for those who want to port postmarketOS on SP7715GA device.
+I've tried some downstream kernels and there are my findings:
+* [https://github.com/bigzz/sc7715-kernel bigzz/sc7715-kernel]: boots, but doesn't support sdcardFS. UbiFS partitions weren't detected despite having related options set up in kernel config. This kernel may be used if your phone doesn't use ubiFS and you plan to flash pmOS on internal storage.
+* BLU kernel: supports sdcardFS, doesn't detect ubiFS partitions. Being used for this device as the best suiting kernel.
+* [https://github.com/diepquynh/android_kernel_oc_vivalto3gvn samsung-vivalto3gvn kernel]: has defconfig only for vivalto, so it needs to be adjusted to fit sp7715ga. Has updated and refactored implementation of sprdfb. Screen doesn't work, the bootloader and kernel seem to not fit each other, so kernel decides to use panel_id=0, which leads to using lcd_dummy driver. Also, the kernel is very unpredictable and booted only once for me, even though I didn't rebuild it for other attempts.
+* [https://github.com/blade-af3/android_kernel_zte_P731A20 Blade AF3 kernel]: has building issues with autotst driver.
+
 == See also ==
 * [https://github.com/Qiangong2/android_kernel_scx15_sp7715ga_FS001 Kernel sources]
-<!--
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-nobby-230 Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-nobby-230 Kernel package]
--->
