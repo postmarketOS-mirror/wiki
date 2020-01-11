@@ -85,6 +85,9 @@ Device is equipped with usb type-c receptacle. No UART cable schematic available
 * Device can detect plug attach, with ALL pins unconnected, including GND and VBUS pins. How?
 * Attaching 619K resistor to B12 pin results in ADC_JIG_UART_ON value in ADC register, during water detection sequence.
 * Enter UART mode by attaching resistors should be possible in NON type-c mode. (file s2mu004-muic.c ,lines 2835,2797)
+* Device has no USB type-c debug accessory mode(both with rd/rd and rp/rp resistors)
+
+
 * UART mode detection most likely is implemented in muic firmware, if exists, or chip logic.
 
 Open questions:
