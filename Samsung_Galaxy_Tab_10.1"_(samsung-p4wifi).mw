@@ -41,6 +41,9 @@
 == Maintainer(s) ==
 * decatf
 
+=== Users owning this device ===
+{{Device owners}}
+
 == Introduction ==
 
 postmarketOS for the Samsung Galaxy Tab 10.1 runs on mainline Linux kernel fork. The kernel uses both mainline and forward ported drivers. Some peripherals are using mainline device driver where applicable. Some peripherals which are not working on or don't have mainline drivers are using drivers forward ported from the stock 3.1.10 kernel.
