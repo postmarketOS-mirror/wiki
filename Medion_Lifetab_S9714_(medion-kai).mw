@@ -78,12 +78,76 @@ My procedure was:
 # Install [https://forums.lenovo.com/t5/Lenovo-Android-based-Tablets-and/A2109-Updated-ClockworkMod-Recovery-for-Jelly-Bean/td-p/949575 CWM recovery] by going into fastboot mode and then running <code>fastboot flash recovery A2109_CWMrecovery-6.0.1.9d.img</code>
 # Backup Android installation on SD card
 # [[Installation_guide|Follow installation guide]] (note that flashing rootfs can take a few minutes without feedback, just wait)
+# After flashing has finished, the screen should show the Medion logo and a notice saying "Cold booting linux"; after that, the postmarkedOS logo and then the demo should come up.
 
 == Notes ==
 
-Apparently, the device was manufactured by Lenovo for vendor Medion and is similar to Lenovo's A2110 / A2109 boards.
+Apparently, the device was manufactured by Lenovo for vendor Medion and is similar to Lenovo's A2110 / A2109 boards. Some information about the [https://thinkwiki.de/IdeaTab_A2109 IdeaTab A2109].
 
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+
+== WiFi ==
+
+Still trying to get WiFi working. Collected information so far:
+
+Chip for WLAN 11b/g/n and Bluetooth 3.0: Broadcom BCM4330
+
+PCI id according to system/etc/nvram_4330.txt: <code>14e4:4360</code>
+
+Kernel config parameters in vendor's config:
+
+    grep -i "bcm" config | grep -v "^#"
+    CONFIG_BCMDHD_CFG80211=y
+    CONFIG_BCMDHD_WIFI_CONTROL_FUNC=y
+    CONFIG_BCMDHD_HW_OOB=y
+    CONFIG_BCMDHD_CSCAN_ENABLE=y
+    CONFIG_BCMDHD_INSMOD_NO_FW_LOAD=y
+    CONFIG_BCMDHD_FXN_FW_PATH="/system/vendor/firmware/bcm4330/fw_bcmdhd.bin"
+    CONFIG_BCMDHD_FXN_NVRAM_PATH="/system/etc/nvram_4330.txt"
+    CONFIG_BCMDHD_FXN_195_89=m
+    CONFIG_BCMA_POSSIBLE=y
+
+BCM-related files in vendor's ROM:
+    find . -iname "*bcm*"
+    system/vendor/firmware/bcm4330
+    system/vendor/firmware/bcm4330/fw_bcmdhd_p2p.bin
+    system/vendor/firmware/bcm4330/fw_bcmdhd.bin
+    system/vendor/firmware/bcm4330/fw_bcmdhd_apsta.bin
+    system/lib/modules/bcmdhd.ko
+    system/etc/firmware/bcm4330.hcd
+    system/bin/bcm4330_bt_fw_loader.sh
+
+    find . -iname "*4330*"
+    system/vendor/firmware/bcm4330
+    system/etc/nvram_4330.txt
+    system/etc/firmware/bcm4330.hcd
+    system/bin/bcm4330_bt_fw_loader.sh
+
+
+
+What I tried so far:
+
+* Created subpackage <code>$pkgname-nonfree-firmware:nonfree_firmware</code> for <code>device-medion-kai</code> locally, including <code>fw_bcmdhd.bin, nvram_4330.txt, fw_bcmdhd_apsta.bin, fw_bcmdhd_p2p.bin, mfg.bin</code>, all are copied to <code>/lib/firmware/postmarketos/bcm4330/</code>
+* Adjusted <code>CONFIG_BCMDHD_FXN_FW_PATH</code> and <code>CONFIG_BCMDHD_FXN_NVRAM_PATH</code> accordingly
+* Rebuilt and flashed
+* Configured <code>/etc/network/interfaces</code> according to [[WiFi#Using_wpa_supplicant]]
+
+Result:
+    sudo /etc/init.d/networking restart
+     * Starting networking ...
+     *   lo ...
+    ip: RTNETLINK answers: File exists                                                        [ !! ]
+     *   wlan0 ...
+    ip: ioctl 0x8913 failed: No such device                                                   [ !! ]
+     * ERROR: networking failed to start
+
+Related links:
+
+* [[Google_Nexus_7_2012_(asus-grouper)|asus-grouper has similar hardware but the kernel params are named slightly differently: CONFIG_BCMDHD_FW_PATH vs CONFIG_BCMDHD_FXN_FW_PATH]]
+* [https://github.com/armbian/firmware/blob/master/brcm/brcmfmac4330-sdio.txt config file very similar to nvram_4330.txt]
+* [https://android.googlesource.com/kernel/tegra/+/ecdcc0e36273de4fca8fcdc31bf011a01459cce1%5E!/ chromeos commit]
+* [https://android.googlesource.com/kernel/tegra/+/b89174cf1a8cbe06951436a2ebe3e3b481de6f9f%5E!/ android commit]
+*[https://wireless.wiki.kernel.org/en/users/drivers/b43 linux wireless drivers page - seems 14e4:4360 is NOT supported]
 
 == See also ==
 
