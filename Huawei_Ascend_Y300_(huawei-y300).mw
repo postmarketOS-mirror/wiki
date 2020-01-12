@@ -4,15 +4,15 @@
 | codename = huawei-y300
 | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
 | imagecaption = CHANGE_ME
-| releaseyear = CHANGE_ME
+| releaseyear = 2013
 | originalsoftware = Android 4.1.1
-| chipset = CHANGE_ME <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = CHANGE_ME <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| chipset = Qualcomm MSM8225 Snapdragon S4 Play
+| cpu = Dual-core 1.0 GHz Cortex-A5
+| gpu = Adreno 203
+| storage = 4GB
+| display = IPS LCD capacitive touchscreen, 16M colors, 4.0 inches, 45.5 cm2 (~57.3% screen-to-body ratio), 480 x 800 pixels, 5:3 ratio (~233 ppi density), Scratch-resistant glass
+| memory = 512MB
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -36,8 +36,6 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
@@ -66,9 +64,9 @@ Is OTG available, not used in wiki
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+* [https://www.gsmarena.com/huawei_ascend_y300-5386.php Specs on GSMArena]
+
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
