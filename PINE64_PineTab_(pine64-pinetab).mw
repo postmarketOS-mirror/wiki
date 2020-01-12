@@ -167,3 +167,4 @@ The microphone can be found here:
 
 == See also ==
 * {{MR|528|pmaports}} Initial merge request
+* https://lore.kernel.org/lkml/20200110155225.1051749-1-icenowy@aosc.io/ Mainline Linux support MR
