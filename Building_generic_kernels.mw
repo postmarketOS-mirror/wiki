@@ -3,15 +3,21 @@ Even if kernel sources are not provided by the vendor, it's still possible to pa
 == Find generic kernel for the device ==
 To find a needed kernel, you have to:
 # Find out the information about the SoC/board used in the device. One SoC may have multiple boards. For example, Spreadtrum SC7731C has 2 boards: sc7731cea and sc7731ceb.
-# Try to search for kernels on the internet. Use different queries to find as much kernels as possible. Kernel is considered matching if it has files for your board, such as device tree source (located at arch/device_arch(e.g. arm, arm64)/boot/dts).
+# Try to search for kernels on the internet. Use different queries to find as much kernels as possible. Kernel is considered matching if it has files for your board, such as device tree source (located at arch/device_arch(e.g. arm, arm64)/boot/dts). Some downstream kernels (up to 3.10.x) may have support in board files instead. They are located at arch/device_arch/mach-soc-vendor or mach-soc-name'. .(e.g. mach-sc, mach-qcom, mach-mt6582)
 
-== Patch vendor dts in kernel ==
+== Add device support ==
+Depending on the way of describing the hardware in kernel, you should choose one of these methods
+=== Patch vendor dts in kernel ===
 [[Device_Tree_(dtb)#Where_can_I_find_a_dts_for_my_device.3F|Get dts from stock boot.img]], replace the board dts with it and make a patch.
+
+=== Board files ===
+If the found kernel uses board files for your SoC, then you have to change kernel config to enable/disable support for specific hardware and patch the board file if implementation of additional devices is needed (e.g. hardware keyboard).
 
 == Adapt kernel config ==
 This step is needed to make a proper kernel config which works for the device. You have to find detailed information about the hardware. Possible ways to do it are:
 # [[Device_Tree_(dtb)#Where_can_I_find_a_dts_for_my_device.3F|Get dts from stock boot.img]]
 # Follow instructions from [[tuning sysfs]] page to get contents of sysfs. It is recommended to do it on a rooted phone in Android, since dump made from recovery will probably have less details about hardware.
+# Use <code>strings stockboot.img > stockboot.txt</code> to dump all possible function names and find out which kernel options should be enabled to add these functions in kernel during building.
 # Find photos of device's internals on the web. If there are none, disassemble the device yourself or ask someone to do it.
 After one of these steps write down all information you've found and use it to adjust kernel config. Run <code>pmbootstrap kconfig edit device-codename</code> and use built-in search (press / key) to find options related to found hardware.
 
@@ -24,3 +30,127 @@ After one of these steps write down all information you've found and use it to a
 # Patch the kernel with driver, Makefile and Kconfig files related to your drivers group to add support. Give a proper name to driver option in Kconfig.
 # Add a line to linux-device-codename's config to make the driver option appear in menuconfig. Example: <code># CONFIG_FB_LCD_ST7796S_MIPI is not set</code>
 # Run <code>pmbootstrap kconfig edit device-codename</code> and enable the option. Tap / on the keyboard to search for it.
+
+== Additional information ==
+=== How to add hardware keyboard support ===
+{{note|This section is useful for porting devices those use board files. If your device uses dts, the keyboard works out of the box probably.}}
+==== Getting a list of input devices and keycodes ====
+For Android devices, you may run <code>getevent -i</code> to get detailed information about the input devices and related keycodes. You'll get output similar to:
+<source>add device 1: /dev/input/event2
+  bus:      0019
+  vendor    0001
+  product   0001
+  version   0100
+  name:     "gpio-keys"
+  location: "gpio-keys/input0"
+  id:       ""
+  version:  1.0.1
+  events:
+    KEY (0001): 0002  0003  0005  0007  0008  0009  000a  003e
+                0067  0069  006a  0161  020a
+  input props:
+    <none>
+add device 2: /dev/input/event0
+  bus:      0019
+  vendor    0001
+  product   0001
+  version   0100
+  name:     "sci-keypad"
+  location: "sci-key/input0"
+  id:       ""
+  version:  1.0.1
+  events:
+    KEY (0001): 0004  0006  000b  003d  006c  0074  008b  009e
+                00e7  020b
+  input props:
+    <none>
+add device 3: /dev/input/event1
+  bus:      0019
+  vendor    0000
+  product   0000
+  version   0000
+  name:     "headset-keyboard"
+  location: ""
+  id:       ""
+  version:  1.0.1
+  events:
+    KEY (0001): 00e2
+  input props:
+    <none>
+</source>
+It's possible to use <code>-l</code> flag to replace keycodes with key names from <code>include/uapi/linux/kpd.h</code>. Do note that some keys may not exist. For example, the output given above has F3 and F4 keycodes, but device doesn't have these keys.
+If you're unsure about the relations of physical keys and keycodes, you may start <code>getevent</code> and press buttons one by one to understand.
+You should also record data from <code>dmesg</code>, it may help later.
+==== Add and modify input devices in board file ====
+{{note|The code blocks of this section are taken from Spreadtrum kernel sources, they are somewhat different for other SoCs, but not much and can be used as example}}
+This task will be reviewed on the previous example. As can be seen, the phone has an input device for headset with one button, matrix keypad device with 9 keys (remember that F3 button doesn't exist) and GPIO keys device. The board file used as the base is [https://github.com/Qiangong2/android_kernel_scx15_sp7715ga_FS001/blob/master/arch/arm/mach-sc/board-sp7715ga.c arch/arm/mach-sc/board-sp7715ga.c]. This board has headset and matrix keypad devices set, but the GPIO keys device is missing and matrix data doesn't fit the device. So, the steps needed are:
+# Change matrix data to fit the device
+# Add gpio keys device to the list of devices
+# Create gpio keys device description
+The matrix data looks like this
+<source>#define CUSTOM_KEYPAD_ROWS          (SCI_ROW0 | SCI_ROW1)
+#define CUSTOM_KEYPAD_COLS          (SCI_COL0 | SCI_COL1)
+#define ROWS	(2)
+#define COLS	(2)
+
+static const unsigned int board_keymap[] = {
+	KEY(0, 0, KEY_VOLUMEDOWN),
+	KEY(1, 0, KEY_VOLUMEUP),
+	KEY(0, 1, KEY_CAMERA),
+};</source>
+As there should be 9 matrix keys, we assume that the matrix has 3 rows and 3 columns. So, the first step is to replace existing entries with ones related to your keys. If you have access to dmesg, then you may find out the proper row and column for every key, otherwise you'll have to guess them. After that, change amount of rows and columns, patch, build and flash the kernel. Then boot to postmarketOS and run <code>evtest</code>. Choose the keypad device and press buttons one by one. If the keycode doesn't fit the key, then you have to make changes in board file. The final result for the device in example is:
+<source>#define CUSTOM_KEYPAD_ROWS          (SCI_ROW0 | SCI_ROW1 | SCI_ROW2 )
+#define CUSTOM_KEYPAD_COLS          (SCI_COL0 | SCI_COL1 | SCI_COL2 )
+#define ROWS	(3)
+#define COLS	(3)
+
+static const unsigned int board_keymap[] = {
+   KEY(0, 0, KEY_5),
+   KEY(1, 0, KEY_BACK),
+   KEY(2, 0, KEY_DOWN),
+   KEY(0, 1, KEY_SEND),
+   KEY(1, 1, KEY_0),
+   KEY(0, 2, KEY_3),
+   KEY(1, 2, KEY_MENU),
+   KEY(2, 2, KEY_NUMERIC_POUND),
+};</source>
+{{note|If you were attentive, you could notice that there are only 8 keys in the array. The reason is that the power key is handled by the Spreadtrum keyboard driver already.}}
+The second step is to add the missing GPIO keys device. There is no template for it in this exact board file, so you have to find it. It is recommended to search for it in the same path where the board file for your device is located (<code>arch/arm/mach-sc</code> in this case). It doesn't mean you're limited by the kernel you're using though. It's possible to search in another kernels as well, just be sure they don't differ much. Example:
+<source>#define GPIO_KEY_HOME 172
+static struct platform_device gpio_button_device;
+
+static struct platform_device *devices[] __initdata = {
+	/*
+		other devices
+	*/
+	&gpio_button_device,
+};
+
+static struct gpio_keys_button gpio_buttons[] = {
+	{
+		.gpio	= GPIO_KEY_HOME,
+		.ds_irqflags = IRQF_TRIGGER_LOW,
+		.code = KEY_HOME,
+		.desc = "Home key",
+		.active_low = 1,
+		.debounce_interval = 2,
+	},
+};
+
+static struct gpio_keys_platform_data gpio_button_data = {
+	.buttons = gpio_buttons,
+	.nbuttons = ARRAY_SIZE(gpio_buttons),
+};
+
+static struct platform_device gpio_button_device = {
+	.name = "gpio-keys",
+	.id = -1,
+	.num_resources = 0,
+	.dev = {
+			.platform_data = &gpio_button_data,
+	}
+};
+</source>
+The final step is to add description of all GPIO keys to the device. In this example, we define GPIOs for keys and change the contents of <code>gpio_buttons[]</code> and test the changes. It is recommended to use [https://wiki.postmarketos.org/wiki/Inspecting_the_initramfs debug-shell hook for initramfs] so you get access to dmesg as fast as possible. In dmesg you may find details of GPIO keys initialization. If it failed, there will be a wrong GPIO mentioned. Then, if everything's alright, run <code>evtest</code> again and choose GPIO keys device. Test and edit the board file till it works.
+
+[[Category: Technical Reference]]
