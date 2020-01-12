@@ -32,6 +32,8 @@ In most cases you should be able to set <code>CONFIG_BCMDHD_FW_PATH</code> and <
 
 You can use the command <code>git grep "lib/firmware/postmarketos" device/linux-*</code> in pmaports to find how it's done for other devices.
 
+An example of how Broadcom was made to work can be found at [[Samsung_Galaxy_S_Advance_(samsung-i9070)#How_drebrez_made_wifi_work]] and [https://github.com/postmarketOS/pmbootstrap/pull/138/commits in the corresponding GitHub pull request].
+
 == Mediatek WiFi ==
 
 {{todo|No device with a Mediatek SoC actually has WiFi working yet. Further debugging is needed to get it working.}}
