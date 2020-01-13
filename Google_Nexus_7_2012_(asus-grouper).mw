@@ -121,6 +121,11 @@ Prerequisites: Official TWRP, at least version 3.3.1-0 for
 * [https://dl.twrp.me/grouper/ grouper]
 * [https://dl.twrp.me/tilapia/ tilapia]
 
+if you haven't done export yet, do
+<syntaxhighlight lang="shell" line='line'>
+pmbootstrap export
+</syntaxhighlight>
+
 <syntaxhighlight lang="shell" line='line'>
 # start TWRP
 (computer) $ adb shell
