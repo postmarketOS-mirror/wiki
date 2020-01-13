@@ -115,7 +115,7 @@ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
 ==== rootfs over 650MB to USERDATA ====
-Be '''very careful''' here and feel free to ask on Matrix channel before accidentally bricking your device with selecting bad partition!
+Be '''very careful''' here and feel free to ask on Matrix channel before accidentally bricking your device with selecting bad partition! THIS MAY SHRINK YOUR DATA PARTITION IF YOU INSTALL ANDROID AGAIN! YOU MAY HAVE TO RESIZE IN TWRP!
 <syntaxhighlight lang="shell" line='line'>
 # start TWRP
 (computer) $ adb shell
