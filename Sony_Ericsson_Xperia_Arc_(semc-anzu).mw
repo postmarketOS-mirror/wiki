@@ -43,10 +43,13 @@
 Power off the device. Hold <code>Back</code> as you plug the USB cable into the device.
 
 == Bootloader unlocking ==
+The process of unlocking the bootloader officially is available '''[https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/ here]''' and it is strictly adviced to use it in the first place. It has all the instructions for one to unlock it.
+
 {{note|If you try any of this out, please rewrite this section into a nice step-by-step wiki format.}}
+
 [https://github.com/postmarketOS/pmbootstrap/pull/346#issuecomment-353199683 @mirh wrote]:
 <blockquote>
-Just for the records of you gentlemen, I wanted to let you know that all the 2011 xperia (manufactured before a not-so-clear 2012 week), are capable of *unofficial* bootloader unlock. 
+Just for the records of you gentlemen, I wanted to let you know that all of the 2011 Xperias (manufactured before a not-so-clear 2012 week), are capable of *unofficial* bootloader unlock. 
 * https://forum.xda-developers.com/showthread.php?t=1285285
 * https://forum.xda-developers.com/showthread.php?t=1551494
 * https://forum.xda-developers.com/showthread.php?t=1730874
@@ -55,6 +58,7 @@ Just for the records of you gentlemen, I wanted to let you know that all the 201
 </blockquote>
 
 * The above methods are "s1tool" and will not get around "Bootloader unlock allowed: No". There doesn't seem to be a way to get around "Bootloader unlock allowed: No" except for a software+hardware box combination called SETool2 that can be used to modify any Sony Ericsson device. This is what likely what has referred to as a "paid unlock" - rendeko
+
 == What works ==
 
 * Building and installing to external SD card
