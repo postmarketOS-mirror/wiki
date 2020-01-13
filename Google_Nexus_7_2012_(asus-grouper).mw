@@ -116,12 +116,19 @@ pmbootstrap flasher flash_rootfs
 
 ==== rootfs over 650MB to USERDATA ====
 Be '''very careful''' here and feel free to ask on Matrix channel before accidentally bricking your device with selecting bad partition! THIS MAY SHRINK YOUR DATA PARTITION IF YOU INSTALL ANDROID AGAIN! YOU MAY HAVE TO RESIZE IN TWRP!
+
+Prerequisites: Official TWRP, at least version 3.3.1-0 for
+* [https://dl.twrp.me/grouper/ grouper]
+* [https://dl.twrp.me/tilapia/ tilapia]
+
 <syntaxhighlight lang="shell" line='line'>
 # start TWRP
 (computer) $ adb shell
 (twrp) $ df #look for the data partition. should be something like /dev/block/mmcblk0p10 with /data next to it
-(computer again) $ adb push /tmp/postmarketOS-export/asus-grouper.img /dev/block/_REPLACE_WITH_CORRECT_PARTITION_ # example: mmcblk0p10, may be different for your Nexus version!
+(computer again) $ adb push /tmp/postmarketOS-export/asus-grouper.img /dev/block/''_REPLACE_WITH_CORRECT_PARTITION_''
 </syntaxhighlight>
+* grouper has most likely data on ''mmcblk0p9'' '''but VERIFY!'''
+* tilapia has most likely data on ''mmcblk0p10'' '''but VERIFY!'''
 
 == Hardware status (mainline) ==
 There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
