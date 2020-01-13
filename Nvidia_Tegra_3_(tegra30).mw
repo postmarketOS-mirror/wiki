@@ -11,9 +11,11 @@ Identical driver and experience as for [[Nvidia_Tegra_2_(tegra20)#Graphics]]
 == Participate development ==
 === Test & Review ===
 ==== iio: al3010 light sensor ====
-Generally used in tegra30 device generation
+Generally used in tegra30 device generation.
+
 Source: https://github.com/okias/linux/commits/al3xxx-for-merge (rebased against [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/ -next] kernel)
-* devices list with this sensor present: http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu0&brand=brand0&filter=al3010&submit=Search
+
+* devices list with sensor: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu0&brand=brand0&filter=al3010&submit=Search deviceinfohw.ru]
 * if your device has this sensor, use this patches + check DTS has entry for al3010
 * install iio-sensor-proxy on your device and check if lux values are present and they change with time
 * if works as expected provide "Tested-by" or "Reviewed-by" tags to author
