@@ -43,7 +43,11 @@ VO: [vdpau] 1280x720 vdpau[yuv420p]
 === Test & Review ===
 ==== sound: tegra_wm8994 ====
 Sound codec used to glue WM8994 and Tegra boards. Used in Samsung P4, P4WiFi, i927.
-Source: https://github.com/okias/linux/commits/i927 and https://github.com/okias/linux/commits/p4wifi two implementations, needs to be cleaned up and tested.
+
+Source:
+* https://github.com/okias/linux/commits/i927
+* https://github.com/okias/linux/commits/p4wifi
+two implementations, needs to be cleaned up and tested.
 
 Present on: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu0&brand=brand0&filter=tegrawm8994&submit=Search device list]
 * if your device has this codec, use these patches + check DTS has entry for wm8994
