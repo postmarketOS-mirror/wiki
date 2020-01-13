@@ -39,6 +39,15 @@ Using hardware decoding (vdpau).
 VO: [vdpau] 1280x720 vdpau[yuv420p]
 </source>
 
+== Participate development ==
+=== Test & Review ===
+==== sound: tegra_wm8994 ====
+Sound codec used to glue WM8994 and Tegra boards. Used in Samsung P4, P4WiFi, i927.
+* Source: https://github.com/okias/linux/commits/i927 and https://github.com/okias/linux/commits/p4wifi two implementations, needs to be cleaned up and tested.
+* if your device has this codec, use these patches + check DTS has entry for wm8994
+* install alsa-utils and check sound (also you can use https://github.com/ford-prefect/xml2ucm/tree/master/src )
+* if works as expected provide "Tested-by" or "Reviewed-by" tags to author
+
 
 == See also ==
 * Tegra 2 is very similiar to [[Nvidia_Tegra_3_(tegra30)]]
