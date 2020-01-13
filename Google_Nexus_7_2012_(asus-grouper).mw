@@ -60,7 +60,7 @@ $ ./pmbootstrap.py flasher flash_kernel
 </syntaxhighlight>
 
 === Special installation process (development setup, cutting edge, kernel over approx. 4M) ===
-[https://gitlab.com/postmarketOS/pmaports/merge_requests/822 Merge Request] to make basic kernel work out-of-box.
+[https://gitlab.com/alpine-mobile/ tegra-fork] to make basic kernel work out-of-box.
 
 If you need bigger kernel, (or previous MR not merged yet), this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
 
@@ -84,7 +84,7 @@ git clone https://github.com/grate-driver/linux.git
 cd linux
 source ~/code/pmbootstrap/helpers/envkernel.sh
 
-sudo curl -o .output/.config https://raw.githubusercontent.com/okias/nexus7-grouper-kernel-config/master/.config
+sudo curl -o .output/.config https://gitlab.com/alpine-mobile/pmaports/raw/master/device/linux-asus-grouper/config-asus-grouper.armv7
 pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
 sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./.output/ # initfs is later compiled into kernel
 
