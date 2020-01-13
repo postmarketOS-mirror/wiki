@@ -85,6 +85,7 @@ cd linux
 source ~/code/pmbootstrap/helpers/envkernel.sh
 
 sudo curl -o .output/.config https://gitlab.com/alpine-mobile/pmaports/raw/master/device/linux-asus-grouper/config-asus-grouper.armv7
+sudo sed -i "s|CONFIG_INITRAMFS_SOURCE=\"\"|CONFIG_INITRAMFS_SOURCE=\"initfs-extracted\"|" .output/.config
 pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
 sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./.output/ # initfs is later compiled into kernel
 
