@@ -71,30 +71,7 @@ The downstream kernel provides an early implementation of a driver for the <code
 The <code>max8903</code> datasheet shows that there are separate GPIOs for USB and DC power connectors. This device has one connect GPIO for both USB and DC mode. The type of connector is determined by reading the <code>usb-sel</code> GPIOs. It's unclear which piece of hardware the usb-sel is coming from (max8903 / tegra soc / 30-pin connector ???).
 
 == Graphics ==
-The reverse engineer grate-driver provides 2D (EXA) acceleration on X11. There is minimal [https://github.com/grate-driver/mesa/ 3D implementation] which is not complete enough to run the Wayland compositor.
-
-Usability of desktop environments:
-* Xfce4 and Mate desktop will run on 2D acceleration.
-* Hildon requires an OpenGL backend.
-** As of cogl 1.22.2 the clutter/cogl backend requires stencil buffers (<code>EGL_STENCIL_SIZE</code>). This not yet implemented in the grate-driver.
-* Wayland enviroments will only work with software rendering backends.
-
-=== Video Decoding ===
-
-Video Decoder Engine (VDE) was added to mainline kernel v4.16. The grate-driver includes hardware h264 decoding with libvdpau-tegra.
-
-The vdpau driver does '''not''' support h264 videos encoded with:
-* weighted prediction
-* CABAC
-
-Sample video that can be decoded with hardware acceleration:
-https://peach.blender.org/trailer-page/
-
-<source lang="shell">
-$ mpv --hwdec=vdpau trailer_720p.mov
-Using hardware decoding (vdpau).
-VO: [vdpau] 1280x720 vdpau[yuv420p]
-</source>
+Moved to [[Nvidia_Tegra_2_(tegra20)#Graphics]] which cover all Tegra 2 devices.
 
 == Audio ==
 
