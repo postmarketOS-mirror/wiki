@@ -38,12 +38,16 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 == Users owning this device ==
 {{Device owners}}
 
+== Contributors ==
+* [[User:Lofenyy|Lofenyy]]
+* [[User:Maxnet|Maxnet]]
+
 == Installation ==
 Before installing, ensure that your host computer and your copy of [[Installing_pmbootstrap|pmbootstrap]] is fully up to date and that your system has been rebooted since it was last updated. 
 
-=== init ===
+=== Initialisation ===
 <source lang="bash">$ pmbootstrap init</source>
-Select "samsung-kylessopen" as the target device and select a graphical interface. If there is no information they were not tested yet.
+Select "samsung-kylessopen" as the target device and select a graphical interface.
 
 ==== [https://wiki.postmarketos.org/wiki/Category:Interface Graphical Interfaces] ====
 
@@ -105,11 +109,11 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 | N
 |}
 
-=== install ===
+=== Installation ===
 <source lang="bash">$ pmbootstrap install</source>
 Full disk encryption currently doesn't work on this device, so it should be turned off for now. 
 
-=== flash ===
+=== Flashing ===
 Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ pmbootstrap flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ pmbootstrap flasher flash_kernel</source> to flash the kernel[https://en.wikipedia.org/wiki/Kernel_(operating_system)].
 
 == Issues ==
@@ -346,7 +350,10 @@ WiFi is likely as well, but camera support is integrated.
 
 According to some websites this device may also have an FM radio, an accelerometer, a proximity sensor and a compass. I haven't found or discovered those peripherals myself but I know the device has a vibrator which most websites fail to mention. It's not on the list because I haven't physically found it yet.
 
-== Interesting Links ===
+== See also ==
+* [https://gitlab.com/samsung-kylessopen-kernels/pavlepiramida-frankenkernel Downstream Kernel used for this port]
+
+== Interesting Links ==
 * [https://forum.xda-developers.com/galaxy-ace XDA-Subforum for Samsung Galaxy Ace devices]
 * [https://www.ifixit.com/Device/Samsung_Galaxy_Ace_II_x iFixit-Device-Page]
 * [https://twrp.me/samsung/samsunggalaxytrend.html TWRP-Device-Page]
