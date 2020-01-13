@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name =  Galaxy Tab 10.1
-| codename = samsung-p4wifi
+| codename = samsung-p4wifi & samsung-p4
 | image = File:P4wifi infobox.png
 | imagecaption = Xcfe4 running on Samsung Galaxy Tab 10.1 (p4wifi)
 | releaseyear = 2011
@@ -39,7 +39,7 @@
 * decatf
 
 == Maintainer(s) ==
-* decatf
+* okias
 
 === Users owning this device ===
 {{Device owners}}
