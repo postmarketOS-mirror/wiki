@@ -4,5 +4,9 @@
 | arch = ARMv7
 | process = 40
 }}
+
+== Graphic ==
+Identical driver and experience as for [[Nvidia_Tegra_2_(tegra20)#Graphics]]
+
 == See also ==
 * Tegra 3 is very similiar to [[Nvidia_Tegra_2_(tegra20)]]
