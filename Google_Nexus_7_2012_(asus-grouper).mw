@@ -67,7 +67,7 @@ If you need bigger kernel, (or previous MR not merged yet), this includes way to
 <syntaxhighlight lang="shell" line='line'>
 mkdir ~/code
 cd ~/code
-git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+git clone https://gitlab.com/alpine-mobile/pmbootstrap.git
 cd pmbootstrap
 alias pmbootstrap=~/code/pmbootstrap/pmbootstrap.py
 pmbootstrap init
@@ -80,7 +80,7 @@ export TEMP="$WORK/chroot_native/tmp/mainline/"
 mkdir -p "$TEMP"
 
 cd ~/code
-git clone https://github.com/grate-driver/linux.git
+git clone https://github.com/okias/linux.git
 cd linux
 source ~/code/pmbootstrap/helpers/envkernel.sh
 
