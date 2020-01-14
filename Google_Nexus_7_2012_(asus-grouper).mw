@@ -155,7 +155,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |Booting
-|... but initfs must be packed directly inside kernel (not into boot.img as usual), otherwise kernel won't boot. With downstream kernel it works.
+|... but when is kernel larger than approx 4MB, initfs must be packed directly inside kernel (not into boot.img as usual), otherwise kernel won't boot. With downstream kernel it works.
 |-
 | Y
 |Touchscreen
@@ -171,7 +171,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |WiFi
-|Wi-Fi works with IWD daemon (apk add iwd; rc-config del wpa_supplicant; rc-config add iwd; and [https://wiki.archlinux.org/index.php/NetworkManager#Using_iwd_as_the_Wi-Fi_backend HOWTO]). 
+|Wi-Fi works (best with IWD daemon: apk add iwd; rc-config del wpa_supplicant; rc-config add iwd; and [https://wiki.archlinux.org/index.php/NetworkManager#Using_iwd_as_the_Wi-Fi_backend HOWTO]). 
 |-
 | Y
 | GPIO keys
@@ -200,7 +200,7 @@ alsamixer -c 0 # and enable something like:
 "SPOL MIX DAC R1"
 "SPOL MIX DAC L1"
 "Stereo DAC MIXR DAC R1"
-"Stereo DAC MIXL DAC L1" (bu
+"Stereo DAC MIXL DAC L1"
 |-
 | Y
 |Temperature sensor
