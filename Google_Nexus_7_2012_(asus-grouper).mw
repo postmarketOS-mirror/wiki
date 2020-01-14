@@ -210,7 +210,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | P
 |3D support
-| See [Nvidia_Tegra_2_(tegra20)#Graphics]
+| See [[Nvidia_Tegra_2_(tegra20)#Graphics]]
 |-
 | N
 |Modem
