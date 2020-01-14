@@ -177,7 +177,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 |Bluetooth
-|Works, audio not tested yet. Needs firmware: brcm/BCM4330B1.hcd
+|Works well, it has even BT 4.0, also BT 5.0 headphones works.
 |-
 | Y
 |Sound
@@ -202,7 +202,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | Y
 |Light sensor
-|Driver al3010. Brightness regulation [https://floss.social/@okias/103371284828595026 works], install iio-sensor-proxy .
+|Driver al3010. Brightness regulation [https://floss.social/@okias/103371284828595026 works], install iio-sensor-proxy . It's slightly [https://gitlab.com/alpine-mobile/pmaports/issues/3 oversensitive].
 |-
 | N
 |Front camera
