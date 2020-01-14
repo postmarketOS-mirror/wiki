@@ -59,6 +59,17 @@ $ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_kernel
 </syntaxhighlight>
 
+=== Instalation process (mainline kernel) ===
+Not merged into pmOS yet, so if you want mainline use this repository for now.
+<syntaxhighlight lang="shell" line='line'>
+$ git clone https://gitlab.com/Alpine-Mobile/pmbootstrap.git
+$ cd pmbootstrap
+$ ./pmbootstrap.py init
+$ ./pmbootstrap.py install
+$ ./pmbootstrap.py flasher flash_kernel
+</syntaxhighlight>
+
+
 === Special installation process (development setup, kernel over approx. 4M) ===
 
 If you need bigger kernel, this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
