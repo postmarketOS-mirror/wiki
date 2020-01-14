@@ -59,10 +59,9 @@ $ ./pmbootstrap.py install
 $ ./pmbootstrap.py flasher flash_kernel
 </syntaxhighlight>
 
-=== Special installation process (development setup, cutting edge, kernel over approx. 4M) ===
-[https://gitlab.com/alpine-mobile/ tegra-fork] to make basic kernel work out-of-box.
+=== Special installation process (development setup, kernel over approx. 4M) ===
 
-If you need bigger kernel, (or previous MR not merged yet), this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
+If you need bigger kernel, this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
 
 <syntaxhighlight lang="shell" line='line'>
 mkdir ~/code
