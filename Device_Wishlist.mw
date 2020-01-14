@@ -50,6 +50,7 @@ Please keep this list sorted by alphabet for readability.
 * Meizu PRO 5
 * [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
 * Motorola Droid RAZR (spyder)
+* Motorola Moto G7 Play/Power and G7 (good work has been going on in the android scene on the g7 power and g7, play is getting there. they all share similar hardware, so a lot of the code could be shared right?)
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
 * Nokia 3
 * Nokia 5
