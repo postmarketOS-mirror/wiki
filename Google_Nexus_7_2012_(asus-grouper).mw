@@ -210,7 +210,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | P
 |3D support
-| [https://github.com/grate-driver/mesa/commits/19.3 mesa-3d repository (branch 19.3)] at least partly OpenGL 1.4 at this moment, for accelerated environment is needed at least GL 2.1 or GLES2)
+| See [Nvidia_Tegra_2_(tegra20)#Graphics]
 |-
 | N
 |Modem
