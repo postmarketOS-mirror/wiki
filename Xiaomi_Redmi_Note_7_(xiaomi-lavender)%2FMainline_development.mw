@@ -39,3 +39,133 @@
 
 Example code:
  *((int *)ioremap(0x10ac000, 4)) = 0; // force-reboot by Zhuowei
+
+=== Example bootloader UART output ===
+* https://paste.sr.ht/~minlexx/8da68fa1d63cf150f6db4f8ae5d1899863ca33a7
+
+ Welcome to minicom 2.7
+ OPTIONS: I18n 
+ Compiled on Jan 14 2020, 22:40:50.
+ Port /dev/ttyUSB0, 23:37:13
+ 
+ Press CTRL-A Z for help on special keys
+                                        
+ UEFI Start     [  865] SEC              
+ PROD Mode   : On                        
+ DEBUG Mode : On                         
+ ASLR        : On                        
+ Timer Delta : +6 mS                     
+ RAM Entry 0 : Base 0x0000000040000000  Size 0x0000000060000000
+ RAM Entry 1 : Base 0x00000000A0000000  Size 0x000000005EAC0000
+ UEFI Ver    : 4.2.190808.BOOT.XF.1.4-00262-S660LZB-1
+ Build Info  : 64b Aug  8 2019 23:13:56  
+ Boot Device : eMMC
+ DALLOG Device [0x2000145]: Cannot turn on source[ACPL
+ Elapsed tick: 0x12BC54E, Wait tick: 0x36EE800 
+ Elapsed tick: 0x12BCD19, Wait tick: 0x36EE800 
+ ... repeated maaaaaaany times ...
+ Elapsed tick: 0x369B23B, Wait tick: 0x36EE800 
+ Setvariable returned Success
+ IsPressPwrKeyOn: true
+ zjl  haptic_on
+ zjl  haptic_off
+ [CheckPanel] panel reg[0xc] value: 0x00000007, uReponseSize:2
+ Panel_CDP_GetID: temp1 =0;temp2 =0
+ Display:f7a tianma nt36672a !
+ ReadKeyInternal: gEfiSimpleTextInputExProtocolGuid handles = 3
+ ReadKeyInternal: Read KEY = 0x102
+  bootstate = 0
+ PanelWidth=1080,PanelHeight=2340
+ ImageWidth=1080,ImageHeight=2160,LogoPosX=0,LogoPosY=90
+ Avoid flicking for 2160x1080 images 
+ PanelWidth=1080,PanelHeight=2340
+ Render Splash  [ 3581]
+ EnvDxe Render Callback
+ LoadImageFromPartitionUsingGuid Failed: 14
+ Keymaster failed to load! Status = 0xE
+ LoadSecureApps: Load app from partition(keymaster): Status = 0x0, AppId = 65537
+ APC1 IDDQ WC 0 , L2:0, CPU[0]:175, CPU[1]:175, CPU[2]:175, CPU[3]:175
+  APC1 Total 700
+ Load CPU 0 Slp: 0x89, Int: 0x17
+ Load CPU 1 Slp: 0x1, Int: 0x0
+ Load CPU 2 Slp: 0xC1, Int: 0x1D
+ Load CPU 3 Slp: 0x1, Int: 0x0
+ GLD IDDQ WC 0
+ CPU PART GOOD [0x0] SUB_BIN[0x0]
+ -----------------------------
+ Platform Init  [ 3746] BDS
+ UEFI Ver   : 4.2.190808.BOOT.XF.1.4-00262-S660LZB-1
+ Platform   : MTP
+ Chip Name  : SDM660
+ Chip Ver   : 1.0
+ Core 0 Freq: 1382400 MHz
+ -----------------------------
+ zjlz 3333 QcomChargerApp:: ChargerLib_Exit Error getting platform type  
+ UEFI Total : 2905 ms
+ POST Time      [ 3770] OS Loader
+ Loader Build Info: Aug 17 2019 11:55:58
+ VB: RWDeviceState: Succeed using rpmb!
+ KeyPressed = (0x9CE65000)
+ Reboot reason: 0
+ LAVENDER Platform version : 0x20000
+ Booting Into Mission Mode
+ avb_slot_verify.c:432: DEBUG: Loading vbmeta struct from partition 'vbmeta'.
+ Partition found: vbmeta
+ avb_slot_verify.c:186: DEBUG: dtbo: Loading entire partition.
+ Partition found: dtbo
+ avb_slot_verify.c:186: DEBUG: boot: Loading entire partition.
+ Partition found: boot
+ State: Unlocked, AvbSlotVerify returned OK, continue boot
+ VB2: Authenticate complete! boot state is: orange
+ VB2: boot state: orange(1)
+ Display menu is not enabled!
+ Device is unlocked, Skipping boot verification
+ VB2: BootState = 1
+ ReadKeyInternal: gEfiSimpleTextInputExProtocolGuid handles = 3
+ ReadKeyInternal: Read KEY = 0x0
+  bootstate = 4
+ var = UNLOCK splash update
+ Cannot find GraphicsHandles.
+ ImageWidth=1080,ImageHeight=2160,LogoPosX=0,LogoPosY=0
+ Avoid flicking for 2160x1080 images 
+ Cannot find GraphicsHandles.
+ Render Splash  [ 4360]
+ VB2: RenderSplashScreen end , BootState = 4 
+ No Ffbm cookie found, ignore: Not Found
+ Memory Base Address: 0x40000000
+ Decompressing kernel image start: 4363 ms
+ Decompressing kernel image done: 4803 ms
+ smem protocol = 9C3020A0
+ board_id1 is 1
+  board_id2 is 1
+  board_id3 is 0
+ board_id is 1
+ get_boardid_from_smem,SUCCESS ,board_id=0x102,cpu_id=0x39148C8C,hwdefined=0
+  PON Reason is 128 cold_boot:1 charger path: 0
+ GetCheckPanelPressGuid:checkPanel = 0x1;Status:0x0
+ panel is Exist
+ Error Locate MiToken Protocol:
+ Error Reading the GetDebugPolicyFlagbuqshuai1
+ VB: readDebugPolicy: ScmSipSysCall Status: (0x7)
+ Error Reading the GetDebugPolicyFlagbuqshuai2
+ Error Get DebugPolicy: Device Error
+ DebugPolicyFlag: 0x0
+ Error Get DebugPolicy: 
+ CMDLINE: AsciiStrLen AsciiStrLen (DebugPolicyFlag);
+ get_hwconfig_cmdline, board_id=0x102
+ get_hwconfig_cmdline, hwlevel=0x1
+ get_hwconfig_cmdline, maxcount=0x32
+ aaaaaa
+ get_hwconfig_cmdline, i=0x1D
+ Cmdline: console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcdl
+ RAM Partitions
+ Add Base: 0x0000000040000000 Available Length: 0x0000000060000000 
+ Add Base: 0x00000000A0000000 Available Length: 0x000000005EAC0000 
+ WARNING: Could not find mem-offline node.
+ kaslr-Seed is added to chosen node
+ pureason = 40080
+ 
+ Shutting Down UEFI Boot Services: 5029 ms
+ BDS: LogFs sync skipped, Unsupported
+ App Log Flush : 2501 ms
+ Exit BS        [ 7539] UEFI End
