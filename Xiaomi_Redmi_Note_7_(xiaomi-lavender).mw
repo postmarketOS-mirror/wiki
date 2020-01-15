@@ -218,7 +218,7 @@ This is still a work-in-progress. If you want to test something, or help in the 
 |}
 
 === Android Verified Boot (vbmeta) ===
-This device is using '''Android Verified Boot''' ( https://android.googlesource.com/platform/external/avb/+/refs/tags/android-vts-8.0_r11/README.md ) so you may need to flash <code>vbmeta</code> partition with <code>vbmeta.img</code> from LineageOS zip or downloaded separately (from https://androidfilehost.com/?fid=1395089523397954291 for example); or we need to find a way to generate it with <code>avbtool</code> and flash it during installation somehow. (add <code>pmbootstrap flasher flash_vbmeta</code>?)
+This device is using '''Android Verified Boot''' ( https://android.googlesource.com/platform/external/avb/+/master/README.md ) so you may need to flash <code>vbmeta</code> partition with custom <code>vbmeta.img</code> from LineageOS zip or downloaded separately (from https://androidfilehost.com/?fid=1395089523397954291 for example). Or we need to find a way to generate it with <code>avbtool</code> and flash it during installation somehow. (add <code>pmbootstrap flasher flash_vbmeta</code>?)
 
 === DTBO partition ===
 This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . We need to find a way to flash generated <code>dt.img</code> to <code>dtbo</code> partition during installation process. (add <code>pmbootstrap flasher flash_dtbo</code>?)
