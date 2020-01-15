@@ -14,10 +14,10 @@ When device is locked, bootloader loads vbmeta struct from '''vbmeta''' partitio
 * RED (no os found): No valid OS found
 And then it can display warnings on the screen, and reflect boot state in kernel command line, like for example <code>androidboot.verifiedbootstate=orange</code>.
 
-For unlocked device bootloader skips the verification for '''boot''' partition, but can still verify others (? TODO: verify this).
+For unlocked device bootloader skips the verification for '''boot''' partition, but can still verify others.
 See relevant [https://source.codeaurora.org/quic/la/kernel/lk/tree/app/aboot/aboot.c?h=LA.BR.1.3.3_rb1.3&id=3b6a87e4556587b3cc0c652ada680b7284d2fae7#n956 LK aboot code].
 
-Example bootloader debug output regarding verified boot process:
+Example bootloader debug output regarding verified boot process with original <code>boot.img</code>, unlocked device:
  Booting Into Mission Mode
  avb_slot_verify.c:432: DEBUG: Loading vbmeta struct from partition 'vbmeta'.
  Partition found: vbmeta
@@ -29,6 +29,22 @@ Example bootloader debug output regarding verified boot process:
  State: Unlocked, AvbSlotVerify returned OK, continue boot
  VB2: Authenticate complete! boot state is: orange
  VB2: boot state: orange(1)
+
+Example bootloader debug output regarding verified boot process with custom <code>boot.img</code>, unlocked device:
+ Booting Into Mission Mode
+ avb_slot_verify.c:432: DEBUG: Loading vbmeta struct from partition 'vbmeta'.
+ Partition found: vbmeta
+ avb_slot_verify.c:186: DEBUG: dtbo: Loading entire partition.
+ Partition found: dtbo
+ avb_slot_verify.c:186: DEBUG: boot: Loading entire partition.
+ Partition found: boot
+ avb_slot_verify.c:242: ERROR: boot: Hash of data does not match digest in descriptor.
+ State: Unlocked, AvbSlotVerify returned ERROR_VERIFICATION, continue boot
+ VB2: Authenticate complete! boot state is: orange
+ VB2: boot state: orange(1)
+ Display menu is not enabled!
+ Device is unlocked, Skipping boot verification
+ VB2: BootState = 1
 
 = Using avbtool =
 [https://android.googlesource.com/platform/external/avb/+/refs/heads/master/avbtool avbtool] is a python script that can be used to view, create and edit images for AVB process.
