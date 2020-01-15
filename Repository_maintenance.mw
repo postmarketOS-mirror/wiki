@@ -23,10 +23,9 @@ mirror="http://dl-cdn.alpinelinux.org/alpine/"
 
 git -C ~/code/pmbootstrap checkout master
 git -C ~/code/pmbootstrap/aports checkout master
+git -C ~/.local/var/pmbootstrap/cache_git/aports_upstream pull
 
 pmbootstrap --mirror-alpine="$mirror" -y zap
-pmbootstrap --mirror-alpine="$mirror" \
-    chroot --add=git --user -- git -C /mnt/pmbootstrap-git/aports_upstream pull
 pmbootstrap --mirror-alpine="$mirror" pkgrel_bump --auto
 pmbootstrap --mirror-alpine="$mirror" aportgen \
     binutils-armhf binutils-aarch64 binutils-armv7 \
