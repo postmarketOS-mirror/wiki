@@ -38,4 +38,4 @@ This example demonstrates how to use bootchart2 with device-qemu-amd64.
 # Wait until bootchart2 has written the image to <code>/var/log/bootchart.png</code>.
 #:[[File:Qemu_bootchart2_example_boot.png]]
 # Copy the file to your host system (<code>scp -P 2222 <qemu username>@localhost:/var/log/bootchart.png .</code>). 
-#:[[File:Qemu_bootchart2_example.png|650px]]
+#:[[File:Qemu_bootchart2_example.png|500px]]
