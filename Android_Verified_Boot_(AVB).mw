@@ -1,0 +1,90 @@
+= What is it =
+AVB is implementation of verified boot process, current version is called AVB 2.0. Verified boot is a process of assuring the end user of the integrity of the software running on a device. It typically starts with a read-only portion of the device firmware which loads code and executes it only after cryptographically verifying that the code is authentic. It also helps in implementing rollback protection.
+
+= Implementation details =
+It is implemented inside [https://android.googlesource.com/platform/external/avb/ libavb] - simple C library, that can be used both inside userspace programs (Android's avbctl?) and by kernel space (bootloader). Heart of the system is '''VBMeta struct''', which contains ''both'' checksums of ''contents'' of several important partitions, ''and'' the public key used to cryptographically sign them. Several important partitions include <code>boot</code>, <code>recovery</code>, <code>dtbo</code>, <code>vendor</code> and <code>system</code>. Public key is meant to be verified by bootloader to the one that is embedded inside it, to be trusted.
+
+The vbmeta struct is described in [https://android.googlesource.com/platform/external/avb/+/refs/heads/master/libavb/avb_vbmeta_image.h#125 libavb/avb_vbmeta_image.h]. It contains header, auth data (reference to public key) and references to descriptors for several paritions. Read the comment above its declaration for more info.
+
+= Verified boot process =
+When device is locked, bootloader loads vbmeta struct from '''vbmeta''' partition. And then it calls <code>avb_slot_verify()</code> for each partition mentioned inside vbmeta struct. If some partition fails this check, then bootloader can know that system files were modified. From the result of this test bootloader sets '''boot state''':
+* YELLOW: Warning screen for LOCKED devices with custom root of trust set
+* ORANGE: Warning screen for UNLOCKED devices
+* RED (eio): Warning screen for dm-verity corruption
+* RED (no os found): No valid OS found
+And then it can display warnings on the screen, and reflect boot state in kernel command line, like for example <code>androidboot.verifiedbootstate=orange</code>.
+
+For unlocked device bootloader skips the verification for '''boot''' partition, but can still verify others (? TODO: verify this).
+See relevant [https://source.codeaurora.org/quic/la/kernel/lk/tree/app/aboot/aboot.c?h=LA.BR.1.3.3_rb1.3&id=3b6a87e4556587b3cc0c652ada680b7284d2fae7#n956 LK aboot code].
+
+Example bootloader debug output regarding verified boot process:
+ Booting Into Mission Mode
+ avb_slot_verify.c:432: DEBUG: Loading vbmeta struct from partition 'vbmeta'.
+ Partition found: vbmeta
+ avb_slot_verify.c:186: DEBUG: dtbo: Loading entire partition.
+ Partition found: dtbo
+ avb_slot_verify.c:186: DEBUG: boot: Loading entire partition.
+ Partition found: boot
+ Device is unlocked, Skipping boot verification
+ State: Unlocked, AvbSlotVerify returned OK, continue boot
+ VB2: Authenticate complete! boot state is: orange
+ VB2: boot state: orange(1)
+
+= Using avbtool =
+[https://android.googlesource.com/platform/external/avb/+/refs/heads/master/avbtool avbtool] is a python script that can be used to view, create and edit images for AVB process.
+
+Use <code>avbtool --help</code> to get list of commands, and <code>avbtool <command> --help</code> to view help on specific command.
+
+== Examining contents of stock images ==
+<code>avbtool info_image</code> command can be used to query headers of vbmeta struct, or for partition images it will show contents of vbmeta footer signature. Example usage:
+
+ avbtool info_image --image /path/to/vbmeta.img
+ avbtool info_image --image /path/to/boot.img
+
+== Signing & cheksumming the partitions ==
+For small partition images (boot, dtbo, recovery) you can add checksum/signature with: <code>avbtool add_hash_footer</code>.
+
+For larger partitions (vendor, system) you should use <code>avbtool add_hashtree_footer</code>. Arguments are the same. Example:
+
+ avbtool add_hash_footer --partition_name PARTITION_NAME --partition_size PARTITION_SIZE --image IMAGE [--key /path/to/key_used_for_signing_or_pub_key]
+ avbtool add_hash_footer --partition_name boot --partition_size 67108864 --image boot.img-postmarketos-qcom-sdm660
+
+PARTITION_NAME will be written into vbmeta struct later and used by bootloader during verification process.
+
+PARTITION_SIZE should be equal to partition size ''in bytes''. Image file will be padded to this size and vbmeta footer will be addded at the end of it.
+
+== Creating vbmeta image ==
+vbmeta.img is an image file that is intended to be flashed into '''vbmeta''' partition. It is used by bootloader as source for checksums in verification process.
+
+First you should checksum/sign all other partition images that are part of your AVB process (for example, boot, system, etc)! See example just above.
+
+<code>avbtool make_vbmeta_image</code> Is the command that you will use in this case:
+
+ avbtool make_vbmeta_image \
+     --output my_vbmeta.img \
+     --padding_size 4096 \
+     --include_descriptors_from_image ./boot.img-postmarketos-qcom-sdm660 \
+     --include_descriptors_from_image ./path/to/some_another_image.img \
+     ...
+     [--key /path/to/key_used_for_signing_or_pub_key]
+
+This command will create <code>my_vbmeta.img</code> file, at least 4096 bytes in size, that will contain hash/hashtree descriptors from all the partition images specified in <code>--include_descriptors_from_image</code> parameters.
+
+== Disabling verified boot ==
+{{note|TODO: just a theory for now, verify!}}
+
+To disable verified boot you should create an empty vbmeta.img, which does not contain any hash/hashtree desriptors and specified a special flag in vbmeta header. The command for it should look like this:
+
+ avbtool make_vbmeta_image --flags 2 --padding_size 4096 --output vbmeta_disabled.img
+
+Mysterious flag '''2''' is [https://android.googlesource.com/platform/external/avb/+/refs/heads/master/libavb/avb_vbmeta_image.h#61 AVB_VBMETA_IMAGE_FLAGS_VERIFICATION_DISABLED], which is documented as:
+ AVB_VBMETA_IMAGE_FLAGS_VERIFICATION_DISABLED: If this flag is set,
+ verification will be disabled and descriptors will not be parsed.
+
+= Links =
+* Google official documentation: [https://android.googlesource.com/platform/external/avb/+/master/README.md platform/external/avb/README.md]
+* Google official documentation: [https://source.android.com/security/verifiedboot/boot-flow Verified boot flow] (boot states)
+* [https://source.codeaurora.org/quic/la/kernel/lk/commit/?h=LA.BR.1.3.3_rb1.3&id=3b6a87e4556587b3cc0c652ada680b7284d2fae7 Commit in LK introducing verified boot and boot states]
+* [https://gitlab.e.foundation/e/os/android_build/commit/cd9e2fcf5dc08a92369f913491d960893a95edd8?view=parallel MR that sched some light on disabling verified boot]
+
+[[Category:Technical Reference]]
