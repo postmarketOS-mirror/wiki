@@ -97,6 +97,22 @@ Mysterious flag '''2''' is [https://android.googlesource.com/platform/external/a
  AVB_VBMETA_IMAGE_FLAGS_VERIFICATION_DISABLED: If this flag is set,
  verification will be disabled and descriptors will not be parsed.
 
+Example bootloader output when booting with vbmeta_disabled.img flashed to vbmeta partition:
+ Booting Into Mission Mode
+ avb_slot_verify.c:432: DEBUG: Loading vbmeta struct from partition 'vbmeta'.
+ Partition found: vbmeta
+ avb_slot_verify.c:544: ERROR: vbmeta: Error verifying vbmeta image: OK_NOT_SIGNED
+ avb_slot_verify.c:704: DEBUG: vbmeta: VERIFICATION_DISABLED bit is set.
+ avb_slot_verify.c:317: DEBUG: boot: Loading entire partition.
+ Partition found: boot
+ avb_slot_verify.c:317: DEBUG: dtbo: Loading entire partition.
+ Partition found: dtbo
+ State: Unlocked, AvbSlotVerify returned ERROR_VERIFICATION, continue boot
+ VB2: Authenticate complete! boot state is: orange
+ VB2: boot state: orange(1)
+
+Note <code>VERIFICATION_DISABLED bit is set</code>. Apparently bootloader can detect that verification is disabled, but its reaction to this mode may be device specific?
+
 = Links =
 * Google official documentation: [https://android.googlesource.com/platform/external/avb/+/master/README.md platform/external/avb/README.md]
 * Google official documentation: [https://source.android.com/security/verifiedboot/boot-flow Verified boot flow] (boot states)
