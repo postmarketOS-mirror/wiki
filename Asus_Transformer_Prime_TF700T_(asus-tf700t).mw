@@ -35,13 +35,13 @@
 | booting = no
 }}
 
-=== Contributors ===
+== Contributors ==
 * ''[[user:jja2000|jja2000]]'' (Testing, documentation)
 * ''[[user:ollieparanoid|ollieparanoid]]'' (help in IRC, documentation)
 
-=== Compiling a kernel ===
+== Compiling a kernel ==
 
-==== KatKernel ====
+=== KatKernel ===
 
 * Katkernel is based off the kernel with the same name for the TF300t. An overlap in components makes these kernels mostly compatible hence the rom it belongs to (KatKiss) has been ported to the TF700t aswell. The reason why the kernel is included in this list is because it's currently the most active kernel for the TF700t.
 * Source: https://github.com/timduru/tf300t-katkernel/tree/dev-tf700t/
@@ -55,7 +55,7 @@
 * Version: 5.5.0-rc5
 * Status: Untested, see Hardware Status.
 
-== Hardware status (mainline) ==
+==== Hardware status (mainline) ====
 There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
 {|class="wikitable feature-colors"
 ! Status
@@ -211,7 +211,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 |}
 
-=== Useful Links ===
+== Useful Links ==
 * [https://wiki.gentoo.org/wiki/Asus_Transformer_Infinity_(TF700T)/Install How to install Gentoo on the TF700t]
 * [https://forum.xda-developers.com/showthread.php?t=2387133 Using Kexec to boot Kernels and .img files]
 * [https://www.spinics.net/lists/linux-tegra/msg30366.html Patches to get TF300t into mainline]
