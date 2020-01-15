@@ -27,7 +27,7 @@
 | status_accel = Y
 | status_audio = Y
 | status_bluetooth = Y
-| status_camera = 
+| status_camera = Y
 | status_gps = -
 | status_mobiledata = -
 | status_sms = -
