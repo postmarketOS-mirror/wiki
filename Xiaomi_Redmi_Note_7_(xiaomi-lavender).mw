@@ -328,6 +328,13 @@ EDIT: seems to not work for me, whatever you do, the output is:
 
 Probably needs a crash? But I can read pstore-console (dmesg) logs from booted TWRP recovery fine..
 
+[[File:Xiaomi-lavender-uart-pins.jpg|200px|thumb|right|Xiaomi Redmi Note 7 (lavender) UART test pins schematic]]
+=== Getting logs through debug UART ===
+
+You have to disassemble the phone (just removing back cover is enough). You'll have to heat up edges of the back cover (as shown in disassembling video, see '''Links''' below) before trying to remove it. Be careful! It is made of glass! Also be careful about fingerprint sensor connector, it is connected to a back cover you are trying to remove. Don't rip it.
+
+In the center you will see 4 test points that are available. (See the picture) Two bigger ones (0.8mm) are '''EDL''' (FORCE_USB_BOOT) pins. UART test points are two smaller ones on the left (0.5mm). TP11 is '''UART TX''' (gpio 4), TP10 is '''UART RX''' (gpio 5). GND is that whole metal shielding, that covers the center of the board. So, to get debug logs from UART it is enough to connect UART TX from the board to RX pin on the converter, and connect GND between phone and GND pin on the converter.
+
 == Links ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
@@ -336,12 +343,13 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* [https://gitlab.com/minlexx/pmaports/commits/minlexx/xiaomi-lavender Current development branch]
+* [https://gitlab.com/minlexx/pmaports/commits/minlexx/xiaomi-lavender-add-mainline Current pmaports development branch]
+* [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom-sdm660 Current mainline kernel development branch]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
 * [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)/Mainline_development]]
-* https://github.com/NixOS/mobile-nixos/pull/28/files
+* [https://github.com/NixOS/mobile-nixos/pull/28 NixOS mobile lavender MR]
 * https://www.youtube.com/watch?v=6GqXqW2Nygc Disassembling video (Rus)
