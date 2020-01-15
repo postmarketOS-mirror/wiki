@@ -188,7 +188,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | N
 | al3010
 | Light sensor
-| [https://github.com/okias/linux/blob/al3xxx-for-merge/drivers/iio/light/al3010.c al3010]
+| [[Nvidia_Tegra_3_(tegra30)#iio:_al3010_light_sensor]]
 | Not implemented in device tree. Using out of tree driver.
 |-
 | N
