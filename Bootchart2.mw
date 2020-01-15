@@ -6,14 +6,31 @@ Use bootchart2 to profile system boot or a running system.
 # add the following kernel command line parameter: <code>PMOS_BOOTCHART2</code>.
 # (optional) modify EXIT_PROC in /etc/bootchartd.conf to define when the collector is to stop.
 # Boot the system. 
-## mkinitfs will start <code>/sbin/bootchartd</code>.
-## <code>/sbin/bootchartd</code> will run <code>/sbin/init</code>.
-## Approximately 20 seconds after sshd starts (if using the default value of EXIT_PROC), the collector will exit.
-## <code>/usr/bin/pybootchartgui</code> will create a visualization in <code>/var/log/bootchart.png</code>.
+#* mkinitfs will start <code>/sbin/bootchartd</code>.
+#* <code>/sbin/bootchartd</code> will run <code>/sbin/init</code>.
+#* Approximately 20 seconds after sshd starts (if using the default value of EXIT_PROC), the collector will exit.
+#* <code>/usr/bin/pybootchartgui</code> will create a visualization in <code>/var/log/bootchart.png</code>.
 == Profile a running system ==
 # Use the command <code>/sbin/bootchartd start</code> (as root) to start profiling
 # Use the command <code>/sbin/bootchartd stop</code> (as root) to stop profiling
-# When the collector exits, <code>/usr/bin/pybootchartgui</code> will create a visualization in <code>/var/log/bootchart.png</code>.
-== Example ==
+#* <code>/usr/bin/pybootchartgui</code> will create a visualization in <code>/var/log/bootchart.png</code>.
+== Example (QEMU) ==
 This example demonstrates how to use bootchart2 with device-qemu-amd64.
-# Run <code>pmbootstrap init</code>. At the <code>Extra packages</code> prompt, enter <code>bootchart2</code>
+# Run <code>pmbootstrap init</code>. At the <code>Extra packages</code> prompt, enter <code>bootchart2</code>.
+#:<code>> pmbootstrap init</code>
+#:<code>[18:46:26] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.</code>
+#:<code>...</code>
+#:<code>[18:46:29] Choose your target device vendor (either an existing one, or a new one for porting).</code>
+#:<code>[18:46:29] Available vendors (43): amazon, asus, bq, chuwi, fairphone, finepower, google, gp, hisense, htc, huawei, infocus, jolla, leeco, lenovo, lg, medion, meizu, motorola, nextbit, nobby, nokia, oneplus, oppo, ouya, pine64, planet, purism, qemu, raspberry, samsung, semc, sony, surftab, t2m, tablet, teclast, wiko, wileyfox, wingtech, xiaomi, yu, zte</code>
+#:<code>[18:46:29] Vendor [qemu]: </code>
+#:<code>[18:46:30] Available codenames (3): aarch64, amd64, vexpress</code>
+#:<code>[18:46:30] Device codename [amd64]: </code>
+#:<code>...</code>
+#:<code>[18:46:35] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"</code>
+#:<code>[18:46:35] Extra packages [none]: <b>bootchart2</b></code>
+#:<code>...</code>
+#:<code>[18:46:40] Done!</code>
+#:<code>></code>
+# Run <code>pmbootstrap install</code>.
+# Start qemu. Use the kernel command line parameters from the deviceinfo file, and add the bootchart2 parameters. For example:
+#:<code>pmbootstrap qemu --image-size=2G --host-qemu --display=gtk  --cmdline '<b>PMOS_BOOTCHART2 initcall_debug printk.time=y quiet</b> console=tty1 console=ttyS0 PMOS_NO_OUTPUT_REDIRECT PMOS_FORCE_PARTITION_RESIZE'</code>
