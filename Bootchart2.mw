@@ -1,0 +1,16 @@
+Use bootchart2 to profile system boot or a running system.
+== Configure bootchart2 ==
+# Add the bootchart2 package to your device.
+# Add the following kernel command line parameters: <code>initcall_debug printk.time=y quiet</code>
+== Profile system boot ==
+# add the following kernel command line parameter: <code>PMOS_BOOTCHART2</code>.
+# (optional) modify EXIT_PROC in /etc/bootchartd.conf to define when the collector is to stop.
+# Boot the system. 
+## mkinitfs will start <code>/sbin/bootchartd</code>.
+## <code>/sbin/bootchartd</code> will run <code>/sbin/init</code>.
+## Approximately 20 seconds after sshd starts (if using the default value of EXIT_PROC), the collector will exit.
+## <code>/usr/bin/pybootchartgui</code> will create a visualization in <code>/var/log/bootchart.png</code>.
+== Profile a running system ==
+# Use the command <code>/sbin/bootchartd start</code> (as root) to start profiling
+# Use the command <code>/sbin/bootchartd stop</code> (as root) to stop profiling
+# When the collector exits, <code>/usr/bin/pybootchartgui</code> will create a visualization in <code>/var/log/bootchart.png</code>.
