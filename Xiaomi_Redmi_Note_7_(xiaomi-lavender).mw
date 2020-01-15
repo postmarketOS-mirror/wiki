@@ -225,7 +225,31 @@ This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Devi
 
 Update: looks like '''dtbo''' partition is not used during boot by LineageOS's kernel, because it is using appended DTB (<code>CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE=y</code>)
 
-Update2: device tree from dtbo partition can still be used by bootloader?
+Update2: device tree from dtbo partition can still be used by bootloader? Yes, it is. bootloader tries to actually overlay dtb from dtbo partition over a dtb found in boot.img, and if it fails to do so, it falls back into fastboot mode. Example bootloader debug UART output in that case:
+ Memory Base Address: 0x40000000
+ Decompressing kernel image start: 2700 ms
+ Decompressing kernel image done: 2852 ms
+ ufdt apply overlay failed
+ Launching fastboot
+
+See Zhuowei's notes on creating custom dtbo partition: https://gitlab.com/zhuowei/dtbo-google-crosshatch-mainline
+
+For mainline kernel just <code>fastboot erase dtbo</code> works. Example output when dtbo partition is erased:
+ Memory Base Address: 0x40000000
+ Decompressing kernel image start: 2641 ms
+ Decompressing kernel image done: 2793 ms
+ Dtbo hdr magic mismatch 0, with D7B7AB1E
+ Best match DTB tags 317/00020008/0x00000000/0/1001B/102001A/0/0/(offset)0x97128304/(size)0x00000653
+ Using pmic info 0x1001B/0x102001A/0x0/0x0 for device 0x2001B/0x102001A/0x0/0x0
+ Memory Base Address: 0x40000000
+ smem protocol = 9C2FA0A0
+ board_id1 is 1
+  board_id2 is 1
+  board_id3 is 0
+ board_id is 1
+ get_boardid_from_smem,SUCCESS ,board_id=0x102,cpu_id=0x39148C8C,hwdefined=0
+  PON Reason is 17 cold_boot:1 charger path: 1
+ ...(proceeding to normal boot procedure)...
 
 === Bootloader cmdline ===
 Stock bootloader is doing nasty things with kernel command line: it passes a lot of arguments that make booting custom OS (like postmarketOS) impossible
