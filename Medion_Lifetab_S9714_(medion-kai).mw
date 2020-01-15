@@ -86,62 +86,132 @@ Apparently, the device was manufactured by Lenovo for vendor Medion and is simil
 
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
-== WiFi ==
+== How bonsaiblue made wifi work ==
 
-Still trying to get WiFi working. Collected information so far:
+How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_Advance_(samsung-i9070)#How_drebrez_made_wifi_work|Inspired by the very helpful How_drebrez_made_wifi_work]].
 
-Chip for WLAN 11b/g/n and Bluetooth 3.0: Broadcom BCM4330
+* Find information online about the wifi chip of the device: it uses Broadcom BCM4330 for wifi 11b/g/n and Bluetooth 3.0
+* Read the [[WiFi]] page, in particular [[WiFi#Broadcom_WiFi|the part about Broadcom WiFi]].
+* Since that page mentions kernel config parameters, grep for "BCM" in the devices kernel config:
 
-PCI id according to system/etc/nvram_4330.txt: <code>14e4:4360</code>
-
-Kernel config parameters in vendor's config:
-
-    grep -i "bcm" config | grep -v "^#"
-    CONFIG_BCMDHD_CFG80211=y
-    CONFIG_BCMDHD_WIFI_CONTROL_FUNC=y
-    CONFIG_BCMDHD_HW_OOB=y
-    CONFIG_BCMDHD_CSCAN_ENABLE=y
-    CONFIG_BCMDHD_INSMOD_NO_FW_LOAD=y
+    grep -i "BCM" pmaports/device/linux-medion-kai/config-medion-kai.armv7
+    ...
     CONFIG_BCMDHD_FXN_FW_PATH="/system/vendor/firmware/bcm4330/fw_bcmdhd.bin"
     CONFIG_BCMDHD_FXN_NVRAM_PATH="/system/etc/nvram_4330.txt"
     CONFIG_BCMDHD_FXN_195_89=m
-    CONFIG_BCMA_POSSIBLE=y
+    ...
 
-BCM-related files in vendor's ROM:
-    find . -iname "*bcm*"
-    system/vendor/firmware/bcm4330
-    system/vendor/firmware/bcm4330/fw_bcmdhd_p2p.bin
-    system/vendor/firmware/bcm4330/fw_bcmdhd.bin
-    system/vendor/firmware/bcm4330/fw_bcmdhd_apsta.bin
-    system/lib/modules/bcmdhd.ko
-    system/etc/firmware/bcm4330.hcd
-    system/bin/bcm4330_bt_fw_loader.sh
+* So the wifi chip needs a kernel module (<code>CONFIG_BCMDHD_FXN_195_89=m</code>) and firmware and config files (<code>fw_bcmdhd.bin</code>, <code>nvram_4330.txt</code>).
+* Download and unpack the vendor's OTA ROM zip (link in the [[Medion_Lifetab_S9714_(medion-kai)#See_also]] section). (Other ideas on how to find firmware files are on the [[How_to_find_device-specific_information#Firmware_files]] page.)
+* In the unpacked ROM folder, look for <code>system/vendor/firmware/bcm4330/fw_bcmdhd.bin</code> and <code>system/etc/nvram_4330.txt</code>.
+* '''FOR TESTING ONLY''' copy both files to <code>aports/device/device-medion-kai</code>. When done with testing, a firmware package should be created, see [[Device_specific_package#Proprietary_firmware_or_userland_blobs]].
+* Edit <code>device/linux-medion-kai/APKBUILD</code> to get kernel modules built and installed:
+** Increase <code>pkgrel</code> by one.
+** At the end of the <code>build()</code> section, add this to build the modules:
+    # the 'no-pic' flag is necessary to avoid the
+    # error 'Unknown symbol _GLOBAL_OFFSET_TABLE_ (err 0)' when loading the module
+    make ARCH="$_carch" CC="${CC:-gcc}" CFLAGS_MODULE="-fno-pic" \
+        KBUILD_BUILD_VERSION="$((pkgrel + 1))-postmarketOS" modules
+** At the end of the <code>package()</code> section, add this to install the modules:
+    # Modules
+    cd "$builddir"
+    unset LDFLAGS
+    make ARCH="$_carch" CC="${CC:-gcc}" \
+        KBUILD_BUILD_VERSION="$((pkgrel + 1))-postmarketOS" \
+        INSTALL_MOD_PATH="$pkgdir" INSTALL_MOD_STRIP=1 \
+        modules_install
 
-    find . -iname "*4330*"
-    system/vendor/firmware/bcm4330
-    system/etc/nvram_4330.txt
-    system/etc/firmware/bcm4330.hcd
-    system/bin/bcm4330_bt_fw_loader.sh
+* Edit <code>device/linux-medion-kai/config-medion-kai.armv7</code> and set the path where the wifi firmware is expected to somewhere in <code>/lib/firmware/postmarketos</code>:
+
+    CONFIG_BCMDHD_FXN_FW_PATH="/lib/firmware/postmarketos/bcm4330/fw_bcmdhd.bin"
+    CONFIG_BCMDHD_FXN_NVRAM_PATH="/lib/firmware/postmarketos/bcm4330/nvram_4330.txt"
+
+* Rebuild <code>linux-medion-kai</code> and create an image file:
+
+    pmbootstrap checksum linux-medion-kai && \
+    pmbootstrap kconfig check -f && \
+    pmbootstrap build linux-medion-kai --force && \
+    pmbootstrap install
+
+* Chroot into the image file and check if modules have been built:
+
+    pmbootstrap chroot -r
+    
+    find /lib/modules/
+    
+* In particular there should be <code>/lib/modules/3.1.10/kernel/drivers/net/wireless/bcmdhd_fxn_195_89/bcmdhd.ko</code>. Leave chroot again (with <code>exit</code>).
+
+* In <code>device/device-medion-kai</code>, add a new file <code>modules-load.conf</code> and have the module found in the previous step loaded at boot time:
+
+    # This file contains the names of kernel modules that should be loaded
+    # at boot time, one per line. Lines beginning with "#" are ignored.
+    # wifi module
+    bcmdhd
+
+* Edit <code>device/device-medion-kai/APKBUILD</code>
+** Increase <code>pkgrel</code> by one.
+** Add to source files and declare a new subpackage:
+
+    subpackages="$pkgname-nonfree-firmware:nonfree_firmware"
+    source="deviceinfo
+        fw_bcmdhd.bin
+        nvram_4330.txt"
+
+** At the end of the <code>package()</code> section, add this to put <code>modules-load.conf</code> in the right place on the device:
+
+    install -Dm644 "$srcdir"/modules-load.conf \
+           "$pkgdir"/etc/modules-load.d/00-${pkgname}.conf
+
+** Below the <code>package()</code> section, add a new <code>nonfree_firmware()</code> section that installs the files from the vendor ROM. Again, this is '''FOR TESTING ONLY'''. How a real firmware package is created is described in [[Device_specific_package#Proprietary_firmware_or_userland_blobs]].
+
+    nonfree_firmware() {
+           pkgdesc="Lenovo Medion Lifetab S9714 wifi firmware"
+           mkdir "$subpkgdir"
+           install -D -m644 "$srcdir"/nvram_4330.txt \
+                   "$subpkgdir"/lib/firmware/postmarketos/bcm4330/nvram_4330.txt
+           install -D -m644 "$srcdir"/fw_bcmdhd.bin \
+                   "$subpkgdir"/lib/firmware/postmarketos/bcm4330/fw_bcmdhd.bin
+    }
+    
+* Rebuild <code>device-medion-kai</code> and recreate the image file:
+
+    pmbootstrap checksum device-medion-kai && \
+    pmbootstrap build device-medion-kai --force && \
+    pmbootstrap install
+
+* Flash image to device    
+
+    pmbootstrap flasher flash_rootfs && pmbootstrap flasher flash_kernel    
+
+* ssh into the device via [[USB_Network]] and run lsmod to see if the kernel modules has been loaded correctly:
+
+    $ lsmod
+    Module                  Size  Used by
+    bcmdhd                387306  0
+    cfg80211              157302  1 bcmdhd
+
+*If the module isn't listed, check that it's on the device (<code>find /lib/modules/ -iname "*bcm*ko"</code>) and what happens if you try to insert it manually (<code>modprobe bcmdhd || dmesg | tail -n 20</code>). If modprobe doesn't find the module you can also try <code>insmod /lib/modules/3.1.10/kernel/drivers/net/wireless/bcmdhd_fxn_195_89/bcmdhd.ko || dmesg | tail -n 20</code>.<br/>If dmesg gives <code>Unknown symbol _GLOBAL_OFFSET_TABLE_</code> you may be missing the <code>-fno-pic</code> flag when building the kernel modules.
+
+* Once the module is loaded correctly, continue with the [[WiFi#Debugging|steps on the Wifi page]]:
+** Check if the interface is available
+
+    $ ip link
+    ...
+    7: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+        link/ether 00:11:22:33:44:55 brd ff:ff:ff:ff:ff:ff
+
+** Scan for available wifis:
+
+    nmcli device wifi list ifname wlan0
+
+** Connect to your wifi:
+
+    nmcli device wifi connect "$SSID" password "$PASSWORD" ifname wlan0
 
 
+=== Related links ===
 
-What I tried so far:
-
-* Created subpackage <code>$pkgname-nonfree-firmware:nonfree_firmware</code> for <code>device-medion-kai</code> locally, including <code>fw_bcmdhd.bin, nvram_4330.txt, fw_bcmdhd_apsta.bin, fw_bcmdhd_p2p.bin, mfg.bin</code>, all are copied to <code>/lib/firmware/postmarketos/bcm4330/</code>
-* Adjusted <code>CONFIG_BCMDHD_FXN_FW_PATH</code> and <code>CONFIG_BCMDHD_FXN_NVRAM_PATH</code> accordingly
-* Rebuilt and flashed
-* Configured <code>/etc/network/interfaces</code> according to [[WiFi#Using_wpa_supplicant]]
-
-Result:
-    sudo /etc/init.d/networking restart
-     * Starting networking ...
-     *   lo ...
-    ip: RTNETLINK answers: File exists                                                        [ !! ]
-     *   wlan0 ...
-    ip: ioctl 0x8913 failed: No such device                                                   [ !! ]
-     * ERROR: networking failed to start
-
-Related links:
+PCI id according to system/etc/nvram_4330.txt: <code>14e4:4360</code>
 
 * [[Google_Nexus_7_2012_(asus-grouper)|asus-grouper has similar hardware but the kernel params are named slightly differently: CONFIG_BCMDHD_FW_PATH vs CONFIG_BCMDHD_FXN_FW_PATH]]
 * [https://github.com/armbian/firmware/blob/master/brcm/brcmfmac4330-sdio.txt config file very similar to nvram_4330.txt]
