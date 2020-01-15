@@ -185,7 +185,7 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 
 * ssh into the device via [[USB_Network]] and run lsmod to see if the kernel modules has been loaded correctly:
 
-    $ lsmod
+    lsmod
     Module                  Size  Used by
     bcmdhd                387306  0
     cfg80211              157302  1 bcmdhd
@@ -195,7 +195,7 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 * Once the module is loaded correctly, continue with the [[WiFi#Debugging|steps on the Wifi page]]:
 ** Check if the interface is available
 
-    $ ip link
+    ip link
     ...
     7: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
         link/ether 00:11:22:33:44:55 brd ff:ff:ff:ff:ff:ff
