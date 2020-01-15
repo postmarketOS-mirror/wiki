@@ -48,6 +48,169 @@
 * Version: 3.1.10
 * Status: Compiles, is too big to fit on /boot
 
+=== Grate ===
+
+*Grate is a upstream based tree for tegra devices with the goal of actually upstreaming any changes done. Trying to mainline this device should be relatively doable up to a certain point since the Tegra 3 is well supported on this tree. I'll be basing work on this tablet on the TF300t port since that one is the closest in Hardware.
+* Source: https://github.com/grate-driver/linux (or a fork with TF300t support: https://github.com/okias/linux/tree/tf300t)
+* Version: 5.5.0-rc5
+* Status: Untested, see Hardware Status.
+
+== Hardware status (mainline) ==
+There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Purpose
+! Driver
+! Info
+|-
+| N
+| Booting
+|
+|
+| Kernel must not be bigger than 8MB. Otherwise it won't flash.
+|-
+| N
+| hv101wx1-1e0
+| Display
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/panel/panel-simple.c panel-simple.c]
+| Not implemented in Device Tree. Panel properties have not been added to panel-simple.c yet.
+|-
+| N
+| Elan ktf3k compatible
+| Touchscreen
+| [https://github.com/okias/linux/blob/tf300t/drivers/input/touchscreen/elants_i2c.c elants_i2c]
+| Not implemented in Device Tree. Uses driver patched out of tree.
+|-
+| N
+| USB
+| SSH for example
+|
+| Not implemented in Device Tree
+|-
+| N
+| Hynix
+| eMMC
+|
+| Not implemented in Device Tree
+|-
+| N
+|
+| External SD
+|
+| Not implemented in Device Tree
+|-
+| N
+|
+| Dock SD
+| asusdec
+| Not implemented in Device Tree
+|-
+| N
+| bcm4329
+| WiFi
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/broadcom/brcm80211/brcmfmac brcmfmac]
+| Not implemented in Device Tree. Needs firmware.
+|-
+| N
+| 
+| GPIO keys
+|
+| Not implemented in Device Tree. There is 3 keys on GPIO: Power, Volume up, Volume down.
+|-
+| N
+| 
+| Battery
+|
+| Not implemented in Device Tree.
+|-
+| N
+| tps6591X (tps65912? It's connected over i2c)
+| PMIC
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/mfd/tps65912-i2c.c tps65912-i2c]
+[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/regulator/tps65912-regulator.c tps65912-regulator]
+| Not implemented in Device Tree.
+|-
+| N
+| tps62360
+| Regulator
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/regulator/tps62360-regulator.c tps62360-regulator]
+| Not implemented in Device Tree.
+|-
+| N
+| ricoh583
+| Regulator
+|
+| Not supported.
+|-
+| N
+| bcm4329
+| Bluetooth
+|
+| Not implemented in Device Tree. Needs firmware.
+|-
+| N
+| rt5631
+| Sound
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/sound/soc/codecs/rt5631.c rt5631]
+| Not implemented in Device Tree. Not sure if this should be used or "Codec".
+|-
+| N
+| wm8903
+| Codec
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/sound/soc/codecs/wm8903.c wm8903]
+| Not implemented in Device Tree. Not sure if this should be used or "Sound".
+|-
+| N
+| kxtf9
+| Accelerometer
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/iio/accel/kxcjk-1013.c kxcjk-1013]
+| Not implemented in Device Tree.
+|-
+| N
+| ami306
+| Magnetometer
+|
+| Not Supported.
+|-
+| N
+| nct1008
+| Temperature sensor
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/hwmon/lm90.c lm90]
+| Not implemented in Device Tree
+|-
+| N
+| mpu3050
+| Gyroscope
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/iio/gyro/mpu3050-i2c.c mpu3050-i2c]
+| temperature sensor works
+|-
+| N
+| al3010
+| Light sensor
+| [https://github.com/okias/linux/blob/al3xxx-for-merge/drivers/iio/light/al3010.c al3010]
+| Not implemented in device tree. Using out of tree driver.
+|-
+| N
+| mi1040
+| Front camera
+|
+|Not supported.
+|-
+| N
+| fjm6mo
+| Back camera
+|
+| Not supported.
+|-
+| N
+| ULP GeForce
+| GPU Acceleration
+| [[Nvidia_Tegra_2_(tegra20)#Graphics]]
+| Not implemented in Device Tree.
+|-
+|}
+
 === Useful Links ===
 * [https://wiki.gentoo.org/wiki/Asus_Transformer_Infinity_(TF700T)/Install How to install Gentoo on the TF700t]
 * [https://forum.xda-developers.com/showthread.php?t=2387133 Using Kexec to boot Kernels and .img files]
