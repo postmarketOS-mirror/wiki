@@ -1,0 +1,66 @@
+{{Infobox device
+| manufacturer = PINE64
+| name = Pinebook Pro
+| codename = pine64-pinebookpro
+| image = File:Pine-pinebookpro.jpg
+| imagecaption = The Pinebook Pro running Sway
+| releaseyear = 2019
+| originalsoftware = Linux 4.4.x
+| pmoskernel = 5.5.0-rc3
+| chipset = Rockchip rk3399
+| cpu = 4x 1.5 GHz Cortex-A53 + 2x 2Ghz Cortex-A72
+| gpu = Mali T860 MP4
+| memory = 4 GB
+| architecture = aarch64
+| n-android =  ✔
+| whet_dhry = 
+| status_usbnet = N
+| status_flashing = -
+| status_touch = -
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = N
+| status_mainline = Y
+| status_battery = Y
+| status_3d = Y
+| status_accel = Y
+| status_audio = Y
+| status_bluetooth = Y
+| status_camera = 
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| status_otg = Y
+| status = Boots
+| booting = yes
+}}
+
+=== Contributors ===
+* ''[[user:MartijnBraam|MartijnBraam]]''
+
+=== Users owning this device ===
+{{Device owners}}
+
+== Serial console ==
+The Pinebook Pro has a serial port on the headphone connector, it's enabled by removing the bottom cover of the laptop and setting the UART switch towards the touchpad.
+
+The uart is 1500000n8
+
+The pinout for the serial connector on the laptop side is:
+
+* Tip: RX
+* Ring: TX
+* Sleeve: GND
+
+The serial connection is 3.3V
+
+You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
+
+
+
+The touchscreen on the PineTab is controlled by <code>goodix</code> module on i2c-0, at address 0x5d.
+
+== See also ==
+* {{MR|882|pmaports}} Initial merge request
