@@ -54,7 +54,7 @@
 * Sources: https://github.com/grate-driver/linux (or a fork with TF300t support: https://github.com/okias/linux/tree/tf300t)
 * Source: https://github.com/jja2000/grate-linux-tf700t/tree/tf700t (Jasper work, initial support)
 * Version: 5.5.0-rc5
-* Status: Untested, see Hardware Status.
+* Status: Boots, see Hardware Status.
 
 ==== Hardware status (mainline) ====
 There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
