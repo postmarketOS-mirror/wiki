@@ -5,6 +5,11 @@
 | process = 40
 }}
 
+== Development ==
+This diagram ilustrates how is Tegra developed.
+
+[[File:Tegra.svg]]
+
 == Graphics ==
 === Components [https://github.com/grate-driver/ (source)] ===
 * libdrm
