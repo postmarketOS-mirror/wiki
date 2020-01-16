@@ -1,26 +1,3 @@
-{{note|This has always been a rough draft, and it is about time to make this more professional and applicable towards getting postmarketOS suitable for daily use. We'll rewrite this until end of October. See also: {{issue|8|postmarketos}} }}
-
-Here are rough guidelines about the responsibilities of people added as [https://gitlab.com/groups/postmarketOS/-/group_members members] of the gitlab postmarketOS organization, as well as plans for removing and adding new members.
-
-=== Responsibilities ===
-
-First of all: team members don't have any authority, only responsibilities. They don't get special mentions because they are in the team. We highlight contributors in the blog post, no matter if they are part of the team or not because everybody's contributions and opinions are important. Everybody should be able to challenge the opinions of everyone in this project, so we have to find the best technical arguments to make decisions.
-
-Team members have the responsibility of moderating issues and merge requests (closing obsolete ones, assigning labels, updating outdated messages, ...). Team members can directly write to all non-protected branches of relevant repositories (<code>master</code> in pmbootstrap is protected as a security measure; only MartijnBraam and ollieparanoid can write to it).
-
-Finally, everybody can select team members to review their merge requests. To keep the quality of code in postmarketOS on a good level, we let all code changes and most aport changes get reviewed by another person before merging them. The exception are tiny obvious changes and critical fixes without which some functionality is completely broken (e.g. a missing comma made it impossible to install plasma mobile, or updating the cross compilers to the gcc version from Alpine which we do very often).
-
-Because of that workflow, we have a lot of merge requests, and it is highly important that people properly test and review them, so we can keep up with our fast development speed without sacrificing quality.
-
-=== Adding/Removing members ===
-* If the community benefits from someone having the team member responsibilities, and that person wants to take it, then they should get it. Usually this means the person has contributed some useful code, helped out in the issues or code reviews.
-* If you want to get this responsibility, please [https://gitlab.com/postmarketOS/postmarketos.org/issues/new open an issue in the postmarketos.org repository] and state the reason why.
-* If you think, we would benefit from somebody becoming a team member who has not asked by themselves, just ask them if they would like to ask.
-* People who don't exercise their responsibilities for 2 months (never reviewing MRs, not making MRs that require team membership, not editing issues) get removed from the team members.
-* After showing new contributions, these people could join again.
-* Once a month we (at least ollieparanoid) should go through the list of team members and remove the inactive ones, as well as asking new people to join if it makes sense.
-
-=== See also ===
-* {{issue|66|postmarketos.org}} discussion and history
+Rewrite pending to make this more applicable to bring postmarketOS to a daily driver goal. ''- ollieparanoid''
 
 [[Category:Community]]
