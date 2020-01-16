@@ -64,7 +64,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 ! Driver
 ! Info
 |-
-| N
+| Y
 | Booting
 |
 |
@@ -82,13 +82,13 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | [https://github.com/okias/linux/blob/tf300t/drivers/input/touchscreen/elants_i2c.c elants_i2c]
 | Not implemented in Device Tree. Uses driver patched out of tree.
 |-
-| N
+| Y
 | USB
 | SSH for example
 |
 | Not implemented in Device Tree
 |-
-| N
+| Y
 | Hynix
 | eMMC
 |
