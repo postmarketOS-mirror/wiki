@@ -51,7 +51,8 @@
 === Grate ===
 
 *Grate is a upstream based tree for tegra devices with the goal of actually upstreaming any changes done. Trying to mainline this device should be relatively doable up to a certain point since the Tegra 3 is well supported on this tree. I'll be basing work on this tablet on the TF300t port since that one is the closest in Hardware.
-* Source: https://github.com/grate-driver/linux (or a fork with TF300t support: https://github.com/okias/linux/tree/tf300t)
+* Sources: https://github.com/grate-driver/linux (or a fork with TF300t support: https://github.com/okias/linux/tree/tf300t)
+* Source: https://github.com/jja2000/grate-linux-tf700t/tree/tf700t (Jasper work, initial support)
 * Version: 5.5.0-rc5
 * Status: Untested, see Hardware Status.
 
