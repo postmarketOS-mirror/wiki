@@ -11,6 +11,7 @@ This diagram ilustrates how is Tegra developed.
 [[File:Tegra.svg]]
 
 == Graphics ==
+[[File:Tegra_mesa.svg|right|450px]]
 === Components [https://github.com/grate-driver/ (source)] ===
 * libdrm
 * Mesa-3D (minimal implementation, not complete enough (GL 1.4) to run XWayland (requires GL 2.1 or GLES2)
