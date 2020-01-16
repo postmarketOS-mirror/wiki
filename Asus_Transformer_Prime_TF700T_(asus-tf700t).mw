@@ -27,12 +27,11 @@
 | status_audio = 
 | status_bluetooth =
 | status_camera =
-| status_gps = 
-| status_mobiledata = 
-| status_sms = 
-| status_calls =
-| status = Kernel compiles, not tested
-| booting = yes
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| booting = Y
 }}
 
 == Contributors ==
@@ -81,19 +80,19 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Elan ktf3k compatible
 | Touchscreen
 | [https://github.com/okias/linux/blob/tf300t/drivers/input/touchscreen/elants_i2c.c elants_i2c]
-| Not implemented in Device Tree. Uses driver patched out of tree.
+| Untested. Uses driver patched out of tree.
 |-
 | Y
 | USB
 | SSH for example
 |
-| Not implemented in Device Tree
+| Working
 |-
 | Y
 | Hynix
 | eMMC
 |
-| Not implemented in Device Tree
+| Working
 |-
 | N
 |
@@ -113,11 +112,11 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/broadcom/brcm80211/brcmfmac brcmfmac]
 | Not implemented in Device Tree. Needs firmware.
 |-
-| N
+| Y
 | 
 | GPIO keys
 |
-| Not implemented in Device Tree. There is 3 keys on GPIO: Power, Volume up, Volume down.
+| Working. There is 3 keys on GPIO: Power, Volume up, Volume down.
 |-
 | N
 | 
@@ -160,13 +159,13 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | wm8903
 | Codec
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/sound/soc/codecs/wm8903.c wm8903]
-| Not implemented in Device Tree. Not sure if this should be used or "Sound".
+| Not implemented in Device Tree. Not sure if this should be used or "Sound". Might be for the TF300t
 |-
 | N
 | kxtf9
 | Accelerometer
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/iio/accel/kxcjk-1013.c kxcjk-1013]
-| Not implemented in Device Tree.
+| Working
 |-
 | N
 | ami306
@@ -180,11 +179,17 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/hwmon/lm90.c lm90]
 | Not implemented in Device Tree
 |-
-| N
+| Y
 | mpu3050
 | Gyroscope
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/iio/gyro/mpu3050-i2c.c mpu3050-i2c]
-| temperature sensor works
+| Working
+|-
+| P
+| mpu3050
+| Temp. Sensor
+| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/iio/gyro/mpu3050-i2c.c mpu3050-i2c]
+| Working, but likely inaccurate
 |-
 | N
 | al3010
