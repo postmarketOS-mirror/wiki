@@ -47,7 +47,7 @@
 * Version: 3.1.10
 * Status: Compiles, is too big to fit on /boot
 
-=== Grate ===
+=== Mainline (Grate) ===
 
 *Grate is a upstream based tree for tegra devices with the goal of actually upstreaming any changes done. Trying to mainline this device should be relatively doable up to a certain point since the Tegra 3 is well supported on this tree. I'll be basing work on this tablet on the TF300t port since that one is the closest in Hardware.
 * Baseline kernel sources: https://github.com/grate-driver/linux
