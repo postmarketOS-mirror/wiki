@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = ASUS
 | name = Transformer Pad
-| codename = tf300t
+| codename = asus-tf300t
 | image = File:ASUS Transformer Pad.jpg
 | imagecaption = ASUS Transformer Pad
 | releaseyear = 2012
@@ -38,7 +38,7 @@
 == Contributors ==
 
 * jonty-comp
-* Jasper (working on [[ASUS Transformer Pad Infinity]])
+* Jasper
 * MartijnBraam
 
 == Compiling a kernel ==
