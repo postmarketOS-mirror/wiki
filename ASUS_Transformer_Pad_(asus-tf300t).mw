@@ -41,14 +41,23 @@
 * Jasper (working on [[ASUS Transformer Pad Infinity]])
 * MartijnBraam
 
-== What works ==
+== Compiling a kernel ==
 
-* Mainline kernel should work, if anyone has device, feel free to contact me on Matrix and we can try (nickname okias or Jasper). Kernel [https://github.com/grate-driver/linux/ source]
+=== old CM13 kernel ===
+
 * Compiling CM13 kernel ([https://github.com/LineageOS/android_kernel_asus_tf300t GitHub])
 * Compiling 4.14-rc3 with tf300t specific patches
 * Flashing via Android recovery zip (Boot image included)
 * System boots
 * Most sensors/cameras/devices seem to be detected (e.g. accelerometer values can be read from <code>/sys</code> etc)
+
+=== Mainline (Grate) ===
+
+*Grate is a upstream based tree for tegra devices with the goal of actually upstreaming any changes done. Trying to mainline this device should be relatively doable up to a certain point since the Tegra 3 is well supported on this tree. I'll be basing work on this tablet on the TF300t port since that one is the closest in Hardware.
+* Baseline kernel sources: https://github.com/grate-driver/linux
+* Source:  transformers branch https://github.com/okias/linux/tree/transformers (Michal TF300t work)
+* Version: 5.5.0-rc5
+* Status: Boots.
 
 == What does not work (downstream kernel) ==
 
