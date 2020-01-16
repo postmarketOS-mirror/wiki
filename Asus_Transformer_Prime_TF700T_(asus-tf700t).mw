@@ -32,7 +32,7 @@
 | status_sms = 
 | status_calls =
 | status = Kernel compiles, not tested
-| booting = no
+| booting = yes
 }}
 
 == Contributors ==
