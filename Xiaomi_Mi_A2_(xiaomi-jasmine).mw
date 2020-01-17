@@ -7,7 +7,7 @@
 | releaseyear = 2018
 | originalsoftware = Android 8.1
 | chipset = Qualcomm SDM660 Snapdragon 660
-| cpu = 2.2GHz Kyro 260
+| cpu = 8-core (4x2.2 GHz Kryo 260 & 4x1.8 GHz Kryo 260)
 | gpu = Adreno 512
 | storage = 32GB, 64GB, 128GB
 | display = 1080 x 2160 LTPS IPS LCD
@@ -61,9 +61,6 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-
-== Installation ==
-== How to enter flash mode ==
 === Bootloader Unlocking ===
 Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
 
@@ -77,6 +74,8 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 
 === Flashing (Download, Fastboot) mode ===
 * Same as recovery, but this time hold the volume- and power keys.
+
+== Installation ==
 
 == See also ==
 <!--
