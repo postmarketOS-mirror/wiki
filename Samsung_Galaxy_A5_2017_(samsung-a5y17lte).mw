@@ -13,6 +13,7 @@
 | display = 5.2 inch 16:9, 1920 x 1080 pixel 424 PPI, capacitive, Super AMOLED, Corning Gorilla Glass 5, glossy: yes
 | memory = 3GB
 | architecture = aarch64
+| pmoskernel = 3.18.14
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = N
