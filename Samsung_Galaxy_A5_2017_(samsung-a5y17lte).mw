@@ -42,7 +42,7 @@ if the device haven't originally ran Android OS, e.g. Nokia N900
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
-| whet_dhry = 0.0
+| whet_dhry = 1691.5
 -->
 }}
 
