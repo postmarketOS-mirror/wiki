@@ -63,7 +63,20 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+== How to enter flash mode ==
+=== Bootloader Unlocking ===
+Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
+
+The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and powered on, and linked with Mi Account)
+
+=== Recovery mode ===
+* Turn the device off (or restart also works)
+* Hold volume+ button and power button
+* Once you feel vibration and phone turns on, release power button
+* Keep holding volume+ until you get to recovery.
+
+=== Flashing (Download, Fastboot) mode ===
+* Same as recovery, but this time hold the volume- and power keys.
 
 == See also ==
 <!--
