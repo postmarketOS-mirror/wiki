@@ -51,6 +51,8 @@ VO: [vdpau] 1280x720 vdpau[yuv420p]
 Sound codec used to glue WM8994 and Tegra boards. Used in Samsung P4, P4WiFi, i927.
 
 Source (two latest commits):
+* https://github.com/okias/linux/commits/tegra_wm8994
+Previous source:
 * https://github.com/okias/linux/commits/tegra_wm8994-i927
 * https://github.com/okias/linux/commits/tegra_wm8994-p4wifi
 two implementations, needs to be tested.
