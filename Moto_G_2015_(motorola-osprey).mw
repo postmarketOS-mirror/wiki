@@ -42,7 +42,7 @@
 Power off the device, hold down the power and the volume up key for 1-2 seconds. Some devices you may need to hold down the power and the volume down key instead.
 
 == Pre-Installation Configuration ==
-* Add <code>deviceinfo_flash_sparse="true"</code> the deviceinfo file
+* Add <code>deviceinfo_flash_sparse="true"</code> the [[deviceinfo]][https://wiki.postmarketos.org/wiki/Deviceinfo_reference] file
 * Replace ssh with dropbear
 
 == Installation ==
