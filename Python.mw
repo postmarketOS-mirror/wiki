@@ -1,3 +1,7 @@
 == Why Python? ==
 
 Python is an easy to use programming/scripting language that can be used to quickly prototype mobile applications. It is possible to run and develop python programs on a postmarketOS installation, and both versions 2 and 3+ can be used. It is recommended that first time users install python 3. Due to the fact that postmarketOS uses busybox, it may be necessary to install extra files through apk if you are adding modules using pip. As per Pythons documentation, it is recommended that you install all add-on modules through pip and not through the distros package installer (apk)
+
+== Installing with pmbootstrap ==
+
+When using <code>pmbootstrap init</code> to setup your flash image, you have the option to add packages. add <code>python3</code> in this section and it will be automatically installed in your image. pip comes bundled in this installation
