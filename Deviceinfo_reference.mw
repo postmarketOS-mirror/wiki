@@ -1,4 +1,4 @@
-Most of the variables in <code>deviceinfo</code> have self-explanatory names and are used both when you are building postmarketOS (edit at <code>.local/var/pmbootstrap/cache_git/pmaports/device/your_device_name/deviceinfo</code> before flashing, and during runtime it is available at <code>/etc/deviceinfo</code>).
+Most of the variables in <code>deviceinfo</code> have self-explanatory names and are used both when you are building postmarketOS (edit at <code>.local/var/pmbootstrap/cache_git/pmaports/device/your_device_name/deviceinfo</code> before flashing, and during runtime it is available at <code>/etc/deviceinfo</code>). if edited before flashing, be sure to rebuild the file with <code>pmbootstrap install</code>
 
 All variables start with <code>deviceinfo_</code> in the file - this is omitted here to save space.
 
