@@ -102,6 +102,26 @@ $ pmbootstrap flasher flash_kernel
  This time, don't hold any button, let it reboot to Linux!
 </source>
 
+=== Nonfree-userland (halium) installation ===
+Link to halium system.img: https://androidfilehost.com/?fid=6006931924117913010
+
+You need to download it, un-sparse and place in to root of userdata partition
+
+un-sparse:
+<source lang="shell-session">
+$ simg2img halium-klte-2019-07-09-system.img halium-klte-2019-07-09-system.img.raw
+</source>
+
+boot phone to TWRP recovery and push image:
+<source lang="shell-session">
+$ adb push halium-klte-2019-07-09-system.img.raw /data/system.img
+</source>
+
+Make sure that you have a /data mounted and make symlink to system.img in <code>/var/lib/lxc/android</code>:
+
+<source lang="shell-session">
+$ sudo ln -sf /data/system.img /var/lib/lxc/android/system.img
+</source>
 
 == Additional info ==
 
