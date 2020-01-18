@@ -103,16 +103,17 @@ $ pmbootstrap flasher flash_kernel
 </source>
 
 === Nonfree-userland (halium) installation ===
-Link to halium system.img: https://androidfilehost.com/?fid=6006931924117913010
 
-You need to download it, un-sparse and place in to root of userdata partition
+To make full use of nonfree-userland intallation, which involves running Android in lxc container to make all hardware work (read more at [[Hybris]] wiki page), you need to to '''manually'''  download and install custom device-specific Android/Halium system image. Building it manually takes a lot of time and free space on HDD, so I've prepared prebuilt image: https://androidfilehost.com/?fid=6006931924117913010
 
-un-sparse:
+You need to download it, un-sparse and place in to root of userdata partition:
+
+Un-sparse:
 <source lang="shell-session">
 $ simg2img halium-klte-2019-07-09-system.img halium-klte-2019-07-09-system.img.raw
 </source>
 
-boot phone to TWRP recovery and push image:
+Reboot phone to TWRP recovery and push image using ADB:
 <source lang="shell-session">
 $ adb push halium-klte-2019-07-09-system.img.raw /data/system.img
 </source>
@@ -123,7 +124,7 @@ Make sure that you have a /data mounted and make symlink to system.img in <code>
 $ sudo ln -sf /data/system.img /var/lib/lxc/android/system.img
 </source>
 
-After that lxc-android service should start fine. Before (re)starting lxc-android, remove file <code>/tmp/lxc-android-once</code> if it exists.
+After that lxc-android service should start fine (<code>sudo rc-service lxc-android restart</code>). Before (re)starting lxc-android, remove file <code>/tmp/lxc-android-once</code> if it exists.
 
 == Additional info ==
 
