@@ -7,3 +7,7 @@ Currently, postmarketOS is still in heavy development, so it's not quite usable 
 * It is recommended you install [[CoreApps]][https://wiki.postmarketos.org/wiki/CoreApps] using <code>sudo apk add corefm</code> after getting a working install
 
 == Developers ==
+
+=== TODO ===
+
+* A guide to kernel hacking?
