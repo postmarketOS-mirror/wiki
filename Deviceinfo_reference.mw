@@ -236,7 +236,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 | e.g. <code>boot,recovery</code>
 |-
 | <code>boot_part_start</code>
-| Number of sectors from the start of the drive to place the boot partition. Some devices may have this increased, if their bootloader takes up more space (like the Librem 5). ({{MR|1856}})
+| Number of sectors from the start of the drive to place the boot partition. Some devices may need this increased, if their bootloader takes up more space (like the Librem 5). ({{MR|1856}})
 | default: <code>2048</code>
 |}
 
