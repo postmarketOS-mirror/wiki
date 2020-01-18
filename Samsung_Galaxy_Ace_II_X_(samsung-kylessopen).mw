@@ -68,7 +68,7 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 | works, but as you have no hardware keyboard, you cannot use it so far (chance to get it work on touch only devices too)
 | N
 |-
-|[https://kodi.wiki/view/10-foot_user_interface][[KODI]]
+|[https://kodi.wiki/view/10-foot_user_interface Kodi]
 |fails to boot (rootfs not found)
 | N
 |-
