@@ -34,7 +34,7 @@
 | booting = yes
 }}
 
-'''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII international GSM version without LTE).  (Neither of these SIII models should be confused with the North American SIII models, which require OS builds.)'''
+'''So far, what works for samsung-i9305 (Galaxy SIII LTE version) also works for the samsung-i9300 (Galaxy SIII international GSM version without LTE) and samsung-shv-e210s (a Korean variant). (None of these SIII models should be confused with the North American SIII models, which require OS builds.)'''
 
 == Contributors ==
 * tyxieblub
@@ -165,7 +165,7 @@ Replicant currently supports this device [https://redmine.replicant.us/projects/
 [https://github.com/xboot/xboot/tree/b71fe8174882277897649bfe2177bf3ca300af69/src/arch/arm32/mach-exynos4412 xboot] might be a completely free bootloader option. Looks to have zero proprietary blobs.
 
 
-===Install with mainline kernel (WIP, not functionnal yet) ===
+===Install with mainline kernel (WIP, not functional yet) ===
 
 <syntaxhighlight lang="shell" line='line'>
 #Export image files in ~/.local/var/pmbootstrap/chroot_rootfs_samsung-i9305/boot/
