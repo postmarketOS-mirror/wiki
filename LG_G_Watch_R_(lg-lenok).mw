@@ -56,9 +56,8 @@ Its important to remember to flash the system image to `userdata` as the system 
 
 This is done by using:
 
-<code>pmbootstrap flasher export</code>
-
-<code>fastboot flash userdata /tmp/postmarketOS-export/device-name.img<code>
+* <code>pmbootstrap flasher export</code>
+* <code>fastboot flash userdata /tmp/postmarketOS-export/device-name.img</code>
 
 === Links ===
 * {{github|489}} initial PR
