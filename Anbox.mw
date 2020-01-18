@@ -1,7 +1,7 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
 {{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]].}}
 
-'''[https://anbox.io Anbox]''' runs Android apps on Linux by running a (trimmed down?) version of Android next to Linux in a container.
+'''[https://anbox.io Anbox]''' runs Android apps on Linux by running a (trimmed down?) version of Android next to Linux in a container. Using Anbox with Gapps installed would make it possible for a user to have both needed, sandboxed applications run alongside of native Linux programs. Having this working could be a major assistant in switch people off of Android into an operating that respects user privacy
 
 See issue {{issue|17|pmaports}} for current progress.
 
