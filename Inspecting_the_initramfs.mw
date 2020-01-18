@@ -34,7 +34,7 @@ Extract /boot/initramfs-sony-amami-extra
 24128 blocks
 </source>
 
-Here '$initramfs_extra' is the path of the file .(for lg-bullhead whole command will be 'extract_initramfs_extra ./boot/initramfs-lg-bullhead-extra' with out quotation.
+Here '$initramfs_extra' is a shorthand for the path of the file. An example of a proper command using a device such as the lg-bullhead would be <code>extract_initramfs_extra ./boot/initramfs-lg-bullhead-extra</code>. modify the device name as needed
 
 === Additional programs ===
 After installing the <code>debug-shell</code> initramfs hook, the <code>evtest</code>, <code>fftest</code> and <code>fbdebug</code> programs are available in the initramfs ({{github|1358}}).
