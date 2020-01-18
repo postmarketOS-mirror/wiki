@@ -162,6 +162,8 @@ It happens when your device expects a sparse system image. The workaround is as 
 
 * Set <code>deviceinfo_flash_sparse=true</code> in deviceinfo
 
+To do this, edit the file in ./local/var/pmbootstrap/cache_git/pmaports/device/your_device_name/deviceinfo and add <code> deviceinfo_flash_sparse="true"</code>. When finished, run <code>"pmbootstrap install"</code> to rebuild the file system
+
 For more information, see issue [https://github.com/postmarketOS/pmbootstrap/issues/299 #299]
 
 === Installed version newer than the version in the repositories ===
