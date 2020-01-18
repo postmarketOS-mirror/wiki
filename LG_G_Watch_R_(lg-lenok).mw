@@ -45,7 +45,7 @@
 
 Turn on your watch and swipe from the top left corner (so thatd be where 11 would be on the watch) as soon as you see the LG logo.
 
-== Preperation ==
+=== Preperation ===
 
 * Add <code>deviceinfo_flash_sparse="true"</code> the deviceinfo file
 * Replace sshd with dropbear as seen in the [[USB Network]][https://wiki.postmarketos.org/wiki/USB_Network] page
