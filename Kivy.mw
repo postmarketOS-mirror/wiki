@@ -2,12 +2,10 @@ Kivy is a useful python framework that will allow you to make full multi-touch a
 
 == Dependencies ==
 Use "sudo APK install" for the following dependencies. All of them might not be needed, but this is what it took for me to get running
-* python2
-* python2-dev
-* py2-pip
+* python3
+* python3-dev
 * gcc
 * musl-dev
-* py2-setuptools
 * binutils
 * linux-headers
 * musl-utils
@@ -16,6 +14,7 @@ Use "sudo APK install" for the following dependencies. All of them might not be 
 
 Use "pip install --user" for the following dependencies. All of these are mandatory.
 * cython===0.25.2
+
 There's a version requirement for cython, so make sure you install this version. Could be subject to change in the future
 * kivy
 
