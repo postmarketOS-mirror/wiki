@@ -123,6 +123,8 @@ Make sure that you have a /data mounted and make symlink to system.img in <code>
 $ sudo ln -sf /data/system.img /var/lib/lxc/android/system.img
 </source>
 
+After that lxc-android service should start fine. Before (re)starting lxc-android, remove file <code>/tmp/lxc-android-once</code> if it exists.
+
 == Additional info ==
 
 === Useful helper scripts ===
