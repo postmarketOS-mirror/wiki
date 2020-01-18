@@ -5,3 +5,10 @@ Python is an easy to use programming/scripting language that can be used to quic
 == Installing with pmbootstrap ==
 
 When using <code>pmbootstrap init</code> to setup your flash image, you have the option to add packages. add <code>python3</code> in this section and it will be automatically installed in your image. pip comes bundled in this installation
+
+== Installing modules ==
+
+Below is a list of modules that are likely to be wanted by python users
+
+* [[Kivy]] is a fantastic user interface for developing touch screen apps for a mobile device
+* [[Pocketsphinx]] is a speech to text library developed at Carnegie Mellon University
