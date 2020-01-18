@@ -47,8 +47,8 @@ Turn on your watch and swipe from the top left corner (so thatd be where 11 woul
 
 == Preperation ==
 
-Add <code>deviceinfo_flash_sparse="true"</code> the deviceinfo file
-
+* Add <code>deviceinfo_flash_sparse="true"</code> the deviceinfo file
+* Replace sshd with dropbear as seen in the [[USB Network]][https://wiki.postmarketos.org/wiki/USB_Network] page
 
 === Flashing ===
 
