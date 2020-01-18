@@ -48,6 +48,9 @@
 * Compiling the kernel and booting ([https://gitlab.com/postmarketOS/pmaports/merge_requests/314 !314])
 * Wifi with the proprietary firmware ([https://gitlab.com/postmarketOS/pmaports/merge_requests/309 !309])
 * Display
+* TouchScreen
+* Flashing via android recovery zip
+* Wayland/Weston/Xwayland
 
 == What does not work ==
 * Probably everything else
