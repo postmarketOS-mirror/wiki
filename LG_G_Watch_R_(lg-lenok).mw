@@ -58,6 +58,7 @@ This is done by using:
 
 * <code>pmbootstrap flasher export</code>
 * <code>fastboot flash userdata /tmp/postmarketOS-export/device-name.img</code>
+* <code>fastboot flash boot /tmp/postmarketOS-export/boot.filename</code>
 
 === Links ===
 * {{github|489}} initial PR
