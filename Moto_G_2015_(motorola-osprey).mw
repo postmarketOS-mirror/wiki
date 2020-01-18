@@ -39,7 +39,11 @@
 == Maintainer(s) ==
 
 == How to enter flash mode ==
-Power off the device, hold down the power and the volume up key for 1-2 seconds.
+Power off the device, hold down the power and the volume up key for 1-2 seconds. Some devices you may need to hold down the power and the volume down key instead.
+
+== Pre-Installation Configuration ==
+* Add <code>deviceinfo_flash_sparse="true"</code> the deviceinfo file
+* Replace ssh with dropbear
 
 == Installation ==
 Follow the [https://github.com/postmarketOS/pmbootstrap#usage installation guide]. Make sure to not use the <code>--fde</code> option, because initfs unlocking does not work yet.
