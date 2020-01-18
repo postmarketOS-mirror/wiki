@@ -1,7 +1,7 @@
 == Users ==
 Currently, postmarketOS is still in heavy development, so it's not quite usable for most users. If you're an early adopter, or a tinkerer please checkout the next section below.
 
-For devices that will allow ease of use to play with, it is recommended that you get a [[PinePhone]][https://www.pine64.org/pinephone/] (Mobile) or a [[Raspberry Pi]][https://www.raspberrypi.org/] (single board computer) to use, as their open nature has enabled more stability than other hacked devices
+For devices that will allow ease of use to play with, it is recommended that you get a [https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone) PinePhone] (Mobile) or a [https://wiki.postmarketos.org/wiki/Raspberry_Pi_4 Raspberry Pi 4] (single board computer) to use, as their open nature has enabled more stability than other hacked devices
 
 == Tinkerers ==
 
