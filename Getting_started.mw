@@ -1,5 +1,7 @@
 == Users ==
-Currently, postmarketOS is still in heavy development, so it's not quite usable for most users. If you're an early adopter, or a tinkerer please checkout the next section below
+Currently, postmarketOS is still in heavy development, so it's not quite usable for most users. If you're an early adopter, or a tinkerer please checkout the next section below.
+
+For devices that will allow ease of use to play with, it is recommended that you get a PinePhone (Mobile) or a Raspberry Pi (single board computer) to use, as their open nature has enabled more stability than other hacked devices
 
 == Tinkerers ==
 
