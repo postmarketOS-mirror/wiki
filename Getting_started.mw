@@ -3,4 +3,6 @@ Currently, postmarketOS is still in heavy development, so it's not quite usable 
 
 == Tinkerers ==
 
+* It seems that every display environment (such as XFCE4) is using Lightdm
+
 == Developers ==
