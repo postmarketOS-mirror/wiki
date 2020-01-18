@@ -46,6 +46,14 @@ VO: [vdpau] 1280x720 vdpau[yuv420p]
 </source>
 
 == Participate development ==
+=== Develop ===
+==== Mesa3D Gallium driver ====
+https://gitlab.freedesktop.org/mesa/mesa/merge_requests/3456
+
+* needed steps: improve CI
+* migrate from TGSI to NIR
+* establishing demos that work, where can be seen regression
+
 === Test & Review ===
 ==== sound: tegra_wm8994 ====
 Sound codec used to glue WM8994 and Tegra boards. Used in Samsung P4, P4WiFi, i927.
