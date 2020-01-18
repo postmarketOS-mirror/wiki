@@ -9,6 +9,7 @@ For devices that will allow ease of use to play with, it is recommended that you
 
 * It seems that every display environment (such as XFCE4) is using Lightdm
 * It is recommended you install [[CoreApps]] using <code>sudo apk add corefm</code> after getting a working install
+* You can build and run python programs on device, even using libraries [[Kivy]] or [[Pocketsphinx]] if you want a more complex setup
 
 == postmarketOS Developers ==
 
