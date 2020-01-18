@@ -10,6 +10,7 @@ For devices that will allow ease of use to play with, it is recommended that you
 * It seems that every display environment (such as XFCE4) is using Lightdm
 * It is recommended you install [[CoreApps]] using <code>sudo apk add corefm</code> after getting a working install
 * You can build and run [[Python|python]] programs on device, even using libraries [[Kivy]] or [[Pocketsphinx]] if you want a more complex setup
+* Though currently unported, [[Anbox]] allows a user to install Android applications on their device. We recommend against using closed source proprietary software such as Android applications, but if you need certain apps for your device to be a daily driver (such as Uber) then this may be an approach you want to consider
 
 == postmarketOS Developers ==
 
