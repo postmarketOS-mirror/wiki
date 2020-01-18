@@ -45,6 +45,11 @@
 
 Turn on your watch and swipe from the top left corner (so thatd be where 11 would be on the watch) as soon as you see the LG logo.
 
+== Preperation ==
+
+Add <code>deviceinfo_flash_sparse="true"</code> the deviceinfo file
+
+
 === Flashing ===
 
 Its important to remember to flash the system image to `userdata` as the system partition on the G Watch R is not big enough for pmOS. It will boot straight into pmOS once the kernel is flashed and the system is on userdata.
