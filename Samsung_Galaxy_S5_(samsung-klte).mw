@@ -227,7 +227,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | Bluetooth ||  || Not working || || unknown
 |-
-| GPU ||  || Not working || || with libhybris
+| GPU ||  || Not working || || worked with libhybris, currently broken
 |-
 | Audio ||  || Not working || || with libhybris
 |-
