@@ -1,0 +1,1 @@
+OpenRC is a dependency-based init system that maintains compatibility with the system provided init program, normally located in /sbin/init. It does not function as a replacement for the /sbin/init file. It is the default system in postmarketOS, and full documentation can be found on the [https://wiki.gentoo.org/wiki/OpenRC Gentoo wiki]
