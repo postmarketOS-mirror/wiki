@@ -13,7 +13,7 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 | storage = 4GB
 | display = 480x800 WVGA
 | memory = 768MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
