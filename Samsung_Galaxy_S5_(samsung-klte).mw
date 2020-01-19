@@ -119,7 +119,7 @@ Reboot phone to TWRP recovery and push image using ADB:
 $ adb push halium-klte-2019-07-09-system.img.raw /data/system.img
 </source>
 
-Make sure that you have a /data mounted and make symlink to system.img in <code>/var/lib/lxc/android</code>:
+Boot to a running postmarketOS system and login with SSH. Next command is executed on the phone. Make sure that you have a /data mounted (check <code>mount</code>) and make symlink to system.img in <code>/var/lib/lxc/android</code>:
 
 <source lang="shell-session">
 $ sudo ln -sf /data/system.img /var/lib/lxc/android/system.img
