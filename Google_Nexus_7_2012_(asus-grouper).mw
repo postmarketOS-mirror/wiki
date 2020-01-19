@@ -261,7 +261,7 @@ alsamixer -c 0 # and enable something like:
 
 * {{issue|201|pmaports}}: With legacy kernel, device seems to reboot spontaneously under heavy load. For better experience, please use mainline kernel.
 * {{issue|1422|pmbootstrap}}: The <code>system</code> partition is too small to hold rootfs images over 650Mb (e.g. Plasma Mobile is about 1.1Gb). Flashing to <code>userdata</code> partition fails.
-* {{issue|1844|pmbootstrap}}: grouper: move to upstream kernel (grate fork, with few patches a top of mainline)
+* [https://gitlab.com/alpine-mobile/pmaports/tree/master/device Merge stuff from Alpine-Mobile (tegra-stuff) back to postmarketOS.]
 
 === See also ===
 
