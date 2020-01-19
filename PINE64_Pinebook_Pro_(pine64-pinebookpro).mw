@@ -59,8 +59,5 @@ The serial connection is 3.3V
 You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
 
 
-
-The touchscreen on the PineTab is controlled by <code>goodix</code> module on i2c-0, at address 0x5d.
-
 == See also ==
 * {{MR|882|pmaports}} Initial merge request
