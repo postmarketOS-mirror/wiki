@@ -1,3 +1,5 @@
 == Direct Rendering Management ==
 
 The Direct Rendering Manager (DRM) is a subsystem of the Linux kernel responsible for interfacing with GPUs of modern video cards. See the [https://en.wikipedia.org/wiki/Direct_Rendering_Manager Wikipedia page] for more information
+
+[[Category:Technical Reference]]
