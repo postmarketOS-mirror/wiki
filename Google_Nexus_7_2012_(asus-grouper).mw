@@ -231,6 +231,7 @@ alsamixer -c 0 # and enable something like:
 == UI options ==
 * Weston: Boots on legacy kernel. Touchscreen is working on legacy kernel. The reboot issue exists on legacy kernel. Maybe it is an issue with the kernel we are using?
 * Phosh (mainline only): Purism Librem 5 compositor and GNOME based environment, needs performance optimization, but works.
+* Xfce4 (mainline only): Xfce4 is a GTK-based desktop environment aiming to be fast and lightweight. Needs performance optimization, but works. Follow the guide at https://wiki.postmarketos.org/wiki/XFCE4 for adjustments.
 
 == Development Notes ==
 
