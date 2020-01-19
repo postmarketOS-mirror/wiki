@@ -17,6 +17,7 @@ Understanding the differences between postmarketOS and a standard Linux distribu
 
 == postmarketOS Developers/Kernel Hackers ==
 
+* [[Porting_to_a_new_device|Porting to a new device]]
 * [[Dump_proprietary_flashing_procedures|Dumping your device]]
 * Getting started with [https://postmarketos.org/blog/2018/04/14/lowlevel/ low level]
 * Information for [[Qualcomm]] based devices
