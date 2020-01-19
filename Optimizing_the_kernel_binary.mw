@@ -8,3 +8,5 @@ A compiler can be told to create binaries specifically for one CPU or family of 
 * [https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html GCC documentation: Optimize options]
 * [https://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html#ARM-Options GCC documentation: ARM options]
 * [https://gcc.gnu.org/onlinedocs/gcc/AArch64-Options.html#AArch64-Options GCC documentation: aarch64 options]
+
+[[Category:Technical Reference]]
