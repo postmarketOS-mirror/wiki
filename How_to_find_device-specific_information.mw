@@ -100,29 +100,7 @@ In the case where you have located the kernel source for your device but there i
 
 == Firmware files ==
 
-If your device has an official LineageOS port, you can find the proprietary files, which often also include the firmware, at [http://github.com/TheMuppets TheMuppets]. Do note, that if you're using the "Find file" (shortcut: T), that it might not find all files as those repositories are generally quite big and not completely indexed by GitHub.
-
-In the case that your device has an unofficial LineageOS port, you can often find a repository in the same naming scheme (proprietary_vendor_MANUFACTURER) at the same location as the kernel source and device tree.
-
-=== Find ===
-
-If you can't find the firmware for your device in an existing repo, you will have to grab them from your device or an OTA image.
-
-In some cases it's a partition that's mounted at <code>/firmware</code> (e.g. labelled <code>modem</code>), in other cases <code>/firmware</code> will have multiple partitions mounted into subdirectories (e.g. labelled <code>radio</code>, <code>adsp</code> & <code>wcnss</code>). Consult the fstab of your installation for different mount points.
-
-In other cases, the firmware will just be in the normal filesystem, e.g. at <code>/vendor/firmware/</code>, <code>/etc/firmware</code> or other locations. You can use the <code>find</code> command to search for e.g. <code>*.mbn</code>
-
-There's also the possibility of extracting the firmware from a file called <code>NON-HLOS.bin</code> which is sometimes delivered with OTA updates. These images are FAT32 images which can be mounted with <code>sudo mount -o ro NON-HLOS.bin mountpoint</code>.
-
-=== Extract ===
-
-The firmware of interest for us is <code>adsp.*</code>, <code>mba.*</code>, <code>modem.*</code> and <code>wcnss.*</code>. Note that not all of those firmware files exist on all devices.
-
-The next step is to import those files into a git repository and pushing it to a publicly accessible location.
-
-=== Package ===
-
-The procedure on how to package firmware and how to add a nonfree-firmware subpackage to the device package is [[Device_specific_package#Proprietary_firmware_or_userland_blobs|documented here]].
+See [[Firmware]].
 
 == Device tree source (dts) ==
 
