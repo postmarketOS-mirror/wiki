@@ -231,46 +231,39 @@ alsamixer -c 0 # and enable something like:
 == UI options ==
 * Phosh (mainline only): Purism Librem 5 compositor and GNOME based environment, needs performance optimization, but works.
 * Xfce4 (mainline only): Xfce4 is a GTK-based desktop environment aiming to be fast and lightweight. Needs performance optimization, but works. Follow the guide at https://wiki.postmarketos.org/wiki/XFCE4 for adjustments.
-* Weston (on legacy): Boots on legacy kernel. Touchscreen is working.
+* <span style="color:#777777">Weston (on legacy): Boots on legacy kernel. Touchscreen is working.</span>
 
 == Development Notes ==
 
 ==== Kernel ====
 
 * Up-to-date [https://github.com/grate-driver/linux kernel], where tegra development ongoing.
-* Old Android kernels: [https://github.com/LineageOS/android_kernel_asus_grouper LineageOS kernel sources] [https://github.com/Unlegacy-Android Unlegacy kernel sources]
-* [https://wiki.ubuntu.com/Nexus7/Kernel Ubuntu Nexus 7 Kernel wiki] (old, last updated 2012)
-
-* The default images for android provided by google have the bootloader broken, meaning it can't be flashed. It does not seem to affect the install process of PostMarketOS, but is something to take into account. If you need a working bootloader image version 4.23 can be found [[https://drive.google.com/file/d/1eVEQJtrByuAYRmS924-BAMGQcRXuBj7C/view?usp=sharing| here]]
+* <span style="color:#777777">Old Android kernels: [https://github.com/LineageOS/android_kernel_asus_grouper LineageOS kernel sources] [https://github.com/Unlegacy-Android Unlegacy kernel sources]</span>
+* <span style="color:#777777">[https://wiki.ubuntu.com/Nexus7/Kernel Ubuntu Nexus 7 Kernel wiki] (old, last updated 2012)</span>
+* <span style="color:#777777">The default images for android provided by google have the bootloader broken, meaning it can't be flashed. It does not seem to affect the install process of PostMarketOS, but is something to take into account. If you need a working bootloader image version 4.23 can be found [[https://drive.google.com/file/d/1eVEQJtrByuAYRmS924-BAMGQcRXuBj7C/view?usp=sharing| here]]</span>
 
 ==== Graphics ====
 
-* (legacy) CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.
-* (legacy) <s>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</s> '''Update:''' Seems to be correctly set now
-* (legacy) weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.
 * The touchscreen input device is named <code>elan-touchscreen</code>.
+* <span style="color:#777777">(legacy) CONFIG_VT had to be enabled for graphics to work. In menuconfig this is located under Device Drivers -&gt; Character devices -&gt; Virtual terminal.</span>
+* <span style="color:#777777">(legacy) <s>/sys/class/graphics/fb0/mode is empty on boot, it must have U:800x1280p-0. This uses the same initfs hook as many other devices.</s> '''Update:''' Seems to be correctly set now</span>
+* <span style="color:#777777">(legacy) weston with fbdev-backend.so uses pixman-type=3 (PIXMAN_TYPE_ABGR), which now does not require configuration.</span>
 
 ==== Wifi ====
 
 * There's a proper firmware subpackage now, wifi device should work out-of-the box. 
 * "Desktop" Linux firmware are outdated. Check [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware/bcm4330/ here] for latest one.
-* (legacy)It is possible to manually get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, running <code>/etc/init.d/networking restart</code>, gave an error about being unable to get a MAC address. After restarting the device to find that wifi Just Worked™, it was possible to successfully scan for wireless networks and establish a connection to secured wireless APs.
 * To connect follow the instructions on [[WiFi#Using_NetworkManager|this page.]]
+* <span style="color:#777777">(legacy)It is possible to manually get wifi working by manually copying fw_bcmdhd.bin and nvram.txt to their kernel-specified locations and configuring <code>/etc/network/interfaces</code>. At this point, running <code>/etc/init.d/networking restart</code>, gave an error about being unable to get a MAC address. After restarting the device to find that wifi Just Worked™, it was possible to successfully scan for wireless networks and establish a connection to secured wireless APs.</span>
 
 === Pending Issues ===
 
-* {{issue|201|pmaports}}: With legacy kernel, device seems to reboot spontaneously under heavy load. For better experience, please use mainline kernel.
+* {{issue|60|pmbootstrap}}: Use the system and userdata partition on Android with LVM
 * {{issue|1422|pmbootstrap}}: The <code>system</code> partition is too small to hold rootfs images over 650Mb (e.g. Plasma Mobile is about 1.1Gb). Flashing to <code>userdata</code> partition fails.
 * [https://gitlab.com/alpine-mobile/pmaports/tree/master/device Merge stuff from Alpine-Mobile (tegra-stuff) back to postmarketOS.]
+* <span style="color:#777777">{{issue|201|pmaports}}: With legacy kernel, device seems to reboot spontaneously under heavy load. For better experience, please use mainline kernel.</span>
 
-=== See also ===
-
-These are other pending issues that are related to this device:
-
-* {{issue|60|pmbootstrap}}: Use the system and userdata partition on Android with LVM
 
 === Fun Fact ===
 
-''<code>grouper</code> was the first tablet to run pmOS!''
-
-''<code>tilapia</code> has exactly same HW as <code>grouper</code>''
+''<code>grouper</code> was the first tablet to run postmarketOS!''
