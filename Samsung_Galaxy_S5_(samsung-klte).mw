@@ -112,6 +112,7 @@ Un-sparse:
 <source lang="shell-session">
 $ simg2img halium-klte-2019-07-09-system.img halium-klte-2019-07-09-system.img.raw
 </source>
+If it says "invalid sparse format or header magic" it means that the image is already unsparsed. Proceed to next step
 
 Reboot phone to TWRP recovery and push image using ADB:
 <source lang="shell-session">
