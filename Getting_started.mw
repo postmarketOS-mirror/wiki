@@ -4,7 +4,7 @@ postmarketOS is based on [https://wiki.alpinelinux.org/wiki/Main_Page Alpine lin
 
 Currently, postmarketOS is still in heavy development, so it's not quite usable for most users. If you're an early adopter looking for a more stable device to get familiar with postmarketOS, it is recommended that you get a [https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone) PinePhone] (Mobile) or a [https://wiki.postmarketos.org/wiki/Raspberry_Pi_4 Raspberry Pi 4] (single board computer) to use, as their open nature has enabled more stability than other hacked devices. 
 
-* Check out [[[postmarketOS_compared_to_other_distributions| postmarketOS compared to other distributions ]]
+* Check out [[postmarketOS_compared_to_other_distributions| postmarketOS compared to other distributions]]
 * Understanding [https://wiki.alpinelinux.org/wiki/Main_Page Alpine linux], the upstream distribution (redirects to Alpine linux wiki) 
 * search installable [http://pkgs.postmarketos.org/packages packages]
 
