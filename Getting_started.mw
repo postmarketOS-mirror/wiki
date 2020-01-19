@@ -16,7 +16,7 @@ Understanding the differences between postmarketOS and a standard Linux distribu
 * [[UI_frameworks | UI frameworks]]
 
 == postmarketOS Developers/Kernel Hackers ==
-
+* Understanding the [[Boot_process|boot process]]
 * [[Porting_to_a_new_device|Porting to a new device]]
 * [[Dump_proprietary_flashing_procedures|Dumping your device]]
 * Getting started with [https://postmarketos.org/blog/2018/04/14/lowlevel/ low level]
