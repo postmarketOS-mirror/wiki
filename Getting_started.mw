@@ -1,8 +1,10 @@
-postmarketOS is based on [[Alpine_Linux|Alpine linux]] so some questions that may seem unanswered here on our wiki can actually be supplemented by the Alpine wiki.
+postmarketOS is based on [[Alpine_Linux|Alpine linux]] so some questions that may seem unanswered here on our wiki can be supplemented by the Alpine wiki. Currently, postmarketOS is still in heavy development so it is not suitable for daily use, nor for non-technical (or at least willing to learn) users. 
 
 == Users/Newbies ==
 
 Currently, postmarketOS is still in heavy development, so it's not quite usable for most users. If you're an early adopter looking for a more stable device to get familiar with postmarketOS, it is recommended that you get a [https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone) PinePhone] (Mobile) or a [https://wiki.postmarketos.org/wiki/Raspberry_Pi_4 Raspberry Pi 4] (single board computer) to use, as their open nature has enabled more stability than other hacked devices
+
+* search installable [http://pkgs.postmarketos.org/packages packages] 
 
 == Tinkerers/Hackers ==
 
@@ -10,6 +12,7 @@ Currently, postmarketOS is still in heavy development, so it's not quite usable 
 * It is recommended you install [[CoreApps]] using <code>sudo apk add corefm</code> after getting a working install
 * You can build and run [[Python|python]] programs on device, even using libraries [[Kivy]] or [[Pocketsphinx]] if you want a more complex setup
 * Though currently unported, [[Anbox]] allows a user to install Android applications on their device. We recommend against using closed source proprietary software such as Android applications, but if you need certain apps for your device to be a daily driver (such as Uber) then this may be an approach you want to consider
+* [[UI_frameworks | UI frameworks]]
 
 == postmarketOS Developers/Kernel Hackers ==
 
