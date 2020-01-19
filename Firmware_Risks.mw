@@ -1,0 +1,54 @@
+There are closed source components (like firmware and bootloaders) in every phone, and [https://ollieparanoid.github.io/post/security-warning/ they are dangerous]. It seems next to impossible to replace them with open source components, and it won't be feasible any time soon for postmarketOS. Yet, this is an interesting topic, so this page provides links for deeper insight into the topic. For packaging instructions, see [[Device_specific_package#Proprietary_firmware_or_userland_blobs]]
+
+== What can we do? ==
+* '''Binary patch security holes in firmware''' (e.g. with [https://github.com/seemoo-lab/nexmon nexmon]). This seems to be the best approach we have since there won't be open firmware for all these components any time soon.
+* Document whether firmware is partially based on open source code and try to reverse engineer the proprietary bits, like @McBitter does for his [[Mediatek]] device!
+* Document which firmware components exist in your devices
+* Document which of these have known security issues
+* Learn more about the circumstances, in which the security bugs can be exploited. Example: Possibly an exploit in the wifi module can only be exploited, after we loaded the wifi firmware.
+* Use alternative components, that are plugged in via USB, and therefore do not have access to the device's memory
+* Connect to people who know more about this topic to get more help
+* Consider bricking insecure components through firmware security holes on purpose, just to make sure that they aren't a risk anymore.
+
+== Components ==
+
+=== Bootloaders ===
+* [https://github.com/ucsb-seclab/BootStomp BootStomp] "a bootloader vulnerability finder" (also check the references at the bottom of README.md!)
+** [https://www.youtube.com/watch?v=ThXQ4oTowUQ 34c3 talk]
+
+==== hboot (HTC) ====
+
+* [http://archive.hack.lu/2013/hacklu2013_hbootdbg.pdf hbootdbg] ''pdf presentation slides''
+* [https://github.com/unrevoked/hboot-tools hboot-tools]
+* [https://github.com/andreiw/nexus9_demo Nexus 9: Low level boot process analysis and demo] ''nvtboot -&gt; tos -&gt; hboot -&gt; demo code''
+
+==== sboot (Samsung) ====
+* [https://hexdetective.blogspot.lt/2017/02/exploiting-android-s-boot-getting.html Arbitrary Code Exec in the Samsung Bootloader]
+* [https://www.youtube.com/watch?v=OY7OlY0OW2Q 34c3 - eMMc hacking, or: how I fixed long-dead Galaxy S3]
+
+=== Cellular modems ===
+
+* [https://osmocom.org/projects/quectel-modems/wiki Qualcomm based cellular data modems with Linux]
+
+=== Wi-Fi modems ===
+* [https://www.blackhat.com/us-17/briefings.html#broadpwn-remotely-compromising-android-and-ios-via-a-bug-in-broadcoms-wi-fi-chipsets Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets] <small>(note: [http://boosterok.com/blog/broadpwn/ doesn't affect] necessarily older firmware/chips versions)</small>
+* [https://github.com/seemoo-lab/nexmon nexmon]: "Firmware Patching Framework for Broadcom/Cypress WiFi Chips that enables Monitor Mode, Frame Injection and much more"
+* Please be careful "mainline" linux-firmware brcm blobs are [https://bugzilla.kernel.org/show_bug.cgi?id=196541 severely outdated]. Make sure to check [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/master/bcmdhd/firmware Google's tree] if handling such hardware.
+
+== Security risks ==
+
+* [https://researchcenter.paloaltonetworks.com/2014/12/coolreaper-revealed-backdoor-coolpad-android-devices/ Coolreaper] ([https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/research/cool-reaper PDF report]), discovered in 2014, is a backdoor software that Coolpad (sixth larger manufacturer of smartphones in the world) operated and installed in their stock Android ROMs.
+
+CoolReaper can perform the following tasks:
+
+* Download, install, or activate any Android application without user consent or notification
+* Clear user data, uninstall existing applications, or disable system applications
+* Notify users of a fake over-the-air (OTA) update that doesn’t update the device, but installs unwanted applications
+* Send or insert arbitrary SMS or MMS messages into the phone.
+* Dial arbitrary phone numbers
+* Upload information about device, its location, application usage, calling and SMS history to a Coolpad server
+
+== See also ==
+* [https://github.com/ReFirmLabs/binwalk binwalk (firmware analysis tool)]
+
+[[Category:Technical Reference]]
