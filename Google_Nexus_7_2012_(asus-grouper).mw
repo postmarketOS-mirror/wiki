@@ -259,9 +259,9 @@ alsamixer -c 0 # and enable something like:
 
 === Pending Issues ===
 
-* {{issue|201|pmaports}}: device seems to reboot spontaneously under heavy load (could be a hardware problem though, needs more testing).  UPDATE:22/12/19 - Seems to noly happen with "legacy" kernel.
+* {{issue|201|pmaports}}: With legacy kernel, device seems to reboot spontaneously under heavy load. For better experience, please use mainline kernel.
 * {{issue|1422|pmbootstrap}}: The <code>system</code> partition is too small to hold rootfs images over 650Mb (e.g. Plasma Mobile is about 1.1Gb). Flashing to <code>userdata</code> partition fails.
-* {{issue|1844|pmbootstrap}}: grouper: move to grate (upstream close) kernel
+* {{issue|1844|pmbootstrap}}: grouper: move to upstream kernel (grate fork, with few patches a top of mainline)
 
 === See also ===
 
