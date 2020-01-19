@@ -21,3 +21,5 @@ There's a version requirement for cython, so make sure you install this version.
 You will need to install PyGame as well
 * download and compile from source for libjpg
 Their other dependencies are sdl and can be found as APK packages
+
+[[Category:Technical Reference]]
