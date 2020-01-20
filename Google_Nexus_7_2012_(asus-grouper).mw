@@ -127,25 +127,26 @@ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
 ==== rootfs over 650MB to USERDATA ====
-Be '''very careful''' here and feel free to ask on Matrix channel before accidentally bricking your device with selecting bad partition! THIS MAY SHRINK YOUR DATA PARTITION IF YOU INSTALL ANDROID AGAIN! YOU MAY HAVE TO RESIZE IN TWRP!
+''NOTE: If you plan flash Android, this may change size of your data partition. You can fix it by resizing partition in TWRP before flashing Android.''
 
-Prerequisites: Official TWRP, at least version 3.3.1-0 for
-* [https://dl.twrp.me/grouper/ grouper]
-* [https://dl.twrp.me/tilapia/ tilapia]
+'''You should proceed very carefully here.'''
 
-if you haven't done export yet, do
+Prerequisites: Official TWRP, at least version 3.3.1-0, binaries are here for [https://dl.twrp.me/grouper/ grouper] or [https://dl.twrp.me/tilapia/ tilapia].
+
+unsure you already run
 <syntaxhighlight lang="shell" line='line'>
 pmbootstrap export
 </syntaxhighlight>
-
+and then proceed with
 <syntaxhighlight lang="shell" line='line'>
 # start TWRP
 (computer) $ adb shell
-(twrp) $ df #look for the data partition. should be something like /dev/block/mmcblk0p10 with /data next to it
-(computer again) $ adb push /tmp/postmarketOS-export/asus-grouper.img /dev/block/''_REPLACE_WITH_CORRECT_PARTITION_''
+(twrp) $ df # look for the data partition. should be something like /dev/block/mmcblk0p9 or p10 with /data next to it
+(computer again) $ adb push /tmp/postmarketOS-export/asus-grouper.img /dev/block/mmcblk0p__ <- fill partition number
 </syntaxhighlight>
-* grouper has most likely data on ''mmcblk0p9'' '''but VERIFY!'''
-* tilapia has most likely data on ''mmcblk0p10'' '''but VERIFY!'''
+* grouper has likely data on /dev/block/mmcblk0<span style="color: #00aa00">p9</span> '''but make sure!'''
+* tilapia has likely data on /dev/block/mmcblk0<span style="color: #00aa00">p10</span> '''but make sure!'''
+it's probably because tilapia has additional modem partition. If you're not sure, come to our Matrix channel and ask :)
 
 == Hardware status (mainline) ==
 There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
