@@ -34,7 +34,9 @@ Hildon is based on GTK2 and there is a work in progress port to GTK3.
 For more information, see PR [https://github.com/postmarketOS/pmbootstrap/pull/461 #461].
 
 === Phosh ===
-'''[[Phosh]]''', the '''pho'''ne '''sh'''ell, is a graphical interface for mobile phones created by Purism for the Librem5. It is one of the most polished mobile interface interface and works best with GNOME 3 applications. Phosh, like Sway, require [[DRM]] and simply won't work if it is not supported by the kernel.
+'''[[Phosh]]''', the '''pho'''ne '''sh'''ell, is a user interface by Purism originally designed for their [https://puri.sm/products/librem-5/ Librem 5] mobile phone. It uses Phoc as a wayland compositor and is one of the most polished mobile interfaces.
+
+It's optimal to run GTK applications (many of them are modified to [https://bytesgnomeschozo.blogspot.com/2019/06/libhandy-0010.html scale on small screens]). For running Phosh you'll need recent kernel with properly working [[DRM]] drivers (downstream kernels will likely don't work).
 
 === MATE ===
 '''[[MATE]]''' is a full GTK-based desktop environment forked from the code base of GNOME 2.
