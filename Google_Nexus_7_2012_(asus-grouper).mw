@@ -51,6 +51,7 @@
 * <code>fastboot</code> should work when the green android appears on the screen
 
 === Installation process (legacy kernel) ===
+'''WARNING:''' Legacy kernel has reboot issues. If not sure, '''please use mainline kernel''' [[Google_Nexus_7_2012_(asus-grouper)#Instalation_process_.28mainline_kernel.29]]!
 <syntaxhighlight lang="shell" line='line'>
 $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 $ cd pmbootstrap
