@@ -69,6 +69,7 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 * {{issue|CHANGEME|pmaports}} Some related issue
 -->
 * [https://gitlab.com/archeYR/pmaports Mi 6 port]
+* [https://gitlab.com/Hacker1245/pmaports/tree/device/xiaomi-sagit Old Mi 6 port]
 * [https://github.com/LineageOS/android_kernel_xiaomi_msm8998 Kernel sources]
 
 <!--
