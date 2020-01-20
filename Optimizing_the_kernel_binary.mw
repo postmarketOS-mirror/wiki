@@ -1,12 +1,1 @@
-A compiler can be told to create binaries specifically for one CPU or family of CPUs, often resulting in a (minor, albeit always welcome) performance boost. On weaker systems, every additional bit of performance might be significant to the user.
-
-==== Reference ====
-
-* [https://wiki.gentoo.org/wiki/GCC_optimization Gentoo GCC Optimization guide]
-* [https://github.com/LineageOS/android_build_soong/blob/a7c950462cb94a88be5826848e896078193adc4a/cc/config/arm_device.go Android buildsystem file hinting which CFLAGS to use for arm targets]
-* [https://github.com/LineageOS/android_build_soong/blob/a7c950462cb94a88be5826848e896078193adc4a/cc/config/arm64_device.go Android buildsystem file hinting which CFLAGS to use for aarch64 targets]
-* [https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html GCC documentation: Optimize options]
-* [https://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html#ARM-Options GCC documentation: ARM options]
-* [https://gcc.gnu.org/onlinedocs/gcc/AArch64-Options.html#AArch64-Options GCC documentation: aarch64 options]
-
-[[Category:Technical Reference]]
+#REDIRECT [[Optimizing built binaries]]
