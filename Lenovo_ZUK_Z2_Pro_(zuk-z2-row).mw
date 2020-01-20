@@ -2,8 +2,8 @@
 | manufacturer = Lenovo
 | name = ZUK Z2 Pro
 | codename = zuk-z2-row
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:Zuk-z2-row-weston.jpg
+| imagecaption = ZUK Z2 Pro
 | releaseyear = 2016
 | originalsoftware = Android 6 (marshmallow)
 | chipset = Qualcomm MSM8996 Snapdragon 820
@@ -19,7 +19,7 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
-| status_xwayland = 
+| status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
@@ -32,6 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
+| status_otg = Y
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes
 | pmoskernel = 4.4.183
@@ -52,8 +53,17 @@
 
 == How to enter flash mode ==
 
+* Apply for bootloader unlocking file at ZUI official website (Chinese): https://www.zui.com/iunlock
+* Following official guides to unlock the bootloader
+* After unlocking, you get a menu to select boot mode every time the phone powers on. Choose bootloader to enter fastboot mode.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+
+== Notes ==
+
+* For unknown reason, system booting takes longer than two minutes if WLAN driver is loaded at boot.
+* I noticed system crash (auto reboot) after Unixbench had been running for a while.
 
 == See also ==
 <!--
