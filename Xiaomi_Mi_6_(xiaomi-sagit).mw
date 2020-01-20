@@ -15,7 +15,7 @@
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
 | status_usbnet =
-| status_flashing =
+| status_flashing = Y
 | status_touch =
 | status_screen =
 | status_wifi =
@@ -32,7 +32,7 @@
 | status_mobiledata =
 | status_sms =
 | status_calls =
-| status = kernel doesn't compile
+| status = kernel compiles, boots only when the virtual terminal is disabled
 | booting = no
 
 <!-- you can also use these lines if you need to:
@@ -45,11 +45,12 @@ Is OTG available, not used in wiki
 -->
 }}
 
-The Mi 6 (xiaomi-sagit) port exists, but it is not complete yet and kernel does not compile. The branch with latest fixes can be found [https://gitlab.com/Hacker1245/pmaports/tree/device/xiaomi-sagit here]
+Kernel boots only if virtual terminal is disabled, which makes debugging harder.
 
 == Contributors ==
 * Hacker420
-* mayeulc
+* MayeulC
+* Illen
 
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
@@ -60,14 +61,14 @@ The Mi 6 (xiaomi-sagit) port exists, but it is not complete yet and kernel does 
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-
+Use pmbootstrap flasher.
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 -->
-* [https://gitlab.com/Hacker1245/pmaports/tree/device/xiaomi-sagit The branch of Mi 6 port]
+* [https://gitlab.com/archeYR/pmaports Mi 6 port]
 * [https://github.com/LineageOS/android_kernel_xiaomi_msm8998 Kernel sources]
 
 <!--
