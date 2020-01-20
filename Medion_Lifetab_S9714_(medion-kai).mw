@@ -154,6 +154,7 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 
     subpackages="$pkgname-nonfree-firmware:nonfree_firmware"
     source="deviceinfo
+        modules-load.conf
         fw_bcmdhd.bin
         nvram_4330.txt"
 
