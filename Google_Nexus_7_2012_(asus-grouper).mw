@@ -142,6 +142,8 @@ and then proceed with
 # start TWRP
 (computer) $ adb shell
 (twrp) $ df # look for the data partition. should be something like /dev/block/mmcblk0p9 or p10 with /data next to it
+(twrp) $ umount /dev/block/mmcblk0p__ <- fill partition number
+(twrp) $ umount /dev/block/mmcblk0p__ <- fill partition number # again, it can be mounted as /sdcard and as /data
 (computer again) $ adb push /tmp/postmarketOS-export/asus-grouper.img /dev/block/mmcblk0p__ <- fill partition number
 </syntaxhighlight>
 * grouper has likely data on /dev/block/mmcblk0<span style="color: #00aa00">p9</span> '''but make sure!'''
