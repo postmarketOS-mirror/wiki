@@ -48,5 +48,34 @@ alsaucm does not track which devices are already enabled, therefore it is possib
 
 {{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
 
+== Modem ==
+To use the modem, select the <code>mainline-modem</code> kernel instead of <code>mainline</code>, and make sure to agree to the usage of non-free firmware (required for the modem).
+
+Note that this changes the way audio is routed on the device:
+* Without modem, audio is routed directly to the audio hardware, and works without the need for non-free firmware.
+* With modem running, audio must be routed through the audio DSP, which requires non-free firmware.
+
+Therefore you should choose the kernel depending whether or not you would like to run the modem.
+
+=== Usage ===
+At the moment, the modem is primarily tested using the oFono test scripts:
+
+ # apk add py-dbus
+ $ git clone https://git.kernel.org/pub/scm/network/ofono/ofono.git/
+ $ cd ofono/test
+ $ ./power-modem
+ $ ./online-modem
+ $ ./list-modems
+
+Check if the SIM card shows up. If you have a dual SIM device (e.g. [[Wileyfox_Swift_(wileyfox-crackling)|Wileyfox Swift]]), follow [https://gist.github.com/TravMurav/45a705f210125858ce889b06f90656d9 this guide]. (TODO: Maybe move this here or somewhere else?)
+
+Unlock the SIM card:
+ ./enter-pin pin <pin>
+
+Eventually, your SIM card should show up as registering in <code>./list-modems</code>
+
+=== SMS ===
+Use the <code>send-sms</code> and <code>receive-sms</code> test scripts (the latter requires <code>py3-gobject3</code>).
+
 == See also ==
 * MSM8916 is a great platform to get started with mainlining! It has a dedicated [[MSM8916 Mainlining]] guide that explains how to get started.
