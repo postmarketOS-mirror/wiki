@@ -30,8 +30,8 @@
 | status_camera = N
 | status_gps = N
 | status_mobiledata = N
-| status_sms = N
-| status_calls = N
+| status_sms = Y
+| status_calls = P
 | status_otg =
 | status = booting
 | booting = yes
