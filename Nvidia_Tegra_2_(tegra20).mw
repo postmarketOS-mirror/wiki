@@ -70,5 +70,16 @@ Present on: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu
 * install alsa-utils and check sound (also you can use https://github.com/ford-prefect/xml2ucm/tree/master/src )
 * if works as expected provide "Tested-by" or "Reviewed-by" tags to author
 
+==== vibrator: isa1200 ====
+Vibrator used in multiple devices and Tegra boards. Used in Samsung P4, P4WiFi, i927.
+
+Source (last commit):
+* https://github.com/okias/linux/commits/isa1200
+
+Present on: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu0&brand=brand0&filter=isa1200&submit=Search device list]
+* if your device has this vibrator, use these patches + chagnge or add DTS has entry for isa1200 pointing to this vibrator
+* test vibrator if works
+* if works as expected provide "Tested-by" or "Reviewed-by" tags to author
+
 == See also ==
 * Tegra 2 is very similiar to [[Nvidia_Tegra_3_(tegra30)]]
