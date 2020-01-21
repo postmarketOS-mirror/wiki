@@ -23,3 +23,30 @@
 | cpufreq = v4.17-rc1
 | cam_controller = v5.0-rc1*
 }}
+
+[https://www.qualcomm.com/products/snapdragon-processors-410 MSM8916]/[https://www.qualcomm.com/products/apq8016e APQ8016] (or Snapdragon 410) is Qualcomm SoC released in 2014, with great mainline support orginally added for the [https://www.96boards.org/product/dragonboard410c/ Dragonboard 410c].
+
+== Audio ==
+=== PulseAudio ===
+Audio should work out of the box with PulseAudio. In your favorite PulseAudio mixer (e.g. <code>pulsemixer</code> on the command line) you can select the output port to use (e.g. Speaker, Earpiece, ...).
+
+=== ALSA ===
+Everything is muted by default and must be enabled through alsaucm. Unfortunately, the tool is not very user-friendly.
+
+ $ alsaucm -i -c hw:0
+ set _verb HiFi
+ set _enadev <device>
+
+where <code><device></code> is one of <code>Speaker</code>, <code>Earpiece</code>, <code>Headphones</code>, <code>PrimaryMic</code>, <code>HeadsetMic</code> or <code>SecondaryMic</code>.
+alsaucm does not track which devices are already enabled, therefore it is possible to produce combinations that won't work properly (e.g. <code>Headphones</code>+<code>Earpiece</code>). To switch between devices, the old device first needs to be re-enabled and then disabled:
+
+ $ alsaucm -i -c msm8916
+ set _verb HiFi
+ set _enadev OLD
+ set _disdev OLD
+ set _enadev NEW
+
+{{note|'''Warning:''' alsaucm sets the volume to maximum by default. It is possible to increase the volume even further, however, this may lead to permanent damage to your speaker!}}
+
+== See also ==
+* MSM8916 is a great platform to get started with mainlining! It has a dedicated [[MSM8916 Mainlining]] guide that explains how to get started.
