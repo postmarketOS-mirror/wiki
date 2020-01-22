@@ -104,7 +104,8 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 * So the wifi chip needs a kernel module (<code>CONFIG_BCMDHD_FXN_195_89=m</code>) and firmware and config files (<code>fw_bcmdhd.bin</code>, <code>nvram_4330.txt</code>).
 * Download and unpack the vendor's OTA ROM zip (link in the [[Medion_Lifetab_S9714_(medion-kai)#See_also]] section). (Other ideas on how to find firmware files are on the [[How_to_find_device-specific_information#Firmware_files]] page.)
 * In the unpacked ROM folder, look for <code>system/vendor/firmware/bcm4330/fw_bcmdhd.bin</code> and <code>system/etc/nvram_4330.txt</code>.
-* '''FOR TESTING ONLY''' copy both files to <code>aports/device/device-medion-kai</code>. When done with testing, a firmware package should be created, see [[Device_specific_package#Proprietary_firmware_or_userland_blobs]].
+* First step is to try to get wifi to work with the vendor firmware. Later on we might be able to use existing postmarket firmware packages instead.
+* Copy <code>nvram_4330.txt</code> to <code>aports/device/device-medion-kai</code>. 
 * Edit <code>device/linux-medion-kai/APKBUILD</code> to get kernel modules built and installed:
 ** Increase <code>pkgrel</code> by one.
 ** At the end of the <code>build()</code> section, add this to build the modules:
@@ -121,10 +122,11 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
         INSTALL_MOD_PATH="$pkgdir" INSTALL_MOD_STRIP=1 \
         modules_install
 
-* Edit <code>device/linux-medion-kai/config-medion-kai.armv7</code> and set the path where the wifi firmware is expected to somewhere in <code>/lib/firmware/postmarketos</code>:
+* Edit <code>device/linux-medion-kai/config-medion-kai.armv7</code> and set the path where the wifi firmware is expected to a subfolder of <code>/lib/firmware/postmarketos</code>:
 
-    CONFIG_BCMDHD_FXN_FW_PATH="/lib/firmware/postmarketos/bcm4330/fw_bcmdhd.bin"
-    CONFIG_BCMDHD_FXN_NVRAM_PATH="/lib/firmware/postmarketos/bcm4330/nvram_4330.txt"
+
+    CONFIG_BCMDHD_FXN_FW_PATH="/lib/firmware/postmarketos/bcmdhd/bcm4330/fw_bcm4330_bg.bin"
+    CONFIG_BCMDHD_FXN_NVRAM_PATH="/lib/firmware/postmarketos/bcmdhd/bcm4330/nvram_4330.txt"
 
 * Rebuild <code>linux-medion-kai</code> and create an image file:
 
@@ -155,7 +157,6 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
     subpackages="$pkgname-nonfree-firmware:nonfree_firmware"
     source="deviceinfo
         modules-load.conf
-        fw_bcmdhd.bin
         nvram_4330.txt"
 
 ** At the end of the <code>package()</code> section, add this to put <code>modules-load.conf</code> in the right place on the device:
@@ -163,15 +164,13 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
     install -Dm644 "$srcdir"/modules-load.conf \
            "$pkgdir"/etc/modules-load.d/00-${pkgname}.conf
 
-** Below the <code>package()</code> section, add a new <code>nonfree_firmware()</code> section that installs the files from the vendor ROM. Again, this is '''FOR TESTING ONLY'''. How a real firmware package is created is described in [[Device_specific_package#Proprietary_firmware_or_userland_blobs]].
+** Below the <code>package()</code> section, add a new <code>nonfree_firmware()</code> section that installs the <code>nvram_4330.txt</code> file from the vendor ROM.
 
     nonfree_firmware() {
-           pkgdesc="Lenovo Medion Lifetab S9714 wifi firmware"
-           mkdir "$subpkgdir"
-           install -D -m644 "$srcdir"/nvram_4330.txt \
-                   "$subpkgdir"/lib/firmware/postmarketos/bcm4330/nvram_4330.txt
-           install -D -m644 "$srcdir"/fw_bcmdhd.bin \
-                   "$subpkgdir"/lib/firmware/postmarketos/bcm4330/fw_bcmdhd.bin
+        pkgdesc="Wifi firmware"
+        mkdir "$subpkgdir"
+        install -D -m644 "$srcdir"/nvram_4330.txt \
+            "$subpkgdir"/lib/firmware/postmarketos/bcmdhd/bcm4330/nvram_4330.txt
     }
     
 * Rebuild <code>device-medion-kai</code> and recreate the image file:
@@ -184,14 +183,17 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 
     pmbootstrap flasher flash_rootfs && pmbootstrap flasher flash_kernel    
 
-* ssh into the device via [[USB_Network]] and run lsmod to see if the kernel modules has been loaded correctly:
+* ssh into the device via [[USB_Network]]
+* Use scp to copy the firmware bin <code>fw_bcmdhd.bin</code> onto the device (e.g. into the /tmp directory) and move it to the path given in <code>CONFIG_BCMDHD_FXN_FW_PATH</code>: <code>/lib/firmware/postmarketos/bcmdhd/bcm4330/fw_bcm4330_bg.bin</code>, next to <code>nvram_4330.txt</code>, which should already be in that directory.
+* Restart the device
+* Log in with ssh over USB again and run lsmod to see if the kernel module has been loaded correctly:
 
     lsmod
     Module                  Size  Used by
     bcmdhd                387306  0
     cfg80211              157302  1 bcmdhd
 
-*If the module isn't listed, check that it's on the device (<code>find /lib/modules/ -iname "*bcm*ko"</code>) and what happens if you try to insert it manually (<code>modprobe bcmdhd || dmesg | tail -n 20</code>). If modprobe doesn't find the module you can also try <code>insmod /lib/modules/3.1.10/kernel/drivers/net/wireless/bcmdhd_fxn_195_89/bcmdhd.ko || dmesg | tail -n 20</code>.<br/>If dmesg gives <code>Unknown symbol _GLOBAL_OFFSET_TABLE_</code> you may be missing the <code>-fno-pic</code> flag when building the kernel modules.
+* If the module isn't listed, check that it's on the device (<code>find /lib/modules/ -iname "*bcm*ko"</code>) and what happens if you try to insert it manually (<code>modprobe bcmdhd || dmesg | tail -n 20</code>). If modprobe doesn't find the module you can also try <code>insmod /lib/modules/3.1.10/kernel/drivers/net/wireless/bcmdhd_fxn_195_89/bcmdhd.ko || dmesg | tail -n 20</code>.<br/>If dmesg gives <code>Unknown symbol _GLOBAL_OFFSET_TABLE_</code> you may be missing the <code>-fno-pic</code> flag when building the kernel modules.
 
 * Once the module is loaded correctly, continue with the [[WiFi#Debugging|steps on the Wifi page]]:
 ** Check if the interface is available
@@ -200,6 +202,9 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
     ...
     7: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
         link/ether 00:11:22:33:44:55 brd ff:ff:ff:ff:ff:ff
+** Turn on wifi
+
+    nmcli radio wifi on
 
 ** Scan for available wifis:
 
@@ -208,6 +213,31 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 ** Connect to your wifi:
 
     nmcli device wifi connect "$SSID" password "$PASSWORD" ifname wlan0
+
+* If wifi works, try replacing the vendor's firmware bin with bins from existing postmarket firmware packages. Information about the Broadcom firmware version is added in ASCII at the end of the blobs and can be seen with <code>less</code>:
+    
+    less fw_bcmdhd.bin
+    ... 4330b2-roml/sdio-g-pool-pno-pktfilter-keepalive-wapi-wme-p2p-apsta-aoe Version: 5.90.195.89 CRC: 2303bcd6 Date: Sun 2012-07-22 19:27:22 PDT ...
+
+* Candidate postmarket packages can be identified with <code>grep -ril "bcm" pmaports/firmware</code>. Package <code>firmware-aosp-broadcom-wlan</code> sounds promising.
+
+* The blobs for <code>firmware-aosp-broadcom-wlan</code> are taken from this [https://github.com/zhuowei/android_hardware_broadcom_wlan/tree/6c8ef5b600cec5d36a54a0276fe8c97b9ab8d6bb/bcmdhd/firmware GitHub repository]. 
+* Checking blob <code>bcm4330/fw_bcm4330_bg.bin</code> from that repository with less shows that it's a newer version:
+
+    less fw_bcm4330_bg.bin
+    ... 4330b2-roml/sdio-g-p2p-idsup-idauth-pno Version: 5.90.195.114 CRC: 24b8f965 Date: Wed 2013-01-23 17:48:37 PST ...
+
+* Copying <code>fw_bcm4330_bg.bin</code> onto the device at <code>/lib/firmware/postmarketos/bcmdhd/bcm4330/fw_bcm4330_bg.bin</code> and rebooting shows, that this firmware also works (with the vendor <code>nvram_4330.txt</code> file unchanged).
+
+* This means we can add <code>firmware-aosp-broadcom-wlan</code> as a dependency in the firmware part of  <code>device/device-medion-kai/APKBUILD</code>:
+
+    nonfree_firmware() {
+           pkgdesc="Wifi firmware"
+           depends="firmware-aosp-broadcom-wlan"
+           mkdir "$subpkgdir"
+           install -D -m644 "$srcdir"/nvram_4330.txt \
+                   "$subpkgdir"/lib/firmware/postmarketos/bcmdhd/bcm4330/nvram_4330.txt
+    }
 
 
 === Related links ===
