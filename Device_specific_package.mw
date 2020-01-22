@@ -104,16 +104,26 @@ subpackages="
 kernel_downstream() {
 	pkgdesc="Display and wifi works (see device table for details)"
 	depends="linux-sony-amami"
-	mkdir "$subpkgdir"
+	devicepkg_subpackage_kernel $startdir $pkgname $subpkgname
 }
 
 kernel_mainline() {
 	pkgdesc="For kernel development only (most features aren't working)"
 	depends="linux-postmarketos-mainline"
-	mkdir "$subpkgdir"
+	devicepkg_subpackage_kernel $startdir $pkgname $subpkgname
 }
 ...
 </syntaxhighlight>
+* Additionally in your <code>deviceinfo</code> file you can use the suffix from your kernel subpackage (e.g. <code>_mainline</code> or <code>_downstream</code>) to limit the variables to one kernel variant in case you need different values. An example:
+: <syntaxhighlight lang="bash">
+...
+deviceinfo_dtb_mainline="qcom-msm8974-fairphone-fp2"
+deviceinfo_append_dtb_mainline="true"
+...
+deviceinfo_bootimg_qcdt_downstream="true"
+...
+</syntaxhighlight>
+* Also consider adjusting the dependencies of your device package to not include downstream- or mainline-specific helper packages, such as <code>adsp-audio</code>, <code>wcnss-wlan</code> or <code>modem-qcom-msm-downstream-common</code>. You can use <code>device-fairphone-fp2</code> as an example for that.
 * Run <code>pmbootstrap init</code> afterwards to test the change. It should ask you for the kernel now.
 * See <code>device-qemu-amd64</code> for another example.
 * Implementation details and discussion in {{github|1363}}
