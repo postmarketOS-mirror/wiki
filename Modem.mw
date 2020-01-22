@@ -1,4 +1,17 @@
-Some devices already have modem support. Check the devices table!
+{{note|This is a work in progress document where a lot of information is still missing. Please help to expand this page!}}
+
+== Qualcomm Modems ==
+
+On most Qualcomm SoCs the modem is a separate processor which lives next to the main CPU where Linux is running on. It needs to be given firmware by the host processor to start.
+
+The procedure for getting the modem to work is generally the following:
+* Package and install the [[Firmware]] of your modem into the file system, generally the <code>mba.*</code> and <code>modem.*</code> files.
+* Install the package <code>modem-qcom-msm-downstream-common</code> or <code>modem-qcom-msm-mainline-common</code>, depending on the kernel you are using (and reboot to activate the udev rules and services).
+* Install <code>ofono</code> and start it using <code>rc-service ofono start</code>
+* You should see signs of your firmware being loaded in the dmesg.
+* You can use the [https://git.kernel.org/pub/scm/network/ofono/ofono.git/tree/test ofono test scripts] or <code>ofonoctl</code> to see if the Linux recognized your modem and if it works correctly.
+
+* Note, that for dual SIM (maybe only for DSDS - dual SIM dual standby?) devices you need to follow additional manual steps, otherwise the modem (and ofono) will not recognize your SIM card. See [https://gist.github.com/TravMurav/45a705f210125858ce889b06f90656d9]
 
 == Relevant issues ==
 * {{github|520}} N900: integrate ofono
