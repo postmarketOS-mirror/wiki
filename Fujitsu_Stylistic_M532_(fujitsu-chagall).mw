@@ -8,7 +8,7 @@
 | originalsoftware = Android 4.0.3 (kernel 2.6)
 | chipset = Nvidia Tegra T30S
 | cpu = 4x ARM Cortex-A7@1.4GHz
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
+| gpu = Geforce ULP
 | storage = 16 GB
 | display = 1280x800 IPS LCD
 | memory = 1 GB
@@ -35,17 +35,18 @@
 | status = boots, unreliable kernel<!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
-see Unixbench page on wiki
-| whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = -
--->
 }}
+
+This device is known under ''many'' names: 
+* Pegatron Chagall
+* Fujitsu Stylistic M532
+* Olivetti Olipad 3
+* Siragon 4N
+* Realpad Bunaken
+* (likely) DNS AirTab P110w / P110g
+
+Some variants offer mobile connectivity (via a Huawei 3G module, probably USB rather than SDIO, that I haven't investigated yet), some 32GB storage.
+
 
 == Contributors ==
 * R.
@@ -74,6 +75,7 @@ Link to related GitLab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+* [https://github.com/n5047c/android_kernel_chagall Booting kernel for this device]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
