@@ -86,7 +86,7 @@ To use <code>nmtui</code>, just run <code>sudo nmtui</code> in your terminal.
 To use <code>nmcli</code>, you can use the following commands, modified for your use case:
 <pre>
 $ sudo nmcli device wifi list ifname wlan0
-$ sudo nmcli device wifi connect "$SSID" password "$PASSWORD" ifname wlan0
+$ sudo nmcli device wifi connect "$SSID" password "$PASSWORD" ifname "wlan0"
 </pre>
 
 === Using wpa_supplicant ===
