@@ -242,16 +242,8 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 
 === Related links ===
 
-PCI id according to system/etc/nvram_4330.txt: <code>14e4:4360</code>
-
 * [https://www.cypress.com/file/298686/download nvram text file reference]
 * [https://android.googlesource.com/platform/hardware/broadcom/wlan/+/bcd905af9e0c40e7c4bf2e6390fc3374a7a261f7/bcmdhd/firmware/bcm4330/ more recent version of broadcom firmware that also works on kai]
-
-* [[Google_Nexus_7_2012_(asus-grouper)|asus-grouper has similar hardware but the kernel params are named slightly differently: CONFIG_BCMDHD_FW_PATH vs CONFIG_BCMDHD_FXN_FW_PATH]]
-* [https://github.com/armbian/firmware/blob/master/brcm/brcmfmac4330-sdio.txt config file very similar to nvram_4330.txt]
-* [https://android.googlesource.com/kernel/tegra/+/ecdcc0e36273de4fca8fcdc31bf011a01459cce1%5E!/ chromeos commit]
-* [https://android.googlesource.com/kernel/tegra/+/b89174cf1a8cbe06951436a2ebe3e3b481de6f9f%5E!/ android commit]
-*[https://wireless.wiki.kernel.org/en/users/drivers/b43 linux wireless drivers page - seems 14e4:4360 is NOT supported]
 
 == See also ==
 
