@@ -19,7 +19,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = <!-- Wireless network works? -->
+| status_wifi = Y
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
@@ -156,13 +156,13 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 
     subpackages="$pkgname-nonfree-firmware:nonfree_firmware"
     source="deviceinfo
-        modules-load.conf
-        nvram_4330.txt"
+        nvram_4330.txt
+        modules-load.conf"
 
 ** At the end of the <code>package()</code> section, add this to put <code>modules-load.conf</code> in the right place on the device:
 
     install -Dm644 "$srcdir"/modules-load.conf \
-           "$pkgdir"/etc/modules-load.d/00-${pkgname}.conf
+        "$pkgdir"/etc/modules-load.d/00-$pkgname.conf
 
 ** Below the <code>package()</code> section, add a new <code>nonfree_firmware()</code> section that installs the <code>nvram_4330.txt</code> file from the vendor ROM.
 
@@ -232,11 +232,11 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
 * This means we can add <code>firmware-aosp-broadcom-wlan</code> as a dependency in the firmware part of  <code>device/device-medion-kai/APKBUILD</code>:
 
     nonfree_firmware() {
-           pkgdesc="Wifi firmware"
-           depends="firmware-aosp-broadcom-wlan"
-           mkdir "$subpkgdir"
-           install -D -m644 "$srcdir"/nvram_4330.txt \
-                   "$subpkgdir"/lib/firmware/postmarketos/bcmdhd/bcm4330/nvram_4330.txt
+        pkgdesc="Wifi firmware"
+        depends="firmware-aosp-broadcom-wlan"
+        mkdir "$subpkgdir"
+        install -D -m644 "$srcdir"/nvram_4330.txt \
+            "$subpkgdir"/lib/firmware/postmarketos/bcmdhd/bcm4330/nvram_4330.txt
     }
 
 
