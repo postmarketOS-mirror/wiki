@@ -229,7 +229,6 @@ These are applications which already exist for Linux and could be reused in post
 * [https://open-store.io/ Ubuntu Touch app store] - Some of these applications may be reusable on pmOS
 * [http://maemo.org/packages/ Maemo packages] - These applications should be reusable in pmOS, and integrate well with the Hildon UI
 * [https://openrepos.net/ Meego/Sailfish/Nemo applications] - Will require some reworking for pmOS
-* [http://www.tizenstore.com/main/getMain.as Tizen Store] - Unknown compatibility with pmOS
 * [http://preware.pivotce.com/ LuneOS apps] - Will require some reworking for pmOS
 * [https://mglapps.frama.io/ Mobile GNU/Linux Apps] - A similar list
 
