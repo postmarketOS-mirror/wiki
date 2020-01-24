@@ -276,6 +276,9 @@ alsamixer -c 0 # and enable something like:
 * <span style="color:#777777">{{issue|201|pmaports}}: With legacy kernel, device seems to reboot spontaneously under heavy load. For better experience, please use mainline kernel.</span>
 
 
-=== Fun Fact ===
+== Fun Fact ==
 
 ''<code>grouper</code> was the first tablet to run postmarketOS!''
+
+== See also ==
+- dmesg logs from various tegra devices https://paste.sr.ht/%7Eokias
