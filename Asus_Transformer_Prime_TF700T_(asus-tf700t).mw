@@ -56,7 +56,7 @@
 * Status: Boots, see Hardware Status.
 
 ==== Hardware status (mainline) ====
-There is '''multiple hardware revisions''', so this status may not apply to all of them. This status apply for tilapia (Bach revision).
+There is '''multiple hardware revisions''', so this status may not apply to all of them.
 {|class="wikitable feature-colors"
 ! Status
 ! Hardware
