@@ -52,7 +52,7 @@ deviceinfo_dev_touchscreen="/dev/input/event3"
 
 === Create fb.modes === 
 
-Some devices require creating a file to inform DirectFB of the correct mode that the display supports.
+Some devices require creating a file (<code>/etc/fb.modes</code>) to inform DirectFB of the correct mode that the display supports.
 
 To calculate the mode for your device you can run <code>fbset</code>, however beware that the mode it returns isn't always supported. Some things to be aware of:
 * Make sure the last number of the geometry line (the color depth) is not 32 or 24, because this is not supported by directfb. If you need 32 or 24 there, set this value to 16 and set <code>pixelformat</code> in DFBARGS to a supported pixel format with color depth 32 or 24 (see [https://linux.die.net/man/5/directfbrc man page of directfbrc] for all available pixelformat options).
