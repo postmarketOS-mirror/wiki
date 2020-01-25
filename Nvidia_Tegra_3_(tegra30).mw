@@ -30,6 +30,7 @@ Send to linux-iio mailing list, changes I have to do in v2:
 * add iio maintainer to CC
 * add digetx to CC
 * add device-tree people to CC
+* also CC part of  ./scripts/get_maintainer.pl
 
 == See also ==
 * Tegra 3 is very similiar to [[Nvidia_Tegra_2_(tegra20)]]
