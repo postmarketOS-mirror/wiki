@@ -24,5 +24,12 @@ Present on: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu
 * install iio-sensor-proxy on your device and check if lux values are present and they change with time
 * if works as expected provide "Tested-by" or "Reviewed-by" tags to author
 
+Send to linux-iio mailing list, changes I have to do in v2:
+* assign myself as DT maintainer
+* change Daniel Baluta email to nxp.com + also CC
+* add iio maintainer to CC
+* add digetx to CC
+* add device-tree people to CC
+
 == See also ==
 * Tegra 3 is very similiar to [[Nvidia_Tegra_2_(tegra20)]]
