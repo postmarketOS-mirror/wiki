@@ -242,6 +242,7 @@ How bonsaiblue made wifi work (minus the confusing detours). [[Samsung_Galaxy_S_
             "$subpkgdir"/lib/firmware/postmarketos/bcmdhd/bcm4330/nvram_4330.txt
     }
 
+Result: [https://gitlab.com/postmarketOS/pmaports/merge_requests/904 Merge request for wifi on medion kai]
 
 === Related links ===
 
