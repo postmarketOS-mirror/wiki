@@ -1,23 +1,23 @@
 {{Infobox device
-| manufacturer = Oneplus
-| name =  5 <!-- e.g. Desire -->
-| codename = oneplus-cheeseburger <!-- e.g. htc-bravo -->
+| manufacturer = OnePlus
+| name =  5
+| codename = oneplus-cheeseburger
 | image = File:Oneplus-cheeseburger.png
 | imagecaption = 
 | releaseyear = 2017
-| originalsoftware = Android 7.1.1 on Linux 4.4 (upgradeable to Android 9 on Linux 4.4) <!-- e.g. Android 2 -->
-| chipset = Qualcomm MSM8998 Snapdragon 835 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = Octa-core (4x2.45 GHz Cortex-A73 & 4x1.90 GHz Cortex-A53) <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 540 <!-- e.g. Adreno 200 -->
-| storage = 64GB/128GB <!-- e.g. 512 MB -->
-| display = 1080x1920 AMOLED <!-- e.g. 480x800 AMOLED -->
-| memory = 6GB/8GB <!-- e.g. 576 MB -->
-| architecture = aarch64 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = Android 7.1.1 (up to Android 9) on Linux 4.4
+| chipset = Qualcomm MSM8998 Snapdragon 835
+| cpu = 4x 2.45 GHz Cortex-A73 + 4x 1.90 GHz Cortex-A53
+| gpu = Adreno 540
+| display = 1080x1920 Optic AMOLED
+| storage = 64 or 128 GB UFS 2.1
+| memory = 6 or 8 GB LPDDR4X RAM
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = N <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = Y <!-- The display is working? -->
+| status_usbnet = Y
+| status_flashing = N <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = Y
+| status_screen = Y
 | status_wifi = N <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -31,27 +31,21 @@
 | status_gps = <!-- The Global Positioning System sensor works.  -->
 | status_mobiledata = N <!-- Connecting to the Internet via cellular network. -->
 | status_sms = N <!-- Sending and receiving short messages works as intended. -->
+| status_otg = Y
 | status_calls = N <!-- Talking to other people over the cellular network. -->
-| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 4.4.153
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = 
 -->
 }}
 
 == Contributors ==
-* R0551
+* deathmist
 
 == Maintainer(s) ==
-R0551
+deathmist
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
@@ -62,16 +56,17 @@ R0551
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
-== How to enter flash mode ==
-The OnePlus 5 uses Fastboot as the flashing protocol.
+== Fastboot mode ==
+The OnePlus 5 uses {{button|fastboot}} as the flashing protocol.
 
-To enter Fastboot mode, hold Volume Up while powering on the device. Let go of Volume Up when "Fastboot mode" displays on the screen.
+To enter Fastboot mode, hold {{button|Volume Up}} while powering on the device. Let go of Volume Up when "Fastboot mode" is displayed on screen.
 
 == Installation ==
+Coming soon!
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
-== See also ==
 <!--
+== See also ==
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
