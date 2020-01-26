@@ -169,3 +169,6 @@ Example code:
  BDS: LogFs sync skipped, Unsupported
  App Log Flush : 2501 ms
  Exit BS        [ 7539] UEFI End
+
+=== UFS notes ===
+ @AlexeyMin seems that was the case, I did have UFS storage which required deviceinfo_rootfs_image_sector_size="4096" to be set
