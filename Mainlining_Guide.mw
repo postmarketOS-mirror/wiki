@@ -7,11 +7,16 @@ This guide will walk you through mainlining your device. Starting by collecting 
 This section include many useful sources to help you with mainlining as posible.
 
 Intro:
- * [https://www.youtube.com/watch?v=77tuFtM4gjA Introduction into how mainlining is done] (52:37)
+* [https://www.youtube.com/watch?v=77tuFtM4gjA Introduction into how mainlining is done] (52:37)
 
 Basics:
- * [https://www.youtube.com/watch?v=NNol7fRGo2E Introduction into ARM architecture] (46:33)
- * [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree (DT) introduction] (1:12:14)
+* [https://www.youtube.com/watch?v=NNol7fRGo2E Introduction into ARM architecture] (46:33)
+* [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree (DT) introduction] (1:12:14)
+* [https://www.youtube.com/watch?v=PgQezmlst0w Device Tree: present, past, future] (37:28)
+
+Next topics:
+* [https://www.youtube.com/watch?v=z4EkzJDGxFo Pin Control and GPIO] (48:03) talk by [[Special:Contributions/Linusw|Linus Walleij]]
+* [https://www.youtube.com/watch?v=LPG4EkXK9Us ARM64 SoC Linux Support Check-List] (42:38) Very useful step-by-step guide what should be done to bring in SoC support
 
 == Requirements ==
 === postmarketOS port ===
