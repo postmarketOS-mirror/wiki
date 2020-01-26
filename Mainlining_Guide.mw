@@ -1,7 +1,17 @@
 == Introduction ==
 {{note|Please have realistic expectations: Booting mainline even if nothing else is working is already a great achievement!}}
 
-This guide will walk you through mainlining your device. Starting by collecting all required information, setting up your build environment and picking a mentor that will guide you through the tricky parts. For the devices where this will work, you should be fine with basic shell knowledge, and you will be rewarded with learning a lot of new stuff and (if it works out) booting the mainline kernel on your device!
+This guide will walk you through mainlining your device. Starting by collecting all required information, setting up your build environment and picking a mentor that will guide you through the tricky parts. For the devices where this will work, you should be fine with basic shell knowledge, and you will be rewarded with learning a lot of new stuff and possibly booting the mainline kernel on your device!
+
+== Materials to look into ==
+This section include many useful sources to help you with mainlining as posible.
+
+Intro:
+ * [https://www.youtube.com/watch?v=77tuFtM4gjA Introduction into how mainlining is done] (52:37)
+
+Basics:
+ * [https://www.youtube.com/watch?v=NNol7fRGo2E Introduction into ARM architecture] (46:33)
+ * [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree (DT) introduction] (1:12:14)
 
 == Requirements ==
 === postmarketOS port ===
