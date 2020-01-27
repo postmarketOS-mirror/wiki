@@ -84,7 +84,9 @@ Loading <code>wlan</code> driver on boot (default setting) will significantly in
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
+-->
+* {{MR|898|pmaports}} Initial merge request
+<!--
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
