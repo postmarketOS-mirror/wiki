@@ -76,11 +76,9 @@ The backlight for physical buttons can be enabled (1) or disabled (0):
 <code>echo 1 > /sys/class/leds/button-backlight/brightness</code>
 
 Notification light color & brightness (0-255) are controllable:
-<pre class="shell">
-echo 255 > /sys/class/leds/red/brightness
-echo 255 > /sys/class/leds/green/brightness
-echo 255 > /sys/class/leds/blue/brightness
-</pre>
+* Red: <code>echo 255 > /sys/class/leds/red/brightness</code>
+* Green: <code>echo 255 > /sys/class/leds/green/brightness</code>
+* Blue: <code>echo 255 > /sys/class/leds/blue/brightness</code>
 
 Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
 
