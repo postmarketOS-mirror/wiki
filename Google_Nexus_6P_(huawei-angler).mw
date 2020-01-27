@@ -45,9 +45,8 @@
 * Continue holding until you se the bootloader menu
 
 ==pmbootstrap install==
+[[installing pmbootstrap|Install pmbootstrap]] and then run:
 <syntaxhighlight lang="shell-session">
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
-$ cd pmbootstrap
 $ pmbootstrap init
 $ pmbootstrap install
 $ pmbootstrap flasher flash_rootfs
