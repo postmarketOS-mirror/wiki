@@ -201,7 +201,7 @@ It's also not clear how the camera switching would work on the software side, th
 The camera hardware pipeline is controlled with <code>/dev/media1</code> and <code>media-ctl</code>, the result is on <code>/dev/video1</code>
 
 <source lang="shell-session">
-pine-dontbeevil:~# media-ctl -d /dev/video1 --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
+pine-dontbeevil:~# media-ctl -d /dev/media1 --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
 pine-dontbeevil:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 selfie.jpg
 </source>
 
