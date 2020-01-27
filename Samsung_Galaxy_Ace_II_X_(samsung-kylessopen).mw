@@ -111,6 +111,8 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 | N
 |}
 
+Note : samsung-kylessopen is compiled now for armv7. Some interfaces (Plasma...) could be tested agian.
+
 === Installation ===
 <source lang="bash">$ pmbootstrap install</source>
 Full disk encryption currently doesn't work on this device, so it should be turned off for now. 
