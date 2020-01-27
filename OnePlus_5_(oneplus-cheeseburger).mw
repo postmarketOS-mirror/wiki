@@ -58,17 +58,35 @@ If you own this device, you can add the text below or something similar under yo
 {{My devices}}
 -->
 == Fastboot mode ==
-The OnePlus 5 uses {{button|fastboot}} as its flashing protocol.
+The OnePlus 5 uses <code>fastboot</code> as its flashing protocol.
 
-To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when {{button|FastBoot Mode}} can be seen on the display.
+To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when <code>FastBoot Mode</code> can be seen on the display.
 
 == Installation ==
 Coming soon!
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
+== LEDs ==
+Currently you can control a whole bunch of the LEDs present on the device via <code>sysfs</code> by writing values to the control files as <code>root</code>:
+
+Screen brightness (0-255) can be adjusted:
+<code>echo 255 > /sys/class/leds/lcd-backlight/brightness</code>
+
+The backlight for physical buttons can be enabled (1) or disabled (0):
+<code>echo 1 > /sys/class/leds/button-backlight/brightness</code>
+
+Notification light color & brightness (0-255) are controllable:
+<pre class="shell">
+echo 255 > /sys/class/leds/red/brightness
+echo 255 > /sys/class/leds/green/brightness
+echo 255 > /sys/class/leds/blue/brightness
+</pre>
+
+Control of camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
+
 == Partition layout ==
-<div class="toccolours mw-collapsible mw-collapsed" style="width:600px; overflow:auto;">
-{{button|oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sda}}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sda</code>
 <div class="mw-collapsible-content">
 <pre class="shell">
 Disk /dev/sda: 113.55 GiB, 121911640064 bytes, 29763584 sectors
@@ -96,8 +114,8 @@ Device     Start      End  Sectors   Size Name
 </pre>
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:600px; overflow:auto;">
-{{button|oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdb}}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdb</code>
 <div class="mw-collapsible-content">
 <pre class="shell">
 Disk /dev/sdb: 4 MiB, 4194304 bytes, 1024 sectors
@@ -113,8 +131,8 @@ Device     Start   End Sectors Size Name
 </pre>
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:600px; overflow:auto;">
-{{button|oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdc}}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdc</code>
 <div class="mw-collapsible-content">
 <pre class="shell">
 Disk /dev/sdc: 4 MiB, 4194304 bytes, 1024 sectors
@@ -130,8 +148,8 @@ Device     Start   End Sectors Size Name
 </pre>
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:600px; overflow:auto;">
-{{button|oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdd}}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdd</code>
 <div class="mw-collapsible-content">
 <pre class="shell">
 Disk /dev/sdd: 128 MiB, 134217728 bytes, 32768 sectors
@@ -150,8 +168,8 @@ Device     Start   End Sectors   Size Name
 </pre>
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:600px; overflow:auto;">
-{{button|oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sde}}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sde</code>
 <div class="mw-collapsible-content">
 <pre class="shell">
 Disk /dev/sde: 4 GiB, 4294967296 bytes, 1048576 sectors
@@ -214,8 +232,8 @@ Device      Start     End Sectors   Size Name
 </pre>
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:600px; overflow:auto;">
-{{button|oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdf}}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdf</code>
 <div class="mw-collapsible-content">
 <pre class="shell">
 Disk /dev/sdf: 1.51 GiB, 1610612736 bytes, 393216 sectors
