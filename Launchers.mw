@@ -7,11 +7,11 @@ There are several simple Linux launchers available, columbiad is the only one of
 
 * [https://wiki.lxde.org/en/LXLauncher lxlauncher] (LXDE official launcher, gtk2; [https://wiki.lxde.org/en/images/5/5c/LXlauncher.png screenshot])
 * [https://github.com/ikeydoherty/columbiad columbiad] (minimal gtk3 fullscreen launcher; [https://www.youtube.com/watch?v=2toCoeoqoag video demo]; merged into aports)
-* [https://github.com/o-marshmallow/PocketCHIP-pocket-home] (PocketCHIP Launcher; currently not in aports)
+* [https://github.com/o-marshmallow/PocketCHIP-pocket-home PocketCHIP-pocket-home] (PocketCHIP Launcher; currently not in aports)
 
 == Qt ==
 * [https://github.com/alamminsalo/qml-launcher qml-launcher] (qml, closes when an app is launched; [https://user-images.githubusercontent.com/5585454/29671459-4659d418-88f2-11e7-8d0d-f03bc4f51023.png screenshot])
-* [https://gitlab.com/cubocore/corestuff] (QT, A very light weight luncher. Can be use with a WM. And as an alternative to existing shells like KDE And Gnome for a touch based experience.; [https://youtu.be/_I8wjw5FYMc CoreStuff running in postmarketOS in Nexus 5x])
+* [https://gitlab.com/cubocore/corestuff CoreStuff] (QT, A very light weight luncher. Can be use with a WM. And as an alternative to existing shells like KDE And Gnome for a touch based experience.; [https://youtu.be/_I8wjw5FYMc CoreStuff running in postmarketOS in Nexus 5x])
 
 == Others ==
 * [http://xlunch.org/ XLunch]: Graphical app launcher for X, using pure Xlib and Imlib2, therefore very light and needing only few dependencies (needs entries to be created manually; closes when an app is launched; [https://raw.githubusercontent.com/Tomas-M/xlunch/Screenshot/screenshot.png screenshot])
