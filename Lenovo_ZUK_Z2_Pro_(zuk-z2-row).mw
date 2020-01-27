@@ -22,7 +22,7 @@
 | status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_battery = Y
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
@@ -62,8 +62,24 @@
 
 == Notes ==
 
-* For unknown reason, system booting takes longer than two minutes if WLAN driver is loaded at boot.
-* I noticed system crash (auto reboot) after Unixbench had been running for a while.
+=== Partitions ===
+
+The <code>persist</code> partition stores device-specific information like WLAN & Bluetooth MAC. You'd better leave it as is. I don't know how to recover it.
+
+=== LED / Torch / Screen brightness / vibrator  ===
+
+Write brightness or boolean value to specific sysfs files:
+
+* Front panel LED light: <code>/sys/class/leds/{red,green,blue}/{brightness,blink}</code>
+* Torch light: <code>/sys/class/leds/led:torch_{0,1}/brightness</code> (torch_0 is cold light, torch_1 is warm light)
+* Screen brightness: <code>/sys/class/leds/lcd-backlight/brightness</code>
+* Vibrator: <code>echo $TIME_MS > /sys/class/timed_output/vibrator/enable</code>
+
+For brightness range, check the <code>max_brightness</code> file.
+
+=== WiFi ===
+
+Loading <code>wlan</code> driver on boot (default setting) will significantly increase booting time (half a min -> 3 minutes to GUI). I don't know why.
 
 == See also ==
 <!--
