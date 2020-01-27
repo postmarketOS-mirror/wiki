@@ -63,7 +63,7 @@ The OnePlus 5 uses <code>fastboot</code> as its flashing protocol.
 To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when <code>FastBoot Mode</code> can be seen on the display.
 
 == Installation ==
-'''NOTE: I've NOT upstreamed my work just yet, so please do wait for a bit (that's why I marked flashing as broken on the features box) :)'''
+'''UPDATE: I've now made a MR to upstream my work ([https://gitlab.com/postmarketOS/pmaports/-/merge_requests/908 see !908 on pmaports]), so please wait for a bit (I'll mark flashing as working in the features box once this is merged) :)'''
 
 === Unlocking the bootloader ===
 If your bootloader is still locked at this point, you need to unlock it to proceed.
