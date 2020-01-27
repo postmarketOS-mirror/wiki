@@ -57,9 +57,9 @@ deathmist
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == Fastboot mode ==
-The OnePlus 5 uses {{button|fastboot}} as the flashing protocol.
+The OnePlus 5 uses {{button|fastboot}} as its flashing protocol.
 
-To enter Fastboot mode, hold {{button|Volume Up}} while powering on the device. Let go of Volume Up when "Fastboot mode" is displayed on screen.
+To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when {{button|FastBoot Mode}} can be seen on the display.
 
 == Installation ==
 Coming soon!
