@@ -28,22 +28,18 @@ There are 19 CoreApps and they all listed here with their descriptions.
 * CorePad - A document editor.
 * CorePaint - A paint app.
 * CorePDF - A PDF viewer.
-* CorePlayer - A player based on QtAV library. (Not ported because QtAV is not in repo)
 * CoreRenamer - A batch file re-namer.
 * CoreStats - A system resource viewer.
-* CoreStuff - An activity viewer.
+* CoreStuff - An activity viewer/ luncher.
 * CoreUniverse - Shows information about apps from the CoreApps family.
 * CoreTime - A time related task manager.
 * CoreTerminal - A terminal emulator. (Not ported because qtermwidget is not in repo)
 * CoreShot - A screen capture utility.
 * CoreInfo - A file information tool.
-
-Two apps are in development.
-* CoreBox - A touch-optimized panel
-* CoreKeyboard - A virtual keyboard.
+* CoreKeyboard - A virtual keyboard for x11.
 
 == Installation ==
-All the apps except 4 are in the pmOS repo. So just install them by 
+All the apps except 1 are in the pmOS repo. So just install them by 
 <code>$ sudo apk add corefm</code>
 
 == Usages ==
