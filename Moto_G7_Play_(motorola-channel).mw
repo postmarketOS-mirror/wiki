@@ -1,0 +1,39 @@
+{{Infobox device
+| manufacturer = Motorola
+| name = Moto G7 Play
+| codename = motorola-channel
+| image = 
+| imagecaption = 
+| releaseyear = 2019
+| originalsoftware = Android 9
+| pmoskernel =
+| chipset = Qualcomm SDM632 Snapdragon 632 (14 nm)
+| cpu = Octa-core (4x1.8 GHz Kryo 250 Gold & 4x1.8 GHz Kryo 250 Silver)
+| gpu = Adreno 506
+| memory = 2 GB
+| architecture = aarch64
+| whet_dhry = 
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status_otg = 
+| status = 
+| booting = 
+}}
+
+The Moto G7 Play is a 5.7" phone with a 720 x 1512P display. It can be bought for about £120 in the UK. It is A/B partitioned, and has an arm64 cpu, however Custom ROMSs must be a64 binder (32 bit OS). No work has gone on to port this device to PostMarketOS yet.
