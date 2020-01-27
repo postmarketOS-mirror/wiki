@@ -67,7 +67,7 @@ Coming soon!
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == LEDs ==
-Currently you can control a whole bunch of the LEDs present on the device via <code>sysfs</code> by writing values to the control files as <code>root</code>:
+Currently you can control a whole bunch of the LEDs present on the device via <code>sysfs</code> by writing values to their brightness control files as <code>root</code>:
 
 Screen brightness (0-255) can be adjusted:
 <code>echo 255 > /sys/class/leds/lcd-backlight/brightness</code>
@@ -82,7 +82,7 @@ echo 255 > /sys/class/leds/green/brightness
 echo 255 > /sys/class/leds/blue/brightness
 </pre>
 
-Control of camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
+Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
 
 == Partition layout ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
