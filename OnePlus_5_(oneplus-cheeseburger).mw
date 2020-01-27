@@ -82,9 +82,12 @@ There are plenty of guides online describing how to do this, but the run-down sh
 === Setup build env & create flashables ===
 Install <code>[https://wiki.postmarketos.org/wiki/Installing_pmbootstrap pmbootstrap]</code> on your build machine and start following the steps below:
  pmbootstrap init
+ pmbootstrap checksum linux-oneplus-cheeseburger
  pmbootstrap build linux-oneplus-cheeseburger
+ pmbootstrap checksum device-oneplus-cheeseburger
  pmbootstrap build device-oneplus-cheeseburger
  pmbootstrap install
+'''NOTICE: Both <code>phosh</code> and <code>plasma-mobile</code> are NOT working at all currently; this should be solved later by mainlining and using the <code>freedreno</code> DRM driver for graphics & <code>mesa</code> 3D acceleration.'''
 
 === Flashing the device ===
 To begin the flashing process, boot your device to <code>fastboot</code> mode (if you haven't already). The standard flashing process goes as follows:
