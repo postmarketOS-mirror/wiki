@@ -2,7 +2,7 @@
 | manufacturer = OnePlus
 | name =  5
 | codename = oneplus-cheeseburger
-| image = File:Oneplus-cheeseburger.png
+| image = File:OnePlus-5-Weston.jpg
 | imagecaption = 
 | releaseyear = 2017
 | originalsoftware = Android 7.1.1 (up to Android 9) on Linux 4.4
@@ -63,8 +63,40 @@ The OnePlus 5 uses <code>fastboot</code> as its flashing protocol.
 To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when <code>FastBoot Mode</code> can be seen on the display.
 
 == Installation ==
-Coming soon!
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+'''NOTE: I've NOT upstreamed my work just yet, so please do wait for a bit (that's why I marked flashing as broken on the features box) :)'''
+
+=== Unlocking the bootloader ===
+If your bootloader is still locked at this point, you need to unlock it to proceed.
+
+'''Doing this WILL delete all your data on the device as a security precaution, so backup all your data before proceeding!'''
+
+There are plenty of guides online describing how to do this, but the run-down should be as follows:
+# Enable <code>Developer options</code> by tapping the build number 7 times in <code>Settings</code> > <code>About</code>
+# Go back and enter <code>Developer options</code> to enable both <code>USB Debugging</code> and <code>OEM Unlocking</code>
+# Install the <code>android-tools-fastboot</code> or <code>android-tools</code> package depending on your machine's distro
+# Power down your OnePlus 5 & enter <code>fastboot</code> mode using the [https://wiki.postmarketos.org/wiki/OnePlus_5_(oneplus-cheeseburger)#Fastboot_mode instructions above this section]
+# Open a terminal window and verify your phone is displayed under <code>fastboot devices</code> to continue
+# Run <code>fastboot oem unlock</code> and follow the instructions on screen. Navigate menus with {{button|Volume Up/Down}} and select an option with the {{button|Power}} button.
+# Congrats, you should now have an unlocked bootloader on your device!
+
+=== Setup build env & create flashables ===
+Install <code>[https://wiki.postmarketos.org/wiki/Installing_pmbootstrap pmbootstrap]</code> on your build machine and start following the steps below:
+ pmbootstrap init
+ pmbootstrap build linux-oneplus-cheeseburger
+ pmbootstrap build device-oneplus-cheeseburger
+ pmbootstrap install
+
+=== Flashing the device ===
+To begin the flashing process, boot your device to <code>fastboot</code> mode (if you haven't already). The standard flashing process goes as follows:
+ pmbootstrap flasher flash_rootfs
+ pmbootstrap flasher flash_kernel
+ sudo fastboot reboot
+
+If you instead want to install the pmOS root filesystem on <code>userdata</code> partition (around 60 or 120 GB) instead of the <code>system</code> partition (3 GB), run the following instead as the flash_rootfs command:
+ pmbootstrap flasher flash_rootfs --partition userdata
+
+During e.g. rapid kernel development you can simply boot the new image instead of always flashing to the device <code>boot</code> partition like so:
+ pmbootstrap flasher boot
 
 == LEDs ==
 Currently you can control a whole bunch of the LEDs present on the device via <code>sysfs</code> by writing values to their brightness control files as <code>root</code>:
@@ -86,174 +118,164 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sda</code>
 <div class="mw-collapsible-content">
-<pre class="shell">
-Disk /dev/sda: 113.55 GiB, 121911640064 bytes, 29763584 sectors
-Disk model: KLUDG8V1EE-B0C1 
-Units: sectors of 1 * 4096 = 4096 bytes
-Sector size (logical/physical): 4096 bytes / 4096 bytes
-I/O size (minimum/optimal): 8192 bytes / 8192 bytes
-Disklabel type: gpt
-Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
-
-Device     Start      End  Sectors   Size Name
-/dev/sda1      6        7        2     8K ssd
-/dev/sda2      8     8199     8192    32M persist
-/dev/sda3   8200    73735    65536   256M cache
-/dev/sda4  73736    73991      256     1M misc
-/dev/sda5  73992    74119      128   512K keystore
-/dev/sda6  74120    74247      128   512K frp
-/dev/sda7  74248    76807     2560    10M oem_dycnvbk
-/dev/sda8  76808    79367     2560    10M oem_stanvbk
-/dev/sda9  79368    79623      256     1M param
-/dev/sda10 79624    81647     2024   7.9M reserve1
-/dev/sda11 81648    85695     4048  15.8M reserve2
-/dev/sda12 85696    85823      128   512K config
-/dev/sda13 85824 29763578 29677755 113.2G userdata
-</pre>
+ Disk /dev/sda: 113.55 GiB, 121911640064 bytes, 29763584 sectors
+ Disk model: KLUDG8V1EE-B0C1 
+ Units: sectors of 1 * 4096 = 4096 bytes
+ Sector size (logical/physical): 4096 bytes / 4096 bytes
+ I/O size (minimum/optimal): 8192 bytes / 8192 bytes
+ Disklabel type: gpt
+ Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ 
+ Device     Start      End  Sectors   Size Name
+ /dev/sda1      6        7        2     8K ssd
+ /dev/sda2      8     8199     8192    32M persist
+ /dev/sda3   8200    73735    65536   256M cache
+ /dev/sda4  73736    73991      256     1M misc
+ /dev/sda5  73992    74119      128   512K keystore
+ /dev/sda6  74120    74247      128   512K frp
+ /dev/sda7  74248    76807     2560    10M oem_dycnvbk
+ /dev/sda8  76808    79367     2560    10M oem_stanvbk
+ /dev/sda9  79368    79623      256     1M param
+ /dev/sda10 79624    81647     2024   7.9M reserve1
+ /dev/sda11 81648    85695     4048  15.8M reserve2
+ /dev/sda12 85696    85823      128   512K config
+ /dev/sda13 85824 29763578 29677755 113.2G userdata
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdb</code>
 <div class="mw-collapsible-content">
-<pre class="shell">
-Disk /dev/sdb: 4 MiB, 4194304 bytes, 1024 sectors
-Disk model: KLUDG8V1EE-B0C1 
-Units: sectors of 1 * 4096 = 4096 bytes
-Sector size (logical/physical): 4096 bytes / 4096 bytes
-I/O size (minimum/optimal): 8192 bytes / 8192 bytes
-Disklabel type: gpt
-Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
-
-Device     Start   End Sectors Size Name
-/dev/sdb1      6  1018    1013   4M xbl
-</pre>
+ Disk /dev/sdb: 4 MiB, 4194304 bytes, 1024 sectors
+ Disk model: KLUDG8V1EE-B0C1 
+ Units: sectors of 1 * 4096 = 4096 bytes
+ Sector size (logical/physical): 4096 bytes / 4096 bytes
+ I/O size (minimum/optimal): 8192 bytes / 8192 bytes
+ Disklabel type: gpt
+ Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ 
+ Device     Start   End Sectors Size Name
+ /dev/sdb1      6  1018    1013   4M xbl
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdc</code>
 <div class="mw-collapsible-content">
-<pre class="shell">
-Disk /dev/sdc: 4 MiB, 4194304 bytes, 1024 sectors
-Disk model: KLUDG8V1EE-B0C1 
-Units: sectors of 1 * 4096 = 4096 bytes
-Sector size (logical/physical): 4096 bytes / 4096 bytes
-I/O size (minimum/optimal): 8192 bytes / 8192 bytes
-Disklabel type: gpt
-Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
-
-Device     Start   End Sectors Size Name
-/dev/sdc1      6  1018    1013   4M xblbak
-</pre>
+ Disk /dev/sdc: 4 MiB, 4194304 bytes, 1024 sectors
+ Disk model: KLUDG8V1EE-B0C1 
+ Units: sectors of 1 * 4096 = 4096 bytes
+ Sector size (logical/physical): 4096 bytes / 4096 bytes
+ I/O size (minimum/optimal): 8192 bytes / 8192 bytes
+ Disklabel type: gpt
+ Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ 
+ Device     Start   End Sectors Size Name
+ /dev/sdc1      6  1018    1013   4M xblbak
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdd</code>
 <div class="mw-collapsible-content">
-<pre class="shell">
-Disk /dev/sdd: 128 MiB, 134217728 bytes, 32768 sectors
-Disk model: KLUDG8V1EE-B0C1 
-Units: sectors of 1 * 4096 = 4096 bytes
-Sector size (logical/physical): 4096 bytes / 4096 bytes
-I/O size (minimum/optimal): 8192 bytes / 8192 bytes
-Disklabel type: gpt
-Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
-
-Device     Start   End Sectors   Size Name
-/dev/sdd1      6    13       8    32K reserve
-/dev/sdd2     14    14       1     4K cdt
-/dev/sdd3     15   270     256     1M ddr
-/dev/sdd4    271 32762   32492 126.9M last_parti
-</pre>
+ Disk /dev/sdd: 128 MiB, 134217728 bytes, 32768 sectors
+ Disk model: KLUDG8V1EE-B0C1 
+ Units: sectors of 1 * 4096 = 4096 bytes
+ Sector size (logical/physical): 4096 bytes / 4096 bytes
+ I/O size (minimum/optimal): 8192 bytes / 8192 bytes
+ Disklabel type: gpt
+ Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ 
+ Device     Start   End Sectors   Size Name
+ /dev/sdd1      6    13       8    32K reserve
+ /dev/sdd2     14    14       1     4K cdt
+ /dev/sdd3     15   270     256     1M ddr
+ /dev/sdd4    271 32762   32492 126.9M last_parti
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sde</code>
 <div class="mw-collapsible-content">
-<pre class="shell">
-Disk /dev/sde: 4 GiB, 4294967296 bytes, 1048576 sectors
-Disk model: KLUDG8V1EE-B0C1 
-Units: sectors of 1 * 4096 = 4096 bytes
-Sector size (logical/physical): 4096 bytes / 4096 bytes
-I/O size (minimum/optimal): 8192 bytes / 8192 bytes
-Disklabel type: gpt
-Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
-
-Device      Start     End Sectors   Size Name
-/dev/sde1       6     133     128   512K rpm
-/dev/sde2     134     261     128   512K rpmbak
-/dev/sde3     262     773     512     2M tz
-/dev/sde4     774    1285     512     2M tzbak
-/dev/sde5    1286    1413     128   512K hyp
-/dev/sde6    1414    1541     128   512K hypbak
-/dev/sde7    1542    1545       4    16K sec
-/dev/sde8    1546    1673     128   512K pmic
-/dev/sde9    1674    1801     128   512K pmicbak
-/dev/sde10   1802   29961   28160   110M modem
-/dev/sde11  29962   34057    4096    16M dsp
-/dev/sde12  34058   35081    1024     4M mdtpsecapp
-/dev/sde13  35082   36105    1024     4M mdtpsecappbak
-/dev/sde14  36106   36361     256     1M dip
-/dev/sde15  36362   44553    8192    32M mdtp
-/dev/sde16  44554   46601    2048     8M abl
-/dev/sde17  46602   48649    2048     8M ablbak
-/dev/sde18  48650   52745    4096    16M LOGO
-/dev/sde19  52746   69129   16384    64M boot
-/dev/sde20  69130   85513   16384    64M boot_aging
-/dev/sde21  85514  871945  786432     3G system
-/dev/sde22 871946  888329   16384    64M recovery
-/dev/sde23 888330  888330       1     4K devinfo
-/dev/sde24 888331  888586     256     1M bluetooth
-/dev/sde25 888587  888714     128   512K keymaster
-/dev/sde26 888715  888842     128   512K keymasterbak
-/dev/sde27 888843  888970     128   512K cmnlib
-/dev/sde28 888971  889098     128   512K cmnlibbak
-/dev/sde29 889099  889226     128   512K cmnlib64
-/dev/sde30 889227  889354     128   512K cmnlib64bak
-/dev/sde31 889355  889418      64   256K apdp
-/dev/sde32 889419  889482      64   256K msadp
-/dev/sde33 889483  889483       1     4K dpo
-/dev/sde34 889484  897839    8356  32.7M splash
-/dev/sde35 897840  897840       1     4K limits
-/dev/sde36 897841  898096     256     1M toolsfv
-/dev/sde37 898097  900144    2048     8M logfs
-/dev/sde38 900145  900656     512     2M sti
-/dev/sde39 900657  900688      32   128K devcfg
-/dev/sde40 900689  917072   16384    64M logdump
-/dev/sde41 917073  917104      32   128K storsec
-/dev/sde42 917105  917136      32   128K storsecbak
-/dev/sde43 917137  917648     512     2M fw_4j1ed
-/dev/sde44 917649  918160     512     2M fw_8v1ee
-/dev/sde45 918161  918672     512     2M fw_4g9n4
-/dev/sde46 918673  919184     512     2M fw_4t0n8
-/dev/sde47 919185 1048570  129386 505.4M minidump
-/dev/sde48 927377  927377       0     0B last_parti
-</pre>
+ Disk /dev/sde: 4 GiB, 4294967296 bytes, 1048576 sectors
+ Disk model: KLUDG8V1EE-B0C1 
+ Units: sectors of 1 * 4096 = 4096 bytes
+ Sector size (logical/physical): 4096 bytes / 4096 bytes
+ I/O size (minimum/optimal): 8192 bytes / 8192 bytes
+ Disklabel type: gpt
+ Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ 
+ Device      Start     End Sectors   Size Name
+ /dev/sde1       6     133     128   512K rpm
+ /dev/sde2     134     261     128   512K rpmbak
+ /dev/sde3     262     773     512     2M tz
+ /dev/sde4     774    1285     512     2M tzbak
+ /dev/sde5    1286    1413     128   512K hyp
+ /dev/sde6    1414    1541     128   512K hypbak
+ /dev/sde7    1542    1545       4    16K sec
+ /dev/sde8    1546    1673     128   512K pmic
+ /dev/sde9    1674    1801     128   512K pmicbak
+ /dev/sde10   1802   29961   28160   110M modem
+ /dev/sde11  29962   34057    4096    16M dsp
+ /dev/sde12  34058   35081    1024     4M mdtpsecapp
+ /dev/sde13  35082   36105    1024     4M mdtpsecappbak
+ /dev/sde14  36106   36361     256     1M dip
+ /dev/sde15  36362   44553    8192    32M mdtp
+ /dev/sde16  44554   46601    2048     8M abl
+ /dev/sde17  46602   48649    2048     8M ablbak
+ /dev/sde18  48650   52745    4096    16M LOGO
+ /dev/sde19  52746   69129   16384    64M boot
+ /dev/sde20  69130   85513   16384    64M boot_aging
+ /dev/sde21  85514  871945  786432     3G system
+ /dev/sde22 871946  888329   16384    64M recovery
+ /dev/sde23 888330  888330       1     4K devinfo
+ /dev/sde24 888331  888586     256     1M bluetooth
+ /dev/sde25 888587  888714     128   512K keymaster
+ /dev/sde26 888715  888842     128   512K keymasterbak
+ /dev/sde27 888843  888970     128   512K cmnlib
+ /dev/sde28 888971  889098     128   512K cmnlibbak
+ /dev/sde29 889099  889226     128   512K cmnlib64
+ /dev/sde30 889227  889354     128   512K cmnlib64bak
+ /dev/sde31 889355  889418      64   256K apdp
+ /dev/sde32 889419  889482      64   256K msadp
+ /dev/sde33 889483  889483       1     4K dpo
+ /dev/sde34 889484  897839    8356  32.7M splash
+ /dev/sde35 897840  897840       1     4K limits
+ /dev/sde36 897841  898096     256     1M toolsfv
+ /dev/sde37 898097  900144    2048     8M logfs
+ /dev/sde38 900145  900656     512     2M sti
+ /dev/sde39 900657  900688      32   128K devcfg
+ /dev/sde40 900689  917072   16384    64M logdump
+ /dev/sde41 917073  917104      32   128K storsec
+ /dev/sde42 917105  917136      32   128K storsecbak
+ /dev/sde43 917137  917648     512     2M fw_4j1ed
+ /dev/sde44 917649  918160     512     2M fw_8v1ee
+ /dev/sde45 918161  918672     512     2M fw_4g9n4
+ /dev/sde46 918673  919184     512     2M fw_4t0n8
+ /dev/sde47 919185 1048570  129386 505.4M minidump
+ /dev/sde48 927377  927377       0     0B last_parti
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdf</code>
 <div class="mw-collapsible-content">
-<pre class="shell">
-Disk /dev/sdf: 1.51 GiB, 1610612736 bytes, 393216 sectors
-Disk model: KLUDG8V1EE-B0C1 
-Units: sectors of 1 * 4096 = 4096 bytes
-Sector size (logical/physical): 4096 bytes / 4096 bytes
-I/O size (minimum/optimal): 8192 bytes / 8192 bytes
-Disklabel type: gpt
-Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ Disk /dev/sdf: 1.51 GiB, 1610612736 bytes, 393216 sectors
+ Disk model: KLUDG8V1EE-B0C1 
+ Units: sectors of 1 * 4096 = 4096 bytes
+ Sector size (logical/physical): 4096 bytes / 4096 bytes
+ I/O size (minimum/optimal): 8192 bytes / 8192 bytes
+ Disklabel type: gpt
+ Disk identifier: 98101B32-BBE2-4BF2-A06E-2BB33D000C20
+ 
+ Device      Start    End Sectors   Size Name
+ /dev/sdf1       6    517     512     2M modemst1
+ /dev/sdf2     518   1029     512     2M modemst2
+ /dev/sdf3    1030   1541     512     2M fsg
+ /dev/sdf4    1542   1542       1     4K fsc
+ /dev/sdf5    1543   1670     128   512K md5
+ /dev/sdf6    1671 263814  262144     1G vendor
+ /dev/sdf7  263815 393182  129368 505.4M reserve3
+ /dev/sdf8  267863 267863       0     0B last_parti
+</div>
+</div>
 
-Device      Start    End Sectors   Size Name
-/dev/sdf1       6    517     512     2M modemst1
-/dev/sdf2     518   1029     512     2M modemst2
-/dev/sdf3    1030   1541     512     2M fsg
-/dev/sdf4    1542   1542       1     4K fsc
-/dev/sdf5    1543   1670     128   512K md5
-/dev/sdf6    1671 263814  262144     1G vendor
-/dev/sdf7  263815 393182  129368 505.4M reserve3
-/dev/sdf8  267863 267863       0     0B last_parti
-</pre>
-</div>
-</div>
+<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == Links ==
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
