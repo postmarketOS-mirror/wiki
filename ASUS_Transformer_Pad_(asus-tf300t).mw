@@ -55,8 +55,8 @@
 
 *Grate is a upstream based tree for tegra devices with the goal of actually upstreaming any changes done. Trying to mainline this device should be relatively doable up to a certain point since the Tegra 3 is well supported on this tree. I'll be basing work on this tablet on the TF300t port since that one is the closest in Hardware.
 * Baseline kernel sources: https://github.com/grate-driver/linux
-* Source:  transformers branch https://github.com/okias/linux/tree/transformers (Michal TF300t work)
-* Version: 5.5.0-rc5
+* Source:  transformers branch https://github.com/grate-driver/linux/tree/transformers (Michal TF300t work)
+* Version: 5.5.0-rc7
 * Status: Boots.
 
 == What does not work (downstream kernel) ==
