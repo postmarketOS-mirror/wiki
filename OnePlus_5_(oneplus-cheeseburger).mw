@@ -90,6 +90,8 @@ Install <code>[https://wiki.postmarketos.org/wiki/Installing_pmbootstrap pmboots
 </div>
 '''NOTICE: Both <code>phosh</code> and <code>plasma-mobile</code> are NOT working at all currently; this should be solved later by mainlining and using the <code>freedreno</code> DRM driver for graphics & <code>mesa</code> 3D acceleration.'''
 
+Also note that running checksums/building can fail due to residue files! In these cases simply run the checksum command (again) for the package in question.
+
 === Flashing the device ===
 To begin the flashing process, boot your device to <code>fastboot</code> mode (if you haven't already). The standard flashing process goes as follows:
  pmbootstrap flasher flash_rootfs
