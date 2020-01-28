@@ -15,7 +15,7 @@
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = N <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = N <!-- Wireless network works? -->
@@ -63,12 +63,11 @@ The OnePlus 5 uses <code>fastboot</code> as its flashing protocol.
 To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when <code>FastBoot Mode</code> can be seen on the display.
 
 == Installation ==
-'''UPDATE: I've now made a MR to upstream my work ([https://gitlab.com/postmarketOS/pmaports/-/merge_requests/908 see !908 on pmaports]), so please wait for a bit (I'll mark flashing as working in the features box once this is merged) :)'''
 
 === Unlocking the bootloader ===
 If your bootloader is still locked at this point, you need to unlock it to proceed.
 
-'''Doing this WILL delete all your data on the device as a security precaution, so backup all your data before proceeding!'''
+'''WARNING: Doing this WILL delete all your data on the device as a security precaution, so backup all your data before continuing!'''
 
 There are plenty of guides online describing how to do this, but the run-down should be as follows:
 # Enable <code>Developer options</code> by tapping the build number 7 times in <code>Settings</code> > <code>About</code>
@@ -81,12 +80,14 @@ There are plenty of guides online describing how to do this, but the run-down sh
 
 === Setup build env & create flashables ===
 Install <code>[https://wiki.postmarketos.org/wiki/Installing_pmbootstrap pmbootstrap]</code> on your build machine and start following the steps below:
+<div style="width: calc(100%-320px); overflow: auto;">
  pmbootstrap init
  pmbootstrap checksum linux-oneplus-cheeseburger
  pmbootstrap build linux-oneplus-cheeseburger
  pmbootstrap checksum device-oneplus-cheeseburger
  pmbootstrap build device-oneplus-cheeseburger
  pmbootstrap install
+</div>
 '''NOTICE: Both <code>phosh</code> and <code>plasma-mobile</code> are NOT working at all currently; this should be solved later by mainlining and using the <code>freedreno</code> DRM driver for graphics & <code>mesa</code> 3D acceleration.'''
 
 === Flashing the device ===
@@ -95,7 +96,7 @@ To begin the flashing process, boot your device to <code>fastboot</code> mode (i
  pmbootstrap flasher flash_kernel
  sudo fastboot reboot
 
-If you instead want to install the pmOS root filesystem on <code>userdata</code> partition (around 60 or 120 GB) instead of the <code>system</code> partition (3 GB), run the following instead as the flash_rootfs command:
+If you instead want to install the pmOS root filesystem on <code>userdata</code> partition (around 56 or 120 GB) instead of the <code>system</code> partition (3 GB), run the following instead as the flash_rootfs command:
  pmbootstrap flasher flash_rootfs --partition userdata
 
 During e.g. rapid kernel development you can simply boot the new image instead of always flashing to the device <code>boot</code> partition like so:
@@ -118,7 +119,7 @@ Notification light color & brightness (0-255) are controllable:
 Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
 
 == Partition layout ==
-<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sda</code>
 <div class="mw-collapsible-content">
  Disk /dev/sda: 113.55 GiB, 121911640064 bytes, 29763584 sectors
@@ -145,7 +146,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
  /dev/sda13 85824 29763578 29677755 113.2G userdata
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdb</code>
 <div class="mw-collapsible-content">
  Disk /dev/sdb: 4 MiB, 4194304 bytes, 1024 sectors
@@ -160,7 +161,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
  /dev/sdb1      6  1018    1013   4M xbl
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdc</code>
 <div class="mw-collapsible-content">
  Disk /dev/sdc: 4 MiB, 4194304 bytes, 1024 sectors
@@ -175,7 +176,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
  /dev/sdc1      6  1018    1013   4M xblbak
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdd</code>
 <div class="mw-collapsible-content">
  Disk /dev/sdd: 128 MiB, 134217728 bytes, 32768 sectors
@@ -193,7 +194,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
  /dev/sdd4    271 32762   32492 126.9M last_parti
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sde</code>
 <div class="mw-collapsible-content">
  Disk /dev/sde: 4 GiB, 4294967296 bytes, 1048576 sectors
@@ -255,7 +256,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
  /dev/sde48 927377  927377       0     0B last_parti
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:620px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 <code>oneplus5:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/sdf</code>
 <div class="mw-collapsible-content">
  Disk /dev/sdf: 1.51 GiB, 1610612736 bytes, 393216 sectors
@@ -281,14 +282,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == Links ==
+* {{MR|908|pmaports}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-oneplus-cheeseburger Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-oneplus-cheeseburger Kernel package]
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
