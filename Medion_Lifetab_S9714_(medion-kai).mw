@@ -65,7 +65,7 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 
 To start fastboot mode:
-When tablet is running (with usb debugging enabled in the developer options) run
+When tablet is running Android (with usb debugging enabled in the developer options) or recovery run
 
     adb reboot bootloader
 
