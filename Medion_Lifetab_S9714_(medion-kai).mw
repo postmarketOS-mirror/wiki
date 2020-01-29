@@ -73,6 +73,8 @@ To unlock bootloader in fastboot mode (CAUTION: this will erase userdata! Backup
 
     fastboot oem unlock
 
+To boot into recovery: hold volume down and power on at the same time to start device.
+
 == Installation ==
 
 My procedure was:
