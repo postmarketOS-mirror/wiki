@@ -14,10 +14,10 @@
 | memory = 6 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
-| status_usbnet =
+| status_usbnet = Y
 | status_flashing = Y
-| status_touch =
-| status_screen =
+| status_touch = P
+| status_screen = Y
 | status_wifi =
 | status_xwayland =
 | status_fde =
@@ -32,8 +32,8 @@
 | status_mobiledata =
 | status_sms =
 | status_calls =
-| status = kernel compiles, boots only when the virtual terminal is disabled
-| booting = no
+| status_otg = Y
+| booting = yes
 
 <!-- you can also use these lines if you need to:
 Version of the kernel that pmos is running
@@ -41,11 +41,8 @@ Version of the kernel that pmos is running
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
-| status_otg = -
 -->
 }}
-
-Kernel boots only if virtual terminal is disabled, which makes debugging harder.
 
 == Contributors ==
 * Hacker420
@@ -62,13 +59,25 @@ Kernel boots only if virtual terminal is disabled, which makes debugging harder.
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 Use pmbootstrap flasher.
+
+== Virtual terminal ==
+Virtual terminal is broken in downstream, causing early reboot without logs in pstore. [https://gitlab.com/archeYR/pmaports/blob/device/xiaomi-sagit/device/linux-xiaomi-sagit/fix-virtual-terminal.patch This patch] is needed to make virtual terminal working properly.
+
+== Input ==
+Touchscreen works sporadically, usually it starts working after the device is left unused for some time. All the buttons except for home button (which is is integrated with fingerprint scanner) are working.
+
+== Display ==
+Seems to work well, except for the postmarketOS splash which is displayed incorrectly. Currently only xfce4 has been tested.
+
+== USB OTG ==
+Tested USB Hub with ethernet adapter, USB Audio device, and HID peripherals. Everything works well.
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 -->
-* [https://gitlab.com/archeYR/pmaports Mi 6 port]
+* [https://gitlab.com/archeYR/pmaports/tree/device/xiaomi-sagit Mi 6 port]
 * [https://gitlab.com/Hacker1245/pmaports/tree/device/xiaomi-sagit Old Mi 6 port]
 * [https://github.com/LineageOS/android_kernel_xiaomi_msm8998 Kernel sources]
 
