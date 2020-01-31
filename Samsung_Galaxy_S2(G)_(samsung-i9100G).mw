@@ -52,9 +52,7 @@ It does not boot.
 
 == To-Do ==
 
-<s>It looks like this device uses the same processor as Tab2 which have a working port for PmOS. I'm thinking about porting it from the Tab2 repo.</s>
-<br>
-It looks like my device is an isorec device while Tab2 is a bootimg device, weird.
+Make it boot
 
 == See also ==
 * [https://github.com/LineageOS/android_kernel_samsung_t1 Kernel sources by LineageOS]
