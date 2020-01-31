@@ -57,4 +57,4 @@ Make it boot
 == See also ==
 * [https://github.com/LineageOS/android_kernel_samsung_t1 Kernel sources by LineageOS]
 * [https://github.com/hpagseddy/postmarketos-i9100g My build]
-* https://github.com/ths-backup/i9100g_xloader/ Looks like this might have a free software bootloader that you can [https://github.com/ths-backup/i9100g_xloader/blob/ics/scripts/signGP.c self sign.] Needs verified!
+* https://github.com/ths-backup/i9100g_xloader/ Looks like this might have a free software bootloader that you can [https://github.com/ths-backup/i9100g_xloader/blob/ics/scripts/signGP.c self sign.] Needs verified! Booting works on the device, didnt test self signing yet
