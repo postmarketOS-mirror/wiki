@@ -39,6 +39,16 @@ with open("tmp/somefile", "w") as handle:
 pmb.chroot.root(args, ["mv", "/tmp/somefile", "/etc/somefile"])
 </syntaxhighlight>
 
+=== Testing the APKBUILD parser after changes ===
+Besides the python tests, it's a good idea to let the APKBUILD parsing code run over all APKBUILDs that we have in pmaports.git, before and after making changes. This makes it easy to spot regressions.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap apkbuild_parse > /tmp/new
+$ git checkout master
+$ pmbootstrap apkbuild_parse > /tmp/old
+$ colordiff /tmp/old /tmp/new | less -R
+</syntaxhighlight>
+
 == See also ==
 * [[Testsuite]]
 
