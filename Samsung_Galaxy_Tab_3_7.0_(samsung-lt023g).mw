@@ -72,7 +72,7 @@ This can be done via <code>pmbootstrap flasher flash_kernel</code> after [[#Ente
 * Bluetooth (only shows available devices. Still looking for a way to connect to a device)
 
 == What does not work ==
-* Cellular networking
+* Cellular networking(not exist on some models)
 * 2D and 3D Acceleration
 * Audio
 * Flashing with flash_rootfs
