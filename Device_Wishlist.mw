@@ -3,6 +3,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 == Mainline Linux Candidate Devices ==
 
 * Galaxy Note II [https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/exynos4412-n710x.dts Mainline DTS available]
+* Kindle Fire 1st Generation (Model # seems to be D01400) (Free software Bootloader, pretty much a PandaBoard devkit with a screen) [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm/boot/dts/omap4-kc1.dts Mainline DTS available]
 * [http://elektranox.org/droid4/ Motorola Droid 4]
 * Nexus 5X [https://invidio.us/watch?v=77tuFtM4gjA Basic support available]
 * Nexus 6P [https://invidio.us/watch?v=77tuFtM4gjA Basic support available]
@@ -41,7 +42,6 @@ Please keep this list sorted by alphabet for readability.
 * Huawei Y5 II
 * [https://github.com/postmarketOS/pmbootstrap/issues/57 Old iPhones] (must be [https://en.wikipedia.org/wiki/OpeniBoot OpeniBoot] compatible to make it feasible)
 * Intex Aqua Fish and Other Sailfish running devices
-* Kindle Fire 1st Generation (FOSS Bootloader, pretty much a PandaBoard devkit with a screen)
 * Lenovo K10a40
 * Lenovo TAB 2 A10-70F
 * LG Leon
