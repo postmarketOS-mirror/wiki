@@ -56,7 +56,14 @@ make -j<cores>
 pmbootstrap build --envkernel linux-postmarketos-qcom-msm8916
 </source>
 
-After that, proceed with [[Installation_guide#Installation_and_flashing|installation]] as usual.
+You will also need to install the [https://github.com/msm8916-mainline/lk2nd/releases/latest lk2nd bootloader], as it is required to handle some quirks
+with msm8916 devices on mainline kernels. Flash the <code>lk2nd.img</code> image to the boot partition with <code>fastboot flash boot /path/to/lk2nd.img</code>. lk2nd
+also provides a fastboot interface that allows for flashing kernels without overwriting lk2nd itself. To enter it, power on the device, then hold down Vol Down as soon
+as you see the boot splash. You should be presented with a menu that looks like the following:
+
+[[File:Motorola-harpia_lk2nd_example.jpeg|x500px]]
+
+After that, proceed with [[Installation_guide#Installation_and_flashing|installation]] as usual, using lk2nd's fastboot interface to flash the kernel and rootfs.
 
 == See also ==
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-harpia Device package]
