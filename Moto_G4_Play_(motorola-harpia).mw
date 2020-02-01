@@ -12,7 +12,7 @@
 | storage = 8GB or 16GB
 | display = HD (720x1280)
 | memory = 1GB or 2GB
-| architecture = armhf
+| architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
