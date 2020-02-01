@@ -253,6 +253,7 @@ Result: [https://gitlab.com/postmarketOS/pmaports/merge_requests/904 Merge reque
 
 == See also ==
 
+* [[Google_Nexus_7_2012_(asus-grouper)]]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-medion-kai Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-medion-kai Kernel package]
 * [https://github.com/red-black-bonsai/android_kernel_medion_lifetab_s9714 Vendor Android kernel sources in a GitHub repository]
