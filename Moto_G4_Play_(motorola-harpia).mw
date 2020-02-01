@@ -17,120 +17,47 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
-| status_xwayland = 
+| status_wifi = Y
+| status_xwayland = Y
 | status_fde = 
-| status_mainline = 
+| status_mainline = Y
 | status_battery =
-| status_3d = 
+| status_3d = N
 | status_accel = 
 | status_audio = 
 | status_bluetooth =
 | status_camera =
 | status_gps = 
 | status_mobiledata = 
-| status_sms = P
+| status_sms = 
 | status_calls = 
 | booting = yes
 }}
 
+== Users owning this device ==
+{{Device owners}}
+
 == Contributors ==
-* the-returning-void
+* Sorixelle
 
 == How to enter flash mode ==
 Hold down POWER + Vol Down while booting to enter Flash Mode.
 
-== Wifi ==
-Configure your kernel and enable the prima wifi staging driver
+== Installation ==
+As some features are still in development for this device, the kernel needs to be built from source using envkernel. To do this, you'll need a copy of
+[https://gitlab.com/postmarketOS/pmbootstrap/blob/master/helpers/envkernel.sh envkernel.sh], and the [https://github.com/msm8916-mainline/linux latest kernel tree]
+for the device. Once you have those, and you have run <code>pmbootstrap init</code>, run the following commands:
 
 <source>
-pmbootstrap menuconfig motorola-harpia
-pmbootstrap build linux-motorola-harpia
+cd /path/to/linux/kernel
+source /path/to/envkernel.sh
+make msm8916_defconfig pmos.config
+make -j<cores>
+pmbootstrap build --envkernel linux-postmarketos-qcom-msm8916
 </source>
 
-On the device
-
-<source>
-apk add wcnss-wlan
-/etc/init.d/wcnss-wlan start
-</source>
-
-== Firmware {Wifi/Modem} (TODO: package it) ==
-On the device extract firmware
-<source>
-cd /lib/firmware
-mkdir postmarketos
-cd postmarketos
-mount /dev/disk/by-partlabel/system /mnt
-cp -ap /mnt/etc/firmware/* /lib/firmware/postmarketos
-umount /mnt
-mount /dev/disk/by-partlabel/fsg /mnt
-cp -ap /mnt/* /lib/firmware/postmarketos
-umount /mnt
-mount /dev/disk/by-partlabel/modem /mnt
-cp -ap /mnt/image/* /lib/firmware/postmarketos
-umount /mnt
-mount /dev/disk/by-partlabel/persist /mnt
-mkdir -p wlan/prima
-cp -ap /mnt/WCNSS_wlan_dictionary.dat wlan/prima/
-umount /mnt
-</source>
-
-Make a link in case the firmware path doesn't include /lib/firmware/postmarketos
-
-<source>
-cd /lib/firmware
-ln -s /lib/firmware/postmarketos/* /lib/firmware/
-</source>
-
-
-== Modem ==
-Make the necesary links for qcom_rmtfs
-
-<source>
-cd /boot
-ln -s /dev/disk/by-partlabel/modemst1 modem_fs1
-ln -s /dev/disk/by-partlabel/modemst2 modem_fs2
-ln -s /dev/disk/by-partlabel/fsg modem_fsg
-</source>
-
-Install necessary software
-<source>apk add modem-qcom-msm-downstream-common qcom_rmtfs libsmdpkt_wrapper libqipcrtr4msmipc ofono</source>
-
-Start the wcnss-wlan service to initialize the wifi card (helps the modem?)
-<source>/etc/init.d/wcnss-wlan start</source>
-
-Start a tmux for multiple windows
-<code>tmux</code>
-
-Start qcom_rmtfs on a terminal
-
-<source>
-export LD_PRELOAD=/usr/lib/preload/libqipcrtr4msmipc.so
-qcom_rmtfs -v
-</source>
-
-Start ofonod on another terminal
-
-<source>
-export LD_PRELOAD=/usr/lib/preload/libsmdpkt_wrapper.so
-ofonod -d -n
-</source>
-
-Send an SMS!
-
-<source>
-export PHONE_NUMBER="<number to send sms to ex: 1234567890>"</code>
-sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Powered" variant:boolean:"true"
-sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.GetProperties
-sudo dbus-send --print-reply --system --dest=org.ofono /gobi_0 org.ofono.Modem.SetProperty string:"Online" variant:boolean:"true"
-sudo dbus-send --system --print-reply --dest=org.ofono /gobi_0 org.ofono.MessageManager.SendMessage string:"$PHONE_NUMBER" string:"Hello world! -postmarketOS"
-</source>
-
-Receive SMS like this (might be spammy if you have other DBus apps):
-<code>sudo dbus-monitor</code>
+After that, proceed with [[Installation_guide#Installation_and_flashing|installation]] as usual.
 
 == See also ==
-* Device requires msm-refresher to get a display past the boot splash, even though <code>cat /sys/class/graphics/fb0/modes > /sys/class/graphics/fb0/mode</code> doesn't fix the display
-* Steps outlined for [[Troubleshooting:display#Screen_is_blank_outside_of_Weston|Screen is blank outside of Weston]] is still required to get a display after the boot splash
-* Xorg starts with a blank display, to make the screen show ssh into the device and run <code>sudo osk-sdl -t</code> to fix display
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-harpia Device package]
+* [https://github.com/Sorixelle/linux Development kernel tree]
