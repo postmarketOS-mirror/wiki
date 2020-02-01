@@ -58,3 +58,4 @@ Make it boot
 * [https://github.com/LineageOS/android_kernel_samsung_t1 Kernel sources by LineageOS]
 * [https://github.com/hpagseddy/postmarketos-i9100g My build]
 * https://github.com/ths-backup/i9100g_xloader/ Looks like this might have a free software bootloader that you can [https://github.com/ths-backup/i9100g_xloader/blob/ics/scripts/signGP.c self sign.] Needs verified! Booting works on the device, didnt test self signing yet
+* The modem seems to be the [https://github.com/LineageOS/android_kernel_samsung_t1/blob/10ca03795f659f6f1fa995e8c300a08c3a133354/arch/arm/configs/cyanogenmod_i9100g_defconfig#L1107 XMM6260]
