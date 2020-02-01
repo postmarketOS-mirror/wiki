@@ -46,6 +46,7 @@ A good example of a device using a mainline kernel is the <code>device-nokia-rx5
 * [https://nickdesaulniers.github.io/blog/2017/05/16/submitting-your-first-patch-to-the-linux-kernel-and-responding-to-feedback/ Submitting your first patch to the Linux kernel and responding to feedback]
 * [http://kroah.com/log/blog/2018/02/05/linux-kernel-release-model/ Linux Kernel Release Model] (reasons why we should all be using mainlined kernels)
 * [https://talk.maemo.org/showthread.php?t=99357 Documenting devices with mainline Linux support]
+* [https://elinux.org/Device_Tree_Usage Device Tree usage on elinux.org]
 * [https://elinux.org/Device_Tree_Reference Device Tree reference on elinux.org]
 * [https://elixir.bootlin.com/linux/latest/source/Documentation/devicetree Documentation of devicetree bindings]
 * [https://matrix.to/#/!clcCCNrLZYwdfNqkkR:disroot.org/$152104340146547HXnql:matrix.org opendata26 walking alibabzo through mainlining aries]
