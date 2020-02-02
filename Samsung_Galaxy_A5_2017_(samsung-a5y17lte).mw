@@ -99,6 +99,60 @@ Open questions:
 
 wifi module gets initialized after 180 seconds. This is due to missing firmware files, and 60 secs timeout.
 
+=== UART cable ===
+
+It is possible to connect to UART port(/dev/ttySAC2) on the mainboard. It is located on pins 1(RX), 2(TX) of the test port. Signal level is 1.8V
+
+==== Bill of materials ====
+* Adhesive tape
+* Precise soldering equipment
+* USB - UART converter (you need also level shifter, if converter does not support 1.8V signals. I used [https://electronics.stackexchange.com/questions/333229/1-8v-uart-with-3-3v-uart schematic on two transistors])
+* Breadboard
+* Wires
+* Thermal glue
+
+
+
+==== Assembly photos ====
+[[File:A5y17lte uart wires.jpg|200px|thumb|left| Wires, soldered to UART port. ]]
+
+[[File:A5y17lte uart assembly.jpg|200px|thumb|left| a5y17lte, connected to USB - UART converter via level shifter. ]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== Motherboard ===
+[[File:A5y17lte test port.jpg|200px|thumb|left| Test port pin numbering]]
 
 == See also ==
 <!--
