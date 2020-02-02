@@ -78,7 +78,7 @@ $ pmbootstrap flasher --method=adb sideload
 == Notes ==
 === USB ===
 
-Device is equipped with usb type-c receptacle. No UART cable schematic available as of 04.01.2020. Available info:
+Device is equipped with usb type-c receptacle. No UART JIG mode cable schematic available as of 04.01.2020. Available info:
 
 * The receptacle is managed by s2mu004 kernel module. Module is capable to manage non type-c receptacles (see CONFIG_MUIC_S2MU004_NON_USB_C_TYPE option)
 * Receptacle has non standard pinout: B12 (considering, A row facing top, B row facing bottom side of the phone) pin is not connected to the ground.
