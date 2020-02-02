@@ -34,7 +34,7 @@
 | status_calls = -
 | status_otg = Y
 | booting = Y
-| pmoskernel = 4.19 (LTS)
+| pmoskernel = 5.4 (LTS)
 | whet_dhry = 1664.4
 }}
 
