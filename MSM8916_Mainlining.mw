@@ -584,7 +584,13 @@ Like the touchscreen, sensors are usually connected to a [https://en.wikipedia.o
 Some devices have a [https://en.wikipedia.org/wiki/Hall_effect_sensor Hall effect sensor] that is used to detect if the screen is covered by some kind of flip cover. It is usually a simple GPIO like the [[#Buttons|buttons]], and can be set up easily using [https://www.kernel.org/doc/Documentation/devicetree/bindings/input/gpio-keys.txt gpio-keys].
 
 === Battery/Charging ===
-{{todo|}}
+Although PM8916 provides a linear charger for batteries only few devices actually make use of it. This might be because it is comparatively inefficient compared to a switching mode battery charger. Therefore most devices actually have custom chips that manage the battery and charging. Usually it is separated in:
+* '''Fuel gauge:''' Measures the remaining charge of the battery.
+* '''Charger:''' Handles charging the battery.
+
+Similar to the sensors, battery/charger are usually connected to a [https://en.wikipedia.org/wiki/I%C2%B2C I²C bus]. Look through the supported drivers in mainline (<code>drivers/power/supply</code>) to see if a driver exists already, or can be modified eventually to support another version of a similar chip. Compare with the downstream driver just to be sure.
+
+{{note|'''Warning:''' Incorrect usage of battery/charger drivers might cause the battery to malfunction. In worst case, incorrect charging of batteries might even cause the battery to explode. Be careful.}}
 
 == Glossary ==
 ;PM8916
