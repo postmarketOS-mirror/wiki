@@ -75,6 +75,10 @@ Before you make any changes, try [https://github.com/msm8916-mainline/lk2nd#buil
 
 Note the <code>FIXME</code> lines in the example above. This is where you still need to make changes for your device. For example, replace the <code>model</code> with a display name for your device, and the placeholders in the <code>compatible</code> string.
 
+The <code>qcom,board-id</code> property allows the bootloader to select the correct device tree. MSM8916 devices usually use [[QCDT]] (multiple device tree blobs (dtb) are packaged in one Android boot image). You should be able to find the <code>qcom,board-id</code> in the downstream <code>.dts</code> file for your device.
+
+{{note|Some devices (in particular Samsung) do not implement the [[QCDT]] specification correctly - they all have the same <code>qcom,board-id</code>. In that case, the device cannot be detected only based on the selected DTB. For Samsung devices, <code>msm8916-samsung-r0x.dts</code> covers multiple devices - the actual device is then detected using <code>androidboot.bootloader</code> version passed by the Samsung bootloader.}}
+
 Make sure to add the new file to <code>dts/rules.mk</code>, and re-compile lk2nd.
 
 With a bit of luck, flashing the boot image on your device should make it boot into a Fastboot screen, and the device should show up via USB. If either of that is not the case, we need to investigate further. Sometimes, there is some kind of [[Micro-USB_Interface_Controller]] that sits between USB and the SoC, which may require manual setup to work correctly. Setting that up would require device-specific code. If you need help, ask in [[Matrix_and_IRC|the mainline channel on Matrix or IRC]].
@@ -118,7 +122,7 @@ deviceinfo_manufacturer="Vendor"
 deviceinfo_codename="<vendor>-<codename>"
 deviceinfo_date=""
 deviceinfo_dtb="qcom/msm8916-<vendor>-<codename>"
-#deviceinfo_append_dtb="true"
+deviceinfo_append_dtb="true"
 deviceinfo_modules_initfs=""
 deviceinfo_arch="aarch64"
 
@@ -138,7 +142,6 @@ deviceinfo_no_framebuffer="true"
 deviceinfo_flash_method="fastboot"
 deviceinfo_kernel_cmdline="earlycon=msm_serial_dm,0x78b0000 console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT"
 deviceinfo_generate_bootimg="true"
-#deviceinfo_bootimg_qcdt="true"
 deviceinfo_flash_offset_base="0x80000000"
 deviceinfo_flash_offset_kernel="0x00080000"
 deviceinfo_flash_offset_ramdisk="0x02000000"
@@ -146,13 +149,6 @@ deviceinfo_flash_offset_second="0x00f00000"
 deviceinfo_flash_offset_tags="0x01e00000"
 deviceinfo_flash_pagesize="2048"
 deviceinfo_flash_sparse="true"</nowiki>
-
-To load a generic kernel image, the device must be able to find the correct device tree. MSM8916 devices usually use [[QCDT]] (multiple device tree blobs (dtb) are packaged in one Android boot image; the correct one is selected based on the <code>qcom,board-id</code>). However, not all devices implement the specification correctly: For example, all Samsung devices use the same <code>qcom,board-id</code> - it is therefore useless to pick the correct device tree. In that case, we append a single DTB to the kernel image instead and load it directly from there (note: works only with lk2nd).
-
-{{todo|Explain how to check if the device implements the QCDT specification properly.}}
-
-* '''QCDT:''' Uncomment <code>deviceinfo_bootimg_qcdt="true"</code> {{todo|Explain how to figure out which <code>compatible</code> string to use in this case.}}
-* '''Appended device tree:''' Uncomment <code>deviceinfo_append_dtb="true"</code>
 
 Follow the [[Porting_to_a_new_device#Device_specific_package|postmarketOS porting guide]] until the device package builds successfully.
 
