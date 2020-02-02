@@ -51,23 +51,11 @@
 * <code>fastboot</code> should work when the green android appears on the screen
 
 === Installation process (legacy kernel) ===
-'''WARNING:''' Legacy kernel has reboot issues. If not sure, '''please use mainline kernel''' [[Google_Nexus_7_2012_(asus-grouper)#Instalation_process_.28mainline_kernel.29]]!
+'''WARNING:''' Legacy kernel has reboot issues. Once it's merged, '''please use mainline kernel'''!
 <syntaxhighlight lang="shell" line='line'>
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
-$ cd pmbootstrap
-$ ./pmbootstrap.py init
-$ ./pmbootstrap.py install
-$ ./pmbootstrap.py flasher flash_kernel
-</syntaxhighlight>
-
-=== Instalation process (mainline kernel) ===
-Not merged into pmOS yet, so if you want mainline use this repository for now.
-<syntaxhighlight lang="shell" line='line'>
-$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
-$ cd pmbootstrap
-$ ./pmbootstrap.py init
-$ ./pmbootstrap.py install
-$ ./pmbootstrap.py flasher flash_kernel
+$ pmbootstrap init # choose asus-grouper
+$ pmbootstrap install
+$ pmbootstrap flasher flash_kernel
 </syntaxhighlight>
 
 === Special installation process (development setup, kernel over approx. 4M) ===
