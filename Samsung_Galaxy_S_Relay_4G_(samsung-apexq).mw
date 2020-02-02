@@ -17,11 +17,11 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery =
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = 
@@ -34,7 +34,7 @@
 | booting = yes
 }}
 
-'''Status: Boots. Weston demo works with touch and keyboard.'''
+'''Status: Boots. Wifi works. Keyboard symbols mapping and screen rotation not working.'''
 
 == Contributors ==
 * silver
@@ -55,14 +55,15 @@ Set phone to ODIN mode
   3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
   4. Push VOLUME_UP to continue to ODIN mode screen
 <pre>
+./pmbootstrap.py flasher flash_kernel
+</pre>
+Phone will reboot. Follow above instructions again. It's easiest to just hold volddown and home while the kernel progress is shown instead of powering off in between flashes.
+<pre>
 ./pmbootstrap.py flasher flash_rootfs
 </pre>
-Phone will reboot. Follow above instructions again.
-<pre>
-./pmbootstrap.py flasher flash_kernel 
-</pre>
+The device will then reboot into postmarketos
 == Port information ==
 *kernel android_kernel_samsung_d2
-*commit 87f5fcaf7afef878914c3fcca2c2fd395f285902
+*commit 3795379ed3f846bf17908ff29576a93caff5d1d7
 *defconfig LineageOS/android_kernel_samsung_d2/87f5fcaf7afef878914c3fcca2c2fd395f285902/arch/arm/configs/cyanogen_apexq_defconfig
 *deviceinfo populated with boot.img from cm backup March 2017
