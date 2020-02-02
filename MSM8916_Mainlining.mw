@@ -586,5 +586,33 @@ Some devices have a [https://en.wikipedia.org/wiki/Hall_effect_sensor Hall effec
 === Battery/Charging ===
 {{todo|}}
 
+== Glossary ==
+;PM8916
+:The [https://en.wikipedia.org/wiki/Power_management_integrated_circuit PMIC] used together with MSM8916.
+;BLSP
+:"BAM-enabled low-speed peripheral". Controllers for UART, I²C and SPI.
+;LPASS
+:Low-power audio subsystem
+;MDSS
+:Mobile Display Subsystem - the hardware that manages the display.
+;MDP
+:Part of MDSS that manages display panels.
+;DSI
+:[https://en.wikipedia.org/wiki/Display_Serial_Interface MIPI Display Serial Interface (DSI)] - used for communication with display panel.
+;CAMSS
+:Camera Subsystem
+;SPMI
+:System Power Management Interface - used for communication between MSM8916 and PM8916.
+
+=== Remote Processors ===
+;WCNSS
+:Wireless Connectivity Subsystem (WCNSS). Provides WiFi and Bluetooth.
+;Venus
+:Provides hardware-accelerated video encoding/decoding.
+;Modem
+:Provides mobile connectivity and Audio DSP (ADSP). '''Note:''' On MSM8916, modem and ADSP are one remote processor, but the ADSP is usually separate on Qualcomm SoCs.
+;Hexagon
+:Microarchitecture for DSPs, used for ADSP (and therefore also modem in MSM8916).
+
 [[Category:Guide]]
 [[Category:Technical Reference]]
