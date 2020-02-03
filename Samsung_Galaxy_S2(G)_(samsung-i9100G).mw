@@ -52,7 +52,8 @@ It does not boot.
 
 == To-Do ==
 
-Make it boot
+* Make it boot
+* Configure files seems outdated and needs some editing to get it working on the latest version of PostmarketOS
 
 == See also ==
 * [https://github.com/LineageOS/android_kernel_samsung_t1 Kernel sources by LineageOS]
