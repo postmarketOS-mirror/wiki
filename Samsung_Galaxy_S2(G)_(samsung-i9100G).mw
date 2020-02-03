@@ -59,3 +59,4 @@ Make it boot
 * [https://github.com/hpagseddy/postmarketos-i9100g My build]
 * Seems to have a [https://github.com/hpagseddy/i9100g_xloader free software first stage bootloader]. Booting worked after compiling this x-loader code and flashing it onto the device with odin.
 * The modem seems to be the [https://github.com/LineageOS/android_kernel_samsung_t1/blob/10ca03795f659f6f1fa995e8c300a08c3a133354/arch/arm/configs/cyanogenmod_i9100g_defconfig#L1107 XMM6260]
+* [https://redmine.replicant.us/projects/replicant/wiki/I9100G Replicant's i9100G wiki]
