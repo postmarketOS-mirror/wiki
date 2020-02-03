@@ -13,6 +13,7 @@
 | display = 10.8 inch 1920x1280 IPS
 | memory = 4 GB DDR3
 | architecture = x86_64
+| whet_dhry = 1916.5
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
