@@ -18,8 +18,9 @@ Basics:
 Specific topics:
 * [https://www.youtube.com/watch?v=z4EkzJDGxFo Pin Control and GPIO] (48:03) talk by [[Special:Contributions/Linusw|Linus Walleij]]
 * [https://www.youtube.com/watch?v=Mwr7eZUm1Nw Common Clock Framework: How To Use It] (44:50) Not so useful, old and only a basic overview
-* [https://www.youtube.com/watch?v=Puv4mW55bF8 Timekeeping in the Linux Kernel - Stephen Boyd, Qualcomm Innovation Center] (34:41) This is cool!
+* [https://www.youtube.com/watch?v=Puv4mW55bF8 Timekeeping in the Linux Kernel - Stephen Boyd, Qualcomm Innovation Center] (34:41) About how clocksource works
 * [https://www.youtube.com/watch?v=l2ZSsOkfnz0 Linux Kernel Display Architecture] (56:53) DRM/KMS, MIPI DSI, panels,... slightly old, need something newer
+* [https://www.youtube.com/watch?v=GsDWgm0YiaU Power Management Integrated Circuits: Keep the Power in Your Hands] (39:44) About PMICs, regulators, power supply, fuelgauge, ...
 
 == Requirements ==
 === postmarketOS port ===
