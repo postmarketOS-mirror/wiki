@@ -230,7 +230,12 @@ echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
 
 === WiFi ===
 
-?
+The wifi uses the rtl8723cs driver and is functional. There is still an issue with the driver not reloading correctly when the SoC is put into suspend mode, this can be worked around by reloading the kernel module:
+
+<source lang="shell-session">
+pinephone:~# sudo rmmod rtl8723cs
+pinephone:~# sudo modprobe rtl8723cs
+</source>
 
 === Bluetooth ===
 
