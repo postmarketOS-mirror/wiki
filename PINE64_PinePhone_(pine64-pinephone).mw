@@ -239,7 +239,15 @@ pinephone:~# sudo modprobe rtl8723cs
 
 === Bluetooth ===
 
-There is a patch series on lkml. A v2 for this series is in progress.
+The bluetooth connection is handled by the wifi chipset. It is functional but there is no integration in Plasma Mobile yet. To pair a bluetooth device start the bluetoothd service and use bluetoothctl to connect.
+
+<source lang="shell-session">
+pinephone:~# sudo service bluetoothd start
+pinephone:~# bluetoothctl
+# scan on
+[NEW] 00:11:22:33:44:55
+# pair 00:11:22:33:44:55
+</source>
 
 === Modem ===
 
