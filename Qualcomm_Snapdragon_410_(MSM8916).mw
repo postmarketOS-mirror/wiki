@@ -63,7 +63,7 @@ At the moment, the modem is primarily tested using the oFono test scripts:
  # apk add py-dbus
  $ git clone https://git.kernel.org/pub/scm/network/ofono/ofono.git/
  $ cd ofono/test
- $ ./power-modem
+ $ ./enable-modem
  $ ./online-modem
  $ ./list-modems
 
