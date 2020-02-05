@@ -10,4 +10,6 @@ Arch Linux is minimal Linux installation with a larger focus on offering the new
 
 == Ubuntu Touch ==
 
+Ubuntu Touch uses Halium, built from Android libraries.
+
 == Sailfish OS ==
