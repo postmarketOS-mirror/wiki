@@ -1,5 +1,7 @@
 == Ubuntu ==
 
+There was once a Ubuntu Desktop port to the grouper, but it was slow and not very usable. It is however compatible with desktop Ubuntu apps.
+
 == LineageOS ==
 
 LineageOS is an Android derived open source project. It runs the Android framework.
@@ -10,6 +12,6 @@ Arch Linux is minimal Linux installation with a larger focus on offering the new
 
 == Ubuntu Touch ==
 
-Ubuntu Touch uses Halium, built from Android libraries.
+Ubuntu Touch uses Halium, built from Android libraries. The only UI is Unity 8, however on most (all?) devices calls work.
 
 == Sailfish OS ==
