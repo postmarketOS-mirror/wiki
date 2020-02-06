@@ -13,7 +13,6 @@
 | display = 1024x600
 | memory = 1 GB
 | architecture = aarch64
-
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
@@ -34,6 +33,7 @@
 | status_calls = N/A
 | status = 
 | booting = no
+}}
 
 == Hardware details ==
 CPU: Allwinner A64
