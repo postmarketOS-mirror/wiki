@@ -166,5 +166,6 @@ Check the results of the automatic build by going to https://gitlab.com/USERNAME
 
 == See also ==
 * https://git-rebase.io/ in depth interactive git rebase tutorial (explains fixing previous commits, squashing commits, splitting one commit into several, reordering commits, etc.)
+* [https://wiki.winehq.org/Git_Wine_Tutorial Wine project has an excellent Git Tutorial]
 
 [[Category:Guide]]
