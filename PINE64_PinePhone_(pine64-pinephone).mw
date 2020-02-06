@@ -50,7 +50,7 @@ The [https://www.pine64.org/pinephone/ PinePhone] is a smartphone by PINE64. The
 
 The recommended installation procedure is installing to a microSD card by following the [[Installation guide|Installation Guide]] and to pass "--sdcard=/dev/(...)" to "pmbootstrap install". 
 
-postmarketOS may be installed onto the eMMC:
+postmarketOS may be installed onto the eMMC by booting a Linux distribution on the phone first and doing the installation process via pmbootstrap on the phone directly:
 
 # Install [[Installing pmbootstrap|pmbootstrap]] and its dependencies on the phone on any Linux distribution booted via the microSD card
 # Follow the [[Installation guide|Installation Guide]] until "Installation and flashing"
