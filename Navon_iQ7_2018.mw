@@ -1,0 +1,54 @@
+{{Infobox device
+| manufacturer = Navon
+| name =  iQ7 2018
+| codename = AL-A64-86VH-V1.0
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2018
+| originalsoftware = Android 7.1.1 with kernel 3.10.65
+| chipset = Allwinner A64
+| cpu = 4x 1152 MHz Cortex-A53
+| gpu = Mali 400
+| storage = 8 GB
+| display = 1024x600
+| memory = 1 GB
+| architecture = aarch64
+
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = N/A
+| status_calls = N/A
+| status = 
+| booting = no
+
+== Hardware details ==
+CPU: Allwinner A64
+Flash: PFF62-10AL
+RAM: Elpida B816483PD-01-F
+Wifi: Realtek RTL8703BS
+PMU: AXP803
+Touchscreen controller: GSL1680
+
+== Contributors ==
+* martonmiklos
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+
+== Installation ==
