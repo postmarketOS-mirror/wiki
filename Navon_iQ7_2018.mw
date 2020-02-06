@@ -38,6 +38,7 @@
  - Wifi: Realtek RTL8703BS
  - PMU: AXP803
  - Touchscreen controller: GSL1680
+ - Cameras: GC0312+GC2145
 
 == Contributors ==
 * martonmiklos
