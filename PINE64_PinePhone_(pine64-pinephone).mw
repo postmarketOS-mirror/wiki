@@ -46,7 +46,15 @@ The [https://www.pine64.org/pinephone/ PinePhone] is a smartphone by PINE64. The
 
 == Installation ==
 
-The recommended installation procedure is installing to a microSD card by passing --sdcard=/dev/... to pmbootstrap install. The pinephone will boot to the microSD card first if it's bootable, or the eMMC if not. postmarketOS may be installed onto the eMMC by running pmbootstrap install --sdcard=/dev/mmcblk... from a Linux distribution booted via the microSD card.
+{{note|'''Note:''' The pinephone will boot to the microSD card first if it's bootable, or the eMMC if not.}}
+
+The recommended installation procedure is installing to a microSD card by following the [[Installation guide|Installation Guide]] and to pass "--sdcard=/dev/(...)" to "pmbootstrap install". 
+
+postmarketOS may be installed onto the eMMC:
+
+# Install [[Installing pmbootstrap|pmbootstrap]] and its dependencies on the phone on any Linux distribution booted via the microSD card
+# Follow the [[Installation guide|Installation Guide]] until "Installation and flashing"
+# Run "pmbootstrap install --sdcard=/dev/mmcblk(...)"
 
 == Serial console ==
 The PinePhone has a serial port in the headphone connector, it's activated by the 6th contact on the dipswitch. If the switch is on then the headphone connector is in audio mode, if it's off then it's in UART mode.
