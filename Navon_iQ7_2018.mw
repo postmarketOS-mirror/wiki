@@ -36,12 +36,12 @@
 }}
 
 == Hardware details ==
-- CPU: Allwinner A64
-- Flash: PFF62-10AL
-- RAM: Elpida B816483PD-01-F
-- Wifi: Realtek RTL8703BS
-- PMU: AXP803
-- Touchscreen controller: GSL1680
+ - CPU: Allwinner A64
+ - Flash: PFF62-10AL
+ - RAM: Elpida B816483PD-01-F
+ - Wifi: Realtek RTL8703BS
+ - PMU: AXP803
+ - Touchscreen controller: GSL1680
 
 == Contributors ==
 * martonmiklos
