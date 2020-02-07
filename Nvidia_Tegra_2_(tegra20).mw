@@ -50,7 +50,7 @@ VO: [vdpau] 1280x720 vdpau[yuv420p]
 ==== Mesa3D Gallium driver ====
 https://gitlab.freedesktop.org/mesa/mesa/merge_requests/3456
 
-* needed steps: improve CI
+* Host1x ABI rework (required before mesa implemenetation): [https://docs.google.com/document/d/1hj7-Bup1NtjJVHzGvs92kTkah0EEh_9wDHBsQWUkuwo/edit (G. docs)] 
 * migrate from TGSI to NIR
 * establishing demos that work, where can be seen regression
 
