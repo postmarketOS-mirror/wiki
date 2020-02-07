@@ -91,9 +91,8 @@ $ sudo nmcli device wifi connect "$SSID" password "$PASSWORD" ifname "wlan0"
 
 === Using wpa_supplicant ===
 
-{{Note|In most cases using NetworkManager is preferred!}}
+{{note|In most cases using NetworkManager is preferred! You might need to set your wlan interface to unmanaged in NetworkManager or stop NetworkManager to configure it manually.}}
 
-{{note|You might need to set your wlan interface to unmanaged in NetworkManager or stop NetworkManager to configure it manually.}}
 postmarketOS currently configures the wpa_supplicant service to start on boot. This service will fail to start unless <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> has been defined. This can be configured using the <code>wpa_passphrase</code> utility:
 
 <pre>$ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf</pre>
