@@ -69,7 +69,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 
 |-
 | <code>dev_touchscreen</code>
-| Path to the touchscreen device (needed for initramfs on-screen-keyboard, [[deviceinfo_dev_touchscreen|more info]])
+| Path to the touchscreen device (only necessary if not automatically detected, [[deviceinfo_dev_touchscreen|more info]])
 | e.g. <code>/dev/input/event3</code>
 |-
 | <code>dev_touchscreen_calibration</code>
