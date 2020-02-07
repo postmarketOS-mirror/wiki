@@ -37,10 +37,6 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | The device has a hardware keyboard.
 | <code>true</code>, <code>false</code>
 |-
-| <code>nonfree</code>
-| Components of the device, that only run with closed source firmware. We have to do more research on this topic and specify a list of possible values, for now all devices have <code>????</code> here.
-| <code>????</code>
-|-
 | <code>dtb</code>
 | Name of the [[Glossary#dtb|device tree blob]] file (only used on mainline kernels). See the option <code>append_dtb</code> on how this is used.
 | e.g. <code>allwinner/sun50i-a64-pine64-lts</code> or <code>qcom-msm8974-lge-nexus5-hammerhead</code>
@@ -291,6 +287,8 @@ Change how the target device shows up when connected with USB to a host PC. {{MR
 === weston ===
 * <code>weston_pixman_type</code>: used to be a Weston specific workaround for the "red screen bug" ({{github|54}}): we patched Weston to accept a <code>--pixman-type</code> argument to override the framebuffer mode that the kernel driver reports. However, this patch was quickly incompatible with future changes in Weston, and it is not as good as [[Troubleshooting:display#My_screen_is_red.21|patching the kernel to report the right framebuffer mode]], so it was removed ({{issue|136|pmaports}}).
 * Various options from [https://manpages.debian.org/unstable/weston/weston.ini.5.en.html weston.ini] used to be duplicated, but this was removed in {{github|739}}. If you need to set weston specific options from your device (such as the output backend or the keymap), please add a weston.ini file to your pmaport ([https://github.com/postmarketOS/pmbootstrap/blob/e7dfe9b9041f0c2ec94295df16afeeec1d9bafd8/aports/device/device-nokia-rx51/APKBUILD#L66-L70 example]).
+=== Device ===
+* <code>nonfree</code>: Components of the device, that only run with closed source firmware. This is now legacy due to nobody uses it. ({{issue|438|pmaports}})
 
 == See also ==
 * [[Device specific package]]
