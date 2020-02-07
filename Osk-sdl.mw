@@ -40,15 +40,7 @@ $ sudo su
 Do '''not''' use the <code>-t</code> option when porting osk-sdl on a device, this mode of running osk-sdl will not be helpful for this purpose!
 
 === Set touchscreen device ===
-A rudimentary method for finding this device is to <code>cat /dev/input/eventX</code> each event file in that directory and touch the screen. If you cat the touchscreen device, cat will output a bunch of gibberish on the screen when you touch it.
-
-Once you have identified the touchscreen event file under <code>/dev/input</code>, set (or add if it doesn't exist) the <code>deviceinfo_dev_touchscreen</code> variable in your deviceinfo file to the <code>/dev/input/eventX</code> event device file representing your touchscreen.
-For example:
-
-<syntaxhighlight lang="shell-session">
-deviceinfo_dev_touchscreen="/dev/input/event3"
-</syntaxhighlight>
-
+See [[deviceinfo_dev_touchscreen]].
 
 === Create fb.modes === 
 
