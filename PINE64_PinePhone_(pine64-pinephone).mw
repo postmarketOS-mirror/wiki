@@ -206,15 +206,15 @@ the USB5v line is meant to charge the phone and the 3v3 is to power peripherals 
 
 === Cameras ===
 
-The camera's both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
+The cameras both share the csi-0 bus. Currently only the rear camera (OV5640) has mainline linux support.
 
 It's also not clear how the camera switching would work on the software side, the current issue is that the sunxi csi driver doesn't support multiple camera endpoints.
 
 The camera hardware pipeline is controlled with <code>/dev/media1</code> and <code>media-ctl</code>, the result is on <code>/dev/video1</code>
 
 <source lang="shell-session">
-pine-dontbeevil:~# media-ctl -d /dev/media1 --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
-pine-dontbeevil:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 selfie.jpg
+pinephone:~# media-ctl -d /dev/media1 --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
+pinephone:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 selfie.jpg
 </source>
 
 [[File:PinePhone-rearcam-dev.png|frameless]]
@@ -275,14 +275,14 @@ pinephone:~# ofonoctl wan --connect --append-dns
 
 === Sensors ===
 
-All sensors work and are accessible as Industrial I/O (iio) devices in linux. To query the data you can cat the files in `/sys/bus/iio/` to make the kernel module query the sensors
+All sensors work and are accessible as Industrial I/O (iio) devices in Linux. To query the data you can cat the files in `/sys/bus/iio/` to make the kernel module query the sensors
 
 <source lang="shell-session">
-dontbeevil:~# cat /sys/bus/iio/devices/iio\:device0/name
+pinephone:~# cat /sys/bus/iio/devices/iio\:device0/name
 mpu6050
-dontbeevil:~# cat /sys/bus/iio/devices/iio\:device0/in_accel_z_raw
+pinephone:~# cat /sys/bus/iio/devices/iio\:device0/in_accel_z_raw
 -17594
-dontbeevil:~# echo "Verified gravity still exists"
+pinephone:~# echo "Verified gravity still exists"
 </source>
 
 === RGB Led ===
