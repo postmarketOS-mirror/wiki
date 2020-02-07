@@ -2,6 +2,8 @@ This page is about <code>deviceinfo_dev_touchscreen</code> from the [[deviceinfo
 
 == How to find the touchscreen device name? ==
 
+{{note|'''Note:''' The <code>deviceinfo_dev_touchscreen</code> property is mostly obsolete - [https://gitlab.alpinelinux.org/alpine/aports/merge_requests/3709 DirectFB can now automatically detect the touchscreen]. This works only if the touchscreen sets the [https://github.com/libts/tslib/issues/108#issuecomment-342556917 INPUT_PROP_DIRECT] bit to identify the input device as a touchscreen. Setting the property is only necessary if your touchscreen is not automatically detected.}}
+
 === Initramfs #1 (fastest) ===
 * [[Inspecting_the_initramfs|Connect to your initramfs via telnet]]
 * Run <code>ls /dev/input</code>
