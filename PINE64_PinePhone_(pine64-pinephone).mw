@@ -77,6 +77,7 @@ The pinout for the serial connector on the tablet side is:
 The serial connection is 3.3V
 
 You can also buy the debug cable from [https://store.pine64.org PINE64 Store]
+The store cable uses a 4 ring plug, as seen in the [http://files.pine64.org/doc/pinebook/guide/Pinebook_Earphone_Serial_Console_Developer_Guide.pdf PDF], but a 3 ring plug works just as well.
 
 [[File:PinePhone-main-board.jpg|frameless]]
 
