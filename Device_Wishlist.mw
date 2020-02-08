@@ -16,7 +16,7 @@ We have been asked, which devices we would like to see pmOS running on - by peop
 * Samsung Galaxy S Relay 4G (apexqtmo) ([https://cascardo.eti.br/blog/News_on_Debian_on_apexqtmo/ WIP mainline support])
 * [https://github.com/PabloPL/linux Samsung Galaxy S S1(?) with panel (s6e63m0) and usb switch (fsa9480)]
 * Samsung Galaxy SIII LTE [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_SIII_LTE_(samsung-i9305)#Mainline_Kernel Consider the following]
-* [https://ac100.grandou.net Toshiba AC100] ([https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/arch/arm/boot/dts/tegra20-paz00.dts mainline DTS], [https://github.com/grate-driver grate driver])
+* [https://ac100.grandou.net Toshiba AC100] ([https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/arch/arm/boot/dts/tegra20-paz00.dts mainline DTS],[https://gitlab.denx.de/u-boot/u-boot/tree/master/board/compal/paz00 uboot],[https://github.com/grate-driver grate driver])
 * Xiaomi Pocophone F1 (beryllium) [https://github.com/Venji10/linux-beryllium WIP mainline support]
 
 == Candidate Devices ==
