@@ -15,7 +15,7 @@
 | architecture = x86_64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = N
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
@@ -53,9 +53,8 @@
 1. Make sure that you are running Android 5.0 (Lollipop) - older versions did not have UEFI firmware.<br />
 2. Install [https://github.com/me176c-dev/me176c-boot#readme me176c-boot].<br />
 3. Set up the <code>APD</code> partition as additional ESP (EFI System Partition), see [https://github.com/me176c-dev/me176c-boot#limitations me176c-boot - Setting up an additional ESP partition].<br />
-4. Follow the [[Installation guide]], but use <code>pmbootstrap install --split</code> to generate separate root and boot partition images.<br />
-5. Navigate to the generated partition images (use <code>pmbootstrap export</code>).<br />
-6. The boot partition must be on internal storage. Use <code>fastboot flash APD asus-me176c-boot.img</code> to write it to the <code>APD</code> partition.<br />
+4. Follow the [[Installation guide]].<br />
+6. The boot partition must be on internal storage. Use <code>pmbootstrap flasher flash_kernel</code> to write it to the <code>APD</code> partition.<br />
 7. Create a boot entry for postmarketOS. Create a file <code>pmos.conf</code>:<br />
  <nowiki>
 title    postmarketOS
@@ -70,14 +69,15 @@ initrd   /initramfs-asus-me176c</nowiki>
 Now you can choose if you would like to install the root partition (<code>asus-me176c-root.img</code>) on internal storage or a SD card.
 
 === Internal Storage ===
-* System partition: <code>fastboot flash system asus-me176c-root.img</code>
-* Userdata partition: <code>fastboot flash userdata asus-me176c-root.img</code>
+* System partition: <code>pmbootstrap flasher flash_rootfs</code>
+* Userdata partition: <code>pmbootstrap flasher flash_rootfs --partition=userdata</code>
 * Alternatively, you can consider shrinking the data partition and create a new partition for postmarketOS. It's best to use a Linux system not located on the data partition for this purpose, for example a postmarketOS install on the system partition or on an SD card.
 
 === SD card ===
 Write the root partition image to a partition on your SD card:
 
 # Find the '''correct''' block device (usually <code>/dev/mmcblkXpY</code> but sometimes <code>/dev/sdXY</code>)
+# <code>pmbootstrap export</code>, navigate to exported files
 # Write the image to the partition ('''Warning:''' Existing data will be erased): <code>dd if=asus-me176c-root.img of=/dev/mmcblkXpY bs=4M</code>
 
 == See also ==
