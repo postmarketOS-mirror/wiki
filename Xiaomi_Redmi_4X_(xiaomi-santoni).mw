@@ -163,7 +163,12 @@ As right now, it seems to connect, but disconnect very quickly, it doesn't ask f
 == libhybris ==
 Hybris implementation for this device has been added in [https://gitlab.com/postmarketOS/pmaports/merge_requests/420 !420]. test_hwcomposer_7_caf passes, and even hwcomposer driver for X11 works!
 
-However, the user needs to build/download pre-built system.img that is used for Halium. Which we'll update this section later when we got them uploaded.
+You can download Halium image for use here:
+https://github.com/dreemurrs-embedded/halium-santoni
+
+[[File:Hybris-santoni-howto.png]]
+
+After downloading the system image, drop it to '''/var/lib/lxc/android/system.img''' in the device's rootfs.
 
 As for the HWcomposer implementation for X11, it's not that fast and there are artifacts on the screen, and [https://user-images.githubusercontent.com/13084776/49331880-06657c00-f5b5-11e8-915a-a33be2b15bc7.jpg kwin on this device gives repeating texture].
 
