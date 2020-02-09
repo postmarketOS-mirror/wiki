@@ -68,7 +68,7 @@ The PinePhone has a serial port in the headphone connector, it's activated by th
 
 The uart is 115200n8
 
-The pinout for the serial connector on the tablet side is:
+The pinout for the serial connector on the headphone jack is:
 
 * Tip: RX
 * Ring: TX
