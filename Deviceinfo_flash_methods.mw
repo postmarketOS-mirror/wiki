@@ -12,6 +12,14 @@ you don't know the combination for your device, please search the Internet. (It 
 
 Most Android devices are compatible with the open source fastboot protocol. That is good, because we simply can use the fastboot application to flash them, and no one needs to reverse engineer the protocol. You are done here, if you have a <code>fastboot</code> compatible device.
 
+===== <code>fastboot</code> =====
+The standard Fastboot flasher using Android boot images. Use this for Fastboot unless you know what you are doing.
+
+===== <code>fastboot-bootpart</code> =====
+Some devices provide a Fastboot interface but using Android boot images is not practical for them (e.g. because they support booting from FAT32 partitions directly). This can be implemented using <code>--split</code> (separate image files for boot and rootfs). The <code>fastboot-bootpart</code> flash method allows flashing the split image files using Fastboot.
+
+The boot partition filesystem is flashed to <code>deviceinfo_flash_fastboot_partition_kernel</code> (without packing it into an Android boot image).
+
 === Odin mode ===
 
 This uses a proprietary flashing protocol from Samsung. There has been great effort put into Heimdall, an open source program that tries to be compatible to the odin protocol. But it does not work perfectly yet, and some devices are not supported at all.
