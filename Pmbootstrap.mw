@@ -1,0 +1,39 @@
+'''pmboootstrap''' is the central tool to develop and install postmarketOS. It works using Alpine chroots to avoid installing software on the host's machine. It works well on any Linux distribution, but preforms poorly on [https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux WSL]. If you are using Windows, you should set up a dual boot or use a VM.
+
+== Installation ==
+
+refer to the [[Installing_pmbootstrap|installation page]].
+
+
+== Example Development Workflows ==
+
+This doesn't concern installation for an existing device. For that refer to the [[Installation_guide|installation guide]]. It will be useful for working on postmarketOS packages and when one want to port postmarketOS to a new device (along with the [[Porting_to_a_new_device|porting guide]]).
+
+{{todo|add more typical uses of pmbootstrap}}
+
+=== Developing packages with pmbootstrap ===
+
+When developing postmarketOS packages, you will want to keep the package definition at hand. For that, you can move the [[pmaports]] repository to an accessible location, using for example:
+ $ olddir="$(pmbootstrap config aports)"
+ $ newdir="$HOME/pmaports"
+ $ mv "$olddir" "$newdir"
+ $ pmbootstrap config aports "$newdir"
+or just the last command, if you don't have something to save yet.
+
+<hr/>
+
+When you are editing packages and want to test the modifications, you will maybe notice that pmbootstrap doesn't rebuild the package, as it already built a package with the same version number and revision. To force a rebuild, don't increment the pkgrel. Instead, use <code>pmbootstrap build --force package-name</code>.
+
+<hr/>
+
+Before uploading a package you just created, you may use <code>pmbootstrap build --force --strict</code> to check that the dependencies you specified are sufficient to build the package.
+
+
+== Developing pmbootstrap itself ==
+
+Development happens [https://gitlab.com/postmarketOS/pmbootstrap here]. You'll find information on parts of the code in [[pmbootstrap_development_guide|the pmbootstrap development guide]].
+
+
+== Useful Links ==
+
+* [https://gitlab.com/postmarketOS/pmbootstrap The git repository].
