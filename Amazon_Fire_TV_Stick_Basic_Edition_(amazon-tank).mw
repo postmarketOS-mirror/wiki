@@ -2,8 +2,8 @@
 | manufacturer = Amazon
 | name =  Fire TV Stick Basic Edition
 | codename = amazon-tank
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:Amazon-tank.jpg
+| imagecaption = Fire TV Stick Basic Edition
 | releaseyear = 2017
 | originalsoftware = Fire OS 5 (Android 5.1)
 | chipset = Mediatek 8127D
@@ -61,6 +61,9 @@ Nimayer(Symmetrist)
 <!-- use _ instead of spaces in device page name, e.g. {{Owns device|HTC_Desire_(htc-bravo)|custom notes}}-->
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
+
+== Information ==
+The Amazon Fire TV Stick Basic Edition contains the same hardware of Fire TV Stick (Gen 2), but is meant for global market.
 
 == Unlocking the bootloader ==
 Before installing PostmarketOS you need to unlock the bootloader using the amonet exploit as explained [https://forum.xda-developers.com/fire-tv/development/unlock-fire-tv-stick-2nd-gen-tank-t3907002 here].
