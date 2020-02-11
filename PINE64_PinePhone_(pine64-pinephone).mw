@@ -304,6 +304,16 @@ echo 0 > /sys/class/leds/$COLOR/brightness
 
 Sound output should work after unmuting <code>AIF1 Slot 0 digital</code>
 
+Start by making sure alsa-utils are installed:
+<source lang="shell-session">
+sudo apk add alsa-utils
+</source>
+
+You may use amixer, or alsamixer to unmute the required channels, and to control the volume. Test the sound output by issuing:
+
+<source lang="shell-session">
+speaker-test -c3
+</source>
 
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
