@@ -48,7 +48,7 @@ With power off, press power und volume-down at the same time, with the usb-cable
 == How to flash ==
 As Huawei changed the partition layout, there is no boot partition anymore. Instead there is a ramdisk and a seperate kernel partition. In order to create the correct images the following steps need to be done:
 
-# Get mkbootimg and unpackbootimg i.e. from [https://github.com/anestisb/android-unpackbootimg here].
+# Get mkbootimg and unpackbootimg i.e. from [https://github.com/anestisb/android-unpackbootimg here] or from [https://aur.archlinux.org/packages/android-unpackbootimg archlinux aur repo].
 # You can extract the kernel-image and ramdisk from the created boot.img with unpackbootimg. 
 #:<syntaxhighlight lang="shell-session">
 $ # copy created boot image to current directory 
