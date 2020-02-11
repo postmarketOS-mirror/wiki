@@ -81,6 +81,11 @@ Before installing PostmarketOS you need to unlock the bootloader using the amone
 * Install the recovery zip with ''adb shell twrp install /tmp/pmos-amazon-tank.zip''
 * Reboot with ''adb shell reboot''
 
+== Serial port ==
+[[File:amazon-tank_uart.jpg|800px|UART pads on amazon-tank]]
+
+This picture shows the location of the UART pads on the PCB.
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
