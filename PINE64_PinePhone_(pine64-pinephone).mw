@@ -218,7 +218,7 @@ The camera hardware pipeline is controlled with <code>/dev/media1</code> and <co
 
 <source lang="shell-session">
 pinephone:~# media-ctl -d /dev/media1 --set-v4l2 '"ov5640 2-003c":0[fmt:UYVY8_2X8/1280x720]'
-pinephone:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video0 -vframes 1 selfie.jpg
+pinephone:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video1 -vframes 1 selfie.jpg
 </source>
 
 [[File:PinePhone-rearcam-dev.png|frameless]]
