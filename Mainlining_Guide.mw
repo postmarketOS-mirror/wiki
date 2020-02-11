@@ -4,7 +4,7 @@
 This guide will walk you through mainlining your device. Starting by collecting all required information, setting up your build environment and picking a mentor that will guide you through the tricky parts. For the devices where this will work, you should be fine with basic shell knowledge, and you will be rewarded with learning a lot of new stuff and possibly booting the mainline kernel on your device!
 
 == Materials to look into ==
-This section include many useful sources to help you with mainlining as posible.
+This section include many useful sources to help you with mainlining as possible.
 
 Intro:
 * [https://www.youtube.com/watch?v=77tuFtM4gjA Introduction into how mainlining is done] (52:37)
