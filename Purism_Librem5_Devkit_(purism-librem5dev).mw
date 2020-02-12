@@ -60,8 +60,6 @@ The Vivante GPU in the devkit is not fully currently supported upstream in Mesa.
 == Todo ==
 
 * Bring up cellular modem
-* Resolve issues with Wifi
-** Interface shows up in OS, and wpa_supplicant seems to connect(?), but no IP.
 * Resolve issues with Bluetooth
 ** Bluetooth can be started by loading the rsi_91x module with <code>dev_oper_mode=14</code> but this disables Wifi station/client mode and enables Wifi AP mode. It doesn't seem to work with <code>dev_oper_mode=13</code>, which enables Wifi client mode. 
 * Test/enable camera
