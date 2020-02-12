@@ -100,6 +100,7 @@ Flash using an external SD card for system, boot kernel without flashing through
 
 * [[Installation_guide|Follow the installation guide to init pmbootstrap]]
 * Put pmos on an SD card: <code>pmbootstrap install --sdcard=/dev/sdX</code> (change /dev/sdX to the SD card)
+* Insert SD card into phone.
 * Put phone into fastboot mode (see above)
 * Boot kernel without flashing: <code>pmbootstrap flasher boot</code>
 * You should be able to see and ping the phone via network over USB soonish, but booting to the point where the ssh daemon runs takes really long (e.g. 8 minutes).
