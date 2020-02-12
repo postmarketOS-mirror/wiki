@@ -207,7 +207,7 @@ These are applications which already exist for Linux and could be reused in post
 |[https://corebird.baedert.org Corebird (Twitter)]
 |GPL3
 |GTK+ Twitter client
-|[https://pkgs.alpinelinux.org/packages?name=corebird&branch=&repo=&arch=&maintainer= Alpine repo]
+|
 |-
 |[https://github.com/signalapp/Signal-Desktop Signal Desktop]
 |GPL3
