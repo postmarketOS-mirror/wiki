@@ -36,7 +36,6 @@
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 }}
-
 This device is known under ''many'' names: 
 * Pegatron Chagall
 * Fujitsu Stylistic M532
@@ -46,7 +45,27 @@ This device is known under ''many'' names:
 * (likely) DNS AirTab P110w / P110g
 
 Some variants offer mobile connectivity (via a Huawei 3G module, probably USB rather than SDIO, that I haven't investigated yet), some 32GB storage.
-Kernel is unreliable, and tends to give "rootfs/boot partition/initramfs_extra not found" errors or reboot, at least when booting off an SD card, about half times for no reason. Weston works, but startx leads to a black screen
+Kernel looks quite reliable, but tends to give "rootfs/boot partition/initramfs_extra not found" errors or reboot, at least when "live booting" (via fastboot boot) off an SD card. Flashing the kernel and rebooting works fine though. Weston works, but startx leads to a black screen.
+
+What works:
+* USB/SSH
+* Audio via headphone jack only
+* LCD
+* Touchscreen
+* Backlight control
+* Battery status
+
+What doesn't:
+* WiFi (probably easy to fix once we have the right blobs in place)
+* Bluetooth
+* Cellular (Huawei 3G modem)
+* Xorg
+* Hardware acceleration
+* Audio via speakers
+
+Untested
+* SPDIF output (is it even implemented?)
+* Whatever sorcery from the 40-pin charging slot (HDMI, ...)
 
 == Contributors ==
 * R.
@@ -62,9 +81,15 @@ Kernel is unreliable, and tends to give "rootfs/boot partition/initramfs_extra n
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-Power key + volume down
+Make sure to flash the proper CWM custom recovery for this device first, or you won't be able to boot to fastboot again from the stock recovery if anything goes wrong! 
+In case you forget to do that first, but still manage to boot postmarketOS, install `reboot-mode` from repos (via ssh), `sudo reboot-mode bootloader` and fix this as soon as possible to avoid bricking if postmarketOS stops booting for some reason (which is almost bound to happen at some point).
+
+Then boot Android, enable USB debugging, do `adb reboot bootloader` and flash using the standard pmbootstrap procedure.
+
 
 == Installation ==
+
+
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == See also ==
