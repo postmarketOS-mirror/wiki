@@ -55,7 +55,7 @@ Once the image has been flashed, place the device into emmc mode and hit the reb
 
 === Graphics ===
 
-The Vivante GPU in the devkit is not fully currently supported upstream in Mesa. In order to achieve preliminary 3D acceleration on this device, the <code>mesa-purism-gc7000</code> package is used. This is automatically installed by pmbootstrap.
+The Vivante GPU in the devkit is fully supported upstream in Mesa and support for it should be installed by the <code>device-purism-librem5dev</code> package.
 
 == Todo ==
 
