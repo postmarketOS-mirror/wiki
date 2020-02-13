@@ -62,9 +62,7 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 === Bootloader Unlocking ===
-Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
-
-The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and powered on, and linked with Mi Account)
+Because this device is an Android One device, it can be unlocked using `fastboot oem unlock` from fastboot mode.
 
 === Recovery mode ===
 * Turn the device off (or restart also works)
