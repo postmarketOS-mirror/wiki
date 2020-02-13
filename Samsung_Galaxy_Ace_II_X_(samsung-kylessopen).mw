@@ -56,22 +56,22 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 {|class="wikitable feature-colors"
 ! Interface
 ! Info
-! Recommended
+! Working
 |-
 |none
-|works, but 'postmarketos loading...' stays around with distorted graphics {{issue|280|pmaports}}
-| Y
+|SSH possible, but 'postmarketos loading...' stays around with distorted graphics {{issue|280|pmaports}}
+| P
 |-
 |[https://en.wikipedia.org/wiki/Hildon][[Hildon]]
-| Hildon ist not available for armhf architecture. As the device is armv7 this has to be changed and we can try again.
+| Hildon ist not available for armv7 architecture.
 | N
 |-
 |[https://en.wikipedia.org/wiki/I3_(window_manager)][[i3wm]]
-| works, but as you have no hardware keyboard, you cannot use it so far (chance to get it work on touch only devices too)
+| works, but as you have no hardware keyboard, you cannot use it yet (chance to get it work on touch only devices too)
 | N
 |-
 |[https://kodi.wiki/view/10-foot_user_interface Kodi]
-|fails to boot (rootfs not found)
+|fails to install: dependency missing (maybe fixable)
 | N
 |-
 |[https://en.wikipedia.org/wiki/MATE_(software)][[MATE]]
@@ -79,24 +79,24 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 | Y
 |-
 |[https://developer.puri.sm/Librem5/Software_Reference/Environments/Phosh.html][[Phosh]]
-| does not show up after 5 minutes, if this kernel has no DRM-Support, Phosh won't work, have to be checked
-| N
+| SSH works, but does not show up after 5 minutes, if this kernel has no DRM-Support, Phosh won't work, (has to be checked)
+| P
 |-
 |[https://en.wikipedia.org/wiki/Plasma_Mobile#Plasma_Mobile][[Plasma Mobile]]
-|can not build for armhf architecture. As the device is armv7 this has to be changed and we can try again.
-| N
+|SSH works, but UI does not show up
+| P
 |-
 |Plasma Mobile Extras
-|can not build for armhf architecture. As the device is armv7 this has to be changed and we can try again.
+|installation does not work, rootfs not found (has to be checked, because it should work as good as plasma-mobile(?))
 | N
 |-
 |[[Shelli]]
-| works somehow but has distorted graphics
-| N
+| SSH works, but has distorted graphics and the gestures do not work
+| P
 |-
 |[https://wiki.postmarketos.org/wiki/User-Interfaces#Sway][[Sway]]
-| cannot boot at all (possibly missing hardware acceleration), simply reboots after some time, maybe that's the known bug. {{issue|248|pmaports}}
-| N
+| SSH works, but no UI shows up
+| P
 |-
 |[https://en.wikipedia.org/wiki/Weston_(software)#Weston][[Weston]]
 |works fine, suitable for development
@@ -104,14 +104,12 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 |-
 |[https://en.wikipedia.org/wiki/Xfce][[XFCE4]]
 |works sometimes but I experienced some issues, reboots some time, maybe that's a known bug {{issue|248|pmaports}} and freezes at boot (maybe also known){{issue|250|pmaports}}
-| N
+| P
 |-
 |[https://wiki.postmarketos.org/wiki/Handhelds#Matchbox_Window_Manager Matchbox]
 |Matchbox once worked, but was removed from postmarketOS
 | N
 |}
-
-Note : samsung-kylessopen is compiled now for armv7. Some interfaces (Plasma...) could be tested agian.
 
 === Installation ===
 <source lang="bash">$ pmbootstrap install</source>
