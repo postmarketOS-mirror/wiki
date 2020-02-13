@@ -27,7 +27,7 @@
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = Y <!-- Using the device's speakers/headphone jack works -->
 | status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
-| status_camera = <!-- Taking photos and videos works. -->
+| status_camera = N <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
