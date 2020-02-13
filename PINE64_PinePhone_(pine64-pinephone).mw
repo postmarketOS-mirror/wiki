@@ -55,11 +55,11 @@ The recommended installation procedure is installing to a microSD card by follow
 
 postmarketOS can be installed onto the eMMC by booting a Linux distribution on the phone first and doing the installation process via pmbootstrap on the phone directly:
 
+{{note|'''Note:''' This requires sufficient space on the microSD, partitions created from images using dd need to be resized.}}
+
 # Install [[Installing pmbootstrap|pmbootstrap]] and its dependencies on the phone on any Linux distribution booted via the microSD card
 # Follow the [[Installation guide|Installation Guide]] until "Installation and flashing"
 # Run "pmbootstrap install --sdcard=/dev/mmcblk(...)"
-
-{{note|'''Note:''' Do not try to install from the demo image, the space of the partition in the demo image is limited. }}
 
 Installing postmarketOS on the eMMC directly from a computer via FEL is also supported. This requires the user to [https://linux-sunxi.org/FEL#Triggering_FEL_mode enable FEL mode], the [https://wiki.pine64.org/index.php/NOOB#Flashing_to_eMMC_using_FEL_.28Allwinner_A64_Devices_Only.29 boot-tools] to mount the eMMC as mass storage are currently however not compatible.
 
