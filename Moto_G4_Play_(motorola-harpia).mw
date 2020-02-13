@@ -67,4 +67,4 @@ After that, proceed with [[Installation_guide#Installation_and_flashing|installa
 
 == See also ==
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-harpia Device package]
-* [https://github.com/Sorixelle/linux Development kernel tree]
+* [https://github.com/msm8916-mainline/linux Development kernel tree]
