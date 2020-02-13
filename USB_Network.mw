@@ -1,6 +1,18 @@
 USB connectivity is generally one of the first things you want up and running on your phone when porting to a new device.
 postmarketOS uses [[USB Network]]ing for every communication between the device and computer.
 
+= Driver (Windows only) =
+
+Normally Windows should already have / should be able to assign the right drivers. If it's not the case and before going further first check if you can assign Microsoft RNDIS USB driver to the device. If no RNDIS driver is showing up, follow what's next.
+
+If your device is listed as an ADB device you'll have to uninstall it (with the driver) first. 
+
+if you can't find the RNDIS driver you'll have to create an inf file that match your computer OS version.
+
+Take the file in the [https://docs.microsoft.com/fr-fr/windows-hardware/drivers/network/remote-ndis-inf-template#rndis-inf-template-for-ndis-60-windows-7-and-later guide from microsoft].
+
+Once you have the file, go into device manager. Follow the dialogs up to the 'choose a driver', point it to your .inf , accept the security warnings and you're done, using a ssh client you should be able to login.
+
 = Connecting =
 Power on your device and connect it to your USB port. You should get the IP <code>172.16.42.2</code> assigned to your PC, check it with <code>ip a</code> or <code>ifconfig</code>.
 
