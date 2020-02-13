@@ -45,7 +45,7 @@ $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 ==== Create a link ====
 If the directory <code>~/.local/bin</code> does not already exist, create it with:
 <syntaxhighlight lang="shell-session">
-$ mkdir --parents ~/.local/bin
+$ mkdir -p ~/.local/bin
 </syntaxhighlight>
 
 Create a symbolic link in <code>~/.local/bin</code> named <code>pmbootstrap</code>:
