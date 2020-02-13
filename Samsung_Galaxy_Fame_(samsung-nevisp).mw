@@ -14,7 +14,7 @@
 | memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet = Y <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = Y <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = Y <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = Y <!-- The display is working? -->
