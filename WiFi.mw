@@ -13,6 +13,7 @@ Useful links:
 Devices with Qualcomm WiFi chips are usually very easy to get working. 
 
 You need to find the firmware files for your device, the main file is called <code>wcnss.mdt</code> and there should also be more files which are called <code>wcnss.b00</code>, <code>wcnss.b01</code>, etc. Copy them all onto your device info <code>/lib/firmware/postmarketos</code>.
+There may also be files starting with WCNSS, e.g. <code>WCNSS_cfg.dat WCNSS_qcom_cfg.ini WCNSS_qcom_wlan_nv.bin</code> - those should go into <code>/lib/firmware/postmarketos/wlan/prima</code. You can use existing firmware packages as examples for which files go where, e.g. <code>aports/firmware/firmware-xiaomi-armani</code>.
 
 Then you can run as root <code>echo 1 > /dev/wcnss_wlan</code> and <code>echo sta > /sys/module/wlan/parameters/fwpath</code>. Check the output of <code>ip link</code> and a <code>wlan0</code> interface should have appeared! Now you can use NetworkManager to [[#Connecting_to_APs|connect to a WiFi]]!
 
