@@ -40,7 +40,7 @@
 | booting = yes
 }}
 
-The [https://www.pine64.org/pinephone/ PinePhone] is a smartphone by PINE64. The postmarketOS vendor and device names are "pine64" and "pinephone" respectively. The back panel can be lifted off by pulling at the notch on the bottom-left corner of the phone. This exposes the battery, microSD and SIM slots, and dipswitches. It comes with a 3000mAh battery and uses the same form-factor as the Samsung J7 for replacement.
+The [https://www.pine64.org/pinephone/ PinePhone] is a smartphone by PINE64. The postmarketOS vendor and device names are "pine64" and "pinephone" respectively. The back panel can be lifted off by pulling at the notch on the bottom-right corner of the phone. This exposes the battery, microSD and SIM slots, and dipswitches. It comes with a 3000mAh battery and uses the same form-factor as the Samsung J7 for replacement.
 
 === Contributors ===
 * ''[[user:MartijnBraam|MartijnBraam]]''
