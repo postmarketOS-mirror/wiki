@@ -49,7 +49,7 @@ The [https://www.pine64.org/pinephone/ PinePhone] is a smartphone by PINE64. The
 
 == Installation ==
 
-{{hint|The pinephone will boot to the microSD card first if it's bootable, or the eMMC if not.}}
+{{hint|The PinePhone will boot to the microSD card first if it's bootable, or the eMMC if not.}}
 
 The recommended installation procedure is installing to a microSD card by following the [[Installation guide|Installation Guide]] and to pass "--sdcard=/dev/(...)" to "pmbootstrap install". 
 
