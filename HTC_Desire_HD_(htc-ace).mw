@@ -40,6 +40,10 @@
 == Users owning this device ==
 {{Device owners}}
 
+== How to enter fastboot mode ==
+{{Button|Volume Down|Power}}
+Press the Buttons to enter the Bootloader and select Fastboot then.
+
 == What works ==
 
 * Display (framebuffer), 16 bit color depth
@@ -53,5 +57,5 @@
 Using ucm configuration files from [https://github.com/w-flo/rootfs-modifier/tree/master/replacements/targz/usr/share/alsa/ucm/msm-audio] it is possible to turn on the speaker, which then produces a very faint noise. However, trying to play sound using aplay or speaker-test does not work.
 
 == Links ==
-
 * [https://github.com/OpenDesireProject/android_kernel_htc_msm7x30 OpenDesireProject Kernel]
+* [https://www.hardreset.info/devices/htc/htc-desire-hd/ Device-page on hardreset.info]
