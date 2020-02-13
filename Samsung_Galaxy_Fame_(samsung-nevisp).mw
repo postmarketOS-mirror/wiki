@@ -25,7 +25,7 @@
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = N <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
-| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_audio = Y <!-- Using the device's speakers/headphone jack works -->
 | status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
