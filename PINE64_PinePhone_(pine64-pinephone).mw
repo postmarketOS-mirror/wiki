@@ -61,7 +61,7 @@ postmarketOS can be installed onto the eMMC by booting a Linux distribution on t
 
 {{note|'''Note:''' Do not try to install from the demo image, the space of the partition in the demo image is limited. }}
 
-Installing postmarketOS on the eMMC directly from a computer via FEL is also supported,<ref>https://twitter.com/thepine64/status/1210991202079780871</ref> it however requires a USB to Serial cable as the PinePhone does not have a dedicated FEL button. For further information see: https://linux-sunxi.org/FEL#Through_serial_console.
+Installing postmarketOS on the eMMC directly from a computer via FEL is also supported. This requires the user to [https://linux-sunxi.org/FEL#Triggering_FEL_mode enable FEL mode], the [https://wiki.pine64.org/index.php/NOOB#Flashing_to_eMMC_using_FEL_.28Allwinner_A64_Devices_Only.29 boot-tools] to mount the eMMC as mass storage are currently however not compatible.
 
 == Serial console ==
 The PinePhone has a serial port in the headphone connector, it's activated by the 6th contact on the dipswitch. If the switch is on then the headphone connector is in audio mode, if it's off then it's in UART mode.
