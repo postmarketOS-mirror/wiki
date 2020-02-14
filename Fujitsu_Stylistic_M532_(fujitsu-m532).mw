@@ -20,7 +20,7 @@
 | status_screen = Y
 | status_wifi = N<!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
-| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_fde = P<!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = -
 | status_3d = N<!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
