@@ -44,7 +44,7 @@
 
 == Installing ==
 
-There appears to be no special process to flashing the device, as long as [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ the bootloader is unlocked first]
+There appears to be no special process to flashing the device, as long as the bootloader is unlocked first. Sadly there is no official way any more to unlock it.
 
 Once you're in fastboot by holding down vol down and power, flashing it is as follows:
 
