@@ -29,8 +29,8 @@
 | status_camera = N
 | status_gps = N
 | status_mobiledata = N
-| status_sms = N
-| status_calls = N
+| status_sms = Y
+| status_calls =
 | booting = yes
 }}
 
@@ -64,6 +64,29 @@ as you see the boot splash. You should be presented with a menu that looks like 
 [[File:Motorola-harpia_lk2nd_example.jpeg|x500px]]
 
 After that, proceed with [[Installation_guide#Installation_and_flashing|installation]] as usual, using lk2nd's fastboot interface to flash the kernel and rootfs.
+
+=== Modem ===
+Modem is currently working on harpia, but as of writing, a few things are still waiting to be merged into pmaports. See [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/907 pmaports!907]
+for more information. This section will be removed once the required changes are merged into pmaports.
+
+'''Following these directions is not recommended until the required changes are in pmaports.''' If you would like to get modem working now, proceed with the above install guide, with the following
+modifications:
+
+* Use the <code>harpia-modem</code> branch of [https://gitlab.com/srxl/pmaports/-/tree/harpia-modem this] fork of pmaports:
+<source>
+cd ~/.local/var/pmbootstrap/cache_git/pmaports
+git remote add harpia-modem https://gitlab.com/srxl/pmaports.git
+git fetch harpia-modem
+git checkout harpia-modem
+</source>
+* lk2nd needs to be built from source, as there are some required changes that have not been added to a release yet. The [https://github.com/msm8916-mainline/lk2nd#building README] on the lk2nd repo has instructions on how to do this.
+
+== Usage ==
+=== Modem ===
+Follow the directions on [[Qualcomm_Snapdragon_410_(MSM8916)#Modem|this wiki page]] to use the modem. If you have a device model other than what is listed here, please edit the list below
+with the results of modem functionality testing.
+
+* '''XT1602:''' Modem working, can send and receive text messages. Calls untested.
 
 == See also ==
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-harpia Device package]
