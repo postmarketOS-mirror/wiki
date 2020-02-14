@@ -277,6 +277,48 @@ pinephone:~# sudo pip3 install ofonoctl
 pinephone:~# ofonoctl wan --connect --append-dns
 </source>
 
+In order to connect to the serial console of the modem, you need a terminal application. One option is to use <code>minicom</code>.
+
+<source lang="shell-session">
+# apk add minicom
+</source>
+
+Connect to the console by issuing:
+
+<source lang="shell-session">
+# minicom -D /dev/ttyUSB2
+</source>
+
+The command <code>AT</code> returns OK:
+
+<source lang="shell-session">
+AT
+OK
+</source>
+
+The command <code>ATI</code> returns some version information from the modem:
+
+<source lang="shell-session">
+ATI
+Quectel
+EG25
+Revision: EG25GGBR07A07M2G
+
+OK
+</source>
+
+The command <code>AT+QDAI</code> (Digital Audio Interface Configure) is used to configure the digital audio interface. <code>AT+QDAI?</code> returns the current configuration:
+
+<source lang="shell-session">
+AT+QDAI?
++QDAI: 3,0,0,4,0,0,1,1
+
+OK
+</source>
+
+
+Some more details on how to configure the modem is available [https://megous.com/dl/tmp/modem.txt here]. The reference for the available commands is the [https://itbrainpower.net/downloadables/Quectel_EC25_EC21_AT_Commands_Manual_V1.0.pdf EC25 & EC21 AT Commands Manual].
+
 === Sensors ===
 
 All sensors work and are accessible as Industrial I/O (iio) devices in Linux. To query the data you can cat the files in `/sys/bus/iio/` to make the kernel module query the sensors
