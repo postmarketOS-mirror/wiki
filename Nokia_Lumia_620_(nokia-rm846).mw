@@ -35,14 +35,11 @@
 | status = installation tested with the files of nokia lumia 720
 | booting = yes
 | n-android =  ✔
-
+| pmoskernel = 3.4.0
+| status_otg = -
 <!-- you can also use these lines if you need to:
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = -
 -->
 }}
 
