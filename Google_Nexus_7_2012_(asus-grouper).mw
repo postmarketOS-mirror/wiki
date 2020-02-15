@@ -182,7 +182,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | P
 | Charger
-|there is driver for the charger in upstream kernel, but it doesn't have support for device-tree
+|there is driver SMC347 (also compatible with SMC345 and SMC358) for the charger in upstream kernel, but it doesn't have support for device-tree. Patches for upstreaming: https://github.com/okias/linux/commits/smb3xx-charger
 |-
 | Y
 |Bluetooth
