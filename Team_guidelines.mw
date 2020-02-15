@@ -1,9 +1,7 @@
 === Rules for merging ===
 
-1. Each merge request needs two approvals from other core team members, unless they are super trivial or a critical fix that must be deployed immediately.
-
-2. Use [https://gitlab.com/postmarketOS/mrhlpr mrhlpr], so we have the MR ID in the commit message
-
-3. If possible, try to also review other people's MRs, and merge their stuff after giving them a second approval.
+# Each merge request needs two approvals from other core team members, unless they are super trivial or a critical fix that must be deployed immediately.
+# Use [https://gitlab.com/postmarketOS/mrhlpr mrhlpr], so we have the MR ID in the commit message
+# If possible, try to also review other people's MRs, and merge their stuff after giving them a second approval.
 
 [[Category:Community]]
