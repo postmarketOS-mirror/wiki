@@ -272,8 +272,7 @@ Receiving and sending text messages works, The calls work but there are some iss
 To bring up mobile data run the following commands:
 
 <source lang="shell-session">
-pinephone:~# sudo apk add py3-dbus
-pinephone:~# sudo pip3 install ofonoctl
+pinephone:~# sudo apk add ofonoctl
 pinephone:~# ofonoctl wan --connect --append-dns
 </source>
 
