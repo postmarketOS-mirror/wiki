@@ -7,7 +7,7 @@
 | releaseyear = 2013
 | originalsoftware = Windows Phone 8
 | chipset = Qualcomm MSM8227
-| cpu = Qualcomm SNapdragon S4 Plus Dual Core 1.0 GHz
+| cpu = Qualcomm Snapdragon S4 Plus Dual Core 1.0 GHz
 | gpu = Adreno 305
 | storage = 8GB
 | display = 480x800 LCD_TFT
@@ -58,9 +58,13 @@ see Unixbench page on wiki
 * Hold <code>Volume down</code> and connect it to the PC to boot it into fastboot mode
 * Hold <code>Volume Up</code> and connect it to the PC to boot into the recovery system
 
-== Installation of Android ==
+== Installation of Android/LittleKernel Bootloader ==
+{{note|Maxnet did a complete install of Android on the device before started to port. It shouldn't be necessary to flash Android, because you will overwrite it with postmarketOS anyway.
+It shouldn't be necessary to install TWRP too, but is is very useful, so it is recommended.}}
 
-For now, it is necessary to first install Android on the device to use fastboot as flash tool.
+For now, it is necessary to first install Android/LittleKernel Bootloader on the device to use fastboot as flash tool.
+
+
 
 === Tools ===
 You will need  some tools for Installation:
