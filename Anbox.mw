@@ -1,8 +1,20 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
 {{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]].}}
+{{note|Anbox currently only works on x86_64. See {{github|1357|anbox|anbox}} for the upstream issue.}}
 
-'''[https://anbox.io Anbox]''' runs Android apps on Linux by running a (trimmed down?) version of Android next to Linux in a container. Using Anbox with Gapps installed would make it possible for a user to have both needed, sandboxed applications run alongside of native Linux programs. Having this working could be a major assistant in switch people off of Android into an operating that respects user privacy
+'''[https://anbox.io Anbox]''' runs Android apps on Linux by running a trimmed down version of Android in a container. Using Anbox installed would make it possible for a user to have both needed Android applications sandboxed, running alongside of native Linux programs. Having this working can be a major assistant to help people switch from Android to an operating that respects their privacy.
 
 See issue {{issue|17|pmaports}} for current progress.
+
+== Installation ==
+
+Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-launch</code> or the icon launcher.
+
+== Troubleshooting ==
+
+=== I don't have access to the internet ===
+
+Anbox require an anbox0 bridge interface. It is currently created with network manager.
+If <code>ip link</code> doesn't report an anbox0 interface, try reinstalling the anbox-networkmanager package: <code>apk fix anbox-networkmanager</code>.
 
 [[Category:Technical Reference]]
