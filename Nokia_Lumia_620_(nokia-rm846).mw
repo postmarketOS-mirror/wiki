@@ -62,10 +62,6 @@ see Unixbench page on wiki
 {{note|Maxnet did a complete install of Android on the device before started to port. It shouldn't be necessary to flash Android, because you will overwrite it with postmarketOS anyway.
 It shouldn't be necessary to install TWRP too, but is is very useful, so it is recommended.}}
 
-For now, it is necessary to first install Android/LittleKernel Bootloader on the device to use fastboot as flash tool.
-
-
-
 === Tools ===
 You will need  some tools for Installation:
 * [https://www.wpinternals.net/ wpinternals]: This is an open-source tool from an XDA-User. It runs natively on Windows.
