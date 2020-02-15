@@ -2,7 +2,9 @@
 {{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]].}}
 {{note|Anbox currently only works on x86_64. See {{github|1357|anbox|anbox}} for the upstream issue.}}
 
-'''[https://anbox.io Anbox]''' runs Android apps on Linux by running a trimmed down version of Android in a container. Using Anbox installed would make it possible for a user to have both needed Android applications sandboxed, running alongside of native Linux programs. Having this working can be a major assistant to help people switch from Android to an operating that respects their privacy.
+[[File:Anbox_app_manager.png|thumb|The anbox application manager with the default apps.]]
+
+'''[https://anbox.io Anbox]''' runs Android apps on Linux using a trimmed down version of Android in a container. Anbox allows one to use Android applications sandboxed, running alongside the native Linux programs. It can be very handy to help people switch from Android to an operating that respects their privacy.
 
 See issue {{issue|17|pmaports}} for current progress.
 
@@ -14,7 +16,39 @@ Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-la
 
 === I don't have access to the internet ===
 
-Anbox require an anbox0 bridge interface. It is currently created with network manager.
+Anbox require an anbox0 bridge interface to access the internet. This interface is currently created with network manager.
+
 If <code>ip link</code> doesn't report an anbox0 interface, try reinstalling the anbox-networkmanager package: <code>apk fix anbox-networkmanager</code>.
+
+
+== Serious Debugging ==
+
+If you never see the application manager, there can be plenty of problems. The first step to debug this is knowing roughly where it fails.
+
+=== Check the openRC service ===
+
+<code>rc-service anbox-container-manager status</code> will give you the state of the container manager. If it reports to be stopped despite your attempts to start it, then the container manager exited. Tell me that '''the container ''manager'' doesn't run''' in a bug report and include <code>/var/lib/anbox/logs/container.log</code>.
+
+=== Check if the container is up ===
+
+If the container manager runs, it doesn't necessarily means the container android runs in is started. To check if the container is up and running, you can try two things can give interesting clues:
+
+;using <code>anbox session-manager</code>
+: check what it answers when you run it. <code>Failed to start container</code> is a pretty obvious way to tell the container doesn't run; but sometimes the session manager will segfault instead. You usually can still tell if container is started.
+
+;using <code>/var/lib/anbox/logs/container.log</code>
+: the file will (hopefully) contain a non-empty log. Look for <q>Received container state "ABORTING" instead of "RUNNING"</q> or <q>Set container state to "STOPPED"</q>.
+
+In this case, tell me in a bug report that '''the container ''itself'' doesn't run''' and include <code>/var/lib/anbox/logs/container.log</code>.
+
+=== Check if <code>adb</code> works ===
+
+Install {{aport|android-tools}} and run <code>adb shell</code>. If you do have a shell, that's great, Android at least started to start. If adb answers you that no devices/emulators are found and the container is running, then tell me in a bug report that '''adb couldn't find the device''' and include <code>/var/lib/anbox/logs/console.log</code>.
+
+=== Check if <code>adb install</code> works ===
+
+Download an apk, for example the [https://f-droid.org/FDroid.apk F-Droid one] and try to install it. For example, <code>adb install Dowloads/FDroid.apk</code>. If this doesn't work, then Zygote probably didn't start. If you can get a shell, but can't install an app with adb, tell me in a bug report that '''''adb install'' doesn't work''' and include <code>/var/lib/anbox/logs/console.log</code>.
+
+If <code>adb install</code> works, congratulations, we have only got Anbox to run that far once or twice so far. Please still open an issue if you don't get the anbox application manager to show up, including <code>/var/lib/anbox/logs/console.log</code>.
 
 [[Category:Technical Reference]]
