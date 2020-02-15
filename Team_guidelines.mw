@@ -1,3 +1,9 @@
-Rewrite pending to make this more applicable to bring postmarketOS to a daily driver goal. ''- ollieparanoid''
+=== Rules for merging ===
+
+1. Each merge request needs two approvals from other core team members, unless they are super trivial or a critical fix that must be deployed immediately.
+
+2. Use [https://gitlab.com/postmarketOS/mrhlpr mrhlpr], so we have the MR ID in the commit message
+
+3. If possible, try to also review other people's MRs, and merge their stuff after giving them a second approval.
 
 [[Category:Community]]
