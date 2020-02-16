@@ -90,7 +90,7 @@ sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extrac
 make -j5
 
 cd ~/code/linux/.output/arch/arm/boot
-cat zImage dts/tegra30-grouper-bach.dtb > ~/code/linux/.zImage-dtb
+cat zImage dts/tegra30-asus-nexus7-grouper.dtb > ~/code/linux/.zImage-dtb
 cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 
 pmbootstrap flasher list_devices
