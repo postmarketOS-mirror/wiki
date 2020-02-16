@@ -6,6 +6,8 @@ Using <code>pmbootstrap</code>, Phosh can be installed by selecting it as the UI
 
 On existing systems, it can be installed by installing the <code>postmarketos-ui-phosh</code> meta package or <code>phosh</code> if postmarketOS specific customization is not wanted.
 
+When running <code>pmbootstrap install</code> to flash a phone or sd card you'll be prompted for a user password. Make sure to only use numeric characters [0-9] in this password as the phosh lock screen uses this password as a pin. On an existing phosh install you can change your user password and pin in the terminal with the standard <code>passwd</code> command.
+
 == Starting Phosh ==
 
 If <code>postmarketos-ui-phosh</code> is installed, Phosh will be automatically launched via the [https://github.com/canonical/lightdm LightDM] display manager.
