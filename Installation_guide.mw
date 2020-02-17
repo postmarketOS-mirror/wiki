@@ -72,6 +72,7 @@ Done!
 === Installation and flashing ===
 {{note|We assume that you have a [[Porting_to_a_new_device#Shortcut|shortcut]] for <code>pmbootstrap</code> set up, that points to <code>./pmbootstrap.py</code>.}}
 {{note|Not all installation and flash methods work for all devices. '''Please check your [[devices|device wiki page]] for further instructions!''' Below you will find generic explanations of what the <code>install</code> and <code>flash</code> actions do, just in case the installation instructions are missing for your device. If that is the case, please extend the device wiki accordingly.}}
+{{note|When running the install process, you will be prompted for a password. If your user interface doesn't allow a full keyboard at the lock screen, or you do not have a keyboard attached to your device, you should create a numeric password.}}
 
 ==== pmbootstrap install ====
 The install action essentially does the following:
