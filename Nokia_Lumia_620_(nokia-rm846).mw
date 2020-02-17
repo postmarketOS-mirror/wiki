@@ -13,11 +13,11 @@
 | display = 480x800 LCD_TFT
 | memory = 512MB
 | architecture = armv7
-<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = Y <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no,- for unavailable or left blank (for untested or unknown) -->
+| status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = Y <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_screen = Y <!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -32,7 +32,6 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = installation tested with the files of nokia lumia 720
 | booting = yes
 | n-android =  ✔
 | pmoskernel = 3.4.0
@@ -102,7 +101,7 @@ At the end of the process the device boots into the TWRP-recovery. Wipe all part
 $ adb sideload <LineageOS.zip>
 </syntaxhighlight>
 
-Replace <LineageOS.zip with a path to the downloaded LineageOS-file.
+Replace <LineageOS.zip> with a path to the downloaded LineageOS-file.
 
 === Troubleshooting ===
 If your device stays black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
