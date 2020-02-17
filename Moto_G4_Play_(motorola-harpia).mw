@@ -67,7 +67,7 @@ After that, proceed with [[Installation_guide#Installation_and_flashing|installa
 
 === Modem ===
 Modem is currently working on harpia, but as of writing, a few things are still waiting to be merged into pmaports. See [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/907 pmaports!907]
-for more information. This section will be removed once the required changes are merged into pmaports.
+and [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/958 pmaports!958] for more information. This section will be removed once the required changes are merged into pmaports.
 
 '''Following these directions is not recommended until the required changes are in pmaports.''' If you would like to get modem working now, proceed with the above install guide, with the following
 modifications:
