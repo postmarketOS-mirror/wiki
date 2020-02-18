@@ -105,6 +105,10 @@ Flash using an external SD card for system, boot kernel without flashing through
 * Boot kernel without flashing: <code>pmbootstrap flasher boot</code>
 * You should be able to see and ping the phone via network over USB soonish, but booting to the point where the ssh daemon runs takes really long (e.g. 8 minutes).
 
+== Wifi ==
+
+Couldn't get wifi to work yet, see [https://gitlab.com/postmarketOS/pmaports/issues/448#note_288605139 issue in Gitlab].
+
 == See also ==
 
 * [https://konstakang.com/devices/kis3/ Lineage port, TWRP, Clockwork mod by KonstaKang]
