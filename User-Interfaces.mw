@@ -64,7 +64,6 @@ See issue [https://github.com/postmarketOS/pmbootstrap/issues/62 #62] for more i
 ** [https://wiki.merproject.org/wiki/SailfishOSS Tracking OSS and non-OSS components of Sailfish OS]
 ** [https://git.merproject.org/mer-core/lipstick lipstick] ([https://www.reddit.com/r/linux/comments/6djq1z/postmarketos_aiming_for_a_10_year_lifecycle_for/di3yc7w/ relevant comment])
 ** [https://github.com/qwazix/glacier-controls-spec glacier] ([https://www.reddit.com/r/linux/comments/6djq1z/postmarketos_aiming_for_a_10_year_lifecycle_for/di4iekw/ relevant comment])
-* sway
 ** [http://i.imgur.com/rwCM4AY.jpg Photo]
 * '''[[LuneOS]]''' ([https://github.com/postmarketOS/pmbootstrap/issues/629 link]) (UI from continuation of webOS, HP's discontinued and open sourced mobile operating system with Wayland and QT5)
 * PDA interfaces, may be desirable, as they are suited to devices capable of stylus input, such as the Nokia N900 and Galaxy Note devices, as well as devices with constrained system resources. There is [[Handhelds|some work]] into porting components from these to PMOS.
