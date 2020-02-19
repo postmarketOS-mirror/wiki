@@ -2,7 +2,7 @@ All testing related code is in the <code>test</code> folder in the <code>pmboots
 
 == Requirements ==
 * GNU grep (Alpine: <code>apk add grep</code>)
-* [https://shellcheck.net/ Shellcheck] ([https://bugs.alpinelinux.org/issues/7105 not packaged for Alpine yet])
+* [https://shellcheck.net/ Shellcheck] (Alpine: <code>apk add shellcheck</code>)
 * Python programs (these can be installed via <code>pip</code> if your distribution does not have them packaged):
 ** <code>pytest</code>
 ** <code>pytest-cov</code>
