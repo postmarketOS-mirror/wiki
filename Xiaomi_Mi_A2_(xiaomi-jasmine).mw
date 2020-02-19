@@ -62,7 +62,7 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 === Bootloader Unlocking ===
-Because this device is an Android One device, it can be unlocked using `fastboot oem unlock` from fastboot mode.
+Because this device is an Android One device, it can be unlocked using <code>fastboot oem unlock</code> from fastboot mode.
 
 === Recovery mode ===
 * Turn the device off (or restart also works)
