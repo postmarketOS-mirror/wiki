@@ -20,7 +20,13 @@ Fortunately, most Android-based devices are fairly foolproof; even if your flash
 '''TL;DR: do your research, don't have important data on your device.'''
 
 === Initialization ===
-[[installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. Then run the following in a Linux terminal:
+[[installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. If you already had pmbootstrap installed make sure that it is updated to the latest version and update your files, to get the newest patches:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap pull
+</syntaxhighlight>
+
+Then run the following in a Linux terminal:
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
