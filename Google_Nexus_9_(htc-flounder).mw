@@ -53,6 +53,6 @@ $ pmbootstrap flasher flash_rootfs
 [[Google Nexus 9 (htc-flounder):mainline|Mainline]]
 
 == See also ==
-* {{github|1309}} Initial pull request
-* {{github|1384}} Kernel panic
+* {{MR|1309|pmbootstrap}} Initial pull request
+* {{issue|1384|pmbootstrap}} Kernel panic
 * https://en.wikipedia.org/wiki/Nexus_9
