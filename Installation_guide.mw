@@ -26,27 +26,6 @@ Fortunately, most Android-based devices are fairly foolproof; even if your flash
 $ pmbootstrap init
 </syntaxhighlight>
 
-Type in the code name of your device as listed [[Devices|here]], and optionally a custom username.
-<pre>
-Target device (either an existing one, or a new one for porting).
-Available (39): amazon-thor, asus-flo, asus-grouper, fairphone-fp2, google-glass, ...
-Device [samsung-i9100]: samsung-i9070
-Username [user]: yourusernamegoeshere
-</pre>
-
-==== User interface ====
-Carefully choose the user interface you would like to install. Check your [[devices|device's wiki page]] for interfaces that are known to be working with your device. Weston and XFCE4 are usable on devices which do not have hardware 3D acceleration (most of them!), the others are notably slowed down. Please read the corresponding [[User-Interfaces|user interface]] article for information about how usable each interface is and keep in mind that most of them are not that usable yet.
-<pre>
-Available user interfaces (5):
-* none: No graphical environment
-* hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens)
-* luna: (Wayland) webOS UI, ported from the LuneOS project (Not working yet)
-* plasma-mobile: (Wayland) Mobile variant of KDE Plasma, optimized for touchscreen
-* weston: (Wayland) Reference compositor (demo, not a phone interface)
-* xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
-User interface [weston]:
-</pre>
-
 ==== Work path ====
 Make sure that the location has a few GB of space available, and that it is a relatively standard Linux filesystem (one that supports device nodes and symbolic links). Notably ''unsupported'' are: eCryptFS, encfs, fat, ntfs, nfs shares, tmpvs, and VirtualBox shared folders.
 <pre>
@@ -54,15 +33,49 @@ Location of the 'work' path. Multiple chroots (native, device arch, device rootf
 Work path [/home/user/.local/var/pmbootstrap]:
 </pre>
 
+==== Device ====
+Type in the vendor and code-name of your device as listed [[Devices|here]], and optionally a custom username.
+<pre>
+Choose your target device vendor (either an existing one, or a new one for porting).
+Available vendors (45): amazon, asus, bq, chuwi, fairphone, finepower, fujitsu, google, gp, hisense, htc, huawei, infocus, jolla, leeco, lenovo, lg, medion, meizu, motorola, nextbit, nobby, nokia, oneplus, oppo, ouya, pine64, planet, purism, qemu, raspberry, samsung, semc, sony, surftab, t2m, tablet, teclast, wiko, wileyfox, wingtech, xiaomi, yu, zte, zuk
+</pre>
+<pre>
+Vendor [nokia]: samsung
+Available codenames (43): a3ulte, a5ulte, a5y17lte, apexq, ariesve, espresso10, expressatt, golden, gt510wifi, gts210velte, gts210vewifi, hero2lte, herolte, i747m, i8200, i9003, i9070, i9100, i9195, i927, i9305, j1mini3g, j3nxlte, jflte, klte, kminilte, kylepro, kylessopen, kylevess, lt01wifi, lt023g, maguro, manta, matissewifi, n5110, n7100, nevisp, p4wifi, royss, s6500d, serranodsdd, serranovelte, zanin
+</pre>
+
+
+==== User interface ====
+Carefully choose the user interface you would like to install. Check your [[devices|device's wiki page]] for interfaces that are known to be working with your device. Weston and XFCE4 are usable on devices which do not have hardware 3D acceleration (most of them!), the others are notably slowed down. Please read the corresponding [[Interfaces|user interface]] article for information about how usable each interface is and keep in mind that most of them are not that usable yet.
+<pre>
+Available user interfaces (11): 
+* none: No graphical environment
+* hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens) (DISABLED FOR ARMHF, ARMV7!)
+* i3wm: (X11) Tiling WM (keyboard required)
+* kodi: (Wayland) 10-foot UI useful on TV's
+* mate: (X11) MATE Desktop Environment, fork of GNOME2 (stylus recommended)
+* phosh: (Wayland) Mobile UI developed for the Librem 5
+* plasma-mobile: (Wayland) Mobile variant of KDE Plasma, optimized for touchscreen (slow without hardware acceleration!)
+* plasma-mobile-extras: Plasma Mobile with more apps pre-installed (video and music players, pdf reader, etc.)
+* shelli: Plain console with touchscreen gesture support
+* sway: (Wayland) Tiling WM, drop-in replacement for i3wm (DOES NOT RUN WITHOUT HW ACCELERATION!)
+* weston: (Wayland) Reference compositor (demo, not a phone interface)
+* xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
+User interface [weston]:
+</pre>
+
+
 ==== More questions ====
 Unless you know that you want to change something, it's fine to anwer with the defaults here by just pressing the <code>return</code> key.
 <pre>
-Build options: Parallel jobs: 3, ccache per arch: 5G, timestamp based rebuilds: True
-Change them? (y/n) [n]:
+Build options: Parallel jobs: 3, ccache per arch: 5G
+Change them? (y/n) [n]: 
 Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
-Extra packages [none]:
-Your host timezone: Europe/London
-Use this timezone instead of GMT? (y/n) [y]:
+Extra packages [none]: 
+Your host timezone: Europe/Berlin
+Use this timezone instead of GMT? (y/n) [y]: 
+Device hostname (short form, e.g. 'foo') [samsung-kylessopen]: 
+Would you like to copy your SSH public keys to the device? (y/n) [n]: 
 WARNING: The applications in the chroots do not get updated automatically.
 Run 'pmbootstrap zap' to delete all chroots once a day before working with pmbootstrap!
 It only takes a few seconds, and all packages are cached.
@@ -70,7 +83,6 @@ Done!
 </pre>
 
 === Installation and flashing ===
-{{note|We assume that you have a [[Porting_to_a_new_device#Shortcut|shortcut]] for <code>pmbootstrap</code> set up, that points to <code>./pmbootstrap.py</code>.}}
 {{note|Not all installation and flash methods work for all devices. '''Please check your [[devices|device wiki page]] for further instructions!''' Below you will find generic explanations of what the <code>install</code> and <code>flash</code> actions do, just in case the installation instructions are missing for your device. If that is the case, please extend the device wiki accordingly.}}
 {{note|When running the install process, you will be prompted for a password. If your user interface doesn't allow a full keyboard at the lock screen, or you do not have a keyboard attached to your device, you should create a numeric password.}}
 
@@ -82,7 +94,7 @@ The install action essentially does the following:
 
 Furthermore you can change the output type (system image) to something else with the following parameters.
 * <code>--sdcard</code>: Format and copy everything to an SD card
-* <code>--android-recovery-zip</code>: Create a zip file, that can be used with TWRP, CWM or other Android recovery systems ([[Android_Recovery_Zip_Installation|detailed instructions]])
+* <code>--android-recovery-zip</code>: Create a zip file, that can be used with TWRP, CWM or other Android recovery systems ([[Installation from recovery mode|detailed instructions]])
 
 Example commands (only using one at a time makes sense):
 <syntaxhighlight lang="shell-session">
@@ -102,7 +114,7 @@ This command wraps various flash programs (e.g. fastboot and heimdall) with a co
 $ pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as your UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>fastboot format system</code> for fastboot compatible devices, or simply install the known working OS, e.g. Android, on it. And if you really know what you are doing, you might consider using <code>dd</code>). Using multiple partitions with LVM is planned ({{github|60}}).
+In case your system partition is too small for the generated image (e.g. because you chose Plasma Mobile as your UI), it is possible to flash to another partition as well. Just be sure to erase any previous installations of postmarketOS in other partitions, because the init script will start with the first one that it encounters. (To delete a previous version either use <code>fastboot format system</code> for fastboot compatible devices, or simply install the known working OS, e.g. Android, on it. And if you really know what you are doing, you might consider using <code>dd</code>). Using multiple partitions with LVM is planned ({{issue|60|pmbootstrap|postmarketOS}}).
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap flasher flash_rootfs --partition userdata
 </syntaxhighlight>
