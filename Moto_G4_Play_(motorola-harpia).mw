@@ -54,6 +54,9 @@ as you see the boot splash. You should be presented with a menu that looks like 
 After that, proceed with [[Installation_guide#Installation_and_flashing|installation]] as usual, using lk2nd's fastboot interface to flash the kernel and rootfs.
 
 == Usage ==
+=== Audio ===
+See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
+
 === Modem ===
 Follow the directions on [[Qualcomm_Snapdragon_410_(MSM8916)#Modem|this wiki page]] to use the modem. If you have a device model other than what is listed here, please edit the list below
 with the results of modem functionality testing.
