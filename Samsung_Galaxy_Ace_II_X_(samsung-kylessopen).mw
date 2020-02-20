@@ -43,7 +43,7 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 * [[User:Maxnet|Maxnet]]
 
 == Installation ==
-Before installing, ensure that your host computer and your copy of [[Installing_pmbootstrap|pmbootstrap]] is fully up to date and that your system has been rebooted since it was last updated. 
+Before installing, ensure that your host computer and your copy of [[Installing_pmbootstrap|pmbootstrap]] is fully up to date and that your system has been rebooted since it was last updated.
 
 <source lang="bash">$ pmbootstrap pull</source>
 
