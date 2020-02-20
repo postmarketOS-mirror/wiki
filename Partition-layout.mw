@@ -28,7 +28,7 @@ The initramfs (in the <code>boot.img</code> file!) will automatically find and m
 ==== Flashing to "userdata" ====
 The <code>userdata</code> partition is not used yet (proposal to do that is in {{issue|60}}). But as we are pretty flexible, you can also flash pmOS to the <code>userdata</code> partition, if it has more space and you can't fit it on the <code>system</code> partition. The initramfs will detect it anyway. Just make sure, that you don't have it flashed to ''both'' partitions!
 
-To flash to the <code>userdata</code> partition instead of the <code>system</code> partition, use <code>pmbootstrap flasher flash_rootfs --partition=USERDATA</code>.
+To flash to the <code>userdata</code> partition instead of the <code>system</code> partition, use <code>pmbootstrap flasher flash_rootfs --partition=userdata</code>.
 
 If you had flashed postmarketOS to the system partition before, make sure to format it with <code>fastboot format system</code>.
 
