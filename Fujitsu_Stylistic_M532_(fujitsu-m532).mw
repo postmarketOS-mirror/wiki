@@ -67,6 +67,10 @@ Untested
 * SPDIF output (is it even implemented?)
 * Whatever sorcery from the 40-pin charging slot (HDMI, ...)
 
+== Mainline kernel
+
+Using Okias's [https://github.com/okias/linux/tree/transformers transformers branch] with the Asus TF300T DTB, the kernel shows (quite surprisingly) a blinking cursor on the LCD, with backlight enabled. However, the device's vibration motor is always on (probably on some conflicting "always on" PIN on the TF300T) and the kernel clearly does not boot after the cursor. No device appears in lsusb.
+
 == Contributors ==
 * R.
 
