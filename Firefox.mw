@@ -58,7 +58,7 @@ You may ajust scale to your device screen size, but it may only be integers.
 You can edit your desktop shortcut /usr/share/applications/firefox.desktop :
 <source lang="C">
 [Desktop Entry]
-Exec=MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
+Exec=env MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
 ...
 </source>
 
