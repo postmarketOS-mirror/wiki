@@ -42,6 +42,9 @@
 * Rob Clark Freedreno video driver maintainer
 * Linaro, Qualcomm, Red Hat drivers, kernel upstreaming
 
+=== Users owning this device ===
+{{Device owners}}
+
 === Key combinations ===
 
 * Boot to bootloader: Power + Volume Down
