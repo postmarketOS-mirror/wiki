@@ -59,7 +59,7 @@ postmarketOS can be installed onto the eMMC by booting a Linux distribution on t
 
 # Install [[Installing pmbootstrap|pmbootstrap]] and its dependencies on the phone on any Linux distribution booted via the microSD card
 # Follow the [[Installation guide|Installation Guide]] until "Installation and flashing"
-# Run "pmbootstrap install --sdcard=/dev/mmcblk(...)"
+# Run "pmbootstrap install --sdcard=/dev/mmcblk2"
 
 '''Note''': If this throws an error mentioning "/dev/installp2" when trying to install from postmarketOS on the microSD card over an existing installation of postmarketOS on the eMMC (including the factory test image), the partitions of the existing installation on the eMMC need to be deleted and the phone needs to be rebooted once after doing so due to a bug, see [https://forum.pine64.org/showthread.php?tid=9107&pid=59870 here].
 
