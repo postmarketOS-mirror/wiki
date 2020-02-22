@@ -46,7 +46,7 @@ Power off the device, hold down the power and the volume up key for 1-2 seconds.
 * Replace ssh with dropbear
 
 == Installation ==
-Follow the [https://github.com/postmarketOS/pmbootstrap#usage installation guide]. Make sure to not use the <code>--fde</code> option, because initfs unlocking does not work yet.
+Follow the [[Installation_guide]]. Make sure to not use the <code>--fde</code> option, because initfs unlocking does not work yet.
 
 == Display ==
 XFCE4 works the best, you may have to run startx over ssh to get it to appear
