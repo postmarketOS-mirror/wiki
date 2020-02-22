@@ -95,3 +95,5 @@ numid=17,iface=MIXER,name='Headphone Playback Volume'
 These should be fairly easy to correlate with the controls you see in alsamixer. The controls follow a standard naming scheme. The volume sliders for devices on the Playback page of alsamixer are called <code>$name Playback Volume</code>, the same control on the Capture page is called <code>$name Capture Volume</code>. The mute button underneath the playback volume sliders are called <code>$name Playback Switch</code> and the enable switches on the Capture page are called <code>$name Capture Switch</code>. Controls  that don't have a volume slider in it but a text selection the name is <code>$name Playback Route</code>
 
 [[File:Alsa_mixer_mapping.png|800px]]
+
+[[Category:Technical Reference]]
