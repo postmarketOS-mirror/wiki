@@ -1,0 +1,53 @@
+Alsa Use Case Manager describes how to set up the mixer for certain usecases (like "playing audio", "calling"). It also describes how to modify the mixer state to route audio to certain outputs and inputs and how to control those devices.
+
+This basically covers the same things profiles do in Pulseaudio except that UCM files are easier to write and also work without Pulseaudio running. If an UCM configuration is present for a card then pulseaudio will ignore the built-in profiles and generate a profile based on the UCM files.
+
+
+== Card name ==
+
+The first thing you need is the card name, this is used as the directory and filename for the UCM main file. You can find it using the aplay command from the alsa-utils package
+
+<source lang="shell-session">
+$ apk add alsa-utils
+$ aplay -l
+card 0: sun50ia64audio [sun50i-a64-audio], device 0: 1c22c00.dai-sun8i-codec-aif1 sun8i-codec-aif1-0 [1c22c00.dai-sun8i-codec-aif1 sun8i-codec-aif1-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+</source>
+
+In this case the name you need is the first name in square brackets: <code>sun50i-a64-audio</code>
+
+== The first usecase ==
+
+The next step is creating a file that contains the list of available usecases for the mixer. This file will be named after the mixer name from the section above:
+
+{{hc|/usr/share/alsa/ucm2/sun50i-a64-audio/sun50i-a64-audio.conf|<syntaxhighlight lang="puppet">
+Syntax 2
+
+SectionUseCase."HiFi" {
+	File "HiFi"
+	Comment "Play high quality music"
+}
+</syntaxhighlight>}}
+
+For every usecase there will be a <code>SectionUseCase</code> block. The name in quotes directly after that is the "verb", which is the internal name of the profile. This has to be one of the predefined usecases from alsa. The ones that are currently defined are:
+
+* "Inactive"
+* "HiFi"
+* "HiFi Low Power"
+* "Voice"
+* "Voice Low Power"
+* "Voice Call"
+* "Voice Call IP"
+* "FM Analog Radio"
+* "FM Digital Radio"
+
+The most important profile to create is the HiFi one, that's the main audio playback profile for the card. For the other profiles the actual use of them isn't very well defined by Alsa.
+
+The first setting for the profile is the <code>File</code> line. This defines the filename for the file that contains the exact mixer configuration for that usecase.
+
+The second setting in this example is the <code>Comment</code>. This is used as the display name in the alsaucm tool and in Pulseaudio. This can be freely defined.
+
+== The Use case definition ==
+
+The most complicated part is the actual contents of the <code>HiFi</code> file that needs to be created. This file is basically a collection of scripts to enable/disable the mixer and commands to move from one input/output to another.
