@@ -64,7 +64,7 @@ Installation to the system is not yet supported for the device, so make sure to 
 
 ==Installing with downstream kernel==
 
-<syntaxhighlight lang="shell" line='line'>
+<source lang="bash">
 #FIRST PMBOOTSTRAP INSTALL
 mkdir ~/code
 cd ~/code
@@ -103,7 +103,7 @@ cp ~/.local/var/pmbootstrap/chroot_buildroot_armhf/var/lib/postmarketos-android-
 #Connect with USB cable
 telnet 172.16.42.1
 pmos_continue_boot
-</syntaxhighlight>
+</source>
 
 == Wifi ==
 
