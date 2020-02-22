@@ -46,7 +46,24 @@ Power off the device, hold down the power and the volume up key for 1-2 seconds.
 * Replace ssh with dropbear
 
 == Installation ==
-Follow the [[Installation_guide]]. Make sure to not use the <code>--fde</code> option, because initfs unlocking does not work yet.
+Follow the [[Installation_guide]].
+
+*Install PMOS
+<source lang="bash">
+pmbootstrap init
+pmbootstrap install
+pmbootstrap flasher flash_rootfs
+pmbootstrap flasher flash_kernel
+</source>
+*Restart your mobile
+*Connect with ssh
+<source lang="bash">
+ssh usermobile@172.16.42.1
+</source>
+*Start graphical interface (Weston for example)
+<source lang="bash">
+startx
+</source>
 
 == Display ==
 XFCE4 works the best, you may have to run startx over ssh to get it to appear
