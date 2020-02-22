@@ -51,3 +51,45 @@ The second setting in this example is the <code>Comment</code>. This is used as 
 == The Use case definition ==
 
 The most complicated part is the actual contents of the <code>HiFi</code> file that needs to be created. This file is basically a collection of scripts to enable/disable the mixer and commands to move from one input/output to another.
+
+This is a minimal example of a usecase file.
+
+{{hc|/usr/share/alsa/ucm2/sun50i-a64-audio/HiFi|<syntaxhighlight lang="puppet">
+SectionVerb {
+	EnableSequence [
+		cset "name='Headphone Playback Switch' off"
+		cset "name='Headphone Source Playback Route' DAC"
+		cset "name='Headphone Playback Volume' 50%"
+	]
+	DisableSequence [
+	]
+
+	Value {
+		PlaybackPCM "hw:${CardId},0"
+		CapturePCM "hw:${CardId},0"
+	}
+}
+</syntaxhighlight>}}
+
+The <code>SectionVerb</code> block defines what commands need to be run to enable or disable this usecase. This is mostly used to bring the whole mixer in a known state on start so it's probably a good idea to set a value for all controls in the mixer here.
+
+The commands in the sections in this  section are all <code>cset</code> commands. These commands correspond to commands you'd normally use with the <code>amixer</code> tool from the alsa-utils package. The first command does this when run with amixer:
+
+<source lang="shell-session">
+$ amixer cset name='Headphone Playback Switch' off
+numid=36,iface=MIXER,name='Headphone Playback Switch'
+  ; type=BOOLEAN,access=rw------,values=2
+  ; values=on,on
+</source>
+
+To get a list of all the controls you can set you can also use the amixer command:
+
+<source lang="shell-session">
+$ amixer controls
+numid=35,iface=MIXER,name='Headphone Source Playback Route'
+numid=36,iface=MIXER,name='Headphone Playback Switch'
+numid=17,iface=MIXER,name='Headphone Playback Volume'
+... a lot more lines here ...
+</source>
+
+These should be fairly easy to correlate with the controls you see in alsamixer. The controls follow a standard naming scheme. The volume sliders for devices on the Playback page of alsamixer are called <code>$name Playback Volume</code>, the same control on the Capture page is called <code>$name Capture Volume</code>. The mute button underneath the playback volume sliders are called <code>$name Playback Switch</code> and the enable switches on the Capture page are called <code>$name Capture Switch</code>. Controls  that don't have a volume slider in it but a text selection the name is <code>$name Playback Route</code>
