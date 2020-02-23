@@ -3,16 +3,16 @@
 | name =  Iconia W511
 | codename = acer-iconia-w511
 | image = 
-| imagecaption = CHANGE_ME
+| imagecaption = 
 | releaseyear = CHANGE_ME
 | originalsoftware = Windows 8
-| chipset = CHANGE_ME <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = CHANGE_ME <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| chipset = Intel® Atom Z2760, DualCore, 1,8 GHz
+| cpu = Intel® Atom Z2760, DualCore, 1,8 GHz
+| gpu = Intel® Graphics Media Accelerator 3650
+| storage = 64 GB
+| display = 1366 x 768 HD LCD
+| memory = 2 GB
+| architecture = x86
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -34,10 +34,8 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
+<!-- you can also use these lines if you need to:
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
