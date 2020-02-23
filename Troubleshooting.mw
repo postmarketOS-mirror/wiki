@@ -282,4 +282,10 @@ It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try
 
 This is a bootloader limitation. Flash [https://github.com/postmarketOS/pmbootstrap/issues/456 with netcat] as a workaround, or use this wiki's search feature to come up with more related information. Feel free to organize this in a better way, but this should be a good starting point. See also {{issue|1735}}.
 
+=== ERROR: This device does not exist anymore, check <https://postmarketos.org/renamed> to see if it was renamed ===
+
+One case where this might happen is if you remove pmbootstrap's work path, and then run a <code>pmbootstrap init</code>. As you might notice it is still remembering values and devices from previous executions. 
+
+To solve this you need to remove (or rename) <code>$XDG_CONFIG/pmbootstrap.cfg</code> (i.e <code>~/.config/pmbootstrap.cfg</code>). After doing so <code>pmbootstrap init</code> should work fine.
+
 [[Category:Technical Reference]]
