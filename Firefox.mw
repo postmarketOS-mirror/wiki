@@ -62,6 +62,8 @@ Exec=env MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
 ...
 </source>
 
+If you are running a wayland user interface (phosh, plasma mobile, etc.), you may also enable experimental wayland support by adding '''MOZ_ENABLE_WAYLAND=1''' before firefox in the Exec line. This makes firefox run without Xwayland and may result in a better experience.
+
 == User agent ==
 If you would like to switch between mobile and desktop page editions easily, the [https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher-revived/ User Agent switcher] extension will allow for easy switching between different user agents.
 
