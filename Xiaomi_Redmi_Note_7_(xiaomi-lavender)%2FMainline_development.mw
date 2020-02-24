@@ -1,5 +1,8 @@
 < [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)]]
 
+=== Mainline Linux ===
+Patches were sent for review with initial mainline support for sdm660/lavender: https://patchwork.kernel.org/project/linux-arm-msm/list/?series=240549
+
 === Lineage OS ROMs/TWRP pstore-ramoops module parameters ===
 
  /sys/fs/pstore # ls -la /sys/module/ramoops/parameters/
