@@ -19,7 +19,7 @@ It works on most devices with a working display, and runs fine without hardware 
 
 # Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
 # Add <code>gvfs</code> and <code>thunar-volman</code> for mounting drives and drive management.
-# Change the hidpi settings to 2x in <code>Display</code> setting.
+# Change the scaling settings to 2x in <code>Applications/Settings/Appearance/Settings/Window Scaling</code> setting.
 # Install <code>lxdm</code> to get restart options in power manager.
 # Disable <code>Compositor</code> from <code>Window Manager Tweaks</code> in settings to get faster experience.
 
