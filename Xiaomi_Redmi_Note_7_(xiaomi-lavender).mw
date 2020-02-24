@@ -364,10 +364,8 @@ In the center you will see 4 test points that are available. (See the picture) T
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* [https://gitlab.com/minlexx/pmaports/commits/minlexx/xiaomi-lavender-add-mainline Current pmaports development branch]
+* [https://gitlab.com/minlexx/pmaports/commits/xiaomi-lavender Current pmaports development branch]
 * [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom-sdm660 Current mainline kernel development branch]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
