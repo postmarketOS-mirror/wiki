@@ -37,7 +37,7 @@ Everything is muted by default and must be enabled through alsaucm. Unfortunatel
  set _verb HiFi
  set _enadev <device>
 
-where <code><device></code> is one of <code>Speaker</code>, <code>Earpiece</code>, <code>Headphones</code>, <code>PrimaryMic</code>, <code>HeadsetMic</code> or <code>SecondaryMic</code>.
+where <code><device></code> is one of <code>Speaker</code>, <code>Earpiece</code>, <code>Headphones</code>, <code>Mic1</code>, <code>Mic2</code> or <code>Headset</code>.
 alsaucm does not track which devices are already enabled, therefore it is possible to produce combinations that won't work properly (e.g. <code>Headphones</code>+<code>Earpiece</code>). To switch between devices, the old device first needs to be re-enabled and then disabled:
 
  $ alsaucm -i -c hw:0
