@@ -26,7 +26,7 @@
 | status_battery = N
 | status_3d = P
 | status_accel = N
-| status_audio = N
+| status_audio = P
 | status_bluetooth = Y
 | status_camera = N
 | status_gps = N
@@ -100,7 +100,7 @@ Boot up the device after installation
 |-
 | Backlight IC || Texas Instruments lp8556 (or lp8558) || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/video/backlight/lp855x_bl.c lp855x does not work] ||
 |-
-| Audio || ? || ? || ?
+| Audio || PM8916/MAX98357A || Yes || Audio over headset and mic work. Speakers are powered by external amp (MAX98357A or similar) which needs more work. Sound output is working, but it sounds a bit ''crusty''
 |-
 | Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Yes] || Working in kernel fork
 |-
