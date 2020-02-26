@@ -71,7 +71,7 @@ Then open a new terminal and try again.
 == Tab completion ==
 [https://en.wikipedia.org/wiki/Command-line_completion Tab completion] is an optional feature that saves you time by automatically filling in the rest of a command when you press the tab key. You can also see a list of possible commands by double pressing the tab key.
 
-Install [https://argcomplete.readthedocs.io/en/latest/ argcomplete] with:
+Install [https://kislyuk.github.io/argcomplete argcomplete] with:
 <syntaxhighlight lang="shell-session">
 $ pip3 install --user argcomplete
 </syntaxhighlight>
