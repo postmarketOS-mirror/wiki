@@ -256,6 +256,7 @@ pinephone:~# sudo modprobe 8723cs
 </source>
 
 === Bluetooth ===
+Main article: [[Bluetooth]].
 
 The bluetooth connection is handled by the wifi chipset. It is functional but there is no integration in Plasma Mobile yet. To pair a bluetooth device start the bluetooth service and use bluetoothctl to connect.
 
@@ -267,7 +268,7 @@ pinephone:~# bluetoothctl
 # pair 00:11:22:33:44:55
 </source>
 
-To use bluetooth headphones with pulseaudio, the package <code>pulseaudio-bluez</code> is required. 
+To use bluetooth headphones with pulseaudio, the package <code>pulseaudio-bluez</code> is required.
 
 === Modem ===
 
