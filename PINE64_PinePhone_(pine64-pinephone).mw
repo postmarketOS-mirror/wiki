@@ -267,6 +267,8 @@ pinephone:~# bluetoothctl
 # pair 00:11:22:33:44:55
 </source>
 
+To use bluetooth headphones with pulseaudio, the package <code>pulseaudio-bluez</code> is required. 
+
 === Modem ===
 
 Receiving and sending text messages works, The calls work but there are some issues left with the audio routing. Mobile data is functional.
