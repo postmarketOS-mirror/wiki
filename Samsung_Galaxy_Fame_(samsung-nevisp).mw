@@ -18,7 +18,7 @@
 | status_flashing = Y <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = Y <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = Y <!-- The display is working? -->
-| status_wifi = N <!-- Wireless network works? -->
+| status_wifi = Y <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = N <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
