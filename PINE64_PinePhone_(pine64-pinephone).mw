@@ -8,7 +8,7 @@
 | image = File:Pinephone-final.jpeg
 | imagecaption = A PinePhone with a case
 | releaseyear = 2019
-| originalsoftware = Linux 5.3.0
+| originalsoftware = Linux 5.x
 | pmoskernel = 
 | chipset = Allwinner A64
 | cpu = 4x 1152 MHz Cortex-A53
@@ -29,12 +29,12 @@
 | status_3d = Y
 | status_accel = Y
 | status_audio = Y
-| status_bluetooth = P
+| status_bluetooth = Y
 | status_camera = P
 | status_gps = Y
 | status_mobiledata = Y
-| status_sms = P
-| status_calls = P
+| status_sms = Y
+| status_calls = Y
 | status_otg = N
 | status = Boots
 | booting = yes
