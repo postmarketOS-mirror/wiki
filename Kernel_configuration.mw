@@ -522,6 +522,28 @@ and these
 '''pmOS specific'''
 Enable only on recent mainline kernels. After enabling these options, you can use iwd daemon (better performance) instead of wpa_supplicant.
 
+=== CONFIG_USER_NS ===
+'''About'''
+
+''User namespace''
+
+''Required for BubbleWrap sandboxing used by The GNOME Web (Epiphany) and other software.''
+
+'''pmOS specific'''
+
+Phosh environment must have to have Web browser (Epiphany) functional.
+
+=== SECCOMP ===
+'''About'''
+
+''Enable seccomp to safely compute untrusted bytecode''
+
+''Required for BubbleWrap sandboxing used by The GNOME Web (Epiphany) and other software.''
+
+'''pmOS specific'''
+
+Phosh environment must have to have Web browser (Epiphany) functional.
+
 = See also =
 
 * [https://cateee.net/lkddb/web-lkddb/ Linux Kernel Driver Database]
