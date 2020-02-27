@@ -227,6 +227,8 @@ pinephone:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video1 -vframes 1 selfie
 
 === Camera Flash ===
 
+''Please note, that the driver for the sgm3140 is not yet included in the main kernel source and as such is not available for use yet without compiling the module yourself.''
+
 The camera flash consist out of a SG Micro SGM3140 "500mA Buck/Boost Charge Pump LED Driver" and a EHP-C04 LED.
 
 The driver supports Flash and Torch mode, the first being brighter but only for about 300ms, when it switches to Torch mode. Torch mode is lower brightness but can be turned on continuously.
@@ -244,7 +246,6 @@ echo 1 > /sys/class/leds/sgm3140-flash/brightness
 # Turn off Torch
 echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
 </source>
-
 
 === WiFi ===
 
