@@ -74,6 +74,7 @@ Simply flash rootfs and kernel in Odin mode.
 
 == See also ==
 {{MR|954|pmaports}} Initial merge request
+{{MR|995|pmaports}} Wifi support
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
