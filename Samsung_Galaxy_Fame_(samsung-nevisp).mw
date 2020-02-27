@@ -19,7 +19,7 @@
 | status_touch = Y <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = Y <!-- The display is working? -->
 | status_wifi = Y <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y<!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = Y <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
