@@ -531,7 +531,7 @@ Enable only on recent mainline kernels. After enabling these options, you can us
 
 '''pmOS specific'''
 
-Phosh environment must have to have Web browser (Epiphany) functional.
+Phosh environment must have it enabled for Web browser (Epiphany) being functional.
 
 === SECCOMP ===
 '''About'''
@@ -542,7 +542,7 @@ Phosh environment must have to have Web browser (Epiphany) functional.
 
 '''pmOS specific'''
 
-Phosh environment must have to have Web browser (Epiphany) functional.
+Phosh environment must have it enabled for Web browser (Epiphany) being functional.
 
 = See also =
 
