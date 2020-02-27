@@ -176,6 +176,12 @@ These are used for flashing and booting the device, and most of them are fastboo
 |-
 
 |-
+| <code>bootimg_append_seandroidenforce</code>
+| Append <code>SEANDROIDENFORCE</code> file to <code>boot.img</code> See {{MR|1000|pmaports}} for details.
+| <code>true, false</code>
+|-
+
+|-
 | <code>generate_bootimg</code>
 | Set this to true for fastboot device, so the <code>mkinitfs</code> command will generate a <code>boot.img</code> file after creating the <code>initfs</code>. Add <code>mkbootimg</code> as dependency to your device's APKBUILD!
 | <code>true, false</code>
