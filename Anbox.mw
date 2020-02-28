@@ -12,6 +12,7 @@ See issue {{issue|17|pmaports}} for current progress.
 
 Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-launch</code> or the icon launcher.
 
+
 == Troubleshooting ==
 
 === I don't have access to the internet ===
@@ -19,6 +20,10 @@ Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-la
 Anbox require an anbox0 bridge interface to access the internet. This interface is currently created with network manager.
 
 If <code>ip link</code> doesn't report an anbox0 interface, try reinstalling the anbox-networkmanager package: <code>apk fix anbox-networkmanager</code>.
+
+=== When I start Anbox in a terminal, it complains about DBus ===
+
+<code>[daemon.cpp:61@Run] Failed to request DBus service name</code> means dbus isn't running, or that you launched it incorrectly (check environment variables are set with <code>env</code>). Ensure you [https://gitlab.com/postmarketOS/pmaports/issues/458 start dbus with your session]
 
 
 == Serious Debugging ==
