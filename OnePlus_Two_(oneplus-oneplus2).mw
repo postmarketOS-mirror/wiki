@@ -69,10 +69,11 @@ I ran into networking issues with default installation procedure ( install-> fla
 Get it working by installing recovery with TWRP:
  <pre>pmbootstrap install --android-recovery-zip</pre> 
 
+WARNING(FIXME): Results in 'boot partition not found'
+
 next copy zip file to device and install it using twrp 
 
 in fastboot mode : <pre>pmbootstrap flasher flash_kernel</pre>
-
 
 == Links ==
 
