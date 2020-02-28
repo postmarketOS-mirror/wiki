@@ -369,6 +369,7 @@ You may use amixer, or alsamixer to unmute the required channels, and to control
 
 Amixer:
 <source lang="shell-session">
+$ amixer scontents
 $ amixer sset Master unmute
 </source> 
 
