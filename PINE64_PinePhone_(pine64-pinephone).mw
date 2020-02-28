@@ -374,7 +374,7 @@ $ amixer sset Master unmute
 
 Alsamixer (use terminal keyboard input to use up/down/left/right keys, to set volume and select devices):
 <source lang="shell-session">
-$ alsamixer
+$ alsamixer -V all
 </source>
 
 Test the sound output by issuing:
