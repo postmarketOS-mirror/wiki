@@ -365,7 +365,19 @@ Start by making sure alsa-utils are installed:
 $ sudo apk add alsa-utils
 </source>
 
-You may use amixer, or alsamixer to unmute the required channels, and to control the volume. Test the sound output by issuing:
+You may use amixer, or alsamixer to unmute the required channels, and to control the volume:
+
+Amixer:
+<source lang="shell-session">
+$ amixer sset Master unmute
+</source> 
+
+Alsamixer (use terminal keyboard input to use up/down/left/right keys, to set volume and select devices):
+<source lang="shell-session">
+$ alsamixer
+</source>
+
+Test the sound output by issuing:
 
 <source lang="shell-session">
 $ speaker-test -c3
