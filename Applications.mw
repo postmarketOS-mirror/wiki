@@ -8,3 +8,7 @@ See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Li
 * <code>gnome-2048</code> The famous 2048 game, works perfectly
 * <code>gnome-authenticator</code> 2FA client app
 * <code>fractal</code> Matrix client - Currently cannot access libsecret on phosh, so you have to login each time
+* <code>angelfish</code> Web browser for Plasma Mobile - Works okay, still has a few issues
+* <code>index</code> Maui based file browser - Extremely fast, and works on both desktops and mobile thanks to Mauikit + Kirigami
+* <code>plasma-camera</code> Camera application for Plasma Mobile - No image comes through and the controls do not do anything
+* <code>VVave</code> A great looking Mauikit music player
