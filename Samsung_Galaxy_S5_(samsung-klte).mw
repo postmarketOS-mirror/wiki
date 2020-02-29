@@ -63,7 +63,8 @@
 
 == What does not work ==
 
-* Audio playback
+* Audio playback without nonfree-userland
+* Bluetooth adapter is visible in rfkill list, but does not work
 * Everything else
 
 == How to enter flash mode ==
