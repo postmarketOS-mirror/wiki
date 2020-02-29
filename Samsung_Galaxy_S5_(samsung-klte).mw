@@ -149,24 +149,6 @@ samsung-klte:~$ sudo set-brightness 20
 20
 </pre>
 
-=== CPU power management ===
-By default after booting all CPU cores are running at full speed (2.4 GHz). This results in draining phone battery completely in ~2 hours. To reduce this problem, you can lower CPU frequences using <code>cpufrequtils</code> package:
-<pre>
-$ sudo apk add cpufrequtils
-</pre>
-You can check current CPU frequences using:
-<pre>
-$ cpufreq-info
-</pre>
-You can execute the following commands or place them in a sript <code>/etc/local.d/cpufreq.start</code> (don't forget to make it executable), so that ondemand governor is set automatically every boot.
-<pre>
-$ sudo cpufreq-set -c0 -g ondemand
-$ sudo cpufreq-set -c1 -g ondemand
-$ sudo cpufreq-set -c2 -g ondemand
-$ sudo cpufreq-set -c3 -g ondemand
-</pre>
-<code>powersave</code> governor lower CPU frequency to 300 MHz and allows for greater power savings.
-
 === Partition layout ===
 
 <pre class="shell">~ # fdisk -l /dev/block/mmcblk0
