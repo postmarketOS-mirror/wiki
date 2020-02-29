@@ -7,3 +7,4 @@ See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Li
 * [[Firefox]] another web browser. Requires manual fixes
 * <code>gnome-2048</code> The famous 2048 game, works perfectly
 * <code>gnome-authenticator</code> 2FA client app
+* <code>fractal</code> Matrix client - Currently cannot access libsecret on phosh, so you have to login each time
