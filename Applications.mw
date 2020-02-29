@@ -4,5 +4,6 @@ See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Li
 
 * <code>gnome-podcasts</code> Basic Podcast app, some compatibility issues (Newest from master works fine though)
 * <code>midori</code> Web browser, some compatibility issues
+* [[Firefox]] another web browser. Requires manual fixes
 * <code>gnome-2048</code> The famous 2048 game, works perfectly
 * <code>gnome-authenticator</code> 2FA client app
