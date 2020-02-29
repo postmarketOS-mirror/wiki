@@ -46,7 +46,6 @@
 
 == What works ==
 
-* Kernel compilation
 * Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
 * Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
 * Initramfs boot
@@ -54,9 +53,13 @@
 * Framebuffer graphics (Splash screens)
 * SSH Connectivity
 * Touchscreen
+* Wi-Fi
 * Xwayland
-* Weston on framebuffer
-* Plasma Mobile on framebuffer
+* Weston on framebuffer [broken with latest weston]
+* Plasma Mobile on framebuffer [untested with last update]
+* X11 based UIs on framebuffer work fine
+* Android container starts
+* audio works with nonfree-userland (with Android container)
 
 == What does not work ==
 
