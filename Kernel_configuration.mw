@@ -63,7 +63,8 @@ This should always be set, otherwise you get this when you try SSH:
 <pre class="shell>
 Device Drivers -->
   Character Devices -->
-    Virtual Terminal
+    Enable TTY -->
+      Virtual Terminal
 </pre>
 
 '''pmOS specific'''
