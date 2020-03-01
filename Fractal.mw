@@ -5,4 +5,4 @@ It can be installed by getting the {{APkg|fracal}} package from the alpine repos
 
 == Troubleshooting ==
 === Passwords are not saved ===
-On some postmarketos installation, no keyring is created by default. This can be solved by downloading the <code>seahorse</code> package from alpine repos, pressing File > New > Password Keyring, and naming it login. You may have to use seahorse to unlock the keychain on each reboot, if your UI does not support unlocking keychains.
+On some postmarketos installation, no keyring is created by default. This can be solved by downloading the {{APkg|fractal}} package from alpine repos, pressing File > New > Password Keyring, and naming it login. You may have to use seahorse to unlock the keychain on each reboot, if your UI does not support unlocking keychains.
