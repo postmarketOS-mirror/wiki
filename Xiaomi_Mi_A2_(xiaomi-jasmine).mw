@@ -88,3 +88,5 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
+
+* [https://github.com/xiaomi-sdm660/android_kernel_xiaomi_sdm660 Possibly good kernel to use as downstream kernel source for jasmine]
