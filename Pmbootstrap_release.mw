@@ -8,7 +8,32 @@ Checklist for creating a <code>pmbootstrap</code> release:
 ** fill out "release notes" (we can use markdown there), leave "message" empty
 ** look at the [https://gitlab.com/postmarketOS/pmbootstrap/commits/master previous commits] and copy paste the commit message titles, including the MR ID, like done in the [https://gitlab.com/postmarketOS/pmbootstrap/tags previous tags]). Sort by features, fixes and other.
 * update the pypi release (see the script in {{issue|1679}})
-* update the pmbootstrap aport in Alpine's aports (change the pkgrel, update the checksum, build)
+* update the pmbootstrap aport in Alpine's aports (change the pkgrel, update the checksum, build; see script below)
 * if future changes in pmaports will require the new pmbootstrap version, increase it in pmaports.git's pmaports.cfg file
+
+
+Script to partially automatize the upgrade in Alpine's aports (one still needs to copy over relevant changes to Alpine's aport, but pkgver and checksums are updated automatically):
+
+<source lang="bash">
+#!/bin/sh -ex
+
+cd ~/code/pmbootstrap
+pkgver_new=$(cat pmb/config/__init__.py | grep "^version =" | cut -d\" -f 2)
+
+# make sure chroot is set up
+pmbootstrap chroot -- true
+
+# e.g. "pmbootstrap-1.15.0-r1"
+current="$(pmbootstrap -q chroot -- apk search pmbootstrap)"
+pkgver_old="$(echo "$current" | cut -d- -f 2)"
+
+pmbootstrap pull
+pmbootstrap -y aportgen --fork-alpine pmbootstrap
+
+cd /home/user/code/pmbootstrap/aports/temp/pmbootstrap
+sed -i "s/pkgver=$pkgver_old/pkgver=$pkgver_new/g" APKBUILD
+pmbootstrap checksum pmbootstrap
+pmbootstrap build pmbootstrap
+</source>
 
 [[Category:Guide]]
