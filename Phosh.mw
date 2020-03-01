@@ -15,3 +15,6 @@ If <code>postmarketos-ui-phosh</code> is installed, Phosh will be automatically 
 It can also be launched manually by running <code>dbus-run-session /usr/bin/phosh</code>.
 
 [[Category:Interface]]
+
+== Calls ==
+For calls to work, you need to go into the sound settings, and set the Configuration to "Make a phone call". This will redirect sound through the modem.
