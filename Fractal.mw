@@ -1,6 +1,6 @@
 [https://wiki.gnome.org/Apps/Fractal Fractal] is a matrix client developed as part of the Gnome project.
 
-It can be installed by getting the <code>fractal</code> package from the alpine repos.
+It can be installed by getting the {{APkg|fracal}} package from the alpine repos.
 
 
 == Troubleshooting ==
