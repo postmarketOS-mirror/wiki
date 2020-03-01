@@ -3,7 +3,7 @@ Hello there, glad you are reading this page. We have a broad spectrum of topics 
 === GitLab issues ===
 First of all, consider [[:Category:Community#GitLab_issues|subscribing to the GitLab issues]]. The most important discussions happen there, on all levels. From broad visions and blog posts to implementation details and bug reports. Voice your opinions and help out others with your knowledge, so there are more people that can in turn help out yourself when you get stuck. If you are a developer, consider testing and reviewing incoming patches (merge requests). The more eyeballs on the code, the less bugs get introduced.
 
-To work on something specific, see the issues tagged with '''[https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted]'''.
+To work on something specific, see the issues tagged with '''[https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted]''' ([https://gitlab.com/postmarketOS/pmaports/issues?scope=all&utf8=%E2%9C%93&state=opened&label_name%5B%5D=help%20wanted&label_name%5B%5D=easy easy ones]).
 
 === Documentation and Blogging ===
 ==== Wiki documentation ====
@@ -28,7 +28,7 @@ The current scheme of blog posts works like this: going through the [https://git
 We are also open to a new format of blog posts, writing shorter ones about specific changes that happened in the project rather than having these epic-but-time-consuming long reads every few months.
 
 === Hacking ===
-* Make sure you did not overlook the [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted] link above
+* Make sure you did not overlook the [https://gitlab.com/postmarketOS/pmaports/issues?label_name%5B%5D=help+wanted help wanted] ([https://gitlab.com/postmarketOS/pmaports/issues?scope=all&utf8=%E2%9C%93&state=opened&label_name%5B%5D=help%20wanted&label_name%5B%5D=easy easy ones]) links above
 * [[Installation_guide|Install postmarketOS]] to a real device or boot it with [[QEMU]]
 * [[Porting_guide|Port]] and [[Mainlining_Guide|mainline]] devices you own
 * Start [[:Category:Dogfooding|dogfooding]] and improve postmarketOS for your real life use case
