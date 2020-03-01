@@ -2,13 +2,13 @@ This article is a list of applications that work on a mobile phone, to some exte
 
 See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Librem 5 Compatibility Chart] and [https://mglapps.frama.io/ Frama's list of compatible apps].
 
-* <code>gnome-podcasts</code> Basic Podcast app, some compatibility issues (Newest from master works fine though)
-* <code>midori</code> Web browser, some compatibility issues
+* {{APkg|gnome-podcasts}} Basic Podcast app, some compatibility issues (Newest from master works fine though)
+* {{APkg|midori}} Web browser, some compatibility issues
 * [[Firefox]] another web browser. Requires manual fixes
-* <code>gnome-2048</code> The famous 2048 game, works perfectly
+* {{APkg|gnome-2048}} The famous 2048 game, works perfectly
 * <code>gnome-authenticator</code> 2FA client app
 * [[Fractal]] Matrix client - Currently cannot access libsecret on phosh, so you have to login each time
-* <code>angelfish</code> Web browser for Plasma Mobile - Works okay, still has a few issues
+* {{APkg|plasma-angelfish}} Web browser for Plasma Mobile - Works okay, still has a few issues
 * <code>index</code> Maui based file browser - Extremely fast, and works on both desktops and mobile thanks to Mauikit + Kirigami
 * <code>plasma-camera</code> Camera application for Plasma Mobile - No image comes through and the controls do not do anything
 * <code>VVave</code> A great looking Mauikit music player
