@@ -6,7 +6,7 @@ See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Li
 * {{APkg|midori}} Web browser, some compatibility issues
 * [[Firefox]] another web browser. Requires manual fixes
 * {{APkg|gnome-2048}} The famous 2048 game, works perfectly
-* <code>gnome-authenticator</code> 2FA client app
+* {{APkg|gnome-authenticator}} 2FA client app
 * [[Fractal]] Matrix client - Currently cannot access libsecret on phosh, so you have to login each time
 * {{APkg|plasma-angelfish}} Web browser for Plasma Mobile - Works okay, still has a few issues
 * <code>index</code> Maui based file browser - Extremely fast, and works on both desktops and mobile thanks to Mauikit + Kirigami
