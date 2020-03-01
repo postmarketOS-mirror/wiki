@@ -274,6 +274,7 @@ To use bluetooth headphones with pulseaudio, the package <code>pulseaudio-bluez<
 === Modem ===
 
 Receiving and sending text messages works, The calls work but there are some issues left with the audio routing. Mobile data is functional.
+For information on audio routing in [[phosh]], see the specific article.
 
 To bring up mobile data run the following commands:
 
