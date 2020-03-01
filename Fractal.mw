@@ -1,0 +1,8 @@
+[https://wiki.gnome.org/Apps/Fractal Fractal] is a matrix client developed as part of the Gnome project.
+
+It can be installed by getting the <code>fractal</code> package from the alpine repos.
+
+
+== Troubleshooting ==
+=== Passwords are not saved ===
+On some postmarketos installation, no keyring is created by default. This can be solved by downloading the <code>seahorse</code> package from alpine repos, pressing File > New > Password Keyring, and naming it login. You may have to use seahorse to unlock the keychain on each reboot, if your UI does not support unlocking keychains.
