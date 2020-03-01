@@ -12,3 +12,4 @@ See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Li
 * <code>index</code> Maui based file browser - Extremely fast, and works on both desktops and mobile thanks to Mauikit + Kirigami
 * <code>plasma-camera</code> Camera application for Plasma Mobile - No image comes through and the controls do not do anything
 * <code>VVave</code> A great looking Mauikit music player
+* {{APkg|telegram-desktop}} The standard telegram client
