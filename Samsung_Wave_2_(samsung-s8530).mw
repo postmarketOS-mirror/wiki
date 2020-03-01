@@ -11,7 +11,7 @@
 | storage = 2GB+SD
 | display = 800x480
 | memory = 512MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
