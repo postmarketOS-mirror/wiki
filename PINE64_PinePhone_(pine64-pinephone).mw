@@ -385,6 +385,13 @@ Test the sound output by issuing:
 $ speaker-test -c3
 </source>
 
+== Troubleshooting ==
+=== Failed to create boot/xxx: No space left on device ===
+A bug has been observed where too many initramfs's are created. To fix, run the following commands to delete and regenerate all initramfs's
+<source lang="shell-session">
+postmarketos:~# sudo rm /boot/initramfs*
+postmarketos:~# sudo apk fix linux-postmarketos-allwinner
+</source>
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
 * [https://wiki.pine64.org/index.php/PinePhone_v1.1_-_Braveheart PinePhone v1.1 - Braveheart] - schematics, changes and known issues on the PINE64 wiki
