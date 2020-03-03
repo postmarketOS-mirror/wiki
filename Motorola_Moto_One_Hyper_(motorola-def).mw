@@ -69,6 +69,14 @@ This device has only been tested with rootfs on sd card, booted via USB with 'pm
 
 You will need an unlocked bootloader. You can follow the instructions on [https://support.motorola.com/us/en/bootloader/unlockyourdeviceb Motorola's website] to do this.
 
+== Touchscreen ==
+
+Touch panel is from from Focaltech, but does not seem to be supported by CONFIG_TOUCHSCREEN_EDT_FT5X06. Downstream stock rom's kernel uses an out-of-tree module called focaltech_mmi to support the touch panel.
+
+== Wifi ==
+
+Wireless seems to be a new generation of atheros not supported by the existing CNSS/QCA in-kernel driver. Downstream stock rom's kernel uses an out-of-tree module called qca_cld3_wlan.
+
 == See also ==
 * {{MR|1023|pmaports}} Initial merge request
 
