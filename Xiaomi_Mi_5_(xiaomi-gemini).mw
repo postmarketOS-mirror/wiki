@@ -58,3 +58,7 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+
+4.4 kernels for gemini, untested:
+https://github.com/sirmordred/Kernel_LA.HB.1.1.5_CAF-4.4/tree/gemini
+https://github.com/xNombre/msm-4.4
