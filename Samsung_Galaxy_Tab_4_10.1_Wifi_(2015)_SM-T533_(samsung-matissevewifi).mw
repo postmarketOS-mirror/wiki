@@ -45,13 +45,13 @@
 * Hold <code>Power</code> + <code>Volume Down</code> + <code>Home</code> while powering up the device.
 * Press <code>Volume Up</code> to enable flashing.
 
-This device use Odin. In order to be able to flash on it you need to install `heimdall`.
+This device uses Odin. In order to be able to flash on it you need to install <code>heimdall</code>.
 On ArchLinux this package in present in the repos.
 
 The command to flash an image is:
-```bashheimdall flash  --<partition_name> <your .img file>
-
-```
+<syntaxhighlight lang="bash" line='line'>
+heimdall flash  --<partition_name> <your .img file>
+</syntaxhighlight>
 
 == Description ==
 
