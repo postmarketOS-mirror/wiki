@@ -33,7 +33,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = Kernel compiles, SSH over USB works, stuck at boot screen
-| booting = yes
+| booting = no
 | pmoskernel = 3.4.0
 }}
 
