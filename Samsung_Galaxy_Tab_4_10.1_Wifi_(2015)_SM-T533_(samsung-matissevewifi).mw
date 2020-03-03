@@ -60,7 +60,13 @@ The device is based on the apq8016 variant of the msm8916 SoC that is beeing mai
 == Milestones ==
 
 This presents the important steps that have been achieved toward mainlining this device:
-1. [https://github.com/msm8916-mainline/lk2nd/pull/13 bootloader]
+# [https://github.com/msm8916-mainline/lk2nd/pull/13 bootloader]
+
+== TODO ==
+# USB Network
+# WiFi/Bluetooth
+# Screen/Touch
+# Battery management
 
 
 == See also ==
