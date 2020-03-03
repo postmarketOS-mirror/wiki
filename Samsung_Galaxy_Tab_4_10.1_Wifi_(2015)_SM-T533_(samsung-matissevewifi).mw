@@ -63,11 +63,10 @@ This presents the important steps that have been achieved toward mainlining this
 # [https://github.com/msm8916-mainline/lk2nd/pull/13 bootloader]
 
 == TODO ==
-# USB Network
-# WiFi/Bluetooth
-# Screen/Touch
-# Battery management
-
+* USB Network
+* WiFi/Bluetooth
+* Screen/Touch
+* Battery management
 
 == See also ==
 
