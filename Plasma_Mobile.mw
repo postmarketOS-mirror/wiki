@@ -58,6 +58,10 @@ fi
 
 For the official KDE instructions on running Plasma Mobile, see [https://docs.plasma-mobile.org/RunningApps.html their website].
 
+== Taking screenshots ==
+In command line:
+ qdbus org.kde.KWin /Screenshot org.kde.kwin.Screenshot.screenshotArea 0 0 1080 1920
+
 == Troubleshooting ==
 === Software rendering ===
 Plasma can also be used if your device doesn't support hardware acceleration (if it's a non-armhf device) yet by using software rendering. Please note that the interface will be slow, and it might not be usable for the average user.
