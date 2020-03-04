@@ -21,7 +21,7 @@
 | status_wifi = N <!-- Wireless network works? -->
 | status_xwayland = Y
 | status_fde = N <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_mainline = P
 | status_battery = N <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = N <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
@@ -113,6 +113,14 @@ Notification light color & brightness (0-255) are controllable:
 * Blue: <code>echo 255 > /sys/class/leds/blue/brightness</code>
 
 Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
+
+== Mainline kernel ==
+This is heavily W.I.P currently but it does at least boot to the [https://imgur.com/a/Tb3LAK7 pmOS initramfs with functional simplefb graphics]!
+UFS storage also seems to work after enabling <code>CONFIG_PHY_QCOM_UFS</code>.
+
+Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff :p
+
+Check links at the bottom of this page for source code.
 
 == Partition layout ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
@@ -282,3 +290,4 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-oneplus-cheeseburger Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-oneplus-cheeseburger Kernel package]
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
+* [https://github.com/JamiKettunen/linux-next-cheeseburger Device mainline kernel W.I.P source]
