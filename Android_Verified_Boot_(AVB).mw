@@ -87,7 +87,6 @@ First you should checksum/sign all other partition images that are part of your 
 This command will create <code>my_vbmeta.img</code> file, at least 4096 bytes in size, that will contain hash/hashtree descriptors from all the partition images specified in <code>--include_descriptors_from_image</code> parameters.
 
 == Disabling verified boot ==
-{{note|TODO: just a theory for now, verify!}}
 
 To disable verified boot you should create an empty vbmeta.img, which does not contain any hash/hashtree desriptors and specified a special flag in vbmeta header. The command for it should look like this:
 
