@@ -43,6 +43,7 @@ see Unixbench page on wiki
 
 == Contributors ==
 * deathmist
+* R0551 (mainlining)
 
 == Maintainer(s) ==
 deathmist
@@ -113,14 +114,6 @@ Notification light color & brightness (0-255) are controllable:
 * Blue: <code>echo 255 > /sys/class/leds/blue/brightness</code>
 
 Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/brightness</code>) seems to be broken via sysfs anyway right now.
-
-== Mainline kernel ==
-This is heavily W.I.P currently but it does at least boot to the [https://imgur.com/a/Tb3LAK7 pmOS initramfs with functional simplefb graphics]!
-UFS storage also seems to work after enabling <code>CONFIG_PHY_QCOM_UFS</code>.
-
-Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff :p
-
-Check links at the bottom of this page for source code.
 
 == Partition layout ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
@@ -284,6 +277,14 @@ Check links at the bottom of this page for source code.
 </div>
 
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+== Mainline kernel ==
+This is heavily W.I.P currently but it does at least boot to the [https://imgur.com/a/Tb3LAK7 pmOS initramfs with functional simplefb graphics]!
+UFS storage also seems to work after enabling <code>CONFIG_PHY_QCOM_UFS</code>.
+
+Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff :p
+
+Check the links below for source code.
 
 == Links ==
 * {{MR|908|pmaports}} Initial merge request
