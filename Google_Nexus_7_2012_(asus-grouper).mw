@@ -57,7 +57,7 @@ $ pmbootstrap install
 $ pmbootstrap flasher flash_kernel
 </syntaxhighlight>
 
-=== Special installation process (development setup, kernel over approx. 4M) ===
+=== [NOT WORKING ANYMORE 05/03/2019 ] Special installation process (development setup, kernel over approx. 4M) ===
 
 If you need bigger kernel, this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
 
