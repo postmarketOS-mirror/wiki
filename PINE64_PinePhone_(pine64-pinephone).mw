@@ -398,6 +398,14 @@ A bug has been observed where too many initramfs's are created. To fix, run the 
 postmarketos:~# sudo rm /boot/initramfs*
 postmarketos:~# sudo apk fix linux-postmarketos-allwinner
 </source>
+=== Qt Based Browsers Not Loading Web Pages ===
+Webkit sandbox is broken in the current build. In order to be able to use Qt based browsers it is necessary to create the file "/etc/profile.d/sandboxhack.sh" with the following contents:
+<source lang="shell-session">
+#!/bin/sh
+export QTWEBENGINE_DISABLE_SANDBOX=1
+</source>
+This sets an environment variable that kills the webkit sandbox because that's broken in the current build. This should be fixed already for the chromium musl build but not yet for all qtwebkit based browsers. This is being worked on [https://gitlab.com/postmarketOS/pmaports/issues/435 here] and [https://gitlab.com/postmarketOS/pmaports/issues/32 here].
+
 == See also ==
 * {{MR|308|pmaports}} Initial merge request
 * [https://wiki.pine64.org/index.php/PinePhone_v1.1_-_Braveheart PinePhone v1.1 - Braveheart] - schematics, changes and known issues on the PINE64 wiki
