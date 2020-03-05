@@ -67,6 +67,9 @@ Turn the device off and then press and hold [Vol down] and [Power] buttons until
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+See [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 #456 Alternative flasher method (using netcat)].
+Not all partitions can really be written to, even if there is enough space. I'm still figuring things out.
+All other methods mentioned in Porting documentation (05.03.2020) worked so far. NFS not tested.
 
 == See also ==
 <!--
