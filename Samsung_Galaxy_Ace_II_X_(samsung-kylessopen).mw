@@ -19,7 +19,7 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 | status_touch = Y
 | status_screen = Y
 | status_wifi = N
-| status_xwayland = -
+| status_xwayland = N
 | status_fde = N
 | status_mainline = N
 | status_battery = N
@@ -168,6 +168,12 @@ Here is a list of tasks that are currently being worked on for this device, from
 | Distorted graphics before a window manager starts.
 |-
 |}
+
+== Xwayland ==
+If you want to run xeyes, it sais:
+<syntaxhighlight lang="bash">
+Error: Can't open display:
+</syntaxhighlight>
 
 == Hardware ==
 {|class="wikitable feature-colors"
