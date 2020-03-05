@@ -50,10 +50,9 @@
 * Hold power + volume down
 * <code>fastboot</code> should work when the green android appears on the screen
 
-=== Installation process (legacy kernel) ===
-'''WARNING:''' Legacy kernel has reboot issues. Once it's merged, '''please use mainline kernel'''!
+=== Installation process ===
 <syntaxhighlight lang="shell" line='line'>
-$ pmbootstrap init # choose asus-grouper
+$ pmbootstrap init # choose asus grouper or asus tilapia
 $ pmbootstrap install
 $ pmbootstrap flasher flash_kernel
 </syntaxhighlight>
@@ -90,7 +89,7 @@ sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extrac
 make -j5
 
 cd ~/code/linux/.output/arch/arm/boot
-cat zImage dts/tegra30-asus-nexus7-grouper.dtb > ~/code/linux/.zImage-dtb
+cat zImage dts/tegra30-asus-nexus7-grouper.dtb > ~/code/linux/.zImage-dtb # grouper or tilapia
 cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
 
 pmbootstrap flasher list_devices
