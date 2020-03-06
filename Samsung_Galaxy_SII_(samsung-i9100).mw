@@ -67,7 +67,7 @@
 * Hold power + Home + volume down
 * When prompted, release all buttons and press volume up
 
-===== Step by step guide for Flashing via netcat [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 (#456)] =====
+==== Step by step guide for Flashing via netcat [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 (#456)] ====
 
 {{note|If you get a "no space left on device" error, see {{github|928}}.}}
 The normal installation does not work yet ({{github|581}}, we might fix that in the future with our own flashing method which basically automatizes the netcat method). Right now you have the following options. If you use any of these, please expand the wiki with details.
@@ -148,6 +148,20 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 ==== Boot process ====
 
 We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flash_methods]] for more information.
+
+==== Mainline kernel ====
+The user [https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100_kernel_mainline_port.git mainline kernel port], based on the older kernel version 4.2. Using ArchLinux, I was still able to compile and flash the kernel using following commands:
+
+  $ git clone https://github.com/Sekilsgs2/i9100_kernel_mainline_port.git
+  $ cd i9100_kernel_mainline_port
+  $ export ARCH=arm
+  $ export CROSS_COMPILE=arm-none-eabi-
+  $ make i9100_defconfig
+  $ make -j6
+  $ cat arch/arm/boot/zImage arch/arm/boot/dts/exynos4210-i9100.dtb > zimage
+  $ mkimage -A arm -O linux -T kernel -C none -a 0x40008000 -e 0x40008000 -n Linux-android-sucks -d zimage boot.img
+  $ make modules_install INSTALL_MOD_PATH=../
+  $ heimdall flash --RECOVERY boot.img
 
 === Usage ===
 ==== Wifi ====
