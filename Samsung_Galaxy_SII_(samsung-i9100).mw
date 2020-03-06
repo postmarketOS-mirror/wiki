@@ -143,11 +143,12 @@ The normal installation does not work yet ({{github|581}}, we might fix that in 
 
 -- Close both nc with CTRL+C when transfer finishes and reboot the phone with power button
 
-=== Boot process ===
+==== Boot process ====
 
 We're using the <code>heimdall-isorec</code> flash method, see [[deviceinfo_flash_methods]] for more information.
 
-=== Wifi ===
+=== Usage ===
+==== Wifi ====
 
 - Create conf for wpa_supplicant
 
@@ -165,13 +166,13 @@ Note : If you are connecting to a hidden wireless network, make sure to add line
 
 To set wifi connection to start automatically on boot, please refer here [[wifi]]
 
-=== ofono ===
+==== Modem ====
 
-Best way seems to get Samsung IPC modem support from the patchset https://lists.ofono.org/pipermail/ofono/2012-September/013766.html (but it was not accepted) and does not build https://github.com/tssk/pmbootstrap/commits/device-samsung-i9100_modem . I would appreciate help from someone that understands C.
+Using Ofono: Best way seems to get Samsung IPC modem support from the patchset https://lists.ofono.org/pipermail/ofono/2012-September/013766.html (but it was not accepted) and does not build https://github.com/tssk/pmbootstrap/commits/device-samsung-i9100_modem . I would appreciate help from someone that understands C.
 
 Second idea was to build Andoird RIL + Samsung RIL and get ofono working with ofono-ril support - https://redmine.replicant.us/projects/replicant/wiki/Samsung-RIL .
 
-=== GPS ===
+==== GPS ====
 
 https://univers-libre.net/posts/galaxy-s2-gps-on-replicant.html
 
@@ -181,13 +182,13 @@ https://github.com/mnalis/gsd4t_parser
 
 https://redmine.replicant.us/boards/21/topics/897
 
-=== Setting the hardware clock ===
+==== Setting the hardware clock ====
 
 If you have already setup chrony and if your hardware clock doesn't have the time set you can set it with,
 <source lang="shell">
 localhost:~# hwclock -w  # Write the current system time to the hardware clock</source>
 
-=== Setting the display brightness ===
+==== Setting the display brightness ====
 
 To adjust display brightness write a value between 0-255 to file given below,
 <source lang="shell">
@@ -197,14 +198,14 @@ localhost:~# echo 255 > /sys/class/backlight/panel/brightness #set the display t
 
 </source>
 
-=== Reading Accelerometer sensor ===
+==== Reading Accelerometer sensor ====
 
 Accelerometer sensor data can read from following file
 <source lang="shell">
 localhost:~$ cat /sys/class/accelerometer/accelerometer/acc_file 
 </source>
 
-=== Hardware specifications for i9100 ===
+=== Hardware specifications ===
 {{note|This device is [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 supported by Replicant]. With some more research we should be able to get most stuff running with their free software userland drivers.}}
 
 ==== SoC ====
