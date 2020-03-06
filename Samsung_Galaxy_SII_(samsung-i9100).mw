@@ -40,7 +40,8 @@
 * ollieparanoid
 * veggie
 
-=== What works ===
+=== Status ===
+==== What works ====
 * Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
 * Installation to device memory (partial)
 * Touchscreen
@@ -52,7 +53,7 @@
 * rtc
 * Xfce
 
-=== What does not work ===
+==== What does not work ====
 * Audio, bluetooth, modem, ...
 * MHL (Video-out)
 * See "Hardware specifications" for ideas how to get them working.
