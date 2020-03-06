@@ -163,6 +163,22 @@ The user [https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://g
   $ make modules_install INSTALL_MOD_PATH=../
   $ heimdall flash --RECOVERY boot.img
 
+It is also possible to use a more recent mainline kernel version. Therefore we will have to checkout the latest sources and download the device tree file:
+
+  $ git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
+  $ cd linux-stable
+  $ git checkout -b v5.4.3
+  $ wget "https://raw.githubusercontent.com/Sekilsgs2/i9100_kernel_mainline_port/6c02dad36b8a76a6f50d26ff1b9abb0d30aacbc9/arch/arm/configs/i9100_defconfig" -O arch/arm/configs/
+  $ export ARCH=arm
+  $ export CROSS_COMPILE=arm-none-eabi-
+  $ make i9100_defconfig
+  $ make -j6
+  $ cat arch/arm/boot/zImage arch/arm/boot/dts/exynos4210-i9100.dtb > zimage
+  $ mkimage -A arm -O linux -T kernel -C none -a 0x40008000 -e 0x40008000 -n Linux-android-sucks -d zimage boot.img
+make modules_install INSTALL_MOD_PATH=../
+
+Unfortunately some things doesn't work here any more. Using a keyboard with USB-OTG fails and also the screen output is up-side-down. I haven't yet found the fixes made to the custom 4.2 port which I have to reapply :(
+
 ==== U-Boot bootloader (legacy) ====
 The user [https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100-uboot.git u-boot bootloader port], based on the work done by the user [https://github.com/astarasikov astarasikov] at [https://github.com/astarasikov/i9100-uboot this repository]. On Archlinux I was able to compile the older U-Boot version using following commands:
 
