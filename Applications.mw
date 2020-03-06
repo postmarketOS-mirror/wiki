@@ -13,3 +13,4 @@ See also [https://puri.sm/posts/the-librem-5-application-compatibility-chart/ Li
 * <code>plasma-camera</code> Camera application for Plasma Mobile - No image comes through and the controls do not do anything
 * <code>VVave</code> A great looking Mauikit music player
 * {{APkg|telegram-desktop}} The standard telegram client
+* {{APkg|gnome-clocks}} An alarm/timer/stopwatch app. Alarm does not seem to trigger
