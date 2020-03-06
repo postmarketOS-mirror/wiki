@@ -86,3 +86,5 @@ expect "Done: boot"
 * [https://github.com/iDroid-Project/openiBoot openiboot] (Great info on wiki)
 * [https://github.com/scintill/iDroid-kernel iDroid-kernel] (older iDroid kernel with ipad support)
 * [https://gitlab.com/scintill/pmaports/issues/1 scintill/pmaports#1] (tracking issue)
+* [https://ipadlinux.org/ iPad Linux] This page is a little collection of Linux on the iPad
+* [https://projectsandcastle.org/ Project Sandcastle] those awesome guys brought some little support for Android on iPhone 7 and A10 equipped iPads
