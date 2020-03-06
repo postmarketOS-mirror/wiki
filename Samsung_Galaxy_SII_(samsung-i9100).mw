@@ -205,7 +205,12 @@ The user [https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://g
   $ make galaxys2
   $ heimdall flash --KERNEL u-boot.bin
 
-After that, u-boot is booting, showing a nice bootloader menu which can be controlled by using the arrow keys.
+After that, u-boot is booting, showing a nice bootloader menu which can be controlled by using the arrow keys. Configuring the boot options is done by editing the file <code>include/configs/galaxys2.h</code>. The critical part for me was to change boot parameters in the section "boot_android" to something like this:
+
+  root=/dev/mmcblk1p1 rw rootfstype=ext4 rootwait init=/sbin/init ;
+
+Where <code>/dev/mmcblk1p1</code> was the ext4 partition with the root filesystem on the sd-card.
+
 === Usage ===
 ==== Wifi ====
 
