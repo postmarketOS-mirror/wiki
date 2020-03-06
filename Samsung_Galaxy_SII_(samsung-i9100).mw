@@ -58,20 +58,22 @@
 * See "Hardware specifications" for ideas how to get them working.
 * Auto resizing partitions during installation to device memory (probably)
 
-=== How to enter flash mode ===
+
+
+=== Installation ===
+==== How to enter flash mode ====
 * Connect a USB cable
 * Make sure, the device is powered off
 * Hold power + Home + volume down
 * When prompted, release all buttons and press volume up
 
-=== Installation ===
+===== Step by step guide for Flashing via netcat [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 (#456)] =====
+
 {{note|If you get a "no space left on device" error, see {{github|928}}.}}
 The normal installation does not work yet ({{github|581}}, we might fix that in the future with our own flashing method which basically automatizes the netcat method). Right now you have the following options. If you use any of these, please expand the wiki with details.
 * use <code>pmbootstrap install --sdcard</code> (you will need a real sd card, but this is the easiest method)
 * use the netcat method (see below)
 * use the recovery zip installer (you need to install a recovery like TWRP on your device, then run <code>pmbootstrap install --android-recovery-zip</code> and <code>pmbootstrap flasher --method=adb sideload</code>.)
-
-===== Step by step guide for Flashing via netcat [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 (#456)] =====
 
 - Build image (on your computer)
 
