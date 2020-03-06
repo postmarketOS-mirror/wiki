@@ -37,8 +37,10 @@
 | booting = no
 }}
 == Contributors ==
-
 * scintill
+
+== Device Owners ==
+{{Device owners}}
 
 == Progress ==
 Can boot into a mainline linux kernel, but the bootloader isn't persistent so it can only boot tethered.
