@@ -184,6 +184,13 @@ make modules_install INSTALL_MOD_PATH=../
 
 Unfortunately some things doesn't work here any more. Using a keyboard with USB-OTG fails and also the screen output is up-side-down. I haven't yet found the fixes made to the custom 4.2 port which I have to reapply :(
 
+===== Firmware files =====
+Proprietary firmware files are needed to get Wifi and Bluetooth working with the mainline kernel. In the following commands, I download them to the ArchLinuxARM root filesystem before booting the device. This should also work for postmarketOS:
+
+  $ wget "https://raw.githubusercontent.com/TheMuppets/proprietary_vendor_samsung/cm-14.1/i9100/proprietary/system/etc/wifi/nvram_net.txt" -O /usr/lib/firmware/brcm/brcmfmac4330-sdio.samsung,i9100.txt
+  $ wget "https://github.com/TheMuppets/proprietary_vendor_samsung/raw/lineage-17.0/i9100/proprietary/system/etc/wifi/bcmdhd_sta.bin" -O /usr/lib/firmware/brcm/brcmfmac4330-sdio.bin # for wifi
+  $ wget "https://github.com/respeaker/rkbin/raw/master/firmware/bluetooth/BCM4330B1.hcd" -O /usr/lib/firmware/brcm/BCM4330B1.hcd # for bluetooth
+
 ==== U-Boot bootloader (legacy) ====
 The user [https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100-uboot.git u-boot bootloader port], based on the work done by the user [https://github.com/astarasikov astarasikov] at [https://github.com/astarasikov/i9100-uboot this repository]. On Archlinux I was able to compile the older U-Boot version using following commands:
 
