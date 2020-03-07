@@ -103,7 +103,7 @@ Generating u-boot bootmenu script...
 '''Note''': This will set pmos as the default boot option. Maemo will still be accessible when booting the N900 with the keyboard slide out and selecting the relevant boot option in the u-boot boot menu.
 
 === Wifi ===
-The <code>linux-firmware-ti-connectivity</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/1414 #1414])
+The <code>device-nokia-n900-nonfree-firmware</code> package is required to provide the wl1251 firmware necessary for initializing the wifi device. ([https://github.com/postmarketOS/pmbootstrap/pull/1414 #1414])
 You get asked during <code>pmbootstrap init</code> if you would like to install that proprietary firmware package.
 
 Now you can use NetworkManager's console UI to connect to your network. Please note that <code>nmtui</code> does not work properly when started from <code>tmux</code>.
