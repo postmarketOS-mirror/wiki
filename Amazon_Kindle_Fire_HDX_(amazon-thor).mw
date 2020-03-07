@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Amazon
 | name =  Kindle Fire HDX
-| codename = amazon-thor (7-inch), amazon-apollo (8.9-inch)
+| codename = amazon-thor
 | image = File:Thor pmos.jpg
 | imagecaption = 7" (thor) edition
 | releaseyear = 2013
@@ -10,7 +10,7 @@
 | cpu = Quad-core 2.2 GHz Krait 400
 | gpu = Adreno 330
 | storage = 16, 32, or 64 GB
-| display = 1920x1200 (thor)<br/>2560x1600 (apollo)
+| display = 1920x1200
 | memory = 2 GB
 | architecture = armhf
 | status_usbnet = Y
