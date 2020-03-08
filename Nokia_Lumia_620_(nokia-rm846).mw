@@ -106,6 +106,10 @@ Replace <LineageOS.zip> with a path to the downloaded LineageOS-file.
 === Troubleshooting ===
 If your device stays black but is connected as QSUSB_DLOAD, use the WindowsDeviceRecoveryTool to make a clean firmware install.
 
+== Kernel configuration ==
+* CONFIG_USB_G does not show up, but it is described as required for USB-Networking
+* CONFIG_PFT, CONFIG_USE_VFB and CONFIG_KINETO_GAN do not show up in menukonfig. This options should be disabled due to the [[Kernel configuration]] guide.
+
 == See also ==
 * [https://www.gsmarena.com/nokia_lumia_620-5147.php More Specs on GSM-Arena]
 * [https://android4lumia.github.io/ Website of the Android4Lumia Project]
