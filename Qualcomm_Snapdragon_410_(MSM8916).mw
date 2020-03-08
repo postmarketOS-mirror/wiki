@@ -60,7 +60,7 @@ Therefore you should choose the kernel depending whether or not you would like t
 === Usage ===
 At the moment, the modem is primarily tested using the oFono test scripts:
 
- # apk add py-dbus
+ # apk add py3-dbus
  $ git clone https://git.kernel.org/pub/scm/network/ofono/ofono.git/
  $ cd ofono/test
  $ ./enable-modem
