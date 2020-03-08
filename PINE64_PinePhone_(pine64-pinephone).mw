@@ -235,22 +235,27 @@ pinephone:~# ffmpeg -s 1280x720 -f video4linux2 -i /dev/video1 -vframes 1 selfie
 
 ''Please note, that the driver for the sgm3140 is not yet included in the main kernel source and as such is not available for use yet without compiling the module yourself.''
 
-The camera flash consist out of a SG Micro SGM3140 "500mA Buck/Boost Charge Pump LED Driver" and a EHP-C04 LED.
+The camera flash consist out of a SG Micro SGM3140 "500mA Buck/Boost Charge Pump LED Driver" and a EHP-C04 LED. It supports Flash and Torch mode, the first being brighter but only for 200-300ms, when it switches to Torch mode automatically. Torch mode is lower brightness but can be turned on continuously.
 
-The driver supports Flash and Torch mode, the first being brighter but only for about 300ms, when it switches to Torch mode. Torch mode is lower brightness but can be turned on continuously.
+Controlling the flash from user space is possible via sysfs and via v4l2:
 
 <source lang="shell-session">
-# Turn on Flash, wait 0.3s, turn off
-echo 1 > /sys/class/leds/sgm3140-flash/flash_strobe
-sleep 0.3
-echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
+# Torch on
+$ echo 1 > /sys/class/leds/white\:flash/brightness
+# Torch off
+$ echo 0 > /sys/class/leds/white\:flash/brightness
+# Activate flash
+$ echo 1 > /sys/class/leds/white\:flash/flash_strobe
 </source>
 
 <source lang="shell-session">
-# Turn on Torch
-echo 1 > /sys/class/leds/sgm3140-flash/brightness
-# Turn off Torch
-echo 0 > /sys/class/leds/sgm3140-flash/flash_strobe
+# Torch on
+$ v4l2-ctl -d /dev/video1 -c led_mode=2
+# Torch off
+$ v4l2-ctl -d /dev/video1 -c led_mode=0
+# Activate flash
+$ v4l2-ctl -d /dev/video1 -c led_mode=1
+$ v4l2-ctl -d /dev/video1 -c strobe=1
 </source>
 
 === WiFi ===
