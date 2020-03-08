@@ -314,7 +314,7 @@ These kernel options are optional and for some devices required to fix some issu
 
 '''pmOS specific'''
 
-This is recommended for all 32bit (armhf, x86) devices. The option is not present on 64bit (aarch64, x86_64) devices.
+This is recommended for all 32bit (armhf, armv7, x86) devices. The option is not present on 64bit (aarch64, x86_64) devices.
 
 Without this option, it is not possible to mount ext4 partitions that have been created with the default settings. The postmarketOS SD card installation uses these default parameters. There doesn't seem to be a point in changing that to work around badly configured kernels: even if the postmarketOS installation did not require this option, you might come across an SD card with ext4, that does not work on your device.
 
