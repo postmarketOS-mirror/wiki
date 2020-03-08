@@ -39,4 +39,16 @@ device/linux-samsung-foo/APKBUILD
 * Qualcomm and maybe some other Androids can simply reboot from postmarketOS (or any Linux distro) into your bootloader or recovery with <code>reboot -f bootloader</code> and <code>reboot -f recovery</code>
 * Battery capacity can be monitored to trigger low battery actions. See [[Battery capacity monitoring]] for more information.
 
+=== Copy a port ===
+If you know a port of another device is working on your device too, you can copy the port.
+
+Arguments for copying a port:
+* You cannot make your device booting yourself or want to safe the time to do it.
+* There are no kernel sources available for your device
+* The devices are very similar (e.g. same SoC), but you need little adjustments
+
+Keep in mind that if you copy a port you always copy all problems and bugs too. For example it can be better to create a new up-to-date port then copying a port which only compiles under gcc6 and still uses armhf.
+
+If you want to copy the port of a device, copy all the files of the device in your device-folder and rename them to the new ones. Now simply follow the porting guide. If the config-file of your new device is available try to use it instead of the old one.
+
 [[Category:Guide]]
