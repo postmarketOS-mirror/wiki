@@ -25,6 +25,9 @@ Projects to run another OS on the device can be linked if they exist.
 |-
   | Zipit Z2
   | armv5te not supported by Alpine
+|-
+  | PalmOne Zire 31
+  | armv5te not supported by Alpine
 |}
 
 == Notes ==
