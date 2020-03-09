@@ -136,22 +136,22 @@ Here is the official Google page to download GPS, Audio, Camera, Gestures, Graph
 
 The Linux mainline kernel has very basic support for this phone since November 2016 (one cpu and uart). In January 2017 support for the onboard SDHCI was added and since March 2018 pstore-ramoops. Both should be included in 4.19.
 
-To boot it using pmbootstrap follow the mainlining guide but note that it has a 64 Bit kernel also compared to downstream "device-lg-bullhead" you need to change the debug tty to /dev/ttyMSM0 in the deviceinfo file.
+To boot it using pmbootstrap follow the mainlining guide but note that it has a 64 Bit kernel. Also, compared to downstream "device-lg-bullhead" you need to change the debug tty to /dev/ttyMSM0 in the deviceinfo file.
 
 Change deviceinfo (aports/device/device-lg-bullhead/deviceinfo)
 
   deviceinfo_kernel_cmdline="console=ttyMSM0,115200,n8 androidboot.hardware=bullhead boot_cpus=0-5 lpm_levels.sleep_disabled=1 msm_poweroff.download_mode=0 buildvariant=userdebug PMOS_NO_OUTPUT_REDIRECT"
 
-ttyMSM0 tells the kernel to write debug output to the debugger cable, PMOS_NO_OUTPUT_REDIRECT tells the initram script from pmos to write there as well instead as to a (temporary) log file
+ttyMSM0 tells the kernel to write debug output to the debugger cable, PMOS_NO_OUTPUT_REDIRECT tells the initramfs script from pmOS to write there as well instead of to a (temporary) log file
 
-increase the pkgrel in APKBUILD and rebuild the boot.img
+Increase the pkgrel in the APKBUILD and rebuild the boot.img
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap checksum device-lg-bullhead
 $ pmbootstrap export
 </syntaxhighlight>
-build your kernel as described in mainlining guide
+Build your kernel as described in mainlining guide
 
-update the boot.img to include your local kernel
+Update the boot.img to include your local kernel
 <syntaxhighlight lang="shell-session">
 $ cp "/tmp/postmarketOS-export/boot.img-lg-bullhead" "$TEMP/boot.img"
 $ cd .output/arch/arm64/boot/
@@ -159,13 +159,13 @@ $ cat Image.gz dts/qcom/msm8992-bullhead-rev-101.dtb > "$TEMP/zImage-dtb"
 $ pmbootstrap chroot -- abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
 $ pmbootstrap flasher list_devices
 </syntaxhighlight>
-You can communicate with the device using screen (or other software), so in a separate terminal start it
+You can communicate with the device using <code>screen</code> (or other software), so in a separate terminal start it:
 <syntaxhighlight lang="shell-session">
 $ screen /dev/ttyUSB0 115200
 </syntaxhighlight>
-Boot your mobile to bootloader (power + vol down), you should see some debug output already in screen
+Boot your mobile to the bootloader (power + vol down) and you should see some debug output on the screen.
 
-Boot mainline kernel using fastboot
+Boot the kernel using fastboot
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
 </syntaxhighlight>
