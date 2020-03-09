@@ -281,8 +281,9 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 == Mainline kernel ==
 This is heavily W.I.P currently but it does at least boot to the [https://imgur.com/a/Tb3LAK7 pmOS initramfs with functional simplefb graphics]!
 
-Here's a list of stuff that is currently (Linux 5.6-rc5) known to be working:
+Here's a list of stuff that is currently (Linux <code>5.6-rc5</code>) known to be working:
 
+* The kernel itself stays booted (i.e. no random panics) and is "stable"
 * UFS internal storage (<code>CONFIG_PHY_QCOM_UFS=y</code>)
 * Display (via [https://github.com/JamiKettunen/linux-mainline-cheeseburger/commit/993fc12bd78ec85938d98b2b60addd95a3c5ea35 <code>simplefb</code>] & <code>CONFIG_FB_SIMPLE=y</code>)
 * Xorg & Wayland (tested with [https://i.imgur.com/VgsaOtY.jpg MATE] & [https://i.imgur.com/dLItMIm.jpg Weston] respectively)
