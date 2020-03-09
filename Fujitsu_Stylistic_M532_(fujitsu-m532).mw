@@ -69,7 +69,7 @@ Untested
 
 == Mainline kernel ==
 
-Using Okias's [https://github.com/okias/linux/tree/transformers transformers branch] with the Asus TF300T DTB, the kernel shows (quite surprisingly) a blinking cursor on the LCD, with backlight enabled. However, the device's vibration motor is always on (probably on some conflicting "always on" PIN on the TF300T) and the kernel clearly does not boot after the cursor. No device appears in lsusb.
+Using Okias's [https://github.com/okias/linux/tree/transformers transformers branch] with the Asus TF300T DTB, the kernel shows (quite surprisingly) a blinking cursor on the LCD, with backlight enabled. However, the device's vibration motor is always on (conflicting dock detect "always on" PIN on the TF300T). A [https://pastebin.com/SCL577FZ modified DTS] (still very incomplete and hacky) I made solves some of these issues, but many things on it (such as the Atmel touch panel) are still not working
 
 == Contributors ==
 * R.
