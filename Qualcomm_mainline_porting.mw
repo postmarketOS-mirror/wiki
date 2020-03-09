@@ -18,7 +18,7 @@
 == Relevant chat log ==
 Thanks to opendata and bshah for the following log. Let's make this more wiki friendly once we try it out.
 * Copy fairphone2 DTs and change device info
-** (alas, if you are using Nexus 4, apq8064 based device would be good start i.e Nexus 7(?)) 
+** (alas, if you are using Nexus 4, apq8064 based device would be good start i.e Nexus 7 2013 (yes, it's most complete device now)) 
 *** Not sure about 8064, I would do the same thing but base off yuga
 * Look for a file named <code>msm8974-regulator.dtsi</code> in devices android kernel tree
 * Look for <code>pm8841_s1: regulator-s1</code> then look at the voltages and make sure your DTS is the same, if not change it.
