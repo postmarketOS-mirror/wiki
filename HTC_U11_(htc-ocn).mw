@@ -4,15 +4,15 @@
 | codename = htc-pcn
 | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
 | imagecaption = CHANGE_ME
-| releaseyear = CHANGE_ME
-| originalsoftware = CHANGE_ME <!-- e.g. Android 2.1 -->
-| chipset = CHANGE_ME <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = CHANGE_ME <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| releaseyear = 2017
+| originalsoftware = Android 9.0
+| chipset = Qualcomm MSM8998 Snapdragon 835
+| cpu = Octa-core (4x2.45 GHz Kryo & 4x1.9 GHz Kryo)
+| gpu = Adreno 540
+| storage = 64/128 GB
+| display = 1440x2560 Super LCD5 capacitive touchscreen
+| memory = 4/6 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
