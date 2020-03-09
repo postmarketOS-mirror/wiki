@@ -128,14 +128,6 @@ Launch recovery: first boot to the bootloader, press the volume down button twic
 |Qualcomm SMB1358. No driver
 |}
 
-== Installation ==
-
-# Setup pmbootstrap <source lang="shell">$ ./pmbootstrap.py init</source> Choose 'lg-bullhead' as target device And Xfce as ui(as it runs well).
-# Create boot image <source lang="shell">$ ./pmbootstrap.py -t 30000 install --no-fde</source> 
-# Now connect the mobile to pc in fastboot mode. Below command format the partitions <source lang="shell">$ fastboot format system</source>
-# Now flash the image <source lang="shell">$ ./pmbootstrap.py flasher flash_rootfs --partition userdata</source> 
-# Now the kernel <source lang="shell">$ ./pmbootstrap.py flasher flash_kernel</source> Installation is done. Reboot the phone.
-
 == Firmware ==
 Here is the official Google page to download GPS, Audio, Camera, Gestures, Graphics, DRM, Video, Sensors firware blob.
 [https://developers.google.com/android/drivers /developers.google]
