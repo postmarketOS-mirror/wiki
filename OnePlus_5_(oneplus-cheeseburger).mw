@@ -280,9 +280,15 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 
 == Mainline kernel ==
 This is heavily W.I.P currently but it does at least boot to the [https://imgur.com/a/Tb3LAK7 pmOS initramfs with functional simplefb graphics]!
-UFS storage also seems to work after enabling <code>CONFIG_PHY_QCOM_UFS</code>.
 
-Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff :p
+Here's a list of stuff that is currently (Linux 5.6-rc5) known to be working:
+
+* UFS internal storage (<code>CONFIG_PHY_QCOM_UFS=y</code>)
+* Display (via [https://github.com/JamiKettunen/linux-mainline-cheeseburger/commit/993fc12bd78ec85938d98b2b60addd95a3c5ea35 <code>simplefb</code>] & <code>CONFIG_FB_SIMPLE=y</code>)
+* Xorg & Wayland (tested with [https://i.imgur.com/VgsaOtY.jpg MATE] & [https://i.imgur.com/dLItMIm.jpg Weston] respectively)
+* Power button (in [https://github.com/JamiKettunen/linux-mainline-cheeseburger/blob/device-oneplus-cheeseburger/arch/arm64/boot/dts/qcom/pm8998.dtsi#L41 DTS])
+
+And that's about it for now. Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff / get logs :p
 
 Check the links below for source code.
 
