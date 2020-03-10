@@ -72,10 +72,6 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | Touchscreen calibration values (only necessary for devices with resistive touchscreen, [[Screen_Calibration#weston-calibrator_.28needed_for_resistive_touch_screens.29|more info]])
 | e.g. <code>1.094563 -0.020949 -34.586121 0.009427 -1.148506 503.816956</code>
 |-
-| <code>dev_keyboard</code>
-| Path to the keyboard device, if your device has any (needed for initramfs password unlocking)
-| e.g. <code>/dev/input/event1</code> 
-|-
 | <code>swap_size_recommended</code>
 | Set recommended swap file size for device. If unset, no swap file will be created for the device.
 | Integer, in MB.
@@ -295,6 +291,7 @@ Change how the target device shows up when connected with USB to a host PC. {{MR
 * Various options from [https://manpages.debian.org/unstable/weston/weston.ini.5.en.html weston.ini] used to be duplicated, but this was removed in {{github|739}}. If you need to set weston specific options from your device (such as the output backend or the keymap), please add a weston.ini file to your pmaport ([https://github.com/postmarketOS/pmbootstrap/blob/e7dfe9b9041f0c2ec94295df16afeeec1d9bafd8/aports/device/device-nokia-rx51/APKBUILD#L66-L70 example]).
 === Device ===
 * <code>nonfree</code>: Components of the device, that only run with closed source firmware. This is now legacy due to nobody uses it. ({{issue|438|pmaports}})
+* <code>dev_keyboard</code>: Originally intended to point osk-sdl to the hardware keyboard, but was never used. (It should detect hardware keyboards automatically...)
 
 == See also ==
 * [[Device specific package]]
