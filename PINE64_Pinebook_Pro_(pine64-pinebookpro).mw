@@ -7,7 +7,7 @@
 | releaseyear = 2019
 | originalsoftware = Linux 4.4.x
 | pmoskernel = 5.5.0-rc3
-| chipset = Rockchip rk3399
+| chipset = Rockchip RK3399
 | cpu = 4x 1.5 GHz Cortex-A53 & 2x 2Ghz Cortex-A72
 | gpu = Mali T860 MP4
 | memory = 4 GB
