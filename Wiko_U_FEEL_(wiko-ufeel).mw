@@ -7,8 +7,8 @@
 | releaseyear = 2016
 | originalsoftware = Android 6 on Linux 3.18.19+ (32-bit mode)
 | chipset = MediaTek MT6735
-| cpu = 1.3 GHz ARM Cortex-A53
-| gpu = ARM Mali T-720
+| cpu = 4x 1.3 GHz Cortex-A53
+| gpu = Mali T-720
 | storage = 16GB eMMC
 | display = 720x1280 LCD
 | memory = 3072 MiB
