@@ -28,9 +28,9 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | e.g. <code>nokia-n900</code>
 
 |-
-| <code>date</code>
-| Release date of the device
-|
+| <code>year</code>
+| Release year of the device
+| e.g. <code>2012</code>
 
 |-
 | <code>keyboard</code>
