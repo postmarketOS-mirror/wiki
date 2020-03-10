@@ -3,9 +3,11 @@
 | name =  PLT9650G
 | codename = proscan-plt9650g
 | releaseyear = 2015
-| chipset = Rockchip RK3126, Cortex-A7  1.2GHz
-| gpu = Mali-400 MP
-| memory = 1GB DDRII, 8GB NAND Flash
+| chipset = Rockchip RK3126
+| cpu = 4x 1.2 GHz Cortex-A7
+| gpu = Mali-400 MP2
+| storage = 8 GB
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = 
