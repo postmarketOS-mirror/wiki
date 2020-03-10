@@ -7,11 +7,11 @@
 | releaseyear = 2015
 | originalsoftware = Android 5.1.1
 | chipset = Qualcomm MSM8939 Snapdragon 615
-| cpu = Arm  Cortex-A53 1.7 GHz 
+| cpu = 8x 1.7 Ghz Cortex-A53
 | gpu = Adreno 405
 | storage = 16/32 GB
 | display = 1080x1920 IPS LCD
-| memory = 2GB
+| memory = 2 GB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
