@@ -7,9 +7,9 @@
 | releaseyear = 2016
 | originalsoftware = OxygenOS 3.x (Android 6.0 "Marshmallow")
 | chipset = Qualcomm MSM8996Pro Snapdragon 821
-| cpu = 2.35GHz Kryo
+| cpu = 2x 2.35 GHz Kryo & 2x 1.6 GHz Kryo
 | gpu = Adreno 530
-| storage = 64/128GB
+| storage = 64/128 GB
 | display = 1080x1920 AMOLED
 | memory = 6GB
 | architecture = aarch64
