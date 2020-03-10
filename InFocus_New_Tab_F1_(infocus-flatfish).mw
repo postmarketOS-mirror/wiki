@@ -7,10 +7,10 @@
 | releaseyear = 2014
 | originalsoftware = Firefox OS 1.4
 | chipset = Allwinner A31
-| cpu = Quad core 1.0 GHz
+| cpu = 4x 1.0 GHz Cortex-A7
 | gpu = PowerVR SGX544MP2
 | storage = 16 GB
-| display =  800×1280
+| display = 800×1280
 | memory = 2 GB
 | architecture = armhf
 | n-android = ✔
