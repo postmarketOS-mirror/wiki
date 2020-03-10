@@ -9,7 +9,7 @@
 | pmoskernel = 
 | chipset = Allwinner A64
 | cpu = 4x 1152 MHz Cortex-A53
-| gpu = Mali 400
+| gpu = Mali-400 MP2
 | memory = 2 GB
 | architecture = aarch64
 | n-android =  ✔
