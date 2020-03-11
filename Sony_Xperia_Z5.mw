@@ -1,0 +1,68 @@
+{{Infobox device
+| manufacturer = Sony
+| name =  Xperia Z5
+| codename = sony-sumire
+| image = File:sony-sumire.jpg
+| imagecaption = Sony Xperia Z5
+| releaseyear = 2015
+| originalsoftware = Android 5.1 - Android 7.1
+| chipset = Qualcomm MSM8994 Snapdragon 810
+| cpu = 4x2GHz A57 + 4x1.5GHz A53
+| gpu = Adreno 430
+| storage = 32GB
+| display = 1080x1920 IPS
+| memory = 3GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet =Y
+| status_flashing =Y
+| status_touch =Y
+| status_screen =Y
+| status_wifi =Y
+| status_xwayland =Y
+| status_fde =
+| status_mainline =N
+| status_battery =N
+| status_3d =N
+| status_accel =
+| status_audio =
+| status_bluetooth =
+| status_camera =N
+| status_gps =N
+| status_mobiledata =
+| status_sms =
+| status_calls =
+| status = compiling, booting
+| booting = yes
+}}
+
+== Contributors ==
+* nergzd723
+
+== Maintainer(s) ==
+* Mark Hargreaves (nergzd723)
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Hold Vol Up, then connect to the PC. If done right, blue LED will show up.
+
+== Installation ==
+
+I use Android recovery package, however it works if flash by Fastboot
+
+To install:
+
+pmbootstrap build linux-sony-sumire
+pmbootstrap build device-sony-sumire
+pmbootstrap install --android-recovery-zip
+pmbootstrap flasher --method=adb sideload
+Then put your device into recovery, and enter sideloading mode.
+
+== See also ==
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
+-->
