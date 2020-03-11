@@ -92,10 +92,11 @@ You have to configure <code>pmbootstrap</code> before generating the system imag
 
 === Once installed ===
 
-Once you have postmarketOS on your phone or tablet, you can still change user interface without reflashing so long you have an internet connection: you need to remove your current UI and install another one. Example:
+Once you have postmarketOS on your phone or tablet, you can still change user interface without reflashing so long you have an internet connection: you need to remove your current UI and install another one. You can then reboot or restart lightdm. Example:
 
  # apk del postmarketos-ui-mate
  # apk add postmarketos-ui-plasma-mobile
+ # rc-service lightdm restart
 
 == See also ==
 * [[Interfaces | Work in progress new interface page]]
