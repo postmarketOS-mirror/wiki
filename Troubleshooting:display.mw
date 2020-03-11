@@ -94,6 +94,11 @@ $ echo 0 > /sys/class/graphics/fb0/blank
 $ echo 1 > /sys/devices/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.134/leds/lcd-backlight/brightness
 </syntaxhighlight>
 
+== Some programs (e.g. Chromium, GIMP,..) has very messed up colors! ==
+If some of the programs looks like [https://gitlab.com/postmarketOS/pmaports/uploads/4cfb043d46ef1c0fa0d50484a66062ea/image0__1_.jpg this], then your framebuffer color depth is wrong.
+
+The application probably is showing RGB on a BGR color depth, a patch like [https://gitlab.com/postmarketOS/pmaports/-/raw/master/device/linux-xiaomi-santoni/99_framebuffer.patch this] could fix it.
+
 == Debugging the kernel driver ==
 If you have some time to spend on getting your video driver working right, consider adding <code>printk</code> statements in your kernel to understand what it does and where it fails. After building your kernel and flashing, check <code>dmesg</code> for your debug output. See [https://gitlab.com/postmarketOS/pmbootstrap/issues/1618#note_88908569 #1618 (comment)] for a detailed example.
 
