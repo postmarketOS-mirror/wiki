@@ -214,9 +214,9 @@ After that, u-boot is booting, showing a nice bootloader menu which can be contr
 
 Where <code>/dev/mmcblk1p1</code> was the ext4 partition with the root filesystem on the sd-card.
 
-I'm also interested in porting the i9100 u-boot patches to newer versions of u-boot but currently u-boot fails with the newer s5p_sdhci driver introduced in newer versions, see Github issue [https://github.com/Talustus/i9100-uboot/issues/1 here].
+[[User:Onny]] is interested in porting the i9100 u-boot patches to newer versions of u-boot but currently u-boot fails with the newer s5p_sdhci driver introduced in newer versions, see Github issue [https://github.com/Talustus/i9100-uboot/issues/1 here].
 
-[https://github.com/Sekilsgs2 Sekilsgs2] is also working on [https://github.com/Talustus/i9100-uboot/issues/2 supporting the Galaxy S2] in the latest u-boot version.
+[https://github.com/Sekilsgs2 Sekilsgs2] is also working on (March 2020) [https://github.com/Talustus/i9100-uboot/issues/2 supporting the Galaxy S2] in the latest u-boot version.
 
 === Usage ===
 ==== Wifi ====
