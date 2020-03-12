@@ -195,7 +195,7 @@ Proprietary firmware files are needed to get Wifi and Bluetooth working with the
   $ wget "https://github.com/respeaker/rkbin/raw/master/firmware/bluetooth/BCM4330B1.hcd" -O /usr/lib/firmware/brcm/BCM4330B1.hcd # for bluetooth
 
 ==== U-Boot bootloader (legacy) ====
-The user [https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100-uboot.git u-boot bootloader port], based on the work done by the user [https://github.com/astarasikov astarasikov] at [https://github.com/astarasikov/i9100-uboot this repository]. On Archlinux I was able to compile the older U-Boot version using following commands:
+[https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100-uboot.git u-boot bootloader port], based on the work done by the user [https://github.com/astarasikov astarasikov] at [https://github.com/astarasikov/i9100-uboot this repository]. On Archlinux I was able to compile the older U-Boot version using following commands:
 
   $ pacman -U dtc-1.4.1-1-x86_64.pkg.tar.xz # downgrade to older version
   $ pacman -S gcc-arm-none-eabi-bin-49 # older gcc version
@@ -215,6 +215,8 @@ After that, u-boot is booting, showing a nice bootloader menu which can be contr
 Where <code>/dev/mmcblk1p1</code> was the ext4 partition with the root filesystem on the sd-card.
 
 I'm also interested in porting the i9100 u-boot patches to newer versions of u-boot but currently u-boot fails with the newer s5p_sdhci driver introduced in newer versions, see Github issue [https://github.com/Talustus/i9100-uboot/issues/1 here].
+
+[https://github.com/Sekilsgs2 Sekilsgs2] is also working on [https://github.com/Talustus/i9100-uboot/issues/2 supporting the Galaxy S2] in the latest u-boot version.
 
 === Usage ===
 ==== Wifi ====
