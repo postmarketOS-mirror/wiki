@@ -15,7 +15,7 @@
 | memory = 1GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = Y
+| status_usbnet = P
 | status_flashing = P
 | status_touch = Y
 | status_screen = Y
@@ -52,6 +52,8 @@ Install to sdcard. The system partition doesn't flash due to bootloader limitati
 
 == Notes ==
 WiFi uses BCM4330(b1). Oddly enough, the defconfig defines firmware paths that don't exist on the actual stock system; further testing will be required to figure out the proper firmware files, paths and versions.
+
+USB seems to be quite buggy; if it's plugged in before the pmOS logo appears, the device refuses to boot; if it is plugged in after the pmOS logo, it will work for about a minute, then freeze the connection and then freeze the entire device.
 
 == See also ==
 
