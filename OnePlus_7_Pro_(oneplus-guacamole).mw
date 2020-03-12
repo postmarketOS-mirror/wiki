@@ -65,6 +65,29 @@ With the device powered off, hold Volume Up + Power.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+* [[Installing pmbootstrap|Install pmbootstrap]]
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+</syntaxhighlight>
+
+<pre>
+Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+Work path [/.../.local/var/pmbootstrap]:
+NOTE: pmaports path: /.../.local/var/pmbootstrap/cache_git/pmaports
+Choose your target device vendor (either an existing one, or a new one for porting).
+Available vendors (46): amazon, asus, bq, chuwi, fairphone, ...
+Vendor []: oneplus
+Available codenames (5): bacon, cheeseburger, ...
+Device codename []: guacamole
+</pre>
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap build linux-oneplus-guacamole
+$ pmbootstrap build device-oneplus-guacamole
+$ pmbootstrap install
+$ pmbootstrap flasher boot
+</syntaxhighlight>
 
 == See also ==
 <!--
