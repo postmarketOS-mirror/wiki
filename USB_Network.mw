@@ -1,3 +1,5 @@
+''For internet connectivity over USB, see [[USB Internet]]''
+
 USB connectivity is generally one of the first things you want up and running on your phone when porting to a new device.
 postmarketOS uses [[USB Network]]ing for every communication between the device and computer.
 
