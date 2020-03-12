@@ -66,6 +66,7 @@ With the device powered off, hold Volume Up + Power.
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 * [[Installing pmbootstrap|Install pmbootstrap]]
+* Extract contents of [https://gofile.io/?c=GHpB0x device] into .../pmbootstrap/aports/device
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
