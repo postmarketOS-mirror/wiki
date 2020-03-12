@@ -13,7 +13,7 @@
 | storage = 8/16GB
 | display = 480x800
 | memory = 1GB
-| architecture = armhf
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = P
