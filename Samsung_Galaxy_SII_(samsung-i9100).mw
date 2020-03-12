@@ -185,6 +185,8 @@ make modules_install INSTALL_MOD_PATH=../
 
 Unfortunately some things doesn't work here any more. Using a keyboard with USB-OTG fails and also the screen output is up-side-down. I haven't yet found the fixes made to the custom 4.2 port which I have to reapply :(
 
+Meanwhile Paul Cercueil [https://lkml.org/lkml/2020/3/12/684 is submitting] an updated version of the device tree file upstream. As of March 2020, it is not yet clear when it will be accepted.
+
 ===== Firmware files =====
 Proprietary firmware files are needed to get Wifi and Bluetooth working with the mainline kernel. In the following commands, I download them to the ArchLinuxARM root filesystem before booting the device. This should also work for postmarketOS:
 
