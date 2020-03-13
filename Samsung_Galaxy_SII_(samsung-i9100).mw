@@ -323,6 +323,15 @@ microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 * Silicon Image 9244 transmitter [https://forum.xda-developers.com/showthread.php?t=1316501&page=2#post25615680]
 * [https://forum.xda-developers.com/showpost.php?p=74099043&postcount=4 Should be all supported] to a certain extent in mainline 4.15 kernel <small><small>(of course the device is still stuck to 3.0 for the time being)</small></small>
 
+==== Serial / UART ====
+
+It is not exactly clear yet where to find UART / serial on the device. For possible location see second image below (red rectangle). Nevertheless a good instruction on hardware teardown is [https://www.ifixit.com/Guide/Samsung+Galaxy+S+II+Micro-USB+Port+Replacement/58028 available here]. Follow this guide until step 5, than proceed with removing the black cover from the circuit board (see first image below).
+
+<gallery>
+File:Samsung galaxy s2 i9100 teardown.jpg|thumb|left|Remove black cover (it is only glued)
+File:Samsung galaxy s2 i9100 uart location.jpg|thumb|UART possibly located in this field (red rectangle)
+</gallery>
+
 === Photos ===
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/telnet.jpg Initramfs asking for the password via telnet]
 * [https://ollieparanoid.github.io/img/2017-05-26/i9100/filled.jpg Weston with various programs opened]
