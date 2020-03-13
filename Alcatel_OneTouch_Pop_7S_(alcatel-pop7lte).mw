@@ -14,7 +14,7 @@
 | memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = P <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet = Y <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = P <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = N <!-- The display is working? -->
@@ -58,9 +58,17 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+I have as yet been '''unable to find a way to ''directly'' enter fastboot''' on this device, nor have I been able to find any hint of custom Android ROM / custom recovery development for this or info on sites like XDA-Developers.
+
+However, one is able to reboot into the bootloader from a running Android system through ADB by running `adb reboot-bootloader` on one's host system.
 
 == Installation ==
+In theory you should be able to directly install onto the device, but due to the aforementioned difficulties getting into fastboot I have not tried this. All of my testing has been undertaken by installing onto an SD card (<code>pmbootstrap install --sdcard [device]</code>) and directly booting the kernel using <code>pmbootstrap flasher boot</code>.
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+
+== Bootloader unlocking ==
+
+I was able to unlock the bootloader on my device with a simple <code>fastboot oem unlock</code>, although I did not test if this works if the device is still carrier locked (in the UK, these devices were mainly sold cheaply -- and carrier locked -- by EE and O2; I was able to obtain a carrier unlock code for my device for under £1 from an eBay seller as EE is slow and charges £9 at time of writing).
 
 == See also ==
 <!--
