@@ -82,5 +82,9 @@ Eventually, your SIM card should show up as registering in <code>/usr/lib/ofono/
 === SMS ===
 Use the <code>send-sms</code> and <code>receive-sms</code> test scripts (the latter requires <code>py3-gobject3</code>).
 
+ $ /usr/lib/ofono/test/send-sms "COUNTRYCODENUMBER" "Test SMS from oFono" 0
+ Send message using modem /gobi_0 ...
+ /gobi_0/message_9914F33A7C53DD6F080B38755E7D64FD59EA8F8F
+
 == See also ==
 * MSM8916 is a great platform to get started with mainlining! It has a dedicated [[MSM8916 Mainlining]] guide that explains how to get started.
