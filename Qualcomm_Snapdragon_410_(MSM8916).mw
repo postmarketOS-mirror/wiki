@@ -58,21 +58,26 @@ Note that this changes the way audio is routed on the device:
 Therefore you should choose the kernel depending whether or not you would like to run the modem.
 
 === Usage ===
-At the moment, the modem is primarily tested using the oFono test scripts:
+At the moment, the modem is primarily tested using the oFono test scripts.
 
- # apk add git py3-dbus
- $ git clone https://git.kernel.org/pub/scm/network/ofono/ofono.git/
- $ cd ofono/test
- $ ./enable-modem
- $ ./online-modem
- $ ./list-modems
+ $ sudo apk add ofono-scripts py3-dbus
+ $ /usr/lib/ofono/test/enable-modem
+ $ /usr/lib/ofono/test/online-modem
+ $ /usr/lib/ofono/test/list-modems
 
 Check if the SIM card shows up. If you have a dual SIM device (e.g. [[Wileyfox_Swift_(wileyfox-crackling)|Wileyfox Swift]]), follow [https://gist.github.com/TravMurav/45a705f210125858ce889b06f90656d9 this guide]. (TODO: Maybe move this here or somewhere else?)
 
-Unlock the SIM card:
- ./enter-pin pin <pin>
+{{note|'''Note:''' Before using <code>qmicli</code> from that guide, make sure that oFono is stopped (<code>sudo rc-service ofono stop</code>). After selecting SIM slot, start oFono servce again.}}
 
-Eventually, your SIM card should show up as registering in <code>./list-modems</code>
+Unlock the SIM card:
+ $ /usr/lib/ofono/test/enter-pin pin <pin>
+
+Eventually, your SIM card should show up as registering in <code>/usr/lib/ofono/test/list-modems</code>.
+
+<code>ofonoctl</code> is also very useful test tool:
+
+ $ sudo apk add ofonoctl
+ $ ofonoctl list
 
 === SMS ===
 Use the <code>send-sms</code> and <code>receive-sms</code> test scripts (the latter requires <code>py3-gobject3</code>).
