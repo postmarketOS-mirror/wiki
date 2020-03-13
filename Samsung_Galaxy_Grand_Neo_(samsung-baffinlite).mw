@@ -56,6 +56,10 @@ WiFi uses BCM4330(b1). Oddly enough, the defconfig defines firmware paths that d
 
 USB seems to be quite buggy; if it's plugged in before the pmOS logo appears, the device refuses to boot; <strike>if it is plugged in after the pmOS logo, it will work for about a minute, then freeze the connection and then freeze the entire device.</strike> Only happens during apk add. Might be related to memory issues? Further logs will be required.
 
+== Mainline ==
+
+There's a DTB for the chipset used in this phone in the mainline kernel, so mainlining could be possible.
+
 == See also ==
 
 <ul>
