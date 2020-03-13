@@ -65,10 +65,13 @@ Power+Vol+Up - recovery
 Power+Vol+Down - odin/download
 
 == Installation ==
-Builds with official kernel, but does not flash. 
+Currently isn't possible. Android ZIP install errors out, heimdall doesn't work due to a different flashing protocol.
 
 Note: pmOS does not fit on the system partition. You have to use an SD card.
 
+== Building ==
+The kernel version is 2.6, so it needs to be built with GCC4. Additionally, the VGA terminal needs to be disabled and one of the touchscreens needs to be enabled. (TODO: Upload the defconfig, in case somebody wants to try this out)
+
 == See also ==
+* [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel]
 * [https://github.com/Dreamboxuser/samsung-kernel-totoro/ Official kernel]
-* [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel, does not compile] ([https://pastebin.com/ZLwiQAYa Broken kernel build logs])
