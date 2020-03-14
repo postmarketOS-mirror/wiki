@@ -10,18 +10,19 @@
 | status_screen = Y
 | status_wifi = -
 | status_xwayland = Y
-| status_fde = 
+| status_fde = Y
 | status_mainline = Y
 | status_battery = -
 | status_3d = Y
 | status_accel = -
-| status_audio = 
+| status_audio = Y
 | status_bluetooth = -
 | status_camera = -
 | status_gps = -
 | status_mobiledata = -
 | status_sms = -
 | status_calls = - 
+| status_otg = - 
 | booting = yes
 }}
 
@@ -30,26 +31,21 @@
 == Contributors ==
 * MartijnBraam
 * ollieparanoid
+* Minecrell
 
 === Usage ===
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init  # Choose device "qemu-aarch64"
 $ pmbootstrap install
-$ pmbootstrap qemu --image-size=2G --display=gtk --arch=aarch64
+$ pmbootstrap qemu
 </syntaxhighlight>
-
-Using the <code>--display=gtk</code> parameter is recommended. In the GTK interface, click on ''View / Show Tabs'' to display all available outputs as tabs next to each other. Check the <code>serial0</code> output for what it is actually doing as the boot will probably take a few minutes, unless you have a very fast PC.
-
-Enable 3D acceleration (virglrenderer) with the <code>gl=on</code> display option. <br>Example: <code>--display=gtk,gl=on</code> or <code>--display=sdl,gl=on</code>
 
 == What works ==
 * Serial output
 * SSH
 * Graphical output via dri (as configured in device-qemu-aarch64 for weston)
 * Keyboard and mouse
-
-== What does not work ==
-* Writing to framebuffer seems to be broken (splash screen doesn't work)
+* Audio
 
 === See also ===
 * [[QEMU]]
