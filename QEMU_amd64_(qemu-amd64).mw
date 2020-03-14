@@ -46,7 +46,12 @@ $ pmbootstrap qemu
 
 See <code>pmbootstrap qemu --help</code> for more options.
 
-[[File:Example.jpg]]
+==== Audio ====
+Audio is disabled by default. To enable audio, select an audio backend (usually <code>pa</code> for PulseAudio or <code>alsa</code> for ALSA), and pass:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap qemu --audio pa
+</syntaxhighlight>
 
 === What works ===
 * Storage
