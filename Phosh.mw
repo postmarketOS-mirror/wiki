@@ -19,6 +19,7 @@ It can also be launched manually by running <code>dbus-run-session /usr/bin/phos
 == Calls ==
 For calls to work, you need to go into the sound settings, and set the Configuration to "Make a phone call". This will redirect sound through the modem.
 
+== Modem ==
 Since the modem settings page is not adapted for small screens one can set this up via the terminal. This example is for mobile vikings Belgium.
 mmcli -m 0 --simple-connect='apn=web.be,user=web,password=web,pin=1111' 
 
