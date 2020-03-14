@@ -22,7 +22,7 @@
 | status_mobiledata = -
 | status_sms = -
 | status_calls = - 
-| booting = yes
+| booting = no
 }}
 
 {{note|CPU emulation is slow! Consider using [[QEMU_amd64_(qemu-amd64)|qemu-amd64]] instead if <code>x86_64</code> is your native architecture.}}
