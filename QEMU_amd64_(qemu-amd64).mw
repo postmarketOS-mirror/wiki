@@ -10,19 +10,21 @@
 | status_screen = Y
 | status_wifi = -
 | status_xwayland = Y
-| status_fde = 
+| status_fde = Y
 | status_mainline = Y
 | status_battery = -
 | status_3d = Y
 | status_accel = -
-| status_audio = 
+| status_audio = Y
 | status_bluetooth = -
 | status_camera = -
 | status_gps = -
 | status_mobiledata = -
 | status_sms = -
 | status_calls = - 
+| status_otg = -
 | booting = yes
+| pmoskernel = 5.4 (LTS)
 }}
 
 This device is used for testing purposes. It is possible to run postmarketOS in a x86_64 Virtual Machine. QEMU will emulate the default x86_64 architecture (see <code>qemu-system-x86_64 -machine help</code> for more choices).
@@ -30,26 +32,25 @@ This device is used for testing purposes. It is possible to run postmarketOS in 
 === Contributors ===
 * ollieparanoid
 * MartijnBraam
+* Minecrell
+* drebrez
 
 === Usage ===
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init  # Choose device "qemu-amd64"
 $ pmbootstrap install
-$ pmbootstrap qemu --image-size=2G
+$ pmbootstrap qemu
 </syntaxhighlight>
 
-See <code>pmbootstrap qemu --help</code> for more options. Notably <code>--spice</code> uses the SPICE protocol, which may give you better 3D acceleration. The <code>--display=gtk</code> switch allows you to see the serial output, but we didn't get 3D acceleration working with it. Default output is SDL (where 3D acceleration is working for most setups).
+See <code>pmbootstrap qemu --help</code> for more options.
 
 === What works ===
 * Storage
 * Network
 * Keyboard and mouse
 * Graphical interfaces (Weston, Plasma Mobile, ...)
-* <code>osk-sdl</code> (with <code>--spice</code>)
-
-=== What does not work ===
-* X11 over vesa: see {{github|672}}
-* <code>osk-sdl</code> segfaults without <code>--spice</code>
+* <code>osk-sdl</code>
+* Audio
 
 === Screenshots ===
 * QEMU running weston
