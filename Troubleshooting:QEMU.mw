@@ -1,11 +1,7 @@
 This page is about debugging problems with <code>pmbootstrap qemu</code>.
 
 == "Booting the kernel." displayed forever or segfault ==
-Most likely you have full disk encryption enabled, this is broken with QEMU right now ({{issue|75|osk-sdl}}) unless you also use <code>--spice</code>.
-To work around this bug, please do one of these:
-* Install without FDE: <code>pmbootstrap install</code>
-* or install a spice client and use it: <code>pmbootstrap qemu --spice</code>
-Help with fixing that issue is highly appreciated.
+By default, serial output is available in the terminal where you have run <code>pmbootstrap qemu</code>. Check it for indications why something is wrong.
 
 == Alternative display options ==
 === GTK instead of SDL ===
@@ -17,19 +13,10 @@ $ pmbootstrap qemu --display=gtk
 
 === Disable OpenGL ===
 {{note|Some user interfaces may not work properly with OpenGL disabled.}}
-Graphics rendering with OpenGL is enabled by default. You can disable it by appending <code>,gl=off</code> to your display option. Examples:
+Graphics rendering with OpenGL is enabled by default. You can disable it (and fall back to slow(!!) software rendering using:
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap qemu --display=sdl,gl=off
-$ pmbootstrap qemu --display=gtk,gl=off
-</syntaxhighlight>
-
-==== Using SPICE ====
-Another option is using the SPICE protocol. The following command will cause QEMU to start a [https://en.wikipedia.org/wiki/SPICE_(protocol) SPICE] server, that listens on localhost, and connect a client right afterwards. 
-Supported clients are <code>remote-viewer</code> and <code>spicy</code> (one of these needs to be installed on your host system). This method supports 3D hardware accelleration as well.
-
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap qemu --spice
+$ pmbootstrap qemu --no-gl
 </syntaxhighlight>
 
 === Using QEMU from the host system ===
@@ -39,11 +26,7 @@ Since {{MR|1612}}, pmbootstrap is using the QEMU binary from the Alpine chroots.
 $ pmbootstrap qemu --host-qemu
 </syntaxhighlight>
 
-This option can be combined with <code>--display</code> or 
-<code>--spice</code>.
-
 === See also ===
 * [[QEMU]]
 * {{issue|1623}} <code>pmbootstrap qemu</code> with proprietary nvidia drivers
 * {{issue|1641}} pmbootstrap qemu booting the kernel for ever (with screenshot)
-* {{issue|75|osk-sdl}} osk-sdl segfaults in qemu-amd64
