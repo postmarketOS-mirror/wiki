@@ -27,7 +27,7 @@
 | pmoskernel = 5.4 (LTS)
 }}
 
-This device is used for testing purposes. It is possible to run postmarketOS in a x86_64 Virtual Machine. QEMU will emulate the default x86_64 architecture (see <code>qemu-system-x86_64 -machine help</code> for more choices).
+This device is used for testing purposes. It is possible to run postmarketOS in a x86_64 Virtual Machine.
 
 === Contributors ===
 * ollieparanoid
