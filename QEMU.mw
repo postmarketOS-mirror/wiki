@@ -1,32 +1,11 @@
-=== Building and starting a QEMU image ===
+QEMU allows running postmarketOS in virtual machines. The following architectures are available:
 
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap init  # Choose a qemu-* device (x86_64: amd64, arm: vexpress-soc)
-$ pmbootstrap install
-$ pmbootstrap qemu --image-size=2G
-</syntaxhighlight>
+* [[QEMU_amd64_(qemu-amd64)|QEMU for x86_64]]
+* [[QEMU_aarch64_(qemu-aarch64)|QEMU for aarch64]]
 
-''Note: The <code>amd64</code> version is recommended if you don't know which one to choose. See the device specific pages (links below) for the differences.''
-
-The <code>--image-size=2G</code> parameter will increase the image size to 2GB, so you don't instantly run out of space (by default the image size is as small as possible). Check out <code>pmbootstrap qemu --help</code> for more options, such as performance tweaks.
-
-=== QEMU on Debian stretch ===
-{{note|This is only needed if you want to use <code>--host-qemu</code>, otherwise Alpine's QEMU will be used.}}
-{{note|This also applies to '''Ubuntu''' Artful and below, Bionic likely will not have it enabled either - [https://bugs.launchpad.net/ubuntu/+source/qemu/+bug/1553999 Launchpad bug.]}}
-
-QEMU on Debian does not include SDL-support by default. To use pmbootstrap on Debian you have to do the following:
-# Ensure that /etc/apt/sources.list contains a deb-src line for Debian buster or later.
-# <code>sudo apt-get build-dep libvirglrenderer-dev/buster</code> (install build dependencies for libvirglrenderer)
-# <code>fakeroot apt-get -b source libvirglrenderer-dev/buster</code> (download and build libvirglrenderer)
-# <code>sudo dpkg -i libvirglrenderer0_0.6.0-2_amd64.deb libvirglrenderer-dev_0.6.0-2_amd64.deb</code> (install it)
-# <code>sudo apt-get build-dep qemu/buster</code>
-# <code>fakeroot apt-get -b source qemu/buster</code>
-# Install the appropriate qemu Debian packages which have been created in the current directory.
+Note that running a virtual machine for a foreign architecture (e.g. aarch64 on x86_64) requires CPU emulation which is rather slow. Prefer the native architecture when possible.
 
 === See also ===
-* [[QEMU_amd64_(qemu-amd64)|QEMU for x86_64]]
-* [[QEMU_ARM_(qemu-vexpress)|QEMU for arm]]
-* [[QEMU_aarch64_(qemu-aarch64)|QEMU for aarch64]]
 * [[Troubleshooting:QEMU]]
 * {{MR|1612}} Use Alpine's QEMU rather than host system QEMU
 
