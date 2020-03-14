@@ -3,6 +3,8 @@
 | name =  amd64
 | codename = qemu-amd64
 | architecture = x86_64
+| image = File:qemu-phosh.png
+| imagecaption = QEMU running Phosh
 | n-android = ✔
 | status_usbnet = -
 | status_flashing = -
@@ -43,6 +45,8 @@ $ pmbootstrap qemu
 </syntaxhighlight>
 
 See <code>pmbootstrap qemu --help</code> for more options.
+
+[[File:Example.jpg]]
 
 === What works ===
 * Storage
