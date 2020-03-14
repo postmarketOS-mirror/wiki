@@ -86,6 +86,9 @@ Before installing PostmarketOS you need to unlock the bootloader using the amone
 
 This picture shows the location of the UART pads on the PCB.
 
+== Full PCB Photo ==
+[[File:Amazon-tank_PCB.jpg|800px|High resolution PCB shot]]
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
