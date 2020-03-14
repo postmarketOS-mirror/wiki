@@ -287,9 +287,9 @@ To use bluetooth headphones with pulseaudio, the package <code>pulseaudio-bluez<
 === Modem ===
 
 Receiving and sending text messages works, The calls work but there are some issues left with the audio routing. Mobile data is functional.
-For information on audio routing in [[phosh]], see the specific article.
+For information on audio routing and setting up the modem in [[phosh]], see the specific article.
 
-To bring up mobile data run the following commands:
+To bring up mobile data run the following commands (for plasma mobile):
 
 <source lang="shell-session">
 pinephone:~# sudo apk add ofonoctl
