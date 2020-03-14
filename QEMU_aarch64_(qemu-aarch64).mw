@@ -3,6 +3,8 @@
 | name = aarch64
 | codename = qemu-aarch64
 | architecture = aarch64
+| image = File:qemu-phosh.png
+| imagecaption = QEMU running Phosh
 | n-android = ✔
 | status_usbnet = -
 | status_flashing = -
