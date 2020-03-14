@@ -19,7 +19,7 @@
 | status_flashing = P
 | status_touch = Y
 | status_screen = Y
-| status_wifi = N <!-- Wireless network works? -->
+| status_wifi = Y <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
@@ -52,9 +52,7 @@ Download/Odin: Power+VolDown
 Install to sdcard. The system partition doesn't flash due to bootloader limitations.
 
 == Notes ==
-WiFi uses BCM4330(b1). Oddly enough, the defconfig defines firmware paths that don't exist on the actual stock system; further testing will be required to figure out the proper firmware files, paths and versions.
-
-USB seems to be quite buggy; if it's plugged in before the pmOS logo appears, the device refuses to boot; <strike>if it is plugged in after the pmOS logo, it will work for about a minute, then freeze the connection and then freeze the entire device.</strike> Only happens during apk add. Might be related to memory issues? Further logs will be required.
+The device freezes under heavy load (such as installing certain apps through apk).
 
 == Mainline ==
 
