@@ -55,12 +55,12 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 
 === Recovery mode ===
 * Turn the device off (or restart also works)
-* Hold volume+ button and power button
-* Once you feel vibration and phone turns on, release power button
-* Keep holding volume+ until you get to recovery.
+* Hold {{button|Volume Up}} and {{button|Power}} button
+* Once you feel vibration and phone turns on, release {{button|Power}} button
+* Keep holding {{button|Volume Up}} until you get to recovery.
 
 === Flashing (Download, Fastboot) mode ===
-* Same as recovery, but this time hold the volume- and power keys.
+* Same as recovery, but this time hold the {{button|Volume Down}} and {{button|Power}} keys.
 
 == Installation ==
 
