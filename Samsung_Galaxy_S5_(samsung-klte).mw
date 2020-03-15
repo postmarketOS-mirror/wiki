@@ -217,13 +217,13 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | WiFi ||  || Not working || || yes
 |-
-| Bluetooth ||  || Not working || || unknown
+| Bluetooth ||  || Not working || || no
 |-
-| GPU ||  || Not working || || worked with libhybris, currently broken
+| GPU ||  || Not working || || works with libhybris (test_hwcomposer_7_1_caf)
 |-
 | Audio ||  || Not working || || with libhybris
 |-
-| Modem ||  || Not working || || no
+| Modem ||  || Not working || || powers up with libhybris
 |-
 | Sensors ||  || Not working || || yes
 |}
