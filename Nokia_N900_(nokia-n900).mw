@@ -141,6 +141,13 @@ $ sudo rc-service wpa_supplicant restart
 
 It should be possible to disable power saving for better ping times, see {{maemo-leste|172}}.
 
+<syntaxhighlight lang="shell-session">
+$ sudo su -
+# apk add iw
+# iw dev wlan0 set power_save off
+# exit
+</syntaxhighlight>
+
 === Sound ===
 Modules need not to be compiled, sound support is built into kernel. Install alsa-utils. 
 
