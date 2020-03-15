@@ -43,16 +43,26 @@ The Samsung Galaxy Ace II X (GT-S7560M) is also sold as the Samsung Galaxy Trend
 * [[User:Maxnet|Maxnet]]
 
 == Installation ==
-Before installing, ensure that your host computer and your copy of [[Installing_pmbootstrap|pmbootstrap]] is fully up to date and that your system has been rebooted since it was last updated.
+First step is to install [[Installing_pmbootstrap|pmbootstrap]]. If you already had pmbootstrap installed, make sure that it is updated to the latest version and update your files, to get the newest patches:
 
-<source lang="bash">$ pmbootstrap pull</source>
+<syntaxhighlight lang="shell-session">$ pmbootstrap pull</syntaxhighlight>
 
-=== Initialisation ===
-<source lang="bash">$ pmbootstrap init</source>
-Select "samsung-kylessopen" as the target device and select a graphical interface.
+Then run the following in a Linux terminal:
 
-==== [https://wiki.postmarketos.org/wiki/Category:Interface Graphical Interfaces] ====
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+</syntaxhighlight>
 
+Choose samsung-kylessopen for this device. For an overview of the graphical interfaces, have a look at the table below.
+
+Install the image:
+<syntaxhighlight lang="shell-session">$ pmbootstrap install</syntaxhighlight>
+Full disk encryption currently doesn't work on this device, so it should be turned off for now. 
+
+=== Flashing ===
+Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_rootfs</syntaxhighlight> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_kernel</syntaxhighlight> to flash the kernel.
+
+=== Graphical Interfaces ===
 {|class="wikitable feature-colors"
 ! Interface
 ! Info
@@ -110,13 +120,6 @@ Select "samsung-kylessopen" as the target device and select a graphical interfac
 |Matchbox once worked, but was removed from postmarketOS
 | N
 |}
-
-=== Installation ===
-<source lang="bash">$ pmbootstrap install</source>
-Full disk encryption currently doesn't work on this device, so it should be turned off for now. 
-
-=== Flashing ===
-Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}} + {{button|Home}} for a few seconds as the system boots. This puts the device in flash mode. Once in this mode, enter <source lang="bash">$ pmbootstrap flasher flash_rootfs</source> to install the rootfs. Once this is finished, put yourself back into flash mode and enter <source lang="bash">$ pmbootstrap flasher flash_kernel</source> to flash the kernel[https://en.wikipedia.org/wiki/Kernel_(operating_system)].
 
 == Issues ==
 Here is a list of tasks that are currently being worked on for this device, from highest priority to lowest. 
