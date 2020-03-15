@@ -173,12 +173,12 @@ depend() {
         after firewall
 }
 </pre>
-Afterwards enable the service so telnet gets launched by openrc:
+Then make the file executable and enable the service so telnet gets launched by openrc:
 <pre>
-chroot /sysroot rc-update add telnetd default
+chmod +x /sysroot/etc/init.d/telnetd && chroot /sysroot rc-update add telnetd default
 </pre>
 
-Then telnetd should be started once the device boots and you should be able to connect to it.
+Then resume boot by typing <code>pmos_continue_boot</code>. Telnetd should be started once the device boots and you should be able to connect to it.
 
 === Using Dropbear ===
 
