@@ -64,9 +64,9 @@ Nimayer
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-From off state, press and hold Volume DOWN + Power, then release Power and hold the other.
+From off state, press and hold {{Button|Volume Down}} + {{Button|Power}}, then release {{Button|Power}} and hold the other.
 
-A confirmation dialog will appear, you need to press volume UP to confirm. 
+A confirmation dialog will appear, you need to press {{Button|Volume Up}} to confirm. 
 
 == SD card Installation ==
 Note that flashing the pmOS kernel will increase the counter shown in ODIN mode (CUSTOM BIN DOWN)
