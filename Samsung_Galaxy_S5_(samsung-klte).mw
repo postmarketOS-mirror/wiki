@@ -73,7 +73,7 @@ Press and hold {{button|Volume Down}} + {{button|Home}} + {{button|Power}} simul
 
 == How to enter recovery mode ==
 
-Press and hold <code>Volume Up</code> + <code>Home</code> + <code>Power</code> simultaneously.
+Press and hold {{button|Volume Up}} + {{button|Home}} + {{button|Power}} simultaneously.
 
 == Installation ==
 First, [[Installing_pmbootstrap|install pmbootstrap]].
