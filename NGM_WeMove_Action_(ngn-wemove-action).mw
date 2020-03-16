@@ -11,7 +11,7 @@
 | storage = 512 MB
 | display = 240×320 QVGA
 | memory = 256 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
