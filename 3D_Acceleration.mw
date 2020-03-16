@@ -10,22 +10,22 @@
 |
 |-
 | Vivante
-| NXP i.mx, Rockchip, Marvell, HiSilicon
+| HiSilicon, Marvell, NXP i.MX, Rockchip
 | [https://github.com/etnaviv etnaviv]
 |
 |-
 | Mali
-| Allwinner, Mediatek
+| Allwinner, Exynos, HiSilicon, Intel, MediaTek, Rockchip, Spreadtrum, ST-Ericsson, WonderMedia
 | [https://gitlab.freedesktop.org/lima lima]
 |
 |-
-| Mali T
-| Allwinner
+| Mali T/G
+| Allwinner, Exynos, HiSilicon, Intel, MediaTek, Rockchip
 | [https://gitlab.freedesktop.org/panfrost panfrost]
 |
 |-
 | PowerVR
-| TI, AllWinner
+| Allwinner, Apple, Exynos, Intel, MediaTek, Rockchip, TI OMAP
 | :(
 | [https://gitlab.com/postmarketOS/pmaports/issues/262 #262]
 |-
@@ -39,9 +39,14 @@
 | [https://cgit.freedesktop.org/mesa/mesa/commit/?id=1755f608f5201e0a23f00cc3ea1b01edd07eb6ef nouveau]
 |
 |-
-| VideoCore
+| VideoCore IV
 | Broadcom
 | [https://github.com/anholt/mesa/wiki/VC4 vc4]
+|
+|-
+| VideoCore V/VI
+| Broadcom
+| [https://gitlab.freedesktop.org/mesa/mesa v3d]
 |
 |}
 
@@ -68,3 +73,9 @@ The opensource reverse-engineered driver for Tegra GPUs is Grate (anagram of "te
 The newer Tegra K1 and X1 use an 3D core that can be used with Nouveau instead with a seperate tegra display driver to handle the I/O
 
 == VideoCore ==
+
+There are two projects for open source VideoCore drivers.
+
+The vc4 driver is for Broadcom VideoCore IV GPUs.
+
+The v3d driver is for Broadcom VideoCore V and VideoCore VI GPUs.
