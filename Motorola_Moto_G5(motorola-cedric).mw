@@ -49,7 +49,7 @@
 {{Device owners}}
 
 == How to enter flash mode ==
-* Power + Volume Down buttons or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
+* {{Button|Power}} + {{Button|Volume Down}} buttons or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
 
 == Installation ==
 * Enter fastboot mode.
