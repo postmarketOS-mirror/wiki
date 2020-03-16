@@ -49,7 +49,7 @@
 
 There appears to be no special process to flashing the device, as long as the bootloader is unlocked first. Sadly there is no official way any more to unlock it.
 
-Once you're in fastboot by holding down vol down and power, flashing it is as follows:
+Once you're in fastboot by holding down {{Button|Volume down}} + {{Button|Power}}, flashing it is as follows:
 
 <source lang="bash">
 $ pmbootstrap init
