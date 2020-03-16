@@ -317,6 +317,9 @@ microSD (up to 128 GB SDXC) [https://en.wikipedia.org/wiki/Samsung_Galaxy_S_II]
 * We could write a daemon, that watches the alsa sound levels, and unmutes channels (speaker, headphones etc.) via hwC0D0 as necessary. (This will only work with the downstream kernel, the sound is probably not implemented in the upstream kernel at all?)
 * Maybe all this is overkill and the strategy from [[Audio]] works as well.
 
+==== Light / proximity sensor ====
+the CM3663 sensor is being use and there is no driver in mainline. A downstream driver is available [https://github.com/mozilla-b2g/kernel-android-galaxy-s2-ics/blob/247d9cff40d94a195ce456c4c5aae6fb967703a5/drivers/sensor/cm3663.c here].
+
 ==== MHL ====
 * Fairchild FSA3200UMX switch [https://forum.xda-developers.com/showthread.php?t=1316501&page=2#post25615680]
 * Maxim MAX8997 PMIC [https://forum.xda-developers.com/showthread.php?t=1316501&page=2#post25615680]
