@@ -11,7 +11,7 @@
 | gpu = Adreno 306
 | storage = 8GB or 16GB
 | display = HD (720x1280)
-| memory = 1GB or 2GB
+| memory = 1GB (w/ 8GB storage) or 2GB (w/ 16GB storage)
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
