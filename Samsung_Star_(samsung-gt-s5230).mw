@@ -18,7 +18,7 @@
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = <!-- The display is working? -->
-| status_wifi = <!-- Wireless network works? -->
+| status_wifi = -
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
@@ -28,7 +28,7 @@
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
 | status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
 | status_camera = <!-- Taking photos and videos works. -->
-| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_gps = -
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
