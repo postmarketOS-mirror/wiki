@@ -35,18 +35,12 @@
 | status = 
 | booting = no
 }}
-== Contributors ==
-
 == Owners ==
 * [[User:Eloy|Eloy]]
 
-== Rooting ==
-* [http://hckohwnotes.blogspot.com/2016/02/rooting-zenpad-s-8.html Tutorial for the ZenPad S 8]
-
 == Notes ==
-This x86 tablet has a Mali GPU. The Lima driver has not yet been tested on x86. 
+This x86 tablet has a Mali GPU, which is quite a weird combination. The Lima driver has not yet been tested on x86. It also uses the Simple Firmware Interface which is being deprecated from the mainline kernel. This device has a very low probability of getting support.
 
-== Installation ==
 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
