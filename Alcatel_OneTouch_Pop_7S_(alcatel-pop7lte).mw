@@ -75,6 +75,8 @@ The touchscreen in this device uses a FocalTech FT5436 controller - firmware is 
 
 tslib and libinput recognise the screen and tslib calibration seems to recognise touch inputs, but Weston does not (suspected driver issues?)
 
+Touch input seems to work in xfce4, however (at least for moving the cursor), although incorrectly rotated (needs calibration).
+
 == WiFi ==
 WiFi firmware is packaged but the prima/pronto driver appears to be missing in Alcatel's kernel tree :-(
 
