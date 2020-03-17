@@ -78,6 +78,11 @@ This is still a work-in-progress. If you want to test something, or help in the 
 
 == Additional info ==
 === Partition list ===
+
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
+Partition list
+<div class="mw-collapsible-content">
+
 {| class="wikitable"
 |-
 ! Device !! Label !! Size in blocks !! Size in bytes !! Stock FS
@@ -216,6 +221,9 @@ This is still a work-in-progress. If you want to test something, or help in the 
 |-
 | mmcblk0rpmb ||  || 4096 ||
 |}
+
+</div>
+</div>
 
 === Android Verified Boot (vbmeta) ===
 This device is using [[Android_Verified_Boot_(AVB)]] so you may need to flash <code>vbmeta</code> partition with custom <code>vbmeta.img</code> from LineageOS zip or downloaded separately (from https://androidfilehost.com/?fid=1395089523397954291 for example). Or we need to find a way to generate it with <code>avbtool</code> and flash it during installation somehow. (package '''avbtool''' and add <code>pmbootstrap flasher flash_vbmeta</code>?)
