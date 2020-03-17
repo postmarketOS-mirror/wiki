@@ -1,6 +1,6 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
-{{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]].}}
-{{note|Anbox currently only works on x86_64. See {{github|1357|anbox|anbox}} for the upstream issue.}}
+{{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]]. Please use the lts kernel for that as the virt kernel doesn't inclued the necessary modules.}}
+{{note|Anbox is currently broken on armv7 because 32 bits binder is not supported by Linux (it would require rebuilding the image for a 64 bits binder) and because Anbox assumes 64 bits in some places, which breaks input (see {{github|1214|anbox|anbox}})}}
 
 [[File:Anbox_app_manager.png|thumb|The anbox application manager with the default apps.]]
 
@@ -17,13 +17,11 @@ Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-la
 
 === I don't have access to the internet ===
 
-Anbox require an anbox0 bridge interface to access the internet. This interface is currently created with network manager.
+Anbox require an anbox0 bridge interface to access the internet. <code>ip link</code> should report an anbox0 interface for the network to work. There seem to be some kind of kernel requirement too, see {{Issue|480|pmaports}} for the investigation about that.
 
-If <code>ip link</code> doesn't report an anbox0 interface, try reinstalling the anbox-networkmanager package: <code>apk fix anbox-networkmanager</code>.
+=== When I start Anbox, it complains about DBus ===
 
-=== When I start Anbox in a terminal, it complains about DBus ===
-
-<code>[daemon.cpp:61@Run] Failed to request DBus service name</code> means dbus isn't running, or that you launched it incorrectly (check environment variables are set with <code>env</code>). Ensure you [https://gitlab.com/postmarketOS/pmaports/issues/458 start dbus with your session]
+<code>[daemon.cpp:61@Run] Failed to request DBus service name</code> means dbus isn't running, or that you launched it incorrectly (check environment variables are set with <code>env</code>). Ensure you [https://gitlab.com/postmarketOS/pmaports/issues/458 start dbus with your session] and that you are not starting Anbox with ssh.
 
 
 == Serious Debugging ==
