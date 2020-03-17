@@ -28,6 +28,9 @@ Projects to run another OS on the device can be linked if they exist.
 |-
   | PalmOne Zire 31
   | armv5te not supported by Alpine
+|-
+  | [[Samsung_Star_(samsung-gt-s5230)]]
+  | armv4 not supported by Alpine
 |}
 
 == Notes ==
