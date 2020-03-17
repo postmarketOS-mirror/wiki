@@ -262,7 +262,9 @@ For mainline kernel just <code>fastboot erase dtbo</code> works. Example output 
 === Bootloader cmdline ===
 Stock bootloader is doing nasty things with kernel command line: it passes a lot of arguments that make booting custom OS (like postmarketOS) impossible
 
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
 Full list of stock command line parameters:
+<div class="mw-collapsible-content">
 <pre>
 ramoops_memreserve=4M
 
@@ -305,6 +307,8 @@ androidboot.hwversion=1.29.0
 androidboot.hwlevel=MP
 androidboot.hwdevice=lavender
 </pre>
+</div>
+</div>
 
 <code>ramoops_memreserve=4M</code> comes from defconfig, next from boot.img, others (starting with first <code>androidboot.</code> and below) come from bootloader directly.
 
