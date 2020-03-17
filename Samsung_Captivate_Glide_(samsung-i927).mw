@@ -158,7 +158,7 @@ If you want to adjust the volume or do some additional configuration (set up an 
 |-
 | N
 |Proximity sensor
-|CM3663. No driver in mainline kernel available.
+|CM3663. No driver in mainline kernel available. A downstream driver is available [https://github.com/mozilla-b2g/kernel-android-galaxy-s2-ics/blob/247d9cff40d94a195ce456c4c5aae6fb967703a5/drivers/sensor/cm3663.c here].
 |-
 | N
 |Back camera
