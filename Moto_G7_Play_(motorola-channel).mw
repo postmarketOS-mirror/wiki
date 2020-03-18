@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Motorola
-| name = Moto G7 Play
+| name = Moto G7 Play/Moto G7 Optimo
 | codename = motorola-channel
 | releaseyear = 2019
 | originalsoftware = Android 9
@@ -39,3 +39,27 @@
 {{Device owners}}
 
 The Moto G7 Play is a 5.7" phone with a 720 x 1512P display. It can be bought for about £120 in the UK. It is A/B partitioned, and has an arm64 cpu, however Custom ROMSs must be a64 binder (32 bit OS). No work has gone on to port this device to PostMarketOS yet.
+
+=== Some notes from Amy ===
+
+There are a few variants listed below:
+
+{| class="wikitable"
+!Model Number
+!Region/Carrier
+|-
+|XT1952-1
+|Europe
+|-
+|XT1952-2
+|Brazil
+|XT1952-3
+|United States (Unlocked)
+|XT1952-4
+|United States (Sprint)
+|XT1952-6
+|United States (Metro by T-Mobile)
+|XT1952-DL
+|United States (Tracfone)
+|XT1952-T (T-Mobile)
+|}
