@@ -69,20 +69,6 @@ Basically all points listed below are done together with other community members
 #* UI (plasma?)
 # Assist with documentation &amp; on IRC/matrix where I can.
 
-=== [https://github.com/drebrez drebrez] ===
-
-* ☑ Optimizing the pmOS system image size by creating the partitions as small as possible and resize them during the first boot ([https://github.com/postmarketOS/pmbootstrap/pull/127 #127])
-* ☑ Add possibility to export an Odin flashable file for samsung devices (<code>pmbootstrap flasher export --odin</code>)
-* ☑ Add framebuffer debugging tools to debug-shell initramfs hook ([https://github.com/postmarketOS/pmbootstrap/issues/1188 #1188])
-* ☑ Implement charging mode ([https://github.com/postmarketOS/pmbootstrap/issues/1081 #1081])
-* ☐ Use LVM over system and userdata partitions ([https://github.com/postmarketOS/pmbootstrap/issues/60 #60])
-* ☐ Add versioning in initramfs scripts (check initramfs and initramfs-extra versions)
-* ☐ Integrate alternative flashing method using netcat ([https://github.com/postmarketOS/pmbootstrap/issues/456 #456])
-* ☐ Getting mainline kernel working on existing devices
-* ☐ Add support for new devices
-* ☐ Add support for [https://en.wikipedia.org/wiki/Memory_Technology_Device MTD] devices (generate yaffs2 image or UBIFS, adapt initramfs script) [Low priority]
-* ☐ Porting PostmarketOS to a [https://wiki.postmarketos.org/wiki/BlackBerry_Bold_Touch_9900_(blackberry-dakota) BlackBerry] [Low priority]
-
 === PureTryOut ===
 
 In general, get postmarketOS to a ready for daily usage state, in my case getting packages and UI packaged for the end user to install. Right now focus is on:
