@@ -69,3 +69,5 @@ There are a few variants listed below:
 |XT1952-T 
 |United States (T-Mobile)
 |}
+
+There is an XDA thread for compiling the kernel, for use with android. This may become helpful. It can be found [https://forum.xda-developers.com/g7-play/development/wip-stock-kernel-compiled-source-t4066599 here] And source code for the kernel can be found [https://github.com/MotorolaMobilityLLC/kernel-msm/releases/tag/MMI-PPYS29.105-134-7 here]
