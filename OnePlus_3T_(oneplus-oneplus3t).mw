@@ -60,8 +60,10 @@ Is OTG available, not used in wiki
 <!-- use _ instead of spaces in device page name, e.g. {{Owns device|HTC_Desire_(htc-bravo)|custom notes}}-->
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
+Good luck.
 
 == How to enter flash mode ==
+Once the device is unlocked, hold power to boot and on the warning screen, press a volume key to enter the system boot menu. Choose Fastboot.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
