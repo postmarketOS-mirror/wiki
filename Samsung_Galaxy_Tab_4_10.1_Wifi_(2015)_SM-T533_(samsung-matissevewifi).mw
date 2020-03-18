@@ -53,6 +53,31 @@ The command to flash an image is:
 heimdall flash  --<partition_name> <your .img file>
 </syntaxhighlight>
 
+== Install ==
+
+=== Fastboot ===
+You need to install lk2nd boot loader on the device.
+See instructions [https://github.com/msm8916-mainline/lk2nd#installation here]
+
+To enter fastboot mode press <code>Power</code> + <code>Volume Down</code>  until you see fastboot screen (device will reboot if already on).
+
+=== PMOS ===
+Install pmboostrap on your host.
+
+<syntaxhighlight lang="bash" line='line'>
+pmbootstrap init
+# choose samsung for vendor
+# chosse matissevewifi for device
+pmbootstrap install
+pmbootstrap flasher flash_rootfs
+
+pmbootstrap flasher flash_kernel
+# or
+pmbootstrap flasher boot
+
+</syntaxhighlight>
+
+
 == Description ==
 
 The device is based on the apq8016 variant of the msm8916 SoC that is beeing mainlined [https://github.com/msm8916-mainline/linux here]. It means that it is in the process of beeing supported as is by the upstream Linux kernel.
