@@ -51,8 +51,7 @@ Is OTG available, not used in wiki
 Uclydde
 
 == Maintainer(s) ==
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
+Uclydde
 
 == Users owning this device ==
 {{Device owners}}
@@ -62,9 +61,12 @@ Uclydde
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+* {{Button|Power}} + {{Button|Volume Down}} buttons or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+* Enter fastboot mode.
+* Execute  <code> pmbootstrap flasher flash_rootfs </code>
+* Execute  <code> pmbootstrap flasher boot </code>
 
 == See also ==
 <!--
