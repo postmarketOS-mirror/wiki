@@ -134,7 +134,7 @@ If after assigning an IP address and <code>ip a</code> shows your device status 
 </source>
 
 
-P.S. If your device is Samsung with old kernel and <code>CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE</code>, something like [https://gitlab.com/postmarketOS/pmaports/blob/master/device/linux-samsung-klte/0007-usb_gadget-set-random-rndis-host-MAC-address-to-prev.patch this patch] can help with preventing zero MAC.
+P.S. If your device is Samsung with old kernel and <code>CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE</code>, something like [https://gitlab.com/postmarketOS/pmaports/blob/master/device/testing/linux-samsung-klte/0007-usb_gadget-set-random-rndis-host-MAC-address-to-prev.patch this patch] can help with preventing zero MAC.
 
 == Kernel configuration parameters ==
 If you think that the kernel configuration may be at fault, first double check with <code>pmbootstrap kconfig check</code> that the required parameters are all set.
