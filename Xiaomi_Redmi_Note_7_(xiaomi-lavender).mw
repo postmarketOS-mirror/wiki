@@ -62,6 +62,42 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 === Flashing (Download, Fastboot) mode ===
 * Same as recovery, but this time hold the {{button|Volume Down}} and {{button|Power}} keys.
 
+=== Fastboot boot ===
+In theory <code>pmbootstrap flasher boot</code> allows to directly boot kernel through USB without flashing it, but does not currently work. Bootloader does not like something about kernel compression:
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
+Bootloader UART logs during "pmbootstrap flasher boot":
+<div class="mw-collapsible-content">
+  Handling Cmd: boot
+ Booting Into Mission Mode
+ avb_slot_verify.c:432: DEBUG: Loading vbmeta struct from partition 'vbmeta'.
+ Partition found: vbmeta
+ avb_slot_verify.c:627: ERROR: vbmeta: Public key used to sign data rejected.
+ avb_slot_verify.c:704: DEBUG: vbmeta: VERIFICATION_DISABLED bit is set.
+ avb_slot_verify.c:317: DEBUG: dtbo: Loading entire partition.
+ Partition found: dtbo
+ State: Unlocked, AvbSlotVerify returned ERROR_PUBLIC_KEY_REJECTED, continue boot
+ VB2: Authenticate complete! boot state is: orange
+ VB2: boot state: orange(1)
+ Display menu is not enabled!
+ Device is unlocked, Skipping boot verification
+ VB2: BootState = 1
+ ReadKeyInternal: gEfiSimpleTextInputExProtocolGuid handles = 3
+ ReadKeyInternal: Read KEY = 0x0
+  bootstate = 4
+ Cannot find GraphicsHandles.
+ ImageWidth=1080,ImageHeight=1920,LogoPosX=0,LogoPosY=0
+ Avoid flicking for 2160x1080 images 
+ Cannot find GraphicsHandles.
+ Render Splash  [3360687]
+ VB2: RenderSplashScreen end , BootState = 4 
+ No Ffbm cookie found, ignore: Not Found
+ Memory Base Address: 0x40000000
+ Decompressing kernel image start: 3360690 ms
+ Error in decompression: Something went wrong while decompression
+ Decompressing kernel image failed!!!
+</div>
+</div>
+
 == Installation ==
 
 === Flash a working custom Android ROM first ===
