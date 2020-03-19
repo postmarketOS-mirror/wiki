@@ -12,7 +12,7 @@
 | storage = 16GB
 | display = 800x1280
 | memory = 1.5GB
-| architecture = armhf
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
@@ -53,10 +53,6 @@ Recovery mode: VolUp while powering on
 == Installation ==
 Flash the system with pmbootstrap flasher flash_rootfs.
 == Links ==
-
-
-== WiFi==
-Should be possible with the instructions for the Galaxy SIII, TODO: Actually add this to the repo.
 
 == USB OTG ==
 USB OTG should work out of the box. To use keyboards and mice, do <code>sudo apk add xf86-input-keyboard xf86-input-mouse</code>
