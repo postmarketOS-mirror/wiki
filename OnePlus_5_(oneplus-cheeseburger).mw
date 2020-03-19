@@ -2,7 +2,7 @@
 | manufacturer = OnePlus
 | name =  5
 | codename = oneplus-cheeseburger
-| image = File:OnePlus-5-Weston.jpg
+| image = File:OnePlus-5-GNOME-Mainline.jpg
 | imagecaption = 
 | releaseyear = 2017
 | originalsoftware = Android 7.1.1 (up to Android 9) on Linux 4.4
@@ -288,6 +288,7 @@ Here's a list of stuff that is currently (Linux <code>5.6-rc5</code>) known to b
 * Display (via [https://github.com/JamiKettunen/linux-mainline-cheeseburger/commit/993fc12bd78ec85938d98b2b60addd95a3c5ea35 <code>simplefb</code>] & <code>CONFIG_FB_SIMPLE=y</code>)
 * Xorg & Wayland (tested with [https://i.imgur.com/VgsaOtY.jpg MATE] & [https://i.imgur.com/dLItMIm.jpg Weston] respectively)
 * Bluetooth (requires <code>crbtfw21.tlv</code> and <code>crnv21.bin</code> blobs from [https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware] + a <code>hciconfig hci0 up</code> in userspace)
+* Touchscreen (using mainline Synaptics RMI4 I2C driver)
 * Power button (in [https://github.com/JamiKettunen/linux-mainline-cheeseburger/blob/device-oneplus-cheeseburger/arch/arm64/boot/dts/qcom/pm8998.dtsi#L41 DTS])
 
 And that's about it for now. Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff / get logs :p
