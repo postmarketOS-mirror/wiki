@@ -14,8 +14,8 @@
 | memory = 3 or 4GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_usbnet = 
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = N
