@@ -9,9 +9,9 @@
 | chipset = Qualcomm SM8150 Snapdragon 855
 | cpu = Kryo 485
 | gpu = Adreno 640
-| storage = 256 GB
+| storage = 128 or 256GB
 | display = 3120x1440 AMOLED
-| memory = 8 GB
+| memory = 8 or 12GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N<!-- USB networking does work? then put Y here and delete this comment -->
