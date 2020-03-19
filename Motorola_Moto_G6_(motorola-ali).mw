@@ -14,7 +14,7 @@
 | memory = 3 or 4GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = 
+| status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
