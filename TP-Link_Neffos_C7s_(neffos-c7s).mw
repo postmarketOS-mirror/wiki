@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| status = kernel compiles, trying to understand how to pass libavb check
+| status = locked bootloader, need compatible loaders for flashing
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 | status_otg = 
 }}
