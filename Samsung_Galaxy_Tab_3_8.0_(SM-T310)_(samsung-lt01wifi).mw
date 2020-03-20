@@ -1,0 +1,77 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Tab 3 8.0
+| codename = samsung-lt01wifi
+| image = File:samsung-lt01wifi.jpg
+| imagecaption = lt01wifi
+| releaseyear = 2013
+| originalsoftware = Android 4.2.2 (Jelly Bean)
+| chipset = Exynos 4212 Dual
+| cpu = Dual-core 1.5 GHz Cortex-A9
+| gpu = Mali-400MP4
+| storage = 16GB
+| display = 800x1280
+| memory = 1.5GB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = N
+| status_battery = Y
+| status_3d = 
+| status_accel = 
+| status_audio = N
+| status_bluetooth = N
+| status_camera = N
+| status_gps = 
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| booting = Y
+| status_otg = Y
+}}
+
+=== Contributors ===
+knuxfanwin8
+
+=== Maintainer(s) ===
+knuxfanwin8
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+Download mode: VolDown while powering on
+
+Recovery mode: VolUp while powering on
+
+== Installation ==
+Flash the system with pmbootstrap flasher flash_rootfs.
+
+== USB OTG ==
+USB OTG should work out of the box. To use keyboards and mice, do <code>sudo apk add xf86-input-keyboard xf86-input-mouse</code>
+
+== Notes/To Do ==
+The Tab 3 8.0 has the same chipset as the [[Samsung_Galaxy_SIII_LTE_(samsung-i9305)]] (Exynos 4412), but the SIII uses a Quad variant. 
+
+Only lt01wifi/T310 has been tested so far. I might make builds for T311 and T315 once I get T310 working.
+
+<b>XFCE ONLY:</b>The device indicates when it's charging, but the actual batery percentage readings don't work.
+
+Hardware buttons work, they just require triggerhappy on xfce. Back and menu buttons are in <code>/dev/input/event1</code>, home, volume and power buttons are in <code>/dev/input/event0</code>.
+
+Audio should work using [https://wiki.postmarketos.org/wiki/Audio#WM1811 these instructions]. The tablet uses TAB3_WM1811 as the name.
+
+For more information about the build process, see https://mastodon.social/@knuxfanwin8/101699225884881827
+
+== See also ==
+* {{MR|283|pmaports}} initial MR
+* [https://github.com/gr8nole/android_device_samsung_lt01-common Device (common)]
+* [https://github.com/gr8nole/android_device_samsung_lt01wifi Device (lt01wifi)]
+* [https://github.com/gr8nole/android_kernel_samsung_smdk4x12 Kernel]
+* [https://github.com/gr8nole/proprietary_vendor_samsung Vendor files]
