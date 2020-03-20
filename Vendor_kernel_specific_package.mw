@@ -32,14 +32,7 @@ Follow the GCC 6 instructions below, but replace 6 with 4 everywhere.
 === Use GCC 6 ===
 If your new kernel port does not boot at all, please try to compile it with GCC 6 and see if it works then.
 
-To do that, open <code>aports/device/linux-[your-device]/APKBUILD</code> and '''replace these lines:'''
-<syntaxhighlight lang="bash">
-# Compiler: latest GCC from Alpine
-HOSTCC="${CC:-gcc}"
-HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
-</syntaxhighlight>
-
-with the following ones:
+To do that, open <code>aports/device/linux-[your-device]/APKBUILD</code> and '''add these lines:'''
 
 <syntaxhighlight lang="bash">
 # Compiler: GCC 6 (doesn't boot when compiled with newer versions)
@@ -49,6 +42,8 @@ if [ "${CC:0:5}" != "gcc6-" ]; then
 	CROSS_COMPILE="gcc6-$CROSS_COMPILE"
 fi
 </syntaxhighlight>
+
+between <code>makedepends=</code> and <code># Source</code> lines.
 
 '''Then add''' <code>gcc6</code> to the kernel's <code>makedepends</code> line.
 
