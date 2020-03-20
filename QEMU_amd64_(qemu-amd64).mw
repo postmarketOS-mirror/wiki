@@ -31,13 +31,13 @@
 
 This device is used for testing purposes. It is possible to run postmarketOS in a x86_64 Virtual Machine.
 
-=== Contributors ===
+== Contributors ==
 * ollieparanoid
 * MartijnBraam
 * Minecrell
 * drebrez
 
-=== Usage ===
+== Usage ==
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init  # Choose device "qemu-amd64"
 $ pmbootstrap install
@@ -46,14 +46,14 @@ $ pmbootstrap qemu
 
 See <code>pmbootstrap qemu --help</code> for more options.
 
-==== Audio ====
+=== Audio ===
 Audio is disabled by default. To enable audio, select an audio backend (usually <code>pa</code> for PulseAudio or <code>alsa</code> for ALSA), and pass:
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap qemu --audio pa
 </syntaxhighlight>
 
-=== What works ===
+== What works ==
 * Storage
 * Network
 * Keyboard and mouse
@@ -61,12 +61,12 @@ $ pmbootstrap qemu --audio pa
 * <code>osk-sdl</code>
 * Audio
 
-=== Screenshots ===
+== Screenshots ==
 * QEMU running weston
 [[File:QEMU amd64 weston.png|500 px]]
 
 * QEMU running Plasma Mobile
 [[File:PlasmaMobileInQemu.png|500px||all is awesome the world is great]]
 
-=== See also ===
+== See also ==
 * [[QEMU|Common QEMU notes]]
