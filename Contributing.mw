@@ -1,12 +1,12 @@
 Hello there, glad you are reading this page. We have a broad spectrum of topics to contribute, and some of them do not even require programming or scripting knowledge. With each contribution, you don't just get to help out your fellow postmarketOS friends, but there's always a chance to learn something new and sharpening your skills along the way. And of course fun, fame and epic stories to tell to your grandchildren about what a badass hacker you have been. Now pick what interests you most.
 
-=== GitLab issues ===
+== GitLab issues ==
 First of all, consider [[:Category:Community#GitLab_issues|subscribing to the GitLab issues]]. The most important discussions happen there, on all levels. From broad visions and blog posts to implementation details and bug reports. Voice your opinions and help out others with your knowledge, so there are more people that can in turn help out yourself when you get stuck. If you are a developer, consider testing and reviewing incoming patches (merge requests). The more eyeballs on the code, the less bugs get introduced.
 
 To work on something specific, see the issues tagged with '''[https://gitlab.com/groups/postmarketOS/-/issues?label_name%5B%5D=help+wanted help wanted]''' ([https://gitlab.com/groups/postmarketOS/-/issues?scope=all&utf8=%E2%9C%93&state=opened&label_name%5B%5D=help%20wanted&label_name%5B%5D=easy easy ones]).
 
-=== Documentation and Blogging ===
-==== Wiki documentation ====
+== Documentation and Blogging ==
+=== Wiki documentation ===
 * Create new pages if you found a new postmarketOS topic worth documenting
 * Structure:
 ** Improve the structure of the wiki, make sure there's a clear path from the main page to every specific page that the user would be interested in
@@ -27,7 +27,7 @@ The current scheme of blog posts works like this: going through the [https://git
 
 We are also open to a new format of blog posts, writing shorter ones about specific changes that happened in the project rather than having these epic-but-time-consuming long reads every few months.
 
-=== Hacking ===
+== Hacking ==
 * Make sure you did not overlook the [https://gitlab.com/groups/postmarketOS/-/issues?label_name%5B%5D=help+wanted help wanted] ([https://gitlab.com/groups/postmarketOS/-/issues?scope=all&utf8=%E2%9C%93&state=opened&label_name%5B%5D=help%20wanted&label_name%5B%5D=easy easy ones]) links above
 * [[Installation_guide|Install postmarketOS]] to a real device or boot it with [[QEMU]]
 * [[Porting_guide|Port]] and [[Mainlining_Guide|mainline]] devices you own
@@ -36,17 +36,17 @@ We are also open to a new format of blog posts, writing shorter ones about speci
 * Work on [[osk-sdl]] and [[charging-sdl]]
 * [https://postmarketos.org/blog/2018/04/14/lowlevel/#lets-do-something Get involved with lowlevel hacking]
 
-=== Help out others ===
+== Help out others ==
 Get active in the [[:Category:Community|community]] and help everyone along the way, with motivation or practical tips on whatever they are doing.
 
-=== Tell your friends! ===
+== Tell your friends! ==
 * [https://gitlab.com/postmarketOS/artwork/tree/master/tshirt Print yourself a postmarketOS fair trade t-shirt and wear it!]
 * Write blog posts on your own platforms
 * Share our web links
 * Make good photos/videos of devices running postmarketOS for the wiki and for /r/postmarketOS
 * Tell your favorite online or print magazine about postmarketOS
 
-=== Help upstream projects ===
+== Help upstream projects ==
 You probably know the whole "we are standing on shoulders of giants" speech. Depending on the components you are looking at in postmarketOS, the giants are not that big and bloated, but of course they would happily accept help by contributors interested in their projects.
 * [https://wiki.alpinelinux.org/wiki/Alpine_Linux:Contribute Alpine Linux]
 * [https://plasma-mobile.org/findyourway/ Plasma Mobile]
