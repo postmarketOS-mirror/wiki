@@ -15,7 +15,7 @@
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = 
+| status_touch = Y
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = Y
@@ -44,10 +44,9 @@
 == Users owning this device ==
 {{Device owners}}
 == Issues ==
-* Phone gets stuck somewhere when shutting down
+* Phone gets stuck somewhere when shutting down when using Nougat firmware
 * X11 doesn't work (requires kernel patching)
 * Firmware is not packaged (source of the most problems)
-* Touchscreen doesn't work (initfs hook gets executed too early)
 
 == How to enter flash mode ==
 <code>Power</code> + <code>Volume Down</code> buttons or use <code>adb reboot bootloader</code>
@@ -61,10 +60,6 @@ $ pmbootstrap flasher boot # To boot kernel without flashing it
 </source>
 === Installation on internal memory ===
 This is untested, but kubast2 had success with Android Recovery Zip.
-
-== Troubleshooting ==
-=== Boot partiiton is not found! ===
-This is very strange error which can be fixed by booting in Android with sdcard inserted.
 
 == See also ==
 * {{MR|286|pmaports}} Initial merge request
