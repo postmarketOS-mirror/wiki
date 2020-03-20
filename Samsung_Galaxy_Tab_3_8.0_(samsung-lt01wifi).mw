@@ -52,7 +52,12 @@ Recovery mode: VolUp while powering on
 
 == Installation ==
 Flash the system with pmbootstrap flasher flash_rootfs.
-== Links ==
+
+== USB Network ==
+
+The MAC generator patch breaks WiFi, so the MAC address has to be set manually:
+
+<code># ip link set dev enp0s20f0u1 address 12:12:12:12:12:12</code>
 
 == USB OTG ==
 USB OTG should work out of the box. To use keyboards and mice, do <code>sudo apk add xf86-input-keyboard xf86-input-mouse</code>
