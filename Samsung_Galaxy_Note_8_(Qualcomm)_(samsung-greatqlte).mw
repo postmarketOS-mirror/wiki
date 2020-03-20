@@ -1,0 +1,63 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Note 8 (Qualcomm)
+| codename = samsung-greatqlte
+| image = File:samsung-hero2lte.jpg
+| imagecaption = Samsung Galaxy Note 8
+| releaseyear = 2017
+| originalsoftware = Android 7.1.1
+| chipset = Qualcomm Snapdragon 835
+| cpu = Octa-core (4×2.35 GHz & 4×1.9 GHz) Kryo 280
+| gpu = Adreno 540
+| storage = 64GB (upgradeable via microSD)
+| display = 1440x2960 AMOLED
+| memory = 6 GB LPDDR4X RAM
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = 
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| booting = <!-- The device is booting at all *IMPORTANT* -->
+}}
+
+== Contributors ==
+* njha
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+
+* njha
+
+== How to enter flash mode ==
+When the device is fully powered off, hold Power, Volume Down, and Bixby for a few seconds.
+
+A (turquoise) download mode warning screen should appear.
+
+== Installation ==
+Doesn't work yet.
+<!--It is recommended to sideload an android recovery zip through TWRP for the easiest process, since heimdall freaks out about the subpartitions in SYSTEM and won't move past ~7%.
+You can use <code>pmbootstrap flasher flash_kernel</code> and then use netcat or similar to flash SYSTEM, but this is a longer and more redundant method.
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --android-recovery-zip
+$ pmbootstrap flasher --method=adb sideload
+</syntaxhighlight>-->
+
+== What is tested and works ==
+* Nothing.
