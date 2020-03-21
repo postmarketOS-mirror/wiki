@@ -59,5 +59,10 @@ $ pmbootstrap install --android-recovery-zip
 $ pmbootstrap flasher --method=adb sideload
 </syntaxhighlight>-->
 
-== What is tested and works ==
-* Nothing.
+== What I did ==
+* Grab TWRP for greatqlte.
+* Grab <code>SM-N950U_NA_PP_Opensource.zip</code> from the Samsung Open Source website.
+* Disable defex_lsm and Knox
+* Disable/enable everything that the checker complains about
+* Apply patch 0001 and 0002 from <code>oneplus-cheeseburger</code>.
+* Now the kernel compiles, and you can theoretically flash it if you didn't have a locked bootloader :(
