@@ -52,9 +52,9 @@ Technical detail: the <code>if...</code> guard around setting the variables is n
 </span>
 
 === Use the newest GCC from Alpine ===
-Let's say you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer compiler.
+Let's say you are using a device that has already been packaged, and you want to figure out if it also boots when compiled with a newer compiler. Just removing HOSTCC vars and references to them should be enough:
 
-'''Replace these lines:'''
+'''Remove these lines:'''
 <syntaxhighlight lang="bash">
 # Compiler: this kernel was only tested with GCC6. Feel free to make a merge
 # request if you find out that it is booting working with newer GCCs as
@@ -66,13 +66,7 @@ if [ "${CC:0:5}" != "gcc6-" ]; then
 fi
 </syntaxhighlight>
 
-with the following ones:
-
-<syntaxhighlight lang="bash">
-# Compiler: latest GCC from Alpine
-HOSTCC="${CC:-gcc}"
-HOSTCC="${HOSTCC#${CROSS_COMPILE}}"
-</syntaxhighlight>
+And remove the mention of <code>HOSTCC</code> in invocation of <code>downstreamkernel_prepare</code>.
 
 Then remove the <code>gcc6</code> package from the <code>makedepends</code> line.
 
