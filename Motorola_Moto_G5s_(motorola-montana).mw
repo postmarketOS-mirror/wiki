@@ -17,7 +17,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = 
 | status_mainline = 
@@ -46,7 +46,6 @@
 == Issues ==
 * Phone gets stuck somewhere when shutting down when using Nougat firmware
 * X11 doesn't work (requires kernel patching)
-* Firmware is not packaged (source of the most problems)
 
 == How to enter flash mode ==
 <code>Power</code> + <code>Volume Down</code> buttons or use <code>adb reboot bootloader</code>
