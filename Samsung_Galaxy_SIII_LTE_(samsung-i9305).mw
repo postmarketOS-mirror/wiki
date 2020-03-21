@@ -109,19 +109,12 @@ pmos_continue_boot
 
 To get the wifi working, you'll need to modify the wpa_supplicant configuration. If this is not done, wpa_supplicant starts with -ip2p0 which is not supported on our device.
 
-  $ echo 'wpa_supplicant_args="-iwlan0 -Dwext"' | sudo tee /etc/conf.d/wpa_supplicant
- 
-Write the following file to <source>/etc/network/interfaces</source>
+  $ echo 'wpa_supplicant_args="-Dwext"' | sudo tee /etc/conf.d/wpa_supplicant
 
-  auto lo 
-  iface lo inet loopback   
-  auto wlan0 
-  iface wlan0 inet dhcp
 
 Start the networkmanger service and restart networking service
 
-  $ sudo rc-service networkmanager start
-  $ sudo rc-service networking restart
+  $ sudo rc-service networkmanager restart
 
 Search for available WiFi networks and connect to network
 
@@ -131,7 +124,6 @@ Search for available WiFi networks and connect to network
 Set services to start
 
   $ sudo rc-update add wpa_supplicant boot
-  $ sudo rc-update add networking default
   $ sudo rc-update add networkmanager default
 
 Reboot and you should be connected on boot.
