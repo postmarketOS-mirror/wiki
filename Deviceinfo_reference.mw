@@ -137,11 +137,14 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>flash_fastboot_vendor_id</code>
 | Set this to your vendor id if fastboot requires the <code>-i</code> argument to work on your device
 |
-
 |-
 | <code>flash_fastboot_max_size</code>
 | Set this if the fastboot required by your device has an upper limit to the size of system images it will flash.
 | Size, in MB
+|-
+| <code>flash_fastboot_partition_vbmeta</code>
+| For [[Android_Verified_Boot_(AVB)|AVB]] devices: set vbmeta partition to be flashed with a custom vbmeta.img which has verity flag disabled ({{MR|1885}}).
+| partition name, e.g. <code>vbmeta</code>
 |-
 | <code>kernel_cmdline</code>
 | Kernel command line
