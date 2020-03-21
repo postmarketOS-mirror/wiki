@@ -126,7 +126,7 @@ Start the networkmanger service and restart networking service
 Search for available WiFi networks and connect to network
 
   $ sudo nmcli device wifi list ifname wlan0
-  $ sudo nmcli device wifi connect "$SSID" password "$PASSWORD" ifname wlan0
+  $ sudo nmcli --ask dev wifi connect SSID
 
 Set services to start
 
@@ -140,7 +140,6 @@ You may also connect directly using wpa_supplicant forgoing NetworkManager. Plea
 
  $ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
  $ sudo rc-service wpa_supplicant restart
-
 
 == Mainline Kernel ==
 The mainline kernel now has some support for the Samsung Galaxy SIII LTE (i9305):
