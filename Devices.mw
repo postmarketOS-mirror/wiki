@@ -1,6 +1,4 @@
-__NOTOC__
-__NOCACHE__
-
+__NOTOC__ __NOCACHE__
 This page details the status of postmarketOS ports to various devices.
 
 If you are porting a device, please [[Help:Device Page|create a device page]] and describe the progress of the port. After the page is created, data about your device will appear on this page automatically.
