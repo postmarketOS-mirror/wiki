@@ -1,3 +1,18 @@
+=== Introduction ===
+
+''             This is a step by step guide made for you to be able to port postmaketOS to a new device.''
+
+{{note|Beginner speaks to beginners : Have a look at the summary to keep in mind the whole process !}}
+
+The main steps are :
+
+* Set up postmarketOS development environment on your computer.
+* Build a device-specific kernel and a device-specific system package for your device.
+* Install the system and adapt it according to your device and usage.
+
+For help, simply connect to the main [[Matrix and IRC|Matrix/IRC]] channel and kindly drop your question. Reactive people here !!
+
+
 === Preparation ===
 {{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, sending text messages, or using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
 
