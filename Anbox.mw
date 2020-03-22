@@ -6,7 +6,7 @@
 
 '''[https://anbox.io Anbox]''' runs Android apps on Linux using a trimmed down version of Android in a container. Anbox allows one to use Android applications sandboxed, running alongside the native Linux programs. It can be very handy to help people switch from Android to an operating that respects their privacy.
 
-See issue {{issue|17|pmaports}} for current progress.
+See issue  {{milestone|7}} for current progress.
 
 == Installation ==
 
