@@ -17,7 +17,7 @@
 | status_usbnet = Y
 | status_flashing = 
 | status_touch = 
-| status_screen = N
+| status_screen = Y
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
