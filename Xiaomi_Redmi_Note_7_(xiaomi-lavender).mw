@@ -307,6 +307,8 @@ For mainline kernel just <code>fastboot erase dtbo</code> works. Bootloader igno
   PON Reason is 17 cold_boot:1 charger path: 1
  ...(proceeding to normal boot procedure)...
 
+For downstream kernel, leave stock dtbo partition untouched.
+
 === Bootloader cmdline ===
 Stock bootloader is doing nasty things with kernel command line: it passes a lot of arguments that make booting custom OS (like postmarketOS) impossible
 
