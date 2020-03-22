@@ -1,0 +1,47 @@
+{{Infobox device
+| manufacturer = Purism
+| name =  Librem 5
+| codename = purism-librem5
+| image = 
+| imagecaption = 
+| releaseyear = 2019
+| originalsoftware = PureOS
+| chipset = Emcraft NXP i.MX8M
+| cpu = NXP i.MX8M
+| gpu = Vivante GC7000Lite
+| storage = 32 GB EMMC
+| display = 1440x720
+| memory = 3 GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = Y
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = Y
+| status_bluetooth =
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = Y
+| status_mobiledata = Y
+| status_sms = Y
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| status_otg = P
+| booting = Y
+| whet_dhry = 
+}}
+
+== Contributors ==
+* ''[https://gitlab.com/craftyguy craftyguy]''
+
+== Installation ==
+
+=== Flashing ===
+
+To put the phone into flash mode, unplug charging cable, remove battery, hold the Vol+ button and then re-insert battery and plug in USB cable to computer. pmOS can be flashed to the device by executing <code>pmbootstrap flasher flash_rootfs</code>
