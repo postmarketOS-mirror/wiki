@@ -111,27 +111,50 @@ To get the wifi working, you'll need to modify the wpa_supplicant configuration.
 
   $ echo 'wpa_supplicant_args="-Dwext"' | sudo tee /etc/conf.d/wpa_supplicant
 
+You can use either Network manager or networking and wpa_supplicant. Network manager is recommend in most cases as it handles reconnection.
 
-Start the networkmanger service and restart networking service
+=== Network Manager ===
 
-  $ sudo rc-service networkmanager restart
+Ensure the networkmanger service is running
+  
+  $ sudo rc-status | grep 'networkmanager'
+
+if it not visible, try to start the service:
+
+  $ sudo rc-service networkmanager start
 
 Search for available WiFi networks and connect to network
 
   $ sudo nmcli device wifi list ifname wlan0
   $ sudo nmcli --ask dev wifi connect SSID
 
-Set services to start
-
-  $ sudo rc-update add wpa_supplicant boot
-  $ sudo rc-update add networkmanager default
-
 Reboot and you should be connected on boot.
 
-You may also connect directly using wpa_supplicant forgoing NetworkManager. Please note this method will not automatically reconnect to WiFi if you loose connection
+=== Networking and wpa_supplicant ===
+
+You will need to manually configure the interfaces by creating <source>/etc/network/interfaces</source> e.g.,
+
+  $ sudo vi /etc/network/interfaces
+
+  <pre>
+  auto lo
+  iface lo inet loopback
+  auto wlan0
+  iface wlan0 inet dhcp
+  </pre>
+
+Save changes and add networking to start with system
+
+ $ sudo rc-update add networking
+
+Add WiFi network information
 
  $ wpa_passphrase YOUR_SSID YOUR_PASSPHRASE | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+
+Restart services
+
  $ sudo rc-service wpa_supplicant restart
+ $ sudo rc-service networking start
 
 == Mainline Kernel ==
 The mainline kernel now has some support for the Samsung Galaxy SIII LTE (i9305):
