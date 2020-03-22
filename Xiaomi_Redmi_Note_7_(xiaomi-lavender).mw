@@ -109,7 +109,7 @@ This is still a work-in-progress. If you want to test something, or help in the 
 * backup <code>boot</code> and <code>system</code> partitions first from TWRP
 * checkout my development branch in pmaports (link below in links section)
 * zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device
-* then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender postmarketos-mkinitfs </code>)
+* then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender</code>), also <code>linux-postmarketos-qcom-sdm660</code>, if you wish to test mainline kernel for some reason.
 * proceed with installation as usual (reboot device to fastboot mode, <code>pmbootstrap install ; pmbootstrap flasher flash_kernel ; pmbootstrap flasher flash_rootfs</code>).
 
 == Photos ==
