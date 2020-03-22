@@ -14,6 +14,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:MR|MR]] ''gitlab merge request link''
 * [[Template:maemo-leste|maemo-leste]] ''[https://github.com/maemo-leste/bugtracker Maemo Leste] bugtracker link''
 * [[Template:Mainpage-button|mainpage-button]] ''fancy buttons with icons used on the [[Main Page]]''
+* [[Template:milestone|milestone]] ''GitLab [https://gitlab.com/groups/postmarketOS/-/milestones milestone] link''
 * [[Template:Note|note]]
 * [[Template:Outdated|outdated]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
