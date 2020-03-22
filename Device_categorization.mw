@@ -1,0 +1,39 @@
+{{note|Work in progress: see {{issue|16|postmarketos}} for current status}}
+
+Devices that are working quite well get lost in the [[Devices|big matrix of booting devices]]. To improve the situation, devices postmarketOS runs on will be grouped into the following categories.
+
+{| class="wikitable sortable"
+!Category
+!Actively maintained
+!Description
+|-
+| main
+| yes ''(ideally by multiple people)''
+| Required working features:
+* Calls ''(not for tablet)''
+* SMS ''(not for tablet)''
+* Usable phone UI (i.e. Plasma Mobile or Phosh)
+* Battery charging
+* Wifi
+Not required (shall change in the future):
+* Bluetooth
+* Camera
+|-
+| community
+| yes
+| Some base functionality must be working (no fixed feature set). As ''actively maintained'' implies, it is usable in some way, or there is at least some goal that maintainers are trying to achieve.
+|-
+| testing
+| no
+| All other device ports, including new ones. Maintainers can create merge requests to move devices to ''community'' if requirements are met.
+|-
+| unmaintained
+| no
+| Known broken device ports are stored here, binary packages are not built for these. The rationale is, that it is easier to restore ports from such an ''unmaintained'' dir.
+|}
+
+== See also ==
+* {{issue|16|postmarketos}} Increase visibility of actively maintained devices
+* [https://gitlab.com/postmarketOS/postmarketos/issues/11#get-serious-about-supported-devices postmarketos#11] Get serious about supported devices
+
+[[Category:Technical Reference]]
