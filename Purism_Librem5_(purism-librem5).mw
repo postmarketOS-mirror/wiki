@@ -7,9 +7,9 @@
 | releaseyear = 2019
 | originalsoftware = PureOS
 | chipset = Emcraft NXP i.MX8M
-| cpu = NXP i.MX8M
+| cpu = 4x 1.5 GHz Cortex-A53
 | gpu = Vivante GC7000Lite
-| storage = 32 GB EMMC
+| storage = 32 GB eMMC
 | display = 1440x720
 | memory = 3 GB
 | architecture = aarch64
