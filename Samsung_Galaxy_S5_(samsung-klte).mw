@@ -82,7 +82,8 @@ Setup device to be used:
 <source lang="shell-session">
 $ pmbootstrap init
 ...
-Device [samsung-i9100]: samsung-klte   <- enter this
+Vendor [samsung]: samsung <- enter this
+Device codename [i9100]: klte   <- enter this
 Kernel [downstream]: downstream        <- you probably want downstream for now
 User interface [weston]:               <- choose any UI by your preference
 ...
