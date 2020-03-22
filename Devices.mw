@@ -1,7 +1,7 @@
 __NOTOC__ __NOCACHE__
-This page details the status of postmarketOS ports to various devices.
+This page details the status of postmarketOS ports to various devices. If you are porting a device, please [[Help:Device Page|create a device page]] and describe the progress of the port. After the page is created, data about your device will appear on this page automatically.
 
-If you are porting a device, please [[Help:Device Page|create a device page]] and describe the progress of the port. After the page is created, data about your device will appear on this page automatically.
+An effort to [[Device categorization|categorize the devices]] better is under way.
 
 == Booting devices ==
 All the devices in this table can at least boot postmarketOS. To monitor boot progress, you must be able to receive output from the screen, a network adapter, or a serial port. If you verify that a device not on this list boots postmarketOS, please [[Help:Device Page|create a page for the device]] and make a [https://docs.gitlab.com/ce/gitlab-basics/add-merge-request.html merge-request].
