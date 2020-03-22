@@ -231,8 +231,8 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 
 == Links ==
 postmarketOS packages:
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-samsung-klte Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-samsung-klte Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-klte Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-samsung-klte Kernel package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-samsung-klte Firmware package]
 
 Mainline kernel patches:
