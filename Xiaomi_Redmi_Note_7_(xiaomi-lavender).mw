@@ -269,7 +269,8 @@ Partition list
 </div>
 
 === Android Verified Boot (vbmeta) ===
-This device is using [[Android_Verified_Boot_(AVB)]] so you may need to flash <code>vbmeta</code> partition with custom <code>vbmeta.img</code> from LineageOS zip or downloaded separately (from https://androidfilehost.com/?fid=1395089523397954291 for example). Or we need to find a way to generate it with <code>avbtool</code> and flash it during installation somehow. (package '''avbtool''' and add <code>pmbootstrap flasher flash_vbmeta</code>?)
+This device is using [[Android_Verified_Boot_(AVB)]] so, if you did not flash any custom Android ROM, you may need to flash <code>vbmeta</code> partition with <code>vbmeta.img</code> with verification disabled flag. pmbootstrap now can generate such image nad flash it with one command:
+ $ pmbootstrap flasher flash_vbmeta
 
 === DTBO partition ===
 This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . We need to find a way to flash generated <code>dt.img</code> to <code>dtbo</code> partition during installation process. (add <code>pmbootstrap flasher flash_dtbo</code>?)
