@@ -72,6 +72,10 @@ Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}}
 |SSH possible, but 'postmarketos loading...' stays around with distorted graphics {{issue|280|pmaports}}
 | P
 |-
+|GNOME
+|Gnome needs some time to boot up, but works in General. Suitable for dogfooding.
+| Y
+|-
 |[https://en.wikipedia.org/wiki/Hildon][[Hildon]]
 | Hildon ist not available for armv7 architecture.
 | N
@@ -91,6 +95,10 @@ Ensure that the USB cable is disconnected, then hold down {{button|Volume Down}}
 |[https://developer.puri.sm/Librem5/Software_Reference/Environments/Phosh.html][[Phosh]]
 | SSH works, but does not show up after 5 minutes, if this kernel has no DRM-Support, Phosh won't work, (has to be checked)
 | P
+|-
+|Plasma-Desktop
+|Rootfs not found at startup
+| N
 |-
 |[https://en.wikipedia.org/wiki/Plasma_Mobile#Plasma_Mobile][[Plasma Mobile]]
 |SSH works, but UI does not show up
