@@ -59,7 +59,7 @@ The recommended installation procedure is installing to a microSD card by follow
 
 {{note|'''Note:''' The above option may throw the following error when entering a passphrase "WARNING: Locking directory /run/cryptsetup is missing!" This can be safely ignored See [https://lists.debian.org/debian-boot/2019/02/msg00100.html here].}}
 
-postmarketOS can be installed onto the eMMC by booting a Linux distribution on the phone first and doing the installation process via pmbootstrap on the phone directly:
+postmarketOS can be installed onto the eMMC by flashing [https://github.com/dreemurrs-embedded/Jumpdrive/releases Jumpdrive] onto a microSD, booting it with the USB connected to the PC and following the microSD install instructions above or by booting a Linux distribution on the phone first and doing the installation process via pmbootstrap on the phone directly:
 
 # Install [[Installing pmbootstrap|pmbootstrap]] and its dependencies on the phone on any Linux distribution booted via the microSD card
 # Follow the [[Installation guide|Installation Guide]] until "Installation and flashing"
