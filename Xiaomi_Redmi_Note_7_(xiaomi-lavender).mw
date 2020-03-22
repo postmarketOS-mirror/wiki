@@ -273,20 +273,20 @@ This device is using [[Android_Verified_Boot_(AVB)]] so, if you did not flash an
  $ pmbootstrap flasher flash_vbmeta
 
 === DTBO partition ===
-This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . We need to find a way to flash generated <code>dt.img</code> to <code>dtbo</code> partition during installation process. (add <code>pmbootstrap flasher flash_dtbo</code>?)
+This device is using a dedicated partition to store the [[Device_Tree_(dtb)|Device Tree Blob]] Overlay. Read more at https://source.android.com/devices/architecture/dto/partitions . 
 
 Update: looks like '''dtbo''' partition is not used during boot by LineageOS's kernel, because it is using appended DTB (<code>CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE=y</code>)
 
-Update2: device tree from dtbo partition can still be used by bootloader? Yes, it is. bootloader tries to actually overlay dtb from dtbo partition over a dtb found in boot.img, and if it fails to do so, it falls back into fastboot mode. Example bootloader debug UART output in that case:
+Update2: device tree from dtbo partition is used by bootloader to apply some fixups on top of appended dtb. Bootloader tries to apply overlay dtb from dtbo partition over a dtb found appended to kernel, and if it fails to do so, it falls back into fastboot mode. Example bootloader debug UART output in that case:
  Memory Base Address: 0x40000000
  Decompressing kernel image start: 2700 ms
  Decompressing kernel image done: 2852 ms
  ufdt apply overlay failed
  Launching fastboot
 
-See Zhuowei's notes on creating custom dtbo partition: https://gitlab.com/zhuowei/dtbo-google-crosshatch-mainline
+See also Zhuowei's notes on creating custom dtbo partition: https://gitlab.com/zhuowei/dtbo-google-crosshatch-mainline
 
-For mainline kernel just <code>fastboot erase dtbo</code> works. Example output when dtbo partition is erased:
+For mainline kernel just <code>fastboot erase dtbo</code> works. Bootloader ignores missing dtbo, example output when dtbo partition is erased:
  Memory Base Address: 0x40000000
  Decompressing kernel image start: 2641 ms
  Decompressing kernel image done: 2793 ms
