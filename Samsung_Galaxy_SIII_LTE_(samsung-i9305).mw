@@ -128,7 +128,7 @@ Search for available WiFi networks and connect to network
   $ sudo nmcli device wifi list ifname wlan0
   $ sudo nmcli --ask dev wifi connect SSID
 
-Reboot and you should be connected on boot.
+Reboot and you should be connected.
 
 === Networking and wpa_supplicant ===
 
