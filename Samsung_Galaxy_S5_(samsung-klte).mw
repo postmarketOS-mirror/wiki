@@ -126,17 +126,9 @@ Reboot phone to TWRP recovery and push image using ADB:
 $ adb push halium-klte-2019-07-09-system.img.raw /data/system.img
 </source>
 
-Boot to a running postmarketOS system and login with SSH using [[USB_Network]]. Next command is executed on the phone. Make sure that you have a /data mounted (check output of <code>mount</code> command) and make symlink to system.img in <code>/var/lib/lxc/android</code>:
+Boot to a running postmarketOS system and login with SSH using [[USB_Network]]. Next commands are executed on the phone. Make sure that you have a <code>/data</code> mounted (check output of <code>mount</code> command). Ensure that Android is fully running inside an lxc container (on device, install <code>htop</code>, run it and switch into tree mode by pressing '''t''') (see the picture on the right). If it does not, check if <code>lxc-android</code> is running (see output of <code>rc-status</code> command). Run '''logcat''' and see if it is printing some error logs on the screen.
 
-<source lang="shell-session">
-$ sudo ln -sf /data/system.img /var/lib/lxc/android/system.img
-</source>
-
-After that lxc-android service should start fine (<code>sudo rc-service lxc-android restart</code>). Before (re)starting lxc-android, remove file <code>/tmp/lxc-android-once</code> if it exists.
-
-Ensure that Android is fully running inside an lxc container (on device, install <code>htop</code>, run it and switch into tree mode by pressing '''t''') (see the picture on the right)
-
-Another way is to run '''logcat''' and see if it is printing some logs on the screen. If you see logs, then you lxc-android is running fine.
+Before (re)starting lxc-android, remember to remove file <code>/tmp/lxc-android-once</code> if it exists.
 
 == Additional info ==
 
