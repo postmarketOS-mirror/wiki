@@ -61,8 +61,8 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-* Soft brick: With the device powered off, hold Volume Up + Power.
-* Hard brick: Hold Volume Up + Volume Down + Power.
+With the device powered off, hold Volume Up + Power.
+If you've hard bricked your device, hold Volume Up + Volume Down + Power.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
