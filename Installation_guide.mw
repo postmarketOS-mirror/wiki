@@ -8,7 +8,7 @@ $ ls
 </syntaxhighlight>
 
 === Requirements ===
-* We assume that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first.
+* We assume that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first. [http://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux/ Windows subsystem for Linux (WSL)] does '''not''' work!
 * The host operating system needs to run Linux 3.17 or newer (first kernel with getrandom syscall)
 * A few gigabytes of free space
 
