@@ -63,6 +63,7 @@ Uclydde
 * {{Button|Power}} + {{Button|Volume Down}} buttons or use TWRP reboot bootloader, or <code>adb reboot bootloader</code>
 
 == Installation ==
+{{note|Working user interfaces: Weston, Mate, Gnome, XFCE4}}
 * Enter fastboot mode.
 * Execute  <code> pmbootstrap flasher flash_rootfs </code>
 * Execute  <code> pmbootstrap flasher boot </code>
