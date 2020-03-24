@@ -57,6 +57,59 @@
 
 You will be able to boot to pmOS by turning on the phone while holding the <code>Volume Up</code> button.
 
+== WLAN ==
+Out-of-tree <code>prima</code> wlan kernel module available [https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/prima/tree/?h=LF.BR.1.2.8 here].
+Firmware can be extracted from the following mountpoints:
+<syntaxhighlight lang="shell-session">
+system   => /system/etc/firmware/wlan/prima/WCNSS_cfg.dat
+userdata => /misc/wifi/WCNSS_qcom_cfg.ini
+persist  => /WCNSS_qcom_wlan_nv.bin
+persist  => /WCNSS_wlan_dictionary.dat
+</syntaxhighlight>
+To enable the module in pmOS run the following (as root):
+<syntaxhighlight lang="shell-session">
+# echo 1 > /dev/wcnss_wlan
+# echo sta > /sys/module/wlan/parameters/fwpath
+</syntaxhighlight>
+Unfortunately, <code>nmcli</code> didn't work for me, but <code>iw dev wlan0 scan</code> did the trick.
+
+== Partition layout ==
+<syntaxhighlight lang="shell-session">
+DDR -> /dev/block/mmcblk0p24
+aboot -> /dev/block/mmcblk0p9
+abootbak -> /dev/block/mmcblk0p10
+boot -> /dev/block/mmcblk0p27
+cache -> /dev/block/mmcblk0p31
+config -> /dev/block/mmcblk0p19
+devinfo -> /dev/block/mmcblk0p23
+fsc -> /dev/block/mmcblk0p5
+fsg -> /dev/block/mmcblk0p25
+hwcfg -> /dev/block/mmcblk0p21
+keystore -> /dev/block/mmcblk0p18
+misc -> /dev/block/mmcblk0p16
+modem -> /dev/block/mmcblk0p22
+modemst1 -> /dev/block/mmcblk0p3
+modemst2 -> /dev/block/mmcblk0p4
+oem -> /dev/block/mmcblk0p32
+pad -> /dev/block/mmcblk0p15
+persist -> /dev/block/mmcblk0p29
+recovery -> /dev/block/mmcblk0p28
+rpm -> /dev/block/mmcblk0p11
+rpmbak -> /dev/block/mmcblk0p12
+sbl1 -> /dev/block/mmcblk0p7
+sbl1bak -> /dev/block/mmcblk0p8
+sec -> /dev/block/mmcblk0p26
+simlock -> /dev/block/mmcblk0p20
+splash -> /dev/block/mmcblk0p17
+ssd -> /dev/block/mmcblk0p6
+system -> /dev/block/mmcblk0p30
+traceability -> /dev/block/mmcblk0p1
+tunning -> /dev/block/mmcblk0p2
+tz -> /dev/block/mmcblk0p13
+tzbak -> /dev/block/mmcblk0p14
+userdata -> /dev/block/mmcblk0p33
+</syntaxhighlight>
+
 == See also ==
 * {{MR|1097|pmaports}} Initial merge request
 
