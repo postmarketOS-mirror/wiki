@@ -6,7 +6,7 @@ On most Qualcomm SoCs the modem is a separate processor which lives next to the 
 
 The procedure for getting the modem to work is generally the following:
 * Package and install the [[Firmware]] of your modem into the file system, generally the <code>mba.*</code> and <code>modem.*</code> files.
-* Install the package <code>modem-qcom-msm-downstream-common</code> or <code>modem-qcom-msm-mainline-common</code>, depending on the kernel you are using (and reboot to activate the udev rules and services).
+* Install the package <code>msm-modem-downstream</code> or <code>msm-modem-mainline</code>, depending on the kernel you are using (and reboot to activate the udev rules and services).
 * Install <code>ofono</code> and start it using <code>rc-service ofono start</code>
 * You should see signs of your firmware being loaded in the dmesg.
 * You can use the [https://git.kernel.org/pub/scm/network/ofono/ofono.git/tree/test ofono test scripts] or <code>ofonoctl</code> to see if the Linux recognized your modem and if it works correctly.
