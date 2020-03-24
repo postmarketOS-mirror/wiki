@@ -123,7 +123,7 @@ deviceinfo_append_dtb_mainline="true"
 deviceinfo_bootimg_qcdt_downstream="true"
 ...
 </syntaxhighlight>
-* Also consider adjusting the dependencies of your device package to not include downstream- or mainline-specific helper packages, such as <code>adsp-audio</code>, <code>wcnss-wlan</code> or <code>modem-qcom-msm-downstream-common</code>. You can use <code>device-fairphone-fp2</code> as an example for that.
+* Also consider adjusting the dependencies of your device package to not include downstream- or mainline-specific helper packages, such as <code>adsp-audio</code>, <code>wcnss-wlan</code> or <code>msm-modem-downstream</code>. You can use <code>device-fairphone-fp2</code> as an example for that.
 * Run <code>pmbootstrap init</code> afterwards to test the change. It should ask you for the kernel now.
 * See <code>device-qemu-amd64</code> for another example.
 * Implementation details and discussion in {{github|1363}}
