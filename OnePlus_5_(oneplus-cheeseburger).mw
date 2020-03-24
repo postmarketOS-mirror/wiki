@@ -281,15 +281,15 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 == Mainline kernel ==
 This is heavily W.I.P currently, but it's coming along quite nicely. [https://imgur.com/a/Tb3LAK7 Here is an imgur gallery with some of the progress showcased]!
 
-Here's a list of stuff that is currently (Linux <code>5.6-rc6</code>) known to be working (in at least some capacity):
+Here's a list of stuff that is currently (Linux <code>5.6-rc7</code>) known to be working (in at least some capacity):
 
 * The kernel itself stays booted (i.e. no random panics) and is "stable"
 * UFS internal storage (<code>CONFIG_PHY_QCOM_UFS=y</code>)
-* Display (via [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/88d747e58c3f58be9cf1dfe5a7b99bfc5e5c8885 <code>simplefb</code>] & <code>CONFIG_FB_SIMPLE=y</code>)
+* Display (via [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/69090b1f1d5eeeb5a8f8860276cf40961fd59d5e <code>simplefb</code>] & <code>CONFIG_FB_SIMPLE=y</code>)
 * Xorg & Wayland (tested with [https://i.imgur.com/VgsaOtY.jpg MATE] & [https://i.imgur.com/dLItMIm.jpg Weston] respectively)
 * Bluetooth (requires <code>crbtfw21.tlv</code> and <code>crnv21.bin</code> blobs from [https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware] + a <code>hciconfig hci0 up</code> in userspace)
-* Touchscreen (using mainline Synaptics RMI4 I2C driver; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/23fbecc56ba4f3828f7adf59f81e891a3a7e6764 definition in DTS])
-* Anbox (install <code>postmarketos-anbox</code>; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/187d3f44d341cf7fad8e44b07dcf9c4132a17573 defconfig changes I made for LXC stuff])
+* Touchscreen (using mainline Synaptics RMI4 I2C driver; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/f3f8872bb19d91bf784cac5b409d00f0325f0cfb definition in DTS])
+* Anbox (install <code>postmarketos-anbox</code>; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/db19aa44532d40ad8a3210722ac78ebbb8018798 defconfig changes I made for LXC stuff])
 * Power button ([https://github.com/JamiKettunen/linux-mainline-oneplus5/blob/device-oneplus-cheeseburger/arch/arm64/boot/dts/qcom/pm8998.dtsi#L41 in DTS])
 
 And that's about it for now. Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff / get logs :p
@@ -301,4 +301,5 @@ Check the links below for source code.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-oneplus-cheeseburger Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-oneplus-cheeseburger Kernel package]
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
-* [https://github.com/JamiKettunen/linux-mainline-oneplus5 Device mainline kernel W.I.P source]
+* [https://github.com/JamiKettunen/linux-mainline-oneplus5 Device mainline kernel W.I.P source (deathmist)]
+* [https://github.com/torvalds/linux Linux mainline kernel source (torvalds)]
