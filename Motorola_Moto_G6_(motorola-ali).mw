@@ -32,6 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
+| status_otg = N
 | status = 
 | booting = yes
 
@@ -42,8 +43,6 @@ Version of the kernel that pmos is running
 | pmoskernel = 3.18.140
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = N
 -->
 }}
 
