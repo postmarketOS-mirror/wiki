@@ -47,7 +47,7 @@
 
 == Installation ==
 {{note|The only method tested assumes flashing <code>boot.img</code> to the <code>recovery</code> partition and <code>rootfs</code> to the microSD card}}
-<code>fastboot</code> reported to be locked on this phone, you will need to flash everything from the KaiOS directly instead
+<code>fastboot</code> reported to be locked on this phone, you will need to flash everything from the KaiOS directly instead:
 * install <code>rootfs</code> to the microSD with <code>pmbootstrap install --sdcard=/dev/sdX</code>
 * put the card into the phone and boot it to the KaiOS
 * export <code>boot.img</code> to the <code>/tmp</code> on your host machine: <code>pmbootstrap export</code>
@@ -72,6 +72,11 @@ To enable the module in pmOS run the following (as root):
 # echo sta > /sys/module/wlan/parameters/fwpath
 </syntaxhighlight>
 Unfortunately, <code>nmcli</code> didn't work for me, but <code>iw dev wlan0 scan</code> did the trick.
+
+== Modem ==
+Followed an approach described [https://wiki.postmarketos.org/wiki/Modem#Qualcomm_Modems here] with no luck: getting <code>smd_pkt_open: DATA5_CNTL open failed -19</code> in <code>dmesg</code> while trying to access the modem.
+
+Figured out that <code>rmtfs</code> fails while trying to map the shared memory -> downstreamed <code>qrtr</code> -> now it hangs <code>qrtr_publish -> qrtr_sendto -> sendto</code>.
 
 == Partition layout ==
 <syntaxhighlight lang="shell-session">
