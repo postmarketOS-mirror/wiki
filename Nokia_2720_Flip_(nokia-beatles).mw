@@ -10,7 +10,7 @@
 | gpu = Adreno 304
 | storage = 4 GB
 | display = 240x320 TFT
-| memory = 512MB
+| memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
