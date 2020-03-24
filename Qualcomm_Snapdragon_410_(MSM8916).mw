@@ -65,7 +65,7 @@ At the moment, the modem is primarily tested using the oFono test scripts.
  $ /usr/lib/ofono/test/online-modem
  $ /usr/lib/ofono/test/list-modems
 
-Check if the SIM card shows up. If you have a dual SIM device (e.g. [[Wileyfox_Swift_(wileyfox-crackling)|Wileyfox Swift]]), follow [https://gist.github.com/TravMurav/45a705f210125858ce889b06f90656d9 this guide]. (TODO: Maybe move this here or somewhere else?)
+Check if the SIM card shows up. If you have a dual SIM device (e.g. [[Wileyfox_Swift_(wileyfox-crackling)|Wileyfox Swift]]), follow [[User:TravMurav/Dual-Sim_QMI_draft|this guide]]. (TODO: Maybe move this here or somewhere else?)
 
 {{note|'''Note:''' Before using <code>qmicli</code> from that guide, make sure that oFono is stopped (<code>sudo rc-service ofono stop</code>). After selecting SIM slot, start oFono servce again.}}
 
