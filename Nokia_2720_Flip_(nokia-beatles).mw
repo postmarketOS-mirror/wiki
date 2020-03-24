@@ -15,7 +15,7 @@
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = N
-| status_touch = 
+| status_touch = -
 | status_screen = Y
 | status_wifi = 
 | status_xwayland = Y
@@ -23,7 +23,7 @@
 | status_mainline = 
 | status_battery = 
 | status_3d = 
-| status_accel = 
+| status_accel = -
 | status_audio = 
 | status_bluetooth = 
 | status_camera = 
