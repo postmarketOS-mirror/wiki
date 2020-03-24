@@ -12,22 +12,17 @@ $ git show channels.cfg:channels.cfg
 
 <source lang="ini">
 [channels.cfg]
-recommended=edge
+recommend=edge
 
 [edge]
 description=Rolling release channel
-pmaports_branch=master
-aports_branch=master
+branch_pmaports=master
+branch_aports=master
 
 [latest]
 description=Upcoming stable release (WIP, do not use!)
-pmaports_branch=3.11
-aports_branch=3.11-stable
-
-# [latest-next]
-# description=...
-# pmaports_branch=3.12
-# aports_branch=3.12-stable
+branch_pmaports=3.11
+branch_aports=3.11-stable
 </source>
 
 === Sections ===
@@ -56,11 +51,11 @@ Channel sections, for which it will be possible to install postmarketOS. <code>e
 | Text displayed next to the branch in <code>pmbootstrap init</code>. May have hints that a branch is not meant to be used yet.
 |
 |-
-| <code>pmaports_branch</code>
+| <code>branch_pmaports</code>
 | Branch of postmarketOS pmaports.git
 | <code>master</code>, <code>3.11</code>, ...
 |-
-| <code>aports_branch</code>
+| <code>branch_aports</code>
 | Branch of Alpine Linux aports.git
 | <code>master</code>, <code>3.11-stable</code>, ...
 |}
