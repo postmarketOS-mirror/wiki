@@ -31,8 +31,8 @@
 | status_camera =
 | status_gps = 
 | status_mobiledata = 
-| status_sms = 
-| status_calls =
+| status_sms = -
+| status_calls = -
 | status = 
 | booting = no
 }}
