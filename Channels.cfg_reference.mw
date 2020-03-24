@@ -2,6 +2,8 @@
 
 This file will be in the channels.cfg branch of pmaports.git, to map the postmarketOS pmaports branches to Alpine Linux aports branches for each release channel. The reason is, that if we store it in any other pmaports.git branch, that we are using for building aports (e.g. master), then we could get an outdated channels.cfg on staled branches. By having it in a dedicated branch, it always counts for the whole repository. Another possible location would be pmbootstrap, but this would tie the pmbootstrap version unnecessarily to these versions.
 
+=== Example ===
+
 It can be viewed from any checked out branch with:
 
 <source lang="shell-session">
@@ -42,7 +44,7 @@ Metadata that does not belong in a channel section.
 | <code>edge</code>, <code>latest</code>
 |}
 
-=== edge, latest, latest-next, legacy ===
+==== edge, latest, latest-next, legacy ====
 Channel sections, for which it will be possible to install postmarketOS. <code>edge</code> and <code>latest</code> will always be present, <code>latest-next</code> and <code>legacy</code> only during transition phases from one release to the next one.
 
 {| class="wikitable sortable"
