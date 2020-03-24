@@ -1,6 +1,6 @@
 {{note|WIP spec related to basing on Alpine stable. See {{milestone|2}} for progress and a general introduction.}}
 
-This file will be in the channels.cfg branch of pmaports.git, to map the postmarketOS pmaports branches to Alpine Linux aports branches for each release channel.
+This file will be in the channels.cfg branch of pmaports.git, to map the postmarketOS pmaports branches to Alpine Linux aports branches for each release channel. The reason is, that if we store it in any other pmaports.git branch, that we are using for building aports (e.g. master), then we could get an outdated channels.cfg on staled branches. By having it in a dedicated branch, it always counts for the whole repository. Another possible location would be pmbootstrap, but this would tie the pmbootstrap version unnecessarily to these versions.
 
 It can be viewed from any checked out branch with:
 
