@@ -1,0 +1,66 @@
+{{note|WIP spec related to basing on Alpine stable. See {{milestone|2}} for progress and a general introduction.}}
+
+This file will be in the channels.cfg branch of pmaports.git, to map the postmarketOS pmaports branches to Alpine Linux aports branches for each release channel.
+
+It can be viewed from any checked out branch with:
+
+<source lang="shell-session">
+$ git show channels.cfg:channels.cfg
+</source>
+
+<source lang="ini">
+[channels.cfg]
+recommended=edge
+
+[edge]
+description=Rolling release channel
+pmaports_branch=master
+aports_branch=master
+
+[latest]
+description=Upcoming stable release (WIP, do not use!)
+pmaports_branch=3.11
+aports_branch=3.11-stable
+
+# [latest-next]
+# description=...
+# pmaports_branch=3.12
+# aports_branch=3.12-stable
+</source>
+
+=== Sections ===
+==== channels.cfg ====
+Metadata that does not belong in a channel section.
+
+{| class="wikitable sortable"
+!Variable
+!Description
+!Possibles values
+|-
+| <code>recommended</code>
+| What pmbootstrap will recommend to install for new users. Initially this will be edge, until latest is ready, then we switch to latest.
+| <code>edge</code>, <code>latest</code>
+|}
+
+=== edge, latest, latest-next, legacy ===
+Channel sections, for which it will be possible to install postmarketOS. <code>edge</code> and <code>latest</code> will always be present, <code>latest-next</code> and <code>legacy</code> only during transition phases from one release to the next one.
+
+{| class="wikitable sortable"
+!Variable
+!Description
+!Possibles values
+|-
+| <code>description</code>
+| Text displayed next to the branch in <code>pmbootstrap init</code>. May have hints that a branch is not meant to be used yet.
+|
+|-
+| <code>pmaports_branch</code>
+| Branch of postmarketOS pmaports.git
+| <code>master</code>, <code>3.11</code>, ...
+|-
+| <code>aports_branch</code>
+| Branch of Alpine Linux aports.git
+| <code>master</code>, <code>3.11-stable</code>, ...
+|}
+
+[[Category:Technical Reference]]
