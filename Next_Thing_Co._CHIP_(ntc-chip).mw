@@ -63,6 +63,19 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+The CHIP has two different flashing modes:
+* FEL mode: used to flash bootloader and rootfs
+* Fastboot mode: used to flash rootfs
+
+To enter FEL mode:
+* Connect the FEL and GND pins with a jumper cable
+* Power on the CHIP
+
+To enter Fastboot mode:
+* Connect an serial (UART) USB adapter to UART1-TX, UART1-RX and GND
+* Power on the CHIP
+* Press enter during boot up to access the U-Boot console
+* On the console type `fastboot 0`
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
