@@ -110,7 +110,7 @@ ln -s /dev/disk/by-partlabel/fsg modem_fsg
 </source>
 
 Install necessary software
-<source>apk add modem-qcom-msm-downstream-common qcom_rmtfs libsmdpkt_wrapper libqipcrtr4msmipc ofono</source>
+<source>apk add msm-modem-downstream qcom_rmtfs libsmdpkt_wrapper libqipcrtr4msmipc ofono</source>
 
 Start the wcnss-wlan service to initialize the wifi card (helps the modem?)
 <source>/etc/init.d/wcnss-wlan start</source>
