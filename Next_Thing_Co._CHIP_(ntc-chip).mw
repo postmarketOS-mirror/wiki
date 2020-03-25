@@ -135,6 +135,8 @@ You can also add normal web links:
 * {{MR|1098|pmaports}} Initial merge request
 * [https://linux-sunxi.org/NextThingCo_CHIP Sunxi wiki page]
 * [https://en.wikipedia.org/wiki/CHIP_(computer) Wikipedia wiki page]
+* [https://github.com/Thore-Krug/CHIP-tools Tools for flashing the CHIP]
+* [https://byteporter.com/ntc-chip-micro-sd-slot/ CHIP microSD slot mod]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
