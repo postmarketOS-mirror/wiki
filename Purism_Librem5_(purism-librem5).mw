@@ -31,7 +31,7 @@
 | status_gps = Y
 | status_mobiledata = Y
 | status_sms = Y
-| status_calls = <!-- Talking to other people over the cellular network. -->
+| status_calls = P
 | status_otg = P
 | booting = Y
 | whet_dhry = 
