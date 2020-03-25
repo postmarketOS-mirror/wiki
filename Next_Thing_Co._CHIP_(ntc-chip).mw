@@ -137,6 +137,7 @@ You can also add normal web links:
 * [https://en.wikipedia.org/wiki/CHIP_(computer) Wikipedia wiki page]
 * [https://github.com/Thore-Krug/CHIP-tools Tools for flashing the CHIP]
 * [https://byteporter.com/ntc-chip-micro-sd-slot/ CHIP microSD slot mod]
+* [https://github.com/umiddelb/armhf/wiki/Get-more-out-of-%22Das-U-Boot%22 Good U-Boot guide]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
