@@ -96,10 +96,6 @@ The following commands needs to be launched from your pmbootstrap workdir
 $ sudo mkdir chroot_rootfs_ntc-chip/boot/dtbs
 $ sudo cp cache_git/pmaports/device/testing/linux-ntc-chip/sun5i-r8-chip.dtb chroot_rootfs_ntc-chip/boot/dtbs/
 </syntaxhighlight>
-* Rename the linux kernel
-<syntaxhighlight lang="shell-session">
-$ sudo cp chroot_rootfs_ntc-chip/boot/vmlinuz-ntc-chip chroot_rootfs_ntc-chip/boot/zImage
-</syntaxhighlight>
 
 Install mtd-utils from your distro repositories e.g. `pacman -S mtd-utils`
 * Create the UBIfs image
