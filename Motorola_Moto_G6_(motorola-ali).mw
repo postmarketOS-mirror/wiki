@@ -69,6 +69,7 @@ Uclydde
 * Execute  <code> pmbootstrap flasher boot </code>
 
 == See also ==
+*{{MR|1071|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
