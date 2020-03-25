@@ -105,7 +105,7 @@ The following commands needs to be launched from your pmbootstrap workdir
 * Copy dtb from linux-ntc-chip
 <syntaxhighlight lang="shell-session">
 $ sudo mkdir chroot_rootfs_ntc-chip/boot/dtbs
-$ sudo cp cache_git/pmaports/device/testing/linux-ntc-chip/sun5i-r8-chip.dtb chroot_rootfs_ntc-chip/boot/dtbs/
+$ sudo cp cache_git/pmaports/device/testing/linux-ntc-chip/sun5i-r8-chip.dtb chroot_rootfs_ntc-chip/boot/
 </syntaxhighlight>
 
 Install mtd-utils from your distro repositories e.g. `pacman -S mtd-utils`
