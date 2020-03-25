@@ -12,7 +12,7 @@ $ git show channels.cfg:channels.cfg
 
 <source lang="ini">
 [channels.cfg]
-recommend=edge
+recommended=edge
 
 [edge]
 description=Rolling release channel
