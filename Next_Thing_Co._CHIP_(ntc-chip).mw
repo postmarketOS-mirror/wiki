@@ -135,7 +135,7 @@ You can also add normal web links:
 * {{MR|1098|pmaports}} Initial merge request
 * [https://linux-sunxi.org/NextThingCo_CHIP Sunxi wiki page]
 * [https://en.wikipedia.org/wiki/CHIP_(computer) Wikipedia wiki page]
-* [https://github.com/Thore-Krug/CHIP-tools Tools for flashing the CHIP]
+* [https://github.com/Thore-Krug/Flash-CHIP Tool for flashing the CHIP]
 * [https://byteporter.com/ntc-chip-micro-sd-slot/ CHIP microSD slot mod]
 * [https://github.com/umiddelb/armhf/wiki/Get-more-out-of-%22Das-U-Boot%22 Good U-Boot guide]
 <!--
