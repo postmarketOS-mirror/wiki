@@ -98,6 +98,7 @@ $ pmbootstrap install
 </syntaxhighlight>
 
 In `workdir/chroot_rootfs_ntc-chip` there is the rootfs for your ntc-chip
+
 The following commands needs to be launched from your pmbootstrap workdir
 * Copy dtb from linux-ntc-chip
 <syntaxhighlight lang="shell-session">
