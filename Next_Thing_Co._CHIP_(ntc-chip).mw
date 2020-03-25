@@ -91,12 +91,9 @@ From the U-boot serial console issue the following commands
 
 == Create the UBIfs image ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
-* Configure the installation
+* Configure the installation and build the system
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
-</syntaxhighlight>
-* Build the system
-<syntaxhighlight lang="shell-session">
 $ pmbootstrap install
 </syntaxhighlight>
 
@@ -104,7 +101,6 @@ In `workdir/chroot_rootfs_ntc-chip` there is the rootfs for your ntc-chip
 The following commands needs to be launched from your pmbootstrap workdir
 * Copy dtb from linux-ntc-chip
 <syntaxhighlight lang="shell-session">
-$ sudo mkdir chroot_rootfs_ntc-chip/boot/dtbs
 $ sudo cp cache_git/pmaports/device/testing/linux-ntc-chip/sun5i-r8-chip.dtb chroot_rootfs_ntc-chip/boot/
 </syntaxhighlight>
 
