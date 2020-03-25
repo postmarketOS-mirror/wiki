@@ -21,6 +21,8 @@ pmbootstrap is up on [https://pypi.org/project/pmbootstrap/ pypi] now, so it can
 $ pip3 install --user pmbootstrap
 </syntaxhighlight>
 
+You may need to reload your configuration by running <code>source ~/.profile</code>.
+
 That's it. The steps below are for alternative methods of installing <code>pmbootstrap</code>. Read on at [[#Tab completion]] if you are interested.
 === Latest development version from git ===
 ==== Download pmbootstrap ====
