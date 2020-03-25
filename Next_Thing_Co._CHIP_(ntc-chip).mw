@@ -67,18 +67,58 @@ The CHIP has two different flashing modes:
 * FEL mode: used to flash bootloader and rootfs
 * Fastboot mode: used to flash rootfs
 
-To enter FEL mode:
+
+To enter '''FEL''' mode:
 * Connect the FEL and GND pins with a jumper cable
 * Power on the CHIP
 
-To enter Fastboot mode:
+To enter '''Fastboot''' mode:
 * Connect an serial (UART) USB adapter to UART1-TX, UART1-RX and GND
 * Power on the CHIP
 * Press enter during boot up to access the U-Boot console
 * On the console type `fastboot 0`
 
-== Installation ==
+== Create the UBIfs image ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+* Configure the installation
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+</syntaxhighlight>
+* Build the system
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install
+</syntaxhighlight>
+
+In `workdir/chroot_rootfs_ntc-chip` there is the rootfs for your ntc-chip
+The following commands needs to be launched from your pmbootstrap workdir
+* Copy dtb from linux-ntc-chip
+<syntaxhighlight lang="shell-session">
+$ sudo mkdir chroot_rootfs_ntc-chip/boot/dtbs
+$ sudo cp cache_git/pmaports/device/testing/linux-ntc-chip/sun5i-r8-chip.dtb chroot_rootfs_ntc-chip/boot/dtbs/
+</syntaxhighlight>
+* Rename the linux kernel
+<syntaxhighlight lang="shell-session">
+$ sudo cp chroot_rootfs_ntc-chip/boot/vmlinuz-ntc-chip chroot_rootfs_ntc-chip/boot/zImage
+</syntaxhighlight>
+
+Install mtd-utils from your distro repositories e.g. `pacman -S mtd-utils`
+* Create the UBIfs image
+<syntaxhighlight lang="shell-session">
+$ mkdir ubi
+$ sudo mkfs.ubifs -m 16384 -e 0x1f8000 -c 2000 -r chroot_rootfs_ntc-chip ubi/ubifs.img
+$ sudo chown youruser:youruser ubi/ubifs.img
+$ ubinize -o ubi/ubi.img -m 16384 -p 2MiB -s 16384 cache_git/pmaports/device/testing/device-ntc-chip/ubinize.cfg
+$ img2simg ubi/ubi.img ubi/ubi.img.sparse 2097152
+</syntaxhighlight>
+
+== Flash the UBIfs image ==
+* Enter fastboot mode as described above
+* On your computer
+<syntaxhighlight lang="shell-session">
+$ sudo fastboot erase UBI
+$ sudo fastboot flash UBI ubi/ubi.img.sparse
+$ sudo fastboot reboot
+</syntaxhighlight>
 
 == See also ==
 <!--
