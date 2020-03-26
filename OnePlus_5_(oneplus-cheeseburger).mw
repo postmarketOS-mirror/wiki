@@ -296,6 +296,38 @@ And that's about it for now. Next up would be USB as I've been doing this blind 
 
 Check the links below for source code.
 
+=== Building ===
+It's easiest to build mainline (for pmOS anyway) with [https://wiki.postmarketos.org/wiki/Mainlining_Guide#pmbootstrap_setup pmbootstrap], so get that setup and remember the install location (in this guide <code>~/pmOS/pmbootstrap</code> is an example).
+
+After you've run through the [https://wiki.postmarketos.org/wiki/OnePlus_5_(oneplus-cheeseburger)#Installation installation steps found on this site at least once] please <code>pmbootstrap extract</code> & save the produced downstream <code>boot.img</code> to a known location as we'll reuse the initramfs found inside later.
+
+Next start following the instructions below:
+
+  git clone https://github.com/JamiKettunen/linux-mainline-oneplus5
+  cd linux-mainline-oneplus5/
+  source ~/pmOS/pmbootstrap/helpers/envkernel.sh     # adjust to match where you've cloned PMB yourself
+  make defconfig
+  make -j`nproc`
+
+=== Boot image generation ===
+Now that the kernel image and DTBs have been built we can assemble a bootable Android-friendly boot.img (assuming you're still in the root of the cloned kernel dir):
+
+  pmbootstrap chroot -- apk add abootimg android-tools mkbootimg dtbtool
+  export DEVICE=`pmbootstrap config device | cut -d'-' -f2` WORK=`pmbootstrap config work` PMOS_BOOT_IMG_PATH="~/pmOS/downstream-boot.img"
+  export TEMP="$WORK/chroot_native/tmp/mainline/" DTB="$PWD/.output/arch/arm64/boot/dts/qcom/msm8998-$DEVICE.dtb"
+  rm -r "$TEMP"; mkdir -p "$TEMP"
+  cat .output/arch/arm64/boot/Image.gz "$DTB" > "$TEMP/Image.gz-dtb"
+  cp "$PMOS_BOOT_IMG_PATH" "$TEMP/boot.img"          # replace "$PMOS_BOOT_IMG_PATH" with the known location of a pmOS downstream boot.img
+  pmbootstrap chroot -- abootimg -u /tmp/mainline/boot.img -k /tmp/mainline/Image.gz-dtb -c "bootsize=67108864"
+
+At this point you get to choose whether to <code>boot</code> the new kernel image or more "permanently" <code>flash</code> it on the device's boot partition instead ^^
+
+Boot: <code>pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img</code>
+
+Flash: <code>pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img</code>
+
+'''NOTE: Sometimes running <code>pmbootstrap flasher list_devices</code> once is needed to get the device detected in fastboot mode!'''
+
 == Links ==
 * {{MR|908|pmaports}} Initial merge request
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-oneplus-cheeseburger Device package]
