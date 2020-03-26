@@ -53,18 +53,7 @@ Download mode: VolDown while powering on
 Recovery mode: VolUp while powering on
 
 == Installation ==
-* First make a zip with <code>pmbootstrap install --android-recovery-zip</code>. 
-* Boot in to the TWRP recovery
-* Click on "Advanced" -> "ADB Sideload", then "Swipe to Start Sideload"
-* Connect your tablet to your PC
-* Start the sideloading process from your PC:
-
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap flasher --method=adb sideload
-</syntaxhighlight>
-
-
-If you don't have TWRP, you can try to flash the system with <code>pmbootstrap flasher flash_rootfs</code>.
+Boot into download mode (Power+VolDown), then run pmbootstrap flasher flash_rootfs and pmbootstrap flasher flash_kernel.
 
 == USB OTG ==
 USB OTG should work out of the box. To use keyboards and mice, do <code>sudo apk add xf86-input-keyboard xf86-input-mouse</code>
