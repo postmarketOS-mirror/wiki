@@ -10,7 +10,7 @@
 | gpu = Adreno 506
 | storage = 32 GB
 | memory = 2 GB
-| architecture = aarch64
+| architecture = aarch64 (stock kernel is armv7 binder)
 | whet_dhry = 
 | status_usbnet = 
 | status_flashing = 
