@@ -67,7 +67,7 @@ Hold power button + vol down button, enter<code>→fastboot protocol</code>
 == Memo ==
 Using GCC6,
 
-Direct flashing doesn't work, <code>pmbootstrap install --sdcard</code>method is OK,
+Mostly flashing method doesn't work, but <code>pmbootstrap install --sdcard</code> is OK,
 
 boot to<code>pmbootstrap flasher boot</code>
 
