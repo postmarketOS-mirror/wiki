@@ -15,14 +15,14 @@
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_battery = Y
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
