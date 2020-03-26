@@ -29,9 +29,9 @@
 | status_bluetooth = N
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
-| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
-| status_sms = <!-- Sending and receiving short messages works as intended. -->
-| status_calls = <!-- Talking to other people over the cellular network. -->
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = Y
 
