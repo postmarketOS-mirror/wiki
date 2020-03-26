@@ -62,6 +62,10 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 
+* Apply for bootloader unlocking file at ZUI official website (Chinese): https://www.zui.com/iunlock
+* Following official guides to unlock the bootloader
+* After unlocking, you get a menu to select boot mode every time the phone powers on. Choose bootloader to enter fastboot mode.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
