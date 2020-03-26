@@ -116,10 +116,5 @@ userdata -> /dev/block/mmcblk0p33
 </syntaxhighlight>
 
 == See also ==
-* {{MR|1097|pmaports}} Initial merge request
-
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-nokia-beatles Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-nokia-beatles Kernel package]
