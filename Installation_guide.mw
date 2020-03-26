@@ -1,4 +1,4 @@
-=== Introduction ===
+== Introduction ==
 If you own a device which has been ported to postmarketOS, then this page will help you to obtain, build, and install postmarketOS to this device.
 
 Any commands that are expected to be entered into a terminal are prefixed with <code>$</code>. You should not enter that character, it is merely to designate that the following commands are intended to be input/executed within a terminal. For example, the following command to list contents of the current working directory, <code>ls</code>, will be mentioned on this page as:
@@ -7,19 +7,19 @@ Any commands that are expected to be entered into a terminal are prefixed with <
 $ ls
 </syntaxhighlight>
 
-=== Requirements ===
+== Requirements ==
 * We assume that you are using Linux. If you don't have Linux installed, please [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/ set up a virtual machine with VirtualBox] first. [http://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux/ Windows subsystem for Linux (WSL)] does '''not''' work!
 * The host operating system needs to run Linux 3.17 or newer (first kernel with getrandom syscall)
 * A few gigabytes of free space
 
-=== Safety first ===
+== Safety first ==
 Beware that by following these instructions, you will '''overwrite''' everything that is currently on your device. You will lose all data and it might not be possible to restore the original operating system. There is a risk of hard-bricking your device, meaning it may be impossible to recover without specialist tools.
 
 Fortunately, most Android-based devices are fairly foolproof; even if your flashed images don't boot, you can still access the flashing mode and fix the mistakes. For details, have a look at your [[devices|device-specific wiki page]]. 
 
 '''TL;DR: do your research, don't have important data on your device.'''
 
-=== Initialization ===
+== Initialization ==
 [[installing pmbootstrap|Install pmbootstrap]], our lightweight postmarketOS development and installation tool. If you already had pmbootstrap installed make sure that it is updated to the latest version and update your files, to get the newest patches:
 
 <syntaxhighlight lang="shell-session">
@@ -32,14 +32,14 @@ Then run the following in a Linux terminal:
 $ pmbootstrap init
 </syntaxhighlight>
 
-==== Work path ====
+=== Work path ===
 Make sure that the location has a few GB of space available, and that it is a relatively standard Linux filesystem (one that supports device nodes and symbolic links). Notably ''unsupported'' are: eCryptFS, encfs, fat, ntfs, nfs shares, tmpvs, and VirtualBox shared folders.
 <pre>
 Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
 Work path [/home/user/.local/var/pmbootstrap]:
 </pre>
 
-==== Device ====
+=== Device ===
 Type in the vendor and code-name of your device as listed [[Devices|here]], and optionally a custom username.
 <pre>
 Choose your target device vendor (either an existing one, or a new one for porting).
@@ -51,7 +51,7 @@ Available codenames (43): a3ulte, a5ulte, a5y17lte, apexq, ariesve, espresso10, 
 </pre>
 
 
-==== User interface ====
+=== User interface ===
 Carefully choose the user interface you would like to install. Check your [[devices|device's wiki page]] for interfaces that are known to be working with your device. Weston and XFCE4 are usable on devices which do not have hardware 3D acceleration (most of them!), the others are notably slowed down. Please read the corresponding [[Interfaces|user interface]] article for information about how usable each interface is and keep in mind that most of them are not that usable yet.
 <pre>
 Available user interfaces (11): 
@@ -71,7 +71,7 @@ User interface [weston]:
 </pre>
 
 
-==== More questions ====
+=== More questions ===
 Unless you know that you want to change something, it's fine to anwer with the defaults here by just pressing the <code>return</code> key.
 <pre>
 Build options: Parallel jobs: 3, ccache per arch: 5G
@@ -88,11 +88,11 @@ It only takes a few seconds, and all packages are cached.
 Done!
 </pre>
 
-=== Installation and flashing ===
+== Installation and flashing ==
 {{note|Not all installation and flash methods work for all devices. '''Please check your [[devices|device wiki page]] for further instructions!''' Below you will find generic explanations of what the <code>install</code> and <code>flash</code> actions do, just in case the installation instructions are missing for your device. If that is the case, please extend the device wiki accordingly.}}
 {{note|When running the install process, you will be prompted for a password. If your user interface doesn't allow a full keyboard at the lock screen, or you do not have a keyboard attached to your device, you should create a numeric password.}}
 
-==== pmbootstrap install ====
+=== pmbootstrap install ===
 The install action essentially does the following:
 * Build a chroot with the full installation as it will be placed on the device
 * Copy that to an encrypted system image file
@@ -113,7 +113,7 @@ $ pmbootstrap install --help
 
 It is possible to enable full disk encryption (FDE) with the <code>--fde</code> parameter, but it is experimental, and might not work at this point. (if, for example, the FDE interface [[osk-sdl]] has not been ported to your device yet).
 
-==== pmbootstrap flash ====
+=== pmbootstrap flash ===
 This command wraps various flash programs (e.g. fastboot and heimdall) with a common syntax, and automatically fills out the paths to the generated files. Usually you need to flash the system image (unless you did the SD card or recovery zip installation):
 
 <syntaxhighlight lang="shell-session">
