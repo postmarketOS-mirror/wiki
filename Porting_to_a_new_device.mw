@@ -113,9 +113,25 @@ $ pmbootstrap log
 == Kernel package ==
 While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kernel mainline kernel] for all devices in the long run, this certainly can not be done in one step when porting to a new device. What we do in the meantime is shipping a Linux kernel fork, that is known to work with this device (e.g. from Android). The steps below are the straight forward changes you need to compile your kernel. For details see the [[vendor kernel specific package]] article.
 
-=== Source code ===
+=== APKBUILD file ===
 {{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
-First of all, [[How to find device-specific information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6, may compile with gcc4, not yet tested), then and adjust the <code># Source</code> section in the <code>aports/device/testing/linux-wiki-example/APKBUILD</code> file (replacing linux-wiki-example with your device, i.e. linux-htc-espresso). In case you have ''not'' cloned <code>pmbootstrap</code> from git, the device folder (from aports/device/) will be in <code>cache_git/pmaports</code> inside your work folder (default: <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>). For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code>, enter: <code>_repository="android_kernel_motorola_ghost"</code>.
+To properly compile a linux kernel for your device, pmbootstap uses a so called <code>APKBUILD</code> file where you'll need to fill some lines according to your port. Basically you will have to provide here at least some info about you (as a contributor/maintainer of the new port), some links to the kernel sources the compiler must use and kernel version, and the names of patch files that you will need to add for the compiler to compile ! (see above)
+
+Where to find your kernel's device related APKBUILD file ?
+
+In case you cloned pmbootstrat form git :	 <code>/"workdir"/aports/device/linux-"wiki-example"/APKBUILD</code>
+
+In case you have ''not'' cloned pmbootstrap from git : <code>/"workdir"/cache_git/pmaports/device/testing/linux-"wiki-example"/APKBUILD</code>
+
+''Remplace "workdir" by the path you provided at the first step of <code>pmbootstrap init</code> process and "wiki-example" by the brand and model you provided there to...''
+
+{{note| Reminder : There is one <code>APKBUILD</code> file for the kernel package AND one for the sytem package!}}
+
+=== Source code ===
+First of all, [[How to find device-specific information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6, may compile with gcc4, not yet tested).
+Then adjust the <code># Source</code> section in the <code>linux-wiki-example/APKBUILD</code> file (replacing linux-wiki-example with your device, i.e. linux-htc-espresso). 
+
+For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code>, enter: <code>_repository="android_kernel_motorola_ghost"</code>.
 
 If your kernel is not in a LineageOS repository but somewhere else, you also have to change the URL in <code>source</code> accordingly, e.g. to
 <code>https://github.com/jmrohwer/${_repository}/archive/${_commit}.tar.gz</code> if the kernel is in <code>https://github.com/jmrohwer/TF101-GNU-kernel</code>. (You still need to set <code>_repository</code> and <code>_commit</code>.) If your kernel is only distributed as a zip/tarball/etc, you can unpack it, [https://help.github.com/en/github/getting-started-with-github/create-a-repo create your own GitHub repository for it], and then use that repository's URL. (Or you can try to [https://gitlab.com/postmarketOS/pmaports/issues/423 build with local Kernel source] for testing and create a repository later on.)
@@ -124,8 +140,8 @@ If your kernel is not in a LineageOS repository but somewhere else, you also hav
 _flavor="wiki-example" # Be sure it's in form of <vendor-codename>, e.g. motorola-ghost
 
 # Source
-_repository="(CHANGEME!)"
-_commit="ffffffffffffffffffffffffffffffffffffffff"
+_repository="(CHANGEME!)"     e.g. android_kernel_motorola_ghost
+_commit="ffffffffffffffffffffffffffffffffffffffff"     e.g. c4914db2f65ef63548b0af5d7b37d131581c9c62
 _config="config-$_flavor.$arch"
 source="
     $pkgname-$_commit.tar.gz::https://github.com/LineageOS/$_repository/archive/$_commit.tar.gz
@@ -135,6 +151,11 @@ source="
 "
 builddir="$srcdir/$_repository-$_commit"
 </syntaxhighlight>
+
+''Where to find the commit number ?
+
+''From the example page <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code> click on the code (e.g. c4914db2) next to "Latest commit" at the right top corner of the directories box. Then copy/paste the end of the url of the current page of your web browser.
+
 
 === Kernel version ===
 In the repository with the kernel source code, you will find a <code>Makefile</code>. Open this file and adjust the <code>pkgver</code> in the kernel <code>APKBUILD</code> to the information from the <code>VERSION</code>, <code>PATCHLEVEL</code> and <code>SUBLEVEL</code> variables (e.g. [https://github.com/LineageOS/lge-kernel-mako/blob/c76e1bc83219088b2ff1b2b5709a88ebda5e54e4/Makefile#L1-L3 3.4.0]).
