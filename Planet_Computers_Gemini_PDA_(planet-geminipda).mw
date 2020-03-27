@@ -8,11 +8,12 @@
 | originalsoftware = Android 7.1 on Linux 3.18
 | chipset = MediaTek MT6797P/X Helio X25/X27
 
-| cpu = 
+| cpu = 2x 2.6 GHz Cortex-A72, 4x 2.0 GHz Cortex-A53, 4x 1.6 GHz Cortex-A53
 | gpu = Mali-T880 MP4
 | storage = 64 GB
 | display = 2160x1080
 | memory = 4 GB
+| architecture = aarch64
 
 | status_usbnet = Y
 | status_flashing = N
