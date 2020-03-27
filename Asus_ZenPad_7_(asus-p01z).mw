@@ -36,7 +36,7 @@
 | booting = no
 }}
 == Owners ==
-* [[User:Eloy|Eloy]]
+{{Device owners}}
 
 == Notes ==
 This x86 tablet has a Mali GPU, which is quite a weird combination. The Lima driver has not yet been tested on x86. It also uses the Simple Firmware Interface which is being deprecated from the mainline kernel. This device has a very low probability of getting support.
