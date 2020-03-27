@@ -1,0 +1,105 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Note II
+| codename = samsung-n7100
+| image = File:Samsung Galaxy Note II.png
+| imagecaption = Samsung Galaxy Note II
+| releaseyear = 2012
+| originalsoftware = Android 4.1.1 on Linux 3.0.31
+| chipset = Exynos 4412 Quad
+| cpu = Quad-core 1.6 GHz Cortex-A9
+| gpu = Mali-400MP4
+| storage = 16/32/64 GB
+| display = 720x1280 AMOLED
+| memory = 2 GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+== Contributors ==
+* Bloo
+
+== Basic info ==
+
+* [http://www.gsmarena.com/samsung_galaxy_note_ii_n7100-4854.php more specs]
+* [https://github.com/bigbiff/android_kernel_samsung_smdk4412 Unofficial TWRP kernel repo]
+
+== What works ==
+
+* Compiling the kernel
+* Flashing with Heimdall
+* Booting initramfs
+* SSH
+* Weston
+* Touch screen fully calibrated
+
+== What does not work ==
+
+* N/A
+
+== Not tested ==
+
+* Sound
+* WiFi (needs kernel modules compiling first)
+
+== How to enter flash mode ==
+
+Press and hold &quot;volume down + home + power&quot; simultaneously. Then click volume up to confirm.
+
+== Installing system ==
+
+First build the device package:
+
+<source lang="shell-session">$ pmbootstrap build device-samsung-n7100</source>
+<!-- Then you need to configure the kernel before building with <code>menuconfig</code> like so:
+
+<pre class="shell">./pmbootstrap.py menuconfig linux-samsung-n7100</pre>
+You can hold down the enter key while it asks you the y/n questions until you get to the menu, then you want to enable the <code>DEVTMPFS</code> kconfig flag located in <code>Device Drivers ---&gt; Generic Driver Options</code>. -->
+
+Now you want to compile the kernel itself:
+
+<source lang="shell-session">$ pmbootstrap build linux-samsung-n7100 --arch=armhf</source>
+Once you've successfully compiled the kernel you can install the OS to an SD card or your system partition. I've only tried an SD card:
+
+<source lang="shell-session">$ pmbootstrap install --sdcard=/dev/sdb</source>
+You will need a 1GB SD card in order for this to work, also keep in mind that this will format the sd card.
+
+Please also note, that you cannot flash directly to the system due to an error in Heimdall.
+
+Next you want to put your phone in download mode by holding <code>power + vol down + home</code> all together until you enter download mode, press volume up again to continue past the warning.
+
+Now you can flash the boot image:
+
+<source lang="shell-session">$ pmbootstrap flasher flash_kernel</source>
+We're using <code>flash_kernel</code> because the N7100 packages its kernel and initfs file into one boot image, where as some other phones have separate partitions for each '''unlike''' the N7100.
+
+If everything checks out OK, your N7100 should reboot and you should see the Samsung logo. Dont worry if the screen is flashing on and off and its taking a while, after a minute or 2 it should show up the pmOS splash!
+
+
+== Mainline Kernel ==
+There is currently no mainline kernel available but it should be possible to mainline this device. Have a look at [http://blog.forkwhiletrue.me/pages/midas-mainline/ Midas on Mainline] for work on mainlining very similar devices.
+
+Work to create a DTS for this device can be found here: [https://github.com/fourkbomb/linux/blob/8ce0752f2cc22b8f8fa980c21be802ea387f9a86/arch/arm/boot/dts/exynos4412-n7100.dts]
+
+The n710x upstream DTS is here: [https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/exynos4412-n710x.dts]
+
+Replicant is interested in further mainlining this device and replacing the bootloader with u-boot and would like to collaborate with us [https://github.com/postmarketOS/pmbootstrap/pull/293#issuecomment-395889596].
+
+This device's Qualcomm Gobi MDM9615 Modem seems to have some mainline kernel support: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/clk/qcom/gcc-mdm9615.c?h=v5.2.7
