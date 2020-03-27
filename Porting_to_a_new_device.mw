@@ -115,7 +115,7 @@ While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kern
 
 === APKBUILD file ===
 {{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
-To properly compile a linux kernel for your device, pmbootstap uses a so called <code>APKBUILD</code> file where you'll need to fill some lines according to your port. Basically you will have to provide here at least some info about you (as a contributor/maintainer of the new port), some links to the kernel sources the compiler must use and kernel version, and the names of patch files that you will need to add for the compiler to compile ! (see above)
+To properly compile a Linux kernel for your device, pmbootstap uses a so called <code>APKBUILD</code> file where you'll need to fill some lines according to your port. Basically you will have to provide here at least some infos about you (as a contributor/maintainer of the new port), some links to the kernel sources the compiler must use and kernel version, and the names of patch files that you will need to add for the compiler to compile ! (see above)
 
 Where to find your kernel's device related APKBUILD file ?
 
@@ -123,9 +123,9 @@ In case you cloned pmbootstrat form git :	 <code>/"workdir"/aports/device/linux-
 
 In case you have ''not'' cloned pmbootstrap from git : <code>/"workdir"/cache_git/pmaports/device/testing/linux-"wiki-example"/APKBUILD</code>
 
-''Remplace "workdir" by the path you provided at the first step of <code>pmbootstrap init</code> process and "wiki-example" by the brand and model you provided there to...''
+''Replace "workdir" by the path you provided at the first step of <code>pmbootstrap init</code> process and "wiki-example" by the brand and model you provided there to...''
 
-{{note| Reminder : There is one <code>APKBUILD</code> file for the kernel package AND one for the sytem package!}}
+{{note| Reminder : There is one <code>APKBUILD</code> file for the kernel package AND one for the system package!}}
 
 === Source code ===
 First of all, [[How to find device-specific information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6, may compile with gcc4, not yet tested).
@@ -154,7 +154,7 @@ builddir="$srcdir/$_repository-$_commit"
 
 ''Where to find the commit hash ?
 
-''From the example page <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code> click on the code (e.g. c4914db2) next to "Latest commit" at the right top corner of the directories box. Then copy/paste the end of the url of the current page of your web browser.
+''From the example page <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code> click on the code (e.g. c4914db2) next to "Latest commit" at the right top corner of the directories box. Then copy/paste the end of the URL of the current page of your web browser.
 
 
 === Kernel version ===
