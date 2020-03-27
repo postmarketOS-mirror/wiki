@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = OnePlus
-| name =  5
-| codename = oneplus-cheeseburger
+| name =  5/5T
+| codename = oneplus-cheeseburger, oneplus-dumpling
 | image = File:OnePlus-5-GNOME-Mainline.jpg
 | imagecaption = 
 | releaseyear = 2017
@@ -9,7 +9,7 @@
 | chipset = Qualcomm MSM8998 Snapdragon 835
 | cpu = 4x 2.45 GHz Cortex-A73 + 4x 1.90 GHz Cortex-A53
 | gpu = Adreno 540
-| display = 1080x1920 Optic AMOLED
+| display = 1080x1920/1080x2160 Optic AMOLED (5/5T)
 | storage = 64 or 128 GB UFS 2.1
 | memory = 6 or 8 GB LPDDR4X RAM
 | architecture = aarch64
@@ -59,7 +59,7 @@ If you own this device, you can add the text below or something similar under yo
 {{My devices}}
 -->
 == Fastboot mode ==
-The OnePlus 5 uses <code>fastboot</code> as its flashing protocol.
+The OnePlus 5/5T uses <code>fastboot</code> as its flashing protocol.
 
 To enter fastboot mode, hold {{button|Volume Up}} while powering on the device. Release the button when <code>FastBoot Mode</code> can be seen on the display.
 
