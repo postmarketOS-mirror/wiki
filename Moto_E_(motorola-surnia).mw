@@ -100,7 +100,7 @@ ln -s /lib/firmware/postmarketos/* /lib/firmware/
 </source>
 
 == Modem ==
-Make the necesary links for qcom_rmtfs
+Make the necesary links for rmtfs
 
 <source>
 cd /boot
@@ -110,7 +110,7 @@ ln -s /dev/disk/by-partlabel/fsg modem_fsg
 </source>
 
 Install necessary software
-<source>apk add msm-modem-downstream qcom_rmtfs libsmdpkt_wrapper libqipcrtr4msmipc ofono</source>
+<source>apk add msm-modem-downstream rmtfs libsmdpkt_wrapper libqipcrtr4msmipc ofono</source>
 
 Start the wcnss-wlan service to initialize the wifi card (helps the modem?)
 <source>/etc/init.d/wcnss-wlan start</source>
@@ -118,11 +118,11 @@ Start the wcnss-wlan service to initialize the wifi card (helps the modem?)
 Start a tmux for multiple windows
 <code>tmux</code>
 
-Start qcom_rmtfs on a terminal
+Start rmtfs on a terminal
 
 <source>
 export LD_PRELOAD=/usr/lib/preload/libqipcrtr4msmipc.so
-qcom_rmtfs -v
+rmtfs -v
 </source>
 
 Start ofonod on another terminal
