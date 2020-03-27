@@ -7,11 +7,12 @@
 | releaseyear = 2014
 | originalsoftware = Android 4.2.2
 | chipset = MediaTek MT6572
-| cpu = ARM-A7 @ 1.2GHz (2 cores) (32 bit)
-| gpu = ARM Mali-400
-| storage = 512MB
+| cpu = 2x 1.2 GHz Cortex-A7
+| gpu = Mali-400
+| storage = 512 MB
 | display = 480x854
-| memory = 256MB
+| memory = 256 MB
+| architecture = armv7
 | booting = no
 }}
 
