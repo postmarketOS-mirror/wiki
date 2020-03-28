@@ -83,8 +83,14 @@ PostmarketOS loads an initramfs together with the kernel, while original Debian 
 
 To boot PostmarketOS we need to change the U-Boot configuration to support the initramfs.
 
-From the U-boot serial console issue the following commands
+From the U-boot serial console issue the following commands:
+* Print the current value of the `bootcmd`, save it in case you want to restore it later.
 <syntaxhighlight lang="shell-session">
+> printenv bootcmd
+</syntaxhighlight>
+* Change the `bootcmd` value
+<syntaxhighlight lang="shell-session">
+> printenv bootcmd
 > setenv bootcmd "gpio set PB2; ${bootcmd_fel}; ${boot_initrd};"
 > saveenv
 </syntaxhighlight>
