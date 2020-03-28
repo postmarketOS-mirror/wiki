@@ -5,11 +5,13 @@ Please join our chat, so we can help you with using postmarketOS in real time. T
 == Matrix ==
 In case you have no experience in using IRC, this is the easier method. You can just open a website in your browser (using the [https://riot.im Riot] client) to enter the channel.
 
-* [https://matrix.to/#/#main:postmarketos.org #main:postmarketos.org] (main channel)
+* [https://matrix.to/#/#main:postmarketos.org #main:postmarketos.org] (main channel, for user questions and general discussion)
+* [https://matrix.to/#/#porting:postmarketos.org #porting:postmarketos.org] (for device porting, getting kernels to compile, ...)
+* [https://matrix.to/#/#devel:postmarketos.org #devel:postmarketos.org] (for all other postmarketOS development, e.g. pmbootstrap, tools, ...)
+* [https://matrix.to/#/#mainline:postmarketos.org #mainline:postmarketos.org] (mainline kernel development)
 * [https://matrix.to/#/#lowlevel:postmarketos.org #lowlevel:postmarketos.org] (bootloader hacking, assembly etc.)
 * [https://matrix.to/#/#osk-sdl-dev:postmarketos.org #osk-sdl-dev:postmarketos.org] ([[osk-sdl]] support and development)
 * [https://matrix.to/#/#offtopic:postmarketos.org #offtopic:postmarketos.org] (other topics)
-* [https://matrix.to/#/#mainline:postmarketos.org #mainline:postmarketos.org] (mainline kernel development)
 
 After you register at any Matrix homeserver and join the channel, the offline history will be saved automatically. So, your questions can be answered even when you are offline!
 
@@ -20,8 +22,8 @@ After you register at any Matrix homeserver and join the channel, the offline hi
 The following channels are bridged to Freenode, so that everyone can talk together (mind the <code>##</code> for offtopic!):
   #postmarketos
   ##postmarketos-offtopic
-  #postmarketos-lowlevel
   #postmarketos-mainline
+  #postmarketos-lowlevel
 
 Due to recent spam, you will likely '''not be able to talk''' (or maybe even to join) before you [https://freenode.net/kb/answer/registration register your username on freenode] (visit the link or just read on to the next section).
 
