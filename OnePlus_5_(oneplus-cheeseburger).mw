@@ -330,6 +330,7 @@ Flash: <code>pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img</c
 
 == Links ==
 * {{MR|908|pmaports}} Initial merge request
+* {{MR|1110|pmaports}} OnePlus 5T merge request
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-oneplus-cheeseburger Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-oneplus-cheeseburger Kernel package]
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
