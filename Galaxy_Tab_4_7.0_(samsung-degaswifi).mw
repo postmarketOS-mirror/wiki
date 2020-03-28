@@ -1,15 +1,15 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Tab 4 7.0 Wi-Fi (SM-T230)
+| name = Galaxy Tab 4 7.0 Wi-Fi (SM-T230)
 | codename = samsung-degaswifi
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2
 | chipset = Marvell PXA 1088
-| cpu = Quad-core 1.2 GHz
+| cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Vivante GC1000
-| storage =  8GB
+| storage = 8 GB
 | display = 800x1280 TFT
-| memory = 1.5GB
+| memory = 1.5 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
