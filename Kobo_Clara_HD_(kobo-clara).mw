@@ -41,3 +41,4 @@
 == See also ==
 * u-boot and kernel source: https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx6sll-clara
 * blog with interesting info: http://yingtongli.me/blog/tag/clara-hd/
+* upstream dts: https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/imx6sll-kobo-clarahd.dts
