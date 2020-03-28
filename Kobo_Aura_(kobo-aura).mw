@@ -59,6 +59,7 @@ Kernel compilation. The lowest working kernel for postmarketOS is 3.x, while the
 
 == See also ==
 [https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aura Official kernel source (Linux 2.6)]
+[https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/imx50-kobo-aura.dts Upstream dts]
 <!--
 Link to related GitHub issues or pull requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{github|CHANGEME}} Initial pull request
