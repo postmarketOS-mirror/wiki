@@ -119,9 +119,9 @@ $ img2simg ubi/ubi.img ubi/ubi.img.sparse 2097152
 * Enter fastboot mode as described above
 * On your computer
 <syntaxhighlight lang="shell-session">
-$ sudo fastboot erase UBI
-$ sudo fastboot flash UBI ubi/ubi.img.sparse
-$ sudo fastboot reboot
+$ fastboot erase UBI
+$ fastboot flash UBI ubi/ubi.img.sparse
+$ fastboot reboot
 </syntaxhighlight>
 
 == See also ==
