@@ -1,3 +1,46 @@
+{{Infobox device
+| manufacturer = Nokia
+| name = N950
+| codename = nokia-n950
+| image = File:nokia-n950.jpg
+| imagecaption = 
+| releaseyear = 2011
+| originalsoftware = MeeGo Harmattan 1.2
+| chipset = TI OMAP 3630
+| cpu = 1x 1.0 GHz Cortex-A8
+| gpu = PowerVR SGX530
+| storage = 16 GB
+| display = 480x854 TFT
+| memory = 1 GB
+| architecture = armv7
+| n-android = ✔
+| whet_dhry = 
+| status_usbnet = 
+| status_flashing =
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| booting = no
+}}
+
+== Kernel status ==
+
 v4.13 works, including display. Something in v4.14-rcs breaks the boot.
 
 More info about kernel status is at https://elinux.org/N950#Kernel_Status
+
+== See also ==
+* [https://en.wikipedia.org/wiki/Nokia_N950 Wikipedia page]
