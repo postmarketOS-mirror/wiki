@@ -34,7 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = Kernel compiles, SSH over USB works, wifi/BT ok, display and toucscreen working, can install any of the UIs.
 | booting = Y
-| pmoskernel = 3.4.0
+| pmoskernel = Mainline
 }}
 
 == Contributors ==
