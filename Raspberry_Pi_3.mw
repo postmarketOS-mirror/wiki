@@ -82,5 +82,6 @@ File:Raspberry-pi-xfce2.jpg|thumb|XFCE4
 * [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
 * {{github|1501}} initial PR
 * {{MR|125|pmaports}} New device: Raspberry Pi Zero with Ethernet over USB enabled
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-raspberry-pi3 Device package]
 
 [[Category:Devices]]
