@@ -1,13 +1,13 @@
 {{Infobox device
 | image = File:Kylevess.jpg
 | manufacturer = Samsung
-| name = Galaxy trend lite
+| name = Galaxy Trend Lite
 | imagecaption = Samsung Galaxy Trend Lite (samsung-kylevess) running htop, glxgears and thunar with the XFCE4 interface
 | codename = samsung-kylevess
 | releaseyear = 2013
 | originalsoftware = Android 4.1.2 on Linux 3.4.5
 | chipset = Broadcom BCM21664A
-| cpu = 1.2GHz
+| cpu = 1.2 GHz
 | gpu = Broadcom VideoCore IV
 | storage = 4 GB + SD card
 | display = 480 x 800 TFT
