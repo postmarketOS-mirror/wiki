@@ -93,15 +93,5 @@ Probably a custom keymap is needed
 
 == See also ==
 * {{MR|496|pmaports}} Initial merge request
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-zanin Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-samsung-zanin Kernel package]
