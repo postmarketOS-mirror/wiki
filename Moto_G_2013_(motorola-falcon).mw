@@ -72,3 +72,5 @@ Similar to the [[Moto_G_2014_(motorola-titan)|Moto G 2014]], the LED can be cont
 
 * [https://github.com/LineageOS/android_kernel_motorola_msm8226 android_kernel_motorola_msm8226]
 * [https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/arch/arm/configs/falcon_defconfig defconfig]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-falcon Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-falcon Kernel package]
