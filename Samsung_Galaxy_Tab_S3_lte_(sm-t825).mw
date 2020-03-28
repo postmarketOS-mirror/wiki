@@ -1,17 +1,17 @@
 {{Infobox device
-| manufacturer = samsung
-| name =  galaxy tab s3 LTE
+| manufacturer = Samsung
+| name = Galaxy Tab S3 LTE
 | codename = sm-t825
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:sm-t825.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2017
 | originalsoftware = android 7.0
 | chipset =Qualcomm MSM8996 Snapdragon 820
 | cpu = Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)
 | gpu = Adreno 530
-| storage = 32GB Emmc
+| storage = 32 GB eMMC
 | display = 1536x2048 (264 PPI) HD Super AMOLED
-| memory = 4GB
+| memory = 4 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
