@@ -1,12 +1,13 @@
 {{Infobox device
 | manufacturer = NGM
 | name = WeMove Action
+| codename = ngn-wemove-action
 | image = File:NGM wemove action.png
 | imagecaption = NGM WeMove Action
 | releaseyear = 2012
 | originalsoftware = Android 2.3.6, Gingerbread
 | chipset = MediaTek MT6575
-| cpu = 1 GHz Cortex-A9 ARM v7
+| cpu = 1 GHz Cortex-A9
 | gpu = PowerVR SGX531 Ultra
 | storage = 512 MB
 | display = 240×320 QVGA
