@@ -138,7 +138,8 @@ startplasma-wayland \
         --exit-with-session=/usr/lib/libexec/startplasma-waylandsession
 </syntaxhighlight>
 
-
+Then restart lightdm
+ $ sudo rc-service lightdm restart
 
 == Photos ==
 <gallery>
