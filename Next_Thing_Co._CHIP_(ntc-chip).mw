@@ -84,7 +84,7 @@ To enter '''Fastboot''' mode:
 * Connect an serial (UART) USB adapter to UART1-TX, UART1-RX and GND
 * Power on the CHIP
 * Press enter during boot up to access the U-Boot console
-* On the console type `fastboot 0`
+* On the console type <code>fastboot 0</code>
 
 == Configure U-Boot ==
 PostmarketOS loads an initramfs together with the kernel, while original Debian installation only used the kernel.
@@ -92,11 +92,11 @@ PostmarketOS loads an initramfs together with the kernel, while original Debian 
 To boot PostmarketOS we need to change the U-Boot configuration to support the initramfs.
 
 From the U-boot serial console issue the following commands:
-* Print the current value of the `bootcmd`, save it in case you want to restore it later.
+* Print the current value of the <code>bootcmd</code>, save it in case you want to restore it later.
 <syntaxhighlight lang="shell-session">
 > printenv bootcmd
 </syntaxhighlight>
-* Change the `bootcmd` value
+* Change the <code>bootcmd</code> value
 <syntaxhighlight lang="shell-session">
 > printenv bootcmd
 > setenv bootcmd "gpio set PB2; ${bootcmd_fel}; ${boot_initrd};"
@@ -111,7 +111,7 @@ $ pmbootstrap init
 $ pmbootstrap install
 </syntaxhighlight>
 
-In `workdir/chroot_rootfs_ntc-chip` there is the rootfs for your ntc-chip
+In <code>workdir/chroot_rootfs_ntc-chip</code> there is the rootfs for your ntc-chip
 
 The following commands needs to be launched from your pmbootstrap workdir
 * Copy dtb from linux-ntc-chip
@@ -119,7 +119,7 @@ The following commands needs to be launched from your pmbootstrap workdir
 $ sudo cp cache_git/pmaports/device/testing/linux-ntc-chip/sun5i-r8-chip.dtb chroot_rootfs_ntc-chip/boot/
 </syntaxhighlight>
 
-Install mtd-utils from your distro repositories e.g. `pacman -S mtd-utils`
+Install mtd-utils from your distro repositories e.g. <code>pacman -S mtd-utils</code>
 * Create the UBIfs image
 <syntaxhighlight lang="shell-session">
 $ mkdir ubi
