@@ -6,7 +6,7 @@
 | imagecaption = xfce4 running on Moto E4
 | releaseyear = 2017
 | originalsoftware = Android 7.1 
-| chipset = Qualcomm MSM8937 Snapdragon 430
+| chipset = Qualcomm MSM8920 Snapdragon 427
 | cpu = 1.4GHz 
 | gpu = Qualcomm® Adreno™ 505 GPU
 | storage 16GB
@@ -34,8 +34,8 @@
 | status_calls = 
 | status = 
 | booting = yes
+| status_otg = Y
 | pmoskernel = 3.18.140
-| status_otg = Works
 ]}}
 
 == Contributors ==
