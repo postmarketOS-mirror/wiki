@@ -61,6 +61,7 @@ For the official KDE instructions on running Plasma Mobile, see [https://docs.pl
 == Taking screenshots ==
 In command line:
  qdbus org.kde.KWin /Screenshot org.kde.kwin.Screenshot.screenshotArea 0 0 1080 1920
+qdbus-qt5 is from package qt5-qttools.
 
 == Troubleshooting ==
 === Software rendering ===
