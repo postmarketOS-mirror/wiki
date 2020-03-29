@@ -16,6 +16,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:Mainpage-button|mainpage-button]] ''fancy buttons with icons used on the [[Main Page]]''
 * [[Template:milestone|milestone]] ''GitLab [https://gitlab.com/groups/postmarketOS/-/milestones milestone] link''
 * [[Template:Note|note]]
+* [[Template:Note-device-milestone-main|note-device-milestone-main]] ''WIP for [[Device_categorization|main device category]] with milestone link''
 * [[Template:Outdated|outdated]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
 * [[Template:Todo|todo]]
