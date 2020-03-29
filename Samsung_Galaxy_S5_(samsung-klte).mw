@@ -190,17 +190,17 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | Debug serial || /dev/ttyMSM0 || Working || v4.17-rc1 || yes, /dev/ttyHSL0
 |-
-| Volume &amp; home buttons || gpio-keys || Working || locally || yes
+| Volume &amp; home buttons || gpio-keys || Working || in pmOS kernel fork || yes
 |-
-| Regulator nodes || pma8084 || Working || locally || yes
+| Regulator nodes || pma8084 || Working || in pmOS kernel fork || yes
 |-
-| Internal storage || sdhci1 || Working || locally || yes
+| Internal storage || sdhci1 || Working || in pmOS kernel fork || yes
 |-
 | SD card storage || sdhci2 || Not working || || yes
 |-
-| USB Networking ||  || Working || || yes
+| USB Networking || usb_dwc3_qcom || Working || in pmOS kernel fork || yes
 |-
-| Display ||  || Not working || || yes
+| Display || panel-simple || Working || in pmOS kernel fork || yes
 |-
 | Touchscreen  ||  || Not working || || yes
 |-
@@ -212,9 +212,9 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | Bluetooth ||  || Not working || || no
 |-
-| GPU ||  || Not working || || works with libhybris (test_hwcomposer_7_1_caf)
+| GPU || drm_msm || Working || in pmOS kernel fork || works with libhybris (test_hwcomposer_7_1_caf)
 |-
-| Audio ||  || Not working || || with libhybris
+| Audio ||  || Not working || || with libhybris (pulseaudio-modules-droid)
 |-
 | Modem ||  || Not working || || powers up with libhybris
 |-
