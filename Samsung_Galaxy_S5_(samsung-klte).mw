@@ -210,6 +210,8 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | WiFi ||  || Not working || || yes
 |-
+| USB OTG ||  || Not working || || yes
+|-
 | Bluetooth ||  || Not working || || no
 |-
 | GPU || drm_msm || Working || in pmOS kernel fork || works with libhybris (test_hwcomposer_7_1_caf)
