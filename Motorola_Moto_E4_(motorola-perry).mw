@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto E4
-| codename = perry
+| name = Moto E4
+| codename = motorola-perry
 | image = File:Perry.jpeg
 | imagecaption = xfce4 running on Moto E4
 | releaseyear = 2017
-| originalsoftware = Android 7.1 
+| originalsoftware = Android 7.1
 | chipset = Qualcomm MSM8920 Snapdragon 427
-| cpu = 1.4GHz 
-| gpu = Qualcomm® Adreno™ 505 GPU
-| storage 16GB
+| cpu = 4x 1.4 GHz Cortex-A53
+| gpu = Adreno 505
+| storage = 16 GB
 | display = 720x1280 IPS LCD
-| memory = 2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -36,7 +36,7 @@
 | booting = yes
 | status_otg = Y
 | pmoskernel = 3.18.140
-]}}
+}}
 
 == Contributors ==
 *lastramses
@@ -69,6 +69,7 @@ $ pmbootstrap flasher flash_kernel<br>
 $ pmbootstrap flasher flash_rootfs<br>
 
 == See also ==
+* {{MR|1111|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
