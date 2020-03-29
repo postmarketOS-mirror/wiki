@@ -21,6 +21,8 @@ After you register at any Matrix homeserver and join the channel, the offline hi
 
 The following channels are bridged to Freenode, so that everyone can talk together (mind the <code>##</code> for offtopic!):
   #postmarketos
+  #postmarketos-porting
+  #postmarketos-devel
   ##postmarketos-offtopic
   #postmarketos-mainline
   #postmarketos-lowlevel
