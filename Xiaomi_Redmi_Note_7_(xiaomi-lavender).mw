@@ -116,10 +116,36 @@ This is still a work-in-progress. If you want to test something, or help in the 
  pmbootstrap flasher flash_rootfs
  pmbootstrap flasher flash_vbmeta
 
+== Tested UIs ==
+On downstream vendorkernel X11 based UIs seem to not work, but wayland based do:
+* weston
+* plasma-mobile
+
+=== Running Plasma Mobile UI on framebuffer backend ===
+Edit kwin wrapper startup script
+ $ sudo nano /usr/bin/kwinwrapper
+Comment out existing startplasma invocation command at the end of file and replace it with
+<syntaxhighlight lang="shell">
+export KWIN_COMPOSE=QPainter
+export GALLIUM_DRIVER=softpipe
+export LIBGL_ALWAYS_SOFTWARE=1
+
+startplasma-wayland \
+        --framebuffer \
+        --xwayland \
+        --libinput \
+        --inputmethod maliit-server \
+        --exit-with-session=/usr/lib/libexec/startplasma-waylandsession
+</syntaxhighlight>
+
+
+
 == Photos ==
 <gallery>
 File:Lavender downstream weston.jpg|thumb|left|Weston on downstream kernel
 File:Lavender boot log sm.jpg|thumb|left|Lavender booting mainline
+File:Lavender_plamo_ds_01.jpg|thumb|left|PlaMo on fbdev 1
+File:Lavender_plamo_ds_02.jpg|thumb|left|PlaMo on fbdev 2
 </gallery>
 
 
