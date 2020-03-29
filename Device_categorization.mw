@@ -9,14 +9,14 @@ Devices that are working quite well get lost in the [[Devices|big matrix of boot
 |-
 | main
 | yes ''(ideally by multiple people)''
-| Required working features:
-* Calls (+ modem audio) ''(not for tablet)''
-* SMS ''(not for tablet)''
+| Required working features (where available):
 * Usable phone UI (i.e. Plasma Mobile or Phosh)
-* Battery charging
-* Wifi
+* Calls (incl. call audio with earpiece)
+* SMS
 * Mobile Data
-* Audio (speaker, main microphone and headphone, headphone microphone, jack detection)
+* WiFi
+* Audio (speaker, main microphone ; headset, headset microphone ; jack detection, headset buttons)
+* Battery charging
 Not required (shall change in the future):
 * Bluetooth
 * Camera
