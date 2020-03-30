@@ -132,7 +132,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |-
 | Y
 | Charger
-|there is driver SMB347 for the charger in upstream kernel, but it doesn't have support for device-tree. Patches for upstreaming: https://github.com/okias/linux/commits/smb3xx-charger
+|patches send to upstream, probably will arrive in 5.7 or 5.8 ( https://github.com/okias/linux/commits/smb3xx-charger )
 |-
 | Y
 |Bluetooth
@@ -156,12 +156,12 @@ alsamixer -c 0 # and enable something like:
 |temperature sensor works
 |-
 | Y
-|Proximity sensor
-|
+|Proximity sensor (tilapia only)
+|Disabled, but works (boolean state, on/off). Would be nice to have this driver work with iio framework (TODO)
 |-
 | Y
 |Light sensor
-|Driver al3010. Brightness regulation [https://floss.social/@okias/103371284828595026 works], install iio-sensor-proxy . It's slightly [https://gitlab.com/alpine-mobile/pmaports/issues/3 oversensitive].
+|Driver Dyna-Image AL3010. Brightness regulation [https://floss.social/@okias/103371284828595026 works], install iio-sensor-proxy . It's slightly [https://gitlab.com/alpine-mobile/pmaports/issues/3 oversensitive].
 |-
 | N
 |Front camera
@@ -173,7 +173,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | N
 |Modem
-|Present only on tilapia, no-one plan to work on it for now. 
+|Present only on tilapia, contribution welcome, no work done yet.
 |-
 |}
 
