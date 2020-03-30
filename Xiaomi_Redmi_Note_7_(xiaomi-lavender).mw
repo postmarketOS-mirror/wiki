@@ -106,7 +106,7 @@ Flash a working custom Android ROM first - it will likely contain all needed cus
 === WIP ===
 This is still a work-in-progress. If you want to test something, or help in the development, do:
 * make sure you have TWRP installed
-* backup <code>boot</code> and <code>system</code> partitions first from TWRP
+* backup <code>boot</code>, <code>dtbo</code> and <code>system</code> partitions first from TWRP
 * checkout my development branch in pmaports (link below in links section)
 * zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device
 * then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender</code>), also <code>linux-postmarketos-qcom-sdm660</code>, if you wish to test mainline kernel for some reason.
@@ -115,6 +115,12 @@ This is still a work-in-progress. If you want to test something, or help in the 
  pmbootstrap flasher flash_kernel
  pmbootstrap flasher flash_rootfs
  pmbootstrap flasher flash_vbmeta
+
+For mainline kernel only (where nothing works except UART):
+ fastboot erase dtbo
+
+And then
+ fastboot reboot
 
 == Tested UIs ==
 On downstream vendorkernel X11 based UIs seem to not work, but wayland based do:
