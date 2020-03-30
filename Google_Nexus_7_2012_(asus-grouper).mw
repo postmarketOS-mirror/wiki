@@ -23,11 +23,11 @@
 | status_mainline = Y
 | status_battery = Y
 | status_3d = P
-| status_accel = 
+| status_accel = Y
 | status_audio = Y
 | status_bluetooth = Y
 | status_camera =
-| status_gps = 
+| status_gps = P
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
@@ -114,9 +114,9 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 |NFC
 |wired, not tested yet. Please update if it'll work for you.
 |-
-| 
+| P
 |GPS
-|Needs entry in DeviceTree. Not tried yet.
+|Pangelo works on it. Some progress been done. [https://redmine.replicant.us/projects/replicant/wiki/BCM4751 BCM4751]
 |-
 | Y
 |WiFi
