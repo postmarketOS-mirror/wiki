@@ -51,81 +51,32 @@
 * <code>fastboot</code> should work when the green android appears on the screen
 
 === Installation process ===
+Preparing rootfs and flashing kernel:
 <syntaxhighlight lang="shell" line='line'>
-$ pmbootstrap init # choose asus grouper or asus tilapia
+$ pmbootstrap init # choose vendor asus and model grouper (without GSM) or tilapia (GSM)
 $ pmbootstrap install
 $ pmbootstrap flasher flash_kernel
 </syntaxhighlight>
 
-=== [NOT WORKING ANYMORE 05/03/2019 ] Special installation process (development setup, kernel over approx. 4M) ===
-
-If you need bigger kernel, this includes way to the latest mainline kernel with size limited only by BOOT partition or how much device will be able boot it:
-
-<syntaxhighlight lang="shell" line='line'>
-mkdir ~/code
-cd ~/code
-git clone https://gitlab.com/alpine-mobile/pmbootstrap.git
-cd pmbootstrap
-alias pmbootstrap=~/code/pmbootstrap/pmbootstrap.py
-pmbootstrap init
-# pmbootstrap initfs hook_add debug-shell # not required, only for debugging
-pmbootstrap export
-pmbootstrap chroot -- apk add abootimg android-tools mkbootimg dtbtool findutils
-export DEVICE="$(pmbootstrap config device)"
-export WORK="$(pmbootstrap config work)"
-export TEMP="$WORK/chroot_native/tmp/mainline/"
-mkdir -p "$TEMP"
-
-cd ~/code
-git clone https://github.com/okias/linux.git
-cd linux
-source ~/code/pmbootstrap/helpers/envkernel.sh
-
-sudo curl -o .output/.config https://gitlab.com/alpine-mobile/pmaports/raw/master/device/linux-asus-grouper/config-asus-grouper.armv7
-sudo sed -i "s|CONFIG_INITRAMFS_SOURCE=\"\"|CONFIG_INITRAMFS_SOURCE=\"initfs-extracted\"|" .output/.config
-pmbootstrap initfs extract # ugly hack to get kernel booting without external initrd
-sudo cp -r ~/.local/var/pmbootstrap/chroot_rootfs_asus-grouper/tmp/initfs-extracted ./.output/ # initfs is later compiled into kernel
-
-make -j5
-
-cd ~/code/linux/.output/arch/arm/boot
-cat zImage dts/tegra30-asus-nexus7-grouper.dtb > ~/code/linux/.zImage-dtb # grouper or tilapia
-cp ~/code/linux/.zImage-dtb "$TEMP"/zImage-dtb
-
-pmbootstrap flasher list_devices
-</syntaxhighlight>
-===== a. Boot only =====
-<syntaxhighlight lang="shell" line='line'>
-pmbootstrap chroot -- fastboot boot /tmp/mainline/zImage-dtb
-</syntaxhighlight>
-===== b. Flash kernel: =====
-We're still not able bundle classic boot.img, so we need generate boot.img without ramdisk (which is already included inside kernel).
-<syntaxhighlight lang="shell" line='line'>
-pmbootstrap chroot -- mkbootimg-osm0sis --kernel "/tmp/mainline/zImage-dtb" --base "0x10000000" --kernel_offset "0x00008000" --ramdisk_offset "0x01000000" --tags_offset "0x00000100" --pagesize "2048" -o "/tmp/mainline/boot.img"
-pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img # test if image will boot
-pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img # flash only tested image
-</syntaxhighlight>
-
-=== Flashing rootfs ===
-==== rootfs under 650MB ====
+==== Flashing rootfs smaller than 650 MB ====
 <syntaxhighlight lang="shell" line='line'>
 pmbootstrap flasher flash_rootfs
 </syntaxhighlight>
 
-==== rootfs over 650MB to USERDATA ====
-''NOTE: If you plan flash Android, this may change size of your data partition. You can fix it by resizing partition in TWRP before flashing Android.''
+==== Flashing rootfs larger than 650 MB ====
+''NOTE: This may change size of your data partition. You can fix it by resizing partition in TWRP before flashing Android.''
 
 '''You should proceed very carefully here.'''
 
+When rootfs is larger than 650 MB you can choose to flash it to the system partition or USERDATA partition (which is on Nexus always > 4 GB).
+This guide is intended will help you flash rootfs onto USERDATA partition.
+
 Prerequisites: Official TWRP, at least version 3.3.1-0, binaries are here for [https://dl.twrp.me/grouper/ grouper] or [https://dl.twrp.me/tilapia/ tilapia].
 
-ensure you already run
+
+First, start TWRP (hold power + volume up) and then continue with these instructions
 <syntaxhighlight lang="shell" line='line'>
-pmbootstrap export
-</syntaxhighlight>
-and then proceed with
-<syntaxhighlight lang="shell" line='line'>
-# start TWRP
+(computer) $ pmbootstrap export
 (computer) $ adb shell
 (twrp) $ df # look for the data partition. should be something like /dev/block/mmcblk0p9 or p10 with /data next to it
 (twrp) $ umount /dev/block/mmcblk0p__ <- fill partition number
