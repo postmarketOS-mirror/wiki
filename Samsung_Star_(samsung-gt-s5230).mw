@@ -60,6 +60,7 @@ Is OTG available, not used in wiki
 Press {{button|Up Volume}} + {{button|Camera}} + {{button|Power}}
 
 == See also ==
+[https://elinux.org/S3C2410 S3C2410 - eLinux.org]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
