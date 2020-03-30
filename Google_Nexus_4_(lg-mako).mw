@@ -41,6 +41,9 @@
 * ollieparanoid
 * PabloCastellano and robb4 on IRC: Workaround for red screen bug ({{github|54}})
 
+== Users owning this device ==
+{{Device owners}}
+
 == Installation ==
 {{note|FDE (full disk encryption) seems to be broken for lg-mako currently, see {{issue|209|pmaports}}}}
 <pre>
