@@ -156,8 +156,8 @@ alsamixer -c 0 # and enable something like:
 |temperature sensor works
 |-
 | Y
-|Proximity sensor (tilapia only)
-|Disabled, but works (boolean state, on/off). Would be nice to have this driver work with iio framework (TODO)
+|Proximity sensor
+|(tilapia only) Disabled, but works (boolean state, on/off). Would be nice to have this driver work with [https://01.org/linuxgraphics/gfx-docs/drm/driver-api/iio/index.html IIO framework] (TODO)
 |-
 | Y
 |Light sensor
@@ -173,7 +173,7 @@ alsamixer -c 0 # and enable something like:
 |-
 | N
 |Modem
-|Present only on tilapia, contribution welcome, no work done yet.
+|(tilapia only) contribution welcome, no work done yet.
 |-
 |}
 
