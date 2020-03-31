@@ -6,7 +6,7 @@
 | imagecaption = Samsung Galaxy Tab A 9.7 WiFi (2015)
 | releaseyear = 2015
 | originalsoftware = Android 7.1.1 with Linux Kernel version 3.10.49
-| pmoskernel = 5.5-rc1
+| pmoskernel = 5.6.0
 | chipset = Qualcomm APQ8016 Snapdragon SD410
 | cpu = Quad-core 1.2 GHz Cortex-A53
 | gpu = Qualcomm Adreno 306
@@ -26,7 +26,7 @@
 | status_battery = N
 | status_3d = P
 | status_accel = N
-| status_audio = P
+| status_audio = Y
 | status_bluetooth = Y
 | status_camera = N
 | status_gps = N
@@ -36,6 +36,7 @@
 | status = 
 | booting = yes
 | status_otg = N
+| whet_dhry = 904.0
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
@@ -43,7 +44,6 @@ if the device haven't originally ran Android OS, e.g. Nokia N900
 Version of the kernel that pmos is running
 | pmoskernel = 5.3-rc6
 see Unixbench page on wiki
-| whet_dhry = 0.0
 Is OTG available, not used in wiki
 | status_otg = -
 -->
@@ -90,9 +90,9 @@ Boot up the device after installation
 |-
 | Volume/Power/Home keys || GPIO || Yes || Working in kernel fork
 |-
-| Capacitive keys || Coreriver Touchkey TC360 || [https://android.googlesource.com/kernel/bcm/+/android-wear-5.0.2_r0.5/drivers/input/touchscreen/coreriver_touchkey/tc360-touchkey.c No, but Downstream] ||
+| Capacitive keys || Coreriver Touchkey TC360 || [https://github.com/msm8916-mainline/linux/blob/master/drivers/input/keyboard/tm2-touchkey.c Yes, working in fork] || May not work on device, device commented out Downstream
 |-
-| Accelerometer || STMicroelectronics K2HH || ? || ?
+| Accelerometer || STMicroelectronics K2HH || [https://github.com/msm8916-mainline/linux/blob/master/drivers/iio/accel/st_accel_i2c.c Yes, supported in kernel fork] || Same as matissevewifi, should work without trouble
 |-
 | Light Sensor || Capella Micro CM3323 || Yes || Possibly missing DT bindings
 |-
@@ -100,7 +100,7 @@ Boot up the device after installation
 |-
 | Backlight IC || Texas Instruments lp8556 (or lp8558) || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/video/backlight/lp855x_bl.c lp855x does not work] ||
 |-
-| Audio || PM8916/MAX98357A || Yes || Audio over headset and mic work. Speakers are powered by external amp (MAX98357A or similar) which needs more work. Sound output is working, but it sounds a bit ''crusty''
+| Audio || PM8916/MAX98357A || Yes || Audio over headset and mic work. Speakers are powered by external amp (MAX98357A or similar) which works with a not yet upstreamed patch.
 |-
 | Touch Screen || Atmel MXT 1664T || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/atmel_mxt_ts.c Yes] || Working in kernel fork
 |-
@@ -118,7 +118,7 @@ Boot up the device after installation
 |-
 | Front camera || Siliconfile Technologies Inc. SR200PC20 || [https://forum.xda-developers.com/showpost.php?p=28482154&postcount=242 Not sure, but there's a datasheet] ||
 |-
-| Main camera || Siliconfile Technologies Inc. SR544 || ? ||
+| Main camera || Siliconfile Technologies Inc. SR544 || [https://github.com/jgsun/mrvl-3.14/commit/d595e2b Old v4l2 patch for unrelated hardware], may be adaptable to current Mainline ||
 |}
 Running some diagnostics programs on Android will likely point out some more info about sensors and any other specifications. At some point I (jja2000) will switch around to Android for a bit to fill in the table. If anyone reading this finds some driver for any of the missing parts let me know on Matrix or if possible edit the table itself.
 
