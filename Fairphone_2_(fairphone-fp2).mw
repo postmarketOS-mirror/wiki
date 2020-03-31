@@ -12,7 +12,7 @@
 | storage = 32 GB
 | display = 1080x1920 IPS
 | memory = 2 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
@@ -41,6 +41,9 @@
 == Maintainer(s) ==
 
 * Luca Weiss (z3ntu)
+
+== Device owners ==
+{Device owners}}
 
 == How to enter flash mode ==
 
