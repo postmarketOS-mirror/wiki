@@ -1,3 +1,4 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
 {{Infobox device
 | manufacturer = Amazon
 | name =  Kindle Fire HDX
@@ -12,7 +13,7 @@
 | storage = 16, 32, or 64 GB
 | display = 1920x1200
 | memory = 2 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
@@ -41,8 +42,6 @@
 * steamport (MoreRobustThanYou)
 
 == Problems ==
-
-* <del>TWRP for this device does NOT contain busybox</del> not a problem anymore, the recovery zip installer handles this now
 * fastboot cannot flash larger images (512 MB or above), it will error with <code>FAILED Unknown chunk type</code>. The latest pmbootstrap should warn you about this. A good fix for this would be implementing our own "postmarketOS flash method", see [https://github.com/postmarketOS/pmbootstrap/issues/456#issuecomment-343686341 #456]
 * Wifi doesn't work {{github|932}}
 * X11 only shows a flickering gray screen {{github|902}}
