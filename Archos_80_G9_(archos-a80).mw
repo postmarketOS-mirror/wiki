@@ -11,7 +11,7 @@
 | storage = 16 GB
 | display = 1024x768 TN
 | memory = 1 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
