@@ -90,32 +90,13 @@ No one has still worked on playback and recording support.
 
 ==== Bluetooth ====
 
-Bluetooth seems to be lacking some firmware.
-
-From dmesg:
-<source lang="shell-session">
-[    0.650667] bluetooth hci0: Direct firmware load for brcm/BCM4335C0.hcd failed with error -2
-</source>
+Bluetooth seems to work somewhat. Power and scan functions in bluetoothctl work but pairing might not.
 
 Using instructions at https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth
-<source lang="shell-session">
-apk add bluez
-rc-update add bluetooth
-</source>
-
-Running bluetoothctl seems to indicate that the controller is recognized:
-<source lang="shell-session">
-https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth
-[bluetooth]# power off
-Changing power off succeeded
-[bluetooth]# power on
-Changing power on succeeded
-[CHG] Controller 07:16:16:94:0E:5D Powered: yes
-</source>
-
 
 ==== Cellular modem ====
-Despite previously working, modem is [https://gitlab.com/postmarketOS/pmaports/issues/238 currently] not detected.
+
+Using instructions at https://wiki.postmarketos.org/wiki/Nokia_N900_(nokia-n900)#SMS it seems that SMS and calls likely work.
 
 ==== WiFi====
 On boot the wifi adapter starts in airplane mode and NetworkManager does not detect that. A manual workaround is to disable and re-enable the wifi adapter. 
