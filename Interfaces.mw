@@ -1,6 +1,6 @@
 This index page could use some help, see {{issue|23|wiki}}.
 
-= Interfaces =
+== Interfaces ==
 
 There are several types of interfaces which we divide into categories based on their use-cases.
 
@@ -8,7 +8,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 
 <code>Y</code> means that the UI is fully packaged and supported. <code>P</code> means that the UI is partially packaged and requires some work still.
 
-== Smartphones ==
+=== Smartphones ===
 
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
@@ -84,7 +84,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | 
 |}
 
-== Feature phones ==
+=== Feature phones ===
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
 ! Name
@@ -111,7 +111,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/zpui WIP branch]
 |}
 
-== PDA's ==
+=== PDA's ===
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
 ! Name
@@ -138,7 +138,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 |
 |}
 
-== Smart Watches ==
+=== Smart Watches ===
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
 ! Name
@@ -157,7 +157,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/asteroidui WIP branch]
 |}
 
-== Smart TV's ==
+=== Smart TV's ===
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
 ! Name
@@ -179,7 +179,7 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | [https://invent.kde.org/kde/plasma-bigscreen link]
 |}
 
-== Desktop ==
+=== Desktop ===
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
 ! Name
