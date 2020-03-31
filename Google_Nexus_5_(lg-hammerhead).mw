@@ -92,7 +92,7 @@ No one has still worked on playback and recording support.
 
 Bluetooth seems to work somewhat. Power and scan functions in bluetoothctl work but pairing might not.
 
-Using instructions at https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth
+To test, use instructions at https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_Setting_Up_Bluetooth.
 
 ==== Cellular modem ====
 
