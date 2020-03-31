@@ -57,9 +57,14 @@
 
 You will be able to boot to pmOS by turning on the phone while holding the <code>Volume Up</code> button.
 
+== Display ==
+Main display works fine with <code>msm-fb-refresher</code>.
+
+External display seems to use custom <code>mdss-spi-panel</code> driver which is not publicly available.
+
 == WLAN ==
 Out-of-tree <code>prima</code> wlan kernel module available [https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/prima/tree/?h=LF.BR.1.2.8 here].
-Firmware can be extracted from the following mountpoints:
+Firmware can be extracted from the following mount points:
 <syntaxhighlight lang="shell-session">
 system   => /system/etc/firmware/wlan/prima/WCNSS_cfg.dat
 userdata => /misc/wifi/WCNSS_qcom_cfg.ini
@@ -71,12 +76,29 @@ To enable the module in pmOS run the following (as root):
 # echo 1 > /dev/wcnss_wlan
 # echo sta > /sys/module/wlan/parameters/fwpath
 </syntaxhighlight>
-Unfortunately, <code>nmcli</code> didn't work for me, but <code>iw dev wlan0 scan</code> did the trick.
+Unfortunately, <code>nmcli</code> didn't work for me, but <code>iw dev wlan0 scan</code> did the trick. Won't connect to any network though.
 
 == Modem ==
 Followed an approach described [https://wiki.postmarketos.org/wiki/Modem#Qualcomm_Modems here] with no luck: getting <code>smd_pkt_open: DATA5_CNTL open failed -19</code> in <code>dmesg</code> while trying to access the modem.
 
-Figured out that <code>rmtfs</code> fails while trying to map the shared memory -> downstreamed <code>qrtr</code> -> now it hangs <code>qrtr_publish -> qrtr_sendto -> sendto</code>.
+With <code>echo 1 > /sys/kernel/boot_adsp/boot</code> modem at least boots up (using <code>rmt_storage</code> binary ripped out of KaiOS), but <code>DATA5_CNTL</code> is still unavailable.
+
+Allocation tables (output of <code>/sys/kernel/debug/smd/ch</code>) is [https://pastebin.com/WBciafqR here].
+
+According to the following lines in <code>dmesg</code>, it looks like something tries to reach USB diag device which is not available:
+<syntaxhighlight lang="shell-session">
+[  502.693072] diag: USB ch diag is not connected
+[  502.693080] diag: In diag_process_smd_read_data, diag_device_write error: -19
+</syntaxhighlight>
+Tried to set the following USB configuration options with no luck as well:
+<syntaxhighlight lang="shell-session">
+# echo "0" > /sys/class/android_usb/android0/enable
+# echo "diag" > /sys/class/android_usb/android0/f_diag/clients 
+# echo "smd" > /sys/class/android_usb/android0/f_serial/transports
+# echo "qti,bam" > /sys/class/android_usb/android0/f_rmnet/transports 
+# echo "diag,serial_smd,rmnet_qti_bam" > /sys/class/android_usb/android0/functions
+# echo "1" > /sys/class/android_usb/android0/enable
+</syntaxhighlight>
 
 == Partition layout ==
 <syntaxhighlight lang="shell-session">
