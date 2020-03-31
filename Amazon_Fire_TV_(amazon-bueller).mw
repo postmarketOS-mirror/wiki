@@ -5,15 +5,14 @@
  | image = File:Amazon-bueller.jpg
  | imagecaption = Amazon Fire TV
  | releaseyear = 2014
- | originalsoftware = Fire OS 5 <!-- e.g. Android 2 -->
+ | originalsoftware = Fire OS 5
  | chipset = Qualcomm APQ8064 Snapdragon 600 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
  | cpu = 4x 1.7GHz Krait 300 <!-- e.g. 1.0 GHz Scorpion -->
  | gpu = Adreno 320 <!-- e.g. Adreno 200 -->
  | storage = 8 GB <!-- e.g. 512 MB -->
  | display = HDMI <!-- e.g. 480x800 AMOLED -->
- | memory = 2 GB <!-- e.g. 576 MB -->
- | architecture = armhf <!-- One of these: armhf, aarch64, x86, x86_64 -->
-
+ | memory = 2 GB
+ | architecture = armhv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
  | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
  | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -43,7 +42,8 @@ Device files:
 
 https://gitlab.com/CalcProgrammer1/pmaports
 
-== Maintainer(s) ==
+== Device owners ==
+{{Device owners}}
 
 == How to enter flash mode ==
 
@@ -65,9 +65,9 @@ The branch has both Amazon FireTV and Galaxy Note 3 changes.
 
 == Notes ==
 
-* The FireTV has serial port pads on the bottom side of the PCB.  You can solder to them with a fine tipped soldering iron.  There is no external serial port available.  I modified mine by adding a 3 pin header port and cutting a notch in the case to fit it.  See here: [https://wiki.postmarketos.org/wiki/File:Amazon-bueller-mod-1.jpg]
+* The FireTV has serial port pads on the bottom side of the PCB. You can solder to them with a fine tipped soldering iron. There is no external serial port available. I modified mine by adding a 3 pin header port and cutting a notch in the case to fit it. See here: [https://wiki.postmarketos.org/wiki/File:Amazon-bueller-mod-1.jpg]
 
-* The FireTV only has one USB port.  It is a type A port, but it can be used as a client through an A-to-A adapter.  This allows Fastboot usage.
+* The FireTV only has one USB port. It is a type A port, but it can be used as a client through an A-to-A adapter. This allows Fastboot usage.
 
 * Wireless LAN is a USB device - Qualcomm Atheros 0CF3:9374 (ath6kl)
 
