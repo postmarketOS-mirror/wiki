@@ -8,11 +8,11 @@
 | originalsoftware = Android 2.3.4
 | chipset = Exynos 4210 Dual
 | cpu = Dual-core 1.2 GHz Cortex-A9
-| gpu = Mali-400MP4
+| gpu = Mali-400 MP4
 | storage = 16/32 GB
 | display = 480x800 AMOLED
 | memory = 1 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = 
 | status_touch = Y
