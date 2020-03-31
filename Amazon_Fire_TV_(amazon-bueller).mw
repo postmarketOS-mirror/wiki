@@ -1,18 +1,18 @@
 {{Infobox device
- | manufacturer = Amazon <!-- e.g. HTC -->
- | name = Fire TV <!-- e.g. Desire -->
- | codename = amazon-bueller <!-- e.g. htc-bravo -->
+ | manufacturer = Amazon
+ | name = Fire TV
+ | codename = amazon-bueller
  | image = File:Amazon-bueller.jpg
  | imagecaption = Amazon Fire TV
  | releaseyear = 2014
  | originalsoftware = Fire OS 5
- | chipset = Qualcomm APQ8064 Snapdragon 600 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
- | cpu = 4x 1.7GHz Krait 300 <!-- e.g. 1.0 GHz Scorpion -->
- | gpu = Adreno 320 <!-- e.g. Adreno 200 -->
- | storage = 8 GB <!-- e.g. 512 MB -->
- | display = HDMI <!-- e.g. 480x800 AMOLED -->
+ | chipset = Qualcomm APQ8064 Snapdragon 600
+ | cpu = 4x 1.7 GHz Krait 300
+ | gpu = Adreno 320
+ | storage = 8 GB
+ | display = HDMI
  | memory = 2 GB
- | architecture = armhv7
+ | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
  | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
  | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
