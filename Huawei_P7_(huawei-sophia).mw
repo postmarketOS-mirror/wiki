@@ -1,14 +1,14 @@
 {{Infobox device
 | manufacturer = Huawei
-| name =  P7-L10
-| codename = sophia
+| name = P7-L10
+| codename = huawei-sophia
 | image = File:Huawei_P7.jpg
 | imagecaption = Huawei P7-L10
 | releaseyear = 2014
 | originalsoftware = EMUI 3.1 (Android 5.1)
 | chipset = HiSilicon Kirin 910T
-| cpu = 1.8GHz ARM Cortex-A9
-| gpu = Mali-450 MP
+| cpu = 4x 1.8GHz Cortex-A9
+| gpu = Mali-450 MP4
 | storage = 16 GB
 | display = 1080x1920 LCD IPS
 | memory = 2 GB
@@ -46,7 +46,7 @@ Probably the same build would work on Huawei P6S, testers are welcome!
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == How to enter flash mode ==
-Keep Power+Volume down pressed for about 5 seconds on boot
+Keep {{Button|Power}} + {{Button|Volume Down}} pressed for about 5 seconds on boot
 
 == Installation ==
 
