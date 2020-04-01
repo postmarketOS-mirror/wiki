@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Essential
-| name =  Phone (PH1)
-| codename = mata
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| name = Phone (PH1)
+| codename = essential-mata
+| image = File:essential-mata.jpg
+| imagecaption = 
 | releaseyear = 2017
 | originalsoftware = Android 7.1.1
 | chipset = Qualcomm MSM8998 Snapdragon 835
-| cpu = Kryo 280 Octa-core (2.45GHz Quad + 1.9GHz Quad), 64 bit, 10nm processor
+| cpu = Kryo 280 Octa-core (2.45GHz Quad + 1.9GHz Quad)
 | gpu = Adreno 540
 | storage = 128 GB
-| display = 2560 x 1312 QHD
-| memory =  4 GB
+| display = 1312 x 2560 IPS
+| memory = 4 GB
 | architecture = aarch64 
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
@@ -64,7 +64,7 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 The Essential Phone uses Fastboot as the flashing protocol.
 
-To enter Fastboot mode, hold Volume Down while powering on the device. Let go of Volume Down when "Fastboot mode" displays on the screen. 
+To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device. Let go of {{Button|Volume Down}} when "Fastboot mode" displays on the screen. 
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
