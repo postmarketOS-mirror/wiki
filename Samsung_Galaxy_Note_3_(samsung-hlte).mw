@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = Samsung <!-- e.g. HTC -->
-| name =  Galaxy Note 3 <!-- e.g. Desire -->
-| codename = samsung-hlte <!-- e.g. htc-bravo -->
+| manufacturer = Samsung
+| name =  Galaxy Note 3
+| codename = samsung-hlte
 | image = hlte.jpg
 | imagecaption = Samsung Galaxy Note 3
 | releaseyear = 2013
-| originalsoftware = Android 4.3 <!-- e.g. Android 2 -->
-| chipset = Qualcomm MSM8974 Snapdragon 800 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = 4x 2.3GHz Krait 400 <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 330 <!-- e.g. Adreno 200 -->
-| storage = 32 GB <!-- e.g. 512 MB -->
-| display = 1080x1920 AMOLED <!-- e.g. 480x800 AMOLED -->
-| memory = 3 GB <!-- e.g. 576 MB -->
-| architecture = armhf <!-- One of these: armhf, aarch64, x86, x86_64 -->
+| originalsoftware = Android 4.3
+| chipset = Qualcomm MSM8974 Snapdragon 800
+| cpu = 4x 2.3 GHz Krait 400
+| gpu = Adreno 330
+| storage = 32 GB
+| display = 1080x1920 AMOLED
+| memory = 3 GB
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = N <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
