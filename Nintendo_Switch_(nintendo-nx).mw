@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Nintendo
 | name = Switch
-| codename = nx
-| image =
+| codename = nintendo-nx
+| image = File:nintendo-nx.jpg
 | imagecaption =
 | releaseyear = 2017
 | originalsoftware = Nintendo Switch system software 1.0.0 (upgradeable to 9.1.0)
 | chipset = Nvidia Tegra X1
 | cpu = Quad-core 1.02GHz Cortex-A57
 | gpu = Maxwell
-| storage = 32GB
+| storage = 32 GB
 | display = 1280x720
-| memory = 4GB
+| memory = 4 GB
 | architecture = aarch64
 | n-android = ✔
 | status_usbnet = 
