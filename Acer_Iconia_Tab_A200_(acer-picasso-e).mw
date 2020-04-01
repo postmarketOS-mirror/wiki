@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Acer
-| name =  Iconia Tab A200
+| name = Iconia Tab A200
 | codename = acer-picasso-e
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:acer-picasso-e.jpg
+| imagecaption = 
 | releaseyear = 2012
 | originalsoftware = Android 3.0, upgrade to 4.0
 | chipset = Nvidia Tegra 2 T20
 | cpu = Dual-core 1.0 GHz Cortex-A9
 | gpu = ULP GeForce
-| storage = 8/16GB
+| storage = 8/16 GB
 | display = 800x1280
-| memory = 1G
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
