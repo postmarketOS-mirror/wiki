@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Huawei
-| name =  Honor 5X
-| codename = kiwi
+| name = Honor 5X
+| codename = huawei-kiwi
 | image = File:Huawei-honor-5x-0.jpg
 | imagecaption = Huawei Honor 5X
 | releaseyear = 2015
@@ -59,7 +59,7 @@ None
 
 == How to enter flash mode ==
 
-Hold volume down plus power at the same time.
+Hold {{Button|Volume Down}} + {{Button|Power}} at the same time.
 
 ===Unlocking the bootloader===
 
