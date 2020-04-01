@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = HTC
 | name = Desire S
-| codename = saga
+| codename = htc-saga
 | image = File:HTC_Desire_S.jpg
 | imagecaption = HTC Desire S running the Weston demo
 | releaseyear = 2011, March
@@ -33,7 +33,7 @@
 
 === Booting ===
 * Unlock (s-off) the bootloader if it hasn't been unlocked before ([https://www.htcdev.com/bootloader/ htcdev unlock site])
-* Hold the '''Volume Down''' button, and then press the '''Power''' button
+* Hold the {{Button|Volume Down}} button, and then press the {{Button|Power}} button
 * Wait for device to boot in HBOOT mode and select FASTBOOT (Make sure it says "FASTBOOT USB", not "HBOOT USB PLUG")
 * Boot kernel using <code>pmbootstrap flasher boot</code>
 
