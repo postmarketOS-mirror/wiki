@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Chat
+| name = Galaxy Chat
 | codename = samsung-zanin
 | image = File:Samsung-zanin.jpg
 | imagecaption = Samsung Galaxy Chat running i3wm
@@ -8,7 +8,7 @@
 | originalsoftware = Android 4.0.4
 | chipset = Broadcom BCM21654
 | cpu = 1x 850 MHz Cortex-A9
-| gpu = Broadcom VideoCore IV
+| gpu = VideoCore IV
 | storage = 4 GB
 | display = 240x320 TFT
 | memory = 512 MB
@@ -84,7 +84,7 @@ I don't know if there is a way to clear this counter, but I don't think is impor
 * The touchscreen works in `ts_test` but does not work in Weston or i3wm
 * The Sym key does not work and gives no output in `xev`
 
-On Android the Alt key can be used to type symbols.
+On Android the {{Button|Alt}} key can be used to type symbols.
 
 On pmOS this does not work (it only works as the Alt key), 
 so currently there is currently no way of typing symbols.
