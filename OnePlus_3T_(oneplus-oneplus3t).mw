@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = OnePlus
 | name = 3T
-| codename = oneplus3t
+| codename = oneplus-oneplus3t
 | image = File:oneplus3t.jpg
 | imagecaption = OnePlus 3T running OxygenOS
 | releaseyear = 2016
@@ -11,7 +11,7 @@
 | gpu = Adreno 530
 | storage = 64/128 GB
 | display = 1080x1920 AMOLED
-| memory = 6GB
+| memory = 6 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = P <!-- USB networking does work? then put Y here and delete this comment -->
@@ -70,6 +70,7 @@ Once the device is unlocked, hold power to boot and on the warning screen, press
 Kernel WIP at https://gitlab.com/DrGitX/linux-postmarketos-qcom-msm8996
 
 == See also ==
+* {{MR|923|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
