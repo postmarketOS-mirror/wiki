@@ -9,10 +9,10 @@
 | chipset = Qualcomm MSM8226 Snapdragon 400
 | cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Adreno 305
-| storage = 8GB
+| storage = 8 GB
 | display = 720x1280 IPS LCD
-| memory = 1GB
-| architecture = armhf
+| memory = 1 GB
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
