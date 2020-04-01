@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Acer
-| name =  Iconia Tab A500
+| name = Iconia Tab A500
 | codename = acer-picasso
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:acer-picasso.jpg
+| imagecaption = 
 | releaseyear = 2011
-| originalsoftware = Android 3.0, upgrade to 4.0
+| originalsoftware = Android 3.0 - 4.0
 | chipset = Nvidia Tegra 2 T20
 | cpu = Dual-core 1.0 GHz Cortex-A9
 | gpu = ULP GeForce
-| storage = 16/32GB
+| storage = 16/32 GB
 | display = 800x1280
-| memory = 1G
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
