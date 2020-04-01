@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name =  Samsung Galaxy Ace i
-| codename = s5830i
+| codename = samsung-s5830i
 | image = File:Samsung-S5830i.jpg
 | imagecaption = S5830i in recovery mode
 | releaseyear = 2011
@@ -10,7 +10,7 @@
 | chipset = Broadcom BCM21553
 | cpu = ARM11 @ 832MHz
 | gpu = VideoCore IV
-| storage = 8GB
+| storage = 8 GB
 | display = 320 x 480
 | memory = 362 MB
 | architecture = armhf
@@ -46,18 +46,18 @@
 {{Device owners}}
 == Entering Recovery Mode ==
 
-Press Power + Volume up + Home to start the phone into recovery mode.
+Press {{Button|Power}} + {{Button|Volume Up}} + {{Button|Home}} to start the phone into recovery mode.
 
-You can choose the items with Volume up and down and enter with home button
+You can choose the items with {{Button|Volume Up}} and {{Button|Volume Down}} and enter with the {{Button|Home}} button
 
 == Entering flash Mode==
 
-Press Power + Volume up + Volume down to start the phone into flash mode
+Press {{Button|Power}} + {{Button|Volume Up}} + {{Button|Volume Down}} to start the phone into flash mode
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-First,enter the flash mode and flash the kernel into the phone.
-Then, install rootfs to the sdcard. (As there is no enough space on the phone.)
+First, enter the flash mode and flash the kernel into the phone.
+Then, install rootfs to the sdcard. (As there is not enough space on the phone.)
 
 == What works ==
 
