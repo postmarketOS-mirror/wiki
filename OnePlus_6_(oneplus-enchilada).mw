@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = OnePlus
-| name =  6
-| codename = Enchilada
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| name = 6
+| codename = oneplus-enchilada
+| image = File:oneplus-enchilada.jpg
 | imagecaption = No Graphics yet :(
 | releaseyear = 2018
 | originalsoftware = Android 8.0 (Up to Android 10) on Linux 4.9
 | chipset = Qualcomm SDM845 Snapdragon 845
-| cpu = Octa-core (4x2.8 GHz Kryo 385 Gold & 4x1.7 GHz Kryo 385 Silver)
+| cpu = Octa-core (4x 2.8 GHz Kryo 385 Gold & 4x 1.7 GHz Kryo 385 Silver)
 | gpu = Adreno 630
-| storage = 128GB
+| storage = 128 GB
 | display = 1080 x 2280 AMOLED
-| memory = 6/8GB
+| memory = 6/8 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = y
@@ -62,7 +62,7 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 
-Unplug from USB, hold power and volume up until your see "Fastboot Mode" text.
+Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until your see "Fastboot Mode" text.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
