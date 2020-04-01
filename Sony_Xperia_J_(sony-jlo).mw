@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia J
-| codename = jlo
-| image =
+| name = Xperia J
+| codename = sony-jlo
+| image = File:sony-jlo.jpg
 | imagecaption = Sony Xperia J
 | releaseyear = 2012
 | originalsoftware = Android 4.0.1 ICS
 | chipset = Qualcomm MSM7227A Snapdragon S1
-| cpu = 1x ARM Cortex A5 @ 1GHz
+| cpu = 1x Cortex-A5 @ 1GHz
 | gpu = Adreno 200 @ 307 MHz
-| storage = 4GB (expandable with up to 32GB MicroSD)
+| storage = 4 GB (expandable with up to 32 GB MicroSD)
 | display = 480x854
-| memory = 512MB
+| memory = 512 MB
 | architecture = armv7
 | status_usbnet = 
 | status_flashing = 
@@ -52,7 +52,7 @@
 * Get everything else working.
 
 == How to enter flash mode ==
-When the device is powered off, press '''Volume Up''' while plugging in a microUSB cable to enter fastboot.
+When the device is powered off, press {{Button|Volume Up}} while plugging in a microUSB cable to enter fastboot.
 Nothing will be displayed on the screen when this occurs.
 
 == Installation ==
