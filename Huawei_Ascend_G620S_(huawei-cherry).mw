@@ -1,15 +1,17 @@
 {{Infobox device
 | manufacturer = Huawei
-| name =  Ascend G620S
-| codename = cherry
+| name = Ascend G620S
+| codename = huawei-cherry
+| image = File:huawei-cherry.jpg
+| imagecaption = 
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2
 | chipset = Qualcomm MSM8916 Snapdragon 410
 | cpu = Quad-core 1.2 GHz Cortex-A53
 | gpu = Adreno 306
-| storage = 8GB
+| storage = 8 GB
 | display = 720x1280
-| memory = 1GB
+| memory = 1 GB
 | architecture = aarch64
 | status_usbnet = 
 | status_flashing = 
@@ -45,7 +47,7 @@
 * Framebuffer graphics (Splash screens)
 
 == How to enter flash mode ==
-Press and hold <code>Volume Down</code> + <code>Power</code> simultaneously.
+Press and hold {{Button|Volume Down}} + {{Button|Power}} simultaneously.
 
 == See also ==
 * [https://github.com/LineageOS/android_kernel_huawei_msm8916 Kernel source]
