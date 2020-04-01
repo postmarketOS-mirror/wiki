@@ -103,7 +103,7 @@ wifi module gets initialized after 180 seconds. This is due to missing firmware 
 <span style="color:red">'''Attention:''' Author is not responsible for any damage to your devices. Signal level is 1.8V. You may fry your board, using standard 3.3V - 5V UART.
 </span>
 
-It is possible to connect to UART port(/dev/ttySAC2) on the mainboard. It is located on pins 1(RX), 2(TX) of the test port, and used by bootloader to log loading process. 
+It is possible to connect to UART port(/dev/ttySAC2) on the mainboard. It is located on [https://wiki.postmarketos.org/wiki/File:A5y17lte_test_port.jpg pins 1(RX), 2(TX)] of the test port, and used by bootloader to log loading process. 
 
 ==== Bill of materials ====
 * Adhesive tape
@@ -114,14 +114,15 @@ It is possible to connect to UART port(/dev/ttySAC2) on the mainboard. It is loc
 * Thermal glue
 
 
+<gallery caption="Assembly photos" widths="240px" heights="180px">
+File:A5y17lte uart wires.jpg|Wires, soldered to UART port.
+File:A5y17lte uart assembly.jpg|a5y17lte, connected to USB - UART converter via level shifter.
+</gallery>
 
-==== Assembly photos ====
-[[File:A5y17lte uart wires.jpg|200px|thumb|left| Wires, soldered to UART port. ]]
-
-[[File:A5y17lte uart assembly.jpg|200px|thumb|left| a5y17lte, connected to USB - UART converter via level shifter. ]]
-
-=== Motherboard ===
-[[File:A5y17lte test port.jpg|200px|thumb|left| Test port pin numbering]]
+=== Main board ===
+<gallery>
+File:A5y17lte test port.jpg|Test port pin numbering
+</gallery>
 
 == See also ==
 <!--
