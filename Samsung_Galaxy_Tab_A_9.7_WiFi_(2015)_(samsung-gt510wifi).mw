@@ -37,16 +37,6 @@
 | booting = yes
 | status_otg = N
 | whet_dhry = 904.0
-
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 5.3-rc6
-see Unixbench page on wiki
-Is OTG available, not used in wiki
-| status_otg = -
--->
 }}
 
 == Contributors ==
