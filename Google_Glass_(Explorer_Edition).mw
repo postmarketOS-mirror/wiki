@@ -1,17 +1,17 @@
 {{Infobox device
-| manufacturer = Foxconn
-| name =  Google Glass (Explorer Edition)
+| manufacturer = Google (Foxconn)
+| name = Glass (Explorer Edition)
 | codename = google-glass
 | image = File:google-glass-screenshot.png
 | imagecaption = Running XFCE4
 | releaseyear = 2013
 | originalsoftware = Glass OS
 | chipset = TI OMAP 4430
-| cpu = Dual-Core ARM Cortex-A9
+| cpu = Dual-Core 1.2 GHz Cortex-A9
 | gpu = PowerVR SGX540
-| storage = 16 GB flash memory total[6] (12 GB of usable memory)
+| storage = 16 GB
 | display = Prism projector, 640×360 pixels (equivalent of a 25 in/64 cm screen from 8 ft/2.4 m away)
-| memory = 2GB RAM
+| memory = 2 GB
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
@@ -47,3 +47,4 @@
 
 == See also ==
 * [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/957 !957] Initial merge request
+* [https://en.wikipedia.org/wiki/Google_Glass Wikipedia page]
