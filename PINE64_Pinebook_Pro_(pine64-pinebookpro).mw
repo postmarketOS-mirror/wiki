@@ -9,10 +9,11 @@
 | pmoskernel = 5.5.0-rc3
 | chipset = Rockchip RK3399
 | cpu = 4x 1.5 GHz Cortex-A53 & 2x 2Ghz Cortex-A72
-| gpu = Mali T860 MP4
+| gpu = Mali-T860 MP4
+| storage = 64GB eMMC (Upgradable)
 | memory = 4 GB
 | architecture = aarch64
-| n-android =  ✔
+| n-android = ✔
 | whet_dhry = 2742.3
 | status_usbnet = N
 | status_flashing = -
