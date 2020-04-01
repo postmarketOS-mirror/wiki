@@ -67,9 +67,8 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 
 
 == Installation ==
-# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] (alternative bootloader that handles certain mainline quirks like setting up the WiFi/BT MAC addresses)
+# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] (alternative bootloader that handles certain mainline quirks like setting up the WiFi/BT MAC addresses. Keep in mind that you have to install pmOS components with lk2nd, not original fastboot)
 # Just follow the [[Installation guide]].
-
 
 == Charging ==
 Mainline kernel doesn't have proper charger driver yet. This means that only way to charge the device is to boot downstream kernel. Easiest way to do so is to boot to recovery (At least TWRP known to charge the device properly)
