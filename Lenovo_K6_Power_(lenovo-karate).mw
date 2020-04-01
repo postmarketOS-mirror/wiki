@@ -12,7 +12,7 @@
 | storage = 32 GB
 | display = 1080x1920
 | memory = 3 GB
-| architecture = armhf
+| architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
