@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name = Galaxy S
-| codename = i9000
+| codename = samsung-i9000
 | image = File:Samsung-i9003-galaxy-s-sl-1.jpg
 | imagecaption = Samsung Galaxy S
 | releaseyear = 2010
@@ -45,7 +45,7 @@
 == How to enter flash mode ==
 * Connect a USB cable
 * Make sure, the device is powered off
-* Hold power + Home + volume down
+* Hold {{Button|Power}} + {{Button|Home}} + {{Button|Volume Down}}
 
 == Installation ==
 
