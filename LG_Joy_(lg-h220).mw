@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = LG
-| name =  Joy
-| codename = h220
+| name = Joy
+| codename = lg-h220
 | image = File:Lg-joy-full-1.jpg
 | imagecaption = LG Joy
 | releaseyear = 2015
@@ -50,16 +50,16 @@
 == Additional info ==
 === Entering &quot;Factory data reset mode&quot; ===
 # Turn off the device
-# Press and hold Volume Down key + Power Key
-# Release Power key when LG logo appear
-# When still pressing Volume Down key, press and hold Power key again
-# Release Volume Down key when Factory Data Reset menu appears
+# Press and hold {{Button|Volume Down}} + {{Button|Power}}
+# Release {{Button|Power}} when LG logo appears
+# While still pressing {{Button|Volume Down}}, press and hold {{Button|Power}} again
+# Release {{Button|Volume Down}} when Factory Data Reset menu appears
 
 === Entering &quot;LG Download mode&quot; ===
 # Turn off the device
-# Press and hold Volume Up key
+# Press and hold {{Button|Volume Up}}
 # Connect the USB cable
-# Release Volume Up key when Download mode appears
+# Release {{Button|Volume Up}} when Download mode appears
 
 == Links ==
 * [https://www.gsmarena.com/lg_joy-7054.php Full phone specifications]
