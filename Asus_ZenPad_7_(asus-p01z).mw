@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Asus
-| name =  ZenPad C 7.0 (Z170C)
+| name = ZenPad C 7.0 (Z170C)
 | codename = asus-p01z
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:asus-p01z.jpg
+| imagecaption = 
 | releaseyear = 2014
 | originalsoftware = Android 5.0 on Linux 3.14
-| chipset = 
-| cpu = Intel Atom x3-C3200
+| chipset = Intel Atom x3-C3200
+| cpu = Quad-core
 | gpu = Mali-450 MP4
-| storage = 8/16GB
+| storage = 8/16 GB
 | display = 7" LED WSVGA (1024x600)
-| memory = 1GB
+| memory = 1 GB
 | architecture = x86_64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = 
