@@ -1,18 +1,18 @@
 {{Infobox device
 | manufacturer = Samsung
 | name =  Samsung Galaxy Star
-| codename = mint
+| codename = samsung-mint
 | image = File:Mint.jpg
 | imagecaption = Samsung Galaxy Star 
 | releaseyear = 2013
 | originalsoftware = Android 4.1.2 on Linux 3.0.8
 | chipset = Spreadtrum SC8810
-| cpu = Single-core 1.0 GHz
-| gpu = Mali-400 MP
+| cpu = Single-core 1.0 GHz Cortex-A5
+| gpu = Mali-300
 | storage = 4 GB
-| display = 320x240 TFT
+| display = 240x320 TFT
 | memory = 512 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
