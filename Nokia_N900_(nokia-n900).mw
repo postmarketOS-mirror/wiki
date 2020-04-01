@@ -492,7 +492,8 @@ $ aplay -vv some-very-good-music.wav
 </source>
 
 == Resources ==
-* [https://gitlab.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-nokia-n900 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-nokia-n900 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-nokia-n900 Kernel package]
 * [https://kernel.org Kernel source]
 * [https://web.archive.org/web/20131117073524/http://skeiron.org/tablets-dev/nokia_N900/ Images and Flashers for Maemo]
 * {{issue|1617}} issue about Wi-Fi Setup and Keyboard layout
