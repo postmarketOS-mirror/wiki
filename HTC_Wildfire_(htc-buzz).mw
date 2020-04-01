@@ -2,7 +2,7 @@
 {{Infobox device
 | manufacturer = HTC
 | name = Wildfire
-| codename = buzz
+| codename = htc-buzz
 | imagecaption = HTC Wildfire
 | releaseyear = 2010
 | originalsoftware = Android 2.1
@@ -48,7 +48,7 @@
 * Everything else
 
 == How to enter flash mode ==
-Hold the '''Volume Down''' button, and then press the '''Power''' button. Choose FASTBOOT.
+Hold the {{Button|Volume Down}} button, and then press the {{Button|Power}} button. Choose FASTBOOT.
 
 == Installation ==
 {{note|Flashing the partitions does not work yet, so you will need an SD card.}}
