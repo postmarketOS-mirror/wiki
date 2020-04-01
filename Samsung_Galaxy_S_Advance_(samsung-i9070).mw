@@ -122,8 +122,8 @@ At the moment is not possible to write the system image file (samsung-i9070.img)
 
 === Links ===
 
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-samsung-i9070 Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-samsung-i9070 Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-i9070 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-i9070 Kernel package]
 * [https://github.com/Epirex/Samsung_STE_Kernel/tree/marshmallow Epirex's Kernel]
 * [https://github.com/Epirex/android_vendor_samsung_u8500 Epirex's vendor files]
 
