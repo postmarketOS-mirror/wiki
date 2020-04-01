@@ -20,4 +20,37 @@ https://nl.alpinelinux.org/alpine/edge/testing
 
 If you get <code>UNTRUSTED signature</code> and you trust your LAN, then you may consider <code>apk upgrade --allow-untrusted [package name]</code>. Beware of the security implications that <code>--allow-untrusted</code> has.
 
+4. (optional) After installing a kernel package, you'll need to call <code>pmos-update-kernel</code>
+
+The apk hosting this command is called <code>postmarketos-update-kernel</code>. Then you need to figure out the name of your kernel flavor. Run <code>ls /boot/boot.img-*</code>. Whatever is after the dash, that is your kernel flavor. So
+
+<source lang="shell">
+$ ls /boot/boot.img-*
+/boot/boot.img-postmarketos-qcom-msm8974
+# your kernel flavor is postmarketos-qcom-msm8974
+$ sudo pmos-update-kernel postmarketos-qcom-msm8974
+</source>
+
+
+== Updating your kernel from a running phone ==
+
+If you're experimenting with mainline kernel and adding new features you might end up wanting to update your kernel and restart your phone very often. On the kernel building end you can use [[envkernel.sh]] + <code>pmbootstrap build --envkernel MAINLINE_LINUX_PACKAGE_NAME</code>. That will produce a fresh new kernel package with the changes you made. Then you need to install that package to the phone.
+
+After you execute steps 1 and 2 above, install postmarketos-update-kernel, and find your kernel flavor, you can run the following script:
+
+<source lang="shell">
+#!/bin/sh
+
+set -e # errors are critical -- will end script immediately
+set -x # echo executed commands
+sudo apk --allow-untrusted update                    # update package info
+sudo apk --allow-untrusted upgrade                   # upgrade all new packages (most likely kernel)
+sudo pmos-update-kernel postmarketos-qcom-msm8974    # make sure new kernel is selected after reboot
+set +x
+
+echo -n 'reboot [yN]? '                              # prompt for restart 
+read ans
+test "$ans" = 'y' && sudo reboot
+</source>
+
 [[Category:Guide]]
