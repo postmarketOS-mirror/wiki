@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Lenovo
-| name =  A6010
-| codename = Lenovo-A6010
+| name = A6010
+| codename = lenovo-A6010
 | image = image:lenovo.jpg
 | imagecaption = 
 | releaseyear = 2015
@@ -9,9 +9,9 @@
 | chipset = Qualcomm MSM8916 Snapdragon 410
 | cpu = Quad-core 1.2 GHz Cortex-A53
 | gpu = Adreno 306
-| storage = 8/16GB
+| storage = 8/16 GB
 | display = 720x1280
-| memory = 1/2GB
+| memory = 1/2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = 
@@ -34,8 +34,6 @@
 | status_calls = 
 | status = Canceled, everyone can countinue it.
 | booting = no 
-
-
 }}
 
 == Maintainer(s) ==
