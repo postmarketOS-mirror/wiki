@@ -1,9 +1,9 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia SP
-| codename = huashan
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| name = Xperia SP
+| codename = sony-huashan
+| image = File:sony-huashan.jpg
+| imagecaption = 
 | releaseyear = 2013
 | originalsoftware = Android 4.1
 | chipset = Qualcomm MSM8960T Snapdragon S4 Pro
@@ -56,7 +56,7 @@ The power menu might have a "Reboot to bootloader option"
 
 === With the device off ===
 
-Press the "volume up" button, then plug in the usb cable. The LED bar should light up blue
+Press the {{Button|Volume Up}} button, then plug in the USB cable. The LED bar should light up blue
 
 == What works ==
 
