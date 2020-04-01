@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Archos
-| name =  80 G9 Turbo
-| codename = a80
+| name = 80 G9 Turbo
+| codename = archos-a80
 | image = File:Archos-a80-bootmenu.jpg
 | imagecaption = Archos 80 G9 Turbo
 | releaseyear = 2012
@@ -43,22 +43,22 @@ Nothing yet
 == What does not work ==
 
 == How to enter flash mode ==
-You can enter flash mode with power+volup or power+voldown after installing the SDE bootmenu
+You can enter flash mode with {{Button|Power}} + {{Button|Volume Up}} or {{Button|Power}} + {{Button|Volume Down}} after installing the SDE bootmenu
 
 == Installation ==
 
 === Installing SDE bootmenu ===
-The first step is installing SDE bootmenu so you'll be able to actually flash non-archos software to the device. This will void your warrenty!
+The first step is installing SDE bootmenu so you'll be able to actually flash non-archos software to the device. This will void your warranty!
 
-# Power on the tablet while holding the volume down button, release the power button as soon as the archos logo shows up but hold the volume button.
-# Choose "Update Firmware" with the volume buttons and press the power button to accept
+# Power on the tablet while holding the {{Button|Volume Down}} button, release the {{Button|Power}} button as soon as the archos logo shows up but hold the {{Button|Volume Down}} button.
+# Choose "Update Firmware" with the {{Button|Volume Up}} and {{Button|Volume Down}} buttons and press the {{Button|Power}} button to accept
 # The device now shows up as an empty mass storage device, mount the device and download the [http://update.archos.com/9/gen9/gen9_sde/firmware_archos_it4.aos SDE bootmenu image] to it.
 # Unmount the mass storage device and press the power button again on the device to install
 
 === Flashing the kernel and initramfs ===
 After installing SDE bootmenu you can install the kernel and initramfs. This is also done through a mass storage device.
 
-# Power on the tablet while holding volume down
+# Power on the tablet while holding {{Button|Volume Down}}
 # Select "Developer Edition Menu"
 # The first time you flash a kernel you'll have to remove the android kernel since the bootloader will default to that kernel over your custom developer kernel.
 # Select "Flash Kernel and Initramfs"
