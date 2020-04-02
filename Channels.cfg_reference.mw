@@ -1,7 +1,7 @@
 __NOTOC__
 {{note|WIP spec related to basing on Alpine stable. See {{milestone|2}} for progress and a general introduction.}}
 
-<code>channels.cfg</code> maps postmarketOS ''pmaports'' branches to Alpine Linux ''aports'' branches for each release channel.
+<code>channels.cfg</code> is in the master branch of [[pmaports.git]] and maps postmarketOS ''pmaports'' branches to Alpine Linux ''aports'' branches for each release channel.
 
 === Example ===
 
