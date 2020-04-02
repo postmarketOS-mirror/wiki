@@ -6,6 +6,7 @@ __NOTOC__
 === Example ===
 
 <source lang="ini">
+# Reference: https://postmarketos.org/channels.cfg
 [channels.cfg]
 recommended=edge
 
