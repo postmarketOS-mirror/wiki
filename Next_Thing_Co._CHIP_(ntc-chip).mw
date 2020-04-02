@@ -32,7 +32,7 @@
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
-| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = Kernel compiles and boots, u-boot needs to be packaged <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
