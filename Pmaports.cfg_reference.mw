@@ -28,7 +28,7 @@ The file only has one section, <code>pmaports</code>.
 | <code>1.17.0</code>
 |-
 | <code>channel</code>
-| One of the release channels defined in [[channels.cfg reference|channels.cfg]]. While channels.cfg already defines the pmaports branch related to a given channel, it is needed to save the channel in each branches pmaports.cfg as well, so we know to which channel a forked branch belongs.
+| One of the release channels defined in [[channels.cfg reference|channels.cfg]]. While channels.cfg already defines the pmaports branch related to a given channel, it is needed to save the channel in pmaports.cfg of each branch as well, so we know to which channel a forked branch belongs.
 | <code>edge</code>, <code>release/20.04</code>
 |}
 
