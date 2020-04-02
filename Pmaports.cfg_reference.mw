@@ -1,0 +1,35 @@
+__NOTOC__
+{{note|WIP spec related to basing on Alpine stable. See {{milestone|2}} for progress and a general introduction.}}
+
+<code>pmaports.cfg</code> is present on each branch of [[pmaports.git]] and holds various metadata parsed by [[pmbootstrap]]. 
+
+=== Example ===
+<source lang="ini">
+[pmaports]
+version=5
+pmbootstrap_min_version=1.17.0
+channel=edge
+</source>
+
+=== Section reference ===
+The file only has one section, <code>pmaports</code>.
+
+{| class="wikitable sortable"
+!Variable
+!Description
+!Possibles values
+|-
+| <code>version</code>
+| pmbootstrap compares this with <code>pmb.config.pmaports_min_version</code> and complains if this version isn't at least as high as the version that pmbootstrap requires
+| <code>5</code>
+|-
+| <code>pmbootstrap_min_version</code>
+| pmbootstrap compares this with <code>pmb.config.version</code> and complains if this branch of pmaports needs a newer pmbootstrap version
+| <code>1.17.0</code>
+|-
+| <code>channel</code>
+| One of the release channels defined in [[channels.cfg reference|channels.cfg]]. While channels.cfg already defines the pmaports branch related to a given channel, it is needed to save the channel in each branches pmaports.cfg as well, so we know to which channel a forked branch belongs.
+| <code>edge</code>, <code>release/20.04</code>
+|}
+
+[[Category:Technical Reference]]
