@@ -21,7 +21,7 @@ branch_aports=master
 
 [latest]
 description=Upcoming stable release (WIP, do not use!)
-branch_pmaports=3.11
+branch_pmaports=release/20.04
 branch_aports=3.11-stable
 </source>
 
