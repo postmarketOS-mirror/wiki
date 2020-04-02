@@ -1,0 +1,16 @@
+<code>pmaports.git</code> ([https://gitlab.com/postmarketOS/pmaports GitLab]) holds the package build recipes of postmarketOS, in the {{alpine|APKBUILD}} format. It is automatically checked out by [[pmbootstrap]] during <code>pmbootstrap init</code> (unless overridden with <code>--aports</code>). The default location of the local checkout is <code>~/.local/var/pmbootstrap/cache_git/pmaports</code>:
+
+<source lang="shell-session">
+$ pmbootstrap config aports
+/home/user/.local/var/pmbootstrap/cache_git/pmaports
+</source>
+
+Remember the <code>pmbootstrap status</code> command, it will print this path as well as the checked out branch and some other useful status information.
+
+=== Naming ===
+''pmaports'' stands for postmarketOS aports, and ''aports'' in turn are the Alpine ports. The name pmaports was chosen when pmaports.git was split from pmbootstrap.git in 2018 ({{issue|383}}), to make obvious that this is not a fork of Alpine's aports.git repository. Before that, it was a subdirectory called <code>aports</code> in the pmbootstrap.git repository. Therefore pmbootstrap sometimes refers to pmaports as "aports" (e.g. <code>pmbootstrap config aports</code> and <code>pmbootstrap --aports</code> are both about pmaports, not Alpine's aports).
+
+=== Differences to Alpine's aports ===
+* pmaports support an arbitrary amount of subdirectories. All packages created will end up in the same index file (<code>postmarketos/APKINDEX.tar.gz</code>), whereas in Alpine's aports, the contents of [https://wiki.alpinelinux.org/wiki/Aports_tree each directory] (<code>main</code>, <code>community</code>, ...) will end up in a separate index (and deeper directory levels are not supported). This was chosen so users only need to download one additional <code>APKINDEX.tar.gz</code> for all of the postmarketOS packages, while still having a flexible directory structure in the git repository.
+* pmaports has metadata about compatibility with pmbootstrap in [[pmaports.cfg reference|pmaports.cfg]]
+* pmaports has metadata about release channels in [[channels.cfg reference|channels.cfg]] (master branch only)
