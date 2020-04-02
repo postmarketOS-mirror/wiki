@@ -5,6 +5,7 @@ __NOTOC__
 
 === Example ===
 <source lang="ini">
+# Reference: https://postmarketos.org/pmaports.cfg
 [pmaports]
 version=5
 pmbootstrap_min_version=1.17.0
