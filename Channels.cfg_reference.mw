@@ -1,14 +1,9 @@
+__NOTOC__
 {{note|WIP spec related to basing on Alpine stable. See {{milestone|2}} for progress and a general introduction.}}
 
-This file will be in the channels.cfg branch of pmaports.git, to map the postmarketOS pmaports branches to Alpine Linux aports branches for each release channel. The reason is, that if we store it in any other pmaports.git branch, that we are using for building aports (e.g. master), then we could get an outdated channels.cfg on staled branches. By having it in a dedicated branch, it always counts for the whole repository. Another possible location would be pmbootstrap, but this would tie the pmbootstrap version unnecessarily to these versions.
+<code>channels.cfg</code> maps postmarketOS ''pmaports'' branches to Alpine Linux ''aports'' branches for each release channel.
 
 === Example ===
-
-It can be viewed from any checked out branch with:
-
-<source lang="shell-session">
-$ git show channels.cfg:channels.cfg
-</source>
 
 <source lang="ini">
 [channels.cfg]
@@ -53,11 +48,29 @@ Channel sections, for which it will be possible to install postmarketOS. <code>e
 |-
 | <code>branch_pmaports</code>
 | Branch of postmarketOS pmaports.git
-| <code>master</code>, <code>3.11</code>, ...
+| <code>master</code>, <code>release/20.04</code>, ...
 |-
 | <code>branch_aports</code>
 | Branch of Alpine Linux aports.git
 | <code>master</code>, <code>3.11-stable</code>, ...
 |}
+
+=== Location ===
+pmbootstrap reads the file from the master/origin branch of pmaports.git. This way, it will always use the latest fetched version, even if the last checked out master branch (master without the origin/ infront) is not up-to-date. This is likely to happen if a release branch was checked out, as a <code>git pull</code> would then only update the reference from the release branch related to origin's release branch, master's reference would not change.
+
+Release branches do ''not'' have a copy of the file, this would just require us to needlessly keep them all in sync.
+
+View it with:
+
+<source lang="shell-session">
+$ cd $(pmbootstrap config aports) # change directory to local checkout of pmaports.git
+$ git show origin/master:channels.cfg
+</source>
+
+For development and testing, it is possible to override the path with <code>--config-channels</code>:
+
+<source lang="shell-session">
+$ pmbootstrap --config-channels /tmp/channels.cfg status
+</source>
 
 [[Category:Technical Reference]]
