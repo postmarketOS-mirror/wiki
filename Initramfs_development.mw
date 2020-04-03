@@ -6,7 +6,7 @@ After the installation, you will have '''two''' initramfs files in your device's
 
 <pre>% ls ~/.local/var/pmbootstrap/chroot_rootfs_samsung-i9100/boot
 initramfs-samsung-i9100  initramfs-samsung-i9100-extra  vmlinuz-samsung-i9100</pre>
-Regular Linux distributions only have '''one''' initramfs file. '''We have split it''' into two to work around the [https://github.com/postmarketOS/pmbootstrap/issues/126 size limitations], that some devices have. The regular initramfs is relatively small (''~1.5 mb, and we could make it smaller if necessary!'') and loads the contents of the initramfs-extra from the pmOS boot partition during the boot process.
+Regular Linux distributions only have '''one''' initramfs file. '''We have split it''' into two to work around the size limitations that some devices have (see {{issue|126}}). The regular initramfs is relatively small (''~1.5 mb, and we could make it smaller if necessary!'') and loads the contents of the initramfs-extra from the pmOS boot partition during the boot process.
 
 The pmOS boot partition is a '''sub'''partition of the system partition (''SD cards: simply a real partition on the SD card''), so we can make it almost as big as we want.
 
