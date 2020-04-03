@@ -15,13 +15,13 @@ You can configure <code>CONFIG_CMDLINE</code> so that the arguments are permanen
 
 pmbootstrap flasher boot --cmdline &quot;PMOS_NO_OUTPUT_REDIRECT&quot;</pre>
 == MSM framebuffer doesn't work ==
-We found out that removing the 3D driver support makes the MSM framebuffer. See [https://github.com/postmarketOS/pmbootstrap/pull/66 #66].
+We found out that removing the 3D driver support makes the MSM framebuffer. See {{MR|66}}.
 
 <pre>CONFIG_MSM_KGSL=n</pre>
 == PTY allocation request failed ==
 <pre>PTY allocation request failed on channel 0
 -ash: a: unknown operand</pre>
-Go to [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting%3Akernel#common-configurations Common configurations], you have probably missed <code>CONFIG_DEVTMPFS</code>!
+Go to [[kernel configuration]], you have probably missed <code>CONFIG_DEVTMPFS</code>!
 
 == Kernel compilation: (some header file): No such file or directory ==
 Busybox' <code>zip</code> implementation does not extract symlinks. There are two workarounds. One is to use another archive type (typically kernel sources are downloaded from GitHub, where you can also get the source as <code>.tar.gz</code> - simply by changing the extension in the URL).
