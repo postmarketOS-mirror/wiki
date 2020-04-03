@@ -19,7 +19,8 @@ It's highly recommended that you run osk-sdl from '''within''' pmOS, which means
 The osk-sdl package is in pmOS's aports directory. To prepare pmOS for running osk-sdl for porting: 
 
 <syntaxhighlight lang="shell-session">
-$ git clone https://github.com/postmarketOS/pmbootstrap.git
+$ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+$ cd pmbootstrap
 $ ./pmbootstrap init
 <select device options>
 <select 'none' for UI so that osk-sdl can be run from within pmos without conflicting with weston>
