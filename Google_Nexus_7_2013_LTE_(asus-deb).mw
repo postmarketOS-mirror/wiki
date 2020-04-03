@@ -1,0 +1,47 @@
+{{Infobox device
+| manufacturer = Google (ASUS)
+| name = Nexus 7 (2013) LTE
+| codename = asus-deb
+| image = File:Asus_flo_hildon.jpg
+| imagecaption = Flo running Hildon
+| releaseyear = July 2013
+| original software = Android 6 on Linux 3.4
+| chipset = Qualcomm APQ8064-1AA Snapdragon S4 Pro (Snapdragon 600)
+| cpu = Quad-core 1.5 GHz Krait 300
+| gpu = Adreno 320
+| storage = 16/32 GB
+| display = 1200x1920 FHD IPS
+| memory = 2 GB
+| architecture = armv7
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = P
+| status_mainline = P
+| status_battery =
+| status_3d = Y
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = N
+| status_sms = -
+| status_calls = -
+| booting = yes
+}}
+[[File:Asus_flo_plasma.jpg|thumb|right|Flo running Plasma Mobile]]
+
+
+=== Users owning this device ===
+
+{{Device owners}}
+
+=== Other information ===
+
+* This device is identical to asus-flo, except that it has a modem.
+* To install to this device, simply use the asus-flo image, which obviously doesn't support the modem.
+* See [[Google Nexus 7 2013 (asus-flo)]]
