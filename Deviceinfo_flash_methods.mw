@@ -1,7 +1,7 @@
 == Introduction ==
 
 Here is a guide on how to find the correct value for <code>deviceinfo_flash_method</code>, and some pitfalls you need to look out for depending on your flasher application. Please note, that all flasher mode implementations on the phones<br />
-listed here are proprietary (even if the flashing software is open source). But they are hard to [https://github.com/postmarketOS/pmbootstrap/wiki/Firmware replace] (if we can do that at all), so we will use them for now to flash pmOS on the devices.
+listed here are proprietary (even if the flashing software is open source). But they are hard to [https://wiki.postmarketos.org/wiki/Firmware replace] (if we can do that at all), so we will use them for now to flash pmOS on the devices.
 
 == Android ==
 
