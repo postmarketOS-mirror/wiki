@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Huawei
-| name =  Ascend Y300
+| name = Ascend Y300
 | codename = huawei-y300
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:huawei-y300.jpg
+| imagecaption = 
 | releaseyear = 2013
 | originalsoftware = Android 4.1.1
 | chipset = Qualcomm MSM8225 Snapdragon S4 Play
 | cpu = Dual-core 1.0 GHz Cortex-A5
 | gpu = Adreno 203
-| storage = 4GB
+| storage = 4 GB
 | display = IPS LCD capacitive touchscreen, 16M colors, 4.0 inches, 45.5 cm2 (~57.3% screen-to-body ratio), 480 x 800 pixels, 5:3 ratio (~233 ppi density), Scratch-resistant glass
-| memory = 512MB
+| memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
