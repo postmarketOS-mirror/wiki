@@ -29,9 +29,9 @@ These are the cross-compile types supported. [https://gitlab.com/postmarketOS/pm
 * <code>"crossdirect"</code>: similar to distcc, but the native chroot gets mounted in the foreign arch chroot, and with some magic we can redirect everything to the cross compilers without having distcc running ({{issue|1731}}). Therefore we side-step the security issue and the performance problems. As of writing, this method is brand new and only available in pmbootstrap master. If any problems arise, you can switch to "distcc-sshd" again by running <code>pmbootstrap --no-crossdirect ...</code>.
 
 === Performance related issues ===
-* [https://github.com/postmarketOS/pmbootstrap/issues/659 Use "native" for (almost) all packages?]
-* [https://github.com/postmarketOS/pmbootstrap/issues/384 Distcc: use pump mode for possible performance improvement]
-* [https://github.com/postmarketOS/pmbootstrap/issues/480 Distcc: has integrated timeout, slowing down our builds ._.]
+* {{issue|659}} Use "native" for (almost) all packages?
+* {{issue|384}} Distcc: use pump mode for possible performance improvement
+* {{issue|480}} Distcc: has integrated timeout, slowing down our builds ._.
 
 === Caches ===
 
@@ -41,7 +41,7 @@ These are the cross-compile types supported. [https://gitlab.com/postmarketOS/pm
 * <code>cache_ccache_$ARCH</code>: ccache: Whenever you compile something with <code>pmbootstrap</code>, the output gets cached in this folder (depending on the architecture). When you compile the same code for the second time, the cached output gets used, thus saving you a lot of time (think of re-compiling kernels, because you want to test another kernel config option etc.)
 * <code>cache_distfiles</code>: Whenever you build a package, <code>abuild</code> (which pmbootstrap wraps) will download the source files to the <code>distfiles</code> cache (and skip these downloads, when they already exist). The exact file name can be controlled inside the APKBUILD ([https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#source more info]).
 * <code>cache_git</code>: <code>pmbootstrap</code> can download git repositories. This gets used in <code>pmbootstrap aportgen</code>, which copies a package (aka. aport) from Alpine Linux and customizes it (for example: <code>gcc-armhf</code>), so we inherit all patches and changes automatically, without much maintenance work. The git repos get stored inside this folder.
-* <code>cache_http</code>: This stores files, that get downloaded with [https://github.com/postmarketOS/pmbootstrap/blob/master/pmb/helpers/http.py <code>pmb.helpers.http.download()</code>], so they don't need to be downloaded again every time. Currently, this gets used for the initial download of Alpine Linux' main repositories <code>APKINDEX.tar.gz</code> and [https://pkgs.alpinelinux.org/package/edge/main/armhf/apk-tools-static apk-tools-static] (which is a static build of the <code>apk</code> package manager, used to set up the chroot).
+* <code>cache_http</code>: This stores files, that get downloaded with [https://gitlab.com/postmarketOS/pmbootstrap/-/blob/master/pmb/helpers/http.py <code>pmb.helpers.http.download()</code>], so they don't need to be downloaded again every time. Currently, this gets used for the initial download of Alpine Linux' main repositories <code>APKINDEX.tar.gz</code> and [https://pkgs.alpinelinux.org/package/edge/main/armhf/apk-tools-static apk-tools-static] (which is a static build of the <code>apk</code> package manager, used to set up the chroot).
 
 === Why noarch packages are built for each architecture ===
 
