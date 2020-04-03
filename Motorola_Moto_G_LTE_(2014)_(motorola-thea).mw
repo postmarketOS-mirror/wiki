@@ -1,16 +1,16 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto G LTE (2014)
+| name = Moto G LTE (2014)
 | codename = motorola-thea
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| image = File:motorola-thea.jpg
+| imagecaption = 
 | releaseyear = 2014
 | originalsoftware = Android 4.4.4 on Linux 3.4
-| chipset = Qualcomm MSM8926 (Snapdragon 400)
+| chipset = Qualcomm MSM8926 Snapdragon 400
 | cpu = 4 x 1.2GHz Cortex-A7
 | gpu = Adreno 305 @ 400 Mhz
-| storage = 8/16GB
-| display = 5" 1280 x 720 IPS
+| storage = 8/16 GB
+| display = 5" 720 x 1280 IPS
 | memory = 1 GB LPDDR3
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
@@ -71,7 +71,6 @@ This device is *literally* motorola-titan but with an 4G/LTE modem (and some und
 Nothing special, just your typical `pmbootstrap install` && `pmbootstrap flasher` combo.
 
 == See also ==
-Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|1058|pmaports}} Initial merge request
 
 <!--
