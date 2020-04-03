@@ -48,7 +48,7 @@
 
 == Current work ==
 * Using libhybris for at least 3d acceleration, sound and wifi.
-** Wifi works using wpa_supplicant described here: https://github.com/postmarketOS/pmbootstrap/issues/373
+** Wifi works using wpa_supplicant described here: {{Issue|373}}
 ** hwcomposer_test_caf works as described in [[Hybris|Hybris documentation]]
 ** plasma doesn't come up due to lack of qtwayland (??) as hinted https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/
 <code>samsung-serranodsdd:~$ exec /usr/bin/plasmashell -p org.kde.plasma.phone
