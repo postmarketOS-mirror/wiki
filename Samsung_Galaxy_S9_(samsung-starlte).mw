@@ -2,13 +2,13 @@
 | manufacturer = Samsung
 | name = Galaxy S9
 | codename = samsung-starlte
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg <!-- TODO -->
+| image = File:samsung-starlte.jpg <!-- TODO -->
 | imagecaption = Samsung Galaxy S9
 | releaseyear = 2018
 | originalsoftware = Android 9.0
-| chipset = Exynos M3 & Cortex-A55
-| cpu = Samsung Exynos 9810
-| gpu = ARM Mali-G72 MP18
+| chipset = Samsung Exynos 9810
+| cpu = Octa-core (4x 2.7 GHz Mongoose M3 & 4x 1.8 GHz Cortex-A55)
+| gpu = Mali-G72 MP18
 | storage = 64 GB
 | display = 2960x1440 Quad HD+ Super AMOLED
 | memory = 4 GB
@@ -47,7 +47,7 @@
 {{Device owners}}
 
 == How to enter flash mode ==
-Press and hold <code>Volume Down</code> + <code>Bixby</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
+Press and hold {{Button|Volume Down}} + {{Button|Bixby}} + {{Button|Power}} simultaneously. Then click {{Button|Volume Up}} to confirm.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
@@ -60,6 +60,7 @@ Press and hold <code>Volume Down</code> + <code>Bixby</code> + <code>Power</code
 * I found a log file [https://pastebin.com/ztfFvzmf here] for a star2lte, so this could be related?.
 
 == See also ==
+* [https://www.gsmarena.com/samsung_galaxy_s9-8966.php More specs]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
