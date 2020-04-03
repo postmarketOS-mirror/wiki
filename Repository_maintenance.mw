@@ -42,6 +42,6 @@ git diff --name-only
 
 == See also ==
 * [[Merge_Workflow#Merge_on_command_line|How to merge git commits on the command line]]
-* [https://github.com/postmarketOS/pmOS-repo-scripts pmOS-repo-scripts]
+* [https://gitlab.com/postmarketOS/pmOS-repo-scripts pmOS-repo-scripts]
 * {{github|1458}} Fixing the repo after QT upgrade to 5.10.1
 * [[Add a new architecture to postmarketOS]]
