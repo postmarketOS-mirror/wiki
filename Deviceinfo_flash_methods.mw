@@ -39,7 +39,7 @@ boot.img: Linux kernel ARM boot executable zImage (little-endian)</pre>
 ===== <code>heimdall-bootimg</code> =====
 
 When using that flasher, make sure that you also add <code>mkbootimg</code> to your <code>depends</code> line in the <code>APKBUILD</code>, and that you set <code>deviceinfo_generate_bootimg</code> in your <code>deviceinfo</code> file to <code>&quot;true&quot;</code>.<br />
-To generate a working boot.img, in the <code>deviceinfo</code> you also need to specify the variables for the various offset, follow this [https://github.com/postmarketOS/pmbootstrap/wiki/How-to-find-device-specific-information#fastboot-bootimg-flash-offsets guide] to find the correct values for your device.
+To generate a working boot.img, in the <code>deviceinfo</code> you also need to specify the variables for the various offset, follow this [https://wiki.postmarketos.org/wiki/How_to_find_device-specific_information#Fastboot_.28boot.img.29_flash_offsets guide] to find the correct values for your device.
 
 ===== <code>heimdall-isorec</code> =====
 
