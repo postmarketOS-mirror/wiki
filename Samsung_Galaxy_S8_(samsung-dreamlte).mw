@@ -52,6 +52,46 @@
 Press and hold {{button|Bixby Key}} + {{button|Volume Down}} + {{button|Power}} simultaneously while device is powered off.
 
 
+== Additional info ==
+
+=== Partition layout ===
+
+<pre class="shell">~ # fdisk -l /dev/block/sda
+Note: sector size is 4096 (not 512)
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/block/sda: 124928000 sectors,  576M
+Logical sector size: 4096
+Disk identifier (GUID): 52444e41-494f-2044-4d4d-43204449534b
+Partition table holds up to 128 entries
+First usable sector is 6, last usable sector is 15615994
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            1024            2047       4096K   0700  BOTA0
+   2            2048            3071       4096K   0700  NA
+   3            3072            8191       20.0M   0700  EFS
+   4            8192           10239       8192K   0700  PARAM
+   5           10240           12287       8192K   0700  UP_PARAM
+   6           12288           14335       8192K   0700  BOTA2
+   7           14336           24575       40.0M   0700  BOOT
+   8           24576           36351       46.0M   0700  RECOVERY
+   9           36352           38399       8192K   0700  BOTA1
+  10           38400           49151       42.0M   0700  RADIO
+  11           49152           49407       1024K   0700  TOMBSTONES
+  12           49408           49663       1024K   0700  DNT
+  13           49664           49791        512K   0700  PERSISTENT
+  14           49792           50047       1024K   0700  MISC
+  15           50048           51071       4096K   0700  STEADY
+  16           51072           55167       16.0M   0700  KEYREFUGE
+  17           55168         1168767       4350M   0700  SYSTEM
+  18         1168768         1296767        500M   0700  CACHE
+  19         1296768         1299327       10.0M   0700  HIDDEN
+  20         1299328         1312127       50.0M   0700  OMR
+  21         1312128         1313407       5120K   0700  CP_DEBUG
+  22         1313408         1318527       20.0M   0700  NAD_FW
+  23         1318528         1318783       1024K   0700  NAD_REFER
+  24         1318784        15614847       54.5G   0700  USERDATA</pre>
+
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_s8-8161.php Full phone specifications]
 * [https://twrp.me/samsung/samsunggalaxys8.html TWRP for Samsung Galaxy S8 (Exynos)]
