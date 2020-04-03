@@ -1,13 +1,13 @@
 {{Infobox device
 | manufacturer = LG
-| name =  Optimus 3D
+| name = Optimus 3D
 | codename = lg-p920
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:lg-p920.jpg
 | imagecaption = LG Optimus 3D
 | releaseyear = 2011
 | originalsoftware = Android 2.2
 | chipset = TI OMAP 4430
-| cpu = Dual-Core ARM Cortex-A9 1.0GHz
+| cpu = Dual-Core 1.0 GHz Cortex-A9
 | gpu = PowerVR SGX540
 | storage = 8 GB
 | display = 800x480 IPS 3D LCD
