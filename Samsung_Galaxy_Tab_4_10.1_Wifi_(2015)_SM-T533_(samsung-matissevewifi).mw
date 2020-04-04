@@ -1,13 +1,13 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Tab 4 10.1 Wifi (2015) SM-T533
+| name = Galaxy Tab 4 10.1 Wifi (2015) SM-T533
 | codename = samsung-matissevewifi
 | image = File:samsung-matissewifi.jpg
 | imagecaption = Samsung Galaxy Tab 4 10.1 (Wi-Fi)
 | releaseyear = 2015
 | originalsoftware = Android 4.4.2 (KitKat)
 | chipset = Qualcomm MSM8916 Snapdragon 410
-| cpu = 4 cores up to 1.2 GHz Cortex-A7 (32bit)
+| cpu = 4 cores up to 1.2 GHz Cortex-A53
 | gpu = Qualcomm Adreno 306 GPU
 | storage = 16/32 GB flash memory, microSDXC slot (up to 64 GB)
 | display = 1280×800 px, 10.1" in (26 cm) diagonal, WXGA TFT display (LCM: smd_ltl101al06, touchscreen: atmel_mxt_1188s)
@@ -106,4 +106,4 @@ This presents the important steps that have been achieved toward mainlining this
 * [https://github.com/msm8916-mainline/android_kernel_qcom_msm8916/tree/SM-T533 mainlining guide for msm8916]
 * [https://wiki.postmarketos.org/wiki/Mainlining_Guide#Materials_to_look_into Mainlining Guide - postmarketOS intruduction videos to device tree for arm]
 * The [[Samsung_Galaxy_Tab_A_9.7_WiFi_(2015)_(samsung-gt510wifi)]] is very similar and as a port that is well advanced. It can be a source of inspiration.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-samsung-matisseve-wifi Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-matissevewifi Device package]
