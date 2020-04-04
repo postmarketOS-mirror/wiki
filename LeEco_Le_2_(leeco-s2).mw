@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = LeEco
-| name =  Le 2
+| name = Le 2
 | codename = leeco-s2
 | image = File:s2.jpg
 | imagecaption = Front
 | releaseyear = 2016, April
 | originalsoftware = EUI 5.9.19S(X527) based on Android 6.0
 | chipset = Qualcomm MSM8976 Snapdragon 652 
-| cpu = 4x1.4 GHz Cortex-A53 & 4x1.8 GHz Cortex-A72
+| cpu = 4x 1.4 GHz Cortex-A53 & 4x 1.8 GHz Cortex-A72
 | gpu = Adreno 510
 | storage = 32/64 GB Internal, no SD card
 | display = 1920x1080, IPS LCD capacitive touchscreen, 16M colors, 5.5 inches, 83.4 cm2 (~74.4% screen-to-body ratio), Multitouch
-| memory = 3 GB RAM
+| memory = 3 GB
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
@@ -38,13 +38,16 @@
 * OctoNezd
 
 == How to enter flash mode ==
-Recovery: Power+VolUp
+Recovery: {{Button|Power}} + {{Button|Volume Up}}
 
-Fastboot: Power+VolDown
+Fastboot: {{Button|Power}} + {{Button|Volume Down}}
 == Installation ==
 1. Flash it with fastboot/twrp
 
 == Photos ==
 
 == Links ==
-[https://wiki.lineageos.org/devices/s2 Le 2 Page on LineageOS Wiki]
+* [https://wiki.lineageos.org/devices/s2 Le 2 Page on LineageOS Wiki]
+* {{MR|1073|pmbootstrap}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-leeco-s2 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-leeco-s2 Kernel package]
