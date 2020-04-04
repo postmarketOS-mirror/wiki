@@ -2,6 +2,8 @@
 
 Devices that are working quite well get lost in the [[Devices|big matrix of booting devices]]. To improve the situation, devices postmarketOS runs on will be grouped into the following categories.
 
+== Categories ==
+
 {| class="wikitable sortable"
 !Category
 !Actively maintained
@@ -33,6 +35,27 @@ Not required (shall change in the future):
 | no
 | Known broken device ports are stored here, binary packages are not built for these. The rationale is, that it is easier to restore ports from such an ''unmaintained'' dir.
 |}
+
+== Moving between categories ==
+
+=== Moving to a higher category ===
+Moving from testing to community, from community to main or even from testing straight to main.
+
+==== Request process ====
+* Make sure that the device fulfills all requirements for the new category (see table above).
+* Create a new merge request in which you move the files.
+* Add new maintainers to the device's APKBUILD in the merge request, if necessary.
+
+==== Review process ====
+* The core team collects approvals as usual, but requires ''four'' approvals (instead of the usual two).
+* Everyone should be given the chance to look at the entire device port again, to identify issues/possible improvements (see examples in {{issue|24|postmarketos}}). Therefore the MR should not be merged before a minimum time of one week passed.
+* Reviewers must look at all files that were moved and add comments as necessary. (GitLab currently doesn't allow in-line comments for moved files {{issue|213446|gitlab|gitlab-org}}, so just add comments below the merge request.)
+* Reviewers must verify that the device fulfills all requirements for the new category (see table above).
+* Consistency issues/possible improvements in the existing features (not missing features) should be discussed and ideally fixed before merge.
+** Consistency changes that require lots of work should be documented as issues at least (I don't think it makes sense to unnecessarily delay merge, that's annoying for everyone)
+
+=== Moving to a lower category ===
+If rules to keep a device in a category are no longer fulfilled, we should create a merge request to move them to the now appropriate category. So far we did not come up with extra rules, so we would treat it just like any other merge request.
 
 == See also ==
 * {{issue|16|postmarketos}} Increase visibility of actively maintained devices
