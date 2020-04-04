@@ -1,16 +1,16 @@
 {{Infobox device
 | manufacturer = Fly
-| name =  Spark
+| name = Spark
 | codename = fly-iq4404
 | image = File:Fly_iq4404_white_original.jpg
 | imagecaption = Fly iq4404 white
 | releaseyear = 2013
 | originalsoftware = Android 4.2
 | chipset = MediaTek MT6572
-| cpu = Cortex A7 2x1200 МГц
-| gpu = Mali-400MP 
+| cpu = 2x 1.2 GHz Cortex-A7
+| gpu = Mali-400
 | storage = 4 GB
-| display = 864x480 IPS
+| display = 480x854 IPS
 | memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
@@ -62,7 +62,7 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-Vol up + Power (loading Recovery)
+{{Button|Volume Up}} + {{Button|Power}} (loading Recovery)
 
 Connect usb cable and enter:
 
@@ -80,6 +80,7 @@ pmbootstrap creates a damaged boot.img, so you need to manually build boot.img
 
 <pre>fastboot flash boot newboot.img</pre>
 == See also ==
+* {{MR|862|pmaports}} Initial (closed, not merged) merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
