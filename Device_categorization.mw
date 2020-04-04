@@ -48,9 +48,10 @@ Moving from testing to community, from community to main or even from testing st
 
 ==== Review process ====
 * The core team collects approvals as usual, but requires '''four approvals''' (instead of the usual two).
-* Everyone should be given the chance to look at the entire device port again, to identify issues/possible improvements (see examples in {{issue|24|postmarketos}}). Therefore the MR should not be merged before a '''minimum time of one week''' passed.
-* Reviewers must look at all files that were moved and add comments as necessary. (GitLab currently doesn't allow in-line comments for moved files {{issue|213446|gitlab|gitlab-org}}, so just add comments below the merge request.)
-* Reviewers must verify that the device fulfills all requirements for the new category (see table above).
+* Everyone should be given the chance to look at the entire device port again, to identify issues/possible improvements. Therefore the MR should not be merged before a '''minimum time of one week''' passed.
+* Reviewers should look at all files that were moved and add comments as necessary. (GitLab currently doesn't allow in-line comments for moved files {{issue|213446|gitlab|gitlab-org}}, so just add comments below the merge request.)
+* Reviewers should verify that the device fulfills all requirements for the new category (see table above).
+* Reviewers should pay special attention to consistency issues, as outlined in {{issue|24|postmarketos}}.
 * Consistency issues/possible improvements in the existing features (not missing features) should be discussed and ideally fixed before merge.
 ** Consistency changes that require lots of work should be documented as issues at least. (Let's not unnecessarily delay merge, that's annoying for everyone.)
 
