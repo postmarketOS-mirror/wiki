@@ -8,11 +8,11 @@
 | releaseyear = 2016
 | originalsoftware = Android 5.1 (Linux 3.10.72)
 | chipset = MediaTek MT6582 (M?)
-| cpu = 4xARM Cortex-A7 1300 MHz
+| cpu = 4x 1.3 GHz Cortex-A7
 | gpu = Mali-400 MP2
-| storage = 8GB
+| storage = 8 GB
 | display = 480x854
-| memory = 1GB
+| memory = 1 GB
 | architecture = armv7
 
 | status_usbnet = Y
@@ -96,6 +96,6 @@ The flashlight can be enabled with
 * [https://github.com/HenriDellal/kernel-huawei-y3ii Kernel source]
 * {{MR|559|pmaports}} Initial merge request
 * {{issue|337|pmaports}} Touchscreen issues fix for this device (and probably other Mediatek phones)
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-huawei-lua-u22 Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-huawei-lua-u22 Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-huawei-lua-u22 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-huawei-lua-u22 Kernel package]
 [[File:huawei-lua-u22-mate-2.png|200px|thumb|left|Running MATE, htop and matchbox-keyboard]]
