@@ -7,8 +7,8 @@
  | releaseyear = 2019
  | originalsoftware = Mocor 5 OS (based on Android 4.4.2)
  | chipset = Spreadtrum SC7715GA
- | cpu = 1 x ARM Cortex-A7 @ 1.0 Ghz
- | gpu = Mali-400MP1
+ | cpu = 1x 1.0 GHz Cortex-A7
+ | gpu = Mali-400 MP1
  | storage = 512 MB
  | display = 240x320
  | memory = 256 MB
@@ -96,5 +96,5 @@ I've tried some downstream kernels and there are my findings:
 
 == See also ==
 * [https://github.com/Qiangong2/android_kernel_scx15_sp7715ga_FS001 Kernel sources]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-nobby-230 Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-nobby-230 Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-nobby-230 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-nobby-230 Kernel package]
