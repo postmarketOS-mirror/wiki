@@ -1,0 +1,52 @@
+{{Infobox device
+| manufacturer = BQ
+| name = Aquaris U
+| codename = bq-chaozu
+| image = File:chaozu.png
+| imagecaption = BQ Aquaris U
+| releaseyear = 2016
+| originalsoftware = Android 6.0
+| chipset = Qualcomm MSM8937 Snapdragon 430
+| cpu = Octa-core 1.4 GHz Cortex-A53
+| gpu = Adreno 505
+| storage = 16 GB
+| display = 720x1280
+| memory = 2 GB
+| architecture = armhf
+| status_usbnet = 
+| status_flashing = Y
+| status_touch = 
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls =
+| booting = yes
+}}
+
+== Contributors ==
+* JBBgameich
+
+== Maintainer(s) ==
+* JBBgameich
+
+== How to enter flash mode ==
+Run adb reboot bootloader from the recovery or stock ROM. Alternatively choose fastboot in the early boot menu (only appears if your bootloader is unlocked) by using the volume buttons.
+
+== Installation ==
+
+== Photos ==
+
+== Links ==
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-bq-chaozu Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-bq-chaozu Kernel package]
