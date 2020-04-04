@@ -52,7 +52,7 @@ Moving from testing to community, from community to main or even from testing st
 * Reviewers must look at all files that were moved and add comments as necessary. (GitLab currently doesn't allow in-line comments for moved files {{issue|213446|gitlab|gitlab-org}}, so just add comments below the merge request.)
 * Reviewers must verify that the device fulfills all requirements for the new category (see table above).
 * Consistency issues/possible improvements in the existing features (not missing features) should be discussed and ideally fixed before merge.
-** Consistency changes that require lots of work should be documented as issues at least (I don't think it makes sense to unnecessarily delay merge, that's annoying for everyone)
+** Consistency changes that require lots of work should be documented as issues at least (Let's not unnecessarily delay merge, that's annoying for everyone)
 
 === Moving to a lower category ===
 If rules to keep a device in a category are no longer fulfilled, we should create a merge request to move them to the now appropriate category. So far we did not come up with extra rules, so we would treat it just like any other merge request.
