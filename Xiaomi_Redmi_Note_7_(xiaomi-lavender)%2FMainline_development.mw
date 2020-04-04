@@ -3,6 +3,10 @@
 === Mainline Linux ===
 Patches were sent for review with initial mainline support for sdm660/lavender: https://patchwork.kernel.org/project/linux-arm-msm/list/?series=240549
 
+commits merged in 5.6:
+* [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=94d57ebd233a39d4d28fcd4de13a092146da3f4f dt-bindings: Add vendor prefix for Xiaomi]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=faf8e30acb219849725aa75302d36e0ffdb6a258 dt-bindings: arm: Add kryo260 compatible]
+
 === Lineage OS ROMs/TWRP pstore-ramoops module parameters ===
 
  /sys/fs/pstore # ls -la /sys/module/ramoops/parameters/
