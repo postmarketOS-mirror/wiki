@@ -47,8 +47,8 @@ Moving from testing to community, from community to main or even from testing st
 * Add new maintainers to the device's APKBUILD in the merge request, if necessary.
 
 ==== Review process ====
-* The core team collects approvals as usual, but requires ''four'' approvals (instead of the usual two).
-* Everyone should be given the chance to look at the entire device port again, to identify issues/possible improvements (see examples in {{issue|24|postmarketos}}). Therefore the MR should not be merged before a minimum time of one week passed.
+* The core team collects approvals as usual, but requires '''four approvals''' (instead of the usual two).
+* Everyone should be given the chance to look at the entire device port again, to identify issues/possible improvements (see examples in {{issue|24|postmarketos}}). Therefore the MR should not be merged before a '''minimum time of one week''' passed.
 * Reviewers must look at all files that were moved and add comments as necessary. (GitLab currently doesn't allow in-line comments for moved files {{issue|213446|gitlab|gitlab-org}}, so just add comments below the merge request.)
 * Reviewers must verify that the device fulfills all requirements for the new category (see table above).
 * Consistency issues/possible improvements in the existing features (not missing features) should be discussed and ideally fixed before merge.
