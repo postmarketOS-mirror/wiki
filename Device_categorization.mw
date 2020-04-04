@@ -10,7 +10,7 @@ Devices that are working quite well get lost in the [[Devices|big matrix of boot
 !Description
 |-
 | main
-| yes ''(ideally by multiple people)''
+| yes, >= 2 people
 | Required working features (where available):
 * Usable phone UI (i.e. Plasma Mobile or Phosh)
 * Calls (incl. call audio with earpiece)
