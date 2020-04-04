@@ -19,8 +19,8 @@ Devices that are working quite well get lost in the [[Devices|big matrix of boot
 * WiFi
 * Audio (speaker, main microphone ; headset, headset microphone ; jack detection, headset buttons)
 * Battery charging
-Not required (shall change in the future):
 * Bluetooth
+Not required (shall change in the future):
 * Camera
 |-
 | community
