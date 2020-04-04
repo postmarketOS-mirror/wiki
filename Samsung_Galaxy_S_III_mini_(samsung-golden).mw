@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy S III mini
+| name = Galaxy S III mini
 | codename = samsung-golden
 | image = File:samsung-golden.jpg
 | imagecaption = Samsung Galaxy SIII mini
 | releaseyear = 2012
 | originalsoftware = Android 4.1.1
 | chipset = [[ST-Ericsson NovaThor U8500]]
-| cpu = 1 GHz dual-core ARM Cortex-A9
-| gpu = ARM Mali-400 MP1
-| storage = 8GB
+| cpu = 1 GHz dual-core Cortex-A9
+| gpu = Mali-400 MP1
+| storage = 8 GB
 | display = 480x800 AMOLED
-| memory = 1GB
+| memory = 1 GB
 | architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
@@ -51,14 +51,14 @@
 == Installation ==
 The mainline kernel can only be booted through U-Boot, not directly with the Samsung bootloader. U-Boot is installed as intermediate bootloader on the boot partition, so it does not replace the Samsung bootloader entirely. pmbootstrap can only support one bootloader configuration at the moment, which is why U-Boot is also recommended when installing the downstream kernel.
 
-Boot into Download Mode using <code>Power</code> + <code>Volume Down</code> + <code>Home</code> and follow the instructions at [[ST-Ericsson_NovaThor_U8500#U-Boot]] to install U-Boot.
+Boot into Download Mode using {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}} and follow the instructions at [[ST-Ericsson_NovaThor_U8500#U-Boot]] to install U-Boot.
 
 Finally, just follow the [[Installation guide]].
 
 == Mainline ==
 '''Working:'''
 * Display (partial - works but cannot be turned off properly; no brightness control)
-* GPU (Mali 400 MP using Lima)
+* GPU (Mali-400 MP using Lima)
 * Touchscreen
 * WiFi
 * Bluetooth (partial - at least on my device scanning for other devices works but it keeps disconnecting when connecting to other devices; not sure why)
