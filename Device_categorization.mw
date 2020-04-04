@@ -36,6 +36,9 @@ Not required (shall change in the future):
 | Known broken device ports are stored here, binary packages are not built for these. The rationale is, that it is easier to restore ports from such an ''unmaintained'' dir.
 |}
 
+== Maintainers ==
+A device maintainer must own the device and be able to test changes. They must make sure that the device port stays in good shape.
+
 == Moving between categories ==
 
 === Moving to a higher category ===
