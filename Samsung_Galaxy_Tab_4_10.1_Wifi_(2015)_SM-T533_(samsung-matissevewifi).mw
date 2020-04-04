@@ -1,9 +1,9 @@
 {{Infobox device
 | manufacturer = Samsung
-| name = Galaxy Tab 4 10.1 Wifi (2015) SM-T533
+| name = Galaxy Tab 4 10.1 WiFi (2015) SM-T533
 | codename = samsung-matissevewifi
 | image = File:samsung-matissewifi.jpg
-| imagecaption = Samsung Galaxy Tab 4 10.1 (Wi-Fi)
+| imagecaption = Samsung Galaxy Tab 4 10.1 (WiFi)
 | releaseyear = 2015
 | originalsoftware = Android 4.4.2 (KitKat)
 | chipset = Qualcomm MSM8916 Snapdragon 410
@@ -67,7 +67,7 @@ Install pmboostrap on your host.
 <syntaxhighlight lang="bash" line='line'>
 pmbootstrap init
 # choose samsung for vendor
-# chosse matissevewifi for device
+# choose matissevewifi for device
 pmbootstrap install
 pmbootstrap flasher flash_rootfs
 
@@ -81,7 +81,7 @@ For more details [https://wiki.postmarketos.org/wiki/Installation_guide here]
 
 == Description ==
 
-The device is based on the apq8016 variant of the msm8916 SoC that is beeing mainlined [https://github.com/msm8916-mainline/linux here]. It means that it is in the process of beeing supported as is by the upstream Linux kernel.
+The device is based on the apq8016 variant of the msm8916 SoC that is beeing mainlined [https://github.com/msm8916-mainline/linux here]. It means that it is in the process of being supported as is by the upstream Linux kernel.
 
 == Milestones ==
 This presents the important steps that have been achieved toward mainlining this device:
