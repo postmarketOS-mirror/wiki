@@ -7,7 +7,9 @@
 }}
 [[File:Asus flo hildon.jpg|thumb|Hildon on the [[Google Nexus 7 2013 (asus-flo)|Nexus 7 2013]] with postmarketOS]]
 
-This is the UI from Maemo Fremantle, which is a Debian-based distribution that originally ran on the Nokia N900. postmarketOS had an incomplete and not well maintained Hildon port based on the Maemo Leste sources, until April of 2020. It was removed as several features were missing, broken, and we could not upgrade it without investing much time to resolve packaging conflicts. Maemo Leste runs Hildon on top of a recent Devuan (Debian fork) with OpenRC (same init system as Alpine), and all the devices they are targeting run the mainline kernel (Droid 4, N900, N9, ...). So for anybody who wants to run Hildon, check out '''[https://maemo-leste.github.io/ Maemo Leste].'''
+This is the UI from Maemo Fremantle, which is a Debian-based distribution that originally ran on the Nokia N900. postmarketOS had an incomplete and not well maintained Hildon port based on the Maemo Leste sources, until April of 2020. It was removed as several features were missing, broken, and we could not upgrade it without investing much time to resolve packaging conflicts.
+
+The Maemo Leste project runs Hildon on top of a recent Devuan (Debian fork) with OpenRC (same init system as Alpine), and all the devices they are targeting run the mainline kernel (Droid 4, N900, N9, ...). So for anybody who wants to run Hildon, check out '''[https://maemo-leste.github.io/ Maemo Leste].'''
 
 If somebody is willing to invest a lot of time for a new postmarketOS port of Hildon/Maemo Leste, let us know in the issues!
 
