@@ -1,13 +1,13 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto G4 Play
+| name = Moto G4 Play
 | codename = motorola-harpia
 | image = File:Motorola_Moto_G4_Play.png
 | imagecaption = Moto G4 Play running Weston
 | releaseyear = 2016
 | originalsoftware = Android 6.0.1
 | chipset = Qualcomm MSM8916 Snapdragon 410
-| cpu = Quad-core 1.21GHz Cortex A53
+| cpu = Quad-core 1.21 GHz Cortex-A53
 | gpu = Adreno 306
 | storage = 8GB or 16GB
 | display = HD (720x1280)
@@ -41,7 +41,7 @@
 * Sorixelle
 
 == How to enter flash mode ==
-Hold down POWER + Vol Down while booting to enter Flash Mode.
+Hold down {{Button|Power}} + {{Button|Volume Down}} while booting to enter Flash Mode.
 
 == Installation ==
 Install the [https://github.com/msm8916-mainline/lk2nd/releases/latest lk2nd bootloader], as it is required to handle some quirks
@@ -64,5 +64,5 @@ with the results of modem functionality testing.
 * '''XT1602:''' Modem working, can send and receive text messages. Can initiate and answer phone calls, but no audio. Mobile data does not work.
 
 == See also ==
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-harpia Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-harpia Device package]
 * [https://github.com/msm8916-mainline/linux Development kernel tree]
