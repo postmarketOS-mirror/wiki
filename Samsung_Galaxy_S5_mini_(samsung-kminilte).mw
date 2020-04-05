@@ -17,7 +17,7 @@
 | status_flashing = N
 | status_touch = Y
 | status_screen = Y
-| status_wifi = 
+| status_wifi = Y
 | status_xwayland = N
 | status_fde = Y
 | status_mainline = 
@@ -87,6 +87,28 @@ This can be done via <code>./pmbootstrap.py flasher flash_kernel</code>, but if 
 
 It should boot, and show the Samsung splash screen. After that you should be able to [https://wiki.postmarketos.org/wiki/USB_Network setup and connect via SSH]
 
+=== Getting Wifi to work ===
+
+Wifi requires firmware blobs to be installed:
+
+  apk add firmware-samsung-kminilte
+
+
+After installation, either reboot the device, or:
+# start "deferred-initcalls" service
+# restart networkmanager and / or wpa_supplicant and / or whatever you want to do with networking
+
+When using networkmanager, you should now be able to connect to a network:
+
+  nmtui
+
+==== Troubleshooting Wifi  ====
+
+* ''Interface <code>wlan0</code> does not exist''
+** Make sure "deferred-initcalls" has been started. See [https://www.elinux.org/Deferred_Initcalls this page on elinux.org] for more information.
+* ''using <code>wlan0</code> or <code>p2p0</code> fails with "Operation not permitted"''
+** Check <code>dmesg</code> for messages containing "dhdsdio_download_firmware", to see if there was an error loading the firmware
+
 == What works ==
 
 * Booting off a microSD card
@@ -104,6 +126,7 @@ It should boot, and show the Samsung splash screen. After that you should be abl
 * Notification LED
 * Vibration motor
 * Gyroscope
+* Wifi
 
 == What does not work ==
 
@@ -115,3 +138,4 @@ Everything else is untested as of writing this.
 == Links ==
 
 * {{github|1467}} Add support for the Samsung Galaxy S5 Mini (kminilte)
+* [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1127 gitlab !1127] Add wifi firmware package
