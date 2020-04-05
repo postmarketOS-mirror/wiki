@@ -17,4 +17,4 @@ If somebody is willing to invest a lot of time for a new postmarketOS port of Hi
 * {{issue|373|pmaports}} Dropping Hildon unless a maintainer steps up
 * [https://gitlab.com/postmarketOS/pmaports/-/tree/106245fbc81c54db8b9715d27d594e74a00a661d/maemo maemo in pmaports tree before it was removed]
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in QEMU)
-* https://github.com/fremantle-gtk3 (GTK+3 port, which we could package in the future)
+* https://github.com/fremantle-gtk3 (interesting WIP GTK+3 port)
