@@ -11,7 +11,7 @@ Devices that are working quite well get lost in the [[Devices|big matrix of boot
 |-
 | main
 | yes, >= 2 people
-| Required working features (where available):
+| Everything in community, plus required working features (where available):
 * Usable phone UI (i.e. Plasma Mobile or Phosh)
 * Calls (incl. call audio with earpiece)
 * SMS
@@ -22,10 +22,18 @@ Devices that are working quite well get lost in the [[Devices|big matrix of boot
 * Bluetooth
 Not required (shall change in the future):
 * Camera
+
+See also: [https://gitlab.com/postmarketOS/postmarketos/-/issues/25 postmarketos#25]
 |-
 | community
 | yes
-| Some base functionality must be working (no fixed feature set). As ''actively maintained'' implies, it is usable in some way, or there is at least some goal that maintainers are trying to achieve.
+| No fixed feature requirements. Purpose of community is to increase visibility of devices that:
+* a lot of work was put into
+* are (and stay) working quite well (i.e. they are useful in some way and are tested occasionally to find and fix regressions)
+* are still being improved or are considered completed at some point
+* are (and stay) overall in good shape
+
+See also: [https://gitlab.com/postmarketOS/postmarketos/-/issues/24 postmarketos#24] 
 |-
 | testing
 | no
