@@ -5,66 +5,14 @@
 | graphics = X11
 | toolkit = GTK+2, [https://talk.maemo.org/showthread.php?t=96800 WIP: GTK+3]
 }}
-[[File:Asus flo hildon.jpg|thumb|Hildon on the [[Google Nexus 7 2013 (asus-flo)|Nexus 7 2013]]]]
-This is the [[User-Interfaces|desktop]] from Maemo Fremantle, which is a Debian-based distribution that originally ran on the Nokia N900.
+[[File:Asus flo hildon.jpg|thumb|Hildon on the [[Google Nexus 7 2013 (asus-flo)|Nexus 7 2013]] with postmarketOS]]
 
-=== Installation instructions ===
+This is the UI from Maemo Fremantle, which is a Debian-based distribution that originally ran on the Nokia N900. postmarketOS had an incomplete and not well maintained Hildon port based on the Maemo Leste sources, until April of 2020. It was removed as several features were missing, broken, and we could not upgrade it without investing much time to resolve packaging conflicts. Maemo Leste runs Hildon on top of a recent Devuan (Debian fork) with OpenRC (same init system as Alpine), and all the devices they are targeting run the mainline kernel (Droid 4, N900, N9, ...). So for anybody who wants to run Hildon, check out '''[https://maemo-leste.github.io/ Maemo Leste].'''
 
-In <code>pmbootstrap init</code>, select <code>hildon</code> as user interface, then do the installation as usually. When running postmarketOS, it should boot automatically into Hildon now!
-
-=== Running ===
-
-hildon-desktop can be run in a horizontal view only. To run programs from the terminal you need to <code>export DISPLAY=:0</code>. To set it by default edit <code>sudo nano /etc/profile</code>.
-
-=== Rotate screen using ''fbdev'' driver ===
-
-In order to rotate the screen using the framebuffer, you need to create this file:
-
-'''/etc/X11/xorg.conf.d/1-fbdev.conf'''
-<pre>
-Section "Device"
-  Identifier "LCD"
-  Driver "fbdev"
-  Option "Rotate" "CW"
-EndSection
-</pre>
-
-reference: https://www.x.org/archive//X11R6.8.0/doc/fbdev.4.html
-
-=== Rotate screen using ''xrandr'' ===
-
-In order to rotate the screen using xrandr, you need to edit a file and put xrandr -o right or xrandr -o left:
-
-<pre>
-sudo apk add xrandr
-sudo nano /etc/postmarketos-ui/xinitrc_hildon.sh
-</pre>
-<pre>
-xrandr -o right
-exec hildon-desktop
-</pre>
-
-=== Calibrate the touchscreen ===
-
-After rotating the screen change/add a value in this file:
-<pre>
-sudo nano /etc/udev/rules.d/90-android-touch-dev.rules
-</pre>
-<pre>
-ENV{ID_INPUT}="1", ENV{ID_INPUT_TOUCHSCREEN}="1", \
-# default			ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
-# Left - 90 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 -1 1 1 0 0"
-# 180 degree clockwise		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 0 -1 1"
-# Right - 270 degree clockwise	ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
-# reflect along y axis		ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0"
-</pre>
-
-=== Performance issues ===
-Software rendering is slow. A possible fix is in the [[Software OpenGL]] article with TinyGLES and similar software.
-
-=== Relation to Maemo Leste ===
-The [http://maemo-leste.github.io/ Maemo Leste] project runs Hildon on top of a recent Devuan (Debian fork) with OpenRC (the same init system that Alpine uses), and all the devices they are targeting run the mainline kernel (Droid 4, N900, N9, ...). postmarketOS has the Hildon packages as maintained by Leste packaged, and we're collaborating.
+If somebody is willing to invest a lot of time for a new postmarketOS port of Hildon/Maemo Leste, let us know in the issues!
 
 === See also ===
+* {{issue|373|pmaports}} Dropping Hildon unless a maintainer steps up
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/106245fbc81c54db8b9715d27d594e74a00a661d/maemo maemo in pmaports tree before it was removed]
 * https://github.com/postmarketOS/pmbootstrap/pull/461 (initial PR by NotKit with a screenshot running in QEMU)
 * https://github.com/fremantle-gtk3 (GTK+3 port, which we could package in the future)
