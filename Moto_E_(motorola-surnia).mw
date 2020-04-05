@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto E (2nd Gen)
+| name = Moto E (2nd Gen)
 | codename = motorola-surnia
 | image = File:Motorola-surnia.jpg
 | imagecaption = Motorola Moto E (2nd Gen)
@@ -41,15 +41,20 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
+== Users owning this device ==
+{{Device owners}}
+
 == How to enter flash mode ==
-Hold down POWER + Vol Down while booting to enter Flash Mode. 
+Hold down {{Button|Power}} + {{Button|Volume Down}} while booting to enter Flash Mode. 
 
 == Installation ==
 I have tested flashing boot.img with an sdcard rootfs and this seems to work fine.
 
 == See also ==
 * As of 2020-03-01, unrznbl is starting to work on mainline with the help of the work on motorola-harpia. Referring to https://wiki.postmarketos.org/wiki/MSM8916_Mainlining
-* https://gitlab.com/postmarketOS/pmaports/merge_requests/29 Initial merge request, status: merged.
+* {{MR|29|pmaports}} Initial merge request, status: merged.
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-surnia Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-surnia Kernel package]
 
 == Modem Setup (same as for motorola-harpia so far) ==
 Content below copied from https://wiki.postmarketos.org/wiki/Moto_G4_Play_(motorola-harpia). 
