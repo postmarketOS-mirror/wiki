@@ -3,7 +3,7 @@
 | image = File:Hildon.png
 | imagecaption = Hildon running in QEMU
 | graphics = X11
-| toolkit = GTK+2, [https://talk.maemo.org/showthread.php?t=96800 WIP: GTK+3]
+| toolkit = GTK+2
 }}
 [[File:Asus flo hildon.jpg|thumb|Hildon on the [[Google Nexus 7 2013 (asus-flo)|Nexus 7 2013]] with postmarketOS]]
 
