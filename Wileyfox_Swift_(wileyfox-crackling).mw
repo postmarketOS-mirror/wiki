@@ -71,9 +71,10 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 # Just follow the [[Installation guide]].
 
 == Charging ==
-Mainline kernel doesn't have proper charger driver yet. This means that only way to charge the device is to boot downstream kernel. Easiest way to do so is to boot to recovery (At least TWRP known to charge the device properly)
-To give you at least some information, kernel that this device uses at the moment have simple driver that shows estimated capacity. (with error of roughly 10%) 
-{{note|'''Note:''' Since driver can't measure capacity precisely, shown percentage will directly depend on current that your device consumes (e.g. it will show less if you increase brightness.)}}
+Mainline kernel doesn't have proper charger driver yet. This means that only way to charge the device is to boot downstream kernel. Easiest way to do so is to boot to recovery (at least TWRP known to charge the device properly).
+
+To give you at least some information, kernel that this device uses at the moment have simple driver that shows estimated capacity (with error of roughly 10%).
+{{note|'''Note:''' Since driver can't measure capacity precisely, shown percentage directly depends on current that your device consumes (e.g. it will show less if you increase brightness).}}
 
 == Audio ==
 See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
