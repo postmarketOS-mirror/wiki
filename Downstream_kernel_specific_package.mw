@@ -1,4 +1,4 @@
-Unless a device has been [[The Mainline Kernel|mainlined]], we need to package the vendor kernel (also called "downstream kernel"). This is the reference for the {{alpine|APKBUILD}} files of vendor kernels.
+Unless a device has been [[The Mainline Kernel|mainlined]], we need to package the downstream kernel (also called "vendor kernel"). This is the reference for the {{alpine|APKBUILD}} files of vendor kernels.
 
 == Generate a template ==
 Usually you would generate both a new [[device specific package]] and a new vendor kernel package by running <code>pmbootstrap init</code> and typing in a new device name. In case you should only have a device package, but not a kernel package, you can regenerate the latter with <code>pmbootstrap aportgen linux-changeme-changeme</code> (you guessed it, <i>changeme</i> needs to be adjusted).
