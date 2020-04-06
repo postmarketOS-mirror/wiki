@@ -33,6 +33,8 @@ device/linux-samsung-foo/APKBUILD
 
 * Create new Checksums, build the kernel and boot.
 
+Due to CI-Updates in the Gitlab-repository it may be necessary to also [[Downstream_kernel_specific_package#Modernize_your_aport|modernize your aport]] before you can [[Git_workflow|upstream your work]].
+
 === Misc ===
 * The splash screen is [https://github.com/postmarketOS/pmbootstrap/pull/206#issuecomment-316791430 highly configurable] (scroll down for an example)!
 * Browse the Linux source with links to all references [http://elixir.free-electrons.com here]
