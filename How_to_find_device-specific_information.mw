@@ -64,6 +64,7 @@ Translate the variables as follows into your deviceinfo:
 * [http://wiki.lineageos.org/devices.html LineageOS List]
 * [http://www.droidviews.com/codenames-of-samsung-galaxy-devices/ List for Samsung Galaxy Devices]
 * [https://github.com/jaredrummler/AndroidDeviceNames/blob/master/json/manufacturers/ List of codenames from the AndroidDeviceNames library]
+* [https://storage.googleapis.com/play_public/supported_devices.html List of supported devices of Android by Google]
 
 == LineageOS kernel source repository ==
 
