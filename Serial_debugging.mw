@@ -38,6 +38,7 @@ It should work with:
 * Samsung GT-P1000 (Galaxy Tab P1000)
 * Samsung GT-S8500 (Wave)
 * Samsung GT-S5570 (Tass) (IC: FSA9280A)
+* [[Samsung Galaxy S III mini (samsung-golden)]]
 * Samsung i897 (Captivate)
 * Samsung GT-i9195 (Galaxy S4 mini) (IC: TSU6721)
 * Samsung klte (Galaxy S5)
@@ -78,6 +79,10 @@ It should work with:
 |-
   | style="white-space: nowrap;" | [[Samsung_Galaxy_Note_3_(Samsung-N900)|Samsung Galaxy Note 3]]
   | style="white-space: nowrap;" | samsung-hlte
+  | 619K ohm || No
+|-
+  | style="white-space: nowrap;" | [[Samsung Galaxy S III mini (samsung-golden)]]
+  | style="white-space: nowrap;" | samsung-golden
   | 619K ohm || No
 |-
   | style="white-space: nowrap;" | [[Samsung_Galaxy_Note_8.0_(Wi-Fi)_(samsung-n5110)|Samsung Galaxy Note 8.0]]
