@@ -90,4 +90,4 @@ The Bluetooth controller should then show up in <code>bluetoothctl</code>:
 '''Mainline:''' Plasma Mobile and Phosh should work okay.
 
 == See Also ==
-* Initial PR: {{github|1428}}
+* Initial PR: {{MR|1428}}
