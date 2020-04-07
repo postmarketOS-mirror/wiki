@@ -101,17 +101,15 @@ But it was reported to work for some people. Try it, might work for you
 
 == Installation ==
 
-=== Flash a working custom Android ROM first ===
-Flash a working custom Android ROM first - it will likely contain all needed custom partition images like <code>vbmeta</code> or <code>dtbo</code> (not sure if it's strictly needed). For example this [[https://forum.xda-developers.com/redmi-note-7/development/rom-lineageos-16-0-t3923203 LineageOS 16.0 ROM]]. The situation is a bit hard, because there is no official LineageOS release for this device yet, not even a official TWRP.
-
-=== WIP ===
-This is still a work-in-progress. If you want to test something, or help in the development, do:
-* make sure you have TWRP installed
-* backup <code>boot</code>, <code>dtbo</code> and <code>system</code> partitions first from TWRP
-* checkout my development branch in pmaports (link below in links section)
-* zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choosing <code>xiaomi-lavender</code> as a device
-* then rebuild every package mentioned in the last commits on my branch (for now: <code>pmbootstrap build --force --arch aarch64 linux-xiaomi-lavender device-xiaomi-lavender</code>), also <code>linux-postmarketos-qcom-sdm660</code>, if you wish to test mainline kernel for some reason.
-* proceed with installation as usual (reboot device to fastboot mode, then
+* [[Installing_pmbootstrap|Install pmbootstrap]] first on your PC
+* make sure you have TWRP installed on the phone, it will help you to make backups:
+* backup <code>boot</code>, <code>dtbo</code> and <code>system</code> partitions first from TWRP, something like this, for example, to SD card:
+ adb shell
+ dd if=/dev/block/bootdevice/by-name/boot of=/external_sd/backups/orig_boot.img
+ dd if=/dev/block/bootdevice/by-name/dtbo of=/external_sd/backups/orig_dtbo.img
+ dd if=/dev/block/bootdevice/by-name/system of=/external_sd/backups/orig_system.img
+* zap & reinit pmbootstrap (<code>pmbootstrap -y zap ; pmbootstrap init</code>), choose <code>xiaomi-lavender</code> as a device
+* proceed with installation as usual: reboot device to fastboot mode, then:
  pmbootstrap install
  pmbootstrap flasher flash_kernel
  pmbootstrap flasher flash_rootfs
