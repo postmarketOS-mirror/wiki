@@ -97,6 +97,7 @@ Bootloader UART logs during "pmbootstrap flasher boot":
  Decompressing kernel image failed!!!
 </div>
 </div>
+But it was reported to work for some people. Try it, might work for you
 
 == Installation ==
 
