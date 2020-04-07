@@ -454,20 +454,15 @@ You have to disassemble the phone (just removing back cover is enough). You'll h
 In the center you will see 4 test points that are available. (See the picture) Two bigger ones (0.8mm) are '''EDL''' (FORCE_USB_BOOT) pins. UART test points are two smaller ones on the left (0.5mm). TP11 is '''UART TX''' (gpio 4), TP10 is '''UART RX''' (gpio 5). GND is that whole metal shielding, that covers the center of the board. So, to get debug logs from UART it is enough to connect UART TX from the board to RX pin on the converter, and connect GND between phone and GND pin on the converter.
 
 == Links ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
--->
-* [https://gitlab.com/minlexx/pmaports/commits/xiaomi-lavender Current pmaports development branch]
+* {{MR|1095|pmaports}} Initial merge request
+* {{issue|494|pmaports}} How to make Wi-Fi work?
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-xiaomi-lavender Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-xiaomi-lavender Downstream kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/main/linux-postmarketos-qcom-sdm660 Mainline kernel package]
 * [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom-sdm660 Current mainline kernel development branch]
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
 * [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)/Mainline_development|Mainline development]]
 * [https://github.com/NixOS/mobile-nixos/pull/28 NixOS-mobile lavender MR]
 * https://www.youtube.com/watch?v=6GqXqW2Nygc Disassembling video (Rus)
 * https://www.anandtech.com/show/11338/qualcomm-announces-snapdragon-660-630-mobile-platforms
 * [https://www.kimovil.com/en/list-smartphones-by-processor/qualcomm-snapdragon-660-msm8976-plus List of mobile phones on SDM660 SoC]
+* [https://www.gsmarena.com/results.php3?nRamMin=2000&sFreeText=sdm660 Another list of mobile phones on SDM660 SoC]
