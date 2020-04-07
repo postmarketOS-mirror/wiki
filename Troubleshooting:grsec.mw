@@ -1,21 +1,26 @@
-== ### TLDR: Grsec based kernels are not supported, because [https://wiki.debian.org/QemuUserEmulation qemu user emulation] appears to be broken and we couldn't fix this right away. But if you want to add support for a kernel based on the grsec patchset, please go ahead. See also: [https://github.com/postmarketOS/pmbootstrap/issues/107 #107] ==
+{{wikipedia|Grsec}} is the name of a patchset, that used to be freely available to harden the Linux kernel. Alpine has a <code>linux-hardened</code> kernel for example, which uses a fork of that patchset. When you run a kernel based on that patchset on your host Linux system, you will probably run into problems with pmbootstrap because it does some things inside chroots, that is blocked by default in that patchset. One example is setting file permissions {{issue|pmbootstrap|107}}}.
 
-[https://en.wikipedia.org/wiki/Grsec Grsec] is the name of a patchset, that used to be freely available to harden the Linux kernel. Alpine has a <code>linux-hardened</code> kernel for example, which uses a fork of that patchset. When you run a kernel based on that patchset on your host Linux system, you will probably run into problems with pmbootstrap because it does some things inside chroots, that is blocked by default in that patchset. One example is setting file permissions ([https://github.com/postmarketOS/pmbootstrap/issues/107 #107]).
+{{Note|Grsec based kernels are not supported, because [https://wiki.debian.org/QemuUserEmulation qemu user emulation] appears to be broken and we couldn't fix this right away. But if you want to add support for a kernel based on the grsec patchset, please go ahead. See also: {{issue|pmbootstrap|107}}}}
 
-You have two options now. Either run pmbootstrap with a regular kernel, or disable the grsec specific features with sysctl while running pmbootstrap (you will probably run into other issues though, which have not been resolved - '''the quick solution is really using the regular kernel''').
+There are two options:
+* run pmbootstrap with a regular kernel
+* disable the grsec specific features with sysctl while running pmbootstrap (you will probably run into other issues though, which have not been resolved - '''the quick solution is really using the regular kernel''').
 
 === Disable some grsec-specific features while running pmbootstrap ===
 
-We don't really know all options, that need to be disabled. Please extend this wiki page, if you are interested in this and figure it out. However, user cmdr2 [https://github.com/postmarketOS/pmbootstrap/issues/107#issuecomment-312506089 reported], that you can do the following to disable ''all'' grsec features, and pmbootstrap will work then:
+{{todo|We don't really know all options, that need to be disabled. Please extend this wiki page, if you are interested in this and figure it out.}}
+However, user cmdr2 [https://github.com/postmarketOS/pmbootstrap/issues/107#issuecomment-312506089 reported], that you can do the following to disable ''all'' grsec features, and pmbootstrap will work then:
 
 <blockquote>To comprehensively disable grsec until the next reboot, I suggest:<br />
-<code>ls -1 /proc/sys/kernel/grsecurity | xargs -I '___' sudo sysctl -w kernel.grsecurity.___=0</code>
+<source lang="shell-session">$ ls -1 /proc/sys/kernel/grsecurity | xargs -I '___' sudo sysctl -w kernel.grsecurity.___=0</source>
 </blockquote>
 === Commands to non-native chroots hang ===
 
-This can only be partially resolved as of now, see [https://github.com/postmarketOS/pmbootstrap/issues/140 #140].<br />
+This can only be partially resolved as of now, see {{issue|pmbootstrap|140}}.<br />
 For starters, disable the <code>RANDMMAP</code> PaX flag:
 
-<pre class="shell">sudo apk add paxctl
-sudo paxctl -C ~/.local/var/pmbootstrap/chroot_rootfs_samsung-s7562/usr/bin/qemu-arm-static
-sudo paxctl -r ~/.local/var/pmbootstrap/chroot_rootfs_samsung-s7562/usr/bin/qemu-arm-static</pre>
+<source lang="shell-session">
+$ sudo apk add paxctl
+$ sudo paxctl -C ~/.local/var/pmbootstrap/chroot_rootfs_samsung-s7562/usr/bin/qemu-arm-static
+$ sudo paxctl -r ~/.local/var/pmbootstrap/chroot_rootfs_samsung-s7562/usr/bin/qemu-arm-static
+</source>
