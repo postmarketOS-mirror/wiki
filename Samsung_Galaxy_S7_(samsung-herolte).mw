@@ -56,7 +56,11 @@
 * Probably everything else
 
 == Notes ==
-* The device and kernel packages are bascially just a copy of the [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_S7_Edge_(samsung-hero2lte) Galaxy S7 Edge's] packages. The only difference is that the two devices use different panels.
+* The device and kernel packages are basically just a copy of the [https://wiki.postmarketos.org/wiki/Samsung_Galaxy_S7_Edge_(samsung-hero2lte) Galaxy S7 Edge's] packages. The only difference is that the two devices use different panels.
+
+== Installation ==
+Put device in downloading mode and then execute <code>$ pmbootstrap flasher flash_kernel</code>. Then reboot device in TWRP sideload and execute <code>$ pmbootstrap flasher --method=adb sideload</code>
+
 
 == Links ==
 * [https://wiki.lineageos.org/devices/herolte Device info (LineageOS)]
