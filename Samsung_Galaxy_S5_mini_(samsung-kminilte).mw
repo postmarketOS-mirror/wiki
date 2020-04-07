@@ -12,7 +12,7 @@
 | storage = 16GB
 | display = 720x1280 AMOLED
 | memory = 1.5GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = N
 | status_touch = Y
