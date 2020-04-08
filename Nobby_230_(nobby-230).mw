@@ -54,26 +54,8 @@
 Hold Accept and Power buttons to enter fastboot.
 
 == Issues ==
+{{note|Bad screen output fixed, will be upstreamed soon}}
 * UbiFS partitions are not detected, so only sdcard installation will work
-* Display output is corrupted
-
-=== Display ===
-==== Display issues ====
-* Wrong scaling
-* Double screen with wrong colors
-* Bottom part of screen is empty (main issue)
-
-==== Possible reasons ====
-* Unknown revision of ILI9340
-* Bug in sprdfb driver
-* Vendor used another display controller and made a fake ili9340 driver to make it boot since the bootloader is picky about panel id and function names (the least possible version, may happen if the vendor didn't have bootloader sources)
-
-==== Attempts to fix ====
-* Write a ili9340 driver with init sequence from mainline kernel
-* Use init sequences from different revisions of ili9341 driver
-* Change clocks constants in sprdfb sources
-* Try kernels with different sprdfb implementation (see Kernels section)
-* Ignore some cmdline parameters (the kernel doesn't boot then)
 
 == Installation ==
 
