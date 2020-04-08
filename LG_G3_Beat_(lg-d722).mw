@@ -1,18 +1,18 @@
 {{Infobox device
 | manufacturer = LG
-| name =  G3 Beat <!-- e.g. Desire -->
-| codename = lg-d722 <!-- e.g. htc-bravo -->
+| name = G3 Beat
+| codename = lg-d722
 | image = File:Lg-d722.jpg
 | imagecaption = LG G3 Beat
 | releaseyear = 2014
-| originalsoftware = Android 4.4.2 Kitkat <!-- e.g. Android 2 -->
+| originalsoftware = Android 4.4.2 Kitkat
 | chipset = Qualcomm MSM8926 Snapdragon 400 (28 nm)
-| cpu = Quad-core 1.2 GHz Cortex-A7 <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 305 <!-- e.g. Adreno 200 -->
-| storage = Internal 8 GB <!-- e.g. 512 MB -->
-| display = 720 x 1280 LCD <!-- e.g. 480x800 AMOLED -->
-| memory = 1 GB <!-- e.g. 576 MB -->
-| architecture = armv7 <!-- One of these: armhf, aarch64, x86, x86_64 -->
+| cpu = Quad-core 1.2 GHz Cortex-A7
+| gpu = Adreno 305
+| storage = 8 GB
+| display = 720 x 1280 LCD
+| memory = 1 GB
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
