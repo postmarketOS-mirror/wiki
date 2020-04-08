@@ -1,19 +1,19 @@
 {{Infobox device
 | pmoskernel = 3.10.101
-| manufacturer = Samsung <!-- e.g. HTC -->
-| name =  Galaxy S6 <!-- e.g. Desire -->
-| codename = samsung-zerofltexx <!-- e.g. htc-bravo -->
+| manufacturer = Samsung
+| name = Galaxy S6
+| codename = samsung-zerofltexx
 | image = File:samsung-zerofltexx.jpg
 | imagecaption = Samsung Galaxy S6
 | releaseyear = 2015
-| originalsoftware = Android 5.0 <!-- e.g. Android 2 -->
-| chipset =  Exynos 7420 Octa <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = Octa-core Cortex-A53 & Cortex-A57 4 x 2.1GHz + 4 x 1.5GHz <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Mali-T760 MP8 <!-- e.g. Adreno 200 -->
-| storage = 32,64,128 GB  <!-- e.g. 512 MB -->
-| display = 1440x2560 AMOLED <!-- e.g. 480x800 AMOLED -->
-| memory = 3GB <!-- e.g. 576 MB -->
-| architecture = aarch64 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = Android 5.0
+| chipset =  Exynos 7420 Octa
+| cpu = Octa-core Cortex-A53 & Cortex-A57 4 x 2.1GHz + 4 x 1.5GHz
+| gpu = Mali-T760 MP8
+| storage = 32,64,128 GB
+| display = 1440x2560 AMOLED
+| memory = 3 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N<!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
