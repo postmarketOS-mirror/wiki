@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = HTC <!-- e.g. HTC -->
-| name =  Desire 610 <!-- e.g. Desire -->
-| codename = htc-a3ul <!-- e.g. htc-bravo -->
+| manufacturer = HTC
+| name = Desire 610
+| codename = htc-a3ul
 | image = File:htc-a3ul.jpg
 | imagecaption = It appears as if its in a hang-state, but the screen does not work
 | releaseyear = 2014
-| originalsoftware = Android 4.4.2 (KitKat); Sense UI 5.5 <!-- e.g. Android 2 -->
-| chipset = Qualcomm MSM8226 Snapdragon 400 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = 4x 1.2 GHz Cortex-A7 <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 305 <!-- e.g. Adreno 200 -->
-| storage = 8 GB eMMC <!-- e.g. 512 MB -->
-| display = 540 x 960(World) or 480 x 854(US) IPS LCD capacitive touchscreen  <!-- e.g. 480x800 AMOLED -->
-| memory = 1 GB <!-- e.g. 576 MB -->
-| architecture =  armv7 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = Android 4.4.2 (KitKat); Sense UI 5.5
+| chipset = Qualcomm MSM8226 Snapdragon 400
+| cpu = 4x 1.2 GHz Cortex-A7
+| gpu = Adreno 305
+| storage = 8 GB eMMC
+| display = 540 x 960(World) or 480 x 854(US) IPS LCD capacitive touchscreen
+| memory = 1 GB
+| architecture =  armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N<!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = N<!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -76,4 +76,4 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* {{MR|315|pmaports}} Initial merge request
+* {{MR|315|pmaports}} Initial merge request (Closed, not merged)
