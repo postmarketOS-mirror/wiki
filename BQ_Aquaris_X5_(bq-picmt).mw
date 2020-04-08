@@ -2,8 +2,8 @@
 | manufacturer = BQ
 | name = Aquaris X5
 | codename = bq-picmt
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = BQ Aquaris X5 Cyanogen Edition running weston
+| image = File:bq-picmt.jpg|thumb|133px
+| imagecaption = BQ Aquaris X5 Cyanogen Edition running weston on postmarketOS
 | releaseyear = 2015
 | originalsoftware = Android 7.1.2, CM 13.1
 | chipset = Qualcomm MSM8916T Snapdragon 412
