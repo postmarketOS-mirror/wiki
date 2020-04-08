@@ -14,10 +14,10 @@ Projects to run another OS on the device can be linked if they exist.
 ! Device
 ! Notes
 |-
-  | [[HTC Wildfire (htc-buzz)|HTC Wildfire]]
+  | [[HTC_Wildfire_(htc-buzz)|HTC Wildfire]]
   | Qualcomm MSM7225 - ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1203 #1203]
 |-
-  | [[Vodafone 858 Smart (huawei-u8160)|Huawei U8160 (Vodafone 858 Smart)]]
+  | [[Vodafone_858_Smart_(huawei-u8160)|Huawei U8160 (Vodafone 858 Smart)]]
   | Qualcomm MSM7225 - ARMv6 without FPU/VFP [https://github.com/postmarketOS/pmbootstrap/issues/1592 #1592]
 |-
   | Nintendo Wii
