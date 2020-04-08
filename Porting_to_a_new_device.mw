@@ -79,6 +79,7 @@ NOTE: You will be prompted for your sudo password, so we can set up a chroot to 
 </pre>
 
 === Interfaces ===
+{{note|Don't choose Plasma Mobile, Phosh, Sway if you use downstream kernel for porting.}}
 We recommend, that you start with <code>weston</code> first, because that has been around the longest in postmarketOS and, while it is not really suitable for a phone, it works as a stable demo interface for making the graphics output work in the first place. After that one works, feel free to try out another interface (but expect, that it will not necessarily work out of the box).
 
 <pre>
@@ -115,17 +116,33 @@ While the goal is to use a [https://wiki.postmarketos.org/wiki/The_Mainline_Kern
 
 === APKBUILD file ===
 {{note|<code>APKBUILD</code> has [[Glossary#apk|nothing to do]] with Android's app format!}}
-To properly compile a Linux kernel for your device, pmbootstap uses a so called <code>APKBUILD</code> file where you'll need to fill some lines according to your port. Basically you will have to provide here at least some infos about you (as a contributor/maintainer of the new port), some links to the kernel sources the compiler must use and kernel version, and the names of patch files that you will need to add for the compiler to compile ! (see above)
+<code>APKBUILD</code> file is a script used to build a package. There are two APKBUILDs you have to edit: for device and linux packages related to your port. The APKBUILDs located at packages' folders.  
 
-Where to find your kernel's device related APKBUILD file ?
+Where to find device-related packages folders?
 
-In case you cloned pmbootstrat form git :	 <code>/"workdir"/aports/device/linux-"wiki-example"/APKBUILD</code>
+In case you cloned pmbootstrap from git:
+<pre>
+$workdir/aports/device/testing/device-wiki-example/APKBUILD
+$workdir/aports/device/testing/linux-wiki-example/APKBUILD
+</pre>
 
-In case you have ''not'' cloned pmbootstrap from git : <code>/"workdir"/cache_git/pmaports/device/testing/linux-"wiki-example"/APKBUILD</code>
+In case you have ''not'' cloned pmbootstrap from git: 
+<pre>
+$workdir/cache_git/pmaports/device/testing/device-wiki-example/APKBUILD
+$workdir/cache_git/pmaports/device/testing/linux-wiki-example/APKBUILD
+</pre>
 
-''Replace "workdir" by the path you provided at the first step of <code>pmbootstrap init</code> process and "wiki-example" by the brand and model you provided there to...''
+''Where $workdir is the path you provided at the first step of <code>pmbootstrap init</code> process and "wiki-example" by the brand and codename you provided there.''
 
-{{note| Reminder : There is one <code>APKBUILD</code> file for the kernel package AND one for the system package!}}
+You have to set yourself as contributor of the packages to be able to build them. This applies to cases when <code>ERROR: linux-wiki-example: Provide a valid RFC822 maintainer address</code> occurs. Replace
+<pre>
+# Contributor: Firstname Lastname <email> (CHANGEME!)
+</pre>
+with something similar to
+<pre>
+# Contributor: Oliver Smith <ollieparanoid@postmarketos.org>
+</pre>
+but related to your information. You may use nickname instead of the real name if you want, but you have to submit your real e-mail address. Maintainer line can be deleted if you don't plan to maintain your port, otherwise change it as well.
 
 === Source code ===
 First of all, [[How to find device-specific information#LineageOS_kernel_source_repository|find the source code]] of the known working kernel fork (lowest known working version is 3.x, 2.6 doesn't compile with GCC6, may compile with gcc4, not yet tested).
@@ -134,7 +151,7 @@ Then adjust the <code># Source</code> section in the <code>linux-wiki-example/AP
 For LineageOS kernels, you will only need to change <code>_repository</code> and <code>_commit</code> variables. Usually it makes sense to use a commit from the most recently updated branch. For example, if the kernel repo is at <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code>, enter: <code>_repository="android_kernel_motorola_ghost"</code>.
 
 If your kernel is not in a LineageOS repository but somewhere else, you also have to change the URL in <code>source</code> accordingly, e.g. to
-<code>https://github.com/jmrohwer/${_repository}/archive/${_commit}.tar.gz</code> if the kernel is in <code>https://github.com/jmrohwer/TF101-GNU-kernel</code>. (You still need to set <code>_repository</code> and <code>_commit</code>.) If your kernel is only distributed as a zip/tarball/etc, you can unpack it, [https://help.github.com/en/github/getting-started-with-github/create-a-repo create your own GitHub repository for it], and then use that repository's URL. (Or you can try to [https://gitlab.com/postmarketOS/pmaports/issues/423 build with local Kernel source] for testing and create a repository later on.)
+<code>https://github.com/jmrohwer/$_repository/archive/$_commit.tar.gz</code> if the kernel is in <code>https://github.com/jmrohwer/TF101-GNU-kernel</code>. (You still need to set <code>_repository</code> and <code>_commit</code>.) If your kernel is only distributed as a zip/tarball/etc, you can unpack it, [https://help.github.com/en/github/getting-started-with-github/create-a-repo create your own GitHub repository for it], and then use that repository's URL. (Or you can try to [https://gitlab.com/postmarketOS/pmaports/issues/423 build with local Kernel source] for testing and create a repository later on.)
 
 <syntaxhighlight lang="bash">
 _flavor="wiki-example" # Be sure it's in form of <vendor-codename>, e.g. motorola-ghost
@@ -152,7 +169,7 @@ source="
 builddir="$srcdir/$_repository-$_commit"
 </syntaxhighlight>
 
-''Where to find the commit hash ?
+''Where to find the commit hash?
 
 ''From the example page <code>https://github.com/LineageOS/android_kernel_motorola_ghost.git</code> click on the code (e.g. c4914db2) next to "Latest commit" at the right top corner of the directories box. Then copy/paste the end of the URL of the current page of your web browser.
 
