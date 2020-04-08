@@ -65,7 +65,7 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 Volume Down 🔈, Home + Power
 == Installation ==
-Create a [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Installation recovery.zip] and flash it with TWRP. Make sure that in TWRP you unmounted the partition you want to flash on by default that would be "SYSTEM".
+Create a [[Android_Recovery_Zip_Installation|recovery.zip]] and flash it with TWRP. Make sure that in TWRP you unmounted the partition you want to flash on by default that would be "SYSTEM".
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
