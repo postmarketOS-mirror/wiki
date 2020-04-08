@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = Samsung <!-- e.g. HTC -->
-| name =  Acclaim <!-- e.g. Desire -->
-| codename = samsung-sch-r880 <!-- e.g. htc-bravo -->
+| manufacturer = Samsung
+| name = Acclaim
+| codename = samsung-sch-r880
 | image = File:samsung-sch-r880.png
 | imagecaption = samsung-sch-r880
 | releaseyear = 2012
-| originalsoftware = Android 2.2 Linux 2.6.32.9 (Minimum 2.1) <!-- e.g. Android 2 -->
-| chipset = ARMv6 (ARM11) <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = 800 MHz Samsung S3C6410 <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = FIMG 3DSE <!-- e.g. Adreno 200 -->
-| storage = 512(?)mb/216mb available to user <!-- e.g. 512 MB -->
-| display = 320x480 TFT LCD <!-- e.g. 480x800 AMOLED -->
-| memory = 256(?)mb <!-- e.g. 576 MB -->
-| architecture = armhf<!-- One of these: armhf, aarch64, x86, x86_64 -->
+| originalsoftware = Android 2.2 Linux 2.6.32.9 (Minimum 2.1)
+| chipset = Samsung S3C6410
+| cpu = 800 MHz ARM11
+| gpu = FIMG 3DSE
+| storage = 512(?) MB / 216 MB available to user
+| display = 320x480 TFT LCD
+| memory = 256(?) MB
+| architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = 
 | status_flashing = 
