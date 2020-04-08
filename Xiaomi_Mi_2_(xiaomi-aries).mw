@@ -1,17 +1,17 @@
 {{Infobox device
-| manufacturer = Xiaomi <!-- e.g. HTC -->
-| name =  Mi 2 <!-- e.g. Desire -->
-| codename = xiaomi-aries <!-- e.g. htc-bravo -->
+| manufacturer = Xiaomi
+| name = Mi 2
+| codename = xiaomi-aries
 | image = File:Photo 2019-01-24 11-42-46.jpg
 | imagecaption = Xiaomi Mi 2
 | releaseyear = 2012
-| originalsoftware = MIUI V4 (Android 4.1 Jelly Bean) <!-- e.g. Android 2 -->
-| chipset = Qualcomm APQ8064 Snapdragon S4 Pro <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = Quad-Core Krait @ 1.5 GHz <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 320 <!-- e.g. Adreno 200 -->
-| storage = 16GB / 32GB <!-- e.g. 512 MB -->
-| display = 1280x720 IPS  <!-- e.g. 480x800 AMOLED -->
-| memory = 2GB <!-- e.g. 576 MB -->
+| originalsoftware = MIUI V4 (Android 4.1 Jelly Bean)
+| chipset = Qualcomm APQ8064 Snapdragon S4 Pro
+| cpu = Quad-Core Krait @ 1.5 GHz
+| gpu = Adreno 320
+| storage = 16 GB / 32 GB
+| display = 720x1280 IPS
+| memory = 2 GB
 | architecture = armhf <!-- One of these: armhf, aarch64, x86, x86_64 -->
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y<!-- USB networking does work? then put Y here and delete this comment -->
@@ -45,13 +45,13 @@
 
 == How to enter flash mode ==
 
-<code>Volume Down</code> + <code>Power</code>, it will look like this:
+{{Button|Volume Down}} + {{Button|Power}}, it will look like this:
 
 [[File:Photo 2019-01-21 23-23-18.jpg|300px]]
 
 == Progress ==
 
-In [https://gitlab.com/postmarketOS/pmaports/merge_requests/168 !168] I used outdated cm11 kernel from [https://github.com/LineageOS/android_kernel_xiaomi_aries LineageOS], it boots fine but I wasn't able to get the display working.
+In {{MR|168|pmaports}} I used outdated cm11 kernel from [https://github.com/LineageOS/android_kernel_xiaomi_aries LineageOS], it boots fine but I wasn't able to get the display working.
 
 Then I switched to the kernel which is still maintained by [https://github.com/GuaiYiHu GuaiYiHu] from [https://github.com/MoKee/android_kernel_xiaomi_aries/ MoKee]. By following the steps on [[Troubleshooting:display]] and [[Tuning_sysfs]], the display was enabled.
 
@@ -59,7 +59,7 @@ Then I switched to the kernel which is still maintained by [https://github.com/G
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-* [https://gitlab.com/postmarketOS/pmaports/merge_requests/171 !171] Initial merge request
+* {{MR|171|pmaports}} Initial merge request
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
