@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = Samsung <!-- e.g. HTC -->
-| name =  Galaxy Note 10.1 Wifi <!-- e.g. Desire -->
-| codename = samsung-n8010 / p4notewifiww <!-- e.g. htc-bravo -->
+| manufacturer = Samsung
+| name = Galaxy Note 10.1 Wifi
+| codename = samsung-n8010 / p4notewifiww
 | image = File:Samsung-n8010.jpg
 | imagecaption = Samsung Galaxy Note 10.1 Wifi
 | releaseyear = 2012
-| originalsoftware = Android 4 <!-- e.g. Android 2 -->
-| chipset = Exynos 4412 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = Quad-core 1.4 GHz Cortex-A9 <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Mali-400MP4 <!-- e.g. Adreno 200 -->
-| storage = 16 GB <!-- e.g. 512 MB -->
-| display = 1280x800 PLS TFT <!-- e.g. 480x800 AMOLED -->
-| memory = 2GB LPDDR2 <!-- e.g. 576 MB -->
-| architecture = armhf <!-- One of these: armhf, aarch64, x86, x86_64 -->
+| originalsoftware = Android 4
+| chipset = Exynos 4412
+| cpu = Quad-core 1.4 GHz Cortex-A9
+| gpu = Mali-400 MP4
+| storage = 16 GB
+| display = 1280x800 PLS TFT
+| memory = 2 GB LPDDR2
+| architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y<!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = Y<!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -57,5 +57,5 @@ XDA forum post about the mainline kernel work being done on this device: https:/
 Git Repositories for the work being done by Viciouss to mainline this device and get Android running on it: https://github.com/Viciouss?tab=repositories
 
 == See also ==
-* {{MR|233|pmaports}} Initial merge request
+* {{MR|233|pmaports}} Initial merge request (Closed, not merged)
 * [https://redmine.replicant.us/issues/1946] Replicant wants to support this device as well
