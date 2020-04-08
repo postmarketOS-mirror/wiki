@@ -1,21 +1,21 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Tab S 10.5" LTE <!-- e.g. Desire -->
-| codename = chagalllte <!-- e.g. htc-bravo -->
+| name = Galaxy Tab S 10.5" LTE
+| codename = chagalllte
 | image = File:chagalllte.jpg
 | imagecaption = A picture of a white Samsung Galaxy Tab S 10.5" LTE.
 | releaseyear = 2014
-| originalsoftware = Android 4.4.2 <!-- e.g. Android 2.1 -->
+| originalsoftware = Android 4.4.2
 | chipset = Qualcomm Snapdragon 800 (28 nm)
-Exynos 5420 Octa (28 nm) <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+Exynos 5420 Octa (28 nm)
 | cpu = Quad-core 2.3 GHz Krait 400 (S800)
-Quad-core 1.9GHz Cortex-A15 & quad-core 1.3 GHz Cortex-A7 (Exynos 5420) <!-- e.g. 1.0 GHz Scorpion -->
+Quad-core 1.9GHz Cortex-A15 & quad-core 1.3 GHz Cortex-A7 (Exynos 5420)
 | gpu = Adreno 330 (S800)
-Mali-T628MP6 (Exynos 5420) <!-- e.g. Adreno 200 -->
-| storage = 16GB/32GB storage, microSD slot <!-- e.g. 512 MB -->
-| display = 2560x1600 Super AMOLED <!-- e.g. 480x800 AMOLED -->
-| memory = 3GB RAM <!-- e.g. 576 MB -->
-| architecture = armv7 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+Mali-T628MP6 (Exynos 5420)
+| storage = 16 GB / 32 GB storage, microSD slot
+| display = 2560x1600 Super AMOLED
+| memory = 3 GB
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = n <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
