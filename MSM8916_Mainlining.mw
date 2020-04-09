@@ -9,6 +9,7 @@ The following features provided by the MSM8916 SoC are supported in mainline and
 * GPU, Display ('''Note:''' There are many different display panels and each needs a custom panel driver...)
 * Sound ('''Note:''' Some devices use a custom speaker amplifier instead of the one provided by PM8916...)
 * Buttons
+* Modem (SMS, voice calls without audio for now)
 
 Certain components (e.g. touchscreen, sensors, ...) are device-specific. With a bit of luck, some will be already supported by mainline, others won't.
 
