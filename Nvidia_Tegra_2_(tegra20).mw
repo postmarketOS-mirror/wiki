@@ -81,5 +81,17 @@ Present on: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu
 * test vibrator if works
 * if works as expected provide "Tested-by" or "Reviewed-by" tags to author
 
+== Devices with a Nvidia Tegra 2 Chipset ==
+{{todo|Update the condition in the table to work generic.}}
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Nvidia Tegra 2' OR Devices.chipset='Nvidia Tegra 2 T20' OR Devices.chipset='Nvidia Tegra 2 AP20H'
+|more results text=
+}}
+
 == See also ==
 * Tegra 2 is very similiar to [[Nvidia_Tegra_3_(tegra30)]]
