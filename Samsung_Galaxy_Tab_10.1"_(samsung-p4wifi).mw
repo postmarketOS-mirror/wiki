@@ -52,14 +52,19 @@ postmarketOS for the Samsung Galaxy Tab 10.1 runs on mainline Linux kernel fork.
 Press and hold Power + Volume Down buttons
 
 == Installation ==
-
-# Init pmbootstrap<source lang="shell">$ pmbootstrap init</source> Choose 'samsung-p4wifi' as target device.
-# Start the build process<source lang="shell">$ pmbootstrap build linux-samsung-p4wifi
-$ pmbootstrap build device-samsung-p4wifi
-$ pmbootstrap install</source>
-# Enter flash (download) mode
-# Flash the kernel and system images<source lang="shell">$ pmbootstrap flasher flash_kernel
-$ pmbootstrap flasher flash_rootfs</source>
+Init pmbootstrap
+<source lang="shell-session">
+$ pmbootstrap init</source>
+Choose 'samsung-p4wifi' as target device.
+Build the image:
+<source lang="shell-session">
+$ pmbootstrap install
+</source>
+Enter flash (download) mode
+Flash the kernel and system images
+<source lang="shell-session">$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_rootfs
+</source>
 
 == Battery ==
 The battery in this device is the <code>max17042</code>. A tear down of the (nearly) identical Galaxy Tab 8.9 reveals that the charger is <code>max8903</code>.
