@@ -77,7 +77,7 @@ Source (last commit):
 * https://github.com/okias/linux/commits/isa1200
 
 Present on: [http://deviceinfohw.ru/devices/index.php?platform=platform0&cpu=cpu0&brand=brand0&filter=isa1200&submit=Search device list]
-* if your device has this vibrator, use these patches + chagnge or add DTS has entry for isa1200 pointing to this vibrator
+* if your device has this vibrator, use these patches + change or add DTS has entry for isa1200 pointing to this vibrator
 * test vibrator if works
 * if works as expected provide "Tested-by" or "Reviewed-by" tags to author
 
