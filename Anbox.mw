@@ -1,12 +1,12 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
-{{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]]. Please use the lts kernel for that as the virt kernel doesn't inclued the necessary modules.}}
+{{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]]. Please use the lts kernel for that as the virt kernel doesn't include the necessary modules.}}
 {{note|Anbox is currently broken on armv7 because 32 bits binder is not supported by Linux (it would require rebuilding the image for a 64 bits binder) and because Anbox assumes 64 bits in some places, which breaks input (see {{github|1214|anbox|anbox}})}}
 
 [[File:Anbox_app_manager.png|thumb|The anbox application manager with the default apps.]]
 
 '''[https://anbox.io Anbox]''' runs Android apps on Linux using a trimmed down version of Android in a container. Anbox allows one to use Android applications sandboxed, running alongside the native Linux programs. It can be very handy to help people switch from Android to an operating that respects their privacy.
 
-See issue  {{milestone|7}} for current progress.
+See {{milestone|7}} for current progress.
 
 == Installation ==
 
