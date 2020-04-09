@@ -41,7 +41,7 @@
 * pavelmachek
 
 == How to enter flash mode ==
-This device is pretty similar to nokia N950, with minor differences in kernel. Bootloader has same problems. See https://elinux.org/N950
+This device is pretty similar to [[Nokia N950]], with minor differences in kernel. Bootloader has same problems. See https://elinux.org/N950
 
 Kernel can be started without flashing, using: 
 
