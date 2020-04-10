@@ -74,6 +74,11 @@ This makes phone calls work.
 | Yes
 | Alarms are silent, possibly phosh issue
 |-
+| gnome-contacts
+| contact manager
+| 
+| No icon, doesn't allow creating local address book, [https://source.puri.sm/Librem5/gnome-contacts/commits/librem5 phosh patches]
+|-
 | baobab
 | disk usage analyzer
 | 
