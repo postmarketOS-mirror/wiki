@@ -167,7 +167,7 @@ Device             Start      End  Sectors  Size Name
 * [https://gitlab.com/unrznbl/gesture/wikis/gesture---handwriting-for-linux-touchscreens shelli-ui: framebuffer console + gesture recognition video demo]
 * [https://www.youtube.com/watch?v=u9zw_ewkBJ0 Demonstration video of a Nexus 5 with postmarketOS and plasma]
 * [https://gitlab.com/postmarketOS/pmbootstrap/tree/b1b5acd79d25fedda99dbbbee9050993aec49405/aports/device/linux-lg-hammerhead obsolete downstream kernel packaging]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-lg-hammerhead Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-lg-hammerhead Device package]
 * [https://gist.github.com/MartijnBraam/57ec370985af341ceb17521183695a3d dmesg from mainline linux with the missing block devices]
 * [https://github.com/flto/linux/wiki/hammerhead-upstream flto's hammerhead-upstream status page]
 * [https://masneyb.github.io/nexus-5-upstream/ Brian Masney's Nexus 5 upstream status page]
