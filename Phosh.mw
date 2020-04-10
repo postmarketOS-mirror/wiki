@@ -57,7 +57,7 @@ This makes phone calls work.
 | gnome-calculator
 | calculator
 | Yes
-| 
+| [https://source.puri.sm/Librem5/gnome-calculator/commits/librem5-3-34-1 phosh patches for focus issue]
 |-
 | gnome-calendar
 | calendar
@@ -212,7 +212,7 @@ This makes phone calls work.
 | gedit
 | text editor
 | Yes
-| 
+| [https://source.puri.sm/Librem5/gedit/commits/librem5-3-34-0 phosh patches]
 |-
 | totem
 | video player/browser
@@ -224,3 +224,8 @@ This makes phone calls work.
 | 
 | Too large for screen
 |}
+
+Purism seems to be using these unpackaged apps in their Phosh:
+
+* https://source.puri.sm/Librem5/lollypop
+* https://source.puri.sm/Librem5/folks
