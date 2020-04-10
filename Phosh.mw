@@ -102,7 +102,7 @@ This makes phone calls work.
 | epiphany
 | browser
 | 
-| crash on javascript
+| crash on javascript [https://source.puri.sm/Librem5/epiphany/tree/librem5-3-34-1 purism patches]
 |-
 | gnome-feeds
 | rss
