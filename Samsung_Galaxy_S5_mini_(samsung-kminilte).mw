@@ -137,11 +137,18 @@ When using networkmanager, you should now be able to connect to a network:
 ** If you are running <code>elogind</code>, make sure to prevent it from handling the power button, by setting <code>HandlePowerKeyIgnore</code> in <code>logind.conf</code>
 * Touch keys
 ** Driver: i2c-gpio
+** Attached via: I2C, address 0x20
 ** Device node: <code>/dev/input/event1</code>
 *** <code>KEY_BACK</code> Back button (right of the home button)
 *** <code>254</code> (name neither listed by libinput, nor linux/input.h) Other button (left of the home button)
 ** The left button cannot be used for triggerhappy right now, since it doesn't support configuring numeric key codes
 * Notification LED
+** Driver: i2c-gpio
+** Attached via: I2C, address 0x30
+** This is an RGB LED. The red, green and blue channels can be controlled individually though led_r, led_g and led_b in <code>/sys/class/leds/$led</code>. Some examples:
+*** full brightness red: <code>echo 48 > /sys/class/leds/led_r/brightness</code> (check <code>max_brightness</code> to make sure this is correct)
+*** half brightness red: <code>echo 24 > /sys/class/leds/led_r/brightness</code>
+*** blink green: <code>echo 1 > /sys/class/leds/led_g/blink</code> (set <code>delay_{on,off}</code> afterwards to control timing)
 * Vibration motor
 * Gyroscope
 ** Chip: Invensense MPU 6515 (No datasheet found so far, [https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf this is the successor product MPU 9250])
