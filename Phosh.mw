@@ -149,6 +149,11 @@ This makes phone calls work.
 | 
 | Too large to fit in screen
 |-
+| gnome-usage
+| system monitor
+| 
+| Too large [https://source.puri.sm/Librem5/gnome-usage/commits/librem5-3-32-0 phosh patches]
+|-
 | peek
 | screen recorder
 | 
