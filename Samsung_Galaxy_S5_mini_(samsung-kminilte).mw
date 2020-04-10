@@ -122,12 +122,18 @@ When using networkmanager, you should now be able to connect to a network:
 * Light sensor
 * Heart rate sensor
 * Magnetic sensor
+** Chip: ALPS HSCDTD0008A ([https://pdf1.alldatasheet.com/datasheet-pdf/view/1080839/ALPS/HSCDTD008A/+00JQ95BXvKPTcKVHIalYvpL+/datasheet.pdf Datasheet])
+** Attached via: I2C, address 0x0c
+** Driver: hscd_i2c
 * Audio jack events
 * Physical buttons
 * Touch keys
 * Notification LED
 * Vibration motor
 * Gyroscope
+** Chip: Invensense MPU 6515 (No datasheet found so far, [https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf this is the successor product MPU 9250])
+** Attached via: I2C, address 0x68
+** Driver: inv-mpu-iio
 * Wifi
 
 == What does not work ==
