@@ -4,7 +4,6 @@ __NOTOC__
 <code>channels.cfg</code> is in the master branch of [[pmaports.git]] and maps postmarketOS ''pmaports'' branches to Alpine Linux ''aports'' branches for each release channel.
 
 === Example ===
-
 <source lang="ini">
 # Reference: https://postmarketos.org/channels.cfg
 [channels.cfg]
