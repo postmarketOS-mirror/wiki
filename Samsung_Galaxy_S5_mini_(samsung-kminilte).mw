@@ -136,6 +136,10 @@ When using networkmanager, you should now be able to connect to a network:
 ** [[Troubleshooting:HID_buttons#Using_triggerhappy_to_handle_HID_input_events|Use triggerhappy]] to configure what the buttons do
 ** If you are running <code>elogind</code>, make sure to prevent it from handling the power button, by setting <code>HandlePowerKeyIgnore</code> in <code>logind.conf</code>
 * Touch keys
+** Driver: i2c-gpio
+** Device node: <code>/dev/input/event1</code>
+*** <code>KEY_BACK</code> Back button (right of the home button)
+*** <code>254</code> (name neither listed by libinput, nor linux/input.h) Other button (left of the home button)
 * Notification LED
 * Vibration motor
 * Gyroscope
