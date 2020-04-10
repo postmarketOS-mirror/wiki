@@ -94,6 +94,11 @@ This makes phone calls work.
 | 
 | Too large
 |-
+| epiphany
+| browser
+| 
+| crash on javascript
+|-
 | gnome-feeds
 | rss
 | 
