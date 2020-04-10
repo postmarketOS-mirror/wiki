@@ -92,7 +92,7 @@ This makes phone calls work.
 | evince
 | document viewer
 | 
-| Too large
+| Too large [https://source.puri.sm/Librem5/evince/commits/librem5-3-34-1 phosh patches]
 |-
 | epiphany
 | browser
