@@ -12,7 +12,7 @@
 | storage = 8 GB
 | display = 640x480
 | memory = 768 MB
-| architecture = armhf
+| architecture = armv7
 | n-android = ✔
 | status_usbnet = 
 | status_flashing = 
