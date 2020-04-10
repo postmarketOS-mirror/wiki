@@ -197,7 +197,7 @@ This makes phone calls work.
 | gnome-software
 | package manager
 | 
-| Slightly too large for screen, no apk support
+| Slightly too large for screen, no apk support [https://source.puri.sm/Librem5/gnome-software/commits/librem5-3-34-0 phosh patches]
 |-
 | gnome-sound-recorder
 | sound recorder
