@@ -1,0 +1,62 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy Tab E 9.6 (SM-T560)
+| codename = sm-t560 <!-- TODO: find out the actual codename -->
+| image = File:sm-t560.jpg
+| imagecaption = 
+| releaseyear = 2015
+| originalsoftware = Android 4.4.4 on Linux 3.10.17
+| chipset = Spreadtrum SC7730SE
+| cpu = 4x 1.3 GHz Cortex-A7
+| gpu = Mali-400 MP2
+| storage = 8 GB
+| display = 800x1280 TFT
+| memory = 1.5 GB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+
+<!-- you can also use these lines if you need to:
+Version of the kernel that pmos is running
+| pmoskernel = 3.x.x
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = -
+-->
+}}
+
+== Contributors ==
+* ''[[User:StandaSK|StandaSK]]''
+
+== Maintainer(s) ==
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+
+== Installation ==
+
+== See also ==
+* [https://www.gsmarena.com/samsung_galaxy_tab_e_9_6-7295.php Specs on GSMArena.com]
+* [https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_E_9.6 Wikipedia page]
