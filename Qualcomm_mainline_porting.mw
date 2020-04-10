@@ -1,7 +1,7 @@
 {{note|Work in progress and untested. Please improve this page (or merge it together with the non-Qualcomm-specific [[The Mainline Kernel|mainlining wiki page]]) when you try any of this.}}
 == Prerequisites ==
 * A working device-tree based downstream kernel
-* You know the location of the UART port on your device ([https://www.youtube.com/watch?v=_aedd8SUBgY video tutorial] | [http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/ Identifying serial ports])
+* You know the location of the UART port on your device, see ([https://www.youtube.com/watch?v=_aedd8SUBgY video tutorial] | [http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/ Identifying serial ports]) and [[Serial debugging|serial debugging]]
 * A device that has one of the following Snapdragon processors
 ** '''S3''' (MSM8260 / MSM8660 / APQ8060)
 ** '''S4 Pro''' (MSM8960T / MSM8960DT / APQ8064)
