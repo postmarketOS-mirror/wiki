@@ -34,6 +34,7 @@
 | status_calls = N <!-- Talking to other people over the cellular network. -->
 | booting = Y <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 }}
+This page is about the Galaxy Note 3 with LTE that uses the MSM8974. The HSPA+ version is based on a Exynos 5420.
 
 == Contributors ==
 * CalcProgrammer1 (Adam Honse)
