@@ -140,6 +140,7 @@ When using networkmanager, you should now be able to connect to a network:
 ** Device node: <code>/dev/input/event1</code>
 *** <code>KEY_BACK</code> Back button (right of the home button)
 *** <code>254</code> (name neither listed by libinput, nor linux/input.h) Other button (left of the home button)
+** The left button cannot be used for triggerhappy right now, since it doesn't support configuring numeric key codes
 * Notification LED
 * Vibration motor
 * Gyroscope
