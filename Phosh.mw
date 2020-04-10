@@ -25,3 +25,197 @@ Since the modem settings page is not adapted for small screens one can set this 
 mmcli -m 0 --simple-connect='apn=web.be,user=web,password=web,pin=1111' 
 
 This makes phone calls work.
+
+== Apps ==
+
+{| class="wikitable"
+! App
+! Is
+! Mobile
+! Notes
+|-
+| gnome-2048
+| game
+| Yes
+| 
+|-
+| gnome-authenticator
+| totp
+| Yes
+| QR scanner is broken
+|-
+| gnome-books
+| ebook reader
+| 
+| Too large for screen
+|-
+| gnome-boxes
+| virtual machine
+| 
+| Too large for screen
+|-
+| gnome-calculator
+| calculator
+| Yes
+| 
+|-
+| gnome-calendar
+| calendar
+| 
+| Slightly too large for screen
+|-
+| cheese
+| camera
+| 
+| Too large for screen, doesn't support ARM cameras
+|-
+| gnome-clocks
+| alarms
+| Yes
+| Alarms are silent, possibly phosh issue
+|-
+| baobab
+| disk usage analyzer
+| 
+| Too large
+|-
+| gnome-disks
+| disk management
+| 
+| Might work, detects no devices
+|-
+| simple-scan
+| document scanner
+| 
+| Slightly too large, requires cups setup first which is broken
+|-
+| evince
+| document viewer
+| 
+| Too large
+|-
+| gnome-feeds
+| rss
+| 
+| doesn't launch
+|-
+| nautilus
+| file browser
+| 
+| non optimal layout in portrait
+|-
+| fractal
+| matrix client
+| Yes
+| 
+|-
+| gnome-games
+| game browser
+| 
+| Too large gnome dialogs
+|-
+| geary
+| mail client
+| 
+| Too large
+|-
+| gnome-latex
+| latex editor
+| 
+| Too large
+|-
+| gnote
+| notes
+| Yes
+| Weird layout for phone
+|-
+| eog
+| image viewer
+| Yes
+| Bad hdpi rendering and sidebar is annoying
+|-
+| gnome-maps
+| openstreetmaps
+| 
+| Too large to fit in screen, casual scrolling the map works fine
+|-
+| gnome-music
+| music player
+| 
+| Too large to fit in screen
+|-
+| peek
+| screen recorder
+| 
+| Doesn't launch
+|-
+| gnome-photos
+| photo manager
+| 
+| Too large
+|-
+| gnome-podcasts
+| podcasts
+| Yes
+| player bar slightly too large
+|-
+| polari
+| irc client
+| 
+| Doesn't launch
+|-
+| vinagre
+| remote desktop client
+| 
+| Messed up layout
+|-
+| rhythmbox
+| music player
+| Yes
+| Fits but with some layout issues
+|-
+| gnome-shortwave
+| internet radio
+| Yes
+| Not very stable, probably radio stations fault
+|-
+| shotwell
+| photo manager
+| 
+| Too large for screen
+|-
+| gnome-software
+| package manager
+| 
+| Slightly too large for screen, no apk support
+|-
+| gnome-sound-recorder
+| sound recorder
+| 
+| Too large for screen
+|-
+| gnome-system-monitor
+| taskmanager
+| 
+| Slightly too large for screen
+|-
+| kgx
+| terminal emulator
+| Yes
+| 
+|-
+| gedit
+| text editor
+| Yes
+| 
+|-
+| totem
+| video player/browser
+| 
+| Too large for screen
+|-
+| gnome-weather
+| weather
+| 
+| Too large for screen
+|}
