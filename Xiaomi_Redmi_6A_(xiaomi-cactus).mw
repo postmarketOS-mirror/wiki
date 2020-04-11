@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Xiaomi
 | name = Redmi 6A
-| codename = cactus
+| codename = xiaomi-cactus
 | image = File:Xiaomi_Redmi_6a.jpg
 | imagecaption = 
 | releaseyear = 2018
@@ -9,9 +9,9 @@
 | chipset = Mediatek MT6761 Helio A22 
 | cpu = Quad-core 2.0 GHz Cortex-A53
 | gpu = PowerVR GE8320
-| storage = 16GB
+| storage = 16 GB
 | display = 720 x 1440 IPS
-| memory =  2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
