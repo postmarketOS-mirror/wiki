@@ -2,7 +2,7 @@
 | manufacturer = Xiaomi
 | name = Redmi 6A
 | codename = cactus
-| image = File:all-ok.com.ua/image/cache/catalog/products/phone/Xiaomi/redmi_6A/Xiaomi_Redmi_6a_Grey_4-700x700-product_popup.jpg
+| image = File:Xiaomi_Redmi_6a.jpg
 | imagecaption = Xiaomi Redmi 6A
 | releaseyear = 2018
 | originalsoftware = Android 9.0
@@ -12,7 +12,7 @@
 | storage = 16GB
 | display = 720 x 1440 IPS
 | memory =  2GB
-| architecture = armv7
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
