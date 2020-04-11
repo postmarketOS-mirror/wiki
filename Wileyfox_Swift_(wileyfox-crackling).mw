@@ -67,6 +67,7 @@ There is also another device called GeneralMobile 4g (Android One device) that i
 
 
 == Installation ==
+# There is a small chance that your device has non-cyanogen bootloader. In this case you may need to update it.
 # Install [https://github.com/msm8916-mainline/lk2nd lk2nd] (alternative bootloader that handles certain mainline quirks like setting up the WiFi/BT MAC addresses. Keep in mind that you have to install pmOS components with lk2nd, not original fastboot)
 # Just follow the [[Installation guide]].
 
