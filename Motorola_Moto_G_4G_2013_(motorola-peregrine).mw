@@ -1,0 +1,68 @@
+{{Infobox device
+| manufacturer = Motorola
+| name =  Moto G 4G (2013)
+| codename = motorola-peregrine
+| image = File:peregrine-weston.jpg
+| imagecaption = Moto G 4G 2013 running Weston
+| releaseyear = 2013
+| originalsoftware = Android 4.4
+| chipset = Qualcomm MSM8226 Snapdragon 400
+| cpu = Quad-core 1.2 GHz Cortex-A7
+| gpu = Adreno 305
+| storage = 8 GB
+| display = 720x1280 IPS LCD
+| memory = 1 GB
+| architecture = armv7
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = Y
+| status_fde = Y
+| status_mainline =
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* pikpok
+
+== Maintainer(s) ==
+* pikpok
+
+== How to enter flash mode ==
+
+You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ unlock your bootloader] first if you haven't yet. Hold power and volume down button to enter fastboot mode if phone is turned on, or just volume down when connecting USB to turned off device.
+
+== Installation ==
+
+Typical fastboot flashing procedure should be fine:
+
+<source lang="shell-session">
+$ pmbootstrap init
+$ pmbootstrap install
+$ pmbootstrap flasher flash_rootfs
+$ pmbootstrap flasher flash_kernel
+</source>
+
+== WiFi and NetworkManager ==
+
+WiFi does not work with NetworkManager out of the box. Seems like it's due to old kernel used (see {{issue|50|pmaports}} for more details).
+
+There are two possible workarounds:
+* connect manually using [[WiFi#Start WIFI manually]]
+* downgrade dhcpcd package to version 6.11.5 ({{issue|50#note_123253196|pmaports}}) and change [https://wiki.archlinux.org/index.php/NetworkManager#DHCP_client NetworkManager DHCP client] in /etc/NetworkManager/conf.d/postmarketos.conf
+
+== See also ==
+
+* {{github|1264}} Initial pull request
