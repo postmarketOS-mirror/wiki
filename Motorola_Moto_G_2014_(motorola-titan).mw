@@ -1,0 +1,122 @@
+{{Infobox device
+| manufacturer = Motorola
+| name = Moto G (2nd gen)
+| codename = motorola-titan
+| image = File:Moto G 2014 Weston.png
+| imagecaption = Moto G 2014 running Weston
+| releaseyear = 2014
+| originalsoftware = Android 4.4.4 on Linux 3.10
+| chipset = Qualcomm MSM8226 Snapdragon 400
+| cpu = Quad-core 1.2 GHz Cortex-A7
+| gpu = Adreno 305
+| storage = 8 GB
+| display = 720x1280 IPS LCD
+| memory = 1 GB
+| architecture = armv7
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = Y
+| status_screen = P
+| status_wifi = P
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+== Contributors ==
+
+* [https://github.com/PabloCastellano/ PabloCastellano]
+
+== Aditional info ==
+
+* Screen is black after the password is entered. Workaround:
+
+<source lang="bash">sh /etc/postmarketos-mkinitfs/hooks/00-device-motorola-titan.sh`</source>
+* Cannot boot if kernel is XZ-compressed (it boots if you build it using [https://wiki.postmarketos.org/wiki/Troubleshooting:kernel#Building_the_kernel_with_Android.27s_build_system Android's build system])
+* flash_kernel: [https://gitlab.com/postmarketOS/pmbootstrap/issues/126 boot image is too big]
+* wifi: requires wcnss-service (see issue [https://gitlab.com/postmarketOS/pmbootstrap/issues/373 #373] and the wiki page [https://wiki.postmarketos.org/wiki/QMI Qualcomm MSM Interface]).
+
+<pre># From initramfs
+/tmp # show_splash splash1.ppm.gz 
+fbsplash: short read</pre>
+This is written to dmesg everytime you type the previous command:
+
+<pre>[   74.192213,0] mdss_fb_alloc_fb_ion_memory: alloc 0x398000B vaddr = e9b99000 (0x00200000 iova) for fb0
+[   74.192374,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.192685,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.192846,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193004,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193106,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193263,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193366,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193522,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193624,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193780,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.193882,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194037,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194138,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194292,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194446,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194547,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194702,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194804,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.194960,0] vm_start=b6ad2000 vm_end=b6e6a000 vm_page_prot=1799
+[   74.196516,0] lm3630a_bl 0-0038: wake up and re-init chip</pre>
+
+* White LED:
+
+<source lang="bash">echo 255 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness</source>
+[https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/drivers/leds/leds-qpnp.c#L187-L189 RGB LED documentation]
+
+== Links ==
+
+* [https://github.com/LineageOS/android_kernel_motorola_msm8226 android_kernel_motorola_msm8226]
+* [https://github.com/LineageOS/lineage_wiki/blob/master/_data/devices/titan.yml titan.yml]
+* [https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/arch/arm/configs/titan_defconfig defconfig]
+* [https://github.com/LineageOS/android_device_motorola_titan/blob/cm-14.1/proprietary-files.txt proprietary-files.txt]
+* [https://cve.lineageos.org/android_kernel_motorola_msm8226 CVE security status]
+* [http://termbin.com/84rz dmesg.txt]
+
+== Drivers table ==
+
+{| class="wikitable sortable"
+! Component
+! Brand
+! Module
+! Works?
+|-
+| Accelerometer
+| Bosch Sensortec MEMS accelerometer sensor driver
+| bma2x2
+|
+|-
+| Framebuffer
+|
+| mdss
+| Yes
+|-
+| WiFi
+|
+| [https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/Documentation/devicetree/bindings/wcnss/wcnss-wlan.txt wcnss]
+|
+|-
+| Storage
+|
+|
+|
+|-
+| USB networking
+|
+|
+|
+|}
