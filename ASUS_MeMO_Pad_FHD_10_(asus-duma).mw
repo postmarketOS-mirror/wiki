@@ -35,15 +35,18 @@
 }}
 
 == Contributors ==
-
 * myfreeweb
 
-== Key combinations ==
+== Users owning this device ==
+{{Device owners}}
 
-* Boot to bootloader: Power + Volume Down
-* Boot to recovery: Power + Volume Up
-* Shutdown: Power
+== Key combinations ==
+* Boot to bootloader: {{Button|Power}} + {{Button|Volume Down}}
+* Boot to recovery: {{Button|Power}} + {{Button|Volume Up}}
+* Shutdown: {{Button|Power}}
 
 == Links ==
 * {{github|1581}} Initial PR
 * [https://archive.org/download/asus-duma-unlock-twrp ME302KL_UnLock + TWRP image + unlocking README] (unlock from [https://www.asus.com/Tablets/ASUS_MeMO_Pad_FHD_10_ME302KL/HelpDesk_Download/ ASUS], TWRP port by SevenMaxs [https://forum.xda-developers.com/android/general/recovery-twrp-3-1-1-0-asus-me302kl-t3609759 xda]/[https://4pda.ru/forum/index.php?s=&showtopic=545744&view=findpost&p=52654784 4pda])
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-asus-duma Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-asus-duma Kernel package]
