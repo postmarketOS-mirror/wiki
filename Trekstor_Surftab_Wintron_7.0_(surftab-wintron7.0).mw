@@ -6,7 +6,8 @@
 | imagecaption = TrekStor Surftab Wintron 7.0
 | releaseyear = 2015
 | originalsoftware = Windows 10 Home
-| cpu = Intel Atom Z3735G
+| chipset = Intel Atom Z3735G
+| cpu = Quad-core 1.83 GHz
 | gpu = Intel HD Graphics
 | storage = 16 GB
 | display = 1024 x 600
@@ -65,4 +66,4 @@ Works if configured with alsamixer:
 The back camera is a OmniVision OV2680. There seems to be some support in the kernel.
 [https://github.com/torvalds/linux/commit/3ee47cad3e6955147882f1a24a9465704d8eddd2#diff-a8a5a22c348086869e2efd5206bbe62e]
 == See also ==
-[https://gitlab.com/postmarketOS/pmaports/merge_requests/290 Initial MR]
+{{MR|290|pmaports}} Initial MR
