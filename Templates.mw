@@ -10,6 +10,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:Infobox|infobox]] ''on the top right of every device / user interface article''
 ** [[Template:Infobox_interface|interface]]
 ** [[Template:Infobox_device|device]]
+** [[Template:Infobox_soc|soc]]
 * [[Template:issue|issue]] ''gitlab issue link''
 * [[Template:MR|MR]] ''gitlab merge request link''
 * [[Template:maemo-leste|maemo-leste]] ''[https://github.com/maemo-leste/bugtracker Maemo Leste] bugtracker link''
