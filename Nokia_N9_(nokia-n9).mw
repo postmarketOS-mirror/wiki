@@ -8,10 +8,10 @@
 | releaseyear = 2011
 | originalsoftware = MeeGo
 | chipset = TI OMAP 3630
-| cpu = Single-core 1.0 GHz Cortex A8
+| cpu = Single-core 1.0 GHz Cortex-A8
 | gpu =  PowerVR SGX530
 | storage = 16/64 GB
-| display = "Clear Black" AMOLED 854 × 480 px
+| display = "Clear Black" AMOLED 480 x 854 px
 | memory = 1 GB
 | architecture = armhf
 | n-android = ✔
