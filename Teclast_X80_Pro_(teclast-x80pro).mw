@@ -6,11 +6,12 @@
 | imagecaption = Teclast X80 Pro running Luna
 | releaseyear = 2017
 | originalsoftware = Windows 10 Home / Android 5.1
-| cpu = Intel Atom x5-Z8300 (4 core, 1.84GHz)
+| chipset = Intel Atom x5-Z8300
+| cpu = 4 core, 1.84 GHz
 | gpu = Intel HD Graphics
-| storage = 32GB
+| storage = 32 GB
 | display = 1920x1200
-| memory = 2GB
+| memory = 2 GB
 | architecture = x86_64
 | n-android = ✔
 | status_usbnet = -
