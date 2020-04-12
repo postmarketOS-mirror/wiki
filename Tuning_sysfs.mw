@@ -95,11 +95,7 @@ fi</pre>
 
 ==Applying tuning==
 
-To make changes to the device, create "initfs-hook.sh" in the device folder, add "initfs-hook.sh" to the source list, and add the following under package()
-<pre class="shell">
-	install -Dm644 "$srcdir"/initfs-hook.sh \
-		"$pkgdir"/etc/postmarketos-mkinitfs/hooks/00-${pkgname}.sh
-</pre>
+To make changes to the device, create "initfs-hook.sh" in the device folder and add "initfs-hook.sh" to the source list.
 
 The initfs-hook.sh runs commands before booting.  Look at the examples section to see how the file should be used.
 
