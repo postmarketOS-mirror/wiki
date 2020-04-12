@@ -8,11 +8,11 @@
 | originalsoftware = iPhone OS 3.2
 | pmoskernel = 5.3.0-rc6
 | chipset = Apple A4
-| cpu = 1x 1 GHz Cortex A8
+| cpu = 1x 1 GHz Cortex-A8
 | gpu = PowerVR SGX535
-| storage = 16/32/64GB
+| storage = 16/32/64 GB
 | display = 1024x768
-| memory = 256MB
+| memory = 256 MB
 | architecture = armv7
 | n-android = ✔
 | status_usbnet = N
@@ -48,7 +48,7 @@ Can boot into a mainline linux kernel, but the bootloader isn't persistent so it
 == Booting ==
 
 # Install syringe package in chroot
-# Enter DFU mode (hold  {{button|power}} and  {{button|home}} with USB connected to computer)
+# Enter DFU mode (hold  {{button|Power}} and  {{button|Home}} with USB connected to computer)
 # load openiboot
 
 <source lang="shell-session">
