@@ -6,7 +6,7 @@
 | releaseyear = 2013
 | originalsoftware = Raspbian
 | chipset = Broadcom BCM2835<br/>Broadcom BCM2836
-| cpu = ARM1176JZF-S @ 700 MHz<br/>ARM Cortex-A7 @ 900 MHz
+| cpu = ARM1176JZF-S @ 700 MHz<br/>4x ARM Cortex-A7 @ 900 MHz
 | gpu = Broadcom VideoCore IV
 | storage = MicroSDHC slot
 | display = HDMI port
