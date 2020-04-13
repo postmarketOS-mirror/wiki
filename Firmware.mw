@@ -1,4 +1,4 @@
-Firmware is generally is software which runs on another processor in the system, e.g. a wireless controller, a GPU... This software is sometimes stored in ROM attached to the relevant controller, but in recent times, controllers tend to rely on the host operating system to load their firmware for them.
+Firmware is generally software which runs on another processor in the system, e.g. a wireless controller, a GPU... This software is sometimes stored in ROM attached to the relevant controller, but in recent times, controllers tend to rely on the host operating system to load their firmware for them.
 
 These firmware files aren't used directly by the kernel, they're loaded by the kernel onto other pieces of hardware.[https://unix.stackexchange.com/a/359996]
 
