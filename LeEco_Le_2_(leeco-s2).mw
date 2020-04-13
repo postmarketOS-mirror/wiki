@@ -40,15 +40,13 @@ The LeEco Le 2 is a smartphone by LeEco. The postmarketOS vendor and device name
 * OctoNezd
 * rxbnDE
 
-== Installation ==
-
-The recommended installation procedure is installing by fastboot by following the [[Installation guide|Installation Guide]].
-
 == How to enter flash mode ==
 Recovery: {{Button|Power}} + {{Button|Volume Up}}
 
 Fastboot: {{Button|Power}} + {{Button|Volume Down}}
 == Installation ==
+The recommended installation procedure is installing by fastboot by following the [[Installation guide|Installation Guide]].
+
 # Follow the [[Installation guide|Installation Guide]] up to the 'pmbootstrap flash' part.
 # Execute following line to unlock flashing: <source lang="shell">$ fastboot oem unlock-go</source>
 # Follow the installation guide again.
