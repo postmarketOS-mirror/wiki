@@ -166,6 +166,7 @@ When using networkmanager, you should now be able to connect to a network:
 * X11-based DEs
 * Cameras
 * Infrared emitter
+* Audio
 
 Everything else is untested as of writing this.
 
