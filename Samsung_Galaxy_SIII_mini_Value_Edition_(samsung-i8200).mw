@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy S III mini Value Edition
+| name = Galaxy S III mini Value Edition
 | codename = samsung-i8200
 | image = File:golden.png
 | imagecaption = Galaxy SIII mini VE
@@ -8,7 +8,8 @@
 | originalsoftware = Android 4.2.2 (Jelly Bean)
 | chipset = Marvell PXA986
 | cpu = Dual-core 1.2 GHz Cortex-A9
-| wifi = Marvell 88w8787
+| gpu = Vivante GC1000
+| storage = 8/16 GB
 | display = 480x800 4in
 | memory = 1 GB
 | architecture = armhf
@@ -39,7 +40,7 @@
 * Ashymad
 
 == What works ==
-* Wi-Fi
+* Wi-Fi (Marvell 88W8787)
 * Bluetooth (although untested it should work because it's the same chipset as Wi-Fi)
 * FDE
 * Touchscreen
