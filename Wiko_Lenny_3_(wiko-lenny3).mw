@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Wiko
-| name =  Lenny 3
+| name = Lenny 3
 | codename = wiko-lenny3
 | image = File:Wiko-lenny3-1.jpg
 | imagecaption = Wiko Lenny 3
@@ -8,7 +8,7 @@
 | originalsoftware = Android 6.0.1 (Marshmallow)
 | chipset = MediaTek MT6580M
 | cpu = Quad-core 1.3 GHz Cortex-A7
-| gpu = Mali-400MP2
+| gpu = Mali-400 MP2
 | storage = 16 GB
 | display = 720x1280
 | memory = 1 GB
@@ -68,7 +68,7 @@
 * Flash process should start
 
 == How to enter recovery mode ==
-* Hold the <code>Volume Up</code> button, and then press the <code>Power</code> button
+* Hold the {{Button|Volume Up}} button, and then press the {{Button|Power}} button
 
 == Links ==
 * [https://www.gsmarena.com/wiko_lenny3-8200.php Full phone specifications]
