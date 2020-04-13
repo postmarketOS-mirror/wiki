@@ -17,14 +17,14 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = N
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = N
 | status_mainline = N
 | status_battery = P
 | status_3d = N
 | status_accel = N
-| status_audio = N
+| status_audio = P
 | status_bluetooth = N
 | status_camera = N
 | status_gps = N
@@ -49,10 +49,13 @@ Recovery: {{Button|Power}} + {{Button|Volume Up}}
 
 Fastboot: {{Button|Power}} + {{Button|Volume Down}}
 == Installation ==
-1. Flash it with fastboot/twrp
+# Follow the [[Installation guide|Installation Guide]] up to the 'pmbootstrap flash' part.
+# Execute following line to unlock flashing: <source lang="shell">$ fastboot oem unlock-go</source>
+# Follow the installation guide again.
 
 == Links ==
 * [https://wiki.lineageos.org/devices/s2 Le 2 Page on LineageOS Wiki]
 * {{MR|1073|pmbootstrap}} Initial merge request
+* {{MR|1129|pmbootstrap}} New code base merge request
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-leeco-s2 Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-leeco-s2 Kernel package]
