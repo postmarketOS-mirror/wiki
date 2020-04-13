@@ -65,9 +65,9 @@ You can also use mainline kernel with envkernel, but only USB and panel works wi
 
 Downstream and mainline are pretty much at the same state.
 
-Works with mainline: USB, panel (with HW acceleration), Volume-Up
+Works with mainline: USB, panel (with HW acceleration), keys
 
-Works with downstream: USB, panel, touchscreen, (keys?)
+Works with downstream: USB, panel, touchscreen, keys
 
 == See also ==
 <!--
