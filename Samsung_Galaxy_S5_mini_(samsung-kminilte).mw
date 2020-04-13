@@ -156,11 +156,16 @@ When using networkmanager, you should now be able to connect to a network:
 ** Attached via: I2C, address 0x68
 ** Driver: inv-mpu-iio
 * Wifi
+* Flashlight
+** Write mode "Torch" / "Off" to <code>/sys/class/flashlight/rt-flash-led/mode</code> to turn the light on and off
+** Change brightness by writing a value from 0 to 15 to <code>/sys/class/flashlight/rt-flash-led/torch_brightness</code>
+** See the [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1150 merge request] for details
 
 == What does not work ==
 
 * X11-based DEs
-* Flashlight
+* Cameras
+* Infrared emitter
 
 Everything else is untested as of writing this.
 
@@ -168,3 +173,4 @@ Everything else is untested as of writing this.
 
 * {{github|1467}} Add support for the Samsung Galaxy S5 Mini (kminilte)
 * [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1127 gitlab !1127] Add wifi firmware package
+* [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1150 gitlab !1150] Add flashlight support
