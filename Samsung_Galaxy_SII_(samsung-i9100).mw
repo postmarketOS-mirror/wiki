@@ -218,7 +218,7 @@ Where <code>/dev/mmcblk1p1</code> was the ext4 partition with the root filesyste
 
 [https://github.com/Sekilsgs2 Sekilsgs2] is also working on (March 2020) [https://github.com/Talustus/i9100-uboot/issues/2 supporting the Galaxy S2] in the latest u-boot version.
 
-[https://github.com/TALUAtGitHub/ TALUAtGitHub] has a recent commit (March 2020) git commit that might be helpful h[ttps://github.com/TALUAtGitHub/i9100-uboot]
+[https://github.com/TALUAtGitHub/ TALUAtGitHub] has a recent commit (March 2020) git commit that might be helpful [https://github.com/TALUAtGitHub/i9100-uboot]
 
 === Usage ===
 ==== Wifi ====
