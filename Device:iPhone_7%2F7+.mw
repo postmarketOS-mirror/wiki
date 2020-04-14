@@ -64,7 +64,7 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-No proper flash mode, but kernel can be booted via checkra1n/PongoOS
+No proper flash mode, but kernel can be booted via checkra1n/PongoOS. Basic dual boot support exists
 
 == Installation ==
 
