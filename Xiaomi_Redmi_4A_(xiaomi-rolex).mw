@@ -20,9 +20,9 @@
 | status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y
-| status_fde = 
+| status_fde = Y
 | status_mainline = 
-| status_battery = 
+| status_battery = Y
 | status_3d = 
 | status_accel = 
 | status_audio = 
