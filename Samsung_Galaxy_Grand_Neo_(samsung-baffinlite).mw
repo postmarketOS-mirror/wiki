@@ -54,7 +54,7 @@ Install to sdcard. The system partition doesn't flash due to bootloader limitati
 == Notes ==
 The device freezes under heavy load (such as installing certain apps through apk).
 
-Audio works for a split second and then crashes.
+Audio works for a split second and then crashes. Seems like it has something to do with some kind of clock.
 
 == Mainline ==
 There's a DTB for the chipset used in this phone in the mainline kernel, so mainlining could be possible.
