@@ -17,7 +17,7 @@
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_screen = Y<!-- The display is working? -->
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -64,11 +64,18 @@ Is OTG available, not used in wiki
 == How to enter flash mode ==
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
 
+== Force power off ==
+Hold [VOLUME +] and power button for several seconds.
+
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == Notes ==
-Kernel currently does not boot up. The simplest method to see dmesg messages:
+Kernel boots up to the point where the phone displays "CHARGING MODE: error starting charging-sdl". It has been tested with firmware 47.2.A.10.107.
+
+Unfortunately USB networking does not work at the moment, so further investigation is difficult.
+
+The simplest method to see dmesg messages after a freeze during boot up:
 * boot a postmarketOS image (pmbootstrap flasher boot)
 * disconnect the USB cable as soon as the boot process starts (e.g. when Sony logo appears)
 * keep holding [VOLUME -] to start the recovery
@@ -76,8 +83,8 @@ Kernel currently does not boot up. The simplest method to see dmesg messages:
 (based on [https://wiki.postmarketos.org/wiki/Troubleshooting:boot boot process troubleshooting wiki])
 
 == See also ==
-* [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/device-sony-lilac Device package (WIP)]
-* [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/linux-sony-lilac Kernel package (WIP)]
+* [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/testing/device-sony-lilac Device package (WIP)]
+* [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/testing/linux-sony-lilac Kernel package (WIP)]
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
