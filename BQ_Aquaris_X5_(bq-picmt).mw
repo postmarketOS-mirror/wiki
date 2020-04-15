@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = BQ
 | name = Aquaris X5
-| codename = bq-picmt
+| codename = bq-picmt, bq-paella
 | image = File:bq-picmt.jpg|thumb|133px
 | imagecaption = BQ Aquaris X5 Cyanogen Edition running weston on postmarketOS
 | releaseyear = 2015
@@ -69,6 +69,9 @@ By now the way I flashed the device and having it working was following [[Instal
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == Status ==
+Currently work is separated based on firmware installed, if you installed the Cyanogen Edition firmware will be referred as bq-paella, if you installed the BQ Android firmware it will be referred as bq-picmt. So here is a summary for both:
+
+'''bq-picmt:''' runs on downstream kernel
 
 Works:
 USB Network,
@@ -81,6 +84,14 @@ Buggy:
 ts_calibrate: to make screen get touches I incrementally have to touch screen with one finger and then with that finger on screen touch the crosshair, then for the second two fingers and crosshair, for the third three fingers and crosshair...don't know why but it started happening when I replaced my broken screen with a new one, if someone has this device with original screen can check if the same issue is present or not
 
 Modem doesn't work, in dmesg I get DATA5_CNTL error relative to no such device
+
+'''bq-paella:''' runs on mainline kernel
+
+Works:
+USB Network,
+WiFi,
+Bluetooth
+
 
 == See also ==
 Initial merge request [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1134]
