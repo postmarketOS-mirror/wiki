@@ -20,7 +20,7 @@ https://nl.alpinelinux.org/alpine/edge/testing
 
 If you get <code>UNTRUSTED signature</code> and you trust your LAN, then you may consider <code>apk upgrade --allow-untrusted [package name]</code>. Beware of the security implications that <code>--allow-untrusted</code> has.
 
-4. (optional) After installing a kernel package, you'll need to call <code>pmos-update-kernel</code>
+4. '''Note:''' If you are upgrading a kernel package, the new Android boot image is not automatically flashed to the boot partition at the moment. If you are booting the flashed image (i.e. not using <code>pmbootstrap flasher boot</code> you'll need to call <code>pmos-update-kernel</code>.
 
 The apk hosting this command is called <code>postmarketos-update-kernel</code>. Then you need to figure out the name of your kernel flavor. Run <code>ls /boot/boot.img-*</code>. Whatever is after the dash, that is your kernel flavor. So
 
