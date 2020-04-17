@@ -32,25 +32,30 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| status = kernel compiles. working on flashing
+| status = kernel compiles and boots, but root partition is not found. 
 | booting = no
 }}
 
 == Contributors ==
 * Langoor
 * (others on IRC)
+* Dominduchami
+* (others on the Matrix chat : Henri Dellal, knuxify and others) 
 
 == What works ==
-* Nothing
+* Kernel boots, but displays splash about root partition not found
+* Screen works
 
 == What does not work ==
-* Everything
+* Everything else, including ssh and telnet connectivity
 
 == Progress ==
 * Got the kernel to compile, based on [https://github.com/maniacx/android_kernel_htc_qsd8k maniacx's nougat android kernel]
+* The qsd8k-legacy kernel also works : [https://github.com/qsd8k-legacy/android_kernel_htc_htcleo]
+* Screen is working during boot now (displays splash screen) 
 
 == Next steps ==
-* Find a way to test the kernel on the device (black cLK?)
+* Fix the error about root partition not found, maybe someone could test and report if this is really a software problem? Here are the sources : [https://github.com/Dominduchami/HTC-HD2-Postmarketos] 
 * Ubuntu on HD2, a good starting point?: https://forum.xda-developers.com/showthread.php?t=889433]
 * Kernel 3.x https://github.com/willcast/kernel_leo + relatively fresh port of Arch: https://forum.xda-developers.com/hd2-ubuntu/development/unofficial-archlinuxarm-htc-hd2-t2970483 
 
@@ -58,4 +63,4 @@
 Because of the age of the HD2, there are serval 3rd party bootloaders available, most commonly used:
 * Haret, Haret is a bootloader (provided as haret.exe) to boot linux or android from WITHIN windows mobile, you start windows mobile, not a great choice for postmarketOS.
 * a(MagLDR), Propitary 3rd party bootloader developed by Cotulla, some folks over at [https://androidforum.tytung.com Tytung's android forum], reverse egineered it and created aMagLdr, still propietary (?)
-*[https://forum.xda-developers.com/showthread.php?t=1114053 cLK], based on littlekernel and download possible with cwm or twrp recovery embedded, seems to be the best option. Littlekernel also provides fastboot wich is handy.
+*[https://forum.xda-developers.com/showthread.php?t=1114053 cLK], based on littlekernel and download possible with cwm or twrp recovery embedded, seems to be the best option. Littlekernel also provides fastboot wich is handy. Only this bootloader is tested right now.
