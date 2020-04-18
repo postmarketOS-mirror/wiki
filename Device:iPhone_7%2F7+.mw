@@ -3,18 +3,18 @@ These two devices can boot Android (via Project Sandcastle) so a postmarketOS po
 {{Infobox device
 | manufacturer = Apple
 | name = iPhone 7/7 plus
-| codename = apple-iphone7 <!-- e.g. htc-bravo -->
+| codename = apple-iphone7
 | image = File:apple-iphone7.jpg
 | imagecaption = The iPhone 7, Booting PostmarketOS
 | releaseyear = 2016
-| originalsoftware = iOS 10.0.1 <!-- e.g. Android 2.1 -->
-| chipset = Apple A10 Fusion <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = 2.34GHz quad-core 64-bit <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Custom PowerVR GT7600 Plus (6 core) <!-- e.g. Adreno 200 -->
-| storage = 32, 128, 256GB <!-- e.g. 512 MB -->
-| display = 1334×750 (326 ppi) (iPhone 7) 1920x1080 (401 ppi) (iPhone 7+) <!-- e.g. 480x800 AMOLED -->
-| memory = 2GB (iPhone 7) 3GB (iPhone 7+) <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = iOS 10.0.1
+| chipset = Apple A10 Fusion
+| cpu = 2.34GHz quad-core 64-bit
+| gpu = Custom PowerVR GT7600 Plus (6 core)
+| storage = 32, 128, 256 GB
+| display = 1334×750 (326 ppi) (iPhone 7) 1920x1080 (401 ppi) (iPhone 7+)
+| memory = 2 GB (iPhone 7) 3 GB (iPhone 7+)
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
