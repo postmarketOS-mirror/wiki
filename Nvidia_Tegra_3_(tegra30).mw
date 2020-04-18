@@ -8,12 +8,24 @@
 == Development ==
 Please see [[Nvidia_Tegra_2_(tegra20)#Development]]
 
-
 == Graphic ==
 Identical driver and experience as for [[Nvidia_Tegra_2_(tegra20)#Graphics]]
 
 == Participate development ==
 === Test & Review ===
+
+== Devices with a Nvidia Tegra 3 Chipset ==
+{{todo|Update the condition in the table to work generic.}}
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999 
+|where=Devices.chipset='Nvidia Tegra 3' OR Devices.chipset='Nvidia Tegra 3 T30' OR Devices.chipset='Nvidia Tegra 3 T33' OR Devices.chipset='Nvidia Tegra 3 T30S'
+|more results text=
+}}
+
 
 == See also ==
 * Tegra 3 is very similiar to [[Nvidia_Tegra_2_(tegra20)]]
