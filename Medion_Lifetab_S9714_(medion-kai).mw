@@ -254,8 +254,8 @@ Result: [https://gitlab.com/postmarketOS/pmaports/merge_requests/904 Merge reque
 == See also ==
 
 * [[Google_Nexus_7_2012_(asus-grouper)]]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-medion-kai Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-medion-kai Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-medion-kai Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-medion-kai Kernel package]
 * [https://github.com/red-black-bonsai/android_kernel_medion_lifetab_s9714 Vendor Android kernel sources in a GitHub repository]
 * [https://forums.lenovo.com/t5/Lenovo-Android-based-Tablets-and/A2109-Updated-ClockworkMod-Recovery-for-Jelly-Bean/td-p/949575 CWM recovery is available here]
 * [https://docs.google.com/open?id=0B1jde5rC0oQGOVRfVzNrY19SZWc Direct link for CWM for Jelly Bean / Android 4.1]
