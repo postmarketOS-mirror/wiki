@@ -64,6 +64,13 @@ In command line:
 qdbus-qt5 is from package qt5-qttools.
 
 == Troubleshooting ==
+=== Scaling ===
+On devices such as [[Samsung_Galaxy_A5_2015_(samsung-a5ulte)]] and [[Moto_G4_Play_(motorola-harpia)]], you may need to set a custom scaling factor.
+
+The following sets a 2x scale factor:
+
+<code>kscreen-doctor output.1.scale.2</code>
+
 === Software rendering ===
 Plasma can also be used if your device doesn't support hardware acceleration (if it's a non-armhf device) yet by using software rendering. Please note that the interface will be slow, and it might not be usable for the average user.
 
