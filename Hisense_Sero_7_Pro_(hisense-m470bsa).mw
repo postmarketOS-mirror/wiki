@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Hisense
-| name =  Sero 7 Pro
+| name = Sero 7 Pro
 | codename = hisense-m470bsa
 | image = File:M470bsa.jpg
 | imagecaption = Sero 7 Pro running PostmarketOS
@@ -9,9 +9,9 @@
 | chipset = Nvidia Tegra 3 T30
 | cpu = Quad-core 1.5 GHz Cortex-A9
 | gpu = ULP GeForce
-| storage = 8GB
+| storage = 8 GB
 | display = 800x1280 IPS
-| memory = 1.0GB
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -64,10 +64,10 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-=== fastboot mode ===
-Press and hold power + volume down
-=== recovery mode ===
-Press and hold power + volume up
+=== Fastboot mode ===
+Press and hold {{Button|Power}} + {{Button|Volume Down}}
+=== Recovery mode ===
+Press and hold {{Button|Power}} + {{Button|Volume Up}}
 == Installation ==
 Refer to [https://wiki.postmarketos.org/wiki/Installation_guide Installation Guide for postmarketOS]
 
@@ -96,7 +96,8 @@ Unknown whether this device has serial capabilities (although it probably does).
 * Framebuffer locked to portrait mode (could probably be fixed by rotating it in the xorg config)
 
 == See also ==
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-hisense-m470bsa Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-hisense-m470bsa Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-hisense-m470bsa Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-hisense-m470bsa Kernel package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-hisense-m470bsa Firmware package]
 * [https://forum.xda-developers.com/sero-7-pro XDA Developers]
+* {{MR|721|pmaports}} Initial merge request
