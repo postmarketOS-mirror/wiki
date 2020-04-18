@@ -22,10 +22,9 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999 
-|where=Devices.chipset='Nvidia Tegra 3' OR Devices.chipset='Nvidia Tegra 3 T30' OR Devices.chipset='Nvidia Tegra 3 T33' OR Devices.chipset='Nvidia Tegra 3 T30S'
+|where=Devices.chipset='Nvidia Tegra 3' OR Devices.chipset='Nvidia Tegra 3 T30' OR Devices.chipset='Nvidia Tegra 3 T33' OR Devices.chipset='Nvidia Tegra 3 T30S' OR Devices.chipset='NVIDIA Tegra 3+ AP37'
 |more results text=
 }}
-
 
 == See also ==
 * Tegra 3 is very similiar to [[Nvidia_Tegra_2_(tegra20)]]
