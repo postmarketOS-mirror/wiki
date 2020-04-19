@@ -1,6 +1,6 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
 {{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]]. Please use the lts kernel for that as the virt kernel doesn't include the necessary modules.}}
-{{note|Anbox is currently broken on armv7 because 32 bits binder is not supported by Linux (it would require rebuilding the image for a 64 bits binder) and because Anbox assumes 64 bits in some places, which breaks input (see {{github|1214|anbox|anbox}})}}
+{{note|Anbox is currently somewhat broken on armv7 because Anbox assumes 64 bits in some places, which breaks input (see https://github.com/anbox/anbox/issues/1214#issuecomment-524578664. Please manifest yourself if you can test and try that)}}
 
 [[File:Anbox_app_manager.png|thumb|The anbox application manager with the default apps.]]
 
