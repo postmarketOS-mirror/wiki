@@ -9,7 +9,7 @@
 The convergent desktop environment.
 
 == Status ==
-Unity 8 is not available in postmarketOS anymore, because at least Mir does not build anymore and there are too many issues with it requiring too old dependencies. See {{issue|357|pmaports}} for details.
+Lomiri (formerly known as Unity 8) is available in the pmaports branch <code>feature/unity8_arches</code>. See {{issue|357|pmaports}} and {{issue|190|pmaports}} for details.
 
 == Installation ==
 {{note|The work on Unity 8 hasn't yet been finished yet - no support is provided}}
