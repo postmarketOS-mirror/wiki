@@ -153,4 +153,10 @@ static struct platform_device gpio_button_device = {
 </source>
 The final step is to add description of all GPIO keys to the device. In this example, we define GPIOs for keys and change the contents of <code>gpio_buttons[]</code> and test the changes. It is recommended to use [https://wiki.postmarketos.org/wiki/Inspecting_the_initramfs debug-shell hook for initramfs] so you get access to dmesg as fast as possible. In dmesg you may find details of GPIO keys initialization. If it failed, there will be a wrong GPIO mentioned. Then, if everything's alright, run <code>evtest</code> again and choose GPIO keys device. Test and edit the board file till it works.
 
+== See also ==
+
+- [https://bnister.github.io/sprdfb.html sprdfb panel tool] - tool for receiving lcm driver data from Spreadtrum boot.img (3.x) or u-boot.
+
+- [http://getbest.ru/lcm_decoder.htm LCM decoder for MediaTek] - get panel init sequence from lk.bin
+
 [[Category: Technical Reference]]
