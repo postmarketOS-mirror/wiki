@@ -20,7 +20,7 @@ echo 'user_pref("general.useragent.override", "Mozilla/5.0 (Linux; Android 5.1.1
 And restart the browser.
 
 === Configuration on gtk ===
-Edit ~/.config/gtk-3.0/settings.ini with:
+Edit ~/.config/gtk-3.0/settings.ini (create it if it doesn't yet exist) with:
 
 <source lang="C">
 [Settings]
