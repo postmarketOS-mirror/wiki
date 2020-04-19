@@ -33,7 +33,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
