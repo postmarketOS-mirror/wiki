@@ -1,9 +1,4 @@
-== References ==
-
-* This chipset has a [[https://en.wikipedia.org/wiki/NovaThor wikipedia page]]
-* For the Sony devices, there is a [[https://github.com/LOSXSTE github with a bunch of kernels]]
-
-== Supported devices ==
+== Devices with this chipset ==
 
 This chipset is used similarly in the following devices:
 
@@ -70,5 +65,8 @@ Or using <code>abootimg</code>:
    abootimg --create boot.img -k zImage -r initrd -s foo.dtb -c "pagesize=0x800" -c "kerneladdr=0x8000" -c "ramdiskaddr=0x02000000" -c "secondaddr=0x00f00000" -c "tagsaddr=0x100"
 
 Notice how this puts the device tree binary <code>dtb.foo</code> into the "second bootloader firmware".
+
+== See also ==
+* This chipset has a [[https://en.wikipedia.org/wiki/NovaThor wikipedia page]]
 
 [[Category:Chipsets]]
