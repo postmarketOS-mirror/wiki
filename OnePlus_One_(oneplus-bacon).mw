@@ -84,6 +84,6 @@ It may be possible to fix the issue by flashing a new [https://www.oneplus.com/s
 {{Device owners}}
 
 == Links ==
-
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-bacon Device package]
 * [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-bacon Vendor kernel package]
+* [https://devices.ubuntu-touch.io/device/bacon/ UbuntuTouch port of this device]
