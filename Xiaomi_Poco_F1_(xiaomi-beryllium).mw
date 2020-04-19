@@ -70,22 +70,7 @@ Works with mainline: USB, panel (with HW acceleration), keys
 Works with downstream: USB, panel, touchscreen, keys
 
 == See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
-WIP mainline kernel: https://github.com/Venji10/linux-beryllium
-
-device package: https://github.com/Venji10/device-xiaomi-beryllium
-
-linux package: https://github.com/Venji10/linux-xiaomi-beryllium
-
-MR: https://gitlab.com/postmarketOS/pmaports/-/merge_requests/663 (not merged, because I don´t have the motivation, to clean it up)
+* {{MR|1156|pmaports}} Initial merge request
+* WIP mainline kernel: https://github.com/Venji10/linux-beryllium
+* device package: https://github.com/Venji10/device-xiaomi-beryllium
+* linux package: https://github.com/Venji10/linux-xiaomi-beryllium
