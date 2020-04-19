@@ -20,6 +20,7 @@ E558: Terminal entry not found in terminfo
 Furthermore, gpg will refuse to work with errors like:
 </source>
 
+Furthermore, gpg will refuse to decrypt files:
 <source>
 gpg: public key decryption failed: Required environment variable not set
 gpg: decryption failed: No secret key
