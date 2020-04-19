@@ -12,19 +12,20 @@ To disable this check, and to allow you to connect by running <code>ssh postmark
 === SSH with Suckless Terminal ===
 When you ssh into postmarktetos using the suckless terminal (st), you will get errors with vim:
 
-```
+<source>
 E558: Terminal entry not found in terminfo
 'st' not known. Available builtin terminals are:
     builtin_amiga
-```
 
 Furthermore, gpg will refuse to work with errors like:
-```
+</source>
+
+<source>
 gpg: public key decryption failed: Required environment variable not set
 gpg: decryption failed: No secret key
-```
+</source>
 
-To fix, simply add `export TERM=xterm` to your `~/.profile`.
+To fix, simply add <code>export TERM=xterm</code> to your <code>~/.profile</code>.
 
 === Some interesting ideas ===
 Here are some interesting ideas that you can do with your device with postmarketOS
