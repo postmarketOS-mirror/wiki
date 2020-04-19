@@ -20,12 +20,12 @@ After you register at any Matrix homeserver and join the channel, the offline hi
 == IRC ==
 
 The following channels are bridged to Freenode, so that everyone can talk together (mind the <code>##</code> for offtopic!):
-  #postmarketos
-  #postmarketos-porting
-  #postmarketos-devel
-  ##postmarketos-offtopic
-  #postmarketos-mainline
-  #postmarketos-lowlevel
+ #postmarketos
+ #postmarketos-porting
+ #postmarketos-devel
+ ##postmarketos-offtopic
+ #postmarketos-mainline
+ #postmarketos-lowlevel
 
 Due to recent spam, you will likely '''not be able to talk''' (or maybe even to join) before you [https://freenode.net/kb/answer/registration register your username on freenode] (visit the link or just read on to the next section).
 
