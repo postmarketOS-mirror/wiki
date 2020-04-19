@@ -77,6 +77,7 @@ Link to related GitLab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+* {{MR|1164|pmaports}} Initial merge request
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-DEVICE_CODENAME Device package]
