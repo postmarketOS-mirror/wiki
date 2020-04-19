@@ -13,6 +13,12 @@ See {{milestone|7}} for current progress.
 Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-launch</code> or the icon launcher.
 
 
+== Porting ==
+
+If Anbox have never been working on you device, you may have to add kernel support for it. Use <code>pmbootstrap kconfig check --anbox</code> (from 
+{{MR|1916}}) to check.
+
+
 == Troubleshooting ==
 
 === I don't have access to the internet ===
