@@ -13,16 +13,13 @@ recommended=edge
 description=Rolling release channel
 branch_pmaports=master
 branch_aports=master
-mirrordir_pmos=master
 mirrordir_alpine=edge
 
 [stable]
 description=Upcoming beta release (WIP, DO NOT USE!)
-branch_pmaports=release/20.04
+branch_pmaports=release/20.05
 branch_aports=3.11-stable
-mirrordir_pmos=v20.04
 mirrordir_alpine=v3.11
-
 </source>
 
 === Sections ===
@@ -52,16 +49,12 @@ Channel sections, for which it will be possible to install postmarketOS. <code>e
 |
 |-
 | <code>branch_pmaports</code>
-| Branch of postmarketOS pmaports.git
-| <code>master</code>, <code>release/20.04</code>, ...
+| Branch of postmarketOS pmaports.git and postmarketOS binary packages mirror directory name (as found [http://postmarketos1.brixit.nl/postmarketos/ here]).
+| <code>master</code>, <code>v20.05</code>, ...
 |-
 | <code>branch_aports</code>
 | Branch of Alpine Linux aports.git
 | <code>master</code>, <code>3.11-stable</code>, ...
-|-
-| <code>mirrordir_pmos</code>
-| postmarketOS binary packages mirror directory name, as found [http://postmarketos1.brixit.nl/postmarketos/ here].
-| <code>master</code>, <code>v20.04</code>, ...
 |-
 | <code>mirrordir_alpine</code>
 | Alpine binary packages mirror directory name, as found [http://dl-cdn.alpinelinux.org/alpine/ here]. (This is referred to as branch in [https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases the Alpine releases page], but it is not the same as the aports branch.)
