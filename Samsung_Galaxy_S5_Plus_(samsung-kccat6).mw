@@ -1,0 +1,54 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy S5 Plus
+| codename = samsung-kccat6
+| image = 
+| imagecaption = 
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 (KitKat)
+| chipset = Qualcomm APQ8084 Snapdragon 805
+| cpu = Quad-core 2.5 GHz Krait 450
+| gpu = Adreno 420
+| storage = 16/32 GB
+| display = 1080 x 1920 AMOLED
+| memory = 2 GB
+| architecture = armv7
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = no
+}}
+
+== Contributors ==
+* ''[[user:drebrez|drebrez]]''
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+
+Press and hold {{button|Volume Down}} + {{button|Home}} + {{button|Power}} simultaneously. Then click {{button|Volume Up}} to confirm.
+
+== How to enter recovery mode ==
+
+Press and hold {{button|Volume Up}} + {{button|Home}} + {{button|Power}} simultaneously.
+
+== Links ==
+* [https://www.gsmarena.com/samsung_galaxy_s5_plus-6748.php Full phone specifications]
+* [https://wiki.lineageos.org/devices/kccat6 LineageOS]
+* [https://twrp.me/samsung/samsunggalaxys5plus.html TWRP]
