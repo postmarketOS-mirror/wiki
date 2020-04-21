@@ -10,18 +10,18 @@ Intro:
 * [https://www.youtube.com/watch?v=77tuFtM4gjA Introduction into how mainlining is done] (52:37)
 
 Basics:
-* [https://www.youtube.com/watch?v=NNol7fRGo2E Introduction into ARM architecture] (46:33)
-* [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree (DT) introduction] (1:12:14)
-* [https://www.youtube.com/watch?v=PgQezmlst0w Device Tree: present, past, future] (37:28)
-* [https://www.youtube.com/watch?v=LPG4EkXK9Us ARM64 SoC Linux Support Check-List] (42:38) Very useful step-by-step guide what should be done to bring in SoC support
+* [https://www.youtube.com/watch?v=NNol7fRGo2E Introduction into ARM architecture, 2017] (46:33)
+* [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree (DT) introduction, 2013] (1:12:14)
+* [https://www.youtube.com/watch?v=PgQezmlst0w Device Tree: present, past, future, 2018] (37:28)
+* [https://www.youtube.com/watch?v=LPG4EkXK9Us ARM64 SoC Linux Support Check-List, 2017] (42:38) ''Very useful step-by-step guide what should be done to bring in SoC support''
 
 Specific topics:
-* [https://www.youtube.com/watch?v=z4EkzJDGxFo Pin Control and GPIO] (48:03) talk by [[Special:Contributions/Linusw|Linus Walleij]]
-* [https://www.youtube.com/watch?v=Mwr7eZUm1Nw Common Clock Framework: How To Use It] (44:50) Not so useful, old and only a basic overview
-* [https://www.youtube.com/watch?v=Puv4mW55bF8 Timekeeping in the Linux Kernel - Stephen Boyd, Qualcomm Innovation Center] (34:41) About how clocksource works
-* [https://www.youtube.com/watch?v=l2ZSsOkfnz0 Linux Kernel Display Architecture] (56:53) DRM/KMS, MIPI DSI, panels,... slightly old, need something newer
-* [https://www.youtube.com/watch?v=UG7tMZM24UU Demystifying Linux MIPI DSI Subsystem - Jagan Teki] (41:57) MIPI DSI, controllers, bridges, panels, DRM/KMS... this is new
-* [https://www.youtube.com/watch?v=GsDWgm0YiaU Power Management Integrated Circuits: Keep the Power in Your Hands] (39:44) About PMICs, regulators, power supply, fuelgauge, ...
+* [https://www.youtube.com/watch?v=z4EkzJDGxFo Pin Control and GPIO, 2013] (48:03) talk by [[Special:Contributions/Linusw|Linus Walleij]]
+* [https://www.youtube.com/watch?v=Mwr7eZUm1Nw Common Clock Framework: How To Use It, 2013] (44:50) ''Not so useful, old and only a basic overview''
+* [https://www.youtube.com/watch?v=Puv4mW55bF8 Timekeeping in the Linux Kernel - Stephen Boyd, Qualcomm Innovation Center, 2017] (34:41) ''About how clocksource works.''
+* [https://www.youtube.com/watch?v=l2ZSsOkfnz0 Linux Kernel Display Architecture, 2013] (56:53) ''DRM/KMS, MIPI DSI, panels,... slightly old, need something newer.''
+* [https://www.youtube.com/watch?v=UG7tMZM24UU Demystifying Linux MIPI DSI Subsystem - Jagan Teki, 2019] (41:57) ''MIPI DSI, controllers, bridges, panels, DRM/KMS...''
+* [https://www.youtube.com/watch?v=GsDWgm0YiaU Power Management Integrated Circuits: Keep the Power in Your Hands, 2017] (39:44) ''About PMICs, regulators, power supply, fuelgauge, ...''
 
 == Requirements ==
 === postmarketOS port ===
