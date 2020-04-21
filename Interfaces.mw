@@ -27,13 +27,13 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | 
 | 
 |-
-| style="text-align: center;" | P
+| style="text-align: center;" | 
 | [[Hildon]]
 | [https://maemo-leste.github.io/ link]
 | [https://github.com/maemo-leste link]
 | Maemo Leste
 | 
-| Runs, but lacks a lot of packages still. [https://gitlab.com/postmarketOS/pmaports/merge_requests/810 There is a work in progress MR]. Still uses GTK2
+| It was removed as several features were missing, broken, and we could not upgrade it without investing much time to resolve packaging, conflicts. Still uses GTK2. See {{issue|373|pmaports}}
 |-
 | style="text-align: center;" | Y
 | [[Phosh]]
