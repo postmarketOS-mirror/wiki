@@ -18,6 +18,7 @@ We were able to present an initial version in [https://postmarketos.org/blog/201
 ''It's sad that we can't maintain this right now and had to remove it. But nevertheless, some of the efforts lived on, because ncopa from Alpine Linux could use some of the musl related qt5-qtwebengine patches that magmastonealex created to make LuneOS UI work on postmarketOS. And who knows, we could be able to support this UI again in the future if someone steps up to maintain it.''
 
 == Running (QEMU) ==
+{{outdated|You cannot choose luna in UI section anymore.}}
 {{note|Choosing luna in the UI selection in <code>pmbootstrap init</code> is not enough to make it start right now!}}
 Install:
 
