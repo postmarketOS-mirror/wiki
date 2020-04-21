@@ -1,3 +1,4 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
 {{Infobox device
 | manufacturer = Motorola
 | name = Moto X
@@ -12,7 +13,7 @@
 | storage = 16/32 GB
 | display = 1280x720 (316 PPI) AMOLED
 | memory = 2 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = 
