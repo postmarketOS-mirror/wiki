@@ -70,43 +70,6 @@ To access the device using USB Networking, use the following commands once the d
 * Open another console
 * pv /tmp/postmarketOS-export/samsung-chagallwifi.img | nc 172.16.42.1 60000
 
-== Log ==
-<source>
-telnet 172.16.42.1
-Trying 172.16.42.1...
-Connected to 172.16.42.1.
-Escape character is '^]'.
-
-Type 'pmos_continue_boot' to continue booting:
-/ # cat pmOS_init.log 
-### postmarketOS initramfs ###
-Configuring kernel firmware image search path
-Kernel does not support setting the firmware image search path. Skipping.
-Trying to mount subpartitions for 10 seconds...
-ERROR: failed to mount subpartitions!
-NOTE: Waiting 10 seconds for the framebuffer /dev/fb0.
-If your device does not have a framebuffer, disable this with:
-no_framebuffer=true in <https://postmarketos.org/deviceinfo>
-Setting framebuffer mode to: U:2560x1600p-60
-Setup usb network
-  Setting up an USB gadget through android_usb
-  /config/usb_gadget does not exist, skipping configfs usb gadget
-Starting udhcpd
-  Using interface rndis0
-  Start the dhcpcd daemon (forks into background)
-Create 'pmos_continue_boot' script
-Create 'pmos_shell' script
-Create 'pmos_loop_forever' script
-Start the telnet daemon
----
-WARNING: debug-shell is active on 172.16.42.1:23.
-This is a security hole! Only use it for debugging, and
-uninstall the debug-shell hook afterwards!
----
-tty: ignoring all arguments
-not a tty
-No tty attached, looping forever.</source>
-
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
