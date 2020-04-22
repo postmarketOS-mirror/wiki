@@ -1,0 +1,78 @@
+{{Infobox device
+| manufacturer = Motorola
+| name = Moto G 2015
+| codename = motorola-osprey
+| image = File:Moto G 2015.png
+| imagecaption = Moto G 2015
+| releaseyear = 2015
+| originalsoftware = Android 5.1.1
+| chipset = Qualcomm MSM8916 Snapdragon 410
+| cpu = Quad-core 1.4 GHz Cortex-A53
+| gpu = Adreno 306
+| storage = 8/16 GB
+| display = 720x1280 IPS
+| memory = 1/2 GB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = P
+| status_wifi = 
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+== Contributors ==
+* ata2001
+
+== Maintainer(s) ==
+
+== How to enter flash mode ==
+Power off the device, hold down the {{Button|Power}} and the {{Button|Volume Up}} key for 1-2 seconds. Some devices you may need to hold down the {{Button|Power}} and the {{Button|Volume Down}} key instead.
+
+== Pre-Installation Configuration ==
+* Add <code>deviceinfo_flash_sparse="true"</code> the [[deviceinfo]][https://wiki.postmarketos.org/wiki/Deviceinfo_reference] file
+* Replace ssh with dropbear
+
+== Installation ==
+Follow the [[Installation_guide]].
+
+*Install PMOS
+<source lang="bash">
+pmbootstrap init
+pmbootstrap install
+pmbootstrap flasher flash_rootfs
+pmbootstrap flasher flash_kernel
+</source>
+*Restart your mobile
+*Connect with ssh
+<source lang="bash">
+ssh usermobile@172.16.42.1
+</source>
+*Start graphical interface (Weston for example)
+<source lang="bash">
+startx
+</source>
+
+== Display ==
+XFCE4 works the best, you may have to run startx over ssh to get it to appear
+
+== Photos ==
+[[File:Osprey-pmos.jpg]]
+
+== Links ==
+* {{MR|714|pmbootstrap}} Initial merge request
+* [https://wiki.lineageos.org/devices/osprey/ LineageOS wiki]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-osprey Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-osprey Kernel package]
