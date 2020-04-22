@@ -33,15 +33,17 @@
 | status_calls = -
 | booting = yes
 }}
-[[File:Asus_flo_plasma.jpg|thumb|right|Flo running Plasma Mobile]]
 
+== Contributors ==
 
-=== Users owning this device ===
-
+== Users owning this device ==
 {{Device owners}}
 
-=== Other information ===
+== Other information ==
 
 * This device is identical to asus-flo, except that it has a modem.
 * To install to this device, simply use the asus-flo image, which obviously doesn't support the modem.
 * See [[Google Nexus 7 2013 (asus-flo)]]
+
+== Photos ==
+[[File:Asus_flo_plasma.jpg|Flo running Plasma Mobile]]
