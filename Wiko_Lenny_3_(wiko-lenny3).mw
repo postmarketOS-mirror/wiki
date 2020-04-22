@@ -73,3 +73,7 @@
 == Links ==
 * [https://www.gsmarena.com/wiko_lenny3-8200.php Full phone specifications]
 * [http://www.wikogeek.com/index.php?telephone=LENNY3 Official Kernel source]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-wiko-lenny3 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-wiko-lenny3 Kernel package]
+* {{MR|939|pmbootstrap}} Initial merge request
+* {{issue|72|osk-sdl}} osk-sdl causes reboot
