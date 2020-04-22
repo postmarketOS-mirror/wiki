@@ -21,7 +21,7 @@
 | status_wifi =
 | status_xwayland =
 | status_fde =
-| status_mainline =
+| status_mainline =p
 | status_battery =
 | status_3d =
 | status_accel =
@@ -80,6 +80,7 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 * [https://gitlab.com/archeYR/pmaports/tree/device/xiaomi-sagit Mi 6 port]
 * [https://gitlab.com/Hacker1245/pmaports/tree/device/xiaomi-sagit Old Mi 6 port]
 * [https://github.com/LineageOS/android_kernel_xiaomi_msm8998 Kernel sources]
+* [https://github.com/degdag/mi6-mainline mainline sagit sources]
 
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
