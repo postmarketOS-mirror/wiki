@@ -56,6 +56,13 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
+== Random thoughts ==
+Two possible ways to get Linux on this device running:
+* Android4Lumia way: Create a LittleKernel Interface and modify a kernel to work on this device
+* Unlock the current Bootloader and use WPInternals to create a custom ROM (in my case pmOS). Modified kernel needed too.
+
+If you got some information regarding this, please add it here.
+
 <!--
 == How to enter flash mode ==
 
@@ -63,6 +70,7 @@ Is OTG available, not used in wiki
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == See also ==
+* [https://github.com/LineageOS/android_kernel_lge_msm8226 possible downstream kernel: The devices seem very similar]
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
