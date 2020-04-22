@@ -70,7 +70,7 @@
 |-
 | Audio || TWL6040 || Yes || earphone working<br/>loudspeaker not working<br/>mic not working
 |-
-| Touch Screen || MELFAS MMS144 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/mms114.c?h=v5.2-rc3 Yes] || 
+| Touch Screen || MELFAS MMS144 || [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/input/touchscreen/mms114.c?h=v5.2-rc3 Yes] || Actually it works only at first boot
 |-
 | USB Switch || FSA9480 || Yes || Missing dts bindings
 |-
