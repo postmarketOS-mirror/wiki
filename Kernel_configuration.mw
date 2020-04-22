@@ -545,6 +545,112 @@ Phosh environment must have it enabled for Web browser (Epiphany) being function
 
 Phosh environment must have it enabled for Web browser (Epiphany) being functional.
 
+== Anbox ==
+
+To enable Anbox support, some options are required
+
+=== CONFIG_SQUASHFS ===
+
+'''About'''
+
+''Squashfs is a highly compressed read-only filesystem for Linux.  It uses zlib, lzo or xz compression to compress both files, inodes and directories. squashfs is intended for general read-only filesystem use, for archival use (i.e. in cases where a .tar.gz file may be used), and in embedded systems where low overhead is needed.''
+
+'''Anbox specific'''
+
+Anbox uses a squashfs to store the Android rootfs.
+
+=== CONFIG_SQUASHFS_XZ ===
+
+'''About'''
+
+''Squashfs support for reading squashfs file systems compressed with XZ compression.  XZ gives better compression than the default zlib compression, at the expense of greater CPU and memory overhead.''
+
+'''Anbox specific'''
+
+Anbox uses a ''xz-compressed'' squashfs.
+
+=== CONFIG_SQUASHFS_XATTR ===
+
+'''About'''
+
+''Squashfs support for extended attributes (xattrs). Xattrs are name:value pairs associated with inodes by the kernel or by users (see the [https://www.systutorials.com/docs/linux/man/5-attr/ attr(5)] manual page).''
+
+'''Anbox specific'''
+
+For some reason, even if the squashfs is created with <code>-no-xattrs</code>,
+Anbox seems to fail badly without.
+
+=== CONFIG_ASHMEM ===
+
+'''About'''
+
+''The ashmem subsystem is a new shared memory allocator, similar to POSIX SHM but with different behavior and sporting a simpler file-based API.''
+
+''It is, in theory, a good memory allocator for low-memory devices, because it can discard shared memory units when under memory pressure.''
+
+'''Anbox specific'''
+
+Android requires it, so you need it to run Anbox.
+
+=== CONFIG_BINDER_IPC ===
+
+'''About'''
+
+''Binder is used in Android for both communication between processes and remote method invocation. This means one Android process can call a method/routine in another Android process, using Binder to identify, invoke and pass arguments between said processes.''
+
+'''Anbox specific'''
+
+Android uses it to communicate between process. It must be present for Anbox to work.
+
+=== CONFIG_BINDERFS ===
+
+'''About'''
+
+''Binderfs is a pseudo-filesystem for the Android Binder IPC driver which can be mounted per-ipc namespace allowing to run multiple instances of Android. Each binderfs mount initially only contains a binder-control device. It can be used to dynamically allocate new binder IPC devices via ioctls.''
+
+'''Anbox-on-postmarketOS specific'''
+
+It should '''not''' be set, because binderfs support in Anbox is broken in postmarketOS. For now, we just use regular binder instead because we don't need several binders.
+
+It could be an incompatibility with musl. In <code>sys/ioctl.h</code>, the ioctl function is prototyped as such: <code>int ioctl(int, int, ...);</code>, in accordance to POSIX. On the hand, in the linux programmer manual, ioctl is of type <code>int ioctl(int, unsigned long, ...);</code>. GCC warns about it: "Warning: overflow in conversion from 'long unsigned int' to 'int' change value from 3238552065 to -1056415231", but according to dalias on #musl it should be harmless.
+
+=== CONFIG_ANDROID_BINDER_DEVICES ===
+
+'''About'''
+
+''Default value for the binder.devices parameter. The binder.devices parameter is a comma-separated list of strings that specifies the names of the binder device nodes that will be created. Each binder device has its own context manager, and is therefore logically separated from the other devices.''
+
+'''Anbox specific'''
+
+This must contain <code>binder</code>, as Anbox expects <code>/dev/binder</code>.
+
+It should also contain <code>hwbinder</code> to be future-proof (as it will be required for Android 10).
+
+=== CONFIG_TMPFS_XATTR ===
+
+'''About'''
+
+Xattr support for tmpfs.
+
+'''Anbox specific'''
+
+Android requires it because it sets xattr on files in /dev, which is a tmpfs. Otherwise you get errors such as this in <code>/var/lib/anbox/console.log</code> :
+
+ libc: fsetxattr failed to set context (u:object_r:dalvik_prop:s0) for "/dev/__properties__/u:object_r:dalvik_prop:s0"
+ libc: fsetxattr failed to set context (u:object_r:config_prop:s0) for "/dev/__properties__/u:object_r:config_prop:s0"
+
+=== NETFILTER_XT_MATCH_COMMENT ===
+
+'''About'''
+
+It allows putting comments in iptables rules. It's a dummy module that ignore its <code>--comment=</code> argument.
+
+depends on NETFILTER, NETFILTER_XTABLES and NETFILTER_ADVANCED.
+
+'''pmOS specific'''
+
+It is a requirement of anbox-bridge.sh, which we use in the openRC init script. Anbox won't start without that. 
+
 = See also =
 
 * [https://cateee.net/lkddb/web-lkddb/ Linux Kernel Driver Database]
