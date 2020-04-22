@@ -68,7 +68,7 @@ Virtual terminal is broken in downstream, causing early reboot without logs in p
 Touchscreen works well on gnome. All the buttons except for home button (which is is integrated with fingerprint scanner) are working.
 
 == Display ==
-Seems to work well. Currently only xfce4 and mate have been tested.
+Seems to work well. Currently only xfce4 and mate and gnome have been tested.
 
 == USB OTG ==
 Tested USB Hub with ethernet adapter, USB Audio device, and HID peripherals. Everything works well.
