@@ -37,10 +37,10 @@
 }}
 
 == Contributors ==
-* dwrdj
+* [[User:dwrdj|dwrdj]]
 
 == Maintainer(s) ==
-* dwrdj
+* [[User:dwrdj|dwrdj]]
 
 == Users owning this device ==
 {{Device owners}}
@@ -82,6 +82,7 @@ Link to related GitLab issues or merge requests like the following (replace CHAN
 * [https://github.com/TeamWin/android_device_samsung_chagallwifi/ TWRP Device]
 * [https://github.com/jcadduono/android_kernel_samsung_universal5420/ TWRP Kernel]
 * [https://github.com/TheMuppets/proprietary_vendor_samsung/ Firmware]
+* [http://linux-exynos.org/wiki/Samsung_Exynos_5422 Exynos 5422 in Linux-Exynos-Wiki]
 
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
