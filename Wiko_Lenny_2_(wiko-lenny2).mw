@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Wiko
-| name =  Lenny 2
+| name = Lenny 2
 | codename = wiko-lenny2
 | image = File:Wiko-Lenny2-Alacritty-HTop.jpg
 | imagecaption = It Works!
@@ -8,10 +8,10 @@
 | originalsoftware = Android 5.1
 | chipset = MediaTek MT6580
 | cpu = Quad-core 1.3 GHz Cortex-A7
-| gpu = Mali-400MP2
-| storage = 4GB
+| gpu = Mali-400 MP2
+| storage = 4 GB
 | display = 480×854px, 5.0"
-| memory = 768MB
+| memory = 768 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -74,22 +74,22 @@
 * [[User:Afontain|afontain]]
 
 == Maintainer ==
-[[User:Afontain|afontain]]
+* [[User:Afontain|afontain]]
 
 == Users owning this device ==
 {{Device owners}}
 
 == How to enter flash mode ==
 First, boot phone into recovery mode.
-To do that, press the volume up button while powering on the phone.
+To do that, press the {{Button|Volume Up}} button while powering on the phone.
 When the logo appears, you can release any button held.
 
 Once in the recovery mode, navigate to "reboot to bootloader" using the volume keys. <br/>
-In my case, I had to validate pressing the power button twice, then the power up button.
+In my case, I had to validate pressing the {{Button|Power}} button twice, then the power up button.
 
 == Installation ==
 
-The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://github.com/postmarketOS/pmbootstrap/issues/456 require a workaround]. I recommand flashing the rootfs to the <code>userdata</code> partition, as it is larger than <code>system</code>.
+The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 require a workaround]. I recommand flashing the rootfs to the <code>userdata</code> partition, as it is larger than <code>system</code>.
 
 == Mainlining ==
 === downstream kernel sources, for reference ===
@@ -104,9 +104,6 @@ Link to related GitLab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
-* [https://gitlab.com/postmarketOS/pmaports/merge_requests/773 pmaports!773], the merge request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-wiko-lenny2 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-wiko-lenny2 Kernel package]
+* {{MR|773|pmaports}} Initial merge request
