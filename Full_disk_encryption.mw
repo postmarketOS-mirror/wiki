@@ -1,6 +1,6 @@
 == Changing Luks Password ==
 
-To change your luks password, connect your phone's storage medium to a Linux computer.
+To change your luks password, connect your phone's storage medium to a Linux computer with {{aport|cryptsetup}} installed.
 
 Run the following command:
 
@@ -8,7 +8,7 @@ Run the following command:
 sudo cryptsetup luksChangeKey <target-device> -S 0
 </code>
 
-For example, if my storage medium's partition table looked like:
+I can get the target device by running the <code>lsblk</code> command. For example, if my storage medium's partition table looked like:
 
 <code>
 sde                  8:64   1  14.7G  0 disk
