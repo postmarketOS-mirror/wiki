@@ -12,7 +12,7 @@
 | storage = 16 GB
 | display = 1280x800 PLS TFT
 | memory = 2 GB LPDDR2
-| architecture = armhf
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y<!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = Y<!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -32,7 +32,8 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| booting = Y<!-- The device is booting at all *IMPORTANT* -->
+| status = Boots, not merged<!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| booting = no<!-- The device is booting at all *IMPORTANT* -->
 }}
 
 == Contributors ==
@@ -43,7 +44,7 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == How to enter flash mode ==
-Press Volume down on power up.
+Press {{Button|Volume Down}} on power up.
 
 == Installation ==
 Image must be sideloaded with TWRP recovery. Check [[Android Recovery Zip Installation]] for instructions on creating the image.
@@ -58,4 +59,4 @@ Git Repositories for the work being done by Viciouss to mainline this device and
 
 == See also ==
 * {{MR|233|pmaports}} Initial merge request (Closed, not merged)
-* [https://redmine.replicant.us/issues/1946] Replicant wants to support this device as well
+* [https://redmine.replicant.us/issues/1946 Replicant] wants to support this device as well
