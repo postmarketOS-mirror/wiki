@@ -64,7 +64,7 @@ Use pmbootstrap flasher.
 Virtual terminal is broken in downstream, causing early reboot without logs in pstore. [https://gitlab.com/archeYR/pmaports/blob/device/xiaomi-sagit/device/linux-xiaomi-sagit/fix-virtual-terminal.patch This patch] is needed to make virtual terminal working properly.
 
 == Input ==
-Touchscreen works sporadically, usually it starts working after the device is left unused for some time. All the buttons except for home button (which is is integrated with fingerprint scanner) are working.
+Touchscreen works well on gnome. All the buttons except for home button (which is is integrated with fingerprint scanner) are working.
 
 == Display ==
 Seems to work well. Currently only xfce4 and mate have been tested.
