@@ -33,7 +33,7 @@
 | status_sms =  
 | status_calls = 
 | status = "Boots to initramfs, when boot is continued, splash screen shows, then screen goes blank. Cannot access through SSH"
-| booting = Y
+| booting = yes
 }}
 
 == Contributors ==
