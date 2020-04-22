@@ -81,7 +81,7 @@ Here's a list of stuff that is currently (Linux 5.6) known to be working (in at 
 * Xorg & Wayland (tested with [https://i.imgur.com/VgsaOtY.jpg MATE] & [https://i.imgur.com/dLItMIm.jpg Weston] respectively)
 * Bluetooth (requires <code>crbtfw21.tlv</code> and <code>crnv21.bin</code> blobs from [https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware] + a <code>hciconfig hci0 up</code> in userspace)
 * Power button ([https://github.com/JamiKettunen/linux-mainline-oneplus5/blob/device-oneplus-cheeseburger/arch/arm64/boot/dts/qcom/pm8998.dtsi#L41 in DTS])
-* USB working (not ; USB_OTG not working yet)
+* USB working ([https://github.com/degdag/mi6-mainline/commit/a11665d313213ad5ab464e74f488465ee053fe38]) (not ; USB_OTG not working yet)
 
 
 Check the links below for source code.
