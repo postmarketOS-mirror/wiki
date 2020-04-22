@@ -1,0 +1,78 @@
+{{note|Even though the chipset supports aarch64, the stock kernel is armv7 binder.}}
+
+{{Infobox device
+| manufacturer = Motorola
+| name = Moto G7 Play / Moto G7 Optimo
+| codename = motorola-channel
+| releaseyear = 2019
+| originalsoftware = Android 9
+| pmoskernel =
+| chipset = Qualcomm SDM632 Snapdragon 632
+| cpu = Octa-core (4x 1.8 GHz Kryo 250 Gold & 4x 1.8 GHz Kryo 250 Silver)
+| gpu = Adreno 506
+| storage = 32 GB
+| memory = 2 GB
+| architecture = aarch64
+| whet_dhry = 
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status_otg = 
+| status = 
+| booting = no
+}}
+
+== Contributors ==
+* 00p513
+
+== Users owning this device ==
+{{Device owners}}
+
+The Moto G7 Play is a 5.7" phone with a 720 x 1512P display. It can be bought for about £120 in the UK. It is A/B partitioned, and has an arm64 cpu, however Custom ROMSs must be a64 binder (32 bit OS). No work has gone on to port this device to PostMarketOS yet.
+
+== Some notes from Amy ==
+
+There are a few variants listed below:
+
+{| class="wikitable"
+!Model Number
+!Region/Carrier
+|-
+|XT1952-1
+|Europe
+|-
+|XT1952-2
+|Brazil
+|-
+|XT1952-3
+|United States (Unlocked)
+|-
+|XT1952-4
+|United States (Sprint)
+|-
+|XT1952-6
+|United States (Metro by T-Mobile)
+|-
+|XT1952-DL
+|United States (Tracfone)
+|-
+|XT1952-T 
+|United States (T-Mobile)
+|}
+
+There is an XDA thread for compiling the kernel, for use with android. This may become helpful. It can be found [https://forum.xda-developers.com/g7-play/development/wip-stock-kernel-compiled-source-t4066599 here] And source code for the kernel can be found [https://github.com/MotorolaMobilityLLC/kernel-msm/releases/tag/MMI-PPYS29.105-134-7 here]
