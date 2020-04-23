@@ -47,6 +47,7 @@ The Moto G7 Play is a 5.7" phone with a 720 x 1512P display. It can be bought fo
 
 == Some notes from Amy ==
 
+=== Variants===
 There are a few variants listed below:
 
 {| class="wikitable"
@@ -75,4 +76,7 @@ There are a few variants listed below:
 |United States (T-Mobile)
 |}
 
-There is an XDA thread for compiling the kernel, for use with android. This may become helpful. It can be found [https://forum.xda-developers.com/g7-play/development/wip-stock-kernel-compiled-source-t4066599 here] And source code for the kernel can be found [https://github.com/MotorolaMobilityLLC/kernel-msm/releases/tag/MMI-PPYS29.105-134-7 here]
+===Kernel===
+There is an XDA thread, which hasnt been posted to for a while, for compiling the kernel, for use with android. This may become helpful. It can be found [https://forum.xda-developers.com/g7-play/development/wip-stock-kernel-compiled-source-t4066599 here] And source code for the kernel can be found [https://github.com/MotorolaMobilityLLC/kernel-msm/releases/tag/MMI-PPYS29.105-134-7 here]
+
+I have had a look at trying to compile the kernel and there *is* a defconfig in the arm64 architcture, so i guess it may work, but i couldnt get it to build (hey, this is my first time compiling a linux kernel)
