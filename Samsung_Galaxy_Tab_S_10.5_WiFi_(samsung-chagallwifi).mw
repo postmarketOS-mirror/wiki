@@ -50,31 +50,35 @@ Press and hold Power + Vol Down + Home. Press up when prompted
 
 == Installation ==
 === Boot Partition ===
-Put the device in to download mode, and use the following commands
+Put the device in to download mode, and use the following commands:
 
-* pmbootstrap install
-* pmbootstrap initfs hook_add debug-shelll
-* pmbootstrap export --odin
-* heimdall flash --BOOT /tmp/postmarketOS-export/boot.img-samsung-chagallwifi
+<source lang="shell-session">
+pmbootstrap install
+pmbootstrap initfs hook_add debug-shell
+pmbootstrap export
+heimdall flash --BOOT /tmp/postmarketOS-export/boot.img-samsung-chagallwifi
+</source>
 
 === USB Networking ===
-To access the device using USB Networking, use the following commands once the device shows in lsusb
-
-* sudo ip link set dev eth0 address 12:12:12:12:12:12
-* sudo dhclient -v eth0
+To access the device using USB Networking, use the following commands once the device shows in lsusb:
+<source lang="shell-session">
+sudo ip link set dev eth0 address 12:12:12:12:12:12
+sudo dhclient -v eth0
+</source>
 
 === System Partition ===
-
+<source lang="shell-session">
 * telnet 172.16.42.1
 * nc -v -l -p 60000 > /dev/mmcblk0p18
 * Open another console
 * pv /tmp/postmarketOS-export/samsung-chagallwifi.img | nc 172.16.42.1 60000
+</source>
 
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue-->
+* {{MR|1174|pmaports}} Initial merge request
 
 * [https://github.com/LineageOS/android_kernel_samsung_exynos5420 LineageOS Kernel]
 * [https://github.com/LineageOS/android_device_samsung_chagallwifi/ LineageOS Device]
