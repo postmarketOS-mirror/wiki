@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name = Samsung Galaxy Tab S 10.5 (wifi)
+| name = Galaxy Tab S 10.5 (WiFi)
 | codename = samsung-chagallwifi
 <!--| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
 | imagecaption = CHANGE_ME-->
@@ -8,10 +8,10 @@
 | originalsoftware = Android 4.4.2
 | chipset = Samsung Exynos 5422
 | cpu = 1.9 Ghz A15 Quad + 1.3 Ghz A7 Quad
-| gpu = ARM MALI T628
-| storage = 16/32GB
+| gpu = Mali-T628 MP6
+| storage = 16/32 GB
 | display = 2560x1600 AMOLED
-| memory = 3GB
+| memory = 3 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -46,7 +46,7 @@
 {{Device owners}}
 
 == How to enter flash mode ==
-Press and hold Power + Vol Down + Home. Press up when prompted
+Press and hold {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}}. Press {{Button|Volume Up}} when prompted
 
 == Installation ==
 === Boot Partition ===
