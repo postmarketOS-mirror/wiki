@@ -68,10 +68,10 @@ sudo dhclient -v eth0
 
 === System Partition ===
 <source lang="shell-session">
-* telnet 172.16.42.1
-* nc -v -l -p 60000 > /dev/mmcblk0p18
-* Open another console
-* pv /tmp/postmarketOS-export/samsung-chagallwifi.img | nc 172.16.42.1 60000
+telnet 172.16.42.1
+nc -v -l -p 60000 > /dev/mmcblk0p18
+Open another console
+pv /tmp/postmarketOS-export/samsung-chagallwifi.img | nc 172.16.42.1 60000
 </source>
 
 == See also ==
