@@ -5,7 +5,7 @@ A great place to start looking for information about many available WiFi chips i
 {{note|Instead of mounting Android's firmware partition, we package the files ourselves (see the [[FAQ#Why_don.27t_we_use_firmware_files_from_Android.27s_firmware_partition.3F|FAQ]]).}}
 
 Useful links:
-* [[How_to_find_device_specific_information#Firmware_files|How to find WiFi firmware files]]
+* [[Firmware|How to find WiFi firmware files]]
 * [[Device_specific_package#Proprietary_firmware_or_userland_blobs|How to package WiFi firmware]]
 
 == Qualcomm WiFi ==
