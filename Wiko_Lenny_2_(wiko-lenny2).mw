@@ -49,15 +49,15 @@
 : maybe something non-alsa could work better?
 
 ;wifi
-: the network interface don't appear in <code>ifconfig</code>.
+: the network interface doesn't appear in <code>ifconfig</code>.
 
 ;battery reading
 : broken,
-:* <code>acpi</code> tell the battery is fully empty.
+:* <code>acpi</code> tells the battery is fully empty.
 :* <code>upower --dump</code> generates a segfault: <br/> <code>(upower:1682): UPower-WARNING **: 11:58:54.107: Cannot connect to upowerd: Error calling StartServiceByName for org.freedesktop.UPower: Process org.freedesktop.UPower received signal 11</code>
 
 ;desktop environment
-* Mate seems to be the one who works best. Mostly because I doesn't die from the segfaults. It is missing the bottom banel though.
+* Mate seems to work best. Mostly because it doesn't die from segfaults. It is missing the bottom panel though.
 * Weston works, but for some reason, it sometimes fails to start: <code>sudo rc-service lightdm restart</code>.
 * Plasma Mobile only shows a mouse cursor on a black background, with loads of segfaults.
 * Sway and Phosh require [https://en.wikipedia.org/wiki/Direct_Rendering_Manager DRM] support, so that's a no-go.
@@ -89,12 +89,11 @@ In my case, I had to validate pressing the {{Button|Power}} button twice, then t
 
 == Installation ==
 
-The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 require a workaround]. I recommand flashing the rootfs to the <code>userdata</code> partition, as it is larger than <code>system</code>.
+The kernel and the initramfs can be flashed using <code>pmbootstrap flasher flash_kernel</code>. Flashing the rootfs [https://gitlab.com/postmarketOS/pmbootstrap/issues/456 requires a workaround]. I recommend flashing the rootfs to the <code>userdata</code> partition, as it is larger than <code>system</code>.
 
 == Mainlining ==
 === downstream kernel sources, for reference ===
 https://www.wikogeek.com/index.php?telephone=LENNY2&region=EUROPE&version=%25
-
 
 == See also ==
 <!--
