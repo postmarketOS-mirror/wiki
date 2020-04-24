@@ -126,6 +126,14 @@ so, in summary, it's hard to know which mixer settings will make it work, so my 
 
 This method may work for non-Android devices as well, as long as you see an audio device in <code>alsamixer</code>. Just boot the normal OS, save the volume settings somehow, then restore them.
 
+== Spreadtrum ==
+
+Audio support for Spreadtrum SoCs is provided in <code>soc-sprd-audio</code> and its subpackages. To get audio support for the device, add the package related to the audio device to dependencies of device package or install it manually, like
+<pre>
+apk add soc-sprd-audio-sc8830
+</pre>
+{{note|SC8830 audio device is available for a huge range of SoCs. Check contents of Android's <code>tiny_hw.xml</code> to find which device is used.}}
+
 == WM1811 ==
 
 This audio chip is present in several Samsung devices that are based on the Exynos 4412 platform. There is a configuration for the Samsung Galaxy Note 10.1 available at [https://code.google.com/archive/p/opensgn/source/default/source the opensgn project]. Have a look at the files in <code>opensgn/data/n8000/usr/share/alsa/ucm/Midas_WM1811/</code>.
