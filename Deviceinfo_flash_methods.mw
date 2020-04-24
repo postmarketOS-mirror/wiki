@@ -1,11 +1,11 @@
 == Introduction ==
 
-Here is a guide on how to find the correct value for <code>deviceinfo_flash_method</code>, and some pitfalls you need to look out for depending on your flasher application. Please note, that all flasher mode implementations on the phones<br />
+Here is a guide on how to find the correct value for <code>deviceinfo_flash_method</code>, and some pitfalls you need to look out for depending on your flasher application. Please note, that all flasher mode implementations on the phones
 listed here are proprietary (even if the flashing software is open source). But they are hard to [https://wiki.postmarketos.org/wiki/Firmware replace] (if we can do that at all), so we will use them for now to flash pmOS on the devices.
 
 == Android ==
 
-Boot your phone into the bootloader menu. Usually this can be done by holding <code>Volume Down</code> and the <code>Power</code> button, until something changes on the screen, then only holding the <code>Volume Down</code> button until the menu appears. It should say either &quot;Fastboot mode&quot; or &quot;Odin mode&quot;, read the appropriate section below. If<br />
+Boot your phone into the bootloader menu. Usually this can be done by holding <code>Volume Down</code> and the <code>Power</code> button, until something changes on the screen, then only holding the <code>Volume Down</code> button until the menu appears. It should say either &quot;Fastboot mode&quot; or &quot;Odin mode&quot;, read the appropriate section below. If
 you don't know the combination for your device, please search the Internet. (It is also a good idea to write this combination to your device's pmOS wiki page, so we can look it up quickly.)
 
 === Fastboot mode ===
@@ -38,7 +38,7 @@ Android bootimg, kernel, ramdisk, page size: 2048</pre>
 boot.img: Linux kernel ARM boot executable zImage (little-endian)</pre>
 ===== <code>heimdall-bootimg</code> =====
 
-When using that flasher, make sure that you also add <code>mkbootimg</code> to your <code>depends</code> line in the <code>APKBUILD</code>, and that you set <code>deviceinfo_generate_bootimg</code> in your <code>deviceinfo</code> file to <code>&quot;true&quot;</code>.<br />
+When using that flasher, make sure that you also add <code>mkbootimg</code> to your <code>depends</code> line in the <code>APKBUILD</code>, and that you set <code>deviceinfo_generate_bootimg</code> in your <code>deviceinfo</code> file to <code>&quot;true&quot;</code>.
 To generate a working boot.img, in the <code>deviceinfo</code> you also need to specify the variables for the various offset, follow this [https://wiki.postmarketos.org/wiki/How_to_find_device-specific_information#Fastboot_.28boot.img.29_flash_offsets guide] to find the correct values for your device.
 
 ===== <code>heimdall-isorec</code> =====
@@ -72,5 +72,5 @@ To generate a recovery zip file and flash it, execute the following:
 
 == Maemo ==
 
-The correct flasher is <code>0xffff</code> (which reverse engineered Nokia's proprietary flashing protocol). Right now we do not have abstracted it in the pmbootstrap config (so <code>pmbootstrap flasher flash_kernel</code> etc. will not work). That is because the Maemo devices have an SD card slot, and it is possible to install uboot on them - so flashing was not really required yet. But it is easy to extend the config to implement that abstraction when it is needed.<br />
+The correct flasher is <code>0xffff</code> (which reverse engineered Nokia's proprietary flashing protocol). Right now we do not have abstracted it in the pmbootstrap config (so <code>pmbootstrap flasher flash_kernel</code> etc. will not work). That is because the Maemo devices have an SD card slot, and it is possible to install uboot on them - so flashing was not really required yet. But it is easy to extend the config to implement that abstraction when it is needed.
 Simply edit the <code>0xffff</code> part in <code>pmb/config/__init__.py</code> (and please make a pull-request after you have tested it).
