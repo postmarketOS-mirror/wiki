@@ -2,7 +2,7 @@
 | manufacturer = Samsung
 | name = Galaxy Tab S 10.5 (WiFi)
 | codename = samsung-chagallwifi
-<!--| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+<!--| image = File:samsung-chagallwifi.jpg
 | imagecaption = CHANGE_ME-->
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2
@@ -87,9 +87,5 @@ Link to related GitLab issues or merge requests like the following (replace CHAN
 * [https://github.com/jcadduono/android_kernel_samsung_universal5420/ TWRP Kernel]
 * [https://github.com/TheMuppets/proprietary_vendor_samsung/ Firmware]
 * [http://linux-exynos.org/wiki/Samsung_Exynos_5422 Exynos 5422 in Linux-Exynos-Wiki]
-
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-DEVICE_CODENAME Kernel package]
--->
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-chagallwifi Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-samsung-chagallwifi Kernel package]
