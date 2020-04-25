@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Tab 2 10.1"
+| name = Galaxy Tab 2 10.1"
 | codename = samsung-espresso10
 | image = File:espresso10weston.jpg|200px|
 | imagecaption = Galaxy Tab 2 10.1" booted into postmarketOS with weston
@@ -9,9 +9,9 @@
 | chipset = TI OMAP 4430
 | cpu = Dual-core 1.0 GHz Cortex-A9
 | gpu = PowerVR SGX540 @ 307 MHz
-| storage = 16GB (expandable with up to 32GB MicroSD)
+| storage = 16 GB (expandable with up to 32 GB MicroSD)
 | display = 1280x800
-| memory = 1GB
+| memory = 1 GB
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = P
@@ -39,6 +39,9 @@
 
 == Maintainer(s) ==
 * WilliamO7
+
+== Users owning this device ==
+{{Device owners}}
 
 == What works ==
 * Display
@@ -72,3 +75,5 @@ LineageOS:
 * [https://wiki.lineageos.org/devices/espresso3g 3G Edition] 
 * [https://wiki.lineageos.org/devices/espressowifi Wifi Edition]
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyTab2101P51xx Replicant's 3G and Wifi Edition]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-espresso10 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-espresso10 Kernel package]
