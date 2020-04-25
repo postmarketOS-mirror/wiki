@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Xiaomi
-| name =  Redmi 2
+| name = Redmi 2
 | codename = wingtech-wt88047
 | image = 
 | imagecaption = 
 | releaseyear = 2015
 | originalsoftware = MIUI 6.0 (Android 4.4.4)
 | chipset = Qualcomm MSM8916 Snapdragon 410
-| cpu = Quad-core ARM Cortex-A53 1.2 GHz
+| cpu = Quad-core 1.2 GHz Cortex-A53
 | gpu = Adreno 306
-| storage = 8GB / 16GB, external microSD (up to 32GB)
+| storage = 8 GB / 16 GB, external microSD (up to 32 GB)
 | display = 720 x 1280
-| memory = 1GB / 2GB
+| memory = 1 GB / 2 GB
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
@@ -48,7 +48,7 @@
 * Everything else
 
 == How to enter flash mode ==
-* Fastboot: hold Volume Down + Power buttons
+* Fastboot: hold {{Button|Volume Down}} + {{Button|Power}} buttons
 
 == Installation ==
 1. Bootstrap
@@ -60,3 +60,8 @@
 3. Boot
 ::<code># with device in fastboot mode</code>
 ::<code>$ pmbootstrap flasher boot</code>
+
+== See also ==
+* {{MR|62|pmaports}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-wingtech-wt88047 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-wingtech-wt88047 Kernel package]
