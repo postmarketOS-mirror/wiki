@@ -3,7 +3,7 @@
 | name = Zenfone 4 <!-- e.g. Desire -->
 | codename = asus-z01k <!-- e.g. htc-bravo -->
 | image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
-| imagecaption = CHANGE_ME
+| imagecaption =
 | releaseyear = 2017
 | originalsoftware = Android 9.0 <!-- e.g. Android 2.1 -->
 | chipset = Qualcomm SDM660 Snapdragon 660 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
@@ -46,6 +46,8 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
+
+Kernel compiles, doesn't boot.
 
 == Contributors ==
 * Tiago
