@@ -57,7 +57,7 @@ Is OTG available, not used in wiki
 {{Device owners}}
 
 == Random thoughts ==
-There is a way to get linux to boot on the device. Porting edk2 is needed, it is described in this guide : https://github.com/konradybcio/Lumia-EDK2-Guide. Unfortunately there is no efistub or efiframebuffer support in the newest msm8226 kernel, so backporting it is required to get pmOS to boot on it.
+There is a way to get linux to boot on the device. Porting edk2 is needed, it is described in this guide : https://github.com/konradybcio/Lumia-EDK2-Guide. Also this edk2 would probably work with some small modifications : https://github.com/Dominduchami/Lumia830Pkg. Unfortunately there is no efistub or efiframebuffer support in the newest msm8226 kernel, so backporting it is required to get pmOS to boot on it.
 
 If you got some information regarding this, please add it here.
 
