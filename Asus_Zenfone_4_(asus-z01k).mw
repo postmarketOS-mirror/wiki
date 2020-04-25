@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = Asus<!-- e.g. HTC -->
-| name = Zenfone 4 <!-- e.g. Desire -->
-| codename = asus-z01k <!-- e.g. htc-bravo -->
+| manufacturer = Asus
+| name = Zenfone 4
+| codename = asus-z01k
 | image =
 | imagecaption =
 | releaseyear = 2017
-| originalsoftware = Android 9.0 <!-- e.g. Android 2.1 -->
-| chipset = Qualcomm SDM660 Snapdragon 660 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = Octa-core (4x2.2 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver) <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 512 <!-- e.g. Adreno 200 -->
-| storage = 64 GB <!-- e.g. 512 MB -->
-| display = 1080x1920 IPS LCD <!-- e.g. 480x800 AMOLED -->
-| memory = 4 GB <!-- e.g. 576 MB -->
-| architecture = aarch64 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = Android 9.0
+| chipset = Qualcomm SDM660 Snapdragon 660
+| cpu = Octa-core (4x2.2 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)
+| gpu = Adreno 512
+| storage = 64 GB
+| display = 1080x1920 IPS LCD
+| memory = 4 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -32,12 +32,10 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = Kernel compiles, doesn't boot.<!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
