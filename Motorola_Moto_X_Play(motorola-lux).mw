@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto X Play
+| name = Moto X Play
 | codename = motorola-lux
 | image = File:motorola-lux.jpg
 | imagecaption = Motorola Moto X Play
@@ -51,7 +51,7 @@
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-Power off the device, hold down the power and the volume up key for 1-2 seconds.
+Power off the device, hold down the {{Button|Power}} and the {{Button|Volume Up}} key for 1-2 seconds.
 
 == Installation ==
 Configuration specific to the motorola-lux is now integrated in pmaports so to install just follow the normal installation guide
@@ -61,10 +61,9 @@ Configuration specific to the motorola-lux is now integrated in pmaports so to i
 * {{MR|562|pmaports}} Initial merge request
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-lux Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-motorola-lux Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-lux Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-lux Kernel package]
