@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto G 4G (2013)
+| name = Moto G 4G (2013)
 | codename = motorola-peregrine
 | image = File:peregrine-weston.jpg
 | imagecaption = Moto G 4G 2013 running Weston
@@ -42,7 +42,7 @@
 
 == How to enter flash mode ==
 
-You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ unlock your bootloader] first if you haven't yet. Hold power and volume down button to enter fastboot mode if phone is turned on, or just volume down when connecting USB to turned off device.
+You need to [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/ unlock your bootloader] first if you haven't yet. Hold {{Button|Power}} and {{Button|Volume Down}} button to enter fastboot mode if phone is turned on, or just {{Button|Volume Down}} when connecting USB to turned off device.
 
 == Installation ==
 
@@ -66,3 +66,5 @@ There are two possible workarounds:
 == See also ==
 
 * {{github|1264}} Initial pull request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-peregrine Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-peregrine Kernel package]
