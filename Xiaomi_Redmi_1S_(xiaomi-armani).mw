@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Xiaomi
-| name =  Redmi 1S
+| name = Redmi 1S
 | codename = xiaomi-armani
 | image = File:Armani.jpg
 | imagecaption = PostmarketOS running on Xiaomi Redmi 1S
 | releaseyear = 2014
 | originalsoftware = MIUI 6.0 (based on Android 4.3)
 | chipset = Qualcomm MSM8228 Snapdragon 400
-| cpu = Quad-core Snapdragon 400 1.6 GHz
+| cpu = Quad-core 1.6 GHz Cortex-A7
 | gpu = Adreno 305
-| storage = 8GB EMMC, external micro-sd slot
-| display = WLED, 720x1280
-| memory = 1GB
+| storage = 8GB eMMC, external micro-sd slot
+| display = 720x1280 WLED
+| memory = 1 GB
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
@@ -58,14 +58,14 @@
 * Xorg based UI: postmarketos-ui-xfce4 displays nothing on the screen.
 
 == How to enter flash mode ==
-* Entering fastboot: hold VolumeKeyDown + Power buttons until fastboot mode displayed on the screen.
-* Entering recovery: hold VolumeKeyUp + Power buttons. The default is Mi Recovery. TWRP is needed for installation, which can be obtained [https://twrp.me/xiaomi/xiaomiredmi1s.html here]
+* Entering fastboot: hold {{Button|Volume Down}} + {{Button|Power}} buttons until fastboot mode is displayed on the screen.
+* Entering recovery: hold {{Button|Volume Up}} + {{Button|Power}} buttons. The default is Mi Recovery. TWRP is needed for installation, which can be obtained [https://twrp.me/xiaomi/xiaomiredmi1s.html here]
 
 == Installation ==
 
 === pmbootstrap flasher method ===
 
-* Put the device into fastboot mode by holding both VolumeKeyDown + Power buttons or rebooting into bootloader from the twrp reboot menu.
+* Put the device into fastboot mode by holding both {{Button|Volume Down}} + {{Button|Power}} buttons or rebooting into bootloader from the twrp reboot menu.
 * Connect the device to the computer via usb cable
 * Bootstrap PostmarketOS
 ::<code>$ pmbootstrap init #select xiaomi-armani</code>
@@ -78,7 +78,7 @@
 
 === Android recovery.zip sideload method ===
 
-* Put the device into TWRP recovery, either by booting twrp image via fastboot directly or by pressing VolumeKeyUp + Power button after flashing TWRP recovery image.
+* Put the device into TWRP recovery, either by booting twrp image via fastboot directly or by pressing {{Button|Volume Up}} + {{Button|Power}} button after flashing TWRP recovery image.
 * Connect the device to the computer via usb cable
 * Bootstrap PostmarketOS
 
@@ -121,5 +121,6 @@ Battery state can be monitored. Refer to [[Battery capacity monitoring]] for mor
 == See also ==
 
 * {{github|1204}} Initial pull request
-
 * [https://wiki.lineageos.org/devices/armani LineageOS wiki page]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-xiaomi-armani Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-xiaomi-armani Kernel package]
