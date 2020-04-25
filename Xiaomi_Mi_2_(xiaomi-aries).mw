@@ -60,6 +60,8 @@ Then I switched to the kernel which is still maintained by [https://github.com/G
 
 == See also ==
 * {{MR|171|pmaports}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-xiaomi-aries Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-xiaomi-aries Kernel package]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
