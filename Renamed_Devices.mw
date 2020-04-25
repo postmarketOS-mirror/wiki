@@ -6,6 +6,18 @@ Please keep the list sorted alphabetically.
 ! New Name
 ! Merge Request
 |-
+| mozilla-flame
+| t2m-flame
+| {{MR|488|pmbootstrap}}
+|-
+| nokia-rm-696
+| nokia-n9
+| {{MR|1146|pmbootstrap}}
+|-
+| nokia-rx51
+| nokia-n900
+| {{MR|1146|pmbootstrap}}
+|-
 | pine-a64lts
 | pine64-a64lts
 | {{MR|623|pmaports}}
@@ -21,6 +33,10 @@ Please keep the list sorted alphabetically.
 | pine-pinetab
 | pine64-pinetab
 | {{MR|623|pmaports}}
+|-
+| samsung-i8190
+| samsung-golden
+| {{MR|719|pmaports}}
 |-
 | samsung-i9505
 | samsung-jflte
