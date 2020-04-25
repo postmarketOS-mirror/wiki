@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Nextbit
-| name =  Robin
+| name = Robin
 | codename = nextbit-robin
 | image = File:ether.jpg
 | imagecaption = Nextbit Robin (ether)
@@ -9,9 +9,9 @@
 | chipset = Qualcomm MSM8992 Snapdragon 808
 | cpu = 2 + 4 Hexa-core (1.82 GHz Cortex-A57 + 1.44 GHz Cortex-A53)
 | gpu = Adreno 418 600 MHz
-| storage = 32GB
+| storage = 32 GB
 | display = 1920x1080 LCD
-| memory = 3GB
+| memory = 3 GB
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
@@ -50,3 +50,5 @@ Fastboot is the only tested method
 == See also ==
 * {{github|1145}} Initial pull request
 * {{github|1197}} Display working pull request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-nextbit-robin Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-nextbit-robin Kernel package]
