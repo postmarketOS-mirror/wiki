@@ -57,9 +57,7 @@ Is OTG available, not used in wiki
 {{Device owners}}
 
 == Random thoughts ==
-Two possible ways to get Linux on this device running:
-* Android4Lumia way: Create a LittleKernel Interface and modify a kernel to work on this device
-* Unlock the current Bootloader and use WPInternals to create a custom ROM (in my case pmOS). Modified kernel needed too.
+There is a way to get linux to boot on the device. Porting edk2 is needed, it is described in this guide : https://github.com/konradybcio/Lumia-EDK2-Guide. Unfortunately there is no efistub or efiframebuffer support in the newest msm8226 kernel, so backporting it is required to get pmOS to boot on it.
 
 If you got some information regarding this, please add it here.
 
