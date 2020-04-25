@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Xiaomi
-| name =  Mi 3
+| name = Mi 3
 | codename = xiaomi-cancro
 | image = File:cancro.jpg
 | imagecaption = Xiaomi Mi 3 running Weston
@@ -9,9 +9,9 @@
 | chipset = Qualcomm MSM8274AB Snapdragon 800
 | cpu = Quad-core 2.3 GHz Krait 400
 | gpu = Adreno 330
-| storage = 16GB / 64GB ROM eMMC 4.5
-| display = IPS Display 5 inches @ 1920px x 1080px (441 PPI) (Manufactured by Sharp or LG)
-| memory =  2GB RAM LPDDR3
+| storage = 16 GB / 64 GB ROM eMMC 4.5
+| display = IPS Display 5 inches @ 1080px x 1920px (441 PPI) (Manufactured by Sharp or LG)
+| memory = 2 GB LPDDR3
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = Y
@@ -52,7 +52,7 @@
 * WiFi
 
 == How to enter flash mode ==
-* Power + Vol-down (fastboot)
+* {{Button|Power}} + {{Button|Volume Down}} (fastboot)
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
@@ -65,4 +65,6 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* {{MR|1650}} Initial merge request
+* {{MR|1650|pmbootstrap}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-xiaomi-cancro Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-xiaomi-cancro Kernel package]
