@@ -34,7 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-Kernel compiles, doesn't boot.
+
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
@@ -46,6 +46,7 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
+Kernel compiles, doesn't boot.
 
 == Contributors ==
 * Tiago
