@@ -1,0 +1,82 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy Trend Plus
+| codename = samsung-kylepro
+| image = File:Kylepro.jpg
+| imagecaption =
+| releaseyear = 2013
+| originalsoftware = Android 4.2.2
+| chipset = Broadcom BCM21664T
+| cpu = 2x 1.2 GHz Cortex-A9
+| gpu = VideoCore IV
+| storage = 4 GB
+| display = 480x800 (240dpi)
+| memory = 768 MB
+| architecture = armhf
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = 
+| status_fde = 
+| status_mainline = P
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = P
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* Deata
+
+== Maintainer(s) ==
+* Deata
+
+== What works ==
+* Screen
+* Touch
+* USB Network
+* Wifi
+* Touch (<code>/dev/input/event2</code>)
+
+== What does not work ==
+* Flashing rootfs to internal storage. (Flash to sdcard instead using the <code>--sdcard</code> option) 
+* Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and udhcpc. See https://wiki.postmarketos.org/wiki/WiFi)
+* Everything else
+
+== How to enter flash mode ==
+* Press volume down and the home key, then press the power button.
+* Maintain volume down and home pressed until a warning screen comes up
+
+== Installation ==
+* 1. Flash the kernel <code>pmbootstrap flasher flash_kernel</code>
+* 2. Install system image to sdcard <code>pmboostrap install --sdcard /dev/mmcblkXXX</code>
+
+== Misc ==
+*Audio and video works in chromium browser.
+*I used a 150kΩ resistor in my USB debug cable. See https://wiki.postmarketos.org/wiki/Serial_debugging
+*Serial port is on <code>/dev/ttyS2</code> in pmOS.
+
+== Mainline ==
+This device has support in mainline. Device is able to boot the mainline kernel all the way to the initramfs.
+
+The internal clocks are currently broken on mainline meaning that the periperal devices don't work currently. Anyone with expertise in this area could perhaps help out.(?)
+
+== Pictures ==
+[[File:UART-kylepro.jpg|200px| UART pin location on motherboard]]
+== Videos ==
+https://youtu.be/2h9T3Rb06LY
+== Links ==
+* [https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx Kernel source]
+* [https://github.com/Samsung-KYLEPROXX/android_device_samsung_kylepro Good hardware information page]
+* [https://gitlab.com/deata/kylepro-mainlining Mainline kernel fork]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-kylepro Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-samsung-kylepro Kernel package]
