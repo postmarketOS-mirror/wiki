@@ -55,7 +55,7 @@ Put the device in to download mode, and use the following commands:
 <source lang="shell-session">
 pmbootstrap install
 pmbootstrap initfs hook_add debug-shell
-pmbootstrap export
+pmbootstrap export --odin
 heimdall flash --BOOT /tmp/postmarketOS-export/boot.img-samsung-chagallwifi
 </source>
 
