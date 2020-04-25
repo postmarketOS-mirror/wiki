@@ -76,5 +76,5 @@ cd pmbootstrap
 
 == Source ==
 
-* Device [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-sony-aries Source]
-* Kernel [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-sony-aries Source]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-sony-aries Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-sony-aries Kernel package]
