@@ -64,7 +64,16 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-No proper flash mode, but kernel can be booted via checkra1n/PongoOS. Basic dual boot support exists
+No proper flash mode, but kernel can be booted via [https://checkra.in/ checkra1n/PongoOS]. Basic dual boot support exists.
+
+First you have to enter DFU mode. Power off your phone and connect it to your computer via USB: Hold down  {{Button|Volume Down}} + {{Button|Power}} for 5 seconds (after Apple logo appeared). Release {{Button|Power}} and keep holding {{Button|Volume Down}} for another 10 seconds.
+
+To enter PongoOS, from where we can load the Linux kernel, run follwoing command on the host machine:
+<source lang="bash">
+$ ./checkra1n-cli -cpE
+</source>
+
+PongoOS will start booting and printing messages on the screen.
 
 == Installation ==
 
