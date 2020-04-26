@@ -72,7 +72,7 @@ To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device
 == Status ==
 Currently a work in progress. Kernel compiles.
 
-== [WIP] Steps to compile ==
+== Config settings needed to compile ==
 Set:
    CONFIG_COMPAT_VDSO=n
    # CONFIG_CROSS_COMPILE_ARM32=""
