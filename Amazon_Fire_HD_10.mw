@@ -29,7 +29,7 @@
 | status_bluetooth = 
 | status_camera = 
 | status_gps = 
-| status_mobiledata = 
+| status_mobiledata = -
 | status_sms = -
 | status_calls = -
 | status = Boots into Weston. XWayland not tested yet. Proprietary WiFi driver available but not tested.
