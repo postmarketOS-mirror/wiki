@@ -89,9 +89,12 @@ Currently a work in progress. After patching, fails to compile kernel.
 
 == [WIP] Steps to compile ==
 Set:
-    CONFIG_DIAG_CHAR=m
     CONFIG_COMPAT_VDSO=n
     # CONFIG_CROSS_COMPILE_ARM32=""
+    CONFIG_DIAG_CHAR=m
+    CONFIG_USB_CONFIGFS=y
+    CONFIG_USB_CONFIGFS_ACM=y
+    CONFIG_CONFIGFS_FS=y
 
 == See also ==
 <!--
