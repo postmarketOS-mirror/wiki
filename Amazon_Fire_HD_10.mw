@@ -63,10 +63,10 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 You have to have your bootloader unlocked through this method: https://forum.xda-developers.com/hd8-hd10/orig-development/unlock-fire-hd-10-2017-suez-t3913639
+
 Entering fastboot through normal methods will not work as we need to access the hacked bootloader. Normal fastboot doesn't let us flash in the required partitions.
+
 Simply hold volume up while powering it up to access TWRP. From TWRP you can reboot into the hacked bootloader as needed.
-
-
 
 == Installation ==
 From TWRP, you have access to ADB sideload, which you can use to install the recovery zip exported from pmbootstrap, or you can reboot into the hacked bootloader to access fastboot. You have to take the following things into consideration:
