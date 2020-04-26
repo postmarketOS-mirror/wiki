@@ -70,15 +70,7 @@ To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == Status ==
-Currently a work in progress. After patching, fails to compile kernel.
-
-    ERROR: "diagfwd_bridge_init" [drivers/char/diag/diagchar.ko] undefined!
-    ERROR: "diag_get_remote_device_mask" [drivers/char/diag/diagchar.ko] undefined!
-    ERROR: "diagfwd_bridge_close" [drivers/char/diag/diagchar.ko] undefined!
-    ERROR: "diagfwd_bridge_exit" [drivers/char/diag/diagchar.ko] undefined!
-    ERROR: "bridge_info" [drivers/char/diag/diagchar.ko] undefined!
-    ERROR: "diagfwd_bridge_write" [drivers/char/diag/diagchar.ko] undefined!
-    ERROR: "diag_mhi" [drivers/char/diag/diagchar.ko] undefined!
+Currently a work in progress. Kernel compiles.
 
 == [WIP] Steps to compile ==
 Set:
