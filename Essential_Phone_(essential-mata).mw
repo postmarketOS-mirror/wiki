@@ -70,7 +70,27 @@ To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == Status ==
-Currently a work in progress. Fails to compile kernel while throwing a gcc related error.
+Currently a work in progress. After patching, fails to compile kernel.
+
+
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `diag_usb_notifier':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:358: undefined reference to `usb_diag_request_size'
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `usb_connect':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:182: undefined reference to `usb_diag_alloc_req'
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `usb_read_work_fn':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:263: undefined reference to `usb_diag_read'
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `diag_usb_write_ext':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:455: undefined reference to `usb_diag_write'
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `diag_usb_write':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:538: undefined reference to `usb_diag_write'
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `diag_usb_register':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:637: undefined reference to `usb_diag_open'
+    aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `diag_usb_exit':
+    /home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out/../drivers/char/diag/diag_usb.c:676: undefined reference to `usb_diag_close'
+    make[1]: *** [/home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/Makefile:1026: vmlinux] Error 1
+    make[1]: Leaving directory '/home/pmos/build/src/android_kernel_essential_msm8998-21f156898daf6e0ee9266457446cd007d08d926e/out'
+    make: *** [Makefile:152: sub-make] Error 2
+    >>> ERROR: linux-essential-mata: build failed
 
 == See also ==
 <!--
