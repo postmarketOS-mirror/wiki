@@ -66,8 +66,10 @@ The Essential Phone uses Fastboot as the flashing protocol.
 
 To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device. Let go of {{Button|Volume Down}} when "Fastboot mode" displays on the screen. 
 
-== Installation ==
+== [WIP] Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
+
+    pmbootstrap flasher flash_rootfs --partition=userdata
 
 == Status ==
 Currently a work in progress. Kernel compiles.
