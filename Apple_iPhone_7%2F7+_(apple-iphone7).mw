@@ -36,16 +36,13 @@ These two devices can boot Android (via Project Sandcastle) so a postmarketOS po
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = no port yet
 | booting = Y
-
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android = N
-Version of the kernel that pmos is running
+| n-android = ✔
 | pmoskernel = 5.4.12
+| status_otg = P
+
+<!--
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = P
 -->
 }}
 
