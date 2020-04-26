@@ -72,6 +72,20 @@ To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device
 == Status ==
 Currently a work in progress. After patching, fails to compile kernel.
 
+    GZIP    arch/arm64/boot/Image.gz
+    ERROR: "debug_debugfs_exit" [drivers/usb/gadget/libcomposite.ko] undefined!
+    ERROR: "debug_debugfs_init" [drivers/usb/gadget/libcomposite.ko] undefined!
+    ERROR: "put_timestamp" [drivers/usb/gadget/function/usb_f_gsi.ko] undefined!
+    ERROR: "enable_event_log" [drivers/usb/gadget/function/usb_f_gsi.ko] undefined!
+    ERROR: "add_event_to_buf" [drivers/usb/gadget/function/usb_f_gsi.ko] undefined!
+    ERROR: "usb_func_ep_queue" [drivers/usb/gadget/function/usb_f_gsi.ko] undefined!
+    ERROR: "diagfwd_bridge_init" [drivers/char/diag/diagchar.ko] undefined!
+    ERROR: "diag_get_remote_device_mask" [drivers/char/diag/diagchar.ko] undefined!
+    ERROR: "diagfwd_bridge_close" [drivers/char/diag/diagchar.ko] undefined!
+    ERROR: "diagfwd_bridge_exit" [drivers/char/diag/diagchar.ko] undefined!
+    ERROR: "bridge_info" [drivers/char/diag/diagchar.ko] undefined!
+    ERROR: "diagfwd_bridge_write" [drivers/char/diag/diagchar.ko] undefined!
+    ERROR: "diag_mhi" [drivers/char/diag/diagchar.ko] undefined!
 
 == [WIP] Steps to compile ==
 Set:
