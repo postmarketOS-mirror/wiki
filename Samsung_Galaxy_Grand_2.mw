@@ -51,6 +51,7 @@ Flashing using heimdall is currently untested so the only way for now is to make
 
 == What works ==
 * USB Networking
+* Booting
 
 == What doesn't work ==
 * Booting
