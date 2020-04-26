@@ -68,6 +68,12 @@ Similar to the [[Moto_G_2014_(motorola-titan)|Moto G 2014]], the LED can be cont
 
 [https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/drivers/leds/leds-qpnp.c#L187-L189 RGB LED documentation]
 
+== TODO ==
+* Try [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device updating the architecture] to <code>armv7</code>
+* Try [https://wiki.postmarketos.org/wiki/Downstream_kernel_specific_package#Use_the_newest_GCC_from_Alpine using the newest GCC from Alpine]
+* Test additional functionality, interfaces, etc.
+* Maintain the device
+
 == Links ==
 
 * [https://github.com/LineageOS/android_kernel_motorola_msm8226 android_kernel_motorola_msm8226]
