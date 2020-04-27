@@ -85,6 +85,15 @@ Set:
    CONFIG_USB_CONFIGFS_ACM=y
    CONFIG_CONFIGFS_FS=y
 
+
+Defaults:
+   CONFIG_COMPAT_VDSO=y
+   CONFIG_CROSS_COMPILE_ARM32=""
+   CONFIG_DIAG_CHAR=y
+   CONFIG_USB_CONFIGFS=m
+   # CONFIG_USB_CONFIGFS_ACM is not set
+   CONFIG_CONFIGFS_FS=m
+
 == See also ==
 * {{MR|1194|pmaports}} Initial merge request
 <!--
