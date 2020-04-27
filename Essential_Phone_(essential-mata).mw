@@ -84,6 +84,7 @@ Set:
    CONFIG_CONFIGFS_FS=y
 
 == See also ==
+* {{MR|1194|pmaports}} Initial merge request
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
