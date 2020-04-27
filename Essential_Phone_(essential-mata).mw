@@ -78,8 +78,7 @@ Currently a work in progress. Kernel compiles.
 
 == Config settings needed to compile ==
 Set:
-   CONFIG_COMPAT_VDSO=n
-   # CONFIG_CROSS_COMPILE_ARM32=""
+   CONFIG_COMPAT_VDSO=m
    CONFIG_DIAG_CHAR=n
    CONFIG_USB_CONFIGFS=y
    CONFIG_USB_CONFIGFS_ACM=y
@@ -88,7 +87,6 @@ Set:
 
 Defaults:
    CONFIG_COMPAT_VDSO=y
-   CONFIG_CROSS_COMPILE_ARM32=""
    CONFIG_DIAG_CHAR=y
    CONFIG_USB_CONFIGFS=m
    # CONFIG_USB_CONFIGFS_ACM is not set
