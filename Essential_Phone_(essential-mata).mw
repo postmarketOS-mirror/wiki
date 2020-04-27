@@ -32,7 +32,7 @@
 | status_mobiledata = N <!-- Connecting to the Internet via cellular network. -->
 | status_sms = N <!-- Sending and receiving short messages works as intended. -->
 | status_calls = N <!-- Talking to other people over the cellular network. -->
-| status = Kernel does not compile due to gcc error
+| status = Kernel compiles and flashes, but gets stuck in a bootloop.
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
