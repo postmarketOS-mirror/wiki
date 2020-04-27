@@ -74,7 +74,7 @@ PongoOS will start booting and printing messages on the screen.
 
 == Installation ==
 
-Currently, there are instructions at https://blog.project-insanity.org/2020/04/16/running-postmarketos-on-iphone-7/
+There is a manual method described in [https://blog.project-insanity.org/2020/04/22/linux-with-wayland-is-now-running-on-iphone-7/ this] blog post.
 
 == See also ==
 * Martijn Braam is working on [https://gitlab.com/postmarketOS/pmaports/-/tree/device/iphone-sandcastle a fork] probably requires [https://gitlab.com/rjeli/pmaports/-/blob/device/xiaomi-willow/device/testing/linux-xiaomi-willow/fix_selinux_asm_types.patch a patch] to finally work
