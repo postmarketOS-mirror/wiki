@@ -342,6 +342,12 @@ In case you were asked for <code>boot.img</code> analyzing, and skipped that sec
 
 See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
 
+Create checksums and build the device package once to make sure it doesn't contain errors at this point (we didn't do that earlier, because <code>pmbootstrap</code> would have complained about the invalid <code>pkgver</code> of the kernel package):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap checksum device-wiki-example
+$ pmbootstrap build device-wiki-example
+</syntaxhighlight>
+
 == We are happy to help you! ==
 If you get stuck, we are happy to help you [[Matrix and IRC|in the chat]] and in the  [https://gitlab.com/postmarketOS/pmaports/issues issues tracker]. When asking for help, always include the APKBUILD you have written, and any custom patches you have applied, as well as the error message you have gotten from <code>pmbootstrap log</code>.
 
@@ -352,12 +358,6 @@ If you have made some progress with a new port, please [[Help:Device_Page|create
 
 == Installation ==
 {{note|If you get a "no space left on device" error, please report in {{issue|928}}.}}
-
-Create checksums and build the device package once to make sure it doesn't contain errors at this point (we didn't do that earlier, because <code>pmbootstrap</code> would have complained about the invalid <code>pkgver</code> of the kernel package):
-<syntaxhighlight lang="shell-session">
-$ pmbootstrap checksum device-wiki-example
-$ pmbootstrap build device-wiki-example
-</syntaxhighlight>
 
 To install to the system partition of an image file, run the following:
 
