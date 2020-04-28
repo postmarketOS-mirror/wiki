@@ -34,11 +34,12 @@
 | status_calls = 
 | status_otg = 
 | status = 
-| booting = no
+| booting = yes
 }}
 
 == Contributors ==
 * 00p513
+* Jetremblay
 
 == Users owning this device ==
 {{Device owners}}
