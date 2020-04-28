@@ -24,11 +24,11 @@
 | status_mainline = 
 | status_battery = N
 | status_3d = N
-| status_accel = 
+| status_accel = N
 | status_audio = N
-| status_bluetooth = 
-| status_camera = 
-| status_gps = 
+| status_bluetooth = N
+| status_camera = N
+| status_gps = N
 | status_mobiledata = -
 | status_sms = -
 | status_calls = -
