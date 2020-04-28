@@ -13,7 +13,7 @@
 | storage = 2GiB flash NAND
 | display = None, connects over HDMI
 | memory = 512 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
@@ -37,21 +37,17 @@
 }}
 
 == Contributors ==
-* steamp0rt
+* [[User:steamport|steamp0rt]]
+
+== Device owners ==
+{{Device owners}}
 
 == What works ==
 * Kernel compiles
-* chromecast-tools can successful mangle a bootimg
-
-== What does not work ==
-* Unknown
-
-== How to enter flash mode ==
-* Unknown
-
-== Installation ==
-See [https://forum.xda-developers.com/showthread.php?t=2452838 FlashCast], [https://forum.xda-developers.com/android-tv/chromecast/root-hubcap-chromecast-root-release-t2855893 HubCap]
+* chromecast-tools can successful mangle a boot.img-file
 
 == See also ==
-* {{github|1562}}, {{github|1563}} Initial pull request
+* [https://forum.xda-developers.com/showthread.php?t=2452838 FlashCast]
+* [https://forum.xda-developers.com/android-tv/chromecast/root-hubcap-chromecast-root-release-t2855893 HubCap]
+* {{MR|1562}}, {{MR|1563}} Initial pull request
 * [https://old.reddit.com/r/postmarketOS/comments/8qxpzk/if_anyone_has_an_old_firstgeneration_chromecast/ Reddit discussion]
