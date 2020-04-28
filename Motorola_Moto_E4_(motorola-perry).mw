@@ -59,17 +59,29 @@ The device has to be unlocked before images can be replaced. It is strongly sugg
 If the device does not boot it is possible to access log from last attempt at sys/fs/pstore/console-ramoops via TWRP.
 
 == Installation ==
-$ pmbootstrap checksum linux-motorola-perry<br>
-$ pmbootstrap kconfig check<br>
-$ pmbootstrap build linux-motorola-perry<br>
-$ pmbootstrap checksum firmware-motorola-perry<br>
-$ pmbootstrap build firmware-motorola-perry<br>
-$ pmbootstrap checksum device-motorola-perry<br>
-$ pmbootstrap build device-motorola-perry<br>
-$ pmbootstrap install<br>
-plug the device and switch to fastboot<br>
-$ pmbootstrap flasher flash_kernel<br>
-$ pmbootstrap flasher flash_rootfs<br>
+the port has been done on the SKU: XT1766 of the Motorola E4 (Perry) version
+<code>
+$ pmbootstrap checksum linux-motorola-perry
+$ pmbootstrap kconfig check
+$ pmbootstrap build linux-motorola-perry
+$ pmbootstrap checksum firmware-motorola-perry
+$ pmbootstrap build firmware-motorola-perry
+$ pmbootstrap checksum device-motorola-perry
+$ pmbootstrap build device-motorola-perry
+$ pmbootstrap install
+</code>
+plug the device to computer and switch it to the fastboot mode
+<code>
+$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_rootfs
+</code>
+finally run <code>$ pmbootstrap flasher boot</code> or reset the device<br>
+
+Device should boot with display and be accessible via ssh @172.16.42.1 
+
+== Additional information ==
+Normally display should work without any modification but at the time of writing there was a compatibility issue with Xorg packages (particularly Xorg-server) in the EDGE repository.
+To resolve the issue after flashing the phone postmarketos-ui-xfce4 and Xorg-server packages have been removed and installed from 3.11/main repository.
 
 == See also ==
 * {{MR|1111|pmaports}} Initial merge request
