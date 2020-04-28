@@ -81,3 +81,9 @@ There are a few variants listed below:
 There is an XDA thread, which hasnt been posted to for a while, for compiling the kernel, for use with android. This may become helpful. It can be found [https://forum.xda-developers.com/g7-play/development/wip-stock-kernel-compiled-source-t4066599 here] And source code for the kernel can be found [https://github.com/MotorolaMobilityLLC/kernel-msm/releases/tag/MMI-PPYS29.105-134-7 here]
 
 I have had a look at trying to compile the kernel and there *is* a defconfig in the arm64 architcture, so i guess it may work, but i couldnt get it to build (hey, this is my first time compiling a linux kernel)
+
+==Notes from Jean-Etienne==
+
+The [https://github.com/LineageOS/android_kernel_motorola_sdm632/ SDM32 kernel from LineageOS] builds fine with arm64 architecture. Apparently the bootloader passes a skip_initramfs option which needs to be disabled in the kernel for postmarketOS to boot.
+
+[https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1195 Initial merge request]
