@@ -55,6 +55,9 @@
 == How to enter flash mode ==
 hold Power On and Volume Down buttons while device is powered off.
 
+The device has to be unlocked before images can be replaced. It is strongly suggested to use TWRP recovery (twrp-perry-3.2.1-r1.img verified to work) if debugging is necessary. 
+If the device does not boot it is possible to access log from last attempt at sys/fs/pstore/console-ramoops via TWRP.
+
 == Installation ==
 $ pmbootstrap checksum linux-motorola-perry<br>
 $ pmbootstrap kconfig check<br>
