@@ -13,7 +13,7 @@
 | display = 3.0" LED-backlit LCD
 | memory = 512 MB RAM
 | booting = yes
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = 
 | status_touch = Y
