@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Sony
 | name = Xperia P
-| codename = Nypon
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| codename = sony-nypon
+| image = File:sony-nypon.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2012
 | originalsoftware = Android 4.1.2
-| chipset = Novathor U8500
-| cpu =  <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = MALI400 <!-- e.g. Adreno 200 -->
-| storage = 8Gb <!-- e.g. 512 MB -->
-| display = 540x960 <!-- e.g. 480x800 AMOLED -->
-| memory = 1Gb <!-- e.g. 576 MB -->
+| chipset = [[ST-Ericsson NovaThor U8500]]
+| cpu = Dual-core 1.0 GHz Cortex-A9
+| gpu = Mali-400
+| storage = 8 GB
+| display = 540x960
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
