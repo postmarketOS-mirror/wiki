@@ -82,6 +82,7 @@ Hold {{button|Volume Down}} + {{button|Power}} until you see the fastboot screen
 * Enter fastboot, plug USB into computer
 * <code>pmbootstrap flasher flash_kernel</code>
 * <code>pmbootstrap flasher flash_rootfs</code>
+* <code>pmbootstrap flasher flash_vbmeta</code>
 * Reboot, sometimes <code>fastboot reboot</code> works, otherwise hold down {{button|Power}} until it reboots to system.
 * Hopefully weston comes up with <code>postmarketos-demos</code>.
 
