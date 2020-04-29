@@ -12,7 +12,7 @@
 | storage = 32GB, 64GB, 128GB
 | display = 1080 x 2340 IPS LCD
 | memory = 3GB, 4GB, 4GB
-| architecture = aarch64,
+| architecture = aarch64
 | status_usbnet = P
 | status_flashing = Y
 | status_touch = Y
@@ -34,7 +34,7 @@
 | status = 
 | booting = yes
 | pmoskernel = 4.14.117
-| whet_dhry = 0.0
+| whet_dhry = 4168.2
 }}
 
 == Contributors ==
@@ -50,10 +50,54 @@
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
+== Note ==
+
+This device is quite similar to the [[Xiaomi Redmi Note 7 (xiaomi-lavender)]], and many of the issues were solved with steps from that device page, so if you're hacking on the 8T it's a good idea to read the xiaomi-lavender page closely.
+
 == How to enter flash mode ==
 
+=== Unlocking the bootloader ===
+
+As with any Xiaomi device, in order to unlock the bootloader you need to sign up for a Mi Account, register your device through the MIUI Settings app (requires a working SIM inserted, but only for a few moments), and wait a week. The official Xiaomi tool only runs on Windows, but [https://www.xiaomitool.com/V2/ XiaoMiTool V2] worked for me on Debian Linux. Be careful, it's a closed source jar!
+
+=== Before you go further ===
+
+You are strongly recommended to install TWRP and back up ALL partitions to a safe place! (you can adb pull the images from twrp)
+
+=== Entering recovery ===
+
+Hold {{button|Volume Up}} + {{button|Power}} until you see the recovery screen.
+
+=== Entering fastboot ===
+
+Hold {{button|Volume Down}} + {{button|Power}} until you see the fastboot screen.
+
 == Installation ==
-<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+
+* [[Installing pmbootstrap|Install pmbootstrap.]]
+* <code>pmbootstrap -y zap; pmbootstrap init</code>, choose <code>xiaomi-willow</code> as your device
+** firmware is currently needed for tianma touchscreen
+** rndis doesn't work, and weston is currently the only working display server, so pick weston for ui if you want to know if the flash worked
+* <code>pmbootstrap install</code>
+* Enter fastboot, plug USB into computer
+* <code>pmbootstrap flasher flash_kernel</code>
+* <code>pmbootstrap flasher flash_rootfs</code>
+* Reboot, sometimes <code>fastboot reboot</code> works, otherwise hold down {{button|Power}} until it reboots to system.
+* Hopefully weston comes up with <code>postmarketos-demos</code>.
+
+== Getting a shell ==
+
+RNDIS doesn't work yet, not sure why. Could be an easy fix for someone more experienced with Qualcomm USB drivers.
+
+=== (Easy) USB-C to Ethernet adapter ===
+
+If you have a USB-C to Ethernet adapter with drivers already compiled into mainline, this will be easy. I had an [https://www.amazon.com/iTeknic-Adapter-Ethernet-Charging-ChromeBook/dp/B07QJXP3DV iTeknic IK-UC002] lying around, which has an <code>RTL8152</code> inside, merged into mainline a while ago and already included the downstream Kconfig. <code>device-xiaomi-willow</code> includes an interfaces file so that <code>eth0</code> is DHCPed at boot, and then <code>avahi-daemon</code> will advertise itself at <code>hostname.local</code>.
+
+So if the phone is connected to your LAN at boot through the adapter, you should be able to <code>ssh user@xiaomi-willow.local</code> from your computer.
+
+=== (Hard) UART ===
+
+pix incoming
 
 == See also ==
 * {{MR|1197|pmaports}} Initial merge request
