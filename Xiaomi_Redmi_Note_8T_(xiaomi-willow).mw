@@ -86,6 +86,10 @@ Hold {{button|Volume Down}} + {{button|Power}} until you see the fastboot screen
 * Reboot, sometimes <code>fastboot reboot</code> works, otherwise hold down {{button|Power}} until it reboots to system.
 * Hopefully weston comes up with <code>postmarketos-demos</code>.
 
+== What's broken ==
+
+* Restarting the display server will fail (due to panel power issues?)
+
 == Getting a shell ==
 
 RNDIS doesn't work yet, not sure why. Could be an easy fix for someone more experienced with Qualcomm USB drivers.
