@@ -17,10 +17,10 @@
 | status_usbnet = Y
 | status_flashing = 
 | status_touch = Y
-| status_screen = N
+| status_screen = Y
 | status_wifi = 
 | status_xwayland =
-| status_fde = Y
+| status_fde =
 | status_mainline = 
 | status_battery =
 | status_3d = 
@@ -45,20 +45,13 @@
 {{Device owners}}
 
 == What works ==
-* Touchscreen
 * USB networking
-* FDE
+* Display
+* Touchscreen
 
 == What does not work ==
-* Audio (is detected but no sound and too many mixers)
-* Programs using XRandr (segfaults, need to fix display)
 * Wi-Fi (something's wrong with calibration file)
 * Flashing (system partition too small)
-
-== What is broken ==
-* Boot (boot isn't broken if you prefer to use your phone w/o a UI ;)
-* Display (Weston ARGB fix got deprecated so the screen is again red. The MDP_RGB_888 patch does nothing, but the ARGB fix patch + ARGB picked in config produces wrong colors. Hmm...)
-* ARMv7 (I didn't bother maintaining the device)
 
 == What is untested/probably won't work ==
 * Camera (blobs)
@@ -79,4 +72,4 @@
 * [https://www.gsmarena.com/sony_ericsson_xperia_mini-3947.php Device specifications]
 * {{MR|1644}} initial merge request
 * [https://github.com/msm7x30/android_kernel_qcom_msm7x30 4.4 kernel for MSM7x30 devices]
-* [https://github.com/Blefish/android_kernel_qcom_msm7x30/commit/67d0b3292ce55484db715e15cbd4a87cf5b8e5f3 Device tree sources (very useful for mainline!)]
+* [https://github.com/Blefish/android_kernel_qcom_msm7x30/commit/67d0b3292ce55484db715e15cbd4a87cf5b8e5f3 Device tree sources (useful for mainline)]
