@@ -99,6 +99,7 @@ So if the phone is connected to your LAN at boot through the adapter, you should
 === (Hard) UART ===
 
 Necessary: reasonably fine soldering iron tip, steady hand
+
 Highly recommended: microscope, steadier hand
 
 * Disassemble the phone. [https://youtu.be/xWvFOEW-n1o Here]'s a decent video.
@@ -111,7 +112,7 @@ Highly recommended: microscope, steadier hand
 
 [[File:Xiaomi_Willow_UART_locations.jpeg|thumb|Test point locations]]
 [[File:Xiaomi-willow-uart-rx-microscope.jpeg|thumb|Only TX pin soldered]]
-[[File:Xiaomi_willow_uart_tx_rx.jpeg|thumb|Blurry pic of TX and RX soldered]]
+[[File:Xiaomi_willow_uart_tx_rx.jpeg|thumb|Blurry pic of TX and RX soldered (taken pointing from the top of the phone towards the bottom)]]
 
 == See also ==
 * {{MR|1197|pmaports}} Initial merge request
