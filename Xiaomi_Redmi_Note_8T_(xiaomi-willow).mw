@@ -98,12 +98,16 @@ So if the phone is connected to your LAN at boot through the adapter, you should
 
 === (Hard) UART ===
 
-The test points are tiny.
+Necessary: reasonably fine soldering iron tip, steady hand
+Highly recommended: microscope, steadier hand
 
 * Disassemble the phone. [https://youtu.be/xWvFOEW-n1o Here]'s a decent video.
 * I spent way too much time heating up the rubber and trying to use a suction cup. The glue is quite strong, and after heating up the edges to unreasonable temperatures I still couldn't pull the glass off with a suction cup. The key is to heat up the bottom a bit (around 100-150C) and use an extremely thin piece of metal to slide in the bottom and tear the rubber a bit. Then you can keep heating the edges and work your way around the perimeter.
 * After removing the glass, remove the ~12ish green screws holding the upper panel in place. One is hidden under a sticker. Pop the panel off with more prying, as gently as you can but some force will be needed.
 * This is the end of disassembly, the test points are now exposed.
+* Solder as shown in diagram.
+* Test connectivity between everything to make sure there's no shorts.
+* Connect to your favorite UART adapter. It expects 1.8v, but I used [https://www.sparkfun.com/products/12731 this] adapter that only goes down to 3.3v, and it hasn't bricked yet.
 
 [[File:Xiaomi_Willow_UART_locations.jpeg|thumb|Test point locations]]
 [[File:Xiaomi-willow-uart-rx-microscope.jpeg|thumb|Only TX pin soldered]]
