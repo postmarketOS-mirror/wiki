@@ -3,7 +3,7 @@
 | name = Redmi Note 8T
 | codename = xiaomi-willow
 | image = File:Xiaomi_willow_weston.jpeg
-| imagecaption = Redmi Note 8T (kapton tape holding UART in place)
+| imagecaption = Redmi Note 8T running firefox and weston-smoke (kapton tape holding UART in place)
 | releaseyear = 2019
 | originalsoftware = Android 9, MIUI 10
 | chipset = Qualcomm SDM665 Snapdragon 665 (11 nm)
