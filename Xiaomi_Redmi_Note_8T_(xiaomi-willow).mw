@@ -116,6 +116,14 @@ File:Xiaomi-willow-uart-rx-microscope.jpeg|thumb|left|Only TX pin soldered
 File:Xiaomi_willow_uart_tx_rx.jpeg|thumb|left|Blurry pic of TX and RX soldered (taken pointing from the top of the phone towards the bottom)
 </gallery>
 
+== Additional Info ==
+
+Info from the Note 7 port that also applies to the 8T:
+
+* [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)#Android_Verified_Boot_(vbmeta)]]
+* [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)#DTBO_partition]]
+* [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)#Bootloader_cmdline]]
+
 == See also ==
 * {{MR|1197|pmaports}} Initial merge request
 <!--
