@@ -62,9 +62,8 @@ Press the {{Button|Volume Up}} button, then plug in the USB cable. The LED bar s
 
 == What does not work ==
 
-* Compiling the kernel
-(Compiling kernel works as long pmOS isnt told to generate an QCDT boot image in which case it will fail (QCDT will be enabled as the detection software will detect dt file in boot image). To overcome this issue one must generate an ELF boot image manually with the RPM file provided in the android repo of the device. Only after that it has chance of booting.)
-* Flashing. See other sony devices for more info (eg: [[Sony_Xperia_E_Dual_(sony-nanhu)]])
+* SSH over USB
+*Basically everything
 
 == Boot image format ==
 
