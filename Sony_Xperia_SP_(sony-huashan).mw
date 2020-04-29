@@ -59,6 +59,8 @@ The power menu might have a "Reboot to bootloader option"
 Press the {{Button|Volume Up}} button, then plug in the USB cable. The LED bar should light up blue
 
 == What works ==
+Compiles
+Boots up (Well at least i get splash screen and IP adress)
 
 == What does not work ==
 
