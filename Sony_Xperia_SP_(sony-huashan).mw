@@ -73,6 +73,9 @@ Press the {{Button|Volume Up}} button, then plug in the USB cable. The LED bar s
 
 I used [https://github.com/AdrianDC/android_boot_bridge Android boot bridge's release zip] to "skip" the bootimg_analyze step, as the releases include a "template boot.img".
 
+This device uses ELF image but also adds RPM file to the mix which at the end builds into dt file in boot image. The ELF image support Merge Request does still not support it but i will work on it to get it supported.
+For now boot image has to be generated manually with mkelf.
+
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
