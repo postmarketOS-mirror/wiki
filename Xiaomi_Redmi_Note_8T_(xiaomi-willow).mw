@@ -105,7 +105,7 @@ The test points are tiny.
 * After removing the glass, remove the ~12ish green screws holding the upper panel in place. One is hidden under a sticker. Pop the panel off with more prying, as gently as you can but some force will be needed.
 * This is the end of disassembly, the test points are now exposed.
 
-[[File:Xiaomi_willow_uart_locations.jpeg|thumb|Test point locations]]
+[[File:Xiaomi_Willow_UART_locations.jpeg|thumb|Test point locations]]
 [[File:Xiaomi-willow-uart-rx-microscope.jpeg|thumb|Only TX pin soldered]]
 [[File:Xiaomi_willow_uart_tx_rx.jpeg|thumb|Blurry pic of TX and RX soldered]]
 
