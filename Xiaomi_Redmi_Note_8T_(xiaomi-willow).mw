@@ -109,6 +109,7 @@ Highly recommended: microscope, steadier hand
 * Solder as shown in diagram.
 * Test connectivity between everything to make sure there's no shorts.
 * Connect to your favorite UART adapter. It expects 1.8v, but I used [https://www.sparkfun.com/products/12731 this] adapter that only goes down to 3.3v, and it hasn't bricked yet.
+* <code>screen /dev/ttyUSB0 115200</code>
 
 [[File:Xiaomi_Willow_UART_locations.jpeg|thumb|Test point locations]]
 [[File:Xiaomi-willow-uart-rx-microscope.jpeg|thumb|Only TX pin soldered]]
