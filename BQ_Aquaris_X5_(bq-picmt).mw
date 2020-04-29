@@ -15,7 +15,7 @@
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = P
+| status_flashing = Y
 | status_touch = P
 | status_screen = Y
 | status_wifi = Y
@@ -75,13 +75,8 @@ By now the way I flashed the device and having it working was following [[Instal
 
 '''bq-paella:'''
 
-The only tested procedure by now is: 
-# installing [https://github.com/msm8916-mainline/lk2nd lk2nd] following the [https://github.com/msm8916-mainline/lk2nd#building Building] section (just needed the first time)
-# follow the [[Installation_guide]] and stop before '''Installation and flashing''' section
-# then run <code>pmbootstrap install</code>
-# then run <code>pmbootstrap export</code>
-# there will be now in <code>/tmp/postmarketOS-export</code> a <code>boot.img-*</code> file and a <code>bq-paella.img</code> file
-# then from lk2nd run <code>fastboot flash boot boot.img</code> and <code>fastboot flash system bq-paella.img</code>
+# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] following the [https://github.com/msm8916-mainline/lk2nd#building Building] section (just needed the first time)
+# boot to lk2nd and follow the [[Installation_guide]] (tested <code>pmbootstrap flasher ..</code> and <code>fastboot</code> methods)
 
 == Status ==
 Currently work is separated based on firmware installed, if you installed the Cyanogen Edition firmware will be referred as bq-paella, if you installed the BQ Android firmware it will be referred as bq-picmt. So here is a summary for both:
