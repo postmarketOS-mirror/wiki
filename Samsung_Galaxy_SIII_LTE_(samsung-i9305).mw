@@ -58,9 +58,18 @@ Set phone to ODIN mode
   3. Hold VOLUME_DOWN + HOME + POWER until you get Warning!! screen
   4. Push VOLUME_UP to continue to ODIN mode screen
 
-At this point you can follow the [[Installation guide | general installation guide]]. 
-Installation to the system is not yet supported for the device, so make sure to install postmarketOS to the sdcard. Also be sure to not enable FDE as osk-sdl is not yet supported for this device, and enabling it would require you to telnet into the device to unlock it.
+<source lang="bash">
+# Ready the build
+pmbootstrap init (weston or xfce4 should do)
 
+# Install rootfs to Micro SD Card
+pmbootstrap --sdcard=/dev/mmcblk0/1/2/3 # (will depend on where your Micro SD Card is mounted)
+
+# Put the i9305 / i9300 into odin mode with the steps above and flash the kernel (to boot from the Micro SD Card)
+pmbootstrap flasher flash_kernel # (in odin mode)
+
+# and it should reboot automatically
+</source>
 
 ==Installing with downstream kernel==
 
