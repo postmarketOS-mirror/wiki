@@ -2,7 +2,7 @@
 | manufacturer =  Samsung
 | name = Galaxy Grand 2
 | codename = samsung-ms013g
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:samsung-ms013g.jpg
 | imagecaption = No image yet
 | releaseyear = 2013
 | originalsoftware = Android 4.3
@@ -12,7 +12,7 @@
 | storage = 8 GB
 | display = 720x1280 TFT
 | memory = 1.5 GB
-| architecture armv7
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
