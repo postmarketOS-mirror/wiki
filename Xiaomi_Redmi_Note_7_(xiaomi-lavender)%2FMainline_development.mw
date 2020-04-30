@@ -7,6 +7,11 @@ commits merged in 5.6:
 * [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=94d57ebd233a39d4d28fcd4de13a092146da3f4f dt-bindings: Add vendor prefix for Xiaomi]
 * [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=faf8e30acb219849725aa75302d36e0ffdb6a258 dt-bindings: arm: Add kryo260 compatible]
 
+commits to be merged into 5.8 (in linux-next for now):
+* [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=aab86bbbd3e32a10ca7e5cd1d3b9a473cf5909bb dt-bindings: arm: qcom: Add sdm630 and sdm660 SoCs]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=feec34411d4c0a9759106ef4f7d563438b3881ae arm64: dts: qcom: Add SDM660 SoC support]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=23a6da79fe8b7f0b5725b40126a7b0638c016ef3 arm64: dts: qcom: Add Xiaomi Redmi Note 7 (lavender)]
+
 === Lineage OS ROMs/TWRP pstore-ramoops module parameters ===
 
  /sys/fs/pstore # ls -la /sys/module/ramoops/parameters/
