@@ -4,6 +4,8 @@
 | manufacturer = Motorola
 | name = Moto G7 Play / Moto G7 Optimo
 | codename = motorola-channel
+| image = File:Motorola Moto G7 Play.jpg
+| imagecaption = Motorola Moto G7 Play (XT1952-4) running Weston
 | releaseyear = 2019
 | originalsoftware = Android 9
 | pmoskernel =
@@ -14,11 +16,11 @@
 | memory = 2 GB
 | architecture = aarch64
 | whet_dhry = 
-| status_usbnet = 
-| status_flashing = 
-| status_touch = 
-| status_screen = 
-| status_wifi = 
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
