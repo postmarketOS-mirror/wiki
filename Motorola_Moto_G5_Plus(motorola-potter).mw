@@ -69,6 +69,12 @@ $ echo 0 > /sys/class/leds/led\:switch/brightness
 $ echo $brightness > /sys/class/leds/led\:switch/brightness
 </source>
 
+== Mainlining ==
+
+Mainlining is in the early stages, based on (and with help from) Junak's msm8953 kernel. Currently the phone boots into pmOS, and one can ssh in, but nothing else works. Source for the kernel is available here:
+
+https://github.com/scarface-one/linux-msm8953
+
 == Links ==
 * GSM Arena specifications page: https://www.gsmarena.com/motorola_moto_g5_plus-8453.php
 * TWRP Recovery: https://twrp.me/motorola/motorolamotog5plus.html
