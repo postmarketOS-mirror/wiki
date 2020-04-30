@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = kernel compiles, does not flash <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = kernel compiles, can't flash normally although flashing the boot.img through TWRP seems to work, does not boot <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
@@ -65,9 +65,13 @@ Power+Vol+Up - recovery
 Power+Vol+Down - odin/download
 
 == Installation ==
-Currently isn't possible. Android ZIP install errors out, heimdall doesn't work due to a different flashing protocol.
+Run pmbootstrap install (without installing to the SD card, since we need it to store the boot.img for flashing), run pmbootstrap export, flash the boot.img manually through TWRP, then reinstall to SD card.
+
+Android ZIP install errors out, heimdall doesn't work due to a different flashing protocol.
 
 Note: pmOS does not fit on the system partition. You have to use an SD card.
+
+Boot gets stuck on Galaxy Y logo. No USB output. (TODO: Does maximum-attention work?)
 
 == Building ==
 The kernel version is 2.6, so it needs to be built with GCC4. Additionally, the VGA terminal needs to be disabled and one of the touchscreens needs to be enabled. (TODO: Upload the defconfig, in case somebody wants to try this out)
