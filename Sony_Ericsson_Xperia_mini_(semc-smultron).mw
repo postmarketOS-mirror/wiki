@@ -19,7 +19,7 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = 
-| status_xwayland =
+| status_xwayland = Y
 | status_fde =
 | status_mainline = 
 | status_battery =
