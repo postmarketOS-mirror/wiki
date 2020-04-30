@@ -1,3 +1,4 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
 {{Infobox device
 | manufacturer = Google (Motorola)
 | name = Nexus 6
@@ -11,7 +12,7 @@
 | storage = 32/64 GB
 | display = 1440x2560 AMOLED
 | memory = 3 GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
