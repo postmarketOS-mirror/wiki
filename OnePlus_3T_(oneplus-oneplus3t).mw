@@ -62,6 +62,18 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 Good luck.
 
+== Unlocking the Bootloader ==
+
+'''WARNING: Doing this will wipe ALL data on your device. Please backup all your personal data before continuing!'''
+# Enable <code>Developer options</code> by tapping the build number 7 times in <code>Settings</code> > <code>About</code>
+# Go to <code>Developer options</code> and enable both <code>USB Debugging</code> and <code>OEM Unlocking</code>
+# Open a terminal window and type <code>adb devices</code> to verify your device is visible.
+# Type <code>adb reboot bootloader</code> to reboot your device into fastboot mode. 
+# Type <code>fastboot devices</code> to verify once again that your device is visible.
+# Type <code>fastboot oem unlock</code>. To navigate the on screen options use {{button|Volume Up/Down}} and select an option with the {{button|Power}} button.
+# Congrats, your bootloader is now unlocked!
+
+
 == How to enter flash mode ==
 Once the device is unlocked, hold power to boot and on the warning screen, press a volume key to enter the system boot menu. Choose Fastboot.
 
