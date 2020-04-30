@@ -55,7 +55,7 @@ So to simplify it, it is handled like in Alpine now; noarch packages just get bu
 For various reasons, we have added support for the following pmbootstrap specific values in APKBUILD [https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#options options].
 * <code>!pmb:kconfigcheck</code>: for linux-* packages only. When set, the given linux package does not fail "pmbootstrap kconfig check" ({{MR|1753}}).
 * <code>pmb:strict</code>: always build the package in strict mode, even if --strict is not passed to "pmbootstrap build" ({{MR|1771}}).
-* <code>pmb:cross-native</code>: build the package using the "native" cross compilation method
+* <code>pmb:cross-native</code>: build the package using the "native" cross compilation method {{MR|1920}}
 * <code>!pmb:crossdirect</code>: do not use the crossdirect method ({{MR|1922}})
 
 [[Category:Technical Reference]]
