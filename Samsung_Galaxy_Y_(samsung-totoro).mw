@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Y (Young)
+| name = Galaxy Y (Young)
 | codename = samsung-totoro
 | image = File:samsung-totoro.jpg
 | imagecaption = 
@@ -8,10 +8,10 @@
 | originalsoftware = Android 2.3
 | chipset = Broadcom BCM21553
 | cpu = 830 MHz ARMv6
-| gpu = 
-| storage = 512MB
+| gpu = VideoCore IV
+| storage = 512 MB
 | display = 240x320
-| memory = 216mb
+| memory = 216 MB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
