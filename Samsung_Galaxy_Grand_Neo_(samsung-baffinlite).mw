@@ -85,6 +85,10 @@ Audio works for a split second and then crashes.
 |Display
 |HX8369 and/or SC7798
 |HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config. Android errors out about not being able to rewrite the panel file on startup, but the display works fine, so perhaps only one of these is used? Check.
+|-
+|PMU
+|BCM590xx
+|Driver in mainline.
 |}
 
 == See also ==
