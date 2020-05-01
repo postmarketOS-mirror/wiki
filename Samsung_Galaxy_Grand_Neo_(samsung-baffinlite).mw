@@ -77,8 +77,11 @@ Audio works for a split second and then crashes.
 |Touchscreen
 |MELFAS MMS144(?)
 |Driver in mainline
+|-
+|WiFi, Bluetooth
+|BCM4330
+|Driver in mainline
 |}
-
 
 == See also ==
 
