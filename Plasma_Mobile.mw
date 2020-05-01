@@ -74,7 +74,26 @@ The following sets a 2x scale factor:
 === Software rendering ===
 Plasma can also be used if your device doesn't support hardware acceleration (if it's a non-armhf device) yet by using software rendering. Please note that the interface will be slow, and it might not be usable for the average user.
 
-Software rendering will be enabled automatically if no hardware acceleration is detected, just make sure <code>mesa-dri-swrast</code> is installed.
+Software rendering is not enabled automatically for now. Make sure <code>mesa-dri-gallium</code> is installed (it contains swras dri module).
+
+Edit kwin wrapper startup script
+ $ sudo nano /usr/bin/kwinwrapper
+Comment out existing startplasma invocation command at the end of file and replace it with
+<syntaxhighlight lang="shell">
+export KWIN_COMPOSE=QPainter
+export GALLIUM_DRIVER=softpipe
+export LIBGL_ALWAYS_SOFTWARE=1
+
+startplasma-wayland \
+        --framebuffer \
+        --xwayland \
+        --libinput \
+        --inputmethod maliit-server \
+        --exit-with-session=/usr/lib/libexec/startplasma-waylandsession
+</syntaxhighlight>
+
+Then restart lightdm
+ $ sudo rc-service lightdm restart
 
 === Log output ===
 If Plasma is launched via LightDM using the <code>postmarketos-ui-plasma-mobile</code> package, logs can be viewed by running <code>logread | grep plasma-mobile</code>. The log can also be viewed live by running <code>logread -f</code>; anything related to Plasma and KDE will have a <code>$username:plasma-mobile</code> prefix.
