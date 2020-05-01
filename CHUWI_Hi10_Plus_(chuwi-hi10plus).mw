@@ -73,7 +73,7 @@
 |-
 | P
 |Wi-Fi
-|Realtek RTL8723BS, driver is in staging, but buggy. Same problem as [[Pine Don't be evil devkit (pine-dontbeevil)|pine-dontbeevil]]
+|Realtek RTL8723BS, driver is in staging, but buggy. Same problem as [[PINE64_Don't_be_evil_devkit_(pine64-dontbeevil)|pine-dontbeevil]]
 |-
 | Y
 |GPIO keys
