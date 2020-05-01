@@ -89,6 +89,10 @@ Audio works for a split second and then crashes.
 |PMU
 |BCM590xx
 |Driver in mainline.
+|-
+|Backlight (likely for touch keys)
+|KTD3102
+|Not in mainline, and there doesn't seem to be a similar driver.
 |}
 
 == See also ==
