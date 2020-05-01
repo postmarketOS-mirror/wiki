@@ -90,9 +90,9 @@ Audio works for a split second and then crashes.
 |BCM590xx
 |Driver in mainline.
 |-
-|Backlight (likely for touch keys)
+|Backlight
 |KTD3102
-|Not in mainline, and there doesn't seem to be a similar driver.
+|Not in mainline, and there doesn't seem to be a similar driver (by name).
 |}
 
 == See also ==
