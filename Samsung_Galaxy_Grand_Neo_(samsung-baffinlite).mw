@@ -56,8 +56,25 @@ The device freezes under heavy load (such as installing certain apps through apk
 
 Audio works for a split second and then crashes.
 
-== Mainline ==
-There's a DTB for the chipset used in this phone in the mainline kernel, so mainlining could be possible.
+== Mainline status ==
+{| class="wikitable"
+! Element type
+! Element
+! Status
+|-
+| Chipset
+| BCM23550
+| DTS in mainline
+|-
+| Graphics
+| Videocore IV
+| Quite sure there's a driver somewhere
+|-
+| ?
+| FSA9485
+| There's a fsa9480 driver, these might be similar
+|}
+
 
 == See also ==
 
