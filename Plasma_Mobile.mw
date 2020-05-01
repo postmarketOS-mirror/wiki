@@ -74,7 +74,7 @@ The following sets a 2x scale factor:
 === Software rendering ===
 Plasma can also be used if your device doesn't support hardware acceleration (if it's a non-armhf device) yet by using software rendering. Please note that the interface will be slow, and it might not be usable for the average user.
 
-Software rendering is not enabled automatically for now. Make sure <code>mesa-dri-gallium</code> is installed (it contains swras dri module).
+Software rendering is not enabled automatically for now. Make sure <code>mesa-dri-gallium</code> is installed (it contains swrast dri module).
 
 Edit kwin wrapper startup script
  $ sudo nano /usr/bin/kwinwrapper
