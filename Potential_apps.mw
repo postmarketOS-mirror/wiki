@@ -222,6 +222,11 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |Electron-based YouTube client
 |[https://github.com/FreeTubeApp/FreeTube/releases x64 tar]
+|-
+|[https://igdm.me/ IGDM]
+|MIT
+|Electron-based Instagram direct message client
+|https://igdm.me/ (AppImage)
 |}
 
 ==See also==
