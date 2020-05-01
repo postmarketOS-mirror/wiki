@@ -38,11 +38,14 @@
 }}
 
 == Contributors ==
-* [[User:knuxfanwin8]]
-* [[User:R]]
+* [[User:knuxfanwin8|knuxfanwin8]]
+* [[User:R|R]]
 
 == Maintainer(s) ==
-* [[User:knuxfanwin8]]
+* [[User:knuxfanwin8|knuxfanwin8]]
+
+== Device owners ==
+{{Device owners}}
 
 == How to enter flash mode ==
 Recovery: Power+VolUp
@@ -68,7 +71,7 @@ Audio works for a split second and then crashes.
 |-
 |Graphics
 |Videocore IV
-|Quite sure there's a driver somewhere
+|https://github.com/anholt/mesa/wiki/VC4
 |-
 |USB
 |FSA9485
