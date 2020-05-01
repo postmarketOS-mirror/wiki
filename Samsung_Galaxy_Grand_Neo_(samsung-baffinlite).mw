@@ -70,7 +70,7 @@ Audio works for a split second and then crashes.
 |Videocore IV
 |Quite sure there's a driver somewhere
 |-
-|?
+|USB
 |FSA9485
 |There's a fsa9480 driver, these might be similar
 |-
@@ -81,6 +81,10 @@ Audio works for a split second and then crashes.
 |WiFi, Bluetooth
 |BCM4330
 |Driver in mainline
+|-
+|Display
+|HX8369 and/or SC7798
+|HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config. Android errors out about not being able to rewrite the panel file on startup, but the display works fine, so perhaps only one of these is used? Check.
 |}
 
 == See also ==
