@@ -62,17 +62,21 @@ Audio works for a split second and then crashes.
 ! Element
 ! Status
 |-
-| Chipset
-| BCM23550
-| DTS in mainline
+|Chipset
+|BCM23550
+|DTS in mainline
 |-
-| Graphics
-| Videocore IV
-| Quite sure there's a driver somewhere
+|Graphics
+|Videocore IV
+|Quite sure there's a driver somewhere
 |-
-| ?
-| FSA9485
-| There's a fsa9480 driver, these might be similar
+|?
+|FSA9485
+|There's a fsa9480 driver, these might be similar
+|-
+|Touchscreen
+|MELFAS MMS144(?)
+|Driver in mainline
 |}
 
 
