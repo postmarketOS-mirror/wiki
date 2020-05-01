@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = Samsung 
-| name = Samsung Galaxy J4+ 
-| codename = j4primelte 
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| manufacturer = Samsung
+| name = Galaxy J4+
+| codename = samsung-j4primelte
+| image = File:samsung-j4primelte.jpg
 | imagecaption = CHANGE_ME
-| releaseyear = 2012
-| originalsoftware = Android 4 (jellybean)
+| releaseyear = 2018
+| originalsoftware = Android 8.1
 | chipset = Qualcomm MSM8917 Snapdragon 425
 | cpu = 1.4 GHz Quad-core Cortex-A53
 | gpu = Adreno 308
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = CHANGE_ME <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| storage = 16/32 GB
+| display = 720x1480 IPS
+| memory = 2/3 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
