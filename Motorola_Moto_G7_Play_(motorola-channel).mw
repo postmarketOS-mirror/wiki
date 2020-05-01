@@ -86,6 +86,6 @@ I have had a look at trying to compile the kernel and there *is* a defconfig in 
 
 ==Notes from Jean-Etienne==
 
-The [https://github.com/LineageOS/android_kernel_motorola_sdm632/ SDM32 kernel from LineageOS] builds fine with arm64 architecture. Apparently the bootloader passes a skip_initramfs option which needs to be disabled in the kernel for postmarketOS to boot.
+The [https://github.com/LineageOS/android_kernel_motorola_sdm632/ SDM632 kernel from LineageOS] builds fine with arm64 architecture. Apparently the bootloader passes a skip_initramfs option which needs to be disabled in the kernel for postmarketOS to boot.
 
 [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1195 Initial merge request]
