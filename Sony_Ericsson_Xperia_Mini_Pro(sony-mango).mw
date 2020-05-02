@@ -1,0 +1,69 @@
+{{Infobox device
+| manufacturer = Sony Ericsson
+| name = Xperia Mini Pro
+| codename = sony-mango
+| image = 
+| imagecaption = Sony Ericsson Xperia Mini Pro
+| releaseyear = 2011
+| originalsoftware = Android 2.3 Gingerbread
+| chipset = Qualcomm MSM8255 Snapdragon S2
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 205
+| storage = 400MB internal, up to 32 GB microSD support
+| display = 3.0" LED-backlit LCD
+| memory = 512 MB RAM
+| booting = yes
+| architecture = armv7
+| status_usbnet = Y
+| status_flashing = -
+| status_touch = Y
+| status_screen = Y
+| status_wifi = -
+| status_xwayland = Y
+| status_fde = -
+| status_mainline = -
+| status_battery = -
+| status_3d = -
+| status_accel = -
+| status_audio = -
+| status_bluetooth = -
+| status_camera = -
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| status_otg = -
+}}
+
+== Contributors ==
+* shadowsvanish
+
+== Maintainer(s) ==
+* shadowsvanish
+
+== What works ==
+* USB Networking
+* USB Internet
+* Display
+* Touchscreen
+
+== What does not work ==
+* Flashing (system partition too small)
+
+== What is untested/probably won't work ==
+* Camera (blobs)
+* Wi-Fi (something's wrong with calibration file)
+* Everything else
+
+== How to unlock bootloader ==
+[https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader#unlock-code Official method]
+
+== How to enter Fastboot ==
+1. Hold the Volume Up button
+
+2. Connect the USB cable while holding the button
+
+3. If the blue LED is on, then you successfully entered the Fastboot mode!
+
+== See also ==
+* [https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently used]
