@@ -5,9 +5,9 @@
 | image = File:nintendo-nx.jpg
 | imagecaption =
 | releaseyear = 2017
-| originalsoftware = Nintendo Switch system software 1.0.0 (upgradeable to 9.1.0)
+| originalsoftware = Nintendo Switch system software 1.0.0 (upgradeable to 10.0.2)
 | chipset = Nvidia Tegra X1
-| cpu = Quad-core 1.02GHz Cortex-A57
+| cpu = Quad-core 1.02 GHz Cortex-A57
 | gpu = Maxwell
 | storage = 32 GB
 | display = 1280x720
@@ -44,6 +44,9 @@
 * zhuowei
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
+
+== Users owning this device ==
+{{Device owners}}
 
 == Software used ==
 
