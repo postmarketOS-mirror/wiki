@@ -32,7 +32,7 @@
 | status_sms = N<!-- Sending and receiving short messages works as intended. -->
 | status_calls = N<!-- Talking to other people over the cellular network. -->
 | status = Boots up. No screen so far.<!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 }}
 
 == Contributors ==
