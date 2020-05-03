@@ -54,8 +54,9 @@
 Hold Accept and Power buttons to enter fastboot.
 
 == Issues ==
-{{note|Bad screen output fixed, will be upstreamed soon}}
-* UbiFS partitions are not detected, so only sdcard installation will work
+* UbiFS partitions are not detected, so only sdcard installation will work;
+* It's not possible to control screen brightness/disable screen;
+* The keyboard maximum brightness is very low.
 
 == Installation ==
 
