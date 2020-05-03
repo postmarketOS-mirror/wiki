@@ -7,7 +7,7 @@ The displayed map data is fetched from a provider, which is usually converting d
 
 ==== Offline ====
 
-The most privacy friendly way of using this application will be with the offline provider [https://rinigus.github.io/osmscout-server/ OSM Scout Server]. See #... for an effort to package it in postmarketOS. In an early test it was noted, that running Pure Maps with OSM Scout Server requires a rather high amount of RAM with 2 GB, but maybe this can be optimized.
+The most privacy friendly way of using this application will be with the offline provider [https://rinigus.github.io/osmscout-server/ OSM Scout Server]. See {{issue|575|pmaports}} for an effort to package it in postmarketOS. In an early test it was noted, that running Pure Maps with OSM Scout Server requires a rather high amount of RAM with 2 GB, but maybe this can be optimized.
 
 ==== Online ====
 
