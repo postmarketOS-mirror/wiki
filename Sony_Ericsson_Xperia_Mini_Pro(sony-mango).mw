@@ -44,8 +44,6 @@
 == What works ==
 * Install to SD Card
 * Boots
-* Flashing
-* Touch
 * Wayland/XWayland
 * USB Networking/Internet
 * Display
