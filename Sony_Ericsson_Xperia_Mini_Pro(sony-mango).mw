@@ -9,9 +9,9 @@
 | chipset = Qualcomm MSM8255 Snapdragon S2
 | cpu = 1.0 GHz Scorpion
 | gpu = Adreno 205
-| storage = 400MB internal, up to 32 GB microSD support
-| display = 3.0" LED-backlit LCD
-| memory = 512 MB RAM
+| storage = 400 MB internal, up to 32 GB microSD support
+| display = 320x480 3.0" LED-backlit LCD
+| memory = 512 MB
 | booting = yes
 | architecture = armv7
 | status_usbnet = Y
