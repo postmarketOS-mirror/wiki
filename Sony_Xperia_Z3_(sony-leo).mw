@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia Z3
+| name = Xperia Z3
 | codename = sony-leo
 | image = File:sony-leo.jpg
 | imagecaption = no image yet
@@ -9,10 +9,10 @@
 | chipset = Qualcomm MSM8974AC Snapdragon 801
 | cpu = Quad-core 2.5 GHz Krait 400
 | gpu = Adreno 330
-| storage = 16GB 
+| storage = 16 GB 
 | display = 1080x1920 IPS
-| memory = 2GB
-| architecture = armhf
+| memory = 2 GB
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -48,7 +48,7 @@ Is OTG available, not used in wiki
 }}
 
 == Contributors ==
-* audunmg (put your username here!)
+* [[User:Audunmg|Audunmg]]
 * (and all the Z3C people since i copy a lot from their efforts)
 
 == Maintainer(s) ==
@@ -78,7 +78,7 @@ Is OTG available, not used in wiki
 This is using fastboot
 
 * Power off phone
-* Hold volume up and connect USB, wait for blue light
+* Hold {{Button|Volume Up}} and connect USB, wait for blue light
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
