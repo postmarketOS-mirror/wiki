@@ -42,15 +42,22 @@
 * [[User:shadowsvanish|shadowsvanish]]
 
 == What works ==
-* USB Networking
-* USB Internet
+* Install to SD Card
+* Boots
+* Flashing
+* Touch
+* Wayland/XWayland
+* USB Networking/Internet
 * Display
 * Touchscreen
 * Proximity Sensor
 * Accelerometer
 * Slider Detection
 * Keyboard, Capacitive Buttons and Buttons
+* Keyboard Backlight
+* Vibrator
 * Flash Light
+* charging-sdl
 
 == What does not work ==
 * Flashing (system partition too small)
