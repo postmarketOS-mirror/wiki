@@ -67,7 +67,8 @@ Is OTG available, not used in wiki
 * Compiling the kernel
 * SSH into device
 * Boot logo (loading)
-* Sometimes weston loads with all red screen.
+* Weston with touch
+* Xorg (touch not completely working, moving cursor works, not clicking)
 
 == What doesn't ==
 
