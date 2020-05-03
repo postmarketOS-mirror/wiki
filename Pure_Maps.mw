@@ -1,0 +1,23 @@
+__NOTOC__
+[https://github.com/rinigus/pure-maps Pure Maps] displays vector and raster maps, places, routes, and provides navigation instructions.
+
+=== Data providers ===
+
+The displayed map data is fetched from a provider, which is usually converting data from [https://www.openstreetmap.org/ OSM] into a format suitable for map clients such as Pure Maps. As of writing, there is no default data provider configured when installing Pure Maps in postmarketOS. You must configure a provider to make the app useful.
+
+==== Offline ====
+
+The most privacy friendly way of using this application will be with the offline provider [https://rinigus.github.io/osmscout-server/ OSM Scout Server]. See #... for an effort to package it in postmarketOS. In an early test it was noted, that running Pure Maps with OSM Scout Server requires a rather high amount of RAM with 2 GB, but maybe this can be optimized.
+
+==== Online ====
+
+When using an online provider, Pure Maps must send the location you are looking at to the map provider. Make sure that this is what you want, and that you are fine with the privacy implications.
+
+There is no provider available, that can be used without registration. So you would need to register a free developer API key from a vector (e.g. mapbox.com or maptiler.com) or raster (e.g. here.com) maps provider. Then configure Pure Maps in postmarketOS to use your personal API key.
+
+''(If somebody went through the process, please describe how to configure Pure Maps here.)''
+
+== See also ==
+* {{MR|593|pmaports}} initial merge request (with an interesting discussion with the lead developer about vendor lock-in)
+
+[[Category:Apps]]
