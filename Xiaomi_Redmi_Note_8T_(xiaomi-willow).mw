@@ -31,7 +31,7 @@
 | status_mobiledata =
 | status_sms =
 | status_calls =
-| status = 
+| status_otg = Y
 | booting = yes
 | pmoskernel = 4.14.117
 | whet_dhry = 4168.2
