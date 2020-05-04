@@ -12,7 +12,7 @@
 | memory = 2GB
 | image = File:Fire_Phone.jpg
 | imagecaption = Amazon Fire Phone (kodiak)
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
