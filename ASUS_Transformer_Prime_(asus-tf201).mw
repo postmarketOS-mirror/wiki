@@ -12,7 +12,7 @@
 | storage = 32 GB
 | display = 1200x800 LED
 | memory = 1GB
-| architecture = armhf
+| architecture = armv7
 | status = doesn't go beyond boot logo
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
