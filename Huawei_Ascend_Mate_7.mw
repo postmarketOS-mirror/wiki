@@ -1,0 +1,65 @@
+{{Infobox device
+| manufacturer = Huawei
+| name = Huawei Ascend Mate 7
+| codename = MT7-L09
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = MT7-L09
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2
+| chipset = HiSilicon Kirin 925 (28 nm)
+| cpu = Octa-core (4x1.8 GHz Cortex-A15 & 4x1.3 GHz Cortex-A7)
+| gpu = Mali-T628MP4
+| storage = 16GB 2GB RAM, 32GB 3GB RAM
+| display = 1080 x 1920 pixels, 16:9 ratio (~368 ppi density). IPS LCD capacitive touchscreen, 16M colors
+| memory = 16GB 2GB RAM, 32GB 3GB RAM
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = N
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = 
+| booting = no 
+
+<!-- you can also use these lines if you need to:
+if the device haven't originally ran Android OS, e.g. Nokia N900
+| n-android =  ✔
+Version of the kernel that pmos is running
+| pmoskernel = 3.x.x
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = -
+-->
+}}
+
+== Contributors ==
+* rustybyte
+
+== How to enter flash mode ==
+
+Install ClockworkMod recovery, turn off the phone, then press and hold: '''volume up + volume down + power button'''. Release all buttons when you see the Huawei logo. Select zip file to install.
+
+== What works ==
+* ☑ Kernel compilation
+* ☑ Export to flashable zip
+* ☑ Flash zip using ClockworkMod recovery
+* ☐ Booting pmOS
+
+=== See also ===
+* [https://github.com/tungel/pmOS-devices/tree/master/device-huawei-mt7l09 device-huawei-mt7l09]
+* [https://github.com/tungel/pmOS-devices/tree/master/linux-huawei-mt7l09 linux-huawei-mt7l09]
