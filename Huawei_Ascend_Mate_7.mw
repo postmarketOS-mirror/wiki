@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Huawei
 | name = Huawei Ascend Mate 7
-| codename = MT7-L09
+| codename = mt7l09
 | image = File:Mt7l09-ClockworkMod.jpg
 | imagecaption = MT7-L09
 | releaseyear = 2014
@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| status = 
+| status = Kernel built and flashed successfully but device not booting.
 | booting = no 
 
 <!-- you can also use these lines if you need to:
