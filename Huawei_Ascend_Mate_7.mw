@@ -58,7 +58,11 @@ Install ClockworkMod recovery, turn off the phone, then press and hold: '''volum
 * ☑ Kernel compilation
 * ☑ Export to flashable zip
 * ☑ Flash zip using ClockworkMod recovery
-* ☐ Booting pmOS
+
+== What doesn't work ==
+
+* Booting pmOS
+* Everything else...
 
 === See also ===
 * [https://github.com/tungel/pmOS-devices/tree/master/device-huawei-mt7l09 device-huawei-mt7l09]
