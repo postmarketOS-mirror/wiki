@@ -28,7 +28,7 @@
 
 
 == Devices with a Qualcomm Snapdragon 410 (MSM8916) ==
-{{todo|Update the condition in the table to work generic.}}
+
 {{#cargo_query:
 tables=Devices
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
@@ -38,7 +38,18 @@ tables=Devices
 |where=Devices.chipset='Qualcomm MSM8916 Snapdragon 410'
 |more results text=
 }}
-
+<br/>
+With APQ8016 :
+<br/>
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Qualcomm APQ8016 Snapdragon SD410'
+|more results text=
+}}
 
 == Audio ==
 === PulseAudio ===
