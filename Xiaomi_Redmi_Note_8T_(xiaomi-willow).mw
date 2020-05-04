@@ -13,7 +13,7 @@
 | display = 1080 x 2340 IPS LCD
 | memory = 3GB, 4GB, 4GB
 | architecture = aarch64
-| status_usbnet = P
+| status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = P
@@ -77,7 +77,7 @@ Hold {{button|Volume Down}} + {{button|Power}} until you see the fastboot screen
 * [[Installing pmbootstrap|Install pmbootstrap.]]
 * <code>pmbootstrap -y zap; pmbootstrap init</code>, choose <code>xiaomi-willow</code> as your device
 ** firmware is currently needed for tianma touchscreen
-** rndis doesn't work, and weston is currently the only working display server, so pick weston for ui if you want to know if the flash worked
+** weston is currently the only tested display server
 * <code>pmbootstrap install</code>
 * Enter fastboot, plug USB into computer
 * <code>pmbootstrap flasher flash_kernel</code>
@@ -85,22 +85,13 @@ Hold {{button|Volume Down}} + {{button|Power}} until you see the fastboot screen
 * <code>pmbootstrap flasher flash_vbmeta</code>
 * Reboot, sometimes <code>fastboot reboot</code> works, otherwise hold down {{button|Power}} until it reboots to system.
 * Hopefully weston comes up with <code>postmarketos-demos</code>.
+* <code>ssh user@172.16.42.1</code>
 
 == What's broken ==
 
 * Restarting the display server will fail (due to panel power issues?)
 
-== Getting a shell ==
-
-RNDIS doesn't work yet, not sure why. Could be an easy fix for someone more experienced with Qualcomm USB drivers.
-
-=== (Easy) USB-C to Ethernet adapter ===
-
-If you have a USB-C to Ethernet adapter with drivers already compiled into mainline, this will be easy. I had an [https://www.amazon.com/iTeknic-Adapter-Ethernet-Charging-ChromeBook/dp/B07QJXP3DV iTeknic IK-UC002] lying around, which has an <code>RTL8152</code> inside, merged into mainline a while ago and already included the downstream Kconfig. <code>device-xiaomi-willow</code> includes an interfaces file so that <code>eth0</code> is DHCPed at boot, and then <code>avahi-daemon</code> will advertise itself at <code>hostname.local</code>.
-
-So if the phone is connected to your LAN at boot through the adapter, you should be able to <code>ssh user@xiaomi-willow.local</code> from your computer.
-
-=== (Hard) UART ===
+== UART ==
 
 Necessary: reasonably fine soldering iron tip, steady hand
 
@@ -127,6 +118,10 @@ Info from the Note 7 port that also applies to the 8T:
 * [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)#Android_Verified_Boot_(vbmeta)]]
 * [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)#DTBO_partition]]
 * [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)#Bootloader_cmdline]]
+
+=== Kernel config ===
+
+* Disabled <code>CONFIG_RNDIS_IPA</code> because it panics at boot if <code>CONFIG_USB_CONFIGFS_RNDIS</code> is set. IPA seems to be an IP offload IC (?) that will route RNDIS straight to the modem with RMNET (?) over BAM (?).
 
 == See also ==
 * {{MR|1197|pmaports}} Initial merge request
