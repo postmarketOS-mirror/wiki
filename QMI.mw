@@ -2,10 +2,10 @@
 
 Related issues:
 
-* {{github|373}} wlan-prima (wireless module) and wcnss-service
-* {{github|410}} flame: Wifi firmware and driver errors
-* {{github|358}} Building and packaging external modules
-* {{github|598}} Let's get the cellular modem working!
+* {{issue|373}} wlan-prima (wireless module) and wcnss-service
+* {{issue|410}} flame: Wifi firmware and driver errors
+* {{issue|358}} Building and packaging external modules
+* {{issue|598}} Let's get the cellular modem working!
 
 == QMI ==
 
