@@ -84,6 +84,26 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | 
 |}
 
+=== Tablets ===
+
+{| class="wikitable feature-colors"
+! style="text-align: center;" | Packaged
+! Name
+! Project page
+! Source
+! From project
+! Unmaintained
+! Notes
+|-
+| style="text-align: center;" | N
+| CutiePi Shell
+| [https://cutiepi.io/ link]
+| [https://github.com/cutiepi-io/cutiepi-shell link]
+| CutiePi Tablet
+| 
+| 
+|}
+
 === Feature phones ===
 {| class="wikitable feature-colors"
 ! style="text-align: center;" | Packaged
