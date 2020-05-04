@@ -26,6 +26,20 @@
 
 [https://www.qualcomm.com/products/snapdragon-processors-410 MSM8916]/[https://www.qualcomm.com/products/apq8016e APQ8016] (or Snapdragon 410) is Qualcomm SoC released in 2014, with great mainline support orginally added for the [https://www.96boards.org/product/dragonboard410c/ Dragonboard 410c].
 
+
+== Devices with a Qualcomm Snapdragon 410 (MSM8916) ==
+{{todo|Update the condition in the table to work generic.}}
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Qualcomm MSM8916 Snapdragon 410'
+|more results text=
+}}
+
+
 == Audio ==
 === PulseAudio ===
 Audio should work out of the box with PulseAudio. In your favorite PulseAudio mixer (e.g. <code>pulsemixer</code> on the command line) you can select the output port to use (e.g. Speaker, Earpiece, ...).
