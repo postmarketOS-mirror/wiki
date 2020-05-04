@@ -5,3 +5,15 @@
 | process = 28
 | audio_codec = 4.412
 }}
+
+== Devices with a Qualcomm Snapdragon 800 (MSM8974) ==
+{{todo|Update the condition in the table to work generic.}}
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Qualcomm MSM8974 Snapdragon 800'
+|more results text=
+}}
