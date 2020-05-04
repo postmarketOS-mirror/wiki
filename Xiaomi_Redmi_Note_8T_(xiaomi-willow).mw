@@ -87,6 +87,8 @@ Hold {{button|Volume Down}} + {{button|Power}} until you see the fastboot screen
 * Hopefully weston comes up with <code>postmarketos-demos</code>.
 * <code>ssh user@172.16.42.1</code>
 
+You can also use <code>pmbootstrap flasher boot</code> to boot the kernel/initramfs without flashing.
+
 == What's broken ==
 
 * Restarting the display server will fail (due to panel power issues?)
