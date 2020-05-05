@@ -51,7 +51,8 @@
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
-== How to enter flash mode ==
+== How to enter fastboot mode ==
+Press {{Button|Power|Volume Down}} to enter the Bootloader and select FASTBOOT
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
