@@ -37,8 +37,6 @@
 | whet_dhry = 2246.4
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 Is OTG available, not used in wiki
