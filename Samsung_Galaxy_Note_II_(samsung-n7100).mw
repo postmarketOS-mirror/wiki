@@ -69,10 +69,13 @@ The device package and kernel is now available, pre-built, from the repositories
 First build the device package:
 
 <source lang="shell-session">$ pmbootstrap build device-samsung-n7100</source>
-<!--Then you need to configure the kernel before building with <code>menuconfig</code> like so:
+
+<p hidden>
+Then you need to configure the kernel before building with <code>menuconfig</code> like so:
 
 <pre class="shell">./pmbootstrap.py menuconfig linux-samsung-n7100</pre>
-You can hold down the enter key while it asks you the y/n questions until you get to the menu, then you want to enable the <code>DEVTMPFS</code> kconfig flag located in <code>Device Drivers ---&gt; Generic Driver Options</code>. -->
+You can hold down the enter key while it asks you the y/n questions until you get to the menu, then you want to enable the <code>DEVTMPFS</code> kconfig flag located in <code>Device Drivers ---&gt; Generic Driver Options</code>.
+</p>
 
 Now you want to compile the kernel itself:
 
