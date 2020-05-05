@@ -35,13 +35,6 @@
 | status = Kernel compiles, can't SSH in <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = N <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 | pmoskernel = 3.4.10 <!-- Version of the kernel that pmos is running -->
-
-<!--
-see Unixbench page on wiki
-| whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = -
--->
 }}
 
 == Contributors ==
