@@ -6,12 +6,12 @@
 | imagecaption = Redmi Note 7
 | releaseyear = 2019
 | originalsoftware = Android 9, MIUI 10
-| chipset = Qualcomm SDM660 Snapdragon 660 (14 nm)
-| cpu = 8-core (4x2.2 GHz Kryo 260 & 4x1.8 GHz Kryo 260)
+| chipset = Qualcomm SDM660 Snapdragon 660
+| cpu = 8-core (4x 2.2 GHz Kryo 260 & 4x 1.8 GHz Kryo 260)
 | gpu = Adreno 512
-| storage = 32 (64) Gb
+| storage = 32/64/128 GB
 | display = 1080 x 2340
-| memory = 3 (4) Gb
+| memory = 3/4/6 GB
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
