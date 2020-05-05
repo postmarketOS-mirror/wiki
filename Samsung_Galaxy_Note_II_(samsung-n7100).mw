@@ -98,6 +98,22 @@ We're using <code>flash_kernel</code> because the N7100 packages its kernel and 
 
 If everything checks out OK, your N7100 should reboot and you should see the Samsung logo. Dont worry if the screen is flashing on and off and its taking a while, after a minute or 2 it should show up the pmOS splash!
 
+=== Getting the S Pen to work ===
+
+To get the S Pen working, you might have to do the following:
+
+* Write the following into <code>/etc/udev/hwdb.d/60-evdev.hwdb</code>:
+<source lang="shell-session">
+$ sudo cat /etc/udev/hwdb.d/60-evdev.hwdb
+evdev:name:*e-pen*
+ EVDEV_ABS_00=::300
+ EVDEV_ABS_01=::300
+</source>
+''(Note: The file's contents should be improved)''
+* Possibly: update the hwdb
+<source lang="shell-session">$ sudo udevadm hwdb --update</source>
+* Restart the phone
+
 == Issues ==
 * Weston does not run, presumably because of missing API calls. This should be fixed once the device runs mainline.
 * The kernel seems to have a bug which causes it to reboot a large number of times. It will eventually be able to boot properly though. ([https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/rWxLNbGACqTlpXVuUZEWNQaG]) 
