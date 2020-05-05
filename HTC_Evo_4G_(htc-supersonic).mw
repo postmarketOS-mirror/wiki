@@ -9,8 +9,8 @@
 | chipset = Qualcomm QSD8650 Snapdragon S1
 | cpu = 1.0 GHz Scorpion
 | gpu = Adreno 200
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
+| storage = 0 MB (SD card only)
+| display = 480×800
 | memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
