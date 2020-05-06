@@ -74,6 +74,18 @@ The following steps boots postmarketOS.
 * pmbootstrap flasher flash_kernel
 * pmbootstrap flasher boot
 
+== Plasma-mobile ==
+
+Need to modify the file /usr/bin/kwinwrapper
+
+Add --framebuffer --fb-device /dev/fb0 to arguments of startplasma-wayland
+
+Like this:
+
+startplasma-wayland --framebuffer --fb-device /dev/fb0 --xwayland --libinput --inputmethod maliit-server --exit-with-session=/usr/lib/libexec/startplasma-waylandsession
+
+
+This ensures that the plasma mobile is rendered using a frame buffer.
 
 == See also ==
 * [https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/cactus-p-oss Kernel Source Code]
