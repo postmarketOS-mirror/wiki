@@ -14,6 +14,6 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset='Qualcomm MSM8974 Snapdragon 800' OR Devices.chipset='Qualcomm MSM8974PRO-AC Snapdragon 801'
+|where=Devices.chipset='Qualcomm MSM8974 Snapdragon 800' OR Devices.chipset='Qualcomm MSM8274AB Snapdragon 800' OR Devices.chipset='Qualcomm APQ8074AB Snapdragon 801' OR Devices.chipset='Qualcomm MSM8974AB Snapdragon 801' OR Devices.chipset='Qualcomm MSM8974AB-AB Snapdragon 801' OR Devices.chipset='Qualcomm MSM8974AC Snapdragon 801' OR Devices.chipset='Qualcomm MSM8974PRO-AC Snapdragon 801'
 |more results text=
 }}
