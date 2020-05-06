@@ -15,7 +15,7 @@ Lomiri (formerly known as Unity 8) is available in the pmaports branch <code>fea
 {{note|The work on Unity 8 hasn't yet been finished yet - no support is provided}}
 
 <source>
-pmbootstrap install --add unity8,qt5-qtwayland,consolekit2
+pmbootstrap install --add postmarketos-ui-lomiri
 </source>
 
 Once the device has launched, Unity 8 can be started with the following (as root):
@@ -43,7 +43,7 @@ export G_MESSAGES_DEBUG=all
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export MIR_MESA_KMS_DISABLE_MODESET_PROBE=1 # probably only needed in QEMU
 
-ck-launch-session unity8
+dbus-run-session unity8
 </source>
 
 Auto-login would require lightdm to be set up or something 
