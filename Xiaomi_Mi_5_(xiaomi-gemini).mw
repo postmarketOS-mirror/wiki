@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Xiaomi
-| name =  Mi 5
+| name = Mi 5
 | codename = xiaomi-gemini
 | image = File:xiaomi-gemini.jpg
 | imagecaption = Xiaomi Mi5
 | releaseyear = 2016
-| originalsoftware = Android 6 (marshmallow)
+| originalsoftware = Android 6.0 - 8.0
 | chipset = Qualcomm MSM8996 Snapdragon 820
-| cpu = Quad-core (2x1.8 GHz Kryo & 2x1.36 GHz Kryo) or Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)
+| cpu = Quad-core (2x 1.8 GHz Kryo & 2x 1.36 GHz Kryo) or Quad-core (2x 2.15 GHz Kryo & 2x 1.6 GHz Kryo)
 | gpu = Adreno 530
-| storage = 32GB, 64GB or 128GB
+| storage = 32/64/128 GB
 | display = 1080x1920
-| memory = 3GB or 4GB
+| memory = 3/4 GB
 | architecture = aarch64
 | status_usbnet = 
 | status_flashing = Y
@@ -60,5 +60,5 @@ You can also add normal web links:
 -->
 
 4.4 kernels for gemini, untested:
-https://github.com/sirmordred/Kernel_LA.HB.1.1.5_CAF-4.4/tree/gemini
-https://github.com/xNombre/msm-4.4
+* https://github.com/sirmordred/Kernel_LA.HB.1.1.5_CAF-4.4/tree/gemini
+* https://github.com/xNombre/msm-4.4
