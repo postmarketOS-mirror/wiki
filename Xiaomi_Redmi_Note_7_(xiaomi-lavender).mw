@@ -122,29 +122,12 @@ And then
  fastboot reboot
 
 == Tested UIs ==
-On downstream vendorkernel X11 based UIs seem to not work, but wayland based do:
 * weston
+* xfce4
 * plasma-mobile
 
 === Running Plasma Mobile UI on framebuffer backend ===
-Edit kwin wrapper startup script
- $ sudo nano /usr/bin/kwinwrapper
-Comment out existing startplasma invocation command at the end of file and replace it with
-<syntaxhighlight lang="shell">
-export KWIN_COMPOSE=QPainter
-export GALLIUM_DRIVER=softpipe
-export LIBGL_ALWAYS_SOFTWARE=1
-
-startplasma-wayland \
-        --framebuffer \
-        --xwayland \
-        --libinput \
-        --inputmethod maliit-server \
-        --exit-with-session=/usr/lib/libexec/startplasma-waylandsession
-</syntaxhighlight>
-
-Then restart lightdm
- $ sudo rc-service lightdm restart
+See [[Plasma_Mobile#Software_rendering]]
 
 == Photos ==
 <gallery>
