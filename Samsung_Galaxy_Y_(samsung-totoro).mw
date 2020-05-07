@@ -73,9 +73,6 @@ Note: pmOS does not fit on the system partition. You have to use an SD card.
 
 Boot gets stuck on Galaxy Y logo. No USB output. (TODO: Does maximum-attention work?)
 
-== Building ==
-The kernel version is 2.6, so it needs to be built with GCC4. Additionally, the VGA terminal needs to be disabled and one of the touchscreens needs to be enabled. (TODO: Upload the defconfig, in case somebody wants to try this out)
-
 == Misc. info ==
 
 === VFP support ===
@@ -100,5 +97,6 @@ Serial		: 0000000000000000
 </pre>
 
 == See also ==
+* [https://gitlab.com/knuxify/pmaports/-/tree/samsung-totoro pmaports fork with the WIP port]
 * [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel]
 * [https://github.com/Dreamboxuser/samsung-kernel-totoro/ Official kernel]
