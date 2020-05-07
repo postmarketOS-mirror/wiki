@@ -34,8 +34,9 @@
 | status_calls = N <!-- Talking to other people over the cellular network. -->
 | status = Kernel compiles, can't SSH in <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-| pmoskernel = 3.4.10 <!-- Version of the kernel that pmos is running -->
 }}
+
+<!-- | pmoskernel = 2.6.32.15 <!-- Version of the kernel that pmos is running -->
 
 == Contributors ==
 * eshimoniak
