@@ -2,6 +2,9 @@ This page describes ways to debug new postmarketOS device ports in which the ker
 
 As always, please edit this page to make corrections and add useful tips.
 
+=== Figuring out booting problems ===
+Add <code>rc_logger=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>.
+
 == Determine whether boot failed ==
 If the device automatically reboots, then the kernel is not loading, or there is a fatal bug in the kernel. However, even if your device only displays the OEM logo or a black screen, the kernel may have actually loaded successfully.
 
