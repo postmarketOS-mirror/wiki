@@ -34,11 +34,11 @@ Android specific format, that usually consists of the Linux kernel (in modern ve
 
 === dtb ===
 
-The binary device tree ([[dtb]]), this is a file containing a description of the hardware in the device, since phones don't have discoverable busses like x86 platforms. These are created from dts files in the kernel repository and produce a file called <code>zImage-dtb</code> for some Android kernels (older Android kernels do not generate a <code>dtb</code> file at all and have hardcoded the information directly in the kernel source). In mainline kernels, <code>dtb</code> files for all supported boards are created at once.
+The binary device tree ([[Device_Tree_(dtb)|dtb]]), this is a file containing a description of the hardware in the device, since phones don't have discoverable busses like x86 platforms. These are created from dts files in the kernel repository and produce a file called <code>zImage-dtb</code> for some Android kernels (older Android kernels do not generate a <code>dtb</code> file at all and have hardcoded the information directly in the kernel source). In mainline kernels, <code>dtb</code> files for all supported boards are created at once.
 
 === dri ===
 
-[https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure Direct Rendering Infrastructure], the modern Linux kernel API for drawing to the screen.
+{{wikipedia|Direct_Rendering_Infrastructure|Direct Rendering Infrastructure}}, the modern Linux kernel API for drawing to the screen.
 
 === drm/kms ===
 
@@ -46,18 +46,18 @@ Direct Rendering Manager/Kernel Mode Setting is a slightly more complicated API 
 
 === FDE ===
 
-Full Disk Encryption, the rootfs created by pmbootstrap is fully encrypted with [https://en.wikipedia.org/wiki/LUKS luks], preventing the phone data from being retrieved without the password if the device is turned off. This can be enabled with <code>--fde</code> .
+Full Disk Encryption, the rootfs created by pmbootstrap is fully encrypted with {{wikipedia|Linux_Unified_Key_Setup|LUKS}}, preventing the phone data from being retrieved without the password if the device is turned off. This can be enabled with <code>--fde</code> .
 
 === fdt ===
 Flat device tree. This is just another name for [[Glossary#dtb|dtb]][https://elinux.org/Device_Tree_Reference#FDT_format]. <code>unpackbootimg</code> generates files ending in <code>.fdt</code>.
 
 === fbdev/framebuffer ===
 
-[https://en.wikipedia.org/wiki/Linux_framebuffer Linux framebuffer] a (more or less?) deprecated API from the Linux kernel that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
+{{wikipedia|Linux_framebuffer|Linux framebuffer}} a (more or less?) deprecated API from the Linux kernel that allows drawing to the screen. Newer drivers use the DRI API instead (see above). Android devices usually have drivers for framebuffer, instead of DRI.
 
 === IDA ===
 
-The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disassembler] is state of the art in the reverse engineering scene. It can be used to reverse engineer all kinds of blobs where the source code is not available, such as closed-source [[firmware]]. Disassembling is hard, and there's a high learning curve involved. It also features a decompiler, which produces (non-working) C code for better understanding.
+The proprietary software {{wikipedia|Interactive_Disassembler|Interactive Disassembler}} is state of the art in the reverse engineering scene. It can be used to reverse engineer all kinds of blobs where the source code is not available, such as closed-source [[Firmware]]. Disassembling is hard, and there's a high learning curve involved. It also features a decompiler, which produces (non-working) C code for better understanding.
 
 === isorec ===
 
@@ -69,11 +69,11 @@ The proprietary software [https://en.wikipedia.org/wiki/IDA_Pro Interactive Disa
 
 === OpenRC ===
 
-[https://en.wikipedia.org/wiki/OpenRC OpenRC] is a dependency-based init for Unix-like systems. It is the default init system of Alpine Linux.
+{{wikipedia|OpenRC}} is a dependency-based init for Unix-like systems. It is the default init system of Alpine Linux.
 
 === Weston ===
 
-[https://github.com/wayland-project/weston Weston] is the reference implementation of a [https://en.wikipedia.org/wiki/Wayland_(display_server_protocol) Wayland] compositor. It has various backends that lets it run on Linux kernel modesetting and evdev input as well as under X11.
+[https://github.com/wayland-project/weston Weston] is the reference implementation of a {{wikipedia|Wayland_(display_server_protocol)|Wayland}} compositor. It has various backends that lets it run on Linux kernel modesetting and evdev input as well as under X11.
 
 We have chosen Weston as a demo because we didn't want to use X11, as this is slowly dying. Also there's libweston, which might come in handy later (you can write your own desktop environment and inherit the hardware compatibility from weston). Weston is nice as a demo and useful at this moment of the development, but not usable as phone interface, so we'll need different desktop environments packaged sooner or later. See [https://github.com/postmarketOS/pmbootstrap/issues/62 issue #62]
 
