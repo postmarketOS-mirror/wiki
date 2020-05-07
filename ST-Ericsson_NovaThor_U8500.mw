@@ -2,15 +2,15 @@
 
 This chipset is used similarly in the following devices:
 
-* [[Samsung_Galaxy_S_III_mini_(samsung-golden)|Samsung Galaxy S III mini]] GT-I8190 codename Golden ([https://en.wikipedia.org/wiki/Samsung_Galaxy_S_III_Mini wikipedia])
-* [[Samsung_Galaxy_S_Advance_(samsung-i9070)|Samsung Galaxy S Advance]] GT-I9070 codename Janice ([https://en.wikipedia.org/wiki/Samsung_Galaxy_S_Advance wikipedia])
-* [[Samsung_Galaxy_Xcover_2_(samsung-skomer)|Samsung Galaxy Xcover 2]] GT-S7710 codename Skomer ([https://en.wikipedia.org/wiki/Samsung_Galaxy_Xcover_2 wikipedia])
-* [[Samsung_Galaxy_Ace_2_(samsung-codina)|Samsung Galaxy Ace 2]] GT-I8160 codename Codina ([https://en.wikipedia.org/wiki/Samsung_Galaxy_Ace_2 wikipedia])
-* [[Samsung_Galaxy_Beam_(samsung-i8530)|Samsung Galaxy Beam]] GT-I8530 ([https://en.wikipedia.org/wiki/Samsung_Galaxy_Beam_i8530 wikipedia])
-* [[Sony_Xperia_U_(sony-kumquat)|Sony Xperia U]] ([https://en.wikipedia.org/wiki/Sony_Xperia_U wikipedia])
-* [[Sony_Xperia_P_(sony-nypon)|Sony Xperia P]] ([https://en.wikipedia.org/wiki/Sony_Xperia_P wikipedia])
-* [[Sony_Xperia_Go_(sony-lotus)|Sony Xperia Go]] ([https://en.wikipedia.org/wiki/Sony_Xperia_Go wikipedia])
-* [[Sony_Xperia_Sola_(sony-pepper)|Sony Xperia Sola]] ([https://en.wikipedia.org/wiki/Sony_Xperia_sola wikipedia])
+* [[Samsung_Galaxy_S_III_mini_(samsung-golden)|Samsung Galaxy S III mini]] GT-I8190 codename Golden ({{wikipedia|Samsung_Galaxy_S_III_Mini|wikipedia}})
+* [[Samsung_Galaxy_S_Advance_(samsung-i9070)|Samsung Galaxy S Advance]] GT-I9070 codename Janice ({{wikipedia|Samsung_Galaxy_S_Advance|wikipedia}})
+* [[Samsung_Galaxy_Xcover_2_(samsung-skomer)|Samsung Galaxy Xcover 2]] GT-S7710 codename Skomer ({{wikipedia|Samsung_Galaxy_Xcover_2|wikipedia}})
+* [[Samsung_Galaxy_Ace_2_(samsung-codina)|Samsung Galaxy Ace 2]] GT-I8160 codename Codina ({{wikipedia|Samsung_Galaxy_Ace_2|wikipedia}})
+* [[Samsung_Galaxy_Beam_(samsung-i8530)|Samsung Galaxy Beam]] GT-I8530 ({{wikipedia|Samsung_Galaxy_Beam_i8530|wikipedia}})
+* [[Sony_Xperia_U_(sony-kumquat)|Sony Xperia U]] ({{wikipedia|Sony_Xperia_U|wikipedia}})
+* [[Sony_Xperia_P_(sony-nypon)|Sony Xperia P]] ({{wikipedia|Sony_Xperia_P|wikipedia}})
+* [[Sony_Xperia_Go_(sony-lotus)|Sony Xperia Go]] ({{wikipedia|Sony_Xperia_Go|wikipedia}})
+* [[Sony_Xperia_Sola_(sony-pepper)|Sony Xperia Sola]] ({{wikipedia|Sony_Xperia_sola|wikipedia}})
 
 == Kernel hacking ==
 
@@ -67,6 +67,6 @@ Or using <code>abootimg</code>:
 Notice how this puts the device tree binary <code>dtb.foo</code> into the "second bootloader firmware".
 
 == See also ==
-* This chipset has a [[https://en.wikipedia.org/wiki/NovaThor wikipedia page]]
+* This chipset has a [{{wikipedia|NovaThor|wikipedia page}}]
 
 [[Category:Chipsets]]
