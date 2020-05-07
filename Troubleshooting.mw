@@ -19,26 +19,20 @@
 
 = Uncategorized errors =
 
-=== ERROR: unsatisfiable constraints ===
-Moved to [[Troubleshooting:dependencies]].
-
 === pmbootstrap is broken! But it worked yesterday! ===
-Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the IRC/matrix channel to find out, which commit was the last one that worked.
+Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the [[Matrix_and_IRC|IRC/matrix]] channel to find out, which commit was the last one that worked.
 
 === <code>musl-*</code>/<code>busybox-static-*</code> fails to build with a 404 error ===
 
-Run <code>pmbootstrap aportgen musl-armhf musl-aarch64 musl-x86_64</code>. The reason why this fails from time to time is, that we use Alpine's binary <code>musl</code> lib c package for <code>armhf</code>/<code>aarch64</code> in the native chroot, to get the cross-compiler working. So the download URL inside the <code>aports/cross/musl-*/APKBUILD</code> file must be in sync with the upstream version. This pmbootstrap command safely gets the new version, uses <code>apk</code> to verify the signature of the package, generates the hash, and updates the <code>APKBUILD</code> file. To make sure, that <code>pmbootstrap aportgen</code> receives the latest <code>musl</code> version, delete your HTTP cache right before by executing this command: <code>pmbootstrap zap -hc</code>. Don't bother making a pull-request for this, as the fix is really trivial (see [https://github.com/postmarketOS/pmbootstrap/commit/0f3b2ea4277679056079000eac581d1b9d05afc8 this commit]). Just report it as issue, if it happens.
+Run <code>pmbootstrap aportgen musl-armhf musl-aarch64 musl-x86_64</code>. The reason why this fails from time to time is, that we use Alpine's binary <code>musl</code> lib c package for <code>armhf</code>/<code>aarch64</code> in the native chroot, to get the cross-compiler working. So the download URL inside the <code>aports/cross/musl-*/APKBUILD</code> file must be in sync with the upstream version. This pmbootstrap command safely gets the new version, uses <code>apk</code> to verify the signature of the package, generates the hash, and updates the <code>APKBUILD</code> file. To make sure, that <code>pmbootstrap aportgen</code> receives the latest <code>musl</code> version, delete your HTTP cache right before by executing this command: <code>pmbootstrap zap -hc</code>. Don't bother making a pull-request for this, as the fix is really trivial (see [https://gitlab.com/postmarketOS/pmbootstrap/commit/0f3b2ea4277679056079000eac581d1b9d05afc8 this commit]). Just report it as issue, if it happens.
 
 === Permission denied: .../pmbootstrap/work/chroot_native/proc/1/cwd' ===
 It looks like you have created your work folder as: <code>pmbootstrap/work</code>, where <code>pmbootstrap</code> is the folder with the checked out source code. That is not supported. Please run <code>pmbootstrap shutdown</code>, then delete that folder, then run <code>pmbootstrap init</code> again and choose another work folder (e.g. <code>~/.local/var/pmbootstrap</code>).
 
-After that it should work - if this still does not resolve it, please open up an issue in the GitHub tracker.
+After that it should work - if this still does not resolve it, please open up an issue in the GitLab issue tracker.
 
 === can't create <code>/dev/null</code>: Permission denied ===
 Make sure that your working directory is mounted correctly. This can happen when working over NFS, or when you mounted the drive your working directory is on trough the file explorer (if that's the case, <code>umount</code> it, and <code>mount</code> it manually). This can probably happen on every drive mounted with <code>nosuid</code> or similar.
-
-=== Figuring out booting problems ===
-Add <code>rc_logger=YES</code> to <code>/etc/rc.conf</code> to have openrc log all its steps to <code>/var/log/rc.log</code>. If you managed to get the system to boot far enough to have telnet access, add [[Inspecting-the-initramfs|the port 24 telnet listener]] and you can mount the root device to view said log.
 
 === SSH / udev / touch screen do not work ===
 * Make sure, that <code>DEVTMPFS</code> is enabled in your [https://wiki.postmarketos.org/wiki/Kernel_configuration kernel config]. Do not enable <code>DEVTMPFS_MOUNT</code>.
