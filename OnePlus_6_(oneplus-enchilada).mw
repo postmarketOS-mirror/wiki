@@ -54,6 +54,10 @@ Is OTG available, not used in wiki
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
+== Contributors ==
+
+* [https://wiki.postmarketos.org/wiki/User:Kalube Kalube]
+
 == How to enter flash mode ==
 
 Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until your see "Fastboot Mode" text.
