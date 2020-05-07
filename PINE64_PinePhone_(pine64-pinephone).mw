@@ -415,5 +415,6 @@ export QTWEBENGINE_DISABLE_SANDBOX=1
 This sets an environment variable that kills the webkit sandbox because that's broken in the current build. This should be fixed already for the chromium musl build but not yet for all qtwebkit based browsers. This is being worked on [https://gitlab.com/postmarketOS/pmaports/issues/435 here] and [https://gitlab.com/postmarketOS/pmaports/issues/32 here].
 
 == See also ==
-* {{MR|308|pmaports}} Initial merge request
+* {{MR|308|pmaports}} Initial merge request (Don't be evil devkit)
+* {{MR|583|pmaports}} Initial merge request (PinePhone)
 * [https://wiki.pine64.org/index.php/PinePhone_v1.1_-_Braveheart PinePhone v1.1 - Braveheart] - schematics, changes and known issues on the PINE64 wiki
