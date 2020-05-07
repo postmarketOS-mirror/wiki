@@ -76,6 +76,29 @@ Boot gets stuck on Galaxy Y logo. No USB output. (TODO: Does maximum-attention w
 == Building ==
 The kernel version is 2.6, so it needs to be built with GCC4. Additionally, the VGA terminal needs to be disabled and one of the touchscreens needs to be enabled. (TODO: Upload the defconfig, in case somebody wants to try this out)
 
+== Misc. info ==
+
+=== VFP support ===
+
+<pre>FP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5</pre>
+
+=== /proc/cpuinfo ===
+
+<pre>
+Processor	: ARMv6-compatible processor rev 5 (v6l)
+BogoMIPS	: 832.90
+Features	: swp half thumb fastmult vfp edsp java 
+CPU implementer	: 0x41
+CPU architecture: 6TEJ
+CPU variant	: 0x1
+CPU part	: 0xb36
+CPU revision	: 5
+
+Hardware	: BCM21553 ThunderbirdEDN31 platform
+Revision	: 0000
+Serial		: 0000000000000000
+</pre>
+
 == See also ==
 * [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Lineage kernel]
 * [https://github.com/Dreamboxuser/samsung-kernel-totoro/ Official kernel]
