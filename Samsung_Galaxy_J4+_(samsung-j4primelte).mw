@@ -12,7 +12,7 @@
 | storage = 16/32 GB
 | display = 720x1480 IPS
 | memory = 2/3 GB
-| architecture = aarch64
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N
 | status_flashing = Y
@@ -40,9 +40,11 @@
 
 == Contributors ==
 * EnderNightLord
+* MacTavishAO
 
 == Maintainer(s) ==
 * EnderNightLord
+* MacTavishAO
 
 == Users owning this device ==
 {{Device owners}}
