@@ -113,6 +113,122 @@ File:Xiaomi-willow-uart-rx-microscope.jpeg|thumb|left|Only TX pin soldered
 File:Xiaomi_willow_uart_tx_rx.jpeg|thumb|left|Blurry pic of TX and RX soldered (taken pointing from the top of the phone towards the bottom)
 </gallery>
 
+== Partition Table ==
+
+<div class="toccolours mw-collapsible mw-collapsed">
+<code>xiaomi-willow:~# gdisk -l /dev/mmcblk0</code> # EXPANDME
+<div class="mw-collapsible-content">
+ <nowiki>
+GPT fdisk (gdisk) version 1.0.5
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+Disk /dev/mmcblk0: 61071360 sectors, 29.1 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 14932C12-AAEA-7ACE-8D8F-C97EFAF3445D
+Partition table holds up to 88 entries
+Main partition table begins at sector 2 and ends at sector 23
+First usable sector is 34, last usable sector is 61071326
+Partitions will be aligned on 8-sector boundaries
+Total free space is 6 sectors (3.0 KiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1              40              55   8.0 KiB     FFFF  switch
+   2              56              71   8.0 KiB     A02C  ssd
+   3              72             135   32.0 KiB    FFFF  secdata
+   4             136             199   32.0 KiB    A040  limits
+   5             200             263   32.0 KiB    FFFF  multiimgoem
+   6             264             327   32.0 KiB    FFFF  multiimgqti
+   7             328             455   64.0 KiB    FFFF  qupfw
+   8             456             583   64.0 KiB    FFFF  qupfwbak
+   9             584             711   64.0 KiB    FFFF  vbmeta
+  10             712             839   64.0 KiB    FFFF  vbmetabak
+  11             840            1095   128.0 KiB   FFFF  xbl_config
+  12            1096            1351   128.0 KiB   FFFF  xbl_configbak
+  13            1352            1607   128.0 KiB   FFFF  devcfg
+  14            1608            1863   128.0 KiB   FFFF  devcfgbak
+  15            1864            2047   92.0 KiB    FFFF  bk0
+  16            2048            2303   128.0 KiB   FFFF  storsec
+  17            2304            2559   128.0 KiB   A029  fsc
+  18            2560            3071   256.0 KiB   A022  apdp
+  19            3072            4095   512.0 KiB   A018  rpm
+  20            4096            5119   512.0 KiB   FFFF  rpmbak
+  21            5120            6143   512.0 KiB   A017  hyp
+  22            6144            7167   512.0 KiB   FFFF  hypbak
+  23            7168            8191   512.0 KiB   FFFF  keymaster
+  24            8192            9215   512.0 KiB   FFFF  keymasterbak
+  25            9216           10239   512.0 KiB   FFFF  cmnlib
+  26           10240           11263   512.0 KiB   FFFF  cmnlib64
+  27           11264           12287   512.0 KiB   FFFF  cmnlibbak
+  28           12288           13311   512.0 KiB   FFFF  cmnlib64bak
+  29           13312           14335   512.0 KiB   A02D  keystore
+  30           14336           15359   512.0 KiB   FFFF  frp
+  31           15360           16383   512.0 KiB   FFFF  catefv
+  32           16384           17407   512.0 KiB   FFFF  uefivarstore
+  33           17408           19455   1024.0 KiB  FFFF  abl
+  34           19456           21503   1024.0 KiB  FFFF  ablbak
+  35           21504           23551   1024.0 KiB  A01A  ddr
+  36           23552           25599   1024.0 KiB  FFFF  bluetooth
+  37           25600           27647   1024.0 KiB  FFFF  bluetoothbak
+  38           27648           29695   1024.0 KiB  A01F  misc
+  39           29696           31743   1024.0 KiB  FFFF  dip
+  40           31744           33791   1024.0 KiB  FFFF  toolsfv
+  41           33792           35839   1024.0 KiB  FFFF  catecontentfv
+  42           35840           39935   2.0 MiB     FFFF  imagefv
+  43           39936           44031   2.0 MiB     FFFF  imagefvbak
+  44           44032           48127   2.0 MiB     FFFF  uefisecapp
+  45           48128           52223   2.0 MiB     FFFF  uefisecappbak
+  46           52224           56319   2.0 MiB     FFFF  cateloader
+  47           56320           60415   2.0 MiB     A027  modemst1
+  48           60416           64511   2.0 MiB     A028  modemst2
+  49           64512           71679   3.5 MiB     A012  xbl
+  50           71680           78847   3.5 MiB     FFFF  xblbak
+  51           78848           87039   4.0 MiB     A016  tz
+  52           87040           95231   4.0 MiB     FFFF  tzbak
+  53           95232          103423   4.0 MiB     FFFF  mdtpsecapp
+  54          103424          111615   4.0 MiB     FFFF  mdtpsecappbak
+  55          111616          127999   8.0 MiB     FFFF  spunvm
+  56          128000          131071   1.5 MiB     FFFF  bk1
+  57          131072          163839   16.0 MiB    A021  devinfo
+  58          163840          180223   8.0 MiB     FFFF  logfs
+  59          180224          200703   10.0 MiB    A02A  fsg
+  60          200704          233471   16.0 MiB    FFFF  metadata
+  61          233472          262143   14.0 MiB    FFFF  bk2
+  62          262144          294911   16.0 MiB    FFFF  oops
+  63          294912          344063   24.0 MiB    FFFF  dtbo
+  64          344064          393215   24.0 MiB    FFFF  dtbobak
+  65          393216          458751   32.0 MiB    FFFF  mdtp
+  66          458752          524287   32.0 MiB    FFFF  mdtpbak
+  67          524288          589823   32.0 MiB    FFFF  dsp
+  68          589824          655359   32.0 MiB    FFFF  dspbak
+  69          655360          786431   64.0 MiB    A026  persist
+  70          786432          917503   64.0 MiB    A026  persistbak
+  71          917504          983039   32.0 MiB    8300  logo
+  72          983040         1114111   64.0 MiB    A036  boot
+  73         1114112         1245183   64.0 MiB    FFFF  bootbak
+  74         1245184         1376255   64.0 MiB    FFFF  splash
+  75         1376256         1507327   64.0 MiB    FFFF  logdump
+  76         1507328         1638399   64.0 MiB    A025  recovery
+  77         1638400         1900543   128.0 MiB   A01C  rawdump
+  78         1900544         2162687   128.0 MiB   FFFF  minidump
+  79         2162688         2949119   384.0 MiB   FFFF  exaid
+  80         2949120         3473407   256.0 MiB   0700  modem
+  81         3473408         3997695   256.0 MiB   FFFF  modembak
+  82         3997696         4784127   384.0 MiB   A039  cache
+  83         4784128         4816895   16.0 MiB    FFFF  gsort
+  84         4816896         6914047   1024.0 MiB  8300  cust
+  85         6914048        10059775   1.5 GiB     A038  vendor
+  86        10059776        19496959   4.5 GiB     A038  system
+  87        19496960        61071326   19.8 GiB    A03A  userdata
+</nowiki>
+</div>
+</div>
+
 == Additional Info ==
 
 Info from the Note 7 port that also applies to the 8T:
