@@ -80,7 +80,7 @@ The kernel version is 2.6, so it needs to be built with GCC4. Additionally, the 
 
 === VFP support ===
 
-<pre>FP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5</pre>
+<pre>VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5</pre>
 
 === /proc/cpuinfo ===
 
