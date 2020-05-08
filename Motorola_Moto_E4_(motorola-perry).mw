@@ -59,22 +59,11 @@ The device has to be unlocked before images can be replaced. It is strongly sugg
 If the device does not boot it is possible to access log from last attempt at sys/fs/pstore/console-ramoops via TWRP.
 
 == Installation ==
-the port has been done on the SKU: XT1766 of the Motorola E4 (Perry) version
-<code>
-$ pmbootstrap checksum linux-motorola-perry
-$ pmbootstrap kconfig check
-$ pmbootstrap build linux-motorola-perry
-$ pmbootstrap checksum firmware-motorola-perry
-$ pmbootstrap build firmware-motorola-perry
-$ pmbootstrap checksum device-motorola-perry
-$ pmbootstrap build device-motorola-perry
-$ pmbootstrap install
-</code>
-plug the device to computer and switch it to the fastboot mode
-<code>
-$ pmbootstrap flasher flash_kernel
-$ pmbootstrap flasher flash_rootfs
-</code>
+the port has been done on the SKU: XT1766 of the Motorola E4 (Perry) version<br>
+<code>$ pmbootstrap install</code><br>
+plug the device to computer and switch it to the fastboot mode <br>
+<code>$ pmbootstrap flasher flash_kernel</code><br>
+<code>$ pmbootstrap flasher flash_rootfs</code><br>
 finally run <code>$ pmbootstrap flasher boot</code> or reset the device<br>
 
 Device should boot with display and be accessible via ssh @172.16.42.1 
