@@ -1,3 +1,10 @@
+{{Infobox soc
+| name = NovaThor U8500
+| manufacturer = ST-Ericsson
+| arch = ARMv7
+| process = 40
+}}
+
 == Devices with this chipset ==
 
 This chipset is used similarly in the following devices:
