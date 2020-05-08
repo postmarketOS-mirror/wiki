@@ -68,6 +68,9 @@ revolutionary
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
+== Mainline ==
+* Device might be a good mainline candidate, considering the Exynos 5433 is already supported upstream. https://elixir.bootlin.com/linux/latest/source/arch/arm64/boot/dts/exynos
+
 == See also ==
 * {{MR|430|pmaports}} Initial merge request
 <!--
