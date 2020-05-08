@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name = Galaxy Y (Young)
+| name = Galaxy Y
 | codename = samsung-totoro
 | image = File:samsung-totoro.jpg
 | imagecaption = 
@@ -36,8 +36,6 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
