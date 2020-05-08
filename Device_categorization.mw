@@ -23,6 +23,8 @@ Devices that are working quite well get lost in the [[Devices|big matrix of boot
 Not required (shall change in the future):
 * Camera
 
+Devices in main must run a (close to) mainline kernel and must not use Halium/libhybris.
+
 See also: [https://gitlab.com/postmarketOS/postmarketos/-/issues/25 postmarketos#25]
 |-
 | community
