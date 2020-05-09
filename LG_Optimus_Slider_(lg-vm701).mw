@@ -1,0 +1,48 @@
+{{Infobox device
+| manufacturer = LG
+| name = Optimus Slider
+| codename = lg-gelato-q
+| releaseyear = 2011
+| originalsoftware = Android 2.3
+| chipset = Qualcomm MSM7627T
+| cpu = 32 bit, single-core, 16 Kbyte I-Cache, 16 Kbyte D-Cache, 65 nm
+| gpu = Qualcomm Adreno 200
+| storage = 512 MB
+| display = 320 x 480 TFT
+| memory = 512 MB
+| architecture = armhf
+| status_usbnet =
+| status_flashing =
+| status_touch =
+| status_screen =
+| status_wifi =
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting =
+}}
+
+== Contributors ==
+
+* Foldmorepaper
+
+=== Users owning this device ===
+{{Device owners}}
+
+== Rooting ==
+
+=== Additional Info ===
+
+== Installation ==
+
+== See also ==
