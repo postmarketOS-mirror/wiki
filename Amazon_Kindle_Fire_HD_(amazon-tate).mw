@@ -39,8 +39,11 @@
 == Users owning this device ==
 {{Device owners}}
 
-== Custom Recovery ==
-TODO: walkthrough of directions from the CyanogenMod guide [https://web.archive.org/web/20161224204707/https://wiki.cyanogenmod.org/w/Install_CM_for_tate]
+== Custom Recovery: TWRP ==
+This custom recovery can only be installed from fastboot, as the bootloader has no exploit. To enter fastboot mode, a fastboot cable (A.K.A. "Fire factory cable", "Motorola factory cable") is needed. This cable is the same as a normal micro USB cable, with the 4th pin ("USB OTG ID", "Mode detect") shorted to the 1st pin (5v).
+TODO: 
+* fastboot cable instructions
+* walkthrough of directions from the CyanogenMod guide [https://web.archive.org/web/20161224204707/https://wiki.cyanogenmod.org/w/Install_CM_for_tate]
 
 == Additional Info ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
