@@ -59,7 +59,8 @@ major minor  #blocks  name
   31        7     185344 mtdblock7 # /data
   31        8        512 mtdblock8
   31        9       1536 mtdblock9 # /persist
-</nowiki></div></div>
+</nowiki>
+</div></div>
 
 == Installation ==
 
