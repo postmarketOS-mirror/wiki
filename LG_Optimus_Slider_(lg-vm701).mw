@@ -42,7 +42,22 @@
 == Rooting ==
 
 == Additional Info ==
+=== Partitions ===
+<nowiki>
+# cat /proc/partitions
+major minor  #blocks  name
 
+  31        0       5120 mtdblock0 
+  31        1     117888 mtdblock1 # /cache
+  31        2       7168 mtdblock2
+  31        3       1280 mtdblock3
+  31        4       1024 mtdblock4
+  31        5       1024 mtdblock5
+  31        6     161792 mtdblock6 # /system
+  31        7     185344 mtdblock7 # /data
+  31        8        512 mtdblock8
+  31        9       1536 mtdblock9 # /persist
+</nowiki>
 == Installation ==
 
 == See also ==
