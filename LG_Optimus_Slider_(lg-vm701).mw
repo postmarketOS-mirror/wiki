@@ -5,8 +5,8 @@
 | releaseyear = 2011
 | originalsoftware = Android 2.3
 | chipset = Qualcomm MSM7627T
-| cpu = 32 bit, single-core, 16 Kbyte I-Cache, 16 Kbyte D-Cache, 65 nm
-| gpu = Qualcomm Adreno 200
+| cpu = 800 MHz ARM11
+| gpu = Adreno 200
 | storage = 512 MB
 | display = 320 x 480 TFT
 | memory = 512 MB
@@ -29,19 +29,19 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| booting =
+| booting = no
 }}
 
 == Contributors ==
 
 * Foldmorepaper
 
-=== Users owning this device ===
+== Users owning this device ==
 {{Device owners}}
 
 == Rooting ==
 
-=== Additional Info ===
+== Additional Info ==
 
 == Installation ==
 
