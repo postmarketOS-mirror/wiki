@@ -89,6 +89,14 @@ Currently, the following works:
 
 :* Sometime you might get stuck with no prompt, or a password prompt, or the connection may seem to lag. No fix has been found yet, but a temporary workaround is to run <code>ping 172.16.42.1</code> in another terminal, while using ssh or telnet.
 
+* Touchscreen
+
+:* Synaptics 3203B, works using mainline RMI4 driver, currently uses a hack to keep gpio64 on, should be fixed to get proper power management
+
+* NFC
+
+:* Not tested, but driver loads and binds correctly, so it should work
+
 Anything that isn't listed above can be assumed to not work.
 
 == Links ==
