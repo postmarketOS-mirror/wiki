@@ -43,7 +43,8 @@
 Device does not need to be rooted to install recovery.
 
 == Custom Recovery: TWRP ==
-This device can be 
+TWRP can be installed with relative ease, as this device does not have a locked bootloader(?). To install TWRP: enable USB debugging, reboot to bootloader, and flash the recovery image.
+See the device page on the TWRP website [https://twrp.me/amazon/amazonkindlefire.html here] for detailed instructions and to download recovery images.
 
 == Additional Info ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
