@@ -8,7 +8,6 @@
 | cpu = 32 bit, single-core, 16 Kbyte I-Cache, 16 Kbyte D-Cache, 65 nm
 | gpu = Qualcomm Adreno 200
 | storage = 512 MB
-| externalstorage = microSD
 | display = 320 x 480 TFT
 | memory = 512 MB
 | architecture = armhf
