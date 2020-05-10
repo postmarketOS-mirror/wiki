@@ -1,0 +1,96 @@
+[http://getbest.ru/lcm_decoder.htm LCM decoder for MediaTek] is used to get initialization sequence for LCM panel. It's needed in a case when generic kernel sources lack the LCM panel driver's source or have them for different panel revision.
+{{note|This tool is compatible only with v2 LCM drivers}}
+
+== Get lk.bin ==
+There are some ways to get lk.bin for your device. If there is device firmware that is compatible with SP Flash Tool, then lk.bin can be received from it. Otherwise use dd or SP Flash Tool to extract.
+
+== Get raw init sequence from lk.bin ==
+To find the start and the end of init sequence, it's important to understand how the init sequence is formed. It consists of multiple arrays with following structure:
+
+Command code (1...4 bytes) - Count of arguments (Or argument of DELAY command) (1...4 bytes) - Arguments array of fixed size (usually 64 or 128 bytes)
+
+Example of a single command with arguments in code:
+<pre>{0xFF, 3, {0x98, 0x81, 0x01}},</pre>
+
+Same in lk.bin
+<pre>
+FF 00 00 00  03 98 81 01  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00
+</pre>
+
+As you can see, FF is the command code, 03 is the count of arguments and 95 22 B7 are arguments. The size of fixed array is 128 bytes, command code length is 1 byte, count length is 4 bytes.
+
+{{note| lk.bin may contain init sequences for multiple panels, which have different lengths of structure elements}}
+
+The first command of the init sequence usually has ID of lcm panel as arguments (example given above for ili9881 panel). Open lk.bin in hex editor and search for the device panel's ID starting from the end of file. If there is something similar to the example, it's usually fine to use this as start.
+
+The last command in init sequence always looks like this
+<pre>{REGFLAG_END_OF_TABLE, 0x00, {}},</pre>
+So, if there is a single byte followed by zeroes, it is most likely to be the end of sequence.
+
+Example in lk.bin:
+<pre>
+FD 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00
+</pre>
+Where FD is REGFLAG_END_OF_TABLE (first byte), count is 0 (4 bytes) and following 128 bytes represent empty array.
+
+Now that the start and end of table are known, it's possible to copy this part from lk.bin with dd.
+
+== Find REGFLAG_DELAY code ==
+
+It is also required to find value of REGFLAG_DELAY. Its array may be located just before the REGFLAG_END_OF_TABLE one.
+Code example:
+<pre>
+{REGFLAG_DELAY, 150, {}},
+</pre>
+Example in lk.bin:
+<pre>
+FE 00 00 00  96 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00
+00 00 00 00  00
+</pre>
+where 0x96 is 150 (ms), the time of delay.
+
+== How to fill decoder's fields ==
+{| class="wikitable sortable"
+!Field name
+!Field name in Russian
+!Additional note
+|-
+| Delay code
+| Код задержки
+| Value of REGFLAG_DELAY
+|-
+| Code of table's end
+| Код конца таблицы
+| Value of REGFLAG_END_OF_TABLE
+|-
+| Length of data array
+| Длина блока данных
+| In bytes
+|-
+| Length of command code
+| Длина команды
+| In bytes
+|-
+| Length of count field
+| Длина счетчика
+| In bytes
+|-
+| Table's offset from start
+| Смещение от начала
+| In hexadecimal form, can be cleared usually
+|}
+
+Upload the part of lk.bin to the decoder when all fields are set. The result is the content of lcm initialization setting array which is used in new lcm driver. It's also required to set REGFLAG_DELAY and REGFLAG_END_OF_TABLE values inside of the driver.
+
+[[Category:Technical Reference]]
