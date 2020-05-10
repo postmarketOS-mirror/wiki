@@ -4,8 +4,8 @@
 | manufacturer = HTC
 | name = One X+
 | codename = htc-enrc2b
-| image = 
-| imagecaption = 
+| image = File:Htc-enrc2b.jpg
+| imagecaption = First time pmos is booting.
 | releaseyear = 2012
 | originalsoftware = Android 4.1.1 (Jelly Bean); Sense UI 4
 | chipset = NVIDIA Tegra 3+ AP37
@@ -16,10 +16,10 @@
 | memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_usbnet = N
+| status_flashing = Y
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
 | status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
@@ -35,7 +35,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = yes
 
 <!-- you can also use these lines if you need to:
 Version of the kernel that pmos is running
@@ -69,6 +69,6 @@ Choose Fastboot
 *[https://www.hardreset.info/devices/htc/htc-one-x-plus/ Hardreset Device Page]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-DEVICE_CODENAME Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-htc-enrc2b Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-htc-enrc2b Kernel package]
 -->
