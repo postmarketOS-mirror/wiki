@@ -28,7 +28,7 @@
 
 <!-- GUIDES -->
 {{mainpage-button|document-save|Installation_guide|Installation}}
-{{mainpage-button|application-menu|Porting_guide|Porting}}
+{{mainpage-button|application-menu|Porting_to_a_new_device|Porting}}
 {{mainpage-button|system-run|Mainlining_Guide|Mainlining}}
 {{mainpage-button|applications-utilities|:Category:Guide|''More Guides''}}
 
