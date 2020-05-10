@@ -4,7 +4,7 @@ Checklist for creating a <code>pmbootstrap</code> release:
 ** bump pmbootstrap version
 ** update <code>apk_tools_static_min_version</code> to the [https://pkgs.alpinelinux.org/packages?name=apk-tools&branch=edge current one in Alpine Linux]
 ** commit with the message "Prepare x.x.x release"
-* [https://gitlab.com/postmarketOS/pmbootstrap/tags/new tag a release in gitlab]
+* [https://gitlab.com/postmarketOS/pmbootstrap/-/tags/new tag a release in gitlab]
 ** fill out "release notes" (we can use markdown there), leave "message" empty
 ** look at the [https://gitlab.com/postmarketOS/pmbootstrap/commits/master previous commits] and copy paste the commit message titles, including the MR ID, like done in the [https://gitlab.com/postmarketOS/pmbootstrap/tags previous tags]). Sort by features, fixes and other.
 * update the pypi release (see the script in {{issue|1679}})
