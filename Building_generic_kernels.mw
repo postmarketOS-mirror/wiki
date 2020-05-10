@@ -157,6 +157,6 @@ The final step is to add description of all GPIO keys to the device. In this exa
 
 - [https://bnister.github.io/sprdfb.html sprdfb panel tool] - tool for receiving lcm driver data from Spreadtrum boot.img (3.x) or u-boot.
 
-- [http://getbest.ru/lcm_decoder.htm LCM decoder for MediaTek] - get panel init sequence from lk.bin
+- [[MTK LCM Decoder]] - get panel init sequence from lk.bin
 
 [[Category: Technical Reference]]
