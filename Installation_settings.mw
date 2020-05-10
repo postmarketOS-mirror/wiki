@@ -33,6 +33,16 @@ Questions that do not make sense outside of pmbootstrap, such as the path to the
 | No
 | Yes (advanced)
 | default to <code>deviceinfo_name</code>
+|-
+| Full disk encryption password
+| Yes
+| Yes
+| in pmbootstrap, asked during <code>pmbootstrap install --fde</code>
+|-
+| User password
+| Yes
+| Yes
+| in pmbootstrap, asked during <code>pmbootstrap install</code>
 |}
 
 
