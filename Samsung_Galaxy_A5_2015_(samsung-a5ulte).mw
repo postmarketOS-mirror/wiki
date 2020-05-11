@@ -25,7 +25,7 @@
 | status_battery = Y
 | status_3d = Y
 | status_accel = Y
-| status_audio = P
+| status_audio = Y
 | status_bluetooth = Y
 | status_camera = N
 | status_gps =
@@ -58,7 +58,7 @@
 {{note|'''Note:''' Enter lk2nd fastboot mode by pressing only Volume Down + Power ('''not''' the Home button). Pressing the Home button additionally will bring you to the Samsung Download mode.}}
 
 == Audio ==
-See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]]. Note that the speaker is currently not working (Samsung messed up here and used a custom speaker amplifier that is totally overcomplicated...) The Earpiece works fine.
+See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
 
 == Modem ==
 See [[Qualcomm_Snapdragon_410_(MSM8916)#Modem]].
