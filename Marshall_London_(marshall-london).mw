@@ -57,3 +57,4 @@ File:Marshall-london-lk2nd.jpg|thumb|lk2nd
 
 == See also ==
 * [https://forum.xda-developers.com/general/general/kb-1501-marshall-london-megathread-info-t3621059 XDA-Developers - Marshall London - Root, recovery and system images]
+* [https://github.com/msm8916-mainline/lk2nd secondary bootloader based on qcom's/codeaurora's ugly lk fork. Provides fastboot]
