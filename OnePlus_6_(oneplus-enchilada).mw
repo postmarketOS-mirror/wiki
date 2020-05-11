@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = OnePlus
-| name = 6
-| codename = oneplus-enchilada
+| name = 6/6T
+| codename = oneplus-enchilada, oneplus-fajita
 | image = File:Mate-running-touch.jpg
 | imagecaption = 4100 in Unixbench :sunglasses:
 | releaseyear = 2018
@@ -10,7 +10,7 @@
 | cpu = Octa-core (4x 2.8 GHz Kryo 385 Gold & 4x 1.7 GHz Kryo 385 Silver)
 | gpu = Adreno 630
 | storage = 128 GB
-| display = 1080 x 2280 AMOLED
+| display = 1080 x 2280 / 1080 x 2340 AMOLED
 | memory = 6/8 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
