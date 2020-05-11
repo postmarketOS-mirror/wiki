@@ -114,7 +114,7 @@ $ sudo nmcli radio all on
 ==== Phosh ====
 Power button does not turn off the screen.
 Epiphany does not load pages, while qutebrowser works and renders well but sometimes crashes.
-If the interface hangs, restarting LightDM has no effect.
+If the interface hangs (does often), restarting LightDM has no effect.
 
 ==== Plasma Mobile ====
 [https://invent.kde.org/jbbgameich/plasma-angelfish Plasma Angelfish] does not run. You may want to install another browser, like qtwebbrowser, [[Firefox]] and/or [[Chromium]].
