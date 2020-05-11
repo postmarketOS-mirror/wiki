@@ -2,16 +2,16 @@
 | manufacturer = Huawei
 | name = P8 Lite (ALE-L21)
 | codename = huawei-alice
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:huawei-alice.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2015
 | originalsoftware = Android 5.0.2
-| chipset = Kirin 620
+| chipset = HiSilicon Kirin 620
 | cpu = Octa-core 1.2 GHz Cortex-A53
-| gpu = Mali-450MP4
-| storage = 16GB
+| gpu = Mali-450 MP4
+| storage = 16 GB
 | display = 720 x 1280 pixels IPS LCD
-| memory = 2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
@@ -34,7 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = kernel compiles
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
-| pmoskernel = 3.x.x
+| pmoskernel = 3.10.108
 }}
 
 == Maintainer(s) ==
