@@ -32,6 +32,7 @@
 | status_sms = 
 | status_calls = 
 | booting = yes
+| pmoskernel = 3.4.113
 }}
 == Contributors ==
 
