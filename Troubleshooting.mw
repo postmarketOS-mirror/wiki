@@ -74,6 +74,8 @@ Many devices require proprietary blobs for enabling certain peripherals (wifi/bl
 
 On some phones, you can hold down the power button for ten seconds to force a reboot. If that does not work: On other phones, you have to hold the power button down for a full minute (or hold it together with volume down). On some phones, it might take even longer (3 minutes or so).
 
+You can also give from console <code>echo b > /proc/sysrq-trigger</code>.
+
 === Phone shows the telnet message, a black screen, or doesn't leave the bootloader or Samsung/Google/... splash screen ===
 
 See: [[Troubleshooting:boot]]
