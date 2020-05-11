@@ -6,6 +6,7 @@
 | imagecaption = motorola-cedric
 | releaseyear = 2017
 | originalsoftware = Android 7.0 - 8.1 on Linux 3.18.71
+| pmoskernel = 3.18.49
 | chipset = Qualcomm MSM8937 Snapdragon 430 
 | cpu = 8x 1.5 GHz Cortex-A53 
 | gpu = Adreno 505
