@@ -127,7 +127,7 @@ This can be solved by updating to the [https://developers.google.com/android/ima
 ==== Remote Data Too Large ====
 Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message that includes "Failed (remote: data too large)".  This might be solved by updating by reflashing [https://developers.google.com/android/images#hammerhead the latest version of the stock Android image for the device].
 
-==== Useful aliases ====
+=== Useful aliases ===
 <pre class="shell">
 # Turn off screen
     echo 0 > /sys/class/backlight/lcd-backlight/brightness
@@ -139,6 +139,8 @@ Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message
     sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
 # Restart lightdm (has no effect)
     sudo rc-service lightdm restart
+# Input devices
+    cat /proc/bus/input/devices
 </pre>
 
 === Partition layout ===
