@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = kernel compiles
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 | pmoskernel = 3.x.x
 }}
@@ -46,10 +46,6 @@
 <!-- use _ instead of spaces in device page name, e.g. {{Owns device|HTC_Desire_(htc-bravo)|custom notes}}-->
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
-
-== Status ==
-
-* compiling
 
 == How to enter flash mode ==
 
