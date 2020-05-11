@@ -87,6 +87,24 @@ $ pmbootstrap flasher flash_kernel
 
 No one has still worked on playback and recording support.
 
+Neverthless you can use another device (like an android device) to stream your audio.
+
+'''source device'''
+
+<source lang="bash">
+# /etc/profile
+  export PULSE_SERVER=<sink_device_ip_address>
+</source>
+
+'''sink Device'''
+
+<source lang="bash">
+# etc/pulse/default.pa
+  load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
+</source>
+
+Don't forget to copy cookie (<code>~/.config/pulse/cookie</code>) to from sink to source!
+
 ==== Bluetooth ====
 
 Bluetooth seems to work somewhat. Power and scan functions in bluetoothctl work but pairing might not.
