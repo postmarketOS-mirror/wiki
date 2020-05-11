@@ -98,7 +98,9 @@ To test, use instructions at https://wiki.alpinelinux.org/wiki/Raspberry_Pi_3_-_
 Using instructions at https://wiki.postmarketos.org/wiki/Nokia_N900_(nokia-n900)#SMS it seems that SMS and calls likely work.
 
 ==== WiFi====
-On boot the wifi adapter starts in airplane mode and NetworkManager does not detect that. A manual workaround is to disable and re-enable the wifi adapter. 
+On Phosh session wifi adapter currently starts.
+
+Before, the wifi adapter started in airplane mode and NetworkManager did not detect that. A manual workaround is to disable and re-enable the wifi adapter. 
 
 This can easily be done in the graphic shell (Plasma Mobile has an airplane mode switch in the pull-down menu: check it and uncheck it) or through the shell:
 
@@ -108,6 +110,11 @@ $ sudo nmcli radio all on
 </source>
 
 === Software issues ===
+
+==== Phosh ====
+Power button does not turn off the screen.
+Epiphany does not load pages, while qutebrowser works and renders well but sometimes crashes.
+If the interface hangs, restarting LightDM has no effect.
 
 ==== Plasma Mobile ====
 [https://invent.kde.org/jbbgameich/plasma-angelfish Plasma Angelfish] does not run. You may want to install another browser, like qtwebbrowser, [[Firefox]] and/or [[Chromium]].
@@ -119,6 +126,20 @@ This can be solved by updating to the [https://developers.google.com/android/ima
 
 ==== Remote Data Too Large ====
 Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message that includes "Failed (remote: data too large)".  This might be solved by updating by reflashing [https://developers.google.com/android/images#hammerhead the latest version of the stock Android image for the device].
+
+==== Useful aliases ====
+<pre class="shell">
+# Turn off screen
+echo 0 > /sys/class/backlight/lcd-backlight/brightness
+# Turn on screen
+echo 250 > /sys/class/backlight/lcd-backlight/brightness
+# Force reboot
+echo b > /proc/sysrq-trigger
+# Turn off screen and suspend (deepsleep?)
+sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
+# Restart lightdm (has no effect)
+sudo rc-service lightdm restart
+</pre>
 
 === Partition layout ===
 <pre class="shell">
