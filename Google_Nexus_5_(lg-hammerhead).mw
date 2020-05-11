@@ -130,15 +130,15 @@ Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message
 ==== Useful aliases ====
 <pre class="shell">
 # Turn off screen
-echo 0 > /sys/class/backlight/lcd-backlight/brightness
+    echo 0 > /sys/class/backlight/lcd-backlight/brightness
 # Turn on screen
-echo 250 > /sys/class/backlight/lcd-backlight/brightness
+    echo 250 > /sys/class/backlight/lcd-backlight/brightness
 # Force reboot
-echo b > /proc/sysrq-trigger
+    echo b > /proc/sysrq-trigger
 # Turn off screen and suspend (deepsleep?)
-sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
+    sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
 # Restart lightdm (has no effect)
-sudo rc-service lightdm restart
+    sudo rc-service lightdm restart
 </pre>
 
 === Partition layout ===
