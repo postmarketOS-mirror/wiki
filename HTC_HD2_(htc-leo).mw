@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls =
-| status = kernel compiles and boots, but root partition is not found. 
+| status = kernel compiles and boots, but screen output is mesed up. 
 | booting = no
 }}
 
@@ -43,8 +43,8 @@
 * (others on the Matrix chat : Henri Dellal, knuxify and others) 
 
 == What works ==
-* Kernel boots, but displays splash about root partition not found
-* Screen works
+* Kernel boots
+* Screen works, but output is messed up, probably because there is a wrong value in /sys/class/graphics/fb0/bits_per_pixel
 
 == What does not work ==
 * Everything else, including ssh and telnet connectivity
@@ -52,12 +52,10 @@
 == Progress ==
 * Got the kernel to compile, based on [https://github.com/maniacx/android_kernel_htc_qsd8k maniacx's nougat android kernel]
 * The qsd8k-legacy kernel also works : [https://github.com/qsd8k-legacy/android_kernel_htc_htcleo]
-* Screen is working during boot now (displays splash screen) 
+* Screen is partially working now.
 
 == Next steps ==
-* Fix the error about root partition not found, maybe someone could test and report if this is really a software problem? Here are the sources : [https://github.com/Dominduchami/HTC-HD2-Postmarketos] 
-* Ubuntu on HD2, a good starting point?: https://forum.xda-developers.com/showthread.php?t=889433]
-* Kernel 3.x https://github.com/willcast/kernel_leo + relatively fresh port of Arch: https://forum.xda-developers.com/hd2-ubuntu/development/unofficial-archlinuxarm-htc-hd2-t2970483 
+* Change the value in /sys/class/graphics/fb0/bits_per_pixel to the correct one to fix display output. Here are the sources : [https://github.com/Dominduchami/HTC-HD2-Postmarketos]
 
 == Bootloaders ==
 Because of the age of the HD2, there are serval 3rd party bootloaders available, most commonly used:
