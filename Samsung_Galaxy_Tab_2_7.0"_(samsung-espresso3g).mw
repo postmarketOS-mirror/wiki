@@ -11,7 +11,4 @@ Chipset : TI OMAP 4430
 
 CPU	: Dual-core 1.0 GHz 
 	
-GPU	: PowerVR SGX540	
-           
-Image : 
-[[File:/home/eon/Downloads/IMG_20200511_231358.jpg]]
+GPU	: PowerVR SGX540
