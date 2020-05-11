@@ -42,7 +42,7 @@ You may need to revise your device's configuration files and recompile the kerne
 If the configuration already appears to be correct, try building the kernel with an [[Vendor kernel specific package#GCC_version|older version of GCC]]. If possible, determine which version of GCC would have been used to build the kernel for Android.
 
 ==== Kernel panics with CONFIG_VT enabled ====
-Some Qualcomm devices with a 4.4 release kernel panic on boot when compiled with newer (>6) GCC versions. If you think you're affected by this simply test booting with <code>CONFIG_VT=n</code> and see if it yields a blank screen (instead of e.g. just rebooting). Now the kernel should have booted without issues and you'll get telnet / SSH. If disabling <code>VT</code> helped you, re-enable it and follow the steps below:
+Some Qualcomm devices with a 4.4 release kernel panic on boot when compiled with newer (>6) GCC versions while using <code>CONFIG_VT=y</code> specifically. If you think you're affected by this simply test booting with <code>CONFIG_VT=n</code> and see if it yields a blank screen (instead of e.g. just rebooting). Now the kernel should have booted without issues and you'll get telnet / SSH. If disabling <code>VT</code> helped you, re-enable it and follow the steps below:
 
 You'll want to revert the following 6 commits from your kernel tree by finding their commit hashes using <code>git log</code> for example and creating patch files for use with your kernel package:
 
