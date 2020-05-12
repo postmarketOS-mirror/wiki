@@ -85,7 +85,7 @@ $ pmbootstrap flasher flash_kernel
 
 ==== Power Management ====
 
-At this stage the directory `/sys/devices/system/cpu/cpufreq` is empty, so it seems there is no integrated power management.
+At this stage the directory <code>/sys/devices/system/cpu/cpufreq</code> is empty, so it seems there is no integrated power management.
 
 There is also no way to turn off touch detection. Still, you can
 
