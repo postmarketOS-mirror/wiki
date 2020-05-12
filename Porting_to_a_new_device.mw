@@ -184,7 +184,7 @@ $ mv lineageos_mako_defconfig aports/device/testing/linux-wiki-example/config-wi
 </syntaxhighlight>
 
 === Download sources and update checksums ===
-Use the checksum command. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window.
+Use the checksum command. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window. Some of you might encounter problem , just add <code>--as-root</code> in the command. So, it will look like <code>$ pmbootstrap --as-root checksum linux-wiki-example</code>. THis would work.
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap checksum linux-wiki-example
