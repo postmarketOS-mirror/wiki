@@ -240,6 +240,8 @@ Next up is the kernel compilation, which will fail a few times before you get it
 $ pmbootstrap build linux-wiki-example
 </syntaxhighlight>
 
+If you run into problem try this <code>$ pmbootstrap --as-root build linux-wiki-example</code>.
+
 We most likely use a more modern version of GCC compared to what your device kernel was intended to be compiled with (which is good, we don't want outdated software). However, this means that you will probably need to patch your kernel before it compiles successfully. Don't be scared, we'll talk you through it. But in the unlikely case, that everything runs through smoothly, continue reading [[#Documentation|here]].
 
 === Find the error message ===
