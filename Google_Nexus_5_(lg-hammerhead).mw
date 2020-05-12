@@ -87,7 +87,7 @@ $ pmbootstrap flasher flash_kernel
 
 At this stage the directory <code>/sys/devices/system/cpu/cpufreq</code> is empty, so it seems there is no integrated power management.
 
-There is also no way to turn off touch detection. Still, you can
+There is also no way to turn off touch detection (or turning off the screen through a button). Still, you can
 
 <pre class="shell">
 # Turn off screen
