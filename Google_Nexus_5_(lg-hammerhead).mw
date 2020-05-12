@@ -156,15 +156,22 @@ $ sudo nmcli radio all on
 
 Power button does not turn off the screen.
 
-If the interface hangs (does randomly every few minutes of usage), restarting LightDM with <code>sudo rc-service lightdm restart</code> has no effect.
+If the interface hangs (does randomly every few minutes of usage), restarting LightDM with <code>sudo rc-service lightdm restart</code> has no effect and you have to force reboot.
 
-===== Browsing =====
+'''Browsing'''
+
 - Epiphany does not load content;
+
 - Chromium crashes;
+
 - Firefox works but crashes after a while;
+
 - Qutebrowser works well but crashes after a while;
+
 - Vimb works but crashes after a while;
+
 - Netsurf never crashed.
+
 - Dillo will probably work, too.
 
 ==== Plasma Mobile ====
