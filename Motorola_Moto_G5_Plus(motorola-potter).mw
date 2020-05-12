@@ -80,15 +80,23 @@ https://github.com/scarface-one/linux-msm8953
 
 Currently, the following works:
 
-* Display (no power management, using simple-panel driver)
+* Display
+
+:* only Boe panel, basic power management
+
+:* using labibb regulator driver from mainline patchworks: 1239224
+
+* Backlight
+
+:* qcom-wled
+
+:* brightness control doesn't work correctly, only on or off states
 
 * GPU (DRM and FB) 
 
 :* requires proprietary firmware blobs, can be extracted from Android, or can be downloaded from firmware repositories
 
 * SSH and Telnet via USB 
-
-:* Doesn't work consistently, sometimes you need to wait at least 2 minutes after boot, and you need to disconnect and reconnect the USB cable a couple of times before it works.
 
 :* Sometime you might get stuck with no prompt, or a password prompt, or the connection may seem to lag. No fix has been found yet, but a temporary workaround is to run <code>ping 172.16.42.1</code> in another terminal, while using ssh or telnet.
 
