@@ -154,9 +154,11 @@ $ sudo nmcli radio all on
 
 ==== Phosh ====
 
+If the screen gets locked, since default passcode is unknown you can't go back.
+
 Power button does not turn off the screen.
 
-If the interface hangs (does randomly every few minutes of usage), restarting LightDM with <code>sudo rc-service lightdm restart</code> has no effect and you have to force reboot.
+If the interface hangs (does randomly every few minutes of usage), restarting LightDM with <code>sudo rc-service lightdm restart</code> has no effect and you have to force reboot.[https://gitlab.com/postmarketOS/pmaports/-/issues/540 [2]]
 
 '''Browsing'''
 
