@@ -97,8 +97,6 @@ Still, you can
 # Turn on screen
     echo 250 > /sys/class/backlight/lcd-backlight/brightness
 
-# Force reboot
-    echo b > /proc/sysrq-trigger
 # Turn off screen and suspend (deepsleep?)
     sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
 
