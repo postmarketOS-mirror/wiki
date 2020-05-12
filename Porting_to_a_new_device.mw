@@ -173,7 +173,7 @@ builddir="$srcdir/$_repository-$_commit"
 </syntaxhighlight>
 
 === Kernel version ===
-In the repository with the kernel source code, you will find a <code>Makefile</code>. Open this file and adjust the <code>pkgver</code> in the kernel <code>APKBUILD</code> to the information from the <code>VERSION</code>, <code>PATCHLEVEL</code> and <code>SUBLEVEL</code> variables (e.g. [https://github.com/LineageOS/lge-kernel-mako/blob/c76e1bc83219088b2ff1b2b5709a88ebda5e54e4/Makefile#L1-L3 3.4.0]).
+In the repository with the kernel source code, you will find a <code>Makefile</code>. Open this file and adjust the <code>pkgver</code> in the kernel <code>APKBUILD</code> to the information from the <code>VERSION</code>, <code>PATCHLEVEL</code> and <code>SUBLEVEL</code> . The whole thing is something like ( e.g. "3.0.101" which resembles "VERSION.PATCHLEVEL.SUBLEVEL") . For more (e.g. [https://github.com/LineageOS/lge-kernel-mako/blob/c76e1bc83219088b2ff1b2b5709a88ebda5e54e4/Makefile#L1-L3 3.4.0]).
 
 === Defconfig ===
 Next you will need to [[How to find device-specific information#Kernel_defconfig_.28default_config.29|find the kernel configuration]], that is used to compile that kernel source for your device. Download it and save it as <code>aports/device/testing/linux-wiki-example/config-wiki-example.armhf</code> (replace <code>wiki-example</code> and <code>armhf</code>).
