@@ -187,6 +187,9 @@ Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message
 
 ==== Useful aliases ====
 <pre class="shell">
+# Force reboot
+    echo b > /proc/sysrq-trigger
+
 # Input devices
     cat /proc/bus/input/devices
 </pre>
