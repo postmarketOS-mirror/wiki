@@ -16,8 +16,8 @@
 | architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = 
-| status_screen = 
+| status_touch = Y
+| status_screen = Y
 | status_wifi = 
 | status_xwayland = 
 | status_fde = 
@@ -55,6 +55,8 @@ The device must be in bootloader mode. While flashing, it's normal to see "varia
 
 == Additional info ==
 The device freezes on the first boot after flashing. Rebooting it fixes the issue.
+
+USB OTG works if USB devices are connected before boot.
 
 == See also ==
 * {{MR|1646}} initial merge requests
