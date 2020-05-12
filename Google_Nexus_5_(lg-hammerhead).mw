@@ -83,6 +83,27 @@ $ pmbootstrap flasher flash_kernel
 
 === Hardware issues ===
 
+==== Power Management ====
+
+At this stage the directory `/sys/devices/system/cpu/cpufreq` is empty, so it seems there is no integrated power management.
+
+There is also no way to turn off touch detection. Still, you can
+
+<pre class="shell">
+# Turn off screen
+    echo 0 > /sys/class/backlight/lcd-backlight/brightness
+# Turn on screen
+    echo 250 > /sys/class/backlight/lcd-backlight/brightness
+
+# Force reboot
+    echo b > /proc/sysrq-trigger
+# Turn off screen and suspend (deepsleep?)
+    sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
+
+#disable two cores (not sure if temperature decreases)
+    echo 0 > /sys/devices/system/cpu/cpu{2..3}/online
+</pre>
+
 ==== Audio ====
 
 No one has still worked on playback and recording support.
@@ -130,9 +151,19 @@ $ sudo nmcli radio all on
 === Software issues ===
 
 ==== Phosh ====
+
 Power button does not turn off the screen.
-Epiphany does not load pages, while qutebrowser works and renders well but sometimes crashes.
-If the interface hangs (does often), restarting LightDM has no effect.
+
+If the interface hangs (does randomly every few minutes of usage), restarting LightDM with <code>sudo rc-service lightdm restart</code> has no effect.
+
+===== Browsing =====
+- Epiphany does not load content;
+- Chromium crashes;
+- Firefox works but crashes after a while;
+- Qutebrowser works well but crashes after a while;
+- Vimb works but crashes after a while;
+- Netsurf never crashed.
+- Dillo will probably work, too.
 
 ==== Plasma Mobile ====
 [https://invent.kde.org/jbbgameich/plasma-angelfish Plasma Angelfish] does not run. You may want to install another browser, like qtwebbrowser, [[Firefox]] and/or [[Chromium]].
@@ -147,24 +178,8 @@ Sometimes `./pmbootstrap.py flasher flash_kernel` can fail with an error message
 
 ==== Useful aliases ====
 <pre class="shell">
-# Turn off screen
-    echo 0 > /sys/class/backlight/lcd-backlight/brightness
-# Turn on screen
-    echo 250 > /sys/class/backlight/lcd-backlight/brightness
-
-# Force reboot
-    echo b > /proc/sysrq-trigger
-# Turn off screen and suspend (deepsleep?)
-    sudo su -c "echo 0 > /sys/class/backlight/lcd-backlight/brightness" && exec pm-suspend
-
-# Restart lightdm (has no effect)
-    sudo rc-service lightdm restart
-
 # Input devices
     cat /proc/bus/input/devices
-
-#disable two cores (not sure if temperature decreases)
-    echo 0 > /sys/devices/system/cpu/cpu{2..3}/online
 </pre>
 
 === Partition layout ===
