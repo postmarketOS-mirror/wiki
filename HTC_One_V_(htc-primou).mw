@@ -84,7 +84,7 @@ Camera: tested with motion, doesn't work.
 
 == Other information == 
 
-* Plasma Mobile only loads to a black screen with [the software rendering workaround](https://wiki.postmarketos.org/wiki/Plasma_Mobile#Software_rendering). Without it, it does not start at all. 
+* Plasma Mobile only loads to a black screen with the software rendering workaround (https://wiki.postmarketos.org/wiki/Plasma_Mobile#Software_rendering). Without it, it does not start at all.
 
 == See also ==
 <!--
