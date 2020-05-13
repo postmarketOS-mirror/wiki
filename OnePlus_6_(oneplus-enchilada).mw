@@ -14,25 +14,25 @@
 | memory = 6/8 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = y
-| status_flashing = y
-| status_touch = y
-| status_screen = n
-| status_wifi = n
-| status_xwayland =  
-| status_fde =  
-| status_mainline =  
-| status_battery =  
-| status_3d =  
-| status_accel =  
-| status_audio =  
-| status_bluetooth =  
-| status_camera =  
-| status_gps =  
-| status_mobiledata =  
-| status_sms =  
-| status_calls =  
-| status = No graphics on downstream, currently attempting mainlining based on work for Pixel 3 / Crosshatch
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = N
+| status_xwayland = Y
+| status_fde = N
+| status_mainline = P
+| status_battery = N
+| status_3d = P
+| status_accel = N
+| status_audio = N
+| status_bluetooth = N 
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N 
+| status_sms = N
+| status_calls = N
+| status = Mainline booting, GPU locked and loaded but DSI display issues. OTG works with a powered hub + recompiled DTS.
 | booting = yes
 
 <!-- you can also use these lines if you need to:
@@ -43,7 +43,7 @@ Version of the kernel that pmos is running
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
-| status_otg = -
+| status_otg = P
 -->
 }}
 
@@ -53,32 +53,30 @@ Is OTG available, not used in wiki
 <!-- use _ instead of spaces in device page name, e.g. {{Owns device|HTC_Desire_(htc-bravo)|custom notes}}-->
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
-
 == Contributors ==
 
 * [https://wiki.postmarketos.org/wiki/User:Kalube Kalube]
-
-== How to enter flash mode ==
-
-Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until your see "Fastboot Mode" text.
 
 == Mainline Kernel ==
 
 Mainline kernel is up and running, with more and more hardware being added!
 
-[https://github.com/calebccff/linux/commits/enchilada-usb Linux 5.7 - enchilada]
-
 * Boots without random panics
-* SimpleFB display works to get output on the screen
+* DSI display works but is somewhat broken - [mailto:caleb@connolly.tech please email me if you can help!]
 * Touch works! [https://github.com/calebccff/linux/commits/enchilada-touchscreen after a massive false start]
-* USB host mode works - with a powered hub only
-* Power button works
-* tri-state-keys work
+* USB networking and host mode both work, however it isn't possible to switch without recompiling the DTS.
+* Buttons (power/vol/tri-state) all function
 
-USB peripheral mode is the next step, then hopefully wifi/bt/audio.
+Building/flashing instructions [https://gist.github.com/calebccff/80bba8237e2ba512dc07f907e55b4891 here]
+
+[https://github.com/calebccff/linux/commits/enchilada-usb Kernel sources]
+
+== How to enter flash mode ==
+
+Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until your see "Fastboot Mode" text.
 
 == See also ==
-* {{MR|982|pmaports}} Initial merge request
+* {{MR|1221|pmaports}} Initial merge request
 <!-- * {{issue|CHANGEME|pmaports}} Some related issue -->
 
 <!--
