@@ -70,7 +70,9 @@ Screen works partially. While displaying the UI works fine, adjusting the bright
 == Plasma Mobile ==
 Plasma mobile currently works on A5 2015, but you should set custom scaling factor to 2.
 
-<code>kscreen-doctor output.1.scale.2</code> should work
+<code>kscreen-doctor output.1.scale.2</code> should work. From ssh session add the following env variables to the above command:
+
+<code>XDG_RUNTIME_DIR=/run/user/10000 QT_QPA_PLATFORM=wayland kscreen-doctor output.1.scale.2</code>
 
 Plasma works smoothly, but there are some graphical glitches like choppy text
 
