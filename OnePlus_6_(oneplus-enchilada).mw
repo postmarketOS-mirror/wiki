@@ -9,7 +9,7 @@
 | chipset = Qualcomm SDM845 Snapdragon 845
 | cpu = Octa-core (4x 2.8 GHz Kryo 385 Gold & 4x 1.7 GHz Kryo 385 Silver)
 | gpu = Adreno 630
-| storage = 128 GB
+| storage = 64/128/256 GB
 | display = 1080 x 2280 / 1080 x 2340 AMOLED
 | memory = 6/8 GB
 | architecture = aarch64
@@ -60,7 +60,7 @@ Building/flashing instructions [https://gist.github.com/calebccff/80bba8237e2ba5
 
 == How to enter flash mode ==
 
-Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until your see "Fastboot Mode" text.
+Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until you see "Fastboot Mode" text.
 
 == See also ==
 * {{MR|1221|pmaports}} Initial merge request
