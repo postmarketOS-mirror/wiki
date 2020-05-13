@@ -94,8 +94,8 @@ After you've run through the [https://wiki.postmarketos.org/wiki/OnePlus_5_(onep
 
 Next start following the instructions below:
 
-  git clone https://github.com/degdag/mi6-mainline.git
-  cd mi6-mainline/
+  git clone https://github.com/degdag/Xiaomi-Mi6-Mainline-Linux.git
+  cd Xiaomi-Mi6-Mainline-Linux/
   source ~/pmOS/pmbootstrap/helpers/envkernel.sh     # adjust to match where you've cloned PMB yourself
   make defconfig
   make -j`nproc`
