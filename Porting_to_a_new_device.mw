@@ -173,7 +173,7 @@ builddir="$srcdir/$_repository-$_commit"
 </syntaxhighlight>
 
 === Kernel version ===
-In the repository with the kernel source code, you will find a <code>Makefile</code>. Open this file and adjust the <code>pkgver</code> in the kernel <code>APKBUILD</code> to the information from the <code>VERSION</code>, <code>PATCHLEVEL</code> and <code>SUBLEVEL</code> . The whole thing is something like ( e.g. "3.0.101" which resembles "VERSION.PATCHLEVEL.SUBLEVEL") . For more (e.g. [https://github.com/LineageOS/lge-kernel-mako/blob/c76e1bc83219088b2ff1b2b5709a88ebda5e54e4/Makefile#L1-L3 3.4.0]).
+In the repository with the kernel source code, you will find a <code>Makefile</code>. Open this file and adjust the <code>pkgver</code> in the kernel <code>APKBUILD</code> to the information from the <code>VERSION</code>, <code>PATCHLEVEL</code> and <code>SUBLEVEL</code> variables (e.g. [https://github.com/LineageOS/lge-kernel-mako/blob/c76e1bc83219088b2ff1b2b5709a88ebda5e54e4/Makefile#L1-L3 3.4.0]).
 
 === Defconfig ===
 Next you will need to [[How to find device-specific information#Kernel_defconfig_.28default_config.29|find the kernel configuration]], that is used to compile that kernel source for your device. Download it and save it as <code>aports/device/testing/linux-wiki-example/config-wiki-example.armhf</code> (replace <code>wiki-example</code> and <code>armhf</code>).
@@ -184,7 +184,7 @@ $ mv lineageos_mako_defconfig aports/device/testing/linux-wiki-example/config-wi
 </syntaxhighlight>
 
 === Download sources and update checksums ===
-Use the checksum command. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window. Some of you might encounter problem , just add <code>--as-root</code> in the command. So, it will look like <code>$ pmbootstrap --as-root checksum linux-wiki-example</code>. THis would work.
+Use the checksum command. It will not only generate the checksums of all source files, but also download them in case they have not been downloaded yet. If this command fails, most likely the download URL is invalid and needs to be adjusted in the <code>APKBUILD</code> again. Another cause could be, that the defconfig could not be found (e.g. because it was saved with a wrong file name). The actual download URL (with all variables replaced) and the download progress are visible in the log window.
 
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap checksum linux-wiki-example
@@ -239,8 +239,6 @@ Next up is the kernel compilation, which will fail a few times before you get it
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap build linux-wiki-example
 </syntaxhighlight>
-
-If you run into problem try this <code>$ pmbootstrap --as-root build linux-wiki-example</code>.
 
 We most likely use a more modern version of GCC compared to what your device kernel was intended to be compiled with (which is good, we don't want outdated software). However, this means that you will probably need to patch your kernel before it compiles successfully. Don't be scared, we'll talk you through it. But in the unlikely case, that everything runs through smoothly, continue reading [[#Documentation|here]].
 
