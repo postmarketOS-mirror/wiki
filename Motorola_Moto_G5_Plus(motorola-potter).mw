@@ -75,22 +75,20 @@ Mainlining is in the early stages, based on Junak's msm8953 kernel. Source for t
 
 https://github.com/scarface-one/linux-msm8953
 
-{{note|1=Currently on works on XT1686, the Indian variant, with board_id = <0x46, 0x83a0>. Porting to other variants of potter should be trivial}}
-{{note|1=Lk2nd is currently a hard dependency, without it the mainline kernel will not boot. You can get lk2nd for potter from here: https://github.com/scarface-one/lk2nd}}
+{{note|1=Only boots on XT1686, the Indian variant, with board_id = <0x46, 0x83a0>. Porting to other variants of potter should be trivial}}
+{{note|1=Lk2nd is a hard dependency, without it the mainline kernel will not boot. You can get lk2nd for potter from here: https://github.com/scarface-one/lk2nd}}
 
-Currently, the following works:
+What works:
 
 * Display
 
-:* only Boe panel, basic power management
+:* only Boe panel works
+
+:* Need test device for tianma panel, along with way to select panel at boot
 
 :* using labibb regulator driver from mainline patchworks: 1239224
 
-* Backlight
-
-:* qcom-wled
-
-:* brightness control doesn't work correctly, only on or off states
+:* Brightness control works, but doesn't use the qcom-wled backlights, needs further investigation
 
 * GPU (DRM and FB) 
 
@@ -102,11 +100,17 @@ Currently, the following works:
 
 * Touchscreen
 
-:* Synaptics 3203B, works using mainline RMI4 driver, currently uses a hack to keep gpio64 on, should be fixed to get proper power management
+:* Synaptics 3203B, works using mainline RMI4 driver
+
+:* Uses a hack to keep <code>gpio64</code> on, should be fixed
 
 * NFC
 
-:* Not tested, but driver loads and binds correctly, so it should work
+:* Not tested, but driver loads and binds correctly, so it might work
+
+* LEDs
+
+:* Front charging LED works (Qualcomm ATC-LED)
 
 Anything that isn't listed above can be assumed to not work.
 
