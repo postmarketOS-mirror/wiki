@@ -45,7 +45,7 @@ The kernel compiles!
 == What Does Not Work ==
 Flashing is possible, but there are problems:
 * booting off SD is necessary as system and userdata partitions are too small for the current image
-* attempting to boot using <nowiki>pmbootstrap flasher boot</nowiki> fails after printing the cmdline to the screen.
+* attempting to boot using <code>pmbootstrap flasher boot</code> uploads but fails to boot after printing the cmdline to the screen.
 
 == Rooting ==
 
