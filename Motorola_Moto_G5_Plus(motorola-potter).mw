@@ -82,11 +82,11 @@ What works:
 
 * Display
 
-:* only Boe panel works
+:* Only Boe panel works
 
-:* Need test device for tianma panel, along with way to select panel at boot
+:* Need test device for Tianma panel, along with way to select panel at boot
 
-:* using labibb regulator driver from mainline patchworks: 1239224
+:* Using labibb regulator driver from mainline patchworks: 1239224
 
 :* Brightness control works, but doesn't use the qcom-wled backlights, needs further investigation
 
@@ -111,6 +111,16 @@ What works:
 * LEDs
 
 :* Front charging LED works (Qualcomm ATC-LED)
+
+* Battery
+
+:* Reports voltage, capacity
+
+:* Needs to deliver other data like current and battery details
+
+:* Driver needs testing and cleaning up.
+
+:* 2 different battery suppliers, need a way to probe and select
 
 Anything that isn't listed above can be assumed to not work.
 
