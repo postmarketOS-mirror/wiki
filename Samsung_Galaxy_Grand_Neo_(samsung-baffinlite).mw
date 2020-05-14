@@ -75,7 +75,7 @@ Audio works for a split second and then crashes.
 |-
 |USB
 |FSA9485
-|There's a fsa9480 driver, these might be similar
+|There's a fsa9480 driver which is pretty similar, so downstream will need to be compared.
 |-
 |Touchscreen
 |MELFAS MMS144(?)/FocalTech FT5306(?)
