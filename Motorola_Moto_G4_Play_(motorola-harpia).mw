@@ -30,7 +30,7 @@
 | status_gps = N
 | status_mobiledata = N
 | status_sms = Y
-| status_calls = P
+| status_calls = Y
 | booting = yes
 }}
 
