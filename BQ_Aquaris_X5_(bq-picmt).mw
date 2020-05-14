@@ -2,8 +2,8 @@
 | manufacturer = BQ
 | name = Aquaris X5
 | codename = bq-picmt, bq-paella
-| image = File:bq-picmt.jpg|thumb|133px
-| imagecaption = BQ Aquaris X5 Cyanogen Edition running weston on postmarketOS downstream
+| image = File:P_20200429_093001.jpg|thumb|133px
+| imagecaption = BQ Aquaris X5 Cyanogen Edition running Plasma Mobile on postmarketOS mainline
 | releaseyear = 2015
 | originalsoftware = Android 7.1.2, CM 13.1
 | chipset = Qualcomm MSM8916T Snapdragon 412
@@ -16,12 +16,12 @@
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
-| status_touch = P
+| status_touch = Y
 | status_screen = Y
 | status_wifi = Y
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_mainline = Y
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
@@ -100,7 +100,10 @@ Modem doesn't work, in dmesg I get DATA5_CNTL error relative to no such device
 Works:
 USB Network,
 WiFi,
-Bluetooth
+Bluetooth,
+Display,
+Touchscreen,
+Volume buttons
 
 
 == See also ==
