@@ -43,7 +43,7 @@
 The kernel compiles!
 
 == What Does Not Work ==
-Flashing. Cannot sideload, apparently zeroing out boot partition enables fastboot? Requires more investigation. 
+Flashing. Zeroing out boot partition enables fastboot, but attempting to boot from SD card with <nowiki>pmbootstrap flasher boot</nowiki> fails after printing the cmdline to the screen.
 
 == Rooting ==
 
