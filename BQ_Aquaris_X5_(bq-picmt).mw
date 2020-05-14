@@ -19,7 +19,7 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
-| status_xwayland = Y
+| status_xwayland = 
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = Y
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
