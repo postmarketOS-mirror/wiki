@@ -78,8 +78,8 @@ Audio works for a split second and then crashes.
 |There's a fsa9480 driver, these might be similar
 |-
 |Touchscreen
-|MELFAS MMS144(?)
-|Driver in mainline
+|MELFAS MMS144(?)/FocalTech FT5306(?)
+|There's a driver in mainline for the MMS144, and a driver on GitHub for the ft5306: https://github.com/focaltech-systems/drivers-input-touchscreen-FTS_driver/blob/master/ft5x06.c
 |-
 |WiFi, Bluetooth
 |BCM4330
@@ -96,6 +96,10 @@ Audio works for a split second and then crashes.
 |Backlight
 |KTD3102
 |Not in mainline, and there doesn't seem to be a similar driver (by name).
+|-
+|Sensor
+|Bosch BMP18x
+|Supported by bmp085 driver in mainline
 |}
 
 == See also ==
