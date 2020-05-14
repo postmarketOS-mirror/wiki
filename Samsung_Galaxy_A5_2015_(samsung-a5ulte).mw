@@ -31,7 +31,7 @@
 | status_gps =
 | status_mobiledata =
 | status_sms = Y
-| status_calls = P
+| status_calls = Y
 | status = 
 | booting = yes
 | pmoskernel = Mainline
