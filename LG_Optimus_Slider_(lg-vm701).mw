@@ -53,7 +53,7 @@ The exploit used on the LG Esteem also works on the Optimus Slider.  Please see 
 The tool referenced has a dead download link, but is available through the Internet Archive's ''Wayback Machine''. [https://web.archive.org/web/20140620234749if_/http://www.androidnerds.net/forums/index.php?action=downloads;sa=downfile&id=10 LG_Esteem_Root.zip on archive.org]
 
 The tool runs from a .bat script.  Though the changes necessary to run it on linux are trivial, here is the modified script:
-<div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
+<div class="toccolours mw-collapsible mw-collapsed" style="width:75%; overflow:auto;">
 <div style="font-weight:bold;line-height:1.6;">run.sh</div>
 <div class="mw-collapsible-content">
  <nowiki>
