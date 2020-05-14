@@ -55,16 +55,46 @@ Flashing. Cannot sideload, apparently zeroing out boot partition enables fastboo
 # cat /proc/partitions
 major minor  #blocks  name
 
-  31        0       5120 mtdblock0 # /boot
-  31        1     117888 mtdblock1 # /cache
-  31        2       7168 mtdblock2 # /recovery
-  31        3       1280 mtdblock3 # /splash
-  31        4       1024 mtdblock4 # /FOTA
-  31        5       1024 mtdblock5 # /FOTA_STO
-  31        6     161792 mtdblock6 # /system
-  31        7     185344 mtdblock7 # /data
-  31        8        512 mtdblock8 # /userdata
-  31        9       1536 mtdblock9 # /persist
+  31        0       5120 mtdblock0
+  31        1     117888 mtdblock1
+  31        2       7168 mtdblock2
+  31        3       1280 mtdblock3
+  31        4       1024 mtdblock4
+  31        5       1024 mtdblock5
+  31        6     161792 mtdblock6
+  31        7     185344 mtdblock7
+  31        8        512 mtdblock8
+  31        9       1536 mtdblock9
+</nowiki>
+</div></div>
+<div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
+<div style="font-weight:bold;line-height:1.6;">fstab</div>
+<div class="mw-collapsible-content">
+ <nowiki>
+# cat /etc/fstab 
+/dev/block/mtdblock1 /cache yaffs2 rw
+/dev/block/mtdblock7 /data yaffs2 rw
+/dev/block/mmcblk0p1 /sdcard vfat rw
+ /sd-ext auto rw
+/dev/block/mtdblock6 /system yaffs2 rw
+</nowiki>
+</div></div>
+<div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
+<div style="font-weight:bold;line-height:1.6;">mtd</div>
+<div class="mw-collapsible-content">
+ <nowiki>
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00500000 00020000 "boot"
+mtd1: 07320000 00020000 "cache"
+mtd2: 00700000 00020000 "recovery"
+mtd3: 00140000 00020000 "splash"
+mtd4: 00100000 00020000 "FOTA"
+mtd5: 00100000 00020000 "FOTA_STO"
+mtd6: 09e00000 00020000 "system"
+mtd7: 0b500000 00020000 "userdata"
+mtd8: 00080000 00020000 "misc"
+mtd9: 00180000 00020000 "persist"
 </nowiki>
 </div></div>
 
