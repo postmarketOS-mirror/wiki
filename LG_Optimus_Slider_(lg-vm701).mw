@@ -48,6 +48,95 @@ Flashing is possible, but there are problems:
 * attempting to boot using <code>pmbootstrap flasher boot</code> uploads but fails to boot after printing the cmdline to the screen.
 
 == Rooting ==
+The exploit used on the LG Esteem also works on the Optimus Slider.  Please see this forum thread on AndroidCentral for instructions. [https://forums.androidcentral.com/metropcs-esteem/131539-howto-root-lg-esteem.html]
+
+The tool referenced has a dead download link, but is available through the Internet Archive's ''Wayback Machine''. [https://web.archive.org/web/20140620234749if_/http://www.androidnerds.net/forums/index.php?action=downloads;sa=downfile&id=10 LG_Esteem_Root.zip on archive.org]
+
+The tool runs from a .bat script.  Though the changes necessary to run it on linux are trivial, here is the modified script:
+<div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
+<div style="font-weight:bold;line-height:1.6;">run.sh</div>
+<div class="mw-collapsible-content">
+ <nowiki>
+#!/bin/bash                     
+#####################################
+#                  
+#  LG Esteem root script
+#  Linux version        
+#
+#  Exploit copyright (C) 2011 Revolutionary
+#  Scripting for LG Esteem by Dan Rosenberg (@djrbliss)
+#  Modified for Linux by foldmorepaper (@foldmorepaper)
+#
+#####################################
+#                                                                                              
+# Instructions:
+#                  
+#  1. Ensure you have the latest drivers installed from LG
+#                                                                                              
+#  2. Put your device in debugging mode                                                        
+#                                                                                              
+#  3. Attach it via USB   
+#                                   
+#  4. Run this script in the same directory as the rest of the extracted
+#     zipfile                                                                                  
+#                                                                                              
+#####################################                                                          
+echo "[*] LG Esteem root script (Linux version)"                
+echo "[*] Exploit copyright (C) 2011 Revolutionary"                           
+echo "[*] Scripting for LG Esteem by Dan Rosenberg (@djrbliss)"
+echo "[*] Linux script by foldmorepaper (@foldmorepaper)"
+echo "[*]"               
+echo "[*] Before continuing, ensure USB debugging is enabled, that you"
+echo "[*] have the latest LG drivers installed, and that your phone is"
+echo "[*] connected via USB."
+echo "[*]"             
+read -p "[*] Press enter to root your phone..." 
+echo "[*]"
+                                               
+echo "[*] Waiting for device..."
+adb kill-server                  
+adb wait-for-device
+                                                                                               
+echo "[*] Device found."
+
+echo "[*] Pushing exploit binary..."
+adb push zergrush /data/local/tmp/zergrush
+adb shell "chmod 755 /data/local/tmp/zergrush"
+
+echo "[*] Running exploit..."
+adb shell "echo exit | /data/local/tmp/zergrush"
+
+# Install the goods
+echo "[*] Installing root tools..."
+adb shell /data/local/tmp/sh -c "mount -orw,remount /dev/block/system /system"
+adb shell /data/local/tmp/sh -c "mkdir /system/tmp"
+adb shell /data/local/tmp/sh -c "chmod 777 /system/tmp"
+adb push su /system/tmp/su
+adb push busybox /system/tmp/busybox
+adb push Superuser.apk /system/tmp/Superuser.apk
+adb shell /data/local/tmp/sh -c "mv /system/tmp/su /system/xbin/su"
+adb shell /data/local/tmp/sh -c "mv /system/tmp/Superuser.apk /system/app/Superuser.apk"
+adb shell /data/local/tmp/sh -c "mv /system/tmp/busybox /system/xbin/busybox"
+adb shell /data/local/tmp/sh -c "chown root /system/xbin/su"
+adb shell /data/local/tmp/sh -c "chmod 4755 /system/xbin/su"
+adb shell /data/local/tmp/sh -c "ln -s /system/xbin/su /system/bin/su"
+adb shell /data/local/tmp/sh -c "chmod 755 /system/xbin/busybox"
+adb shell /data/local/tmp/sh -c "/system/xbin/busybox --install /system/xbin/"
+
+# Clean up after ourselves
+echo "[*] Cleaning up..."
+adb shell /data/local/tmp/sh -c "rmdir /system/tmp"
+adb shell "rm /data/local/tmp/* 2>/dev/null"
+
+echo "[*] Rebooting..."
+adb reboot
+
+adb wait-for-device
+echo "[*] Root complete, enjoy!"
+echo "[*] Press any key to exit."
+adb kill-server
+</nowiki>
+</div></div>
 
 == Additional Info ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
