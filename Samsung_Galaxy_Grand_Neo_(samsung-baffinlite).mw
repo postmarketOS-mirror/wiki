@@ -97,9 +97,13 @@ Audio works for a split second and then crashes.
 |KTD3102
 |Not in mainline, and there doesn't seem to be a similar driver (by name).
 |-
-|Sensor
+|Temperature/barometric sensor
 |Bosch BMP18x
 |Supported by bmp085 driver in mainline
+|-
+|Proximity/ambient light sensor
+|tmd2771
+|Driver might not be in mainline
 |}
 
 == See also ==
