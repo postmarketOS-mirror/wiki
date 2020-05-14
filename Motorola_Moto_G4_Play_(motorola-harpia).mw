@@ -61,7 +61,7 @@ See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
 Follow the directions on [[Qualcomm_Snapdragon_410_(MSM8916)#Modem|this wiki page]] to use the modem. If you have a device model other than what is listed here, please edit the list below
 with the results of modem functionality testing.
 
-* '''XT1602:''' Modem working, can send and receive text messages. Can initiate and answer phone calls, but no audio. Mobile data does not work.
+* '''XT1602:''' Modem working, can send and receive text messages. Can initiate and answer phone calls. Mobile data does not work.
 
 == See also ==
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-harpia Device package]
