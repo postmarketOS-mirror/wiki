@@ -94,6 +94,8 @@ What works:
 
 :* requires proprietary firmware blobs, can be extracted from Android, or can be downloaded from firmware repositories
 
+:* Sometimes crashes on resume after suspend
+
 * SSH and Telnet via USB 
 
 :* Sometime you might get stuck with no prompt, or a password prompt, or the connection may seem to lag. No fix has been found yet, but a temporary workaround is to run <code>ping 172.16.42.1</code> in another terminal, while using ssh or telnet.
