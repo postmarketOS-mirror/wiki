@@ -98,6 +98,8 @@ What works:
 
 :* Sometime you might get stuck with no prompt, or a password prompt, or the connection may seem to lag. No fix has been found yet, but a temporary workaround is to run <code>ping 172.16.42.1</code> in another terminal, while using ssh or telnet.
 
+:* Adding <code>trace_event=dwc3 tp_printk=1</code> to the kernel boot args seems to completely mitigate the issue
+
 * Touchscreen
 
 :* Synaptics 3203B, works using mainline RMI4 driver
@@ -114,7 +116,7 @@ What works:
 
 * Battery
 
-:* Reports voltage, capacity
+:* Reports voltage, capacity, temperature, energy
 
 :* Needs to deliver other data like current and battery details
 
