@@ -56,7 +56,7 @@ The tool runs from a .bat script.  Though the changes necessary to run it on lin
 <div class="toccolours mw-collapsible mw-collapsed" style="width:75%; overflow:auto;">
 <div style="font-weight:bold;line-height:1.6;">run.sh</div>
 <div class="mw-collapsible-content">
- <nowiki>
+ <syntaxhighlight lang="bash" line='line'>
 #!/bin/bash                     
 #####################################
 #                  
@@ -135,14 +135,14 @@ adb wait-for-device
 echo "[*] Root complete, enjoy!"
 echo "[*] Press any key to exit."
 adb kill-server
-</nowiki>
+</syntaxhighlight>
 </div></div>
 
 == Additional Info ==
 <div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
 <div style="font-weight:bold;line-height:1.6;">Partitions</div>
 <div class="mw-collapsible-content">
- <nowiki>
+ <syntaxhighlight line='line'>
 # cat /proc/partitions
 major minor  #blocks  name
 
@@ -156,24 +156,24 @@ major minor  #blocks  name
   31        7     185344 mtdblock7
   31        8        512 mtdblock8
   31        9       1536 mtdblock9
-</nowiki>
+</syntaxhighlight>
 </div></div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
 <div style="font-weight:bold;line-height:1.6;">fstab</div>
 <div class="mw-collapsible-content">
- <nowiki>
+<syntaxhighlight line='line'>
 # cat /etc/fstab 
 /dev/block/mtdblock1 /cache yaffs2 rw
 /dev/block/mtdblock7 /data yaffs2 rw
 /dev/block/mmcblk0p1 /sdcard vfat rw
  /sd-ext auto rw
 /dev/block/mtdblock6 /system yaffs2 rw
-</nowiki>
+</syntaxhighlight>
 </div></div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
 <div style="font-weight:bold;line-height:1.6;">mtd</div>
 <div class="mw-collapsible-content">
- <nowiki>
+<syntaxhighlight line='line'>
 # cat /proc/mtd
 dev:    size   erasesize  name
 mtd0: 00500000 00020000 "boot"
@@ -186,9 +186,63 @@ mtd6: 09e00000 00020000 "system"
 mtd7: 0b500000 00020000 "userdata"
 mtd8: 00080000 00020000 "misc"
 mtd9: 00180000 00020000 "persist"
-</nowiki>
+</syntaxhighlight>
 </div></div>
 
+== Custom Recovery ==
+Two custom recoveries are available for the vm701. Use in the context of postmarketOS:
+* '''CWM'''
+** '''Enable fastboot''' by formatting the the boot partition
+** Restore commonly-available Android system backups
+* '''TWRP'''
+** ADB access without booting Android
+To flash a custom recovery to the recovery partition (before having access to fastboot), the tool <code>flash_image</code> is required. (available from, among other sources, BobZhome ROM's) [https://sites.google.com/site/bobzhomeroms/]
+<div class="toccolours mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
+<div style="font-weight:bold;line-height:1.6;">flash_image Installation & Usage</div>
+<div class="mw-collapsible-content">
+<syntaxhighlight line='line'>
+$ adb push recovery.img /sdcard/
+$ adb push flash_image /sdcard/
+$ adb shell
+$ su
+# mount -o remount, rw /system
+# cp /sdcard/flash_image /system/bin
+# chmod 777 /system/bin/flash_image
+# flash_image recovery /sdcard/recovery.img
+# reboot recovery
+</syntaxhighlight>
+</div></div>
+==== Booting to Recovery ====
+* From power-off: hold buttons ''Power'' + ''Volume Down'' until booted into recovery
+* Using ADB: <code>$ adb reboot recovery</code>
+* Using fastboot: <code>$ fastboot reboot recovery</code>
+=== CWM ===
+A custom CWM recovery is available from BobZhome ROM's. [https://sites.google.com/site/bobzhomeroms/vm701]
+Push to SD card:
+<code>$ adb push BobZhome_VM701_recovery.img /sdcard/</code><br />
+{{note|The ''volume buttons'' scroll through menu options, and the ''camera button'' selects menu options}}
+==== Flash from Android ====
+Using <code>flash_image</code>, flash recovery image to recovery partition (from ADB):
+<syntaxhighlight line='line'>
+# flash_image recovery /sdcard/BobZhome_VM701_recovery.img
+</syntaxhighlight>
+==== Flash/Boot from Fastboot ====
+Boot recovery image <code>fastboot boot BobZhome_VM701_recovery.img</code><br />Flash recovery image <code>fastboot flash recovery BobZhome_VM701_recovery.img</code>
+=== TWRP ===
+Download the official TWRP recovery from the device page. [https://twrp.me/lg/lgoptimusslider.html]
+Push to SD card:
+<code>$ adb push twrp-2.8.5.0-gelato.img /sdcard/</code>
+==== Flash from Android ====
+Using <code>flash_image</code>, flash recovery image to recovery partition (from ADB):
+<syntaxhighlight line='line'>
+# flash_image recovery /sdcard/twrp-2.8.5.0-gelato.img
+</syntaxhighlight>
+==== Flash/Boot from Fastboot ====
+Boot recovery image <code>fastboot boot twrp-2.8.5.0-gelato.img</code><br />Flash recovery image <code>fastboot flash recovery twrp-2.8.5.0-gelato.img</code>
 == Installation ==
-
+=== Fastboot ===
+Fastboot is only available upon erasing/formatting the boot partition. There are alternative means of nulling the boot partition, but CWM is the easiest.<br /><br />
+It is recommended, as always, to make a full system backup before doing any modifications.  This is especially necessary in this case, as unbricking from emergency mode (''camera button'' + ''backup button'', plug in usb cable to computer) is not possible, even though the lg mobile support tool recognizes the device and downloads a firmware image, an unknown error occurs.<br /><br />
+To format the boot partition, '''Mounts and Storage -> format /boot -> Yes - Format'''<br />
+On boot, fastboot should automatically start. To restore normal boot functionality, restore boot partition from backup.
 == See also ==
