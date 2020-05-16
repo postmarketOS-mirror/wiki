@@ -246,3 +246,4 @@ It is recommended, as always, to make a full system backup before doing any modi
 To format the boot partition, '''Mounts and Storage -> format /boot -> Yes - Format'''<br />
 On boot, fastboot should automatically start. To restore normal boot functionality, restore boot partition from backup.
 == See also ==
+[https://fccid.io/BEJLS700/Internal-Photos/Internal-Photographs-1492686 FCC Internal Photos]
