@@ -107,6 +107,17 @@ If the file did not get installed for you, please double check if it is there an
 {{note|Plasma Mobile shell uses some Wayland protocols, so you can't run it on X11 in case you tried to do that.}}
 Please follow [https://blog.martin-graesslin.com/blog/2016/07/why-does-kwin_wayland-not-start/ these instructions] for debugging.
 
+=== Some env vars that may help Angelfish browser ===
+<source lang="bash">
+# Recommended in https://bugreports.qt.io/browse/QTBUG-80665
+export QTWEBENGINE_DISABLE_GPU_THREAD=1
+# Flags are based on workaround for SFOS (disable-gpu-compositing) and default Android settings:
+# Multiple Raster Threads: Disabled
+# Flags enabled by Qt if enable-embedded-switches is given
+export QTWEBENGINE_CHROMIUM_FLAGS="--disable-gpu-compositing --num-raster-threads=1 --enable-viewport --disable-composited-antialiasing"
+</source>
+( [https://github.com/sailfishos-flatpak/flatpak-runner/blob/a49f60f3347972eb673fc35b94c4ef1c2024297d/src/appsettings.cpp#L79 source] )
+
 == Guide ==
 Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
 
