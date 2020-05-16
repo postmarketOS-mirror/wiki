@@ -18,7 +18,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = N
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = N
 | status_mainline = P
@@ -53,6 +53,10 @@ Mainline kernel is up and running, with more and more hardware being added!
 * Touch works! [https://github.com/calebccff/linux/commits/enchilada-touchscreen after a massive false start]
 * USB networking and host mode both work, however it isn't possible to switch without recompiling the DTS.
 * Buttons (power/vol/tri-state) all function
+* Modem boots up but ofonoctl doesn't detect any sim slots.
+* Wifi is semi-functional! There is a [https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/commit/7f485ed31b6e66e32cc3bdc385fc95532fc531a6 normally fatal error that must be ignored] in order to boot wlan, but it does
+successfully connect to networks with dhcp.
+
 
 Building/flashing instructions [https://gist.github.com/calebccff/80bba8237e2ba512dc07f907e55b4891 here]
 
