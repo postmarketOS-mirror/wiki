@@ -83,6 +83,8 @@ $ pmbootstrap flasher flash_kernel
 
 === Hardware issues ===
 
+Graphic subsystem randomly crashes, requiring an hard reboot. [https://gitlab.com/postmarketOS/pmaports/-/issues/424]
+
 ==== Power Management ====
 
 At this stage the directory <code>/sys/devices/system/cpu/cpufreq</code> is empty, so it seems there is no integrated power management.
