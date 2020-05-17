@@ -11,7 +11,7 @@ The most privacy friendly way of using this application will be with the offline
 
 ==== Online ====
 
-When using an online provider, Pure Maps must send the location you are looking at to the map provider. Make sure that this is what you want, and that you are fine with the privacy implications.
+When using an online provider, Pure Maps must send queries for tiles, search, and routing to the map provider. Make sure that this is what you want, and that you are fine with the privacy implications.
 
 There is no provider available, that can be used without registration. So you would need to register a free developer API key from a vector (e.g. mapbox.com or maptiler.com) or raster (e.g. here.com) maps provider. Then configure Pure Maps in postmarketOS to use your personal API key.
 
