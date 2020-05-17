@@ -48,6 +48,7 @@
 * Multi-touch
 * Plasma Mobile(slideshow mode)
 * Xfce
+* Mate
 * Weston
 * Touch screen ({{github|1313}})
 * USB Networking ({{github|1260}})
@@ -60,7 +61,6 @@
 * Menu/Back touch buttons (<code>/dev/input/event9</code>)
 
 == What does not work ==
-* Screen is red by default, can be fixed by using RGB565 mode instead of RGBA8888
 * HW acceleration(we need libhybris or mainlining or freedreno)
 * USB network device has no MAC address set by default, can be fixed by changing it to 06:4b:2d:xx:xx:xx(replace xx with random hex number)
 
