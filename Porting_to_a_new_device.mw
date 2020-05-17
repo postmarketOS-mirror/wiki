@@ -134,15 +134,15 @@ $workdir/cache_git/pmaports/device/testing/linux-wiki-example/APKBUILD
 
 ''Where $workdir is the path you provided at the first step of <code>pmbootstrap init</code> process and "wiki-example" by the brand and codename you provided there.''
 
-You have to set yourself as contributor of the packages to be able to build them. This applies to cases when <code>ERROR: linux-wiki-example: Provide a valid RFC822 maintainer address</code> occurs. Replace
+Maintainer line can be deleted if you don't plan to maintain your port, otherwise replace 
 <pre>
-# Contributor: Firstname Lastname <email> (CHANGEME!)
+# Maintainer: Firstname Lastname <email> (CHANGEME!)
 </pre>
-with something similar to
+ with something similar to
 <pre>
-# Contributor: Oliver Smith <ollieparanoid@postmarketos.org>
+# Maintainer: Oliver Smith <ollieparanoid@postmarketos.org>
 </pre>
-but related to your information. You may use nickname instead of the real name if you want, but you have to submit your real e-mail address. Maintainer line can be deleted if you don't plan to maintain your port, otherwise change it as well.
+but related to your information. You may use nickname instead of the real name if you want, but you have to submit your real e-mail address. 
 
 === Source code ===
 [[How to find device-specific information#LineageOS_kernel_source_repository|Find the source code]] of the known working kernel fork. Try to find a widely used kernel if possible, for example from LineageOS. The kernel version is also important, as of writing (April 2020), the lowest kernel version number we have packaged is 3.0.x. It might be possible to get even older kernels running (with [[Downstream_kernel_specific_package#GCC_version|old GCC versions]]), but even if you get them to boot, you will likely run into problems down the road.
