@@ -71,6 +71,14 @@ Here's how to boot pmOS via fastboot:
 # Enter the fastboot mode
 # Finally, boot pmOS: <syntaxhighlight lang="shell-session">$ pmbootstrap flasher boot</syntaxhighlight>
 
+or 
+# Enter the fastboot mode
+# Flash system
+<syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_system</syntaxhighlight>
+# Flash kernel
+<syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_kernel</syntaxhighlight>
+# Finally, reboot into pmOS: <syntaxhighlight lang="shell-session">$ fastboot reboot</syntaxhighlight>
+
 == See also ==
 * {{MR|1088|pmaports}} Initial merge request
 <!--
