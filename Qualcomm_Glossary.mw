@@ -1,0 +1,42 @@
+[[Category:Technical Reference]]
+List of inscrutable Qualcomm terms and acronyms. Please contribute - links save seconds, definitions save minutes, explanations save <s>hours</s> <s>days</s> weeks!
+
+== G ==
+
+'''GCC''' - General Clock Controller
+: Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/clock/qcom,gcc.txt qcom,gcc.txt]
+: DT Bindings: [https://www.kernel.org/doc/Documentation/devicetree/bindings/clock/qcom,gcc.yaml qcom,gcc.yaml]
+
+<span id="GENI">'''GENI'''</span> - Generic Interface
+: Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/soc/qcom/qcom,geni-se.txt qcom,geni-se.txt]
+
+<span id="GLINK">'''GLINK'''</span>
+: Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/soc/qcom/qcom,glink.txt qcom,glink.txt]
+
+== M ==
+
+'''MSM''' - Mobile Station Modem
+
+== Q ==
+
+'''QCOM''' - Qualcomm
+
+'''QUP''' - Qualcomm Universal Peripheral
+: Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/spi/qcom%2Cspi-qup.txt qcom,spi-qup.txt], [https://www.kernel.org/doc/Documentation/devicetree/bindings/i2c/qcom%2Ci2c-qup.txt qcom,i2c-qup.txt],
+: See also: [[# GENI]]
+
+== R ==
+
+<span id="RPM">'''RPM'''</span> - Resource Power Manager
+: Allows each component in the system to vote for resources such as clocks, regulators, and bus frequencies
+: Not to be confused with RPMSG
+: Controlled with the <code>"rpm_requests"</code> SMD channel, either over [[#GLINK]] or [[#SMD]]
+: Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/mfd/qcom-rpm.txt qcom-rpm.txt]
+
+'''RPMCC''' - [[#RPM]] Clock Controller
+
+== S ==
+
+'''SDM''' - Snapdragon
+
+<span id="SMD">'''SMD'''</span> - Shared Memory Device
