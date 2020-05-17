@@ -53,9 +53,6 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 </syntaxhighlight>
 
-If you've ported a new device, add a line to both APKBUILD files:
-<code># Contributor: your real name (preferred) or nickname <your@email.address></code>
-
 Create a new branch, commit the changes and go back to the master branch:
 <syntaxhighlight lang="shell-session">
 $ git checkout -b mynewbranch
