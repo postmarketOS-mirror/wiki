@@ -3,7 +3,7 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 
 == G ==
 
-'''GCC''' - General Clock Controller
+'''GCC''' - Global Clock Controller
 : Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/clock/qcom,gcc.txt qcom,gcc.txt]
 : DT Bindings: [https://www.kernel.org/doc/Documentation/devicetree/bindings/clock/qcom,gcc.yaml qcom,gcc.yaml]
 
