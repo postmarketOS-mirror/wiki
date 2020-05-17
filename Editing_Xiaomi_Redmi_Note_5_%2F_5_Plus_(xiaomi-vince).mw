@@ -23,7 +23,7 @@
 | status_fde = 
 | status_mainline = 
 | status_battery = Y
-| status_3d = Y
+| status_3d = P
 | status_accel = N
 | status_audio = N
 | status_bluetooth = N
@@ -69,8 +69,6 @@ Here's how to boot pmOS via fastboot:
 # Insert the SD card into the device
 # Connect the device to your PC
 # Enter the fastboot mode
-# In order to boot an image with fastboot, an 8-Kb image of zeros should be flashed to the <code>antirbpass</code> partition every time we want to use <code>pmbootstrap flasher boot</code> or <code>fastboot boot</code>. Create an image if you haven't done that already: <syntaxhighlight lang="shell-session">$ dd if=/dev/zero of=dummy.img bs=8K count=1</syntaxhighlight>
-# Flash the freshly created <code>dummy.img</code> to the <code>antirbpass</code> partition: <syntaxhighlight lang="shell-session">$ fastboot flash antirbpass dummy.img</syntaxhighlight>
 # Finally, boot pmOS: <syntaxhighlight lang="shell-session">$ pmbootstrap flasher boot</syntaxhighlight>
 
 == See also ==
