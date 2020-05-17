@@ -80,7 +80,7 @@ or
 # Finally, reboot into pmOS: <syntaxhighlight lang="shell-session">$ fastboot reboot</syntaxhighlight>
 
 == See also ==
-* {{MR|1088|pmaports}} Initial merge request
+* {{MR|1249|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
