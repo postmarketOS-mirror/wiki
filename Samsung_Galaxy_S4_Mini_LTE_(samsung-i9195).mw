@@ -1,3 +1,4 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
 {{Infobox device
 | manufacturer = Samsung
 | name =  Galaxy S4 Mini LTE
@@ -12,7 +13,7 @@
 | storage = Internal, with external SD slot
 | display = 960x540
 | memory = 1.5GB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = P
 | status_flashing = Y
 | status_touch = Y
