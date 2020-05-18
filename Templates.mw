@@ -21,12 +21,18 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:Outdated|outdated]]
 * [[Template:Syslog|syslog]] ''short explanation on how to read relevant syslog entries''
 * [[Template:Todo|todo]]
+* [[Template:Userbox|userbox]] ''userbox template''
 * [[Template:wikipedia|wikipedia]] ''link to an wikipedia article''
 
 Templates for device ownership list:
 * [[Template:My devices|My devices]] ''Show table of devices owned on your own page''
 * [[Template:Owns device|Owns device]] ''Adds a device to the ownership table''
 * [[Template:Device owners|Device owners]] ''Displays list of people owning the device to the device page''
+
+Userboxes:
+* [[Template:User_ports]] ''Shows the amount of devices you ported'' (usage: {<p style="display:inline;"></p>{User ports|amount}})
+* [[Template:User_mainline]] ''Shows the amount of devices you mainlined'' (usage: {<p style="display:inline;"></p>{User mainline|amount}})
+* [[Template:User_mainline_attempts]] ''"This user is currently trying to mainline a device."''
 
 == See also ==
 * [[Special:UncategorizedTemplates]]
