@@ -2,16 +2,16 @@
 | manufacturer = Asus
 | name =  Eee Pad Transformer Prime
 | codename = asus-tf201
-| image = 
-| imagecaption = Picture: Todo
+| image = File:Tf201-2.jpg
+| imagecaption = 
 | releaseyear = 2011
-| originalsoftware = Android 4.1
-| chipset = Nvidia Tegra 3
-| cpu = 1.3 GHz quad-core Nvidia Tegra 3 T30
+| originalsoftware = Android 3.2 to Android 4.1
+| chipset = Nvidia Tegra 3 T30
+| cpu = Quad-core 1.3 GHz Cortex-A9
 | gpu = GeForce ULP
-| storage = 32 GB
-| display = 1200x800 LED
-| memory = 1GB
+| storage = 32/64 GB
+| display = 1200x800 Super IPS+ LCD
+| memory = 1 GB
 | architecture = armv7
 | status = doesn't go beyond boot logo
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
@@ -29,10 +29,10 @@
 | status_audio = <!-- Using the device's speakers/headphone jack works -->
 | status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
 | status_camera = <!-- Taking photos and videos works. -->
-| status_gps = <!-- The Global Positioning System sensor works.  -->
-| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
-| status_sms = <!-- Sending and receiving short messages works as intended. -->
-| status_calls = <!-- Talking to other people over the cellular network. -->
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
 | booting = no
 }}
 
@@ -41,6 +41,9 @@
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
+
+== Unlocking ==
+The first step to do anything with the device is unlocking, with this device its done by sideloading the unlock apk from ASUS and clicking a few buttons in the app. The apk can be found on [https://dlcdnets.asus.com/pub/ASUS/EeePAD/TF201/UnLock_Device_App_V6.apk the ASUS support page].
 
 == Based on ==
 Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/rom-t3457417 XDA link]
@@ -51,8 +54,11 @@ Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/
 * Doesn't go beyond bootlogo
 * Having problems compiling with APANIC flag (to read last_kmesg - and figure out why)
 
-== How to enter flash mode ==
-Longpress power (for reboot), then during reboot (feel the vibration) lower sound (to bootloader), and from bootloader higher sound to jump to recovery
+== How to enter flash modes ==
+Turn tablet off if it is in system. Then press power and volume down buttons till you feel the vibration. Then release power button only. You will enter bootloader), and from bootloader higher sound to jump to recovery
+
+== Fastboot issue ==
+It seems like the bootloader doesn't handle flashing the boot and userdata partition correctly, the official firmware package flashes an "Android blob" to the staging partition with fastboot which triggers an flashing screen on the tablet which copies the data to the correct partitions. Flashing ordinary images using TWRP recovery goes properly.
 
 == Installation ==
 You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader). Please follow this [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 guide on XDA] if you're not.
