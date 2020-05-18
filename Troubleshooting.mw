@@ -31,7 +31,7 @@
 
 == Porting process, preparation and various information ==
 
-See also: "pmbootstrap and build related errors" section above
+See also: [[Troubleshooting#pmbootstrap and build related errors]]
 
 === My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source ===
 
