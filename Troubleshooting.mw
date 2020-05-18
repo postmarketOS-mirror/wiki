@@ -1,4 +1,4 @@
-__NOTOC__
+<div style="float: right; width: 30%;">__TOC__</div>
 = General information =
 
 * Always look at the log file for a detailed error message: <code>~/.local/var/pmbootstrap/log.txt</code>
