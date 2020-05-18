@@ -1,3 +1,4 @@
+__NOTOC__
 = General information =
 
 * Always look at the log file for a detailed error message: <code>~/.local/var/pmbootstrap/log.txt</code>
@@ -6,50 +7,48 @@
 * {{alpine|Syslog}} is enabled, and will log to shared memory once the OS has booted. It can be read with the <code>logread</code> tool in BusyBox. The syslog is currently not preserved across reboots.
 
 = Specific troubleshooting pages =
-* [[Troubleshooting:boot|boot]]
-* [[Troubleshooting:dependencies|dependencies]]
-* [[Troubleshooting:display|display]]
-* [[Troubleshooting:grsec|grsec]] (TL;DR: doesn't work)
-* [[Troubleshooting:HID buttons|HID buttons]]
-* [[Troubleshooting:host|host system issues]]
-* [[Troubleshooting:kernel|kernel]]
-* [[Osk-sdl#Troubleshooting|osk-sdl]]
-* [[Troubleshooting:QEMU|QEMU]]
-* [[Troubleshooting:Xorg|Xorg]]
+* [[Troubleshooting:boot]] - Troubleshooting the boot process, figuring out if your device boots
+* [[Troubleshooting:display]] - Troubleshooting display issues
+* [[Troubleshooting:HID buttons]] - Troubleshooting on-device buttons
+* [[Troubleshooting:host]] - Troubleshooting the host system
+* [[Troubleshooting:kernel]] - Common kernel building related issues and how to fix them
+* [[Osk-sdl#Troubleshooting|Troubleshooting osk-sdl]]'''
+* [[Troubleshooting:Xorg]] - Troubleshooting problems with Xorg
+* [[Troubleshooting:QEMU]] - Debugging problems with <code>pmbootstrap qemu</code>
+* [[Troubleshooting:dependencies]] - A guide to resolving <code>Could not find dependency</code> errors coming from pmbootstrap, as well as <code>unsatisfiable constraints</code> errors coming from apk.
+* [[Troubleshooting:grsec]] (TL;DR: doesn't work)
 
-= Uncategorized errors =
+= Port/device troubleshooting =
 
-=== pmbootstrap is broken! But it worked yesterday! ===
-Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the [[Matrix_and_IRC|IRC/matrix]] channel to find out, which commit was the last one that worked.
+== References ==
 
-=== <code>musl-*</code>/<code>busybox-static-*</code> fails to build with a 404 error ===
+* [[Audio]]
+* [[Osk-sdl|osk-sdl]]
+* [[Serial debugging]]
+* [[Modem]]
+* [[WiFi]]
+* ...and specific troubleshooting pages linked above.
 
-Run <code>pmbootstrap aportgen musl-armhf musl-aarch64 musl-x86_64</code>. The reason why this fails from time to time is, that we use Alpine's binary <code>musl</code> lib c package for <code>armhf</code>/<code>aarch64</code> in the native chroot, to get the cross-compiler working. So the download URL inside the <code>aports/cross/musl-*/APKBUILD</code> file must be in sync with the upstream version. This pmbootstrap command safely gets the new version, uses <code>apk</code> to verify the signature of the package, generates the hash, and updates the <code>APKBUILD</code> file. To make sure, that <code>pmbootstrap aportgen</code> receives the latest <code>musl</code> version, delete your HTTP cache right before by executing this command: <code>pmbootstrap zap -hc</code>. Don't bother making a pull-request for this, as the fix is really trivial (see [https://gitlab.com/postmarketOS/pmbootstrap/commit/0f3b2ea4277679056079000eac581d1b9d05afc8 this commit]). Just report it as issue, if it happens.
+== Porting process, preparation and various information ==
 
-=== Permission denied: .../pmbootstrap/work/chroot_native/proc/1/cwd' ===
-It looks like you have created your work folder as: <code>pmbootstrap/work</code>, where <code>pmbootstrap</code> is the folder with the checked out source code. That is not supported. Please run <code>pmbootstrap shutdown</code>, then delete that folder, then run <code>pmbootstrap init</code> again and choose another work folder (e.g. <code>~/.local/var/pmbootstrap</code>).
+See also: "pmbootstrap and build related errors" section above
 
-After that it should work - if this still does not resolve it, please open up an issue in the GitLab issue tracker.
+=== My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source ===
 
-=== can't create <code>/dev/null</code>: Permission denied ===
-Make sure that your working directory is mounted correctly. This can happen when working over NFS, or when you mounted the drive your working directory is on trough the file explorer (if that's the case, <code>umount</code> it, and <code>mount</code> it manually). This can probably happen on every drive mounted with <code>nosuid</code> or similar.
+# Ask kindly via e-mail.
+# If they don't provide the source, team up with [http://gpl-violations.org/faq/violation-faq/ gpl-violations.org]. You have the legal right to get the source, because the Linux kernel is under the GPLv2!
+# Consider [[building generic kernels|building generic kernel]] for your device.
+# Another option is [[using prebuilt kernels]]
 
-=== SSH / udev / touch screen do not work ===
-* Make sure, that <code>DEVTMPFS</code> is enabled in your [https://wiki.postmarketos.org/wiki/Kernel_configuration kernel config]. Do not enable <code>DEVTMPFS_MOUNT</code>.
+=== My Android device does not have partition labels, how do I know where to put the boot.img file etc? ===
+* Search online for the partitions, they are probably documented somewhere.
 
-=== I can't access the framebuffer device ===
-* <code>cat /dev/random &gt; /dev/fb0</code> returns: <code>cat: write error: No such device</code>
-* This could be caused by a proprietary 3d driver enabled in the kernel config. [https://github.com/postmarketOS/pmbootstrap/pull/66/ Try to disable it (the actual config options may be different).]
+* Try to dump all partitions. Run `file` on them, it should roughly tell you the contents. If that does not help, run [https://github.com/ReFirmLabs/binwalk binwalk].
+** file output: check if it is a kernel (vmlinuz), <code>boot.img</code> file or just "data".
+** In case you have "data", don't flash anything there, we probably can't generate that format yet. Please open an issue in GitHub or ask on the channel.
+* You can also look at recovery zips from other Android ROMs, that were released for your device. Extract it and look at <code>META-INF/com/google/android/updater-script</code>, search for commands starting with <code>run_program("/sbin/busybox", "dd"</code>, they are for flashing partitions.
 
-=== BusyBox does something different than the standard tool for the job, and this breaks building my package! ===
-
-'''Example:''' unzip in BusyBox doesn't extract symlinks like the normal unzip implementation ([https://github.com/postmarketOS/pmbootstrap/issues/82 #82]).
-
-'''Solution:''' Simply add <code>unzip</code> to the makedepends in the APKBUILD, and the &quot;real&quot; unzip will be used (or in that case, try to get the sources in another archive format, such as <code>.tar.bz2</code>, <code>.tar.xz</code>, <code>.tar.gz</code>).
-
-=== Errors with ecryptfs ===
-
-When your &quot;work&quot; folder is inside an ecryptfs mounted folder, [https://github.com/postmarketOS/pmbootstrap/issues/53 <code>/dev/random</code> may not work inside the chroot] and you may have other issues. Try to move your ''work'' folder to another location, you can use <code>/tmp</code> to test if this resolves the issue. You can change the location in <code>pmbootstrap init</code>. See also: [https://github.com/postmarketOS/pmbootstrap/issues/61 #61]. (This doesn't seem to be an issue with newer versions of ecryptfs anymore.)
+** In one example, there was <code>run_program("/sbin/busybox", "dd", "if=/tmp/boot.blob", "of=/dev/block/mmcblk0p4");</code>, which means that a <code>boot.blob</code> file gets flashed to <code>/dev/block/mmcblk0p4</code>. That <code>boot.blob</code> file is also in the recovery zip - run the <code>file</code> program on it (see above).
 
 === Serial Console Debug Cable (early boot debugging) ===
 
@@ -64,9 +63,9 @@ On fastboot devices, you may have to enable UART debugging with <code>fastboot o
 
 By default, all output from the initramfs get redirected to <code>/pmOS_init.log</code>. If you want the output through the debug cable you need to add <code>PMOS_NO_OUTPUT_REDIRECT</code> to your [[Troubleshooting:kernel#How_can_I_boot_the_kernel_with_some_specific_arguments.3F|kernel command line]].
 
-See [[Serial_debugging]]
+See [[Serial debugging]]
 
-=== Proprietary Blobs ===
+=== Proprietary blobs ===
 
 Many devices require proprietary blobs for enabling certain peripherals (wifi/bluetooth/cellular/GPS). [https://github.com/TheMuppets These repositories] appear to contain blobs for a large percentage of devices out there.
 
@@ -76,20 +75,44 @@ On some phones, you can hold down the power button for ten seconds to force a re
 
 You can also give from console <code>echo b > /proc/sysrq-trigger</code>.
 
+== Errors on the device ==
+
+=== Touch screen device present but not outputting any touch events ===
+For some devices (at least motorola-shamu and motorola-lux), the touch screen I2C device is present but not activated at boot, and must be activated before it produces any output.
+
+For the motorola-lux, this is done in the following way:
+
+<code>echo 1 > /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/drv_irq</code>
+
+The path to the correct touch device depends on the device. This can be added to an [[Device_specific_package#Initramfs_hook|initfs hook]] to activate the touch screen automatically at boot.
+
+=== CHARGING MODE: error starting charging-sdl ===
+When attaching the power cable while the device is off, Android devices boot into a special "charging mode". postmarketOS's [[charging-sdl]] display does not work yet on all devices.
+
+To debug the issue, follow instructions at [[Inspecting the initramfs]] including activating the initramfs-extra, then execute <code>start_charging_mode</code> in the shell.
+
+=== During initramfs generation: "modprobe: WARNING: Module drm not found in directory /lib/modules/..." ===
+This means, that a module can not be put in an initramfs. When you are not using a mainline kernel, it is likely that there are no modules configured, but the code is built directly into the kernel. This means, it is expected and can be ignored.
+
 === Phone shows the telnet message, a black screen, or doesn't leave the bootloader or Samsung/Google/... splash screen ===
 
 See: [[Troubleshooting:boot]]
 
-=== My device runs the Linux kernel (e.g. Android), but the vendor does not provide the source ===
-
-# Ask kindly via e-mail.
-# If they don't provide the source, team up with [http://gpl-violations.org/faq/violation-faq/ gpl-violations.org]. You have the legal right to get the source, because the Linux kernel is under the GPLv2!
-# Consider [[building generic kernels|building generic kernel]] for your device.
-# Another option is [[using prebuilt kernels]]
-
 === I have ported postmarketOS to my device and the screen doesn't get updated ===
 
 There is a [https://github.com/postmarketOS/pmbootstrap/pull/66#issuecomment-306343779 known bug] where if you execute <code>cat /sys/class/graphics/fb0/modes &gt; /sys/class/graphics/fb0/mode</code> exactly one frame is drawn, and the screen isn't updated otherwise.
+
+=== Device reboots ===
+* If your device always reboots after the same time (e.g. 2 minutes) after booting, you probably need to feed (or disable) a watchdog. Try to search your kernel config for watchdog, and also the internet for watchdog + your phone name.
+* Android: The kernel config option <code>CONFIG_ANDROID_LOW_MEMORY_KILLER</code> may cause reboots. Please check if you have disabled it. If this helps you, please let us know, so we can consider checking for this option.
+* Android: it is possible to get the <code>dmesg</code> log from just before the crash after the reboot [https://stackoverflow.com/questions/9682306/android-how-to-get-kernel-logs-after-kernel-panic if you enable some kernel options].
+
+=== SSH / udev / touch screen do not work ===
+* Make sure that <code>DEVTMPFS</code> is enabled in your [[Kernel configuration|kernel config]]. Do not enable <code>DEVTMPFS_MOUNT</code>.
+
+=== I can't access the framebuffer device ===
+* <code>cat /dev/random &gt; /dev/fb0</code> returns: <code>cat: write error: No such device</code>
+* This could be caused by a proprietary 3d driver enabled in the kernel config. [https://github.com/postmarketOS/pmbootstrap/pull/66/ Try to disable it (the actual config options may be different).]
 
 === &quot;if running weston from ssh, use --tty to specify a tty&quot; ===
 
@@ -100,44 +123,7 @@ Specify a tty in weston's commandline. The correct syntax is: <code>weston --tty
 If Weston returns an error because it could not access <code>/dev/tty1</code>, even when you specify it on the command line as above, you may need to enable Virtual Terminals in the kernel config.<br />
 You can enable <code>CONFIG_VT</code> using <code>pmbootstrap menuconfig</code> and checking under Device Drivers -&gt; Character devices -&gt; Virtual terminal
 
-=== Errors with grsec-based kernel on the host system ===
-
-See: [[Troubleshooting:grsec]]
-
-=== WARNING: No provider for dependency... ===
-
-'''Normal behavior.''' it means, that your &quot;user&quot; repository (the repository with all custom compiled packaged from pmOS, such as your device package and kernel) does not have the dependencies from the official Alpine Linux repositories (such as <code>cryptsetup</code>, <code>iw</code>, <code>htop</code>, ...) when indexing it. But these dependencies ''are'' in the official repositories, so they will be found when you try to install something. Usually the package indexing is done on all repositories at once in Alpine (then you wouldn't get the error), but pmOS does it only on the &quot;user&quot; repository.
-
-=== ERROR: busybox-1.27.0-r1.post-install: script exited with error 127 ===
-
-'''Normal behavior.''' We use a x86_64 version of <code>apk</code> to set up the chroots. When setting up the armhf chroot, the armhf post-installation code can't be executed, and that's where the errors come from. But we run &quot;apk fix&quot; right afterwards - with the armhf architecture, because we have an armhf version of apk installed inside the chroot now - and this runs the installation scripts again.
-
-=== sh: can't create /proc/sys/fs/binfmt_misc/register: nonexistent directory ===
-
-This issue is known to happen in Alpine Virthardened. It also happened in Void Linux for one user. These commands should fix it:
-
-<pre class="shell">sudo modprobe binfmt_misc
-sudo mount -t binfmt_misc none /proc/sys/fs/binfmt_misc</pre>
-If it still does not work, it is probably not supported by your host Linux distribution's kernel (<code>CONFIG_BINFMT_MISC</code>). Try to use another kernel.
-
-=== ERROR: /mnt/pmbootstrap-packages/x86_64/qemu-user-static-repack-2.8-r6.apk: UNTRUSTED signature ===
-
-You don't have your own package signing key imported, which gets generated when you compile a package for the first time. pmbootstrap should automatically import it, but when you hit <code>^C</code> during that, it may go wrong.
-
-Your generated key is in <code>~/.local/var/pmbootstrap/config_abuild</code>, all imported keys are in <code>~/.local/var/pmbootstrap/config_apk_keys</code>.
-
-A quick fix is deleting all packages:
-<pre>./pmbootstrap zap -p</pre>
-
-See issue [https://github.com/postmarketOS/pmbootstrap/issues/270 #270] for more information and don't hesitate to reopen if this didn't work for you.
-
-=== flasher (fastboot) is stuck in < waiting for any device > ===
-
-Maybe you need to install udev rules on your host Linux distribution. Arch has the [https://www.archlinux.org/packages/community/any/android-udev/ android-udev] package for example, which uses the rules from [https://github.com/M0Rf30/android-udev-rules here].
-
-If that does not help, it might be necessary to set the <code>flash_fastboot_vendor_id</code> in your [[deviceinfo]] (this was necessary for the [[Amazon Kindle Fire HDX]]). Try to search the web for your device name and "fastboot vendor id".
-
-If you were previously able to use fastboot and it stopped working, sometimes <code>pmbootstrap shutdown</code> to restart the chroot helps ({{issue|1633}}). Also try to reboot the device into fastboot again.
+== Flashing problems ==
 
 === Invalid sparse file format at header magi ===
 
@@ -161,6 +147,62 @@ It happens when your device expects a sparse system image. The workaround is as 
 To do this, edit the file in ./local/var/pmbootstrap/cache_git/pmaports/device/your_device_name/deviceinfo and add <code> deviceinfo_flash_sparse="true"</code>. When finished, run <code>"pmbootstrap install"</code> to rebuild the file system
 
 For more information, see issue [https://github.com/postmarketOS/pmbootstrap/issues/299 #299]
+
+=== Heimdall: Flashing fails at 7% ===
+
+You might also be getting the error "ERROR: Failed to confirm end of file transfer sequence"
+
+It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try setting <code>deviceinfo_flash_sparse="true"</code> in the [[deviceinfo]].
+
+=== FAILED (remote: Unknown chunk type) ===
+
+This is a bootloader limitation. Flash [https://github.com/postmarketOS/pmbootstrap/issues/456 with netcat] as a workaround, or use this wiki's search feature to come up with more related information. Feel free to organize this in a better way, but this should be a good starting point. See also {{issue|1735}}.
+
+=== flasher (fastboot) is stuck in < waiting for any device > ===
+
+Maybe you need to install udev rules on your host Linux distribution. Arch has the [https://www.archlinux.org/packages/community/any/android-udev/ android-udev] package for example, which uses the rules from [https://github.com/M0Rf30/android-udev-rules here].
+
+If that does not help, it might be necessary to set the <code>flash_fastboot_vendor_id</code> in your [[deviceinfo]] (this was necessary for the [[Amazon Kindle Fire HDX]]). Try to search the web for your device name and "fastboot vendor id".
+
+If you were previously able to use fastboot and it stopped working, sometimes <code>pmbootstrap shutdown</code> to restart the chroot helps ({{issue|1633}}). Also try to reboot the device into fastboot again.
+
+= pmbootstrap and build related errors =
+
+== Alpine, chroots and pmbootstrap ==
+
+=== pmbootstrap is broken! But it worked yesterday! ===
+Sorry! Revert to the last commit, that was known to work (git checkout $commit) and report an issue, if there is not already one. Consult with others in the [[Matrix_and_IRC|IRC/matrix]] channel to find out, which commit was the last one that worked.
+
+=== ERROR: This device does not exist anymore, check <https://postmarketos.org/renamed> to see if it was renamed ===
+
+One case where this might happen is if you remove pmbootstrap's work path, and then run a <code>pmbootstrap init</code>. As you might notice it is still remembering values and devices from previous executions. 
+
+To solve this you need to remove (or rename) <code>$XDG_CONFIG/pmbootstrap.cfg</code> (i.e <code>~/.config/pmbootstrap.cfg</code>). After doing so <code>pmbootstrap init</code> should work fine.
+
+=== BusyBox does something different than the standard tool for the job, and this breaks building my package! ===
+
+'''Example:''' unzip in BusyBox doesn't extract symlinks like the normal unzip implementation ([https://github.com/postmarketOS/pmbootstrap/issues/82 #82]).
+
+'''Solution:''' Simply add <code>unzip</code> to the makedepends in the APKBUILD, and the &quot;real&quot; unzip will be used (or in that case, try to get the sources in another archive format, such as <code>.tar.bz2</code>, <code>.tar.xz</code>, <code>.tar.gz</code>).
+
+=== WARNING: No provider for dependency... ===
+
+'''Normal behavior.''' it means, that your &quot;user&quot; repository (the repository with all custom compiled packaged from pmOS, such as your device package and kernel) does not have the dependencies from the official Alpine Linux repositories (such as <code>cryptsetup</code>, <code>iw</code>, <code>htop</code>, ...) when indexing it. But these dependencies ''are'' in the official repositories, so they will be found when you try to install something. Usually the package indexing is done on all repositories at once in Alpine (then you wouldn't get the error), but pmOS does it only on the &quot;user&quot; repository.
+
+=== ERROR: busybox-1.27.0-r1.post-install: script exited with error 127 ===
+
+'''Normal behavior.''' We use a x86_64 version of <code>apk</code> to set up the chroots. When setting up the armhf chroot, the armhf post-installation code can't be executed, and that's where the errors come from. But we run &quot;apk fix&quot; right afterwards - with the armhf architecture, because we have an armhf version of apk installed inside the chroot now - and this runs the installation scripts again.
+
+=== ERROR: /mnt/pmbootstrap-packages/x86_64/qemu-user-static-repack-2.8-r6.apk: UNTRUSTED signature ===
+
+You don't have your own package signing key imported, which gets generated when you compile a package for the first time. pmbootstrap should automatically import it, but when you hit <code>^C</code> during that, it may go wrong.
+
+Your generated key is in <code>~/.local/var/pmbootstrap/config_abuild</code>, all imported keys are in <code>~/.local/var/pmbootstrap/config_apk_keys</code>.
+
+A quick fix is deleting all packages:
+<pre>./pmbootstrap zap -p</pre>
+
+See issue [https://github.com/postmarketOS/pmbootstrap/issues/270 #270] for more information and don't hesitate to reopen if this didn't work for you.
 
 === Installed version newer than the version in the repositories ===
 
@@ -192,14 +234,53 @@ For more information, see issue [https://github.com/postmarketOS/pmbootstrap/iss
 
 '''Note:''' If that does not help it, you can manually delete that specific packages from your aports folder: <code>sudo rm ~/.local/var/pmbootstrap/packages/*/postmarketos-mkinitfs*.apk</code> and run <code>pmbootstrap index</code> to re-index all packages. See also: [https://github.com/postmarketOS/pmbootstrap/issues/466 #466], [https://github.com/postmarketOS/pmbootstrap/pull/474 #474]
 
+=== mkbootimg: error: argument --dt: can't open '/boot/dt.img' ===
+This happens when you have <code>deviceinfo_bootimg_qcdt</code> enabled (which is correct when pmbootstrap generated it that way), but your kernel does not generate the <code>/boot/dt.img</code> file.
+Please adjust your kernel <code>APKBUILD</code> as follows:
+* add <code>dtbtool</code> to <code>makedepends</code>
+* extend your <code>build()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L74-L75 like this]
+* and your <code>package()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L97-L99 like that]
+
+See {{github|688}} for a plan to automatically generate the linux APKBUILD right.
+
+== Build errors ==
+
+=== Errors with grsec-based kernel on the host system ===
+
+See: [[Troubleshooting:grsec]]
+
+=== Errors with ecryptfs ===
+
+When your &quot;work&quot; folder is inside an ecryptfs mounted folder, [https://github.com/postmarketOS/pmbootstrap/issues/53 <code>/dev/random</code> may not work inside the chroot] and you may have other issues. Try to move your ''work'' folder to another location, you can use <code>/tmp</code> to test if this resolves the issue. You can change the location in <code>pmbootstrap init</code>. See also: [https://github.com/postmarketOS/pmbootstrap/issues/61 #61]. (This doesn't seem to be an issue with newer versions of ecryptfs anymore.)
+
+=== <code>musl-*</code>/<code>busybox-static-*</code> fails to build with a 404 error ===
+
+Run <code>pmbootstrap aportgen musl-armhf musl-aarch64 musl-x86_64</code>. The reason why this fails from time to time is, that we use Alpine's binary <code>musl</code> lib c package for <code>armhf</code>/<code>aarch64</code> in the native chroot, to get the cross-compiler working. So the download URL inside the <code>aports/cross/musl-*/APKBUILD</code> file must be in sync with the upstream version. This pmbootstrap command safely gets the new version, uses <code>apk</code> to verify the signature of the package, generates the hash, and updates the <code>APKBUILD</code> file. To make sure, that <code>pmbootstrap aportgen</code> receives the latest <code>musl</code> version, delete your HTTP cache right before by executing this command: <code>pmbootstrap zap -hc</code>. Don't bother making a pull-request for this, as the fix is really trivial (see [https://gitlab.com/postmarketOS/pmbootstrap/commit/0f3b2ea4277679056079000eac581d1b9d05afc8 this commit]). Just report it as issue, if it happens.
+
+=== Permission denied: .../pmbootstrap/work/chroot_native/proc/1/cwd' ===
+It looks like you have created your work folder as: <code>pmbootstrap/work</code>, where <code>pmbootstrap</code> is the folder with the checked out source code. That is not supported. Please run <code>pmbootstrap shutdown</code>, then delete that folder, then run <code>pmbootstrap init</code> again and choose another work folder (e.g. <code>~/.local/var/pmbootstrap</code>).
+
+After that it should work - if this still does not resolve it, please open up an issue in the GitLab issue tracker.
+
+=== can't create <code>/dev/null</code>: Permission denied ===
+Make sure that your working directory is mounted correctly. This can happen when working over NFS, or when you mounted the drive your working directory is on trough the file explorer (if that's the case, <code>umount</code> it, and <code>mount</code> it manually). This can probably happen on every drive mounted with <code>nosuid</code> or similar.
+
+=== sh: can't create /proc/sys/fs/binfmt_misc/register: nonexistent directory ===
+
+This issue is known to happen in Alpine Virthardened. It also happened in Void Linux for one user. These commands should fix it:
+
+<pre class="shell">sudo modprobe binfmt_misc
+sudo mount -t binfmt_misc none /proc/sys/fs/binfmt_misc</pre>
+If it still does not work, it is probably not supported by your host Linux distribution's kernel (<code>CONFIG_BINFMT_MISC</code>). Try to use another kernel.
+
+=== du: unrecognized option: summarize ===
+If you are using Alpine Linux and you encounter this issue, you will need to install the <code>coreutils</code> package.
+
+<code>sudo apk add coreutils</code>
+
 === Packaging for aarch64: ./config.guess: unable to guess system type ===
 
 This happens in packages built with autoconf (./configure; make; make install), when it ships an outdated config.guess file in the source code. Adjust your APKBUILD's <code>prepare()</code> function like done in {{github|698}}.
-
-=== Device reboots ===
-* If your device always reboots after the same time (e.g. 2 minutes) after booting, you probably need to feed (or disable) a watchdog. Try to search your kernel config for watchdog, and also the internet for watchdog + your phone name.
-* Android: The kernel config option <code>CONFIG_ANDROID_LOW_MEMORY_KILLER</code> may cause reboots. Please check if you have disabled it. If this helps you, please let us know, so we can consider checking for this option.
-* Android: it is possible to get the <code>dmesg</code> log from just before the crash after the reboot [https://stackoverflow.com/questions/9682306/android-how-to-get-kernel-logs-after-kernel-panic if you enable some kernel options].
 
 === ERROR: ... BAD archive ===
 If you <code>pmbootstrap log</code> shows something similar to the following:
@@ -220,24 +301,9 @@ $ cd ~/.local/var/pmbootstrap/ # go into your work folder, as specified in 'pmbo
 $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package name accordingly
 </syntaxhighlight>
 
-=== My Android device does not have partition labels, how do I know where to put the boot.img file etc? ===
-* Search online for the partitions, they are probably documented somewhere.
+= Troubleshooting steps kept around for historical reference =
 
-* Try to dump all partitions. Run `file` on them, it should roughly tell you the contents. If that does not help, run [https://github.com/ReFirmLabs/binwalk binwalk].
-** file output: check if it is a kernel (vmlinuz), <code>boot.img</code> file or just "data".
-** In case you have "data", don't flash anything there, we probably can't generate that format yet. Please open an issue in GitHub or ask on the channel.
-* You can also look at recovery zips from other Android ROMs, that were released for your device. Extract it and look at <code>META-INF/com/google/android/updater-script</code>, search for commands starting with <code>run_program("/sbin/busybox", "dd"</code>, they are for flashing partitions.
-
-** In one example, there was <code>run_program("/sbin/busybox", "dd", "if=/tmp/boot.blob", "of=/dev/block/mmcblk0p4");</code>, which means that a <code>boot.blob</code> file gets flashed to <code>/dev/block/mmcblk0p4</code>. That <code>boot.blob</code> file is also in the recovery zip - run the <code>file</code> program on it (see above).
-
-=== mkbootimg: error: argument --dt: can't open '/boot/dt.img' ===
-This happens when you have <code>deviceinfo_bootimg_qcdt</code> enabled (which is correct when pmbootstrap generated it that way), but your kernel does not generate the <code>/boot/dt.img</code> file.
-Please adjust your kernel <code>APKBUILD</code> as follows:
-* add <code>dtbtool</code> to <code>makedepends</code>
-* extend your <code>build()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L74-L75 like this]
-* and your <code>package()</code> function [https://github.com/postmarketOS/pmbootstrap/blob/bc2784ece7dbbb5b9fbc8e1855566d3e9e770e59/aports/device/linux-huawei-y530/APKBUILD#L97-L99 like that]
-
-See {{github|688}} for a plan to automatically generate the linux APKBUILD right.
+{{Note|You're most likely not going to encounter these errors. If you do, file an issue in the appropriate repository.}}
 
 === pmbootstrap builds packages that it should download from the binary repo/that are already built ===
 {{note|Most likely, this is issue {{github|1023}}!}}
@@ -245,43 +311,5 @@ Try to disable the "timestamp based rebuilds" feature in "pmbootstrap init" as a
 * *enable* timestamp based rebuilds
 * <code>pmbootstrap -v install</code> (let it run until it starts building the package it should not build)
 * <code>pmbootstrap log</code> (we need the log from here!)
-
-=== During initramfs generation: "modprobe: WARNING: Module drm not found in directory /lib/modules/..." ===
-This means, that a module can not be put in an initramfs. When you are not using a mainline kernel, it is likely that there are no modules configured, but the code is built directly into the kernel. This means, it is expected and can be ignored.
-
-=== du: unrecognized option: summarize ===
-If you are using Alpine Linux and you encounter this issue, you will need to install the <code>coreutils</code> package.
-
-<code>sudo apk add coreutils</code>
-
-=== Touch screen device present but not outputting any touch events ===
-For some devices (at least motorola-shamu and motorola-lux), the touch screen I2C device is present but not activated at boot, and must be activated before it produces any output.
-
-For the motorola-lux, this is done in the following way:
-
-<code>echo 1 > /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/drv_irq</code>
-
-The path to the correct touch device depends on the device. This can be added to an [[Device_specific_package#Initramfs_hook|initfs hook]] to activate the touch screen automatically at boot.
-
-=== CHARGING MODE: error starting charging-sdl ===
-When attaching the power cable while the device is off, Android devices boot into a special "charging mode". postmarketOS's [[charging-sdl]] display does not work yet on all devices.
-
-To debug the issue, follow instructions at [[Inspecting the initramfs]] including activating the initramfs-extra, then execute <code>start_charging_mode</code> in the shell.
-
-=== Heimdall: Flashing fails at 7% ===
-
-You might also be getting the error "ERROR: Failed to confirm end of file transfer sequence"
-
-It might be, that your device only accepts "sparse images" ({{issue|1643}}). Try setting <code>deviceinfo_flash_sparse="true"</code> in the [[deviceinfo]].
-
-=== FAILED (remote: Unknown chunk type) ===
-
-This is a bootloader limitation. Flash [https://github.com/postmarketOS/pmbootstrap/issues/456 with netcat] as a workaround, or use this wiki's search feature to come up with more related information. Feel free to organize this in a better way, but this should be a good starting point. See also {{issue|1735}}.
-
-=== ERROR: This device does not exist anymore, check <https://postmarketos.org/renamed> to see if it was renamed ===
-
-One case where this might happen is if you remove pmbootstrap's work path, and then run a <code>pmbootstrap init</code>. As you might notice it is still remembering values and devices from previous executions. 
-
-To solve this you need to remove (or rename) <code>$XDG_CONFIG/pmbootstrap.cfg</code> (i.e <code>~/.config/pmbootstrap.cfg</code>). After doing so <code>pmbootstrap init</code> should work fine.
 
 [[Category:Technical Reference]]
