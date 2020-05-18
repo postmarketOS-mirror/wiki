@@ -78,7 +78,7 @@ pmbootstrap creates a damaged boot.img, so you need to manually build boot.img
 
 <pre>fastboot flash boot newboot.img</pre>
 == See also ==
-* {{MR|862|pmaports}} Initial (closed, not merged) merge request
+* {{MR|1213|pmaports}} Initial (merged) merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
