@@ -78,8 +78,8 @@ Audio works for a split second and then crashes.
 |There's a fsa9480 driver which is pretty similar, so downstream will need to be compared.
 |-
 |Touchscreen
-|MELFAS MMS144(?)/FocalTech FT5306(?)
-|There's a driver in mainline for the MMS144, and a driver on GitHub for the ft5306: https://github.com/focaltech-systems/drivers-input-touchscreen-FTS_driver/blob/master/ft5x06.c
+|MELFAS MMS144
+|Driver in mainline
 |-
 |WiFi, Bluetooth
 |BCM4330
@@ -97,14 +97,26 @@ Audio works for a split second and then crashes.
 |KTD3102
 |Not in mainline, and there doesn't seem to be a similar driver (by name).
 |-
-|Temperature/barometric sensor
-|Bosch BMP18x
-|Supported by bmp085 driver in mainline
-|-
 |Proximity/ambient light sensor
-|tmd2771
-|Driver might not be in mainline
+|Sharp GP2AP002
+|Driver in mainline
+|-
+|Gyroscope
+|mpu3050 (?)
+|Driver in mainline
+|-
+|Geomagnetic
+|Alps HSCDTD008A
+|Driver not in mainline
+|-
+|Accelerometer, magnetometer
+|Bosch BMC150
+|Driver in mainline
 |}
+
+Some information:
+
+* There's a DTS in mainline but it's unused and the parts used don't match the defconfig. It was likely used for an earlier revision of the phone, which might've never hit the market. (Also, the reg values are completely different there from the ones in mainline.)
 
 == See also ==
 
