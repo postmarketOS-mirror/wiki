@@ -5,7 +5,7 @@
 | image = File:Asus-transformer-tf700.jpg
 | imagecaption = Asus Transformer Infinity (TF700t)
 | releaseyear = 2012
-| originalsoftware = Android 4.0.3 on Linux 2.6
+| originalsoftware = Android 4.0.3 on Linux 3.1.10
 | chipset = Nvidia Tegra 3 T33
 | cpu = Quad-core 1.6 GHz Cortex-A9
 | gpu = ULP GeForce
@@ -139,12 +139,6 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Regulator
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/regulator/tps62360-regulator.c tps62360-regulator]
 | Not implemented in Device Tree.
-|-
-| N
-| ricoh583
-| Regulator
-|
-| Not supported.
 |-
 | N
 | bcm4330
