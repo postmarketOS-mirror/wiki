@@ -33,6 +33,7 @@ Userboxes:
 * [[Template:User_ports]] ''Shows the amount of devices you ported'' (usage: {<p style="display:inline;"></p>{User ports|amount}})
 * [[Template:User_mainline]] ''Shows the amount of devices you mainlined'' (usage: {<p style="display:inline;"></p>{User mainline|amount}})
 * [[Template:User_mainline_attempts]] ''"This user is currently trying to mainline a device."''
+* [[Template:User_GitLab]] ''Links to user's GitLab profile'' (usage: {<p style="display:inline;"></p>{User GitLab|username}})
 
 == See also ==
 * [[Special:UncategorizedTemplates]]
