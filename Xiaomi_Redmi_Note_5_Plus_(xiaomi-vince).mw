@@ -21,9 +21,9 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = 
-| status_mainline = 
+| status_mainline = N
 | status_battery = Y
-| status_3d = P
+| status_3d = N
 | status_accel = N
 | status_audio = N
 | status_bluetooth = N
