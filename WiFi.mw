@@ -35,12 +35,12 @@ You can use the command <code>git grep "lib/firmware/postmarketos" device/linux-
 
 An example of how Broadcom was made to work can be found at [[Samsung_Galaxy_S_Advance_(samsung-i9070)#How_drebrez_made_wifi_work]] and [https://github.com/postmarketOS/pmbootstrap/pull/138/commits in the corresponding GitHub pull request]. Another example is [[Medion_Lifetab_S9714_(medion-kai)#How_bonsaiblue_made_wifi_work]].
 
-Here's a quick rundown of the stept required to get Broadcom WiFi up and running:
+Here's a quick rundown of the steps required to get Broadcom WiFi up and running:
 
 * Locate the nvram and firmware files. You might be able to use the ones from <code>firmware-aosp-broadcom-wlan</code>, but if they don't work you can package your own.
 * Modify your kernel config to point to the new firmware paths.
 * Modify your kernel APKBUILD to build modules, so that you can use bcmdhd.
-* Add a modules-load.conf file to your device package and put the bcmdhd module name (usually dhd) in it, then modify the APKBUILD to install the file. (This will auto-load the dhd module.)
+* Add a modules-load.conf file to your device package and put the bcmdhd module name (usually dhd) in it, then modify the APKBUILD to install the file. (This will auto-load the dhd module on startup.)
 
 See the [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-i9070 Galaxy S Advance device package], [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-i9070 Galaxy S Advance linux package] and [https://gitlab.com/postmarketOS/pmaports/-/tree/master/firmware/firmware-samsung-i9070 Galaxy S Advance firmware package] for reference.
 
