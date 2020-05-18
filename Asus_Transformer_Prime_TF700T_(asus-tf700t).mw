@@ -110,7 +110,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Not implemented in Device Tree
 |-
 | N
-| bcm4329
+| bcm4330
 | WiFi
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/broadcom/brcm80211/brcmfmac brcmfmac]
 | Not implemented in Device Tree. Needs firmware.
@@ -147,7 +147,7 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Not supported.
 |-
 | N
-| bcm4329
+| bcm4330
 | Bluetooth
 |
 | Not implemented in Device Tree. Needs firmware.
@@ -157,12 +157,6 @@ There is '''multiple hardware revisions''', so this status may not apply to all 
 | Sound
 | [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/sound/soc/codecs/rt5631.c rt5631]
 | Not implemented in Device Tree. Not sure if this should be used or "Codec".
-|-
-| N
-| wm8903
-| Codec
-| [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/sound/soc/codecs/wm8903.c wm8903]
-| Not implemented in Device Tree. Not sure if this should be used or "Sound". Might be for the TF300t
 |-
 | N
 | kxtf9
