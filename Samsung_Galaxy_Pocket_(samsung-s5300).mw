@@ -109,8 +109,8 @@ If you wish to help with analysis: http://Mis012.nejlepsiserialy.cz/nextcloud/in
 (images extracted with binwalk, PARAM mounted within CWM; efs and Reserved dd'd from /dev/block/mmcblk0, mmcblk0p10 is all zeros. 'security' :P)
 
 == See also ==
-* [https://github.com/MoltenMotherBoard/platform_kernel_samsung_cori|downstream kernel I used]
-* [http://www.cpkb.org/wiki/Samsung_GT-S5300_Galaxy_Pocket_service_manual|service manual, most useful is the block diagram with part names]
+* [https://github.com/MoltenMotherBoard/platform_kernel_samsung_cori downstream kernel I used]
+* [http://www.cpkb.org/wiki/Samsung_GT-S5300_Galaxy_Pocket_service_manual service manual, most useful is the block diagram with part names]
 * https://www.ebay.com/itm/USB-Micro-B-Plug-Breakout-Module-for-Arduino-Connector-Adapter-with-Pin/322604640134 - cheapest thing with µUSB plug on one end and 100% all 5 pins connected to something
 (if you dare solder to the plug itself, you can get 10 for $1 it would seem)
 * https://datasheet.octopart.com/FSA880UMX-ON-Semiconductor-datasheet-86696689.pdf - The IC used for detecting resistor value between USB_ID and USB_GND. Not as full-featured as the mighty FSA9480, but as can be seen in the service manual, it is indeed connected to UART. EDIT: JTAG-[Rx/Tx] seems to be connected to the same lines, so if you solder to corresponding pads near tag you can use usb at the same time.
