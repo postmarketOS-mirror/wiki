@@ -112,7 +112,7 @@ Audio works for a split second and then crashes.
 
 Some information:
 
-* There's a DTS in mainline but it's unused and the parts used don't match the defconfig. It was likely used for an earlier revision of the phone, which might've never hit the market. (Also, the reg values are completely different there from the ones in mainline.)
+* There's a DTS in mainline but it's unused and the parts used don't match the defconfig. Seems like it's a generic tree and was never finished, as it matches some stuff in the board-java.c file in downstream.
 
 == See also ==
 
