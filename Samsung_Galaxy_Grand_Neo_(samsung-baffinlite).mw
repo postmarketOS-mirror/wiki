@@ -101,10 +101,6 @@ Audio works for a split second and then crashes.
 |Sharp GP2AP002
 |Driver in mainline
 |-
-|Gyroscope
-|mpu3050 (?)
-|Driver in mainline
-|-
 |Geomagnetic
 |Alps HSCDTD008A
 |Driver not in mainline
