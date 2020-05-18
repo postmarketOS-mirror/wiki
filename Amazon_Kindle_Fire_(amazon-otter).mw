@@ -10,7 +10,7 @@
 | storage = 8 GB
 | display = 600 x 1024 IPS LCD
 | memory = 512 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet =
 | status_flashing =
 | status_touch =
