@@ -1,6 +1,6 @@
 == dt-blob in firmware ==
 
-There's a dt-blob in the stock firmware. When decompiled with dts, it yields:
+There's a dt-blob in the stock firmware. When decompiled with dtc, it yields:
 
 <syntaxhighlight lang="c">
 /dts-v1/;
