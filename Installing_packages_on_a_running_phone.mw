@@ -1,7 +1,7 @@
 1. Go to the pmbootstrap packages dir and start a web server:
 
 <syntaxhighlight lang="shell-session">
-$ cd ~/.local/var/pmbootstrap/packages
+$ cd ~/.local/var/pmbootstrap/packages/edge
 $ python3 -m http.server
 </syntaxhighlight>
 
