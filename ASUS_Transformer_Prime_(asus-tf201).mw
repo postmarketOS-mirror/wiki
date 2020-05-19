@@ -36,11 +36,13 @@
 | booting = no
 }}
 
-== Contributors ==
-
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
+
+== Contributors ==
+=== Users owning this device ===
+{{Device owners}}
 
 == Unlocking ==
 The first step to do anything with the device is unlocking, with this device its done by sideloading the unlock apk from ASUS and clicking a few buttons in the app. The apk can be found on [https://dlcdnets.asus.com/pub/ASUS/EeePAD/TF201/UnLock_Device_App_V6.apk the ASUS support page].
