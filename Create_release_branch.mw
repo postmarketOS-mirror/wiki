@@ -1,4 +1,23 @@
-{{note|Work in progress page: {{issue|44|wiki}} }}
+This is relevant for maintaining the repository only, regular users will not need this guide.
+
+=== Checklist ===
+Creating a new release branch, like "v20.05":
+
+* <code>git checkout -b v20.05 master</code>
+* <code>git push</code>
+* protect the new release branch in gitlab, so nobody can force-push to it
+* remove channels.cfg (should only be in master)
+* adjust channel in pmaports.cfg
+* remove packages:
+** device/testing
+** cross/*-armhf, cross/*-x86
+** unused firmware packages (see script below)
+* run <code>pmbootstrap aportgen</code> for packages in cross
+* add the new branch to master's channels.cfg
+* bpo
+** add the branch to bpo's config, for x86_64 only
+** wait until all packages for x86_64 are built and published, fix packages as necessary
+** after x86_64 is published, activate more arches (if you activate them before, the builds will fail due to missing cross compilers!)
 
 === Remove unused firmware packages ===
 
