@@ -16,7 +16,7 @@ ls -l /dev/block/platform/
 ls -l /dev/block/platform/msm_sdcc.1/by-name
 
 # From there we know that the boot partition is /dev/block/mmcblk0p14
-# Now we just dump the partition to a file (we need to root permissions)
+# Now we just dump the partition to a file (we need root permissions)
 #
 # Note: You may have to exit from adb and start it again with `adb root`
 #   if the `su` command fails.
