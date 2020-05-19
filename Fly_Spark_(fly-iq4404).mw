@@ -36,8 +36,6 @@
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 | pmoskernel = 3.10.89
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
@@ -79,7 +77,7 @@ pmbootstrap creates a damaged boot.img, so you need to manually build boot.img
 
 <pre>fastboot flash boot newboot.img</pre>
 == See also ==
-* {{MR|1213|pmaports}} Initial (merged) merge request
+* {{MR|1213|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
