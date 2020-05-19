@@ -116,7 +116,7 @@ Audio works for a split second and then crashes.
 
 Some information:
 
-* There's a DTS in mainline but it's unused and the parts used don't match the defconfig. Seems like it's a generic tree and was never finished, as it matches some stuff in the board-java.c file in downstream.
+* There's a DTS in downstream but it's unused and the parts used don't match the defconfig. Seems like it's a generic tree and was never finished, as it matches some stuff in the board-java.c file in downstream.
 
 == See also ==
 
