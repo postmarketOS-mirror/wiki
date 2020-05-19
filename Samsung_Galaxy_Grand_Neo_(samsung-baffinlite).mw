@@ -1,7 +1,7 @@
 {{note|IMPORTANT NOTE: THIS IS FOR THE GALAXY GRAND NEO (I9060), NOT THE GRAND NEO PLUS (I9060I)}}
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Grand Neo
+| name = Galaxy Grand Neo
 | codename = samsung-baffinlite
 | image = File:samsung-baffinlite.jpg
 | imagecaption = Phone running weston.
@@ -10,9 +10,9 @@
 | chipset = Broadcom BCM23550
 | cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Broadcom VideoCore IV
-| storage = 8/16GB
+| storage = 8/16 GB
 | display = 480x800
-| memory = 1GB
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = P
@@ -34,7 +34,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status_otg = N
-| booting = Y
+| booting = yes
 }}
 
 == Contributors ==
@@ -46,7 +46,6 @@
 
 == Device owners ==
 {{Device owners}}
-* [[User:km2|LibrePhone]]
  
 == How to enter flash mode ==
 Recovery: Power+VolUp
