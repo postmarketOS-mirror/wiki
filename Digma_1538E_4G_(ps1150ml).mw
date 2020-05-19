@@ -1,18 +1,18 @@
 {{Infobox device
 | manufacturer = Digma
-| name = 1538E 4G <!-- e.g. Desire -->
-| codename = digma-ps1150ml <!-- e.g. htc-bravo -->
+| name = 1538E 4G
+| codename = digma-ps1150ml
 | image = File:Digma-ps1150ml front1.jpg
 | imagecaption = Android running
 | releaseyear = 2017
-| originalsoftware = Android 7.0 <!-- e.g. Android 2.1 -->
-| chipset = MediaTek MT8735W <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = 4 x Cortex-A53 1.3 GHz <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Mali-T720 <!-- e.g. Adreno 200 -->
-| storage = 32 Gb <!-- e.g. 512 MB -->
-| display = 1920x1200 IPS 10.1 <!-- e.g. 480x800 AMOLED -->
-| memory = 2 Gb <!-- e.g. 576 MB -->
-| architecture = aarch64 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = Android 7.0
+| chipset = MediaTek MT8735W
+| cpu = 4x Cortex-A53 1.3 GHz
+| gpu = Mali-T720
+| storage = 32 GB
+| display = 1920x1200 IPS 10.1
+| memory = 2 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -36,8 +36,6 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
