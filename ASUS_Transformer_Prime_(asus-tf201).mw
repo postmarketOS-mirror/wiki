@@ -50,15 +50,15 @@ Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/
 
 == Status ==
 * Kernel compiles
-* Flashable from within recovery (same as [[ASUS_Eee_Pad_Transformer_(asus-tf101)]])
+* Flashable from within recovery (same as [[ASUS_Eee_Pad_Transformer_(asus-tf101)|Asus Eee Pad Transformer TF101]])
 * Doesn't go beyond bootlogo
 * Having problems compiling with APANIC flag (to read last_kmesg - and figure out why)
 
 == How to enter flash modes ==
-Turn tablet off if it is in system. Then press power and volume down buttons till you feel the vibration. Then release power button only. You will enter bootloader), and from bootloader higher sound to jump to recovery
+Turn tablet off if it is in the system. Then press POWER and VOL DOWN buttons till you feel the vibration. Then release the POWER only. You will enter the bootloader. In bootloader navigate with VOL DOWN button and to choose option use VOL UP button.
 
 == Fastboot issue ==
-It seems like the bootloader doesn't handle flashing the boot and userdata partition correctly, the official firmware package flashes an "Android blob" to the staging partition with fastboot which triggers an flashing screen on the tablet which copies the data to the correct partitions. Flashing ordinary images using TWRP recovery goes properly.
+The bootloader doesn't handle flashing the boot and userdata partition correctly, the official firmware package flashes an "Android blob" to the staging partition with fastboot which triggers an flashing screen on the tablet which copies the data to the correct partitions. Flashing ordinary images using TWRP recovery goes properly. Using latest TWRP is highly recommended.
 
 == Installation ==
 You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader). Please follow this [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 guide on XDA] if you're not.
@@ -78,6 +78,7 @@ The following should be executed within adb shell:
 Note: Other ways of flashing do not work. This is exactly how the katkiss android ROM is flashed to the device.
 
 == See also ==
+* Asus Transformer device family on Tegra 3 includes also [[ASUS_Transformer_Pad_(asus-tf300t)|Transformer Pad TF300T]] and [[Asus_Transformer_Pad_Infinity_TF700T_(asus-tf700t)|Transformer Pad Infinity TF700T]]
 * Katkiss android ROM [https://forum.xda-developers.com/transformer-tf700/development/rom-t3457417 XDA link]
 * How to get your tf201 to katkiss [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 XDA link]
 * More about the device [https://en.wikipedia.org/wiki/Asus_Eee_Pad_Transformer_Prime Wikipedia entry]
