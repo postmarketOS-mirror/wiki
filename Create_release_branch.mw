@@ -1,0 +1,36 @@
+{{note|Work in progress page: {{issue|44|wiki}} }}
+
+=== Remove unused firmware packages ===
+
+After removing <code>device/testing/*</code>, the related firmware packages should be removed as well. This script adds them for removal, read it, run it, then do <code>git status</code> and <code>git commit</code>.
+
+<syntaxhighlight lang="shell">
+#!/bin/sh -e
+PMAPORTS=~/code/pmaports
+
+# $1: pkgname
+firmware_mentioned_anywhere() {
+	local pkgname="$1"
+
+	cd "$PMAPORTS"
+	for dir in *; do
+		[ -d "$dir" ] || continue
+		[ "$dir" = "firmware" ] && continue
+		
+		git -C "$dir" grep -q "$pkgname" && return 0
+	done
+	return 1
+}
+
+cd "$PMAPORTS/firmware"
+for i in *; do
+	if firmware_mentioned_anywhere "$i"; then
+		echo "# $i was found"
+	else
+		git rm -r "$PMAPORTS/firmware/$i"
+	fi
+done
+echo "# done"
+</syntaxhighlight>
+
+[[Category:Guide]]
