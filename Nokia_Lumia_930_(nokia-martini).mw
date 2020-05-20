@@ -39,6 +39,9 @@
 == Unlocking ==
 The phone has to be unlocked first with the WPinternals tool.
 
+== Bootloader ==
+* A port of EDK2 exists: https://github.com/rickliu2000/Lumia930Pkg
+
 === TODO ===
 * Check bootloader support
 
