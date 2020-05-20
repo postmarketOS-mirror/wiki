@@ -56,6 +56,13 @@ else
 fi
 </pre>
 
+=== Running Apps from SSH session ===
+In order to run applications on the device, you need to set up your environment similar to the environment in which the plasmashell is running:
+
+<source lang="bash>
+export $(cat /proc/$(pidof plasmashell)/environ | tr '\0' '\n')
+</source>
+
 For the official KDE instructions on running Plasma Mobile, see [https://docs.plasma-mobile.org/RunningApps.html their website].
 
 == Taking screenshots ==
