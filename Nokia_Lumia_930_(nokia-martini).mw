@@ -42,9 +42,6 @@ The phone has to be unlocked first with the WPinternals tool.
 == Bootloader ==
 * A port of EDK2 exists: https://github.com/rickliu2000/Lumia930Pkg
 
-=== TODO ===
-* Check bootloader support
-
 == Kernel ==
 A downstream kernel for MSM9874 devices from Nokia can be found here: https://github.com/rickliu2000/linux_nokia_msm8974
 
