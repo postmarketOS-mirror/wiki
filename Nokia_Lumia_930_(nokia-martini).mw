@@ -46,7 +46,7 @@ The phone has to be unlocked first with the [[WPinternals]] tool.
 == Kernel ==
 This device has a Qualcomm Snapdragon 800, which has support in the mainline kernel.
 
-An older kernel with a patched DTS can be found here: https://github.com/rickliu2000/linux_nokia_msm8974
+A kernel with a patched DTS can be found here: https://github.com/rickliu2000/linux_nokia_msm8974
 
 The DTS made can be found here: https://github.com/rickliu2000/linux_nokia_msm8974/blob/e47905c603a0ea3f40253ad9b6aa0ed5308c0864/arch/arm/boot/dts/qcom-msm8974-lumia.dts
 
