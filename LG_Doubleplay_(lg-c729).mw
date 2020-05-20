@@ -1,0 +1,229 @@
+{{Infobox device
+| manufacturer = LG
+| name = Doubleplay
+| codename = lgc729
+| releaseyear = 2011
+| originalsoftware = Android 2.3
+| chipset = Qualcomm MSM8255
+| cpu = 1.0 GHz Scorpion
+| gpu = Adreno 205
+| storage = 2 GB
+| display = 320 x 480 TFT
+| memory = 512 MB
+| architecture = armv7
+| status_usbnet =
+| status_flashing =
+| status_touch =
+| status_screen =
+| status_wifi =
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery =
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = no
+}}
+
+== Contributors ==
+
+* Foldmorepaper
+
+== Users owning this device ==
+{{Device owners}}
+
+== What Works ==
+Nothing. (besides rooting and kernel building) I'm not sure how to enable fastboot, and I'm not so sure wiping the boot partition would work.  Until I have a custom recovery working, I don't want to risk bricking my device.
+
+== What Does Not Work ==
+Everything.
+
+== Rooting ==
+The exploit used on the LG Esteem also works on the Doubpleplay.  Please see this forum thread on AndroidCentral for instructions. [https://forums.androidcentral.com/metropcs-esteem/131539-howto-root-lg-esteem.html]
+
+The tool referenced has a dead download link, but is available through the Internet Archive's ''Wayback Machine''. [https://web.archive.org/web/20140620234749if_/http://www.androidnerds.net/forums/index.php?action=downloads;sa=downfile&id=10 LG_Esteem_Root.zip on archive.org]
+
+The tool runs from a .bat script.  Though the changes necessary to run it on linux are trivial, here is the modified script:
+<div class="toccolours mw-collapsible mw-collapsed" style="width:75%; overflow:auto;">
+<div style="font-weight:bold;line-height:1.6;">run.sh</div>
+<div class="mw-collapsible-content">
+ <syntaxhighlight lang="bash" line='line'>
+#!/bin/bash                     
+#####################################
+#                  
+#  LG Esteem root script
+#  Linux version        
+#
+#  Exploit copyright (C) 2011 Revolutionary
+#  Scripting for LG Esteem by Dan Rosenberg (@djrbliss)
+#  Modified for Linux by foldmorepaper (@foldmorepaper)
+#
+#####################################
+#                                                                                              
+# Instructions:
+#                  
+#  1. Ensure you have the latest drivers installed from LG
+#                                                                                              
+#  2. Put your device in debugging mode                                                        
+#                                                                                              
+#  3. Attach it via USB   
+#                                   
+#  4. Run this script in the same directory as the rest of the extracted
+#     zipfile                                                                                  
+#                                                                                              
+#####################################                                                          
+echo "[*] LG Esteem root script (Linux version)"                
+echo "[*] Exploit copyright (C) 2011 Revolutionary"                           
+echo "[*] Scripting for LG Esteem by Dan Rosenberg (@djrbliss)"
+echo "[*] Linux script by foldmorepaper (@foldmorepaper)"
+echo "[*]"               
+echo "[*] Before continuing, ensure USB debugging is enabled, that you"
+echo "[*] have the latest LG drivers installed, and that your phone is"
+echo "[*] connected via USB."
+echo "[*]"             
+read -p "[*] Press enter to root your phone..." 
+echo "[*]"
+                                               
+echo "[*] Waiting for device..."
+adb kill-server                  
+adb wait-for-device
+                                                                                               
+echo "[*] Device found."
+
+echo "[*] Pushing exploit binary..."
+adb push zergrush /data/local/tmp/zergrush
+adb shell "chmod 755 /data/local/tmp/zergrush"
+
+echo "[*] Running exploit..."
+adb shell "echo exit | /data/local/tmp/zergrush"
+
+# Install the goods
+echo "[*] Installing root tools..."
+adb shell /data/local/tmp/sh -c "mount -orw,remount /dev/block/system /system"
+adb shell /data/local/tmp/sh -c "mkdir /system/tmp"
+adb shell /data/local/tmp/sh -c "chmod 777 /system/tmp"
+adb push su /system/tmp/su
+adb push busybox /system/tmp/busybox
+adb push Superuser.apk /system/tmp/Superuser.apk
+adb shell /data/local/tmp/sh -c "mv /system/tmp/su /system/xbin/su"
+adb shell /data/local/tmp/sh -c "mv /system/tmp/Superuser.apk /system/app/Superuser.apk"
+adb shell /data/local/tmp/sh -c "mv /system/tmp/busybox /system/xbin/busybox"
+adb shell /data/local/tmp/sh -c "chown root /system/xbin/su"
+adb shell /data/local/tmp/sh -c "chmod 4755 /system/xbin/su"
+adb shell /data/local/tmp/sh -c "ln -s /system/xbin/su /system/bin/su"
+adb shell /data/local/tmp/sh -c "chmod 755 /system/xbin/busybox"
+adb shell /data/local/tmp/sh -c "/system/xbin/busybox --install /system/xbin/"
+
+# Clean up after ourselves
+echo "[*] Cleaning up..."
+adb shell /data/local/tmp/sh -c "rmdir /system/tmp"
+adb shell "rm /data/local/tmp/* 2>/dev/null"
+
+echo "[*] Rebooting..."
+adb reboot
+
+adb wait-for-device
+echo "[*] Root complete, enjoy!"
+echo "[*] Press any key to exit."
+adb kill-server
+</syntaxhighlight>
+</div></div>
+
+== Additional Info ==
+<div class="toccolours mw-collapsible mw-collapsed" style="width:85%; overflow:no;">
+<div style="font-weight:bold;line-height:1.6;">/proc/partitions</div>
+<div class="mw-collapsible-content">
+ <syntaxhighlight line='line'>
+# cat /proc/partitions
+major minor  #blocks  name
+
+ 179        0    1912832 mmcblk0
+ 179        1       1024 mmcblk0p1
+ 179        2        512 mmcblk0p2
+ 179        3       2048 mmcblk0p3
+ 179        4          1 mmcblk0p4
+ 179        5       4096 mmcblk0p5
+ 179        6       4096 mmcblk0p6
+ 179        7       8192 mmcblk0p7
+ 179        8       4096 mmcblk0p8
+ 179        9       8192 mmcblk0p9
+ 179       10       8192 mmcblk0p10
+ 179       11      28672 mmcblk0p11
+ 179       12      28672 mmcblk0p12
+ 179       13       4096 mmcblk0p13
+ 179       14       4096 mmcblk0p14
+ 179       15     462848 mmcblk0p15
+ 179       16    1048576 mmcblk0p16
+ 179       17       8192 mmcblk0p17
+ 179       18     102400 mmcblk0p18
+ 179       19       8192 mmcblk0p19
+ 179       20       8192 mmcblk0p20
+ 179       21       8192 mmcblk0p21
+ 179       22       4096 mmcblk0p22
+ 179       23       4096 mmcblk0p23
+ 179       24       4096 mmcblk0p24
+</syntaxhighlight>
+</div></div>
+<div class="toccolours mw-collapsible mw-collapsed" style="width:85%; overflow:no;">
+<div style="font-weight:bold;line-height:1.6;">/proc/mounts</div>
+<div class="mw-collapsible-content">
+<syntaxhighlight line='line'>
+# cat /proc/mounts
+rootfs / rootfs ro,relatime 0 0
+tmpfs /dev tmpfs rw,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+tmpfs /mnt/asec tmpfs rw,relatime,mode=755,gid=1000 0 0
+tmpfs /mnt/obb tmpfs rw,relatime,mode=755,gid=1000 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+/dev/block/mmcblk0p15 /system ext4 ro,relatime,barrier=1,data=ordered 0 0
+/dev/block/mmcblk0p16 /data ext4 rw,nosuid,nodev,noatime,errors=panic,barrier=1,data=ordered 0 0
+/dev/block/mmcblk0p18 /cache ext4 rw,nosuid,nodev,noatime,errors=panic,barrier=1,data=ordered 0 0
+/dev/block/mmcblk0p20 /lgdrm ext4 rw,nosuid,nodev,relatime,barrier=1,data=ordered 0 0
+/dev/block/mmcblk0p21 /multimedia ext4 rw,nosuid,nodev,relatime,barrier=1,data=ordered 0 0
+/dev/block/vold/179:33 /mnt/sdcard vfat rw,dirsync,nosuid,nodev,noexec,relatime,uid=1000,gid=1015,fmask=0702,dmask=0702,allow_utime=0020,codepage=cp437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0
+/dev/block/vold/179:33 /mnt/secure/asec vfat rw,dirsync,nosuid,nodev,noexec,relatime,uid=1000,gid=1015,fmask=0702,dmask=0702,allow_utime=0020,codepage=cp437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0
+tmpfs /mnt/sdcard/.android_secure tmpfs ro,relatime,size=0k,mode=000 0 0
+</syntaxhighlight>
+</div></div>
+<div class="toccolours mw-collapsible mw-collapsed" style="width:85%; overflow:no;">
+<div style="font-weight:bold;line-height:1.6;">mtd</div>
+<div class="mw-collapsible-content">
+<syntaxhighlight line='line'>
+# cat /cache/recovery/last_log
+Starting recovery on Tue May 19 20:15:45 2020
+framebuffer: fd 4 (320 x 720)
+recovery filesystem table
+=========================
+  0 /tmp ramdisk (null) (null)
+  1 /boot emmc /dev/block/mmcblk0p7 (null)
+  2 /cache ext4 /dev/block/mmcblk0p18 (null)
+  3 /data ext4 /dev/block/mmcblk0p16 (null)
+  4 /misc mtd misc (null)
+  5 /recovery emmc /dev/block/mmcblk0p17 (null)
+  6 /sdcard vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1
+  7 /system ext4 /dev/block/mmcblk0p15 (null)
+...
+</syntaxhighlight>
+</div></div>
+
+== Custom Recovery ==
+WIP
+
+==== Stock Recovery ====
+Stock recovery mode performs a factory reset
+
+=== Fastboot ===
+Testing
+
+== See also ==
+[https://fccid.io/BEJC729/Internal-Photos/Internal-Photographs-1525100 FCC Internal Photos]
