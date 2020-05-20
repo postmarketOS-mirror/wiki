@@ -60,7 +60,7 @@
 
 == Installation ==
 * 1. Flash the kernel <code>pmbootstrap flasher flash_kernel</code>
-* 1. Flash system image <code>pmbootstrap flasher flash_rootfs</code>
+* 2. Flash system image <code>pmbootstrap flasher flash_rootfs</code>
 * 3. Install system image to sdcard <code>pmboostrap install --sdcard /dev/mmcblkXXX</code>
 
 == Misc ==
