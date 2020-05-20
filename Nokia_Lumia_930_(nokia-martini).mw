@@ -36,7 +36,14 @@
 | booting = 
 }}
 
+== Unlocking ==
+The phone has to be unlocked first with the WPinternals tool.
 
+=== TODO ===
+* Check bootloader support
+
+== Mainline ==
+This device has a Qualcomm Snapdragon 800, which has support in the mainline kernel.
 
 == External links ==
 * {{wikipedia|Nokia_Lumia_930|Wikipedia}}
