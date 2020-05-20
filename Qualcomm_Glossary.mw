@@ -11,6 +11,7 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 : Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/soc/qcom/qcom,geni-se.txt qcom,geni-se.txt]
 
 <span id="GLINK">'''GLINK'''</span>
+: Fifo based mechanism for communication between subsystems on Qualcomm platforms
 : Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/soc/qcom/qcom,glink.txt qcom,glink.txt]
 
 == M ==
