@@ -45,7 +45,9 @@ The phone has to be unlocked first with the WPinternals tool.
 === TODO ===
 * Check bootloader support
 
-== Mainline ==
+== Kernel ==
+A downstream kernel for MSM9874 devices from Nokia can be found here: https://github.com/rickliu2000/linux_nokia_msm8974
+
 This device has a Qualcomm Snapdragon 800, which has support in the mainline kernel.
 
 == External links ==
