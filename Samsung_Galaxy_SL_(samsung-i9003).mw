@@ -12,7 +12,7 @@
 | storage = 4/16 GB
 | display = 480x800
 | memory = 478 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = P
 | status_touch = Y
