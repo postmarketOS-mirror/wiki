@@ -291,7 +291,7 @@ Here's a list of stuff that is currently (Linux 5.6.13) known to be working (in 
 * Anbox (install <code>postmarketos-anbox</code>; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/392d26fea261cc9b7264997d2c1df79b919bee02 defconfig changes I made for LXC stuff])
 * Power button ([https://github.com/JamiKettunen/linux-mainline-oneplus5/blob/wiki/arch/arm64/boot/dts/qcom/pm8998.dtsi#L41-L55 in DTS])
 * Volume keys ([https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/51d74de3a157ee8861f5961895a3163498c15260 added under MSM8998 PMIC GPIOs])
-* Keypad backlight (only applicable to regular OnePlus 5; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/518b4fa6d8874815a7652e78cc59560675829884 added under MSM8998 PMIC GPIOs])
+* Keypad backlight (only applicable to regular OnePlus 5; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/518b4fa6d8874815a7652e78cc59560675829884 added under MSM8998 PMIC GPIOs] & controllable with <code>/sys/class/leds/button-backlight/brightness</code>)
 
 And that's about it for now. Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff / get logs :p
 
