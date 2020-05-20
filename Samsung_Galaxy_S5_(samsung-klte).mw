@@ -31,6 +31,9 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
+| status_otg =
+| pmoskernel = 3.4.113 / 5.6
+| whet_dhry = 884.3
 | booting = yes
 }}
 
@@ -145,6 +148,9 @@ samsung-klte:~$ sudo set-brightness 20
 
 === Partition layout ===
 
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
+Partition layout:
+<div class="mw-collapsible-content">
 <pre class="shell">~ # fdisk -l /dev/block/mmcblk0
 Found valid GPT with protective MBR; using GPT
 
@@ -181,6 +187,8 @@ Number  Start (sector)    End (sector)  Size       Code  Name
   24         5498880         5908479        200M   0700  cache
   25         5908480         6010879       50.0M   0700  hidden
   26         6010880        30777310       11.8G   0700  userdata</pre>
+</div>
+</div>
 
 == Component support table ==
 
@@ -188,39 +196,45 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
  ! Component !! Codename !! Mainline kernel !! Since when !! Downstream 3.4 kernel
 |-
-| Debug serial || /dev/ttyMSM0 || Working || v4.17-rc1 || yes, /dev/ttyHSL0
+| Debug serial || msm_serial /dev/ttyMSM0 || Working || v4.17-rc1 || yes, /dev/ttyHSL0
 |-
-| Volume &amp; home buttons || gpio-keys || Working || in pmOS kernel fork || yes
+| Volume &amp; home buttons || gpio-keys || Working || 5.8 || yes
 |-
-| Regulator nodes || pma8084 || Working || in pmOS kernel fork || yes
+| Regulator nodes || pma8084, Maxim max77826 || Working || 5.8 || yes
 |-
-| Internal storage || sdhci1 || Working || in pmOS kernel fork || yes
+| Internal storage || sdhci-msm || Working || 5.8 || yes
 |-
-| SD card storage || sdhci2 || Not working || || yes
+| SD card storage || sdhci-msm || Working || 5.8 || yes
 |-
-| USB Networking || usb_dwc3_qcom || Working || in pmOS kernel fork || yes
+| USB Networking || usb_dwc3_qcom || Working || 5.8 || yes
 |-
-| Display || panel-simple || Working || in pmOS kernel fork || yes
+| Display || panel-simple || Working || 5.8 || yes
 |-
-| Touchscreen  ||  || Not working || || yes
+| Touchscreen  || synaptics rmi4-i2c || Working || 5.8 || yes
+|-
+| Touchkeys  || Cypress tm2-touchkey || Working || 5.8 || yes
 |-
 | Vibration motor ||  || Not working || || yes
 |-
-| Notification LED ||  || Not working || || yes
+| Notification LED || Panasonic AN30259A || Working || In pmOS kernel fork || yes
 |-
-| WiFi ||  || Not working || || yes
+| WiFi || brcmfmac + PCAL6416A GPIO Expander || Working || In pmOS kernel fork || yes
 |-
 | USB OTG ||  || Not working || || yes
 |-
-| Bluetooth ||  || Not working || || no
+| Bluetooth || brcmfmac || Not working || || no
+|-
+| Battery charger || Maxim max17048 ? || Not working || || yes
+|-
+| Battery fulegauge || Maxim max17048 ? || Not working || || yes
 |-
 | GPU || drm_msm || Working || in pmOS kernel fork || works with libhybris (test_hwcomposer_7_1_caf)
 |-
 | Audio ||  || Not working || || with libhybris (pulseaudio-modules-droid)
 |-
-| Modem ||  || Not working || || powers up with libhybris
+| Modem || qcom-q6v5-mss || Not working || || powers up with libhybris
 |-
-| Sensors ||  || Not working || || yes
+| Sensors ||  || Not working || || yes (libhybris's test_sensors)
 |}
 
 == Links ==
