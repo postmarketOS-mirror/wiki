@@ -7,12 +7,12 @@
 | releaseyear = 2014
 | originalsoftware = Windows Phone 8.1
 | chipset = Qualcomm MSM8974 Snapdragon 800
-| cpu = 
+| cpu = 4x 2.2 GHz Krait 400
 | gpu = Adreno 330
 | display = 1080x1920
 | storage = 32 GB
 | memory = 2 GB
-| architecture =
+| architecture = armv7
 | whet_dhry =
 | status_usbnet = 
 | status_flashing = 
@@ -33,7 +33,7 @@
 | status_sms = 
 | status_otg = 
 | status_calls = 
-| booting = 
+| booting = no
 }}
 
 == Unlocking ==
