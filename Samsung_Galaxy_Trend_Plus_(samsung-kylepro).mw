@@ -51,7 +51,7 @@
 * Touch (<code>/dev/input/event2</code>)
 
 == What does not work ==
-* Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and udhcpc. See https://wiki.postmarketos.org/wiki/WiFi)
+* Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and udhcpc, see [[WiFi]])
 * Everything else
 
 == How to enter flash mode ==
