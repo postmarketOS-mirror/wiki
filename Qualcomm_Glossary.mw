@@ -40,3 +40,11 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 '''SDM''' - Snapdragon
 
 <span id="SMD">'''SMD'''</span> - Shared Memory Device
+
+== T ==
+<span id="TLMM">'''TLMM'''</span> - Top Level Mode Multiplexer
+: Main SoC pin controller
+
+<span id="TCSR">'''TCSR'''</span> - Top Control and Status Register
+: Provides access for configuration and mux settings for a variety of peripherals.
+: Kernel docs: [https://github.com/torvalds/linux/blob/master/Documentation/devicetree/bindings/mfd/qcom%2Ctcsr.txt qcom,tcsr.txt]
