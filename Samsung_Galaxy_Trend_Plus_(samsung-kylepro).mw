@@ -51,7 +51,6 @@
 * Touch (<code>/dev/input/event2</code>)
 
 == What does not work ==
-* Flashing rootfs to internal storage. (Flash to sdcard instead using the <code>--sdcard</code> option) 
 * Setting up wifi using networkmanager. (Wifi works when setting up manually with wpa_supplicant and udhcpc. See https://wiki.postmarketos.org/wiki/WiFi)
 * Everything else
 
@@ -61,7 +60,8 @@
 
 == Installation ==
 * 1. Flash the kernel <code>pmbootstrap flasher flash_kernel</code>
-* 2. Install system image to sdcard <code>pmboostrap install --sdcard /dev/mmcblkXXX</code>
+* 1. Flash system image <code>pmbootstrap flasher flash_rootfs</code>
+* 3. Install system image to sdcard <code>pmboostrap install --sdcard /dev/mmcblkXXX</code>
 
 == Misc ==
 *Audio and video works in chromium browser.
