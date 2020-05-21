@@ -196,7 +196,7 @@ tmpfs /mnt/sdcard/.android_secure tmpfs ro,relatime,size=0k,mode=000 0 0
 </syntaxhighlight>
 </div></div>
 <div class="toccolours mw-collapsible mw-collapsed" style="width:85%; overflow:no;">
-<div style="font-weight:bold;line-height:1.6;">mtd</div>
+<div style="font-weight:bold;line-height:1.6;">/cache/recovery/last_log</div>
 <div class="mw-collapsible-content">
 <syntaxhighlight line='line'>
 # cat /cache/recovery/last_log
