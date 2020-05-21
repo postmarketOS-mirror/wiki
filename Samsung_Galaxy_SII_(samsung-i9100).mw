@@ -14,7 +14,7 @@
 | memory = 1 GB
 | architecture = armv7
 | status_usbnet = Y
-| status_flashing = 
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
@@ -45,8 +45,8 @@
 
 === Status ===
 ==== What works ====
+* Installation to device memory (<code>pmbootstrap flasher flash_rootfs</code>)
 * Installation to sdcard (<code>pmbootstrap install --sdcard=/dev/mmcblk...</code>)
-* Installation to device memory (partial)
 * Touchscreen
 * Weston (only on SD card)
 * XWayland
@@ -61,8 +61,6 @@
 * MHL (Video-out)
 * See "Hardware specifications" for ideas how to get them working.
 * Auto resizing partitions during installation to device memory (probably)
-
-
 
 === Installation ===
 ==== How to enter flash mode ====
