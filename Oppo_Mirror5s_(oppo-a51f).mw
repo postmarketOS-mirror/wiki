@@ -7,11 +7,11 @@
 | releaseyear = 2015
 | originalsoftware = Android 5.1.1
 | chipset = Qualcomm Snapdragon 410
-| cpu = 1.2Ghz quad-cores Cortex-A53
+| cpu = Quad-core 1.2 Ghz Cortex-A53
 | gpu = Adreno 306
-| storage = 16GB
+| storage = 16 GB
 | display = 1280x720 IPS LED
-| memory = 2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet =
@@ -36,8 +36,6 @@
 | booting = no
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
