@@ -2,16 +2,16 @@
 | manufacturer = OPPO
 | name = A37
 | codename = oppo-a37f
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| image = File:oppo-a37f.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2016
 | originalsoftware = Android 5.1.1
 | chipset = Qualcomm Snapdragon 410
-| cpu = 1.2Ghz qual-cores Cortex-A53
+| cpu = Quad-core 1.2 Ghz Cortex-A53
 | gpu = Adreno 306
-| storage = 16GB
+| storage = 16 GB
 | display = 720x1280 IPS LCD
-| memory = 2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet =
@@ -36,8 +36,6 @@
 | booting = no
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
