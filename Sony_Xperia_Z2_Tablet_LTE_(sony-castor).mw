@@ -1,0 +1,91 @@
+{{Infobox device
+| manufacturer = Sony
+| name = Xperia Z2 Tablet LTE
+| codename = sony-castor
+| image = File:Sony Xperia Z2 Tablet.png
+| imagecaption = Sony Xperia Z2 Tablet
+| releaseyear = 2014
+| originalsoftware = Android 4.4.2 on Linux 3.4
+| chipset = Qualcomm MSM8974AB Snapdragon 801
+| cpu = Quad-core 2.3 GHz Krait 400
+| gpu = Adreno 330
+| storage = 16/32 GB
+| display = 1200x1920 TFT
+| memory = 3 GB
+| architecture = armv7
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = -
+| status_screen = Y
+| status_wifi = -
+| status_xwayland = -
+| status_fde = -
+| status_mainline = Y
+| status_battery = Y
+| status_3d = -
+| status_accel = -
+| status_audio = -
+| status_bluetooth = -
+| status_camera = -
+| status_gps = -
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
+| booting = yes 
+}}
+
+== Contributors ==
+* bjorn andersson (ported device to 4.3)
+* robclark (freedreno support)
+* opendata26
+* plata
+
+== What works ==
+* Booting the system
+* NOTE: {{MR|1199|pmaports}} works a lot better
+
+== What does not work ==
+* GUI (tested with plasma, phosh)
+
+== Installation ==
+=== Prerequisites ===
+==== Unlock Bootloader ====
+This might not work if the device is in factory settings, so setup Android once.
+* open dialer and type <code>*#*#7378423#*#*</code>
+* Service info → Configuration → Rooting Status
+* check that bootloader unlock says "Yes" (otherwise, you cannot unlock)
+* use the IMEI to retrieve the unlock code from the [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/ Sony website]
+* turn off device and disconnect USB (if connected)
+* hold volume up and connect USB to computer to enter fastboot (LED should switch from red to blue)
+* with the unlock code from the Sony website as <code>KEY</code>:
+<source lang="bash">$ fastboot oem unlock 0xKEY</source>
+
+==== Install pmbootstrap ====
+* see [[Installing_pmbootstrap]]
+
+=== Install postmarketOS ===
+* turn off device and disconnect USB (if connected)
+* hold volume up and connect USB to computer to enter fastboot (LED should switch from red to blue)
+<source lang="bash">$ pmbootstrap init</source>
+* select <code>sony</code> and <code>castor</code>
+<source lang="bash">$ pmbootstrap install</source>
+* NOTE: plasma-mobile is too large, use [[Installation_from_recovery_mode]] instead
+<source lang="bash">$ pmbootstrap flasher flash_rootfs
+$ pmbootstrap flasher flash_kernel</source>
+
+=== Useful key combinations ===
+* fastboot: volume up and connect USB
+* hard shutdown: press and hold volume up and power
+
+== Links ==
+* {{MR|1240|pmaports}} Initial merge request
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-sony-castor Device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-sony-castor Kernel package]
+-->
+* [https://wiki.postmarketos.org/wiki/Sony_Xperia_Z2_Tablet_(sony-castor-windy) Sony Xperia Z2 Tablet Wifi]
+* [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/ Sony Developer|Unlock bootloader]
+* [https://developer.sony.com/develop/open-devices/get-started/flash-tool/useful-key-combinations/ Sony Developer|Useful key combinations]
+* [https://github.com/andersson/kernel Kernel]
+* [http://elixir.free-electrons.com/linux/v4.8.16/source/Documentation/devicetree/bindings/display/msm/mdp5.txt New MDP5 Bindings]
