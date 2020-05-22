@@ -1,27 +1,27 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto G5 
-| codename = motorola-cedric 
+| name = Moto G5
+| codename = motorola-cedric
 | image = File:Motorola-cedric.jpg
 | imagecaption = motorola-cedric
 | releaseyear = 2017
 | originalsoftware = Android 7.0 - 8.1 on Linux 3.18.71
 | pmoskernel = 3.18.49
-| chipset = Qualcomm MSM8937 Snapdragon 430 
-| cpu = 8x 1.5 GHz Cortex-A53 
+| chipset = Qualcomm MSM8937 Snapdragon 430
+| cpu = 8x 1.5 GHz Cortex-A53
 | gpu = Adreno 505
-| storage = 16 GB or 32 GB 
-| display = 1080x1920 IPS 
-| memory = 2 or 3GB 
-| architecture = aarch64 
+| storage = 16 GB or 32 GB
+| display = 1080x1920 IPS
+| memory = 2 or 3GB
+| architecture = aarch64
 | whet_dhry = 1850.2
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
-| status_flashing = P 
+| status_flashing = P
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y
-| status_xwayland = Y 
+| status_xwayland = Y
 | status_fde = N
 | status_mainline = N
 | status_battery = Y
@@ -36,7 +36,7 @@
 | status_calls = 
 | status_otg = Y
 | status_fingerprint = 
-| booting = P 
+| booting = P
 }}
 
 == Contributors ==
@@ -67,5 +67,5 @@
 * [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
 * [https://www.androidfilehost.com/?w=files&flid=236353 TWRP (not needed if you use pmbootstrap flasher boot)]
 * [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/msm/adreno/a5xx_gpu.c?h=v4.16-rc7 (adreno 5xx is mainlined)]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-cedric Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-cedric Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-motorola-cedric Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-motorola-cedric Kernel package]
