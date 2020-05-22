@@ -73,6 +73,10 @@ This might not work if the device is in factory settings, so setup Android once.
 <source lang="bash">$ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher flash_kernel</source>
 
+==== Plasma Mobile ====
+Set scaling to 3x:
+<source lang="bash">$ kscreen-doctor output.1.scale.3</source>
+
 === Useful key combinations ===
 * fastboot: volume up and connect USB
 * hard shutdown: press and hold volume up and power
