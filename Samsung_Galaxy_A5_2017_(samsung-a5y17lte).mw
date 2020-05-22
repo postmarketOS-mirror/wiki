@@ -119,6 +119,13 @@ File:A5y17lte uart wires.jpg|Wires, soldered to UART port.
 File:A5y17lte uart assembly.jpg|a5y17lte, connected to USB - UART converter via level shifter.
 </gallery>
 
+==== Enabling console output ====
+===== Downstream kernel =====
+* Build kernel with options:
+**CONFIG_CMDLINE="earlycon=exynos,0x13820000,115200n8 console=ttySAC2,115200"
+**CONFIG_CMDLINE_EXTEND=y
+* Optional (enable login console on ttySAC2)[https://wiki.alpinelinux.org/wiki/Enable_Serial_Console_on_Boot]:
+
 === Main board ===
 <gallery>
 File:A5y17lte test port.jpg|Test port pin numbering
