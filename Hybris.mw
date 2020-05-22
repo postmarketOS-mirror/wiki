@@ -1,3 +1,5 @@
+{{note|Halium 9 users MUST https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1144 TO BE MERGED, OR BUILD IT ON YOUR OWN.}}
+
 [https://en.wikipedia.org/wiki/Hybris_(software) Libhybris] allows devices lacking FLOSS drivers to make full use of their hardware by using the proprietary drivers from Android. Mainlining and using free software drivers is of course the better approach, but it is not possible for all devices. '''We will not list devices that need hybris as featured devices''' (see {{issue|83|postmarketos.org}}).
 
 == What is libhybris? ==
