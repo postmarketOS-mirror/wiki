@@ -33,7 +33,7 @@
 | status_calls = 
 | booting = yes
 }}
-
+{{note|This phone is currently better supported by Maemo Leste, which has 3D acceleration with X.org, WiFi, and more working with mainline}}
 == Contributors ==
 
 * TheKit
