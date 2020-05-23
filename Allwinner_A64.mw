@@ -1,0 +1,17 @@
+{{Infobox soc
+| name = A64
+| manufacturer = Allwinner
+| arch = AArch64
+| process = 40
+}}
+
+== Devices ==
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Allwinner A64'
+|more results text=
+}}
