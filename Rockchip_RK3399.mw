@@ -15,3 +15,7 @@ tables=Devices
 |where=Devices.chipset='Rockchip RK3399'
 |more results text=
 }}
+
+== See also ==
+* RK3399 on [http://opensource.rock-chips.com/wiki_RK3399 Rockchip wiki]
+* RK3399 on [http://rockchip.wikidot.com/rk3399 rockchip.wikidot.com]
