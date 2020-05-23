@@ -1,17 +1,18 @@
 {{Infobox device
 | manufacturer = LG
-| name =  Bello II
+| name = Bello II
 | codename = lg-x150
 | image = File:lg-x150.jpg
 | imagecaption = LG Bello II
 | releaseyear = 2015
 | originalsoftware = Android 5.0.2
-| chipset = Mediatek MT6582 (32bit)
+| pmoskernel = 3.10.54
+| chipset = MediaTek MT6582
 | cpu = Quad-core 1.3 GHz Cortex-A7
-| gpu = ARM Mali-400 MP2
-| storage = 8GB
+| gpu = Mali-400 MP2
+| storage = 8 GB
 | display = 480 x 854 IPS 68.9 cm² (~196 ppi density)
-| memory = 1GB
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -36,10 +37,6 @@
 | booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.10.54
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
@@ -72,6 +69,7 @@ Not all partitions can really be written to, even if there is enough space. I'm 
 All other methods mentioned in Porting documentation (05.03.2020) worked so far. NFS not tested.
 
 == See also ==
+* {{MR|1027|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
