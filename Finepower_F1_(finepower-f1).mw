@@ -151,5 +151,5 @@ wruntimenv2 -> /dev/block/mmcblk0p8
 * {{issue|239|pmaports}} porting process
 * {{MR|645|pmaports}} initial merge request
 * [https://github.com/jedld/kernel_7730 Generic kernel for Spreadtrum]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-finepower-f1 Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-finepower-f1 Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-finepower-f1 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-finepower-f1 Kernel package]
