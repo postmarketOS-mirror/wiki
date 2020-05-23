@@ -15,3 +15,7 @@ tables=Devices
 |where=Devices.chipset='Allwinner A64'
 |more results text=
 }}
+
+== See also ==
+* A64 on [https://linux-sunxi.org/A64 linux-sunxi]
+* A64 on [http://www.allwinnertech.com/index.php?c=product&a=index&id=9 Allwinner's website]
