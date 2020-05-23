@@ -37,14 +37,10 @@
 | status_otg = Y
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.1.10
 see Unixbench page on wiki
 | whet_dhry = 0.0
-Is OTG available, not used in wiki
-| status_otg = Y
 -->
 }}
 
@@ -96,8 +92,8 @@ Unknown whether this device has serial capabilities (although it probably does).
 * Framebuffer locked to portrait mode (could probably be fixed by rotating it in the xorg config)
 
 == See also ==
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-hisense-m470bsa Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-hisense-m470bsa Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-hisense-m470bsa Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-hisense-m470bsa Kernel package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-hisense-m470bsa Firmware package]
 * [https://forum.xda-developers.com/sero-7-pro XDA Developers]
 * {{MR|721|pmaports}} Initial merge request
