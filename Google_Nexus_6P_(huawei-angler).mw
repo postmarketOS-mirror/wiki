@@ -11,7 +11,7 @@
 | gpu = Adreno 430
 | storage = 32/64/128 GB
 | display = 1440x2560 AMOLED
-| memory = 3 GB RAM
+| memory = 3 GB
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = P
@@ -45,7 +45,7 @@
 * Continue holding until you se the bootloader menu
 
 ==pmbootstrap install==
-[[installing pmbootstrap|Install pmbootstrap]] and then run:
+[[Installing_pmbootstrap|Install pmbootstrap]] and then run:
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
 $ pmbootstrap install
@@ -86,11 +86,8 @@ The audio requires the blobs from Android's /vendor/adsp.* to be present in /lib
 It seems Bluetooth is connected via H4 UART at /dev/ttyHS0. [https://wiki.tizen.org/Porting_Guide/Connectivity#Configuration Tizen] uses the hciattach_bcm43xx tool from BlueZ to load firmware to the Bluetooth dongle, but I can't find this utility in Alpine's bluez or bluez-deprecated package. btattach -B /dev/ttyHS0 doesn't seem to work.
 
 == Links ==
-
-[https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-huawei-angler Device Package]
-
-[https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512: initial PR]
-
-[https://github.com/postmarketOS/pmbootstrap/pull/555 pmbootstrap Pull Request #555: Wi-Fi and graphics]
-
-[https://github.com/LineageOS/android_kernel_huawei_angler/tree/04d1557af1259b211609fa41adbe852b5f9cf2da The LineageOS 14.1 kernel used]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-huawei-angler Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-huawei-angler Kernel package]
+* [https://github.com/postmarketOS/pmbootstrap/pull/512 pmbootstrap Pull Request #512: initial PR]
+* [https://github.com/postmarketOS/pmbootstrap/pull/555 pmbootstrap Pull Request #555: Wi-Fi and graphics]
+* [https://github.com/LineageOS/android_kernel_huawei_angler/tree/04d1557af1259b211609fa41adbe852b5f9cf2da The LineageOS 14.1 kernel used]
