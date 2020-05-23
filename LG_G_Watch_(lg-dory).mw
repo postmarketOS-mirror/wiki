@@ -94,9 +94,8 @@ Number  Start (sector)    End (sector)  Size Name
     22         7633920         7634910  495K grow</pre>
 
 == Links ==
-
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-dory Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-lg-dory Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-lg-dory Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-lg-dory Kernel package]
 * [https://android.googlesource.com/kernel/msm/+/refs/tags/android-wear-6.0.1_r0.1 Android Wear 6.0.1 Release 0.1 Kernel]
 
 == Photos ==
