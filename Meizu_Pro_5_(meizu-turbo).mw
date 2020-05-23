@@ -8,10 +8,10 @@
 | originalsoftware = Android 5, Ubuntu Touch
 | chipset = Exynos 7420 Octa
 | cpu = Octa-core (4x2.1 GHz Cortex-A57 & 4x1.5 GHz Cortex-A53)
-| gpu = Mali-T760MP8
-| storage = 32GB/64GB
-| display = AMOLED, 16M colors
-| memory = 3GB/4GB
+| gpu = Mali-T760 MP8
+| storage = 32/64 GB
+| display = 1080x1920 AMOLED
+| memory = 3/4 GB
 | architecture = aarch64
 | status_usbnet = Y
 | status_flashing = P
@@ -112,7 +112,9 @@ There are several candidate kernels for the port:
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
-[https://gitlab.com/postmarketOS/pmaports/merge_requests/106 Initial merge request] 
+* {{MR|106|pmaports}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-meizu-turbo Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-meizu-turbo Kernel package]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
