@@ -29,6 +29,10 @@ Templates for device ownership list:
 * [[Template:Owns device|Owns device]] ''Adds a device to the ownership table''
 * [[Template:Device owners|Device owners]] ''Displays list of people owning the device to the device page''
 
+Package links:
+* [[Template:Device_package|Template:Device package]]
+* [[Template:Kernel_package|Template:Kernel package]]
+
 Userboxes:
 * [[Template:User_ports]] ''Shows the amount of devices you ported'' (usage: {<p style="display:inline;"></p>{User ports|amount}})
 * [[Template:User_mainline]] ''Shows the amount of devices you mainlined'' (usage: {<p style="display:inline;"></p>{User mainline|amount}})
