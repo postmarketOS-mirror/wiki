@@ -86,7 +86,8 @@ A good way forward would be using a minimal version of the <code>flo</code> DTS,
 
 == See also ==
 * [https://github.com/freedreno/freedreno/wiki/Nexus-4 freedreno: Nexus 4]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-lg-mako Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-lg-mako Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-lg-mako Kernel package]
 * [https://www.optiv.com/blog/building-a-nexus-4-uart-debug-cable Tutorial: UART debug cable]
 * [https://developers.google.com/android/drivers#mako Official proprietary drivers]
 * {{issue|1079}} The Nexus 7 DTB is so similar, it even boots
