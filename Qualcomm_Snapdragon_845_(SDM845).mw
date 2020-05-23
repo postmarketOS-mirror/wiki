@@ -1,0 +1,58 @@
+{{Infobox soc
+| name = SDM845
+| manufacturer = Qualcomm
+| arch = AArch64
+| process = 10
+| gpu = Adreno 630
+| usb_device = DWC3
+| pmic = pm8998 (v4.5-rc1)
+| wifi = ath10k WCN3990
+}}
+
+[https://www.qualcomm.com/products/sdm845 SDM845] (or Snapdragon 845) is a Qualcomm SoC released in 2018, with mainline support originally added for the Dragonboard 845c.
+
+
+== Devices ==
+=== MSM8916 (Snapdragon 410) ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset=' 	Qualcomm SDM845 Snapdragon 845'
+|more results text=
+}}
+
+== Audio ==
+TODO - audio hasn't been worked on as of yet, although the adsp audio processor subsystem boots.
+
+== Modem ==
+The modem is controlled by the Q6V5 MSS Peripheral Image Loader, it is required to boot the WiFi adapter.
+ofonoctl currently shows no output when the modem is booted, however further testing has not been undertaken.
+
+== WiFi ==
+Wifi is functional! Firmware for the modem and ath10k module must be loaded in order to have functional wifi.
+
+3 packages are required for functional wifi:
+
+rmtfs, pd-mapper and tqftpserv can all be installed with apk add ({{MR|1080|pmaports}}).
+
+[https://github.com/jhugo/linux/tree/5.5rc2_wifi This readme] can then be followed to fixup the firmware.
+
+For some devices [https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/commit/698b631a6aaf7a2c2f91c9514c552a734e1cdc63 this commit] is also needed
+as some wlan firmware blobs don't play ball.
+
+TODO: Build sdm845 firmware packages for OnePlus enchilada / fajita.
+
+== Display ==
+
+The Adreno 630 is relatively easy to work with, after adding a driver for your panel, obtain [https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/commit/41ac945f035a7facab53b43d7c3506870f1fb2b4 the firmware] from
+your device and either compile into the kernel (in addition to enabling CONFIG_DRM_FBDEV_EMULATION for early dmesg)) or add to the right subdirectory under /lib/firmware.
+
+== See also == 
+
+[[OnePlus_6_(oneplus-enchilada)]]
+
+[https://gitlab.com/sdm845-mainline/sdm845-linux-next sdm845-linux-next] a common device tree for SDM845 mainline devices.
+Current devices include the OnePlus 6(T) and (soon) Pocophone F1.
