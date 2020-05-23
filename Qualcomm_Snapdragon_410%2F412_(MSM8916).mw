@@ -35,7 +35,7 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset='Qualcomm MSM8916 Snapdragon 410'
+|where=Booting and Devices.chipset='Qualcomm MSM8916 Snapdragon 410'
 |more results text=
 }}
 === APQ8016 (Snapdragon 410, WiFi-only) ===
@@ -45,7 +45,7 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset='Qualcomm APQ8016 Snapdragon 410'
+|where=Booting and Devices.chipset='Qualcomm APQ8016 Snapdragon 410'
 |more results text=
 }}
 === MSM8916v2 (Snapdragon 412) ===
@@ -55,7 +55,7 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset='Qualcomm MSM8916v2 Snapdragon 412'
+|where=Booting and Devices.chipset='Qualcomm MSM8916v2 Snapdragon 412'
 |more results text=
 }}
 
