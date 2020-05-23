@@ -6,6 +6,7 @@
 | imagecaption = Motorola Moto E (2nd Gen)
 | releaseyear = 2015
 | originalsoftware = Android 5.0.2 Lollipop
+| pmoskernel = 3.10.49
 | chipset = Qualcomm MSM8916 Snapdragon 410
 | cpu = Quad-core 1.2 GHz Cortex-A53
 | gpu = Adreno 306
@@ -53,8 +54,8 @@ I have tested flashing boot.img with an sdcard rootfs and this seems to work fin
 == See also ==
 * As of 2020-03-01, unrznbl is starting to work on mainline with the help of the work on motorola-harpia. Referring to https://wiki.postmarketos.org/wiki/MSM8916_Mainlining
 * {{MR|29|pmaports}} Initial merge request, status: merged.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-motorola-surnia Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-motorola-surnia Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-motorola-surnia Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-motorola-surnia Kernel package]
 
 == Modem Setup (same as for motorola-harpia so far) ==
 Content below copied from https://wiki.postmarketos.org/wiki/Moto_G4_Play_(motorola-harpia). 
