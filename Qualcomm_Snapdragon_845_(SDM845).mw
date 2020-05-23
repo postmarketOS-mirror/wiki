@@ -13,14 +13,14 @@
 
 
 == Devices ==
-=== MSM8916 (Snapdragon 410) ===
+=== SDM845 (Snapdragon 845) ===
 {{#cargo_query:
 tables=Devices
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Booting and Devices.chipset=' 	Qualcomm SDM845 Snapdragon 845'
+|where=Booting and Devices.chipset='Qualcomm SDM845 Snapdragon 845'
 |more results text=
 }}
 
