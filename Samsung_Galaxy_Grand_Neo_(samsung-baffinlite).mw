@@ -118,6 +118,8 @@ Some information:
 == See also ==
 
 * [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1057 Merge request]
+* {{Device package|samsung-baffinlite|testing}}
+* {{Kernel package|samsung-baffinlite|testing}}
 * [[Samsung_Galaxy_Grand_Neo_(samsung-baffinlite)/Downstream_notes]]
 * [https://github.com/knuxdroid New sources]
 * [https://github.com/SamsungBCM-GrandNeo Old sources]
