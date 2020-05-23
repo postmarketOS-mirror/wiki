@@ -1,17 +1,18 @@
 {{Infobox device
 | manufacturer = Lenovo
-| name =  ZUK Z2 plus
+| name = ZUK Z2 plus
 | codename = zuk-z2-plus
 | image = File:Zuk.jpg
 | imagecaption = Zuk Z2 Plus
 | releaseyear = 2016
-| originalsoftware = Android 6 (marshmallow)
+| originalsoftware = Android 6
+| pmoskernel = 4.4.183
 | chipset = Qualcomm MSM8996 Snapdragon 820
 | cpu = Quad-core Kryo (2x2.15GHz & 2x1.6GHz)
 | gpu = Adreno 530
-| storage = 64GB/32GB
+| storage = 32/64 GB
 | display = 1080x1920 
-| memory = 4GB/3GB
+| memory = 3/4 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -36,10 +37,6 @@
 | booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
@@ -70,6 +67,7 @@ Is OTG available, not used in wiki
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == See also ==
+* {{MR|1105|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
