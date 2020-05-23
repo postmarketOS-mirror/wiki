@@ -1,17 +1,18 @@
 {{Infobox device
 | manufacturer = LG
-| name =  Optimus L5
+| name = Optimus L5
 | codename = lg-e610
 | image = File:Lg-e610.jpg
 | imagecaption = LG Optimus L5
 | releaseyear = 2012
 | originalsoftware = Android 4.0.3
+| pmoskernel = 3.4.0
 | chipset = Qualcomm MSM7225A Snapdragon S1
-| cpu = 800MHz Cortex-A5
+| cpu = 800 MHz Cortex-A5
 | gpu = Adreno 200
-| storage = 4GB
+| storage = 4 GB
 | display = 320x480
-| memory = 512MB
+| memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -36,10 +37,6 @@
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.4.0
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
@@ -93,6 +90,9 @@ You can flash by [https://wiki.postmarketos.org/wiki/Android_Recovery_Zip_Instal
   $ pmbootstrap flasher flash_kernel 
 
 == See also ==
+* {{MR|340|pmaports}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-lg-e610 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-lg-e610 Kernel package]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
