@@ -48,5 +48,5 @@ Run adb reboot bootloader from the recovery or stock ROM. Alternatively choose f
 == Photos ==
 
 == Links ==
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-bq-chaozu Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-bq-chaozu Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-bq-chaozu Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-bq-chaozu Kernel package]
