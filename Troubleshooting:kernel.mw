@@ -1,7 +1,7 @@
 Here are some common kernel compilation problems listed. For debugging a kernel that compiles, but does not boot, see [[Troubleshooting:boot]].
 
 == How to create a patch ==
-Patching a kernel is as simple as putting a <code>.patch</code> file in your <code>aports/device/linux-vendor-flavor</code> folder and adding the patch name to the <code>source</code> variable in your <code>APKBUILD</code> file. See also: [[How to create a patch when packaging software]].
+Patching a kernel is as simple as putting a <code>.patch</code> file in your <code>aports/device/linux-vendor-flavor</code> folder and adding the patch name to the <code>source</code> variable in your <code>APKBUILD</code> file. See also: [[Patching]].
 
 == undefined reference to kgsl_iommu_sync_lock ==
 <pre>drivers/built-in.o:(.data.rel+0x68c): undefined reference to kgsl_iommu_sync_lock'
