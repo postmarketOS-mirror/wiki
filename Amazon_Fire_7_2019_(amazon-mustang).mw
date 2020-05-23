@@ -6,12 +6,13 @@
 | imagecaption = Amazon Fire 7 showing the weston demo UI
 | releaseyear = 2019
 | originalsoftware = Android 7.1.1 (Fire OS 6)
+| pmoskernel = 4.9.77
 | chipset = MediaTek MT8163V/B (64-bit quad-core)
-| cpu = ARM Cortex-A53 (1.3 GHz)
-| gpu = ARM Mali-T720 MP2
-| storage = 16GB
+| cpu = 4x 1.3 GHz Cortex-A53
+| gpu = Mali-T720 MP2
+| storage = 16 GB
 | display = 600x1024 IPS
-| memory = 1GB
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
@@ -36,10 +37,6 @@
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 4.9.77
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
@@ -71,6 +68,7 @@ Another option is exporting a flashable zip that can be flashed using twrp.
 Refer to [https://wiki.postmarketos.org/wiki/Installation_guide Installation Guide for postmarketOS]
 == See also ==
 Todo
+* {{MR|1263|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|1263|pmaports}} Initial merge request
