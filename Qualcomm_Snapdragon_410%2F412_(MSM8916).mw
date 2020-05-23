@@ -48,14 +48,14 @@ tables=Devices
 |where=Devices.chipset='Qualcomm APQ8016 Snapdragon 410'
 |more results text=
 }}
-=== MSM8916 (Snapdragon 412) ===
+=== MSM8916v2 (Snapdragon 412) ===
 {{#cargo_query:
 tables=Devices
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset='Qualcomm MSM8916 Snapdragon 412'
+|where=Devices.chipset='Qualcomm MSM8916v2 Snapdragon 412'
 |more results text=
 }}
 
