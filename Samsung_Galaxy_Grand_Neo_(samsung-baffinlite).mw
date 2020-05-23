@@ -51,9 +51,6 @@
 Recovery: Power+VolUp
 Download/Odin: Power+VolDown
 
-== Installation ==
-Install to sdcard. The system partition doesn't flash due to bootloader limitations.
-
 == Notes ==
 The device freezes under heavy load (such as installing certain apps through apk).
 
