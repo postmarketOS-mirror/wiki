@@ -55,5 +55,5 @@ The recommended installation procedure is installing by fastboot by following th
 * [https://wiki.lineageos.org/devices/s2 Le 2 Page on LineageOS Wiki]
 * {{MR|1073|pmbootstrap}} Initial merge request
 * {{MR|1129|pmbootstrap}} New code base merge request
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-leeco-s2 Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-leeco-s2 Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-leeco-s2 Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-leeco-s2 Kernel package]
