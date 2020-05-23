@@ -34,7 +34,7 @@
 | status_calls = N
 | status = Mainline booting, DSI panel mode up and running with freedreno!
 | booting = yes
-| pmoskernel = 5.7.0-rc5
+| pmoskernel = 5.7.0-rc6
 | whet_dhry = 4100
 | status_otg = Modified DTS
 }}
