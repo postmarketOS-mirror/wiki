@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = HTC
-| name =  One S
+| name = One S
 | codename = htc-ville
 | image = File:htc-ville.jpg
 | imagecaption = HTC One S
@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| booting = Y
+| booting = yes
 }}
 
 == Contributors ==
@@ -48,6 +48,9 @@
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 == See also ==
+* {{MR|177|pmaports}} Initial merge request
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-htc-ville Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-htc-ville Kernel package]
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
