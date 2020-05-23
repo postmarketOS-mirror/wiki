@@ -87,9 +87,8 @@ finished. total time: 415.840s</pre>
 
 === Links ===
 
-
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-asus-flo Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-asus-flo Kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-asus-flo Device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-asus-flo Kernel package]
 * [https://twrp.me/asus/asusnexus72013wifi.html TWRP recovery]
 * [https://git.linaro.org/landing-teams/working/qualcomm/wcnss-config.git/tree WIFI start with Wcnss-start]
 * [https://git.linaro.org/people/john.stultz/flo.git/log/?h=flo-v4.11 John Stultz's Flo kernel/patches]
