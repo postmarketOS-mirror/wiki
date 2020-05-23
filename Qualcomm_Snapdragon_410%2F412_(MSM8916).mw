@@ -24,7 +24,7 @@
 | cam_controller = v5.0-rc1*
 }}
 
-[https://www.qualcomm.com/products/snapdragon-processors-410 MSM8916]/[https://www.qualcomm.com/products/apq8016e APQ8016] (or Snapdragon 410) is Qualcomm SoC released in 2014, with great mainline support orginally added for the [https://www.96boards.org/product/dragonboard410c/ Dragonboard 410c].
+[https://www.qualcomm.com/products/snapdragon-processors-410 MSM8916]/[https://www.qualcomm.com/products/apq8016e APQ8016] (or Snapdragon 410) is Qualcomm SoC released in 2014, with great mainline support orginally added for the [https://www.96boards.org/product/dragonboard410c/ Dragonboard 410c]. There is a slightly higher clocked variant (CPU cores up to 1.4 GHz) available as Snapdragon 412.
 
 
 == Devices ==
