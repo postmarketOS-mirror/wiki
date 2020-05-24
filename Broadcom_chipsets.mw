@@ -1,0 +1,221 @@
+This is a joint page for multiple Broadcom chips, currently mostly ones released around 2012 (Broadcom Kona platform).
+
+{{note|'''Note:''' This is not a comprehensive article about Broadcom chips, nor is it a complete list of Broadcom chips. Especially newer ones are missing.}}
+
+{{todo|Add Raspberry Pi chipsets}}
+
+== Broadcom BCM21553 ==
+
+{{Infobox soc
+| name = BCM21553
+| manufacturer = Broadcom
+| arch = armhf
+| year = 2010
+| process = 65
+<!--
+| status_cpu = Y
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = Y
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = Y
+| status_video = Y
+| status_thermal = Y
+| status_wifi =
+| status_bluetooth =
+| status_modem = 
+| status_camera = 
+-->
+| gpu = Videocore IV
+}}An older armv6 chip with VFP support.
+
+=== Devices ===
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Broadcom BCM21553'
+|more results text=
+}}
+
+=== Specifications ===
+
+* Single-core 832MHz ARMv6 CPU
+
+=== Mainline status ===
+
+No dts in mainline, and there doesn't seem to be any similar chip supported.
+
+=== More information ===
+
+* [http://phonedb.net/index.php?m=processor&id=336&c=broadcom_bcm21553 phonedb.net]
+
+
+
+
+
+
+== Broadcom BCM21654 ==
+
+{{Infobox soc
+| name = BCM21654
+| manufacturer = Broadcom
+| arch = armv7
+| year = 2012
+| process = 40
+<!--
+| status_cpu = Y
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = Y
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = Y
+| status_video = Y
+| status_thermal = Y
+| status_wifi =
+| status_bluetooth =
+| status_modem = 
+| status_camera = 
+-->
+| gpu = Videocore IV
+}}=== Devices ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Broadcom BCM21654' OR Devices.chipset='Broadcom BCM21654G'
+|more results text=
+}}
+=== Specifications ===
+
+* Single-core 850MHz Cortex A9 CPU
+
+=== Mainline status ===
+
+No dtsi.
+{{todo|How similar is this one to the 21664 and 23550?}}
+
+=== More information ===
+
+* [http://phonedb.net/index.php?m=processor&id=384&c=broadcom_bcm21654 phonedb.net]
+
+
+
+
+
+== Broadcom BCM21664 ==
+
+{{Infobox soc
+| name = BCM21664
+| manufacturer = Broadcom
+| arch = armv7
+| year = 2012
+| process = 40
+<!--
+| status_cpu = Y
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = Y
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = Y
+| status_video = Y
+| status_thermal = Y
+| status_wifi =
+| status_bluetooth =
+| status_modem = 
+| status_camera = 
+-->
+| gpu = Videocore IV
+}}'''Codename:''' Hawaii
+
+=== Devices ===
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Broadcom BCM21664' OR Devices.chipset='Broadcom BCM21664A' OR Devices.chipset='Broadcom BCM21664G' OR Devices.chipset='Broadcom BCM21664T'
+|more results text=
+}}
+
+{{todo|Document variants.}}
+
+=== Specifications ===
+
+* Dual-core 1.2GHz Cortex A9 CPU
+* Videocore IV GPU
+
+=== Mainline status ===
+
+There's a dtsi available for this chipset in the mainline kernel.
+
+=== More information ===
+
+* [http://phonedb.net/index.php?m=processor&id=445&c=broadcom_bcm21664 phonedb.net]
+
+
+
+== Broadcom BCM23550 ==
+
+{{Infobox soc
+| name = BCM23550
+| manufacturer = Broadcom
+| arch = armv7
+| year = 2012
+| process = 40?
+<!--
+| status_cpu = Y
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = Y
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = Y
+| status_video = Y
+| status_thermal = Y
+| status_wifi =
+| status_bluetooth =
+| status_modem = 
+| status_camera = 
+-->
+| gpu = Videocore IV
+}}'''Codename:''' Java
+
+=== Devices ===
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Broadcom BCM23550'
+|more results text=
+}}
+
+=== Specifications ===
+
+* Quad-core 1.2GHz Cortex A9 CPU
+* Videocore IV GPU
+
+=== Mainline status ===
+
+There's a dtsi available for this chipset in the mainline kernel.
+
+=== More information ===
+
+* [http://phonedb.net/index.php?m=processor&id=470&c=broadcom_bcm23550 phonedb.net]
