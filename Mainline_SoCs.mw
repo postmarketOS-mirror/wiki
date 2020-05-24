@@ -1,9 +1,1 @@
-[[Category:Socs]]
-{{#cargo_query:
-tables=Socs
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Manufacturer,Name,Arch,CONCAT( Process,'nm' )=Process,AudioCodec
-|order by=Socs.Manufacturer, Socs.Name
-|format=table
-|limit=9999
-|more results text=
-}}
+#REDIRECT [[Mainlining]]
