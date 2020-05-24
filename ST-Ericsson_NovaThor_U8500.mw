@@ -2,6 +2,7 @@
 | name = NovaThor U8500
 | manufacturer = ST-Ericsson
 | arch = ARMv7
+| year = 2011
 | process = 40
 | status_cpu = Y
 | status_storage = Y
@@ -13,6 +14,8 @@
 | status_audio =
 | status_video =
 | status_thermal = Y
+| status_wifi = -
+| status_bluetooth = -
 | status_modem =
 | status_camera =
 }}
