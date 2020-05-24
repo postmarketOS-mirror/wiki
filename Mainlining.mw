@@ -5,7 +5,8 @@
 * '''Storage:''' eMMC, SD cards, UFS, ...
 * '''Video:''' Hardware-accelerated video de/encoding
 * '''Modem:''' Calls, SMS, Internet
-<br>
+'''Note:''' The statuses displayed below signify if a particular feature was tested on a device by someone in the postmarketOS community - not necessarily the components supported in the mainline kernel.
+
 {{#cargo_query:
 tables=Socs
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Manufacturer,Name,Arch,StatusCpu=CPU,StatusStorage=Storage,StatusUsb=USB,StatusDisplay=Display,StatusGpu=GPU,StatusPinctrl=Pinctrl,StatusI2c=I²C,StatusAudio=Audio,StatusVideo=Video,StatusThermal=Thermal,StatusModem=Modem,StatusCamera=Camera
