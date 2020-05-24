@@ -40,6 +40,7 @@ Basics:
 * [https://www.youtube.com/watch?v=m_NyYEBxfn8 Device Tree (DT) introduction, 2013] (1:12:14)
 * [https://www.youtube.com/watch?v=PgQezmlst0w Device Tree: present, past, future, 2018] (37:28)
 * [https://www.youtube.com/watch?v=LPG4EkXK9Us ARM64 SoC Linux Support Check-List, 2017] (42:38) ''Very useful step-by-step guide what should be done to bring in SoC support''
+* [https://www.youtube.com/watch?v=RBB6qKLUpd8 Upstreaming ARM64 SoC's easier than before, 2019] (19:03)
 
 Specific topics:
 * [https://www.youtube.com/watch?v=z4EkzJDGxFo Pin Control and GPIO, 2013] (48:03) talk by [[Special:Contributions/Linusw|Linus Walleij]]
