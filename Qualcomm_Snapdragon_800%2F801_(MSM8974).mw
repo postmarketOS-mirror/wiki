@@ -3,7 +3,18 @@
 | manufacturer = Qualcomm
 | arch = ARMv7
 | process = 28
-| audio_codec = 4.412
+| status_cpu = P
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = Y
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = 
+| status_video = 
+| status_thermal = Y
+| status_modem = P
+| status_camera = 
 }}
 
 == Devices ==
