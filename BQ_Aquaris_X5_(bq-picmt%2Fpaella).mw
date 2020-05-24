@@ -99,7 +99,7 @@ You can use the bootloader from the BQ firmware you downloaded before:
  $ fastboot flash aboot emmc_appsboot.mbn
  $ fastboot flash splash splash.img
 
-The bootloader has a splash screen with white background.
+The bootloader has a splash screen with white/black background (likely depending on the color of your device).
 
 ==== Mainline/Downstream ====
 The BQ bootloader is unable to boot [https://github.com/msm8916-mainline/lk2nd lk2nd], therefore you need to flash the bootloader from the Cyanogen firmware. You can download it here: [https://storage.googleapis.com/support-files.bq.com/Bootloader/Cyanogen%20OS/cm-13.1.4-ZNH2KAS5FE-paella-signed-fastboot-a6851b4fbe.zip cm-13.1.4-ZNH2KAS5FE-paella-signed-fastboot-a6851b4fbe.zip]
