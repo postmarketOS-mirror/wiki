@@ -63,20 +63,56 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
-'''bq-paella:'''
+=== BQ bootloader ===
+* '''Recovery''': Power on the device with both <code>Power</code> and <code>Volume Up</code> buttons.
+* '''Fastboot''': Power on the device with both <code>Power</code> and <code>Volume Down</code> buttons.
+
+=== Cyanogen bootloader ===
 * '''Recovery''': Power on the device with both <code>Power</code> and <code>Volume Down</code> buttons.
 * '''Stock fastboot''': Power on the device with both <code>Power</code> and <code>Volume Up</code> buttons.
 * '''lk2nd Fastboot''': Power on the device. After it vibrates, hold <code>Volume Down</code>.
 
 == Installation ==
-'''bq-picmt:'''
+=== Firmware ===
+It is recommended to flash to latest firmware from BQ before using postmarketOS. You can download it here: [https://storage.googleapis.com/otas/2015/Smartphones/X5/Android_N/5.2.0_20180228-1305-picmt-user-637-Fastboot-FW.zip 5.2.0_20180228-1305-picmt-user-637-Fastboot-FW.zip].
 
-By now the way I flashed the device and having it working was following [[Installation from recovery mode]] guide and using the adb sideload method
+First flash the early boot firmware:
 
-'''bq-paella:'''
+ $ fastboot flash sbl1 sbl1.mbn
+ $ fastboot flash sbl1bak sbl1.mbn
+ $ fastboot flash tz tz.mbn
+ $ fastboot flash tzbak tz.mbn
+ $ fastboot flash hyp hyp.mbn
+ $ fastboot flash hypbak hyp.mbn
+ $ fastboot flash rpm rpm.mbn
+ $ fastboot flash rpmbak rpm.mbn
+ $ fastboot flash modem NON-HLOS.bin
 
-# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] following the [https://github.com/msm8916-mainline/lk2nd#building Building] section (just needed the first time)
-# boot to lk2nd and follow the [[Installation_guide]] (tested <code>pmbootstrap flasher ..</code> and <code>fastboot</code> methods)
+As a next step you also need to flash a Linux/Android bootloader (<code>aboot</code>). This depends if you want to run downstream (<code>bq-picmt</code> in postmarketOS) or mainline (<code>bq-paella</code> in postmarketOS).
+
+==== Downstream ====
+You can use the bootloader from the BQ firmware you downloaded before:
+
+ $ fastboot flash aboot emmc_appsboot.mbn
+ $ fastboot flash splash splash.img
+
+The bootloader has a splash screen with white background.
+
+==== Mainline/Downstream ====
+The BQ bootloader is unable to boot [https://github.com/msm8916-mainline/lk2nd lk2nd], therefore you need to flash the bootloader from the Cyanogen firmware. You can download it here: [https://storage.googleapis.com/support-files.bq.com/Bootloader/Cyanogen%20OS/cm-13.1.4-ZNH2KAS5FE-paella-signed-fastboot-a6851b4fbe.zip cm-13.1.4-ZNH2KAS5FE-paella-signed-fastboot-a6851b4fbe.zip]
+
+ $ fastboot flash aboot emmc_appsboot.mbn
+ $ fastboot flash splash splash.img
+
+The bootloader has a splash screen with black background.
+
+=== postmarketOS ===
+==== Downstream ====
+Choose <code>bq-picmt</code> and follow the [[Installation guide]].
+
+==== Mainline ====
+# Install [https://github.com/msm8916-mainline/lk2nd lk2nd] following the [https://github.com/msm8916-mainline/lk2nd#building Building] section (just needed the first time).
+# Choose <code>bq-paella</code> and follow the [[Installation guide]] (flash from lk2nd, not the Cyanogen fastboot).
 
 == Status ==
 Currently work is separated based on firmware installed, if you installed the Cyanogen Edition firmware will be referred as bq-paella, if you installed the BQ Android firmware it will be referred as bq-picmt. So here is a summary for both:
