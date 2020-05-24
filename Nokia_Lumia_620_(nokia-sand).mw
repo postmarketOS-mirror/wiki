@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Nokia
-| name =  Lumia 620
+| name = Lumia 620
 | codename = nokia-rm846
 | image = File:nokia-lumia-620-off.jpg
 | imagecaption = The Nokia Lumia 620 powered off.
@@ -9,9 +9,9 @@
 | chipset = Qualcomm MSM8227
 | cpu = Qualcomm Snapdragon S4 Plus Dual Core 1.0 GHz
 | gpu = Adreno 305
-| storage = 8GB
-| display = 480x800 LCD_TFT
-| memory = 512MB
+| storage = 8 GB
+| display = 480x800 TFT LCD
+| memory = 512 MB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no,- for unavailable or left blank (for untested or unknown) -->
 | status_usbnet = N <!-- USB networking does work? then put Y here and delete this comment -->
@@ -113,3 +113,5 @@ If your device stays black but is connected as QSUSB_DLOAD, use the WindowsDevic
 == See also ==
 * [https://www.gsmarena.com/nokia_lumia_620-5147.php More Specs on GSM-Arena]
 * [https://android4lumia.github.io/ Website of the Android4Lumia Project]
+* {{Device package|nokia-rm846}}
+* {{Kernel package|nokia-rm846}}
