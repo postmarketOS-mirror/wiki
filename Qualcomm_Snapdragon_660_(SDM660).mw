@@ -1,0 +1,107 @@
+{{Infobox soc
+| name = SDM660
+| manufacturer = Qualcomm
+| arch = AArch64
+| year = 2017
+| process = 14
+| status_cpu = P
+| status_storage = P
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = Y
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+== General description ==
+[https://www.qualcomm.com/products/sdm660 SDM660]/636/630 are Qualcomm SoCs released in 2017, with practically no mainline support.
+According to [https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_systems-on-chip#Snapdragon_630,_636_and_660_(2017) Wikipedia], they all are pretty similar. Their advantage is price; SoC is usually used in middle-range priced devices, compared to SDM845-based devices, which are usually expensive and used in high-end hardware.
+
+Closest similar SoC is MSM8998 Snapdragon 835 (which has decent mainline support), and it seems that several drivers from MSM8998 can be reused for SDM660.
+
+Main problem of the platform is missing a proper PMIC support (PM660/PM660L) which is required for working on almost every other component.
+
+
+== Devices ==
+=== SDM660 (Snapdragon 660) ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset='Qualcomm SDM660 Snapdragon 660'
+|more results text=
+}}
+
+=== SDM636 (Snapdragon 636) ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset='Qualcomm SDM636 Snapdragon 636'
+|more results text=
+}}
+
+=== SDM630 (Snapdragon 630) ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset='Qualcomm SDM630 Snapdragon 630'
+|more results text=
+}}
+
+== CPU ==
+All cores are up; but partial because no CPU frequency scaling support.
+
+== Storage ==
+At least SDHCI (eMMC) was tested to work. UFS is untested (xiaomi-lavender does not have it).
+
+== USB ==
+Should work similarly to MSM8998, but no one worked much on it yet.
+
+== Display ==
+
+The only tested for now is simple-framebuffer.
+
+== GPU ==
+There is a chance that Adreno 508-512 are not suppored properly in mainline kernel.
+
+== Pinctrl ==
+Was ported from downstream kernel to mainline by [[User:opendata|opendata]] in 2018.
+
+== WiFi ==
+Driver is there (ath10k_snoc) and should work the same way as in [[Qualcomm_Snapdragon_845_(SDM845)|SDM845]]/MSM8998 and such. See its page for details.
+
+== Work done so far ==
+=== Who is working on it ===
+* [[User:opendata]] worked on initial basic SoC support (pinctrl-sdm660, gcc-sdm660)
+* [https://developer.sony.com/posts/pavel-dubrova-selected-as-the-first-2018-hero-open-source-developer/ Pavel Dubrova] worked on SDM630 SoC support based on kernel 5.3. It is unknown where the sources are located.
+* [[User:Alexeymin]] tried to continue opendata's work.  WIP Branch is in [https://gitlab.com/postmarketOS/linux-postmarketos/-/commits/qcom-sdm660/ linux-postmarketos] repo.
+
+=== Upstream commits related to sdm660 ===
+commits merged in 4.20:
+* [https://github.com/torvalds/linux/commit/9cf0c526bc5874d77208751ae42f7e4c62bfdd4d pinctrl: qcom: Add sdm660 pinctrl driver] submitted by opendata
+* [https://github.com/torvalds/linux/commit/5db0b0a298d26c007e06a96d7e60849b4829a57c pinctrl: sdm660: Set tile property for pingroups]
+* [https://github.com/torvalds/linux/commit/f2a76a2955c0eb7514cdb5885e3d60a973301ae0 clk: qcom: Add Global Clock controller (GCC) driver for SDM660] by Taniya Das, who sent opendata's unsubmitted work after opendata had disappeared
+commits merged in 5.1:
+* [https://github.com/torvalds/linux/commit/4e2256d31f0f24107c36dae35a1d84dff0fced30 soc: qcom: smd-rpm: Add sdm660 compatible] by opendata
+commits merged in 5.6:
+* [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=faf8e30acb219849725aa75302d36e0ffdb6a258 dt-bindings: arm: Add kryo260 compatible]
+
+commits to be merged into 5.8:
+* [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=aab86bbbd3e32a10ca7e5cd1d3b9a473cf5909bb dt-bindings: arm: qcom: Add sdm630 and sdm660 SoCs]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=feec34411d4c0a9759106ef4f7d563438b3881ae arm64: dts: qcom: Add SDM660 SoC support]
+* [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=23a6da79fe8b7f0b5725b40126a7b0638c016ef3 arm64: dts: qcom: Add Xiaomi Redmi Note 7 (lavender)]
