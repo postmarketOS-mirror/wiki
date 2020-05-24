@@ -3,6 +3,18 @@
 | manufacturer = ST-Ericsson
 | arch = ARMv7
 | process = 40
+| status_cpu = Y
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = Y
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio =
+| status_video =
+| status_thermal = Y
+| status_modem =
+| status_camera =
 }}
 
 == Devices with this chipset ==
