@@ -12,7 +12,7 @@
 | storage = 16GB / 32GB
 | display = 720 x 1280 (IPS LCD capacitive touchscreen, 16M colors)
 | memory = 2GB / 3GB
-| architecture = armv7
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
@@ -34,7 +34,7 @@
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes
-
+| pmoskernel = Mainline (for bq-paella)
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
 | n-android =  ✔
