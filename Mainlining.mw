@@ -1,4 +1,11 @@
 [[Category:Socs]]
+
+== Feature Matrix ==
+* '''CPU:''' SMP (bring up secondary CPU cores), CPU frequency scaling, CPUidle
+* '''Storage:''' eMMC, SD cards, UFS, ...
+* '''Video:''' Hardware-accelerated video de/encoding
+* '''Modem:''' Calls, SMS, Internet
+<br>
 {{#cargo_query:
 tables=Socs
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Manufacturer,Name,Arch,StatusCpu=CPU,StatusStorage=Storage,StatusUsb=USB,StatusDisplay=Display,StatusGpu=GPU,StatusPinctrl=Pinctrl,StatusI2c=I²C,StatusAudio=Audio,StatusVideo=Video,StatusThermal=Thermal,StatusModem=Modem,StatusCamera=Camera
