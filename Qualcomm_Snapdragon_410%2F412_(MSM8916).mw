@@ -2,6 +2,7 @@
 | name = MSM8916
 | manufacturer = Qualcomm
 | arch = AArch64
+| year = 2014
 | process = 28
 | status_cpu = Y
 | status_storage = Y
@@ -13,6 +14,8 @@
 | status_audio = Y
 | status_video = Y
 | status_thermal = Y
+| status_wifi = Y
+| status_bluetooth =Y
 | status_modem = P
 | status_camera = 
 | clock = v4.1-rc1 (ioommu, gpu, sound: v4.4-rc1)
