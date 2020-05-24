@@ -73,6 +73,9 @@ Is OTG available, not used in wiki
 * '''lk2nd Fastboot''': Power on the device. After it vibrates, hold <code>Volume Down</code>.
 
 == Installation ==
+=== Unlock bootloader ===
+To unlock your bootloader, boot into Android, enable Developer Options from the settings and enable "Allow OEM unlock". Then boot into Fastboot and use <code>fastboot oem unlock</code>. You might need to use <code>fastboot oem unlock-go</code>. ('''Note:''' All your data will be erased!)
+
 === Firmware ===
 It is recommended to flash to latest firmware from BQ before using postmarketOS. You can download it here: [https://storage.googleapis.com/otas/2015/Smartphones/X5/Android_N/5.2.0_20180228-1305-picmt-user-637-Fastboot-FW.zip 5.2.0_20180228-1305-picmt-user-637-Fastboot-FW.zip].
 
