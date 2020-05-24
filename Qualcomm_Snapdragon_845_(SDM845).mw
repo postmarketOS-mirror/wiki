@@ -43,22 +43,24 @@ tables=Devices
 TODO - audio hasn't been worked on as of yet, although the adsp audio processor subsystem boots.
 
 == Modem ==
-The modem is controlled by the Q6V5 MSS Peripheral Image Loader, it is required to boot the WiFi adapter.
-ofonoctl currently shows no output when the modem is booted, however further testing has not been undertaken.
+The modem is booted by the Q6V5 MSS Peripheral Image Loader, it is required to boot the WiFi adapter.
+It should be possible to use [[https://github.com/andersson/rpmsgexport rpmsgexport]] to create a modem device that qmicli and eventually ofonoctl can talk to.
 
 == WiFi ==
 Wifi is functional! Firmware for the modem and ath10k module must be loaded in order to have functional wifi.
 
 3 packages are required for functional wifi:
 
-rmtfs, pd-mapper and tqftpserv can all be installed with apk add ({{MR|1080|pmaports}}).
+rmtfs, pd-mapper and tqftpserv can be installed with
+
+<code>apk add rmtfs pd-mapper tqftpserv</code>
+
+({{MR|1080|pmaports}}).
 
 [https://github.com/jhugo/linux/tree/5.5rc2_wifi This readme] can then be followed to fixup the firmware.
 
 For some devices [https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/commit/698b631a6aaf7a2c2f91c9514c552a734e1cdc63 this commit] is also needed
-as some wlan firmware blobs don't play ball.
-
-TODO: Build sdm845 firmware packages for OnePlus enchilada / fajita.
+as some wlan firmware blobs don't play nice.
 
 == Display ==
 
