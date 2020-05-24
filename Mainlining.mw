@@ -2,7 +2,12 @@
 
 {{todo|Have some introduction here}}
 == Why? ==
-{{todo|}}
+
+Mainlining is a fairly complicated process, especially if you're one of the first to start work on a given SOC. However through community effort there is a growing number of SOCs that have increasingly stable mainline ports (see below). In general it is relatively simple to take your existing Android kernel and boot it without any of the Android blobs, however from that point it can be a lot of working to create a working system and at the end of it you don't receive any security patches or general improvements. Successfully mainlining an SOC or device means that you benefit from every improvement the Linux kernel has to offer, you can run a fairly standard Linux distro and benefit from kernel updates and improvements without needing to compile your own kernel or deal with frustrating patches.
+
+If your device's SOC is in the list below there's a very decent chance that you can get the same functionality working on your device and eventually upstream your patches to the kernel, helping to build a solid base for other devices too!
+
+{{todo|Explain process for previous devices that now run mainline quite well}}
 
 == Getting Started ==
 
