@@ -2,6 +2,7 @@
 | name = MSM8974
 | manufacturer = Qualcomm
 | arch = ARMv7
+| year = 2013
 | process = 28
 | status_cpu = P
 | status_storage = Y
@@ -13,6 +14,8 @@
 | status_audio = 
 | status_video = 
 | status_thermal = Y
+| status_wifi = Y
+| status_bluetooth = Y
 | status_modem = P
 | status_camera = 
 }}
