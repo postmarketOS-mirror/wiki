@@ -33,6 +33,11 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | e.g. <code>2012</code>
 
 |-
+| <code>chassis</code>
+| The computer case of your device ({{MR|1933}})
+| e.g. <code>handset</code> for phones, <code>watch</code> ([https://www.freedesktop.org/software/systemd/man/machine-info.html all values])
+
+|-
 | <code>keyboard</code>
 | The device has a hardware keyboard.
 | <code>true</code>, <code>false</code>
