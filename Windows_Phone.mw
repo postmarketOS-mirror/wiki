@@ -1,5 +1,19 @@
 This page collects some useful resources for working with Windows Phones.
 
+== Devices ==
+On the different device pages is described how porting was done for the specific device. This can be used to get further information on how to port your device
+{{todo|Update the condition in the table to work generic.}}
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.originalsoftware='Microsoft Windows Phone 8.1' OR Devices.originalsoftware='Windows Phone 8' OR Devices.originalsoftware='Windows 10 Mobile' OR Devices.originalsoftware='Windows Phone'
+|more results text=
+}}
+
+
 == Tools ==
 === WindowsPhoneInternals[https://www.wpinternals.net/] ===
 [[File:WPinternals.jpg|thumb|Supported models]]
