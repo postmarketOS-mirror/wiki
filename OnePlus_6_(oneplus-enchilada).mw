@@ -64,6 +64,12 @@ successfully connect to networks with dhcp.
 
 Follow the install guide [https://gist.github.com/calebccff/80bba8237e2ba512dc07f907e55b4891 here].
 
+It is possible to dual boot with android by following the guide above and using
+
+<code>fastboot --set-active=[a|b]</code>
+
+to switch to your inactive slot before flashing.
+
 [https://github.com/calebccff/linux/commits/enchilada-usb Kernel sources]
 
 == How to enter flash mode ==
