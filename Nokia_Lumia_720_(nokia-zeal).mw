@@ -39,10 +39,11 @@
 * magnusgulin
 
 == Basic info ==
-
 * [https://www.gsmarena.com/nokia_lumia_720-5321.php More specs]
 * [https://github.com/Android4Lumia/bootloader_msm8227 LittleKernel Bootloader]
 * [https://github.com/Android4Lumia/android_kernel_nokia_msm8x27 Kernel source]
+* {{Device package|nokia-rm885}}
+* {{Kernel package|nokia-rm885}}
 
 == Additional info ==
 * Possible emmc corruption when flashing? From Android4Lumia page: <q>My phone has Samsung eMMC, can I still use this? You can, but be aware, that those eMMCs are more probable to die unexpectedly than Hynix or Toshiba ones.</q>. Files are randomly corrupted on my device as well.
