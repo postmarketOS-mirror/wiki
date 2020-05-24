@@ -1,6 +1,8 @@
 [[Category:Socs]]
 
-== Feature Matrix ==
+== Supported SoCs ==
+Some SoCs are already supported quite well and are used for some devices in postmarketOS. Getting started with one of these might be more easy for you, because you can get help from others working with the same SoC. The feature matrix below shows which features are already supported for a particular SoC. The pages for each SoC will provide more information, plus hints how to get started and who you can contact.
+
 * '''CPU:''' SMP (bring up secondary CPU cores), CPU frequency scaling, CPUidle
 * '''Storage:''' eMMC, SD cards, UFS, ...
 * '''Video:''' Hardware-accelerated video de/encoding
