@@ -1,0 +1,9 @@
+[[Category:Socs]]
+{{#cargo_query:
+tables=Socs
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Manufacturer,Name,Arch,StatusCpu=CPU,StatusStorage=Storage,StatusUsb=USB,StatusDisplay=Display,StatusGpu=GPU,StatusPinctrl=Pinctrl,StatusI2c=I²C,StatusAudio=Audio,StatusVideo=Video,StatusThermal=Thermal,StatusModem=Modem,StatusCamera=Camera
+|order by=Socs.Manufacturer, Socs.Name
+|format=table
+|limit=9999
+|more results text=
+}}
