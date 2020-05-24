@@ -1,0 +1,64 @@
+{{Infobox device
+| manufacturer = Microsoft
+| name = Microsoft Lumia 535
+| codename = chakra
+<!--| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg -->
+| imagecaption = No image yet
+| releaseyear = 2014
+| originalsoftware = Microsoft Windows Phone 8.1
+| chipset = Qualcomm Snapdragon 200 MSM8212
+| cpu = Quad-core 1.2 GHz Cortex-A7
+| gpu = Adreno 302
+| storage = 8 GB
+| display = 540 x 960 IPS LCD
+| memory = 1 GB
+| architecture = armv7
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| booting = no
+| n-android =  ✔
+<!-- you can also use these lines if you need to:
+Version of the kernel that pmos is running
+| pmoskernel = 3.x.x
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = -
+-->
+}}
+
+== Users owning this device ==
+{{Device owners}}
+
+== See also ==
+<!--
+Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{issue|CHANGEME|pmaports}} Some related issue
+-->
+* [https://www.gsmarena.com/microsoft_lumia_535-6791.php GSMArena-page]
+* [http://phonedb.net/index.php?m=device&id=7125&c=microsoft_lumia_535 Phonedb-page]
+* [[Windows Phone]]
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* {{Device package|DEVICE_CODENAME}}
+* {{Kernel package|DEVICE_CODENAME}}
+-->
