@@ -2,6 +2,8 @@
 | name = Bay Trail
 | manufacturer = Intel
 | arch = x86_64
+| cpu = Intel Silvermont
+| gpu = Intel Gen 7.5 (Ivy Bridge/Bay Trail)
 | year = 2013
 | process = 22
 | mainline = yes
