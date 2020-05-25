@@ -1,15 +1,15 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Pop Plus/ Galaxy Mini Plus
-| codename = tassve
+| name = Galaxy Pop Plus/ Galaxy Mini Plus
+| codename = samsung-tassve
 | releaseyear = 2012
 | originalsoftware = Android 2.3.6
 | chipset = Broadcom BCM21553
 | cpu = 832 MHz ARMv6
 | gpu = Broadcom VideoCore IV
-| storage = 160MB
+| storage = 160 MB
 | display = 240x320
-| memory = 384MB
+| memory = 384 MB
 | architecture = armhf
 | status_usbnet = 
 | status_flashing = 
@@ -43,7 +43,7 @@
 * Flashing
 
 == How to enter flash mode ==
-Press and hold <code>Volume Down</code> + <code>Home</code> + <code>Power</code> simultaneously. Then click <code>Volume Up</code> to confirm.
+Press and hold {{Button|Volume Down}} + {{Button|Home}} + {{Button|Power}} simultaneously. Then click {{Button|Volume Up}} to confirm.
 
 == See also ==
 * [https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common Kernel source]
