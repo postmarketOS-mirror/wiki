@@ -1,10 +1,10 @@
 {{Infobox device
 | manufacturer = LG
 | name = Doubleplay
-| codename = lgc729
+| codename = lg-c729
 | releaseyear = 2011
 | originalsoftware = Android 2.3
-| chipset = Qualcomm MSM8255
+| chipset = Qualcomm MSM8255 Snapdragon S2
 | cpu = 1.0 GHz Scorpion
 | gpu = Adreno 205
 | storage = 2 GB
