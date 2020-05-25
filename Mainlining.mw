@@ -85,5 +85,10 @@ This section include many useful sources to help you with mainlining as possible
 * Device tree bindings (i.e. documentation how to specify devices in your device tree) are mandatory for all mainline drivers. You can check those in the <code>Documentation/devicetree/bindings</code> directory to see which options are supported by a particular driver.
 * [https://www.devicetree.org/specifications/ Device Tree Specification]
 
+'''Submitting patches:'''
+* [https://www.kernel.org/doc/html/latest/process/submitting-patches.html Submitting patches: the essential guide to getting your code into the kernel]
+* [https://nickdesaulniers.github.io/blog/2017/05/16/submitting-your-first-patch-to-the-linux-kernel-and-responding-to-feedback/ Submitting Your First Patch to the Linux Kernel and Responding to Feedback]
+* [https://git-send-email.io/ Guide for git-send-email]
+
 == See also ==
 * [[Mainlining Guide]] (very generic, parts are slowly incorporated into this page)
