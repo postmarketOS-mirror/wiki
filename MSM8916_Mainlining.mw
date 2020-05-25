@@ -619,5 +619,17 @@ Similar to the sensors, battery/charger are usually connected to a [https://en.w
 ;Hexagon
 :Microarchitecture for DSPs, used for ADSP (and therefore also modem in MSM8916).
 
+== Documentation ==
+* Specifications
+** [https://developer.qualcomm.com/download/sd410/snapdragon-410-processor-device-specification.pdf Snapdragon 410E (APQ8016E) Processor Device Specification]
+** [https://developer.qualcomm.com/download/sd410/pm8916pm8916-1-power-management-ic-device-specification.pdf PM8916/PM8916-1 Power Management IC Device Specification]
+** [https://developer.qualcomm.com/download/sd410/wcn3620-wireless-connectivity-ic-device-specification.pdf WCN3620 Wireless Connectivity IC Device Specification]
+** [https://developer.qualcomm.com/download/sd410/wcn3680b-wcn3660b-device-spec.pdf WCN3680B/WCN3660B Device Specification]
+* Register Descriptions
+** [https://developer.qualcomm.com/download/sd410/hardware-register-description-qualcomm-snapdragon-410.pdf Qualcomm Snapdragon 410E Processor (APQ 8016E) Hardware Register Description] 
+** [https://developer.qualcomm.com/download/sd410/pm8916-hardware-register-description.pdf PM8916 Hardware Register Description]
+* [https://developer.qualcomm.com/download/sd410/snapdragon-410e-technical-reference-manual.pdf Snapdragon 410E Technical Reference Manual] (provides explanations for many hardware blocks)
+* More documentation: [https://developer.qualcomm.com/hardware/apq-8016e/tools APQ8016E Tools & Resources]
+
 [[Category:Guide]]
 [[Category:Technical Reference]]
