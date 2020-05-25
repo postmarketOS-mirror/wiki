@@ -1,8 +1,20 @@
+This page contains some information about the Galaxy Grand Neo, taken from downstream resources.
+
+* There's a DTS in downstream but it's unused and the parts used don't match the defconfig. Seems like it's a generic tree and was never finished, as it matches some stuff in the board-java.c file in downstream.
+
+== Bootloader kernel cmdline options ==
+
+Taken from TWRP 2.7.
+
+<syntaxhighlight>
+console=ttyS2,115200n8 mem=994M cma0=0M carveout0=0M vmalloc=190M androidboot.console=ttyS2 logbuf_nocache=1 bootmode=2 ap_only_boot sec_debug.reset_reason=0x1A2B3C00 sec_debug.level=0 androidboot.debug_level=0x4f4c loglevel=0 sec_log=0x70000@0x9e900000 lpcharge=0 cordon=8e35ac7f0eb64eb53f82647be12673c8 androidboot.emmc_checksum=3 brd_ver=2 androidboot.serialno=[censored]
+</syntaxhighlight>
+
 == dt-blob in firmware ==
 
-There's a dt-blob in the stock firmware. When decompiled with dtc, it yields:
+There's a dt-blob in the stock firmware. Click the Expand button to the right to preview a version decompiled with dtc.
 
-<syntaxhighlight lang="c">
+<syntaxhighlight lang="c" class="mw-collapsible mw-collapsed">
 /dts-v1/;
 
 / {
@@ -51,4 +63,86 @@ There's a dt-blob in the stock firmware. When decompiled with dtc, it yields:
 		pre_eoc_min_curr = <0x12c>;
 	};
 };
+</syntaxhighlight>
+
+== Partitions ==
+
+Click expand button to the right.
+
+<syntaxhighlight lang="shell-session" class="mw-collapsible mw-collapsed">
+
+# cat /proc/partitions
+major minor  #blocks  name
+
+ 179        0    7634944 mmcblk0
+ 179        1       1024 mmcblk0p1
+ 179        2        256 mmcblk0p2
+ 179        3        256 mmcblk0p3
+ 179        4        256 mmcblk0p4
+ 179        5      20480 mmcblk0p5
+ 179        6       2048 mmcblk0p6
+ 179        7       2048 mmcblk0p7
+ 179        8       8192 mmcblk0p8
+ 179        9       8192 mmcblk0p9
+ 179       10       8192 mmcblk0p10
+ 179       11        512 mmcblk0p11
+ 179       12        512 mmcblk0p12
+ 179       13      19200 mmcblk0p13
+ 179       14        512 mmcblk0p14
+ 179       15        256 mmcblk0p15
+ 179       16     319488 mmcblk0p16
+ 179       17    1572592 mmcblk0p17
+ 179       18      30720 mmcblk0p18
+ 179       19    5632000 mmcblk0p19
+
+# ls -la /dev/block/platform/sdhci.1/
+__bionic_open_tzdata: couldn't find any tzdata when looking for localtime!
+__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+drwxr-xr-x root     root              2013-01-05 07:31 by-name
+drwxr-xr-x root     root              2013-01-05 07:31 by-num
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0 -> /dev/block/mmcblk0
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p1 -> /dev/block/mmcblk0p1
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p10 -> /dev/block/mmcblk0p10
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p11 -> /dev/block/mmcblk0p11
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p12 -> /dev/block/mmcblk0p12
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p13 -> /dev/block/mmcblk0p13
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p14 -> /dev/block/mmcblk0p14
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p15 -> /dev/block/mmcblk0p15
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p16 -> /dev/block/mmcblk0p16
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p17 -> /dev/block/mmcblk0p17
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p18 -> /dev/block/mmcblk0p18
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p19 -> /dev/block/mmcblk0p19
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p2 -> /dev/block/mmcblk0p2
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p3 -> /dev/block/mmcblk0p3
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p4 -> /dev/block/mmcblk0p4
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p5 -> /dev/block/mmcblk0p5
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p6 -> /dev/block/mmcblk0p6
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p7 -> /dev/block/mmcblk0p7
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p8 -> /dev/block/mmcblk0p8
+lrwxrwxrwx root     root              2013-01-05 07:31 mmcblk0p9 -> /dev/block/mmcblk0p9
+
+# ls -la /dev/block/platform/sdhci.1/by-name/
+__bionic_open_tzdata: couldn't find any tzdata when looking for localtime!
+__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+lrwxrwxrwx root     root              2013-01-05 07:31 BOTA0 -> /dev/block/mmcblk0p6
+lrwxrwxrwx root     root              2013-01-05 07:31 BOTA1 -> /dev/block/mmcblk0p7
+lrwxrwxrwx root     root              2013-01-05 07:31 CSC -> /dev/block/mmcblk0p16
+lrwxrwxrwx root     root              2013-01-05 07:31 DTS -> /dev/block/mmcblk0p14
+lrwxrwxrwx root     root              2013-01-05 07:31 FOTA_SIG -> /dev/block/mmcblk0p15
+lrwxrwxrwx root     root              2013-01-05 07:31 HIDDEN -> /dev/block/mmcblk0p18
+lrwxrwxrwx root     root              2013-01-05 07:31 KERNEL -> /dev/block/mmcblk0p9
+lrwxrwxrwx root     root              2013-01-05 07:31 PARAM -> /dev/block/mmcblk0p8
+lrwxrwxrwx root     root              2013-01-05 07:31 RECOVERY -> /dev/block/mmcblk0p10
+lrwxrwxrwx root     root              2013-01-05 07:31 RESERVED1 -> /dev/block/mmcblk0p11
+lrwxrwxrwx root     root              2013-01-05 07:31 RESERVED2 -> /dev/block/mmcblk0p12
+lrwxrwxrwx root     root              2013-01-05 07:31 RF_CAL_FILE -> /dev/block/mmcblk0p4
+lrwxrwxrwx root     root              2013-01-05 07:31 cal -> /dev/block/mmcblk0p1
+lrwxrwxrwx root     root              2013-01-05 07:31 efs -> /dev/block/mmcblk0p5
+lrwxrwxrwx root     root              2013-01-05 07:31 modem -> /dev/block/mmcblk0p13
+lrwxrwxrwx root     root              2013-01-05 07:31 parm-spml_dep -> /dev/block/mmcblk0p3
+lrwxrwxrwx root     root              2013-01-05 07:31 sysparm_dep -> /dev/block/mmcblk0p2
+lrwxrwxrwx root     root              2013-01-05 07:31 system -> /dev/block/mmcblk0p17
+lrwxrwxrwx root     root              2013-01-05 07:31 userdata -> /dev/block/mmcblk0p19
 </syntaxhighlight>
