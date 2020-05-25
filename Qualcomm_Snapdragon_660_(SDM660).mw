@@ -1,7 +1,7 @@
 {{Infobox soc
 | name = SDM660
 | manufacturer = Qualcomm
-| arch = AArch64
+| arch = aarch64
 | year = 2017
 | process = 14
 | status_cpu = P
