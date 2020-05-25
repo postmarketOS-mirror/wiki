@@ -11,9 +11,13 @@ This is a joint page for multiple Broadcom chips, currently mostly ones released
 | manufacturer = Broadcom
 | arch = armhf
 | year = 2010
+| cpu = 1x 832 MHz ARMv6
+| gpu = Broadcom VideoCore IV
 | process = 65
+| mainline = 
 <!--
 | status_cpu = Y
+| status_uart = 
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
@@ -28,7 +32,6 @@ This is a joint page for multiple Broadcom chips, currently mostly ones released
 | status_modem = 
 | status_camera = 
 -->
-| gpu = Videocore IV
 }}An older armv6 chip with VFP support.
 
 === Devices ===
@@ -59,11 +62,6 @@ No dts in mainline, and there doesn't seem to be any similar chip supported.
 
 * [http://phonedb.net/index.php?m=processor&id=336&c=broadcom_bcm21553 phonedb.net]
 
-
-
-
-
-
 == Broadcom BCM21654 ==
 
 {{Infobox soc
@@ -71,9 +69,13 @@ No dts in mainline, and there doesn't seem to be any similar chip supported.
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
+| cpu = 1x 850MHz Cortex-A9
+| gpu = Broadcom VideoCore IV
 | process = 40
+| mainline = 
 <!--
 | status_cpu = Y
+| status_uart = 
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
@@ -88,7 +90,6 @@ No dts in mainline, and there doesn't seem to be any similar chip supported.
 | status_modem = 
 | status_camera = 
 -->
-| gpu = Videocore IV
 }}=== Devices ===
 {{#cargo_query:
 tables=Devices
@@ -112,10 +113,6 @@ No dtsi.
 
 * [http://phonedb.net/index.php?m=processor&id=384&c=broadcom_bcm21654 phonedb.net]
 
-
-
-
-
 == Broadcom BCM21664 ==
 
 {{Infobox soc
@@ -123,8 +120,12 @@ No dtsi.
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
+| cpu = 2x 1.2 GHz Cortex-A9
+| gpu = Broadcom VideoCore IV
 | process = 40
+| mainline = yes
 | status_cpu = Y
+| status_uart = 
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
@@ -138,7 +139,6 @@ No dtsi.
 | status_bluetooth = N
 | status_modem = N
 | status_camera = N
-| gpu = Videocore IV
 }}'''Codename:''' Hawaii
 
 === Devices ===
@@ -158,7 +158,7 @@ tables=Devices
 === Specifications ===
 
 * Dual-core 1.2GHz Cortex A9 CPU
-* Videocore IV GPU
+* VideoCore IV GPU
 
 === Mainline status ===
 
@@ -177,8 +177,12 @@ Some mainlining progress was made by [[User:Deata|Deata]] (see [https://gitlab.c
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
+| cpu = 4x 1.2 GHz ARM Cortex-A9
+| gpu = Broadcom VideoCore IV
 | process = 40?
+| mainline = yes
 | status_cpu = Y
+| status_uart = 
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
@@ -192,7 +196,6 @@ Some mainlining progress was made by [[User:Deata|Deata]] (see [https://gitlab.c
 | status_bluetooth = N
 | status_modem = N
 | status_camera = N
-| gpu = Videocore IV
 }}'''Codename:''' Java
 
 === Devices ===
@@ -210,7 +213,7 @@ tables=Devices
 === Specifications ===
 
 * Quad-core 1.2GHz Cortex A9 CPU
-* Videocore IV GPU
+* VideoCore IV GPU
 
 === Mainline status ===
 
