@@ -4,7 +4,7 @@
 | category = main
 | codename = qemu-amd64
 | architecture = x86_64
-| cpu = QEMU Virtual CPU
+| cpu = QEMU Virtual
 | gpu = Virgil 3D
 | image = File:qemu-phosh.png
 | imagecaption = QEMU running Phosh
