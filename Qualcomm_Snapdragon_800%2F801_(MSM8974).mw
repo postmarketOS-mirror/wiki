@@ -4,6 +4,7 @@
 | arch = armv7
 | year = 2013
 | process = 28
+| mainline = yes
 | status_cpu = P
 | status_uart = Y
 | status_storage = Y
