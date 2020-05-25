@@ -2,6 +2,8 @@
 | name = SDM660
 | manufacturer = Qualcomm
 | arch = aarch64
+| cpu = 4x 2.2 GHz Kryo 260 Gold, 4x 1.84 GHz Kryo 260 Silver
+| gpu = Adreno 512
 | year = 2017
 | process = 14
 | mainline = yes
