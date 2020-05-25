@@ -2,6 +2,8 @@
 | name = MSM8974
 | manufacturer = Qualcomm
 | arch = armv7
+| cpu = 4x 2.26/2.36/2.45 GHz Krait 400
+| gpu = Adreno 330
 | year = 2013
 | process = 28
 | mainline = yes
