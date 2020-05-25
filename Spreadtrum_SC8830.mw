@@ -3,6 +3,8 @@
 | manufacturer = Spreadtrum
 | arch = armv7
 | year = 2015
+| cpu = 4x 1.2 GHz ARM Cortex-A7
+| gpu = ARM Mali-400 MP2
 | process = 28
 | mainline = no
 | status_cpu =
