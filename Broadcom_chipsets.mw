@@ -47,6 +47,10 @@ tables=Devices
 
 * Single-core 832MHz ARMv6 CPU
 
+=== Downstream status ===
+
+The only device that seems to work with this chipset is the [[Samsung Galaxy Ace i]], although it has not been merged into pmaports. The [[Samsung Galaxy Y]] does not boot.
+
 === Mainline status ===
 
 No dts in mainline, and there doesn't seem to be any similar chip supported.
