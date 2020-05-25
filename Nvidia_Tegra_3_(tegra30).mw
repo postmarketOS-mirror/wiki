@@ -3,6 +3,8 @@
 | manufacturer = Nvidia
 | arch = armv7
 | year = 2011
+| cpu = 4x 1.2/1.4/1.6 GHz ARM Cortex-A9
+| gpu = Nvidia ULP Geforce
 | process = 40
 | mainline = yes
 | status_cpu = Y
