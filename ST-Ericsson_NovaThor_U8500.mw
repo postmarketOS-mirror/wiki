@@ -5,6 +5,7 @@
 | year = 2011
 | process = 40
 | status_cpu = Y
+| status_uart = Y
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
