@@ -2,7 +2,7 @@
 | name = MSM8916
 | manufacturer = Qualcomm
 | arch = aarch64
-| cpu = 4x 1.2/1.4 GHz Cortex-A53
+| cpu = 4x 1.2/1.4 GHz ARM Cortex-A53
 | gpu = Adreno 306
 | year = 2014
 | process = 28
