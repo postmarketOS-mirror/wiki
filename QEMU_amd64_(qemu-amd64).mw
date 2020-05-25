@@ -4,6 +4,7 @@
 | category = main
 | codename = qemu-amd64
 | architecture = x86_64
+| chipset = QEMU Standard PC
 | cpu = QEMU Virtual
 | gpu = Virgil 3D
 | image = File:qemu-phosh.png
