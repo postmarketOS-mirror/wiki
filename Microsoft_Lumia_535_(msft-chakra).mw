@@ -1,12 +1,12 @@
 {{Infobox device
 | manufacturer = Microsoft
-| name = Microsoft Lumia 535
+| name = Lumia 535
 | codename = microsoft-chakra
 <!--| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg -->
 | imagecaption = No image yet
 | releaseyear = 2014
 | originalsoftware = Microsoft Windows Phone 8.1
-| chipset = Qualcomm Snapdragon 200 MSM8212
+| chipset = Qualcomm MSM8212 Snapdragon 200
 | cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Adreno 302
 | storage = 8 GB
