@@ -1,7 +1,7 @@
 {{Infobox soc
 | name = RK3399
 | manufacturer = Rockchip
-| arch = AArch64
+| arch = aarch64
 | year = 2016
 | process = 28
 | status_cpu = 
