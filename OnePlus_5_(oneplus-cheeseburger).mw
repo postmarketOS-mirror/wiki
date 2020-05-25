@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = OnePlus
-| name =  5/5T
+| name = 5/5T
 | codename = oneplus-cheeseburger, oneplus-dumpling
 | image = File:OnePlus-5-GNOME-Mainline.jpg
 | imagecaption = 
@@ -332,9 +332,9 @@ Flash: <code>pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img</c
 == Links ==
 * {{MR|908|pmaports}} Initial merge request
 * {{MR|1110|pmaports}} OnePlus 5T merge request
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-oneplus-cheeseburger OnePlus 5 device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-oneplus-dumpling OnePlus 5T device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-oneplus-msm8998 Shared kernel package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-oneplus-cheeseburger OnePlus 5 device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-oneplus-dumpling OnePlus 5T device package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-oneplus-msm8998 Shared kernel package]
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
 * [https://github.com/JamiKettunen/linux-mainline-oneplus5 Device mainline kernel W.I.P source (deathmist)]
 * [https://github.com/torvalds/linux Linux mainline kernel source (torvalds)]
