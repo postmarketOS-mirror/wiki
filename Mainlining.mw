@@ -27,8 +27,9 @@ Some SoCs are already supported quite well and are used for some devices in post
 
 {{#cargo_query:
 tables=Socs
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Arch,Year,StatusCpu=CPU,StatusStorage=Storage,StatusUsb=USB,StatusDisplay=Display,StatusGpu=GPU,StatusPinctrl=Pinctrl,StatusI2c=I²C,StatusAudio=Audio,StatusVideo=Video,StatusThermal=Thermal,StatusWiFi=WiFi,StatusBluetooth=BT,StatusModem=Modem,StatusCamera=Camera
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Arch,Year,StatusCpu=CPU,StatusUart=UART,StatusStorage=Storage,StatusUsb=USB,StatusDisplay=Display,StatusGpu=GPU,StatusPinctrl=Pinctrl,StatusI2c=I²C,StatusAudio=Audio,StatusVideo=Video,StatusThermal=Thermal,StatusWiFi=WiFi,StatusBluetooth=BT,StatusModem=Modem,StatusCamera=Camera
 |order by=Socs.Manufacturer, Socs.Name
+|where=Mainline="1"
 |format=table
 |limit=9999
 |more results text=
