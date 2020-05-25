@@ -48,7 +48,8 @@ tables=Devices
 
 === Specifications ===
 
-* Single-core 832MHz ARMv6 CPU
+* Single-core 832 MHz ARMv6 CPU
+* VideoCore IV GPU
 
 === Downstream status ===
 
@@ -69,7 +70,7 @@ No dts in mainline, and there doesn't seem to be any similar chip supported.
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
-| cpu = 1x 850MHz Cortex-A9
+| cpu = 1x 850 MHz Cortex-A9
 | gpu = Broadcom VideoCore IV
 | process = 40
 | mainline = 
@@ -102,7 +103,8 @@ tables=Devices
 }}
 === Specifications ===
 
-* Single-core 850MHz Cortex A9 CPU
+* Single-core 850 MHz Cortex-A9 CPU
+* VideoCore IV GPU
 
 === Mainline status ===
 
@@ -157,7 +159,7 @@ tables=Devices
 
 === Specifications ===
 
-* Dual-core 1.2GHz Cortex A9 CPU
+* Dual-core 1.2 GHz Cortex-A9 CPU
 * VideoCore IV GPU
 
 === Mainline status ===
@@ -212,7 +214,7 @@ tables=Devices
 
 === Specifications ===
 
-* Quad-core 1.2GHz Cortex A9 CPU
+* Quad-core 1.2 GHz Cortex-A9 CPU
 * VideoCore IV GPU
 
 === Mainline status ===
