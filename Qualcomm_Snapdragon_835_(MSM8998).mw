@@ -3,7 +3,7 @@
 | manufacturer = Qualcomm
 | arch = aarch64
 | year = 2017
-| cpu = 4x 2.45 GHz Kryo 280 + 4x 1.9 GHz Kryo 280
+| cpu = 4x 2.45 GHz Kryo 280, 4x 1.9 GHz Kryo 280
 | gpu = Adreno 540
 | process = 10
 | mainline = yes
