@@ -13,7 +13,7 @@ If your device's SoC is in the list below there's a very decent chance that you 
 
 {{todo|Explain process for previous devices that now run mainline quite well}}
 
-== Getting Started ==
+== Overview ==
 
 === Supported SoCs ===
 Some SoCs are already supported quite well and are used for some devices in postmarketOS. Getting started with one of these might be more easy for you, because you can get help from others working with the same SoC. The feature matrix below shows which features are already supported for a particular SoC. The pages for each SoC will provide more information, plus hints how to get started and who you can contact.
@@ -59,6 +59,14 @@ Below are some more chat channels / mailing list that may be helpful for further
 | ask @okias, ##tegra on Freenode, [https://www.spinics.net/lists/linux-tegra/ linux-tegra@vger.kernel.org]
 |}
 
+== Getting Started ==
+* Collect as much information about your device as you can: downstream kernel sources, specifications, schematics (can be sometimes found with your favorite search engine) are all going to prove invaluable when attempting to port a device to mainline.
+* [[Serial debugging]] will be helpful especially in the beginning (before USB or network is working). Some devices expose it through the USB port or the audio jack; others have test points available on the mainboard.
+* Choose a kernel tree:
+** '''Mainline:''' (the last kernel version released by Linus Torvalds) Usually a good compromise of being recent, yet quite stable. [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git torvalds/linux.git]
+** '''linux-next:''' A collection of recently merged changes from many subsystems; use this if you are working on a very recent SoC. [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git next/linux-next.git]
+** There may be more WIP changes available in Linux kernel trees specific to your SoC.
+* [[Compiling kernels with envkernel.sh]] is very useful to integrate kernel development into postmarketOS.
 
 == Materials to look into ==
 This section include many useful sources to help you with mainlining as possible.
