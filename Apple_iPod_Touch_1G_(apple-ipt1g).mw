@@ -6,11 +6,12 @@
 | imagecaption = Apple iPod Touch (1G)
 | releaseyear = 2007
 | originalsoftware = iPhone OS 1.0
-| cpu = Apple/Samsung ARM (400MHz)
-| gpu = 
-| storage = 8/16/32GB
-| display = 320x480
-| memory = 128MB
+| chipset = Samsung S5L8900
+| cpu = Single-core 412 MHz ARM1176JZF-S
+| gpu = PowerVR MBX Lite
+| storage = 8/16/32 GB
+| display = 320x480 TN
+| memory = 128 MB
 | architecture = armhf
 | n-android = ✔
 | status_usbnet = 
@@ -21,16 +22,16 @@
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery =
+| status_battery = 
 | status_3d = 
 | status_accel = 
 | status_audio = 
-| status_bluetooth =
-| status_camera =
+| status_bluetooth = 
+| status_camera = 
 | status_gps = 
-| status_mobiledata = 
-| status_sms = 
-| status_calls =
+| status_mobiledata = -
+| status_sms = -
+| status_calls = -
 | status = openiboot doesn't build under gcc6 or 8 (we do have gcc4 packaged now, anyone willing to try again?)
 | booting = no
 }}
@@ -50,4 +51,4 @@ This is also the slowest device yet since it uses a 412 Mhz ARMv6 single-core cp
 
 * [https://github.com/iDroid-Project/openiBoot openiboot] (Great info on wiki)
 * [https://github.com/planetbeing/iphonelinux iphonelinux] (Also this wiki has a lot of useful info)
-* [https://gitlab.com/postmarketOS/pmbootstrap/tree/device/ipod1 pmos branch], old scheme, aports/main/openiboot would need to be copied to the new pmaports.git
+* [https://gitlab.com/postmarketOS/pmbootstrap/-/tree/device/ipod1 pmos branch], old scheme, aports/main/openiboot would need to be copied to the new pmaports.git
