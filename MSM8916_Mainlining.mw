@@ -551,7 +551,7 @@ There are different approaches used to dim the brightness of the screen. The app
 * '''Custom''': Some devices (e.g. Samsung AMOLED panels) have <code>bl_ctrl_dcs</code> or something else listed, but actually use an entirely custom way to control display brightness. This needs to be implemented manually in the panel driver (or using an extra backlight driver).
 
 === Touchscreen ===
-{{todo|}}
+The touchscreen is usually connected to a [https://en.wikipedia.org/wiki/I%C2%B2C I²C bus], e.g. <code>blsp_i2c5</code>. Often it is either supplied by some PM8916 regulators or a set of fixed regulator. (This is often visible when the touchscreen has some "enable" GPIOs listed downstream; those usually represent a chip that can be enabled through a GPIO and then supplies a fixed voltage to the touchscreen...) This is where similarities end. There can be all sorts of touchscreens connected to the I²C bus and manufacturers like to use many different ones. Look through the supported touchscreen in mainline to see if a driver exists already, or can be modified eventually to support another version of a similar chip. Otherwise, you may need to write a simple driver yourself.
 
 === Audio ===
 {{todo|}}
