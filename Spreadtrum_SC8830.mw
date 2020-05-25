@@ -1,0 +1,28 @@
+{{Infobox soc
+| name = SC8830
+| manufacturer = Spreadtrum
+| arch = armv7
+| year = 2015
+| process = 28
+| mainline = no
+| status_cpu =
+| status_uart =
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = Y
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+Spreadtrum SC8830 is a SoC from 2015 which is used in cheap Android smartphones. Information on this page might also apply to other similar SoCs (like SC7731)
+
+= Audio =
+See [[Audio#Spreadtrum]]
