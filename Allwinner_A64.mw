@@ -1,7 +1,7 @@
 {{Infobox soc
 | name = A64
 | manufacturer = Allwinner
-| arch = AArch64
+| arch = aarch64
 | year = 2015
 | process = 40
 | status_cpu = Y
