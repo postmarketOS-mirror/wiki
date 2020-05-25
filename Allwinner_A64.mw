@@ -14,9 +14,9 @@
 | status_audio = Y
 | status_video = 
 | status_thermal = Y
-| status_wifi = 
-| status_bluetooth = 
-| status_modem = 
+| status_wifi = -
+| status_bluetooth = -
+| status_modem = -
 | status_camera = 
 }}
 
