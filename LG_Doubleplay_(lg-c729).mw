@@ -223,7 +223,10 @@ WIP
 Stock recovery mode performs a factory reset
 
 === Fastboot ===
-Testing
+To enter fastboot mode, reboot the bootloader from android or "charging mode"
+<source lang="shell-session">
+$ adb reboot bootloader
+</source>
 
 == See also ==
 [https://fccid.io/BEJC729/Internal-Photos/Internal-Photographs-1525100 FCC Internal Photos]
