@@ -179,9 +179,9 @@ Some mainlining progress was made by [[User:Deata|Deata]] (see [https://gitlab.c
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
-| cpu = 4x 1.2 GHz ARM Cortex-A9
+| cpu = 4x 1.2 GHz ARM Cortex-A7
 | gpu = Broadcom VideoCore IV
-| process = 40?
+| process = 40
 | mainline = no
 | status_cpu = Y
 | status_uart = 
@@ -214,7 +214,7 @@ tables=Devices
 
 === Specifications ===
 
-* Quad-core 1.2 GHz ARM Cortex-A9 CPU
+* Quad-core 1.2 GHz ARM Cortex-A7 CPU
 * VideoCore IV GPU
 
 === Mainline status ===
