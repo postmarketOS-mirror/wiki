@@ -1,6 +1,7 @@
 {{Infobox device
 | manufacturer = QEMU
 | name =  amd64
+| category = main
 | codename = qemu-amd64
 | architecture = x86_64
 | image = File:qemu-phosh.png
