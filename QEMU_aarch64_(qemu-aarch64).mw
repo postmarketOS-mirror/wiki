@@ -4,6 +4,9 @@
 | category = main
 | codename = qemu-aarch64
 | architecture = aarch64
+| chipset = QEMU ARM Virtual Machine
+| cpu = QEMU ARM Cortex-A57
+| gpu = Virgil 3D
 | image = File:qemu-phosh.png
 | imagecaption = QEMU running Phosh
 | n-android = ✔
