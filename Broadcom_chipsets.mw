@@ -14,7 +14,7 @@ This is a joint page for multiple Broadcom chips, currently mostly ones released
 | cpu = 1x 832 MHz ARMv6
 | gpu = Broadcom VideoCore IV
 | process = 65
-| mainline = 
+| mainline = no
 <!--
 | status_cpu = Y
 | status_uart = 
@@ -73,7 +73,7 @@ No dts in mainline, and there doesn't seem to be any similar chip supported.
 | cpu = 1x 850 MHz Cortex-A9
 | gpu = Broadcom VideoCore IV
 | process = 40
-| mainline = 
+| mainline = no
 <!--
 | status_cpu = Y
 | status_uart = 
@@ -125,7 +125,7 @@ No dtsi.
 | cpu = 2x 1.2 GHz Cortex-A9
 | gpu = Broadcom VideoCore IV
 | process = 40
-| mainline = yes
+| mainline = no
 | status_cpu = Y
 | status_uart = 
 | status_storage = Y
@@ -182,7 +182,7 @@ Some mainlining progress was made by [[User:Deata|Deata]] (see [https://gitlab.c
 | cpu = 4x 1.2 GHz ARM Cortex-A9
 | gpu = Broadcom VideoCore IV
 | process = 40?
-| mainline = yes
+| mainline = no
 | status_cpu = Y
 | status_uart = 
 | status_storage = Y
