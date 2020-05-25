@@ -6,6 +6,7 @@
 | imagecaption = Samsung Galaxy Fame (nevisp) running mate
 | releaseyear = 2013
 | originalsoftware = Android 4.1.2
+| pmoskernel = 3.0.101
 | chipset = Broadcom BCM21654G
 | cpu = 1.0 GHz Cortex-A9
 | gpu = Broadcom VideoCore IV
@@ -36,10 +37,6 @@
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
@@ -75,15 +72,12 @@ Simply flash rootfs and kernel in Odin mode.
 == See also ==
 * {{MR|954|pmaports}} Initial merge request
 * {{MR|995|pmaports}} Wifi support
+* {{Device package|samsung-nevisp}}
+* {{Kernel package|samsung-nevisp}}
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
