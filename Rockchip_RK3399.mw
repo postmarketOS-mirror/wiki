@@ -8,6 +8,7 @@
 | process = 28
 | mainline = yes
 | status_cpu = 
+| status_uart =
 | status_storage = 
 | status_usb = 
 | status_display = 
@@ -17,9 +18,9 @@
 | status_audio = 
 | status_video = 
 | status_thermal = 
-| status_wifi = 
-| status_bluetooth = 
-| status_modem = 
+| status_wifi = -
+| status_bluetooth = -
+| status_modem = -
 | status_camera = 
 }}
 
