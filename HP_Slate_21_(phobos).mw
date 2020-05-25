@@ -1,18 +1,18 @@
 {{Infobox device
 | manufacturer = HP
-| name =  Slate 21
-| codename = phobos
+| name = Slate 21
+| codename = hp-phobos
 | image = File:phobos.jpg
 | imagecaption = HP Slate 21
 | releaseyear = 2013
 | originalsoftware = Android 4.2.2
-| chipset = ARM Cortex-A15
-| cpu = Nvidia Tegra 4
+| chipset = Nvidia Tegra 4 T40S
+| cpu = 4x 1.66 GHz Cortex-A15
 | gpu = Nvidia 72 core
 | storage = 8 GB
-| display = 1920x1080 IPS full HD LED
-| memory = 1 GB DDR3
-| architecture = armhf
+| display = 1920x1080 IPS
+| memory = 1 GB
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
