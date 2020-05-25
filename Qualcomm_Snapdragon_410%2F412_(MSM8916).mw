@@ -2,6 +2,8 @@
 | name = MSM8916
 | manufacturer = Qualcomm
 | arch = aarch64
+| cpu = 4x 1.2/1.4 GHz Cortex-A53
+| gpu = Adreno 306
 | year = 2014
 | process = 28
 | mainline = yes
@@ -20,10 +22,12 @@
 | status_bluetooth =Y
 | status_modem = P
 | status_camera = 
+|
+| <!-- Please ignore these for now, they are not used -->
 | clock = v4.1-rc1 (ioommu, gpu, sound: v4.4-rc1)
 | pinctrl = v4.0-rc1
 | serial = v4.1-rc1
-| gpu = Adreno A306 (v4.2-rc1 / v4.14-rc1)
+| gpu_something = Adreno A306 (v4.2-rc1 / v4.14-rc1)
 | sdhci = v4.3-rc1
 | usb_device = v4.3-rc1
 | usb_host = v4.3-rc1
