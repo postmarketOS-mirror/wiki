@@ -1,7 +1,7 @@
 {{Infobox soc
 | name = Tegra 3
 | manufacturer = Nvidia
-| arch = ARMv7
+| arch = armv7
 | year = 2011
 | process = 40
 | status_cpu = 
