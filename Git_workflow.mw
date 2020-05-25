@@ -104,7 +104,7 @@ If there are any conflicts, pay attention to the git output and run <code>git di
 === Preparation ===
 These steps only need to be done the first time.
 ==== Forking the repository ====
-We are currently using GitLab for development. Login to the website, and [https://gitlab.com/postmarketOS/pmaports/forks/new click here to fork pmaports.git] to your own user's namespace.
+We are currently using GitLab for development. Login to the website, and [https://gitlab.com/postmarketOS/pmaports/-/forks/new click here to fork pmaports.git] to your own user's namespace.
 
 If you have just registered at GitLab, [https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html create a SSH key and store it in the settings].
 
