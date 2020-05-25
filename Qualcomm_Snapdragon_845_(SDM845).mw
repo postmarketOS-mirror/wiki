@@ -2,6 +2,8 @@
 | name = SDM845
 | manufacturer = Qualcomm
 | arch = aarch64
+| cpu = 4x 2.8 GHz Kryo 385 Gold, 4x 1.8 GHz Kryo 385 Silver
+| gpu = Adreno 630
 | year = 2018
 | process = 10
 | mainline = yes
@@ -19,7 +21,6 @@
 | status_bluetooth = 
 | status_modem = P
 | status_camera = 
-| gpu = Adreno 630
 | usb_device = DWC3
 | pmic = pm8998 (v4.5-rc1)
 | wifi = ath10k WCN3990
