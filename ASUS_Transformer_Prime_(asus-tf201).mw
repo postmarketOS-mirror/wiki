@@ -41,14 +41,12 @@
 <!-- This person needs to be willing to answer questions from users of this device -->
 
 == Contributors ==
+* Clamor
 === Users owning this device ===
 {{Device owners}}
 
 == Unlocking ==
 The first step to do anything with the device is unlocking, with this device its done by sideloading the unlock apk from ASUS and clicking a few buttons in the app. The apk can be found on [https://dlcdnets.asus.com/pub/ASUS/EeePAD/TF201/UnLock_Device_App_V6.apk the ASUS support page].
-
-== Based on ==
-Katkiss android [https://forum.xda-developers.com/transformer-tf700/development/rom-t3457417 XDA link]
 
 == Status ==
 * Kernel compiles
@@ -78,6 +76,87 @@ The following should be executed within adb shell:
 # <pre>dd if=/cache/asus-tf201.img of=/dev/block/mmcblk0p1</pre>
 
 Note: Other ways of flashing do not work. This is exactly how the katkiss android ROM is flashed to the device.
+
+== Hardware status (mainline) ==
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Info
+|-
+| N
+|Booting
+|When kernel is larger than approx 8MB, initfs must be packed directly inside kernel (not into boot.img as usual), otherwise kernel won't boot. With downstream kernel it works.
+|-
+| N
+|Panel
+|HannStar HSD101PWW2 Rev0-A00/A01 LCD SuperIPS+ HD panel.
+|-
+| N
+|Touchscreen
+|Used Atmel MXT768E touchscreen.
+|-
+| N
+|USB
+|
+|-
+| N
+|SDHCI
+|
+|-
+| N
+|GPS
+|Broadcom GPS [https://redmine.replicant.us/projects/replicant/wiki/BCM4751 BCM4751] is used.
+|-
+| N
+|WiFi
+|Wi-Fi might work (best with IWD daemon: apk add iwd; rc-config del wpa_supplicant; rc-config add iwd; and [https://wiki.archlinux.org/index.php/NetworkManager#Using_iwd_as_the_Wi-Fi_backend HOWTO]).
+|-
+| N
+|Bluetooth
+|Uses Azurewave AW-NH615 BCM4329B1.
+|-
+| N
+| GPIO keys
+|There is 3 keys on GPIO: Power, Volume up, Volume down.
+Additionally GPIO-keys like are LID sensor, Power adapter 15V and Audio dock line-out detect.
+|-
+| N
+|Dock Keyboard
+|It is handled via Nuvoton NPCE795LA0BX embedded controller and driver is mostly mainlined.
+|-
+| N
+| Battery/Charger
+|Driver is based on Texas Instruments bq24725 SMBus Charge Controller driver but works through pad/dock EC.
+|-
+| N
+|Sound
+|Sound codec is RT5631 and needs additional maintenance it kernel.
+|-
+| N
+|Thermal sensor
+|
+|-
+| N
+|Orientation sensors
+|Include Invensense mpu3050 gyroscope with Kionix KXTF9 accelerometer and Aichi AMI306 3-axis digital compass.
+|-
+| N
+|Light sensor
+|Driver Dyna-Image AL3010. Brightness regulation [https://floss.social/@okias/103371284828595026 works], install iio-sensor-proxy . It's slightly [https://gitlab.com/alpine-mobile/pmaports/issues/3 oversensitive].
+|-
+| N
+|Front camera
+|Aptina mi1040 camera sensor
+|-
+| N
+|Rear camera
+|Fujitsu MBG048 image processor
+|-
+| P
+|3D support
+| See [[Nvidia_Tegra_2_(tegra20)#Graphics]]
+|-
+|}
 
 == See also ==
 * Asus Transformer device family on Tegra 3 includes also [[ASUS_Transformer_Pad_(asus-tf300t)|Transformer Pad TF300T]] and [[Asus_Transformer_Pad_Infinity_TF700T_(asus-tf700t)|Transformer Pad Infinity TF700T]]
