@@ -1,7 +1,7 @@
 {{Infobox soc
 | name = Tegra 2
 | manufacturer = Nvidia
-| arch = ARMv7
+| arch = armv7
 | year = 2010
 | process = 40
 | status_cpu = 
