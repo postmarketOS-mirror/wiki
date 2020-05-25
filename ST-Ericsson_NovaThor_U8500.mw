@@ -2,6 +2,8 @@
 | name = NovaThor U8500
 | manufacturer = ST-Ericsson
 | arch = armv7
+| cpu = 2x 1 GHz ARM Cortex-A9
+| gpu = ARM Mali 400 MP
 | year = 2011
 | process = 40
 | mainline = yes
