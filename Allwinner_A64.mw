@@ -3,6 +3,8 @@
 | manufacturer = Allwinner
 | arch = aarch64
 | year = 2015
+| cpu = 4x 1.152 GHz ARM Cortex-A53
+| gpu = ARM Mali 400 MP2
 | process = 40
 | mainline = yes
 | status_cpu = Y
