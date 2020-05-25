@@ -2,7 +2,7 @@
 | name = RK3399
 | manufacturer = Rockchip
 | arch = aarch64
-| cpu = 2x 2 GHz ARM Cortex-A72, 4x 1.5 GHz ARM Cortex-A53
+| cpu = 2x 2.0 GHz ARM Cortex-A72, 4x 1.5 GHz ARM Cortex-A53
 | gpu = ARM Mali-T860
 | year = 2016
 | process = 28
