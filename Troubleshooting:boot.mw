@@ -33,7 +33,7 @@ If you get a "<code>bad boot image header</code>" error when booting from a micr
 You may need to revise your device's configuration files and recompile the kernel.
 
 * Make sure that you are using the correct [[Porting to a new device#Defconfig|defconfig]].
-* If your kernel's APKBUILD file uses <code>arch=armhf</code>, be aware that Alpine Linux' <tt>armhf</tt> architecture requires ARMv6 with a floating point unit (FPU). (See issue {{github|1203}}.)
+* If your kernel's APKBUILD file uses <code>arch=armhf</code>, be aware that Alpine Linux' <tt>armhf</tt> architecture requires ARMv6 with a floating point unit (FPU). (See issue {{issue|1203}}.)
 * The bootimg file in different ROMs may have different [[deviceinfo]] values. Run <code>pmbootstrap bootimg_analyze ''filename''</code> on a bootimg file for your device, and compare the output with the contents of your deviceinfo file. In Android ROMs, this file is called <code>boot.img</code>. Recovery ROMs are themselves bootimg files. If you want to analyze the bootimg of your pmOS ROM, you can extract it with the <code>unpackbootimg</code> command.
 * If TWRP has been ported to your device, extract the TWRP image file with <code>unpackbootimg</code>, and the initramfs inside it with [https://superuser.com/a/813899 cpio]. Check the <tt>rc</tt> files in initramfs for useful comments or settings (such as <code>write /sys/class/xxx/yyy/enable 1</code>).
 * If a similar device already has a postmarketOS port, take a look at its aport to see if it does anything special.
@@ -75,21 +75,21 @@ By setting an initramfs hook, you can dump the sysfs to a partition on the devic
 
 pmOS generates SSH keys during first boot. If the device loses power before it fully boots, you are left with empty files instead of keys. If that happens, reflash the device and make sure that the initramfs script completes before you power-off or reboot.
 
-If the initramfs script completes and you can ping the device, but SSH still doesn't work, log OpenRC's output to <code>kmesg</code> (see issue {{github|1582}}).
+If the initramfs script completes and you can ping the device, but SSH still doesn't work, log OpenRC's output to <code>kmesg</code> (see issue {{issue|1582}}).
 
 One possible cause is a failed fsck. Try this:
 
 # Telnet into initramfs
 # Mount the root partition
 # Comment out the boot partition in <code>/etc/fstab</code>
-# Try to boot ({{github|1511}}).
+# Try to boot ({{issue|1511}}).
 
 If boot succeeds, try reflashing the postmarketOS rootfs to correct the error.
 
 == General debugging ==
 <code>/proc/last_kmsg</code> and <code>/sys/fs/pstore/console-ramoops</code> are useful sources of debugging data.
 
-On boot, postmarketOS generates an init log, <code>pmOS_init.log</code>, in the root directory on the device. The init system is OpenRC. See issue {{github|1582}} for steps to log OpenRC's output to <code>kmesg</code>.
+On boot, postmarketOS generates an init log, <code>pmOS_init.log</code>, in the root directory on the device. The init system is OpenRC. See issue {{issue|1582}} for steps to log OpenRC's output to <code>kmesg</code>.
 
 It's also possible to step through the initramfs script line by line. Install the [[Inspecting the initramfs|debug shell]] initramfs hook to get a telnet shell directly from the initramfs. As soon as you are in the initramfs shell, open [https://gitlab.com/postmarketOS/pmaports/blob/master/main/postmarketos-mkinitfs/init.sh.in init.sh.in] in your browser, and execute it one line at a time to figure out where it fails.
 
@@ -121,6 +121,6 @@ If you haven't already done so, please [[Help:Device_Page|create a wiki page for
 
 == Further reading ==
 * [https://developer.qualcomm.com/qfile/28821/lm80-p0436-1_little_kernel_boot_loader_overview.pdf Qualcomm Little Kernel Boot Loader Overview] (PDF)
-* Issue {{github|99}} HTC Droid DNA (dlx) not booting
-* Issue {{github|1206}} HTC One M8 not booting
-* Issue {{github|1203}} HTC Wildfire not booting
+* Issue {{issue|99}} HTC Droid DNA (dlx) not booting
+* Issue {{issue|1206}} HTC One M8 not booting
+* Issue {{issue|1203}} HTC Wildfire not booting
