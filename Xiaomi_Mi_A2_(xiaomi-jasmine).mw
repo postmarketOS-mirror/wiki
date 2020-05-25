@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Xiaomi
-| name =  Mi A2
+| name = Mi A2
 | codename = xiaomi-jasmine
 | image = File:xiaomi-jasmine.jpg
 | imagecaption = Xiaomi Mi A2
@@ -9,9 +9,9 @@
 | chipset = Qualcomm SDM660 Snapdragon 660
 | cpu = 8-core (4x2.2 GHz Kryo 260 & 4x1.8 GHz Kryo 260)
 | gpu = Adreno 512
-| storage = 32GB, 64GB, 128GB
+| storage = 32/64/128 GB
 | display = 1080 x 2160 LTPS IPS LCD
-| memory = 4GB, 6GB
+| memory = 4/6 GB
 | architecture = aarch64
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -35,8 +35,6 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
