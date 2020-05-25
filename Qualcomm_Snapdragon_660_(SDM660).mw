@@ -28,7 +28,7 @@
 [https://www.qualcomm.com/products/sdm660 SDM660]/636/[https://fccid.io/PY7-67442A/Schematics/Schematics-20171116-v1-PY7-67442A-Schematic-Diagram-3652761 630] are Qualcomm SoCs released in 2017, with practically no mainline support.
 According to [https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_systems-on-chip#Snapdragon_630,_636_and_660_(2017) Wikipedia], they all are pretty similar. Their advantage is price; SoC is usually used in middle-range priced devices, compared to SDM845-based devices, which are usually expensive and used in high-end hardware.
 
-Closest similar SoC is MSM8998 Snapdragon 835 (which has decent mainline support), and it seems that several drivers from MSM8998 can be reused for SDM660.
+Closest similar SoC is [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998 Snapdragon 835]] (which has decent mainline support), and it seems that several drivers from [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]] can be reused for SDM660.
 
 Main problem of the platform is missing a proper PMIC support (PM660/PM660L) which is required for working on almost every other component.
 
@@ -73,7 +73,7 @@ All cores are up; but partial because no CPU frequency scaling support.
 At least SDHCI (eMMC) was tested to work. UFS is untested (xiaomi-lavender does not have it).
 
 == USB ==
-Should work similarly to MSM8998, but no one worked much on it yet.
+Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]], but no one worked much on it yet.
 
 == Display ==
 
@@ -86,7 +86,7 @@ There is a chance that Adreno 508-512 are not suppored properly in mainline kern
 Was ported from downstream kernel to mainline by [[User:opendata|opendata]] in 2018.
 
 == WiFi ==
-Driver is there (ath10k_snoc) and should work the same way as in [[Qualcomm_Snapdragon_845_(SDM845)|SDM845]]/MSM8998 and such. See its page for details.
+Driver is there (ath10k_snoc) and should work the same way as in [[Qualcomm_Snapdragon_845_(SDM845)|SDM845]]/[[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]] and such. See their pages for details.
 
 == Work done so far ==
 === Who is working on it ===
