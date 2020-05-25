@@ -70,6 +70,7 @@ It is possible to dual boot with android by following the guide above and using
 
 to switch to your inactive slot before flashing.
 
+== Sources ==
 [https://github.com/calebccff/linux/commits/enchilada-usb Kernel sources]
 
 == How to enter flash mode ==
