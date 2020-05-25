@@ -2,7 +2,7 @@
 
 Qualcomm is a semiconductors company, and one of the biggest manufacturers of smartphone and tablet SoCs.
 
-= Booting Procedure =
+== Booting Procedure ==
 Qualcomm ARM SoCs make use of several bootloaders, each of which initializes and/or checks some things and then passes on execution to the next stage in the boot chain.
 The final stage is whatever operating system runs on the SoC.
 There are slight differences between the boot chains for different SoCs,
@@ -18,7 +18,18 @@ These charts are not necessarily exact representations of the boot chain on a sp
 
 A more close examination of these bootloaders will follow.
 
-= Useful Links = 
+== Mainline SoCs ==
+{{#cargo_query:
+tables=Socs
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Arch,Year
+|order by=Socs.Name
+|where=Mainline="1" AND Manufacturer="Qualcomm"
+|format=table
+|limit=9999
+|more results text=
+}}
+
+== Useful Links ==
 * [https://lineageos.org/engineering/Qualcomm-Firmware/ Qualcomm's Chain of Trust - LineageOS]
 * [https://alephsecurity.com/2018/01/22/qualcomm-edl-1/ Exploiting Qualcomm EDL Programmers (1)]
 * [https://github.com/alephsecurity/firehorse Research & Exploitation framework for Qualcomm EDL Firehose programmers]
