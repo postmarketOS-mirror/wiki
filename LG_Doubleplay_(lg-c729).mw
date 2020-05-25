@@ -40,7 +40,9 @@
 {{Device owners}}
 
 == What Works ==
-Nothing. (besides rooting and kernel building) I'm not sure how to enable fastboot, and I'm not so sure wiping the boot partition would work.  Until I have a custom recovery working, I don't want to risk bricking my device.
+Nothing. (besides rooting and kernel building)
+
+Using the lg-c800 device tree, I have begun work on building TWRP. It boots and adb is useable, but no further testing has been done.
 
 == What Does Not Work ==
 Everything.
