@@ -18,6 +18,7 @@ Some SoCs are already supported quite well and are used for some devices in post
 * '''Storage:''' eMMC, SD cards, UFS, ...
 * '''Video:''' Hardware-accelerated video de/encoding
 * '''Modem:''' Calls, SMS, Internet
+* Unavailable (-) means that such a feature is not built directly into SoC. For example, for WiFi/BT are also often used through SDIO/UART which can be chosen independently from the SoC.
 '''Note:''' The statuses displayed below signify if a particular feature was tested on a device by someone in the postmarketOS community - not necessarily the components supported in the mainline kernel.
 
 {{#cargo_query:
