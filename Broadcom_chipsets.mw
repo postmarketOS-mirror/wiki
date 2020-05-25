@@ -120,22 +120,20 @@ No dtsi.
 | arch = armv7
 | year = 2012
 | process = 40
-<!--
 | status_cpu = Y
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
-| status_gpu = Y
-| status_pinctrl = Y
-| status_i2c = Y
-| status_audio = Y
-| status_video = Y
-| status_thermal = Y
-| status_wifi =
-| status_bluetooth =
-| status_modem = 
-| status_camera = 
--->
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = P
+| status_video = 
+| status_thermal = 
+| status_wifi = Y
+| status_bluetooth = N
+| status_modem = N
+| status_camera = N
 | gpu = Videocore IV
 }}'''Codename:''' Hawaii
 
@@ -162,11 +160,11 @@ tables=Devices
 
 There's a dtsi available for this chipset in the mainline kernel.
 
+Some mainlining progress was made by [[User:Deata|Deata]] (see [https://gitlab.com/deata/kylepro-mainlining deata/kylepro-mainlining on GitLab])
+
 === More information ===
 
 * [http://phonedb.net/index.php?m=processor&id=445&c=broadcom_bcm21664 phonedb.net]
-
-
 
 == Broadcom BCM23550 ==
 
@@ -176,22 +174,20 @@ There's a dtsi available for this chipset in the mainline kernel.
 | arch = armv7
 | year = 2012
 | process = 40?
-<!--
 | status_cpu = Y
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
-| status_gpu = Y
-| status_pinctrl = Y
-| status_i2c = Y
-| status_audio = Y
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = N
 | status_video = Y
-| status_thermal = Y
-| status_wifi =
-| status_bluetooth =
-| status_modem = 
-| status_camera = 
--->
+| status_thermal = 
+| status_wifi = Y
+| status_bluetooth = N
+| status_modem = N
+| status_camera = N
 | gpu = Videocore IV
 }}'''Codename:''' Java
 
@@ -215,6 +211,8 @@ tables=Devices
 === Mainline status ===
 
 There's a dtsi available for this chipset in the mainline kernel.
+
+Some mainlining progress was made by [[User:Knuxfanwin8|knuxify]] (see [https://github.com/knuxdroid/baffinlite-mainline knuxdroid/baffinlite-mainline on GitHub]), although it did not appear to boot.
 
 === More information ===
 
