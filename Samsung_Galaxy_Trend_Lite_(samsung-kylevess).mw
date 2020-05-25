@@ -1,13 +1,14 @@
 {{Infobox device
-| image = File:Kylevess.jpg
 | manufacturer = Samsung
 | name = Galaxy Trend Lite
+| image = File:Kylevess.jpg
 | imagecaption = Samsung Galaxy Trend Lite (samsung-kylevess) running htop, glxgears and thunar with the XFCE4 interface
 | codename = samsung-kylevess
 | releaseyear = 2013
 | originalsoftware = Android 4.1.2 on Linux 3.4.5
+| pmoskernel = 3.4.5
 | chipset = Broadcom BCM21664A
-| cpu = 1.2 GHz
+| cpu = 2x 1.2 GHz Cortex-A9
 | gpu = Broadcom VideoCore IV
 | storage = 4 GB + SD card
 | display = 480 x 800 TFT
@@ -120,5 +121,5 @@ Copy-pasted from [https://github.com/eduardoclasheiro/android_device_samsung_kyl
 == Links ==
 * [https://www.gsmarena.com/samsung_galaxy_fresh_s7390-5841.php Galaxy fresh on GSM Arena]
 * [https://github.com/eduardoclasheiro/android_device_samsung_kylevess Good hardware info page]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-kylevess Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-samsung-kylevess Kernel package]
+* {{Device package|samsung-kylevess}}
+* {{Kernel package|samsung-kylevess}}
