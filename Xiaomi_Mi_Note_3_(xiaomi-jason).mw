@@ -6,12 +6,12 @@
 | imagecaption = Xiaomi Mi Note 3
 | releaseyear = 2017
 | originalsoftware = Android 7.1, upgradable to Android 9.0
-| chipset = Qualcomm SDM660 Snapdragon 660 (14 nm)
-| cpu = 8-core (4 x 2.2 GHz Kryo 260 & 4 x 1.8 GHz Kryo 260)
+| chipset = Qualcomm SDM660 Snapdragon 660
+| cpu = 8-core (4x 2.2 GHz Kryo 260 & 4x 1.8 GHz Kryo 260)
 | gpu = Adreno 512
-| storage = 64 Gb
+| storage = 64 GB
 | display = 1080 x 1920
-| memory = 6 Gb
+| memory = 6 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
@@ -36,8 +36,6 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
