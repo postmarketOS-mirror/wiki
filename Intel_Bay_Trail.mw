@@ -24,7 +24,7 @@
 | status_camera = N
 }}
 
-Intel Bay Trail is a chipset used for many x86-based Intel tablets in 2014-2015. An advantage of this chip set is that it was usually used much like an ordinary PC: There is UEFI, ACPI and a normal Intel GPU so usually you can boot Linux on them without making any changes to the kernel.
+Intel Bay Trail is a chipset used for many x86-based Intel tablets in 2014-2015. An advantage of this chipset is that it was usually used much like an ordinary PC: There is UEFI, ACPI and a normal Intel GPU so usually you can boot Linux on them without making any changes to the kernel.
 
 == Devices ==
 {{#cargo_query:
