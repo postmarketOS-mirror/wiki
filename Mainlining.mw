@@ -68,6 +68,8 @@ Below are some more chat channels / mailing list that may be helpful for further
 ** There may be more WIP changes available in Linux kernel trees specific to your SoC.
 * [[Compiling kernels with envkernel.sh]] is very useful to integrate kernel development into postmarketOS.
 * If you are attempting to port to a SoC listed above, check the SoC wiki page for further help and instructions.
+* Do not attempt to copy any code as-is from downstream. In general this won't work, and most importantly: it won't be accepted for inclusion into the mainline kernel upstream.
+** Instead, try to understand what the downstream code does, and rewrite it from scratch for mainline by looking at similar code.
 
 == Materials to look into ==
 This section include many useful sources to help you with mainlining as possible.
