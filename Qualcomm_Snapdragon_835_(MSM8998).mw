@@ -31,6 +31,6 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Booting AND Devices.chipset='Qualcomm Snapdragon 835 (MSM8998)'
+|where=Booting AND Devices.chipset='Qualcomm MSM8998 Snapdragon 835'
 |more results text=
 }}
