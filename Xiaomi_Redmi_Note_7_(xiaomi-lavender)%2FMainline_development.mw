@@ -185,6 +185,7 @@ Example code:
 === eMMC notes ===
  @AlexeyMin seems that was the case, I did have UFS storage which required deviceinfo_rootfs_image_sector_size="4096" to be set
 
+SDM660 has both SDHCI and UFS support, but lavender does not use UFS storage. That actually makes porting a little bit easier.
 
 === Wi-Fi notes ===
 Wi-Fi chip is the same as used in sdm845 for example - Qualcomm Atheros wcn3990. In downstream driver is called iCNSS/qcacld-3.0. Mainline driver is ath10k together with ath10k_snoc (not ath10k_pci!) Activation is probably done from userspace using QMI (at least on downstream?)
