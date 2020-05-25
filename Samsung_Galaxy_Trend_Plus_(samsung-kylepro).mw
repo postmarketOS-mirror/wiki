@@ -6,6 +6,7 @@
 | imagecaption =
 | releaseyear = 2013
 | originalsoftware = Android 4.2.2
+| pmoskernel = 3.4.113 / Mainline
 | chipset = Broadcom BCM21664T
 | cpu = 2x 1.2 GHz Cortex-A9
 | gpu = VideoCore IV
@@ -81,5 +82,5 @@ https://youtu.be/2h9T3Rb06LY
 * [https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx Kernel source]
 * [https://github.com/Samsung-KYLEPROXX/android_device_samsung_kylepro Good hardware information page]
 * [https://gitlab.com/deata/kylepro-mainlining Mainline kernel fork]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-samsung-kylepro Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-samsung-kylepro Kernel package]
+* {{Device package|samsung-kylepro}}
+* {{Kernel package|samsung-kylepro}}
