@@ -5,13 +5,14 @@
 | image = File:Zuk-z2-row-weston.jpg
 | imagecaption = ZUK Z2 Pro
 | releaseyear = 2016
-| originalsoftware = Android 6 (marshmallow)
+| originalsoftware = Android 6.0.1 - 7.0
+| pmoskernel = 4.4.183
 | chipset = Qualcomm MSM8996 Snapdragon 820
 | cpu = Quad-core Kryo (2x2.15GHz & 2x1.6GHz)
 | gpu = Adreno 530
-| storage = 128GB/64GB
+| storage = 64/128 GB
 | display = 1080x1920 Super AMOLED
-| memory = 6GB/4GB
+| memory = 4/6 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -35,7 +36,6 @@
 | status_otg = Y
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes
-| pmoskernel = 4.4.183
 }}
 
 == Contributors ==
@@ -86,13 +86,10 @@ Loading <code>wlan</code> driver on boot (default setting) will significantly in
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 -->
 * {{MR|898|pmaports}} Initial merge request
+* {{Device package|zuk-z2-row}}
+* {{Kernel package|zuk-z2-row}}
 <!--
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
