@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Google
-| name =  Pixel
+| name = Pixel
 | codename = google-pixel
-| releaseyear = 2016
-| originalsoftware = Android 7.1 (Nougat)
-| chipset = Qualcomm MSM8996 Snapdragon 821
-| cpu = Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)
-| gpu = Adreno 530
-| storage = 32/128GB
-| display = 5.0 inch AMOLED capacitive multi-touch screen, 1280x1920
-| memory = 4GB Dual Channel LPDDR4
 | image = File:Sailfish.jpg
 | imagecaption = Google Pixel
+| releaseyear = 2016
+| originalsoftware = Android 7.1 - 10
+| chipset = Qualcomm MSM8996 Snapdragon 821
+| cpu = Quad-core (2x 2.15 GHz Kryo & 2x 1.6 GHz Kryo)
+| gpu = Adreno 530
+| storage = 32/128 GB
+| display = 1080×1920 AMOLED
+| memory = 4 GB Dual Channel LPDDR4
 | architecture = aarch64
 | status_usbnet = 
 | status_flashing = 
@@ -21,16 +21,16 @@
 | status_xwayland = 
 | status_fde = 
 | status_mainline = 
-| status_battery =
+| status_battery = 
 | status_3d = 
 | status_accel = 
 | status_audio = 
-| status_bluetooth =
-| status_camera =
+| status_bluetooth = 
+| status_camera = 
 | status_gps = 
 | status_mobiledata = 
 | status_sms = 
-| status_calls =
+| status_calls = 
 | status = Kernel compiles, panics on boot
 | booting = no
 }}
@@ -47,14 +47,7 @@
 The Pixel (sailfish) and Pixel XL (marlin) share identical kernel architectures. This port should work for both devices.
 
 === Device Owners ===
-
-==== Pixel ====
-
-* ?
-
-==== Pixel XL ====
-
-* ?
+{{Device owners}}
 
 == What works ==
 
@@ -165,7 +158,7 @@ The baud rate is 115200.
 
 ==== Unable to mount rootfs ====
 
-When running from a vendor kernel, Android is configured to skip loading with an initramfs. For postmarketOS to boot, the offending change would have to be removed with a [https://gitlab.com/postmarketOS/pmaports/merge_requests/66/diffs?commit_id=b6a70454d1e999678fe8d770ed3d59bd28da8549 patch].
+When running from a vendor kernel, Android is configured to skip loading with an initramfs. For postmarketOS to boot, the offending change would have to be removed with a [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/66/diffs?commit_id=b6a70454d1e999678fe8d770ed3d59bd28da8549 patch].
 
 Without the patch, the rootfs will fail to mount:
 <pre>
