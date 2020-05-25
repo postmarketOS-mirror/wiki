@@ -1,7 +1,7 @@
 {{Infobox soc
 | name = SDM845
 | manufacturer = Qualcomm
-| arch = AArch64
+| arch = aarch64
 | year = 2018
 | process = 10
 | status_cpu = Y
