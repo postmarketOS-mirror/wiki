@@ -34,6 +34,32 @@ tables=Socs
 |more results text=
 }}
 
+=== Getting help ===
+Mainlining related to postmarketOS is primarily discussed in the [[Matrix_and_IRC|#postmarketOS-mainline]] channel. For one of the SoCs above there should be someone around who is able to help you to some extent. Note that you will be on your own for some of the problems - there are often device specific problems or components that no one has experience with yet.
+
+Below are some more chat channels / mailing list that may be helpful for further help or if you want to work on a SoC that is not listed above (yet!):
+
+{| class="wikitable"
+! SoC
+! Where to ask for help
+|-
+| Any
+| [[Matrix_and_IRC|#postmarketOS-mainline]] (SoC-specific questions might be limited to those listed above)
+|-
+| Exynos
+| #replicant on Freenode (ask forkbomb, Putti)
+|-
+| OMAP3
+| ask [https://gitlab.com/pavelm @pavelm], [https://lore.kernel.org/linux-omap/ linux-omap@vger.kernel.org]
+|-
+| Qualcomm (msm...)
+| ##linux-msm on Freenode, [https://lore.kernel.org/linux-arm-msm/ linux-arm-msm@vger.kernel.org]
+|-
+| Tegra
+| ask @okias, ##tegra on Freenode, [https://www.spinics.net/lists/linux-tegra/ linux-tegra@vger.kernel.org]
+|}
+
+
 == Materials to look into ==
 This section include many useful sources to help you with mainlining as possible.
 
