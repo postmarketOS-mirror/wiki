@@ -1,5 +1,31 @@
 {{note|This page is WiP.}}
 
+{{Infobox soc
+| name = MT6735
+| manufacturer = MediaTek
+| arch = aarch64
+| year = 2014
+| cpu = 4x 1.5 GHz ARM Cortex-A53
+| gpu = ARM Mali-720
+| process = 28
+| mainline = no
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
 Memory map of MT6735P. It might apply to MT6735M but has to be verified
 
 === File info image format ===
