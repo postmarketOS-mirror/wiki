@@ -1,0 +1,36 @@
+{{Infobox soc
+| name = MSM8996
+| manufacturer = Qualcomm
+| arch = aarch64
+| year = 2016
+| cpu = 2x 2.2/2.3 GHz Kryo, 2x 1.6 GHz Kryo
+| gpu = Adreno 530
+| process = 14
+| mainline = yes
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+== Devices ==
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting AND Devices.chipset LIKE 'Qualcomm MSM8996%'
+|more results text=
+}}
