@@ -7,19 +7,19 @@
 | gpu = Adreno 540
 | process = 10
 | mainline = yes
-| status_cpu = 
+| status_cpu = Y
 | status_uart = 
-| status_storage = 
-| status_usb = 
-| status_display = 
+| status_storage = P
+| status_usb = P
+| status_display = P
 | status_gpu = 
-| status_pinctrl = 
-| status_i2c = 
+| status_pinctrl = Y
+| status_i2c = Y
 | status_audio = 
 | status_video = 
 | status_thermal = 
 | status_wifi = 
-| status_bluetooth = 
+| status_bluetooth = P
 | status_modem = 
 | status_camera = 
 }}
