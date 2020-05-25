@@ -67,6 +67,7 @@ Below are some more chat channels / mailing list that may be helpful for further
 ** '''linux-next:''' A collection of recently merged changes from many subsystems; use this if you are working on a very recent SoC. [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git next/linux-next.git]
 ** There may be more WIP changes available in Linux kernel trees specific to your SoC.
 * [[Compiling kernels with envkernel.sh]] is very useful to integrate kernel development into postmarketOS.
+* If you are attempting to port to a SoC listed above, check the SoC wiki page for further help and instructions.
 
 == Materials to look into ==
 This section include many useful sources to help you with mainlining as possible.
