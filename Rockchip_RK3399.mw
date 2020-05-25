@@ -4,6 +4,7 @@
 | arch = aarch64
 | year = 2016
 | process = 28
+| mainline = yes
 | status_cpu = 
 | status_storage = 
 | status_usb = 
