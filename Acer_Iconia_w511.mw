@@ -1,16 +1,16 @@
 {{Infobox device
 | manufacturer = Acer
-| name =  Iconia W511
+| name = Iconia W511
 | codename = acer-iconia-w511
 | image = 
 | imagecaption = 
 | releaseyear = 2012
 | originalsoftware = Windows 8
-| chipset = Intel® Atom Z2760, DualCore, 1,8 GHz
-| cpu = Intel® Atom Z2760, DualCore, 1,8 GHz
-| gpu = Intel® Graphics Media Accelerator 3650
+| chipset = Intel Atom Z2760
+| cpu = Dual-core (4-thread) 1.8 GHz Atom
+| gpu = Intel GMA 3650 (PowerVR SGX 545)
 | storage = 64 GB
-| display = 1366 x 768 HD LCD
+| display = 1366 x 768 LCD
 | memory = 2 GB
 | architecture = x86
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
