@@ -4,6 +4,7 @@
 | arch = x86_64
 | year = 2013
 | process = 22
+| mainline = yes
 | status_cpu = Y
 | status_uart = Y
 | status_storage = Y
