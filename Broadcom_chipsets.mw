@@ -11,7 +11,7 @@ This is a joint page for multiple Broadcom chips, currently mostly ones released
 | manufacturer = Broadcom
 | arch = armhf
 | year = 2010
-| cpu = 1x 832 MHz ARMv6
+| cpu = 1x 832 MHz ARM1136
 | gpu = Broadcom VideoCore IV
 | process = 65
 | mainline = no
@@ -48,7 +48,7 @@ tables=Devices
 
 === Specifications ===
 
-* Single-core 832 MHz ARMv6 CPU
+* Single-core 832 MHz ARM1136 ARMv6 CPU
 * VideoCore IV GPU
 
 === Downstream status ===
@@ -70,7 +70,7 @@ No dts in mainline, and there doesn't seem to be any similar chip supported.
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
-| cpu = 1x 850 MHz Cortex-A9
+| cpu = 1x 850 MHz ARM Cortex-A9
 | gpu = Broadcom VideoCore IV
 | process = 40
 | mainline = no
@@ -103,7 +103,7 @@ tables=Devices
 }}
 === Specifications ===
 
-* Single-core 850 MHz Cortex-A9 CPU
+* Single-core 850 MHz ARM Cortex-A9 CPU
 * VideoCore IV GPU
 
 === Mainline status ===
@@ -122,7 +122,7 @@ No dtsi.
 | manufacturer = Broadcom
 | arch = armv7
 | year = 2012
-| cpu = 2x 1.2 GHz Cortex-A9
+| cpu = 2x 1.2 GHz ARM Cortex-A9
 | gpu = Broadcom VideoCore IV
 | process = 40
 | mainline = no
@@ -159,7 +159,7 @@ tables=Devices
 
 === Specifications ===
 
-* Dual-core 1.2 GHz Cortex-A9 CPU
+* Dual-core 1.2 GHz ARM Cortex-A9 CPU
 * VideoCore IV GPU
 
 === Mainline status ===
@@ -214,7 +214,7 @@ tables=Devices
 
 === Specifications ===
 
-* Quad-core 1.2 GHz Cortex-A9 CPU
+* Quad-core 1.2 GHz ARM Cortex-A9 CPU
 * VideoCore IV GPU
 
 === Mainline status ===
