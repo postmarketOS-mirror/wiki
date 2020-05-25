@@ -8,6 +8,7 @@
 | process = 40
 | mainline = yes
 | status_cpu = Y
+| status_uart =Y
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
