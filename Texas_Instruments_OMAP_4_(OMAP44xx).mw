@@ -2,7 +2,7 @@
 | name = OMAP44xx
 | manufacturer = Texas Instruments
 | arch = armv7
-| cpu = 2x 1.2 GHz Cortex-A9
+| cpu = 2x 1.2 GHz ARM Cortex-A9
 | gpu = PowerVR SGX540
 | year = 2011
 | process = 45
