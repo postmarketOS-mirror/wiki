@@ -73,10 +73,8 @@ Here's how to boot pmOS via fastboot:
 
 or 
 # Enter the fastboot mode
-# Flash system
-<syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_system</syntaxhighlight>
-# Flash kernel
-<syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_kernel</syntaxhighlight>
+# Flash system <syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_system</syntaxhighlight>
+# Flash kernel <syntaxhighlight lang="shell-session">$ pmbootstrap flasher flash_kernel</syntaxhighlight>
 # Finally, reboot into pmOS: <syntaxhighlight lang="shell-session">$ fastboot reboot</syntaxhighlight>
 
 == Audio ==
@@ -87,7 +85,7 @@ You can do it in many ways:
 on a running device
 
 On both cases you always need to enable the triggerhappy daemon with:
-# <syntaxhighlight lang="shell-session">sudo rc-update add triggerhappy default</syntaxhighlight>
+<syntaxhighlight lang="shell-session">sudo rc-update add triggerhappy default</syntaxhighlight>
 == See also ==
 * {{MR|1249|pmaports}} Initial merge request
 <!--
