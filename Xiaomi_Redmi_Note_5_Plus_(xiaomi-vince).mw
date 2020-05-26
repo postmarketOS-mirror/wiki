@@ -88,6 +88,7 @@ On both cases you always need to enable the triggerhappy daemon with:
 <syntaxhighlight lang="shell-session">sudo rc-update add triggerhappy default</syntaxhighlight>
 == See also ==
 * {{MR|1249|pmaports}} Initial merge request
+* [https://github.com/M0Rf30/msm8953-snd-card-mtp ALSA msm8953-snd-card-mtp UCM] 
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
