@@ -25,7 +25,7 @@
 | status_battery = Y
 | status_3d = N
 | status_accel = N
-| status_audio = N
+| status_audio = P
 | status_bluetooth = N
 | status_camera = N
 | status_gps = N
@@ -33,7 +33,7 @@
 | status_sms = N
 | status_calls = N
 | booting = yes
-| pmoskernel = 4.9.223
+| pmoskernel = 4.9.224
 
 <!-- you can also use these lines if you need to:
 if the device haven't originally ran Android OS, e.g. Nokia N900
