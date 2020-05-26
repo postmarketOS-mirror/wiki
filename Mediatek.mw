@@ -11,7 +11,7 @@ When chip is powered on the dram controller pushes the address of brom (boot rom
 # If KCOL0 pin is shorted to the ground, preloader loading is avoided and download protocol is rolled up on USB port.
 
 == Memory maps of different system on chips ==
-* [[MT6735]]
+* [[MediaTek_MT6735|MT6735]]
 
 == Image format ==
 {{note|Incomplete and has missing information. Feel free to coordinate corrections on Matrix chat. Information here is only for reference. Flashing the binaries to storage will be done using brom protocol and custom flashing software.}}
