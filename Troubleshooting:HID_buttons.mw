@@ -1,13 +1,12 @@
-== Introduction ==
 Phones may have some buttons. Those buttons can be configured to execute specific command when pressed.
 
 == Getting input device information using udevadm ==
 
-Make sure that buttons are recognized as eventX inside /dev/input directory
+Make sure that buttons are recognized as eventX inside <code>/dev/input</code> directory
 
-To make sure that the input buttons are recognized, run the following command
+To make sure that the input buttons are recognized, run the following command:
 
-<code># udevadm info -a /dev/input/event0 </code>
+<syntaxhighlight lang='shell-session'>$ udevadm info -a /dev/input/event0 </syntaxhighlight>
 
 The command will print udev properties which can be used to assign udev rules, for example tagging specified device as touchscreen.
 
