@@ -65,27 +65,36 @@ Is OTG available, not used in wiki
 
 Here's how to boot pmOS via fastboot:
 
-# Install to a SD card with <code>$ pmbootstrap install --sdcard=/dev/sdX</code>
+# Install to a SD card with 
+<code>$ pmbootstrap install --sdcard=/dev/sdX</code>
 # Insert the SD card into the device
 # Connect the device to your PC
 # Enter the fastboot mode
-# Finally, boot pmOS: <code>$ pmbootstrap flasher boot</code>
+# Finally, boot pmOS: 
+<code>$ pmbootstrap flasher boot</code>
 
 or 
 # Enter the fastboot mode
-# Flash system <code>$ pmbootstrap flasher flash_system</code>
-# Flash kernel <code>$ pmbootstrap flasher flash_kernel</code>
-# Finally, reboot into pmOS: <code>$ fastboot reboot</code>
+# Flash system 
+<code>$ pmbootstrap flasher flash_system</code>
+# Flash kernel 
+<code>$ pmbootstrap flasher flash_kernel</code>
+# Finally, reboot into pmOS: 
+<code>$ fastboot reboot</code>
 
 == Audio ==
 To enable audio you need to install triggerhappy.
 You can do it in many ways:
-# At the first <code>$ pmbootstrap install</code> command appending <code> --add triggerhappy</code> or with
+# At the first 
+<code>$ pmbootstrap install</code> command appending 
+<code> --add triggerhappy</code> 
+or with
 # <code>$ sudo apk add triggerhappy</code>
 on a running device
 
 On both cases you always need to enable the triggerhappy daemon with:
-<syntaxhighlight lang="shell-session">sudo rc-update add triggerhappy default</code>
+
+<code>$ sudo rc-update add triggerhappy default</code>
 == See also ==
 * {{MR|1249|pmaports}} Initial merge request
 * [https://github.com/M0Rf30/msm8953-snd-card-mtp ALSA msm8953-snd-card-mtp UCM] 
