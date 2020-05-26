@@ -82,11 +82,10 @@ or
 == Audio ==
 To enable audio you need to install triggerhappy.
 You can do it in many ways:
-# at the first <syntaxhighlight lang="shell-session">pmbootstrap install</syntaxhighlight> command
-appending <syntaxhighlight lang="shell-session">--add triggerhappy</syntaxhighlight>
-or with 
+# At the first <syntaxhighlight lang="shell-session">pmbootstrap install</syntaxhighlight> command appending <syntaxhighlight lang="shell-session">--add triggerhappy</syntaxhighlight> or with
 # <syntaxhighlight lang="shell-session">sudo apk add triggerhappy</syntaxhighlight>
 on a running device
+
 On both cases you always need to enable the triggerhappy daemon with:
 # <syntaxhighlight lang="shell-session">sudo rc-update add triggerhappy default</syntaxhighlight>
 == See also ==
