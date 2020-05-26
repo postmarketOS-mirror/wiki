@@ -226,3 +226,53 @@ Some mainlining progress was made by [[User:Knuxfanwin8|knuxify]] (see [https://
 === More information ===
 
 * [http://phonedb.net/index.php?m=processor&id=470&c=broadcom_bcm23550 phonedb.net]
+
+== Broadcom BCM2711 ==
+
+{{Infobox soc
+| name = BCM2711
+| manufacturer = Broadcom
+| arch = aarch64
+| year = 2019
+| cpu = 4x 1.5 GHz ARM Cortex-A72
+| gpu = Broadcom VideoCore VI
+| process = 28
+| mainline = yes
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+=== Devices ===
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting AND Devices.chipset LIKE 'Broadcom BCM2711%'
+|more results text=
+}}
+
+=== Specifications ===
+
+* Quad-core 1.5 GHz ARM Cortex-A72 CPU
+* VideoCore VI GPU
+
+=== Mainline status ===
+
+=== More information ===
+* [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/README.md raspberrypi.org]
