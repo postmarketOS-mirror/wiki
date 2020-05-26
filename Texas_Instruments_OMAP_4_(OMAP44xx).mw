@@ -1,0 +1,73 @@
+{{Infobox soc
+| name = OMAP44xx
+| manufacturer = Texas Instruments
+| arch = armv7
+| cpu = 2x 1.2 GHz Cortex-A9
+| gpu = PowerVR SGX540
+| year = 2011
+| process = 45
+| mainline = yes
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+== General description ==
+The 4th generation OMAPs (4430/4460/4470), all use a dual-core ARM Cortex-A9 CPU, with two ARM Cortex-M3 cores, as part of the "Ducati" sub-system, for off-loading low-level tasks.<br />
+The 4430 and 4460 use a PowerVR SGX540 integrated 3D graphics accelerator, running at a clock frequency of 304 and 384 MHz respectively.<br />
+All OMAP 4 come with an IVA3 multimedia hardware accelerator with a programmable DSP that enables 1080p Full HD and multi-standard video encode/decode.<br />
+OMAP 4 uses ARM Cortex-A9's with ARM's SIMD engine (Media Processing Engine, aka NEON) which may have a significant performance advantage in some cases over Nvidia Tegra 2's ARM Cortex-A9s with non-vector floating point units.<br />
+It also uses a dual-channel LPDDR2 memory controller compared to Nvidia Tegra 2's single-channel memory controller.
+
+{{wikipedia|OMAP#OMAP_4|Wikipedia: OMAP 4}}
+
+
+== Devices ==
+=== OMAP 4430 ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='TI OMAP 4430'
+|more results text=
+}}
+
+=== OMAP 4460 ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='TI OMAP 4460'
+|more results text=
+}}
+
+=== OMAP 4470 ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='TI OMAP 4470'
+|more results text=
+}}
+
+== See also ==
+* {{wikipedia|OMAP#OMAP_4|Wikipedia page}}
+* [https://patchwork.kernel.org/project/linux-omap/list/|Linux ARM based TI OMAP SoCs mailing list]
