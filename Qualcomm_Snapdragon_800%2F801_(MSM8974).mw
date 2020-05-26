@@ -12,7 +12,7 @@
 | status_storage = Y
 | status_usb = Y
 | status_display = Y
-| status_gpu = Y
+| status_gpu = P
 | status_pinctrl = Y
 | status_i2c = Y
 | status_audio = 
