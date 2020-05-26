@@ -87,13 +87,12 @@ To enable audio you need to install triggerhappy.
 You can do it in many ways:
 
 # At the first 
-<code>$ pmbootstrap install</code>
-command appending
+<code>$ pmbootstrap install</code> 
+command appending 
 <code> --add triggerhappy</code> 
-or with
+or with 
 <code>$ sudo apk add triggerhappy</code>
 on a running device
-
 # On both cases you always need to enable the triggerhappy daemon with:
 
 <code>$ sudo rc-update add triggerhappy default</code>
