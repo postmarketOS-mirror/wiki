@@ -74,10 +74,10 @@ This exploit is installed by bootrom exploit. But probably some 2nd stage bootlo
 There is some work on mt8163 mainline, for amazon-karnak, but it will be easy to get it on mustang. For now serial console and simplefb is working. Pwrap and pmic seems to be working. https://github.com/mt8163-mainline/linux
 
 == Device problems ==
-1. Mainline is not yet usable.
-2. Panfrost (driver for mali-t720) is wip, and not avalible in downstream (Merged in linux 5.2)
-3. This device use exploit due to locked bootloader. See #Amonet.
-4. This device's bl is not very good for running linux, due to it appends much of bad cmdline params, and some things in device tree.
+* Mainline is not yet usable.
+* Panfrost (driver for mali-t720) is wip, and not avalible in downstream (Merged in linux 5.2)
+* This device use exploit due to locked bootloader. See #Amonet.
+* This device's bl is not very good for running linux, due to it appends much of bad cmdline params, and some things in device tree.
 == See also ==
 Todo
 * {{MR|1263|pmaports}} Initial merge request
