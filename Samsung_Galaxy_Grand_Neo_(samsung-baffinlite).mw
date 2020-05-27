@@ -15,8 +15,8 @@
 | memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = P
-| status_flashing = P
+| status_usbnet = Y
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi = Y <!-- Wireless network works? -->
@@ -118,6 +118,7 @@ Some information:
 == See also ==
 
 * [https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1057 Merge request]
+* [https://github.com/knuxdroid/baffinlite-mainline WIP mainline kernel]
 * {{Device package|samsung-baffinlite|testing}}
 * {{Kernel package|samsung-baffinlite|testing}}
 * [[Samsung_Galaxy_Grand_Neo_(samsung-baffinlite)/Downstream_notes]]
