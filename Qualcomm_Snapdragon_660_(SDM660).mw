@@ -90,7 +90,7 @@ Driver is there (ath10k_snoc) and should work the same way as in [[Qualcomm_Snap
 
 == Work done so far ==
 === Who is working on it ===
-* [[User:opendata]] worked on initial basic SoC support (pinctrl-sdm660, gcc-sdm660)
+* [[User:opendata]] worked on initial basic SoC support (pinctrl-sdm660, gcc-sdm660) (+ [https://gitlab.com/opendata26/linux/-/tree/nile-mainline-submit-2 various branches])
 * [https://developer.sony.com/posts/pavel-dubrova-selected-as-the-first-2018-hero-open-source-developer/ Pavel Dubrova] worked on SDM630 SoC support based on kernel 5.3. It is unknown where the sources are located.
 * [[User:Alexeymin]] tried to continue opendata's work.  WIP Branch is in [https://gitlab.com/postmarketOS/linux-postmarketos/-/commits/qcom-sdm660/ linux-postmarketos] repo.
 
