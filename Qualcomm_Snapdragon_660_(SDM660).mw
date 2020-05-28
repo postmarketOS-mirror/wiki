@@ -67,7 +67,7 @@ tables=Devices
 }}
 
 == CPU ==
-All cores are up; but partial because no CPU frequency scaling support.
+All cores are up, PSCI is working. Marked as partial because there is no support for CPU frequency scaling.
 
 == Storage ==
 At least SDHCI (eMMC) was tested to work. UFS is untested (xiaomi-lavender does not have it).
