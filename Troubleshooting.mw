@@ -301,6 +301,9 @@ $ cd ~/.local/var/pmbootstrap/ # go into your work folder, as specified in 'pmbo
 $ sudo rm -v cache_apk_*/qemu-user-static-repack-* # adjust the failing package name accordingly
 </syntaxhighlight>
 
+=== CROSS_COMPILE_ARM32 not defined or empty, the compat vDSO will not be built ===
+Disable <code>CONFIG_COMPAT_VDSO</code> in kernel config.
+
 = Troubleshooting steps kept around for historical reference =
 
 {{Note|You're most likely not going to encounter these errors. If you do, file an issue in the appropriate repository.}}
