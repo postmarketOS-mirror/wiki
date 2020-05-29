@@ -279,6 +279,59 @@ tables=Devices
 === More information ===
 * [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/README.md raspberrypi.org]
 
+== Broadcom BCM2835 ==
+
+{{Infobox soc
+| name = BCM2835
+| manufacturer = Broadcom
+| arch = armhf
+| year = 2012
+| cpu = 700 MHz / 1 GHz ARM1176JZF-S
+| gpu = Broadcom VideoCore IV
+| process = 40
+<!-- Please only uncomment this if you have experience running mainline on this SoC and fill out the status fields below.
+| mainline = yes
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+-->
+}}
+
+=== Devices ===
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting AND Devices.chipset LIKE 'Broadcom BCM2835%'
+|more results text=
+}}
+
+=== Specifications ===
+
+* Single-core 700 MHz ARM1176JZF-S (Raspberry Pi 1)
+* Single-core 1 GHz ARM1176JZF-S (Raspberry Pi Zero)
+* VideoCore IV GPU
+
+=== Mainline status ===
+
+=== More information ===
+* [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/README.md raspberrypi.org]
+
 == Broadcom BCM2837(B0) ==
 
 {{Infobox soc
