@@ -6,6 +6,7 @@
 | cpu = 2x 2.2/2.3 GHz Kryo, 2x 1.6 GHz Kryo
 | gpu = Adreno 530
 | process = 14
+<!-- Please only uncomment this if you have experience running mainline on this SoC and fill out the status fields below.
 | mainline = yes
 | status_cpu = 
 | status_uart = 
@@ -22,6 +23,7 @@
 | status_bluetooth = 
 | status_modem = 
 | status_camera = 
+-->
 }}
 
 == Devices ==
