@@ -78,7 +78,8 @@ to switch to your inactive slot before flashing.
 Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until you see "Fastboot Mode" text.
 
 == See also ==
-* {{MR|1221|pmaports}} Initial merge request
+* {{MR|1221|pmaports}} Initial merge request.
+* {{MR|1271|pmaports}} Updates to add panel mode and WiFi support.
 <!-- * {{issue|CHANGEME|pmaports}} Some related issue -->
 
 <!--
