@@ -278,3 +278,57 @@ tables=Devices
 
 === More information ===
 * [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/README.md raspberrypi.org]
+
+== Broadcom BCM2837(B0) ==
+
+{{Infobox soc
+| name = BCM2837(B0)
+| manufacturer = Broadcom
+| arch = aarch64
+| year = 2016
+| cpu = 4x 1.2/1.4 Ghz ARM Cortex-A53
+| gpu = Broadcom VideoCore IV
+| process = 40
+<!-- Please only uncomment this if you have experience running mainline on this SoC and fill out the status fields below.
+| mainline = yes
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+-->
+}}
+
+=== Devices ===
+
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting AND Devices.chipset LIKE 'Broadcom BCM2837%'
+|more results text=
+}}
+
+=== Specifications ===
+
+* Quad-core 1.2 GHz ARM Cortex-A53 CPU (BCM2837)
+* Quad-core 1.4 GHz ARM Cortex-A53 CPU (BCM2837B0)
+* VideoCore IV GPU
+
+=== Mainline status ===
+
+=== More information ===
+* [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2837/README.md BCM2837 on raspberrypi.org]
+* [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2837b0/README.md BCM2837B0 on raspberrypi.org]
