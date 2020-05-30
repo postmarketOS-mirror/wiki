@@ -76,7 +76,7 @@ Audio works for a split second and then crashes.
 |-
 |Touchscreen
 |MELFAS MMS144
-|Driver in mainline
+|[[Google_Galaxy_Nexus_GSM_(samsung-maguro)]] claims that there's a driver in mainline for this touchscreen, but links to the mms114 driver instead.
 |-
 |WiFi, Bluetooth
 |BCM4330
