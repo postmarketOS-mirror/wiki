@@ -131,6 +131,14 @@ File:A5y17lte uart assembly.jpg|a5y17lte, connected to USB - UART converter via 
 File:A5y17lte test port.jpg|Test port pin numbering
 </gallery>
 
+=== Mainlining ===
+
+==== Exynos calibration table driver (ect_parser.c) ====
+Exynos calibration table driver - simple driver, that reads and parses predefined cpu address range. It has voltage, cpu, gpu frequency tables, and more. 
+
+Legacy driver uses __raw_read macro to access data.
+Calibration table resides in volatile cpu address region (probably loaded there by bootloader?). One can write to ect cpu address region
+
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
