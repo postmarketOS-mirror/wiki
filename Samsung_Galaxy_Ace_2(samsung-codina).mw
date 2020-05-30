@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Samsung
 | name = Galaxy Ace 2
-| codename = codina
+| codename = samsung-codina
 | image = File:codina.jpg
 | imagecaption = Samsung Galaxy Ace 2
 | releaseyear = 2012
 | originalsoftware = Android 4.2
 | chipset = NovaThor U8500
-| cpu = 2 x 800 MHz ARM Cortex-A9
+| cpu = 2x 800 MHz ARM Cortex-A9
 | gpu = Mali 400 MP1
 | storage = 4 GB
 | display = 480x800 PLS
-| memory = 768MB
+| memory = 768 MB
 | architecture = armhf
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N
