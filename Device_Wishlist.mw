@@ -48,7 +48,6 @@ Please keep this list sorted by alphabet for readability.
 * LG Leon
 * LG Optimus Black (P970): [https://code.paulk.fr/article20/a-hacker-s-journey-freeing-a-phone-from-the-ground-up-first-part Replicant support and open bootloader]
 * Meizu MX4
-* Meizu PRO 5
 * [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
 * Motorola Droid RAZR (spyder)
 * Motorola Moto G7 Play/Power and G7 (good work has been going on in the android scene on the g7 power and g7, play is getting there. they all share similar hardware, so a lot of the code could be shared right?)
@@ -56,10 +55,8 @@ Please keep this list sorted by alphabet for readability.
 * Nokia 3
 * Nokia 5
 * Nokia Lumia 520, 525, 635 and/or other unlocked Lumia devices
-* Oneplus 6
 * OpenPandora handheld games console, mainline DTS
 * [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
-* Purism Librem 5
 * Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
 * Samsung Epic 4G (SPH-D700)
 * Samsung Galaxy Core Plus (SM-G350)
@@ -76,7 +73,6 @@ Please keep this list sorted by alphabet for readability.
 * Xiaomi Mi Pad 3 (cappu)
 * Xiaomi Redmi 5 (rosy)
 * Xiaomi Redmi Note 5a (ugglite)
-* ZTE Open C - its hardware is very similar to the [[Mozilla_Flame_(t2m-flame)]] (already supported)
 
 == Low Priority Devices ==
 
