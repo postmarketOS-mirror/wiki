@@ -432,6 +432,8 @@ EDIT: seems to not work for me, whatever you do, the output is:
 Probably needs a crash? But I can read pstore-console (dmesg) logs from booted TWRP recovery fine..
 
 [[File:Xiaomi-lavender-uart-pins.jpg|200px|thumb|right|Xiaomi Redmi Note 7 (lavender) UART test pins schematic]]
+[[File:Xiaomi-lavender-uart-pins-real-photo.jpg|200px|thumb|right|Xiaomi Redmi Note 7 (lavender) UART test pins photo]]
+
 === Getting logs through debug UART ===
 
 You have to disassemble the phone (just removing back cover is enough). You'll have to heat up edges of the back cover (as shown in disassembling video, see '''Links''' below) before trying to remove it. Be careful! It is made of glass! Also be careful about fingerprint sensor connector, it is connected to a back cover you are trying to remove. Don't rip it.
