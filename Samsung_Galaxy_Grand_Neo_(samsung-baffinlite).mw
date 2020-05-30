@@ -71,8 +71,8 @@ Audio works for a split second and then crashes.
 |https://github.com/anholt/mesa/wiki/VC4
 |-
 |USB
-|FSA9485
-|There's a fsa9480 driver which is pretty similar, so downstream will need to be compared.
+|[[User:knuxfanwin8/FSA9485|FSA9485]]
+|Similar to the FSA9480, which is in mainline. The only difference seems to be the addition of support for some old Samsung docks.
 |-
 |Touchscreen
 |MELFAS MMS144
@@ -84,7 +84,7 @@ Audio works for a split second and then crashes.
 |-
 |Display
 |HX8369 and/or SC7798
-|HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config, and both are defined in the downstream framebuffer config. It is unclear which display is actually used, but it might be the HX8369.)
+|HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config, and both are defined in the downstream framebuffer config. It is unclear which display is actually used.
 |-
 |Camera
 |Samsung S5K4ECGX and ??? db8v61m
