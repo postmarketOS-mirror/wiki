@@ -84,10 +84,10 @@ Audio works for a split second and then crashes.
 |-
 |Display
 |HX8369 and/or SC7798
-|HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config. Only SC7798 is present in my Grand Neo (TODO: There's apparently a dual-sim model. Does that use the same display?)
+|HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config, and both are defined in the downstream framebuffer config. It is unclear which display is actually used, but it might be the HX8369.)
 |-
 |Camera
-|Samsung S5K4ECGX and db8v61m
+|Samsung S5K4ECGX and ??? db8v61m
 |s5k4ecgx is in mainline, db8v61m is only in Broadcom downstream. (TODO: Which one is the front-facing camera and which one is the main one?)
 |-
 |PMU
