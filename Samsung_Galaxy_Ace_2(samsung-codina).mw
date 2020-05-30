@@ -1,0 +1,100 @@
+{{Infobox device
+| manufacturer = Samsung
+| name = Galaxy Ace 2
+| codename = codina
+| image = File:codina.jpg
+| imagecaption = Samsung Galaxy Ace 2
+| releaseyear = 2012
+| originalsoftware = Android 4.2
+| chipset = NovaThor U8500
+| cpu = 2 x 800 MHz ARM Cortex-A9
+| gpu = Mali 400 MP1
+| storage = 4 GB
+| display = 480x800 PLS
+| memory = 768MB
+| architecture = armhf
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = N
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = N
+| status_xwayland = Y
+| status_fde = N
+| status_mainline = N
+| status_battery = Y
+| status_3d = N
+| status_accel = N
+| status_audio = N
+| status_bluetooth = N
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N
+| status_sms = N
+| status_calls =N
+| status = booting
+| booting = yes
+
+}}
+
+== Contributors ==
+* nergzd723
+
+== Maintainer(s) ==
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+
+Odin Mode: While turned off, hold POWER+HOME+Vol-
+
+Fastboot: Hold Vol- while booting.
+
+== Installation ==
+
+Download uboot from here:
+
+
+https://github.com/novathor-mainline/u-boot
+
+
+Flash while in Odin Mode:
+
+
+heimdall flash --Kernel u-boot.bin
+
+
+Setup postmarketos on PC:
+
+
+pmbootstrap init
+
+pmbootstrap install
+
+
+Enter Fastboot mode, then flash kernel:
+
+
+pmbootstrap flasher flash_kernel
+
+
+And flash rootfs:
+
+
+pmbootstrap flasher flash_rootfs
+
+
+Reboot:
+
+
+fastboot reboot
+
+
+
+== See also ==
+* {{MR|1275|pmaports}} Initial merge request
+
+== Known bug ==
+
+While in fastboot, PC may not detect the device. Try rebooting the device.
