@@ -1,0 +1,192 @@
+{{Infobox device
+| name = Nexus 5X
+| manufacturer = LG
+| codename = lg-bullhead
+| image = File:Lg-bullhead_mate.jpg
+| imagecaption = Nexus 5x
+| releaseyear = 2015
+| originalsoftware = Android 6.0 on Linux 3.10
+| chipset = Qualcomm MSM8992 Snapdragon 808
+| cpu = 4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57
+| gpu = Adreno 418
+| display = 1080x1920 IPS
+| storage = 16/32 GB
+| memory = 2 GB
+| architecture = aarch64
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = 
+| status_xwayland = Y
+| status_fde = 
+| status_mainline = P
+| status_battery = Y
+| status_3d = 
+| status_accel =
+| status_audio = 
+| status_bluetooth =
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status_otg = Y
+| booting = yes
+| whet_dhry = 1273.5
+}}
+
+== Contributors ==
+
+* [[User:PureTryOut]]
+* [[User:MartijnBraam]]
+
+== Unlocking == 
+
+In android go to {{button|Settings|System|About Phone}} and tap the build number 7 times.
+Then go to {{button|Settings|System|Developer Options}} and enable OEM unlocking
+
+Reboot to the bootloader and run "<kbd>fastboot oem unlock</kbd>"
+Now select {{button|Yes}} on the phone screen with the volume button and use the power button to accept.
+
+== No RPMB ==
+
+If your device says "SECURE BOOT: ENABLED (NO RPMB)" in the fastboot screen that means that the mainboard in your Nexus 5X is missing an image required by secureboot to function properly.
+If this is missing then oem-unlocking won't work on the device. It will re-lock every reboot. 
+
+No fix is available yet for this
+
+== Special key combos ==
+
+Boot to bootloader: hold volume down + power button until the screen turns on
+
+Launch recovery: first boot to the bootloader, press the volume down button twice and press the power button to select
+== Mainline Kernel Status ==
+{|class="wikitable feature-colors"
+! Status
+! Hardware
+! Info
+|-
+| Y
+|Power Management
+|Uses Qualcomm's PM8994 controller, works since 4.11
+|-
+| 
+|Touch Screen
+| Nope
+|-
+| 
+| DSI Panel
+| Out-of-tree driver[https://gist.github.com/undevdecatos/dedabe4f8823e8fc9e34f058da1a1f82] made by UnDevDeCatOS using lmdbg. Untested
+|-
+|
+|USB Gadget/OTG
+| Nope
+|-
+| Y
+|SDHCI
+|The sd card is supported since 4.17.
+|-
+| 
+|Wi-Fi
+|Uses Qualcomm QCA6174. Untested
+|-
+|Y
+|GPIO keys
+|PinCTRL works.
+|-
+| 
+|Bluetooth
+|Unknown chip, probably inside the SoC.
+|-
+| 
+|Sound
+|Untested, uses the Qualcomm WCD9330 codec.
+|-
+| 
+|Light Sensor
+| Rohm RPR0521. Supported in mainine, no dt bindings.
+|-
+| 
+|Sixaxis
+| Bosch BMI160. Supported in mainline, but no dt bindings.
+|-
+|
+|Camera
+|Sony IMX377. No driver available.
+|-
+| 
+|GPU
+|Qualcomm Ardeno 418, untested
+|-
+|
+|Modem
+|Qualcomm WTR3925. Untested, no dt bindings.
+|-
+| 
+| Fast Charge controller
+|Qualcomm SMB1358. No driver
+|}
+
+== Firmware ==
+Here is the official Google page to download GPS, Audio, Camera, Gestures, Graphics, DRM, Video, Sensors firware blob.
+[https://developers.google.com/android/drivers /developers.google]
+
+== Mainlining ==
+
+The Linux mainline kernel has very basic support for this phone since November 2016 (one cpu and uart). In January 2017 support for the onboard SDHCI was added and since March 2018 pstore-ramoops. Both should be included in 4.19.
+
+To boot it using pmbootstrap follow the mainlining guide but note that it has a 64 Bit kernel. Also, compared to downstream "device-lg-bullhead" you need to change the debug tty to /dev/ttyMSM0 in the deviceinfo file.
+
+Change deviceinfo (aports/device/device-lg-bullhead/deviceinfo)
+
+  deviceinfo_kernel_cmdline="console=ttyMSM0,115200,n8 androidboot.hardware=bullhead boot_cpus=0-5 lpm_levels.sleep_disabled=1 msm_poweroff.download_mode=0 buildvariant=userdebug PMOS_NO_OUTPUT_REDIRECT"
+
+ttyMSM0 tells the kernel to write debug output to the debugger cable, PMOS_NO_OUTPUT_REDIRECT tells the initramfs script from pmOS to write there as well instead of to a (temporary) log file
+
+Increase the pkgrel in the APKBUILD and rebuild the boot.img
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap checksum device-lg-bullhead
+$ pmbootstrap export
+</syntaxhighlight>
+Build your kernel as described in mainlining guide
+
+Update the boot.img to include your local kernel
+<syntaxhighlight lang="shell-session">
+$ cp "/tmp/postmarketOS-export/boot.img-lg-bullhead" "$TEMP/boot.img"
+$ cd .output/arch/arm64/boot/
+$ cat Image.gz dts/qcom/msm8992-bullhead-rev-101.dtb > "$TEMP/zImage-dtb"
+$ pmbootstrap chroot -- abootimg -u /tmp/mainline/boot.img  -k /tmp/mainline/zImage-dtb
+$ pmbootstrap flasher list_devices
+</syntaxhighlight>
+You can communicate with the device using <code>screen</code> (or other software), so in a separate terminal start it:
+<syntaxhighlight lang="shell-session">
+$ screen /dev/ttyUSB0 115200
+</syntaxhighlight>
+Boot your mobile to the bootloader (power + vol down) and you should see some debug output on the screen.
+
+Boot the kernel using fastboot
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap chroot -- fastboot boot /tmp/mainline/boot.img
+</syntaxhighlight>
+
+Device teardown:
+
+https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318
+
+Downstream DTS:
+https://github.com/franciscofranco/bullhead/blob/oreo-mr1/arch/arm/boot/dts/qcom/msm8992.dtsi
+
+== Photos ==
+
+{| style="float:left"
+|[[File:Lg-bullhead_mate.jpg|200x200px]]
+|[[File:Lg-bullhead_plasma.jpg|200x200px]]
+|[[File:coreapps2.jpg|200x200px]]
+|}
+
+<div style="clear:left"></div>
+
+== See also ==
+* {{github|1222}} initial MR
+* {{issue|1703}} showing black screen after pmos logo in xfce DE
