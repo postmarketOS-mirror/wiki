@@ -1,16 +1,16 @@
 {{Infobox device
 | manufacturer = Fairphone
-| name = Fairphone 3
+| name = 3
 | codename = fairphone-fp3
 | image =
 | imagecaption =
 | releaseyear = 2019
 | originalsoftware = Android 9 on Linux 4.9
 | chipset = Qualcomm SDM632 Snapdragon 632
-| cpu = Octo-core 1.8GHz
+| cpu = 4x 1.8 GHz Kryo 250 Gold + 4x 1.8 GHz Kryo 250 Silver
 | gpu = Adreno 506
 | storage = 64 GB
-| display = 2160x1080
+| display = 1080x2160
 | memory = 4 GB
 | architecture = aarch64
 | status_usbnet =
