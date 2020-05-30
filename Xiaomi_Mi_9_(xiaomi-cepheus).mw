@@ -1,0 +1,70 @@
+{{Infobox device
+| manufacturer = Xiaomi
+| name = Mi 9
+| codename = xiaomi-cepheus
+| image = xiaomi-cepheus.jpg
+| imagecaption = Mi 9
+| releaseyear = 2019
+| category = testing
+| originalsoftware = Android 9.0, up to 10, MIUI 11
+| chipset = Qualcomm SM8150 Snapdragon 855
+| cpu = 8-core (1x 2.84 GHz Kryo 485 & 3x 2.42 GHz Kryo 485 & 4x 1.78 GHz Kryo 485)
+| gpu = Adreno 640
+| storage = 64/128/256 GB
+| display = 1080 x 2340
+| memory = 6/8 GB
+| architecture = aarch64
+| status_usbnet = 
+| status_flashing = 
+| status_touch = 
+| status_screen = 
+| status_wifi = 
+| status_xwayland = 
+| status_fde = 
+| status_mainline = 
+| status_battery = 
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status = none
+| booting = no
+| pmoskernel = 
+| whet_dhry = 
+| status_otg = 
+}}
+
+== Contributors ==
+<!-- * ''[[user:handle|Nick name]]'' -->
+
+== Maintainer(s) ==
+<!-- * ''[[user:handle|Nick name]]'' -->
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+=== Bootloader Unlocking ===
+Like other Xiaomi devices, the user will have to acquire the bootloader unlock key: https://en.miui.com/unlock
+
+The device will not unlock if the device isn't 7 days old (from the time when your device connects to internet and powered on, and linked with Mi Account)
+
+=== Recovery mode ===
+* Turn the device off (or restart also works)
+* Hold {{button|Volume Up}} and {{button|Power}} button
+* Once you feel vibration and phone turns on, release {{button|Power}} button
+* Keep holding {{button|Volume Up}} until you get to recovery.
+
+=== Flashing (Download, Fastboot) mode ===
+* Same as recovery, but this time hold the {{button|Volume Down}} and {{button|Power}} keys.
+
+
+
+== Links ==
+<!-- * {{MR|1095|pmaports}} Initial merge request -->
+* [https://www.gsmarena.com/xiaomi_mi_9-9507.php GSMARENA]
