@@ -1,0 +1,303 @@
+{{Infobox device
+| manufacturer = Samsung
+| name =  Galaxy Tab 10.1
+| codename = samsung-p4wifi
+| image = File:P4wifi infobox.png
+| imagecaption = Xcfe4 running on Samsung Galaxy Tab 10.1 (p4wifi)
+| releaseyear = 2011
+| originalsoftware = Android 3.1 Honeycomb
+| chipset = Nvidia Tegra 2
+| cpu = 2x 1.0 Ghz Cortex-A9
+| gpu = Tegra 2
+| storage = 16/32 GB
+| display = 1280×800
+| memory = 1GB
+| architecture = armv7
+| whet_dhry = 424.5
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = Y
+| status_xwayland = 
+| status_fde = Y
+| status_mainline = P
+| status_battery = Y
+| status_3d = 
+| status_accel = Y
+| status_audio = Y
+| status_bluetooth = Y
+| status_camera =
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| booting = yes
+}}
+
+== Contributors ==
+* decatf
+
+== Maintainer(s) ==
+* okias
+
+=== Users owning this device ===
+{{Device owners}}
+
+== Introduction ==
+
+postmarketOS for the Samsung Galaxy Tab 10.1 runs on mainline Linux kernel fork. The kernel uses both mainline and forward ported drivers. Some peripherals are using mainline device driver where applicable. Some peripherals which are not working on or don't have mainline drivers are using drivers forward ported from the stock 3.1.10 kernel.
+
+== How to enter flash mode ==
+Press and hold Power + Volume Down buttons
+
+== Installation ==
+Init pmbootstrap
+<source lang="shell-session">
+$ pmbootstrap init</source>
+Choose 'samsung-p4wifi' as target device.
+Build the image:
+<source lang="shell-session">
+$ pmbootstrap install
+</source>
+Enter flash (download) mode
+Flash the kernel and system images
+<source lang="shell-session">$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_rootfs
+</source>
+
+== Battery ==
+The battery in this device is the <code>max17042</code>. A tear down of the (nearly) identical Galaxy Tab 8.9 reveals that the charger is <code>max8903</code>.
+
+Differences between mainline and downstream drivers:  
+
+The downstream kernel provides an early implementation of a driver for the <code>max17042</code> battery. The implementation of the battery and charger driver are split across <code>p4_battery.c</code> and <code>max17042_battery.c</code>. The downstream charger driver implements additional logic to handle charge full and low battery events which may affect the health of the battery. The implementation details are not clear but the overall functionality appears to dynamically tune the full charge value. The mainline driver does not have this sort of functionality. The downstream driver reports the current in milliamp whereas the mainline driver is in microamp.
+
+The <code>max8903</code> datasheet shows that there are separate GPIOs for USB and DC power connectors. This device has one connect GPIO for both USB and DC mode. The type of connector is determined by reading the <code>usb-sel</code> GPIOs. It's unclear which piece of hardware the usb-sel is coming from (max8903 / tegra soc / 30-pin connector ???).
+
+== Graphics ==
+Moved to [[Nvidia_Tegra_2_(tegra20)#Graphics]] which cover all Tegra 2 devices.
+
+== Audio ==
+
+Audio output through headphone and speakers are working. Audio input through the built-in microphone and headset microphone are working.  
+
+The ALSA UCM config files were previously generated using the <code>xml2ucm</code> tool. The <code>mixer_paths.xml</code> and <code>p4wifi.config.xml</code> can be found in this [https://gist.github.com/Decatf/c37dda86a96f953f8b77eb9502d6681b github gist].
+<source lang="shell">$ stack exec -- xml2ucm -m mixer_paths.xml -c p4wifi-config.xml -o examples</source>  
+
+As of <code>pmaports!254</code> the ALSA UCM config files were created based the wm8994 datasheet and the downstream driver coding of the mixer.  
+
+
+The audio inputs are muted by default. Unmute and set the volume with <code>alsamixer</code> or set the mixer controls manually with <code>amixer</code>. The right channel (<code>IN1R</code>) is the headset microphone. The left channel (<code>IN1L</code>) is the built-in microphone.  
+
+Unmuting the headset microphone:
+<source lang="shell">
+$ amixer cset name='IN1R Switch' on
+$ amixer cset name='IN1R Volume' 11
+</source>
+
+Note: Plug in the headset mic at boot otherwise the sound driver will not load. Some wm8994 device register writes fail during driver probe unless mic bias GPIO is set to high.
+
+== Wifi ==
+The wifi chip in this device is the Broadcom BCM4330 B1 revision. There is a B2 revision which is much more common. The only distinguishing factor is the firmware. Only the B1 firmware will work on this device. The most common BCM4330 firmware found from various sources (such as <code>linux-firmware</code>) is for the B2 revision.
+
+== Cellular Modem ==
+The xmm6260 modem was used in quite a few Samsung Android devices from the same era as this tablet. The Samsung Galaxy Tab 10.1 3G (p4) and Samsung Galaxy Tab 10.1 from T-Mobile (p4tmo) are otherwise identical to the WiFi only version of the tablet (p4wifi). The cellular modem is connected via an internal USB interface called USB HSIC. The mainline Tegra USB driver does not implement this functionality. Much of the work in enabling the cellular stack would involve adding USB HSIC support to the mainline USB driver.
+
+== Bluetooth ==
+
+The bcm4330 Bluetooth module is supported by the mainline kernel and Bluez 5 stack.
+
+Install bluetooth service:
+<source lang="shell">
+$ apk add bluez
+$ rc-update add bluetooth default
+$ rc-service bluetooth start
+</source>
+
+Pair a Bluetooth device:
+<source lang="shell">
+$ bluetoothctl
+$ power on
+$ scan on
+$ connect XX:XX:XX:XX:XX:XX
+$ scan off
+</source>
+
+=== Audio ===
+
+The following instructions will play audio to a Bluetooth headset.
+
+Install PulseAudio:
+<source lang="shell">$ apk add pulseaudio pulseaudio-bluez pulseaudio-utils</source>
+
+Start PulseAudio:
+<source lang="shell">$ pulseaudio --daemonize</source>
+
+Check that the Bluetooth audio profiles are working in bluetoothctl:
+<source lang="shell">
+$ show
+Controller XX:XX:XX:XX:XX:XX (public)
+        Name: BlueZ 5.49
+        Alias: BlueZ 5.49
+        Class: 0x000c0000
+        Powered: yes
+        Discoverable: no
+        Pairable: yes
+        UUID: Headset AG                (00001112-0000-1000-8000-00805f9b34fb)
+        UUID: Generic Attribute Profile (00001801-0000-1000-8000-00805f9b34fb)
+        UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)
+        UUID: Generic Access Profile    (00001800-0000-1000-8000-00805f9b34fb)
+        UUID: PnP Information           (00001200-0000-1000-8000-00805f9b34fb)
+        UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)
+        UUID: Audio Source              (0000110a-0000-1000-8000-00805f9b34fb)
+        UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)
+        UUID: Headset                   (00001108-0000-1000-8000-00805f9b34fb)
+        Modalias: usb:v1D6Bp0246d0531
+        Discovering: no
+</source>
+
+Play an audio file through a Bluetooth headset:
+<source lang="shell">$ paplay audio.wav</source>
+
+== Accelerometer ==
+
+The <code>kxt9f</code> accelerometer driver works pending device tree patches being merged into upstream. There requires a user space daemon such as <code>iio-sensor-proxy</code> to read the sensor data.  
+
+== USB OTG ==
+
+USB OTG mode is not implemented in the mainline USB driver.
+
+
+== Other Information ==
+==== Hardware Information & Mainline Driver Status ====
+
+The Linux mainlining effort contains drivers forward ported from the stock Samsung Linux 3.1.10 kernel which shipped with the device. Some peripheral devices have been transitioned over to the mainline driver. Other drivers are not in the mainline kernel or the device is not compatible with the mainline driver.
+
+{| class="wikitable feature-colors"
+!Peripheral Type
+!Hardware
+! Mainline Driver<br/>Status
+|-
+|Accelerometer
+|kxtf9<sup>1</sup>
+|
+|-
+|Ambient light sensor
+|bh1721fvc
+|Y
+|-
+|Analog Digital Converter
+|stmpe811
+|Y
+|-
+|Audio
+|wm8994
+|Y
+|-
+|Battery
+|max17042
+|Y
+|-
+|Camera
+|s5k5ccgx (front)<br/>s5k6bbgx (back)
+| - 
+|-
+|Charger
+|max8903
+|Y
+|-
+|Compass
+|ak8975c<sup>2</sup>
+|
+|-
+|CPU Temperature Sensor
+|nct1008
+|Y
+|-
+|Display Panel
+|cmc623
+|P
+|-
+|GPS
+|bcm4751
+|P
+|-
+|GPU
+|tegra host1x
+|Y 
+|-
+|Gyroscope
+|mpu3050
+|Y
+|-
+|HDMI Connector
+|sii9234<sup>3</sup>
+|
+|-
+|Touch Digitizer
+|mxt1386
+|Y
+|-
+|Vibration Motor
+|isa1200
+| P 
+|-
+|Voltage Regulators
+|tps6586x
+|Y
+|-
+|Wifi / Bluetooth
+|bcm4330
+|Y
+|-
+|3G Modem
+|xmm6260
+| - 
+|-
+|3.5mm Jack
+|sec_jack
+|P
+|-
+|30-pin accessory port
+|unknown 
+| - 
+|-
+|}
+
+Notes:
+
+: 1: kxt9f driver exists in mainline. The driver needs support device tree bindings.
+
+: 2: ak8975 driver exists in mainline. The device id for ak8975c needs to be added to the driver. I (decatf) can't test it because the compass seems to report nonsense data. The compass on my tablet might be broken.
+
+: 3: sii9234 driver exists in mainline. Requires someone with an MHL cable to implement / test it.
+
+
+===== Mainline Driver Status Legend =====
+{| class="wikitable feature-colors"
+! Code
+! Meaning
+|-
+  | Y
+  | Mainline driver
+|-
+  | P
+  | Forward ported driver
+|-
+  | -
+  | No driver -- driver has not been forward ported
+|}
+
+===== latest mainline driver ? =====
+
+latest kernel (based on grate-linux) with rebase patches to test (do not posses the HW) https://github.com/okias/linux/pull/new/p4wifi . Config file: https://raw.githubusercontent.com/Decatf/linux/040d3332474fceceaf4e4402417f0ead732f45bc/arch/arm/configs/tegra_postmarketos_defconfig
+
+If it'll work for you, please let me know on Matrix (okias) or here.
+
+== See also ==
+* {{github|1279}} Initial pull request
+* [https://github.com/Decatf/linux/ decatf mainline Linux kernel]
+* [https://github.com/Decatf/android_kernel_samsung_p4 stock Samsung 3.1.10 kernel]
+* [https://github.com/grate-driver/ Grate driver]
+* {{github|1386}} Update linux-samsung-p4wifi to kernel 4.16 (with some comments about what's left to do before we could have a shared mainline kernel)
