@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = NVIDIA
-| name =  Tegra Note 7
+| name = Tegra Note 7
 | codename = nvidia-tegratab
 | image = File:tegratab.jpg
 | imagecaption = booting photo
@@ -8,11 +8,11 @@
 | originalsoftware = Android 4.2.2
 | pmoskernel = 3.4.57
 | chipset = NVIDIA Tegra 4
-| cpu = Cortex-A15 4+1core 1.8GHz
+| cpu = 4+1core 1.8 Ghz Cortex-A15
 | gpu = GeForce ULP 72core
-| storage = 16GB
+| storage = 16 GB
 | display = 800x1280 7inch LCD
-| memory = 1GB
+| memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -34,13 +34,9 @@
 | status_sms = -
 | status_calls = -
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = Y
+| booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.x.x
 see Unixbench page on wiki
 | whet_dhry = 0.0
 Is OTG available, not used in wiki
