@@ -100,3 +100,5 @@ ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1"
 
 == Links ==
 * [https://github.com/ggow/android_kernel_amazon_mt8127-common/ Kernel source code - ggow/android_kernel_amazon_mt8127-common/]
+
+[[Category:Mediatek]]
