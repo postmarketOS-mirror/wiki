@@ -26,6 +26,18 @@ tables=Devices
 |more results text=
 }}
 
+=== Testing ===
+All other device ports, including new ones. Maintainers can create merge requests to move devices to community if requirements are met on the [[Device categorization]] page.
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename
+|order by=Devices.Manufacturer, Devices.Name
+|format=ul
+|limit=9999
+|where=Devices.Booting = 1 and Devices.category = "testing"
+|more results text=
+}}
+
 === Status Columns ===
 {| class="wikitable"
 ! Column
