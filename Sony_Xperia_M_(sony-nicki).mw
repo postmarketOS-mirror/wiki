@@ -38,6 +38,9 @@
 == Contributors ==
 * Konrad Dybcio (@konradybcio)
 
+== Device owners ==
+{{Device owners}}
+
 == How to enter flash mode ==
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
 
