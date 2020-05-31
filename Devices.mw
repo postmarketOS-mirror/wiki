@@ -1,85 +1,38 @@
 __NOTOC__ __NOCACHE__
 This page details the status of postmarketOS ports to various devices. If you are porting a device, please [[Help:Device Page|create a device page]] and describe the progress of the port. After the page is created, data about your device will appear on this page automatically.
 
-An effort to [[Device categorization|categorize the devices]] better is under way.
 
-== Booting devices ==
-All the devices in this table can at least boot postmarketOS. To monitor boot progress, you must be able to receive output from the screen, a network adapter, or a serial port. If you verify that a device not on this list boots postmarketOS, please [[Help:Device Page|create a page for the device]] and make a [https://docs.gitlab.com/ce/user/project/merge_requests/creating_merge_requests.html merge request].
-
+=== Main ===
+These are the most supported devices, maintained by at least 2 people and have the functions you expect from the device running it's normal OS, like calling on a phone, working audio and a functional UI.
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,Released,Chipset,CPU,GPU,StatusFde=FDE,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.Booting = 1
+|where=Devices.Booting = 1 and Devices.category = "main"
 |more results text=
 }}
 
-=== Status Legend ===
-{| class="wikitable feature-colors"
-! Code
-! Meaning
-|-
-  | Y
-  | Yes, fully implemented
-|-
-  | P
-  | Partially implemented
-|-
-  | N
-  | Not working yet
-|-
-  | 
-  | Untested
-|-
-  | -
-  | Not applicable -- device does not have feature
-|}
+=== Community ===
+Devices that had a lot of work put into, regressions are actively fixed and is overall in a pretty good shape.
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename
+|order by=Devices.Manufacturer, Devices.Name
+|format=ul
+|limit=9999
+|where=Devices.Booting = 1 and Devices.category = "community"
+|more results text=
+}}
 
 === Status Columns ===
 {| class="wikitable"
 ! Column
 ! Meaning
 |-
-  | USB Net
-  | After connecting the device with USB to your PC, you can [[Inspecting_the_initramfs|connect to it via telnet (initramfs)]] or [[USB_Network|SSH (booted system)]].
-|-
-  | Flashing
-  | It is possible to flash the device with <code>pmbootstrap flasher</code>.
-|-
-  | Touch
-  | Touching the screen is recognized properly.
-|-
-  | Screen
-  | The device's display is working.
-|-
-  | Wifi
-  | Connecting to wireless network is possible.
-|-
-  | XWayland
-  | Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works.
-|-
   | FDE
   | Full disk encryption and unlocking with [[osk-sdl]].
-|-
-  | Mainline
-  | Instead of a Linux kernel fork, it is possible to run [[The_Mainline_Kernel|mainline]].
-|-
-  | Battery
-  | Charging the battery with [[charging-sdl]] is possible (this seems to be largely untested, please update your device's column if charging is possible).
-|-
-  | 3D
-  | Hardware accelerated 3D graphics
-|-
-  | IMU
-  | The sensor that measures [https://en.wikipedia.org/wiki/Proper_acceleration proper acceleration] works.
-|-
-  | Audio
-  | Using the device's speakers/headphone jack works.
-|-
-  | Bluetooth
-  | It's possible to pair and use other devices via the bluetooth protocol.
 |-
   | Camera
   | Taking photos and videos works.
@@ -97,28 +50,8 @@ tables=Devices
   | Talking to other people over the cellular network.
 |}
 
-== Non-booting devices ==
-The devices list below cannot boot postmarketOS (yet). As such, they have not been integrated into the postmarketOS source tree. Once the device becomes bootable, it might appear in this least until a pull-request to integrate the code has been accepted. If you have verified that a device in this list boots postmarketOS, please [https://docs.gitlab.com/ce/gitlab-basics/add-merge-request.html make a merge-request].
-
-{{#cargo_query:
-tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,StatusStatus=Status
-|order by=Devices.Manufacturer, Devices.Name
-|format=table
-|limit=9999
-|where=Devices.Booting = 0
-|more results text=
-}}
-
-==Peripherals==
-Have you tested a USB or Bluetooth peripheral with postmarketOS? Does the peripheral use open-source drivers and firmware? If so, please report your findings in this section. This can be especially helpful for users who wish to replace built-in a network adapter or GPS unit with one that supports free software.
- 
-===Wireless network adapters===
-* Atheros [[AR9271]] chipset
-
-===External GPS units===
-
 ==See also==
+* [[All devices]]
 * [[Renamed Devices]]
 * [[Device Wishlist]]
 * [[The-big-list-of-who-has-what-device]]
