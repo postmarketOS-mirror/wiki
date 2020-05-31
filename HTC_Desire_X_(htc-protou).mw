@@ -59,7 +59,8 @@ Is OTG available, not used in wiki
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
-== How to enter flash mode ==
+== How to enter fastboot mode ==
+Hold {{Button|Volume Down|Power}} buttons to enter the Bootloader and select Fastboot then with a {{Button|Power}}.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
