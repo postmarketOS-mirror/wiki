@@ -1,17 +1,17 @@
 {{Infobox device
 | manufacturer = Xiaomi
-| name =  Pocophone F1
+| name = Pocophone F1
 | codename = xiaomi-beryllium
 | image = File: Plasmamobile-beryllium-mainline.jpg
 | releaseyear = 2018
 | originalsoftware = MIUI 9.6 (based on Android 8.1)
 | orginalkernel = 4.9
 | chipset = Qualcomm SDM845 Snapdragon 845
-| cpu = Qualcomm Snapdragon 845
+| cpu = Octa-core (4x 2.8 GHz Kryo 385 Gold & 4x 1.8 GHz Kryo 385 Silver)
 | gpu = Adreno 630
-| storage = 64GB / 128GB / 256GB
+| storage = 64/128/256 GB
 | display = 1080x2246 LCD
-| memory = 6GB / 8GB
+| memory = 6/8 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
