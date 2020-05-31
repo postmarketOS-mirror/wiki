@@ -103,9 +103,18 @@ $ pmbootstrap flasher flash_rootfs
  Hold "Volume down" + "Home" buttons at the end of the process,
  so that when phone reboots put it in flashing mode again 
 
-$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_kernel 
 
  This time, don't hold any button, let it reboot to Linux!
+</source>
+
+Booting from SD card also works:
+<source lang="shell-session">
+$ pmbootstrap install --sdcard=/dev/sdg
+
+ Remember to change device /dev/sd* to your card reader
+
+$ pmbootstrap flasher flash_kernel
 </source>
 
 == See also ==
