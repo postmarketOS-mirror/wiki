@@ -1,13 +1,13 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy S9 (SM-G9600/DS)
+| name = Galaxy S9 (SM-G9600/DS)
 | codename = samsung-starqltechn
 | image = 
 | imagecaption = Coming soon
 | releaseyear = 2018
 | originalsoftware = Android 8 - 10
-| chipset = Snapdragon 845
-| cpu = Cortex-A75 / A55 (Kryo 385)
+| chipset = Qualcomm SDM845 Snapdragon 845
+| cpu = Octa-core (4x 2.8 GHz Kryo 385 Gold & 4x 1.7 GHz Kryo 385 Silver)
 | gpu = Adreno 630
 | storage = 64 GB
 | display = 5.8 inch 18.5:9, 2960 x 1440 pixel 568 PPI, capacitive touchscreen, 10 multi-touch points, Super AMOLED, Corning Gorilla Glass 5, glossy: yes
@@ -38,8 +38,6 @@
 | status_otg = 
 | whet_dhry = 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
