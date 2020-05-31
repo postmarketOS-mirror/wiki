@@ -68,3 +68,5 @@ Cortex-A53 is a 64-bit processor from what I can tell.
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
 Installing doesn't work with fastboot, because the file is too large. I tried installing on an external SD card, but it's still not booting.
+
+[[Category:Mediatek]]
