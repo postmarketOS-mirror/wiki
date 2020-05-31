@@ -85,3 +85,5 @@ extracted boot.img, first bytes of the vendor's initramfs (working):
 
 * {{issue|73}} lists lots of issues with the device, and additional information, such as fastboot's partitions output
 * [http://specdevice.com/showspec.php?id=27b5-72c0-d54b-c7580033c587 This might be the same phone?]
+
+[[Category:Mediatek]]
