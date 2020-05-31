@@ -6,7 +6,7 @@
 | imagecaption = Phone running weston.
 | releaseyear = 2014
 | originalsoftware = Android 4.2.2
-| chipset = Broadcom BCM23550
+| chipset = [[Broadcom_chipsets#Broadcom_BCM23550|Broadcom BCM23550]]
 | cpu = Quad-core 1.2 GHz Cortex-A7
 | gpu = Broadcom VideoCore IV
 | storage = 8/16 GB
@@ -23,15 +23,15 @@
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = N <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = Y
-| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
+| status_3d = N <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
 | status_audio = N <!-- Using the device's speakers/headphone jack works -->
 | status_bluetooth = N <!-- It's possible to pair and use other devices via the bluetooth protocol -->
 | status_camera = N <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
-| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
-| status_sms = <!-- Sending and receiving short messages works as intended. -->
-| status_calls = <!-- Talking to other people over the cellular network. -->
+| status_mobiledata = N <!-- Connecting to the Internet via cellular network. -->
+| status_sms = N<!-- Sending and receiving short messages works as intended. -->
+| status_calls = N <!-- Talking to other people over the cellular network. -->
 | status_otg = N
 | booting = yes
 }}
@@ -45,10 +45,13 @@
 
 == Device owners ==
 {{Device owners}}
- 
 == How to enter flash mode ==
-Recovery: Power+VolUp
-Download/Odin: Power+VolDown
+* Recovery: Power+VolUp
+* Download/Odin: Power+VolDown+Home
+
+== Installing ==
+
+Follow the [[Installation guide]]. To flash to the device, boot into Download/Odin mode by holding the Volume Down + Home buttons while powering on the device, then run the <code>pmbootstrap flasher</code> commands to flash.
 
 == Notes ==
 The device freezes under heavy load (such as installing certain apps through apk).
@@ -56,6 +59,9 @@ The device freezes under heavy load (such as installing certain apps through apk
 Audio works for a split second and then crashes.
 
 == Mainline status ==
+
+There's mainlining work being done for this device by [[User:knuxfanwin8|knuxify]], however it currently does not boot. (See [https://github.com/knuxdroid/baffinlite-mainline the WIP mainline kernel repository] and [[User:knuxfanwin8/Grand Neo mainline journal]].)
+
 {| class="wikitable"
 ! Element type
 ! Element
@@ -109,10 +115,6 @@ Audio works for a split second and then crashes.
 |Bosch BMC150
 |Driver in mainline
 |}
-
-Some information:
-
-* There's a DTS in downstream but it's unused and the parts used don't match the defconfig. Seems like it's a generic tree and was never finished, as it matches some stuff in the board-java.c file in downstream.
 
 == See also ==
 
