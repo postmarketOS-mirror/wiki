@@ -44,6 +44,11 @@ Is OTG available, not used in wiki
 -->
 }}
 
+== OEM Variant ==
+* HP Slate 7 Extreme (hp-olive)
+* ZOTAC Tegra Note 7
+* EVGA Tegra Note 7　...and more info {{wikipedia|Tegra_Note_7}}
+
 == Contributors ==
 * coffeebeat
 
@@ -70,6 +75,7 @@ boot to<code>pmbootstrap flasher boot</code>
 
 I'm not recommended <code>flasher flash_kernel</code>, because you can't charging battery!
 
+<code>tegranote7c</code> is LTE version(Probably). Don't get confused.
 
 == See also ==
 * [https://github.com/skoar/android_kernel_nvidia_tegratab/tree/cm-12.1] Using Kernel
