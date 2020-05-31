@@ -96,3 +96,5 @@ If you manage to get your device packages merged, uncomment links below and chan
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-DEVICE_CODENAME Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-DEVICE_CODENAME Kernel package]
 -->
+
+[[Category:Mediatek]]
