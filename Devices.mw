@@ -27,7 +27,7 @@ tables=Devices
 }}
 
 === Testing ===
-All other device ports, including new ones. Maintainers can create merge requests to move devices to community if requirements are met on the [[Device categorization]] page.
+All other device ports, including new ones. Maintainers can create merge requests to move devices to community if requirements are met on the [[Device categorization]] page. A more detailed view with a full status matrix of these devices can be found on the [[All devices]] page.
 {{#cargo_query:
 tables=Devices
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename
