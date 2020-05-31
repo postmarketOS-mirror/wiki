@@ -6,7 +6,7 @@ This page details the status of postmarketOS ports to various devices. If you ar
 These are the most supported devices, maintained by at least 2 people and have the functions you expect from the device running it's normal OS, like calling on a phone, working audio and a functional UI.
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,Released,Chipset,CPU,GPU,StatusFde=FDE,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,Released=Release year,Chipset,CPU,GPU,StatusFde=FDE,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
