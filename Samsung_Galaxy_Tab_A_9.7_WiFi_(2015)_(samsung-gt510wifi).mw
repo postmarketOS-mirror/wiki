@@ -25,7 +25,7 @@
 | status_mainline = Y
 | status_battery = N
 | status_3d = P
-| status_accel = N
+| status_accel = Y
 | status_audio = Y
 | status_bluetooth = Y
 | status_camera = N
@@ -84,7 +84,7 @@ Boot up the device after installation
 |-
 | Accelerometer || STMicroelectronics K2HH || [https://github.com/msm8916-mainline/linux/blob/master/drivers/iio/accel/st_accel_i2c.c Yes, supported in kernel fork] || Same as matissevewifi, should work without trouble
 |-
-| Light Sensor || Capella Micro CM3323 || Yes || Possibly missing DT bindings
+| Light Sensor || Capella Micro CM3323 || Yes || Missing DT bindings
 |-
 | Display || Samsung S6D7AA0 LTL101AT01 || No || Working in kernel fork
 |-
@@ -96,7 +96,7 @@ Boot up the device after installation
 |-
 | USB Switch || ? || ? ||
 |-
-| Proximity sensor || Semtech SX9500 || Yes || Not implemented in DT, used to check where the tablet is held
+| Proximity sensor || Semtech SX9500 || Yes || Working in kernel fork, proximity sensor on the front
 |-
 | GPU || Adreno 306 || Yes || Working in kernel fork
 |-
@@ -120,7 +120,7 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* [https://gitlab.com/jja2000/pmaports/tree/msm8916-mainline-t550/device/device-samsung-gt510wifi Device package (in my fork, pre-merge)]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-gt510wifi Device package]
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/main/linux-postmarketos-qcom-msm8916 Kernel package]
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
