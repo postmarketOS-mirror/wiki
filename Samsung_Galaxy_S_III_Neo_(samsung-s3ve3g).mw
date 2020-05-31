@@ -117,6 +117,15 @@ $ pmbootstrap install --sdcard=/dev/sdg
 $ pmbootstrap flasher flash_kernel
 </source>
 
+== Additional info ==
+Phone is booting fine but it only shows Samsung Galaxy logo. When it is in charging mode it shows postmarketOS charging error splash screen. 
+
+
+To set MAC address for USB networking:
+<source lang="shell-session">
+$ sudo ip link set dev enp0s20f0u1 address 12:12:12:12:12:12
+</source>
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
