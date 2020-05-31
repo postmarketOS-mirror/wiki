@@ -1,4 +1,3 @@
-{{note|IMPORTANT NOTE: THIS IS FOR THE GALAXY GRAND NEO (I9060), NOT THE GRAND NEO PLUS (I9060I)}}
 {{Infobox device
 | manufacturer = Samsung
 | name = Galaxy Grand Neo
@@ -36,7 +35,7 @@
 | status_otg = N
 | booting = yes
 }}
-
+{{note|'''Important!''' This will work with the Galaxy Grand Neo (I9060/I9060DS), but not the Galaxy Grand Neo Plus (I9060I).}}
 == Contributors ==
 * [[User:knuxfanwin8|knuxify]]
 * [[User:R|R]]
