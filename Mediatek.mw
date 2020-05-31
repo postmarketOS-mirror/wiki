@@ -1,5 +1,7 @@
 {{note|This page is WiP.}}
 
+For an overview of Mediatek devices, see [[:Category:Mediatek|Mediatek]].
+
 = Booting procedure =
 == Power applied to the SoC ==
 When chip is powered on the dram controller pushes the address of brom (boot rom, mask rom that is hardwired) to PC (program counter) and execution of rom begins.
