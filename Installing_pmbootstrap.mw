@@ -32,7 +32,7 @@ $ git clone https://gitlab.com/postmarketOS/pmbootstrap.git
 
 ==== Install ====
 <syntaxhighlight lang="shell-session">
-$ python3 "$PWD/pmbootstrap/setup.py" install
+$ cd pmbootstrap && python3 setup.py install
 </syntaxhighlight>
 
 == Installing manually ==
