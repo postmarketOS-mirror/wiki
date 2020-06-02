@@ -223,7 +223,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 |-
 | <code>flash_heimdall_partition_vbmeta</code>
 | For [[Android_Verified_Boot_(AVB)|AVB]] devices: set vbmeta partition to be flashed with a custom vbmeta.img which has verity flag disabled ({{MR|1936}}, {{MR|1885}}).
-| partition name, e.g. <code>vbmeta</code>
+| partition name, e.g. <code>VBMETA</code>
 |-
 
 | <code>boot_filesystem</code>
