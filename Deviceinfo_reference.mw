@@ -297,6 +297,7 @@ Change how the target device shows up when connected with USB to a host PC. {{MR
 * <code>nonfree</code>: Components of the device, that only run with closed source firmware. This is now legacy due to nobody uses it. ({{issue|438|pmaports}})
 * <code>dev_keyboard</code>: Originally intended to point osk-sdl to the hardware keyboard, but was never used. (It should detect hardware keyboards automatically...)
 
+=== Flash ===
 * <code>flash_fastboot_vendor_id</code>: fastboot used to have a <code>-i</code> option, but this was removed ({{issue|1830}}). Since we only had one device using this and nobody to verify if the option is really needed with this device, we decided to remove it. If you are interested in bringing it back, please create a new issue.
 
 == See also ==
