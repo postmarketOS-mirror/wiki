@@ -99,12 +99,12 @@ Not yet, as MSM8937 isn't in mainline. MSM8940 is similar to MSM8937.
 | Yes ([https://github.com/torvalds/linux/blob/master/drivers/input/touchscreen/edt-ft5x06.c edt-ft5x06.c])
 |-
 | scope="row"| Fingerprint Sensor
-| FPC1020
+| FPC1020/Goodix
 | No
 |-
 | scope="row"| Accelerometer + Gyroscope
-| ICM20607
-| No
+| ICM20607/BMI120
+| No/Yes ([https://github.com/torvalds/linux/blob/master/drivers/iio/imu/bmi160/bmi160_i2c.c bmi160_i2c.c])
 |-
 | scope="row"| ALSPS
 | STK3X1X
@@ -124,7 +124,7 @@ Not yet, as MSM8937 isn't in mainline. MSM8940 is similar to MSM8937.
 |-
 | scope="row"| Front Camera
 | OV5675
-| No
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/media/i2c/ov5675.c ov5675.c])
 |-
 | scope="row"| Back Camera
 | S5K3L8
