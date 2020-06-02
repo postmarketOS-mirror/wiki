@@ -88,8 +88,8 @@ There's mainlining work being done for this device by [[User:knuxfanwin8|knuxify
 |Driver in mainline
 |-
 |Display
-|HX8369 and/or SC7798
-|HX8369 is in mainline, SC7798 is not. Both are enabled in the kernel config, and both are defined in the downstream framebuffer config. It is unclear which display is actually used.
+|HX8369
+|Driver in mainline. Board files and framebuffer config also mention the SC7798, which is not in mainline, but appears to be unused.
 |-
 |Camera
 |Samsung S5K4ECGX and ??? db8v61m
