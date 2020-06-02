@@ -139,10 +139,6 @@ These are used for flashing and booting the device, and most of them are fastboo
 | Set this to true if your device expects a [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting#invalid-sparse-file-format-at-header-magi sparse system image] flashed
 |
 |-
-| <code>flash_fastboot_vendor_id</code>
-| Set this to your vendor id if fastboot requires the <code>-i</code> argument to work on your device
-|
-|-
 | <code>flash_fastboot_max_size</code>
 | Set this if the fastboot required by your device has an upper limit to the size of system images it will flash.
 | Size, in MB
@@ -300,6 +296,8 @@ Change how the target device shows up when connected with USB to a host PC. {{MR
 === Device ===
 * <code>nonfree</code>: Components of the device, that only run with closed source firmware. This is now legacy due to nobody uses it. ({{issue|438|pmaports}})
 * <code>dev_keyboard</code>: Originally intended to point osk-sdl to the hardware keyboard, but was never used. (It should detect hardware keyboards automatically...)
+
+* <code>flash_fastboot_vendor_id</code>: fastboot used to have a <code>-i</code> option, but this was removed ({{issue|1830}}). Since we only had one device using this and nobody to verify if the option is really needed with this device, we decided to remove it. If you are interested in bringing it back, please create a new issue.
 
 == See also ==
 * [[Device specific package]]
