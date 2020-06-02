@@ -72,10 +72,10 @@ When Recovery is fully loaded
 When the fastboot logo appears on the phone
 
 == Installation ==
-pmbootstrap creates a damaged boot.img, so you need to manually build boot.img
-<pre>mtkimg repack newboot.img -n -k vmlinuz-fly-iq4404 -r initramfs-fly-iq4404</pre>
 
-<pre>fastboot flash boot newboot.img</pre>
+
+<pre>fastboot flash boot boot.img-fly-iq4404</pre>
+
 == See also ==
 * {{MR|1213|pmaports}} Initial merge request
 <!--
