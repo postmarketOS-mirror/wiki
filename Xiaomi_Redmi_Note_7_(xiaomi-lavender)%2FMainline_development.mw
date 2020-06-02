@@ -196,4 +196,6 @@ Wi-Fi chip is the same as used in sdm845 for example - Qualcomm Atheros wcn3990.
 === Panel/touch notes ===
 Panel used in lavender is Tianma NT36672A, which is the same used in xiaomi-beryllium ([https://www.youtube.com/watch?v=-SRqxkMpeMc demo video]), except for the resolution (more height for lavender, 2340 instead of 2246). The source code for the panel is [https://github.com/pundiramit/linux/blob/beryllium-android-mainline/drivers/gpu/drm/panel/panel-tianma-nt36672a.c pundiramit's branch in tianma-nt36672a.c] file. According to the video touchscreen should be working too, but I can't find a source for it yet. Downstream has touchscreen in [https://github.com/minlexx/android_kernel_xiaomi_lavender/tree/lineage-16.0/drivers/input/touchscreen/nvt_touch_f7a drivers/input/touchscreen/nvt_touch_f7a].
 
+Beryllium commit that adds nt36xxx driver, copied almost as-is from downstream - https://github.com/Venji10/linux-beryllium/commit/075504c46b563a56998450e1975945589fcb5f26
+
 Also it seems like [https://github.com/pundiramit/linux/commit/313d05d11715c01841b01566a55c7d71754946ff panel requires new type of regulators] "'''LABIBB'''" (== LAB('''LCD AMOLED Boost''') / IBB('''Inverting Buck Boost''')) for which driver is not currently present in mainline (but there is a PR for that - https://patchwork.kernel.org/cover/11576211/).
