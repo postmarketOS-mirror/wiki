@@ -138,14 +138,7 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>flash_sparse</code>
 | Set this to true if your device expects a [https://github.com/postmarketOS/pmbootstrap/wiki/Troubleshooting#invalid-sparse-file-format-at-header-magi sparse system image] flashed
 |
-|-
-| <code>flash_fastboot_max_size</code>
-| Set this if the fastboot required by your device has an upper limit to the size of system images it will flash.
-| Size, in MB
-|-
-| <code>flash_fastboot_partition_vbmeta</code>
-| For [[Android_Verified_Boot_(AVB)|AVB]] devices: set vbmeta partition to be flashed with a custom vbmeta.img which has verity flag disabled ({{MR|1885}}).
-| partition name, e.g. <code>vbmeta</code>
+
 |-
 | <code>kernel_cmdline</code>
 | Kernel command line
@@ -181,7 +174,6 @@ These are used for flashing and booting the device, and most of them are fastboo
 | <code>true, false</code>
 |-
 
-|-
 | <code>generate_bootimg</code>
 | Set this to true for fastboot device, so the <code>mkinitfs</code> command will generate a <code>boot.img</code> file after creating the <code>initfs</code>. Add <code>mkbootimg</code> as dependency to your device's APKBUILD!
 | <code>true, false</code>
@@ -197,6 +189,8 @@ These are used for flashing and booting the device, and most of them are fastboo
 | default: <code>80008000</code>
 |-
 
+<!-- FASTBOOT -->
+
 | <code>flash_fastboot_partition_kernel</code>
 | Only relevant for [[Deviceinfo_flash_methods|fastboot]] flash methods, the partition where the kernel or boot.img will be stored ({{MR|1741}}).
 | default: <code>"boot"</code>
@@ -205,6 +199,16 @@ These are used for flashing and booting the device, and most of them are fastboo
 | Only relevant for [[Deviceinfo_flash_methods|fastboot]] flash methods, the partition where the system image will be stored (see also: [[partition-layout]]).
 | default: <code>"system"</code>
 |-
+| <code>flash_fastboot_partition_vbmeta</code>
+| For [[Android_Verified_Boot_(AVB)|AVB]] devices: set vbmeta partition to be flashed with a custom vbmeta.img which has verity flag disabled ({{MR|1885}}).
+| partition name, e.g. <code>vbmeta</code>
+|-
+| <code>flash_fastboot_max_size</code>
+| Set this if the fastboot required by your device has an upper limit to the size of system images it will flash.
+| Size, in MB
+|-
+<!-- HEIMDALL -->
+
 | <code>flash_heimdall_partition_kernel</code>
 | Only relevant for [[Deviceinfo_flash_methods|heimdall]] flash methods, the partition where the kernel or boot.img will be stored.
 | default: <code>"KERNEL"</code>
