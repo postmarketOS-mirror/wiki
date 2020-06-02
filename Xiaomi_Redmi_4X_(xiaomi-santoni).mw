@@ -20,7 +20,7 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = P
-| status_mainline = 
+| status_mainline = Y
 | status_battery = Y
 | status_3d = 
 | status_accel = 
@@ -71,7 +71,7 @@
 * Calls
 * Accelerometers
 * Bluetooth (partially)
-* 3D Acceleration (will never happen due to downstream kernel)
+* 3D Acceleration (possible on mainline)
 * Display Power Management on Wayland
 * Full Disk Encryption (does unlock, but failed to look up the partition after booting)
 
@@ -79,7 +79,10 @@
 * alsamixer doesn't work, will result in a error telling mixer controls doesn't exist, workaround to control the volume is to use PulseAudio.
 
 == Mainline kernel? ==
-Not yet, as MSM8937 isn't in mainline. MSM8940 is similar to MSM8937.
+There's ongoing effort to bring up mainline kernel on MSM8937 platform, with initial focus on santoni: [https://github.com/dreemurrs-embedded/santoni-linux].
+
+MSM8937/40 is pretty close to [https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_410/412_(MSM8916) MSM8916], so a lot of drivers can be re-used with proper device tree and minimal address remapping in some places.
+
 {| class="wikitable"
 |-
 ! scope="col"| Parts
