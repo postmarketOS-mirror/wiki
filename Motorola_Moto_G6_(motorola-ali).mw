@@ -1,18 +1,19 @@
 {{Infobox device
 | manufacturer = Motorola
-| name =  Moto G6
+| name = Moto G6
 | codename = motorola-ali
 | image = File:Motorola-ali-mate.jpg
 | imagecaption = Moto G6 with Mate desktop
 | releaseyear = 2018
 | originalsoftware = Android 8.0
+| pmoskernel = 3.18.140
 | chipset = Qualcomm Snapdragon 450 SDM450
 | cpu = 8x 1.8 GHz Cortex-A53
 | gpu = Adreno 506
-| storage = 32 or 64GB
+| storage = 32/64 GB
 | display = 1080x2160 
-| memory = 3 or 4GB
-| architecture = armv7
+| memory = 3/4 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
 | status_flashing = Y
@@ -37,10 +38,6 @@
 | booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.18.140
 see Unixbench page on wiki
 | whet_dhry = 0.0
 -->
@@ -69,16 +66,14 @@ Uclydde
 * Execute  <code> pmbootstrap flasher boot </code>
 
 == See also ==
-*{{MR|1071|pmaports}} Initial merge request
+* {{MR|1071|pmaports}} Initial merge request
+* {{MR|1281|pmaports}} Update to arm64, update gcc, remove unused patches
+* {{Device package|motorola-ali}}
+* {{Kernel package|motorola-ali}}
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-motorola-ali Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-motorola-ali Kernel package]
 -->
