@@ -78,7 +78,7 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | e.g. <code>1.094563 -0.020949 -34.586121 0.009427 -1.148506 503.816956</code>
 |-
 | <code>keymaps</code>
-| Lists keymap options that are available for this device, this will be shown as options in the pmbootstrap init command
+| Lists keymap options that are available for this device, this will be shown as options in the pmbootstrap init command, this will be passed to Alpine's setup-keymap command
 | <code>us/rx51_us ch/rx51_ch it/rx51_it</code>
 |-
 | <code>swap_size_recommended</code>
