@@ -5,6 +5,7 @@
 | image = File:sm-a300fu.png
 | imagecaption = Samsung Galaxy A3 (2015) running Plasma Mobile on mainline with hardware accelerated graphics 
 | releaseyear = 2014
+| category = community
 | originalsoftware = Android 4.4 KitKat (official update to Android 6.0.1 marshmallow)
 | chipset = Qualcomm MSM8916 Snapdragon 410
 | cpu = 1.2 GHz Quad ARM Cortex-A53
@@ -31,7 +32,7 @@
 | status_gps = N
 | status_mobiledata = N
 | status_sms = Y
-| status_calls = P
+| status_calls = Y
 | status_otg =
 | status = booting
 | booting = yes
