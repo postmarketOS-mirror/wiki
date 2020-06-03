@@ -146,3 +146,33 @@ lrwxrwxrwx root     root              2013-01-05 07:31 sysparm_dep -> /dev/block
 lrwxrwxrwx root     root              2013-01-05 07:31 system -> /dev/block/mmcblk0p17
 lrwxrwxrwx root     root              2013-01-05 07:31 userdata -> /dev/block/mmcblk0p19
 </syntaxhighlight>
+
+== GPIO pins ==
+
+* 91 - Something related to SD card
+* 24 - Power saving for UART GPS
+* 2, 111 - related to camera
+* 9, 10, 11 - buttons:
+<syntaxhighlight lang="c">
+#define GPIO_KEYS_SETTINGS { \
+      { KEY_VOLUMEUP,9, 1, "VOLUMEUP", EV_KEY, 0, 64}, \
+    { KEY_HOME, 10, 1, "HOME", EV_KEY, 0, 64},  \
+      { KEY_VOLUMEDOWN,11, 1, "VOLUMEDOWN", EV_KEY, 0, 64}, \
+}
+</syntaxhighlight>
+* 89 - irq pin for ambient sensor
+* 121, 70 - related to more buttons, possibly headset detection
+* 28, 71 - related to rfkill
+* 32, 72 - related to bluetooth(?)
+* 3, 74 - related to wifi
+* 24(?) - used by backlight
+* 113, 114, 56 - used by fsa9485 (musb switch)
+* 0 - related to konafb
+* 12, 13 - more related to camera
+
+=== Unused ===
+
+* 73, 70 - Related to unused touchscreens
+* 17, 16, 90 - Related to ISDBT (television transmission protocol in certain latin countries, only used on the dtv model released in latin countries(?))
+* 92 - used for unused bma2x2 sensor
+* 22 - used by konafb on BAFFINLITE_REV00, unused since the used one is REV02 which defines it as 0
