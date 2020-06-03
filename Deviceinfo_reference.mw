@@ -77,6 +77,10 @@ All variables start with <code>deviceinfo_</code> in the file - this is omitted 
 | Touchscreen calibration values (only necessary for devices with resistive touchscreen, [[Screen_Calibration#weston-calibrator_.28needed_for_resistive_touch_screens.29|more info]])
 | e.g. <code>1.094563 -0.020949 -34.586121 0.009427 -1.148506 503.816956</code>
 |-
+| <code>keymaps</code>
+| Lists keymap options that are available for this device, this will be shown as options in the pmbootstrap init command
+| <code>us/rx51_us ch/rx51_ch it/rx51_it</code>
+|-
 | <code>swap_size_recommended</code>
 | Set recommended swap file size for device. If unset, no swap file will be created for the device.
 | Integer, in MB.
