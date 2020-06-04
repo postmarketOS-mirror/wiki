@@ -3,7 +3,7 @@
 | name = Galaxy S III Neo
 | codename = samsung-s3ve3g
 | image = File:samsung-s3ve3g.jpg
-| imagecaption = Samsung Galaxy S III Neo
+| imagecaption = Samsung Galaxy S III Neocommints
 | releaseyear = 2014
 | originalsoftware = Android 4.4.4 (KitKat)
 | chipset = Qualcomm MSM8226 Snapdragon 400
@@ -148,3 +148,8 @@ If you manage to get your device packages merged, uncomment links below and chan
 * {{Device package|DEVICE_CODENAME}}
 * {{Kernel package|DEVICE_CODENAME}}
 -->
+
+== Photos ==
+<gallery>
+File:firefox_weston.jpg|thumb|left|Firefox running on Weston
+</gallery>
