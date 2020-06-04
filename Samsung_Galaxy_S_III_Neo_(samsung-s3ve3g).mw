@@ -14,12 +14,12 @@
 | memory = 1397 MB <!-- e.g. 576 MB -->
 | architecture = armv7 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = Y<!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = Y<!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y<!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
@@ -32,7 +32,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = booting, stays at Samsung logo<!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
@@ -67,6 +67,11 @@ Is OTG available, not used in wiki
 * Initramfs boot
 * USB Network with internet
 * SSH Connectivity 
+* Framebuffer graphics (Splash screens)
+* Touchscreen
+* Xwayland
+* Weston on framebuffer
+* Firefox on Weston (Xwayland)
 
 == What does not work ==
 * Everything else was untested
@@ -118,13 +123,7 @@ $ pmbootstrap flasher flash_kernel
 </source>
 
 == Additional info ==
-Phone is booting fine but it only shows Samsung Galaxy logo. When it is in charging mode it shows postmarketOS charging error splash screen. 
-
-
-To set MAC address for USB networking:
-<source lang="shell-session">
-$ sudo ip link set dev enp0s20f0u1 address 12:12:12:12:12:12
-</source>
+Phone is booting fine. When in charging mode it shows postmarketOS charging error splash screen. 
 
 * Back flashlight:
 <source lang="shell-session">
