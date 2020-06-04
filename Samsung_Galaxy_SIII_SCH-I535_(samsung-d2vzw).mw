@@ -71,6 +71,9 @@ Set phone to ODIN mode
 == Installation ==
 Clone from [https://gitlab.com/Worldblender/pmaports https://gitlab.com/Worldblender/pmaports], as this device is currently not yet merged upstream.
 
+After the flashing process is done, results should be similar to the image below:
+[[File:samsung-d2vzw_splash-screen.jpg|200px]]
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
