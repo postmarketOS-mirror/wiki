@@ -126,6 +126,12 @@ To set MAC address for USB networking:
 $ sudo ip link set dev enp0s20f0u1 address 12:12:12:12:12:12
 </source>
 
+* Back flashlight:
+<source lang="shell-session">
+$ echo 255 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness # turn on
+$ echo 0 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness   # turn off
+</source>
+
 == Issues ==
 * charging-sdl is broken on this device.
 
