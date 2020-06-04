@@ -126,6 +126,9 @@ To set MAC address for USB networking:
 $ sudo ip link set dev enp0s20f0u1 address 12:12:12:12:12:12
 </source>
 
+== Issues ==
+* charging-sdl is broken on this device.
+
 == See also ==
 * {{MR|1278|pmaports}} Initial merge request
 <!--
