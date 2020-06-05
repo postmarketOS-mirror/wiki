@@ -186,6 +186,7 @@ $ echo 0 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness   # turn of
 |cypress_touchkey
 |/devices/i2c.82/i2c-21/21-0020
 |-
+|}
 <!--
 |CPU Temperature Sensor
 |
@@ -222,7 +223,6 @@ $ echo 0 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness   # turn of
 |
 |-
 --!>
-|}
 
 == Issues ==
 * charging-sdl is broken on this device.
