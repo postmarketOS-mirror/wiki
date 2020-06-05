@@ -19,7 +19,7 @@
 | status_touch = P
 | status_screen = Y<!-- The display is working? -->
 | status_wifi = Y
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = <!-- Charging the battery with charging-sdl is possible -->
@@ -59,6 +59,16 @@ Is OTG available, not used in wiki
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
+== What works ==
+
+* USB Network
+* Framebuffer graphics (Splash screens)
+* SSH Connectivity
+* Touchscreen
+* Wi-Fi
+* Xwayland
+* Weston on framebuffer
+
 == How to enter fastboot mode ==
 Hold {{Button|Volume Down|Power}} buttons to enter the Bootloader and select Fastboot then with a {{Button|Power}}.
 
@@ -76,3 +86,8 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
+
+== Photos ==
+<gallery>
+File:htc_desire_x_thunar.jpg|thumb|left|Thunar file manager on Weston
+</gallery>
