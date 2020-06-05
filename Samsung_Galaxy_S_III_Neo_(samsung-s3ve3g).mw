@@ -131,6 +131,99 @@ $ echo 255 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness # turn on
 $ echo 0 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness   # turn off
 </source>
 
+* Hardware information
+
+{| class="wikitable feature-colors"
+!Peripheral Type
+!Driver
+!Device
+|-
+|Accelerometer
+|mpu6500_input
+|/devices/f9924000.i2c/i2c-2/2-0068
+|-
+|Camera
+|s5k6a3yx (front)<br/>s5k4h5yb(Samsung) or imx175(Sony) (back)
+|- 
+|-
+|Camera Actuator
+|msm_actuator
+|/devices/i2c.78/i2c-20/20-0036
+|-
+|Charger
+|sm5502
+|/devices/i2c.0/i2c-15/15-0025
+|-
+|GPU
+|Adreno 305
+| -
+|-
+|Gyroscope
+|mpu6500_input
+|/devices/f9924000.i2c/i2c-2/2-0068
+|-
+|Magnetic field sensor
+|yas532
+|/devices/f9924000.i2c/i2c-2/2-002e
+|-
+|NFC
+|pn547
+|/devices/f9925000.i2c/i2c-3/3-002b
+|-
+|Light and proximity sensor
+|cm36651
+|/devices/i2c.81/i2c-23/23-0018
+|-
+|RGB Led
+|an30259a
+|/devices/i2c.81/i2c-23/23-0030
+|-
+|Touchscreen
+|mms144_ts
+|/devices/f9927000.i2c/i2c-5/5-0048
+|-
+|Touchscreen buttons
+|cypress_touchkey
+|/devices/i2c.82/i2c-21/21-0020
+|-
+<!--
+|CPU Temperature Sensor
+|
+|
+|-
+|Display Panel
+|
+|
+|-
+|GPS
+|
+|
+|-
+--!>
+<!--
+|Vibration Motor
+|
+|
+|-
+|Voltage Regulators
+|
+|
+|-
+|Wifi / Bluetooth
+|
+|
+|-
+|3G Modem
+|
+|
+|-
+|3.5mm Jack
+|
+|
+|-
+--!>
+|}
+
 == Issues ==
 * charging-sdl is broken on this device.
 
