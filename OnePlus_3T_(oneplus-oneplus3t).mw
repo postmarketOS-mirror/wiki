@@ -75,7 +75,9 @@ Good luck.
 
 
 == How to enter flash mode ==
-Once the device is unlocked, hold power to boot and on the warning screen, press a volume key to enter the system boot menu. Choose Fastboot.
+# After the bootloader is unlocked press the {{button|Power}} button and you should see the warning screen. Press {{button|Volume Up/Down}} to open the boot options. 
+# Select <code>Fastboot</code> and press {{button|Power}}
+You are now ready to flash.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
