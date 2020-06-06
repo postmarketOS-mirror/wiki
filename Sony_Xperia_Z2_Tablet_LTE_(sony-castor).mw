@@ -68,9 +68,8 @@ This might not work if the device is in factory settings, so setup Android once.
 * hold volume up and connect USB to computer to enter fastboot (LED should switch from red to blue)
 <source lang="bash">$ pmbootstrap init</source>
 * select <code>sony</code> and <code>castor</code>
-<source lang="bash">$ pmbootstrap install</source>
-* NOTE: plasma-mobile is too large, use [[Installation_from_recovery_mode]] instead
-<source lang="bash">$ pmbootstrap flasher flash_rootfs
+<source lang="bash">$ pmbootstrap install
+$ pmbootstrap flasher flash_rootfs
 $ pmbootstrap flasher flash_kernel</source>
 
 ==== Plasma Mobile ====
