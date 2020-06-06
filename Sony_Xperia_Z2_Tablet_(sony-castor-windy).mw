@@ -35,10 +35,12 @@
 }}
 
 == Contributors ==
-
 * bjorn andersson (ported device to 4.3)
 * robclark (freedreno support)
 * opendata26
+
+== Users owning this device ==
+{{Device owners}}
 
 == What works ==
 
