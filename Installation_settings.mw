@@ -1,7 +1,7 @@
 __NOTOC__
-{{note|WIP reference related to OEM installer {{issue|463|pmaports}}}}
+{{note|WIP reference related to on-device installer {{issue|463|pmaports}}}}
 
-During or right after the installation of an operating system, it makes sense to ask the user a few questions for some basic configuration. In postmarketOS, this configuration is done in <code>pmbootstrap init</code>. A graphical frontend for pmbootstrap will likely just ask the same questions. This document is about defining what pmbootstrap asks versus what we want to ask the user in an OEM installer.
+During or right after the installation of an operating system, it makes sense to ask the user a few questions for some basic configuration. In postmarketOS, this configuration is done in <code>pmbootstrap init</code>. A graphical frontend for pmbootstrap will likely just ask the same questions. This document is about defining what pmbootstrap asks versus what we want to ask the user in an on-device installer.
 
 Questions that do not make sense outside of pmbootstrap, such as the path to the work dir or the ccache size are not listed here.
 
@@ -9,7 +9,7 @@ Questions that do not make sense outside of pmbootstrap, such as the path to the
 {| class="wikitable sortable"
 !Setting
 !Ask in pmbootstrap
-!Ask in OEM installer (planned)
+!Ask in on-device installer (planned)
 !Notes
 |-
 | Keymap
