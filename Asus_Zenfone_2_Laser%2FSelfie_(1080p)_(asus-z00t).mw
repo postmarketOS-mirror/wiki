@@ -41,6 +41,9 @@
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
 
+
+== Device owners ==
+{{Device owners}}
 == How to enter flash mode ==
 
 Volume up + power
@@ -50,5 +53,6 @@ Volume up + power
 == Installation ==
 
 == See also ==
-
-* {{github|1552}} Initial pull request
+* {{Device package|asus-z00t}}
+* {{Kernel package|asus-z00t}}
+* {{MR|1552}} MR pull request
