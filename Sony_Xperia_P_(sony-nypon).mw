@@ -65,6 +65,13 @@ Volume Up + Plug in USB cable
 == Installation ==
 * pmbootstrap flasher flash_kernel
 * pmbootstrap flasher flash_rootfs
+
+
+== Mainline ==
+DarkNeutrino is working on kind of a port of mainline kernel for the device.
+The UART is not functional and im not sure if its loading the kernel even but it should but may be crashing very very early.
+Also to avoid data fault the kernel needs to be uncompressed as having it compressed data aborts the device.
+
 == Issues ==
 The device seems to be having issue with unpacking ramdisk when CONFIG_VT is enabled for some reason.
 When being connected via UART i can see the kernel trying to do something with the ramdisk but it fails. Disabling CONFIG_VT it goes to crazy mode as /dev/tty isnt there and spams the log with that.
