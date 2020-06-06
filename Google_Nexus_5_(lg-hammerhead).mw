@@ -166,7 +166,7 @@ If the interface hangs, restarting LightDM with <code>sudo rc-service lightdm re
 
 '''Browsing'''
 
-- Epiphany does not load content;
+- Epiphany works well, but doesn't load youtube videos and tends to crash after a while;
 
 - Chromium crashes;
 
