@@ -1,2 +1,7 @@
 Mediatek flashing protocol
+
+If you want to flash firmware to Mediatek-based devices, there is a proprietary Tool for that: [https://spflashtool.com/ SPflahstool].
+
+It is e.g. used for the [[Wiko Lenny 3 (wiko-lenny3)]]
+
 [[Category:low-level]]
