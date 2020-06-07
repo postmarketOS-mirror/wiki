@@ -442,14 +442,13 @@ In the center you will see 4 test points that are available. (See the picture) T
 
 == Links ==
 * {{MR|1095|pmaports}} Initial merge request
-* {{issue|494|pmaports}} How to make Wi-Fi work?
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-xiaomi-lavender Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-xiaomi-lavender Downstream kernel package]
+* {{Device package|xiaomi-lavender}}
+* {{Kernel package|xiaomi-lavender}}
 * [https://gitlab.com/postmarketOS/pmaports/tree/master/main/linux-postmarketos-qcom-sdm660 Mainline kernel package]
+* {{issue|494|pmaports}} How to make Wi-Fi work?
 * [https://gitlab.com/postmarketOS/linux-postmarketos/tree/qcom-sdm660 Current mainline kernel development branch]
-* [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)/Mainline_development|Mainline development]]
+* [[Xiaomi_Redmi_Note_7_(xiaomi-lavender)/Mainline_development|Mainline development BLOG]]
 * [https://github.com/NixOS/mobile-nixos/pull/28 NixOS-mobile lavender MR]
 * https://www.youtube.com/watch?v=6GqXqW2Nygc Disassembling video (Rus)
 * https://www.anandtech.com/show/11338/qualcomm-announces-snapdragon-660-630-mobile-platforms
-* [https://www.kimovil.com/en/list-smartphones-by-processor/qualcomm-snapdragon-660-msm8976-plus List of mobile phones on SDM660 SoC]
-* [https://www.gsmarena.com/results.php3?nRamMin=2000&sFreeText=sdm660 Another list of mobile phones on SDM660 SoC]
+* List of mobile phones on SDM660 SoC: [https://www.kimovil.com/en/list-smartphones-by-processor/qualcomm-snapdragon-660-msm8976-plus 1], [https://www.gsmarena.com/results.php3?nRamMin=2000&sFreeText=sdm660 2]
