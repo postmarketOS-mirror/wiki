@@ -1,14 +1,14 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Tab 4 10.1 (wifi) (SM-T530)
+| name = Galaxy Tab 4 10.1 (wifi) (SM-T530)
 | codename = samsung-matissewifi
 | image = File:samsung-matissewifi.jpg
 | imagecaption = Samsung Galaxy Tab 4 10.1 (Wi-Fi)
 | releaseyear = 2014
 | originalsoftware = Android 4.4.2 (KitKat)
 | chipset = Qualcomm MSM8226 Snapdragon 400
-| cpu = 4 cores up to 1.2 GHz Cortex-A7
-| gpu = Qualcomm Adreno 305 GPU
+| cpu = 4x 1.2 GHz Cortex-A7
+| gpu = Adreno 305
 | storage = 16/32 GB flash memory, microSDXC slot (up to 64 GB)
 | display = 1280×800 px, 10.1" in (26 cm) diagonal, WXGA TFT display (LCM: smd_ltl101al06, touchscreen: atmel_mxt_1188s)
 | memory = 1.5 GB
@@ -62,11 +62,13 @@ Won't work with SM-T533 and SM-T536 models.
 
 == See also ==
 
-* {{MR|560|pmaports}}
+* {{MR|560|pmaports}} Initial merge request
 * [https://github.com/GalaxyTab4/android_kernel_samsung_matissewifi Kernel source]
 * [https://eu.dl.twrp.me/matisse/ TWRP]
 * [https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_4_10.1 Specs on Wikipedia]
 * [http://www.deviceinfohw.ru/devices/item.php?item=24514 Specs on deviceinfohw.ru]
+* {{Device package|samsung-matissewifi}}
+* {{Kernel package|samsung-matissewifi}}
 
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
@@ -74,9 +76,4 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
 -->
