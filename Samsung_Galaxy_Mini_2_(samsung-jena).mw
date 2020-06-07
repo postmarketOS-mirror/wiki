@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Samsung
-| name =  Galaxy Mini 2
+| name = Galaxy Mini 2
 | codename = samsung-s6500d, s6500, jena
 | image = File:samsung-s6500d.jpg
 | imagecaption = Samsung s6500d
@@ -8,9 +8,9 @@
 | originalsoftware = Android 2.3.4
 | pmoskernel= 3.4 from Cyanogen
 | chipset =  Qualcomm MSM7227A Snapdragon S1
-| cpu = ARM Cortex-A5 800 Mhz
+| cpu = 800 Mhz Cortex-A5
 | gpu = Adreno 200
-| storage = 4GB
+| storage = 4 GB
 | display = 320×480
 | memory = physically probably 512MiB, limited by kernel to ~385MiB (faulty dices/Java something?)
 | architecture = armhf
@@ -45,7 +45,7 @@
 * [[user:Halamix2|Halamix2]]
 
 == Maintainer(s) ==
-* also [[user:Halamix2|Halamix2]]
+* [[user:Halamix2|Halamix2]]
 
 == Users owning this device ==
 {{Device owners}}
