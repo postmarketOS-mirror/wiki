@@ -54,13 +54,14 @@ The first step to do anything with the device is unlocking, with this device its
 * Doesn't go beyond bootlogo
 * Having problems compiling with APANIC flag (to read last_kmesg - and figure out why)
 
-== How to enter flash modes ==
+== Installation ==
+=== How to enter flash modes ===
 Turn tablet off if it is in the system. Then press POWER and VOL DOWN buttons till you feel the vibration. Then release the POWER only. You will enter the bootloader. In bootloader navigate with VOL DOWN button and to choose option use VOL UP button.
 
-== Fastboot issue ==
+=== Fastboot issue ===
 The bootloader doesn't handle flashing the boot and userdata partition correctly, the official firmware package flashes an "Android blob" to the staging partition with fastboot which triggers an flashing screen on the tablet which copies the data to the correct partitions. Flashing ordinary images using TWRP recovery goes properly. Using latest TWRP is highly recommended.
 
-== Installation ==
+=== Flashing ===
 You need to be running Katkiss 7.1 (with TWRP 3.0.0 and hairy bean bootloader). Please follow this [https://forum.xda-developers.com/transformer-prime/help/guide-tutorial-asus-transformer-prime-t3486237 guide on XDA] if you're not.
 
 # <pre>./pmbootstrap.py install</pre>
