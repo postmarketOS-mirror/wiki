@@ -92,16 +92,24 @@ Note: Other ways of flashing do not work. This is exactly how the katkiss androi
 |HannStar HSD101PWW2 Rev0-A00/A01 LCD SuperIPS+ HD panel.
 |-
 | N
+|HDMI output
+|HDMI lines are present in device tree.
+|-
+| N
 |Touchscreen
 |Used Atmel MXT768E touchscreen.
 |-
 | N
 |USB
-|
+|One full size USB 2.0 in dock or via 40pin adapter.
 |-
 | N
-|SDHCI
-|
+|SD HCI
+|MicroSD card and full sized SD card in dock.
+|-
+| N
+|Internal memory
+|eMMC by Kingston KE4BT5D6A or Hynix H26M64002BNR.
 |-
 | N
 |GPS
@@ -121,7 +129,11 @@ Note: Other ways of flashing do not work. This is exactly how the katkiss androi
 Additionally GPIO-keys like are LID sensor, Power adapter 15V and Audio dock line-out detect.
 |-
 | N
-|Dock Keyboard
+| Vibro
+|Transformer Prime has GPIO based vibrator.
+|-
+| N
+| Dock Keyboard
 |It is handled via Nuvoton NPCE795LA0BX embedded controller and driver is mostly mainlined.
 |-
 | N
@@ -129,12 +141,20 @@ Additionally GPIO-keys like are LID sensor, Power adapter 15V and Audio dock lin
 |Driver is based on Texas Instruments bq24725 SMBus Charge Controller driver but works through pad/dock EC.
 |-
 | N
+| PMIC
+|Transformers use Texas Instruments TPS659110 PMIC and TPS62361 core regulator.
+|-
+| N
 |Sound
-|Sound codec is RT5631 and needs additional maintenance it kernel.
+|Sound codec is RT5631 and needs additional maintenance in kernel.
+|-
+| N
+|Voice processor
+|Transformers use separate Fortemedia FM34NE voice processor, which needs additional maintenance in kernel.
 |-
 | N
 |Thermal sensor
-|
+|NCT1008 ON Semiconductor LM90 series thermometer.
 |-
 | N
 |Orientation sensors
@@ -146,15 +166,15 @@ Additionally GPIO-keys like are LID sensor, Power adapter 15V and Audio dock lin
 |-
 | N
 |Front camera
-|Aptina mi1040 camera sensor
+|Aptina mi1040 camera sensor.
 |-
 | N
 |Rear camera
-|Fujitsu MBG048 image processor
+|Fujitsu MBG048 image processor.
 |-
 | P
-|3D support
-| See [[Nvidia_Tegra_2_(tegra20)#Graphics]]
+|ULP GeForce
+| [[Nvidia_Tegra_2_(tegra20)#Graphics|GPU Acceleration]] partially works.
 |-
 |}
 
