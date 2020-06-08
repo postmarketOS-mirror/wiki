@@ -52,7 +52,7 @@
 === MSM8916 (Snapdragon 410) ===
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
@@ -62,7 +62,7 @@ tables=Devices
 === APQ8016 (Snapdragon 410, WiFi-only) ===
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
@@ -72,7 +72,7 @@ tables=Devices
 === MSM8916v2 (Snapdragon 412) ===
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
