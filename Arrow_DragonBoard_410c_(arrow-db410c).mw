@@ -70,6 +70,8 @@ If you want to access Fastboot again later (after flashing a boot image), press 
 == Installation ==
 Follow the [[Installation guide]]. Use <code>pmbootstrap flasher flash_rootfs</code> and <code>pmbootstrap flasher flash_kernel</code> or <code>pmbootstrap flasher boot</code>.
 
+{{note|'''Note:''' On the first boot the file system will be extended to span the entire SD card. This may take several minutes. You can see this if the disk LED (3) is active.}}
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
