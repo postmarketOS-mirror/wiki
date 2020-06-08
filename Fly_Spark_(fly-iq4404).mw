@@ -73,7 +73,12 @@ When the fastboot logo appears on the phone
 
 == Installation ==
 
+You can install it on an sd card or flash it on your phone through recovery. To do this, instead of pmbootstrap install, run
+<pre>./pmbootstrap.py install  --android-recovery-zip --recovery-install-partition=data</pre>
+It loads into recovery (I checked on twrp), go to advanced ones and click adb sideload. We connect the usb cable and run
+<pre>./pmbootstrap.py flasher --method=adb sideload</pre>
 
+And flashing the kernel
 <pre>fastboot flash boot boot.img-fly-iq4404</pre>
 
 == See also ==
