@@ -26,6 +26,11 @@ mmcli -m 0 --simple-connect='apn=web.be,user=web,password=web,pin=1111'
 
 This makes phone calls work.
 
+== Screen Scaling ==
+The Phosh screen may be scaled lower for better compatibility with existing applications. Change the scale by modifying the scale factor variable found in /usr/share/phosh/phoc.ini, which has a default value of 2.
+
+Screen scaling may also be performed on-demand from the command line or by making an application by following the Purism [https://wp.puri.sm/posts/easy-librem-5-app-development-scale-the-screen/ Easy Librem 5 App Development: Scale the Screen] blog post. Those instructions work well for devices running Phosh even if written for a Librem5 running PureOS (Debian-based OS). Keep in mind some commands will need to be modified to work on PostmarketOS.
+
 == Apps ==
 
 {| class="wikitable"
