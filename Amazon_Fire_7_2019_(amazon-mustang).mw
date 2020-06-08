@@ -78,20 +78,17 @@ There is some work on mt8163 mainline, for amazon-karnak, but it will be easy to
 * Panfrost (driver for mali-t720) is wip, and not avalible in downstream (Merged in linux 5.2)
 * This device use exploit due to locked bootloader. See #Amonet.
 * This device's bl is not very good for running linux, due to it appends much of bad cmdline params, and some things in device tree.
+
 == See also ==
-Todo
 * {{MR|1263|pmaports}} Initial merge request
+* {{Device package|amazon-mustang}}
+* {{Kernel package|amazon-mustang}}
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|1263|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-DEVICE_CODENAME Kernel package]
 -->
 
 [[Category:Mediatek]]
