@@ -29,7 +29,7 @@ Intel Bay Trail is a chipset used for many x86-based Intel tablets in 2014-2015.
 == Devices ==
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
