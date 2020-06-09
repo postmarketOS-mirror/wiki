@@ -64,6 +64,10 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 * Same as recovery, but this time hold the {{button|Volume Down}} and {{button|Power}} keys.
 
 
+== Getting logs through debug UART ==
+Untested yet <br />
+[[File:Xiaomi-cepheus_UART_pins.jpg|457px]]
+
 
 == Links ==
 <!-- * {{MR|1095|pmaports}} Initial merge request -->
