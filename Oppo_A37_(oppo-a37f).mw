@@ -6,7 +6,7 @@
 | imagecaption = CHANGE_ME
 | releaseyear = 2016
 | originalsoftware = Android 5.1.1
-| chipset = Qualcomm Snapdragon 410
+| chipset = Qualcomm MSM8916 Snapdragon 410
 | cpu = Quad-core 1.2 Ghz Cortex-A53
 | gpu = Adreno 306
 | storage = 16 GB
@@ -74,6 +74,6 @@ You can also add normal web links:
 -->
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-DEVICE_CODENAME Kernel package]
+* {{Device package|DEVICE_CODENAME}}
+* {{Kernel package|DEVICE_CODENAME}}
 -->
