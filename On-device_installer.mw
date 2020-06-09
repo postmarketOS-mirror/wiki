@@ -46,7 +46,7 @@ The partition layout looks like this now:
 
 initramfs:
 * deletes the pmOS_deleteme_install partition
-* resizes pmOS_root to use up all space (even beyond pmOS_deleteme_install)
+* resizes pmOS_root to use up all available free space (even beyond pmOS_deleteme_install)
 * runs osk-sdl as usually for encrypted installations
 * boots into pmOS_root
 
