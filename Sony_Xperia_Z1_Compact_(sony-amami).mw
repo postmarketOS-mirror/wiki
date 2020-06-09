@@ -89,3 +89,5 @@ If you select `xfce4` UI when building, after you boot it, you can make it more 
 == Links ==
 
 * [https://web.archive.org/web/20161225005457/https://wiki.cyanogenmod.org/w/Amami_Info CM wiki archive]
+* {{Device package|sony-amami}}
+* {{Kernel package|sony-amami}}
