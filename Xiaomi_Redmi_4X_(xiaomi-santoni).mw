@@ -111,7 +111,7 @@ MSM8937/40 is pretty close to [https://wiki.postmarketos.org/wiki/Qualcomm_Snapd
 |-
 | scope="row"| ALSPS
 | STK3X1X
-| No
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/iio/light/stk3310.c stk3310.c])
 |-
 | scope="row"| Magnetometer
 | YAS537
