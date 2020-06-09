@@ -37,16 +37,16 @@ Calamares runs:
 * shows the custom [https://gitlab.com/postmarketOS/postmarketos-ondev/-/tree/master/calamares/modules/partitionq "partitionq"] module (and others in the future)
 * "partitionq" asks for the FDE password, formats the target partition with cryptsetup and ext4 and mounts it (bypassing some of the usual Calamares logic, as Calamares relies on grub2 and encrypted initramfs)
 * [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/calamares/config/modules/unpackfs.conf "unpackfs"] extracts rootfs.img and gives a nice progress bar
-* [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/calamares/config/modules/shellprocess.conf "shellprocess"] renames pmOS_install to pmOS_deleteme_install and reboots
+* [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/calamares/config/modules/shellprocess.conf "shellprocess"] renames pmOS_install to pmOS_deleteme and reboots
 
 The partition layout looks like this now:
 * p1: label=pmOS_boot
 * p2: label=pmOS_root
-* p3: label=pmOS_deleteme_install
+* p3: label=pmOS_deleteme
 
 initramfs:
-* deletes the pmOS_deleteme_install partition
-* resizes pmOS_root to use up all available free space (even beyond pmOS_deleteme_install)
+* deletes the pmOS_deleteme partition
+* resizes pmOS_root to use up all available free space (even beyond pmOS_deleteme)
 * runs osk-sdl as usually for encrypted installations
 * boots into pmOS_root
 
