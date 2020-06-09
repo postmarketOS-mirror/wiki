@@ -60,5 +60,5 @@
 
 == See also ==
 * {{github|1200}} Initial pull request
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-sony-scorpion Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-sony-scorpion Kernel package]
+* {{Device package|sony-scorpion}}
+* {{Kernel package|sony-scorpion}}
