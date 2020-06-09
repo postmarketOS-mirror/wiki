@@ -9,7 +9,7 @@
 | chipset = Qualcomm MSM8974AC Snapdragon 801
 | cpu = Quad-core 2.5 GHz Krait 400
 | gpu = Adreno 330
-| storage = 16 GB 
+| storage = 16 GB
 | display = 1080x1920 IPS
 | memory = 2 GB
 | architecture = armv7
@@ -81,8 +81,8 @@ This is using fastboot
 
 == See also ==
 * {{MR|1190|pmaports}} Initial merge request
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-sony-leo Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-sony-leo Kernel package]
+* {{Device package|sony-leo}}
+* {{Kernel package|sony-leo}}
 * [https://developer.sony.com/develop/open-devices/guides/access-uart-ports/] for how to access UART
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
