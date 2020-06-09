@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia M
+| name = Xperia M
 | codename = sony-nicki
 | image = File:sony-nicki.jpg
 | imagecaption = Sony Xperia M
@@ -114,3 +114,5 @@ If using a large rootfs (like with plasma-mobile) fastboot with throw a "no spac
 * {{MR|1611}} Initial merge request
 * [https://gitlab.com/postmarketOS/pmbootstrap/merge_requests/1604#note_85239812 display hack] (needs to be reworked in the future to make it compatible with a display manager)
 * [https://gitlab.com/postmarketOS/pmaports/issues/184 Mainline kernel notes]
+* {{Device package|sony-nicki}}
+* {{Kernel package|sony-nicki}}
