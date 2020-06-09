@@ -27,7 +27,7 @@
 == Devices ==
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
