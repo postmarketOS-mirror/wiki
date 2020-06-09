@@ -16,7 +16,8 @@ $ pmbootstrap install --ondev [--sdcard]
 * prepare the device rootfs, and create an image from it as usually (more or less)
 * prepare a new installer rootfs
 * copy the device rootfs image into the installer rootfs as /var/lib/rootfs.img
-* install postmarketos-ondev, postmarketos-base and the device- package into the installer rootfs
+* install postmarketos-ondev, postmarketos-base and the device-package into the installer rootfs
+* runs [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/ondev-prepare.sh ondev-prepare.sh] (currently not doing anything)
 * create an image from the installer rootfs, with reserved space
 
 The installer image has the following partition layout:
