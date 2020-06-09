@@ -74,7 +74,8 @@ $ ./pmbootstrap.py flasher flash_kernel</source>
 
 == Links ==
 
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-sony-castor-windy Device package]
+* {{Device package|sony-castor-windy}}
+* {{Kernel package|sony-castor-windy}}
 * [https://github.com/andersson/kernel Kernel source]
 
 == Wifi ==
