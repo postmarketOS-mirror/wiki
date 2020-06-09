@@ -63,6 +63,6 @@ Then put your device into recovery, and enter sideloading mode.
 * {{MR|1056|pmaports}} Initial merge request
 <!--
 If you manage to get your device packages merged, uncomment links below.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-sony-sumire Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-sony-sumire Kernel package]
+* {{Device package|sony-sumire}}
+* {{Kernel package|sony-sumire}}
 -->
