@@ -36,8 +36,6 @@
 | booting = yes <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
@@ -64,7 +62,7 @@ Is OTG available, not used in wiki
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == See also ==
-* {{MR|758|pmaports}} Initial merge request
+* {{MR|758|pmaports}} Initial (closed, not merged) merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
@@ -74,6 +72,6 @@ You can also add normal web links:
 -->
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-DEVICE_CODENAME Kernel package]
+* {{Device package|DEVICE_CODENAME}}
+* {{Kernel package|DEVICE_CODENAME}}
 -->
