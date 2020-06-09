@@ -116,3 +116,9 @@ Follow the [[Installation guide]].
 == References ==
 
 * [https://github.com/LineageOS/android_kernel_sony_msm8974 Kernel Source]
+
+== See also ==
+
+* {{MR|500}} Initial merge request
+* {{Device package|sony-yuga}}
+* {{Kernel package|sony-yuga}}
