@@ -34,14 +34,13 @@ Identical driver and experience as for [[Nvidia_Tegra_2_(tegra20)#Graphics]]
 === Test & Review ===
 
 == Devices with a Nvidia Tegra 3 Chipset ==
-{{todo|Update the condition in the table to work generic.}}
 {{#cargo_query:
 tables=Devices
 |fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,StatusMainline=Mainline
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999 
-|where=Devices.chipset='Nvidia Tegra 3' OR Devices.chipset='Nvidia Tegra 3 T30' OR Devices.chipset='Nvidia Tegra 3 T33' OR Devices.chipset='Nvidia Tegra 3 T30S' OR Devices.chipset='NVIDIA Tegra 3+ AP37'
+|where=Booting and Devices.chipset like 'Nvidia Tegra 3%'
 |more results text=
 }}
 
