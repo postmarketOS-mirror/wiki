@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia L
+| name = Xperia L
 | codename = sony-taoshan
 | image = File:Sony-Taoshan.jpg
 | imagecaption = Replacement image
@@ -65,8 +65,11 @@ From LineageOS wiki: With the device powered off, hold Volume Up and connect the
 == Installation ==
 [[Installation guide]]
 
-
-<!--== See also ==
+== See also ==
+* {{MR|71|pmaports}} Initial merge request
+* {{Device package|sony-taoshan}}
+* {{Kernel package|sony-taoshan}}
+<!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
 * {{issue|CHANGEME}} Some related issue
