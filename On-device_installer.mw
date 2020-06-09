@@ -79,6 +79,9 @@ $ yes | pmbootstrap install --ondev
 $ pmbootstrap qemu
 </syntaxhighlight>
 
+==== Enable SSH server in Calamares ====
+This is currently possible by checking out postmarketos-ondev, commenting in [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/a1aa4a9397778f3b479b0535692f4d37c1852ae5/ondev-boot.sh#L59 this line] and building it as described above.
+
 === Related ===
 * [https://gitlab.com/postmarketOS/postmarketos-ondev/-/commit/3c099ed82cbd38fa5eb16c1cd072fbf59ae92707 Initial commit message]
 * {{issue|463|pmaports}} On-device installer
