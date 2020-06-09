@@ -92,3 +92,5 @@ Note that Wi-Fi and osk-sdl are untested and may require further work.
 * [https://github.com/LegacyXperia/android_kernel_semc_msm7x30 The kernel currently being used]
 * [http://www.flashtool.net/ Xperia Flashtool] that should probably work once it is unlocked. With [https://github.com/Androxyde/Flashtool source code!]
 * [https://github.com/LegacyHuawei/local_manifests/issues/9#issuecomment-168169631 there's possibly also a 3.10 branch in the wild]
+* {{Device package|semc-anzu}}
+* {{Kernel package|semc-anzu}}
