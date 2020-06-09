@@ -1,4 +1,4 @@
-The on-device installer [https://gitlab.com/postmarketOS/postmarketos-ondev postmarketos-ondev] allows customizing the postmarketOS installation without using pmbootstrap. It starts an installer on the device, that guides the user graphically through various [[installation settings]]. With [https://calamares.io/ Calamares], which you may know from desktop Linux distribution installations. Most importantly, this makes it possible to perform a full disk encrypted installation from a pre-built image.
+The on-device installer [https://gitlab.com/postmarketOS/postmarketos-ondev postmarketos-ondev] allows customizing the postmarketOS installation without using our command-line tool pmbootstrap. It starts an installer on the device, that guides the user graphically through various [[installation settings]]. With [https://calamares.io/ Calamares], which you may know from desktop Linux distribution installations. Most importantly, this makes it possible to perform a full disk encrypted installation from a pre-built image.
 
 === Status ===
 
