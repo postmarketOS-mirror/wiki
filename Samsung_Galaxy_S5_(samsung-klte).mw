@@ -206,15 +206,15 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | Internal storage || sdhci-msm || Working || 5.8 || yes
 |-
-| SD card storage || sdhci-msm || Working || 5.8 || yes
+| SD card storage || sdhci-msm || Working || In pmOS kernel fork || yes
 |-
 | USB Networking || usb_dwc3_qcom || Working || 5.8 || yes
 |-
-| Display || panel-simple || Working || 5.8 || yes
+| Display || panel-simple || Working || In pmOS kernel fork || yes
 |-
-| Touchscreen  || synaptics rmi4-i2c || Working || 5.8 || yes
+| Touchscreen  || synaptics rmi4-i2c || Working || In pmOS kernel fork || yes
 |-
-| Touchkeys  || Cypress tm2-touchkey || Working || 5.8 || yes
+| Touchkeys  || Cypress tm2-touchkey || Working || In pmOS kernel fork || yes
 |-
 | Vibration motor ||  || Not working || || yes
 |-
@@ -226,9 +226,9 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 |-
 | Bluetooth || brcmfmac || Not working || || no
 |-
-| Battery charger || Maxim max17048 ? || Not working || || yes
+| Battery charger || Maxim max77804k || Not working || || yes
 |-
-| Battery fulegauge || Maxim max17048 ? || Not working || || yes
+| Battery fuelgauge || Maxim max17048 || Working || In pmOS kernel fork || yes
 |-
 | GPU || drm_msm || Working || in pmOS kernel fork || works with libhybris (test_hwcomposer_7_1_caf)
 |-
