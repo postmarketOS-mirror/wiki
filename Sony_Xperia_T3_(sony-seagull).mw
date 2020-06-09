@@ -8,7 +8,7 @@
 | releaseyear = 2014
 | originalsoftware = Android 4.4.4 on Linux 3.4.0
 | chipset = Qualcomm MSM8928 Snapdragon 400
-| cpu = Quad-core 1.4 GHz
+| cpu = Quad-core 1.4 GHz Cortex-A7
 | gpu = Adreno 305
 | storage = 8 GB + SD card
 | display = 720x1280 TFT
@@ -86,3 +86,5 @@ The device shares the <code>yukon</code> platform with other Xperia devices, suc
 == Links ==
 * [https://developer.sonymobile.com/downloads/xperia-open-source-archives/open-source-archive-for-build-18-1-a-1-23/ Kernel source] [https://github.com/MayeulC/sony-seagull-kernel Mirror with releases history]
 * {{MR|1389}} Initial PR
+* {{Device package|sony-seagull}}
+* {{Kernel package|sony-seagull}}
