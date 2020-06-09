@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Live With Walkman
+| name = Live With Walkman
 | codename = sony-coconut
 | image = File:WT19I.jpg
 | imagecaption = The device
@@ -11,7 +11,7 @@
 | gpu = Adreno 205
 | storage = internal: 320 MB; microSD: 2 GB included (expandable up to 32 GB)
 | display = 3.2 inch 320×480 px TFT LCD at 180 PPI, 16M Colors
-| memory = 512 MB of RAM
+| memory = 512 MB
 | architecture = armhf
 | status_usbnet = Y
 | status_flashing = 
@@ -55,3 +55,5 @@ as target device the entire microSD card (''/dev/mmcblk0'').
 * {{MR|1590}} Initial pull request
 * {{MR|1614}} Touchscreen support merge request
 * [https://gitlab.com/postmarketOS/pmaports/merge_requests/178 !178] 16-bit depth fix for display merge request
+* {{Device package|sony-coconut}}
+* {{Kernel package|sony-coconut}}
