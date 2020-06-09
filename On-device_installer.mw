@@ -1,0 +1,55 @@
+The on-device installer [https://gitlab.com/postmarketOS/postmarketos-ondev postmarketos-ondev] allows customizing the postmarketOS installation without using pmbootstrap. It starts an installer on the device, that guides the user graphically through various [[installation settings]]. With [https://calamares.io/ Calamares], which you may know from desktop Linux distribution installations. Most importantly, this makes it possible to perform a full disk encrypted installation from a pre-built image.
+
+=== Status ===
+
+A basic first version has been implemented, that ties all the components together and makes them work for the first time. As of writing, only the full disk encryption password is supported, but now it should be fairly easy to add more dialogs. For now, the target partition for the installation will always be the reserved space on the same "disk" as the installer (details below). We can add support for installing from SD card to internal memory in the future.
+
+=== Usage ===
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+$ pmbootstrap install --ondev [--sdcard]
+</syntaxhighlight>
+
+=== How it works ===
+<code>pmbootstrap install --ondev</code> does the following:
+* prepare the device rootfs, and create an image from it as usually (more or less)
+* prepare a new installer rootfs
+* copy the device rootfs image into the installer rootfs as /var/lib/rootfs.img
+* install postmarketos-ondev, postmarketos-base and the device- package into the installer rootfs
+* create an image from the installer rootfs, with reserved space
+
+The installer image has the following partition layout:
+* p1: label=pmOS_boot
+* p2: (reserved space)
+* p3: label=pmOS_install
+
+This installer image can be transmitted to the device via the usual methods (fastboot flash, via SD card, ...). When booting into the installer's initramfs, the usual postmarketOS initramfs code will prefer <code>pmOS_install</code> over <code>pmOS_root</code> (so we don't end up in an invalid state if an installation was aborted). So the <code>pmOS_install</code> partition will be mounted as / and the boot continues.
+
+[https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/ondev-boot.sh ondev-boot.sh] runs:
+* calculates ONDEV_PARTITION_TARGET
+* configures lightdm and i3, then starts lightdm (we may use something other than i3 in the future, but this works well even with framebuffer devices)
+* the config will start Calamares
+
+Calamares runs:
+* loads [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/calamares/config/settings.conf settings.conf]
+* shows the custom [https://gitlab.com/postmarketOS/postmarketos-ondev/-/tree/master/calamares/modules/partitionq "partitionq"] module (and others in the future)
+* "partitionq" asks for the FDE password, formats the target partition with cryptsetup and ext4 and mounts it (bypassing some of the usual Calamares logic, as Calamares relies on grub2 and encrypted initramfs)
+* [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/calamares/config/modules/unpackfs.conf "unpackfs"] extracts rootfs.img and gives a nice progress bar
+* [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/master/calamares/config/modules/shellprocess.conf "shellprocess"] renames pmOS_install to pmOS_deleteme_install and reboots
+
+The partition layout looks like this now:
+* p1: label=pmOS_boot
+* p2: label=pmOS_root
+* p3: label=pmOS_deleteme_install
+
+initramfs:
+* deletes the pmOS_deleteme_install partition
+* resizes pmOS_root to use up all space (even beyond pmOS_deleteme_install)
+* runs osk-sdl as usually for encrypted installations
+* boots into pmOS_root
+
+=== Related ===
+* [https://gitlab.com/postmarketOS/postmarketos-ondev/-/commit/3c099ed82cbd38fa5eb16c1cd072fbf59ae92707 Initial commit message]
+
+[[Category:Technical Reference]]
