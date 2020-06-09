@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia M4 Aqua
+| name = Xperia M4 Aqua
 | codename = sony-tulip
 | image = File:sony-tulip.jpg
 | imagecaption = Sony Xperia M4 Aqua
@@ -9,9 +9,9 @@
 | chipset = Qualcomm MSM8936 Snapdragon 610<br/>Qualcomm MSM8939 Snapdragon 615
 | cpu = 8x Cortex-A53, 4x 1,5Ghz (big cluster) + 4x 1Ghz (LITTLE cluster) (clock speeds may vary slightly)
 | gpu = Adreno 405
-| storage = 8GB / 16 GB (refer to the model list)
+| storage = 8/16 GB (refer to the model list)
 | display = 720 x 1280 LED Triluminos 294ppi 5"
-| memory = 2GB
+| memory = 2 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or "" (blank) - for untested or unknown -->
 | status_usbnet = Y
@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| booting = Y
+| booting = yes
 }}
 
 == Contributors ==
@@ -46,7 +46,6 @@
 == How to enter flash mode ==
 With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED will turn blue, meaning it has entered fastboot mode.
 You will need an unlocked bootloader. To unlock it follow the [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/how-to-unlock-bootloader/ official guide by Sony].
-
 
 == Model list ==
 E2303 (European) - 8GB storage, LTE
@@ -77,8 +76,10 @@ E2363 - 16GB storage, LTE, Dual-SIM
 == Installation ==
 Fastboot and TWRP zips work fine.
 
-
 == See also ==
+* {{MR|77|pmaports}} Initial merge request
+* {{Device package|sony-tulip}}
+* {{Kernel package|sony-tulip}}
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME}} Initial merge request
