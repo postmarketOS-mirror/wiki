@@ -52,5 +52,6 @@ initramfs:
 
 === Related ===
 * [https://gitlab.com/postmarketOS/postmarketos-ondev/-/commit/3c099ed82cbd38fa5eb16c1cd072fbf59ae92707 Initial commit message]
+* {{issue|463|pmaports}} On-device installer
 
 [[Category:Technical Reference]]
