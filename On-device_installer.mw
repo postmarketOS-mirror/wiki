@@ -50,6 +50,35 @@ initramfs:
 * runs osk-sdl as usually for encrypted installations
 * boots into pmOS_root
 
+=== Development ===
+
+==== Building postmarketos-ondev with a local source tree ====
+
+Some quirks are currently necessary:
+* Remove the whole <code># Workaround for broken out-of-tree builds:</code> block in <code>main/postmarketos-ondev/APKBUILD</code>
+* Download the upstream calamares source, and copy these directories into the <code>calamares</code> dir of your local <code>postmarketos-ondev.git</code> clone: <code>CMakeModules</code>, <code>src/libcalamares</code>, <code>src/libcalamaresui</code>
+* Now it can be built as usually with local source:
+
+<syntaxhighlight lang="shell-session">
+$ cd ~/code/postmarketos-ondev
+$ pmbootstrap --details-to-stdout build --src=. postmarketos-ondev
+</syntaxhighlight>
+
+==== Running postmarketos-ondev locally ====
+
+Run it in a chroot (test UI changes):
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap chroot --xauth --add=postmarketos-ondev,mesa-dri-gallium -- calamares -D8
+</syntaxhighlight>
+
+Or run it in QEMU (test the whole installation):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap config device qemu-amd64
+$ yes | pmbootstrap install --ondev
+$ pmbootstrap qemu
+</syntaxhighlight>
+
 === Related ===
 * [https://gitlab.com/postmarketOS/postmarketos-ondev/-/commit/3c099ed82cbd38fa5eb16c1cd072fbf59ae92707 Initial commit message]
 * {{issue|463|pmaports}} On-device installer
