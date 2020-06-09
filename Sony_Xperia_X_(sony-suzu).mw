@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Sony
-| name =  Xperia X
+| name = Xperia X
 | codename = sony-suzu
 | image = File:sony-suzu.jpg
 | imagecaption = Sony Xperia X
@@ -9,7 +9,7 @@
 | chipset = Qualcomm MSM8956 Snapdragon 650
 | cpu = Hexa-core, 2x Cortex-A72 1.8GHz (big cluster), 4x Cortex-A53 1.2GHz (LITTLE cluster)
 | gpu = Adreno 510
-| storage = 32GB / 64 GB
+| storage = 32/64 GB
 | display = 1080x1920 IPS TFT
 | memory = 3072 MB 
 | architecture = aarch64
@@ -74,4 +74,6 @@ With device powered off, hold [VOLUME +] and plug USB cable in. Device's LED wil
 Works fine with the typical pmbootstrap install & pmbootstrap flasher procedure.
 
 == See also ==
-* {{MR|482|pmaports}} initial MR
+* {{MR|482|pmaports}} Initial MR
+* {{Device package|sony-suzu}}
+* {{Kernel package|sony-suzu}}
