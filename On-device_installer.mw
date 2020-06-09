@@ -45,7 +45,7 @@ The partition layout looks like this now:
 * p3: label=pmOS_deleteme
 
 initramfs:
-* deletes the pmOS_deleteme partition
+* deletes the pmOS_deleteme partition ({{issue|1|postmarketos-ondev}})
 * resizes pmOS_root to use up all available free space (even beyond pmOS_deleteme)
 * runs osk-sdl as usually for encrypted installations
 * boots into pmOS_root
