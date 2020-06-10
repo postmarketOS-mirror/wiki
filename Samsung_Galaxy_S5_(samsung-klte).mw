@@ -297,7 +297,7 @@ Mainline kernel patches:
 * initial dts https://patchwork.kernel.org/patch/10150807/
 * usb-net, storage, hwkeys dts https://lore.kernel.org/patchwork/project/lkml/list/?series=438265
 * max77826 driver https://lore.kernel.org/patchwork/project/lkml/list/?series=438450
-* max17048 fuelgauge driver https://patchwork.kernel.org/project/linux-pm/list/?series=299767
+* max17048 fuelgauge driver https://lore.kernel.org/patchwork/project/lkml/list/?series=447534
 
 Development branch:
 * https://gitlab.com/postmarketOS/linux-postmarketos/tree/old-4.17.0-rc3/qcom , old 4.17 kernel, commits by ''drebrez''
