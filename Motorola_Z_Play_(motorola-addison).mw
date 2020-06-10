@@ -1,18 +1,18 @@
 {{Infobox device
-| manufacturer = Motorola<!-- e.g. HTC -->
-| name = Z Play <!-- e.g. Desire -->
-| codename = Addison <!-- e.g. htc-bravo -->
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| manufacturer = Motorola
+| name = Z Play
+| codename = motorola-addison
+| image = File:motorola-addison.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2016
-| originalsoftware = CHANGE_ME <!-- e.g. Android 2.1 -->
-| chipset = Qualcomm MSM8953 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = CHANGE_ME <!-- e.g. Adreno 200 -->
-| storage = CHANGE_ME <!-- e.g. 512 MB -->
-| display = CHANGE_ME <!-- e.g. 480x800 AMOLED -->
-| memory = 3GB <!-- e.g. 576 MB -->
-| architecture = <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| originalsoftware = Android 6.0.1 - 8.0
+| chipset = Qualcomm MSM8953 Snapdragon 625
+| cpu = Octa-core 2.0 GHz Cortex-A53
+| gpu = Adreno 506
+| storage = 32 GB
+| display = 1080x1920 Super AMOLED
+| memory = 3 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
@@ -36,8 +36,6 @@
 | booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
@@ -63,7 +61,7 @@ Is OTG available, not used in wiki
 
 == How to enter flash mode ==
 == Build ==
-boot.img must be less than 16MB to fit on boot partition. See https://gitlab.com/postmarketOS/pmbootstrap/-/issues/126 for possible strategies.
+boot.img must be less than 16MB to fit on boot partition. {{issue|126|pmbootstrap}} for possible strategies.
 
 
 == Installation ==
@@ -79,7 +77,7 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 <!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* {{Device package|DEVICE_CODENAME}}
-* {{Kernel package|DEVICE_CODENAME}}
+If you manage to get your device packages merged, uncomment links below.
+* {{Device package|motorola-addison}}
+* {{Kernel package|motorola-addison}}
 -->
