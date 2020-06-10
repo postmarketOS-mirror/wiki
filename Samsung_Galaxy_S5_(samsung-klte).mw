@@ -148,9 +148,53 @@ samsung-klte:~$ sudo set-brightness 20
 20
 </pre>
 
-=== Mainlining Notes ====
+=== Mainlining Notes ===
 
-TBD
+==== Power IC ====
+
+The phone uses max77804k MFD (Multi Function Device) IC to handle charging, extcon (cable detect), vibrator, flash led. This device is not in mainline, but it is very similar (i.e the same) to max77693 in register layout. In the next paragraph I'll refer to max77804k code as downstream and max77693 code as upstream.
+
+
+* Charging : downstream charging code is scary. Mainline code only reads info, and doesn't charge, so a brave soul might be able to figure out a minimal setup that does charge the phone.
+* Extcon : downstream extcon is not too bad, and it is trivial to follow the basic use cases and ensure they are ported correctly. Mainline code is different and writes different values for diffrent use cases, but following a similar structure it can be made to behave.
+* Flash Leds : these are pretty straight forward, the existing mainline code is a bit weird, but I wrote a port of downstream and it does work for the most part.
+* Vibrator : the mainline code is for a different kind of vibrator. It shouldn't be too hard to port the downstream code.
+
+==== USB ====
+
+At the moment usb-networking works only the first time it is plugged, and only
+if the (experimental) max77804k is not enabled.
+
+There are 2 different blocks for USB on the klte. One has a good driver, and
+manages the somewhat working usb networking -- let's call it simple. But if the
+max77804k driver is enabled, it switches to the other IP block which does not
+have mainline drivers -- let's call it complex. Downstream only has code for
+the complex block.
+
+Drivers for the complex block are present on newer SoCs from qualcomm, but at
+least to me, they look different than the downstream code (downstream doesn't
+have the notion of phy's, and this is a pretty big deal). So this code be
+a simple fix, but likely isn't.
+
+Another possible approach will be to somehow let the simple block handle all
+the USB, but without documentation on max77804k/usb blocks this is pretty hard.
+
+==== Graphics/Display ====
+
+There is mainline support for the GPU with 3D Acceleration. kmscube works.
+
+If you run phosh or plamo, you'll "crash" the display. The phone continues to
+work, so this shouldn't be too hard to figure out.
+
+If you just let the phone sit, even with no ui (terminal cursor blinking) the
+whole phone hard freezes, including usb networking, wifi networking, uart
+console. And there is no warning in dmesg.
+
+==== Parts Bin code ====
+
+max77693 to max77804k port (incl some usb work): https://gitlab.com/ichernev/linux-postmarketos/-/tree/max77693-update
+
+max77804k with leds only: https://gitlab.com/ichernev/linux-postmarketos/-/tree/max77804k
 
 === Partition layout ===
 
