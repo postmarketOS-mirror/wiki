@@ -195,6 +195,54 @@ max77693 to max77804k port (incl some usb work): https://gitlab.com/ichernev/lin
 
 max77804k with leds only: https://gitlab.com/ichernev/linux-postmarketos/-/tree/max77804k
 
+==== Running on pure mainline ====
+
+At the moment (5.6), if you want to use real mainline (from torvalds tree), you'd need this patch:
+
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
+Patch:
+<div class="mw-collapsible-content">
+<pre class="patch">
+commit 765f55b248cd3b231af8431fe2f2aeca263b4e4b
+Author: Jonathan Marek <jonathan@marek.ca>
+Date:   Sat Oct 5 21:15:07 2019 -0400
+
+    HACK: delay rpm init
+    
+    Delay RPM init. This is a hack that somehow fixes some problems.
+    Hopefully the need for this patches goes away once the IOMMU is
+    working.
+    
+    Signed-off-by: Jonathan Marek <jonathan@marek.ca>
+    Signed-off-by: Brian Masney <masneyb@onstation.org>
+
+diff --git a/drivers/clk/qcom/clk-smd-rpm.c b/drivers/clk/qcom/clk-smd-rpm.c
+index 0bbfef9fa6dec..447ca887deb11 100644
+--- a/drivers/clk/qcom/clk-smd-rpm.c
++++ b/drivers/clk/qcom/clk-smd-rpm.c
+@@ -15,6 +15,7 @@
+ #include <linux/of_device.h>
+ #include <linux/platform_device.h>
+ #include <linux/soc/qcom/smd-rpm.h>
++#include <linux/delay.h>
+ 
+ #include <dt-bindings/clock/qcom,rpmcc.h>
+ #include <dt-bindings/mfd/qcom-rpm.h>
+@@ -770,6 +771,9 @@ static int rpm_smd_clk_probe(struct platform_device *pdev)
+        rcc->clks = rpm_smd_clks;
+        rcc->num_clks = num_clks;
+ 
++       /* delay rpm init, somehow this fixes some problems */
++       usleep_range(100000, 110000);
++
+        for (i = 0; i < num_clks; i++) {
+                if (!rpm_smd_clks[i])
+                        continue;</pre>
+</div>
+</div>
+
+I won't be surprised if more issues pop up in the future, as nobody is really testing for regressions on phones.
+
 === Partition layout ===
 
 <div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
