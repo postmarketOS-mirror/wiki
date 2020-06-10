@@ -173,7 +173,7 @@ the complex block.
 
 Drivers for the complex block are present on newer SoCs from qualcomm, but at
 least to me, they look different than the downstream code (downstream doesn't
-have the notion of phy's, and this is a pretty big deal). So this code be
+have the notion of phy's, and this is a pretty big deal). So this could be
 a simple fix, but likely isn't.
 
 Another possible approach will be to somehow let the simple block handle all
