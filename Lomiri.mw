@@ -12,13 +12,13 @@ The convergent desktop environment.
 Lomiri (formerly known as Unity 8) is available in the pmaports branch <code>feature/unity8_arches</code>. See {{issue|357|pmaports}} and {{issue|190|pmaports}} for details.
 
 == Installation ==
-{{note|The work on Unity 8 hasn't yet been finished yet - no support is provided}}
+{{note|The work on Lomiri hasn't yet been finished yet - no support is provided}}
 
 <source>
 pmbootstrap install --add postmarketos-ui-lomiri
 </source>
 
-Once the device has launched, Unity 8 can be started with the following (as root):
+Once the device has launched, Lomiri can be started with the following (as root):
 
 <source>
 # Run this (at least) once:
@@ -28,7 +28,7 @@ touch $HOME/.config/ubuntu-system-settings/wizard-has-run
 </source>
 
 <source>
-# Run this for starting Unity 8:
+# Run this for starting Lomiri:
 
 export XDG_RUNTIME_DIR=/tmp/$(id -u)-runtime-dir
 if ! test -d "${XDG_RUNTIME_DIR}"; then
@@ -48,6 +48,8 @@ dbus-run-session unity8
 
 Auto-login would require lightdm to be set up or something 
 
-Q: Should it be possible to launch unity8 as non-root user?
+== FAQ ==
 
-A: In principle, yes. The lightdm integration can be used to negotiate DRM master.
+'''Q:''' Should it be possible to launch unity8 as non-root user?
+
+'''A:''' In principle, yes. The lightdm integration can be used to negotiate DRM master.
