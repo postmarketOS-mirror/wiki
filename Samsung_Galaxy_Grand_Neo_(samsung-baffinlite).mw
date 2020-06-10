@@ -101,7 +101,7 @@ There's mainlining work being done for this device by [[User:knuxfanwin8|knuxify
 |-
 |Backlight?
 |KTD3102
-|Not in mainline. Appears to be unused, despite being enabled, as the HX8369 manages brightness by itself.
+|Not in mainline.
 |-
 |Proximity/ambient light sensor
 |Sharp GP2AP002
