@@ -239,7 +239,7 @@ To adjust brightness:
 === GUI ===
 
 ==== i3wm ====
-'''[[I3wm]] is the recommended UI.''' It is lightweight and fast, and we have a custom N900 configuration that optimizes for its keyboard ([https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ photos]). The most important keybindings are described below, for details see [https://gitlab.com/postmarketOS/pmaports/blob/master/device/device-nokia-n900/i3wm/i3wm.conf i3wm.conf]. This file gets installed to <code>~/.i3/config</code> and of course you can customize it. If you have good additions, please make a merge request so everybody benefits from an improved default config.
+'''[[I3wm]] is the recommended UI.''' It is lightweight and fast, and we have a custom N900 configuration that optimizes for its keyboard ([https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ photos]). The most important keybindings are described below, for details see [https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/testing/device-nokia-n900/i3wm/i3wm.conf i3wm.conf]. This file gets installed to <code>~/.i3/config</code> and of course you can customize it. If you have good additions, please make a merge request so everybody benefits from an improved default config.
 
 ===== default mode =====
 * shift + space: switch to "command mode"
