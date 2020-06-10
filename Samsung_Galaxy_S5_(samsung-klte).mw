@@ -184,7 +184,7 @@ the USB, but without documentation on max77804k/usb blocks this is pretty hard.
 There is mainline support for the GPU with 3D Acceleration. kmscube works.
 
 If you run phosh or plamo, you'll "crash" the display. The phone continues to
-work, so this shouldn't be too hard to figure out.
+work, so this shouldn't be too hard to figure out. Check this issue: https://gitlab.com/postmarketOS/pmaports/-/issues/424
 
 If you just let the phone sit, even with no ui (terminal cursor blinking) the
 whole phone hard freezes, including usb networking, wifi networking, uart
