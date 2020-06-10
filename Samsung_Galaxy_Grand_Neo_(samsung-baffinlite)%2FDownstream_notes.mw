@@ -1,6 +1,6 @@
 This page contains some information about the Galaxy Grand Neo, taken from downstream resources.
 
-* There's a DTS in downstream but it's unused and the parts used don't match the defconfig. Seems like it's a generic tree and was never finished, as it matches some stuff in the board-java.c file in downstream.
+* There's a DTS in downstream, but it's for the baffinlite REV00 (the version that was released appears to be REV02), and as such does not apply at all.
 
 == Bootloader kernel cmdline options ==
 
