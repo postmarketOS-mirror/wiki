@@ -53,6 +53,12 @@ Total xfer: 1.08x
 == Copy the generated image to an SD card ==
 Instead of sideloading, you can run <code>pmbootstrap export</code> and copy the <code>pmos-*.zip</code> file to an SD card. Insert it into your phone, boot into the recovery system, and select "Install". Then navigate to the zip file, and the postmarketOS installation should begin.
 
+== Photos ==
+<gallery>
+File:Postmarketos-android-recovery-installer.jpeg|thumb|left|postmarketos-android-recovery-installer 1.0.1 running in TWRP on [[Google Nexus 4 (lg-mako)]] 
+</gallery>
+
+
 == See also ==
 * [https://postmarketos.org/blog/2017/09/03/100-days-of-postmarketos/#interoperability 100 days of postmarketOS: Interoperability]
 * [[Android Recovery]]: general tips and tricks for postmarketOS and the recovery system
