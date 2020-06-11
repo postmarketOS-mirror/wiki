@@ -60,6 +60,8 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+* Power + Volume Down buttons
+
 == Build ==
 boot.img must be less than 16MB to fit on boot partition. {{issue|126|pmbootstrap}} for possible strategies.
 
