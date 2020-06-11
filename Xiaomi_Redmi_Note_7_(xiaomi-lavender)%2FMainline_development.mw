@@ -198,4 +198,6 @@ Panel used in lavender is Tianma NT36672A, which is the same used in xiaomi-bery
 
 Beryllium commit that adds nt36xxx driver, copied almost as-is from downstream - https://github.com/Venji10/linux-beryllium/commit/075504c46b563a56998450e1975945589fcb5f26
 
+Another one: https://github.com/rupansh/mainline-beryllium/commit/fc7e3775cda8f27e69e660740bc3947d6fc17d46
+
 Also it seems like [https://github.com/pundiramit/linux/commit/313d05d11715c01841b01566a55c7d71754946ff panel requires new type of regulators] "'''LABIBB'''" (== LAB('''LCD AMOLED Boost''') / IBB('''Inverting Buck Boost''')) for which driver is not currently present in mainline (but there is a PR for that - https://patchwork.kernel.org/cover/11576211/).
