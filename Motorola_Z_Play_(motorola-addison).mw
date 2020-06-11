@@ -64,6 +64,7 @@ Is OTG available, not used in wiki
 boot.img must be less than 16MB to fit on boot partition. {{issue|126|pmbootstrap}} for possible strategies.
 
 Trying to build for aarch64 errors out:
+<pre>
 aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `f_midi_transmit':
 /home/pmos/build/src/msm-3.18-60a8d8af3751b9dc22894fe68b3964ea94ae7888/out/../drivers/usb/gadget/function/f_midi.c:582: undefined reference to `free_ep_req'
 /home/pmos/build/src/msm-3.18-60a8d8af3751b9dc22894fe68b3964ea94ae7888/out/../drivers/usb/gadget/function/f_midi.c:582:(.text+0x2fafc0): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `free_ep_req'
@@ -73,7 +74,7 @@ aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `f_midi_complete':
 aarch64-alpine-linux-musl-ld: drivers/built-in.o: in function `arm_smmu_add_device':
 /home/pmos/build/src/msm-3.18-60a8d8af3751b9dc22894fe68b3964ea94ae7888/out/../drivers/iommu/arm-smmu.c:2827: undefined reference to `msm_pcie_configure_sid'
 /home/pmos/build/src/msm-3.18-60a8d8af3751b9dc22894fe68b3964ea94ae7888/out/../drivers/iommu/arm-smmu.c:2827:(.text+0x5f7e50): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `msm_pcie_configure_sid'
-
+</pre>
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 pmbootstrap flasher boot not working.
