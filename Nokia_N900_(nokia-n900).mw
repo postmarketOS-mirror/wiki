@@ -69,7 +69,7 @@ the built in emmc is quite slow and fragile.
 # Start the build process and install the completed image to a sdcard<source lang="shell">
 # Replace /dev/sdX with the device for your sdcard
 $ ./pmbootstrap.py install --sdcard /dev/sdX</source>
-# [http://maemo.org/downloads/product/Maemo5/u-boot-flasher/ Install u-boot from pali] on the n900 in Maemo. If this does not work from the graphical interface you may run "apt-get install u-boot-flasher" in maemo terminal (see [https://gitlab.com/postmarketOS/wiki/issues/16 1] [https://gitlab.com/postmarketOS/pmbootstrap/issues/1371 2]).  See Additional Info below for instructions on configuring pmos to boot by default.
+# [http://maemo.org/downloads/product/Maemo5/u-boot-flasher/ Install u-boot from pali] on the n900 in Maemo. If this does not work from the graphical interface you may run "apt-get install u-boot-flasher" in maemo terminal (see {{issue|16|wiki}} and {{issue|1371|pmbootstrap}}).  See Additional Info below for instructions on configuring pmos to boot by default.
 # Place the sdcard into the n900 and boot it with the keyboard slide open
 # Choose the u-boot shell
 # enter <code>run sdboot</code> into the shell
@@ -224,7 +224,7 @@ tty6::respawn:/sbin/getty 38400 tty6
 
 === Display ===
 
-With DRM enabled ([https://github.com/postmarketOS/pmbootstrap/pull/197 #197]), the display can be managed at this location: <code>/sys/devices/platform/omapdrm.0/graphics/fb0/</code>
+With DRM enabled ({{MR|197|pmbootstrap}}), the display can be managed at this location: <code>/sys/devices/platform/omapdrm.0/graphics/fb0/</code>
 
 For example, the display can be turned off by:
 
@@ -240,7 +240,7 @@ To adjust brightness:
 === GUI ===
 
 ==== i3wm ====
-'''[[I3wm]] is the recommended UI.''' It is lightweight and fast, and we have a custom N900 configuration that optimizes for its keyboard ([https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ photos]). The most important keybindings are described below, for details see [https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/testing/device-nokia-n900/i3wm/i3wm.conf i3wm.conf]. This file gets installed to <code>~/.i3/config</code> and of course you can customize it. If you have good additions, please make a merge request so everybody benefits from an improved default config.
+'''[[I3wm]] is the recommended UI.''' It is lightweight and fast, and we have a custom N900 configuration that optimizes for its keyboard ([https://www.reddit.com/r/unixporn/comments/7wt8ig/i3gaps_n900_restored_to_glory/ photos]). The most important keybindings are described below, for details see [https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/community/device-nokia-n900/i3wm/i3wm.conf i3wm.conf]. This file gets installed to <code>~/.i3/config</code> and of course you can customize it. If you have good additions, please make a merge request so everybody benefits from an improved default config.
 
 ===== default mode =====
 * shift + space: switch to "command mode"
@@ -493,8 +493,8 @@ $ aplay -vv some-very-good-music.wav
 </source>
 
 == Resources ==
-* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-nokia-n900 Device package]
-* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-nokia-n900 Kernel package]
+* {{Device package|nokia-n900|community}}
+* {{Kernel package|nokia-n900|community}}
 * [https://kernel.org Kernel source]
 * [https://web.archive.org/web/20131117073524/http://skeiron.org/tablets-dev/nokia_N900/ Images and Flashers for Maemo]
 * {{issue|1617}} issue about Wi-Fi Setup and Keyboard layout
