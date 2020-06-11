@@ -1,5 +1,4 @@
 [[Category:Socs]]
-
 Mainlining is the process of replacing the kernel provided by the device vendor (the "downstream" kernel), with a version close to the actively developed version released on [https://www.kernel.org kernel.org] (the "mainline" kernel). It involves porting (and most importantly: cleaning up) device-specific code from the downstream kernel to the mainline kernel. For some [https://en.wikipedia.org/wiki/System_on_a_chip SoCs], common support already exists in mainline, so you can focus on device-specific components.
 
 == Why? ==
