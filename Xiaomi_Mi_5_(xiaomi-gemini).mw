@@ -40,6 +40,9 @@
 == Maintainer(s) ==
 * pinoaffe
 
+== Device owners ==
+{{Device owners}}
+
 == How to enter flash mode ==
 Either run `adb reboot bootloader` while the phone is booted into android,
 or turn the device off and hold the power button and the volume down button.
