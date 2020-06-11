@@ -7,7 +7,7 @@
 | releaseyear = 2018
 | originalsoftware = Android 8.1
 | chipset = Qualcomm SDM660 Snapdragon 660
-| cpu = 8-core (4x2.2 GHz Kryo 260 & 4x1.8 GHz Kryo 260)
+| cpu = 8-core (4x 2.2 GHz Kryo 260 & 4x 1.8 GHz Kryo 260)
 | gpu = Adreno 512
 | storage = 32/64/128 GB
 | display = 1080 x 2160 LTPS IPS LCD
@@ -82,9 +82,9 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 <!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
+If you manage to get your device packages merged, uncomment links below.
+* {{Device package|xiaomi-jasmine}}
+* {{Kernel package|xiaomi-jasmine}}
 -->
 
 * [https://github.com/xiaomi-sdm660/android_kernel_xiaomi_sdm660 Possibly good kernel to use as downstream kernel source for jasmine]
