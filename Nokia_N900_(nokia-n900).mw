@@ -34,7 +34,7 @@
 | status_gps = P
 | status_mobiledata = Y
 | status_sms = Y
-| status_calls =
+| status_calls = P
 | booting = yes
 }}
 [[File:I3wm-n900.jpg|thumb|right|Running i3wm]]
