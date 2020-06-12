@@ -44,6 +44,8 @@
 === Users owning this device ===
 {{Device owners}}
 
+== Serial console ==
+There is a very good write-up on how to use the serial console on [https://forum.pine64.org/showthread.php?tid=6387 the Pine64 forums]. Watch out that you don't connect your serial adapter to port 4 as it will fry it.
 
 == See also ==
 * {{MR|882|pmaports}} Initial merge request
