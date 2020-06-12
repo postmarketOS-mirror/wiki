@@ -1,11 +1,12 @@
 {{Infobox device
 | manufacturer = Xiaomi
 | name = Mi A2
-| codename = xiaomi-jasmine
+| codename = xiaomi-jasmine_sprout
 | image = File:xiaomi-jasmine.jpg
 | imagecaption = Xiaomi Mi A2
 | releaseyear = 2018
 | originalsoftware = Android 8.1
+| pmoskernel = 4.4.226
 | chipset = Qualcomm SDM660 Snapdragon 660
 | cpu = 8-core (4x 2.2 GHz Kryo 260 & 4x 1.8 GHz Kryo 260)
 | gpu = Adreno 512
@@ -13,26 +14,26 @@
 | display = 1080 x 2160 LTPS IPS LCD
 | memory = 4/6 GB
 | architecture = aarch64
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
-| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = <!-- The display is working? -->
-| status_wifi = <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
+| status_screen = Y
+| status_wifi = N
+| status_xwayland = P
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
-| status_battery = <!-- Charging the battery with charging-sdl is possible -->
-| status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
-| status_accel = <!-- The sensor that measures proper acceleration works -->
-| status_audio = <!-- Using the device's speakers/headphone jack works -->
-| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
-| status_camera = <!-- Taking photos and videos works. -->
-| status_gps = <!-- The Global Positioning System sensor works.  -->
-| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
-| status_sms = <!-- Sending and receiving short messages works as intended. -->
-| status_calls = <!-- Talking to other people over the cellular network. -->
-| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| status_mainline = N
+| status_battery = 
+| status_3d = N
+| status_accel = N
+| status_audio = N
+| status_bluetooth = N
+| status_camera = N
+| status_gps = N
+| status_mobiledata = N
+| status_sms = N
+| status_calls = N
+| status = Booting
+| booting = yes
 
 <!-- you can also use these lines if you need to:
 Version of the kernel that pmos is running
@@ -45,6 +46,7 @@ Is OTG available, not used in wiki
 }}
 
 == Contributors ==
+* [[User:robante15|robante15]]
 * [[User:Profmagija|Profmagija]]
 
 == Maintainer(s) ==
@@ -58,20 +60,44 @@ Is OTG available, not used in wiki
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
+== Notes ==
+This device is quite similar to the [[Xiaomi Redmi Note 7 (xiaomi-lavender)]] and [[Xiaomi Redmi Note 8T (xiaomi-willow)]], and many of the issues were solved with steps from that devices pages, so if you're hacking on the Mi A2 it's a good idea to read the xiaomi-lavender and the xiaomi-willow page closely.
+
 == How to enter flash mode ==
 === Bootloader Unlocking ===
 Because this device is an Android One device, it can be unlocked using <code>fastboot oem unlock</code> from fastboot mode.
 
 === Recovery mode ===
 * Turn the device off (or restart also works)
-* Hold volume+ button and power button
-* Once you feel vibration and phone turns on, release power button
-* Keep holding volume+ until you get to recovery.
+* Hold {{button|Volume Up}} and {{button|Power}} button
+* Once you feel vibration and phone turns on, release {{button|Power}} button
+* Keep holding {{button|Volume Up}} until you get to recovery.
 
 === Flashing (Download, Fastboot) mode ===
-* Same as recovery, but this time hold the volume- and power keys.
+* Same as recovery, but this time hold the {{button|Volume Down}} and {{button|Power}} keys.
 
 == Installation ==
+
+* [[Installing pmbootstrap|Install pmbootstrap.]]
+* Download the device/linux package from [https://github.com/robante15/mia2_pmaports my Github] (because it is not merged) and paste it into your pmaports/device folder. 
+* <code>pmbootstrap -y zap; pmbootstrap init</code>, choose <code>xiaomi-jasmine_sprout</code> as your device
+** Weston, XFCE4, and GNOME have been successfully tested. Phosh and Plasma Mobile do not work
+* <code>pmbootstrap install</code>
+* Enter fastboot, plug USB into computer
+* <code>pmbootstrap flasher flash_kernel</code>
+* <code>pmbootstrap flasher flash_rootfs</code>
+* <code>pmbootstrap flasher flash_vbmeta</code>
+* Reboot, sometimes <code>fastboot reboot</code> works, otherwise hold down {{button|Power}} until it reboots to system.
+* Hopefully weston comes up with <code>postmarketos-demos</code>.
+* <code>ssh user@172.16.42.1</code>
+
+== Additional Info ==
+
+Info from the Xiaomi Redmi Note 7, and Redmi Note 8 port that also applies to the Mi A2:
+
+* [[Xiaomi Redmi Note 7 (xiaomi-lavender)]]
+* [[Xiaomi Redmi Note 8T (xiaomi-willow)]]
+* [[USB Internet]]
 
 == See also ==
 <!--
@@ -87,4 +113,5 @@ If you manage to get your device packages merged, uncomment links below.
 * {{Kernel package|xiaomi-jasmine}}
 -->
 
-* [https://github.com/xiaomi-sdm660/android_kernel_xiaomi_sdm660 Possibly good kernel to use as downstream kernel source for jasmine]
+* [https://github.com/xiaomi-sdm660/android_kernel_xiaomi_sdm660 Kernel used as downstream kernel source for jasmine_sprout]
+* [https://github.com/robante15/mia2_pmaports Xiaomi Mi A2 Linux and Device Package]
