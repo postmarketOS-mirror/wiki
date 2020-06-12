@@ -1,6 +1,6 @@
 {{Infobox device
 | manufacturer = Motorola
-| name = moto x4
+| name = Moto X4
 | codename = motorola-payton
 | image = File:Payton.jpg
 | imagecaption = Motorola moto x4
@@ -36,8 +36,6 @@
 | booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.x.x
 see Unixbench page on wiki
@@ -74,6 +72,7 @@ Is OTG available, not used in wiki
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
 
 == See also ==
+* {{MR|1301|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
@@ -82,7 +81,7 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 <!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* {{Device package|DEVICE_CODENAME}}
-* {{Kernel package|DEVICE_CODENAME}}
+If you manage to get your device packages merged, uncomment links below.
+* {{Device package|motorola-payton}}
+* {{Kernel package|motorola-payton}}
 -->
