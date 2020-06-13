@@ -6,12 +6,13 @@
 | imagecaption = Redmi Note 3 running weston
 | releaseyear = 2016
 | originalsoftware = Android 6.0.1 "Marshmallow"
+| pmoskernel = 3.10.105
 | chipset = Qualcomm MSM8956 Snapdragon 650
 | cpu = Hexa-core (4x1.4GHz Cortex-A53 & 2x1.8GHz Cortex-A72)
 | gpu = Adreno 510
-| storage = 16GB/32GB
+| storage = 16/32 GB
 | display = 1080x1920 IPS
-| memory = 2GB/3GB
+| memory = 2/3 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -35,19 +36,10 @@
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
 | booting = yes
 | whet_dhry = 2417.9
-
-<!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
-Version of the kernel that pmos is running
-| pmoskernel = 3.10.105
-see Unixbench page on wiki
-| whet_dhry = 2417.9
--->
 | status_otg = P
 }}
 
-{{Note|not to be confused with the xiaomi-hennessey, which is based on a MediaTek SoC}}
+{{Note|Not to be confused with the xiaomi-hennessey, which is based on a MediaTek SoC}}
 == Contributors ==
 * IdanHoro
 
@@ -97,7 +89,7 @@ X11:
 
 == See also ==
 * {{MR|461|pmaports}} Initial merge request
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-xiaomi-kenzo Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-xiaomi-kenzo Kernel package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-xiaomi-kenzo Firmware package]
+* {{Device package|xiaomi-kenzo}}
+* {{Kernel package|xiaomi-kenzo}}
+* {{Firmware package|xiaomi-kenzo}}
 * [https://gitlab.com/IdanHoro/vendor_xiaomi_kenzo/tree/master Proprietary vendor blobs]
