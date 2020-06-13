@@ -44,17 +44,6 @@ tables=Devices
 |more results text=
 }}
 
-=== SDM665 (Snapdragon 665) ===
-{{#cargo_query:
-tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
-|order by=Devices.Manufacturer, Devices.Name
-|format=table
-|limit=9999
-|where=Booting and Devices.chipset='Qualcomm SDM665 Snapdragon 665'
-|more results text=
-}}
-
 === SDM636 (Snapdragon 636) ===
 {{#cargo_query:
 tables=Devices
