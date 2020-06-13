@@ -98,15 +98,13 @@ What works:
 
 * SSH and Telnet via USB 
 
-:* Sometime you might get stuck with no prompt, or a password prompt, or the connection may seem to lag. No fix has been found yet, but a temporary workaround is to run <code>ping 172.16.42.1</code> in another terminal, while using ssh or telnet.
+:* Low power mode on USB doesn't work, but apparently never worked on any kernel ever on msm8953 devices.
 
-:* Adding <code>trace_event=dwc3 tp_printk=1</code> to the kernel boot args seems to completely mitigate the issue
+:* USB used to be slow and ssh/telnet were unresponsive, until lpm was disabled.
 
 * Touchscreen
 
 :* Synaptics 3203B, works using mainline RMI4 driver
-
-:* Uses a hack to keep <code>gpio64</code> on, should be fixed
 
 * NFC
 
@@ -116,15 +114,17 @@ What works:
 
 :* Front charging LED works (Qualcomm ATC-LED)
 
-* Battery
+* Battery (qcom-fg/qpnp-fg)
 
-:* Reports voltage, capacity, temperature, energy
+:* Reports voltage, capacity, temperature, current, battery data and energy
 
-:* Needs to deliver other data like current and battery details
-
-:* Driver needs testing and cleaning up.
+:* Needs to deliver other data like and battery details
 
 :* 2 different battery suppliers, need a way to probe and select
+
+* Wifi
+
+:* Only 2.4GHz works, mainline wcnss driver has a bug that prevents 5GHz networks from appearing
 
 Anything that isn't listed above can be assumed to not work.
 
