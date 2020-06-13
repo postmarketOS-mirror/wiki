@@ -63,6 +63,19 @@ Is OTG available, not used in wiki
 == Notes ==
 This device is quite similar to the [[Xiaomi Redmi Note 7 (xiaomi-lavender)]] and [[Xiaomi Redmi Note 8T (xiaomi-willow)]], and many of the issues were solved with steps from that devices pages, so if you're hacking on the Mi A2 it's a good idea to read the xiaomi-lavender and the xiaomi-willow page closely.
 
+=== LED / Torch / Screen brightness / vibrator  ===
+
+Write brightness or boolean value to specific sysfs files:
+
+* Front panel LED light [0-255]: <code>/sys/class/leds/white/{brightness,blink}</code>
+* Torch light [0-255]: <code>/sys/class/leds/flashlight/brightness</code> (torch_0 is cold light, torch_1 is warm light)
+* Screen brightness [0-255]: <code>/sys/class/leds/lcd-backlight/brightness</code>
+* Vibrator [Miliseconds]: <code>/sys/class/timed_output/vibrator/enable</code>
+
+'''Example:'''
+<code>echo 255 > /sys/class/leds/lcd-backlight/brightness</code>
+That maximizes the brightness of the screen
+
 == How to enter flash mode ==
 === Bootloader Unlocking ===
 Because this device is an Android One device, it can be unlocked using <code>fastboot oem unlock</code> from fastboot mode.
