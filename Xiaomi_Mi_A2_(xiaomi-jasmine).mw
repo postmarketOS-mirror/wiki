@@ -63,7 +63,7 @@ Is OTG available, not used in wiki
 == Notes ==
 This device is quite similar to the [[Xiaomi Redmi Note 7 (xiaomi-lavender)]] and [[Xiaomi Redmi Note 8T (xiaomi-willow)]], and many of the issues were solved with steps from that devices pages, so if you're hacking on the Mi A2 it's a good idea to read the xiaomi-lavender and the xiaomi-willow page closely.
 
-=== LED / Torch / Screen brightness / vibrator  ===
+=== LED / Torch / Screen brightness / Vibrator  ===
 
 Write brightness or boolean value to specific sysfs files:
 
