@@ -36,7 +36,7 @@ Package links:
 
 Userboxes:
 * [[Template:User_ports]] ''Shows the amount of devices you ported'' (usage: {<p style="display:inline;"></p>{User ports|amount}})
-* [[Template:User_main_device]] ''Shows the user's main device`` (usage: {<p style="display:inline;"></p>{User main device|Wiki link}})
+* [[Template:User_main_device]] ''Shows the user's main device'' (usage: {<p style="display:inline;"></p>{User main device|Wiki link}})
 * [[Template:User_mainline]] ''Shows the amount of devices you mainlined'' (usage: {<p style="display:inline;"></p>{User mainline|amount}})
 * [[Template:User_mainline_attempts]] ''"This user is currently trying to mainline a device."''
 * [[Template:User_GitLab]] ''Links to user's GitLab profile'' (usage: {<p style="display:inline;"></p>{User GitLab|username}})
