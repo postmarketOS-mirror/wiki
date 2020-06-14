@@ -25,7 +25,7 @@
 | status_battery = Y
 | status_3d = N
 | status_accel = 
-| status_audio = 
+| status_audio = N
 | status_bluetooth = N
 | status_camera = 
 | status_gps = -
@@ -45,6 +45,22 @@
 
 == Users owning this device ==
 {{Device owners}}
+
+== Known Issues ==
+
+* When accessing the audio device (such as via <code>hwtest</code>), the device freezes. After reboot you may be prompted with a "Collecting Logs" screen with an Amazon logo, indicating some sort of firmware level log collector.
+* CPU1,2,3 continuously enable and disable themselves, with logs such as:
+
+<pre>
+[  378.053320] -(3)[0:swapper/3]CPU3: Booted secondary processor
+[  378.053334] -(3)[0:swapper/3][name:cpuinfo&]Detected VIPT I-cache on CPU3
+[  378.053385] -(3)[0:swapper/3][name:topology&]CPU3: update cpu_capacity 1024
+[  378.122632]  (0)[1829:kworker/0:2][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+[  378.342631] -(0)[1600:kwin_wayland][name:sched_monitor&][BURST IRQ DURATION WARN] IRQ[ 51:musb-hdrc.0.auto] +1237 ( dur 30000 us , avg 24 us)
+[  379.122661]  (0)[1829:kworker/0:2][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+[  380.053771]  (1)[71:hps_main][name:smp&]CPU3: shutdown
+</pre>
+
 
 == How to enter flash mode ==
 
