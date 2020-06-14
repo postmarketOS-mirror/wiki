@@ -74,7 +74,7 @@ Seems to work well. Currently only xfce4 and mate and gnome have been tested.
 Tested USB Hub with ethernet adapter, USB Audio device, and HID peripherals. Everything works well.
 == Mainline kernel ==
 
-Here's a list of stuff that is currently (Linux 5.6) known to be working (in at least some capacity):
+Here's a list of stuff that is currently (Linux 5.7) known to be working (in at least some capacity):
 
 * The kernel itself stays booted (i.e. no random panics) and is "stable"
 * UFS internal storage (<code>CONFIG_PHY_QCOM_UFS=y</code>)
