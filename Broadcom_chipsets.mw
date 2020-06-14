@@ -51,7 +51,7 @@ tables=Devices
 
 === Downstream status ===
 
-The only device that seems to work with this chipset is the [[Samsung Galaxy Ace i]], although it has not been merged into pmaports. The [[Samsung Galaxy Y]] does not boot.
+The only device that seems to work with this chipset is the [[Samsung Galaxy Ace i (samsung-s5830i)]], although it has not been merged into pmaports. The [[Samsung Galaxy Y (samsung-totoro)]] does not boot.
 
 === Mainline status ===
 
