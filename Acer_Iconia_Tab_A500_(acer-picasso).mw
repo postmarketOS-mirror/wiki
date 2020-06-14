@@ -68,4 +68,6 @@ Similiar to asus-grouper. Ask okias on postmarketOS channel, if you own device.
 Linux itself is tested and works, but non pmOS work started.
 
 == See also ==
+- [https://gitlab.com/Worldblender/pmaports/-/tree/device/acer-picasso External branch containing build files]
+
 - [https://github.com/grate-driver/linux/ grate kernel]
