@@ -20,7 +20,7 @@
 | status_thermal = Y
 | status_wifi = Y
 | status_bluetooth =Y
-| status_modem = P
+| status_modem = Y
 | status_camera = 
 |
 | <!-- Please ignore these for now, they are not used -->
