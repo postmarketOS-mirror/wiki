@@ -25,7 +25,7 @@
 | status_xwayland = Y
 | status_fde = Y
 | status_mainline = Y
-| status_battery =
+| status_battery = Y
 | status_3d = N
 | status_accel = Y
 | status_audio = Y
