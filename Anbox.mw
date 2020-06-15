@@ -23,7 +23,7 @@ If Anbox have never been working on you device, you may have to add kernel suppo
 
 === I don't have access to the internet ===
 
-Anbox require an anbox0 bridge interface to access the internet. <code>ip link</code> should report an anbox0 interface for the network to work. There seem to be some kind of kernel requirement too, see {{Issue|480|pmaports}} for the investigation about that.
+Anbox require an anbox0 bridge interface to access the internet. <code>ip link</code> should report an anbox0 interface for the network to work. There seem to be some kind of kernel requirement too, see {{Issue|480|pmaports}} (contains workaround) for the investigation about that.
 
 === When I start Anbox, it complains about DBus ===
 
