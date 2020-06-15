@@ -123,7 +123,7 @@ MSM8937/40 is pretty close to [https://wiki.postmarketos.org/wiki/Qualcomm_Snapd
 |-
 | scope="row"| Notifications LED
 | AW2013
-| No
+| Yes ([https://github.com/torvalds/linux/blob/master/drivers/leds/leds-aw2013.c leds-aw2013.c])
 |-
 | scope="row"| Front Camera
 | OV5675
