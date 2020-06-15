@@ -29,8 +29,8 @@
 | status_3d = N
 | status_accel = Y
 | status_audio = Y
-| status_bluetooth = N
-| status_camera = N
+| status_bluetooth =
+| status_camera =
 | status_gps = P
 | status_mobiledata = Y
 | status_sms = Y
