@@ -37,6 +37,9 @@
 == Contributors ==
 yxist
 
+== Device owners ==
+{{Device owners}}
+
 == How to enter flash mode ==
 Hold power button and volume up while device is turned off
 
@@ -67,4 +70,4 @@ Link to related GitHub issues or pull requests like the following (replace CHANG
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-* {{github|1176}} Initial pull request
+* {{MR|1176}} Initial merge request
