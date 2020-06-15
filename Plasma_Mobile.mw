@@ -132,7 +132,4 @@ export QTWEBENGINE_CHROMIUM_FLAGS="--disable-gpu-compositing --num-raster-thread
 == Guide ==
 Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
 
-== See also ==
-* [[Packaging-Plasma-Mobile|Packaging efforts]]
-
 [[Category:Interface]]
