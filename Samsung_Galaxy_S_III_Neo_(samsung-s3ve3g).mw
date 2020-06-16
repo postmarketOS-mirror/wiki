@@ -150,7 +150,7 @@ $ echo 0 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness   # turn of
 |msm_actuator
 |/devices/i2c.78/i2c-20/20-0036
 |-
-|Charger
+|Charger (MUIC)
 |sm5502
 |/devices/i2c.0/i2c-15/15-0025
 |-
