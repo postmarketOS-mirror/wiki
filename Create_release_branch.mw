@@ -8,6 +8,7 @@ Creating a new release branch, like "v20.05":
 * protect the new release branch in gitlab, so nobody can force-push to it
 * remove channels.cfg (should only be in master)
 * adjust channel in pmaports.cfg
+* replace "master" in .gitlab-ci.yml ([https://gitlab.com/postmarketOS/pmaports/-/commit/3db21d5852291061eac005436b81cfb9a6d93cc3 example])
 * remove packages:
 ** device/testing
 ** cross/*-armhf, cross/*-x86
