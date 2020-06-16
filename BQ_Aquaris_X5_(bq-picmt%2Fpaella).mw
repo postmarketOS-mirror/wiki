@@ -117,6 +117,12 @@ Choose <code>bq-picmt</code> and follow the [[Installation guide]].
 # Install [https://github.com/msm8916-mainline/lk2nd lk2nd] following the [https://github.com/msm8916-mainline/lk2nd#building Building] section (just needed the first time).
 # Choose <code>bq-paella</code> and follow the [[Installation guide]] (flash from lk2nd, not the Cyanogen fastboot).
 
+== Audio ==
+See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
+
+== Modem ==
+See [[Qualcomm_Snapdragon_410_(MSM8916)#Modem]].
+
 == Status ==
 Currently work is separated based on firmware installed, if you installed the Cyanogen Edition firmware will be referred as bq-paella, if you installed the BQ Android firmware it will be referred as bq-picmt. So here is a summary for both:
 
