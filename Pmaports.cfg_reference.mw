@@ -1,6 +1,4 @@
 __NOTOC__
-{{note|WIP spec related to basing on Alpine stable. See {{milestone|2}} for progress and a general introduction.}}
-
 <code>pmaports.cfg</code> is present on each branch of [[pmaports.git]] and holds various metadata parsed by [[pmbootstrap]]. 
 
 === Example ===
