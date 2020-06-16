@@ -15,7 +15,6 @@
 | display = 720x1280 Color PVA TFT LCD
 | memory = 1 GB
 | architecture = armv7
-<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N
 | status_flashing = Y
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
@@ -56,19 +55,15 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
-== How to enter flash mode ==
+== How to enter HBOOT ==
 {{button|Power}} + {{button|Volume Down}}
 
-Choose Fastboot
-== Installation ==
+From here you can navigate to recovery or fastboot mode.
 
 == See also ==
 *[https://twrp.me/htc/htconexplusinternational.html TWRP-Device Page]
 *[https://www.gsmarena.com/htc_one_x+-4976.php GSM-Arena Device Page]
 *[http://phonedb.net/index.php?m=device&id=3755&c=htc_one_xplus_s728e__htc_endeavor_c2 Phonedb Device-Page]
 *[https://www.hardreset.info/devices/htc/htc-one-x-plus/ Hardreset Device Page]
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-htc-enrc2b Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-htc-enrc2b Kernel package]
--->
+*{{Device package|htc-enrc2b|testing}}
+*{{Kernel package|htc-enrc2b|testing}}
