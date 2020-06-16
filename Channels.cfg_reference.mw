@@ -16,8 +16,8 @@ mirrordir_alpine=edge
 [stable]
 description=Stable release channel (first beta v20.05, does not have many devices yet)
 branch_pmaports=v20.05
-branch_aports=3.11-stable
-mirrordir_alpine=v3.11
+branch_aports=3.12-stable
+mirrordir_alpine=v3.12
 </source>
 
 === Sections ===
@@ -52,11 +52,11 @@ Channel sections, for which it will be possible to install postmarketOS. <code>e
 |-
 | <code>branch_aports</code>
 | Branch of Alpine Linux aports.git
-| <code>master</code>, <code>3.11-stable</code>, ...
+| <code>master</code>, <code>3.12-stable</code>, ...
 |-
 | <code>mirrordir_alpine</code>
 | Alpine binary packages mirror directory name, as found [http://dl-cdn.alpinelinux.org/alpine/ here]. (This is referred to as branch in [https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases the Alpine releases page], but it is not the same as the aports branch.)
-| <code>edge</code>, <code>v3.11</code>, ...
+| <code>edge</code>, <code>v3.12</code>, ...
 |}
 
 === Location ===
