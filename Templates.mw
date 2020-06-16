@@ -7,6 +7,7 @@ MediaWiki allows us to define custom templates, which can then be included in ot
 * [[Template:File|file]] ''gitlab or github file link''
 * [[Template:github|github]] ''github issue or pull-request link'' (obsolete for postmarketOS code, use [[Template:issue|issue]] or [[Template:MR|MR]] instead)
 * [[Template:Hc|hc]] ''block code with header (can be used for listing the contents of a file, with the file location on top)''
+* [[Template:Icon box|icon box]] ''simple box with icon''
 * [[Template:Infobox|infobox]] ''on the top right of every device / user interface article''
 ** [[Template:Infobox_interface|interface]]
 ** [[Template:Infobox_device|device]]
