@@ -49,6 +49,8 @@ Volume up + power
 
  adb wait-for-device && adb reboot bootloader
 
+You will need an unlocked bootloader. To unlock it follow the [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/how-to-unlock-bootloader/ official guide by Sony].
+
 == Installation ==
 
 
