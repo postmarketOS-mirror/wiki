@@ -32,12 +32,12 @@ Metadata that does not belong in a channel section.
 !Possibles values
 |-
 | <code>recommended</code>
-| What pmbootstrap will recommend to install for new users. Initially this will be edge, until latest is ready, then we switch to latest.
-| <code>edge</code>, <code>latest</code>
+| What pmbootstrap will recommend to install for new users. Initially this will be edge, until stable is ready, then we switch to stable.
+| <code>edge</code>, <code>stable</code>
 |}
 
-==== edge, latest, latest-next, legacy ====
-Channel sections, for which it will be possible to install postmarketOS. <code>edge</code> and <code>latest</code> will always be present, <code>latest-next</code> and <code>legacy</code> only during transition phases from one release to the next one.
+==== edge, stable, stable-next, legacy ====
+Channel sections, for which it will be possible to install postmarketOS. <code>edge</code> and <code>stable</code> will always be present, <code>stable-next</code> and <code>legacy</code> only during transition phases from one release to the next one.
 
 {| class="wikitable sortable"
 !Variable
