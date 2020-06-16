@@ -72,10 +72,8 @@ Follow the [[Installation guide]]. Use <code>pmbootstrap flasher flash_rootfs</c
 
 {{note|'''Note:''' On the first boot the file system will be extended to span the entire SD card. This may take several minutes. You can see this if the disk LED (3) is active.}}
 
+== Audio ==
+See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
+
 == See also ==
 * {{MR|1293|pmaports}} Initial merge request
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* {{Device package|DEVICE_CODENAME}}
-* {{Kernel package|DEVICE_CODENAME}}
--->
