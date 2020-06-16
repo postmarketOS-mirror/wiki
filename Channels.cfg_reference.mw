@@ -14,7 +14,7 @@ branch_aports=master
 mirrordir_alpine=edge
 
 [stable]
-description=Upcoming beta release (WIP, DO NOT USE!)
+description=Stable release channel (first beta v20.05, does not have many devices yet)
 branch_pmaports=v20.05
 branch_aports=3.11-stable
 mirrordir_alpine=v3.11
