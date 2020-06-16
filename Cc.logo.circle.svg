@@ -6,6 +6,10 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="cc-logo-circle-reexported-2.svg"
    id="svg7"
    height="64px"
    width="64px"
@@ -24,6 +28,26 @@
   </metadata>
   <defs
      id="defs11" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg7"
+     inkscape:window-maximized="0"
+     inkscape:window-y="17"
+     inkscape:window-x="17"
+     inkscape:cy="32"
+     inkscape:cx="32"
+     inkscape:zoom="13.84375"
+     showgrid="false"
+     id="namedview9"
+     inkscape:window-height="1020"
+     inkscape:window-width="865"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
   <path
      id="path2"
      d="M31.957,0.311c-8.682,0-16.322,3.213-22.226,9.203  C3.653,15.678,0.354,23.666,0.354,32c0,8.422,3.212,16.236,9.29,22.313c6.078,6.078,13.978,9.377,22.313,9.377  c8.334,0,16.409-3.299,22.66-9.463c5.904-5.817,9.029-13.544,9.029-22.227c0-8.595-3.125-16.408-9.116-22.399  C48.453,3.523,40.639,0.311,31.957,0.311z M32.043,6.041c7.12,0,13.458,2.691,18.406,7.641c4.862,4.861,7.466,11.286,7.466,18.318  c0,7.119-2.518,13.371-7.379,18.146c-5.123,5.035-11.721,7.727-18.493,7.727c-6.858,0-13.283-2.691-18.232-7.641  C8.862,45.283,6.084,38.772,6.084,32c0-6.858,2.778-13.369,7.727-18.406C18.673,8.646,24.924,6.041,32.043,6.041z" />
