@@ -134,7 +134,7 @@ Eventually, your SIM card should show up as registering in <code>/usr/lib/ofono/
  $ ofonoctl list
 
 === SMS ===
-Use the <code>send-sms</code> and <code>receive-sms</code> test scripts (the latter requires <code>py3-gobject3</code>).
+Use the <code>send-sms</code> and <code>receive-sms</code> test scripts (from <code>ofono-scripts</code> package).
 
  $ /usr/lib/ofono/test/send-sms "COUNTRYCODENUMBER" "Test SMS from oFono" 0
  Send message using modem /gobi_0 ...
