@@ -75,5 +75,7 @@ Follow the [[Installation guide]]. Use <code>pmbootstrap flasher flash_rootfs</c
 == Audio ==
 See [[Qualcomm_Snapdragon_410_(MSM8916)#Audio]].
 
+To play via HDMI, use <code>set _verb HDMI</code> or select HDMI in the PulseAudio mixer.
+
 == See also ==
 * {{MR|1293|pmaports}} Initial merge request
