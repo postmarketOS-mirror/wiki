@@ -2,7 +2,7 @@
 | manufacturer = Acer
 | name = Iconia Tab A500
 | codename = acer-picasso
-| image = File:acer-picasso.jpg
+| image = File:acer-picasso mate-desktop.jpg
 | imagecaption = 
 | releaseyear = 2011
 | originalsoftware = Android 3.0 - 4.0
@@ -66,6 +66,7 @@ None yet.
 == Installation ==
 Similiar to asus-grouper. Ask okias on postmarketOS channel, if you own device.
 Linux itself is tested and works, but non pmOS work started.
+After installation to either a microSD card or the eMMC, the screen should look like: [[File:Acer-picasso splash-screen.jpg|200px]]
 
 == See also ==
 - [https://gitlab.com/Worldblender/pmaports/-/tree/device/acer-picasso External branch containing build files]
