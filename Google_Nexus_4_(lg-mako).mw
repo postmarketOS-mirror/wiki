@@ -80,6 +80,49 @@ This means, that most peripherals of the <code>mako</code> should work with main
 
 A good way forward would be using a minimal version of the <code>flo</code> DTS, where everything but USB is deleted, and fixing USB / trying to get the display working with the [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting DSI Panel Porting Guide]. The downstream DTSI files that need to be ported to the upstream kernel are probably located [https://github.com/LineageOS/android_kernel_lge_mako/tree/lineage-15.1/arch/arm/boot/dts here], and I guess the exact panel name appears when running <code>dmesg</code> after a successful boot (I did not verify this). Please expand this when you're working on it, and report your progress in #postmarketOS. Check out the [[Mainline Guide]].
 
+=== Partition Layout ===
+<div class="toccolours mw-collapsible mw-collapsed" style="width: 620px; overflow: auto;">
+Partition layout:
+<div class="mw-collapsible-content">
+<pre class="shell"># fdisk /dev/block/mmcblk0
+Found valid GPT with protective MBR; using GPT
+
+
+Command (m for help): p
+Disk /dev/block/mmcblk0: 15269888 sectors, 3360M
+Logical sector size: 512
+Disk identifier (GUID): 98101b32-bbe2-4bf2-a06e-2bb33d000c20
+Partition table holds up to 28 entries
+First usable sector is 34, last usable sector is 15269854
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            1024          132095       64.0M   0700  modem
+   2          132096          133119        512K   0700  sbl1
+   3          133120          134143        512K   0700  sbl2
+   4          134144          138239       2048K   0700  sbl3
+   5          138240          139263        512K   0700  tz
+   6          139264          184319       22.0M   0700  boot
+   7          184320          229375       22.0M   0700  recovery
+   8          229376          230935        780K   0700  m9kefs1
+   9          230936          232495        780K   0700  m9kefs2
+  10          232496          234055        780K   0700  m9kefs3
+  11          234496          235519        512K   0700  rpm
+  12          235520          236543        512K   0700  aboot
+  13          236544          237567        512K   0700  sbl2b
+  14          237568          241663       2048K   0700  sbl3b
+  15          241664          242687        512K   0700  abootb
+  16          242688          243711        512K   0700  rpmb
+  17          243712          244735        512K   0700  tzb
+  18          244736          245759        512K   0700  metadata
+  19          245760          278527       16.0M   0700  misc
+  20          278528          311295       16.0M   0700  persist
+  21          311296         2031615        840M   0700  system
+  22         2031616         3178495        560M   0700  cache
+  23         3178496        15267839       5903M   0700  userdata
+  24        15267840        15268863        512K   0700  DDR
+  25        15268864        15269854        495K   0700  grow</pre>
+</div></div>
+
 == Photos ==
 * [https://ollieparanoid.github.io/img/2017-05-26/mako/editor.jpg Weston running with framebuffer issues]
 * [https://cloud.githubusercontent.com/assets/6033024/26761940/2e3273e0-4928-11e7-8800-0b4ddb14e239.jpg robb4 patched Weston to display the right colors]
