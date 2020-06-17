@@ -1,8 +1,8 @@
 {{Infobox device
 | manufacturer = Sony
 | name = Xperia M2
-| codename = eagle
-| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| codename = sony-eagle
+| image = File:sony-eagle.jpg
 | imagecaption = CHANGE_ME
 | releaseyear = 2014
 | originalsoftware = Android 5.1.1
@@ -55,5 +55,7 @@ You will need an unlocked bootloader. To unlock it follow the [https://developer
 
 
 == See also ==
+<!-- Uncomment when device packages get merged
 * {{Device package|sony-eagle}}
 * {{Kernel package|sony-eagle}}
+-->
