@@ -114,7 +114,7 @@ Therefore you should choose the kernel depending whether or not you would like t
 === Usage ===
 At the moment, the modem is primarily tested using the oFono test scripts.
 
- $ sudo apk add ofono-scripts py3-dbus
+ $ sudo apk add ofono-scripts
  $ /usr/lib/ofono/test/enable-modem
  $ /usr/lib/ofono/test/online-modem
  $ /usr/lib/ofono/test/list-modems
