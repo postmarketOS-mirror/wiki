@@ -1,5 +1,6 @@
 This is relevant for maintaining the repository only, regular users will not need this guide.
 
+== Creating a new release branch ==
 === Checklist ===
 Creating a new release branch, like "v20.05":
 
@@ -52,5 +53,16 @@ for i in *; do
 done
 echo "# done"
 </syntaxhighlight>
+
+== Maintenance ==
+
+=== Cherry-picking commits from master ===
+
+* Use <code>git cherry-pick -x ffffffff</code> (insert commit to cherry pick accordingly). The <code>-x</code> will add a <code>(cherry picked from commit ffffffff)</code> line to the commit message.
+* Cherry picked commits shall not be squashed, then it's hard to understand which commits were already picked and which were not.
+* If git reports conflicts, resolve them.
+** If you have cherry-picked a commit, that has touched a lot of devices that don't exist in the stable branch, then you can use <code>git rm $(git status | grep "deleted by us" | cut -d ':' -f 2)</code>.
+** Look at the <code>git diff</code> to make sure that the result is as expected.
+* If it's something non-trivial, then make a merge request for the cherry-picked commits so we see that it was done correctly, it builds and that we may test the packages before merging.
 
 [[Category:Guide]]
