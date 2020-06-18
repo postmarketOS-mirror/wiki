@@ -3,7 +3,7 @@
 | name =  U FEEL
 | codename = wiko-ufeel
 | image = File:wiko-ufeel.png
-| imagecaption = Picture of XFCE4 running on Wiko U FEEL with downstream kernel
+| imagecaption = Picture of XFCE4 running on Wiko U FEEL (p6609) with downstream kernel
 | releaseyear = 2016
 | originalsoftware = Android 6 on Linux 3.18.19+ (32-bit mode)
 | chipset = MediaTek MT6735
@@ -59,7 +59,7 @@ Is OTG available, not used in wiki
 UnDevDeCatOS: Screen is broken
 
 == Board ==
-Wiko U Feel is based on Tinno p6601 board (like BLU R1 HD, Lanix Ilium L910, QMobile Noir A6, Evertek EverSolo, Smart Art P6601).
+Wiko U Feel has two different board revisions: one using the Tinno p6601 board (like BLU R1 HD, Lanix Ilium L910, QMobile Noir A6, Evertek EverSolo, Smart Art P6601) and the other using the p6609 board. It appears that the current packaged kernel is compatible between these two boards.
 
 == WiFi ==
 As described in the WiFi troubleshooting guide, you need a firmware loader, named 6620_launcher, but it panics the kernel.
