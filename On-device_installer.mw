@@ -69,7 +69,7 @@ $ pmbootstrap --details-to-stdout build --src=. postmarketos-ondev
 Run it in a chroot (test UI changes):
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap chroot --xauth --add=postmarketos-ondev,mesa-dri-gallium -- calamares -D8
+$ pmbootstrap chroot --xauth --add=postmarketos-ondev,mesa-dri-gallium -- sh -c "QT_IM_MODULE=qtvirtualkeyboard calamares -D8"
 </syntaxhighlight>
 
 Or run it in QEMU (test the whole installation):
