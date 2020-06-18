@@ -139,6 +139,9 @@ References:
 
 2. Use <code>adb reboot recovery</code> to enter recovery (or <code>adb reboot bootloader</code> to enter bootloader for fastboot commands)
 
+=== Downloads ===
+You'll need OneClickOuyaRecovery.zip from [https://download.milaq.net/public/android/ouya/misc/ here] (original link is dead)
+
 ===pmbootstrap===
 {{todo| Work in progress, may be wrong. Only attempt for development}}
 
