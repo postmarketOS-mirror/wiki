@@ -59,4 +59,4 @@ You will need an unlocked bootloader. To unlock it follow the [https://developer
 * {{Device package|sony-eagle}}
 * {{Kernel package|sony-eagle}}
 -->
-* {{MR|1338}} MR pull request
+* {{MR|1338|pmaports}} MR pull request
