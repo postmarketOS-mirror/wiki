@@ -2,10 +2,10 @@
 | manufacturer = Sony
 | name = Xperia M5
 | codename = sony-hollyss
-| image = https://raw.githubusercontent.com/Empyreal96/linux-sony-hollyss-packaged-kernels-extra/master/20200619_105048.jpg
+| image = File:Sony-hollyss-mate-neofetch.jpg
 | imagecaption = pmOS running MATE and neofetch
 | releaseyear = 2015
-| originalsoftware = Android 5 - 6
+| originalsoftware = Android 5 (can be upgraded to Android 6)
 | chipset = Mediatek MT6795 Helio X10
 | cpu = Octa-core 2.0 GHz Cortex-A53
 | gpu = PowerVR G6200
@@ -69,7 +69,7 @@ If you need to flash back to android, go to (Wipe - Advanced Wipe - Tick System 
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{MR|1349|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
