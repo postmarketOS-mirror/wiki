@@ -57,8 +57,12 @@
 You will need to be in TWRP. From powered off, hold Vol Down + Power.
 
 == Notes ==
-I doubt it will be able to be mainlined by myself as I (empyreal96) am not developer level. I am continuing to learn and work on it.
+- I doubt it will be able to be mainlined by myself as I (empyreal96) am not developer level. I am continuing to learn and work on it.
 To install you need to have either Source from Sony Source Archive, or find it on github search 'linux hollyss'
+
+- This will need to be a New Device Port for now, I plan to sort patches out this weekend for the default config
+
+- When selecting the defconfig file, choose hollyss_defconf and not the others. 
 
 == Installation ==
 I only had success with the Flashable Zip method using 'pmbootstrap flasher --method=adb sideload' or 'adb sideload PATH_TO_ZIP'
