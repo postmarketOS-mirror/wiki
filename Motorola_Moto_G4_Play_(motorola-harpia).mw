@@ -63,7 +63,7 @@ Follow the directions on [[Qualcomm_Snapdragon_410_(MSM8916)#Modem|this wiki pag
 with the results of modem functionality testing.
 
 * '''XT1602:''' Modem working, can send and receive text messages. Can initiate and answer phone calls. Mobile data does not work.
-* '''XT1607:''' Modem working, can send text messages. Had to manually load RETUS_6.0.1 NON-HLOS firmware, will work on packaging as an option maybe?
+* '''XT1607:''' Modem working, can send text messages. Earpiece and Mic1 work with phone calls. Had to manually load RETUS_6.0.1 NON-HLOS firmware, will document and maybe package alternate firmware.
 
 == See also ==
 * {{Device package|motorola-harpia|community}}
