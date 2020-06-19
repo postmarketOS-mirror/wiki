@@ -25,7 +25,7 @@
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = Y
 | status_3d = Y
-| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_accel = Y
 | status_audio = Y
 | status_bluetooth =
 | status_camera = <!-- Taking photos and videos works. -->
