@@ -63,39 +63,7 @@ Follow the directions on [[Qualcomm_Snapdragon_410_(MSM8916)#Modem|this wiki pag
 with the results of modem functionality testing.
 
 * '''XT1602:''' Modem working, can send and receive text messages. Can initiate and answer phone calls. Mobile data does not work.
-* '''XT1607:''' Modem working, SIM is recognized by qmicli but not ofonoctl says "No SIM". Maybe my device is network locked. I will research.
-  harpia:~$ sudo qmicli -d /dev/modem --uim-get-card-status
-  [/dev/modem] Successfully got card status
-  Provisioning applications:
-        Primary GW:   slot '1', application '1'
-        Primary 1X:   session doesn't exist
-        Secondary GW: session doesn't exist
-        Secondary 1X: session doesn't exist
-  Slot [1]:
-        Card state: 'present'
-        UPIN state: 'not-initialized'
-                UPIN retries: '0'
-                UPUK retries: '0'
-        Application [1]:
-                Application type:  'usim (2)'
-                Application state: 'check-personalization-state'
-                Application ID:
-                        (app-id-redacted)
-                Personalization state: 'code-required' (feature: gw-service-provider)
-                        Disable retries:     '9'
-                        Unblock retries:     '32'
-                UPIN replaces PIN1: 'no'
-                PIN1 state: 'disabled'
-                        PIN1 retries: '3'
-                        PUK1 retries: '10'
-                PIN2 state: 'enabled-not-verified'
-                        PIN2 retries: '10'
-                        PUK2 retries: '10'
-
-Running --uim-change-provisioning-session seems happy, but still no SIM in ofonoctl
-  harpia:~$ sudo qmicli -d /dev/modem --uim-change-provisioning-session="slot=1,activate=yes,session-type=primary-gw-provisioning,aid=$REDACTED"
-  [/dev/modem] Successfully changed provisioning session
-
+* '''XT1607:''' Modem working, can send text messages. Had to manually load RETUS_6.0.1 NON-HLOS firmware, will work on packaging as an option maybe?
 
 == See also ==
 * {{Device package|motorola-harpia|community}}
