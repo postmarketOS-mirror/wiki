@@ -9,9 +9,9 @@
 | chipset = Mediatek MT6795 Helio X10
 | cpu = Octa-core 2.0 GHz Cortex-A53
 | gpu = PowerVR G6200
-| storage = 16GB
+| storage = 16 GB
 | display = 1080 x 1920
-| memory = 3GB
+| memory = 3 GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -67,15 +67,15 @@ You may recieve errors that it is unable to format partitions, make sure they ar
 If you need to flash back to android, go to (Wipe - Advanced Wipe - Tick System - Repair or Change.. - Change Filesystem - ext4) because TWRP will fail to see the partition
 
 == See also ==
+* {{MR|1349|pmaports}} Initial merge request
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|1349|pmaports}} Initial merge request
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 <!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* {{Device package|DEVICE_CODENAME}}
-* {{Kernel package|DEVICE_CODENAME}}
+If you manage to get your device packages merged, uncomment links below.
+* {{Device package|sony-hollyss}}
+* {{Kernel package|sony-hollyss}}
 -->
