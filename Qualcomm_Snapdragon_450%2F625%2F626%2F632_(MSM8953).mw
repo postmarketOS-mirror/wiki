@@ -1,0 +1,75 @@
+{{Infobox soc
+| name = MSM8953
+| manufacturer = Qualcomm
+| arch = aarch64
+| cpu = 8x 1.8/2.0/2.2 GHz ARM Cortex-A53 (SDM450/625/626)
+4x 1.8 GHz Kryo250 Gold +
+4x 1.8 GHz Kryo250 Silver (SDM632)
+| gpu = Adreno 506
+| year = 2016
+| process = 14
+| mainline = partial
+| status_cpu = P
+| status_uart = Y
+| status_storage = Y
+| status_usb = Y
+| status_display = Y
+| status_gpu = P
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio =
+| status_video =
+| status_thermal = P
+| status_wifi = Y
+| status_bluetooth = Y
+| status_modem =
+| status_camera = 
+
+}}
+
+[https://www.qualcomm.com/products/snapdragon-450-mobile-platform SDM625]/[https://www.qualcomm.com/products/snapdragon-625-mobile-platform SDM625]/[https://www.qualcomm.com/products/snapdragon-626-mobile-platform SDM626]/[https://www.qualcomm.com/products/snapdragon-632-mobile-platform SDM632]/[https://www.qualcomm.com/products/apq8053 APQ8053] are Qualcomm SoCs released from 2016. According to Wikipedia, SDM450/625/626/632 are all pin and software compatible. 
+
+
+== Devices ==
+=== Snapdragon 450 ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset='Qualcomm MSM8953 Snapdragon 450'
+|where=Booting and Devices.chipset='Qualcomm Snapdragon 450 SDM450'
+|more results text=
+}}
+=== Snapdragon 625 ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset='Qualcomm MSM8953 Snapdragon 625'
+|more results text=
+}}
+=== Snapdragon 632 ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline,Category
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting and Devices.chipset='Qualcomm SDM632 Snapdragon 632'
+|more results text=
+}}
+== CPU ==
+All cores are working on different clock speeds for each clusters. Marked as partial because there is no support for CPU Idle and SDM632 SoC. 
+
+== Display ==
+Display works with both simplefb and msm-drm (with FB takeover). Dual DSI configuration is not tested.
+
+== GPU ==
+GPU works without preemption and on reduced clock speed.
+
+== Mainlining ==
+MSM8953 is almost as great platform to get started with mainlining as MSM8916! The [[MSM8916 Mainlining]] guide is quite relevant to it.
