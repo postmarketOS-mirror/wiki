@@ -22,7 +22,7 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = Y
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_mainline = Y
 | status_battery = Y
 | status_3d = Y
 | status_accel = Y
