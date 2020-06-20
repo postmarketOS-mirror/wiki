@@ -58,7 +58,7 @@ echo "# done"
 
 === Cherry-picking commits from master ===
 
-* In merge requests, that shall be cherry picked, add the cherry-pick-to-stable tag. It is the responsibility of the person doing the merge, to also cherry pick it to the stable branch.
+* In merge requests, that shall be cherry picked, add the <code>cherry-pick-to-stable</code> label. It is the responsibility of the person doing the merge, to also cherry pick it to the stable branch.
 * Use <code>git cherry-pick -x ffffffff</code> (insert commit to cherry pick accordingly). The <code>-x</code> will add a <code>(cherry picked from commit ffffffff)</code> line to the commit message.
 * Cherry picked commits shall not be squashed, then it's hard to understand which commits were already picked and which were not.
 * If git reports conflicts, resolve them.
