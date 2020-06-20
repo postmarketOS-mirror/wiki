@@ -65,6 +65,6 @@ echo "# done"
 ** If you have cherry-picked a commit, that has touched a lot of devices that don't exist in the stable branch, then you can use <code>git rm $(git status | grep "deleted by us" | cut -d ':' -f 2)</code>.
 ** Look at the <code>git diff</code> to make sure that the result is as expected.
 * If it's something non-trivial, then make a merge request for the cherry-picked commits so we see that it was done correctly, it builds and that we may test the packages before merging.
-* Avoid cherry-picking patches from master to the stable branch in the wrong order ([https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1340#note_364975701 related comment]).
+* Avoid cherry-picking multiple patches that touch the same pmaports in the wrong order ([https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1340#note_364975701 related comment]).
 
 [[Category:Guide]]
