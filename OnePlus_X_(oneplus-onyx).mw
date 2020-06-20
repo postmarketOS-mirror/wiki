@@ -41,12 +41,6 @@
 == Device owners ==
 {{Device owners}}
 
-== Notes ==
-
-This device seems to suffer from issues with the postmarketOS toolchain. See [https://github.com/postmarketOS/pmbootstrap/issues/848 here] for more information.
-
-Current fork with the code used to get this far is available [https://github.com/magmastonealex/pmbootstrap here].
-
 == What works ==
 '''with LineageOS-built kernel'''
 
@@ -65,7 +59,9 @@ Current fork with the code used to get this far is available [https://github.com
 Hold power button and volume up while device is turned off
 
 == Installation ==
+Fastboot installation fails with an error like [https://wiki.postmarketos.org/wiki/Troubleshooting#Invalid_sparse_file_format_at_header_magi this].
 
+Android recovery installation via sideload is recommended, as explained [https://wiki.postmarketos.org/wiki/Installation_from_recovery_mode here].
 
 <!-- add more sections here as necessary, e.g. Wifi, ... -->
 
@@ -73,8 +69,4 @@ Hold power button and volume up while device is turned off
 == Photos ==
 
 == Links ==
-
-==Current Work==
-
-* osk-sdl porting (black screen is current issue)
-* Debugging why postmarketOS kernel causes panics when framebuffer is accessed.
+* [https://github.com/postmarketOS/pmbootstrap/issues/848 Initial toolchain problems] (now fixed)
