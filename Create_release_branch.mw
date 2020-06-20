@@ -58,11 +58,13 @@ echo "# done"
 
 === Cherry-picking commits from master ===
 
+* In merge requests, that shall be cherry picked, add the cherry-pick-to-stable tag. It is the responsibility of the person doing the merge, to also cherry pick it to the stable branch.
 * Use <code>git cherry-pick -x ffffffff</code> (insert commit to cherry pick accordingly). The <code>-x</code> will add a <code>(cherry picked from commit ffffffff)</code> line to the commit message.
 * Cherry picked commits shall not be squashed, then it's hard to understand which commits were already picked and which were not.
 * If git reports conflicts, resolve them.
 ** If you have cherry-picked a commit, that has touched a lot of devices that don't exist in the stable branch, then you can use <code>git rm $(git status | grep "deleted by us" | cut -d ':' -f 2)</code>.
 ** Look at the <code>git diff</code> to make sure that the result is as expected.
 * If it's something non-trivial, then make a merge request for the cherry-picked commits so we see that it was done correctly, it builds and that we may test the packages before merging.
+* Avoid cherry-picking patches from master to the stable branch in the wrong order ([https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1340#note_364975701 related comment]).
 
 [[Category:Guide]]
