@@ -126,6 +126,28 @@ What works:
 
 :* Only 2.4GHz works, mainline wcnss driver has a bug that prevents 5GHz networks from appearing
 
+* Bluetooth
+
+:* Works, even audio over bluetooth, but needs pulseaudio-bluez, bluez-alsa and bluez-hcd2hci to be installed
+
+* Storage
+
+:* MMC works as expected
+
+:* SD Card works, but some (minor) issue with cd-gpios needs to be fixed for proper card detection. Otherwise works as expected.
+
+* Modem
+
+:* Boots
+
+:* Doesn't actually work, seems to use a different way to talk to userspace than other currently supported qcom modems
+
+* ADSP
+
+:* Boots
+
+:* Useless without soundcard drivers
+
 Anything that isn't listed above can be assumed to not work.
 
 == Links ==
