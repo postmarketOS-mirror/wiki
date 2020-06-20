@@ -29,7 +29,7 @@
 | status_audio = Y
 | status_bluetooth = Y
 | status_camera = <!-- Taking photos and videos works. -->
-| status_gps = P
+| status_gps = Y
 | status_mobiledata = Y
 | status_sms = Y
 | status_calls = P
