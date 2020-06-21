@@ -50,11 +50,11 @@
 * USB Network
 * Wifi
 * Proximity sensor (<code>/dev/input/event0</code>)
-  <code>echo 1 >  /sys/class/input/input0/enable</code>
+** enable with  <code>echo 1 >  /sys/class/input/input0/enable</code>
 * Accelerometer (<code>/dev/input/event1</code>)
-** <code>echo 1 >  /sys/class/input/input1/enable</code>
+** enable with <code>echo 1 >  /sys/class/input/input1/enable</code>
 * Compass (<code>/dev/input/event2</code>)
-** <code>echo 1 >  /sys/class/input/input2/enable</code>
+** enable with <code>echo 1 >  /sys/class/input/input2/enable</code>
 * Touch (<code>/dev/input/event4</code>)
 
 == What does not work ==
