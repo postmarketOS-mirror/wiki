@@ -14,7 +14,7 @@
 | memory = 1.5 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet = P
 | status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
 | status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
 | status_screen = <!-- The display is working? -->
@@ -58,8 +58,25 @@ Is OTG available, not used in wiki
 Press and hold {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}}. Press {{Button|Volume Up}} when prompted
 
 == Installation ==
+* pmbootstrap install
+* pmbootstrap export
+* pmbootstrap export --odin
+
+Flashing via Odin could work, untested as of now.
+Android recovery flashable zip can flash boot.img, 
+however it fails at installing rootfs.
+
+== What works ==
+* Flashing the kernel
+* USB Networking
+
+== What doesn't work ==
+* Everything else
+
+== Additional notes ==
+It seems to run exceptionally slowly, and while USB Networking works, it's very inconsistent often locking up the entire system.
 
 == See also ==
 * [https://www.gsmarena.com/samsung_galaxy_tab_e_9_6-7295.php Specs on GSMArena.com]
 * {{wikipedia|Samsung_Galaxy_Tab_E_9.6|Wikipedia page}}
-* [https://github.com/codeworkx/android_kernel_samsung_gtelwifi Possible kernel source]
+* [https://github.com/atipls/android_kernel_gtelwifi Kernel source]
