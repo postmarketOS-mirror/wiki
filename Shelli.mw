@@ -1,6 +1,6 @@
 This is a command line based user interface developed first for the Geeksphone Keon and later for several other Android devices. It is really just a collection of simple bash scripts to try and replicate the common features on a phone such as calling, answering, texting, contacts, calendar, note taking, etc.
 
-For PostmarketOS shelli is combined with gesture recognition software to provide for a non-UI alternative which uses the touch screen and the linux framebuffer console.
+For postmarketOS shelli is combined with gesture recognition software to provide for a non-UI alternative which uses the touch screen and the linux framebuffer console.
 
 === Status ===
 Initial packaging is in the works at https://gitlab.com/postmarketOS/pmaports/merge_requests/397.
