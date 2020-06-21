@@ -74,7 +74,7 @@ your device and either compile into the kernel (in addition to enabling CONFIG_D
 [[OnePlus_6_(oneplus-enchilada)]]
 
 [https://gitlab.com/sdm845-mainline/sdm845-linux-next sdm845-linux-next] a common device tree for SDM845 mainline devices.
-Current devices include the OnePlus 6(T) and (soon) Pocophone F1.
+Current devices include the OnePlus 6(T) and the Pocophone F1.
 
 == Who's working on it ==
 
