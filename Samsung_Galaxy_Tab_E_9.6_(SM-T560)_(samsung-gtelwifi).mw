@@ -75,3 +75,4 @@ It seems to run exceptionally slowly, and while USB Networking works, it's very 
 * [https://www.gsmarena.com/samsung_galaxy_tab_e_9_6-7295.php Specs on GSMArena.com]
 * {{wikipedia|Samsung_Galaxy_Tab_E_9.6|Wikipedia page}}
 * [https://github.com/atipls/android_kernel_gtelwifi Kernel source]
+* {{MR|1355|pmaports}} Initial merge request
