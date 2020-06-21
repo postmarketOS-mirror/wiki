@@ -14,12 +14,12 @@
 | memory = 1.5 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = P
+| status_usbnet = Y
 | status_flashing = Y
-| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
-| status_screen = P
+| status_touch = Y
+| status_screen = Y
 | status_wifi = <!-- Wireless network works? -->
-| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
 | status_battery = Y
@@ -54,19 +54,19 @@ Is OTG available, not used in wiki
 == Users owning this device ==
 {{Device owners}}
 
-== How to enter flash mode ==
-Press and hold {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}}. Press {{Button|Volume Up}} when prompted
-
 == Installation ==
 * pmbootstrap install --android-recovery-zip
 * pmbootstrap flasher --method=adb sideload
 
 == What works ==
 * Flashing rootfs and kernel via TWRP
-* Screen (boot logo, is in wrong orientation)
+* Screen
+* Touchscreen
 
 == What doesn't work ==
-* Everything else
+* WiFi
+* Audio
+* USB-OTG
 
 == Additional notes ==
 It seems to run exceptionally slowly, and while USB Networking works, it's very inconsistent often locking up the entire system.
