@@ -62,8 +62,8 @@ pmbootstrap install --android-recovery-zip
 pmbootstrap flasher --method=adb sideload
 
 == What works ==
-* Flashing the kernel
-* USB Networking
+* Flashing rootfs and kernel via TWRP
+* Screen (boot logo, is in wrong orientation)
 
 == What doesn't work ==
 * Everything else
