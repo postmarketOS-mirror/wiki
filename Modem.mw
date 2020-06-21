@@ -13,6 +13,8 @@ The procedure for getting the modem to work is generally the following:
 
 * Note, that for dual SIM (maybe only for DSDS - dual SIM dual standby?) devices you need to follow additional manual steps, otherwise the modem (and ofono) will not recognize your SIM card. See [https://gist.github.com/TravMurav/45a705f210125858ce889b06f90656d9]
 
+'''Note:''' On newer SoCs (e.g. SDM845 or MSM8953), the modem seems to be available only through QRTR, and not through rpmsg channels as on older Qualcomm SoCs. You can see this if <code>qrtr-lookup</code> also lists modem services such as <code>User Identity Module service</code>. In that case, you can query the modem through libqmi 1.26.0+ like <code>qmicli -d qrtr://<node> --uim-get-card-status</code>. Currently, the QRTR transport does not seem to be supported in modem services like oFono or ModemManager yet. At least for ModemManager there seem to be ongoing efforts to make it work, though.
+
 == Relevant issues ==
 * {{github|520}} N900: integrate ofono
 * {{github|598}} Let's get the cellular modem working! (presenting various stacks, general discussion)
