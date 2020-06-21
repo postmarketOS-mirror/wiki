@@ -58,13 +58,8 @@ Is OTG available, not used in wiki
 Press and hold {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}}. Press {{Button|Volume Up}} when prompted
 
 == Installation ==
-* pmbootstrap install
-* pmbootstrap export
-* pmbootstrap export --odin
-
-Flashing via Odin could work, untested as of now.
-Android recovery flashable zip can flash boot.img, 
-however it fails at installing rootfs.
+pmbootstrap install --android-recovery-zip
+pmbootstrap flasher --method=adb sideload
 
 == What works ==
 * Flashing the kernel
