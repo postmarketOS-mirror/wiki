@@ -23,7 +23,7 @@
 | status_fde = Y
 | status_mainline = P
 | status_battery = Y
-| status_3d = 
+| status_3d = N
 | status_accel = 
 | status_audio = P
 | status_bluetooth =
