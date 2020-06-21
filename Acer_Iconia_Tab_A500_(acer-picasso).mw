@@ -14,7 +14,7 @@
 | memory = 1 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
@@ -60,7 +60,8 @@ Is OTG available, not used in wiki
 <!-- you may need to purge page cache to see changes (more->purge cache)-->
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
-== How to enter flash mode ==
+== How to enter flash mode (requires a custom bootloader) ==
+See [https://forum.xda-developers.com/iconia-a500/a500-2019-2020-t4039271 https://forum.xda-developers.com/iconia-a500/a500-2019-2020-t4039271] for a through explanation of how to go from stock to fully modded.
 
 == Installation ==
 Similiar to asus-grouper. Ask okias on postmarketOS channel, if you own device.
