@@ -12,7 +12,7 @@
 | storage = 16/32 GB
 | display = 720x1480 IPS
 | memory = 2/3 GB
-| architecture = armv7
+| architecture = aarch64 (arm64)
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N
 | status_flashing = Y
@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| status = 
+| status = mainlining in progress
 | booting = yes
 
 
