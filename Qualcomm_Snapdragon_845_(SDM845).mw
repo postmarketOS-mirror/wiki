@@ -46,7 +46,120 @@ TODO - audio hasn't been worked on as of yet, although the adsp audio processor 
 
 == Modem ==
 The modem is booted by the Q6V5 MSS Peripheral Image Loader, it is required to boot the WiFi adapter.
-It should be possible to use [[https://github.com/andersson/rpmsgexport rpmsgexport]] to create a modem device that qmicli and eventually ofonoctl can talk to.
+
+=== Testing with QRTR ===
+On SDM845, unlike previous SOCs, the modem is accessed through QRTR, not through a dedicated device created through rpmsgexport.
+To check if the modem is available run <code>qrtr-lookup</code> and check for a service like <code>User Identity Module service</code>, or <code>Phonebook Management Service</code>.
+
+Example <code>qrtr-lookup</code> output (for enchilada):
+<pre>
+oneplus6:~$ qrtr-lookup
+  Service Version Instance Node  Port
+       66       1      180    0     1 Service registry notification service
+       43       2       18    0     4 Subsystem control service
+       15       1        0    0    22 Test service
+       51       1        2    0    23 CoreSight remote tracing service
+       21       1        0    0    24 Modem embedded file system service
+       24       1        0    0    25 Thermal mitigation device service
+       23       1        0    0    26 Thermal sensors service
+       22       1        0    0    27 Time service
+       36       1        0    0    29 Persistent device configuration service
+       49       1        2    0    30 IPA control service
+       54       1        0    0    34 <unknown>
+       17       1        0    0    36 Specific absorption rate service
+       74       1        0    0    37 <unknown>
+     4098       0        0    0    38 <unknown>
+       34       1        0    0    40 Coexistence service
+       41       1        1    0    42 RF radiated performance enhancement service
+       55       1        2    0    44 <unknown>
+      228       1        0    0    45 <unknown>
+        9       2        0    0    50 Voice service
+       50       1        0    0    51 <unknown>
+        3       1        0    0    52 Network Access Service
+       12       1        0    0    53 Phonebook Management service
+       10       2        0    0    54 Card Application Toolkit service (v2)
+        1       1        0    0    55 Wireless Data Service
+        4       1        0    0    56 Quality Of Service service
+       26       1        0    0    57 Wireless data administrative service
+        7       1        0    0    58 Authentication service
+        8       1        0    0    59 AT service
+       29       1        0    0    60 Circuit switched videotelephony service
+       11       1        0    0    61 User Identity Module service
+       47       1        0    0    62 <unknown>
+       71       1        0    0    63 <unknown>
+        5       1        0    0    64 Wireless Messaging Service
+       42       1        0    0    71 Data system determination service
+        2       1        0    0    75 Device Management Service
+       16       2        0    0    76 Location service (~ PDS v2)
+       48       1        0    0    79 <unknown>
+       68       1        0    0    80 <unknown>
+       51       1        3    0    82 CoreSight remote tracing service
+       69       1        0    0    83 ATH10k WLAN firmware service
+       77       1        0    0    89 <unknown>
+       33       1        0    0    92 IMS application service
+       18       1        0    0    93 IMS settings service
+     4099       0        0    0   101 <unknown>
+       57       1        0    0   103 <unknown>
+       14       1        0    1    14 Remote file system service
+       64       1        1    1 16389 Service registry locator service
+     4096       1        0    1 16390 <unknown>
+
+</pre>
+
+=== Getting SIM slot status ===
+
+Run <code>qmicli -d qrtr://<node> --uim-get-card-status</code> to get information about cards inserted.
+
+Example output (for enchilada):
+<pre>
+oneplus6:~$ qmicli -d qrtr://0 --uim-get-card-status
+[qrtr://0] Successfully got card status
+Provisioning applications:
+        Primary GW:   session doesn't exist
+        Primary 1X:   session doesn't exist
+        Secondary GW: session doesn't exist
+        Secondary 1X: session doesn't exist
+Slot [1]:
+        Card state: 'present'
+        UPIN state: 'not-initialized'
+                UPIN retries: '0'
+                UPUK retries: '0'
+        Application [1]:
+                Application type:  'usim (2)'
+                Application state: 'detected'
+                Application ID:
+                        A0:00:00:00:87:10:02:FF:FF:FF:FF:89:03:02:00:00
+                Personalization state: 'unknown'
+                UPIN replaces PIN1: 'no'
+                PIN1 state: 'not-initialized'
+                        PIN1 retries: '0'
+                        PUK1 retries: '0'
+                PIN2 state: 'not-initialized'
+                        PIN2 retries: '0'
+                        PUK2 retries: '0'
+Slot [2]:
+        Card state: 'present'
+        UPIN state: 'not-initialized'
+                UPIN retries: '0'
+                UPUK retries: '0'
+        Application [1]:
+                Application type:  'usim (2)'
+                Application state: 'detected'
+                Application ID:
+                        A0:00:00:00:87:10:02:FF:44:FF:12:89:00:00:01:00
+                Personalization state: 'unknown'
+                UPIN replaces PIN1: 'no'
+                PIN1 state: 'not-initialized'
+                        PIN1 retries: '0'
+                        PUK1 retries: '0'
+                PIN2 state: 'not-initialized'
+                        PIN2 retries: '0'
+                        PUK2 retries: '0'
+</pre>
+
+=== References ===
+
+* {{MR|1356|pmaports}} Relevant discussion on renaming the msm-modem package as rpmsgexport is not needed on SDM845.
 
 == WiFi ==
 Wifi is functional! Firmware for the modem and ath10k module must be loaded in order to have functional wifi.
