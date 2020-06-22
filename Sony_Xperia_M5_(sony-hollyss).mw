@@ -68,14 +68,11 @@ If you need to flash back to android, go to (Wipe - Advanced Wipe - Tick System 
 
 == See also ==
 * {{MR|1349|pmaports}} Initial merge request
+* {{Device package|sony-hollyss}}
+* {{Kernel package|sony-hollyss}}
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
-<!--
-If you manage to get your device packages merged, uncomment links below.
-* {{Device package|sony-hollyss}}
-* {{Kernel package|sony-hollyss}}
 -->
