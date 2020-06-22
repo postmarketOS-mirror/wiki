@@ -18,14 +18,14 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = <!-- Wireless network works? -->
+| status_wifi = Y
 | status_xwayland = Y
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
-| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_mainline = N
 | status_battery = Y
 | status_3d = <!-- Hardware accelerated 3D graphics (e.g. with freedreno) -->
 | status_accel = <!-- The sensor that measures proper acceleration works -->
-| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_audio = N
 | status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
 | status_camera = <!-- Taking photos and videos works. -->
 | status_gps = <!-- The Global Positioning System sensor works.  -->
@@ -50,6 +50,7 @@ Is OTG available, not used in wiki
 * [[User:Atipls|atipls]]
 
 == Maintainer(s) ==
+* [[User:Atipls|atipls]]
 
 == Users owning this device ==
 {{Device owners}}
@@ -62,14 +63,28 @@ Is OTG available, not used in wiki
 * Flashing rootfs and kernel via TWRP
 * Screen
 * Touchscreen
+* WiFi
 
 == What doesn't work ==
-* WiFi
 * Audio
 * USB-OTG
 
 == Additional notes ==
-It seems to run exceptionally slowly, and while USB Networking works, it's very inconsistent often locking up the entire system.
+* ADB sideload stops at 50%, but it actually succeeds.
+* The power button instantly shuts down the entire system
+* LightDM Hangs after a while but can be restarted from USB/SSH
+* Some audio devices do show up, but they don't actually work.
+
+=== How atipls made wifi work ===
+
+How atipls made wifi work (with a bit of confusing detours). [[Medion_Lifetab_S9714_(medion-kai)#How_bonsaiblue_made_wifi_work|Inspired by the (sort of) helpful How_bonsaiblue_made_wifi_work]].
+
+* Since the kernel provided by Samsung has built-in support for the BCM4343, enabling it was enough to get wlan0 to show up.
+** I actually have tried loading it as a kernel module, which ended up with horrible messages like <code>no wifi platform data, skip</code> and <code>DHD wifi platform data is required for Android build</code>
+* Grab nvram_mfg.txt and bcmdhd_mfg.bin from /etc/wifi from either a stock install or an unofficial lineageos port.
+** I have also tried <code>firmware-aosp-broadcom-wlan</code>, but the firmware seems to be newer than wanted thus either not loading or straight up soft bricking the OS.
+* Bring the interface up: <code>$ ip link set wlan0 up</code>
+* Use XFCE4's menu or <code>nmtui</code> to connect to a wifi network.
 
 == See also ==
 * [https://www.gsmarena.com/samsung_galaxy_tab_e_9_6-7295.php Specs on GSMArena.com]
