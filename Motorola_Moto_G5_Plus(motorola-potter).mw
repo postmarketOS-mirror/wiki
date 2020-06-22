@@ -75,26 +75,31 @@ Mainlining is in the early stages, based on Junak's msm8953 kernel. Source for t
 
 https://github.com/scarface-one/linux-msm8953
 
-{{note|1=Only boots on XT1686, the Indian variant, with board_id = <0x46, 0x83a0>. Porting to other variants of potter should be trivial}}
-{{note|1=Lk2nd is a hard dependency, without it the mainline kernel will not boot. You can get lk2nd for potter from here: https://github.com/scarface-one/lk2nd}}
+{{note|1=Only tested on XT1686, the Indian variant, with <code>board_id = <0x46, 0x83a0></code>. It should work on other devices, but may not.}}
+{{note|1=Some variants have a slightly different USB config, that isn't set up on mainline. Using mainline on those devices is dangerous, please don't use it unless you know what you're doing.}}
+{{note|1=Lk2nd is a hard dependency, without it the mainline kernel will not boot. You can get lk2nd for potter from here: https://github.com/scarface-one/lk2nd . Use branch <code>la.um.6.6.r1-V2</code> .}}
 
 What works:
 
 * Display
 
-:* Only Boe panel works
+:* Only Boe panel is tested
 
-:* Need test device for Tianma panel, along with way to select panel at boot
+:* Need test device for Tianma panel
+
+:* Panel is selected at boot by lk2nd, based on the cmdline
 
 :* Using labibb regulator driver from mainline patchworks: 1239224
 
-:* Brightness control works, but doesn't use the qcom-wled backlights, needs further investigation
+:* Brightness control works, but doesn't use the qcom-wled backlight, needs further investigation
 
 * GPU (DRM and FB) 
 
 :* requires proprietary firmware blobs, can be extracted from Android, or can be downloaded from firmware repositories
 
-:* Sometimes crashes on resume after suspend
+:* Sometimes crashes on resume after suspend, because of a mutex
+
+:* Preemption doesn't work (see msm8953 status)
 
 * SSH and Telnet via USB 
 
@@ -108,7 +113,7 @@ What works:
 
 * NFC
 
-:* Not tested, but driver loads and binds correctly, so it might work
+:* Driver probes and binds, but the h/w doesn't seem to respond
 
 * LEDs
 
@@ -149,6 +154,8 @@ What works:
 :* Useless without soundcard drivers
 
 Anything that isn't listed above can be assumed to not work.
+
+See also: [[Qualcomm Snapdragon 450/625/626/632 (MSM8953)|MSM8953 mainlining status]]
 
 == Links ==
 * GSM Arena specifications page: https://www.gsmarena.com/motorola_moto_g5_plus-8453.php
