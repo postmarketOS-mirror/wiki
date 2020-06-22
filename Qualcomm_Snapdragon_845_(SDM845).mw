@@ -157,6 +157,9 @@ Slot [2]:
                         PUK2 retries: '0'
 </pre>
 
+=== On making phone calls ===
+There is work in ModemManager to add qrtr support, more research needs to be done.
+
 === References ===
 
 * {{MR|1356|pmaports}} Relevant discussion on renaming the msm-modem package as rpmsgexport is not needed on SDM845.
