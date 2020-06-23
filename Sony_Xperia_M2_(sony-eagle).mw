@@ -14,14 +14,14 @@
 | memory = 1 GB
 | architecture = armv7
 | status_usbnet = Y
-| status_flashing =
+| status_flashing = Y
 | status_touch = Y
 | status_screen = Y
 | status_wifi =
 | status_xwayland =
 | status_fde =
 | status_mainline =
-| status_battery =
+| status_battery = Y
 | status_3d =
 | status_accel =
 | status_audio =
