@@ -39,26 +39,23 @@
 
 
 == Contributors ==
-* CalcProgrammer1 (Adam Honse)
-
-Device files:
-
-https://gitlab.com/CalcProgrammer1/pmaports
+* [[User:CalcProgrammer1|CalcProgrammer1]]
+* [[User:Eloy|Eloy]]
 
 == Maintainer(s) ==
 LineageOS kernel
 
 == How to enter flash mode ==
+
 Home + Volume Down will enter Download Mode
+
+Home + Volume Up will enter recovery mode
 
 == Installation ==
 I flashed by exporting zip, copying with MTP, and flashing with TWRP.  Have not tried other flash methods.
 
-== See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
--->
+== Mainline ==
+Eloy is currently working on porting mainline.
+
+== Externals links ==
+* https://gitlab.com/CalcProgrammer1/pmaports
