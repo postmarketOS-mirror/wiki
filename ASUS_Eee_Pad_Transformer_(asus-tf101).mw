@@ -43,12 +43,12 @@
 * Everyone on IRC
 
 == Installation ==
-{{note|We could [https://github.com/postmarketOS/pmbootstrap/pull/1103#issuecomment-357035481 streamline this a lot] with your help.}}
+{{note|We could [https://gitlab.com/postmarketOS/pmbootstrap/-/merge_requests/1103#note_85244280 streamline this a lot] with your help.}}
 
-You have to flash a recovery like TWRP before doing this.
+You have to flash a recovery like [https://twrp.me/asus/asustransformerTF101.html TWRP] before doing this.
 
-# <pre>./pmbootstrap.py install</pre>
-# <pre>./pmbootstrap.py export</pre>
+# <pre>pmbootstrap install</pre>
+# <pre>pmbootstrap export</pre>
 # Reboot the device in recovery
 # <pre>adb push /tmp/postmarketOS-export/blob-asus-tf101 /cache</pre>
 # <pre>adb push /tmp/postmarketOS-export/asus-tf101.img /cache</pre>
@@ -72,4 +72,5 @@ Boot log:
 
 == Links ==
 * [https://forum.xda-developers.com/wiki/index.php?title=ASUS_Eee_Pad_Transformer/How_to_install_Ubuntu&ajax=0#Development Partition overview]
-* {{github|1103}} initial PR
+* {{MR|1103}} initial PR
+* [[Nvidia Tegra 2 (tegra20)]]
