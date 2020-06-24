@@ -61,6 +61,9 @@ The device will take roughly 60 seconds to boot to the Weston environment.
 == Photos ==
 |[[File:Nexus-10-weston.jpg|400x400px]]
 
+== Mainline ==
+The Exynos 5250 has support in the mainline kernel, so this tablet might be a good candidate.
+
 
 == Links ==
 * [https://github.com/postmarketOS/pmbootstrap/pull/1138 Original pull request]
