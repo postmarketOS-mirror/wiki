@@ -12,9 +12,16 @@ Replace <code>username</code> with the username you chose in the installer. If y
 
 If you have trouble connecting, see [[USB Network]] for a more detailed guide and for troubleshooting instructions.
 
-=== Replace password with SSH key ===
+=== Hardening ===
+==== Replace password with SSH key ====
 
 If the SSH server is enabled in postmarketOS (in the on-device installer, one can decide at install-time), it listens to USB networking, Wi-Fi and cellular network. This provides a big attack surface, so it's highly recommended to install an SSH key and disable password login.
+
+''(TODO: add instructions here, please help with filling in)''
+
+==== Enable specific network interfaces only ====
+
+You might want to disable SSH access over cellular network, Wi-Fi and/or USB.
 
 ''(TODO: add instructions here, please help with filling in)''
 
