@@ -1,0 +1,23 @@
+This article provides an overview of how to use the SSH server after postmarketOS was installed. It is aimed at beginners, who have possibly installed postmarketOS for the first time through the [[on-device installer]] or [[pmbootstrap]].
+
+=== First login ===
+
+Connect your phone via USB to your PC, then type:
+
+<syntaxhighlight lang="shell-session">
+$ ssh username@172.16.42.1
+</syntaxhighlight>
+
+Replace <code>username</code> with the username you chose in the installer. If your phone is in the same network as your PC (e.g. via Wi-Fi), you can replace the IP with the Wi-Fi IP and it should work as well.
+
+If you have trouble connecting, see [[USB Network]] for a more detailed guide and for troubleshooting instructions.
+
+=== Replace password with SSH key ===
+
+If the SSH server is enabled in postmarketOS (in the on-device installer, one can decide at install-time), it listens to USB networking, Wi-Fi and cellular network. This provides a big attack surface, so it's highly recommended to install an SSH key and disable password login.
+
+''(TODO: add instructions here, please help with filling in)''
+
+=== Cool things to do with SSH ===
+
+* [[USB Internet|Share your PC's Internet with the phone]]
