@@ -2,9 +2,10 @@ List of Exynos SoC's that have various stages of support in the mainline Linux k
 
 * 3250
 * 4210
-* 4412
-* 5250
+* 4412: samsung-n5110, samsung-n8010, samsung-lt01wifi
+* 5250: samsung-manta
 * 5260
 * 5410
-* 5422
+* 5420: samsung-hlte
+* 5422: samsung-chagallwifi, 
 * 5800
