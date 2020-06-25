@@ -48,11 +48,18 @@
 == Unlocking ==
 The first step to do anything with the device is unlocking, with this device its done by sideloading the unlock apk from ASUS and clicking a few buttons in the app. The apk can be found on [https://dlcdnets.asus.com/pub/ASUS/EeePAD/TF201/UnLock_Device_App_V6.apk the ASUS support page].
 
-== Status ==
-* Kernel compiles
-* Flashable from within recovery (same as [[ASUS_Eee_Pad_Transformer_(asus-tf101)|Asus Eee Pad Transformer TF101]])
-* Doesn't go beyond bootlogo
-* Having problems compiling with APANIC flag (to read last_kmesg - and figure out why)
+== Kernel status ==
+=== Android kernel ===
+
+* 3.1 kernel based on ASUS sources with updates till Oreo support ([https://github.com/clamor95/morpheus_kernel_asus_tf201 Morpheus kernel])
+* 3.4 kernel as a part of Unlegacy Android Project ([https://github.com/clamor95/android_kernel_nvidia_tegra3 Unlegacy kernel])
+
+=== Mainline (Grate) ===
+
+* Baseline kernel sources on master: https://github.com/grate-driver/linux
+* Basic dts for TF201 is added
+* Version: 5.8.0-rc2
+* Status: Boots.
 
 == Installation ==
 === How to enter flash modes ===
