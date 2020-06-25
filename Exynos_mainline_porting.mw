@@ -1,8 +1,63 @@
-List of Exynos SoC's that have various stages of support in the mainline Linux kernel:
+== Exynos 4412 ==
+{{Infobox soc
+| name = 4412
+| manufacturer = Samsung
+| arch = armv7
+| year = 2012
+| cpu = 4x ARM Cortex A9 @ 1.4GHz
+| gpu = Broadcom VideoCore IV
+| process = 65
+| mainline = no <!-- Someone with a device to verify sth. working on mainline ? -->
+<!--
+| status_cpu = 
+| status_uart = 
+| status_storage = 
+| status_usb =
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi =
+| status_bluetooth =
+| status_modem = 
+| status_camera = 
+-->
+}}
 
+=== Devices ===
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Devices.chipset='Exynos 4412'
+|more results text=
+}}
+
+=== Specifications ===
+
+* 4x ARM Cortex A9 @ 1.4GHz
+* ARM Mali-400MP4 (quad-core) @ 440 MHz ; 17.6 GFLOPS
+
+=== Downstream status ===
+
+Both devices are reported to boot and have some initial support.
+
+=== Mainline status ===
+It has been reported that [[Samsung Galaxy Note 10.1 WiFi (samsung-n8010)]] now runs with the mainline kernel: https://github.com/CustomROMs/android_local_manifests_i9300/issues/1#issuecomment-568949705 The report says "I'm able to boot into buildroot with a 5.4 kernel, display, touch, wifi and some other stuff already working. I can run kmscube but I think it's not using the lima driver but software rendering as it's really slow." 
+
+=== More information ===
+
+* [http://phonedb.net/index.php?m=processor&id=337&c=samsung_exynos_4_quad_4412 phonedb.net]
+* [http://linux-exynos.org/wiki/Samsung_Exynos_4412 Linux-Exynos.org]
+
+== Other ==
 * 3250
 * 4210
-* 4412: samsung-n5110, samsung-n8010, samsung-lt01wifi
 * 5250: samsung-manta
 * 5260
 * 5410
