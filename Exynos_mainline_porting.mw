@@ -34,7 +34,7 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset='Exynos 4412' OR Devices.chipset='Exynos 4412 Quad' OR Devices.chipset='Exynos 4412 Dual'
+|where=Devices.chipset like 'Exynos 4412%'
 |more results text=
 }}
 
