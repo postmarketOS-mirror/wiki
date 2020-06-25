@@ -5,7 +5,7 @@
 | image = File:xtreamer-mc.jpg
 | imagecaption = 
 | releaseyear = 2014
-| originalsoftware = Android 4.2.2
+| originalsoftware = Android 4.2.2 on Linux 3.0.36
 | chipset = Rockchip RK3188
 | cpu = 4x 1.6 GHz Cortex-A9
 | gpu = Mali-400 MP4
@@ -60,6 +60,12 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+
+== Downstream notes ==
+There is a pre-built Ubuntu 12.04 image based on the 3.0.36+ kernel available on [https://www.cnx-software.com/2014/07/02/easy-and-safe-way-to-try-linux-on-popular-rockchip-rk3188-mini-pcs/ cnx-software.com]. Although it says it is built for the MINIX NEO X7 (also RK3188-based), it seems to work on this device as well.
+
+== Mainline ==
+RK3188 is supported in [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm/boot/dts/rk3188.dtsi mainline], so it may not be that difficult to mainline the device.
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
