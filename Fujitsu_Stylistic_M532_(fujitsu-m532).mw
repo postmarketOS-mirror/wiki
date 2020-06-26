@@ -82,11 +82,19 @@ Relevant PDF for similar device: https://www.rot13.org/~dpavlin/presentations/dc
 |-
 |Chipset
 |Nvidia Tegra T30S
-|✓ DTS in mainline
+|✓ boots
+|-
+|Display
+|Innolux n101icg-l21
+|✓ works
 |-
 |USB
 |?
-|✓ Driver in mainline
+|✓ works
+|-
+|Backlight
+|PWM
+|✓ works
 |-
 |Touchscreen
 |Atmel maXTouch
@@ -96,10 +104,6 @@ Relevant PDF for similar device: https://www.rot13.org/~dpavlin/presentations/dc
 |BCM4329
 |✓ Driver in mainline
 |-
-|Display
-|Innolux n101icg-l21
-|✓ Driver in mainline
-|-
 |Temperature
 |nct1008
 |✓ Driver in mainline
@@ -107,10 +111,6 @@ Relevant PDF for similar device: https://www.rot13.org/~dpavlin/presentations/dc
 |PMU
 |Texas Instruments TPS65911
 |✓ Driver in mainline
-|-
-|Backlight
-|PWM
-|✓ works
 |-
 |Accelerometer, gyro(s)
 |Invensense MPU3050
