@@ -40,6 +40,7 @@ Here '$initramfs_extra' is a shorthand for the path of the file. An example of a
 After installing the <code>debug-shell</code> initramfs hook, the <code>evtest</code>, <code>fftest</code> and <code>fbdebug</code> programs are available in the initramfs ({{github|1358}}).
 
 === Deleting the debug shell ===
+<source lang="shell-session">
 pmbootstrap initfs hook_del debug-shell
 
 === Tips and tricks ===
