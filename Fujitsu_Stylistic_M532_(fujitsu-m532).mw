@@ -69,7 +69,69 @@ Untested
 
 == Mainline kernel ==
 
-Using Okias's [https://github.com/okias/linux/tree/transformers transformers branch] with the Asus TF300T DTB, the kernel shows (quite surprisingly) a blinking cursor on the LCD, with backlight enabled. However, the device's vibration motor is always on (conflicting dock detect "always on" PIN on the TF300T). A [https://pastebin.com/SCL577FZ modified DTS] (still very incomplete and hacky) I made solves some of these issues, but many things on it (such as the Atmel touch panel) are still not working
+Using Okias's [https://github.com/okias/linux/tree/transformers transformers branch] with the Asus TF300T DTB, the kernel shows (quite surprisingly) a blinking cursor on the LCD, with backlight enabled. However, the device's vibration motor is always on (conflicting dock detect "always on" PIN on the TF300T).
+
+A [https://pastebin.com/SCL577FZ modified DTS] (still very incomplete and hacky) I made solves some of these issues, but many things on it (such as the Atmel touch panel) are still not working
+
+Relevant PDF for similar device: https://www.rot13.org/~dpavlin/presentations/dc2019-mainline_kernel_tegra20.pdf
+
+{| class="wikitable"
+! Element type
+! Element
+! Status
+|-
+|Chipset
+|Nvidia Tegra T30S
+|✓ DTS in mainline
+|-
+|USB
+|?
+|✓ Driver in mainline
+|-
+|Touchscreen
+|Atmel maXTouch
+|✓ Driver in mainline
+|-
+|WiFi, Bluetooth
+|BCM4329
+|✓ Driver in mainline
+|-
+|Display
+|Innolux n101icg-l21
+|✓ Driver in mainline
+|-
+|Temperature
+|nct1008
+|✓ Driver in mainline
+|-
+|PMU
+|Texas Instruments TPS65911
+|✓ Driver in mainline
+|-
+|Backlight
+|PWM
+|✓ works
+|-
+|Accelerometer, gyro(s)
+|Invensense MPU3050
+|✓ Driver in mainline
+|-
+|Graphics
+|Nvidia ULP
+|partial support in Nouveau?
+|-
+|Camera
+|ce1502, mt9d115
+|not in mainline, same as Nexus 7
+|-
+|Battery and LEDs
+|CG7153AM
+|super weird, no mainline support
+|-
+|Proximity/ambient light sensor
+|?
+|?
+|}
 
 == Contributors ==
 * R.
