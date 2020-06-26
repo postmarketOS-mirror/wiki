@@ -41,9 +41,9 @@ If you were asked for the passphrase and successfully logged in, everything work
 $ sudo nano /etc/ssh/sshd_config
 </syntaxhighlight>
 
-In this file, change the line to:
+In this file, set:
 
- PermitRootLogin '''without'''-password
+ PasswordAuthentication no
 
 Save and close the file. You might have to restart the ssh server for the changes to take effect.
 
