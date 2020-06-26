@@ -49,7 +49,7 @@
 
 3. Start the build process and install the completed image to a sdcard
 <source lang="shell-session">
-$ ./pmbootstrap.py install --sdcard /dev/sdX
+$ pmbootstrap install --sdcard /dev/sdX
 (replace /dev/sdX with the device for your sdcard)
 </source>
 4. Place the sdcard into the Raspberry Pi and boot it
@@ -78,9 +78,9 @@ File:Raspberry-pi-xfce2.jpg|thumb|XFCE4
 == See also ==
 * The Raspberry Pi has a [https://wiki.alpinelinux.org/wiki/Raspberry_Pi pre-existing port of Alpine Linux]
 * It should be possible to [[Existing Alpine installation|convert the pre-existing RPi Alpine install to a pmOS install]].
-* {{github|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
+* {{issue|1137}} Testing out Hildon and XFCE4 (other UIs did not work at all?) on Raspberry Pi after converting the Alpine installation
 * [https://github.com/christinaa/rpi-open-firmware/tree/master rpi-open-firmware] - a Free Software firmware for the Pi.
-* {{github|1501}} initial PR
+* {{MR|1501}} initial PR
 * {{MR|125|pmaports}} New device: Raspberry Pi Zero with Ethernet over USB enabled
 * {{Device package|raspberry-pi3}}
 
