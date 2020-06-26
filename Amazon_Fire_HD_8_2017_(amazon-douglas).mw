@@ -61,6 +61,7 @@
 [  380.053771]  (1)[71:hps_main][name:smp&]CPU3: shutdown
 </pre>
 
+* Although the kernel can detect plugged in USB keyboard, nor X neither wayland can use the keyboard. evtest works tho. USB drives also mounts correctly..
 
 == How to enter flash mode ==
 
