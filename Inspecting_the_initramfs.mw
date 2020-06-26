@@ -39,6 +39,9 @@ Here '$initramfs_extra' is a shorthand for the path of the file. An example of a
 === Additional programs ===
 After installing the <code>debug-shell</code> initramfs hook, the <code>evtest</code>, <code>fftest</code> and <code>fbdebug</code> programs are available in the initramfs ({{github|1358}}).
 
+=== Deleting the debug shell ===
+pmbootstrap initfs hook_del debug-shell
+
 === Tips and tricks ===
 * [http://www.microhowto.info/howto/copy_a_file_from_one_machine_to_another_using_netcat.html copy files to/from the initramfs with <code>nc</code> while it is running]
 
