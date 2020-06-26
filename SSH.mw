@@ -12,6 +12,14 @@ Replace <code>username</code> with the username you chose in the installer. If y
 
 If you have trouble connecting, see [[USB Network]] for a more detailed guide and for troubleshooting instructions.
 
+'''Note:''' The command
+
+<syntaxhighlight lang="shell-session">
+$ cd ~
+</syntaxhighlight>
+
+takes you to /root and not to /home/user.
+
 === Hardening ===
 ==== Replace password with SSH key ====
 
