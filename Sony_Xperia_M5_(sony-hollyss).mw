@@ -59,6 +59,8 @@ You will need to be in TWRP. From powered off, hold Vol Down + Power.
 == Notes ==
 - I doubt it will be able to be mainlined by myself as I (empyreal96) am not developer level but I am learning!
 
+- YOU WILL NEED TO ADD 'msm-fb-refresher' when using 'pmbootstrap init' (I forgot to add to depends, will update with next MR)
+
 == Installation ==
 I only had success with the Flashable Zip method using 'pmbootstrap flasher --method=adb sideload' or 'adb sideload PATH_TO_ZIP'
 
