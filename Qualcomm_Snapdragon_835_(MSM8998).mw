@@ -9,8 +9,8 @@
 | mainline = yes
 | status_cpu = Y
 | status_uart = 
-| status_storage = P
-| status_usb = P
+| status_storage = Y
+| status_usb = Y
 | status_display = P
 | status_gpu = 
 | status_pinctrl = Y
@@ -18,8 +18,8 @@
 | status_audio = 
 | status_video = 
 | status_thermal = 
-| status_wifi = 
-| status_bluetooth = P
+| status_wifi = P
+| status_bluetooth = Y
 | status_modem = 
 | status_camera = 
 }}
