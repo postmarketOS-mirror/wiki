@@ -12,7 +12,7 @@
 | storage = 1 GB internal, microSD slot for up to 32 GB
 | display = 400 x 800 pixels
 | memory = 512 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
@@ -38,35 +38,13 @@
 == Notes ==
 This is an active work in progress, which you can view/contribute to here: https://github.com/jkayani/pmbootstrap/tree/device-samsung-t679
 
-I'm waiting for a battery for the device to come in so I can try installing and booting pmOS. 
-
 You can view the original kernel sources for the device here: https://github.com/jkayani/exhibit-kernel. I originally obtained them from here (thanks Jocala!): https://github.com/Jocala/Samsung-Exhibit-II-Kernel, but had to put them in my own repo so that the source was in the root.
 
 == Contributors ==
 * Exhibit24g
 
 == Maintainer(s) ==
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
 * Exhibit24g
-
-== What works ==
-
-Kernel compiles. 
-
-== What does not work ==
-
-Everything.
-
-== How to enter flash mode ==
-
-== Installation ==
-
-
-<!-- add more sections here as necessary, e.g. Wifi, ... -->
-
-
-== Photos ==
 
 == Links ==
 Kernel: https://github.com/jkayani/exhibit-kernel
