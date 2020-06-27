@@ -5,7 +5,7 @@
 | image = File:gp-revolution.jpg
 | imagecaption = Geeksphone Revolution boot screen
 | releaseyear = 2014
-| originalsoftware = * Firefox OS 1.3
+| originalsoftware = Firefox OS 1.3
 * Firefox OS 2.0
 * Android 4.2
 * CyanogeMod 11
@@ -39,15 +39,12 @@
 }}
 
 == Contributors ==
-* Rudloff
+* [[User:Rudloff|Rudloff]]
 
 == Maintainer(s) ==
-* Rudloff
+* [[User:Rudloff|Rudloff]]
 
-== What works ==
-The kernel builds.
-
-== What does not work ==
+== Status ==
 It does not boot (it goes straight to recovery).
 
 According to [http://gpdroid.s3.amazonaws.com/revolution/BuildCM11forGPRev.pdf this document], the bootloader requires a signed ''boot.img'' so it might not be possible to use our own.
