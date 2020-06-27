@@ -22,9 +22,12 @@ More information:
 * [https://github.com/lunixbochs/tinygles/issues/10 Unable to run hildon-desktop: Failed to create texture 2d due to size/format constraints]
 * [https://pyra-handheld.com/boards/threads/glshim.69736/ Pandora thread about glshim] (contains debug environment variables etc!)
 
+== OpenSWR ==
+
+[https://openswr.org/ OpenSWR] does not work on non-x86 architectures due to its usage of {{wikipedia|Advanced_Vector_Extensions|AVX}}, see [https://gallium.readthedocs.io/en/latest/drivers/openswr/faq.html#will-this-work-on-arm-mips-power-other-non-x86-architecture]
+
 == Others ==
 Not much research has gone into these, please expand.
-* [http://openswr.org/ OpenSWR]
 * [https://github.com/google/swiftshader swiftshader] (see {{issue|23|pmaports}})
 
 [[Category:Technical Reference]]
