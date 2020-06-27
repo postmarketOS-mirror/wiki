@@ -12,7 +12,7 @@
 | storage =
 | display =
 | memory = 
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = 
 | status_flashing = 
 | status_touch = 
