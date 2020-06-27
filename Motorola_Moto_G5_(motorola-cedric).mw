@@ -55,8 +55,9 @@
 == Installation ==
 * Enter fastboot mode.
 * Execute  <code> pmbootstrap flasher flash_rootfs </code>
-* Execute  <code> pmbootstrap flasher boot </code>
+* Execute  <code> pmbootstrap flasher boot </code> or <code> pmbootstrap flasher flash_kernel </code>
 * Enjoy
+See also [[Installation guide]]
 
 == Notes ==
 * Hildon has messed up colors and is in portrait mode.
