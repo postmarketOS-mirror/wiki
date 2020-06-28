@@ -90,7 +90,9 @@ Reboot:
 
 fastboot reboot
 
+== Installing recovery ==
 
+samsung-codina uses weird proprietary Samsung boot format to boot recovery using the main kernel. u-boot can only boot recoveries that are in Android boot.img format. As a workaround, you can get vmlinuz from postmarketOS installation(do pmbootstrap export after pmbootstrap install), and create boot image with mkbootimg(using recovery CPIO).
 
 == See also ==
 * {{MR|1275|pmaports}} Initial merge request
