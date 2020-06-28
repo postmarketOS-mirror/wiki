@@ -12,7 +12,7 @@ To turn Alpine into postmarketOS:
 
 * Install the packages for the UI you want, for example:
  
-<pre>apk add -u postmarketos-ui-hildon</pre> or
+<pre>apk add -u postmarketos-ui-xfce</pre> or
 <pre>apk add -u postmarketos-ui-weston</pre>
  
 (Use <code>device-qemu-amd64</code> for a x86_64 virtual machine installation, but this will also install a kernel -- maybe it makes sense to introduce a new "docker device" without any kernel, you could experiment with that if you want.)
