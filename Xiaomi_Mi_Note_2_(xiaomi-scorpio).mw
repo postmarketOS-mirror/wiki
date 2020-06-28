@@ -4,7 +4,7 @@
 | codename = xiaomi-scorpio <!-- e.g. htc-bravo -->
 | releaseyear = 2016
 | originalsoftware = Android 6.0 (Marshmallow), MIUI 8.2 <!-- e.g. Android 2.1 -->
-| chipset = Qualcomm Snapdragon 821 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
+| chipset = Qualcomm MSM8996 Snapdragon 821 <!-- e.g. Qualcomm QSD8250 Snapdragon S1 -->
 | cpu = Quad-core (2x2.35 GHz Kryo & 2x1.6 GHz Kryo) <!-- e.g. 1.0 GHz Scorpion -->
 | gpu = Adreno 530 <!-- e.g. Adreno 200 -->
 | storage = 64/128GB Internal <!-- e.g. 512 MB -->
