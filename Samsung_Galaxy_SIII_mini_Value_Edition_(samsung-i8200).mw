@@ -2,7 +2,7 @@
 | manufacturer = Samsung
 | name = Galaxy S III mini Value Edition
 | codename = samsung-i8200
-| image = File:golden.png
+| image = File:PmOS-i8200.jpg
 | imagecaption = Galaxy SIII mini VE
 | releaseyear = 2014
 | originalsoftware = Android 4.2.2 (Jelly Bean)
@@ -34,8 +34,6 @@
 | booting = yes
 }}
 
-[[File:PmOS-i8200.jpg|thumb|right|Midori browser on Weston]]
-
 == Contributors ==
 * Ashymad
 
@@ -57,11 +55,12 @@
 Hold <code>Home</code>+<code>Volume Down</code>+<code>Power</code> then release <code>Power</code> when phone vibrates. Press <code>Volume Up</code> upon seeing warning.
 
 == Installation ==
-<code>
-pmbootstrap init<br>
-pmbootstrap install --sdcard=/dev/mmcblk
-pmbootstrap flasher flash_kernel
->
+You can flash rootfs to sdcard or use netcat {{issue|456}}
+
+ pmbootstrap init
+ pmbootstrap install --sdcard=/dev/mmcblkX
+ pmbootstrap flasher flash_kernel
+
 
 
 == See also ==
