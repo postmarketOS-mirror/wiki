@@ -55,7 +55,7 @@
 == Installation ==
 * Enter fastboot mode.
 * Execute  <code> pmbootstrap flasher flash_rootfs </code>
-* Execute  <code> pmbootstrap flasher boot </code> or <code> pmbootstrap flasher flash_kernel </code>
+* Execute  <code> pmbootstrap flasher boot </code> (flashing the kernel is not possible as the kernel is too big)
 * Enjoy
 See also [[Installation guide]]
 
