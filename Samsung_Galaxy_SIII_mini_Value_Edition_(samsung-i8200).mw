@@ -61,6 +61,7 @@ You can flash rootfs to sdcard or use netcat {{issue|456}}
  pmbootstrap install --sdcard=/dev/mmcblkX
  pmbootstrap flasher flash_kernel
 
+Change <code>X</code> in the command to your sdcard device node!
 
 
 == See also ==
