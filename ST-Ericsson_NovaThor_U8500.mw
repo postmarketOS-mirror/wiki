@@ -41,7 +41,7 @@ tables=Devices
 Other devices using this chipset but not yet ported to postmarketOS (remove once they are ported):
 
 * Samsung Galaxy Xcover 2 GT-S7710 codename Skomer ({{wikipedia|Samsung_Galaxy_Xcover_2|wikipedia}})
-* Samsung Galaxy Beam GT-I8530 ({{wikipedia|Samsung_Galaxy_Beam_i8530|wikipedia}})
+* Samsung Galaxy Beam GT-I8530 codename Gavini ({{wikipedia|Samsung_Galaxy_Beam_i8530|wikipedia}})
 * Sony Xperia Go (sony-lotus) ({{wikipedia|Sony_Xperia_Go|wikipedia}})
 * Sony Xperia Sola (sony-pepper) ({{wikipedia|Sony_Xperia_sola|wikipedia}})
 
