@@ -24,6 +24,15 @@ $ pip3 install --user pmbootstrap
 You may need to reload your configuration by running <code>source ~/.profile</code>.
 
 That's it. The steps below are for alternative methods of installing <code>pmbootstrap</code>. Read on at [[#Tab completion]] if you are interested.
+
+==== Updating ====
+
+Updating to the latest version of pmbootstrap can be done like this:
+
+<syntaxhighlight lang="shell-session">
+$ pip3 install --user --upgrade pmbootstrap
+</syntaxhighlight>
+
 === Latest development version from git ===
 ==== Download pmbootstrap ====
 <syntaxhighlight lang="shell-session">
