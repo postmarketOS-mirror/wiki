@@ -37,7 +37,7 @@
 == Supported models ==
 This page is only for versions of the Galaxy S4 that use the Qualcomm Snapdragon 600 SoC, see https://en.wikipedia.org/wiki/Samsung_Galaxy_S4#Model_variants
 
-Watch out, some versions have bootloaders that can't be unlocked.
+Watch out, some versions have bootloaders that can't be unlocked, although the locked versions have a bootloader that contains a [http://blog.azimuthsecurity.com/2013/05/exploiting-samsung-galaxy-s4-secure-boot.html bug].
 
 == Contributors ==
 * i9505_someone (rrooij on GitHub)
@@ -109,4 +109,3 @@ If your network uses DHCP, start the DHCP client:
 
 * Kernel used: https://github.com/LineageOS/android_kernel_samsung_jf
 * Teardown: https://www.ifixit.com/Teardown/Samsung+Galaxy+S4+Teardown/13947
-* Bug in bootloader http://blog.azimuthsecurity.com/2013/05/exploiting-samsung-galaxy-s4-secure-boot.html
