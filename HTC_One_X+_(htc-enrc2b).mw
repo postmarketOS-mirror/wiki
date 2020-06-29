@@ -33,7 +33,7 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
+| status = not booting anymore, as the image shows it once reached pmOS logo, but it doesn't show up anymore
 | booting = no
 
 <!-- you can also use these lines if you need to:
