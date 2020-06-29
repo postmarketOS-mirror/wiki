@@ -19,7 +19,7 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = Y
+| status_screen = Partial
 | status_wifi = Y
 | status_xwayland = 
 | status_fde = 
@@ -55,6 +55,10 @@ Working fine
 
 === MATE ===
 Black screen but booted
+
+=== XFCE ===
+
+Black screen
 
 == Some notes from Amy ==
 
