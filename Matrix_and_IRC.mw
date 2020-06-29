@@ -54,7 +54,7 @@ You can probably configure your chat client to identify you automatically. Instr
 == Other discussion platforms ==
 
 * [https://reddit.com/r/postmarketOS Reddit] (we share photos/videos/blog posts of our development work there)
-* [https://gitlab.com/postmarketOS/pmbootstrap/issues GitLab issues] (for discussing bugs and features)
+* [https://gitlab.com/groups/postmarketOS/-/issues GitLab issues] (for discussing bugs and features)
 
 == See also ==
 * [https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ FAQ for using regular IRC with your matrix account over matrix-appservice-irc]
