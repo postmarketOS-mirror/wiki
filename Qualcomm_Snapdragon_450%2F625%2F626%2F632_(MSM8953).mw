@@ -18,7 +18,7 @@
 | status_pinctrl = Y
 | status_i2c = Y
 | status_audio =
-| status_video =
+| status_video = Y
 | status_thermal = P
 | status_wifi = Y
 | status_bluetooth = Y
@@ -70,6 +70,9 @@ Display works with both simplefb and msm-drm (with FB takeover). Dual DSI config
 
 == GPU ==
 GPU works without preemption and on reduced clock speed.
+
+== Video Encoder / Decoder (Venus) ==
+Venus boots and registers, but sadly there isn't much support for h/w accelerated video decoding, let alone v4l2 based video decoding, so venus hasn't been tested. That being said, there's not much reason it wouldn't work, so its just assumed to work for now.
 
 == Modem ==
 The modem boots and responds to commands, but unlike older qcom modems which use SMD to communicate, it uses qrtr. qrtr support in userspace tools is still in the initial stages, as of now only libqmi seems to support it. Other tools like modem-manager and ofono have no support, but some work is being done on modem-manager.
