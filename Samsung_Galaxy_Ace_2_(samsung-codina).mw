@@ -12,7 +12,7 @@
 | storage = 4 GB
 | display = 480x800 PLS
 | memory = 768 MB
-| architecture = armhf
+| architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = N
 | status_flashing = Y
@@ -96,7 +96,7 @@ samsung-codina uses weird proprietary Samsung boot format to boot recovery using
 
 == See also ==
 * {{MR|1275|pmaports}} Initial merge request
-
+* {{Kernel package|samsung-codina|testing}}
 == Known bug ==
 
 While in fastboot, PC may not detect the device. Try rebooting the device.
