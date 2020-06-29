@@ -33,8 +33,8 @@
 | status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
-| status = not booting anymore, as the image shows it once reached pmOS logo, but it doesn't show up anymore
-| booting = no
+| status = booting up and showing pmOS logo, if weston is choosen
+| booting = yes
 
 <!-- you can also use these lines if you need to:
 Version of the kernel that pmos is running
@@ -73,7 +73,7 @@ Basically follow the [[Installation guide]]. Here is an overview about different
 |Y
 |-
 |pmbootstrap flasher boot
-| splash screen does not show up, ssh-connection fails
+|
 |Y
 |-
 |pmbootstrap flasher flash_kernel
@@ -90,8 +90,11 @@ Basically follow the [[Installation guide]]. Here is an overview about different
 |-
 | Full-disk-encryption parameter
 |
-|
+|N
 |}
+
+== USB-Network ==
+Trying to get onto the device with ssh results in <pre>ssh: connect to host 172.16.42.1 port 22: Connection timed out</pre>
 
 == See also ==
 *[https://twrp.me/htc/htconexplusinternational.html TWRP-Device Page]
