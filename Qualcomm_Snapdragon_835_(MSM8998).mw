@@ -1,16 +1,16 @@
 {{Infobox soc
-| name = MSM8998
 | manufacturer = Qualcomm
+| name = MSM8998
 | arch = aarch64
-| year = 2017
-| cpu = 4x 2.45 GHz Kryo 280, 4x 1.9 GHz Kryo 280
+| cpu = 4x 2.45 GHz Kryo 280 Gold, 4x 1.9 GHz Kryo 280 Silver
 | gpu = Adreno 540
+| year = 2017
 | process = 10
 | mainline = yes
 | status_cpu = Y
 | status_uart = 
 | status_storage = Y
-| status_usb = Y
+| status_usb = P
 | status_display = P
 | status_gpu = 
 | status_pinctrl = Y
@@ -24,6 +24,8 @@
 | status_camera = 
 }}
 
+[https://www.qualcomm.com/products/snapdragon-835-mobile-platform MSM8998] (or Snapdragon 835) is a high-end Qualcomm SoC released in 2017 with mainline support originally added for the [https://patchwork.kernel.org/cover/10586661/ MTP (proven reference design) board] towards the end of 2018.
+
 == Devices ==
 {{#cargo_query:
 tables=Devices
@@ -34,3 +36,29 @@ tables=Devices
 |where=Booting AND Devices.chipset='Qualcomm MSM8998 Snapdragon 835'
 |more results text=
 }}
+
+== Bluetooth ==
+Getting Bluetooth to work should be trivial assuming you compile the kernel with the following modules enabled:
+ CONFIG_RFKILL=m
+ CONFIG_BT_RFCOMM=y
+ CONFIG_BT_BNEP=y
+ CONFIG_BT_HIDP=y
+ CONFIG_BT_HS=y
+ CONFIG_BT_LE=y
+
+After those are set and you've copied the needed kernel modules over to the rootfs in <code>/lib/modules/</code> you just need the following firmware files in <code>/lib/firmware/qca/</code>:
+ crbtfw21.tlv
+ crnv21.bin
+
+Those can be supplied directly from <code>[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware]</code> and they should work fine, but if not you'll need to grab the files from your phone's firmware partitions.
+
+== See also ==
+[https://github.com/JamiKettunen/linux-mainline-oneplus5 linux-mainline-oneplus5] A mainline kernel fork with some patches for MSM8998 and OnePlus 5/5T support (check the [https://github.com/JamiKettunen/linux-mainline-oneplus5/commits/linux-5.7 5.7 branch commits] for a "step-by-step guide")
+
+[[OnePlus_5_(oneplus-cheeseburger)#Mainline_kernel]]
+
+== Who's working on it ==
+* [[User:Deathmist]] (@deathmist on Matrix)
+* [[User:R0551]] (@r0551 on Matrix)
+* [[User:Degdag]] (@degdag on Matrix)
+(feel free to add yourself here if you're working on MSM8998 mainlining!)
