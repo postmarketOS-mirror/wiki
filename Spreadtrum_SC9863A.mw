@@ -1,0 +1,43 @@
+{{Infobox soc
+| name = SC9863A
+| manufacturer = Spreadtrum
+| arch = aarch64
+| year = 2018
+| cpu = 4x 1.6 GHz ARM Cortex-A55 + 4x 1.2 GHz ARM Cortex-A55
+| gpu = PowerVR GE8322
+| process = 28
+| mainline = yes
+| status_cpu =
+| status_uart =
+| status_storage = 
+| status_usb = 
+| status_display = 
+| status_gpu = 
+| status_pinctrl = 
+| status_i2c = 
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+== Bootloader unlock ==
+{{Warning|Bootloader unlock results in formatted system partition as well as userdata. Make sure you have a backup/official firmware.}}
+* [https://mega.nz/#!nBgBDYDJ!ynSsfCT7UfY16qhc6YlngRLVJKcxnf1qJDC2n_V0u9o Download required files]
+* Open Developer options and toggle Bootloader unlock option on
+* Move to fastboot mode
+* Get identifier token with <pre>fastboot oem get_identifier_token</pre>
+* Run <code>./signidentifier_unlockbootloader.sh paste_token_hre rsa4096_vbmeta.pem signature.bin</code>
+* Run <code>fastboot flashing unlock signature.bin</code>
+
+=== Devices those can be unlocked ===
+* Alcatel 1S (2019) 5024D
+* Doogee Y7/N10
+* Xiaomi Qin 2 Pro
+* Other
+
+== See also ==
+[https://www.imgtec.com/powervr-gpu/ge8322/ PowerVR GE8322 page on Imagination Technologies website]
