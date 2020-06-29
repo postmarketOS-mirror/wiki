@@ -34,7 +34,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = yes
+| booting = no
 
 <!-- you can also use these lines if you need to:
 Version of the kernel that pmos is running
@@ -59,6 +59,39 @@ Is OTG available, not used in wiki
 {{button|Power}} + {{button|Volume Down}}
 
 From here you can navigate to recovery or fastboot mode.
+
+== Installation ==
+{{note|Installation port seems broken at the moment. Once showed pmOS logo at least, but it doesn't show it anymore and stays at the htc-logo.}}
+Basically follow the [[Installation guide]]. Here is an overview about different options available:
+{|class="wikitable feature-colors"
+! Option
+! Info
+! Working
+|-
+|pmbootstrap flasher flash_rootfs
+|
+|Y
+|-
+|pmbootstrap flasher boot
+| splash screen does not show up, ssh-connection fails
+|Y
+|-
+|pmbootstrap flasher flash_kernel
+|
+|Y
+|-
+| sd-card installation
+|
+|
+|-
+| Android-Recovery-Installer
+|
+|
+|-
+| Full-disk-encryption parameter
+|
+|
+|}
 
 == See also ==
 *[https://twrp.me/htc/htconexplusinternational.html TWRP-Device Page]
