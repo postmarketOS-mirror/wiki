@@ -62,7 +62,7 @@ Download https://releases.linaro.org/96boards/dragonboard410c/linaro/rescue/late
  <nowiki>$ git clone https://git.linaro.org/landing-teams/working/qualcomm/db-boot-tools.git
 $ cd db-boot-tools
 $ SD_CARD="/dev/sdX" # Replace this by your device name
-$ sudo ./mksdcard -o "$SD_CARD" -p dragonboard410c/linux/partitions.txt -i ../dragonboard-410c-bootloader-sd-linux-* -s $(($(sudo blockdev --getsz "$SD_CARD") / 2))</nowiki>
+$ sudo ./mksdcard -o "$SD_CARD" -p dragonboard410c/linux/partitions.txt -i ../dragonboard-410c-bootloader-sd-linux-*/ -s $(($(sudo blockdev --getsz "$SD_CARD") / 2))</nowiki>
 
 Writing the SD card will take a while. Then insert it into the DragonBoard 410c and turn it on. Now you can connect a micro USB cable to get access to Fastboot.
 
