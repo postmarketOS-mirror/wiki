@@ -43,7 +43,7 @@ Work path [/home/user/.local/var/pmbootstrap]:
 Type in the vendor and code-name of your device as listed [[Devices|here]], and optionally a custom username.
 <pre>
 Choose your target device vendor (either an existing one, or a new one for porting).
-Available vendors (45): amazon, asus, bq, chuwi, fairphone, finepower, fujitsu, google, gp, hisense, htc, huawei, infocus, jolla, leeco, lenovo, lg, medion, meizu, motorola, nextbit, nobby, nokia, oneplus, oppo, ouya, pine64, planet, purism, qemu, raspberry, samsung, semc, sony, surftab, t2m, tablet, teclast, wiko, wileyfox, wingtech, xiaomi, yu, zte, zuk
+Available vendors (50): alcatel, amazon, arrow, asus, bq, chuwi, fairphone, finepower, fly, fujitsu, google, gp, hisense, htc, huawei, infocus, jolla, leeco, lenovo, lg, medion, meizu, motorola, nextbit, nobby, nokia, oneplus, oppo, ouya, pine64, planet, purism, qemu, raspberry, samsung, semc, sharp, sony, surftab, t2m, tablet, teclast, tokio, wiko, wileyfox, wingtech, xiaomi, yu, zte, zuk
 </pre>
 <pre>
 Vendor [nokia]: samsung
@@ -55,18 +55,21 @@ Available codenames (43): a3ulte, a5ulte, a5y17lte, apexq, ariesve, espresso10, 
 Carefully choose the user interface you would like to install. Check your [[devices|device's wiki page]] for interfaces that are known to be working with your device. Weston and XFCE4 are usable on devices which do not have hardware 3D acceleration (most of them!), the others are notably slowed down. Please read the corresponding [[Interfaces|user interface]] article for information about how usable each interface is and keep in mind that most of them are not that usable yet.
 <pre>
 Available user interfaces (11): 
+Available user interfaces (13): 
 * none: No graphical environment
-* hildon: (X11) Lightweight GTK+2 UI (optimized for single-touch touchscreens) (DISABLED FOR ARMHF, ARMV7!)
+* fbkeyboard: Plain framebuffer console with touchscreen keyboard support
+* gnome: (Wayland) Gnome Shell
 * i3wm: (X11) Tiling WM (keyboard required)
 * kodi: (Wayland) 10-foot UI useful on TV's
 * mate: (X11) MATE Desktop Environment, fork of GNOME2 (stylus recommended)
-* phosh: (Wayland) Mobile UI developed for the Librem 5
-* plasma-mobile: (Wayland) Mobile variant of KDE Plasma, optimized for touchscreen (slow without hardware acceleration!)
+* phosh: (Wayland) Mobile UI developed for the Librem 5 (works only with numeric passwords!)
+* plasma-desktop: (X11/Wayland) KDE Desktop Environment (works well with tablets)
+* plasma-mobile: (Wayland) Mobile variant of KDE Plasma (does not run without hardware acceleration, allows only numeric passwords!)
 * plasma-mobile-extras: Plasma Mobile with more apps pre-installed (video and music players, pdf reader, etc.)
 * shelli: Plain console with touchscreen gesture support
 * sway: (Wayland) Tiling WM, drop-in replacement for i3wm (DOES NOT RUN WITHOUT HW ACCELERATION!)
 * weston: (Wayland) Reference compositor (demo, not a phone interface)
-* xfce4: (X11) Lightweight GTK+2 desktop (stylus recommended)
+* xfce4: (X11) Lightweight desktop (stylus recommended)
 User interface [weston]:
 </pre>
 
