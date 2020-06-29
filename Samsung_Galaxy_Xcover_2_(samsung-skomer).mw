@@ -66,6 +66,7 @@ Boot into Download Mode using {{Button|Power}} + {{Button|Volume Down}} + {{Butt
 Finally, just follow the [[Installation guide]].
 
 == See also ==
+{{wikipedia|Samsung_Galaxy_Xcover_2|wikipedia}}
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
