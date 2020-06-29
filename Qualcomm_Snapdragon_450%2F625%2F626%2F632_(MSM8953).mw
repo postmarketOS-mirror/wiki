@@ -22,7 +22,7 @@
 | status_thermal = P
 | status_wifi = Y
 | status_bluetooth = Y
-| status_modem =
+| status_modem = P
 | status_camera = 
 
 }}
@@ -70,6 +70,9 @@ Display works with both simplefb and msm-drm (with FB takeover). Dual DSI config
 
 == GPU ==
 GPU works without preemption and on reduced clock speed.
+
+== Modem ==
+The modem boots and responds to commands, but unlike older qcom modems which use SMD to communicate, it uses qrtr. qrtr support in userspace tools is still in the initial stages, as of now only libqmi seems to support it. Other tools like modem-manager and ofono have no support, but some work is being done on modem-manager.
 
 == Mainlining ==
 MSM8953 is almost as great platform to get started with mainlining as MSM8916! The [[MSM8916 Mainlining]] guide is quite relevant to it.
