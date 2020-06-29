@@ -298,6 +298,17 @@ pinephone:~# sudo apk add ofonoctl
 pinephone:~# ofonoctl wan --connect --append-dns
 </source>
 
+Or use only modemmanager which integrates better with phosh.
+
+<source lang="shell-session">
+pinephone:~# sudo mmcli -m 0 --create-bearer='apn=APN.NAME,user=USERNAME,password=PASSWORD,allowed-auth=chap,allow-roaming=no'
+pinephone:~# sudo nmcli c add type gsm ifname cdc-wdm0 con-name OPERATOR-NAME apn APN.NAME user USERNAME password PASSWORD
+
+# Check your connection
+pinephone:~# nmcli c   # check status of the connection named OPERATOR-NAME as above
+pinephone:~# nmcli d    #  check status of cdc-wdm0
+</source>
+
 In order to connect to the serial console of the modem, you need a terminal application. One option is to use <code>minicom</code>.
 
 <source lang="shell-session">
