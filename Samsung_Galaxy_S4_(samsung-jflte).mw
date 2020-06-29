@@ -109,3 +109,4 @@ If your network uses DHCP, start the DHCP client:
 
 * Kernel used: https://github.com/LineageOS/android_kernel_samsung_jf
 * Teardown: https://www.ifixit.com/Teardown/Samsung+Galaxy+S4+Teardown/13947
+* Bug in bootloader http://blog.azimuthsecurity.com/2013/05/exploiting-samsung-galaxy-s4-secure-boot.html
