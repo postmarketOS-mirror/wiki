@@ -77,18 +77,6 @@ To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device
 == Status ==
 Currently a work in progress. Kernel compiles.
 
-== Config settings needed to compile ==
-Set:
-   CONFIG_COMPAT_VDSO=m
-   CONFIG_DIAG_CHAR=n
-   CONFIG_USB_CONFIGFS=y
-
-
-Defaults:
-   CONFIG_COMPAT_VDSO=y
-   CONFIG_DIAG_CHAR=y
-   CONFIG_USB_CONFIGFS=m
-
 == See also ==
 * {{MR|1194|pmaports}} Initial merge request
 <!--
