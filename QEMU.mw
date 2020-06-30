@@ -25,7 +25,7 @@ For example, to set the resolution to qHD (540x960):
  # 544x960 59.96 Hz (CVT) hsync: 59.72 kHz; pclk: 43.00 MHz
  Modeline "544x960_60.00"   43.00  544 576 632 720  960 963 973 996 -hsync +vsync
 
-Note how it changed the horizontal resolution to <code>544</code> to match the CVT standard (weird). Then add the new <code>modeline</code> and change <code>mode</code>:
+Note how it changed the horizontal resolution to <code>544</code> to match the CVT standard. Weird. Then add the new <code>modeline</code> and change <code>mode</code>:
 
  [output:Virtual-1]
  # For the x86 VM using QXL to get a phone like geometry
