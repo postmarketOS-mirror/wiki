@@ -286,7 +286,7 @@ fi
 
 {{note|You cannot use this to turn the screen back on if i3lock or similar is running, as they would grab the keys}}
 
-==== Misc: Middle click ====
+==== Misc: Middle click and right click ====
 Obviously, you can't middle click with a touchscreen, but this can be annoying when it's one of the few ways to paste in the terminal.
 This script simulates a middle click:
 <syntaxhighlight lang="sh">
