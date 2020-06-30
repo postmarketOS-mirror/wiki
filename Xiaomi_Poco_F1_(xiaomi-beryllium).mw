@@ -55,7 +55,7 @@ You have to press Power and Vol- to enter the bootloader.
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
-Run "pmbootstrap init" and select beryllium as device.
+Run <code>pmbootstrap init</code> and select beryllium as device.
 
 Choose a display environment of your choice.
 
