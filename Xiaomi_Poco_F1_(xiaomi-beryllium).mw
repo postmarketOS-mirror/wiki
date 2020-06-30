@@ -55,17 +55,12 @@ You have to press Power and Vol- to enter the bootloader.
 == Installation ==
 <!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
 
-Download the device/linux package from my GitHub or from the GitLab MR (because it is not merged) and paste it into your pmaports/device folder.
+Run "pmbootstrap init" and select beryllium as device.
 
-Choose Plasma Mobile as user interface (others do not work yet).
+Choose an display environment of your choice.
 
-Build and install it.
-
-You can also use mainline kernel with envkernel, but only USB and panel works with mainline yet.
-
-Downstream and mainline are pretty much at the same state.
-
-Works with mainline: USB, panel (with HW acceleration), keys
+Works with mainline: USB, panel (with HW acceleration), keys, WiFi, booting modem, internal storage and SDCard support
+(newest kernel not in pmaports yet, have to build it using envkernel)
 
 Works with downstream: USB, panel, touchscreen, keys
 
