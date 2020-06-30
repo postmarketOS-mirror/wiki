@@ -297,6 +297,11 @@ xdotool keyup ctrl
 xdotool keyup shift
 </syntaxhighlight>
 
+For simulating right click button you can use this command:
+<syntaxhighlight lang="sh">
+xdotool click 3
+</syntaxhighlight>
+
 You can bind it to any key you wish. <code>XF86WebCam</code> is a good choice since it's fairly easy to reach and isn't used for anything.
 
 === Battery ===
