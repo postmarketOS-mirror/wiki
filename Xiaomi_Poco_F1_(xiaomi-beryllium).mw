@@ -18,12 +18,12 @@
 | status_flashing = Y
 | status_touch = P
 | status_screen = P
-| status_wifi = 
-| status_xwayland = 
+| status_wifi = Y
+| status_xwayland = Y
 | status_fde = 
-| status_mainline = P
+| status_mainline = Y
 | status_battery = 
-| status_3d = P
+| status_3d = Y
 | status_accel = 
 | status_audio = 
 | status_bluetooth = 
@@ -32,7 +32,7 @@
 | status_mobiledata = 
 | status_sms = 
 | status_calls = 
-| status = fully booting,display only works in Plasma Mobile, mainline WIP
+| status = fully booting,display with working WiFi, mainline WIP
 | booting = yes
 }}
 
@@ -57,7 +57,7 @@ You have to press Power and Vol- to enter the bootloader.
 
 Run "pmbootstrap init" and select beryllium as device.
 
-Choose an display environment of your choice.
+Choose a display environment of your choice.
 
 Works with mainline: USB, panel (with HW acceleration), keys, WiFi, booting modem, internal storage and SDCard support
 (newest kernel not in pmaports yet, have to build it using envkernel)
