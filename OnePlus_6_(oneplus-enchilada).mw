@@ -61,7 +61,27 @@ Mainline kernel is up and running, with more and more hardware being added const
 
 == Installing == 
 
-Follow the install guide [https://gist.github.com/calebccff/80bba8237e2ba512dc07f907e55b4891 here].
+<code>pmbootstrap init</code>, pick enchilada / fajita device depending on your taste :D
+
+Most UIs work well, phosh is quite good, plasma mobile does seems to be more buggy.
+For phosh set <code>scale=3</code> in <code>/etc/phoc/phosh.ini</code> under DSI-1 to fix scaling.
+
+Now run the following to build and flash:
+<pre>
+pmbootstrap install --split
+pmbootstrap export
+</pre>
+Reboot back into bootloader mode after each of the following commands, replacing enchilada with fajita where appropriate.
+<pre>
+fastboot erase dtbo
+fastboot flash vendor /tmp/postmarketOS-export/oneplus-enchilada-boot.img
+fastboot flash system /tmp/postmarketOS-export/oneplus-enchilada-root.img
+fastboot flash boot /tmp/postmarketOS-export/boot.img-oneplus-sdm845
+</pre>
+
+Reboot and you should see dmesg on your screen :D
+
+If you have flashing or booting issues, try first flashing the latest OxygenOS to the slot you want to install postmarketOS to (ie, flash in TWRP from your other slot). If you still have no luck, try flashing OOS 9 as the bootloader can be more forgiving.
 
 It is possible to dual boot with android by following the guide above and using
 
@@ -81,8 +101,7 @@ Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until you see "F
 * {{MR|1271|pmaports}} Updates to add panel mode and WiFi support.
 <!-- * {{issue|CHANGEME|pmaports}} Some related issue -->
 
-<!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/device-DEVICE_CODENAME Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/linux-DEVICE_CODENAME Kernel package]
--->
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-oneplus-enchilada Enchilada device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-oneplus-fajita Fajita device package]
+* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-oneplus-sdm845 Kernel package]
