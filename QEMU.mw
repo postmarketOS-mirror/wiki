@@ -5,6 +5,38 @@ QEMU allows running postmarketOS in virtual machines. The following architecture
 
 Note that running a virtual machine for a foreign architecture (e.g. aarch64 on x86_64) requires CPU emulation which is rather slow. Prefer the native architecture when possible.
 
+=== Phosh ===
+By default, Phosh has the resolution hard-coded to 720x1440 (like the Librem 5), so the display is cut off on usual 1920x1080 (Full HD) monitors.
+
+You can change the resolution by editing <code>/usr/share/phosh/phoc.ini</code>. By default it contains:
+
+ [output:Virtual-1]
+ # For the x86 VM using QXL to get a phone like geometry
+ modeline = 87.25  720 776 848 976  1440 1443 1453 1493 -hsync +vsync
+ mode = 720x1440
+ scale = 2
+
+To add a new resolution, you need to add a new <code>modeline</code>, then change the <code>mode</code> (and eventually the <code>scale</code>). You can generate the modelines using the <code>cvt</code> tool.
+
+For example, to set the resolution to qHD (540x960):
+
+ $ cvt -v 540 960
+ Warning: Aspect Ratio is not CVT standard.
+ # 544x960 59.96 Hz (CVT) hsync: 59.72 kHz; pclk: 43.00 MHz
+ Modeline "544x960_60.00"   43.00  544 576 632 720  960 963 973 996 -hsync +vsync
+
+Note how it changed the horizontal resolution to <code>544</code> to match the CVT standard (weird). Then add the new <code>modeline</code> and change <code>mode</code>:
+
+ [output:Virtual-1]
+ # For the x86 VM using QXL to get a phone like geometry
+ modeline = 87.25  720 776 848 976  1440 1443 1453 1493 -hsync +vsync
+ modeline = 43.00  544 576 632 720  960 963 973 996 -hsync +vsync
+ mode = 544x960
+ # Maybe it's a bit too large with scale 2 on this resolution? Or maybe not, just test it out :)
+ scale = 1
+
+Restart QEMU or <code>rc-service lightdm restart</code>, then Phosh should show up with the new resolution. Note that the <code>modeline</code> is necessary to support custom resolutions, you cannot just set the <code>mode</code>.
+
 === See also ===
 * [[Troubleshooting:QEMU]]
 * {{MR|1612}} Use Alpine's QEMU rather than host system QEMU
