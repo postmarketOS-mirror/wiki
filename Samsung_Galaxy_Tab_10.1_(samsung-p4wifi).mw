@@ -66,6 +66,11 @@ Flash the kernel and system images
 $ pmbootstrap flasher flash_rootfs
 </source>
 
+As alternative you can flash rootfs to Data partition to use more space, because default system partition is small
+<source lang="shell-session">
+$ pmbootstrap flasher flash_rootfs --partition UDA
+</source>
+
 == Battery ==
 The battery in this device is the <code>max17042</code>. A tear down of the (nearly) identical Galaxy Tab 8.9 reveals that the charger is <code>max8903</code>.
 
