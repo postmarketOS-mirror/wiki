@@ -26,3 +26,5 @@ The list below contains useful information about some language packages.
 === MATE ===
 
 Run <code> # apk add $(apk list mate-*-lang | grep -o "^[A-Za-z\-]*" | rev | cut -c 2- | rev) && apk add caja-lang </code>. This will find and install all necessarry packages automaticly. All applets (network-manager, etc.) also needs their lang packages.
+
+[[Category:Guide]]
