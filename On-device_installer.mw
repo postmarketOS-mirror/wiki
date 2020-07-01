@@ -2,7 +2,7 @@ The on-device installer [https://gitlab.com/postmarketOS/postmarketos-ondev post
 
 === Status ===
 
-A basic first version has been implemented, that ties all the components together and makes them work for the first time. As of writing, only the full disk encryption password is supported, but now it should be fairly easy to add more dialogs. For now, the target partition for the installation will always be the reserved space on the same "disk" as the installer (details below). We can add support for installing from SD card to internal memory in the future.
+The most important dialogs have been implemented (user pin, ssh credentials, full disk encryption password). For now, the target partition for the installation will always be the reserved space on the same "disk" as the installer (details below). We can add support for installing from SD card to internal memory in the future. Find and report issues [https://gitlab.com/postmarketOS/postmarketos-ondev/-/issues here]. It's planned to [https://github.com/calamares/calamares/issues/1451 upstream the custom modules] to Calamares.
 
 === Usage ===
 
