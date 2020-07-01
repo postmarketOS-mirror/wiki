@@ -15,11 +15,11 @@
 | architecture = aarch64
 | pmoskernel = 
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
-| status_usbnet = 
-| status_flashing = 
+| status_usbnet = Y
+| status_flashing = N
 | status_touch = 
-| status_screen = 
-| status_wifi = 
+| status_screen = N
+| status_wifi = N
 | status_xwayland = 
 | status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard = Y
 | status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
@@ -34,7 +34,7 @@
 | status_sms = <!-- Sending and receiving short messages works as intended. -->
 | status_calls = <!-- Talking to other people over the cellular network. -->
 | status = <!-- Text displayed in the "not booting" table on the Devices page , e.g "kernel compiles, doesn't boot" -->
-| booting = <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+| booting = yes<!-- The device is booting at all, can be yes/no *IMPORTANT* -->
 | status_otg = 
 | whet_dhry = 
 <!-- you can also use these lines if you need to:
@@ -62,7 +62,6 @@ see Unixbench page on wiki
 == How to enter flash mode ==
 == Installation ==
 == Notes ==
-<span style="color:green"><big>'''Call for testers!'''</big></span> If you are willing to test pmos on this device, contact [[User:dsankouski|Dzmitry]]
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
@@ -71,4 +70,4 @@ Link to related gitlab issues or merge requests like the following (replace CHAN
 You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
-[https://gitlab.com/dsankouski/pmaports/-/tree/device/samsung-starqltechn dsankouski aport fork for SM-G9600]
+[https://gitlab.com/dsankouski/pmaports/-/tree/device/samsung-starqltechn aport fork for SM-G9600]
