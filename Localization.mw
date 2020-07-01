@@ -1,0 +1,28 @@
+This article explains how to set up language and locale for the entire system and apps in particular.
+
+== Locale ==
+
+Locale names are typically of the form <code>language[_territory][.codeset][@modifier] </code>, where ''language'' is an [[w:List_of_ISO_639-1_codes|ISO 639 language code]], ''territory'' is an [[w:ISO_3166-1#Current_codes|ISO 3166 country code]], and ''codeset'' is a [[w:Character_encoding|character set]] or encoding identifier like [[w:ISO/IEC_8859-1|ISO-8859-1]] or [[w:UTF-8|UTF-8]].
+
+To set up your locale you need to change LANG and LC_COLLATE in /etc/profile.d/locale.sh file. 
+
+Config for Russian language, for example:
+{{hc|1=/etc/profile.d/locale.sh|2=
+export CHARSET=UTF-8
+export LANG=''ru_RU''.UTF-8
+export LC_COLLATE=''ru_RU''
+
+}}
+
+From now software, that has the translations files will use selected language.
+
+
+== Languages packages ==
+
+In Alpine Linux, translations for applications are shipped in a separate package with -lang at the end of their name. Usually, it can be easily found by <code> $ apk list ''packagename''-lang </code> or <code> $ apk list ''packagename''-lang-* </code>, if each language ships in separate package (like libreoffice).
+
+The list below contains useful information about some language packages.
+
+=== MATE ===
+
+Run <code> # apk add $(apk list mate-*-lang | grep -o "^[A-Za-z\-]*" | rev | cut -c 2- | rev) && apk add caja-lang </code>. This will find and install all necessarry packages automaticly. All applets (network-manager, etc.) also needs their lang packages.
