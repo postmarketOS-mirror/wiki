@@ -12,7 +12,7 @@ The main steps are:
 
 For help, simply connect to the main [[Matrix and IRC|Matrix/IRC]] channel and kindly drop your question. People are happy to answer your questions!
 
-{{note|Instead of using the downstream, vendor provided kernel, you can instead "mainline" your device ([[Mainlining]]). This is, in theory, very much preferrable. Depending on the SoC (and to a lesser extent, the peripherals) of your device, it may be realatively easy, or (when your SoC is not supported at all) quite challenging. Notably, for some SoCs (such as MSM8916), mainlining is usually even easier than using the downstream kernel (see [[MSM8916_Mainlining]]) }}
+{{note|Instead of using the downstream, vendor provided kernel, you can "mainline" your device ([[Mainlining]]). This is, in theory, very much preferrable. Depending on the SoC (and to a lesser extent, the peripherals) of your device, it may be realatively easy, or (when your SoC is not supported at all) quite challenging. Notably, for some SoCs (such as MSM8916), mainlining is usually even easier than using the downstream kernel (see [[MSM8916_Mainlining]]) }}
 
 == Preparation ==
 {{note|Please use a spare device for experimenting with postmarketOS! You won't be able to use typical phone features right now, such as making calls, sending text messages, or using Bluetooth. Although everything has been tested, there is no guarantee that you won't break your device.}}
