@@ -188,10 +188,6 @@ These are applications which already exist for Linux and could be reused in post
 |GPL3
 |X11 application (Electron web wrapper).  Touch-optimisation and notifications support.
 |-
-|[https://github.com/Enrico204/Whatsapp-Desktop whatsapp-desktop]
-|GPL3
-|X11 application (Electron web wrapper).
-|-
 |[https://github.com/terkelg/ramme ramme (Instagram)]
 |MIT
 |X11 application (Electron web wrapper). Touch-friendly
