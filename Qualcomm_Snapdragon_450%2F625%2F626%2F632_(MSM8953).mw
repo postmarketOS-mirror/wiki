@@ -38,10 +38,10 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Booting and Devices.chipset='Qualcomm MSM8953 Snapdragon 450'
-|where=Booting and Devices.chipset='Qualcomm Snapdragon 450 SDM450'
+|where=Booting and (Devices.chipset='Qualcomm MSM8953 Snapdragon 450' or Devices.chipset='Qualcomm Snapdragon 450 SDM450')
 |more results text=
 }}
+
 === Snapdragon 625 ===
 {{#cargo_query:
 tables=Devices
