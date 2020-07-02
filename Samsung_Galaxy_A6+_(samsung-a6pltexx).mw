@@ -1,19 +1,19 @@
 {{Infobox device
 | manufacturer = Samsung
 | name = Galaxy A6+ 
-(SM-A605FN) <!-- e.g. Desire -->
-| codename = samsung-a6pltexx <!-- e.g. htc-bravo -->
+(SM-A605FN)
+| codename = samsung-a6pltexx
 | image = File:samsung-a6pltexx.png
 | imagecaption = Samsung Galaxy A6+ (SM-A605FN) running Plasma Mobile on mainline
 | releaseyear = 2018
-| originalsoftware = Android 8.0 <!-- e.g. Android 2.1 -->
+| originalsoftware = Android 8.0
 | chipset = Qualcomm MSM8953 Snapdragon 450
-| cpu = 8x 1.8 GHz Cortex-A53 <!-- e.g. 1.0 GHz Scorpion -->
-| gpu = Adreno 506 <!-- e.g. Adreno 200 -->
-| storage = 32GB EMMC <!-- e.g. 512 MB -->
-| display = 1080x2220 sAMOLED <!-- e.g. 480x800 AMOLED -->
-| memory = 3GB <!-- e.g. 576 MB -->
-| architecture = aarch64 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
+| cpu = 8x 1.8 GHz Cortex-A53
+| gpu = Adreno 506
+| storage = 32 GB eMMC
+| display = 1080x2220 sAMOLED
+| memory = 3 GB
+| architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y <!-- USB networking does work? then put Y here and delete this comment -->
 | status_otg = Y 
@@ -40,8 +40,6 @@
 | pmoskernel = 5.7
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 
 see Unixbench page on wiki
