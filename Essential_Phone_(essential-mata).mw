@@ -74,7 +74,9 @@ To enter Fastboot mode, hold {{Button|Volume Down}} while powering on the device
     pmbootstrap flasher flash_kernel --partition boot_a
 
 == Status ==
-Currently a work in progress. Kernel compiles.
+Mata successfully boots into a stable session.
+
+Weston will display a graphical interface, however, there is currently no touch capabilities on mata. The device required is /dev/event5 which will load on a TWRP partition, but not in pmOS due to blobs.
 
 == See also ==
 * {{MR|1194|pmaports}} Initial merge request
