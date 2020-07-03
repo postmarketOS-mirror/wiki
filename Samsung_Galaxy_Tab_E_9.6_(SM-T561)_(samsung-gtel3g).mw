@@ -1,3 +1,4 @@
+{{Infobox device
 | manufacturer = Samsung
 | name = Samsung Galaxy Tab E 9.6 <!-- e.g. Desire -->
 | codename = gtel3g <!-- e.g. htc-bravo -->
@@ -10,7 +11,7 @@
 | gpu = Mali-400 MP <!-- e.g. Adreno 200 -->
 | storage = 8 GB <!-- e.g. 512 MB -->
 | display = 1200x800, DPI:600 <!-- e.g. 480x800 AMOLED -->
-| memory = 768MB <!-- e.g. 576 MB -->
+| memory = 1.5 GB <!-- e.g. 576 MB -->
 | architecture = armv7 <!-- One of these: armhf, armv7, aarch64, x86, x86_64 -->
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -47,11 +48,11 @@ Is OTG available, not used in wiki
 }}
 
 == Contributors ==
-* realaravinth
+* [https://wiki.postmarketos.org/wiki/User:Realaravint]
 == Maintainer(s) ==
 <!-- Only if this device doesn't run on linux-postmarketos yet! -->
 <!-- This person needs to be willing to answer questions from users of this device -->
-* realaravinth
+* [https://wiki.postmarketos.org/wiki/User:Realaravinth]
 
 == Users owning this device ==
 {{Device owners}}
@@ -61,6 +62,8 @@ Is OTG available, not used in wiki
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+* Recovery mode: Hold volume up, power button and home button
+* Download mode(Odin/Heimdall): Hold volume down, power button and home button[flashing via download mode doesn't work]
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
@@ -71,15 +74,22 @@ Is OTG available, not used in wiki
 * ADB sideload stops at 50%, but it actually succeeds.
 * The power button instantly shuts down the entire system
 * Only Weston works, other interfaces don't work. SSH works even when the display is stuck at the Samsung boot animation
+* Android apps that generate specs have produced conflicting reports about the device's memory. The device actually has 1.5 GB of memory.
 
 == See also ==
-* {{MR|https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1385|pmaports}} Initial merge request
+* {{MR|1385|pmaports}} Initial merge request
+* [https://github.com/realaravinth/SM-T561-gtel3g-kernel Kernel dump from Samsung]
+* [https://web.archive.org/web/20200703124105/http://specdevice.com/showspec.php?id=20b2-4476-b1a9-f9370033c587 Device specs on gnmarena]
+* [https://web.archive.org/web/20200703124105/http://specdevice.com/showspec.php?id=20b2-4476-b1a9-f9370033c587 More device specs]
+* [https://web.archive.org/web/20200630114256/http%3A%2F%2Fwww.deviceinfohw.ru%2Fdevices%2Fitem.php%3Fitem%3D64490 And some more device specs]
+* [https://github.com/gtel3g source dump]
+
+
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-
 * {{issue|CHANGEME|pmaports}} Some related issue
 You can also add normal web links:
-* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
+
 -->
 <!--
 If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
