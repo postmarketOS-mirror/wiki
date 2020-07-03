@@ -1,7 +1,7 @@
 {{Infobox device
 | manufacturer = Samsung
 | name = Samsung Galaxy Tab E 9.6 <!-- e.g. Desire -->
-| codename = gtel3g <!-- e.g. htc-bravo -->
+| codename = samsung-gtel3g <!-- e.g. htc-bravo -->
 | image = File:SM-T561-samsung-gtel3g.jpeg
 | imagecaption = Samsung Galaxy Tab E 9.6 (SM-T561) (samsung-gtel3g) running Weston 
 | releaseyear = 2015
