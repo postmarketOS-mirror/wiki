@@ -18,9 +18,9 @@
 | status_video = 
 | status_thermal = 
 | status_wifi = Y
-| status_bluetooth = 
+| status_bluetooth = P
 | status_modem = P
-| status_camera = 
+| status_camera = N
 | usb_device = DWC3
 | pmic = pm8998 (v4.5-rc1)
 | wifi = ath10k WCN3990
