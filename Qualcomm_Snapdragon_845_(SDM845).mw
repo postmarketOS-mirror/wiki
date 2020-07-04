@@ -185,6 +185,20 @@ as some wlan firmware blobs don't play nice.
 The Adreno 630 is relatively easy to work with, after adding a driver for your panel, obtain [https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/commit/41ac945f035a7facab53b43d7c3506870f1fb2b4 the firmware] from
 your device and either compile into the kernel (in addition to enabling CONFIG_DRM_FBDEV_EMULATION for early dmesg)) or add to the right subdirectory under /lib/firmware.
 
+
+== I2C ==
+
+I2C and the Geni hardware is functional and supported, however it is missing a special GPI DMA mode used by a few devices (e.g. touchscreen on Enchilada). A solution is to instead create a 'bitbang' CPU driven I2C device that simply reuses the GPIO pins that are normally driven by Geni.
+
+* [[https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/blob/8233fd9a8e48a4e09272035f16876585487f5c13/arch/arm64/boot/dts/qcom/sdm845-oneplus-enchilada.dtsi#L43 See here for an example.]]
+
+== Bluetooth ==
+
+Bluetooth is functional on Beryllium, however it requires that either the firmware be included in the kernel, or that bluetooth be compiled as a module.
+
+On enchilada, bluetooth firmware is loaded but it fails to communicate with the bluetooth hardware to finish initialisation.
+{{todo|Show error logs}}
+
 == See also == 
 
 [[OnePlus_6_(oneplus-enchilada)]]
