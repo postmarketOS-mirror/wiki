@@ -190,7 +190,7 @@ your device and either compile into the kernel (in addition to enabling CONFIG_D
 
 I2C and the Geni hardware is functional and supported, however it is missing a special GPI DMA mode used by a few devices (e.g. touchscreen on Enchilada). A solution is to instead create a 'bitbang' CPU driven I2C device that simply reuses the GPIO pins that are normally driven by Geni.
 
-* [[https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/blob/8233fd9a8e48a4e09272035f16876585487f5c13/arch/arm64/boot/dts/qcom/sdm845-oneplus-enchilada.dtsi#L43 See here for an example.]]
+* [https://gitlab.com/sdm845-mainline/sdm845-linux-next/-/blob/8233fd9a8e48a4e09272035f16876585487f5c13/arch/arm64/boot/dts/qcom/sdm845-oneplus-enchilada.dtsi#L43 See here for an example.]
 
 == Bluetooth ==
 
