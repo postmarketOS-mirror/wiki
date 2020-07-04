@@ -7,10 +7,10 @@
 | releaseyear = 2015
 | originalsoftware = 4.4.4
 | chipset = Spreadtrum sc8830
-| cpu = 4x1300Mhz
-| gpu = Mali-400 MP
+| cpu = 4x 1300 Mhz Cortex-A7
+| gpu = Mali-400 MP2
 | storage = 8 GB
-| display = 1200x800, DPI:600>
+| display = 1200x800
 | memory = 1.5 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
@@ -85,7 +85,7 @@ You can also add normal web links:
 
 -->
 <!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* {{Device package|DEVICE_CODENAME}}
-* {{Kernel package|DEVICE_CODENAME}}
+If you manage to get your device packages merged, uncomment links below.
+* {{Device package|samsung-gtel3gE}}
+* {{Kernel package|samsung-gtel3g}}
 -->
