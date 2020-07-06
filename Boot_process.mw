@@ -1,5 +1,3 @@
-postmarketOS has a boot process quite similar to the other linux distributions, with a few peculiarities that come from the devices it runs on.
-
 == First stage boot loader ==
 This isn't something controlled by postmarketOS, and most of the time the user doesn't control it either.
 
