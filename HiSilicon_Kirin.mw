@@ -1,0 +1,3 @@
+Family of Huawei-manufactured chips, included in almost every Huawei ARM device. Very [https://www.96boards.org/blog/hikey970-mainlining-update-part2/ minimal mainline support] is present, but often the proprietary nature of these SoCs makes it difficult to run anything beyond downstream kernels.
+
+Cleaner AOSP kernels can be found, with their own limitations, on the [https://openkirin.net/about/ OpenKirin] page.
