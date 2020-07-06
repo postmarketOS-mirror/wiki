@@ -6,7 +6,7 @@
 | imagecaption = Xperia 10 Plus
 | releaseyear = 2019
 | originalsoftware = Android 9.0 on Linux 4.4
-| chipset = Qualcomm SDM636 (14nm)
+| chipset = Qualcomm SDM636 Snapdragon 636
 | cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
 | gpu = Adreno 509
 | storage = 32GB eMMC on sdhci5
@@ -32,7 +32,7 @@
 | status_mobiledata = N
 | status_sms = N
 | status_calls = N
-| booting = yes
+| booting = no
 | pmoskernel = mainline
 }}
 
