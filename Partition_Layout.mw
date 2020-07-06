@@ -1,43 +1,60 @@
-=== General partition layout (installation image) ===
-{{note|The postmarketOS initramfs detects the partitions by their partition label.}}
-<pre class="shell">/dev/installp1 # label: pmOS_boot (contains kernel, initramfs, initramfs-extra)
-/dev/installp2 # label: pmOS_root (can be encrypted, when --fde is specified)</pre>
+A postmarketOS installation consists of two partitions, the boot and the root partition. This distinction was made to support FDE (full disk encryption). With FDE, the entire root partition gets encrypted, and the only non-encrypted part remains the boot partition (which does not hold any personal data).
 
-=== SD card ===
+<syntaxhighlight lang="shell">
+p1 # label: pmOS_boot (contains kernel, initramfs, initramfs-extra)
+p2 # label: pmOS_root (contains everything else, can be encrypted)
+</syntaxhighlight>
 
-This is the least awkward layout - both partitions from above get directly created on the SD card. If your device has a sdcard slot, it is recommended to use it. Because then you don't wear down the internal flash storage of the device and don't need to worry about the phone's internal storage partition layout.
+Due to the wide range of devices we support, there are a few variations of where these partitions will be exactly after installing postmarketOS.
 
-Usage:
+=== Use the whole storage device ===
+Both partitions are directly written to the storage device (SD card, eMMC, ...), for example <code>/dev/mmcblk0p1</code> and <code>/dev/mmcblk0p2</code>.
 
-<pre class="shell">$ ./pmbootstrap.py install --sdcard /dev/mmcblkX</pre>
-=== Android internal storage ===
+This is always done with SD cards. With the eMMC (internal storage), this is only done if it the factory OS can be flashed back without relying on a specific partitioning layout. (This is not possible with Android, see [[#Subpartitions|subpartitions]] below.)
 
-We don't want to modify the partition layout on the internal storage of Android systems. Because this seems somewhat risky, and then users couldn't simply install another ROM such as LineageOS anymore. So we came up with the following:
+A typical SD card installation:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+$ pmbootstrap install --sdcard=/dev/path-to-sdcard-device
+</syntaxhighlight>
 
-The Android internal storage is already partitioned - the layout seems to be different for every device, as well as the numbers they have assigned. But most notably the devices have the following partitions:
+A typical eMMC installation (you would flash the resulting image with a tool like [https://wiki.pine64.org/index.php/PinePhone#Flashing_eMMC_using_Jumpdrive Jumpdrive]):
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+$ pmbootstrap install
+$ pmbootstrap export
+</syntaxhighlight>
 
-<pre>boot
-system
-userdata</pre>
-We usually flash a <code>boot.img</code> file (which is the kernel + initramfs) to Android's <code>boot</code> partition (see also: [[deviceinfo_flash_methods]]) - because that is what works and what all other ROMs do. Now the interesting part is the system partition, where we flash our installation image (rootfs). But the installation image already has a partition layout and own partitions! So you will have '''subpartitions'''. In the end, it will look like this:
+=== Subpartitions ===
+Android (and other factory OS) require a specific partition layout. In order to make it feasible for the user to switch back to Android on their device, we install postmarketOS only into an existing partition. The postmarketOS boot and root partitions will become subpartitions of that partition.
 
-<pre class="shell">systemp1 # pmOS boot partition, only initramfs-extra gets used from there
-systemp2 # pmOS (un)encrypted root filesystem</pre>
-The initramfs (in the <code>boot.img</code> file!) will automatically find and mount the pmOS boot and root partition, load the <code>initramfs-extra</code> (which contains additional files, it was split to save space) and take care of booting through until [[Glossary#OpenRC|OpenRC]] takes over.
+For example, a typical Android installation consists of:
+* boot
+* system
+* userdata
+* (more partitions with firmware etc.)
 
-==== Flashing to "userdata" ====
-The <code>userdata</code> partition is not used yet (proposal to do that is in {{issue|60}}). But as we are pretty flexible, you can also flash pmOS to the <code>userdata</code> partition, if it has more space and you can't fit it on the <code>system</code> partition. The initramfs will detect it anyway. Just make sure, that you don't have it flashed to ''both'' partitions!
+postmarketOS will be installed into the system partition, which means the postmarketOS boot partition becomes <code>systemp1</code> and the postmarketOS root partition becomes <code>systemp2</code>.
 
-To flash to the <code>userdata</code> partition instead of the <code>system</code> partition, use <code>pmbootstrap flasher flash_rootfs --partition=userdata</code>.
+Example:
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap init
+$ pmbootstrap install
+$ pmbootstrap flasher flash_kernel
+$ pmbootstrap flasher flash_rootfs
+</syntaxhighlight>
 
-If you had flashed postmarketOS to the system partition before, make sure to format it with <code>fastboot format system</code>.
+Note that the <code>flash_kernel</code> command fills Android's boot partition with a boot.img file, that consists of the Linux kernel and initramfs from postmarketOS. The files are duplicated on the postmarketOS boot partition, but not used from there. Some Android devices have a strict size limit for this boot.img file, which is why we load additional files from the initramfs-extra file from the postmarketOS boot partition.
 
-=== Future ideas ===
+==== Pick a different subpartition ====
+While on some devices, the system partition is bigger than the userdata partition, it is the other way around on others. So it is possible to switch to the userdata partition with <code>pmbootstrap flasher flash_rootfs --partition userdata</code>. To clear a previous postmarketOS installation from the system partition, use <code>fastboot format system</code> (otherwise, the initramfs may boot into the wrong installation!).
 
-{{note|See also: Allow booting from an image file (/data/postmarketOS.img) instead of flashing to a partition ({{github|953}})}}
+=== On-device installer ===
+The on-device installer starts with three partitions (boot, reserved space, installer). It installs postmarketOS into the reserved space, and removes the third partition, so in the end it looks like the regular boot and root partition layout. Details are in the [[on-device installer]] article.
 
-There might be scenarios, in which the partition type of the <code>system</code> partition can not be changed through the flasher, because it only allows {{wikipedia|YAFFS#YAFFS2|YAFFS2}} or simg with ext4 support (during research for the mozilla flame, we found that to be the case ({{issue|299}}) - however, it also has an SD slot, so we did not continue this way ({{issue|337}})).
-
-A proposal we have for that case, is to have one big ext4/yaffs partition, and include the whole system image file inside that. Then we would adjust the initramfs code to find the boot and root partitions inside that, and teach it how to resize the whole thing to the maximum partition size. We already did some experiments, and so far everything worked (talk to drebrez or ollieparanoid).
+== See also ==
+* [[Boot process]], in particular how the partitions for boot and root are determined
+* {{github|953}}: idea to boot from an image file (did not go anywhere, open a new issue if you are interested in implementing this)
 
 [[Category:Technical Reference]]
+__NOTOC__
