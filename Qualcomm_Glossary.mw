@@ -38,6 +38,10 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 
 '''RPMCC''' - [[#RPM]] Clock Controller
 
+'''RPMH''' - RPM Hardened (used in newer SoCs, like sdm845)
+
+'''RPMPD''' - RPM Power Domains
+
 == S ==
 
 '''SDM''' - Snapdragon
