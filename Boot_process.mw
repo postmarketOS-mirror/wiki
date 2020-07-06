@@ -56,4 +56,3 @@ At the end of the initramfs script, the root partition is mounted at <code>/sysr
 * [[deviceinfo_flash_methods|Deviceinfo: flash methods]]
 
 [[Category:Technical Reference]]
-__NOTOC__
