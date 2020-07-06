@@ -1,5 +1,9 @@
 Most postmarketOS developers use pmbootstrap on a bare-metal Linux installation. This page notes some quirks you may have to deal with when running pmbootstrap in a Linux distribution inside a VM like VirtualBox.
 
+== Can I use pmbootstrap in WSL? ==
+
+No.
+
 == If your device gets detected as ADB Interface/Recovery ==
 1. Click Update Driver - choose "Composite USB Device"("Составное USB Устройство" in Russian locale of Windows)
 
