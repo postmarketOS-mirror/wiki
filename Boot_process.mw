@@ -53,6 +53,7 @@ At the end of the initramfs script, the root partition is mounted at <code>/sysr
 * [[Troubleshooting:boot:initfshooks]]
 * {{issue|664|pmaports}}: two postmarketOS installations: OpenRC may mount wrong partition as /boot
 * [https://postmarketos.org/blog/2018/04/14/lowlevel/ postmarketOS low-level blog post] (talks in part about liberating bootloaders)
+* [[deviceinfo_flash_methods|Deviceinfo: flash methods]]
 
 [[Category:Technical Reference]]
 __NOTOC__
