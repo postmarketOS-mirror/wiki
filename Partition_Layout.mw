@@ -55,6 +55,7 @@ The on-device installer starts with three partitions (boot, reserved space, inst
 == See also ==
 * [[Boot process]], in particular how the partitions for boot and root are determined
 * {{github|953}}: idea to boot from an image file (did not go anywhere, open a new issue if you are interested in implementing this)
+* [[deviceinfo_flash_methods|Deviceinfo: flash methods]]
 
 [[Category:Technical Reference]]
 __NOTOC__
