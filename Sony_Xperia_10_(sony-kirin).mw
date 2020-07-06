@@ -6,7 +6,7 @@
 | imagecaption = Xperia 10
 | releaseyear = 2019
 | originalsoftware = Android 9.0 on Linux 4.4
-| chipset = Qualcomm SDM630 (14nm)
+| chipset = Qualcomm SDM630 Snapdragon 630
 | cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
 | gpu = Adreno 508
 | storage = 64GB eMMC on sdhci5
@@ -32,7 +32,7 @@
 | status_mobiledata = N
 | status_sms = N
 | status_calls = N
-| booting = yes
+| booting = no
 | pmoskernel = mainline
 }}
 
