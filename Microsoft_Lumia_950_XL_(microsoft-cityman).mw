@@ -18,27 +18,28 @@
 | status_touch = Y
 | status_screen = Y
 | status_wifi = P
-| status_xwayland = N
+| status_xwayland = Y
 | status_fde = N
 | status_mainline = Y
 | status_battery = N
 | status_3d = N
 | status_accel = N
 | status_audio = N
-| status_bluetooth = Y
+| status_bluetooth = P
 | status_camera = N
 | status_gps = N
 | status_mobiledata = N
 | status_sms = N
 | status_calls = N
-| status = kernel compiles and boots. Bringing-up other components
-| booting = yes
+| status = Kernel compiles and boots. Bringing-up other components
+| booting = no <!-- not merged yet -->
 | n-android =  ✔
-| pmoskernel = 4.18
+| pmoskernel = mainline
 }}
 
 == Contributors ==
 * [[User:SunshineBiscuit|SunshineBiscuit]]
+* [[User:Konradybcio|Konrad Dybcio]]
 
 == Maintainer(s) ==
 * [[User:SunshineBiscuit|SunshineBiscuit]]
@@ -58,13 +59,16 @@ Because Lumia 950 XL uses standardized UEFI firmware, it is not necessary to fla
 == Progress ==
 A slightly patched kernel is available at https://dev.azure.com/imbushuo-personal/_git/Kernel.
 
-Although Lumia 950 XL supports ACPI, the arm64 ACPI support for Qualcomm platforms is limited to Windows-only. Hence a device tree is necessary for successful bring-up. The current device tree is available at https://dev.azure.com/imbushuo-personal/_git/Device%20Tree?version=GBml-4.18-950xl.
+A more patched and more functional kernel is available at https://github.com/WOA-Project/linux.
 
-The progress is generic for all Linux distros including Debian and pmOS.
+Although Lumia 950 XL supports ACPI, the arm64 ACPI support for Qualcomm platforms is limited to Windows-only. Hence a device tree is necessary for successful bring-up. The current device tree is available at 
+[https://dev.azure.com/imbushuo-personal/_git/Device%20Tree?version=GBml-4.18-950xl here (old)] or right [https://github.com/WOA-Project/linux/blob/v5.8-rc3-lumia/arch/arm64/boot/dts/qcom/msm8994-msft-lumia-cityman.dts there].
 
-* Processor bring-up using PSCI
+The progress is generic for all Linux distros.
+
+* Processor bring-up and reset using PSCI (EL1) or spin-table (EL2, WIP!)
 * I2C, GPIO, UART and a few more simple low-speed I/O
-* GCC clocks (RPM clocks do not work yet)
+* GCC clocks
 * Synaptics Touchscreen via I2C
 * FrameBuffer via UEFI GOP @ 1080x1920
 * Bluetooth via UART. Need rampatch and TLV firmware blobs similar to other QCA6174 chipsets.
