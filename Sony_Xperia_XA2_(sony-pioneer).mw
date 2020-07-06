@@ -58,6 +58,7 @@ Hold PWR and Vol+ until the LED becomes blue. Congratulations, you've entered fa
 Just your standard "pmbootstrap flasher" procedure
 
 == See also ==
+* [[Sony_Ninges|Platform-common device page]]
 * [https://patchwork.kernel.org/project/linux-arm-msm/list/?submitter=190109 Konrad Dybcio's patchwork profile, new features will likely appear here.]
 
 <!--
