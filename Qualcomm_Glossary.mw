@@ -12,7 +12,8 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 == C ==
 
 '''CAMSS''' - Camera Subsystem
-'''CCI''' - Core Cluster Interconnect (NOT msm_bus/interconnect) OR Camera Control Interface
+
+'''CCI''' - (Core Cluster/Cache Coherent) Interconnect (NOT msm_bus/interconnect) OR Camera Control Interface
 
 == G ==
 
