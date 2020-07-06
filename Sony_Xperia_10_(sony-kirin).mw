@@ -6,12 +6,12 @@
 | imagecaption = Xperia 10
 | releaseyear = 2019
 | originalsoftware = Android 9.0 on Linux 4.4
-| chipset = Qualcomm SDM636 (14nm)
+| chipset = Qualcomm SDM630 (14nm)
 | cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
 | gpu = Adreno 508
 | storage = 64GB eMMC on sdhci5
 | display = 1080x2520 IPS LCD
-| memory = 4GB
+| memory = 3GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
