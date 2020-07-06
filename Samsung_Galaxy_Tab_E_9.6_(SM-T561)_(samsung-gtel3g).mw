@@ -55,37 +55,27 @@ Is OTG available, not used in wiki
 {{Device owners}}
 
 == How to enter flash mode ==
-* Recovery mode: Hold volume up, power button and home button
-* Download mode(Odin/Heimdall): Hold volume down, power button and home button[flashing via download mode doesn't work]
+* <b>Recovery mode:</b> Hold volume up, power button and home button
+* <b>Download mode(Odin/Heimdall):</b> Hold volume down, power button and home button[flashing via download mode doesn't work]
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
-* pmbootstrap install --android-recovery-zip
-* pmbootstrap flasher --method=adb sideload
+* <code>pmbootstrap install --android-recovery-zip</code>
+* <code>pmbootstrap flasher --method=adb sideload</code>
 
 == Addional Notes ==
 * ADB sideload stops at 50%, but it actually succeeds.
-* The power button instantly shuts down the entire system
-* Only Weston works, other interfaces don't work. SSH works even when the display is stuck at the Samsung boot animation
+* When running portnarketOS power button instantly shuts down the entire system
+* <code>Xfce4</code> works like a charm but it needs to be manually started over <code>SSH</code>
 * Android apps that generate specs have produced conflicting reports about the device's memory. The device actually has 1.5 GB of memory.
+* You probably already know this but if you ever find yourself in a bootloop/soft-brick situation, hold donwn the volume keys, the home and the power button to reboot.
 
 == See also ==
+* {{Device package|samsung-gtel3g}}
+* {{Kernel package|samsung-gtel3g}}
 * {{MR|1385|pmaports}} Initial merge request
 * [https://github.com/realaravinth/SM-T561-gtel3g-kernel Kernel dump from Samsung]
 * [https://web.archive.org/web/20200703124105/http://specdevice.com/showspec.php?id=20b2-4476-b1a9-f9370033c587 Device specs on gnmarena]
 * [https://web.archive.org/web/20200703124105/http://specdevice.com/showspec.php?id=20b2-4476-b1a9-f9370033c587 More device specs]
 * [https://web.archive.org/web/20200630114256/http%3A%2F%2Fwww.deviceinfohw.ru%2Fdevices%2Fitem.php%3Fitem%3D64490 And some more device specs]
 * [https://github.com/gtel3g source dump]
-
-
-<!--
-Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{issue|CHANGEME|pmaports}} Some related issue
-You can also add normal web links:
-
--->
-<!--
-If you manage to get your device packages merged, uncomment links below.
-* {{Device package|samsung-gtel3gE}}
-* {{Kernel package|samsung-gtel3g}}
--->
