@@ -1,9 +1,61 @@
 {{Infobox soc
+| name = SDM630
+| manufacturer = Qualcomm
+| arch = aarch64
+| cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
+| gpu = Adreno 508
+| year = 2017
+| process = 14
+| mainline = yes
+| status_cpu = Y
+| status_uart = Y
+| status_storage = Y
+| status_usb = P
+| status_display = 
+| status_gpu = 
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+{{Infobox soc
+| name = SDM636
+| manufacturer = Qualcomm
+| arch = aarch64
+| cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
+| gpu = Adreno 509
+| year = 2017
+| process = 14
+| mainline = yes
+| status_cpu = Y
+| status_uart = Y
+| status_storage = Y
+| status_usb = P
+| status_display = 
+| status_gpu = 
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+{{Infobox soc
 | name = SDM660
 | manufacturer = Qualcomm
 | arch = aarch64
 | cpu = 4x 2.2 GHz Kryo 260 Gold, 4x 1.84 GHz Kryo 260 Silver
-| gpu = Adreno 508/509/512
+| gpu = Adreno 512
 | year = 2017
 | process = 14
 | mainline = yes
@@ -73,10 +125,9 @@ All cores are up, PSCI is working. Marked as partial because there is no support
 At least SDHCI (eMMC) was tested to work. UFS is untested (xiaomi-lavender does not have it).
 
 == USB ==
-Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]], but no one worked much on it yet.
+Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]]. There is WIP support for USB 2.0 only (no USB 3) by [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs
 
 == Display ==
-
 The only tested for now is simple-framebuffer.
 
 == GPU ==
@@ -93,6 +144,7 @@ Driver is there (ath10k_snoc) and should work the same way as in [[Qualcomm_Snap
 * [[User:opendata]] worked on initial basic SoC support (pinctrl-sdm660, gcc-sdm660) (+ [https://gitlab.com/opendata26/linux/-/tree/nile-mainline-submit-2 various branches])
 * [https://developer.sony.com/posts/pavel-dubrova-selected-as-the-first-2018-hero-open-source-developer/ Pavel Dubrova] worked on SDM630 SoC support based on kernel 5.3. It is unknown where the sources are located.
 * [[User:Alexeymin]] tried to continue opendata's work.  WIP Branch is in [https://gitlab.com/postmarketOS/linux-postmarketos/-/commits/qcom-sdm660/ linux-postmarketos] repo.
+* [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs
 
 === Upstream commits related to sdm660 ===
 commits merged in 4.20:
@@ -108,3 +160,4 @@ commits to be merged into 5.8:
 * [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=aab86bbbd3e32a10ca7e5cd1d3b9a473cf5909bb dt-bindings: arm: qcom: Add sdm630 and sdm660 SoCs]
 * [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=feec34411d4c0a9759106ef4f7d563438b3881ae arm64: dts: qcom: Add SDM660 SoC support]
 * [https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=23a6da79fe8b7f0b5725b40126a7b0638c016ef3 arm64: dts: qcom: Add Xiaomi Redmi Note 7 (lavender)]
+* many commits by Konrad that I'm too lazy now to find all of them and put here (sorry, maybe later!)
