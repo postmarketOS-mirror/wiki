@@ -28,6 +28,8 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 
 '''QCOM''' - Qualcomm
 
+'''QTI''' - Qualcomm Technologies Incorporated
+
 '''QUP''' - Qualcomm Universal Peripheral
 : Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/spi/qcom%2Cspi-qup.txt qcom,spi-qup.txt], [https://www.kernel.org/doc/Documentation/devicetree/bindings/i2c/qcom%2Ci2c-qup.txt qcom,i2c-qup.txt],
 : See also: [[# GENI]]
