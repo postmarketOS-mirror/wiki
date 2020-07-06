@@ -65,7 +65,7 @@ Is OTG available, not used in wiki
 
 == Addional Notes ==
 * ADB sideload stops at 50%, but it actually succeeds.
-* When running portnarketOS power button instantly shuts down the entire system
+* When running portmarketOS power button instantly shuts down the entire system
 * <code>Xfce4</code> works like a charm but it needs to be manually started over <code>SSH</code>
 * Android apps that generate specs have produced conflicting reports about the device's memory. The device actually has 1.5 GB of memory.
 * You probably already know this but if you ever find yourself in a bootloop/soft-brick situation, hold donwn the volume keys, the home and the power button to reboot.
