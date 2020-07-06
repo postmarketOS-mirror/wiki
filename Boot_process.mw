@@ -1,28 +1,58 @@
-== First stage boot loader ==
-This isn't something controlled by postmarketOS, and most of the time the user doesn't control it either.
+== Overview ==
+Once you press the power button on your device with a postmarketOS installation, it goes through the following steps:
 
-Usually there is a first stage bootloader (actually, more of a second or more stage, depending on the device) installed somewhere on the device.
-That bootloader loads the linux kernel compiled by pmbootstrap in memory, as well as an initramfs ([[Initramfs development]]), which contains the smallest possible set of tools for the rest. It then passes the execution on to the kernel, which extracts the initramfs in memory and mounts it as a root filesystem. It does so, while passing on the kernel command line option, and sometimes the [[Device Tree (dtb)|Device Tree Blob (dtb)]].
+# Device specific bootloaders
+# postmarketOS initramfs
+# OpenRC
+# LightDM (if UI is not none, otherwise it stops at OpenRC)
+# User Interface of choice (Plasma Mobile, Phosh, ...)
 
-Various devices have various ways of doing this (''It would be nice to document this here''):
+== Device specific bootloaders ==
+There are multiple stages of bootloaders passed before arriving at the postmarketOS initramfs. The first stages are not that relevant to understand the postmarketOS booting process, as they take care of very low level things, such as DRAM calibration. It gets interesting at the last stage of these device specific bootloaders, which is oftentimes some LK derivative, or on more libre or liberated devices, it may be u-boot.
 
-* [[Deviceinfo_flash_methods#heimdall-isorec|heimdall-isorec]] devices expect to find the initramfs packed with the vmlinuz image, as they can't load it themselves. For these, postmarketOS has a small initramfs in the vmlinuz image that loads the usual minimalist initramfs from another partition.
-* [[Mediatek#Booting_procedure|Boot process on Mediatek devices]]
-== Inside the initramfs ==
-The task goes on to the Linux kernel, which initializes some of the peripherals, then executes the postmarketOS initramfs init script[https://gitlab.com/postmarketOS/pmaports/blob/2a4d30e52a755695a2e82ee5662e441cd11205ab/main/postmarketos-mkinitfs/init.sh.in].
+=== LK (Android) ===
+[https://github.com/littlekernel/lk LK (Little Kernel)] loads a <code>boot.img</code> file, that was directly written to the Android boot partition of the device (without any partitioning, just the file directly; this is ''not'' the postmarketOS boot partition, see [[Partition_Layout|partition layout]]). This file consists of the postmarketOS Linux kernel and initramfs, which we flash to that partition during the installation. Flashing instructions are passed to LK with the <code>fastboot</code> command (abstracted in <code>pmbootstrap flasher</code>).
 
-This script initializes [[USB Network]]ing, looks for a postmarketOS boot partition [https://gitlab.com/postmarketOS/pmaports/blob/2a4d30e52a755695a2e82ee5662e441cd11205ab/main/postmarketos-mkinitfs/init.sh.in#L17][https://gitlab.com/postmarketOS/pmaports/blob/2a4d30e52a755695a2e82ee5662e441cd11205ab/main/postmarketos-mkinitfs/init_functions.sh#L41].
-At that point, you can [[Inspecting the initramfs|Inspect the initramfs]] if you want to, and the various hook scripts are ran.
+Notably LK does not allow to boot a different kernel from an SD card (without hacks like chainloading another bootloader that is stored in <code>boot.img</code>, which potentially increases the boot time and is a whole lot of effort to implement). LK is licensed under the MIT license, without copyleft, meaning that vendors are not required to release the source code of their LK bootloader forks. In practice, they end up being proprietary - we don't get the source code and can't make changes.
 
-The boot partition is mounted, and the second initramfs, ''initramfs-extra'', is loaded (a splash is displayed if not found). This initramfs contains other the remaining tools necessary for the boot process, but is kept separate in order to minimize the size of the boot image (that needs to fit on every device).
+==== isorec ====
+Very few Android devices don't expect a <code>boot.img</code> file written to the Android boot partition, but rather just the Linux kernel, with an embedded initramfs. But we want the initramfs packaging to be independent of the kernel (not require a kernel rebuild to change the initramfs!). Therefore we use the so-called "isorec" trick here: the initramfs script built into the kernel is just a very small stub, that loads the real initramfs from the postmarketOS boot partition ([https://gitlab.com/postmarketOS/pmaports/-/blob/1d2b62a1094e77e50e1a52c48b07eecb1fbfd26a/device/testing/linux-samsung-i9100/APKBUILD#L31-50 example]).
 
-The init script then proceeds to find the root partition (it displays a splash if it isn't found), to resize it, to unlock it, to mount it at <code>/sysroot</code>, and then chroots in, executing <code>/sbin/init</code>.
+=== u-boot ===
+[https://www.denx.de/wiki/U-Boot/ Das U-Boot] is highly configurable. When used with postmarketOS, it usually loads the postmarketOS Linux kernel and initramfs from the postmarketOS boot partition, where they live as dedicated files. The u-boot script is usually packaged in the device specific package.
 
-== In the root partition ==
-TODO: complete this section
+With u-boot, we can have two separate postmarketOS installations on the device, one on the internal storage (eMMC), and one on the SD card. If that is the case, we set the <code>pmos_root</code> and <code>pmos_boot</code> Linux kernel parameters from u-boot, so our initramfs script knows which root and boot partition we want to use ([https://gitlab.com/postmarketOS/pmaports/-/blob/1d2b62a1094e77e50e1a52c48b07eecb1fbfd26a/device/community/device-pine64-pinephone/uboot-script.cmd#L4-12 example]).
+
+== postmarketOS initramfs ==
+The postmarketOS initramfs consists of busybox, a shell script and very few other command-line programs. Find the source code in the [https://gitlab.com/postmarketOS/pmaports/-/tree/master/main/postmarketos-mkinitfs postmarketos-mkinitfs] pmaports. <code>mkinitfs.sh</code> generates the initramfs (and packages into a suitable format for the device specific bootloader if necessary, such as a boot.img file) and <code>init.sh.in</code> is what is actually running in the initramfs.
+
+The initramfs takes care of many things during the early booting phase, such as setting up USB networking, resizing the root partition, displaying a charging UI. Some of the tasks are listed in detail here, for others refer to the source code for now and consider expanding this article. Furthermore, the initramfs supports hooks (which may be used to work around device specific quirks, for example).
+
+=== Find the boot and root partitions ===
+Due to the various possible [[Partition_Layout|partition layouts]], the initramfs script has to look in various places for the postmarketOS boot and root partitions.
+
+boot partition:
+* <code>pmos_boot</code> kernel parameter (from the device specific bootloader)
+* Any partition or subpartition with the <code>pmOS_boot</code> label
+
+root partition:
+* <code>pmos_root</code> kernel parameter (from the device specific bootloader)
+* Any partition or subpartition with the <code>pmOS_root</code> label
+* Any partition or subpartition that is encrypted
+
+=== Load initramfs-extra ===
+Some Android devices require a very small initramfs, because otherwise the resulting <code>boot.img</code> file is too big for the Android boot partition. Therefore, we have split the initramfs into two parts, the tiny initramfs that is potentially placed in such a <code>boot.img</code> file (depending on the bootloader). And the initramfs-extra, which can hold bigger binaries, such as the UI to unlock an encrypted root partition ([[osk-sdl]]).
+
+=== Switch root ===
+{{note|It will look like this, once {{issue|664|pmaports}} is resolved.}}
+At the end of the initramfs script, the root partition is mounted at <code>/sysroot</code>, and the boot partition is mounted at <code>/sysroot/boot</code>. The latter is done, so OpenRC does not need to figure out the correct boot partition later on. Afterwards, the busybox command <code>switch_root</code> is called to switch over and pass control to OpenRC.
 
 == See also ==
+* [[Partition Layout]]
 * [[Troubleshooting:boot]]
 * [[Troubleshooting:boot:initfshooks]]
+* {{issue|664|pmaports}}: two postmarketOS installations: OpenRC may mount wrong partition as /boot
+* [https://postmarketos.org/blog/2018/04/14/lowlevel/ postmarketOS low-level blog post] (talks in part about liberating bootloaders)
 
 [[Category:Technical Reference]]
+__NOTOC__
