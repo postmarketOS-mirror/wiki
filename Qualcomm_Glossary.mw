@@ -1,6 +1,10 @@
 [[Category:Technical Reference]]
 List of inscrutable Qualcomm terms and acronyms. Please contribute - links save seconds, definitions save minutes, explanations save <s>hours</s> <s>days</s> weeks!
 
+== B ==
+
+'''BLSP''' - BAM-enabled Low Speed Peripheral (I2C, SPI and UARTs)
+
 == G ==
 
 '''GCC''' - Global Clock Controller
