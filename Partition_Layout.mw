@@ -22,7 +22,7 @@ A typical eMMC installation (you would flash the resulting image with a tool lik
 <syntaxhighlight lang="shell-session">
 $ pmbootstrap init
 $ pmbootstrap install
-$ pmbootstrap export
+$ pmbootstrap export  # create a symlink to the rootfs image file for further usage
 </syntaxhighlight>
 
 === Subpartitions ===
