@@ -1,0 +1,84 @@
+== Introduction ==
+
+Ninges (or Ningles as some might argue) is a name commonly used by Sony fans (there are at least 7 of us!) to refer to Xperia Nile and Ganges platforms (sdm630/636, Xperia XA2 and 10 series).
+
+The devices are mostly the same under the hood with the biggest outstander being the 10 Plus (mermaid), as it features a slightly different SoC (sdm636).
+
+
+== Hardware ==
+
+{| class="wikitable"
+! Component
+! Model
+! Driver
+|-
+| Touchscreen
+| Synaptics / Novatek
+| RMI4 (nile)/ out-of-tree novatek (ganges)
+|-
+| Rear camera
+| Check device page/over qcom CCI
+| QCOM_CCI
+|-
+| Camera flash
+| PMIC-based
+| ???
+|-
+| Front camera
+| Check device page/over qcom CCI
+| QCOM_CCI
+|-
+| LCD
+| Check device page
+| *not yet ready*
+|-
+| WiFi
+| Qualcomm WCN3980?
+| ???
+|-
+| Bluetooth
+| Qualcomm WCN3980/90?
+| ???
+|-
+| Modem
+| Inbuilt SDM modem
+| ???
+|-
+| GNSS/GPS
+| Inbuilt qcom solution
+| ???
+|-
+| NFC
+| NXP PN553
+| *not yet ready*
+|-
+| Vibration motor
+| Qcom qpnp-haptics?
+| ???
+|-
+| Notification LED
+| Some PMIC-based thingy
+| ???
+|-
+| Volume buttons
+| Vol- via gpio-keys, Vol+ via pm660 RESIN
+| ???
+|-
+| Power button
+| pm660 RESIN
+| INPUT_AXP20X_PEK
+|-
+| Battery fuel gauge
+| pm660(l)-fg
+| *not yet ready*
+|}
+
+
+== Mainline ==
+
+These devices are all running a shared out-of-tree-but-mainline kernel and thus have more or less same features working.
+
+The goal is to achieve feature parity with PinePhone, or perhaps surpass it (these devices have some fancy-schmancy qcom features).
+
+
+Currently the kernel is stored at [https://github.com/konradybcio/linux/commits/ninges_labs this link], but it's force-pushed quite often.
