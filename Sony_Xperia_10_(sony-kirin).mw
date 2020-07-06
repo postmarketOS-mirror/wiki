@@ -9,9 +9,9 @@
 | chipset = Qualcomm SDM630 (14nm)
 | cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
 | gpu = Adreno 508
-| storage = 32GB eMMC on sdhci5
+| storage = 64GB eMMC on sdhci5
 | display = 1080x2520 IPS LCD
-| memory = 3GB
+| memory = 4GB
 | architecture = aarch64
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
