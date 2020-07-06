@@ -3,7 +3,7 @@ This article is about <code>/etc/fstab</code> in postmarketOS.
 === Usage in the boot process ===
 {{note|It will look like this, once {{issue|664|pmaports}} is resolved.}}
 
-We used to rely on <code>/etc/fstab</code> to find the postmarketOS [[Partition_Layout|boot and root partitions]] by their label. We had to find partitions by their label, because we did not always know the exact location or UUID of the partition in advance. However, by just relying on the label, we get unpredictable behavior if installing postmarketOS on both the eMMC and the SD card ({{issue|664|pmaports}}).
+We used to rely on <code>/etc/fstab</code> to find the postmarketOS [[Partition_Layout|boot and root partitions]] by their label. We have to find partitions by their label, because we do not always know the exact location or UUID of the partition in advance. However, by just relying on the label, we get unpredictable behavior if installing postmarketOS on both the eMMC and the SD card ({{issue|664|pmaports}}).
 
 The initramfs accepts paths to the boot and root partitions as kernel parameters and falls back to searching by label, therefore it covers all use cases we have. Nowadays, we [[Boot_process#postmarketOS_initramfs|let the initramfs mount root and boot]], and do not have any entries for them in <code>/etc/fstab</code>.
 
