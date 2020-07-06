@@ -1,9 +1,18 @@
 [[Category:Technical Reference]]
 List of inscrutable Qualcomm terms and acronyms. Please contribute - links save seconds, definitions save minutes, explanations save <s>hours</s> <s>days</s> weeks!
 
+== A ==
+
+'''ADSP''' - Audio Digital Signal Processor
+
 == B ==
 
 '''BLSP''' - BAM-enabled Low Speed Peripheral (I2C, SPI and UARTs)
+
+== C ==
+
+'''CAMSS''' - Camera Subsystem
+'''CCI''' - Core Cluster Interconnect (NOT msm_bus/interconnect) OR Camera Control Interface
 
 == G ==
 
@@ -19,6 +28,10 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 : Kernel docs: [https://www.kernel.org/doc/Documentation/devicetree/bindings/soc/qcom/qcom,glink.txt qcom,glink.txt]
 
 == M ==
+
+'''MDSS''' - Mobile Display Subsystem
+
+'''MDP''' - Mobile Display Protocol
 
 '''MMCC''' - MultiMedia Clock Controller
 
