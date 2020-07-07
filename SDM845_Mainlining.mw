@@ -120,7 +120,7 @@ strings /dev/block/bootdevice/by-name/xbl_a | grep "Display Reserved"
 </pre>
 
 {{hc|Example output|
-1|OnePlus6:/ # strings /dev/block/bootdevice/by-name/xbl_a | grep "Display Reserved"                           
+OnePlus6:/ # strings /dev/block/bootdevice/by-name/xbl_a &#124; grep "Display Reserved"                           
 0x9D400000, 0x02400000, "Display Reserved",  AddMem, MEM_RES, SYS_MEM_CAP, Reserv, WRITE_BACK_XN
 }}
 
