@@ -220,7 +220,11 @@ If all has gone to plan, you'll see a few penguins at the top of your screen, an
 
 Congrats, you did it :D
 
-{{todo|Add sections for adding hardware support, detail SMMU issues and more complex notes.}}
+= The next step =
+
+Now that you have a booting phone, or if you've bumped into issues along the way, you should [https://wiki.postmarketos.org/wiki/Matrix_and_IRC hop on to Matrix] and talk about your progress, the wonderful folks there will be more than happy to offer guidance and support.
+
+{{todo|Add sections for adding hardware support (display, touch, buttons, modem, wlan), detail SMMU issues and more complex notes.}}
 
 = Maintainers =
 
