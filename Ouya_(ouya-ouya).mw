@@ -134,6 +134,7 @@ References:
 
 
 == Installation ==
+{{note|These instructions appear to be broken. If you have an Ouya, please help with fixing them. Related discussion: {{issue|668|pmaports}}}}
 === How to enter flash mode ===
 1. Connect Ouya to PC
 
@@ -143,8 +144,6 @@ References:
 You'll need OneClickOuyaRecovery.zip from [https://download.milaq.net/public/android/ouya/misc/ here] (original link is dead)
 
 ===pmbootstrap===
-{{todo| Work in progress, may be wrong. Only attempt for development}}
-
 1. Flash [https://forum.xda-developers.com/showthread.php?t=2295645 CWM] and [https://forum.xda-developers.com/showthread.php?t=2692836 Ouya BootMenu].
 
 2. Turn on Ouya, then press the power button many times until it scrolls to '''Bootloader''', and then wait until the boot menu disappears.
