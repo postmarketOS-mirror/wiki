@@ -145,12 +145,12 @@ With your device now added to the kernel, it's ready to compile.
 === Source the tools ===
 <pre>
 cd $HOME/pmos/linux
-source $HOME/pmos/pmtools/pmenv.sh
+source $HOME/pmos/tools/pmenv.sh
 </pre>
 
 I'd recommend you add <code>pmenv.sh</code> to your bashrc/zshrc, it doesn't do anything too heavy :D, I will assume that you have sourced it for the rest of this guide.
 <pre>
-echo -e "source \$HOME/pmos/pmtools/pmenv.sh" >> $HOME/.bashrc
+echo -e "source \$HOME/pmos/tools/pmenv.sh" >> $HOME/.bashrc
 </pre>
 
 === Enable simplefb ===
@@ -200,7 +200,7 @@ mkbootimg \
         --ramdisk $HOME/pmos/initramfs.cpio.gz
         --kernel /tmp/kernel-dtb -o $HOME/pmos/mainline-boot.img
 
-# Or, if you've already fixed the offsets in $HOME/pmos/pmtools/mkbootimg.sh
+# Or, if you've already fixed the offsets in $HOME/pmos/tools/mkbootimg.sh
 mkb -r $HOME/pmos/initramfs.cpio.gz
 </pre>
 
