@@ -28,6 +28,6 @@ More information:
 
 == Others ==
 Not much research has gone into these, please expand.
-* [https://github.com/google/swiftshader swiftshader] (see {{issue|23|pmaports}})
+* [https://github.com/google/swiftshader swiftshader] (see {{issue|23|pmaports}}), packaging efforts in {{MR|1380|pmaports}}
 
 [[Category:Technical Reference]]
