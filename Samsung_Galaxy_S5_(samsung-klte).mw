@@ -338,7 +338,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 postmarketOS packages:
 * {{Device package|samsung-klte}}
 * {{Kernel package|samsung-klte}}
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/firmware/firmware-samsung-klte Firmware package]
+* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/firmware-samsung-klte Firmware package]
 
 Mainline kernel patches:
 * initial dts https://patchwork.kernel.org/patch/10150807/
