@@ -37,6 +37,14 @@ tables=Devices
 |more results text=
 }}
 
+== UFS internal storage ==
+To enable the device's internal UFS 2.1 host controller (& 14nm UFS QMP PHY), compile the kernel with the following modules enabled:
+ CONFIG_SCSI_UFS_QCOM=y
+ CONFIG_PHY_QCOM_QMP=y
+ CONFIG_PHY_QCOM_UFS=y
+
+You can optionally set <code>CONFIG_SCSI_SCAN_ASYNC=y</code> for some additional speedup while booting. Consider also enabling <code>CONFIG_QFMT_V2</code> if you intend on writing data to a <code>userdata</code> partition formatted by Android where disk quotas are normally enabled by default for <code>ext4</code> volumes.
+
 == Bluetooth ==
 Getting Bluetooth to work should be trivial assuming you compile the kernel with the following modules enabled:
  CONFIG_RFKILL=m
@@ -50,7 +58,7 @@ After those are set and you've copied the needed kernel modules over to the root
  crbtfw21.tlv
  crnv21.bin
 
-Those can be supplied directly from <code>[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware]</code> and they should work fine, but if not you'll need to grab the files from your phone's firmware partitions.
+Those can be supplied directly from <code>[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware]</code> and they should work fine, but if not you'll need to grab the files from your device's firmware partitions.
 
 == See also ==
 [https://github.com/JamiKettunen/linux-mainline-oneplus5 linux-mainline-oneplus5] A mainline kernel fork with some patches for MSM8998 and OnePlus 5/5T support (check the [https://github.com/JamiKettunen/linux-mainline-oneplus5/commits/linux-5.7 5.7 branch commits] for a "step-by-step guide")
