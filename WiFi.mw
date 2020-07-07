@@ -42,7 +42,7 @@ Here's a quick rundown of the steps required to get Broadcom WiFi up and running
 * Modify your kernel APKBUILD to build modules, so that you can use bcmdhd.
 * Add a modules-load.conf file to your device package and put the bcmdhd module name (usually dhd) in it, then modify the APKBUILD to install the file. (This will auto-load the dhd module on startup.)
 
-See the [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-i9070 Galaxy S Advance device package], [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-i9070 Galaxy S Advance linux package] and [https://gitlab.com/postmarketOS/pmaports/-/tree/master/firmware/firmware-samsung-i9070 Galaxy S Advance firmware package] for reference.
+See the [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-i9070 Galaxy S Advance device package], [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-i9070 Galaxy S Advance linux package] and [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/firmware-samsung-i9070 Galaxy S Advance firmware package] for reference.
 
 == Mediatek WiFi ==
 
