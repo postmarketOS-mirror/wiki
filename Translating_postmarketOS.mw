@@ -1,0 +1,27 @@
+As postmarketOS becomes more and more stable, it makes sense to think about making it more accessible for non-developers. An important part of that are translations and localization.
+
+== Integrating localization into postmarketOS ==
+As of writing, we did not put much effort in making language selection / localization work in postmarketOS. You might be able to change the language in the settings app of your UI of choice, possibly after installing some extra language packages, but it is likely to be broken.
+
+Ideas to push this forward:
+* integrate language selection into the on-device installer and pmbootstrap
+* install language packages as necessary
+* make sure, that language selection is actually working (this may need some extra work with musl libc)
+* make language selection in the settings apps work
+* possibly provide a way to install an additional language (e.g. in GNOME Software or (KDE) Discover?)
+
+If you would like to help out with these tasks, let us know in the [https://gitlab.com/groups/postmarketOS/-/issues issues].
+
+== Development tools and homepage ==
+It is not very useful to translate development tools such as pmbootstrap. In order to use them, you need to read a lot of English documentation anyways. In fact, translating these will make development harder, as you suddenly can't search the Internet for specific output that pmbootstrap throws at you - you need to turn off translations first, or you won't get useful results. Let's rather focus on the parts that end-users will be facing.
+
+Translating the homepage doesn't make sense at this point either. It is a lot of effort, which could be spent translating the actual user interfaces instead, and becomes outdated quickly. Besides that, there is technical effort required to make the homepage translatable in the first place. If you are interested in providing information about postmarketOS in a specific language, consider contributing to the postmarketOS Wikipedia page of that language.
+
+== Upstream projects ==
+Pretty much everything that an end-user sees needs to be translated in an upstream project. Here are some pointers, note that GNOME and KDE are big projects consisting of many components, and that only a few of these components are actually relevant for postmarketOS. So if you plan to improve or add support for a certain language, think about the tasks that a casual postmarketOS user would typically perform with the OS. Then look into the translations of the components that make these tasks possible. If you do so, please add more bullet points with the specific components to be translated.
+
+* [https://l10n.kde.org/ KDE Localization] (Plasma Mobile UI and apps)
+* [https://wiki.gnome.org/TranslationProject GNOME Translation Project] (Phosh UI and apps)
+* [https://github.com/calamares/calamares/wiki/Translate-Guide Calamares Translate Guide] (For the [[On-device installer]]; note that we are currently not using the translations, but this is planned along with upstreaming our custom modules into Calamares)
+
+[[Category:Guide]]
