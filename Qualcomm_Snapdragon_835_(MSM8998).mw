@@ -38,6 +38,9 @@ tables=Devices
 }}
 
 == UFS internal storage ==
+
+'''IF YOUR DEVICE IS A SONY XPERIA DO NOT NEVER EVER EVER DON'T TRY TO ENABLE UFS ON NON-VENDOR/NON-SODP KERNELS! IT WILL ERASE THE CHIP CLEAN (INCLUDING THE BOOTLOADER!) CONSIDER YOURSELF WARNED'''
+
 To enable the device's internal UFS 2.1 host controller (& 14nm UFS QMP PHY), compile the kernel with the following modules enabled:
  CONFIG_SCSI_UFS_QCOM=y
  CONFIG_PHY_QCOM_QMP=y
