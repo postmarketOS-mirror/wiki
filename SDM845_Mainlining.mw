@@ -52,11 +52,11 @@ rmtfs, pd-mapper and tqftpserv are all required and are used to communicate with
 If you phone is a Sony Xperia, DO NOT EVEN TRY TO ADD UFS TO YOUR DEFCONFIG/DTS if you're not running a vendor-based or SODP-based kernel. It needs a workaround without which YOUR UFS WILL BE WIPED CLEAN (INCLUDING THE BOOTLOADER!). You can boot off of a SD Card or a USB drive.
 
 == Treble ==
-Treble is both a blessing and a curse, the OnePlus 6 has 2 of system, vendor, boot and a few other partitions, this means it's super easy to dual boot with android as only one slot is used at any one time, simply <code>fastboot --set-active=[a|b]</code> to change!
-For this guide I will be installing Linux to slot a, wherever you see a <code>_a</code> suffix after a partition, replace it with whichever slot you would like to install for, I recommend using not the one you currently have Android on if you plan on daily driving like I do.
+Treble is both a blessing and a curse, SDM845 device have 2 of system, vendor, boot, xbl and a few other partitions, this means it's super easy to dual boot with android as only one slot is used at any one time, simply <code>fastboot --set-active=[a|b]</code> to change!
+For this guide I will be installing Linux to slot a, wherever you see a <code>_a</code> suffix after a partition, replace it with whichever slot you would like to install for, I recommend using not the one you currently have Android on if you plan on daily driving Android or Halium like I do.
 
-Check you current slot by booting TWRP and going into the reboot menu.
-Be aware that if you flash OTAs they are flashed to the inactive slot, if that slot had Linux on it, it doesn't anymore...
+Check your current slot by booting TWRP and going into the reboot menu.
+Be aware that if you flash OTAs (from within Android or TWRP) they are flashed to the inactive slot, if that slot had Linux on it, it doesn't anymore...
 
 = Starting Off =
 
