@@ -10,6 +10,9 @@ Once you press the power button on your device with a postmarketOS installation,
 == Device specific bootloaders ==
 There are multiple stages of bootloaders passed before arriving at the postmarketOS initramfs. The first stages are not that relevant to understand the postmarketOS booting process, as they take care of very low level things, such as DRAM calibration. It gets interesting at the last stage of these device specific bootloaders, which is oftentimes some LK derivative, or on more libre or liberated devices, it may be u-boot.
 
+=== TianoCore/EDK2 ===
+This is the open source implementation of UEFI spec. Mainly used for Lumias, popular/high-end ARM platforms (think Raspberry Pi or the expensive ARM servers). Having a framebuffer is a must with the UEFI spec, hence it's trivial to set up a screen console output using this one (earlycon=efifb console=efifb).
+
 === LK (Android) ===
 [https://github.com/littlekernel/lk LK (Little Kernel)] loads a <code>boot.img</code> file, that was directly written to the Android boot partition of the device (without any partitioning, just the file directly; this is ''not'' the postmarketOS boot partition, see [[Partition_Layout|partition layout]]). This file consists of the postmarketOS Linux kernel and initramfs, which we flash to that partition during the installation. Flashing instructions are passed to LK with the <code>fastboot</code> command (abstracted in <code>pmbootstrap flasher</code>).
 
