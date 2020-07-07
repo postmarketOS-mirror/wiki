@@ -82,6 +82,13 @@ It is possible to dual boot with android by following the guide above and using
 
 to switch to your inactive slot before flashing.
 
+== Building ==
+
+Feel like helping? Want to learn kernel development?
+<h2>[https://gitlab.com/sdm845-mainline/pmtools/-/blob/master/Building.md Check out the building guide]</h2>
+
+Feel free to contact @kalube in the [https://wiki.postmarketos.org/wiki/Matrix_and_IRC #postmarketos-mainline] matrix channel if you're stuck.
+
 == Sources ==
 [https://github.com/calebccff/linux/commits/enchilada-usb Kernel sources]
 
