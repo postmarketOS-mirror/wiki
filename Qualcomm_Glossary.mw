@@ -5,7 +5,13 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 
 '''ADSP''' - Audio Digital Signal Processor
 
+'''AOSS''' - Always-On Subsystem
+
+'''APR''' - Asynchronous Packet Router
+
 == B ==
+
+'''BAM''' - Block Address Mode
 
 '''BLSP''' - BAM-enabled Low Speed Peripheral (I2C, SPI and UARTs)
 
@@ -14,6 +20,9 @@ List of inscrutable Qualcomm terms and acronyms. Please contribute - links save 
 '''CAMSS''' - Camera Subsystem
 
 '''CCI''' - (Core Cluster/Cache Coherent) Interconnect (NOT msm_bus/interconnect) OR Camera Control Interface
+
+== D ==
+'''DSI''' - Display Serial Interface
 
 == G ==
 
