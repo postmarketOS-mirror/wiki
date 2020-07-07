@@ -85,7 +85,7 @@ to switch to your inactive slot before flashing.
 == Building ==
 
 Feel like helping? Want to learn kernel development?
-== [[SDM845_Mainlining|Check out the mainlining guide] ==
+== [[SDM845_Mainlining|Check out the mainlining guide]] ==
 For detailed SDM845 specific instructions on initial device porting and building.
 Feel free to contact @kalube in the [https://wiki.postmarketos.org/wiki/Matrix_and_IRC #postmarketos-mainline] matrix channel if you're stuck.
 
