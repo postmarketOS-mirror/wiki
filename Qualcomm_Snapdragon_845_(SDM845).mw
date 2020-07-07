@@ -41,6 +41,10 @@ tables=Devices
 |more results text=
 }}
 
+
+=== Adding yours ===
+If you have an SDM845 based device that isn't in this list you should definitely do something about that, checkout the [[SDM845_Mainlining|SDM845 Mainlining Guide]] for instructions on porting new devices. It is fairly straightforward to get core functionality working on most devices.
+
 == Audio ==
 TODO - audio hasn't been worked on as of yet, although the adsp audio processor subsystem boots.
 
