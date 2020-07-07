@@ -22,7 +22,7 @@ Pretty much everything that an end-user sees needs to be translated in an upstre
 
 * [https://l10n.kde.org/ KDE Localization] (Plasma Mobile UI and apps)
 * [https://wiki.gnome.org/TranslationProject GNOME Translation Project] (Phosh UI and apps)
-** [https://developer.puri.sm/Librem5/Contact/Contributing/Translations.html Libram 5 Translation Docs]
+** [https://developer.puri.sm/Librem5/Contact/Contributing/Translations.html Librem 5 Translation Docs]
 * [https://github.com/calamares/calamares/wiki/Translate-Guide Calamares Translate Guide] (For the [[On-device installer]]; note that we are currently not using the translations, but this is planned along with upstreaming our custom modules into Calamares)
 
 [[Category:Guide]]
