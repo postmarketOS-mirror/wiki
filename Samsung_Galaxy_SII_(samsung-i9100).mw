@@ -196,7 +196,7 @@ Proprietary firmware files are needed to get Wifi and Bluetooth working with the
   $ wget "https://github.com/respeaker/rkbin/raw/master/firmware/bluetooth/BCM4330B1.hcd" -O /usr/lib/firmware/brcm/BCM4330B1.hcd # for bluetooth
 
 ==== U-Boot bootloader (legacy) ====
-[https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100-uboot.git u-boot bootloader port], based on the work done by the user [https://github.com/astarasikov astarasikov] at [https://github.com/astarasikov/i9100-uboot this repository]. On Archlinux I was able to compile the older U-Boot version using following commands:
+[https://github.com/Sekilsgs2 Sekilsgs2] on Github created a [https://github.com/Sekilsgs2/i9100-uboot.git u-boot bootloader port], based on the work done by the user [https://github.com/astarasikov astarasikov] at [https://github.com/astarasikov/i9100-uboot this repository]. On Arch Linux I was able to compile the older U-Boot version using following commands:
 
   $ pacman -U dtc-1.4.1-1-x86_64.pkg.tar.xz # downgrade to older version
   $ pacman -S gcc-arm-none-eabi-bin-49 # older gcc version
