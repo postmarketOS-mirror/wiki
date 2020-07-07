@@ -1,0 +1,227 @@
+
+= Overview =
+Getting Linux to boot on your phone is a daunting prospect, luckily due to a large push by Google and [https://www.linaro.org/ Linaro], support for more ARM based SOCs is being added to mainline constantly, and the Android kernel is slowly moving closer and closer to upstream. As a result, for a lucky few SOCs (ahem SDM845), it's pretty easy to get a large amount of core functionality working.
+
+This page is meant to serve as a guide for adding support for mainline Linux to your SDM845 based device, the table below shows which features you should expect to have functional once you get mainline Linux booting on your device. The general approach here is the easier it is to add support for new devices, the more devices we will be able to support and in turn the more developers and users we will get :D.
+
+== Status ==
+The features marked as Y are confirmed to be functional on at least ONE device, as more devices are supported this number should be increased.
+Features marked as P generally have some limited functionality but have issues than make them unsuitable for daily use.
+* '''CPU:''' SMP (bring up secondary CPU cores), CPU frequency scaling, CPUidle
+* '''Storage:''' eMMC, SD cards, UFS, ...
+* '''Video:''' Hardware-accelerated video de/encoding
+* '''Modem:''' Calls, SMS, Internet
+
+{{#cargo_query:
+tables=Socs
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=SoC,Arch,Year,StatusCpu=CPU,StatusUart=UART,StatusStorage=Storage,StatusUsb=USB,StatusDisplay=Display,StatusGpu=GPU,StatusPinctrl=Pinctrl,StatusI2c=I²C,StatusAudio=Audio,StatusVideo=Video,StatusThermal=Thermal,StatusWiFi=WiFi,StatusBluetooth=BT,StatusModem=Modem,StatusCamera=Camera
+|where=Mainline="1" and Socs.Name="SDM845"
+|format=table
+|limit=9999
+|more results text=
+}}
+
+== About ==
+[https://www.qualcomm.com/products/sdm845 SDM845] (or Snapdragon 845) is a Qualcomm SoC released in 2018, with mainline support originally added for the Dragonboard 845c.
+
+== Relevant Components ==
+
+=== [https://gitlab.com/sdm845-mainline/sdm845-linux SDM845 common kernel] ===
+This repo contains branches for the [[OnePlus_6_(oneplus-enchilada)|OnePlus 6/T]] and [[Xiaomi_Poco_F1_(xiaomi-beryllium)|Xiaomi Pocophone F1]] and is where the majority of development currently happens. There are aims to merge into a common branch and minimise the commits so that they can potentially be submitted to the kernel. Once you have your device booting you should contact @kalube ([[ in the postmarketos-mainline
+
+=== [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-oneplus-sdm845 Kernel package] ===
+This is the Alpine aports package source for the OnePlus 6 kernel, it is built by [https://wiki.postmarketos.org/wiki/Installing_pmbootstrap pmbootstrap] and used to create an android boot image.
+
+{{todo|Make kernel package generic and use common branch.}}
+
+=== [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/soc-qcom-sdm845 Common device package] ===
+This is a generic device package that includes all common SDM845 dependencies. All SDM845 devices should depend on this package.
+A common device package has the benefit of simplifying device packages by including common dependencies and patches.
+For SDM845 this means that the services used to boot the modem and wifi adapter don't have to be included in every device package, and reduces the chance of confusion and issues caused by a missing package.
+
+=== [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-oneplus-enchilada OnePlus 6 device package] ===
+This is the OnePlus 6 specific device package, it can be used as a reference guide for new SDM845 devices.
+
+=== Required packages ===
+rmtfs, pd-mapper and tqftpserv are all required and are used to communicate with the modem in order to load wifi firmware and perform other tasks. These are included in the common device package.
+
+= Device Quirks =
+
+== Treble ==
+Treble is both a blessing and a curse, the OnePlus 6 has 2 of system, vendor, boot and a few other partitions, this means it's super easy to dual boot with android as only one slot is used at any one time, simply <code>fastboot --set-active=[a|b]</code> to change!
+For this guide I will be installing Linux to slot a, wherever you see a <code>_a</code> suffix after a partition, replace it with whichever slot you would like to install for, I recommend using not the one you currently have Android on if you plan on daily driving like I do.
+
+Check you current slot by booting TWRP and going into the reboot menu.
+Be aware that if you flash OTAs they are flashed to the inactive slot, if that slot had Linux on it, it doesn't anymore...
+
+= Starting Off =
+
+== pmtools ==
+
+The [https://gitlab.com/sdm845-mainline/pmtools pmtools] repo contains a few useful scripts:
+* [https://gitlab.com/sdm845-mainline/pmtools/-/blob/master/pmenv.sh pmenv.sh] a collection of aliases and functions, I will reference this script where it can be used.
+* [https://gitlab.com/sdm845-mainline/pmtools/-/blob/master/mkbootimg.sh mkbootimg.sh] an uncreatively-named wrapper for mkbootimg, edit the offsets to match your device (You can learn how to find these numbers [[Porting_to_a_new_device#Flash_method|here]], you may also want to modify the default paths defined at the top to match your device codename, to avoid manually specifying parameters.
+
+== Setting up your build environment ==
+This is still very much WIP, however the process is not too complicated once you understand it.
+
+=== pmbootstrap ===
+The first thing to set up is pmbootstrap, it does a whole ton of the hard work for us, becoming comfortable with it and the pmaports repo let you create a reproducible build process and allows anybody to start developing for your device.
+
+To get started follow the [https://wiki.postmarketos.org/wiki/Porting_to_a_new_device porting guide] up until the kernel package section, then continue below.
+
+=== Kernel building ===
+
+This guide has some overlap with the [[Mainlining_Guide|Mainlining guide]] and the [https://gitlab.com/sdm845-mainline/pmtools/-/blob/master/Building.md OnePlus 6 specific] building guide, they can also be referred to for help. This guide, and the scripts used in it, will assume that you're working from <code>$HOME/pmos</code>.
+
+{{note|A better solution would be to set a <code>WORKDIR</code> variable in [https://gitlab.com/sdm845-mainline/pmtools/-/blob/master/pmenv.sh pmenv.sh] and use it in other scripts.}}
+
+The mainlining guide uses pmbootstrap's <code>envkernel.sh</code> script to do all kernel compilation in a chroot, this allows for a reproducible build environment and removes the need to install extra dependencies to build. However it does come with a performance hit, and can occasionally cause issues due to permissions. This guide will instead build on your host. If you'd rather build using envkernel then refer to the [[Mainlining_Guide#envkernel.sh|relevant section]] on the mainlining guide, the only functional difference is running their <code>make</code> alias, instead of the <code>m</code> alias shown below.
+
+==== Clone the kernel ====
+<pre>
+cd $HOME
+mkdir -p pmos && cd pmos
+git clone https://gitlab.com/sdm845-mainline/pmtools tools
+git clone https://gitlab.com/sdm845-mainline/sdm845-linux -b oneplus-sdm845 linux
+</pre>
+
+= Initial device support =
+Getting an initial kernel boot with graphics is relatively simply, it consists of creating a new DTS for your device, and creating a simple framebuffer to output to.
+
+== Creating a DTS ==
+The first steps to adding support for your device is creating a new DTS file for your device, the basics for that are covered by [[Mainlining_Guide#Device_Tree_Source|the mainlining guide]], and should be read before continuing. Use the [https://gitlab.com/sdm845-mainline/sdm845-linux/-/blob/oneplus-sdm845/arch/arm64/boot/dts/qcom/sdm845-mtp.dts] file as your template.
+
+{{note|Don't forget to [https://gitlab.com/sdm845-mainline/sdm845-linux/-/commit/b028f129dfdf7f8a67661b2b184909d90b509855#9b17b57d02f28064f56d71b1cf1aef9b1fb0fea7_25_25 add your DTS to the Makefile]}}
+
+=== Preparing the DTS ===
+You should comment out or remove the following nodes as they are either specific to the MTP device, not needed for testing or known to cause issues:
+* <code>&cdsp_pas</code> - a remote processor, requires firmware to boot and not important yet
+* <code>&dsi0</code> - All dsi related nodes are MTP specific and could interfere with the framebuffer.
+* <code>&dsi0_phy</code>
+* <code>&dsi1</code>
+* <code>&dsi1_phy</code>
+* <code>&gpu</code> - We want to leave the GPU alone so that it doesn't try and talk to the display.
+* <code>&mdss</code> - The MDSS handles display stuff too, we don't want that yet.
+* <code>&mdss_mdp</code>
+* <code>&mss_pil</code> - this is the modem, will only contribute to dmesg errors for now
+* <code>&sdhc_2</code> - this is the sdcard reader, your device may not have this
+* All <code>sd*</code> nodes under <code>&tlmm</code>
+
+{{note|The qcom,board-id and soc-id values have not been needed on any SDM845 device yet as far as I know, they should be safe to ignore.}}
+
+=== Creating a framebuffer ===
+Luckily for us, there's a neat feature in android that allows the kernel to inherit some SMMU mappings from the bootloader, this means we can be cheeky and reuse the framebuffer that the bootloader setup for us - the one used to render the splash screen you see when you first turn your phone on.
+
+==== Find the framebuffer address ====
+First you need to find the address of the framebuffer, you can do this by booting into TWRP or rooted android and running:
+<pre>
+strings /dev/block/bootdevice/by-name/xbl_a | grep "Display Reserved"
+</pre>
+
+{{hc|Example output|
+1|OnePlus6:/ # strings /dev/block/bootdevice/by-name/xbl_a | grep "Display Reserved"                           
+0x9D400000, 0x02400000, "Display Reserved",  AddMem, MEM_RES, SYS_MEM_CAP, Reserv, WRITE_BACK_XN
+}}
+
+The first value is the address (in this case <code>0x9D400000</code>), the second value is the size (<code>0x02400000</code> for us).
+
+==== Create the framebuffer node ====
+With that value noted down, you can now add [https://gitlab.com/sdm845-mainline/sdm845-linux/-/commit/b028f129dfdf7f8a67661b2b184909d90b509855#254727b611d020b3dae1f6ef7b36cacb184c98c9_0_28 this framebuffer node] to your DTS file. Don't forget to copy the <code>reserved-memory</code> node underneath too.
+
+There are a few values that must be changed to match your device, this example is for the OnePlus 6 which has a display width of 1080, and height of 2280, everywhere you see these 2 values they should be changed to match your device.
+Additionally, you have to change every reference to the <code>9d400000</code> address to match the value you got above.
+Make sure you update the <code>reserved-memory</code> node too.
+
+{{note|I have no explanation for why the formatting is so bad, viewing the commit locally shows correct formatting.}}
+
+== Compiling ==
+With your device now added to the kernel, it's ready to compile.
+
+=== Source the tools ===
+<pre>
+cd $HOME/pmos/linux
+source $HOME/pmos/pmtools/pmenv.sh
+</pre>
+
+I'd recommend you add <code>pmenv.sh</code> to your bashrc/zshrc, it doesn't do anything too heavy :D, I will assume that you have sourced it for the rest of this guide.
+<pre>
+echo -e "source \$HOME/pmos/pmtools/pmenv.sh" >> $HOME/.bashrc
+</pre>
+
+=== Enable simplefb ===
+
+<pre>
+m defconfig
+</pre>
+This will create a <code>.config</code> file in the output directory (<code>.output</code> that contains every single config option, and either sets or unsets it.
+In order to make use of the framebuffer device we defined, we need to enable support for the simplefb framebuffer driver.
+<pre>
+m menuconfig
+</pre>
+You can now use {{button|/}} to open a search box, search for <code>FB_SIMPLE</code> and press {{button|1}} to go to the option, you can now press {{button|space}} to toggle it on.
+
+Press {{button|Escape}} twice to go back, repeat until you are prompted to save and exit.
+
+=== Building ===
+Finally, we can compile the kernel with:
+<pre>
+m
+</pre>
+You can see what that's doing by running <code>alias m</code> in a terminal where you've sourced <code>pmenv.sh</code>, or by [https://gitlab.com/sdm845-mainline/pmtools/-/blob/master/pmenv.sh#L16 looking here].
+
+== Booting ==
+With our kernel compiled, you'll find the kernel image at <code>.output/arch/arm64/boot/Image.gz</code>, and your device dtb file at <code>.output/arch/arm64/boot/dts/qcom/sdm845-<device>.dtb</code>.
+{{note|The output directory <code>.output</code> is defined in the make command, different kernel will use different output directories.}}
+
+The final step is to make an Android compatible boot image, unfortunately there's one final hitch, the ramdisk...
+
+=== Getting a ramdisk ===
+Fortunately it doesn't take too long to make a postmarketOS ramdisk, simply do the following:
+<pre>
+pmbootstrap export
+cp /tmp/postmarketOS-export/initramfs-qcom-sdm845 $HOME/pmos/initramfs.cpio.gz
+</pre>
+
+=== Making a boot image ===
+<pre>
+cat .output/arch/arm64/boot/Image.gz .output/arch/arm64/boot/dts/qcom/sdm845-<device>.dtb > /tmp/kernel-dtb
+mkbootimg \
+	--base 0x0 \
+	--kernel_offset 0x8000 \
+	--ramdisk_offset 0x1000000 \
+	--tags_offset 0x100 \
+	--pagesize 4096 \
+	--second_offset 0xf00000 \
+        --ramdisk $HOME/pmos/initramfs.cpio.gz
+        --kernel /tmp/kernel-dtb -o $HOME/pmos/mainline-boot.img
+
+# Or, if you've already fixed the offsets in $HOME/pmos/pmtools/mkbootimg.sh
+mkb -r $HOME/pmos/initramfs.cpio.gz
+</pre>
+
+That's it! With a kernel successfully built it's ready for a test run...
+
+=== The boot procedure ===
+Reboot your device into fastboot mode, unfortunately all treble device launching with Android Oreo (and some Pie devices) have a dtbo partition, this stores a whole bunch of dtb files that the bootloader can go slap on to the kernel, mainline doesn't like this much...
+
+We need to erase the dtbo partition before we can boot, it's wise to boot into twrp and take a backup first, or alternatively [[#Treble|switch to the opposite slot]] so as to keep whatever OS you're currently running intact.
+<pre>
+fastboot erase dtbo
+fastboot reboot bootloader
+</pre>
+
+You can now boot the kernel with
+<pre>
+fastboot boot $HOME/pmos/mainline-boot.img
+</pre>
+
+If all has gone to plan, you'll see a few penguins at the top of your screen, and dmesg scrolling on by.
+
+Congrats, you did it :D
+
+{{todo|Add sections for adding hardware support, detail SMMU issues and more complex notes.}}
+
+= Maintainers =
+
+* [https://wiki.postmarketos.org/wiki/User:Kalube Kalube]
