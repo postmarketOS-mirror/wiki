@@ -67,7 +67,7 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 == Getting logs through debug UART ==
 Untested yet <br />
 [[File:Xiaomi-cepheus_UART_pins.jpg|457px]]
-
+[[File:Xiaomi-cepheus-UART-pins-schematic.jpg|600px]]
 
 == Links ==
 <!-- * {{MR|1095|pmaports}} Initial merge request -->
