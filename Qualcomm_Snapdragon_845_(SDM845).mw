@@ -14,9 +14,9 @@
 | status_gpu = Y
 | status_pinctrl = Y
 | status_i2c = P
-| status_audio = 
-| status_video = 
-| status_thermal = 
+| status_audio = N
+| status_video = N
+| status_thermal = N
 | status_wifi = Y
 | status_bluetooth = P
 | status_modem = P
