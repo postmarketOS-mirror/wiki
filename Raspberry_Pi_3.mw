@@ -69,6 +69,65 @@ $ speaker-test -c 2
 $ amixer cset numid=3 2
 </source>
 
+=== Graphical Interfaces ===
+{|class="wikitable feature-colors"
+! Interface
+! Info
+! Working
+|-
+|none
+|
+|
+|-
+|[[GNOME 3]]
+|
+|
+|-
+|[https://en.wikipedia.org/wiki/I3_(window_manager)][[i3wm]]
+|
+|
+|-
+|[https://kodi.wiki/view/10-foot_user_interface Kodi]
+|
+|
+|-
+|[https://en.wikipedia.org/wiki/MATE_(software)][[MATE]]
+|works fine
+| Y
+|-
+|[https://developer.puri.sm/Librem5/Software_Reference/Environments/Phosh.html][[Phosh]]
+|
+|
+|-
+|Plasma-Desktop
+|
+|
+|-
+|[https://en.wikipedia.org/wiki/Plasma_Mobile#Plasma_Mobile][[Plasma Mobile]]
+|
+|
+|-
+|Plasma Mobile Extras
+|
+|
+|-
+|[[Shelli]]
+|
+|
+|-
+|[https://wiki.postmarketos.org/wiki/User-Interfaces#Sway][[Sway]]
+|
+|
+|-
+|[https://en.wikipedia.org/wiki/Weston_(software)#Weston][[Weston]]
+|
+|
+|-
+|[https://en.wikipedia.org/wiki/Xfce][[XFCE4]]
+|
+|
+|}
+
 == Photos ==
 <gallery>
 File:Raspberry-pi-xfce1.jpg|thumb|XFCE4
