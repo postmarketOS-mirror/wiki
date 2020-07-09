@@ -60,12 +60,12 @@ Besides the ones listed here, [https://wiki.alpinelinux.org/wiki/Category:Deskto
 | Has been packaged previously, but got removed due to the amount of out-of-tree patches to Qt libraries which weren't compatible with newer versions
 |-
 | style="text-align: center;" | P
-| [[Unity 8]]
+| [[Lomiri]]
 | [https://ubports.com/ link]
 | [https://github.com/ubports link]
 | UBPorts
 | 
-| Has a [https://gitlab.com/postmarketOS/pmaports/tree/feature/unity8_arches WIP branch]
+| Has a [https://gitlab.com/postmarketOS/pmaports/-/tree/feature/unity8_arches/ WIP branch]
 |-
 | style="text-align: center;" | 
 | Glacier
