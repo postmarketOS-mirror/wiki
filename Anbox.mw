@@ -63,6 +63,8 @@ Once done, close the menuconfig with exit button on bottom. pmbootstrap will upd
 
 Try building the kernel with <code>pmbootstrap build linux-postmarketos-wiki-example</code>. If build succeeds, flash the kernel into your device <code>pmbootstrap install && pmbootstrap flasher flash_kernel</code>, and install Anbox.
 
+Once you confirmed that your port is working, edit the kernel package APKBUILD options property to include pmb:kconfigcheck-anbox option(needed to get the package merged) and create new MR to pmaports.
+
 == Troubleshooting ==
 
 === I don't have access to the internet ===
