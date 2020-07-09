@@ -1,6 +1,7 @@
 {{note|Consider using native Linux programs instead, see [[FAQ]].}}
 {{note|Development on this feature can be done without running pmOS on a real device with [[QEMU]]. Please use the lts kernel for that as the virt kernel doesn't include the necessary modules.}}
 {{note|Anbox is currently somewhat broken on armv7 because Anbox assumes 64 bits in some places, which breaks input (see https://github.com/anbox/anbox/issues/1214#issuecomment-524578664. Please manifest yourself if you can test and try that)}}
+{{note|Works only on kernels with DRI support, see [[Mainlining Guide]].}}
 
 [[File:Anbox_app_manager.png|thumb|The anbox application manager with the default apps.]]
 
@@ -15,9 +16,52 @@ Install the <code>postmarketos-anbox</code> package. Launch using <code>anbox-la
 
 == Porting ==
 
-If Anbox have never been working on you device, you may have to add kernel support for it. Use <code>pmbootstrap kconfig check --anbox</code> (from 
-{{MR|1916}}) to check.
+=== Requirements ===
 
+You need a few things to get started with porting Anbox support to your device:
+
+* '''device with mainline postmarketOS kernel support'''
+
+Since Anbox require DRI to function, you need mainline kernel to get it to work.
+
+* '''Linux environment'''
+
+pmbootstrap needs Linux environment to function, and porting process may also require rebuilding the kernel.
+
+=== Checking defconfig ===
+
+First, you need to know which kernel package does your device use to perform a kconfig check(replace wiki-example with your actual device codename):
+
+<syntaxhighlight lang="shell-session">
+$ cd $(pmbootstrap config aports)
+$ cat device/testing/device-wiki-example/APKBUILD | grep linux
+</syntaxhighlight>
+
+The output of the last command will be like this: <code>depends="'''linux-postmarketos-wiki-example''' mesa-git-dri-gallium"</code>. Your mainline Linux package name will be similar to the highlighted sample one.
+
+Then you need to verify the defconfig with pmbootstrap to make sure all the kernel modules Anbox require will be installed(replace linux-postmarketos-wiki-example with actual kernel package name).
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap kconfig check --anbox linux-postmarketos-wiki-example
+</syntaxhighlight>
+
+If the check was successful, pmbootstrap will output <code>kconfig check succeeded!</code>. If the check is successful, you can install the postmarketos-anbox package and run <code>anbox-launch</code> to start Anbox.
+
+If some checks failed, you need to rebuild the kernel package with updated defconfig. Update the defconfig so <code>pmbootstrap kconfig check --anbox</code> command will output <code>kconfig check succeeded!</code>.
+
+=== Updating defconfig ===
+
+First, you need to bump pkgrel of your kernel package:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap pkgrel_bump linux-postmarketos-wiki-example
+</syntaxhighlight>
+
+Then, use <code>pmbootstrap kconfig edit linux-postmarketos-wiki-example</code> to edit the defconfig. You can browse the options menu with arrow keys and select options with Space key. You can also search your needed kconfig option with "/" button.
+
+Once done, close the menuconfig with exit button on bottom. pmbootstrap will update your kernel defconfig and you'll be able to build the kernel.
+
+Try building the kernel with <code>pmbootstrap build linux-postmarketos-wiki-example</code>. If build succeeds, flash the kernel into your device <code>pmbootstrap install && pmbootstrap flasher flash_kernel</code>, and install Anbox.
 
 == Troubleshooting ==
 
