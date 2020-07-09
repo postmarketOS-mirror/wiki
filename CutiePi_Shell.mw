@@ -1,0 +1,3 @@
+A light, highly tablet-friendly (not strictly mobile-friendly!) Linux desktop initially developed for the CutiePi Raspberry Pi tablet using Qt/QML.
+
+Offers a [https://www.youtube.com/watch?v=e33Xke0atlk&feature=emb_title QtWayland compositor] and other small UIs such as a custom terminal, web browser, lock screen, wireless/quick switches and on-screen keyboard (visible [https://www.youtube.com/watch?v=1q-2_S8sQnc here])
