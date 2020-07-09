@@ -294,6 +294,25 @@ General setup -->
 
 Required for elogind, and therefore necessary to be able to run most desktop environments.
 
+=== CONFIG_CRYPTO_XTS ===
+
+'''About'''
+
+''XTS: IEEE1619/D16 narrow block cipher''
+
+[https://cateee.net/lkddb/web-lkddb/CRYPTO_XTS.html Read more...]
+
+'''Location in menu'''
+
+<pre class="shell">
+Cryptographic API -->
+  XTS support
+</pre>
+
+'''pmOS specific'''
+
+Needed for the default cryptsetup cipher in pmbootstrap (<code>aes-xts-plain64</code>) ({{issue|1940}})
+
 == Optional ==
 
 These kernel options are optional and for some devices required to fix some issues.
