@@ -48,7 +48,7 @@ Is OTG available, not used in wiki
 }}
 == About ==
 This page describes the support for postmarketOS on the OnePlus 7/T.
-The phone is running a mainline kernel which you can find [https://github.com/DeltaSporos/linux-mainline-oneplus7t here].
+The phone is able to boot a mainline kernel which you can find [https://github.com/DeltaSporos/linux-mainline-oneplus7t here].
 
 == Contributors ==
 * [[User:Sporos|Sporos]]
