@@ -172,7 +172,7 @@ $ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /sdcard/altboot.img
 
 {{note|'''WARNING''': Flashing to the userdata partition will overwrite all data on the device. Backup all data to another device before proceeding.}}
 
-It is much more usable to flash rootfs to the data partition which is around 5.7GB in size.
+It is much more usable to flash rootfs to the data partition which is around 5.7GB in size. 
 
 ==== Flashing to the data partition ====
 Specify the partition to flash rootfs to with the <code>--partition</code> argument:
@@ -183,6 +183,12 @@ $ pmbootstrap flasher flash_rootfs --partition userdata
 Copy postmarketOS <code>boot.img</code> to <code>/system</code>:
 <source lang="shell">
 $ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /system/boot.img
+</source>
+
+Do note, if the rootfs is larger than ~750mb Ouya's fastboot won't be able to flash it. In that case you may need to use <code>dd</code> to install the image from a usb drive. This can be done with adb shell in recovery. After you've ran <code>pmbootstrap export</code> ouya-ouya.img will be in <code>/tmp/postmarketOS-export/</code>.
+
+<source lang="shell">
+# dd if=/auto0-1/ouya-ouya.img of=/dev/block/mmcblk0p9
 </source>
 
 === Updating the kernel ===
