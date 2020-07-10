@@ -46,13 +46,16 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
+== About ==
+This page describes the support for postmarketOS on the OnePlus 6/T.
+The phone is running a mainline kernel which you can find [https://github.com/DeltaSporos/linux-mainline-oneplus7t here].
+
 
 == Contributors ==
 Sporos
 
 == Maintainer(s) ==
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
+Sporos
 
 == Users owning this device ==
 {{Device owners}}
