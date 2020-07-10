@@ -1,0 +1,18 @@
+The term "mainline" is used with different meaning in the wider Linux community. When talking about "mainline" in postmarketOS without further context, we are usually referring to "close to mainline" kernels (to distinct from Android's heavily patched downstream kernels, also called vendor kernels). It is our intention to get devices from an Android downstream kernel first to "close to mainline", and eventually into mainline by [https://lists.sr.ht/~postmarketos/upstreaming upstreaming] the patches.
+
+If somebody got confused about the terminology, please point them to this wiki page. Let's make an effort to use the right terminology, "mainline" vs. "close to mainline". But don't nitpick about it when other people use it wrong. Usually it is clear from the context.
+
+== Linux kernel ==
+=== Mainline ===
+On [https://www.kernel.org/category/releases.html kernel.org], it refers to the "mainline" tree of the Linux kernel (other trees: prepatch, stable, longterm):
+<blockquote>
+Mainline tree is maintained by Linus Torvalds. It's the tree where all new features are introduced and where all the exciting new development happens. New mainline kernels are released every 2-3 months.
+</blockquote>
+
+The stable and longterm trees are based on mainline. This means, if a patch made it to mainline Linux, it ends up in mainline, stable and longterm releases.
+
+=== Close to mainline ===
+A "close to mainline" kernel is based on a source tree from kernel.org with "a few patches" on top. This is an important distinction from Android's heavily patched downstream kernels, which have [https://arstechnica.com/gadgets/2019/11/google-outlines-plans-for-mainline-linux-kernel-support-in-android/ tens of thousands of lines of code] changed (not even counting vendor specific changes; the trend goes towards minimizing the changed lines). With a "close to mainline" kernel, it should be feasible to get the few patches into the mainline Linux kernel, whereas this is not feasible for an Android downstream kernel.
+
+== Other software ==
+To get something into "mainline" in the context of other software than the Linux kernel means, to get it into the official source tree of that software.
