@@ -185,13 +185,22 @@ Copy postmarketOS <code>boot.img</code> to <code>/system</code>:
 $ adb push /tmp/postmarketOS-export/boot.img-ouya-ouya /system/boot.img
 </source>
 
-==== Updating the kernel ====
+=== Updating the kernel ===
 
 When the <code>apk</code> package manager updates the kernel package (e.g. <code>linux-ouya-ouya</code> or <code>linux-ouya-ouya-mainline</code>) then the <code>boot.img</code> will be regenerated with the new kernel. Run the following commands on device to install the updated <code>boot.img</code>:
+
+For altboot.img on /sdcard:
 <source lang="shell">
-$ mkdir /system
-$ mount /dev/mmcblk1p3 /system
-$ cp /boot/boot.img-ouya-ouya /system/boot.img
+# mkdir /data
+# mount /dev/mmcblk1p9 /data
+# cp /boot/boot.img-ouya-ouya /data/media/altboot.img
+</source>
+
+For boot.img on /system:
+<source lang="shell">
+# mkdir /system
+# mount /dev/mmcblk1p3 /system
+# cp /boot/boot.img-ouya-ouya /system/boot.img
 </source>
 
 == Links ==
