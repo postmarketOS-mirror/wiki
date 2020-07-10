@@ -18,7 +18,7 @@
 | status_flashing = Y
 | status_touch = Y
 | status_screen = Y
-| status_wifi = Y
+| status_wifi = P
 | status_xwayland = P
 | status_fde = 
 | status_mainline = 
@@ -59,7 +59,8 @@ The device has to be unlocked before images can be replaced. It is strongly sugg
 If the device does not boot it is possible to access log from last attempt at sys/fs/pstore/console-ramoops via TWRP.
 
 == Installation ==
-the port has been done on the SKU: XT1766 of the Motorola E4 (Perry) version<br>
+This port has been done on the SKU: XT1766 of the Motorola E4 (Perry) version<br>
+This port has been tested on the SKU: XT1765 of the Motorola E4 (Perry)<br>
 <code>$ pmbootstrap install</code><br>
 plug the device to computer and switch it to the fastboot mode <br>
 <code>$ pmbootstrap flasher flash_kernel</code><br>
