@@ -64,6 +64,7 @@ The phone is running a mainline kernel which you can find [https://github.com/De
 <!-- you can use {{My devices}} on your profile page to show table with all your devices -->
 
 == How to enter flash mode ==
+adb reboot fastboot
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
