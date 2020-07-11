@@ -1,9 +1,11 @@
 __NOTOC__ __NOCACHE__
 All the devices in this table can at least boot postmarketOS. To monitor boot progress, you must be able to receive output from the screen, a network adapter, or a serial port. If you verify that a device not on this list boots postmarketOS, please [[Help:Device Page|create a page for the device]] and make a [https://docs.gitlab.com/ce/user/project/merge_requests/creating_merge_requests.html merge request].
 
+Status columns are described [[#Status_Columns|further below]]. In particular, ''Mainline*'' refers to [[(Close to) Mainline|(close to) mainline]] and is written this way to save screen space in this big table.
+
 {{#cargo_query:
 tables=Devices
-|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,Architecture,StatusUsbnet=USB Net,StatusFlashing=Flashing,StatusTouch=Touch,StatusScreen=Screen,StatusWifi=Wifi,StatusXwayland=Xwayland,StatusFde=FDE,StatusMainline=Mainline*,StatusBattery=Battery,Status3d=3D,StatusAccel=IMU,StatusAudio=Audio,StatusBluetooth=Bluetooth,StatusCamera=Camera,StatusGps=GPS,StatusMobiledata=Mobile Data,StatusSms=SMS,StatusCalls=Calls
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
@@ -58,8 +60,8 @@ tables=Devices
   | FDE
   | Full disk encryption and unlocking with [[osk-sdl]].
 |-
-  | Mainline
-  | Instead of a Linux kernel fork, it is possible to run [[The_Mainline_Kernel|mainline]].
+  | Mainline*
+  | Runs a [[(Close to) Mainline]] kernel, not an Android downstream kernel.
 |-
   | Battery
   | Charging the battery with [[charging-sdl]] is possible (this seems to be largely untested, please update your device's column if charging is possible).
