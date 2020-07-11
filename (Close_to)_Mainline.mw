@@ -4,7 +4,7 @@ If somebody got confused about the terminology, please point them to this wiki p
 
 == Linux kernel ==
 === Mainline ===
-On [https://www.kernel.org/category/releases.html kernel.org], it refers to the "mainline" tree of the Linux kernel (other trees: prepatch, stable, longterm, linux-next):
+On [https://www.kernel.org/category/releases.html kernel.org], it refers to the "mainline" tree of the Linux kernel (other trees: linux-next, prepatch, stable, longterm):
 <blockquote>
 Mainline tree is maintained by Linus Torvalds. It's the tree where all new features are introduced and where all the exciting new development happens. New mainline kernels are released every 2-3 months.
 </blockquote>
