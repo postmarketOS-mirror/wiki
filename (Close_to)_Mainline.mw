@@ -1,5 +1,7 @@
 The term "mainline" is used with different meaning in the wider Linux community. When talking about "mainline" in postmarketOS without further context, we are usually referring to "close to mainline" kernels (to distinct from Android's heavily patched downstream kernels, also called vendor kernels). It is our intention to get devices from an Android downstream kernel first to "close to mainline", and eventually into mainline by [https://lists.sr.ht/~postmarketos/upstreaming upstreaming] the patches.
 
+To find out, whether a device has a "mainline" or "close to mainline" kernel, look at the ''device-'' and ''linux-'' [[pmaports]].
+
 If somebody got confused about the terminology, please point them to this wiki page. Let's make an effort to use the right terminology, "mainline" vs. "close to mainline". But don't nitpick about it when other people use it wrong. Usually it is clear from the context.
 
 == Linux kernel ==
