@@ -62,6 +62,9 @@ Hold Power + Volume Down while the phone is turned off. This will make the phone
 
 == Installation ==
 <!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+You will need to [https://en.miui.com/unlock/ unlock the bootloader] in order to be able to flash anything onto the phone.
+
+[https://forum.xda-developers.com/mi-note-2/development/recovery-twrp-xiaomi-mi-note-2-t3774171 Installing TWRP] before doing anything else is recommended, as it makes dealing with the phone easier later on, and allows for quick restoration by taking backups of <code>/system</code> and <code>/boot</code>, then flashing them back in order to restore the device to its original state.
 
 == See also ==
 <!--
