@@ -3,7 +3,7 @@ The term "mainline" is used with different meaning in the wider Linux community.
 
 To find out, whether a device has a "mainline" or "close to mainline" kernel, look at the ''device-'' and ''linux-'' [[pmaports]].
 
-If somebody got confused about the terminology, please point them to this wiki page. Let's make an effort to use the right terminology, "mainline" vs. "close to mainline". But don't nitpick about it when other people use it wrong. Usually it is clear from the context.
+If somebody got confused about the terminology, please point them to this wiki page. Let's make an effort to use the right terminology, "mainline" vs. "close to mainline". But don't nitpick about it in conversations when other people use it wrong. Usually it is clear from the context.
 
 == Linux kernel ==
 === Mainline ===
