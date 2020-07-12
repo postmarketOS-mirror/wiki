@@ -47,7 +47,7 @@
 * ☐ Framebuffer graphics (Splash screens)
 * ☐ SSH Connectivity
 * ☐ Weston on framebuffer
-* ☐ Xwayland
+* ☐ Initramfs boot
 
 == Device info ==
 
