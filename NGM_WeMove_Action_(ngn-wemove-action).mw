@@ -44,7 +44,6 @@
 * ☐ Kernel compilation
 * ☐ Flash Kernel (<code>pmbootstrap flasher flash_kernel</code>)
 * ☐ Flash Rootfs (<code>pmbootstrap flasher flash_rootfs</code>)
-* ☐ Initramfs boot
 * ☐ Framebuffer graphics (Splash screens)
 * ☐ SSH Connectivity
 * ☐ Weston on framebuffer
