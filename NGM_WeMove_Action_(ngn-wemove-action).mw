@@ -13,9 +13,9 @@
 | display = 240×320 QVGA
 | memory = 256 MB
 | architecture = armv7
-| status_usbnet = 
-| status_flashing = 
-| status_touch = 
+| status_usbnet = Y
+| status_flashing = Y
+| status_touch = Y
 | status_screen = 
 | status_wifi = 
 | status_xwayland = 
@@ -34,6 +34,7 @@
 | status = 
 | booting = no
 }}
+
 == Contributors ==
 
 * ''[[user:drebrez|drebrez]]''
