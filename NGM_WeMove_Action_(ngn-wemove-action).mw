@@ -23,9 +23,9 @@
 | status_mainline = 
 | status_battery =
 | status_3d = 
-| status_accel = 
-| status_audio = 
-| status_bluetooth =
+| status_accel = Y
+| status_audio = Y
+| status_bluetooth = Y
 | status_camera =
 | status_gps = 
 | status_mobiledata = 
