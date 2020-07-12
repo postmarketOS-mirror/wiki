@@ -41,7 +41,7 @@ tables=Devices
 |more results text=
 }}
 
-== Non-booting devices ==
+== Non-booting devices == 
 The devices list below cannot boot postmarketOS (yet). As such, they have not been integrated into the postmarketOS source tree. Once the device becomes bootable, it might appear in this least until a pull-request to integrate the code has been accepted. If you have verified that a device in this list boots postmarketOS, please [https://docs.gitlab.com/ce/gitlab-basics/add-merge-request.html make a merge-request].
 {{#cargo_query:
 tables=Devices
