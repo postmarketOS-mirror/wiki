@@ -33,9 +33,9 @@ Udev rules can be used to detect if headphones are plugged in, example for this 
 {{note|This was only tested on Qualcomm MSM8937, this might also work on other chipset too, but this is untested.}}
 ADSP needs to be powered on before audio could work on downstream kernels. To do that, you'll have to supply firmware files that is available on your internal MMC.
 
-On a shell prompt inside postmarketOS, type <code>fdisk -l /dev/mmcblk0</code> (replace mmcblk0 with the correct device name for internal MMC). At this point you should get a familiar partition layout of a Android device.
+On a shell prompt inside postmarketOS, type <code>ls -l /dev/disk/by-partlabel</code>. At this point you should get a familiar partition layout of a Android device.
 
-Now, the only thing that is important is the partition with <code>modem</code> label on it, which on my device it's mmcblk0p1. Mount the partition as read-only to /mnt using:
+Now, the only thing that is important is the partition with <code>MODEM</code> label on it, which on my device it's mmcblk0p1. Mount the partition as read-only to /mnt using:
 
 <pre>
 # mount -o ro /dev/mmcblk0p1 /mnt
