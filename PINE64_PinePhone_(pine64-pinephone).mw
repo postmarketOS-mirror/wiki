@@ -75,7 +75,7 @@ $ sudo dd if=pine64-pinephone-20200701-phosh-v20.05.img of=/dev/mmcblk... status
 Create a new image with pmbootstrap (recommended, [[Installation guide|details]]) or download a pre-built image (see above).
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap init
+$ pmbootstrap init # select "stable" channel
 $ pmbootstrap install # add --fde for full disk encryption
 $ pmbootstrap export
 $ realpath /tmp/postmarketOS-export/pine64-pinephone.img 
