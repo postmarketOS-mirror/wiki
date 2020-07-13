@@ -114,7 +114,11 @@ $ pmbootstrap install --fde
 $ pmbootstrap install --help
 </syntaxhighlight>
 
-If your device has a Y in the FDE column of the [[all devices]] table, you can enable full disk encryption with the <code>--fde</code> parameter. To format with FDE enabled and flash directly to an SD card, use <code> pmbootstrap install --fde --sdcard=/dev/mmcblk </code>.
+If your device has a Y in the FDE column of the [[all devices]] table, you can enable full disk encryption with the <code>--fde</code> parameter. To format with FDE enabled and flash directly to an SD card, use:
+
+<syntaxhighlight lang="shell-session">
+$ pmbootstrap install --fde --sdcard=/dev/mmcblk
+</syntaxhighlight>
 
 === pmbootstrap flash ===
 This command wraps various flash programs (e.g. fastboot and heimdall) with a common syntax, and automatically fills out the paths to the generated files. Usually you need to flash the system image (unless you did the SD card or recovery zip installation):
