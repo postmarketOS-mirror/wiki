@@ -102,7 +102,7 @@ The install action essentially does the following:
 * Ask you for the user and encryption passwords
 
 Furthermore you can change the output type (system image) to something else with the following parameters.
-* <code>--sdcard</code>: Format and copy everything to an SD card
+* <code>--sdcard</code>: Format and copy everything to an SD card (use <code>lsblk</code> to figure out the correct path to your SD card)
 * <code>--android-recovery-zip</code>: Create a zip file, that can be used with TWRP, CWM or other Android recovery systems ([[Installation from recovery mode|detailed instructions]])
 
 Example commands (only using one at a time makes sense):
