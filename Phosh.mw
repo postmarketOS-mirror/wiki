@@ -27,6 +27,11 @@ mmcli -m 0 --simple-connect='apn=web.be,user=web,password=web,pin=1111'
 
 This makes phone calls work.
 
+Unlock your SIM card with the PIN, if necessary:
+<code>
+mmcli -i 0 --pin=12345
+</code>
+
 == Screen Scaling ==
 The Phosh screen may be scaled lower for better compatibility with existing applications. Change the scale by modifying the scale factor variable found in /usr/share/phosh/phoc.ini, which has a default value of 2.
 
