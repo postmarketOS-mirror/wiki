@@ -46,7 +46,6 @@
 
 == What works ==
 * Screen
-* Touch
 * USB Network
 * Wifi
 * Proximity sensor (<code>/dev/input/event0</code>)
