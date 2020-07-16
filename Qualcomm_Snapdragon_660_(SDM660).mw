@@ -131,7 +131,7 @@ Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]]. There is
 The only tested for now is simple-framebuffer.
 
 == GPU ==
-There is a chance that Adreno 508-512 are not suppored properly in mainline kernel.
+Adreno 508-512 are not suppored in the mainline kernel yet.
 
 == Pinctrl ==
 Was ported from downstream kernel to mainline by [[User:opendata|opendata]] in 2018.
