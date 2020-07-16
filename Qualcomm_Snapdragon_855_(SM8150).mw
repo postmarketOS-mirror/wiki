@@ -1,0 +1,55 @@
+{{Infobox soc
+| manufacturer = Qualcomm
+| name = SM8150
+| arch = aarch64
+| cpu = 1x 2.84GHz Kryo 485 Prime (A76-based), 3x 2.42GHz Kryo 485 Gold (A76-based), 4x1.8GHz Kryo 485 Silver (A55-based)
+| gpu = Adreno 640
+| year = 2019
+| process = 7
+| mainline = yes
+| status_cpu = Y
+| status_uart = Y
+| status_storage = Y
+| status_usb = 
+| status_display = Y
+| status_gpu = 
+| status_pinctrl = Y
+| status_i2c = Y
+| status_audio = 
+| status_video = 
+| status_thermal = 
+| status_wifi = 
+| status_bluetooth = 
+| status_modem = 
+| status_camera = 
+}}
+
+[https://www.qualcomm.com/products/snapdragon-855-mobile-platform SM8150] (or Snapdragon 855) is a high-end Qualcomm SoC released in 2019 with mainline support originally added for the [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/arch/arm64/boot/dts/qcom/sm8150-mtp.dts?h=v5.8-rc5&id=63db27709e48d9981b02511bc73fcc5112b6b038 MTP (proven reference design) board] towards the end of 2019.
+
+== Devices ==
+{{#cargo_query:
+tables=Devices
+|fields=CONCAT( '[[', _pageName, '|',Manufacturer,' ',Name,']]' )=Device,Codename,StatusMainline=Mainline
+|order by=Devices.Manufacturer, Devices.Name
+|format=table
+|limit=9999
+|where=Booting AND Devices.chipset='Qualcomm SM8150 Snapdragon 855'
+|more results text=
+}}
+
+== UFS internal storage ==
+
+{{warning|IF YOUR DEVICE IS A SONY XPERIA DO NOT NEVER EVER EVER TRY TO ENABLE UFS ON NON-VENDOR/NON-SODP KERNELS! IT WILL ERASE THE CHIP CLEAN (INCLUDING THE BOOTLOADER!) CONSIDER YOURSELF WARNED}}
+
+<!--
+== See also ==
+[https://github.com/JamiKettunen/linux-mainline-oneplus5 linux-mainline-oneplus5] A mainline kernel fork with some patches for MSM8998 and OnePlus 5/5T support (check the [https://github.com/JamiKettunen/linux-mainline-oneplus5/commits/linux-5.7 5.7 branch commits] for a "step-by-step guide")
+
+[[OnePlus_5_(oneplus-cheeseburger)#Mainline_kernel]]
+
+== Who's working on it ==
+* [[User:Deathmist]] (@deathmist on Matrix)
+* [[User:R0551]] (@r0551 on Matrix)
+* [[User:Degdag]] (@degdag on Matrix)
+(feel free to add yourself here if you're working on MSM8998 mainlining!)
+-->
