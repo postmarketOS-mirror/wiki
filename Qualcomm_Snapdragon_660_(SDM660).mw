@@ -131,7 +131,7 @@ Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]]. There is
 At least one 630 board can successfully use display via DRM/MSM with some (for now) out-of-tree patches.
 
 == GPU ==
-Adreno 508-512 are not suppored in the mainline kernel yet.
+Adreno 508-512 are not supported in the mainline kernel yet.
 
 == Pinctrl ==
 Was ported from downstream kernel to mainline by [[User:opendata|opendata]] in 2018.
