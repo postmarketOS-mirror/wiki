@@ -28,7 +28,7 @@
 | name = SDM636
 | manufacturer = Qualcomm
 | arch = aarch64
-| cpu = 4x Cortex-A53 PERF cluster + 4x Cortex-A53 PWR cluster
+| cpu = 4x Kryo 260 Gold PERF cluster + 4x Kryo 260 Silver PWR cluster
 | gpu = Adreno 509
 | year = 2017
 | process = 14
