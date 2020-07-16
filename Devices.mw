@@ -16,7 +16,7 @@ tables=Devices
 }}
 
 === Community ===
-Devices that had a lot of work put into, regressions are actively fixed and is overall in a pretty good shape.
+Devices that have had a lot of work put into them, where regressions are actively fixed, and the port is overall in a pretty good shape.
 
 Status columns are described [[#Status_Columns|further below]]. In particular, ''Mainline*'' refers to [[(Close to) Mainline|(close to) mainline]] and is written this way to save screen space in this big table.
 {{#cargo_query:
