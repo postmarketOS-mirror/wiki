@@ -110,7 +110,21 @@ You should comment out or remove the following nodes as they are either specific
 * <code>&mdss_mdp</code>
 * <code>&mss_pil</code> - this is the modem, will only contribute to dmesg errors for now
 * <code>&sdhc_2</code> - this is the sdcard reader, your device may not have this
-* All <code>sd*</code> nodes under <code>&tlmm</code>
+* All <code>sd*</code> nodes under <code>&tlmm</code> - if you have an SD card you can add these back later.
+
+To use simplefb as below, you will also need to explicitly disable some nodes to prevent hangs / display going black after a few seconds:
+
+<pre>
+dispcc {
+	status = "disabled";
+};
+
+&gpu {
+	status = "disabled";
+};
+</pre>
+
+If the display clocks initialise then it will reset the states set up by the bootloader and cause the display to die.
 
 {{note|The qcom,board-id and soc-id values have not been needed on any SDM845 device yet as far as I know, they should be safe to ignore.}}
 
