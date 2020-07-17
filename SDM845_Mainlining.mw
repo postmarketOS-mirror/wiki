@@ -112,7 +112,7 @@ You should comment out or remove the following nodes as they are either specific
 * <code>&sdhc_2</code> - this is the sdcard reader, your device may not have this
 * All <code>sd*</code> nodes under <code>&tlmm</code> - if you have an SD card you can add these back later.
 
-To use simplefb as below, you will also need to explicitly disable some nodes to prevent hangs / display going black after a few seconds:
+To use simplefb as below, you will also need to explicitly disable some nodes to prevent hangs / display going black after a few seconds, to do that add the following to your dts:
 
 <pre>
 dispcc {
