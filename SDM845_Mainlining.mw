@@ -151,7 +151,7 @@ There are a few values that must be changed to match your device, this example i
 Additionally, you have to change every reference to the <code>9d400000</code> address to match the value you got above.
 Make sure you update the <code>reserved-memory</code> node too.
 
-{{note|I have no explanation for why the formatting is so bad, viewing the commit locally shows correct formatting.}}
+{{note|For some reason that commit has mixed tab/space indentation hence the rubbish formatting.}}
 
 == Compiling ==
 With your device now added to the kernel, it's ready to compile.
