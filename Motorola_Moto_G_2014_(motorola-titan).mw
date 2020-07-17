@@ -78,6 +78,11 @@ This is written to dmesg everytime you type the previous command:
 <source lang="bash">echo 255 > /sys/devices/leds-qpnp-rgb-e1d8be00/leds/white/brightness</source>
 [https://github.com/LineageOS/android_kernel_motorola_msm8226/blob/cm-14.1/drivers/leds/leds-qpnp.c#L187-L189 RGB LED documentation]
 
+* Backlight brightness:
+
+<source lang="bash">echo 255 > /sys/class/leds/lcd-backlight/brightness</source>
+Values are between 0 and 255.
+
 == Links ==
 
 * [https://github.com/LineageOS/android_kernel_motorola_msm8226 android_kernel_motorola_msm8226]
