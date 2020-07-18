@@ -26,7 +26,7 @@
 | status_3d = P
 | status_accel = N
 | status_audio = N
-| status_bluetooth = N 
+| status_bluetooth = Y
 | status_camera = N
 | status_gps = N
 | status_mobiledata = N 
@@ -95,6 +95,29 @@ Feel free to contact @kalube in the [https://wiki.postmarketos.org/wiki/Matrix_a
 == How to enter flash mode ==
 
 Unplug from USB, hold {{Button|Power}} and {{Button|Volume Up}} until you see "Fastboot Mode" text.
+
+= Status =
+
+== Bluetooth ==
+Does work, tested with a bluetooth headset.
+Requires some messing about with bluetoothctl, doesn't appear in Phosh UI at all, although how much of this is device issues rather than Phosh issues I'm not sure.
+
+<pre>
+sudo service bluetooth start
+</pre>
+Then
+<pre>
+bluetoothctl
+[bluetooth]# power off
+[bluetooth]# power on
+[bluetooth]# default-agent
+[bluetooth]# scan on
+[bluetooth]# discoverable on
+[bluetooth]# devices
+[bluetooth]# pair <device>
+-- WAIT --
+[bluetooth]# connect <device>
+</pre>
 
 == See also ==
 
