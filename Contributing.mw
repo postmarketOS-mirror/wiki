@@ -7,7 +7,7 @@ To work on something specific, see the issues tagged with '''[https://gitlab.com
 
 == Documentation and Blogging ==
 === Wiki documentation ===
-* Create new pages if you found a new postmarketOS topic worth documenting
+* Create new pages if you found a new postmarketOS topic worth documenting. To create a new page search for the topic first and make sure you don't provide redundant information. If you did not find what you want to create, click "create new page" in the search results.
 * Structure:
 ** Improve the structure of the wiki, make sure there's a clear path from the main page to every specific page that the user would be interested in
 ** Fix the [[Special:LonelyPages|orphaned pages]] and [[Special:WantedPages|links to non-existing pages]] (do ''not'' add more of those!)
