@@ -140,6 +140,9 @@ Use the <code>send-sms</code> and <code>receive-sms</code> test scripts (from <c
  Send message using modem /gobi_0 ...
  /gobi_0/message_9914F33A7C53DD6F080B38755E7D64FD59EA8F8F
 
+=== Mobile Internet ===
+Work in progress. It works with some additional code ported from downstream, but needs to be cleaned up before this can be enabled within postmarketOS. If you don't mind building the kernel with some changes, please see: https://gist.github.com/Minecrell/4cc2bfb9fcae18e294386b0a213907d1
+
 ==CPU==
 While the specifications of MSM8916 have 1200 MHz as max clock speed, currently the max MHz the CPU will operate with pmOS is 998 MHz.
 
