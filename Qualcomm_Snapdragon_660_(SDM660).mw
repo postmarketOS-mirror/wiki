@@ -11,16 +11,16 @@
 | status_uart = Y
 | status_storage = Y
 | status_usb = P
-| status_display = 
+| status_display = P
 | status_gpu = 
 | status_pinctrl = Y
 | status_i2c = Y
 | status_audio = 
 | status_video = 
-| status_thermal = 
+| status_thermal = P
 | status_wifi = 
 | status_bluetooth = 
-| status_modem = 
+| status_modem = P
 | status_camera = 
 }}
 
