@@ -63,6 +63,38 @@ Boot into Download Mode using {{Button|Power}} + {{Button|Volume Down}} + {{Butt
 
 Finally, just follow the [[Installation guide]].
 
+== Mainline ==
+'''Working:'''
+* Display (no brightness control)
+* GPU (Mali-400 MP using Lima)
+* Touchscreen
+* Broadcom WiFi
+* Bluetooth (partial)
+* Accelerometer
+* Magnetometer/compass
+* HALL sensor
+* USB
+
+'''Not working:'''
+* Audio
+* Camera
+* ...
+
+=== Bluetooth ===
+Bluetooth does not have any Bluetooth device address (bdaddr or "MAC address") set after boot at the moment. To make Bluetooth work, you need to manually configure one:
+
+ # apk add bluez-btmgmt
+ # btmgmt public-addr <bdaddr>
+
+where <code><bdaddr></code> is a MAC address like <code>53:33:6d:69:6e:69</code>.
+
+The Bluetooth controller should then show up in <code>bluetoothctl</code>:
+
+ # apk add bluez
+ # rc-service bluetooth start
+ $ bluetoothctl
+
+
 == See also ==
 {{wikipedia|Samsung_Galaxy_Xcover_2|wikipedia}}
 <!--
