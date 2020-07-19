@@ -39,6 +39,7 @@ It should work with:
 * Samsung GT-S8500 (Wave)
 * Samsung GT-S5570 (Tass) (IC: FSA9280A)
 * [[Samsung Galaxy S III mini (samsung-golden)]]
+* [[Samsung Galaxy Xcover 2 (samsung-skomer)]]
 * Samsung i897 (Captivate)
 * Samsung GT-i9195 (Galaxy S4 mini) (IC: TSU6721)
 * Samsung klte (Galaxy S5)
@@ -82,6 +83,10 @@ It should work with:
   | 619K ohm || No
 |-
   | style="white-space: nowrap;" | [[Samsung Galaxy S III mini (samsung-golden)]]
+  | style="white-space: nowrap;" | samsung-golden
+  | 619K ohm || No
+|-
+  | style="white-space: nowrap;" | [[Samsung Galaxy Xcover 2 (samsung-skomer)]]
   | style="white-space: nowrap;" | samsung-golden
   | 619K ohm || No
 |-
