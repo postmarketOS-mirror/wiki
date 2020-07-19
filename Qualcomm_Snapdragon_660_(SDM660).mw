@@ -62,7 +62,7 @@
 | status_cpu = P
 | status_uart = Y
 | status_storage = P
-| status_usb = 
+| status_usb = P
 | status_display = 
 | status_gpu = 
 | status_pinctrl = Y
