@@ -77,12 +77,13 @@
 }}
 
 == General description ==
-[https://www.qualcomm.com/products/sdm660 SDM660]/636/[https://fccid.io/PY7-67442A/Schematics/Schematics-20171116-v1-PY7-67442A-Schematic-Diagram-3652761 630] are Qualcomm SoCs released in 2017, with practically no mainline support.
-According to [https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_systems-on-chip#Snapdragon_630,_636_and_660_(2017) Wikipedia], they all are pretty similar. Their advantage is price; SoC is usually used in middle-range priced devices, compared to SDM845-based devices, which are usually expensive and used in high-end hardware.
+[https://www.qualcomm.com/products/sdm660 SDM660]/636/[https://fccid.io/PY7-67442A/Schematics/Schematics-20171116-v1-PY7-67442A-Schematic-Diagram-3652761 630] are Qualcomm SoCs released in 2017, with mostly out-of-tree mainline support.
+
+According to [https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_systems-on-chip#Snapdragon_630,_636_and_660_(2017) Wikipedia], they all are pretty similar. Their advantage is price; these SoCs are usually used in middle-range devices.
 
 Closest similar SoC is [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998 Snapdragon 835]] (which has decent mainline support), and it seems that several drivers from [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]] can be reused for SDM660.
 
-Main problem of the platform is missing a proper PMIC support (PM660/PM660L) which is required for working on almost every other component.
+Main problem of the platform is missing a proper PMIC support (PM660/PM660L) which is required for voltage scaling support. Currently we have to get by with whatever the bootloader gave us.
 
 == Devices ==
 === SDM660 (Snapdragon 660) ===
@@ -118,33 +119,45 @@ tables=Devices
 |more results text=
 }}
 
+== Battery/Charging == 
+Most devices seem to use the PMIC-provided QPNP-charger which currently does not have a mainline driver.
+
 == CPU ==
 All cores are up, PSCI is working. Marked as partial because there is no support for CPU frequency scaling.
 
-== Storage ==
-At least SDHCI (eMMC) was tested to work. UFS is untested (xiaomi-lavender does not have it).
-
-== USB ==
-Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]]. There is WIP support for USB 2.0 only (no USB 3) by [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs
-
 == Display ==
-At least four 630 boards can successfully use display via DRM/MSM with some (for now) out-of-tree patches.
+At least four 630 boards can successfully use display (both command- and video-mode) via DRM/MSM (and of course CPU rendering) with some (for now) out-of-tree patches.
+Most devices make use of PMIC-provided WLED backlight, which does have a mainline driver, but there happens to be an issue with it not working.
 
 == GPU ==
 Adreno 508-512 are not supported in the mainline kernel yet.
 
+== Modem Subsystem ==
+The remote processor responsible for modem subsystem shows up and shows *some* signs of life, but neither the modem itself, nor the Wi-Fi chip currently work. The phone also gets very hot with it enabled, which might suggest it's not really fine right now. Of course it needs firmware.
+
 == Pinctrl ==
 Was ported from downstream kernel to mainline by [[User:opendata|opendata]] in 2018.
 
+== SMMUs / IOMMUs ==
+This platform is very picky about its SMMUs and therefore requires many downstream workarounds to be implemented. Upstream maintainers aren't exactly happy with that.
+
+== Storage ==
+At least SDHCI (eMMC) was tested to work. UFS is untested (if anybody knows about a sdm630/36/60-based device using UFS, leave a note here!).
+
+== USB ==
+There is WIP support for USB 2.0 only (no USB 3) by [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs
+
+Do note that most devices only have USB 2.0 wired up in hardware.
+
 == WiFi ==
-Driver is there (ath10k_snoc) and should work the same way as in [[Qualcomm_Snapdragon_845_(SDM845)|SDM845]]/[[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]] and such. See their pages for details.
+Wireless network should be available via the ath10k_snoc driver, provided the modem subsystem is alive. It also needs firmware (which is possibly signed per-device or per-vendor - though it's unconfirmed!).
 
 == Work done so far ==
 === Who is working on it ===
 * [[User:opendata]] worked on initial basic SoC support (pinctrl-sdm660, gcc-sdm660) (+ [https://gitlab.com/opendata26/linux/-/tree/nile-mainline-submit-2 various branches])
 * [https://developer.sony.com/posts/pavel-dubrova-selected-as-the-first-2018-hero-open-source-developer/ Pavel Dubrova] worked on SDM630 SoC support based on kernel 5.3. It is unknown where the sources are located.
 * [[User:Alexeymin]] tried to continue opendata's work.  WIP Branch is in [https://gitlab.com/postmarketOS/linux-postmarketos/-/commits/qcom-sdm660/ linux-postmarketos] repo.
-* [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs
+* [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs (warning: frequent forcepushes!)
 
 === Upstream commits related to sdm660 ===
 commits merged in 4.20:
