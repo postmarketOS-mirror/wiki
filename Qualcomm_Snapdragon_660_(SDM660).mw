@@ -128,7 +128,7 @@ At least SDHCI (eMMC) was tested to work. UFS is untested (xiaomi-lavender does 
 Should work similarly to [[Qualcomm_Snapdragon_835_(MSM8998)|MSM8998]]. There is WIP support for USB 2.0 only (no USB 3) by [[User:Konradybcio|Konrad Dybcio]] in https://github.com/konradybcio/linux/commits/ninges_labs
 
 == Display ==
-At least one 630 board can successfully use display via DRM/MSM with some (for now) out-of-tree patches.
+At least four 630 boards can successfully use display via DRM/MSM with some (for now) out-of-tree patches.
 
 == GPU ==
 Adreno 508-512 are not supported in the mainline kernel yet.
