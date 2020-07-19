@@ -63,6 +63,10 @@ Boot into Download Mode using {{Button|Power}} + {{Button|Volume Down}} + {{Butt
 
 Finally, just follow the [[Installation guide]].
 
+== Notes ==
+
+Since battery charging is not yet working with the mainline kernel, it is helpful to have an external Samsung battery charger at hand for charging the battery. If you plan to work intensively on the device, it is also nice to have two batteries so that you can charge one while working with the other. If you don't have an external battery charger you need to reflash the original firmware just to charge the battery which is not going to be possible if you run the battery out, so catch-22. An external battery charger is definately recommended.
+
 == Mainline ==
 '''Working:'''
 * Display (no brightness control)
@@ -93,7 +97,6 @@ The Bluetooth controller should then show up in <code>bluetoothctl</code>:
  # apk add bluez
  # rc-service bluetooth start
  $ bluetoothctl
-
 
 == See also ==
 {{wikipedia|Samsung_Galaxy_Xcover_2|wikipedia}}
