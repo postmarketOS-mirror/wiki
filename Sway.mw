@@ -1,0 +1,14 @@
+{{Infobox interface
+| name = i3wm
+}}
+
+== Installation ==
+Run <code>pmbootstrap init</code> and choose <code>sway</code> in the interface section.
+
+== Guide ==
+Follow the [https://wiki.postmarketos.org/wiki/Display Display] guide to change and fix display related issues.
+
+== See also ==
+* {{MR|374|pmaports}} initial pull request
+
+[[Category:Interface]]
