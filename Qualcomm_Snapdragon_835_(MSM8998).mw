@@ -62,6 +62,13 @@ After those are set and you've copied the needed kernel modules over to the root
 
 Those can be supplied directly from <code>[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/qca linux-firmware]</code> and they should work fine, but if not you'll need to grab the files from your device's firmware partitions.
 
+== Real-time clock (RTC) ==
+The RTC module found on the PM8998 PMIC block works with <code>CONFIG_RTC_DRV_PM8XXX</code> enabled. It can be easily tested from userspace like so:
+ # cd /sys/class/rtc/rtc0/
+ # echo $((`cat since_epoch`+120)) > wakealarm
+
+After running that and fully powering down the device it should power on by itself soon afterwards (2 minutes later to be exact).
+
 == See also ==
 [https://github.com/JamiKettunen/linux-mainline-oneplus5 linux-mainline-oneplus5] A mainline kernel fork with some patches for MSM8998 and OnePlus 5/5T support (check the [https://github.com/JamiKettunen/linux-mainline-oneplus5/commits/linux-5.7 5.7 branch commits] for a "step-by-step guide")
 
