@@ -384,6 +384,56 @@ OK
 
 Some more details on how to configure the modem is available [https://megous.com/dl/tmp/modem.txt here]. The reference for the available commands is the [https://itbrainpower.net/downloadables/Quectel_EC25_EC21_AT_Commands_Manual_V1.0.pdf EC25 & EC21 AT Commands Manual].
 
+==== VoLTE ====
+
+The EG25 modem in the PinePhone comes preloaded with VoLTE profiles for a few providers. The modem can handle VoLTE fully internally so nothing complicated is required on the postmarketOS side. The VoLTE profile needs to be configured before
+calls can be made with it.
+
+<source lang="shell-session">
+# first list the profiles supported by the modem
+$ echo 'AT+QMBNCFG="list"' | atinout - /dev/EG25.AT -
++QMBNCFG: "List",0,1,1,"ROW_Generic_3GPP",0x0501081F,201901141
++QMBNCFG: "List",1,0,0,"VoLTE-ATT",0x0501033C,201909271
++QMBNCFG: "List",2,0,0,"hVoLTE-Verizon",0x05010141,201911251
++QMBNCFG: "List",3,0,0,"Sprint-VoLTE",0x05010205,201908141
++QMBNCFG: "List",4,0,0,"Commercial-TMO_VoLTE",0x05010505,201811231
++QMBNCFG: "List",5,0,0,"Telus-Commercial_VoLTE",0x05800C43,201912031
++QMBNCFG: "List",6,0,0,"Commercial-SBM",0x05011C18,201904021
++QMBNCFG: "List",7,0,0,"Commercial-DT",0x05011F1C,201905311
++QMBNCFG: "List",8,0,0,"Reliance_OpnMkt",0x05011B38,201910161
++QMBNCFG: "List",9,0,0,"TF_Germany_VoLTE",0x05010C1B,201909201
++QMBNCFG: "List",10,0,0,"TF_Spain_VoLTE",0x05010CFA,201909261
++QMBNCFG: "List",11,0,0,"Volte_OpenMkt-Commercial-CMCC",0x05012071,201904281
++QMBNCFG: "List",12,0,0,"OpenMkt-Commercial-CT",0x05011322,201911081
++QMBNCFG: "List",13,0,0,"OpenMkt-Commercial-CU",0x05011505,201807052
+
+OK
+
+# Select the profile most applicable to your provider, or use the Generic one if nothing matches
+$ echo 'AT+QMBNCFG="list","ROW_Generic_3GPP"' | atinout - /dev/EG25.AT -
+
+OK
+# Enable calling over ip (VoLTE)
+$ echo 'AT+QCFG="ims",1' | atinout - /dev/EG25.AT -
+
+OK
+# Reboot the modem to apply the settings
+$ echo 'AT+CFUN=1,1' | atinout - /dev/EG25.AT -
+</source>
+
+After this process VoLTE should be used when available. To check the status while in a call you can run the CLCC command:
+
+<source lang="shell-session">
+$ echo 'AT+CLCC' | atinout - /dev/EG25.AT -
+
++CLCC: 1,1,0,1,0,"",128
++CLCC: 2,1,0,1,0,"",128
+
+OK
+</source>
+
+The "1" in the 4th column on the second CLCC row means it's currently calling with VoLTE, when it's "0" it's calling over the legacy phone network.
+
 === Sensors ===
 
 All sensors work and are accessible as Industrial I/O (iio) devices in Linux. To query the data you can cat the files in `/sys/bus/iio/` to make the kernel module query the sensors
