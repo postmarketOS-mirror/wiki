@@ -78,6 +78,7 @@ $ pmbootstrap qemu
 This is currently possible by checking out postmarketos-ondev, commenting in [https://gitlab.com/postmarketOS/postmarketos-ondev/-/blob/a1aa4a9397778f3b479b0535692f4d37c1852ae5/ondev-boot.sh#L59 this line] and building it as described above. Don't forget to set the right arch (i.e. <code>pmbootstrap build --src=. --arch=armv7 postmarketos-ondev</code>).
 
 === Related ===
+* [https://postmarketos.org/blog/2020/07/15/pinephone-ce-preorder/#installer-with-optional-ssh-server-and-encryption Screenshots in the PinePhone pre-order blog post]
 * [https://gitlab.com/postmarketOS/postmarketos-ondev/-/commit/3c099ed82cbd38fa5eb16c1cd072fbf59ae92707 Initial commit message]
 * {{issue|463|pmaports}} On-device installer
 
