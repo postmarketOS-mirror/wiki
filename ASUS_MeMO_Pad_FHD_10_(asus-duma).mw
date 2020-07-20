@@ -1,3 +1,4 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
 {{Infobox device
 | manufacturer = ASUS
 | name = MeMO Pad FHD 10 (ME302KL)
@@ -46,7 +47,7 @@
 * Shutdown: {{Button|Power}}
 
 == Links ==
-* {{github|1581}} Initial PR
+* {{MR|1581}} Initial MR
 * [https://archive.org/download/asus-duma-unlock-twrp ME302KL_UnLock + TWRP image + unlocking README] (unlock from [https://www.asus.com/Tablets/ASUS_MeMO_Pad_FHD_10_ME302KL/HelpDesk_Download/ ASUS], TWRP port by SevenMaxs [https://forum.xda-developers.com/android/general/recovery-twrp-3-1-1-0-asus-me302kl-t3609759 xda]/[https://4pda.ru/forum/index.php?s=&showtopic=545744&view=findpost&p=52654784 4pda])
 * [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-asus-duma Device package]
 * [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-asus-duma Kernel package]
