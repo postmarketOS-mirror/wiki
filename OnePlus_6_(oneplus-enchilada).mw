@@ -82,6 +82,8 @@ It is possible to dual boot with android by following the guide above and using
 
 to switch to your inactive slot before flashing.
 
+{{note|The fastboot implementation on OnePlus 6 is dodgy at the best of times, especially on the OOS 10 bootloader. If you have issues running fastboot commands then choose 'REBOOT BOOTLOADER' from the menu on device and run the fastboot command while it reboots, wait for it to finish. It also helps to reboot back into fastboot after every command.}}
+
 == Building ==
 
 Feel like helping? Want to learn kernel development?
