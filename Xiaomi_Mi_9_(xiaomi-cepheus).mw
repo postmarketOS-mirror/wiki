@@ -65,7 +65,8 @@ The device will not unlock if the device isn't 7 days old (from the time when yo
 
 
 == Getting logs through debug UART ==
-Tested! It works extremely well and the TX pin is easily accessible even without soldering.  <br />
+Tested! It works extremely well and the TX pin is easily accessible even without soldering.
+For the ground you can force a breadboard pin into some metal shield. Be careful not to break the back being of a glassy material, so use a piece of plastic such as a credit card (not to scratch the metal edges) to unstick the glue in the edges. To get the credit card into the edges you must first heat them with a phono or with a gas stove and then with a suction cup lift the back (opposing the strength of the glue). Never bend the back too much to avoid the risk of breaking it, but it is relatively flexible and always keeping in mind that it is a glassy material you will not have to leave defects, let alone cracks. If you care about aesthetics and plan to combine a mess, I recommend you put a spare back on the cart, they have a paltry price.<br />
 [[File:Xiaomi-cepheus_UART_pins.jpg|457px]]
 [[File:Xiaomi-cepheus-UART-pins-schematic.jpg|600px]]
 
