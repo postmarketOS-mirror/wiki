@@ -131,7 +131,7 @@ At least four 630 boards can successfully use display (both command- and video-m
 Most devices make use of PMIC-provided WLED backlight, which does have a mainline driver, but there happens to be an issue with it not working.
 
 == GPU ==
-Adreno 508-512 are not supported in the mainline kernel yet.
+Adreno 508/509/512 are not supported in the mainline kernel yet.
 
 == Modem Subsystem ==
 The remote processor responsible for modem subsystem shows up and shows *some* signs of life, but neither the modem itself, nor the Wi-Fi chip currently work. The phone also gets very hot with it enabled, which might suggest it's not really fine right now. Of course it needs firmware.
