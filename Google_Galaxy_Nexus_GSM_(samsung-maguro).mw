@@ -45,6 +45,7 @@
 * [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-maguro Device package]
 * [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-maguro Kernel package]
 * [https://github.com/drebrez/linux/commits/samsung-maguro drebrez's mainline kernel fork]
+* [https://redmine.replicant.us/projects/replicant/wiki/GalaxyNexusGTI9250 Replicant Wiki page]
 
 == Mainline Kernel Status ==
 {| class="wikitable"
