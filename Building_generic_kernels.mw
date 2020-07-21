@@ -1,6 +1,7 @@
 Even if kernel sources are not provided by the vendor, it's still possible to package kernel and make the phone boot.
 
 == Find generic kernel for the device ==
+{{note|For Qualcomm devices msm-* repos from https://source.codeaurora.org/quic/la/kernel/ may be used.}}
 To find a needed kernel, you have to:
 # Find out the information about the SoC/board used in the device. One SoC may have multiple boards. For example, Spreadtrum SC7731C has 2 boards: sc7731cea and sc7731ceb.
 # Try to search for kernels on the internet. Use different queries to find as much kernels as possible. Kernel is considered matching if it has files for your board, such as device tree source (located at arch/device_arch(e.g. arm, arm64)/boot/dts). Some downstream kernels (up to 3.10.x) may have support in board files instead. They are located at arch/device_arch/mach-soc-vendor or mach-soc-name'. .(e.g. mach-sc, mach-qcom, mach-mt6582)
