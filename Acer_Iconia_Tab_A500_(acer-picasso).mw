@@ -84,7 +84,7 @@ Next, run the following commands in succession, after each one finishes, assumin
 <code>
 > ./pmbootstrap.py build device-acer-picasso
 > ./pmbootstrap.py build firmware-acer-picasso
-> ./pmbootstrap.py build linux-grate-postmarketos
+> ./pmbootstrap.py build linux-postmarketos-grate
 </code>
 
 From here on out, the generated chroot can be either installed to the eMMC, or a microSD card that must be inserted at or before boot time (the latter method allows for dual-booting Android already installed to the eMMC, although it can be directly accessed from the Linux system). The boot partition always has to be flashed to the eMMC in fastboot mode, as it is not possible to boot directly off of a microSD card.
