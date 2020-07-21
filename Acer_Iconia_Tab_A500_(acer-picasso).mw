@@ -76,9 +76,11 @@ Follow the [[Installation_guide]] as usual, where theses specifics have to be sp
 
 The user interface may be freely selected, as long as it is not one that requires 3D acceleration. To use KDE Plasma 5, add these lines to /etc/security/pam_env.conf:
 
-<nowiki>QT_IM_MODULE=qtvirtualkeyboard
+<code>QT_IM_MODULE=qtvirtualkeyboard
+
 QT_QUICK_BACKEND=software
-LIBGL_ALWAYS_SOFTWARE=1</nowiki>
+
+LIBGL_ALWAYS_SOFTWARE=1</code>
 
 Next, run the following commands in succession, after each one finishes, assuming the working directory contains the pmbootstrap.py script:
 <code>
