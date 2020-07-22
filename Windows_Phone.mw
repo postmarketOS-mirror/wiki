@@ -9,7 +9,7 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.originalsoftware='Microsoft Windows Phone 8.1' OR Devices.originalsoftware='Windows Phone 8' OR Devices.originalsoftware='Windows 10 Mobile' OR Devices.originalsoftware='Windows Phone'
+|where=Devices.originalsoftware='Microsoft Windows Phone 8.1' OR Devices.originalsoftware='Windows Phone 8' OR Devices.originalsoftware='Windows 10 Mobile' OR Devices.originalsoftware='Windows Phone' OR Devices.originalsoftware='Microsoft Windows Phone 8.1, later Windows 10 Mobile'
 |more results text=
 }}
 
