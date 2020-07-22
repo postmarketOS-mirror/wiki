@@ -1,3 +1,5 @@
+{{note| This device is still running on armhf, although the processor supports aarch64. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
+
 {{Infobox device
 | manufacturer = BQ
 | name = Aquaris U
@@ -12,7 +14,7 @@
 | storage = 16 GB
 | display = 720x1280
 | memory = 2 GB
-| architecture = armhf
+| architecture = aarch64
 | status_usbnet = 
 | status_flashing = Y
 | status_touch = 
@@ -48,5 +50,5 @@ Run adb reboot bootloader from the recovery or stock ROM. Alternatively choose f
 == Photos ==
 
 == Links ==
-* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-bq-chaozu Device package]
-* [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-bq-chaozu Kernel package]
+* {{Device package|bq-chaozu}}
+* {{Kernel package|bq-chaozu}}
