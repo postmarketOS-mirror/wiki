@@ -1,3 +1,5 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
+
 {{Infobox device
 | manufacturer = Geeksphone
 | name =  Peak
@@ -12,7 +14,7 @@
 | storage = 4 GB
 | display = 540×960
 | memory = 512 MB
-| architecture = armhf
+| architecture = armv7
 | n-android = ✔
 | status_usbnet = Y
 | status_flashing = Y
@@ -55,6 +57,5 @@ Jan  1 01:59:59 localhost kern.err kernel: [  574.209948] Notify: start reset
 Press both volume keys + power key until you see the Geeksphone logo.
 
 == See also ==
-* {{github|1214}} Initial pull request
+* {{MR|1214}} Initial pull request
 * [https://github.com/gp-b2g/gp-peak-kernel Geeksphone kernel source]
-* [http://downloads.geeksphone.com/ Firefox OS images]
