@@ -43,11 +43,11 @@ Please keep this list sorted by alphabet for readability.
 * Meizu MX4
 * [https://en.wikipedia.org/wiki/Motorola_Defy Motorola Defy series] (small, ruggedized, initial OMAP3 and later Qualcomm, [https://forum.xda-developers.com/showthread.php?t=2312349 bootloaders might still be locked])
 * Motorola Droid RAZR (spyder)
+* Motorola Xoom (MZ604, MZ605)
 * Nintendo 3DS (Old and New, once its [https://github.com/xerpi/linux_3ds/ kernel fork] gets SDMMC write support)
 * Nokia 3
 * Nokia 5
 * Nokia Lumia 520, 525, 635 and/or other unlocked Lumia devices
-* Motorola Xoom (MZ604, MZ605)
 * OpenPandora handheld games console, mainline DTS
 * [https://www.cnx-software.com/2017/06/14/10-smartphone-display-released-for-orange-pi-2g-iot-board Orange Pi + display] - "it costs 20$ and is open hardware" (Ri_ck in #postmarketOS)
 * Samsung 360 H1 - runs originally on LiMO (Linux Mobile), has a bootloader and Android port, see XDA
