@@ -77,5 +77,5 @@ in fastboot mode : <pre>pmbootstrap flasher flash_kernel</pre>
 
 == Links ==
 
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/device-oneplus-oneplus2 Device package]
-* [https://github.com/postmarketOS/pmbootstrap/tree/master/aports/device/linux-oneplus-oneplus2 Kernel package]
+* {{Device package|oneplus-oneplus2}}
+* {{Kernel package|oneplus-oneplus2}}
