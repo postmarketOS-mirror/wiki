@@ -3,7 +3,7 @@ This page explains how to make firefox usable in mobile UIs like plasma-mobile.
 == Firefox ==
 Install {{aport|firefox}} or {{aport|firefox-esr}} package from alpine. {{aport|firefox-esr}} right now is much more adaptive to smaller screens on wayland when compared to {{aport|firefox}}.
 
-Firefox is available from armv7 architecture. armhf is unsupported at this moment.
+{{note|Firefox is unavailable for armhf architecturea at the moment. If your device runs on armhf, but the SoC supports armv7, [[Tips_and_tricks#Update_the_architecture_of_your_device|update the architecture]].}}
 
 === Specific firefox config ===
 
