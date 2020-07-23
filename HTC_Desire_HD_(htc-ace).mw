@@ -59,3 +59,5 @@ Using ucm configuration files from [https://github.com/w-flo/rootfs-modifier/tre
 == Links ==
 * [https://github.com/OpenDesireProject/android_kernel_htc_msm7x30 OpenDesireProject Kernel]
 * [https://www.hardreset.info/devices/htc/htc-desire-hd/ Device-page on hardreset.info]
+* {{Device package|htc-ace}}
+* {{Kernel package|htc-ace}}
