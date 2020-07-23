@@ -5,7 +5,7 @@
 | image = File:OnePlus-5-GNOME-Mainline.jpg
 | imagecaption = 
 | releaseyear = 2017
-| originalsoftware = Android 7.1.1 (up to Android 9) on Linux 4.4
+| originalsoftware = Android 7.1.1 (up to Android 10) on Linux 4.4
 | chipset = Qualcomm MSM8998 Snapdragon 835
 | cpu = 4x 2.45 GHz Cortex-A73 + 4x 1.90 GHz Cortex-A53
 | gpu = Adreno 540
@@ -281,7 +281,7 @@ Control of the rear camera flashlight (<code>/sys/class/leds/torch-light*/bright
 == Mainline kernel ==
 This is heavily W.I.P currently, but it's coming along quite nicely. [https://imgur.com/a/Tb3LAK7 Here is an imgur gallery with some of the progress showcased]!
 
-Here's a list of stuff that is currently (Linux 5.6.13) known to be working (in at least some capacity):
+Here's a list of stuff that is currently (Linux 5.8-rc6) known to be working (in at least some capacity):
 
 * UFS internal storage (<code>CONFIG_PHY_QCOM_UFS=y</code>)
 * Display (via [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/b54a7b03cbeb115ed6b5b7c6220a790c77271506 <code>simplefb</code>] & <code>CONFIG_FB_SIMPLE=y</code>)
@@ -292,6 +292,7 @@ Here's a list of stuff that is currently (Linux 5.6.13) known to be working (in 
 * Power button ([https://github.com/JamiKettunen/linux-mainline-oneplus5/blob/wiki/arch/arm64/boot/dts/qcom/pm8998.dtsi#L41-L55 in DTS])
 * Volume keys ([https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/51d74de3a157ee8861f5961895a3163498c15260 added under MSM8998 PMIC GPIOs])
 * Keypad backlight (only applicable to regular OnePlus 5; [https://github.com/JamiKettunen/linux-mainline-oneplus5/commit/518b4fa6d8874815a7652e78cc59560675829884 added under MSM8998 PMIC GPIOs] & controllable with <code>/sys/class/leds/button-backlight/brightness</code>)
+* RTC alarms (<code>CONFIG_RTC_DRV_PM8XXX=y</code>)
 
 And that's about it for now. Next up would be USB as I've been doing this blind and don't exactly have a great setup to debug stuff / get logs :p
 
@@ -338,3 +339,4 @@ Flash: <code>pmbootstrap chroot -- fastboot flash boot /tmp/mainline/boot.img</c
 * [https://github.com/android-linux-stable/op5/tree/lineage-17.1 LineageOS downstream kernel fork]
 * [https://github.com/JamiKettunen/linux-mainline-oneplus5 Device mainline kernel W.I.P source (deathmist)]
 * [https://github.com/torvalds/linux Linux mainline kernel source (torvalds)]
+* [[Qualcomm_Snapdragon_835_(MSM8998)|Qualcomm Snapdragon 835 (MSM8998) SoC mainline page]]
