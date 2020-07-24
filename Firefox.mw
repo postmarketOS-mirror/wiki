@@ -1,75 +1,32 @@
-This page explains how to make firefox usable in mobile UIs like plasma-mobile.
-[[File:Nexus5-Firefox.jpg|thumb|right|frame|none|alt=Alt text|Firefox running on plasma-mobile]]
-== Firefox ==
-Install {{aport|firefox}} or {{aport|firefox-esr}} package from alpine. {{aport|firefox-esr}} right now is much more adaptive to smaller screens on wayland when compared to {{aport|firefox}}.
+__NOTOC__
+[[File:Firefox-welcome.png|thumb|right|frame|none|alt=Alt text|Firefox running on Phosh]]
+postmarketOS ships the desktop version of Firefox as default in Phosh and Plasma Mobile, with a mobile and privacy friendly configuration.
 
-{{note|Firefox is unavailable for armhf architecturea at the moment. If your device runs on armhf, but the SoC supports armv7, [[Tips_and_tricks#Update_the_architecture_of_your_device|update the architecture]].}}
+== postmarketOS specific configuration ==
+Besides the obvious change of the default homepage, the following things have been configured. To remove the postmarketOS specific configuration, uninstall the <code>postmarketos-config-firefox</code> package.
 
-=== Specific firefox config ===
+==== Mobile ====
+* Enable zooming with fingers <small>(Change in about:config; apz.allow_zooming, apz.allow_double_tap_zooming, dom.w3c.touch_events.enabled)</small>
+* Mobile user agent (from tor browser for android) <small>(Change in about:config; general.useragent.override)</small>
 
-Go in your profile directory (.mozilla/firefox/xxxxxxxx.default/) then exec:
+==== Privacy ====
+* Disable search suggestions, so URLs do not get sent to search engines as they are getting typed. <small>(Change in Preferences)</small>
+* Disable Firefox studies <small>(Change in Preferences)</small>
+* Disable Telemetry <small>(Change in Preferences)</small>
+* Set DuckDuckGo as default search engine <small>(Change in Preferences)</small>
 
-<source lang="C">
-echo 'user_pref("dom.w3c.touch_events.enabled", true);' >> prefs.js
-echo 'user_pref("browser.gesture.pinch.in", "cmd_fullZoomReduce");' >> prefs.js
-echo 'user_pref("browser.gesture.pinch.out", "cmd_fullZoomEnlarge");' >> prefs.js
-echo 'user_pref("general.useragent.site_specific_overrides", false );' >> prefs.js
-echo 'user_pref("general.useragent.override", "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.65 Safari/537.361");' >> prefs.js
-</source>
+==== Uncluttering ====
+To save screen space, remove broken features, and have less distractions in the browser in general:
+* Empty "new tab" page (loads faster, no annoying "top sites" etc.) <small>(Change in Preferences)</small>
+* Move all buttons to the overflow menu and remove spacers around the address bar
+* Disable developer tools, so the hamburger menu fits the screen of the pinephone. <small>(Change in /etc/firefox/policies/policies.json)</small>
+* Disable "Firefox Screenshots": the feature did not work with the mobile resolution in Phosh. <small>(Change in /etc/firefox/policies/policies.json)</small>
+* No default bookmarks from Firefox <small>(Change in /etc/firefox/policies/policies.json)</small>
+* Disable First Run Page <small>(Change in /etc/firefox/policies/policies.json)</small>
+* Disable Post Update Page <small>(Change in /etc/firefox/policies/policies.json)</small>
+* Disable "User Messaging" (What's new, Extension/Feature Recommendations, Urlbar Interventions) <small>(Change in /etc/firefox/policies/policies.json)</small>
 
-And restart the browser.
-
-=== Configuration on gtk ===
-Edit ~/.config/gtk-3.0/settings.ini (create it if it doesn't yet exist) with:
-
-<source lang="C">
-[Settings]
-gtk-icon-theme-name = Paper
-gtk-cursor-theme-name = Paper
-gtk-fallback-icon-theme = Gnome
-gtk-font-name = Sans 10
-gtk-cursor-theme-size = 0
-gtk-toolbar-style = GTK_TOOLBAR_BOTH
-gtk-toolbar-icon-size = GTK_ICON_SIZE_LARGE_TOOLBAR
-gtk-button-images = 0
-gtk-menu-images = 1
-gtk-enable-event-sounds = 1
-gtk-enable-input-feedback-sounds = 1
-gtk-xft-antialias = 1
-gtk-xft-hinting = 0
-gtk-xft-hintstyle = hintfull
-gtk-xft-rgba = rgb
-</source>
-
-Make sure to install '''gnome-icon-theme''' and '''paper-icon-theme''' packages
-
-You may ajust Font size for your screen.
-
-=== Environment variables for starting Firefox ===
-
-You can start firefox with:
-
-<source lang="C">
-MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
-</source>
-
-You may ajust scale to your device screen size, but it may only be integers.
-
-You can edit your desktop shortcut /usr/share/applications/firefox.desktop :
-<source lang="C">
-[Desktop Entry]
-Exec=env MOZ_USE_XINPUT2=1 GDK_SCALE=3  firefox %u
-...
-</source>
-
-If you are running a wayland user interface (phosh, plasma mobile, etc.), you may also enable experimental wayland support by adding '''MOZ_ENABLE_WAYLAND=1''' before firefox in the Exec line. This makes firefox run without Xwayland and may result in a better experience.
-
-== User agent ==
-If you would like to switch between mobile and desktop page editions easily, the [https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher-revived/ User Agent switcher] extension will allow for easy switching between different user agents.
-
-== Upcoming versions ==
-
-With upcoming versions (> 55) we will be able to use the multi-touch zoom extension to get fluid zooming. 
-https://github.com/haxiomic/firefox-multi-touch-zoom
+== See also ==
+* {{MR|1445|pmaports}}: configure firefox-esr for mobile and privacy (has more screenshots)
 
 [[Category:Apps]]
