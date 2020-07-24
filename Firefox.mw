@@ -18,7 +18,7 @@ Besides the obvious change of the default homepage, the following things have be
 ==== Uncluttering ====
 To save screen space, remove broken features, and have less distractions in the browser in general:
 * Empty "new tab" page (loads faster, no annoying "top sites" etc.) <small>(Change in Preferences)</small>
-* Move all buttons to the overflow menu and remove spacers around the address bar
+* Move all buttons to the overflow menu and remove spacers around the address bar <small>(Change with >>, Customize Toolbar)</small>
 * Disable developer tools, so the hamburger menu fits the screen of the pinephone. <small>(Change in /etc/firefox/policies/policies.json)</small>
 * Disable "Firefox Screenshots": the feature did not work with the mobile resolution in Phosh. <small>(Change in /etc/firefox/policies/policies.json)</small>
 * No default bookmarks from Firefox <small>(Change in /etc/firefox/policies/policies.json)</small>
