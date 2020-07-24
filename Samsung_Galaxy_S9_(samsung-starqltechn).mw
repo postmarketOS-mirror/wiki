@@ -62,6 +62,14 @@ see Unixbench page on wiki
 == How to enter flash mode ==
 == Installation ==
 == Notes ==
+== Mainline ==
+Mainline kernel shows booting log in ramoops. It fails to setup CAM_CC clocks, possibly to bootloader, messing up with device tree. 
+
+Also strange behavior noted:
+
+When reboot to system(with mainline kernel) from twrp, and then reboot back to twrp, only twrp logs present in ramoops
+
+To get mainline logs, reboot to system from twrp, then reboot again to system, and then reboot to twrp, and you will get mainline logs
 == See also ==
 <!--
 Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
@@ -71,3 +79,5 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 [https://gitlab.com/dsankouski/pmaports/-/tree/device/samsung-starqltechn aport fork for SM-G9600]
+
+[https://gitlab.com/dsankouski/sdm845-linux-next/-/tree/starqltechn mainline kernel fork for SM-G9600]
