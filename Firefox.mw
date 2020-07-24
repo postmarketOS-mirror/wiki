@@ -26,6 +26,10 @@ To save screen space, remove broken features, and have less distractions in the 
 * Disable Post Update Page <small>(Change in /etc/firefox/policies/policies.json)</small>
 * Disable "User Messaging" (What's new, Extension/Feature Recommendations, Urlbar Interventions) <small>(Change in /etc/firefox/policies/policies.json)</small>
 
+== Tweaks ==
+=== layers.acceleration.force-enabled ===
+Enabling <code>layers.acceleration.force-enabled</code> in <code>about:config</code> may improve performance on your device.[https://mobile.twitter.com/ManjaroLinux/status/1286241964111867905] If it gives you a clear and reproducible performance improvement after thorough testing, let us know in the [[How_to_report_issues|issues]]. Then we can consider shipping it by default for your device. We did some very basic testing on the PinePhone and some things appeared to be faster but others slower, therefore we decided to not include it by default.
+
 == See also ==
 * {{MR|1445|pmaports}}: configure firefox-esr for mobile and privacy (has more screenshots)
 * [https://addons.mozilla.org Firefox Add-ons]
