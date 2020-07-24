@@ -1,3 +1,5 @@
+{{note|Alpine recently moved to a new version of musl libc version introducing 64-bit time_t for 32-bit architectures. If you are on the edge branch and building for a 32-bit architecture (like armv7 or armhf) you may have problems with missing dependencies until all the packages are rebuilt against the new version. See this blogpost:  [http://postmarketos.org/blog/2020/07/21/breaking-update-in-edge/ Breaking update for 32-bit arches in postmarketOS edge]}}
+
 Here's a step-by-step guide to resolving <code>Could not find dependency</code> errors coming from <code>pmbootstrap</code>, as well as <code>unsatisfiable constraints</code> errors coming from <code>apk</code>.
 
 == Why does this happen? ==
