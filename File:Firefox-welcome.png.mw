@@ -1,0 +1,4 @@
+== Summary ==
+Firefox ESR with the custom homepage and mobile/privacy tweaks from: https://gitlab.com/postmarketOS/pmaports/-/merge_requests/1445
+== Licensing ==
+{{self|cc-by-sa-4.0|GFDL|migration=redundant}}
