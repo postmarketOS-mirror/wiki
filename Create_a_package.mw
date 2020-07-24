@@ -102,6 +102,15 @@ prepare() {
 }
 </syntaxhighlight>
 
+=== Policy for packaging hacks ===
+Hacks make things work by using a short-cut.
+
+* Try to avoid hacks altogether and go the proper route if feasible.
+* Hacks should not be a permanent solution, the path to the proper solution should be well known and an attempt should be made to do it properly, so we can remove the hack as soon as possible.
+* Have a good reason to package a hack. Justify why you do it.
+* Hacks should touch as little components as possible. Keep device specific hacks in the device packages / device specific kernels if any. Hacks in shared kernels may be acceptable, as long as they do not break other devices using the same kernel.
+* Hacks should not increase the maintenance burden. A simple patch file in a kernel that we are already packaging is not much maintenance effort; forking an aport from Alpine to pmaports and keeping it in sync forever is much effort. Try to upstream the change to Alpine's aports instead!
+
 == Porting packages from Arch Linux ==
 Arch Linux' <code>PKGBUILD</code> format is similar to <code>APKBUILD</code> of Alpine. If you don't know how to package a new program, check out how Arch does it.
 === Find the package ===
