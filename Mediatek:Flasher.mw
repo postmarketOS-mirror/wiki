@@ -4,4 +4,16 @@ If you want to flash firmware to Mediatek-based devices, there is a proprietary 
 
 It is e.g. used for the [[Wiko Lenny 3 (wiko-lenny3)]]
 
+Some open source software has been developed, see
+
+https://github.com/saleemrashid/mediatek_flash_tool
+
+https://github.com/MediaTek-Labs/mt76x7-uploader
+
+https://github.com/Wiz-IO/Mediatek-MT2625-Flash-Utility
+
+https://github.com/McBitter/flasher 
+
+
+
 [[Category:low-level]]
