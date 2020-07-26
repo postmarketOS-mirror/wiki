@@ -86,8 +86,8 @@ nonfree_firmware() {
 	depends="firmware-motorola-titan"
 	mkdir "$subpkgdir"
 }
-Update the checksums and rebuild your device package.
 </syntaxhighlight>
+Update the checksums and rebuild your device package.
 
 == Multiple kernels ==
 This is relevant in case it is possible to boot your device with multiple kernels (most common case is the downstream kernel from the vendor <code>linux-$devicename</code>, and one of the upstream <code>linux-postmarketos-*</code> kernels).
