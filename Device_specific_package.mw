@@ -86,6 +86,7 @@ nonfree_firmware() {
 	depends="firmware-motorola-titan"
 	mkdir "$subpkgdir"
 }
+Update the checksums and rebuild your device package.
 </syntaxhighlight>
 
 == Multiple kernels ==
