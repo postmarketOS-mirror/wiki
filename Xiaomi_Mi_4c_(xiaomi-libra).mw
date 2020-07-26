@@ -71,5 +71,8 @@
  pmbootstrap flasher flash_kernel
  pmbootstrap flasher flash_rootfs
 
+== Mainline kernel ==
+There is a close-to-mainline kernel fork featuring USB, screen via simplefb and basic core bringup. Find it [https://github.com/WOA-Project/linux/commits/v5.8-rc3-lumia here].
+
 == See also ==
 * {{MR|1454|pmaports}} Initial merge request
