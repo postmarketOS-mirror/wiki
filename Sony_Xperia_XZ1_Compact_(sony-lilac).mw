@@ -83,8 +83,8 @@ The simplest method to see dmesg messages after a freeze during boot up:
 (based on [https://wiki.postmarketos.org/wiki/Troubleshooting:boot boot process troubleshooting wiki])
 
 == See also ==
-* [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/testing/device-sony-lilac Device package (WIP)]
-* [https://gitlab.com/orsonmmz/pmaports/tree/device-sony-lilac/device/testing/linux-sony-lilac Kernel package (WIP)]
+* [https://gitlab.com/orsonmmz/pmaports/-/tree/device/sony-lilac/device/testing/device-sony-lilac Device package (WIP)]
+* [https://gitlab.com/orsonmmz/pmaports/-/tree/device/sony-lilac/device/testing/linux-sony-lilac Kernel package (WIP)]
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
 * {{MR|CHANGEME|pmaports}} Initial merge request
