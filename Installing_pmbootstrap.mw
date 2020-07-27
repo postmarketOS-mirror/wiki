@@ -87,6 +87,15 @@ Install [https://kislyuk.github.io/argcomplete argcomplete] with:
 $ pip3 install --user argcomplete
 </syntaxhighlight>
 
+Alternatively you can use your distro package manager to install <code>argcomplete</code>, for example in Ubuntu:
+<syntaxhighlight lang="shell-session">
+$ sudo apt install python-argcomplete
+</syntaxhighlight>
+in Gentoo:
+<syntaxhighlight lang="shell-session">
+$ sudo emerge dev-python/argcomplete
+</syntaxhighlight>
+
 Next, do one of the following depending on the shell you use.
 
 ==== Bash ====
