@@ -86,7 +86,7 @@ to switch to your inactive slot before flashing.
 
 
 === Issues ===
-<b>A small number of users have reported their device being stuck on the bootloader unlocked screen after installing, follow the debugging steps below if that happens to you</b>
+A small number of users have reported their device being stuck on the bootloader unlocked screen after installing, follow the debugging steps below if that happens to you
 
 The first and simplest debugging step is to see if the kernel is booting, this can be done by checking for a gadget mode device appearing in dmesg on your host, you can do this by putting the phone in fastboot mode and then running <code>dmesg -w</code> in a terminal, opening another and running:
 <pre>
