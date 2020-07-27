@@ -117,7 +117,7 @@ If you don't see a <code>USB disconnect</code> line, make sure you have run <cod
 Feel like helping? Want to learn kernel development?
 == [[SDM845_Mainlining|Check out the mainlining guide]] ==
 For detailed SDM845 specific instructions on initial device porting and building.
-Feel free to contact @kalube in the [https://wiki.postmarketos.org/wiki/Matrix_and_IRC #postmarketos-mainline] matrix channel if you're stuck.
+Feel free to contact @kalube (or anyone) in the [https://wiki.postmarketos.org/wiki/Matrix_and_IRC #postmarketos-mainline] matrix channel if you're stuck.
 
 == Sources ==
 [https://github.com/calebccff/linux/commits/enchilada-usb Kernel sources]
