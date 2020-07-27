@@ -66,5 +66,5 @@ Works with downstream: USB, panel, touchscreen, keys
 
 == See also ==
 * {{MR|1156|pmaports}} Initial merge request
-* WIP mainline kernel: https://gitlab.com/sdm845-mainline/sdm845-linux-next
+* WIP mainline kernel: https://gitlab.com/sdm845-mainline/sdm845-linux
 * Another WIP mainline kernel: https://github.com/Venji10/linux-beryllium
