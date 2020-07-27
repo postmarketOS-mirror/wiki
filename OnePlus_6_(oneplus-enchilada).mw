@@ -50,8 +50,7 @@ The phone is running a mainline kernel which you can find [https://gitlab.com/sd
 
 == Notes ==
 
-* Wifi is functional! Although there is a [https://gitlab.com/sdm845-mainline/sdm845-linux/-/commit/7f485ed31b6e66e32cc3bdc385fc95532fc531a6 normally fatal error that must be ignored] in order for the drivers to successfully probe.
-* The battery driver is pretty broken right now and will always show the battery as fully charged, be careful not to leave your phone unplugged running postmarketOS as the battery will drain until it's dead.
+* The battery driver is pretty broken right now and will always show the battery as fully charged, be careful not to leave your phone unplugged running postmarketOS as the battery will drain until it's dead, requiring you to charge it while off for a short period before powering on your phone again (and potentially damaging the battery).
 
 == Installing ==
 
