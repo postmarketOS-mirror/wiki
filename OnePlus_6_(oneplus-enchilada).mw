@@ -20,11 +20,11 @@
 | status_screen = Y
 | status_wifi = Y
 | status_xwayland = Y
-| status_fde = -
+| status_fde = 
 | status_mainline = Y
 | status_battery = P
 | status_3d = Y
-| status_accel = N
+| status_accel = 
 | status_audio = N
 | status_bluetooth = Y
 | status_camera = N
