@@ -86,6 +86,8 @@ to switch to your inactive slot before flashing.
 
 
 === Issues ===
+
+==== Installing ====
 A small number of users have reported their device being stuck on the bootloader unlocked screen after installing, follow the debugging steps below if that happens to you
 
 The first and simplest debugging step is to see if the kernel is booting, this can be done by checking for a gadget mode device appearing in dmesg on your host, you can do this by putting the phone in fastboot mode and then running <code>dmesg -w</code> in a terminal, opening another and running:
@@ -110,6 +112,12 @@ The terminal running <code>dmesg -w</code> should see output similar to the foll
 Note the first device up until <code>USB disconnect</code> is the phone appearing in fastboot mode, followed by it booting into the kernel.
 
 If you don't see a <code>USB disconnect</code> line, make sure you have run <code>fastboot erase dtbo</code>. If you do but it is not followed by a new device appearing, try flashing a different version of OxygenOS to the slot you're on (ie by switching slots and then flashing the OTA from TWRP), OOS 9 can behave better. If you still have issues and have tried reflashing multiple times, feel free to contact <code>@kalube</code> in the [https://wiki.postmarketos.org/wiki/Matrix_and_IRC #mainline:postmarketos] matrix channel.
+
+==== Bluetooth ====
+Bluetooth does not show up in Phosh UI, but works fine with bluetoothctl, not sure why this is.
+
+==== Sleep ====
+The power button **does** work, but it doesn't turn of the touch screen, as a result your inputs will still be registered with the screen off.
 
 == Building ==
 
