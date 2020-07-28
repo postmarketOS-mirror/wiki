@@ -6,6 +6,9 @@ For the Nest Learning Thermostat, two tarballs where released for version 5.7:
 
 The Nest userspace has been implemented in an open source project: https://github.com/luke-jr/freeabode
 
+== TODO ==
+* document revisions/SKUs of the Nest per SoC
+
 == External links ==
 * https://en.wikipedia.org/wiki/Nest_Learning_Thermostat
 * https://nest.com/legal/compliance/
