@@ -8,6 +8,7 @@ The Nest userspace has been implemented in an open source project: https://githu
 
 == TODO ==
 * document revisions/SKUs of the Nest per SoC
+* add unlock info
 
 == External links ==
 * https://en.wikipedia.org/wiki/Nest_Learning_Thermostat
