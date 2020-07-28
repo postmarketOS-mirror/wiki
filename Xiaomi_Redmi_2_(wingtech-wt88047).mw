@@ -1,3 +1,5 @@
+{{note| This device is still running on armhf, although the processor supports aarch64. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
+
 {{Infobox device
 | manufacturer = Xiaomi
 | name = Redmi 2
@@ -12,7 +14,7 @@
 | storage = 8 GB / 16 GB, external microSD (up to 32 GB)
 | display = 720 x 1280
 | memory = 1 GB / 2 GB
-| architecture = armhf
+| architecture = aarch64
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
