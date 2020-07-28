@@ -79,6 +79,44 @@ Follow the [[Installation_from_recovery_mode|Installation from recovery mode]] g
 # Select the [https://pastebin.com/aUfY5kPk MT6753 scatter file].
 # Asign <code>boot.img-vernee-k506</code> to partition '''boot''' and <code>vernee-k506.img</code> to partition '''system'''
 # Click {{Button|Download}} and turn on/restart the phone. It will automatically flash the files.
+
+== SoC features ==
+WiFi, Bluetooth, GPS and FM Radio are all integrated into the SoC and need to be initialized all at the same time.
+
+To do this the proprietary firmware files matching the kernel need to be copied into <code>/lib/firmware/postmarketos</code>.
+
+
+To initialize the chip and drivers MediaTek provides two proprietary programs:
+* '''wmt_loader:''' initializes the chip and starts the drivers.
+* '''6620_launcher (or connsys_launcher):''' finds and loads the firmware files into their respective chips.
+These tools are not officially available outside Android, but there are source code versions available that do work.
+
+In the case of the Vernee Thor all the required connectivity drivers are compiled into the kernel, so theres no need to load them prior to executing these programs.
+# Execute <code>sudo ./wmt_loader</code> without parameters. ''/dev/wmtDetect'' should appear.
+# Execute <code>sudo ./6620_launcher -p /lib/firmware/postmarketos</code>. This program needs to keep running, so better send it to background with <code>&</code>.
+
+If it worked now there should be a bunch of ''/dev/stp*'' entries and ''/dev/wmtWifi''.
+
+For debugging use <code>dmesg | grep wmt</code>. Execute <code>sysctl -w kernel.printk=7</code> to improve verbosity.
+
+'''Caution:''' the phone will crash if '''wmt_loader''' runs twice.
+
+== WiFi ==
+To get WiFi working first initialize the chip and driver.
+# Execute <code>sudo chmod 644 /dev/wmtWifi</code>
+# Execute <code>sudo echo "1" > /dev/wmtWifi</code>
+# Check with <code>ifconfig</code> that the interface ''wlan0'' appeared
+
+To connect to a network:
+# Bring the interface up: <code>ifconfig wlan0 up</code>
+# Scan to find out what WiFi networks are detected: <code>iw dev wlan0 scan</code>
+# Connect to WPA/WPA2 WiFi network: <code>wpa_passphrase SSID PASS &gt;&gt; /etc/wpa_supplicant/wpa_supplicant.conf</code>
+# Start wpa_supplicant to connect to the network: <code>wpa_supplicant -B -D nl80211 -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</code>
+# Verify that you are indeed connected to the SSID: <code>iw wlan0 link</code>
+# Start udhcpc to get an ip address: <code>udhcpc -b -i wlan0</code>
+
+If everything seems fine but theres no network traffic (<code>ping postmarketos.org</code> doesn't work) it probably means the firmware files are not the correct ones.
+
 == See also ==
 * [https://www.needrom.com/download/twrp-thor/ TWRP 3.0.2 ROM for Vernee Thor]
 
