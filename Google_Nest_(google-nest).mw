@@ -4,6 +4,8 @@ For the Nest Learning Thermostat, two tarballs where released for version 5.7:
 * for the i.MX version, DTS files attributed to Nest Labs are located in <code>/arch/arm/boot/dts/onyx-*</code>
 * the OMAP version is based on board files, some Nest Labs attributed files are located in <code>/arch/arm/mach-omap2/board-diamond-*</code>
 
+The Nest userspace has been implemented in an open source project: https://github.com/luke-jr/freeabode
+
 == External links ==
 * https://en.wikipedia.org/wiki/Nest_Learning_Thermostat
 * https://nest.com/legal/compliance/
