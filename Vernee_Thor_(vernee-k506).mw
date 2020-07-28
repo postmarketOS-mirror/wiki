@@ -82,13 +82,7 @@ Follow the [[Installation_from_recovery_mode|Installation from recovery mode]] g
 == See also ==
 * [https://www.needrom.com/download/twrp-thor/ TWRP 3.0.2 ROM for Vernee Thor]
 
-<!--
-Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
--->
-<!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* {{MR|1439|pmaports}} Initial merge request
+* {{MR|1456|pmaports}} Firmware merge request
 * {{Device package|vernee-k506}}
 * {{Kernel package|vernee-k506}}
--->
