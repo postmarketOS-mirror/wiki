@@ -45,8 +45,8 @@ Here's a quick rundown of the steps required to get Broadcom WiFi up and running
 See the [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-samsung-i9070 Galaxy S Advance device package], [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/linux-samsung-i9070 Galaxy S Advance linux package] and [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/firmware-samsung-i9070 Galaxy S Advance firmware package] for reference.
 
 == Mediatek WiFi ==
-
-{{todo|No device with a Mediatek SoC actually has WiFi working yet. Further debugging is needed to get it working.}}
+{{todo|Improve this section to include a general explanation for all MTK SoCs}}
+{{note|There is one MediaTek device with WiFi working. [[Vernee_Thor_(vernee-k506)#SoC_features|Vernee Thor Wifi Guide]]}}
 
 Devices with Mediatek WiFi chips are much more complicated to get working. On MT6589 devices, there is a tool called <code>6620_launcher</code> which (probably) loads the firmware from the filesystem into the kernel. This tool is a binary included in the Android installation and linked against the bionic libc. There is a [https://github.com/MediaDeb/android_hardware_mediatek/blob/master/combo_tool/src/stp_uart_launcher.c source code version of the tool available] which can be compiled on a normal Linux system. On the [[Fairphone_1_(fairphone-fp1)|Fairphone 1]], the order for initialization should be the following (based on the init.rc files from Android):
 <pre>
