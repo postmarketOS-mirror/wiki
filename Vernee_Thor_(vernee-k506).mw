@@ -101,7 +101,7 @@ For debugging use <code>dmesg | grep wmt</code>. Execute <code>sysctl -w kernel.
 
 '''Caution:''' the phone will crash if '''wmt_loader''' runs twice.
 
-== WiFi ==
+=== WiFi ===
 To get WiFi working first initialize the chip and driver.
 # Execute <code>sudo chmod 644 /dev/wmtWifi</code>
 # Execute <code>sudo echo "1" > /dev/wmtWifi</code>
