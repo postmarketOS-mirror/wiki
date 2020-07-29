@@ -43,12 +43,6 @@ This page documents the status on mainline Linux on the OnePlus 6!
 
 The phone is currently capable of booting modern Linux with only a few patches, [https://gitlab.com/sdm845-mainline/sdm845-linux see the kernel here] and check the table on the right for the hardware support checklist.
 
-== Users owning this device ==
-{{Device owners}}
-== Contributors ==
-
-* [[User:Kalube|Kalube]]
-
 == Notes ==
 
 * The battery driver is pretty broken right now and will always show the battery as fully charged, be careful not to leave your phone unplugged running postmarketOS as the battery will drain until it's dead, requiring you to charge it while off for a short period before powering on your phone again (and potentially damaging the battery).
@@ -156,6 +150,12 @@ bluetoothctl
 -- WAIT --
 [bluetooth]# connect <device>
 </pre>
+
+== postmarketOS users that own the device ==
+{{Device owners}}
+== Maintainers ==
+
+* [[User:Kalube|Kalube]]
 
 == See also ==
 
