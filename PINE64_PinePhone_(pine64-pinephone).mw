@@ -166,8 +166,8 @@ There is a 2x3 grid of pogo pins on the back of the PinePhone for connecting a b
 
 {| class="wikitable"
 | Interrupt
-| I2C
-| I2C
+| SDA
+| SCL
 |-
 | 3v3
 | usb 5v
