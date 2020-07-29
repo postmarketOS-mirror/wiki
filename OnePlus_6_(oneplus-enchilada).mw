@@ -151,6 +151,8 @@ bluetoothctl
 [bluetooth]# connect <device>
 </pre>
 
+= Community Info =
+
 == postmarketOS users that own the device ==
 {{Device owners}}
 == Maintainers ==
