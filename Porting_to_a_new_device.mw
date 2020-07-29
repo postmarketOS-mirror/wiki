@@ -342,6 +342,19 @@ Now adjust:
 * <code>deviceinfo_screen_width</code>
 * <code>deviceinfo_screen_height</code>
 
+If your device uses UFS storage, you may need to configure the rootfs image sector size. It defaults to 512b, but some devices use 4096b.
+In TWRP, check your sector size through the terminal:
+
+<syntaxhighlight lang="shell-session">
+$ fdisk -l /dev/block/sd* | grep -i "sector size"
+</syntaxhighlight>
+
+If the sector sizes are 4096 bytes, add the following line to the <code>deviceinfo</code> file:
+
+<code>deviceinfo_rootfs_image_sector_size="4096"</code>
+
+You can read more about sector sizes on [https://gitlab.com/postmarketOS/pmbootstrap/-/merge_requests/1725 this pull request thread.]
+
 In case you were asked for <code>boot.img</code> analyzing, and skipped that section during [[#Flash_method|init]]: You can run <code>pmbootstrap bootimg_analyze path/to/boot.img</code> to get the right values for the <code>deviceinfo_flash_offset_</code> lines now. Filling out manually also works, but that is error-prone and therefore not recommended.
 
 See [[deviceinfo reference]] for a listing of all available variables and their meanings. The [[device specific package]] article explains advanced customization of the <code>APKBUILD</code>.
