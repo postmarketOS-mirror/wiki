@@ -17,6 +17,8 @@ $ pmbootstrap initfs hook_add maximum-attention
 $ pmbootstrap flasher boot
 </syntaxhighlight>
 
+Note that the device will loop in the initramfs stage with this turned on, so make sure to disable it when you're finished.
+
 You can also check for the init log, <tt>pmOS_init.log</tt>, in the root directory on the device. 
 
 If it turns out that your kernel loaded ''and'' your device has an IP address, then you probably only need to [[Porting to a new device#Display|get your display working]].
