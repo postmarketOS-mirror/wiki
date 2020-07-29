@@ -48,7 +48,9 @@ See the [https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/d
 {{todo|Improve this section to include a general explanation for all MTK SoCs}}
 {{note|There is one MediaTek device with WiFi working. [[Vernee_Thor_(vernee-k506)#SoC_features|Vernee Thor Wifi Guide]]}}
 
-Devices with Mediatek WiFi chips are much more complicated to get working. On MT6589 devices, there is a tool called <code>6620_launcher</code> which (probably) loads the firmware from the filesystem into the kernel. This tool is a binary included in the Android installation and linked against the bionic libc. There is a [https://github.com/MediaDeb/android_hardware_mediatek/blob/master/combo_tool/src/stp_uart_launcher.c source code version of the tool available] which can be compiled on a normal Linux system. On the [[Fairphone_1_(fairphone-fp1)|Fairphone 1]], the order for initialization should be the following (based on the init.rc files from Android):
+Devices with Mediatek WiFi chips are much more complicated to get working. The best way to know how your specific SoC works is to look at the init.rc scripts from an Android ROM available for your phone and look for the chip initialization (search for "/dev/stp", "mtk_stp" and "wmt").
+
+On MT6589 devices, there is a tool called <code>6620_launcher</code> which (probably) loads the firmware from the filesystem into the kernel. This tool is a binary included in the Android installation and linked against the bionic libc. There is a [https://github.com/MediaDeb/android_hardware_mediatek/blob/master/combo_tool/src/stp_uart_launcher.c source code version of the tool available] which can be compiled on a normal Linux system. On the [[Fairphone_1_(fairphone-fp1)|Fairphone 1]], the order for initialization should be the following (based on the init.rc files from Android):
 <pre>
 # Install the files mt6628_ant_m1.cfg mt6628_patch_e1_hdr.bin mt6628_patch_e2_0_hdr.bin mt6628_patch_e2_1_hdr.bin WIFI_RAM_CODE_MT6628 WMT.cfg into /system/etc/firmware/ (path could be patched in the kernel sources)
 insmod mtk_hif_sdio.ko
