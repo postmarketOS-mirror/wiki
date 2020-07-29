@@ -60,3 +60,4 @@ You will need an unlocked bootloader. To unlock it follow the [https://developer
 * {{Kernel package|sony-eagle}}
 -->
 * {{MR|1338|pmaports}} MR pull request
+* [[Troubleshooting:display#My_screen_is_red.21|Red Screen issue]]
