@@ -58,7 +58,7 @@ The PinePhone will boot from a bootable microSD card if it is plugged, and fall 
 For now, it is recommended to build your own image with [[pmbootstrap]]. Run the following commands, and consult the [[Installation guide|installation guide]] for details.
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap init # select "stable" channel
+$ pmbootstrap init # vendor: pine64, device: pinephone, select "stable" channel
 $ pmbootstrap install --sdcard=/dev/mmcblk...  # add --fde for full disk encryption
 </syntaxhighlight>
 
@@ -75,7 +75,7 @@ $ sudo dd if=pine64-pinephone-20200701-phosh-v20.05.img of=/dev/mmcblk... status
 Create a new image with pmbootstrap (recommended, [[Installation guide|details]]) or download a pre-built image (see above).
 
 <syntaxhighlight lang="shell-session">
-$ pmbootstrap init # select "stable" channel
+$ pmbootstrap init # vendor: pine64, device: pinephone, select "stable" channel
 $ pmbootstrap install # add --fde for full disk encryption
 $ pmbootstrap export
 $ realpath /tmp/postmarketOS-export/pine64-pinephone.img 
