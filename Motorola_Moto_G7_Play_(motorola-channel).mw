@@ -19,7 +19,7 @@
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = Y
-| status_screen = P
+| status_screen = Y
 | status_wifi = Y
 | status_xwayland = 
 | status_fde = 
@@ -54,9 +54,11 @@ The Moto G7 Play is a 5.7" phone with a 720 x 1512P display. It can be bought fo
 Working fine
 
 === MATE ===
-Black screen but booted
+Working fine
 
 === XFCE ===
+
+''may have changed''
 
 Black screen
 
@@ -94,7 +96,77 @@ There are a few variants listed below:
 ===Kernel===
 There is an XDA thread, which hasnt been posted to for a while, for compiling the kernel, for use with android. This may become helpful. It can be found [https://forum.xda-developers.com/g7-play/development/wip-stock-kernel-compiled-source-t4066599 here] And source code for the kernel can be found [https://github.com/MotorolaMobilityLLC/kernel-msm/releases/tag/MMI-PPYS29.105-134-7 here]
 
-I have had a look at trying to compile the kernel and there *is* a defconfig in the arm64 architcture, so i guess it may work, but i couldnt get it to build (hey, this is my first time compiling a linux kernel)
+===Partitions===
+<syntaxhighlight lang="shell-session">
+$ tree /dev/disk/by-partlabel/
+/dev/disk/by-partlabel/
+├── DDR -> ../../mmcblk0p25
+├── aboot_a -> ../../mmcblk0p9
+├── aboot_b -> ../../mmcblk0p10
+├── apdp -> ../../mmcblk0p49
+├── boot_a -> ../../mmcblk0p41
+├── boot_b -> ../../mmcblk0p42
+├── carrier -> ../../mmcblk0p38
+├── cid -> ../../mmcblk0p35
+├── cmnlib64_a -> ../../mmcblk0p13
+├── cmnlib64_b -> ../../mmcblk0p14
+├── cmnlib_a -> ../../mmcblk0p11
+├── cmnlib_b -> ../../mmcblk0p12
+├── devcfg_a -> ../../mmcblk0p7
+├── devcfg_b -> ../../mmcblk0p8
+├── devinfo -> ../../mmcblk0p52
+├── dpo -> ../../mmcblk0p51
+├── dsp_a -> ../../mmcblk0p23
+├── dsp_b -> ../../mmcblk0p24
+├── dtbo_a -> ../../mmcblk0p43
+├── dtbo_b -> ../../mmcblk0p44
+├── frp -> ../../mmcblk0p34
+├── fsc -> ../../mmcblk0p21
+├── fsg_a -> ../../mmcblk0p30
+├── fsg_b -> ../../mmcblk0p31
+├── hw -> ../../mmcblk0p56
+├── keymaster_a -> ../../mmcblk0p15
+├── keymaster_b -> ../../mmcblk0p16
+├── kpan -> ../../mmcblk0p40
+├── logo_a -> ../../mmcblk0p36
+├── logo_b -> ../../mmcblk0p37
+├── logs -> ../../mmcblk0p48
+├── metadata -> ../../mmcblk0p39
+├── misc -> ../../mmcblk0p45
+├── modem_a -> ../../mmcblk0p19
+├── modem_b -> ../../mmcblk0p20
+├── modemst1 -> ../../mmcblk0p28
+├── modemst2 -> ../../mmcblk0p29
+├── mota -> ../../mmcblk0p46
+├── msadp -> ../../mmcblk0p50
+├── oem_a -> ../../mmcblk0p58
+├── oem_b -> ../../mmcblk0p59
+├── padA -> ../../mmcblk0p55
+├── persist -> ../../mmcblk0p32
+├── persist2 -> ../../mmcblk0p33
+├── prov_a -> ../../mmcblk0p17
+├── prov_b -> ../../mmcblk0p18
+├── rpm_a -> ../../mmcblk0p3
+├── rpm_b -> ../../mmcblk0p4
+├── sbl1_a -> ../../mmcblk0p1
+├── sbl1_b -> ../../mmcblk0p2
+├── sp -> ../../mmcblk0p57
+├── ssd -> ../../mmcblk0p22
+├── syscfg -> ../../mmcblk0p47
+├── system_a -> ../../mmcblk0p62
+├── system_b -> ../../mmcblk0p63
+├── tz_a -> ../../mmcblk0p5
+├── tz_b -> ../../mmcblk0p6
+├── userdata -> ../../mmcblk0p64
+├── utags -> ../../mmcblk0p26
+├── utagsBackup -> ../../mmcblk0p27
+├── vbmeta_a -> ../../mmcblk0p53
+├── vbmeta_b -> ../../mmcblk0p54
+├── vendor_a -> ../../mmcblk0p60
+└── vendor_b -> ../../mmcblk0p61
+
+0 directories, 64 files
+</syntaxhighlight>
 
 ==Notes from Jean-Etienne==
 
