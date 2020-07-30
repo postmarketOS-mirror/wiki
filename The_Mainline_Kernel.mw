@@ -35,6 +35,7 @@ A good example of a device using a mainline kernel is the <code>device-nokia-rx5
 === Links ===
 * [[Mainlining FAQ]] various information collected from #postmarketOS
 * [[Qualcomm mainline porting]]
+* [[SDM845_Mainlining]] SDM845 Mainlining Guide
 * [http://linux-sunxi.org/Linux_mainlining_effort Allwinner mainline effort]
 * Blog about [http://elektranox.org/droid4/ mainline kernel support for the Motorola Droid 4]
 * [https://github.com/freedreno/freedreno/wiki/DSI-Panel-Driver-Porting Freedreno wiki: Display driver porting]
