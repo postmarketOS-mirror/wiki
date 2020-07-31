@@ -26,6 +26,8 @@ If it turns out that your kernel loaded ''and'' your device has an IP address, t
 === If boot fails ===
 If the tests above indicate that boot failed, read <code>/proc/last_kmsg</code> or <code>/sys/fs/pstore/console-ramoops</code> on the device to try to find the point of failure. If your device has TWRP installed, you can access them from the command line either by opening a terminal in TWRP, or by using TWRP's ADB interface. For more details, see [[Mainlining_FAQ#Writing_dmesg_to_RAM_and_reading_it_out_after_reboot|here]] and [http://docs.halium.org/en/latest/porting/debug-build/dmesg.html here].
 
+If you find <code>console-ramoops</code> corrupted, cool the device by putting it in a fridge or holding it in front of an AC vent for a few minutes then reboot and check it again. 
+
 ==== If booting from a microSD card ====
 If the initramfs cannot find the [[Partition-layout|boot partition]], it will display an error splash screen and wait forever. If the display driver does not work yet, the device will appear to hang with a blank screen, and the SSH server will not come up.
 
