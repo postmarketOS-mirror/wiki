@@ -47,9 +47,9 @@ tables=Devices
 
 * [http://phonedb.net/index.php?m=processor&id=514&c=samsung_exynos_3_dual_3250 phonedb.net]
 
-== Exynos 4410 ==
+== Exynos 4210 ==
 {{Infobox soc
-| name = 4410
+| name = 4210
 | manufacturer = Samsung
 | arch = armv7
 | year = 2011
@@ -83,7 +83,7 @@ tables=Devices
 |order by=Devices.Manufacturer, Devices.Name
 |format=table
 |limit=9999
-|where=Devices.chipset like 'Exynos 4410%'
+|where=Devices.chipset like 'Exynos 4210%'
 |more results text=
 }}
 
@@ -95,7 +95,7 @@ tables=Devices
 === More information ===
 
 * [http://phonedb.net/index.php?m=processor&id=269&c=samsung_s5pc210_exynos_4_dual_4210__orion phonedb.net]
-* [http://linux-exynos.org/wiki/Samsung_Exynos_4410 Linux-Exynos.org]
+* [http://linux-exynos.org/wiki/Samsung_Exynos_4210 Linux-Exynos.org]
 
 == Exynos 4412 ==
 {{Infobox soc
