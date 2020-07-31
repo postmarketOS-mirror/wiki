@@ -17,7 +17,7 @@
 | status_gpu = Y
 | status_pinctrl = Y
 | status_i2c = Y
-| status_audio =
+| status_audio = Y
 | status_video =
 | status_thermal = Y
 | status_wifi = Y
@@ -70,6 +70,9 @@ Display works with both simplefb and msm-drm (with FB takeover). Dual DSI config
 
 == GPU ==
 GPU preemption (only supported on some 5xx GPUs) is disabled because of deadlock problem in msm drm driver. 
+
+== Audio ==
+Audio works. MSM8953 uses an updated codec from  as MSM8916 (cajon-v2). Each device needs its own alsa ucm conf file, you can find examples from MSM8916 here: https://github.com/msm8916-mainline/alsa-ucm-conf .
 
 == Video Encoder / Decoder (Venus) ==
 Venus boots and registers, but doesn't quite work yet. Further investigation is necessary...
