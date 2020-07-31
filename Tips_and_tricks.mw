@@ -48,7 +48,7 @@ device/testing/linux-samsung-foo/APKBUILD
 
 * Update the name of the config-wiki-example.armhf in device/linux-wiki-example
 
-* Create new Checksums (for example: <code>pmbootstrap checksum device-samsung-foo</code>), and reinstall.
+* Create new Checksums (for example: <code>pmbootstrap checksum device-samsung-foo</code>), zap, and reinstall.
 
 Due to CI-Updates in the Gitlab-repository it may be necessary to also [[Downstream_kernel_specific_package#Modernize_your_aport|modernize your aport]] before you can [[Git_workflow|upstream your work]].
 
