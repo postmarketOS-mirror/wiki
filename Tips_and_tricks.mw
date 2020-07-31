@@ -41,14 +41,14 @@ You might need to specify the X server if x11vnc does not detect it (e.g. by pas
 Some devices have the armhf-architecture but the device supports armv7. Some Interfaces can not be built for armhf, so it could be useful to update the architecture:
 * Update the architecture in the following files:
 <source>
-device/device-samsung-foo/APKBUILD
-device/device-samsung-foo/deviceinfo
-device/linux-samsung-foo/APKBUILD
+device/testing/device-samsung-foo/APKBUILD
+device/testing/device-samsung-foo/deviceinfo
+device/testing/linux-samsung-foo/APKBUILD
 </source>
 
 * Update the name of the config-wiki-example.armhf in device/linux-wiki-example
 
-* Create new Checksums, build the kernel and boot.
+* Create new Checksums (for example: <code>pmbootstrap checksum device-samsung-foo</code>), and reinstall.
 
 Due to CI-Updates in the Gitlab-repository it may be necessary to also [[Downstream_kernel_specific_package#Modernize_your_aport|modernize your aport]] before you can [[Git_workflow|upstream your work]].
 
