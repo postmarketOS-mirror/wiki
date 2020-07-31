@@ -6,10 +6,11 @@
 | releaseyear = 2019
 | originalsoftware = Android 9.0/10.0
 | chipset = Qualcomm MSM8953 Snapdragon 632
-| cpu = 4x Kryo 250 Gold @ 1.8GHz 4x Kryo 250 Silver @ 1.8GHz
+| cpu = 4x Kryo 250 Gold @ 1.8GHz 
+4x Kryo 250 Silver @ 1.8GHz
 | gpu = Adreno 506
 | storage = 32/64GB
-| display = 1570x720 IPS
+| display = 1520x720 IPS
 | memory = 3/4GB
 | architecture = aarch64
 | status_usbnet = Y
