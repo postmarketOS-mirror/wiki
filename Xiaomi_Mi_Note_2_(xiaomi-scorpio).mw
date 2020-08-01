@@ -67,6 +67,9 @@ You will need to [https://en.miui.com/unlock/ unlock the bootloader] in order to
 
 [https://forum.xda-developers.com/mi-note-2/development/recovery-twrp-xiaomi-mi-note-2-t3774171 Installing TWRP] before doing anything else is recommended, as it makes dealing with the phone easier later on, and allows for quick restoration by taking backups of <code>/system</code> and <code>/boot</code>, then flashing them back in order to restore the device to its original state.
 
+== Mainline ==
+Does not boot yet. [https://gitlab.com/Tooniis/linux-postmarketos-qcom-msm8996 Temporary fork of linux-postmarketos-qcom-msm8996], will open merge request when device boots.
+
 == See also ==
 <!--
 Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
