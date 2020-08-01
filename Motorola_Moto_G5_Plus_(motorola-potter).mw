@@ -88,7 +88,7 @@ What works:
 
 :* Need test device for Tianma panel
 
-:* Panel is selected at boot by lk2nd, based on the cmdline
+:* Panel is selected at boot by lk2nd, based on the cmdline from stock bootloader
 
 :* Using labibb regulator driver from mainline patchworks: 1239224
 
@@ -134,7 +134,7 @@ What works:
 
 * Bluetooth
 
-:* Works, even audio over bluetooth, but needs pulseaudio-bluez, bluez-alsa and bluez-hcd2hci to be installed
+:* Works but needs pulseaudio-bluez, bluez-alsa and bluez-hcd2hci to be installed
 
 * Storage
 
@@ -148,11 +148,13 @@ What works:
 
 :* Doesn't actually work, seems to use a different way to talk to userspace than other currently supported qcom modems
 
-* ADSP
+* Audio
 
-:* Boots
+:* Routed via ADSP, needs firmware blobs
 
-:* Useless without soundcard drivers
+:* Speaker, earpiece and headphones all work.
+
+:* Hiss/Popping with headphones when no audio is playing
 
 Anything that isn't listed above can be assumed to not work.
 
