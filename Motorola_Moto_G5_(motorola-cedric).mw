@@ -23,7 +23,7 @@
 | status_wifi = Y
 | status_xwayland = Y
 | status_fde = N
-| status_mainline = N
+| status_mainline = P
 | status_battery = Y
 | status_3d = 
 | status_accel = 
@@ -64,6 +64,20 @@ See also [[Installation guide]]
 * charging-sdl was tested manually through the debug shell and in plasma-mobile.
 * I suggest nmtui to connect to WiFi
 
+== Mainline ==
+What works:
+* booting to pmOS
+* eMMC
+* SD card
+* display (using simplefb)
+* power button and volume down
+What doesn't
+* everything else
+Notes:
+* touch probably needs regulators or GPIO properly configured
+* 3GB RAM versions of Cedric have weird crashing issues when trying to boot pmOS (2GB RAM versions seem to work fine)
+
+[https://github.com/Hacker1245/linux-cedric Mainline fork for cedric]
 == See also ==
 * [https://github.com/Sohamlad7/android_kernel_motorola_msm8937/tree/lineage-15.1-64 Kernel source]
 * [https://www.androidfilehost.com/?w=files&flid=236353 TWRP (not needed if you use pmbootstrap flasher boot)]
