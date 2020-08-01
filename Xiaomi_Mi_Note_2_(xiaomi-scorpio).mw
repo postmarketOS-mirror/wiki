@@ -80,3 +80,5 @@ If you manage to get your device packages merged, uncomment links below
 * {{Device package|xiaomi-scorpio}}
 * {{Kernel package|xiaomi-scorpio}}
 -->
+
+* {{issue|649|pmaports}} fastboot can't find dtb in downstream kernel
