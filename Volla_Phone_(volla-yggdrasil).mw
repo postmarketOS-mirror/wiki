@@ -1,0 +1,67 @@
+{{Infobox device
+| manufacturer = Volla
+| name = Phone
+| codename = volla-yggdrasil
+| image = File:Volla-yggdrasil.jpg
+| imagecaption = Weston running Firefox via Xwayland
+| releaseyear = 2020
+| originalsoftware = Android 9 / Ubuntu Touch on Linux 4.4
+| chipset = MediaTek Helio P23 (MT6763V)
+| cpu = Octa-core Cortex-A53 @ 2.0 GHz
+| gpu = ARM Mali-G71 MP2 (Bifrost)
+| display = 1080x2340 6,3"
+| storage = 64 GB eMMC
+| memory = 4 GB
+| architecture = aarch64
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = Y
+| status_flashing = P
+| status_touch = Y
+| status_screen = P
+| status_wifi = 
+| status_xwayland = Y
+| status_fde = N
+| status_mainline = N
+| status_battery = N
+| status_3d = 
+| status_accel = 
+| status_audio = 
+| status_bluetooth = 
+| status_camera = 
+| status_gps = 
+| status_mobiledata = 
+| status_sms = 
+| status_calls = 
+| status_otg = 
+| booting = yes
+
+<!-- you can also use these lines if you need to:
+see Unixbench page on wiki
+| whet_dhry = 0.0
+-->
+}}
+
+== Contributors ==
+* [[user:Deathmist|Deathmist]]
+
+== Maintainer(s) ==
+<!-- Only if this device doesn't run on linux-postmarketos yet! -->
+<!-- This person needs to be willing to answer questions from users of this device -->
+* [[user:Deathmist|Deathmist]]
+
+== Users owning this device ==
+{{Device owners}}
+<!--
+If you own this device, you can add the text below or something similar under your user profile:
+== Owns Devices ==
+{{Owns device|Volla_Phone_(volla-yggdrasil)|Additional notes by you e.g. Broken touchscreen digitizer}}
+{{My devices}}
+-->
+
+== How to enter flash mode ==
+* '''Fastboot:''' Power on the device with both {{Button|Power}}  and {{Button|Volume Up}} buttons held down. Then select ''Fastboot'' by pressing {{Button|Volume Up}} and confirm with {{Button|Volume Down}}.
+* '''Recovery:''' Do the same as for ''Fastboot'', but select the ''Recovery'' option in the menu instead.
+* '''MediaTek Preloader:''' The preloader triggers automatically everytime the phone turns on or reboots.
+
+== Installation ==
+<code>fastboot boot</code>ing is broken on this device, so kernels will always have to be flashed to the <code>boot</code> partition of the device.
