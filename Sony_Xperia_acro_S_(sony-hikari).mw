@@ -36,11 +36,7 @@
 }}
 
 == Contributors ==
-* intgr
-
-== Maintainer(s) ==
-<!-- Only if this device doesn't run on linux-postmarketos yet! -->
-<!-- This person needs to be willing to answer questions from users of this device -->
+* [[User:Intgr|intgr]]
 
 == What works ==
 
@@ -48,7 +44,7 @@ This device uses a non-standard ELF format boot.img file that is not supported b
  % file boot.img
  boot.img: ELF 32-bit LSB executable, ARM, version 1 (ARM), statically linked, corrupted section header size
 
-intgr has a working hacked postmarketOS toolchain for building compatible boot.img files.
+[[User:Intgr|intgr]] has a working hacked postmarketOS toolchain for building compatible boot.img files.
 
 == What does not work ==
 
@@ -74,13 +70,4 @@ Power off the device. Hold Volume Up as you plug the USB cable into the device.
 Alternatively, perform a hard reset by holding Power and Volume Up buttons. When the device vibrates, release the Power button *first*, and it will boot into fastboot loader.
 
 == Installation ==
-<!-- add more sections below as necessary, e.g. Wifi, photos, ... -->
-
 Follow [https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader Sony's instructions to unlock the bootloader].
-
-== See also ==
-<!--
-Link to related gitlab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME}} Initial merge request
-* {{issue|CHANGEME}} Some related issue
--->
