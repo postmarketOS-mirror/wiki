@@ -85,3 +85,4 @@ If you manage to get your device packages merged, uncomment links below
 -->
 
 * {{issue|649|pmaports}} fastboot can't find dtb in downstream kernel
+* {{issue|708|pmaports}} Mainlining attempt
