@@ -52,5 +52,5 @@ Please keep the list sorted alphabetically.
 |}
 
 == See also ==
-* {{issue|1646}} Use codename instead of model number
+* {{issue|35|pmaports}} Use codename instead of model number
 * {{MR|1682}} Check if device was renamed
