@@ -73,9 +73,8 @@ Screen brightness (0-255) can be adjusted:
 <code>echo 255 | sudo tee /sys/class/leds/lcd-backlight/brightness</code>
 
 == Partition layout ==
-<div class="toccolours mw-collapsible mw-collapsed" style="width: 640px; overflow: auto;">
-<code>volla:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/mmcblk0</code>
-<div class="mw-collapsible-content">
+<div style="width: 620px; overflow: auto;">
+ volla:~# fdisk -l -o Device,Start,End,Sectors,Size,Name /dev/mmcblk0
  Disk /dev/mmcblk0: 58.24 GiB, 62537072640 bytes, 122142720 sectors
  Units: sectors of 1 * 512 = 512 bytes
  Sector size (logical/physical): 512 bytes / 512 bytes
@@ -118,5 +117,4 @@ Screen brightness (0-255) can be adjusted:
  /dev/mmcblk0p32  10027008  10911743    884736  432M cache
  /dev/mmcblk0p33  10911744 122109918 111198175   53G userdata
  /dev/mmcblk0p34 122109919 122142686     32768   16M flashinfo
-</div>
 </div>
