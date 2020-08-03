@@ -46,6 +46,8 @@ see Unixbench page on wiki
 -->
 }}
 
+'''[[Important]]'''! As noted later in the article, charging does currently not work with the mainline Linux kernel. If your battery's charge goes too low while using the phone, '''it may no longer be able to charge, even with the original firmware/recovery'''! Be careful!
+
 == Contributors ==
 * [[User:Linusw|Linusw]]
 
