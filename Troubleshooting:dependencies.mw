@@ -8,6 +8,13 @@ $ pmbootstrap chroot -b=armv7
 / # apk upgrade -U -a
 </syntaxhighlight>
 </li>
+<li>If you get BAD signature errors, run the following commands:
+<syntaxhighlight lang="shell">
+$ pmbootstrap --mirror-alpine "http://dl-2.alpinelinux.org/alpine/" update
+$ pmbootstrap --mirror-alpine "http://dl-2.alpinelinux.org/alpine/" install
+</syntaxhighlight>
+See [https://gitlab.com/postmarketOS/build.postmarketos.org/-/issues/72#note_388367812 this comment] for more details.
+</li>
 <li>Try running <code>pmbootstrap zap</code>, experiment with arguments (see <code>pmbootstrap zap --help</code> for a list)</li>
 </ul>
 
