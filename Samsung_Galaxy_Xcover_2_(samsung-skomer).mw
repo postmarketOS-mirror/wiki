@@ -61,7 +61,7 @@ see Unixbench page on wiki
 == Installation ==
 The mainline kernel can only be booted through U-Boot, not directly with the Samsung bootloader. U-Boot is installed as intermediate bootloader on the boot partition, so it does not replace the Samsung bootloader entirely. 
 
-Boot into Download Mode using {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}} and follow the instructions at [[ST-Ericsson_NovaThor_U8500#U-Boot]] to install U-Boot.
+Boot into Download Mode using {{Button|Power}} + {{Button|Volume Down}} + {{Button|Home}} and follow the instructions at [[ST-Ericsson_NovaThor_U8500#U-Boot]] to install U-Boot. For this device, Skomer, you should flash the .img U-Boot file, not the .raw file.
 
 Finally, just follow the [[Installation guide]].
 
