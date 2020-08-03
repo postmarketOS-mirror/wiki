@@ -67,7 +67,7 @@ Finally, just follow the [[Installation guide]].
 
 == Notes ==
 
-Since battery charging is not yet working with the mainline kernel, it is helpful to have an external Samsung battery charger at hand for charging the battery. If you plan to work intensively on the device, it is also nice to have two batteries so that you can charge one while working with the other. If you don't have an external battery charger you need to reflash the original firmware just to charge the battery which is not going to be possible if you run the battery out, so catch-22. An external battery charger is definitely recommended.
+Since battery charging is not yet working with the mainline kernel, it is helpful to have an external Samsung battery charger at hand for charging the battery. If you plan to work intensively on the device, it is also nice to have two batteries so that you can charge one while working with the other. If you don't have an external battery charger you need to reflash the original firmware just to charge the battery which is not going to be possible if you run the battery out, so catch-22. Also worth noting is that even if you were to magically get the original firmware/recovery back on the device, you may end up in a situation where you cannot charge regardless because the phone turns off before it's able to start charging, and loops like this. In some cases it can reach enough charge during this to be able to charge properly eventually, but this may not always be the case. An external battery charger is definitely recommended.
 
 == Mainline ==
 '''Working:'''
