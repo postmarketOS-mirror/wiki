@@ -1,4 +1,17 @@
-{{note|Alpine recently moved to a new version of musl libc version introducing 64-bit time_t for 32-bit architectures. If you are on the edge branch and building for a 32-bit architecture (like armv7 or armhf) you may have problems with missing dependencies until all the packages are rebuilt against the new version. See this blogpost:  [http://postmarketos.org/blog/2020/07/21/breaking-update-in-edge/ Breaking update for 32-bit arches in postmarketOS edge]}}
+{{note|Alpine recently moved to a new version of musl libc version introducing 64-bit time_t for 32-bit architectures. If you were on the edge branch and building for a 32-bit architecture (like armv7 or armhf) you may have experienced problems with missing dependencies. As of 03/07/2020 (DD/MM/YYYY), most packages have been rebuilt to fit this new change. If you still have difficulties installing packages or dependencies, try the following troubleshooting steps:
+<ul>
+<li>(in case of postmarketOS packages) Check [https://build.postmarketos.org build.postmarketos.org]'s Failed category and issue {{issue|72|build.postmarketos.org}} to verify</li>
+<li>In the chroot for the affected architecture run <code>apk upgrade -U -a</code> as root (<code>pmbootstrap chroot</code> will automatically sign you in as root):
+<syntaxhighlight lang="shell">
+$ pmbootstrap chroot -b=armv7
+[09:44:40] (buildroot_armv7) % sh -i
+/ # apk upgrade -U -a
+</syntaxhighlight>
+</li>
+<li>Try running <code>pmbootstrap zap</code>, experiment with arguments (see <code>pmbootstrap zap --help</code> for a list)</li>
+</ul>
+
+For more information, read this blogpost: [http://postmarketos.org/blog/2020/07/21/breaking-update-in-edge/ Breaking update for 32-bit arches in postmarketOS edge]}}
 
 Here's a step-by-step guide to resolving <code>Could not find dependency</code> errors coming from <code>pmbootstrap</code>, as well as <code>unsatisfiable constraints</code> errors coming from <code>apk</code>.
 
