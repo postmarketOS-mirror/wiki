@@ -13,7 +13,7 @@ $ pmbootstrap chroot -b=armv7
 $ pmbootstrap --mirror-alpine "http://dl-2.alpinelinux.org/alpine/" update
 $ pmbootstrap --mirror-alpine "http://dl-2.alpinelinux.org/alpine/" install
 </syntaxhighlight>
-See [https://gitlab.com/postmarketOS/build.postmarketos.org/-/issues/72#note_388367812 this comment] for more details.
+You may also need to change the mirrors on your device after installing postmarketOS. See [https://gitlab.com/postmarketOS/build.postmarketos.org/-/issues/72#note_388367812 this comment] for an explanation.
 </li>
 <li>Try running <code>pmbootstrap zap</code>, experiment with arguments (see <code>pmbootstrap zap --help</code> for a list)</li>
 </ul>
