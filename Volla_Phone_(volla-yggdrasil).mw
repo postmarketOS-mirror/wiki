@@ -118,3 +118,8 @@ Screen brightness (0-255) can be adjusted:
  /dev/mmcblk0p33  10911744 122109918 111198175   53G userdata
  /dev/mmcblk0p34 122109919 122142686     32768   16M flashinfo
 </div>
+
+== Links ==
+* [https://gitlab.com/deathmist/pmaports/-/commits/yggdrasil-edge/ Unofficial development pmaports tree with Hybris]
+* [https://gitlab.com/deathmist/pmaports/-/tree/yggdrasil-edge/device/testing/device-volla-yggdrasil Unofficial Volla Phone device package]
+* [https://gitlab.com/deathmist/pmaports/-/tree/yggdrasil-edge/device/testing/linux-volla-yggdrasil Unofficial Volla Phone kernel package]
