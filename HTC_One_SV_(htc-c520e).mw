@@ -53,7 +53,7 @@ Instructions can be found [https://www.htcdev.com/bootloader here]. Select "All 
 == Port status ==
 * Kernel can be compiled with GCC4, boots, USB networking works.
 * Matchbox worked, but got removed from repos
-* [[MATE]] work
+* [[MATE]] works
 * Some apps might crash the device.
 * It uses the 16 bit color mode.
 
