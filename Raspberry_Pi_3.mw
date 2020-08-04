@@ -96,8 +96,8 @@ $ amixer cset numid=3 2
 | Y
 |-
 |[https://developer.puri.sm/Librem5/Software_Reference/Environments/Phosh.html][[Phosh]]
-|
-|
+|works fine
+| Y
 |-
 |Plasma-Desktop
 |
