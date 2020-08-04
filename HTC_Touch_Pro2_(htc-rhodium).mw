@@ -8,6 +8,17 @@ Quite some useful files can be found in this Mega folder: https://mega.nz/folder
 
 HTC-Linux wiki contains useful information: https://web.archive.org/web/20100724055411/http://htc-linux.org/wiki/index.php?title=Rhodium
 
+A mirror of the kernel: https://gitlab.com/linux-on-qualcomm-s-msm/hycs-linux-msm
+
+Contains board files in the mach-msm folder for the:
+* Rhodium
+* Blackstone
+* Diamond
+* Kovsky
+* Raphael
+* Topaz
+* 
+
 == External links ==
 * [https://forum.xda-developers.com/wiki/HTC_Rhodium/Ubuntu Ubuntu on the HTC Rhodium]
 
