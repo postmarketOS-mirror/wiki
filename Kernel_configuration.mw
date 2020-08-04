@@ -256,7 +256,7 @@ Device Drivers -->
 
 '''pmOS specific'''
 
-Causes <code>sudo</code>, <code>ip</code> and other commands to hang ({{issue|1513|pmaports}}). Please disable it.
+Causes <code>sudo</code>, <code>ip</code> and other commands to hang ({{issue|1513|pmbootstrap}}). Please disable it.
 
 === CONFIG_BLK_DEV_INITRD ===
 
