@@ -46,6 +46,9 @@
 == Users owning this device ==
 {{Device owners}}
 
+== Unlocking the bootloader ==
+Please visit the [https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a Motorola website] for instructions. You will need a valid email address and, ironically, an Windows or MacOS machine. A virtual machine with usb pass-through does work.
+
 == How to enter flash mode ==
 Hold down {{Button|Power}} + {{Button|Volume Down}} while booting to enter Flash Mode. 
 
