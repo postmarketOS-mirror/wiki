@@ -3,7 +3,7 @@
 | name = Phone
 | codename = volla-yggdrasil
 | image = File:Volla-yggdrasil.jpg
-| imagecaption = Phosh Shell running via libhybris
+| imagecaption = Phosh running via libhybris
 | releaseyear = 2020
 | originalsoftware = Android 9 / Ubuntu Touch on Linux 4.4
 | chipset = MediaTek Helio P23 (MT6763V)
