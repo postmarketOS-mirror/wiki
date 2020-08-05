@@ -8,7 +8,8 @@
 | releaseyear = 2009
 | originalsoftware = Microsoft Windows Mobile 6.1
 | chipset = Qualcomm MSM7200A
-| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
+| cpu = ARM1136EJ-S
+| gpu = Adreno 130
 | storage = 512 MB
 | display = 480x800 TN-TFT LCD
 | memory = 288 MB
