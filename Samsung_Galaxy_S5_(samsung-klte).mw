@@ -112,29 +112,6 @@ $ pmbootstrap flasher flash_kernel
  This time, don't hold any button, let it reboot to Linux!
 </source>
 
-=== Nonfree-userland (halium) installation ===
-
-[[File:Samsung-klte-android-running-inside-lxc-cut.png|400px|thumb|right|Android processes running inside lxc container]]
-
-To make full use of nonfree-userland intallation, which involves running Android in lxc container to make all hardware work (read more at [[Hybris]] wiki page), you need to to '''manually'''  download and install custom device-specific Android/Halium system image. Building it manually takes a lot of time and free space on HDD, so I've prepared prebuilt image: https://androidfilehost.com/?fid=6006931924117913010
-
-You need to download it, un-sparse and place in to root of userdata partition:
-
-Un-sparse:
-<source lang="shell-session">
-$ simg2img halium-klte-2019-07-09-system.img halium-klte-2019-07-09-system.img.raw
-</source>
-If it says "invalid sparse format or header magic" it means that the image is already unsparsed. Proceed to next step
-
-Reboot phone to TWRP recovery and push image using ADB:
-<source lang="shell-session">
-$ adb push halium-klte-2019-07-09-system.img.raw /data/system.img
-</source>
-
-Boot to a running postmarketOS system and login with SSH using [[USB_Network]]. Next commands are executed on the phone. Make sure that you have a <code>/data</code> mounted (check output of <code>mount</code> command). Ensure that Android is fully running inside an lxc container (on device, install <code>htop</code>, run it and switch into tree mode by pressing '''t''') (see the picture on the right). If it does not, check if <code>lxc-android</code> is running (see output of <code>rc-status</code> command). Run '''logcat''' and see if it is printing some error logs on the screen.
-
-Before (re)starting lxc-android, remember to remove file <code>/tmp/lxc-android-once</code> if it exists.
-
 == Additional info ==
 
 === Useful helper scripts ===
