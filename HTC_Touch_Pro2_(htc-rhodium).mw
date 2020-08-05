@@ -1,23 +1,90 @@
-The '''HTC Touch Pro2''' has different codenames for different carriers (Barium for AT&T). Rhodium seems to be the original codename for the carrier-neutral version.
+{{note|The '''HTC Touch Pro2''' has different codenames for different carriers (Barium for AT&T). Rhodium seems to be the original codename for the carrier-neutral version.}}
+{{Infobox device
+| manufacturer = HTC
+| name = Touch Pro2
+| codename = htc-rhodium
+| image = File:CHANGE_ME_TO_DEVICE_CODENAME.jpg
+| imagecaption = CHANGE_ME
+| releaseyear = 2009
+| originalsoftware = Microsoft Windows Mobile 6.1
+| chipset = Qualcomm MSM7200A
+| cpu = CHANGE_ME <!-- e.g. 1.0 GHz Scorpion -->
+| storage = 512 MB
+| display = 480x800 TN-TFT LCD
+| memory = 288 MB
+| architecture = armhf
+| n-android =  ✔
+<!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
+| status_usbnet = <!-- USB networking does work? then put Y here and delete this comment -->
+| status_flashing = <!-- Flashing with "pmbootstrap flasher" works? Put Y here. It works the same for everything coming below. -->
+| status_touch = <!-- Touch screen is working? You can also answer these questions with P for partially. -->
+| status_screen = <!-- The display is working? -->
+| status_wifi = <!-- Wireless network works? -->
+| status_xwayland = <!-- Showing X11 applications in a Wayland compositor (Weston, KWin, ...) works? -->
+| status_fde = <!-- When installing with full disk encryption, can you type in the password with the on screen keyboard? -->
+| status_mainline = <!-- Instead of a Linux kernel fork, it is possible to run mainline. -->
+| status_battery = <!-- Charging the battery with charging-sdl is possible -->
+| status_3d = -
+| status_accel = <!-- The sensor that measures proper acceleration works -->
+| status_audio = <!-- Using the device's speakers/headphone jack works -->
+| status_bluetooth = <!-- It's possible to pair and use other devices via the bluetooth protocol -->
+| status_camera = <!-- Taking photos and videos works. -->
+| status_gps = <!-- The Global Positioning System sensor works.  -->
+| status_mobiledata = <!-- Connecting to the Internet via cellular network. -->
+| status_sms = <!-- Sending and receiving short messages works as intended. -->
+| status_calls = <!-- Talking to other people over the cellular network. -->
+| status = research started
+| booting = no <!-- The device is booting at all, can be yes/no *IMPORTANT* -->
+<!-- you can also use these lines if you need to:
+Version of the kernel that pmos is running
+| pmoskernel = 3.x.x
+see Unixbench page on wiki
+| whet_dhry = 0.0
+Is OTG available, not used in wiki
+| status_otg = -
+-->
+}}
 
-Android seems to be working on the device, so there is at least a downstream kernel working: https://www.youtube.com/watch?v=fa1Eu_hzX8Q
+== Contributors ==
 
+== Maintainer(s) ==
+
+== Users owning this device ==
+{{Device owners}}
+
+== How to enter flash mode ==
+
+== Installation ==
+<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
+
+== See also ==
+<!--
+Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
+* {{MR|CHANGEME|pmaports}} Initial merge request
+* {{issue|CHANGEME|pmaports}} Some related issue
+-->
+* [https://www.youtube.com/watch?v=fa1Eu_hzX8Q working Android]
+* [https://gitlab.com/linux-on-qualcomm-s-msm/hycs-linux-msm Kernel Mirror]
+**Contains board files in the mach-msm folder for the:
+*** Rhodium
+*** Blackstone
+*** Diamond
+*** Kovsky
+*** Raphael
+*** Topaz
+
+<!--
+If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
+* {{Device package|DEVICE_CODENAME}}
+* {{Kernel package|DEVICE_CODENAME}}
+-->
 A tutorial can be found here: https://www.plecoforums.com/threads/xdandroid-dual-boot-android-on-htc-touch-pro-diamond-hd.2742/
 
 Quite some useful files can be found in this Mega folder: https://mega.nz/folder/kRk22IBI#f3R8QBASM8-iA-ZH9wVW-g/folder/tY8EmbIJ
 
 HTC-Linux wiki contains useful information: https://web.archive.org/web/20100724055411/http://htc-linux.org/wiki/index.php?title=Rhodium
 
-A mirror of the kernel: https://gitlab.com/linux-on-qualcomm-s-msm/hycs-linux-msm
 
-Contains board files in the mach-msm folder for the:
-* Rhodium
-* Blackstone
-* Diamond
-* Kovsky
-* Raphael
-* Topaz
-* 
 
 == External links ==
 * [https://forum.xda-developers.com/wiki/HTC_Rhodium/Ubuntu Ubuntu on the HTC Rhodium]
