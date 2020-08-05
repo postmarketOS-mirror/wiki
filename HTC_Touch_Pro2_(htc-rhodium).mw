@@ -45,25 +45,10 @@ Is OTG available, not used in wiki
 | status_otg = -
 -->
 }}
-
-== Contributors ==
-
-== Maintainer(s) ==
-
 == Users owning this device ==
 {{Device owners}}
 
-== How to enter flash mode ==
-
-== Installation ==
-<!-- add more sections below as necessary, e.g. WiFi, photos, ... -->
-
-== See also ==
-<!--
-Link to related GitLab issues or merge requests like the following (replace CHANGEME with the ID, e.g. 1234):
-* {{MR|CHANGEME|pmaports}} Initial merge request
-* {{issue|CHANGEME|pmaports}} Some related issue
--->
+== Documentation ==
 * [https://www.youtube.com/watch?v=fa1Eu_hzX8Q working Android]
 * [https://gitlab.com/linux-on-qualcomm-s-msm/hycs-linux-msm Kernel Mirror]
 **Contains board files in the mach-msm folder for the:
