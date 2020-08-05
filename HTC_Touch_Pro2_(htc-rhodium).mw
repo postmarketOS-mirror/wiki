@@ -88,6 +88,8 @@ HTC-Linux wiki contains useful information: https://web.archive.org/web/20100724
 === Mainline ===
 The MSM7200(A) had initial [https://lkml.org/lkml/2015/3/13/736 mainline support] with DTs written by Stephen Boyd, but these patches are lost as of 2020. The board files in mainline were dropped.
 
+The Adreno 130 does not seem to be supported by Freedreno.
+
 == External links ==
 * [https://forum.xda-developers.com/wiki/HTC_Rhodium/Ubuntu Ubuntu on the HTC Rhodium]
 
