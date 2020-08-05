@@ -85,7 +85,7 @@ Quite some useful files can be found in this Mega folder: https://mega.nz/folder
 HTC-Linux wiki contains useful information: https://web.archive.org/web/20100724055411/http://htc-linux.org/wiki/index.php?title=Rhodium
 
 === Mainline ===
-The MSM7200(A) had initial [https://lkml.org/lkml/2015/3/13/736 mainline support] written by Stephen Boyd, but these patches got lost in 2020.
+The MSM7200(A) had initial [https://lkml.org/lkml/2015/3/13/736 mainline support] with DTs written by Stephen Boyd, but these patches got lost in 2020. The board files in mainline where dropped.
 
 == External links ==
 * [https://forum.xda-developers.com/wiki/HTC_Rhodium/Ubuntu Ubuntu on the HTC Rhodium]
