@@ -30,7 +30,7 @@ When you don't have a result, try to find a <code>dts</code> file with the same 
 # Set the kernel dependency to <code>linux-postmarketos</code> in the APKBUILD for the device package if you want to make it the default kernel ([https://github.com/postmarketOS/pmbootstrap/issues/91#issuecomment-318825285 more information]).
 # Add the name of the generated dtb file (without path or extension) to the <code>deviceinfo_dtb</code> file in the deviceinfo file.
 
-A good example of a device using a mainline kernel is the <code>device-nokia-rx51</code> package.
+A good example of a device using a mainline kernel is the <code>device-nokia-n900</code> package.
 
 === Links ===
 * [[Mainlining FAQ]] various information collected from #postmarketOS
