@@ -170,6 +170,3 @@ Available platform plugins are: wayland-org.kde.kwin.qpa, eglfs, linuxfb, minima
 | 
 | 
 |}
-
-== See also ==
-* [[Hybris]] Description of how to run libhybris in postmarketOS
