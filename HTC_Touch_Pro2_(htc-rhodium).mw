@@ -86,8 +86,8 @@ Quite some useful files can be found in this Mega folder: https://mega.nz/folder
 HTC-Linux wiki contains useful information: https://web.archive.org/web/20100724055411/http://htc-linux.org/wiki/index.php?title=Rhodium
 
 === Mainline ===
-The MSM7200(A) had initial [https://lkml.org/lkml/2015/3/13/736 mainline support] with DTs written by Stephen Boyd, but these patches are lost as of 2020. The board files in mainline were dropped.
-
+The MSM7200(A) had initial [https://lkml.org/lkml/2015/3/13/736 mainline support] with DTs written by Stephen Boyd, but these patches are lost as of 2020. The board files in mainline were dropped. Those can't be merged back but can be used as a starting point for mainlizning.
+ 
 Freedreno does not support the Adreno 130
 
 <pre>19:45 <anholt> it would entail writing a from-scratch classic (non-gallium) driver.
