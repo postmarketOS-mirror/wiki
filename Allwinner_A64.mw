@@ -7,7 +7,7 @@
 | gpu = ARM Mali-400 MP2
 | process = 40
 | mainline = yes
-| status_cpu = Y
+| status_cpu = P
 | status_uart = Y
 | status_storage = Y
 | status_usb = Y
