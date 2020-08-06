@@ -1,4 +1,4 @@
-Android devices usually have a recovery partition, where another boot.img file can be flashed. It contains another kernel, and an extra initramfs, which is basically the whole recovery system. TWRP is the most popular recovery system, and before that CWM was most popular.
+Android devices usually have a recovery partition, where another boot.img file can be flashed. It contains another kernel, and an extra initramfs, which is basically the whole recovery system. [https://twrp.me TWRP] is the most popular recovery system, and before that CWM was most popular.
 
 == Starting postmarketOS initramfs via adb ==
 <syntaxhighlight lang="shell">
