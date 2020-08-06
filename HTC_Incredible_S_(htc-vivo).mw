@@ -1,3 +1,5 @@
+{{note| This device is still running on armhf, although the processor supports armv7. If you own it, change it and test it [https://wiki.postmarketos.org/wiki/Tips_and_tricks#Update_the_architecture_of_your_device that] way.}}
+
 {{Infobox device
 | image = File:Stock_vivo.jpeg
 | manufacturer = HTC
@@ -12,7 +14,7 @@
 | storage = 2 GB + microSD card
 | display = 480x800 4" SLCD
 | memory = 768 MB
-| architecture = armhf
+| architecture = armv7
 | status_usbnet = Y
 | status_flashing = Y
 | status_touch = 
@@ -71,6 +73,7 @@ Hold power button for ten seconds, or simply remove the battery.
 The device shares the <code>msm8x55</code> platform with other hTC devices, such as the One V (Primou).
 
 == Links ==
-[https://github.com/szezso/T.E.S.C.O-kernel_vivo/ Current working kernel source]
-
-[https://forum.xda-developers.com/showpost.php?p=75757495&postcount=117/ Detailed device partitions]
+*[https://github.com/szezso/T.E.S.C.O-kernel_vivo/ Current working kernel source]
+*[https://forum.xda-developers.com/showpost.php?p=75757495&postcount=117/ Detailed device partitions]
+*{{Device package|htc-vivo}}
+*{{Kernel package|htc-vivo}}
