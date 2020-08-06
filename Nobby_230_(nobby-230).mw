@@ -54,7 +54,6 @@
 Hold Accept and Power buttons to enter fastboot.
 
 == Issues ==
-* UbiFS partitions are not detected, so only sdcard installation will work;
 * It's not possible to control screen brightness/disable screen;
 * The keyboard maximum brightness is very low.
 
@@ -76,6 +75,44 @@ I've tried some downstream kernels and there are my findings:
 * BLU kernel: supports sdcardFS, doesn't detect ubiFS partitions. Being used for this device as the best suiting kernel.
 * [https://github.com/diepquynh/android_kernel_oc_vivalto3gvn samsung-vivalto3gvn kernel]: has defconfig only for vivalto, so it needs to be adjusted to fit sp7715ga. Has updated and refactored implementation of sprdfb. Screen doesn't work, the bootloader and kernel seem to not fit each other, so kernel decides to use panel_id=0, which leads to using lcd_dummy driver. Also, the kernel is very unpredictable and booted only once for me, even though I didn't rebuild it for other attempts.
 * [https://github.com/blade-af3/android_kernel_zte_P731A20 Blade AF3 kernel]: has building issues with autotst driver.
+
+== Other information ==
+
+=== MTD ===
+<pre>
+dev:    size   erasesize  name
+mtd0: 00040000 00040000 "spl"
+mtd1: 000c0000 00040000 "2ndbl"
+mtd2: 00080000 00040000 "kpanic"
+mtd3: 1fe80000 00040000 "ubipac"
+</pre>
+
+=== UBIFS ===
+<pre>
+241,   0 ubi0
+241,  16 ubi0_boot
+241,  18 ubi0_cache
+241,  15 ubi0_fbootlogo
+241,  14 ubi0_logo
+241,  20 ubi0_misc
+241,   2 ubi0_miscdata
+241,   1 ubi0_prodnv
+241,  19 ubi0_recovery
+241,  17 ubi0_system
+241,  21 ubi0_userdata
+241,   5 ubi0_wcnfixnv1
+241,   6 ubi0_wcnfixnv2
+241,  13 ubi0_wcnmodem
+241,   9 ubi0_wcnruntimenv1
+241,  10 ubi0_wcnruntimenv2
+241,  12 ubi0_wdsp
+241,   3 ubi0_wfixnv1
+241,   4 ubi0_wfixnv2
+241,  11 ubi0_wmodem
+241,   7 ubi0_wruntimenv1
+241,   8 ubi0_wruntimenv2
+ 10,  40 ubi_ctrl
+</pre>
 
 == See also ==
 * [https://github.com/Qiangong2/android_kernel_scx15_sp7715ga_FS001 Kernel sources]
