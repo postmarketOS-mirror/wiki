@@ -48,8 +48,6 @@ $ pmbootstrap flasher flash_kernel
 $ pmbootstrap flasher flash_rootfs
 </source>
 
-== Mainline attempt ==
-[[Google Nexus 9 (htc-flounder):mainline|Mainline]]
 == Minimal working dts ==
 The following is a minimal working device tree that is just enough to boot into the initramfs debug-shell. The boot parameter <code>clk_ignore_unused</code> is a temporary workaround to fix an issue where the image on the screen slowly distorts to static as soon as the kernel boots. A similar issue is discussed [https://github.com/NVIDIA/tegra-nouveau-rootfs/issues/22 here]. Do not edit the <code>google,flounder64</code> string, otherwise the bootloader will reject the dtb and refuse to boot the kernel.
 
