@@ -116,5 +116,5 @@ mtd3: 1fe80000 00040000 "ubipac"
 
 == See also ==
 * [https://github.com/Qiangong2/android_kernel_scx15_sp7715ga_FS001 Kernel sources]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/device-nobby-230 Device package]
-* [https://gitlab.com/postmarketOS/pmaports/tree/master/device/testing/linux-nobby-230 Kernel package]
+* {{Device package|nobby-230}}
+* {{Kernel package|nobby-230}}
