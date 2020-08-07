@@ -9,9 +9,9 @@
 | chipset = Nvidia Tegra 4
 | cpu = 1.9 GHz quad-core Cortex-A15
 | gpu = 72 core GeForce® GPU
-| storage = 32GB
+| storage = 32 GB
 | display = 2560x1600 LCD
-| memory = 2GB
+| memory = 2 GB
 | architecture = armv7
 <!-- the following status_* questions should be answered with Y - yes, P - partial, N - no, or left blank (for untested or unknown) -->
 | status_usbnet = Y
@@ -36,8 +36,6 @@
 | booting = yes
 
 <!-- you can also use these lines if you need to:
-if the device haven't originally ran Android OS, e.g. Nokia N900
-| n-android =  ✔
 Version of the kernel that pmos is running
 | pmoskernel = 3.4.104
 see Unixbench page on wiki
@@ -78,7 +76,7 @@ You can also add normal web links:
 * [https://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100 Replicant wiki page]
 -->
 <!--
-If you manage to get your device packages merged, uncomment links below and change DEVICE_CODENAME with the actual one.
-* {{Device package|DEVICE_CODENAME}}
-* {{Kernel package|DEVICE_CODENAME}}
+If you manage to get your device packages merged, uncomment links below.
+* {{Device package|asus-tf701t}}
+* {{Kernel package|asus-tf701t}}
 -->
